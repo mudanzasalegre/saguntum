@@ -64,10 +64,6 @@ let churchData=null,churchContextData=null,churchGuide=null,churchStopId=null,ch
 let plazaData=null,plazaContextData=null,plazaGuide=null,plazaStopId=null,plazaReadingMode='materials',plazaFallbackMap=null,plazaSectionOpen=false;
 let juderiaData=null,juderiaContextData=null,juderiaGuide=null,juderiaStopId=null,juderiaReadingMode='materials',juderiaFallbackMap=null;
 let calvarioData=null,calvarioContextData=null,calvarioGuide=null,calvarioStopId=null,calvarioReadingMode='materials',calvarioFallbackMap=null;
-// A direct plaza visit uses the same Atlas controls, guide, terrain and model.
-const plazaDocument=/^#glorieta(?:\/|$)/.test(location.hash);
-const plazaShape={cx:-27.4,cz:-215.8,rx:309,rz:295};
-const insidePlazaSector=(x,z)=>((x-plazaShape.cx)/plazaShape.rx)**2+((z-plazaShape.cz)/plazaShape.rz)**2<1;
 let glorietaData,glorietaSite,glorietaLayout,glorietaBuildings,glorietaNight=false,glorietaWater=true;
 let berenguerData=null,berenguerContextData=null,dianaData=null,sangreData=null,sangreContextData=null,salvadorData=null,salvadorContextData=null,museoData=null,museoContextData=null,porticData=null,porticContextData=null,domusData=null,domusContextData=null,circoData=null,circoContextData=null,necropolisData=null,necropolisContextData=null,hornoData=null,hornoContextData=null,talleresData=null,talleresContextData=null,museoIndustrialData=null,museoIndustrialContextData=null,gerenciaData=null,gerenciaContextData=null,casinoData=null,casinoContextData=null,begonaData=null,begonaContextData=null,economatoData=null,economatoContextData=null,barrioData=null,barrioContextData=null,sanatorioData=null,sanatorioContextData=null,pantalanPaseoData=null,pantalanMaritimoData=null,pantalanContextData=null,grauData=null,grauContextData=null;
 const visitStates=Object.fromEntries(['glorieta','berenguer','diana','sangre','salvador','museo','portic','domus','circo','necropolis','horno','talleres','museo-industrial','gerencia','casino','begona','economato','barrio-obrero','sanatorio','pantalan-paseo','pantalan-maritimo','grau-vell'].map(id=>[id,{guide:null,stopId:null,readingMode:'materials',sectionOpen:false,fallbackMap:null}]));
@@ -135,7 +131,7 @@ function visitMapOptions(v,extra={}){return{selected:v.stopId,heightAt:regionOf(
 const regionCounts={sagunto:15,puerto:9,coast:4,marjal:1,almarda:1,palancia:1};
 const regionTerrain=region=>isLandscape(region)?landscapes[region]?.terrain:region==='coast'?coastTerrain:region==='puerto'?portTerrain:terrain;
 const regionGround=region=>isLandscape(region)?landscapes[region]?.urban:region==='coast'?coastUrban:region==='puerto'?portUrban:urban;
-const regionInside=region=>isLandscape(region)?inLandscapeBounds(landscapeConfig[region].shape):region==='coast'?inCoastBounds:region==='puerto'?inPortBounds:plazaDocument?insidePlazaSector:inBounds;
+const regionInside=region=>isLandscape(region)?inLandscapeBounds(landscapeConfig[region].shape):region==='coast'?inCoastBounds:region==='puerto'?inPortBounds:inBounds;
 const landscapeSite=()=>landscapes[activeRegion]?.heritage?.sites[selected];
 const pause=()=>new Promise(resolve=>requestAnimationFrame(resolve));
 const escapeHtml=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -271,7 +267,7 @@ function setRegion(region){
  document.body.classList.toggle('port-region',activeRegion==='puerto');document.body.classList.toggle('coast-region',activeRegion==='coast');document.querySelectorAll('[data-region]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.region===activeRegion)));
  const intro=atlasHome?atlasIntro:info;$('intro-title').innerHTML=intro.title;$('intro-copy').textContent=intro.copy;$('start-tour-label').textContent=atlasHome?'Explorar el atlas':'Iniciar recorrido';$('journey-count').textContent=atlasHome?`${catalog.length} lugares · ${Object.keys(regionInfo).length} ámbitos`:land?`${info.count} puntos de observación`:`${info.count} paradas por ${info.label}`;$('map-region-title').textContent=info.map;$('map-place-count').textContent=land?`${info.count} puntos de observación`:`${info.count} lugares para explorar`;$('map-scale-label').textContent=`${info.scale} m`;
  const mapArea=activeRegion==='puerto'?'del Puerto':info.label.startsWith('el ')?`del ${info.label.slice(3)}`:`de ${info.label}`;$('map-open').setAttribute('aria-label',`Abrir mapa ${mapArea}`);$('minimap').setAttribute('aria-label',`Mapa de ${info.count} ${land?'puntos de observación':'lugares'} ${mapArea}`);
- if(scene)scene.fog.density=land?.000035:activeRegion==='coast'?.000075:.00014;if(controls){controls.maxDistance=plazaDocument?950:land?22000:activeRegion==='coast'?9000:6500;controls.maxPolarAngle=Math.PI*(land||activeRegion==='coast'?.499:.485);}
+ if(scene)scene.fog.density=land?.000035:activeRegion==='coast'?.000075:.00014;if(controls){controls.maxDistance=land?22000:activeRegion==='coast'?9000:6500;controls.maxPolarAngle=Math.PI*(land||activeRegion==='coast'?.499:.485);}
  applyRegionVisibility();refreshMap();
 }
 function changeRegion(region){setRegion(region);focus('overview',{instant:true});}
@@ -322,7 +318,7 @@ function buildPlaceUI(){
 }
 
 function castleFrame(w=innerWidth,h=innerHeight){
- if(plazaDocument&&w>700&&w<=1000&&h>w){
+ if((selected==='glorieta')&&w>700&&w<=1000&&h>w){
   const left=20,right=w-64,top=102,bottom=h*.54;
   return{left,right,top,bottom,width:right-left,height:bottom-top,offsetX:w/2-(left+right)/2,offsetY:h/2-(top+bottom)/2};
  }
@@ -341,7 +337,7 @@ function preset(name,near=false){
   const target=part?.target?.clone()||points[name]?.clone()||new THREE.Vector3(...(isTheatre?[0,94,235]:isChurch?[-94,85,-4]:isPlaza?[-54,55,-48]:isJuderia?[-45,72,89]:isCalvario?[-250,95,95]:[-110,143,345]));
   const off=new THREE.Vector3(...(near?(part?.closeOffset||part?.offset||(isTheatre?[58,55,-75]:isChurch?[-56,45,-65]:isPlaza?[15,16,-27]:isJuderia?[24,26,-32]:isCalvario?[32,24,-48]:[220,260,-330])):part?.offset||(isTheatre?[110,140,-175]:isChurch?[-110,135,-150]:isPlaza?[60,72,-80]:isJuderia?[92,115,-112]:isCalvario?[85,95,-135]:[350,420,-530])));
   let fov=part?.fov||38;
-  if(plazaDocument&&part?.fitBounds===false){
+  if((selected==='glorieta')&&part?.fitBounds===false){
    // The guide and navigation occupy part of the canvas. Preserve the authored
    // pedestrian viewpoint while the visible part of the image gets its intended angle.
    const frame=castleFrame(),ratio=Math.min(1,Math.min(frame.width,frame.height)/innerHeight);
@@ -438,14 +434,6 @@ function landscapePanel(){
 }
 
 async function focus(name,{instant=false,keepTour=false,castleFocus=null,theatreFocus=null,santaMariaFocus=null,plazaMayorFocus=null,juderiaFocus=null,calvarioFocus=null,visitFocus=null}={}){
- if((name==='glorieta')!==plazaDocument){
-  const place=name==='overview'?activeRegion:name;
-  const deepStop=visitFocus||castleFocus||theatreFocus||santaMariaFocus||plazaMayorFocus||juderiaFocus||calvarioFocus;
-  const current=location.hash.slice(1).split('/');
-  const stop=deepStop?encodeURIComponent(deepStop):current[0]===place?current[1]:'';
-  window.history.replaceState(keepTour?{atlasTour:{stops:activeTour,index:tourStep}}:null,'','#'+place+(stop?'/'+stop:''));
-  location.reload();return;
- }
  atlasHome=name==='atlas';if(atlasHome)name='overview';
  const serial=++focusSerial;if(name!=='overview'&&name!=='forum'&&!byId[name])name='overview';if(!keepTour)stopTour();closeCatalog();
  const previous=portHeritage?.sites[selected]||coastHeritage?.sites[selected];if(previous?.roof)previous.roof.visible=true;if(civic)civic.roofs.forEach(r=>r.object.visible=true);roofOpen=false;portFocus=null;coastFocus=null;landscapeFocus=null;marineInspection=false;coastEnvironment?.setInspection(false);
@@ -544,11 +532,11 @@ function updateMarkers(){const occupied=[];const priority=['glorieta','marjal-mo
  }
  const v=guidedVisit();if(v?.data){
   const visit=v.model,frame=castleFrame(),visible=showLabels&&document.querySelector('[data-layer=monuments]').checked;
-  const plazaOverview=plazaDocument&&(!v.stopId||['glorieta-conjunto','glorieta-despedida','glorieta-comparar'].includes(v.stopId));
-  $('hotspots').classList.toggle('plaza-pins',plazaDocument);
+  const plazaOverview=(selected==='glorieta')&&(!v.stopId||['glorieta-conjunto','glorieta-despedida','glorieta-comparar'].includes(v.stopId));
+  $('hotspots').classList.toggle('plaza-pins',(selected==='glorieta'));
   const candidates=v.data.stops.map(stop=>({stop,focus:visit?.focuses?.[stop.id]})).filter(p=>p.focus).sort((a,b)=>a.focus.target.distanceTo(camera.position)-b.focus.target.distanceTo(camera.position));
-  let shown=0;for(const {stop,focus:part}of candidates){const el=$(v.id+'-marker-'+stop.id);if(!el)continue;marker.copy(part.target);marker.y+=part.interiorView?.25:4;marker.project(camera);const x=(marker.x*.5+.5)*innerWidth,y=(-marker.y*.5+.5)*innerHeight,width=plazaDocument?44:Math.min(260,stop.title.length*6.7+48);
-   let show=visible&&shown<(plazaOverview?3:plazaDocument?2:7)&&stop.id!==v.stopId&&stop.id!==v.data.stops[0]?.id&&marker.z>-1&&marker.z<1&&x>frame.left+width/2&&x<frame.right-width/2&&y>frame.top+20&&y<frame.bottom-20;
+  let shown=0;for(const {stop,focus:part}of candidates){const el=$(v.id+'-marker-'+stop.id);if(!el)continue;marker.copy(part.target);marker.y+=part.interiorView?.25:4;marker.project(camera);const x=(marker.x*.5+.5)*innerWidth,y=(-marker.y*.5+.5)*innerHeight,width=(selected==='glorieta')?44:Math.min(260,stop.title.length*6.7+48);
+   let show=visible&&shown<(plazaOverview?3:(selected==='glorieta')?2:7)&&stop.id!==v.stopId&&stop.id!==v.data.stops[0]?.id&&marker.z>-1&&marker.z<1&&x>frame.left+width/2&&x<frame.right-width/2&&y>frame.top+20&&y<frame.bottom-20;
    if(occupied.some(r=>Math.abs(r.x-x)<(r.w+width)/2+10&&Math.abs(r.y-y)<44))show=false;
    el.style.display=show?'flex':'none';if(show){el.style.left=x+'px';el.style.top=y+'px';occupied.push({x,y,w:width});shown++;}
   }
@@ -559,7 +547,7 @@ async function ensureRegionData(region){
  if(isLandscape(region))return ensureLandscapeData(region);
  if(region==='sagunto'&&geo||region==='puerto'&&portGeo||region==='coast'&&coastGeo)return;
  if(baseDataLoads.has(region))return baseDataLoads.get(region);
- const prefix=region==='sagunto'?(plazaDocument?'glorieta-sector-':''):region==='puerto'?'port-':'coast-',names=['cartography','elevation',...(region==='coast'?['water']:[])];
+ const prefix=region==='sagunto'?'':region==='puerto'?'port-':'coast-',names=['cartography','elevation',...(region==='coast'?['water']:[])];
  const task=(async()=>{const data=await Promise.all(names.map(async name=>{const r=await fetch(`./assets/data/${prefix}${name}.json`);if(!r.ok)throw new Error(`No se pudo cargar ${prefix}${name}`);return r.json();}));
  if(region==='sagunto'){[geo,elevation]=data;rawHeight=createHeightSampler(elevation);}else if(region==='puerto'){[portGeo,portElevation]=data;portHeight=createHeightSampler(portElevation);}else{[coastGeo,coastElevation,coastWater]=data;coastHeight=createHeightSampler(coastElevation);waterMask=createWaterMask(coastWater,project);}})();
  baseDataLoads.set(region,task);try{await task;}finally{baseDataLoads.delete(region);}
@@ -590,21 +578,7 @@ async function ensureRegion(region){
 async function buildRegion(region){
  const added=[];const addToRegion=group=>{group.visible=false;scene.add(group);added.push(group);};
  const task=(async()=>{
- if(region==='sagunto'&&plazaDocument){
-  $('loading-status').textContent='Preparando la Glorieta y sus calles…';
-  const {createGlorieta}=await import('./glorieta.js');
-  glorietaSite=createGlorieta({heightAt:rawHeight,project,layout:glorietaLayout,buildings:glorietaBuildings,guide:glorietaData,visitOnly:true});
-  addToRegion(glorietaSite.group);
-  points.glorieta=glorietaSite.visit.focuses['glorieta-conjunto'].target;
-  await pause();
-  urban=createUrbanSurface({data:geo,project,heightAt:rawHeight,exclusions:glorietaSite.exclusions});
-  terrain=await createTerrain({data:elevation,heightAt:urban.groundHeight,renderer,shape:plazaShape,
-   meshOptions:{core:{minX:-133,maxX:77,minZ:-318,maxZ:-110},coreStep:2.5,outerStep:10},photoUrl:'./assets/data/glorieta-sector.jpg'});
-  addToRegion(terrain.group);await pause();
-  city=createCity({data:geo,project,heightAt:urban.groundHeight,urban,terrainHeightAt:terrain.meshHeightAt,
-   inBounds:insidePlazaSector,exclusions:glorietaSite.exclusions,detailBounds:[],treeLimit:0});
-  addToRegion(city.group);
- }else if(region==='sagunto'){
+ if(region==='sagunto'){
  $('loading-status').textContent='Modelando el patrimonio del casco histórico…';await pause();
  monuments=createMonuments({heightAt:rawHeight,project,data:geo,castleVisit:castleData,theatreVisit:theatreData,deferCastle:true});addToRegion(monuments.group);
  sacred=createSacredHeritage({heightAt:rawHeight,project,landmarks,data:geo,santaMariaVisit:churchData,santaMariaContext:churchContextData,calvarioVisit:calvarioData,calvarioContext:calvarioContextData,berenguerContext:berenguerContextData,sangreVisit:sangreData,sangreContext:sangreContextData,salvadorVisit:salvadorData,salvadorContext:salvadorContextData});addToRegion(sacred.group);await pause();civic=createCivicHeritage({heightAt:rawHeight,project,landmarks,data:geo,plazaVisit:plazaData,plazaContext:plazaContextData,juderiaVisit:juderiaData,juderiaContext:juderiaContextData,berenguerVisit:berenguerData,berenguerContext:berenguerContextData,museoVisit:museoData,museoContext:museoContextData});addToRegion(civic.group);
@@ -694,7 +668,7 @@ function updateStatus(){
 async function init(){
  setupUI();initTheme({onChange:()=>{refreshMap();redrawDialogMap?.();updateStatus();}});const regionFiles=['regional','landmarks','archaeology-domestic','archaeology-public','archaeology-necropolis','port-industrial','port-garden','port-workers','coast-pier','coast-grau','coast-archaeology','landscape-regions','landscape-marjal','landscape-dunes','landscape-palancia','landscape-territory','atlas-data-summary','historic-context'];
  const visitFiles=['castle-visit','theatre-visit','theatre-plan','santa-maria-visit','santa-maria-plan','santa-maria-context','plaza-mayor-visit','plaza-mayor-plan','plaza-mayor-context','juderia-visit','juderia-plan','juderia-context','calvario-visit','calvario-plan','calvario-context','berenguer-visit','berenguer-plan','berenguer-context','sangre-visit','sangre-plan','sangre-context','salvador-visit','salvador-plan','salvador-context','museo-visit','museo-plan','museo-context','portic-visit','portic-plan','portic-context','domus-visit','domus-plan','domus-context','circo-visit','circo-plan','circo-context','necropolis-visit','necropolis-plan','necropolis-context','horno-visit','horno-plan','horno-context','talleres-visit','talleres-plan','talleres-context','museo-industrial-visit','museo-industrial-plan','museo-industrial-context','gerencia-visit','gerencia-plan','gerencia-context','casino-visit','casino-plan','casino-context','begona-visit','begona-plan','begona-context','economato-visit','economato-plan','economato-context','barrio-visit','barrio-plan','barrio-context','sanatorio-visit','sanatorio-plan','sanatorio-context','pantalan-paseo-visit','pantalan-paseo-plan','pantalan-maritimo-visit','pantalan-maritimo-plan','pantalan-context','grau-visit','grau-plan','grau-context'];
- const files=plazaDocument?regionFiles:[...regionFiles,...visitFiles];
+ const files=[...regionFiles,...visitFiles];
  const loaded=await Promise.all(files.map(async name=>{const r=await fetch(`./assets/data/${name}.json`);if(!r.ok)throw new Error(`No se pudo cargar ${name}`);return r.json();}));
  $('glorieta-water').onclick=e=>{glorietaWater=!glorietaWater;e.currentTarget.setAttribute('aria-pressed',String(glorietaWater));};
  $('glorieta-night').onclick=e=>{if(!renderer)return;const night=!glorietaNight;setLight(lightMode);glorietaNight=night;e.currentTarget.setAttribute('aria-pressed',String(night));
@@ -704,7 +678,7 @@ async function init(){
  glorietaData=prepareGlorietaVisit(stops,glorietaHistory,layout,buildings);
  const entry=glorietaRecord.sites[0];catalog.push(entry);byId.glorieta=entry;tourOrder.push('glorieta');
  regional=loaded[0];landmarkData=loaded[1];landmarks=Object.fromEntries(landmarkData.sites.map(s=>[s.id,s]));archaeologyRecords=registerArchaeology(loaded.slice(2,5),catalog,byId,tourOrder);portRecords=registerPortHeritage(loaded.slice(5,8),catalog,byId,tourOrder);coastRecords=registerCoastHeritage(loaded.slice(8,11),catalog,byId,tourOrder);landscapeConfig=loaded[11];landscapeRecords=registerLandscapes(loaded.slice(12,15),catalog,byId,tourOrder);regional={...regional,...loaded[15]};dataSummary=loaded[16];historicContext=loaded[17];
- if(!plazaDocument){
+
  castleData=loaded[18];theatreData=loaded[19];theatreData.plan=loaded[20];churchData=loaded[21];churchData.plan=loaded[22];churchContextData=loaded[23];plazaData=loaded[24];plazaData.plan=loaded[25];plazaContextData=loaded[26];juderiaData=loaded[27];juderiaData.plan=loaded[28];juderiaContextData=loaded[29];calvarioData=loaded[30];calvarioData.plan=loaded[31];calvarioContextData=loaded[32];berenguerData=loaded[33];berenguerData.plan=loaded[34];berenguerContextData=loaded[35];berenguerData.sectionOnOverview=true;berenguerData.relatedVisits=[{id:'diana',label:'Explorar el muro de Diana'}];dianaData=createDianaVisit(berenguerData);sangreData=loaded[36];sangreData.plan=loaded[37];sangreContextData=loaded[38];sangreData.sectionOnOverview=true;salvadorData=loaded[39];salvadorData.plan=loaded[40];salvadorContextData=loaded[41];salvadorData.sectionOnOverview=true;museoData=loaded[42];museoData.plan=loaded[43];museoContextData=loaded[44];museoData.sectionOnOverview=true;museoData.relatedVisits=[{id:'juderia',label:'Recorrer la Judería'}];juderiaData.relatedVisits=[...(juderiaData.relatedVisits||[]),{id:'museo',label:'Explorar el Museo Arqueológico'}];porticData=loaded[45];porticData.plan=loaded[46];porticContextData=loaded[47];domusData=loaded[48];domusData.plan=loaded[49];domusContextData=loaded[50];circoData=loaded[51];circoData.plan=loaded[52];circoContextData=loaded[53];necropolisData=loaded[54];necropolisData.plan=loaded[55];necropolisContextData=loaded[56];hornoData=loaded[57];hornoData.plan=loaded[58];hornoContextData=loaded[59];hornoData.sectionOnOverview=true;talleresData=loaded[60];talleresData.plan=loaded[61];talleresContextData=loaded[62];talleresData.sectionOnOverview=true;museoIndustrialData=loaded[63];museoIndustrialData.plan=loaded[64];museoIndustrialContextData=loaded[65];museoIndustrialData.sectionOnOverview=true;gerenciaData=loaded[66];gerenciaData.plan=loaded[67];gerenciaContextData=loaded[68];gerenciaData.sectionOnOverview=true;casinoData=loaded[69];casinoData.plan=loaded[70];casinoContextData=loaded[71];casinoData.sectionOnOverview=true;begonaData=loaded[72];begonaData.plan=loaded[73];begonaContextData=loaded[74];begonaData.sectionOnOverview=true;economatoData=loaded[75];economatoData.plan=loaded[76];economatoContextData=loaded[77];barrioData=loaded[78];barrioData.plan=loaded[79];barrioContextData=loaded[80];sanatorioData=loaded[81];sanatorioData.plan=loaded[82];sanatorioContextData=loaded[83];sanatorioData.sectionOnOverview=true;sanatorioData.relatedVisits=[{id:'barrio-obrero',label:'Recorrer el Barrio Obrero'},{id:'gerencia',label:'Explorar la ciudad jardín'},{id:'museo-industrial',label:'Conocer el Museo Industrial'}];barrioData.sectionOnOverview=true;barrioData.relatedVisits=[{id:'economato',label:'Conocer el antiguo Economato'},{id:'gerencia',label:'Recorrer la ciudad jardín'},{id:'sanatorio',label:'Conocer el antiguo Sanatorio'}];economatoData.sectionOnOverview=true;economatoData.relatedVisits=[{id:'begona',label:'Explorar Begoña y la Alameda'},{id:'gerencia',label:'Recorrer la ciudad jardín'},{id:'casino',label:'Explorar el Casino'},{id:'barrio-obrero',label:'Conocer el Barrio Obrero'}];begonaData.relatedVisits=[{id:'casino',label:'Explorar el Casino'},{id:'gerencia',label:'Recorrer la ciudad jardín'},{id:'economato',label:'Conocer el antiguo Economato'}];casinoData.relatedVisits=[{id:'gerencia',label:'Recorrer la ciudad jardín'},{id:'begona',label:'Explorar Begoña y la Alameda'},{id:'museo-industrial',label:'Visitar el Museo Industrial'}];gerenciaData.relatedVisits=[{id:'economato',label:'Conocer el antiguo Economato'},{id:'casino',label:'Explorar el Casino'},{id:'museo-industrial',label:'Visitar el Museo Industrial'},{id:'barrio-obrero',label:'Conocer el Barrio Obrero'}];museoIndustrialData.relatedVisits=[{id:'talleres',label:'Explorar Talleres Generales'},{id:'horno',label:'Explorar el Alto Horno n.º 2'},{id:'gerencia',label:'Recorrer la Gerencia'}];talleresData.relatedVisits=[{id:'horno',label:'Explorar el Alto Horno n.º 2'},{id:'museo-industrial',label:'Visitar el Museo Industrial'},{id:'gerencia',label:'Recorrer la Gerencia'}];hornoData.relatedVisits=[{id:'talleres',label:'Explorar Talleres Generales'},{id:'museo-industrial',label:'Visitar el Museo Industrial'},{id:'gerencia',label:'Recorrer la Gerencia'}];necropolisData.relatedVisits=[{id:'juderia',label:'Recorrer la Judería'},{id:'castle',label:'Explorar el Castillo'},{id:'theatre',label:'Visitar el Teatro Romano'}];circoData.relatedVisits=[{id:'portic',label:'Explorar la Vía del Pòrtic'},{id:'domus',label:'Explorar la Domus dels Peixos'}];domusData.relatedVisits=[{id:'portic',label:'Explorar la Vía del Pòrtic'},{id:'museo',label:'Explorar el Museo Arqueológico'}];porticData.relatedVisits=[{id:'domus',label:'Explorar la Domus dels Peixos'},{id:'museo',label:'Explorar el Museo Arqueológico'}];
  pantalanPaseoData=loaded[84];pantalanPaseoData.plan=loaded[85];pantalanMaritimoData=loaded[86];pantalanMaritimoData.plan=loaded[87];pantalanContextData=loaded[88];
  grauData=loaded[89];grauData.plan=loaded[90];grauContextData=loaded[91];
@@ -740,7 +714,6 @@ async function init(){
  Object.assign(byId.sanatorio,{era:'LA SALUD EN LA CIUDAD FACTORÍA · 1949',title:'La salud<br><em>entre jardines.</em>',description:sanatorioData.subtitle||sanatorioData.introduction,facts:[['1949','Entrada en servicio'],[String(sanatorioData.stops.length)+' paradas','Edificio, jardines y entorno']],features:['Fachada, pórtico y accesos del edificio en T','Planta baja histórica documentada','Pabellones, chalets y jardines'],sources:sanatorioData.sources.map(source=>source.url)});
  Object.assign(byId['grau-vell'],{era:'DEFENSA, COMERCIO Y VIDA JUNTO AL MAR',title:'Fortín del<br><em>Grau Vell.</em>',description:grauData.subtitle||grauData.introduction,facts:[[String(grauData.stops.length)+' paradas','Fortín, interiores y poblado'],['Sagunt i la Mar','Centro de interpretación']],features:['Torre, batería y foso','Almacenes, patio y cubiertas','Poblado y paisaje litoral'],sources:grauData.sources.map(source=>source.url)});
  for(const id of pantalanIds){const data=visitDataFor(id),sea=id==='pantalan-maritimo';Object.assign(byId[id],{era:sea?'ESTRUCTURA, MAR Y MEMORIA INDUSTRIAL':'EL PASEO, LA SOMBRA Y EL MIRADOR',title:sea?'Pantalán<br><em>marítimo.</em>':'Paseo del Pantalán<br>y <em>mirador.</em>',description:data.subtitle||data.introduction,facts:[[String(data.stops.length)+' paradas','Visita documentada'],[sea?'Actual · 1984–1987':'≈600 m · +8,80 m',sea?'Comparación de épocas':'Recorrido y cota del mirador']],sources:data.sources.map(source=>source.url)});}
- }
  for(const id of Object.keys(visitStates)){const state=visitStates[id],data=visitDataFor(id);if(!data)continue;
   state.guide=createMonumentVisit({element:$(id+'-panel'),data,...(pantalanIds.has(id)?{onPresentation:changeCoastMode}:{}),monumentId:id,monumentLabel:guidedVisit(id).label,onSelect:stop=>selectVisitStop(id,stop),onNear:()=>toggleNearView(id),onMap:()=>visitMapDialog(id),onReading:mode=>{state.readingMode=mode;castlePanel();refreshMap();if(renderer)renderer.shadowMap.needsUpdate=true;updateStatus();},onSource:source=>dialog(state.guide.sourceContent(source)),...(data.sectionInstructions&&!archaeologicalVisitIds.has(id)&&id!=='pantalan-paseo'?{onSection:open=>{if(!ready||!regionsBuilt.has(regionOf(byId[id])))return;if(id==='grau-vell'){const part=guidedVisit(id)?.model?.focuses?.[state.stopId];if(open&&part?.interiorView){state.stopId=part.buildingId==='grau-almacen'?'grau-cerchas':'grau-torre';mapFocus=state.stopId;window.history.replaceState(null,'','#'+id+'/'+state.stopId);}if(!open&&guidedVisit(id)?.model?.focuses?.[state.stopId]?.requiresSection){selectVisitStop(id,null);return;}state.sectionOpen=!!open;closeView=false;$('close-view').textContent='Vista cercana';$('close-view').setAttribute('aria-pressed','false');castlePanel();resize();fly(id);refreshMap();if(renderer)renderer.shadowMap.needsUpdate=true;coastEnvironment?.invalidate();updateStatus();return;}if(pantalanIds.has(id)){state.sectionOpen=!!open;marineInspection=!!open;coastEnvironment?.setInspection(marineInspection);castlePanel();refreshMap();updateStatus();return;}if(id==='sanatorio'&&open&&(!state.stopId||state.stopId==='sanatorio-conjunto')){selectVisitStop(id,'sanatorio-seccion');return;}if(id==='barrio-obrero'&&open&&(!state.stopId||state.stopId==='barrio-conjunto')){selectVisitStop(id,'barrio-seccion');return;}if(!open&&guidedVisit(id)?.model?.focuses?.[state.stopId]?.requiresSection){selectVisitStop(id,null);return;}state.sectionOpen=!!open;castlePanel();refreshMap();if(renderer)renderer.shadowMap.needsUpdate=true;updateStatus();}}:{})});
  }
@@ -750,7 +723,7 @@ async function init(){
 
  // The map view also serves devices that have already lost their GPU context.
  if(!wantsPlan()){
-  try{renderer=new THREE.WebGLRenderer({antialias:true,alpha:false,powerPreference:plazaDocument?'default':'high-performance'});}
+  try{renderer=new THREE.WebGLRenderer({antialias:true,alpha:false,powerPreference:matchMedia('(pointer:coarse)').matches?'default':'high-performance'});}
   catch(error){console.error('WebGL unavailable',error);}
  }
  if(!renderer){fallbackCanvas=document.createElement('canvas');fallbackCanvas.className='fallback-scene';fallbackCanvas.setAttribute('aria-label','Mapa de Sagunto, Puerto y paisajes del territorio');$('world').appendChild(fallbackCanvas);document.body.classList.add('map-mode');refreshMap();$('loading').classList.add('loaded');$('fallback').hidden=false;window.atlasStatus={ready:false,mode:'2d',reason:'WebGL unavailable',places:catalog.length,regions:regionCounts,activeRegion};fallbackCanvas.onclick=e=>{const map=visitFallback(selected);if(!map)return;const r=fallbackCanvas.getBoundingClientRect(),id=map.hitTarget((e.clientX-r.left)*fallbackCanvas.width/r.width,(e.clientY-r.top)*fallbackCanvas.height/r.height);if(id)selectVisitStop(selected,id);};await focus(request.name,{castleFocus:request.stopId,theatreFocus:request.stopId,santaMariaFocus:request.stopId,plazaMayorFocus:request.stopId,juderiaFocus:request.stopId,calvarioFocus:request.stopId,visitFocus:request.stopId});await resumeTour(pendingTour);return;}
@@ -769,7 +742,7 @@ async function init(){
   if(activeRegion==='sagunto'&&glorietaSite?.group.visible)glorietaSite.animate(now/1000,glorietaWater,glorietaNight,camera);
   controls.update(delta);const inside=regionInside(activeRegion),ground=regionGround(activeRegion);
   if(ground&&inside(camera.position.x,camera.position.z)){const surface=regionTerrain(activeRegion);let y=(isLandscape(activeRegion)||!!guidedVisit())&&surface?surface.meshHeightAt(camera.position.x,camera.position.z):ground.groundHeight(camera.position.x,camera.position.z);if(activeRegion==='sagunto')y=excavation?.groundAt(camera.position.x,camera.position.z,y)??y;camera.position.y=Math.max(camera.position.y,Math.max(activeRegion==='coast'||isLandscape(activeRegion)?0:-Infinity,y)+1.55);}
-  const lb=landscapeConfig[activeRegion]?.bounds,limits=plazaDocument?[-170,115,-335,-94]:lb?[lb.minX,lb.maxX,lb.minZ,lb.maxZ]:activeRegion==='coast'?[2750,7900,2350,6100]:activeRegion==='puerto'?[3550,7150,500,4000]:[-1050,1100,-800,1100];controls.target.x=THREE.MathUtils.clamp(controls.target.x,limits[0],limits[1]);controls.target.z=THREE.MathUtils.clamp(controls.target.z,limits[2],limits[3]);if(activeRegion==='coast')coastEnvironment?.update(delta);if(isLandscape(activeRegion))landscapes[activeRegion]?.environment?.update(delta);updateMarkers();renderer.render(scene,camera);markRendered();
+  const lb=landscapeConfig[activeRegion]?.bounds,limits=lb?[lb.minX,lb.maxX,lb.minZ,lb.maxZ]:activeRegion==='coast'?[2750,7900,2350,6100]:activeRegion==='puerto'?[3550,7150,500,4000]:[-1050,1100,-800,1100];controls.target.x=THREE.MathUtils.clamp(controls.target.x,limits[0],limits[1]);controls.target.z=THREE.MathUtils.clamp(controls.target.z,limits[2],limits[3]);if(activeRegion==='coast')coastEnvironment?.update(delta);if(isLandscape(activeRegion))landscapes[activeRegion]?.environment?.update(delta);updateMarkers();renderer.render(scene,camera);markRendered();
   if(first){first=false;renderer.shadowMap.autoUpdate=false;$('loading').classList.add('loaded');}
  }
  requestAnimationFrame(frame);
