@@ -4,6 +4,7 @@ import base64
 import json
 import math
 from pathlib import Path
+from PIL import Image,ImageDraw,ImageFont
 from playwright.sync_api import sync_playwright
 
 OUT=Path(__file__).resolve().parent/"validation-v37-landscape"
@@ -37,11 +38,10 @@ def render(browser,base,label,case,state,mobile):
     page.on("console",lambda m: errors.append(m.text[:2400]) if m.type=="error" else None)
     page.on("response",lambda r:errors.append(f"{r.status} {r.url}") if r.status>=400 else None)
     page.add_init_script("("+HOOK+")()")
-    payload=json.dumps({"camera":state,"quality":"0" if mobile else "2"})
-    page.add_init_script("sessionStorage.setItem('saguntum-territorial-visit',"+json.dumps(payload)+")")
+    settings={"camera":state,"quality":"0" if mobile else "2"}
     if case=="costa":
-        payload=json.dumps({"camera":state,"quality":"0" if mobile else "2","hour":9,"lightPreference":"solar","terrain":"photo"})
-        page.add_init_script("sessionStorage.setItem('saguntum-territorial-visit',"+json.dumps(payload)+")")
+        settings.update(hour=9,lightPreference="solar",terrain="photo")
+    page.add_init_script("sessionStorage.setItem('saguntum-territorial-visit',"+json.dumps(json.dumps(settings))+")")
     page.goto(f"http://127.0.0.1:{base}/#simulador",wait_until="domcontentloaded")
     try:
         page.wait_for_function("window.territoryStatus?.frameMs && window.sceneQA.camera",timeout=180000)
@@ -60,6 +60,29 @@ def render(browser,base,label,case,state,mobile):
         return status
     finally:
         page.close()
+def comparison():
+    labels={"panorama":"Sagunto, el puerto y la costa","cultivos":"Corredor industrial y agrícola",
+            "sierra":"Castillo de Sagunto y sierra Calderona"}
+    if not all((OUT/f"{case}-{version}.jpg").is_file() for case in labels for version in ("antes","despues")):
+        return
+    width,height=704,413
+    result=Image.new("RGB",(2*width+36,(height+34)*3+55),"#f5f2ea")
+    draw=ImageDraw.Draw(result)
+    try:
+        font=ImageFont.truetype("arial.ttf",18)
+        bold=ImageFont.truetype("arialbd.ttf",20)
+    except OSError:
+        font=bold=ImageFont.load_default()
+    draw.text((12,12),"Atlas vivo · v36",font=bold,fill="#183732")
+    draw.text((24+width,12),"Atlas vivo · v37",font=bold,fill="#183732")
+    for row,(case,name) in enumerate(labels.items()):
+        top=43+row*(height+34)
+        draw.text((12,top),name,font=font,fill="#183732")
+        for col,version in enumerate(("antes","despues")):
+            im=Image.open(OUT/f"{case}-{version}.jpg");im.thumbnail((width,height),Image.Resampling.LANCZOS)
+            result.paste(im,(12+col*(width+12),top+27))
+    result.save(OUT/"comparacion.jpg",quality=88,optimize=True)
+
 if __name__=="__main__":
     parser=argparse.ArgumentParser();parser.add_argument("version",nargs="*",default=["antes","despues"])
     parser.add_argument("--mobile",action="store_true")
@@ -76,3 +99,4 @@ if __name__=="__main__":
                 results[case]=render(browser,8470 if label=="antes" else 8471,label,case,CASES[case],args.mobile)
             path.write_text(json.dumps(results,ensure_ascii=False,indent=2),encoding="utf8")
         browser.close()
+    comparison()

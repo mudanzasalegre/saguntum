@@ -35,7 +35,7 @@ El proceso comprueba el CRS del GML y los rásteres. Procesa el código municipa
 
 - `dist/assets/territory/world.json` contiene extensiones XZ, origen, fuentes, procedencia de alturas, costa, recintos ICV, mallas de elevación y catálogo espacial.
 - `heights.bin` y `heights-core.bin` son grillas Int16 little-endian en decímetros, con filas desde el norte, coincidentes en sus límites con las extensiones de sus metadatos. La cuantización decimétrica es un formato de almacenamiento y no implica precisión de levantamiento de 10 cm.
-- `ortho.jpg`, `ortho-core.jpg` y `map.jpg` comparten la orientación de las mallas. El último archivo es la miniatura cartográfica municipal.
+- Las ortofotos originales se conservan en `research/territory/originales/`. El visor carga sus versiones adaptadas desde `dist/assets/territory/landscape/` con la misma orientación y usa `map.jpg` como miniatura municipal. El paso final de `prepare-territory-horizon.py` prepara esta distribución.
 - `b/<ix>_<iz>.json` contiene los volúmenes de la celda de 500 m. Cada registro tiene identificador, anillos XZ, altura, método, uso y, cuando existe, plantas y color estimado de cubierta. El primer anillo es exterior. El resto delimita los patios. Los anillos se cierran implícitamente.
 - `overview.json` conserva el identificador y el sector de cada volumen lejano, con su huella simplificada. Incluye partes desde 600 m² o con al menos 15 m de altura y 100 m² de planta. El detalle de las calles tiene las huellas completas.
 

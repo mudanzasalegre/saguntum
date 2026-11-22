@@ -14,6 +14,7 @@ import numpy as np
 import requests
 import tifffile
 from PIL import Image
+from territory_distribution import original_photo, prepare_distribution
 
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / "dist/assets"
@@ -48,7 +49,7 @@ def block_photo(pair):
     bx,bz = pair
     key = f"a{bx}_{bz}.jpg"
     # Request at most a 2 km sheet when a 4 km response is unavailable.
-    if (CACHE/key).exists():
+    if pair in {(0,-1),(2,-1),(0,0)}:
         img = Image.open(acquire(key, WMS, ortho(bx*4096,bz*4096,(bx+1)*4096,(bz+1)*4096,4096,4096)))
     else:
         img = Image.new("RGB",(4096,4096))
@@ -66,6 +67,31 @@ def block_photo(pair):
                 tile.save(OUT/f"{code}{bx*side+ix}_{bz*side+iz}.webp",quality=quality,method=3)
 
     print("PNOA",bx,bz,flush=True)
+
+def validate_tiles():
+    controls={"Sagunto":[3457,-438],"Puerto":[8218,1410],"Grau Vell":[6884,4075],
+              "Pantalán":[10260,2418],"Corredor":[5770,644],"Marjal":[5280,5282]}
+    measurements={}
+    for name,(x,z) in controls.items():
+        bx,bz=x//4096,z//4096
+        if (bx,bz) in {(0,-1),(2,-1),(0,0)}:
+            source=CACHE/f"a{bx}_{bz}.jpg"
+            side=4096
+        else:
+            source=CACHE/f"b{bx}_{bz}_{(x%4096)//2048}_{(z%4096)//2048}.jpg"
+            side=2048
+        camera=OUT/f"p{x//1024}_{z//1024}.webp"
+        def patch(file,x,z):
+            return np.asarray(Image.open(file).crop((x-16,z-16,x+16,z+16)),dtype=float)
+        expected=patch(source,x%side,z%side)
+        observed=patch(camera,x%1024,z%1024)
+        error=float(np.abs(expected-observed).mean())
+        measurements[name]=dict(utm=[ORIGIN[0]+x,ORIGIN[1]-z],source=source.name,tile=camera.name,
+            patchPixels=32,meanAbsoluteChannelError=round(error,3))
+        if error>9:raise ValueError(f"{name}: error de registro RGB {error}")
+    destination=ROOT/"research/validation-v37-landscape"
+    destination.mkdir(parents=True,exist_ok=True)
+    (destination/"cartografia.json").write_text(json.dumps(measurements,ensure_ascii=False,indent=2),encoding="utf8")
 
 def main():
     OUT.mkdir(exist_ok=True,parents=True)
@@ -93,10 +119,10 @@ def main():
     heights.round().astype("<i2").tofile(OUT/"horizon.i16")
     # Full-coverage colour at two device budgets. Higher source detail streams around the camera.
     for name,source in [("territory","ortho.jpg"),("core","ortho-core.jpg")]:
-        img=Image.open(ASSETS/"territory"/source)
-        for suffix,maxsize in [("",2048 if name=="core" else 1792),("-mobile",1280 if name=="core" else 1024)]:
-            copy=img.copy();copy.thumbnail((maxsize,maxsize),Image.Resampling.LANCZOS)
-            copy.save(OUT/(name+suffix+".jpg"),quality=87,optimize=True)
+        with Image.open(original_photo(source)) as img:
+            for suffix,maxsize in [("",2048 if name=="core" else 1792),("-mobile",1280 if name=="core" else 1024)]:
+                copy=img.copy();copy.thumbnail((maxsize,maxsize),Image.Resampling.LANCZOS)
+                copy.save(OUT/(name+suffix+".jpg"),quality=87,optimize=True)
     # Each Atlas plate retains its published registration. Tiles decode independently.
     legacy={}
     for sheet in sorted((ASSETS/"data").glob("*orthophoto.jpg")):
@@ -115,7 +141,7 @@ def main():
     # Measure chromaticity over a small disk centred on each LiDAR crown. Filtering
     # by green excess and percentile reduces contamination by roads and deep shade.
     # The countrywide base supplies colour outside the downloaded one-metre blocks.
-    coarse=Image.open(ASSETS/"territory/ortho.jpg").convert("RGB")
+    coarse=Image.open(original_photo("ortho.jpg")).convert("RGB")
     coarse_grid=np.asarray(coarse)
     lookups={}
     colours=[]
@@ -144,10 +170,12 @@ def main():
             # photographic tree material. The original optical luminance still applies.
             colours.append([int(np.clip((r/g-.79)*180+125,72,195)),int(np.clip((b/g-.67)*180+123,60,190))])
     np.asarray(colours,dtype=np.uint8).tofile(OUT/"canopy-chroma.bin")
+    validate_tiles()
     manifest=dict(crs=CRS,origin=ORIGIN,horizonBounds=EXTENT,horizonStep=250,horizonSize=[len(xs),len(ns)],
         atlasSheets=legacy,pnoaBlocks=BLOCKS,sourceResolutionM=1,mediumSampleM=2,sourcePixelSizeMDT=25,canopyChromaCount=len(colours),
         credits="Ortofotografía PNOA máxima actualidad y MDT25 © Instituto Geográfico Nacional de España, CC BY 4.0.",
         license="https://www.ign.es/web/ign/portal/politica-datos",records=dict(sorted(RECORDS.items())))
     (OUT/"index.json").write_text(json.dumps(manifest,indent=2),encoding="utf8")
+    prepare_distribution()
 if __name__=="__main__":
     main()
