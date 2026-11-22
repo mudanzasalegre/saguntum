@@ -1,5 +1,18 @@
 # Sincronización de Sites a GitHub
 
+## Publicación territorial · versión 33
+
+El 22 de noviembre de 2026, Sites publicó el [Simulador 3D](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador) en el proyecto original. El despliegue terminó con estado `succeeded`.
+
+| Referencia | Valor |
+| --- | --- |
+| Commit de origen en Sites | `f03ddbec199b5d2fd77d187b6db20061316590fb` |
+| Commit de implementación en GitHub | `1d364d07c512f7c996b54a82b45239b855864f2c` |
+| Árbol Git idéntico de `dist/` en ambos commits | `5d42f610ccc4acd8e63f5dec478a7952d034bfeb` |
+| Archivo de distribución registrado por Sites, SHA-256 | `53cdd5f90ebca057fc40a4a5dbea0f5cc19c027f94d6b3b977afde26511f0bc8` |
+
+El paquete desplegado contiene 915 archivos, incluido el manifiesto. Las fuentes editables, recetas cartográficas y pruebas se encuentran en este repositorio. [Documentación del simulador](SIMULADOR.md)
+
 ## Copia local de Sites v32
 
 - Proyecto Sites: `appgprj_6afeb5aaef8c8191b0062318fb3a24f1`.
