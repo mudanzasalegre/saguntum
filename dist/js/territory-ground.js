@@ -3,6 +3,7 @@ import {mergeGeometries} from 'three/addons/utils/BufferGeometryUtils.js';
 import {closeOrthophoto} from './territory-ortho.js';
 import {gridSampler} from './territory-coordinates.js';
 import {conservationGround} from './territory-heritage-ground.js';
+import {setSurfaceBuildings} from './territory-surface-photo.js';
 
 export async function resource(url, type='json') {
   const response=await fetch(url);
@@ -111,5 +112,6 @@ export async function buildGround(scene,grids,heightAt,renderer) {
       block.mesh.visible=n>0;g.setDrawRange(0,n);g.index.needsUpdate=true;block.dirty=false;
     }
   }
-  return {group,update,texture:maps[0],setHeritage:heritageGround.setSource,grade:heritageGround.grade,canStand:heritageGround.canStand};
+  return {group,update,texture:maps[0],setHeritage:heritageGround.setSource,
+    showBuildings:setSurfaceBuildings,grade:heritageGround.grade,canStand:heritageGround.canStand};
 }

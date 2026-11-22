@@ -8,6 +8,8 @@ El menú principal abre el [Simulador 3D — Explora Sagunto](https://saguntum-a
 
 El simulador usa 44.838 volúmenes cartográficos, 1.560 patios, relieve IGN, ortofotos PNOA y una red de 15.671 aristas. Carga por proximidad las escenas existentes y documenta el origen de alturas y materiales. El código estático y sus recursos se sirven directamente desde `dist/`. [Instalación, arquitectura, fuentes, pruebas y limitaciones](docs/SIMULADOR.md)
 
+La revisión gráfica incorpora ortofotos PNOA de 2024 de hasta 25 cm por píxel, fachadas y pavimentos con materiales escaneados, reflejos del cielo en el agua y el metal y una panorámica urbana de 15.862 volúmenes. Las capturas permiten comparar las dos versiones desde las mismas calles y monumentos. [Comparación visual](research/validation-visual/README.md) · [Fuentes y límites de la reconstrucción](docs/GRAFICOS.md)
+
 ## Identidad y portada estables
 
 Por indicación del usuario, la marca **SAGUNTUM · Atlas vivo**, el título **SAGUNTUM · Sagunto y Puerto de Sagunto** y la portada representan siempre al conjunto del atlas. Las ampliaciones de monumentos se integran en sus propias visitas y no sustituyen esta identidad ni la entrada general. Esta regla se aplica a las próximas iteraciones.

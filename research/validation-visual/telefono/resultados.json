@@ -1,0 +1,544 @@
+{
+  "checks": [
+    "Portada global",
+    "Panorámica territorial",
+    "Escena industrial y edificios cargados",
+    "Visita patrimonial del Alto Horno",
+    "Restauración de hora y posición",
+    "Ascenso en vuelo libre",
+    "Inicio y parada del itinerario",
+    "Cambio de época local",
+    "Mapa municipal",
+    "Regreso al Atlas",
+    "Sin errores de carga o JavaScript"
+  ],
+  "snapshots": {
+    "panorama": {
+      "ready": true,
+      "mode": "orbit",
+      "places": 31,
+      "buildings": 44838,
+      "routeMetres": 9682,
+      "hour": 16,
+      "loadMs": 615,
+      "range": 21150,
+      "camera": {
+        "mode": "orbit",
+        "eye": [
+          10063.860127360254,
+          13517.744498448588,
+          17427.962492190658
+        ],
+        "target": [
+          5938.911591743585,
+          17.91292733948676,
+          1678.1589925633743
+        ],
+        "yaw": 0,
+        "pitch": 0
+      },
+      "sectors": 0,
+      "networkSectors": 0,
+      "traffic": {
+        "cars": 0,
+        "people": 0
+      },
+      "photo": {
+        "cells": [],
+        "sheetCount": 0,
+        "sampleMetres": null,
+        "sourceMetres": [],
+        "photographedCoverage": 0,
+        "grains": false,
+        "atlasUploads": 0
+      },
+      "aerial": {
+        "parts": 5553,
+        "chunks": 16,
+        "packages": [
+          "skyline",
+          "sagunto"
+        ],
+        "complete": false,
+        "fallback": false,
+        "failures": []
+      },
+      "quality": 0,
+      "pixelRatio": 1,
+      "drawCalls": 71,
+      "triangles": 411741,
+      "geometries": 45,
+      "textures": 8,
+      "frameMs": 1750.6,
+      "frameP95Ms": 1750.6,
+      "heapMiB": 1378,
+      "heritage": {
+        "requested": [],
+        "loaded": [],
+        "loading": false,
+        "failures": {}
+      },
+      "pending": 0
+    },
+    "alto-horno": {
+      "ready": true,
+      "mode": "orbit",
+      "places": 31,
+      "buildings": 44838,
+      "routeMetres": 9682,
+      "hour": 16,
+      "loadMs": 615,
+      "range": 192,
+      "camera": {
+        "mode": "orbit",
+        "eye": [
+          8520.893095239624,
+          126.19763273776516,
+          2061.3554166594513
+        ],
+        "target": [
+          8483.493095239624,
+          3.797632737765105,
+          1918.555416659452
+        ],
+        "yaw": 0,
+        "pitch": 0
+      },
+      "sectors": 7,
+      "networkSectors": 6,
+      "traffic": {
+        "cars": 9,
+        "people": 8
+      },
+      "photo": {
+        "cells": [
+          [
+            32,
+            6
+          ],
+          [
+            33,
+            6
+          ],
+          [
+            32,
+            7
+          ],
+          [
+            33,
+            7
+          ]
+        ],
+        "sheetCount": 1,
+        "sampleMetres": 0.5,
+        "sourceMetres": [
+          0.25
+        ],
+        "photographedCoverage": 1,
+        "grains": true,
+        "atlasUploads": 1
+      },
+      "aerial": {
+        "parts": 15862,
+        "chunks": 42,
+        "packages": [
+          "skyline",
+          "sagunto",
+          "puerto",
+          "municipio"
+        ],
+        "complete": true,
+        "fallback": false,
+        "failures": []
+      },
+      "quality": 0,
+      "pixelRatio": 1,
+      "drawCalls": 298,
+      "triangles": 1312590,
+      "geometries": 201,
+      "textures": 24,
+      "frameMs": 16.7,
+      "frameP95Ms": 16.8,
+      "heapMiB": 1454,
+      "heritage": {
+        "requested": [
+          "horno"
+        ],
+        "loaded": [
+          "horno"
+        ],
+        "loading": false,
+        "failures": {}
+      },
+      "pending": 2,
+      "selected": "horno"
+    },
+    "noche": {
+      "ready": true,
+      "mode": "orbit",
+      "places": 31,
+      "buildings": 44838,
+      "routeMetres": 9682,
+      "hour": 22,
+      "loadMs": 615,
+      "range": 192,
+      "camera": {
+        "mode": "orbit",
+        "eye": [
+          8520.893095239624,
+          126.19763273776516,
+          2061.3554166594513
+        ],
+        "target": [
+          8483.493095239624,
+          3.797632737765105,
+          1918.555416659452
+        ],
+        "yaw": 0,
+        "pitch": 0
+      },
+      "sectors": 11,
+      "networkSectors": 6,
+      "traffic": {
+        "cars": 0,
+        "people": 8
+      },
+      "photo": {
+        "cells": [
+          [
+            32,
+            6
+          ],
+          [
+            33,
+            6
+          ],
+          [
+            32,
+            7
+          ],
+          [
+            33,
+            7
+          ]
+        ],
+        "sheetCount": 1,
+        "sampleMetres": 0.5,
+        "sourceMetres": [
+          0.25
+        ],
+        "photographedCoverage": 1,
+        "grains": true,
+        "atlasUploads": 1
+      },
+      "aerial": {
+        "parts": 15862,
+        "chunks": 42,
+        "packages": [
+          "skyline",
+          "sagunto",
+          "puerto",
+          "municipio"
+        ],
+        "complete": true,
+        "fallback": false,
+        "failures": []
+      },
+      "quality": 0,
+      "pixelRatio": 1,
+      "drawCalls": 148,
+      "triangles": 629306,
+      "geometries": 201,
+      "textures": 24,
+      "frameMs": 16.7,
+      "frameP95Ms": 16.8,
+      "heapMiB": 1464,
+      "heritage": {
+        "requested": [
+          "horno"
+        ],
+        "loaded": [
+          "horno"
+        ],
+        "loading": false,
+        "failures": {}
+      },
+      "pending": 0,
+      "selected": "horno"
+    },
+    "peaton": {
+      "ready": true,
+      "mode": "walk",
+      "places": 31,
+      "buildings": 44838,
+      "routeMetres": 9682,
+      "hour": 12,
+      "selected": null,
+      "loadMs": 597,
+      "range": 2,
+      "camera": {
+        "mode": "walk",
+        "eye": [
+          8518.6,
+          6.8999999999999995,
+          1585.4
+        ],
+        "target": [
+          8483.493095239624,
+          3.797632737765105,
+          1918.555416659452
+        ],
+        "yaw": 0.25615138256560227,
+        "pitch": -0.035
+      },
+      "sectors": 11,
+      "networkSectors": 5,
+      "traffic": {
+        "cars": 0,
+        "people": 8
+      },
+      "photo": {
+        "cells": [
+          [
+            32,
+            6
+          ],
+          [
+            33,
+            6
+          ],
+          [
+            32,
+            5
+          ],
+          [
+            33,
+            5
+          ]
+        ],
+        "sheetCount": 2,
+        "sampleMetres": 0.5,
+        "sourceMetres": [
+          0.25
+        ],
+        "photographedCoverage": 1,
+        "grains": true,
+        "atlasUploads": 2
+      },
+      "aerial": {
+        "parts": 15862,
+        "chunks": 42,
+        "packages": [
+          "skyline",
+          "sagunto",
+          "puerto",
+          "municipio"
+        ],
+        "complete": true,
+        "fallback": false,
+        "failures": []
+      },
+      "quality": 0,
+      "pixelRatio": 1,
+      "drawCalls": 44,
+      "triangles": 473964,
+      "geometries": 60,
+      "textures": 17,
+      "frameMs": 16.7,
+      "frameP95Ms": 33.3,
+      "heapMiB": 1029,
+      "heritage": {
+        "requested": [
+          "museo-industrial"
+        ],
+        "loaded": [
+          "museo-industrial"
+        ],
+        "loading": false,
+        "failures": {}
+      },
+      "pending": 0
+    },
+    "fortin": {
+      "ready": true,
+      "mode": "orbit",
+      "places": 31,
+      "buildings": 44838,
+      "routeMetres": 9682,
+      "hour": 12,
+      "selected": "grau-vell",
+      "loadMs": 597,
+      "range": 107,
+      "camera": {
+        "mode": "orbit",
+        "eye": [
+          6905.294492801511,
+          71.39999999999998,
+          4154.65269832518
+        ],
+        "target": [
+          6884.394492801512,
+          3.0000000000000004,
+          4074.852698325179
+        ],
+        "yaw": 0.25615138256560227,
+        "pitch": -0.034999999999999996
+      },
+      "sectors": 4,
+      "networkSectors": 4,
+      "traffic": {
+        "cars": 0,
+        "people": 8
+      },
+      "photo": {
+        "cells": [
+          [
+            26,
+            16
+          ],
+          [
+            27,
+            16
+          ],
+          [
+            26,
+            15
+          ],
+          [
+            27,
+            15
+          ]
+        ],
+        "sheetCount": 2,
+        "sampleMetres": 0.5,
+        "sourceMetres": [
+          0.25
+        ],
+        "photographedCoverage": 1,
+        "grains": true,
+        "atlasUploads": 11
+      },
+      "aerial": {
+        "parts": 15862,
+        "chunks": 42,
+        "packages": [
+          "skyline",
+          "sagunto",
+          "puerto",
+          "municipio"
+        ],
+        "complete": true,
+        "fallback": false,
+        "failures": []
+      },
+      "quality": 0,
+      "pixelRatio": 1,
+      "drawCalls": 283,
+      "triangles": 609951,
+      "geometries": 195,
+      "textures": 29,
+      "frameMs": 16.7,
+      "frameP95Ms": 616.9,
+      "heapMiB": 1138,
+      "heritage": {
+        "requested": [
+          "grau-vell"
+        ],
+        "loaded": [
+          "grau-vell"
+        ],
+        "loading": false,
+        "failures": {}
+      },
+      "pending": 0,
+      "touring": false
+    },
+    "pantalan": {
+      "ready": true,
+      "mode": "orbit",
+      "places": 31,
+      "buildings": 44838,
+      "routeMetres": 9682,
+      "hour": 12,
+      "selected": "pantalan-maritimo",
+      "loadMs": 597,
+      "range": 407,
+      "camera": {
+        "mode": "orbit",
+        "eye": [
+          9568.132540628645,
+          254.18054175230142,
+          3099.9685386483025
+        ],
+        "target": [
+          9488.671784533248,
+          -5.872841832635991,
+          2796.5729244658755
+        ],
+        "yaw": 0.25615138256560227,
+        "pitch": -0.034999999999999996
+      },
+      "sectors": 3,
+      "networkSectors": 3,
+      "traffic": {
+        "cars": 0,
+        "people": 0
+      },
+      "photo": {
+        "cells": [
+          [
+            34,
+            11
+          ],
+          [
+            33,
+            11
+          ]
+        ],
+        "sheetCount": 2,
+        "sampleMetres": 0.5,
+        "sourceMetres": [
+          0.5
+        ],
+        "photographedCoverage": 1,
+        "grains": true,
+        "atlasUploads": 17
+      },
+      "aerial": {
+        "parts": 15862,
+        "chunks": 42,
+        "packages": [
+          "skyline",
+          "sagunto",
+          "puerto",
+          "municipio"
+        ],
+        "complete": true,
+        "fallback": false,
+        "failures": []
+      },
+      "quality": 0,
+      "pixelRatio": 1,
+      "drawCalls": 25,
+      "triangles": 309974,
+      "geometries": 89,
+      "textures": 19,
+      "frameMs": 16.7,
+      "frameP95Ms": 33.3,
+      "heapMiB": 1162,
+      "heritage": {
+        "requested": [
+          "pantalan"
+        ],
+        "loaded": [
+          "pantalan"
+        ],
+        "loading": false,
+        "failures": {}
+      },
+      "pending": 0,
+      "touring": false
+    }
+  },
+  "errors": []
+}

@@ -3,6 +3,7 @@ import {loadHeritageCatalog} from './territory-heritage-catalog.js';
 import {buildHeritageModel,inRing,modelId,normalizeBuildingId,releaseModel} from './territory-heritage-models.js';
 import {overviewModels} from './territory-heritage-overview.js';
 import {heritageWorker} from './territory-heritage-loader.js';
+import {dressHeritageSurfaces} from './territory-heritage-surface.js';
 
 export async function createHeritage({scene,heightAt,project,grids,mobile=false,onChange=()=>{},onError=console.warn}){
  const inventory=await loadHeritageCatalog(project);
@@ -58,6 +59,7 @@ export async function createHeritage({scene,heightAt,project,grids,mobile=false,
      if(!item&&needed())item=await buildHeritageModel(id,{...options,needed});
      if(!item)continue;
      if(!needed()){releaseModel(item.group);continue;}
+     dressHeritageSurfaces(item.group);
      root.add(item.group);loaded.set(id,item);
      if(low.has(id))low.get(id).visible=false;
      item.setHistorical(historical===id);

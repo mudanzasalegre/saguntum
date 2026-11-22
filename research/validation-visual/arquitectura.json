@@ -1,0 +1,115 @@
+{
+  "partesFuente": 44838,
+  "partesPanoramicas": 15862,
+  "huellasGeneralizadasValidas": 15862,
+  "cubiertasConMuestraColor": 13500,
+  "otrasCubiertas": 2362,
+  "anillosReparadosDuranteGeneralizacion": 53,
+  "paquetes": {
+    "municipio.bin": {
+      "partes": 4212,
+      "bytes": 133548
+    },
+    "puerto.bin": {
+      "partes": 6097,
+      "bytes": 209518
+    },
+    "sagunto.bin": {
+      "partes": 3563,
+      "bytes": 122293
+    },
+    "skyline.bin": {
+      "partes": 1990,
+      "bytes": 118174
+    }
+  },
+  "bytesTotales": 583533,
+  "pantalla": "Chromium WebGL 2, 1360 × 816, cámara y hora de panorama coincidentes",
+  "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 3090 (0x00002204) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+  "panoramaV33": {
+    "loadMs": 550,
+    "frameMs": 16.7,
+    "frameP95Ms": 16.8,
+    "drawCalls": 29,
+    "triangles": 212612,
+    "heapMiB": 36,
+    "textures": 6
+  },
+  "panoramaV34": {
+    "loadMs": 546,
+    "frameMs": 16.7,
+    "frameP95Ms": 16.8,
+    "drawCalls": 64,
+    "triangles": 471748,
+    "heapMiB": 49,
+    "textures": 8
+  },
+  "capasPanoramicas": {
+    "parts": 15862,
+    "chunks": 42,
+    "packages": [
+      "skyline",
+      "sagunto",
+      "puerto",
+      "municipio"
+    ],
+    "complete": true,
+    "fallback": false,
+    "failures": []
+  },
+  "calleCarrerMajor": {
+    "muestras": 180,
+    "p50Ms": 16.7,
+    "p95Ms": 16.8,
+    "maxMs": 16.9,
+    "condiciones": "180 fotogramas de navegación en reposo, seis segundos después de cargar la iglesia de la Sangre y las siluetas."
+  },
+  "calleCarrerMajorAlCargar": {
+    "loadMs": 690,
+    "frameMs": 16.7,
+    "frameP95Ms": 916.9,
+    "drawCalls": 288,
+    "triangles": 2543720,
+    "heapMiB": 142,
+    "textures": 30
+  },
+  "puerto": {
+    "loadMs": 755,
+    "frameMs": 16.7,
+    "frameP95Ms": 16.8,
+    "drawCalls": 90,
+    "triangles": 767268,
+    "heapMiB": 155,
+    "textures": 21
+  },
+  "tactil": {
+    "webgl": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "pantalla": [
+      390,
+      844
+    ],
+    "memoriaGPU": "Mismo equipo de escritorio",
+    "transferencias": [
+      [
+        "surfaces-compact.webp",
+        139972
+      ],
+      [
+        "joinery-compact.webp",
+        53718
+      ],
+      [
+        "glazing-compact.webp",
+        3626
+      ],
+      [
+        "microrelief-compact.webp",
+        99112
+      ]
+    ],
+    "bytes": 296428,
+    "errores": []
+  },
+  "erroresWebGL": [],
+  "notas": "Tiempo de arranque de una ejecución local por versión. El percentil inmediatamente posterior a la carga de patrimonio puede incluir su preparación. Las mediciones táctiles son de emulación en Chromium."
+}

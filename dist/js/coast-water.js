@@ -119,6 +119,10 @@ void main(){
  vec4 shore=texture2D(shoreSampler,clamp(uv,vec2(0.0),vec2(1.0)));
  float shoreDistance=max(0.0,dot(shore.rg,vec2(256.0,1.0))*(256.0/257.0)-32.0);
  float shoreCharacter=shore.b;
+#ifdef TERRITORIAL_COAST
+ vec2 overflow=max(max(-uv,uv-1.0),0.0)*shoreBounds.zw;
+ shoreDistance=min(224.0,shoreDistance+length(overflow));
+#endif
 
  vec2 coarseA=texture2D(normalSampler,p/241.0+vec2(time*.0004,time*.0002)).rg*2.0-1.0;
  vec2 coarseB=texture2D(normalSampler,vec2(p.y,-p.x)/79.3+vec2(-time*.0006,time*.0004)).rg*2.0-1.0;
@@ -132,6 +136,12 @@ void main(){
  vec2 rippleA=texture2D(normalSampler,p/19.0+vec2(time*.006,time*.003)).rg*2.0-1.0;
  vec2 rippleB=texture2D(normalSampler,vec2(p.y,-p.x)/8.1+vec2(-time*.004,time*.005)).rg*2.0-1.0;
  slope+=(rippleA*.105+rippleB*.065)*rippleVisibility;
+#ifdef TERRITORIAL_COAST
+ vec2 capillary=texture2D(normalSampler,vec2(p.x+.36*p.y,p.y-.36*p.x)/2.9
+               +vec2(time*.009,-time*.013)).rg*2.0-1.0;
+ float fine=1.0-smoothstep(.07,.62,max(length(dFdx(p)),length(dFdy(p))));
+ slope+=capillary*(.092*fine);
+#endif
  slope*=mix(.60,1.0,smoothstep(0.0,20.0,shoreDistance));
  vec3 surfaceNormal=normalize(vec3(-slope.x,1.0,-slope.y));
  float facing=clamp(dot(surfaceNormal,viewDirection),0.0,1.0);
@@ -145,12 +155,21 @@ void main(){
  scatter*=(.91+.16*max(dot(surfaceNormal,sunDirection),0.0)+broadVariation)*shadow;
 
  vec2 distortion=surfaceNormal.xz*(.0016+min(.007,1.0/eyeDistance)*.20);
+#ifdef TERRITORIAL_COAST
+ distortion+=surfaceNormal.xz*.008*(.45+.55*(1.-facing));
+#endif
  vec2 reflectionUV=mirrorCoord.xy/max(mirrorCoord.w,.0001)+distortion;
  vec3 reflection=texture2D(mirrorSampler,clamp(reflectionUV,vec2(.001),vec2(.999))).rgb;
  vec3 light=mix(scatter,reflection,fresnel);
  vec3 halfDirection=normalize(sunDirection+viewDirection);
  float specAngle=max(dot(surfaceNormal,halfDirection),0.0);
  float highlight=pow(specAngle,140.0)*.28+pow(specAngle,38.0)*.035;
+#ifdef TERRITORIAL_COAST
+ // Directional flecks break up the sun path as individual crests resolve.
+ float gust=texture2D(normalSampler,p/511.0+vec2(time*.0001,0.)).r;
+ highlight+=pow(specAngle,600.0)*mix(.24,1.45,gust)*mix(.35,1.,fine);
+ light+=scatter*(gust-.5)*.24;
+#endif
  light+=sunColor*highlight*sunStrength*shadow;
 
  // Broken, soft contact foam follows only the mapped coast; never the atlas rim.
@@ -158,6 +177,11 @@ void main(){
  float breakup=.52+.48*sin(p.x*.19-p.y*.16+sin(p.y*.081)*2.0);
  float contact=exp(-shoreDistance/2.8)*(1.0-smoothstep(9.0,15.0,shoreDistance));
  float foam=contact*(.20+.22*shorePulse)*breakup*mix(.30,.75,shoreCharacter);
+#ifdef TERRITORIAL_COAST
+ float wash=shoreDistance+.7*sin(dot(p,vec2(.035,.091)))+.55*sin(time*.72+p.y*.015);
+ float wavelet=exp(-pow((wash-4.5-shorePulse*2.)/1.25,2.));
+ foam+=wavelet*breakup*.23*shoreCharacter*(.3+.7*fine);
+#endif
  light=mix(light,foamColor,foam);
  gl_FragColor=vec4(light,alpha);
  #include <tonemapping_fragment>

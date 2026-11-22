@@ -10,7 +10,7 @@ self.document={createElement(type){
  throw Error('Elemento no disponible en el trabajador: '+type);
 }};
 let inventory,heightAt;
-const props=['metalness','roughness','emissiveIntensity','bumpScale','opacity','transparent','alphaTest','side','vertexColors','flatShading','depthTest','depthWrite','polygonOffset','polygonOffsetFactor','polygonOffsetUnits','toneMapped','colorWrite','blending','fog'];
+const props=['name','metalness','roughness','envMapIntensity','clearcoat','clearcoatRoughness','ior','normalMapType','emissiveIntensity','bumpScale','opacity','transparent','alphaTest','side','vertexColors','flatShading','depthTest','depthWrite','polygonOffset','polygonOffsetFactor','polygonOffsetUnits','toneMapped','colorWrite','blending','fog'];
 async function pack(model){
  const geometries=[],materials=[],textures=[],objects=[],transfer=new Set();
  const geometryIds=new Map(),materialIds=new Map(),textureIds=new Map();
@@ -28,7 +28,7 @@ async function pack(model){
  async function texture(t){
   if(textureIds.has(t))return textureIds.get(t);
   const i=textures.length;textureIds.set(t,i);
-  const entry={colorSpace:t.colorSpace,wrapS:t.wrapS,wrapT:t.wrapT,magFilter:t.magFilter,minFilter:t.minFilter,repeat:t.repeat.toArray(),offset:t.offset.toArray(),rotation:t.rotation,anisotropy:t.anisotropy,generateMipmaps:t.generateMipmaps};
+  const entry={name:t.name,channel:t.channel,center:t.center.toArray(),colorSpace:t.colorSpace,wrapS:t.wrapS,wrapT:t.wrapT,magFilter:t.magFilter,minFilter:t.minFilter,repeat:t.repeat.toArray(),offset:t.offset.toArray(),rotation:t.rotation,anisotropy:t.anisotropy,generateMipmaps:t.generateMipmaps};
   if(t.isDataTexture){
    Object.assign(entry,t.image,{type:t.type,format:t.format,flipY:t.flipY});
    transfer.add(entry.data.buffer);
@@ -43,7 +43,8 @@ async function pack(model){
   if(materialIds.has(m))return materialIds.get(m);
   const i=materials.length;materialIds.set(m,i);
   const data={type:m.type,options:Object.fromEntries(props.filter(k=>m[k]!==undefined).map(k=>[k,m[k]])),color:m.color?.toArray(),emissive:m.emissive?.toArray()};
-  for(const key of ['map','bumpMap','normalMap','roughnessMap','alphaMap'])if(m[key])data[key]=await texture(m[key]);
+  data.normalScale=m.normalScale?.toArray();
+  for(const key of ['map','bumpMap','normalMap','roughnessMap','alphaMap','metalnessMap','emissiveMap','aoMap'])if(m[key])data[key]=await texture(m[key]);
   materials.push(data);return i;
  }
  // Only transport meshes visible at territory scale. Closed interiors remain
@@ -57,7 +58,7 @@ async function pack(model){
  for(const [o,visibility] of visible){
   const ids=[];
   for(const m of Array.isArray(o.material)?o.material:[o.material])ids.push(await material(m));
-  const item={name:o.name,visibility,geometry:geometry(o.geometry),materials:ids,matrix:o.matrixWorld.toArray(),cast:o.castShadow,receive:o.receiveShadow,order:o.renderOrder};
+  const item={name:o.name,materialKind:o.userData.materialKind,visibility,geometry:geometry(o.geometry),materials:ids,matrix:o.matrixWorld.toArray(),cast:o.castShadow,receive:o.receiveShadow,order:o.renderOrder};
   if(o.isInstancedMesh){
    item.count=o.count;item.instances=attribute(o.instanceMatrix);
    if(o.instanceColor)item.instanceColor=attribute(o.instanceColor);

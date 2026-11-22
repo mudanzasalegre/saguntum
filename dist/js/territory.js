@@ -8,6 +8,8 @@ import {createBuildings} from './territory-stream.js';
 import {createNetwork} from './territory-network.js';
 import {createNavigation} from './territory-camera.js';
 import {createAtmosphere} from './territory-atmosphere.js';
+import {contactRenderer} from './territory-contact.js';
+import {surfacePhotoMetrics} from './territory-surface-photo.js';
 import {terrainMap} from './territory-map.js';
 
 const $=id=>document.getElementById('sim-'+id);
@@ -28,6 +30,7 @@ export async function openSimulator(){
   const core={x:(sag.x+port.x)/2,z:(sag.z+grau.z)/2,anchors:zones,range:Math.max(6100,Math.hypot(port.x-sag.x,grau.z-sag.z)*.94)};
   let nav,buildings,network,heritage,atmosphere,renderer,selected=null,historical=false;
   let focus2D={...core},budget=mobile?0:2,lastBudget=-1,hour=16,markerButtons=[];
+  let pixelScale=1;
   const flags={buildings:true,heritage:true,streets:true,land:true,labels:true,cars:true,people:true};
   const status={ready:false,mode:'cargando',places:places.length,buildings:world.counts.buildingGeometries,routeMetres:index.routeLengthM};
   window.territoryStatus=status;
@@ -36,7 +39,7 @@ export async function openSimulator(){
     map.close();update2D();
   }});
   const credits=document.createElement('span');credits.className='sim-attribution';
-  credits.innerHTML='<a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap</a> · <a href="https://www.ign.es/" target="_blank" rel="noopener">PNOA / IGN</a> · <a href="https://www.catastro.hacienda.gob.es/webinspire/" target="_blank" rel="noopener">Catastro</a> · <a href="https://icv.gva.es/" target="_blank" rel="noopener">ICV</a>';
+  credits.innerHTML='<a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap</a> · <a href="https://www.ign.es/" target="_blank" rel="noopener">PNOA / IGN</a> · <a href="https://www.catastro.hacienda.gob.es/webinspire/" target="_blank" rel="noopener">Catastro</a> · <a href="https://icv.gva.es/" target="_blank" rel="noopener">ICV</a> · <a href="https://polyhaven.com/license" target="_blank" rel="noopener">Materiales CC0</a>';
   document.querySelector('.sim-foot').prepend(credits);
   $('credits').textContent='Huellas de Catastro INSPIRE, MDT y ortofoto PNOA del IGN, límite municipal del ICV y red viaria de OpenStreetMap (ODbL). Las alturas derivan de LiDAR, plantas o estimación. Las fachadas y la actividad urbana son interpretativas.';
   function panel(id,open){
@@ -100,12 +103,13 @@ export async function openSimulator(){
   let lost=false;renderer.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();lost=true;renderer=null;fallback('Mapa 2D · Se ha interrumpido WebGL');});
   $('status').textContent='Preparando relieve, costa y edificios…';
   const grids=await loadElevation(world.terrain),heightAt=makeSampler(grids);
-  const sea=createTerritorySea({polygons:world.water,shorelines:world.shorelines,project,heightAt,mobile,reduced:matchMedia('(prefers-reduced-motion:reduce)').matches});
+  const sea=createTerritorySea({polygons:world.water,bounds:world.bounds,shorelines:world.shorelines,project,heightAt,mobile,reduced:matchMedia('(prefers-reduced-motion:reduce)').matches});
   scene.add(sea.group);
   const underSea=sea.mask.groundHeight(heightAt);
   const [ground,heritageResult]=await Promise.all([buildGround(scene,grids,underSea,renderer),createHeritage({scene,project,heightAt,grids,mobile,onChange:()=>{buildings?.changed();if(renderer)renderer.shadowMap.needsUpdate=true;}})]);
-  heritage=heritageResult;ground.setHeritage(heritage);buildings=createBuildings({scene,world,grids,heritage});network=createNetwork({scene,index,heightAt});
+  heritage=heritageResult;ground.setHeritage(heritage);buildings=createBuildings({scene,world,grids,heritage});network=createNetwork({scene,index,heightAt,heritage});
   atmosphere=createAtmosphere(scene,renderer,sea,buildings,network);
+  const render=contactRenderer(renderer);
   function setLight(h){
     hour=Number(h);$('time').value=hour;$('hour').textContent=String(Math.floor(hour)).padStart(2,'0')+':'+String(Math.round((hour%1)*60)).padStart(2,'0');
     atmosphere.setHour(hour);status.hour=hour;
@@ -122,6 +126,7 @@ export async function openSimulator(){
       $('tour').setAttribute('aria-pressed',String(active));$('tour').textContent=active?'Detener recorrido':'Recorrido territorial';status.touring=active;
     }});
   function applyFlags(){
+    ground.showBuildings?.(flags.buildings);
     if(heritage.group.visible!==flags.heritage)buildings.changed();
     buildings.group.visible=flags.buildings;heritage.group.visible=flags.heritage;$('markers').hidden=!flags.labels;
     if(!flags.heritage){heritage.clear();if(historical)clear();}
@@ -129,13 +134,14 @@ export async function openSimulator(){
   }
   function resize(){
     if(!renderer)return;
-    renderer.setPixelRatio(Math.min(devicePixelRatio,[1,1.3,1.65][budget]));renderer.setSize(innerWidth,innerHeight);
+    const cap=mobile?Math.min([1.65,2,2.25][budget],Math.sqrt([850000,1450000,2300000][budget]/(innerWidth*innerHeight))):[1,1.5,2][budget];
+    renderer.setPixelRatio(Math.min(devicePixelRatio,Math.max(1,cap*pixelScale)));renderer.setSize(innerWidth,innerHeight);
     camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();
   }
   document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{nav.setMode(b.dataset.mode);renderer.domElement.focus({preventScroll:true});});
   document.querySelectorAll('[data-flag]').forEach(b=>b.onchange=()=>{flags[b.dataset.flag]=b.checked;applyFlags();});
   $('time').oninput=e=>setLight(e.target.value);
-  $('quality').onchange=e=>{budget=e.target.value==='auto'?(mobile?0:2):Number(e.target.value);resize();};
+  $('quality').onchange=e=>{budget=e.target.value==='auto'?(mobile?0:2):Number(e.target.value);pixelScale=1;resize();};
   $('home').onclick=()=>{clear();nav.panorama();};$('tour').onclick=()=>{clear();nav.startTour();};
   window.addEventListener('resize',resize);
   for(const p of [...zones,...places]){
@@ -175,13 +181,13 @@ export async function openSimulator(){
     }
     atmosphere.update(camera,p,range,budget);sea.update(dt);network.animate(dt,flags);
     camera.near=range>2600?3:range>450?.7:.12;camera.updateProjectionMatrix();
-    renderer.info.reset();renderer.render(scene,camera);
+    renderer.info.reset();render(scene,camera,budget===2&&!mobile&&range<520);
     if(ms>0)samples.push(ms);
     if(now-prevStats>900){
       const sorted=samples.sort((a,b)=>a-b),median=sorted[Math.floor(sorted.length/2)]||16;
       const pending=buildings.stream.pending.size+network.stream.pending.size;
       Object.assign(status,{mode:nav.mode,range:Math.round(range),camera:nav.snapshot(),sectors:buildings.stream.live.size,networkSectors:network.stream.live.size,
-        traffic:network.traffic,quality:budget,drawCalls:renderer.info.render.calls,triangles:renderer.info.render.triangles,
+        traffic:network.traffic,photo:surfacePhotoMetrics(),aerial:buildings.aerialStats,quality:budget,pixelRatio:renderer.getPixelRatio(),drawCalls:renderer.info.render.calls,triangles:renderer.info.render.triangles,
         geometries:renderer.info.memory.geometries,textures:renderer.info.memory.textures,frameMs:Math.round(median*10)/10,
         frameP95Ms:Math.round((sorted[Math.floor(sorted.length*.95)]||median)*10)/10,
         heapMiB:performance.memory?Math.round(performance.memory.usedJSHeapSize/1048576):null,heritage:heritage.stats,pending});
@@ -189,7 +195,10 @@ export async function openSimulator(){
       $('status').textContent=(pending?'Cargando sectores':historical?'Reconstrucción local':'Territorio actual')+' · '+(nav.mode==='orbit'?Math.round(camera.position.y-heightAt(camera.position.x,camera.position.z)).toLocaleString('es-ES')+' m sobre terreno':nav.mode==='walk'?'A pie':'Vuelo libre');
       if($('quality').value==='auto'){
         slow=median>(mobile?36:29)?slow+1:median<18?Math.min(-1,slow-1):0;
-        if(slow>=3&&budget>0){budget--;slow=0;}else if(slow < -12&&budget<(mobile?1:2)){budget++;slow=0;}
+        if(slow>=3&&budget>0){budget--;slow=0;}
+        else if(slow>=3&&mobile&&renderer.getPixelRatio()>1.01){pixelScale=Math.max(.5,pixelScale-.15);resize();slow=0;}
+        else if(slow < -12&&pixelScale<1){pixelScale=Math.min(1,pixelScale+.1);resize();slow=0;}
+        else if(slow < -12&&budget<(mobile?1:2)){budget++;slow=0;}
         if(lastBudget!==budget){resize();lastBudget=budget;}
       }
       samples=[];prevStats=now;

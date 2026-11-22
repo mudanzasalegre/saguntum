@@ -1,0 +1,619 @@
+{
+ "crs": "EPSG:25830",
+ "origin": [
+  730000,
+  4395000
+ ],
+ "sheetMetres": 512,
+ "credit": "Ortofoto PNOA Máxima Actualidad © IGN, CC BY 4.0 scne.es",
+ "source": "https://www.ign.es/wms-inspire/pnoa-ma",
+ "licence": "https://www.ign.es/web/ign/portal/politica-datos",
+ "microreliefLicence": "https://polyhaven.com/license",
+ "microrelief": [
+  {
+   "name": "dry_ground_01",
+   "author": "Rob Tuytel",
+   "extentMetres": 4.0,
+   "inputs": {
+    "disp": {
+     "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/dry_ground_01/dry_ground_01_disp_1k.jpg",
+     "md5": "19f4ceadb51e1e08bcc82690309fb779"
+    },
+    "diff": {
+     "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/dry_ground_01/dry_ground_01_diff_1k.jpg",
+     "md5": "f928726e24cf06765877ae77b9a04b4a"
+    }
+   },
+   "page": "https://polyhaven.com/a/dry_ground_01"
+  },
+  {
+   "name": "damp_beach_sand",
+   "author": "Dimitrios Savva",
+   "extentMetres": 2.0,
+   "inputs": {
+    "disp": {
+     "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/damp_beach_sand/damp_beach_sand_disp_1k.jpg",
+     "md5": "3d588be29daf9a55b39bb2bd6643ac6b"
+    },
+    "diff": {
+     "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/damp_beach_sand/damp_beach_sand_diff_1k.jpg",
+     "md5": "7914af7bb383c00889e0838edd85f1a0"
+    }
+   },
+   "page": "https://polyhaven.com/a/damp_beach_sand"
+  },
+  {
+   "name": "gravel_floor",
+   "author": "Matterfield, Jenelle van Heerden",
+   "extentMetres": 2.25,
+   "inputs": {
+    "disp": {
+     "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/gravel_floor/gravel_floor_disp_1k.jpg",
+     "md5": "5e616ed00b443bc3741d4aa219bc9319"
+    },
+    "diff": {
+     "url": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/1k/gravel_floor/gravel_floor_diff_1k.jpg",
+     "md5": "4f055e1545dcf41f347600fbb01d9ac2"
+    }
+   },
+   "page": "https://polyhaven.com/a/gravel_floor"
+  }
+ ],
+ "controlSamples": {
+  "Sagunto": {
+   "local": [
+    3457,
+    -438
+   ],
+   "query": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetFeatureInfo&LAYERS=OI.MosaicElement&STYLES=&CRS=EPSG%3A25830&BBOX=732945%2C4394926%2C733969%2C4395950&WIDTH=1024&HEIGHT=1024&FORMAT=image%2Fjpeg&QUERY_LAYERS=OI.MosaicElement&I=512&J=512&INFO_FORMAT=text%2Fplain",
+   "capture": "2024-05",
+   "nativeMetres": 0.25
+  },
+  "Puerto": {
+   "local": [
+    8218,
+    1410
+   ],
+   "query": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetFeatureInfo&LAYERS=OI.MosaicElement&STYLES=&CRS=EPSG%3A25830&BBOX=737706%2C4393078%2C738730%2C4394102&WIDTH=1024&HEIGHT=1024&FORMAT=image%2Fjpeg&QUERY_LAYERS=OI.MosaicElement&I=512&J=512&INFO_FORMAT=text%2Fplain",
+   "capture": "2024-06",
+   "nativeMetres": 0.25
+  },
+  "Corredor": {
+   "local": [
+    5770,
+    644
+   ],
+   "query": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetFeatureInfo&LAYERS=OI.MosaicElement&STYLES=&CRS=EPSG%3A25830&BBOX=735258%2C4393844%2C736282%2C4394868&WIDTH=1024&HEIGHT=1024&FORMAT=image%2Fjpeg&QUERY_LAYERS=OI.MosaicElement&I=512&J=512&INFO_FORMAT=text%2Fplain",
+   "capture": "2024-06",
+   "nativeMetres": 0.25
+  },
+  "Grau Vell": {
+   "local": [
+    6884,
+    4075
+   ],
+   "query": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetFeatureInfo&LAYERS=OI.MosaicElement&STYLES=&CRS=EPSG%3A25830&BBOX=736372%2C4390413%2C737396%2C4391437&WIDTH=1024&HEIGHT=1024&FORMAT=image%2Fjpeg&QUERY_LAYERS=OI.MosaicElement&I=512&J=512&INFO_FORMAT=text%2Fplain",
+   "capture": "2024-06",
+   "nativeMetres": 0.25
+  },
+  "Pantalán": {
+   "local": [
+    10260,
+    2418
+   ],
+   "query": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetFeatureInfo&LAYERS=OI.MosaicElement&STYLES=&CRS=EPSG%3A25830&BBOX=739748%2C4392070%2C740772%2C4393094&WIDTH=1024&HEIGHT=1024&FORMAT=image%2Fjpeg&QUERY_LAYERS=OI.MosaicElement&I=512&J=512&INFO_FORMAT=text%2Fplain",
+   "capture": "2024-06",
+   "nativeMetres": 0.25
+  },
+  "Marjal dels Moros": {
+   "local": [
+    5280,
+    5282
+   ],
+   "query": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetFeatureInfo&LAYERS=OI.MosaicElement&STYLES=&CRS=EPSG%3A25830&BBOX=734768%2C4389206%2C735792%2C4390230&WIDTH=1024&HEIGHT=1024&FORMAT=image%2Fjpeg&QUERY_LAYERS=OI.MosaicElement&I=512&J=512&INFO_FORMAT=text%2Fplain",
+   "capture": "2024-06",
+   "nativeMetres": 0.25
+  },
+  "Almardà": {
+   "local": [
+    10514,
+    -4223
+   ],
+   "query": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetFeatureInfo&LAYERS=OI.MosaicElement&STYLES=&CRS=EPSG%3A25830&BBOX=740002%2C4398711%2C741026%2C4399735&WIDTH=1024&HEIGHT=1024&FORMAT=image%2Fjpeg&QUERY_LAYERS=OI.MosaicElement&I=512&J=512&INFO_FORMAT=text%2Fplain",
+   "capture": "2024-05",
+   "nativeMetres": 0.25
+  }
+ },
+ "blocks": [
+  {
+   "localBounds": [
+    2048,
+    -2048,
+    3072,
+    -1024
+   ],
+   "spacingMetres": 0.5,
+   "acquisition": "2026-11-22",
+   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG%3A25830&BBOX=732048%2C4396024%2C733072%2C4397048&WIDTH=2048&HEIGHT=2048&FORMAT=image%2Fjpeg",
+   "sourceSha256": "f1c9391e5670ae922ce88cdedb238c890e2ad25d87878ab08e6ee8f1b5dce42d"
+  },
+  {
+   "localBounds": [
+    2048,
+    -1024,
+    3072,
+    0
+   ],
+   "spacingMetres": 0.25,
+   "acquisition": "2026-11-22",
+   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG%3A25830&BBOX=732048%2C4395000%2C733072%2C4396024&WIDTH=4096&HEIGHT=4096&FORMAT=image%2Fjpeg",
+   "sourceSha256": "5daad3e64be5ee6bb3ee9ac3117944f18e5899cdc0c0e91355e57955ee722bba"
+  },
+  {
+   "localBounds": [
+    2048,
+    0,
+    3072,
+    1024
+   ],
+   "spacingMetres": 0.5,
+   "acquisition": "2026-11-22",
+   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG%3A25830&BBOX=732048%2C4393976%2C733072%2C4395000&WIDTH=2048&HEIGHT=2048&FORMAT=image%2Fjpeg",
+   "sourceSha256": "03b11d837abd66cc8314e9ba1e14433ffbb3285fec32100323204ccb654d14a3"
+  },
+  {
+   "localBounds": [
+    3072,
+    -2048,
+    4096,
+    -1024
+   ],
+   "spacingMetres": 0.25,
+   "acquisition": "2026-11-22",
+   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG%3A25830&BBOX=733072%2C4396024%2C734096%2C4397048&WIDTH=4096&HEIGHT=4096&FORMAT=image%2Fjpeg",
+   "sourceSha256": "f9546e002b86797e116448f5f83594aa15ae92414646044b480c0b1f773d7831"
+  },
+  {
+   "localBounds": [
+    3072,
+    -1024,
+    4096,
+    0
+   ],
+   "spacingMetres": 0.25,
+   "acquisition": "2026-11-22",
+   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG%3A25830&BBOX=733072%2C4395000%2C734096%2C4396024&WIDTH=4096&HEIGHT=4096&FORMAT=image%2Fjpeg",
+   "sourceSha256": "990ba10978b69b7f9ddce74088ef1b0432af50c082a02beb8c5d078f83f59144"
+  },
+  {
+   "localBounds": [
+    3072,
+    0,
+    4096,
+    1024
+   ],
+   "spacingMetres": 0.5,
+   "acquisition": "2026-11-22",
+   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG%3A25830&BBOX=733072%2C4393976%2C734096%2C4395000&WIDTH=2048&HEIGHT=2048&FORMAT=image%2Fjpeg",
+   "sourceSha256": "594b2b839ab708a4c8ddaad71b54010b2a993411f30008b7eafc468ec31f91bd"
+  },
+  {
+   "localBounds": [
+    4096,
+    -2048,
+    5120,
+    -1024
+   ],
+   "spacingMetres": 0.5,
+   "acquisition": "2026-11-22",
+   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG%3A25830&BBOX=734096%2C4396024%2C735120%2C4397048&WIDTH=2048&HEIGHT=2048&FORMAT=image%2Fjpeg",
+   "sourceSha256": "574dacc49d7b0faaec394c4d8e2f7e73fe7c391a16026d5f011f783a6503e654"
+  },
+  {
+   "localBounds": [
+    4096,
+    -1024,
+    5120,
+    0
+   ],
+   "spacingMetres": 0.5,
+   "acquisition": "2026-11-22",
+   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG%3A25830&BBOX=734096%2C4395000%2C735120%2C4396024&WIDTH=2048&HEIGHT=2048&FORMAT=image%2Fjpeg",
+   "sourceSha256": "cfa52a9c4573384a80f8dd63f7aa35611e7ef330d9bffcb6760b6e17277f2c99"
+  },
+  {
+   "localBounds": [
+    4096,
+    0,
+    5120,
+    1024
+   ],
+   "spacingMetres": 0.5,
+   "acquisition": "2026-11-22",
+   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG%3A25830&BBOX=734096%2C4393976%2C735120%2C4395000&WIDTH=2048&HEIGHT=2048&FORMAT=image%2Fjpeg",
+   "sourceSha256": "57c7485f0632079dbe8aec51903872de1a80457b79cd507007085f6c0ca1eb82"
+  },
+  {
+   "localBounds": [
+    5120,
+    -1024,
+    6144,
+    0
+   ],
+   "spacingMetres": 0.5,
+   "acquisition": "2026-11-22",
+   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG%3A25830&BBOX=735120%2C4395000%2C736144%2C4396024&WIDTH=2048&HEIGHT=2048&FORMAT=image%2Fjpeg",
+   "sourceSha256": "6ba6818c33892fd2c5b602314573465bc7bc6e46242223a592515c086c0a391c"
+  },
+  {
+   "localBounds": [
+    5120,
+    0,
+    6144,
+    1024
+   ],
+   "spacingMetres": 0.5,
+   "acquisition": "2026-11-22",
+   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG%3A25830&BBOX=735120%2C4393976%2C736144%2C4395000&WIDTH=2048&HEIGHT=2048&FORMAT=image%2Fjpeg",
+   "sourceSha256": "c51535f0636a1db3c3657e5c635dc6b5b4981f19896d5b033394dd7394d312af"
+  },
+  {
+   "localBounds": [
+    5120,
+    5120,
+    6144,
+    6144
+   ],
+   "spacingMetres": 0.25,
+   "acquisition": "2026-11-22",
+   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG%3A25830&BBOX=735120%2C4388856%2C736144%2C4389880&WIDTH=4096&HEIGHT=4096&FORMAT=image%2Fjpeg",
+   "sourceSha256": "61724828e70152fdf67c3fe258c64ffaf77d150f687d44c44384aa5a30bbcfb4"
+  },
+  {
+   "localBounds": [
+    6144,
+    -1024,
+    7168,
+    0
+   ],
+   "spacingMetres": 0.5,
+   "acquisition": "2026-11-22",
+   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG%3A25830&BBOX=736144%2C4395000%2C737168%2C4396024&WIDTH=2048&HEIGHT=2048&FORMAT=image%2Fjpeg",
+   "sourceSha256": "d2b44a3eef3195f5c3fbf0877b2b659278f2602361b9d891e32487733060b4d3"
+  },
+  {
+   "localBounds": [
+    6144,
+    0,
+    7168,
+    1024
+   ],
+   "spacingMetres": 0.5,
+   "acquisition": "2026-11-22",
+   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG%3A25830&BBOX=736144%2C4393976%2C737168%2C4395000&WIDTH=2048&HEIGHT=2048&FORMAT=image%2Fjpeg",
+   "sourceSha256": "a1d97604771eba0376e5f7b86bcc40827b73732b3935de61314e6778fa22df2b"
+  },
+  {
+   "localBounds": [
+    6144,
+    1024,
+    7168,
+    2048
+   ],
+   "spacingMetres": 0.5,
+   "acquisition": "2026-11-22",
+   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG%3A25830&BBOX=736144%2C4392952%2C737168%2C4393976&WIDTH=2048&HEIGHT=2048&FORMAT=image%2Fjpeg",
+   "sourceSha256": "2fcefdab367836b98cf19f4b1ee797d4673098b21f157f38a5de91e5aaa178fd"
+  },
+  {
+   "localBounds": [
+    6144,
+    3072,
+    7168,
+    4096
+   ],
+   "spacingMetres": 0.25,
+   "acquisition": "2026-11-22",
+   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG%3A25830&BBOX=736144%2C4390904%2C737168%2C4391928&WIDTH=4096&HEIGHT=4096&FORMAT=image%2Fjpeg",
+   "sourceSha256": "99e70c6263763d89db1b3f4b92e98e4de4630637ba1700859d9b05246b3b31ba"
+  },
+  {
+   "localBounds": [
+    6144,
+    4096,
+    7168,
+    5120
+   ],
+   "spacingMetres": 0.25,
+   "acquisition": "2026-11-22",
+   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG%3A25830&BBOX=736144%2C4389880%2C737168%2C4390904&WIDTH=4096&HEIGHT=4096&FORMAT=image%2Fjpeg",
+   "sourceSha256": "c8f63531033792faf5b083ad4b26dec19470140914a9de5a2bc661ea257a7d23"
+  },
+  {
+   "localBounds": [
+    7168,
+    -1024,
+    8192,
+    0
+   ],
+   "spacingMetres": 0.5,
+   "acquisition": "2026-11-22",
+   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG%3A25830&BBOX=737168%2C4395000%2C738192%2C4396024&WIDTH=2048&HEIGHT=2048&FORMAT=image%2Fjpeg",
+   "sourceSha256": "2368f0472fb541e510b115c2719de8dacacdee5930f1dc780b15a308541fc967"
+  },
+  {
+   "localBounds": [
+    7168,
+    0,
+    8192,
+    1024
+   ],
+   "spacingMetres": 0.5,
+   "acquisition": "2026-11-22",
+   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG%3A25830&BBOX=737168%2C4393976%2C738192%2C4395000&WIDTH=2048&HEIGHT=2048&FORMAT=image%2Fjpeg",
+   "sourceSha256": "2aa570c221b524944b1530d8b21a6a559f25815d8d28e41d737eee40d51e086c"
+  },
+  {
+   "localBounds": [
+    7168,
+    1024,
+    8192,
+    2048
+   ],
+   "spacingMetres": 0.25,
+   "acquisition": "2026-11-22",
+   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG%3A25830&BBOX=737168%2C4392952%2C738192%2C4393976&WIDTH=4096&HEIGHT=4096&FORMAT=image%2Fjpeg",
+   "sourceSha256": "871d57235bc89c135ab07fbef57dbe0b9ceff2a8fb44bc6ab58409ef50a3cbf8"
+  },
+  {
+   "localBounds": [
+    7168,
+    2048,
+    8192,
+    3072
+   ],
+   "spacingMetres": 0.5,
+   "acquisition": "2026-11-22",
+   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG%3A25830&BBOX=737168%2C4391928%2C738192%2C4392952&WIDTH=2048&HEIGHT=2048&FORMAT=image%2Fjpeg",
+   "sourceSha256": "3edd4e4fab1b295c92746f5d7a5b7366c712f030958e965cca62c880d559c7b8"
+  },
+  {
+   "localBounds": [
+    7168,
+    3072,
+    8192,
+    4096
+   ],
+   "spacingMetres": 0.5,
+   "acquisition": "2026-11-22",
+   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG%3A25830&BBOX=737168%2C4390904%2C738192%2C4391928&WIDTH=2048&HEIGHT=2048&FORMAT=image%2Fjpeg",
+   "sourceSha256": "e41f5aabe9d9a19a1586bd77c5dce80933d9322dfddaf72ac18a454f8284b142"
+  },
+  {
+   "localBounds": [
+    8192,
+    -1024,
+    9216,
+    0
+   ],
+   "spacingMetres": 0.5,
+   "acquisition": "2026-11-22",
+   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG%3A25830&BBOX=738192%2C4395000%2C739216%2C4396024&WIDTH=2048&HEIGHT=2048&FORMAT=image%2Fjpeg",
+   "sourceSha256": "f2991fe1d703339183968d948a31d75adba09a763e39cb8018b99ec3b57021fe"
+  },
+  {
+   "localBounds": [
+    8192,
+    0,
+    9216,
+    1024
+   ],
+   "spacingMetres": 0.25,
+   "acquisition": "2026-11-22",
+   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG%3A25830&BBOX=738192%2C4393976%2C739216%2C4395000&WIDTH=4096&HEIGHT=4096&FORMAT=image%2Fjpeg",
+   "sourceSha256": "3a2e8c1c8790330374670527baff8971ed00b6b4494286f4f54621b093f9dc38"
+  },
+  {
+   "localBounds": [
+    8192,
+    1024,
+    9216,
+    2048
+   ],
+   "spacingMetres": 0.25,
+   "acquisition": "2026-11-22",
+   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG%3A25830&BBOX=738192%2C4392952%2C739216%2C4393976&WIDTH=4096&HEIGHT=4096&FORMAT=image%2Fjpeg",
+   "sourceSha256": "9e4718425bda734992d98cfe924f2ab470e1575c3d2e7039fecdc07489657959"
+  },
+  {
+   "localBounds": [
+    8192,
+    2048,
+    9216,
+    3072
+   ],
+   "spacingMetres": 0.5,
+   "acquisition": "2026-11-22",
+   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG%3A25830&BBOX=738192%2C4391928%2C739216%2C4392952&WIDTH=2048&HEIGHT=2048&FORMAT=image%2Fjpeg",
+   "sourceSha256": "7499588f9de91f007159d4c78d42300cc389860faef18e2da629813e6933292b"
+  },
+  {
+   "localBounds": [
+    9216,
+    0,
+    10240,
+    1024
+   ],
+   "spacingMetres": 0.5,
+   "acquisition": "2026-11-22",
+   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG%3A25830&BBOX=739216%2C4393976%2C740240%2C4395000&WIDTH=2048&HEIGHT=2048&FORMAT=image%2Fjpeg",
+   "sourceSha256": "2a5a71d475463f788b982f0c8a5bdaa0f35b2f851a1b8a43971f51f6acbb68a5"
+  },
+  {
+   "localBounds": [
+    9216,
+    1024,
+    10240,
+    2048
+   ],
+   "spacingMetres": 0.25,
+   "acquisition": "2026-11-22",
+   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG%3A25830&BBOX=739216%2C4392952%2C740240%2C4393976&WIDTH=4096&HEIGHT=4096&FORMAT=image%2Fjpeg",
+   "sourceSha256": "a2709620a9ed8c70fccd5d9348283f67866e2d9a7b99764523b267b829ef0862"
+  },
+  {
+   "localBounds": [
+    9216,
+    2048,
+    10240,
+    3072
+   ],
+   "spacingMetres": 0.5,
+   "acquisition": "2026-11-22",
+   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG%3A25830&BBOX=739216%2C4391928%2C740240%2C4392952&WIDTH=2048&HEIGHT=2048&FORMAT=image%2Fjpeg",
+   "sourceSha256": "8e7c62d256bfa6699fcb7a56499c43e80e78f03de60cac6b792b3a0fe2038861"
+  },
+  {
+   "localBounds": [
+    10240,
+    -5120,
+    11264,
+    -4096
+   ],
+   "spacingMetres": 0.25,
+   "acquisition": "2026-11-22",
+   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG%3A25830&BBOX=740240%2C4399096%2C741264%2C4400120&WIDTH=4096&HEIGHT=4096&FORMAT=image%2Fjpeg",
+   "sourceSha256": "e39979e87303bd526acb167d3f11f9938564606fb5f66323ef5c154a153fe535"
+  },
+  {
+   "localBounds": [
+    10240,
+    2048,
+    11264,
+    3072
+   ],
+   "spacingMetres": 0.25,
+   "acquisition": "2026-11-22",
+   "url": "https://www.ign.es/wms-inspire/pnoa-ma?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=OI.OrthoimageCoverage&STYLES=&CRS=EPSG%3A25830&BBOX=740240%2C4391928%2C741264%2C4392952&WIDTH=4096&HEIGHT=4096&FORMAT=image%2Fjpeg",
+   "sourceSha256": "aa5add6a7f1a9befeba96e8a1ca418cbbd40dbf804c46a7a051cd1aa2422a425"
+  }
+ ],
+ "sheets": {
+  "4_-4": 0.5,
+  "5_-4": 0.5,
+  "4_-3": 0.5,
+  "5_-3": 0.5,
+  "4_-2": 0.25,
+  "5_-2": 0.25,
+  "4_-1": 0.25,
+  "5_-1": 0.25,
+  "4_0": 0.5,
+  "5_0": 0.5,
+  "4_1": 0.5,
+  "5_1": 0.5,
+  "6_-4": 0.25,
+  "7_-4": 0.25,
+  "6_-3": 0.25,
+  "7_-3": 0.25,
+  "6_-2": 0.25,
+  "7_-2": 0.25,
+  "6_-1": 0.25,
+  "7_-1": 0.25,
+  "6_0": 0.5,
+  "7_0": 0.5,
+  "6_1": 0.5,
+  "7_1": 0.5,
+  "8_-4": 0.5,
+  "9_-4": 0.5,
+  "8_-3": 0.5,
+  "9_-3": 0.5,
+  "8_-2": 0.5,
+  "9_-2": 0.5,
+  "8_-1": 0.5,
+  "9_-1": 0.5,
+  "8_0": 0.5,
+  "9_0": 0.5,
+  "8_1": 0.5,
+  "9_1": 0.5,
+  "10_-2": 0.5,
+  "11_-2": 0.5,
+  "10_-1": 0.5,
+  "11_-1": 0.5,
+  "10_0": 0.5,
+  "11_0": 0.5,
+  "10_1": 0.5,
+  "11_1": 0.5,
+  "10_10": 0.25,
+  "11_10": 0.25,
+  "10_11": 0.25,
+  "11_11": 0.25,
+  "12_-2": 0.5,
+  "13_-2": 0.5,
+  "12_-1": 0.5,
+  "13_-1": 0.5,
+  "12_0": 0.5,
+  "13_0": 0.5,
+  "12_1": 0.5,
+  "13_1": 0.5,
+  "12_2": 0.5,
+  "13_2": 0.5,
+  "12_3": 0.5,
+  "13_3": 0.5,
+  "12_6": 0.25,
+  "13_6": 0.25,
+  "12_7": 0.25,
+  "13_7": 0.25,
+  "12_8": 0.25,
+  "13_8": 0.25,
+  "12_9": 0.25,
+  "14_-2": 0.5,
+  "15_-2": 0.5,
+  "14_-1": 0.5,
+  "15_-1": 0.5,
+  "14_0": 0.5,
+  "15_0": 0.5,
+  "14_1": 0.5,
+  "15_1": 0.5,
+  "14_2": 0.25,
+  "15_2": 0.25,
+  "14_3": 0.25,
+  "15_3": 0.25,
+  "14_4": 0.5,
+  "15_4": 0.5,
+  "14_5": 0.5,
+  "15_5": 0.5,
+  "14_6": 0.5,
+  "15_6": 0.5,
+  "14_7": 0.5,
+  "15_7": 0.5,
+  "16_-2": 0.5,
+  "17_-2": 0.5,
+  "16_-1": 0.5,
+  "17_-1": 0.5,
+  "16_0": 0.25,
+  "17_0": 0.25,
+  "16_1": 0.25,
+  "17_1": 0.25,
+  "16_2": 0.25,
+  "17_2": 0.25,
+  "16_3": 0.25,
+  "17_3": 0.25,
+  "16_4": 0.5,
+  "17_4": 0.5,
+  "16_5": 0.5,
+  "17_5": 0.5,
+  "18_0": 0.5,
+  "19_0": 0.5,
+  "18_1": 0.5,
+  "18_2": 0.25,
+  "18_3": 0.25,
+  "18_4": 0.5,
+  "19_4": 0.5,
+  "18_5": 0.5,
+  "19_5": 0.5,
+  "20_-10": 0.25,
+  "21_-10": 0.25,
+  "20_-9": 0.25
+ },
+ "mobileNativeSuffix": ".half.webp"
+}

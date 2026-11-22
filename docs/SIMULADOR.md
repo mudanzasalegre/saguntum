@@ -2,6 +2,8 @@
 
 La entrada es [Simulador 3D — Explora Sagunto](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador). La portada se abre en [Atlas vivo](https://saguntum-atlas-3d.monmode.chatgpt.site/#atlas).
 
+La revisión gráfica posterior a la primera publicación sustituye el panorama inicial de 1.990 partes por un nivel progresivo de 15.862, incorpora fotografía de terreno y cubiertas, y actualiza la representación de arquitectura, calles, arbolado, cielo y mar. [Implementación y procedencia de los materiales](GRAFICOS.md) · [Capturas comparables y validación WebGL](../research/validation-visual/README.md)
+
 ## Punto de partida
 
 Se abrió el repositorio original de Sites en su versión 32, commit `568bb3627fa6ed0c21c123e7b89a14aa50415cd7`. Los árboles Git de `dist/` y `research/` coincidían con los de la copia de GitHub. Se revisaron el enrutamiento por fragmento, las fábricas de patrimonio, los controladores de visita y sus fuentes, la carga y retirada de regiones, la alternativa 2D, los materiales de costa y el muestreo de las mallas.

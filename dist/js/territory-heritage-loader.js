@@ -5,12 +5,14 @@ function unpack(data){
   const t=r.data?new THREE.DataTexture(r.data,r.width,r.height,r.format,r.type):new THREE.Texture(r.bitmap);
   t.flipY=r.flipY??false;t.colorSpace=r.colorSpace;t.wrapS=r.wrapS;t.wrapT=r.wrapT;t.anisotropy=r.anisotropy;t.generateMipmaps=r.generateMipmaps;
   t.minFilter=r.minFilter;t.magFilter=r.magFilter;t.rotation=r.rotation;t.repeat.fromArray(r.repeat);t.offset.fromArray(r.offset);
+  t.name=r.name||'';t.channel=r.channel??0;if(r.center)t.center.fromArray(r.center);
   t.needsUpdate=true;if(r.bitmap)t.addEventListener('dispose',()=>r.bitmap.close());return t;
  });
  const materials=data.materials.map(r=>{
   const m=new (THREE[r.type]||THREE.MeshStandardMaterial)(r.options);
   if(r.color)m.color.fromArray(r.color);if(r.emissive)m.emissive.fromArray(r.emissive);
-  for(const key of ['map','bumpMap','normalMap','roughnessMap','alphaMap'])if(r[key]!==undefined)m[key]=textures[r[key]];
+  if(r.normalScale)m.normalScale.fromArray(r.normalScale);
+  for(const key of ['map','bumpMap','normalMap','roughnessMap','alphaMap','metalnessMap','emissiveMap','aoMap'])if(r[key]!==undefined)m[key]=textures[r[key]];
   return m;
  });
  const attribute=a=>new THREE.BufferAttribute(a.array,a.size,a.normalized);
@@ -30,6 +32,7 @@ function unpack(data){
    if(o.instanceColor)m.instanceColor=new THREE.InstancedBufferAttribute(o.instanceColor.array,3);
   }
   m.name=o.name;m.matrixAutoUpdate=false;m.matrix.fromArray(o.matrix);
+  if(o.materialKind)m.userData.materialKind=o.materialKind;
   m.castShadow=o.cast;m.receiveShadow=o.receive;m.renderOrder=o.order;group.add(m);
   if(o.visibility===1)modern.push(m);if(o.visibility===2){historical.push(m);m.visible=false;}
  }
