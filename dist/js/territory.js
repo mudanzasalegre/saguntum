@@ -211,7 +211,7 @@ export async function openSimulator(){
       canopy.update(p,range,budget,flags.land);
       map.draw(camera.position,p,camera.getWorldDirection(direction));markers(range);lastUpdate=now;
     }
-    atmosphere.update(camera,p,range,budget);sea.update(dt);network.animate(dt,flags);
+    heritage.animateGlorieta(now/1000,$('jets').checked,lighting==='solar'&&(hour<7||hour>=20));atmosphere.update(camera,p,range,budget);sea.update(dt);network.animate(dt,flags);
     camera.near=range>2600?3:range>450?.7:.12;camera.updateProjectionMatrix();
     renderer.info.reset();render(scene,camera,lighting==='solar'&&budget===2&&!mobile&&range<520);
     if(ms>0)samples.push(ms);

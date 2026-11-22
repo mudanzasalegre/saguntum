@@ -1,10 +1,14 @@
 # SAGUNTUM · Atlas vivo
 
-Atlas patrimonial y paisajístico de Sagunto, Puerto de Sagunto y su costa en Three.js, con **31 lugares explorables** sobre cartografía real. Reúne monumentos, arqueología, memoria industrial, costa y paisajes en seis ámbitos territoriales, con visitas documentadas y vistas históricas.
+Atlas patrimonial y paisajístico de Sagunto, Puerto de Sagunto y su costa en Three.js, con **32 lugares explorables** sobre cartografía real. Reúne monumentos, arqueología, memoria industrial, costa y paisajes en seis ámbitos territoriales, con visitas documentadas y vistas históricas.
+
+## La Glorieta · Plaza del Cronista Chabret
+
+La visita recorre el paseo de Sagunto en **24 paradas**. Desde el jardín de José Romeu se llega a la fuente, la pérgola y los juegos, al frente del Mercado Municipal, la biblioteca y el auditorio, y a los arcos y el reloj del Ayuntamiento. Tiene plano seleccionable, comparación con la configuración anterior a 2009, 16 hitos históricos y una sección arqueológica del sondeo III. [Entrar en la Glorieta](https://saguntum-atlas-3d.monmode.chatgpt.site/#glorieta) · [Explorar en el simulador](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador/glorieta/glorieta-romeu) · [Fuentes, modelo y validación](docs/GLORIETA.md)
 
 ## Simulador 3D
 
-El menú principal abre el [Simulador 3D — Explora Sagunto](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador). En un territorio continuo se puede pasar de la Plaça Major al Puerto y al Grau Vell, cambiar de vuelo a peatón y abrir cualquiera de los 31 destinos del Atlas. El recorrido guiado sigue 9,68 km de calles y caminos cartografiados.
+El menú principal abre el [Simulador 3D — Explora Sagunto](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador). En un territorio continuo se puede pasar de la Plaça Major al Puerto y al Grau Vell, cambiar de vuelo a peatón y abrir cualquiera de los 32 destinos del Atlas. El recorrido guiado sigue 9,68 km de calles y caminos cartografiados.
 
 La versión 35 lleva al simulador los entornos originales del Atlas. Se puede empezar bajo los soportales de la Plaça Major, en las oficinas de Gerencia o ante el Alto Horno, con el encuadre y la luz de su visita. En las calles vecinas, las jambas y los huecos tienen profundidad y las medianeras se distinguen de las fachadas. [Soportales](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador/plaza-mayor/plaza-soportales) · [Gerencia](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador/gerencia/gerencia-oficinas) · [Alto Horno](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador/horno/horno-acceso) · [Comparación gráfica con el Atlas](research/validation-atlas-parity/README.md)
 

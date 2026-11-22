@@ -59,7 +59,7 @@ with sync_playwright() as p:
             check('Portada global',page.title()=='SAGUNTUM · Sagunto y Puerto de Sagunto' and page.url.endswith('#atlas'))
             page.locator('.simulator-entry').click()
             wait('window.territoryStatus?.frameMs')
-            check('Panorámica territorial',status()['places']==31 and status()['range']>4500)
+            check('Panorámica territorial',status()['places']==32 and status()['range']>4500)
             shot('panorama')
             choose('Alto Horno')
             wait_atlas_frame('horno','horno');wait('territoryStatus.sectors>2')

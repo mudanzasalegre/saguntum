@@ -83,7 +83,7 @@ export async function createHeritage({scene,heightAt,project,grids,mobile=false,
     try{
      if(!background&&grids)background=heritageWorker(grids);
      let item;
-     if(background&&!background.closed){
+     if(id!=='glorieta'&&background&&!background.closed){
       try{item=await background.load(id);}
       catch(error){if(!needed())continue;onError(new Error('Patrimonio en primer plano · '+id+' · '+error.message));}
      }
@@ -118,6 +118,7 @@ export async function createHeritage({scene,heightAt,project,grids,mobile=false,
   notify();
  }
  return {places,group:root,get stats(){return status;},get relief(){return root.visible?[...loaded.values()].map(item=>item.relief):[];},
+  animateGlorieta(time,water,night){loaded.get('glorieta')?.animate?.(time,water,night);},
   maskRoadMaterial:roadMasks.apply,
   setAtlasLighting(enabled){atlasLighting.value=enabled?1:0;},
   walkSurface(x,z){

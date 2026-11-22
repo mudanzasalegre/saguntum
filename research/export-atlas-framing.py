@@ -7,6 +7,7 @@ from playwright.sync_api import sync_playwright
 root=Path(__file__).resolve().parents[1]
 parser=argparse.ArgumentParser()
 parser.add_argument('--base',required=True)
+parser.add_argument('--place',help='Actualizar sólo este lugar en el índice de salida existente')
 parser.add_argument('--out',type=Path,default=root/'dist/assets/territory/atlas-frames.json')
 args=parser.parse_args()
 # This inspection hook is added to a browser response for this export only.
@@ -18,9 +19,9 @@ window.readAtlasOpening=()=>{
     ground:h(d.target.x,d.target.z)};
 };
 window.atlasStopForExport=()=>guidedVisit(selected)?.stopId;"""
-frames={}
+frames=json.loads(args.out.read_bytes()) if args.place and args.out.exists() else {}
 # Exterior, current-state stops whose original composition can also be visited in the territory.
-chosen={'castle':'acceso','theatre':'teatro-orchestra','plaza-mayor':'plaza-soportales',
+chosen={'glorieta':'glorieta-romeu','castle':'acceso','theatre':'teatro-orchestra','plaza-mayor':'plaza-soportales',
         'horno':'horno-acceso','gerencia':'gerencia-oficinas','barrio-obrero':'barrio-hileras',
         'santa-maria':'santa-maria-cavallers','museo':'museo-fachada','sangre':'sangre-escalinata'}
 with sync_playwright() as pw:
@@ -35,6 +36,9 @@ with sync_playwright() as pw:
     ids=page.evaluate("""async()=>{const {loadHeritageCatalog}=await import('./js/territory-heritage-catalog.js');
       const {project}=await import('./js/territory-coordinates.js');
       return (await loadHeritageCatalog(project)).places.map(p=>p.id)}""")
+    if args.place:
+        assert args.place in ids
+        ids=[args.place]
     for size,width,height in [('wide',1440,900),('portrait',390,844)]:
         page.set_viewport_size({'width':width,'height':height})
         for id in ids:

@@ -7,6 +7,7 @@ import {sampleAtlasPavement} from './territory-heritage-paving.js';
 // sectional interiors and original texture generation. Only one site is built
 // at a time, after the previously requested place has yielded to the browser.
 const definitions={
+ glorieta:['glorieta','createGlorieta',()=>import('./glorieta.js')],
  castle:['castle','createCastle',()=>import('./castle.js')],theatre:['theatre','createTheatre',()=>import('./theatre.js')],
  'santa-maria':['santa-maria','createSantaMaria',()=>import('./santa-maria.js')],'plaza-mayor':['plaza-mayor','createPlazaMayor',()=>import('./plaza-mayor.js')],
  juderia:['juderia','createJuderia',()=>import('./juderia.js')],calvario:['calvario','createCalvario',()=>import('./calvario.js')],berenguer:['berenguer','createBerenguer',()=>import('./berenguer.js')],
@@ -18,7 +19,7 @@ const definitions={
  'grau-vell':['coast-grau','createCoastGrau',()=>import('./coast-grau.js')],'pantalan':['coast-pier','createCoastPier',()=>import('./coast-pier.js')],'puerto-antiguo':['coast-archaeology','createCoastArchaeology',()=>import('./coast-archaeology.js')],
  'marjal-moros':['landscape-marjal','createMarshLandscape',()=>import('./landscape-marjal.js')],'dunas-almarda':['landscape-dunes','createDunesLandscape',()=>import('./landscape-dunes.js')],'rio-palancia':['landscape-palancia','createPalanciaLandscape',()=>import('./landscape-palancia.js')]
 };
-const archiveOnly=new Set(['pantalan','grau-vell','puerto-antiguo','marjal-moros','dunas-almarda','rio-palancia']);
+const archiveOnly=new Set(['glorieta','pantalan','grau-vell','puerto-antiguo','marjal-moros','dunas-almarda','rio-palancia']);
 export const modelId=id=>id==='diana'?'berenguer':id.startsWith('pantalan-')?'pantalan':id;
 
 export function maskRing(points){
@@ -152,6 +153,7 @@ export async function buildHeritageModel(id,{places,records,area,heightAt,projec
  if(record.landscape){
   requests.push(get(record.region+'-cartography','data'));
  }
+ if(id==='glorieta')requests.push(get('glorieta-layout','layout'),get('glorieta-buildings','buildings'),get('glorieta-visit','guide'));
  const [module]=await Promise.all(requests);
  if(!needed())return null;
  const {hasAtlasContext,originalSurroundings,settleSourceClaims}=await import('./territory-heritage-contexts.js');
@@ -199,6 +201,7 @@ export async function buildHeritageModel(id,{places,records,area,heightAt,projec
  }
  const claims=Object.entries(sites).map(([key,site])=>claimsFor(site,records[key],frame,project));
  let pavement=null,contextStats=null;
+ if(id==='glorieta')pavement=sampleAtlasPavement({group:local});
  if(surroundings){
   const {context,data}=surroundings;
   claims.push(contextClaims(context,data,project));
@@ -211,7 +214,7 @@ export async function buildHeritageModel(id,{places,records,area,heightAt,projec
   for(const ref of module[id+'BuildingIds']||[])claims[0].ids.add(String(ref).replace(/^cat-/,''));
   if(id==='theatre')claims[0].rings.push(maskRing(area.theatrePolygon.map(c=>project(...c))));
  }
- return {group:outer,claims,relief,pavement,contextStats,setDensity:landscapeDetail(outer),setHistorical(on){
+ return {group:outer,claims,relief,pavement,contextStats,animate:made.animate,setDensity:landscapeDetail(outer),setHistorical(on){
   for(const site of Object.values(sites))if(site.currentGroup&&site.historicalGroup){
    site.currentGroup.visible=!on;site.historicalGroup.visible=on;
   }

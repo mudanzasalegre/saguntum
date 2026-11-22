@@ -1,6 +1,6 @@
 // One entry per original Atlas destination. Keep anchors, evidence and visit links
 // in their source records; the simulator only adds the common projected position.
-const inventories=['landmarks','archaeology-public','archaeology-domestic','archaeology-necropolis','port-industrial','port-garden','port-workers','coast-pier','coast-grau','coast-archaeology','landscape-marjal','landscape-dunes','landscape-palancia'];
+const inventories=['glorieta-catalog','landmarks','archaeology-public','archaeology-domestic','archaeology-necropolis','port-industrial','port-garden','port-workers','coast-pier','coast-grau','coast-archaeology','landscape-marjal','landscape-dunes','landscape-palancia'];
 const cache=new Map();
 export function documentData(name,retain=true){
  if(cache.has(name))return cache.get(name);

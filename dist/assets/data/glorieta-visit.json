@@ -1,0 +1,466 @@
+{
+  "name": "La Glorieta",
+  "regions": [
+    {
+      "id": "ciudad",
+      "name": "La plaza en la ciudad"
+    },
+    {
+      "id": "memoria",
+      "name": "El monumento a Romeu"
+    },
+    {
+      "id": "jardin",
+      "name": "Agua, sombra y juego"
+    },
+    {
+      "id": "bordes",
+      "name": "Los edificios y las calles"
+    },
+    {
+      "id": "tiempo",
+      "name": "Bajo nuestros pies"
+    }
+  ],
+  "stops": [
+    {
+      "id": "glorieta-conjunto",
+      "title": "Una plaza en el ensanche",
+      "regionId": "ciudad",
+      "coordinate": [
+        -0.27832007,
+        39.6809386
+      ],
+      "anchor": "general",
+      "period": "contemporary",
+      "rise": 0,
+      "offset": [
+        70,
+        122,
+        119
+      ],
+      "intro": "El paseo une el borde del Ayuntamiento con el extremo norte de la plaza. Desde el aire se distinguen el jardín de Romeu, la explanada, los pabellones y la zona de juegos."
+    },
+    {
+      "id": "glorieta-entrada",
+      "title": "Llegar desde el Ayuntamiento",
+      "regionId": "ciudad",
+      "coordinate": [
+        -0.27828986,
+        39.6802456
+      ],
+      "anchor": "acceso-sur",
+      "period": "contemporary",
+      "rise": 1,
+      "offset": [
+        5,
+        1.0,
+        10
+      ],
+      "intro": "El encuentro del extremo sur con el Ayuntamiento abre una de las entradas peatonales al paseo."
+    },
+    {
+      "id": "glorieta-eje",
+      "title": "Cruzar la Glorieta",
+      "regionId": "ciudad",
+      "coordinate": [
+        -0.27832007,
+        39.680863
+      ],
+      "anchor": "eje",
+      "period": "contemporary",
+      "rise": 1,
+      "offset": [
+        -6.57,
+        4,
+        27.38
+      ],
+      "intro": "El plano de flujos de la investigación de 2015 distingue recorridos longitudinales y transversales entre los equipamientos."
+    },
+    {
+      "id": "glorieta-norte",
+      "title": "La entrada del extremo norte",
+      "regionId": "ciudad",
+      "coordinate": [
+        -0.27816204,
+        39.6815524
+      ],
+      "anchor": "acceso-norte",
+      "period": "contemporary",
+      "rise": 1,
+      "offset": [
+        -6,
+        5,
+        -17
+      ],
+      "intro": "El borde septentrional vincula los pasos del barrio con la explanada y los jardines."
+    },
+    {
+      "id": "glorieta-romeu",
+      "title": "El monumento a José Romeu",
+      "regionId": "memoria",
+      "coordinate": [
+        -0.27851761,
+        39.6806614
+      ],
+      "anchor": "romeu",
+      "period": "contemporary",
+      "rise": 3,
+      "offset": [
+        7,
+        2,
+        12
+      ],
+      "intro": "La figura en pie corona un pedestal en un jardín de la plaza. La escultura que se contempla hoy corresponde al homenaje inaugurado en 1976."
+    },
+    {
+      "id": "glorieta-relieves",
+      "title": "Leer el pedestal",
+      "regionId": "memoria",
+      "coordinate": [
+        -0.27851761,
+        39.6806614
+      ],
+      "anchor": "romeu",
+      "period": "contemporary",
+      "rise": 1.3,
+      "offset": [
+        3,
+        1.3,
+        5
+      ],
+      "intro": "Los relieves del basamento introducen una segunda escala de lectura, próxima al peatón."
+    },
+    {
+      "id": "glorieta-busto",
+      "title": "Del busto a la figura en pie",
+      "regionId": "memoria",
+      "coordinate": [
+        -0.27851761,
+        39.6806614
+      ],
+      "anchor": "romeu",
+      "period": "mixed",
+      "rise": 4,
+      "offset": [
+        -8.0,
+        4,
+        7.0
+      ],
+      "intro": "El primer monumento de 1888 llevaba un busto. La cronología permite distinguirlo del grupo posterior."
+    },
+    {
+      "id": "glorieta-fuentes",
+      "title": "El agua a ras de la plaza",
+      "regionId": "jardin",
+      "coordinate": [
+        -0.27829683,
+        39.6804814
+      ],
+      "anchor": "fuente",
+      "period": "contemporary",
+      "rise": 0.45,
+      "offset": [
+        5,
+        2,
+        9
+      ],
+      "intro": "Junto al acceso sur, el vaso longitudinal y sus surtidores se leen en la fotografía de la página 100."
+    },
+    {
+      "id": "glorieta-pergola",
+      "title": "La sombra de la pérgola",
+      "regionId": "jardin",
+      "coordinate": [
+        -0.27857106,
+        39.680476
+      ],
+      "anchor": "pergola",
+      "period": "contemporary",
+      "rise": 2.4,
+      "offset": [
+        9.0,
+        4,
+        10.0
+      ],
+      "intro": "La pérgola delimita una zona de estancia. Sus lamas fragmentan la luz sobre las mesas y el pavimento."
+    },
+    {
+      "id": "glorieta-jardines",
+      "title": "Los bordes plantados",
+      "regionId": "jardin",
+      "coordinate": [
+        -0.27825965,
+        39.6806398
+      ],
+      "anchor": "jardines",
+      "period": "contemporary",
+      "rise": 0.55,
+      "offset": [
+        -8.0,
+        3.6,
+        20.0
+      ],
+      "intro": "Los parterres bajos articulan el paso entre el jardín del monumento y los recorridos principales."
+    },
+    {
+      "id": "glorieta-palmeras",
+      "title": "El paseo bajo las copas",
+      "regionId": "jardin",
+      "coordinate": [
+        -0.27799937,
+        39.681025
+      ],
+      "anchor": "palmeras",
+      "period": "contemporary",
+      "rise": 4,
+      "offset": [
+        18.12,
+        2.5,
+        -1.49
+      ],
+      "intro": "La alineación vegetal acompaña al paseo. Los troncos y las sombras permiten leer el ritmo del borde."
+    },
+    {
+      "id": "glorieta-juegos",
+      "title": "Un jardín para jugar",
+      "regionId": "jardin",
+      "coordinate": [
+        -0.27853155,
+        39.6809962
+      ],
+      "anchor": "juegos",
+      "period": "contemporary",
+      "rise": 1,
+      "offset": [
+        7.0,
+        3,
+        8.0
+      ],
+      "intro": "La zona infantil aparece en el estudio de 2015. El Ayuntamiento documentó una renovación de los juegos en 2018."
+    },
+    {
+      "id": "glorieta-cafeteria",
+      "title": "La cafetería y los recorridos",
+      "regionId": "jardin",
+      "coordinate": [
+        -0.27855014,
+        39.6808504
+      ],
+      "anchor": "cafeteria",
+      "period": "contemporary",
+      "rise": 1.8,
+      "offset": [
+        8.0,
+        3,
+        9.0
+      ],
+      "intro": "El pabellón y su espacio de estancia se reconocen en el análisis de los usos de la plaza."
+    },
+    {
+      "id": "glorieta-mercado",
+      "title": "El Mercado Municipal",
+      "regionId": "bordes",
+      "coordinate": [
+        -0.27766385,
+        39.68119278
+      ],
+      "anchor": "mercado",
+      "period": "contemporary",
+      "rise": 3,
+      "offset": [
+        -40.0,
+        17,
+        11.0
+      ],
+      "intro": "La fachada del mercado forma parte del frente oriental. La visita permite leer desde fuera sus accesos y cubiertas."
+    },
+    {
+      "id": "glorieta-biblioteca",
+      "title": "La Biblioteca Cronista Chabret",
+      "regionId": "bordes",
+      "coordinate": [
+        -0.27895126,
+        39.68062684
+      ],
+      "anchor": "biblioteca",
+      "period": "contemporary",
+      "rise": 2,
+      "offset": [
+        18.78,
+        6,
+        -15.46
+      ],
+      "intro": "La biblioteca ocupa la planta baja de la finca de los números 19 y 20. Sobre el equipamiento continúa la vivienda."
+    },
+    {
+      "id": "glorieta-lira",
+      "title": "La Lira y el auditorio Joaquín Rodrigo",
+      "regionId": "bordes",
+      "coordinate": [
+        -0.27791479,
+        39.68061337
+      ],
+      "anchor": "auditorio",
+      "period": "contemporary",
+      "rise": 4,
+      "offset": [
+        -34.0,
+        10,
+        12.0
+      ],
+      "intro": "La sede de la Lira y la sala de audiciones se relacionan con la esquina de Loreto y el frente de la plaza."
+    },
+    {
+      "id": "glorieta-ayuntamiento",
+      "title": "El Ayuntamiento y el extremo sur",
+      "regionId": "bordes",
+      "coordinate": [
+        -0.27848555,
+        39.68016421
+      ],
+      "anchor": "ayuntamiento",
+      "period": "contemporary",
+      "rise": 5,
+      "offset": [
+        -6,
+        16,
+        -40
+      ],
+      "intro": "Desde la Glorieta se reconoce el volumen del Palacio Municipal. La fachada principal se abre hacia la plaza de la Autonomía."
+    },
+    {
+      "id": "glorieta-reloj",
+      "title": "Los arcos y el reloj del Palacio Municipal",
+      "anchor": "reloj",
+      "regionId": "bordes",
+      "coordinate": [
+        -0.27846687730212594,
+        39.680015091627745
+      ],
+      "period": "contemporary",
+      "rise": 8,
+      "offset": [
+        24,
+        21,
+        -6
+      ],
+      "intro": "Desde la Autonomía se lee la composición de la fachada principal. Cinco arcos sostienen el cuerpo de balcones. El reloj y el remate marcan el eje central."
+    },
+    {
+      "id": "glorieta-fachadas",
+      "title": "Vivir sobre la plaza",
+      "regionId": "bordes",
+      "coordinate": [
+        -0.27895126,
+        39.68062684
+      ],
+      "anchor": "biblioteca",
+      "period": "contemporary",
+      "rise": 6,
+      "offset": [
+        24.0,
+        8,
+        -11.0
+      ],
+      "intro": "Los alzados residenciales cambian de anchura, altura y ritmo al pasar de una parcela a la siguiente."
+    },
+    {
+      "id": "glorieta-calles",
+      "title": "De la plaza al casco histórico",
+      "regionId": "bordes",
+      "coordinate": [
+        -0.27828986,
+        39.6802456
+      ],
+      "anchor": "acceso-sur",
+      "period": "contemporary",
+      "rise": 2,
+      "offset": [
+        17,
+        17,
+        -17
+      ],
+      "intro": "El encuentro con las calles contiguas devuelve al visitante a la trama del centro de Sagunto."
+    },
+    {
+      "id": "glorieta-convento",
+      "title": "La memoria de San Francisco",
+      "regionId": "tiempo",
+      "coordinate": [
+        -0.27832007,
+        39.6809386
+      ],
+      "anchor": "general",
+      "period": "mixed",
+      "rise": 1,
+      "offset": [
+        45,
+        75,
+        63
+      ],
+      "intro": "La relación entre el convento franciscano, las huertas y el paseo ayuda a entender el origen de este espacio público."
+    },
+    {
+      "id": "glorieta-subsuelo",
+      "title": "La Glorieta bajo nuestros pies",
+      "regionId": "tiempo",
+      "coordinate": [
+        -0.27832007,
+        39.6809386
+      ],
+      "anchor": "general",
+      "period": "mixed",
+      "rise": 0,
+      "offset": [
+        -31,
+        48,
+        49
+      ],
+      "intro": "Los sondeos de 2005 localizaron restos funerarios medievales y niveles romanos. Esta cámara sitúa el ámbito de la intervención."
+    },
+    {
+      "id": "glorieta-comparar",
+      "title": "Antes y después de la reforma",
+      "regionId": "tiempo",
+      "coordinate": [
+        -0.27832007,
+        39.6809386
+      ],
+      "anchor": "general",
+      "period": "mixed",
+      "rise": 0,
+      "offset": [
+        0,
+        146,
+        28
+      ],
+      "intro": "Abre el plano y alterna la disposición anterior a la reforma con la plaza actual. Observa cómo cambian los espacios de paso y de estancia."
+    },
+    {
+      "id": "glorieta-despedida",
+      "title": "La Glorieta y la ciudad",
+      "regionId": "ciudad",
+      "coordinate": [
+        -0.27832007,
+        39.6809386
+      ],
+      "anchor": "general",
+      "period": "contemporary",
+      "rise": 0,
+      "offset": [
+        -82,
+        107,
+        104
+      ],
+      "intro": "Desde el noroeste, los jardines, las calles y los equipamientos vuelven a leerse como un único espacio público."
+    }
+  ],
+  "introduction": "Recorre la plaza del Cronista Chabret a través de sus jardines, el monumento a Romeu y los edificios que mantienen la vida pública en sus bordes.",
+  "mapButtonLabel": "Plano de la Glorieta",
+  "mapLabel": "Plano de la Glorieta",
+  "timelineIntroduction": "Del paseo de San Francisco a la plaza contemporánea.",
+  "materialsModeLabel": "Plaza actual",
+  "readingModeLabel": "Plano histórico",
+  "readingModeNote": "El plano compara los ámbitos ajardinados anteriores a la reforma con la organización actual. El modelo tridimensional representa el presente."
+}
