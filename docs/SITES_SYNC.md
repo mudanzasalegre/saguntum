@@ -1,5 +1,17 @@
 # Sincronización de Sites a GitHub
 
+## Revisión gráfica · versión 34
+
+Sites publicó la revisión gráfica del Simulador el 22 de noviembre de 2026. El despliegue `appgdep_6b02f12722d48191a46d72049b11f1ef` terminó con estado `succeeded`. [Simulador publicado](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador) · [Comparación entre las versiones 33 y 34](../research/validation-visual/README.md)
+
+| Referencia | Valor |
+| --- | --- |
+| Commit de origen en Sites | `1058c0fd7d3a9c44e9680346099837829a291257` |
+| Commit de implementación en GitHub | `f56359f93021f50d4b8eb07669d320be314f95c7` |
+| Árbol Git idéntico de `dist/` | `56de53b6f53d9b51e9b2b50d843180c537576495` |
+| Archivo de distribución registrado por Sites, SHA-256 | `11d6c239975f06f6603ef1d640b12759e735db4f4e5dfb9337d9bb33b1c6bce9` |
+| Archivos en el paquete registrado | 1.220 |
+
 ## Publicación territorial · versión 33
 
 El 22 de noviembre de 2026, Sites publicó el [Simulador 3D](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador) en el proyecto original. El despliegue terminó con estado `succeeded`.

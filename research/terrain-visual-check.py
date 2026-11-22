@@ -28,9 +28,10 @@ views={
 results={}
 with sync_playwright() as driver:
     browser=driver.chromium.launch(channel='chrome')
+    display=dict(viewport={'width':390,'height':780} if args.mobile else {'width':1040,'height':680},
+                 has_touch=args.mobile,is_mobile=args.mobile)
     for name,(at,eye,alt) in views.items():
-        context=browser.new_context(viewport={'width':390,'height':780} if args.mobile else {'width':1040,'height':680},
-                    has_touch=args.mobile,is_mobile=args.mobile)
+        context=browser.new_context(**display)
         page=context.new_page()
         errors=[]
         page.on('pageerror',lambda error: errors.append(str(error)))
@@ -65,7 +66,7 @@ with sync_playwright() as driver:
         results[name]=data
         print(name,data,flush=True)
         context.close()
-    context=browser.new_context(viewport={'width':800,'height':620})
+    context=browser.new_context(**display)
     page=context.new_page()
     page.goto(args.base+'#simulador',wait_until='domcontentloaded')
     page.wait_for_function('window.territoryStatus?.frameMs',timeout=120000)

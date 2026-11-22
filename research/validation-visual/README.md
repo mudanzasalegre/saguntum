@@ -20,6 +20,8 @@ Cada imagen tiene al lado un JSON con los parámetros reales devueltos por la ap
 
 Dos vistas adicionales de la Plaça Cronista Chabret comprueban la lectura de las copas, el contacto con el pavimento y la actividad peatonal. [La plaza desde arriba](plaza/cronista.jpg) · [Arbolado a cinco metros de altura](plaza/arbolado.jpg) · [Resultados WebGL](plaza/checks.json)
 
+Tras el despliegue se volvió a abrir la URL pública en Chrome. La panorámica cargó las 15.862 partes y el Carrer Major mostró las cuatro celdas fotográficas próximas. Ambas vistas terminaron sin errores de recursos, de shaders ni de JavaScript. [Panorámica en Sites](publicacion/panorama.json) · [Carrer Major en Sites](publicacion/carrer-major.jpg)
+
 ## Navegación y rendimiento
 
 Se comprobó el recorrido del Atlas al Simulador y a la visita del Alto Horno, el retorno con cámara y hora restauradas, los cambios de fase, el vuelo, el modo a pie y el mapa. Se probaron la alternativa sin WebGL y los gestos en dos tamaños táctiles. Los 29 constructores patrimoniales que atienden los 31 destinos se dibujaron también en una prueba independiente con WebGL. Queda pendiente la prueba física en Safari de iPhone y iPad. [Escritorio](recorrido/resultados.json) · [Interfaz de teléfono](telefono/resultados.json) · [Gestos](tactil.json) · [Mapa 2D](mapa/resultados.json) · [Constructores patrimoniales](patrimonio-webgl.jsonl)
