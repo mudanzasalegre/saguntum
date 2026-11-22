@@ -61,10 +61,15 @@ export function territorySky(renderer,scene,direction,horizon,zenith) {
     photo.wrapS=T.RepeatWrapping;uniforms.cloudMap.value=photo;uniforms.hasClouds.value=1;dirty=true;
   },undefined,()=>{ /* The solar sky remains available without the cloud image. */ });
   return {
+    show(visible){
+      dome.visible=visible;
+      scene.environment=visible&&target?target.texture:null;
+    },
     setLight(daylight,warmth){
       uniforms.daylight.value=daylight;uniforms.warmth.value=warmth;dirty=true;
     },
     update(camera,quality){
+      if(!dome.visible)return;
       dome.position.copy(camera.position);
       if(!dirty||performance.now()-lastProbe<220)return;
       const previous=target;

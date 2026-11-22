@@ -1,5 +1,15 @@
 import {createUrbanSurface} from './urban-surface.js';
 
+export function reliefDelta(p,x,z){
+ if(!p.bounds)return 0;
+ const [l,t,r,b]=p.bounds;
+ if(x<l||x>r||z<t||z>b)return 0;
+ const u=(x-l)*(p.width-1)/(r-l),v=(z-t)*(p.height-1)/(b-t);
+ const i=Math.min(p.width-2,Math.floor(u)),j=Math.min(p.height-2,Math.floor(v)),k=j*p.width+i;
+ const dx=u-i,dz=v-j,a=p.delta[k],c=p.delta[k+1],d=p.delta[k+p.width],e=p.delta[k+p.width+1];
+ return dx+dz<=1?a+(c-a)*dx+(d-a)*dz:e+(c-e)*(1-dz)+(d-e)*(1-dx);
+}
+
 // Sample the v32 foundation grading in the metric world, retaining the
 // height *difference* from MDT. A border supplies the unchanged terrain.
 export function heritageRelief(id,sites,frame,place,heightAt,sample){

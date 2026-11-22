@@ -16,7 +16,9 @@
 </section>
 <section class="sim-panel" id="sim-settings" aria-label="Ajustes del territorio" hidden>
   <div class="sim-heading"><h2>Capas y luz</h2><button data-close aria-label="Cerrar ajustes">×</button></div>
+  <label>Luz <select id="sim-light"><option value="golden">Dorada del Atlas</option><option value="day">Día del Atlas</option><option value="solar">Hora solar</option></select></label>
   <label for="sim-time">Hora solar <output id="sim-hour">16:00</output></label><input id="sim-time" type="range" min="0" max="23.75" step=".25" value="16">
+  <label>Terreno <select id="sim-terrain"><option value="natural">Natural del Atlas</option><option value="photo">Ortofotografía PNOA</option></select></label>
   <label>Calidad <select id="sim-quality"><option value="auto">Automática</option><option value="0">Ligera</option><option value="1">Media</option><option value="2">Alta</option></select></label>
   <fieldset><legend>Capas visibles</legend>
     <label>Edificios <input type="checkbox" data-flag="buildings" checked></label>
@@ -36,7 +38,7 @@
 </aside>
 <div id="sim-location" hidden>
   <div><div class="sim-kicker" id="sim-zone"></div><h2 id="sim-title"></h2><p id="sim-era" hidden></p></div>
-  <div class="sim-visit-actions"><a id="sim-visit">Visita patrimonial</a><button id="sim-history" hidden>Reconstrucción histórica</button></div><button id="sim-clear" aria-label="Cerrar lugar">×</button>
+  <div class="sim-visit-actions"><button id="sim-frame" hidden></button><a id="sim-visit">Visita patrimonial</a><button id="sim-history" hidden>Reconstrucción histórica</button></div><button id="sim-clear" aria-label="Cerrar lugar">×</button>
 </div>
 <div class="sim-bottom">
   <div class="sim-nav" role="group" aria-label="Modo de cámara">

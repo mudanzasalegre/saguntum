@@ -1,6 +1,7 @@
 """Comprueba el flujo real mediante Chromium. Ejecutar contra el servidor local."""
 import argparse
 import json
+import math
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 
@@ -34,6 +35,13 @@ with sync_playwright() as p:
         s=page.evaluate('window.territoryStatus')
         if s:snapshots[label]=s
     def status():return page.evaluate('window.territoryStatus')
+    def wait_atlas_frame(place,model,exterior=False):
+        data=page.evaluate("async()=>await (await fetch('./assets/territory/atlas-frames.json')).json()")[place]
+        view=(data['exterior'] if exterior else data)['portrait' if args.mobile else 'wide']
+        expected=math.dist(view['eye'],view['target'])
+        page.wait_for_function("""([place,model,expected])=>territoryStatus.selected===place &&
+            territoryStatus.heritage?.loaded.includes(model) &&
+            Math.abs(territoryStatus.range-expected)<Math.max(2,expected*.02)""",arg=[place,model,expected],timeout=120000)
     def choose(query,label=None):
         page.locator('#sim-search-open').click()
         page.locator('#sim-query').fill(query)
@@ -54,7 +62,7 @@ with sync_playwright() as p:
             check('Panorámica territorial',status()['places']==31 and status()['range']>4500)
             shot('panorama')
             choose('Alto Horno')
-            wait("window.territoryStatus?.heritage?.loaded?.includes('horno') && territoryStatus.sectors>2 && territoryStatus.range<220")
+            wait_atlas_frame('horno','horno');wait('territoryStatus.sectors>2')
             shot('alto-horno')
             check('Escena industrial y edificios cargados',not status()['heritage']['failures'])
             page.locator('#sim-settings-open').click();page.locator('#sim-time').fill('22');page.locator('[data-flag="cars"]').uncheck()
@@ -77,10 +85,13 @@ with sync_playwright() as p:
             page.locator('#sim-home').click();page.locator('#sim-tour').click();wait('territoryStatus.touring===true')
             page.locator('#sim-tour').click();wait('territoryStatus.touring===false')
             check('Inicio y parada del itinerario',True)
-            choose('Fortín');wait("territoryStatus.heritage?.loaded?.includes('grau-vell') && territoryStatus.range<160")
+            choose('Fortín');wait_atlas_frame('grau-vell','grau-vell')
             shot('fortin')
             choose('Pantalán marítimo')
-            wait("territoryStatus.heritage?.loaded?.includes('pantalan') && territoryStatus.range<550")
+            wait_atlas_frame('pantalan-maritimo','pantalan')
+            page.locator('#sim-frame').click()
+            wait_atlas_frame('pantalan-maritimo','pantalan',True)
+            check('Encuadre de los trípodes del pantalán',page.locator('#sim-visit').get_attribute('href')=='#pantalan-maritimo/pantalan-maritimo-tripodes')
             page.locator('#sim-history').click()
             check('Cambio de época local',page.locator('#sim-era').is_visible())
             shot('pantalan')

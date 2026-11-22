@@ -2,6 +2,32 @@
 
 La entrada es [Simulador 3D — Explora Sagunto](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador). La portada se abre en [Atlas vivo](https://saguntum-atlas-3d.monmode.chatgpt.site/#atlas).
 
+## Ver un lugar con el acabado del Atlas
+
+Al elegir un lugar en el buscador, el simulador adopta el encuadre general de su visita. En 26 destinos se puede pulsar el nombre de una parada exterior para acercarse. **Visita patrimonial** lleva a la misma parada del Atlas. **Volver al simulador** recupera la cámara, la luz y la presentación del terreno. Se puede compartir una parada con un enlace directo. [Soportales de la Plaça Major](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador/plaza-mayor/plaza-soportales)
+
+**Capas y luz** permite elegir la luz dorada o la diurna del Atlas, o mover la hora solar para recorrer un ciclo de día y noche. **Natural del Atlas** aplica el tratamiento de la fotografía que emplea la visita. **Ortofotografía PNOA** permite leer el vuelo de referencia. Las 23 fábricas de entorno cargan las manzanas, los pavimentos y los jardines propios de cada visita y ceden su sitio a la cartografía territorial al alejarse. [Integración de las geometrías originales](../research/contextos-nativos-simulador.md) · [Pruebas comparadas en WebGL](../research/validation-atlas-parity/README.md)
+
+### Datos que aportan detalle a las calles y al paisaje
+
+| Capa | Evidencia y precisión |
+| --- | --- |
+| Fachadas y cubiertas | Las relaciones entre las 44.838 partes de edificios permiten distinguir frentes expuestos, patios y medianeras. Se han ajustado 152 cubiertas inclinadas con el MDSnE de edificios. Los huecos, colores y carpinterías del tejido ordinario son interpretaciones tipológicas. [Método, umbrales y vistas a pie de calle](../research/paridad-arquitectura/README.md) |
+| Relieve regional | Los seis MDT del Atlas se reproyectan a la malla territorial de 2 m en Sagunto y 5 m en los otros ámbitos. La malla 3D próxima alcanza un espaciado de 4 m en estas zonas. Los bordes se funden con el relieve territorial. En 81 puntos interiores por ámbito, el error de remuestreo en el percentil 95 varió entre 0,076 y 0,119 m respecto al MDT de la visita. La precisión geográfica sigue dependiendo del levantamiento de origen. [Índice, fuentes y mallas](../dist/assets/territory/atlas-relief/index.json) |
+| Arbolado | Se localizaron 58.628 agrupaciones candidatas a copa en el corredor estudiado con el MDSnV del IGN y la fotografía PNOA. Se filtran las huellas de edificios, la red de transporte y los árboles ya cartografiados. Una agrupación puede reunir varios árboles. La altura aproxima la superficie vegetal detectada, mientras la forma y la especie son interpretativas. [Consultas, extensiones y huellas digitales](../dist/assets/territory/canopy/index.json) · [Política de datos del IGN](https://www.ign.es/web/ign/portal/politica-datos) |
+
+La medición de escritorio con Chrome, una RTX 3090 y una ventana de 1440 × 900 registró 16,7 ms de mediana y 16,8 ms en el percentil 95 en seis vistas estabilizadas. La panorámica empleó 155 llamadas de dibujo. El ensayo táctil en ventanas de 390 × 844 y 820 × 1180 comprobó la visibilidad de los tres núcleos y el desplazamiento en vuelo. Queda pendiente la medición en Safari sobre iPhone o iPad físicos. [Mediciones por vista](../research/validation-atlas-parity/rendimiento/mediciones.json) · [Recorridos en escritorio, móvil emulado y alternativa 2D](../research/validation-atlas-parity/flujo.json)
+
+Para reproducir la preparación se requieren Python, NumPy, SciPy, pyproj, Shapely, Pillow, requests y tifffile. La exportación de encuadres y el recorrido de comprobación usan Playwright con Chrome. Desde la raíz del repositorio, con `dist/` servido en el puerto 8317, la preparación y las comprobaciones se reproducen con los siguientes comandos.
+
+```powershell
+python research/prepare-atlas-relief.py
+node research/check-atlas-elevation.mjs
+python research/prepare-atlas-canopy.py
+python research/export-atlas-framing.py --base http://127.0.0.1:8317/
+python research/check-atlas-presentation.py --base http://127.0.0.1:8317/ --out recorrido.json
+```
+
 La revisión gráfica posterior a la primera publicación sustituye el panorama inicial de 1.990 partes por un nivel progresivo de 15.862, incorpora fotografía de terreno y cubiertas, y actualiza la representación de arquitectura, calles, arbolado, cielo y mar. [Implementación y procedencia de los materiales](GRAFICOS.md) · [Capturas comparables y validación WebGL](../research/validation-visual/README.md)
 
 ## Punto de partida

@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import {atlasProject,documentData,registerFrame} from './territory-heritage-catalog.js';
-import {heritageRelief} from './territory-heritage-relief.js';
+import {heritageRelief,reliefDelta} from './territory-heritage-relief.js';
+import {sampleAtlasPavement} from './territory-heritage-paving.js';
 
 // Each table entry addresses the original geometry constructor, including
 // sectional interiors and original texture generation. Only one site is built
@@ -26,26 +27,48 @@ export function maskRing(points){
  return {points,left:Math.min(...xs),right:Math.max(...xs),top:Math.min(...zs),bottom:Math.max(...zs)};
 }
 export const normalizeBuildingId=id=>String(id).replace(/^(?:way\/|osm-|cat-)/,'');
-// At territory scale, retain the survey-based structures and sample the
-// interpreted grass/pebble instances evenly across their existing positions.
-function landscapeLod(site){
- const matrix=new THREE.Matrix4(),color=new THREE.Color();
+// Keep every original plant and pebble. Interleave their existing transforms so
+// a shortened draw on a distant/limited view still covers the whole footprint.
+function prepareLandscape(site){
  site.group.traverse(o=>{
   if(!o.isInstancedMesh)return;
-  const isDecoration=site.vegetation?.getObjectById(o.id)||/cantos|grava|tornillería|guijarros|cantos rodados/i.test(o.name);
-  if(!isDecoration)return;
-  const triangles=(o.geometry.index?.count??o.geometry.attributes.position.count)/3;
-  const step=Math.ceil(o.count*triangles/14000);
-  if(step<2)return;
-  let count=0;
-  for(let i=0;i<o.count;i+=step){
-   o.getMatrixAt(i,matrix);o.setMatrixAt(count,matrix);
-   if(o.instanceColor){o.getColorAt(i,color);o.setColorAt(count,color);}
-   count++;
+  const decoration=site.vegetation?.getObjectById(o.id)||/cantos|grava|tornillería|guijarros/i.test(o.name);
+  if(!decoration||o.count<2)return;
+  const cost=(o.geometry.index?.count??o.geometry.attributes.position.count)/3;
+  if(cost*o.count<=14000)return;
+  let seed=38197;
+  for(let i=o.count-1;i>0;i--){
+   seed=(Math.imul(seed,1664525)+1013904223)>>>0;
+   const j=Math.floor(seed/4294967296*(i+1));
+   for(const attr of [o.instanceMatrix,o.instanceColor]){
+    if(!attr)continue;
+    const a=attr.array,n=attr.itemSize;
+    for(let k=0;k<n;k++){
+     const from=i*n+k,to=j*n+k,old=a[from];a[from]=a[to];a[to]=old;
+    }
+   }
   }
-  o.count=count;o.instanceMatrix.needsUpdate=true;if(o.instanceColor)o.instanceColor.needsUpdate=true;
-  o.computeBoundingSphere();
+  o.instanceMatrix.needsUpdate=true;if(o.instanceColor)o.instanceColor.needsUpdate=true;
+  o.userData.territoryInstances=[o.count,cost];o.computeBoundingSphere();
  });
+}
+export function landscapeDetail(root){
+ const meshes=[];
+ root.traverse(o=>{if(o.userData.territoryInstances)meshes.push(o);});
+ const density={instances:0,total:0};
+ for(const o of meshes)density.total+=o.userData.territoryInstances[0];
+ let previousCap;
+ return (altitude,quality)=>{
+  const cap=quality>=2&&altitude<200?Infinity:quality>=1&&altitude<550?160000:14000;
+  if(previousCap===cap)return density;
+  previousCap=cap;density.instances=0;
+  for(const o of meshes){
+   const [count,cost]=o.userData.territoryInstances;
+   o.count=Math.min(count,Math.max(1,Math.floor(cap/cost)));
+   density.instances+=o.count;
+  }
+  return density;
+ };
 }
 
 export function inRing(x,z,ring){
@@ -55,7 +78,7 @@ export function inRing(x,z,ring){
  for(let i=0,j=p.length-1;i<p.length;j=i++){
   if((p[i].z>z)!==(p[j].z>z)&&x<(p[j].x-p[i].x)*(z-p[i].z)/(p[j].z-p[i].z)+p[i].x)inside=!inside;
  }
- return inside;
+ return inside&&!ring.holes?.some(hole=>inRing(x,z,hole));
 }
 function claimsFor(model,record,frame,project) {
  const ids=new Set(),rings=[];
@@ -69,6 +92,32 @@ function claimsFor(model,record,frame,project) {
  }
  for(const id of model.group.userData.osmContextFootprints||[])add(id);
  return {ids,rings};
+}
+
+function contextClaims(model,data,project){
+ const ids=new Set(Array.from(model.excludedBuildingIds||[],normalizeBuildingId)),rings=[];
+ for(const row of data.buildings||[]){
+  for(const shape of [row,...row.secondaryFootprints||[]]){
+   if(!shape.coordinates?.length)continue;
+   const ring=maskRing(shape.coordinates.map(c=>project(...c)));
+   if(!ring)continue;
+   ring.holes=(shape.holes||[]).map(h=>maskRing(h.map(c=>project(...c)))).filter(Boolean);
+   rings.push(ring);
+  }
+ }
+ const props=[];
+ for(const type of ['trees','lamps','benches']){
+  for(const obj of data[type]||[]){
+   if(obj.coordinate){const {x,z}=project(...obj.coordinate);props.push([x,z,type==='trees'?3.5:2]);}
+  }
+ }
+ const green=(data.vegetationExclusions||data.vegetationExclusionPolygons||[]).map(row=>{
+  const coords=row.coordinates||row;
+  if(!Array.isArray(coords[0]))return null;
+  const ring=maskRing(coords.map(c=>project(...c)));if(!ring)return null;
+  ring.holes=(row.holes||[]).map(h=>maskRing(h.map(c=>project(...c)))).filter(Boolean);return ring;
+ }).filter(Boolean);
+ return {ids,rings,props,green};
 }
 
 export function releaseModel(group){
@@ -100,24 +149,18 @@ export async function buildHeritageModel(id,{places,records,area,heightAt,projec
  }
  if(id==='grau-vell')requests.push(get('grau-visit','grauVisit'),get('grau-context','grauContextData'));
  if(id==='pantalan')requests.push(get('pantalan-paseo-visit','pantalanPaseoVisit'),get('pantalan-maritimo-visit','pantalanMaritimoVisit'),get('pantalan-context','contextData'));
- const coastalContext=id==='grau-vell'||id==='pantalan';
- if(coastalContext)requests.push((id==='grau-vell'?import('./grau-context.js'):import('./pantalan-context.js')).then(m=>{options.makeContext=m.createGrauContext||m.createPantalanContext;}));
  if(record.landscape){
   requests.push(get(record.region+'-cartography','data'));
  }
  const [module]=await Promise.all(requests);
  if(!needed())return null;
+ const {hasAtlasContext,originalSurroundings,settleSourceClaims}=await import('./territory-heritage-contexts.js');
+ await settleSourceClaims(id,options);
  if(options.visitData&&id!=='castle')options.visitData.plan=await documentData(file+'-plan',false);
  if(!needed())return null;
  const made=module[func](options);
  const sites=made.sites||{[id]:made.isObject3D?{group:made}:made};
  const local=made.isObject3D?made:made.group;
- let surroundings;
- if(coastalContext){
-  surroundings=options.makeContext({...options,contextData:options.grauContextData||options.contextData});
-  surroundings.surfaces.visible=false; // The shared road network owns the pavement.
-  local.add(surroundings.group);
- }
  if(id==='berenguer'&&made.dianaSite){
   sites.diana=made.dianaSite;
   local.attach(made.dianaSite.group);
@@ -125,7 +168,12 @@ export async function buildHeritageModel(id,{places,records,area,heightAt,projec
  const outer=new THREE.Group();outer.name='Atlas · '+place.name;
  outer.matrixAutoUpdate=false;
  outer.matrix.set(frame.a,0,frame.b,frame.tx,0,1,0,0,frame.c,0,frame.d,frame.tz,0,0,0,1);
- outer.add(local);outer.updateMatrixWorld(true);
+ outer.add(local);
+ // Every context factory draws in the Atlas metre grid, including those whose
+ // monument constructor has a rotated or translated local frame of its own.
+ const surroundings=hasAtlasContext(id)?originalSurroundings(id,options,sites):null;
+ if(surroundings)outer.add(surroundings.context.group);
+ outer.updateMatrixWorld(true);
  for(const [key,site] of Object.entries(sites)){
   site.setSection?.(false);
   if(site.currentGroup)site.currentGroup.visible=true;
@@ -133,18 +181,37 @@ export async function buildHeritageModel(id,{places,records,area,heightAt,projec
   if(site.reconstruction)site.reconstruction.visible=false;
   if(site.hypotheses)site.hypotheses.visible=false;
   if(site.remains)site.remains.visible=true;
-  if(records[key].landscape)landscapeLod(site);
+  if(records[key].landscape)prepareLandscape(site);
   site.setPresentation?.({mode:'current',selected:false,opening:0,hypotheses:false,roofOpen:false});
   site.group.userData.territoryPlace=key;
  }
+ const relief=heritageRelief(id,surroundings?{...sites,context:surroundings.context}:sites,frame,place,heightAt,sample);
+ const adjusted=(x,z)=>{const p=frame.world(x,z);return heightAt(p.x,p.z)+reliefDelta(relief,p.x,p.z);};
+ if(relief.bounds){
+  // Atlas calls bindGround after grading the excavations and foundations.
+  // Rebind in Atlas coordinates before freezing the worker's world matrices.
+  surroundings?.context.bindGround?.(adjusted);
+  for(const site of Object.values(sites)){
+   const visit=site.visit||site.group.userData.visit;
+   visit?.bindGround?.(adjusted);
+  }
+  outer.updateMatrixWorld(true);
+ }
  const claims=Object.entries(sites).map(([key,site])=>claimsFor(site,records[key],frame,project));
- if(surroundings)claims.push(claimsFor(surroundings,{},frame,project));
+ let pavement=null,contextStats=null;
+ if(surroundings){
+  const {context,data}=surroundings;
+  claims.push(contextClaims(context,data,project));
+  pavement=sampleAtlasPavement(context,sites['plaza-mayor']?.group);
+  let meshes=0,triangles=0;
+  context.group.traverseVisible(o=>{if(o.isMesh){meshes++;triangles+=(o.geometry.index?.count??o.geometry.attributes.position.count)/3*(o.isInstancedMesh?o.count:1);}});
+  contextStats={id,meshes,triangles,buildings:data.buildings?.length||0,pavingAreaM2:Math.round((pavement?.coverage||0)*(pavement?.metres||0)**2)};
+ }
  if(id==='castle'||id==='theatre'){
   for(const ref of module[id+'BuildingIds']||[])claims[0].ids.add(String(ref).replace(/^cat-/,''));
   if(id==='theatre')claims[0].rings.push(maskRing(area.theatrePolygon.map(c=>project(...c))));
  }
- const relief=heritageRelief(id,sites,frame,place,heightAt,sample);
- return {group:outer,claims,relief,setHistorical(on){
+ return {group:outer,claims,relief,pavement,contextStats,setDensity:landscapeDetail(outer),setHistorical(on){
   for(const site of Object.values(sites))if(site.currentGroup&&site.historicalGroup){
    site.currentGroup.visible=!on;site.historicalGroup.visible=on;
   }

@@ -258,7 +258,7 @@ export async function streetFurniture(){
             const near=Math.hypot(row.x-x,row.z-z)<radius;
             if((kind==='treeView')===near)continue;
           }
-          if(heritage?.isReplaced('',row.x,row.z))continue;
+          if(heritage?.isReplaced('',row.x,row.z)||(isTree?heritage?.ownsVegetation(row.x,row.z):heritage?.ownsFurniture(row.x,row.z)))continue;
           dummy.position.set(row.x,row.y,row.z);dummy.rotation.set(row.pitch,row.yaw,row.roll,'YXZ');dummy.scale.set(row.sx,row.sy,row.sz);
           dummy.updateMatrix();mesh.setMatrixAt(i++,dummy.matrix);
         }

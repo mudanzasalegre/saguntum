@@ -35,3 +35,33 @@ export function gridSampler({width,height,bounds,unit}, heights) {
     return unit*(u+v<=1 ? a+(b-a)*u+(c-a)*v : d+(c-d)*(1-u)+(b-d)*(1-v));
   };
 }
+
+// One elevation function for terrain, urban meshes, heritage workers and navigation.
+export function terrainSampler(grids){
+  const base=gridSampler(grids.base,grids.base.data),detail=grids.detail;
+  const core=detail&&gridSampler(detail,detail.data);
+  const regional=(grids.regional||[]).map(g=>({...g,sample:gridSampler(g,g.data)}));
+  function weight(x,z,b,margin){
+    return Math.min(1,Math.max(0,Math.min(x-b[0],z-b[1],b[2]-x,b[3]-z)/margin));
+  }
+  function coarse(x,z){
+    const t=core?weight(x,z,detail.bounds,50):0;
+    return t===0?base(x,z):t===1?core(x,z):base(x,z)*(1-t)+core(x,z)*t;
+  }
+  function sample(x,z,start){
+    for(let n=start;n<regional.length;n++){
+      const g=regional[n];
+      const [l,t,r,b]=g.bounds;
+      if(x<=l||z<=t||x>=r||z>=b)continue;
+      const i=Math.floor((x-l)/g.spacing),j=Math.floor((z-t)/g.spacing),k=j*g.width+i;
+      // A rotated source does not cover all corners of its storage rectangle.
+      if(g.data[k]===-32768||g.data[k+1]===-32768||g.data[k+g.width]===-32768||g.data[k+g.width+1]===-32768)continue;
+      let margin=35;
+      for(const e of g.edges)margin=Math.min(margin,e[0]*x+e[1]*z+e[2]);
+      const y=g.sample(x,z),w=Math.max(0,margin/35);
+      return w===1?y:w*y+(1-w)*sample(x,z,n+1);
+    }
+    return coarse(x,z);
+  }
+  return (x,z)=>sample(x,z,0);
+}

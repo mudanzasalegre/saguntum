@@ -9,6 +9,7 @@ export function createNetwork({scene,index,heightAt,heritage}){
   const root=new T.Group(),streets=new T.Group(),green=new T.Group(),life=new T.Group();
   root.add(streets,green,life);scene.add(root);
   const surface=streetMaterial(),propsReady=streetFurniture(),dummy=new T.Object3D();
+  heritage?.maskRoadMaterial(surface);
   dummy.rotation.order='YXZ';
   let props=null,night=0;
   propsReady.then(result=>{props=result;props.setNight(night);}).catch(error=>console.warn('Mobiliario',error));

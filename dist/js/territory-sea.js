@@ -44,6 +44,7 @@ export function createTerritorySea({polygons,bounds,shorelines=[],project,height
  const palette=['#195f73','#205b69','#081a25','#589e9c','#75a396','#142d36','#d5e7de','#e3dcca','#516675','#fff5df','#ffdfa4'].map(c=>new THREE.Color(c));
  let last=-1,lastY=Infinity;
  return {group:env.group,water:env.water,stats:env.stats,mask,update:env.update,
+  setAtlasLight(mode){last=-1;lastY=Infinity;env.setLight(mode);},
   setSun(direction,daylight){
    const light=THREE.MathUtils.clamp(daylight,0,1);
    u.sunDirection.value.copy(direction).normalize();

@@ -1,6 +1,6 @@
 // Each reading of the atlas owns the single WebGL context of its document.
 // A full transition also releases GPU resources on memory-constrained Safari.
-const simulatorRoute = () => location.hash === '#simulador';
+const simulatorRoute = () => /^#simulador(?:\/|$)/.test(location.hash);
 const simulator = simulatorRoute();
 const back = document.getElementById('sim-return');
 const inVisit = () => {

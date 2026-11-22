@@ -69,19 +69,27 @@ try{
   window.loader=(await import('/js/territory-heritage-loader.js')).heritageWorker(grids);
   window.sea=createTerritorySea({polygons:meta.water,shorelines:meta.shorelines,project,heightAt,mobile:true});
   window.terrain=await ground.buildGround(scene,grids,sea.mask.groundHeight(heightAt),gl);
-  window.source={relief:[]};terrain.setHeritage(source);
-  window.code={modelId,releaseModel,heightAt,project};
+  window.masks=(await import('/js/territory-heritage-roadmask.js')).atlasRoadMasks();
+  window.source={relief:[],maskRoadMaterial:masks.apply};terrain.setHeritage(source);
+  const {hasAtlasContext}=await import('/js/territory-heritage-contexts.js');
+  window.code={modelId,releaseModel,heightAt,project,hasAtlasContext};
   return [...new Set(inventory.places.map(p=>modelId(p.id)))];
  });
  for(const id of ids){
   const stats=await run(async id=>{
    const place=inventory.places.find(p=>code.modelId(p.id)===id),{x,z}=place,start=performance.now();
-   const m=await loader.load(id);source.relief=[m.relief];terrain.update(x,z,80);
+   const m=await loader.load(id);masks.update([m]);source.relief=[m.relief];terrain.update(x,z,80);
+   const lite={...m.setDensity(3000,0)},close={...m.setDensity(10,2)};
+   if(close.total&&(close.instances!==close.total||lite.instances>=close.instances))throw Error(id+' densidad de paisaje incorrecta');
    const base=code.heightAt(x,z);
    camera.position.set(x+72,base+75,z+70);camera.lookAt(x,base+8,z);
    scene.add(m.group);gl.render(scene,camera);
    const draws=gl.info.render.calls,tris=gl.info.render.triangles,glError=gl.getContext().getError();
    if(!draws||!tris||glError)throw Error(id+' fallo en WebGL');
+   if(code.hasAtlasContext(id)&&(!m.contextStats?.meshes||!m.contextStats?.triangles))throw Error(id+' entorno original ausente');
+   const lamps=[];m.group.traverseVisible(o=>{if(o.isPointLight)lamps.push([o.intensity,o.distance,o.decay]);});
+   if(id==='horno'&&JSON.stringify(lamps)!==JSON.stringify([[8,14,1.7],[10,14,1.7]]))throw Error('Falta la iluminación interior del Horno');
+   if(['plaza-mayor','horno','barrio-obrero','grau-vell'].includes(id)&&!(m.pavement?.coverage>0))throw Error(id+' pavimento sin registrar');
    for(const [cx,cz] of m.relief.cuts)if(terrain.canStand(cx,cz))throw Error(id+' corte abierto transitable');
    let deltaMin=0;for(const delta of m.relief.delta||[])deltaMin=Math.min(deltaMin,delta);
    if(id==='theatre'&&deltaMin>-.5)throw Error('Falta el rebaje del Teatro Romano');
@@ -91,12 +99,13 @@ try{
    const present=visible();m.setHistorical(true);const historic=visible();
    if(['pantalan','puerto-antiguo','berenguer'].includes(id)&&present===historic)throw Error(id+' falta la fase alternativa');
    code.releaseModel(m.group);gl.renderLists.dispose();
-   return {id,ms:Math.round(performance.now()-start),draws,tris,glError,cuts:m.relief.cuts.length,deltaMin:Math.round(100*deltaMin)/100};
+   return {id,ms:Math.round(performance.now()-start),draws,tris,glError,context:m.contextStats,lamps:lamps.length,landscape:close.total?{original:close.total,close:close.instances,far:lite.instances}:null,
+    cuts:m.relief.cuts.length,deltaMin:Math.round(100*deltaMin)/100};
   },id);
   console.log(JSON.stringify(stats));
  }
  const water=await run(async()=>{
-  source.relief=[];terrain.update(0,0,3500);
+  masks.update([]);source.relief=[];terrain.update(0,0,3500);
   const {coastalWaterFragment}=await import('/js/coast-water.js');
   const p=inventory.places.find(p=>p.id==='pantalan-maritimo');
   scene.add(sea.group);sea.setSun(new T.Vector3(-.5,1,-.2),.95);sea.update(.05);

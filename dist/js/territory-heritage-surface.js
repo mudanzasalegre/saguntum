@@ -9,12 +9,33 @@ const families=[
 const uniforms={heritageGrain:{value:null},grainReady:{value:0}};
 let loading=false;
 
-export function dressHeritageSurfaces(group){
+// Some original double-sided roof sheets have downward winding. On nearly
+// level sheets the visible face is particularly sensitive to the shadow offset.
+function preserveAtlasRoofShadow(material,atlasLighting){
+  const previous=material.onBeforeCompile.bind(material),key=material.customProgramCacheKey();
+  material.customProgramCacheKey=()=>key+'-atlas-roof-shadow';
+  material.onBeforeCompile=(shader,renderer)=>{
+    previous(shader,renderer);
+    shader.uniforms.atlasRoofLighting=atlasLighting;
+    const bias='directionalLightShadows[ i ].shadowNormalBias';
+    // Fade between two and five degrees from horizontal. Steeper pitched roofs
+    // and outward-facing polygons retain the territorial light's normal bias.
+    const nativeBias='mix('+bias+', 0.22, atlasRoofLighting * smoothstep(0.9962, 0.9994, -shadowWorldNormal.y))';
+    shader.vertexShader='uniform float atlasRoofLighting;\n'+shader.vertexShader.replace(
+      '#include <shadowmap_vertex>',T.ShaderChunk.shadowmap_vertex.replace(bias,nativeBias));
+  };
+  material.needsUpdate=true;
+}
+
+export function dressHeritageSurfaces(group,atlasLighting){
   const seen=new Set();
   group.traverse(object=>{
     if(!object.isMesh)return;
     for(const m of Array.isArray(object.material)?object.material:[object.material]){
       if(!m.isMeshStandardMaterial||m.transparent||seen.has(m))continue;
+      if(m.side===T.DoubleSide && /(^| · )roof$/i.test(m.map?.name||m.name)){
+        preserveAtlasRoofShadow(m,atlasLighting);seen.add(m);continue;
+      }
       const labels=[object.userData.materialKind,m.map?.name,m.name];
       const names=labels.filter(label=>typeof label==='string'&&label).map(label=>label.trim().toLowerCase().split(/[ ·|]+/).at(-1));
       const index=families.findIndex(family=>names.some(name=>family.has(name)));

@@ -1,4 +1,5 @@
 import * as T from 'three';
+import {naturalMix,terrainTint} from './atlas-appearance.js';
 
 // A four-slot photographic atlas in local ETRS89 metres. A second, smaller
 // atlas carries ground colour under buildings (RGB) and mapped land use (A).
@@ -14,6 +15,9 @@ const uniforms={
 const grains={uSurfaceGrains:{value:null},uGrainTone:{value:null},uSurfaceGrainsReady:{value:0},uSurfaceBuildingMask:{value:1}};
 let residentSheets=0,atlasUploads=0,visibleCount=0,sourceSpacings=[];
 export function setSurfaceBuildings(visible){grains.uSurfaceBuildingMask.value=visible?1:0;}
+const atlasGround={value:1},groundTint=new T.Color(terrainTint);
+export function setTerrainAppearance(natural){atlasGround.value=natural?1:0;}
+export const isAtlasTerrain=()=>atlasGround.value===1;
 export function surfacePhotoMetrics(){
   const w=uniforms.uSurfaceWindow.value,weight=uniforms.uSurfaceGain.value;
   const cells=weight>0?uniforms.uSurfaceCells.value.filter(c=>c.x*cell>=w.x&&c.x*cell<w.x+512&&c.y*cell>=w.y&&c.y*cell<w.y+512):[];
@@ -66,7 +70,8 @@ export function addRoofPhotography(shader,xzExpression,strengthExpression){
 
 export function addSurfaceGround(shader){
   attach(shader);
-  Object.assign(shader.uniforms,grains);
+  Object.assign(shader.uniforms,grains,{uAtlasGround:atlasGround,uNaturalTint:{value:groundTint}});
+  shader.fragmentShader='uniform float uAtlasGround;uniform vec3 uNaturalTint;\n'+shader.fragmentShader;
   shader.fragmentShader='uniform sampler2D uSurfaceGrains,uGrainTone; uniform float uSurfaceGrainsReady,uSurfaceBuildingMask;\n'+shader.fragmentShader;
   shader.fragmentShader=shader.fragmentShader.replace('#include <alphatest_fragment>',`
     vec2 groundDx=dFdx(vTerritory),groundDy=dFdy(vTerritory),groundUV;
@@ -99,7 +104,13 @@ export function addSurfaceGround(shader){
         groundColour=mix(groundColour,localTone,dot(selection,vec3(.12,.73,.53))*blend);
         groundColour*=1.+((dot(scannedTone,selection)-.5)*.66+relief*.17)*blend;
       }
-      diffuseColor.rgb=mix(diffuseColor.rgb,groundColour,coverage);
+      diffuseColor.rgb=mix(diffuseColor.rgb,groundColour,coverage*(1.-uAtlasGround*atlasPlate));
+    }
+    if(uAtlasGround>.5){
+      vec3 s=sRGBTransferOETF(vec4(max(diffuseColor.rgb,vec3(0.)),1.)).rgb;
+      float luminance=dot(s,vec3(${naturalMix.luma.join(',')}));
+      vec3 graded=clamp(luminance*vec3(${naturalMix.grey.join(',')})+s*vec3(${naturalMix.rgb.join(',')})+vec3(${naturalMix.lift.map(v=>(v/255).toFixed(7)).join(',')}),0.,1.);
+      diffuseColor.rgb=sRGBTransferEOTF(vec4(graded,1.)).rgb*uNaturalTint;
     }
     #include <alphatest_fragment>`).replace('#include <normal_fragment_maps>',`
     #include <normal_fragment_maps>

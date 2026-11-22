@@ -1,7 +1,7 @@
 import * as T from 'three';
 import {mergeGeometries} from 'three/addons/utils/BufferGeometryUtils.js';
 import {closeOrthophoto} from './territory-ortho.js';
-import {gridSampler} from './territory-coordinates.js';
+import {terrainSampler} from './territory-coordinates.js';
 import {conservationGround} from './territory-heritage-ground.js';
 import {setSurfaceBuildings} from './territory-surface-photo.js';
 
@@ -14,21 +14,24 @@ export const territoryBase='./assets/territory/';
 export const networkBase='./assets/network/';
 export async function loadElevation(meta) {
   const load=async grid=>({...grid, data:new Int16Array(await resource(territoryBase+grid.heights,'arrayBuffer'))});
-  const base=await load(meta);
-  return {base,detail:meta.detail ? await load(meta.detail) : null};
+  async function regional(){
+    if(typeof DecompressionStream==='undefined')return [];
+    const index=await resource(territoryBase+'atlas-relief/index.json');
+    return Promise.all(index.map(async g=>{
+      const bytes=await resource(territoryBase+g.file,'arrayBuffer');
+      const head=new Uint8Array(bytes,0,2);
+      const raw=head[0]===31&&head[1]===139?await new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer():bytes;
+      const data=new Int16Array(raw);
+      if(data.length!==g.width*g.height)throw Error('Dimensiones del relieve '+g.region);
+      for(let j=0;j<g.height;j++)for(let k=j*g.width+1,end=(j+1)*g.width;k<end;k++)data[k]+=data[k-1];
+      return {...g,data};
+    }));
+  }
+  const [base,detail,local]=await Promise.all([load(meta),meta.detail?load(meta.detail):null,
+    regional().catch(e=>{console.warn('Relieve regional del Atlas',e);return [];})]);
+  return {base,detail,regional:local};
 }
-export function makeSampler(grids) {
-  const base=gridSampler(grids.base,grids.base.data);
-  if(!grids.detail) return base;
-  const d=grids.detail, detail=gridSampler(d,d.data), [l,t,r,b]=d.bounds;
-  return (x,z)=>{
-    const margin=Math.min(x-l,r-x,z-t,b-z);
-    if(margin<=0) return base(x,z);
-    if(margin>=50) return detail(x,z);
-    const f=margin/50;
-    return base(x,z)*(1-f)+detail(x,z)*f;
-  };
-}
+export const makeSampler=terrainSampler;
 export async function buildGround(scene,grids,heightAt,renderer) {
   const loader=new T.TextureLoader(), group=new T.Group(), pieces=[];
   const [left,top,right,bottom]=grids.base.bounds;
@@ -77,12 +80,13 @@ export async function buildGround(scene,grids,heightAt,renderer) {
   // Batch the far landscape in 4.8 km blocks. A nearby patch is removed
   // from its block's index buffer while its finer mesh is visible.
   const heritageGround=conservationGround({group,material:mat,heightAt,bounds:grids.base.bounds});
-  const size=1200,blocks=new Map();
+  const size=600,coarseDiv=6,blocks=new Map();
   for(let z=top;z<bottom;z+=size) for(let x=left;x<right;x+=size){
     const w=Math.min(size,right-x),h=Math.min(size,bottom-z);
-    const key=Math.floor((x-left)/(size*4))+','+Math.floor((z-top)/(size*4));
+    const key=Math.floor((x-left)/(size*8))+','+Math.floor((z-top)/(size*8));
     if(!blocks.has(key))blocks.set(key,{parts:[],dirty:false});
-    const block=blocks.get(key),piece={x,z,w,h,mesh:null,coarse:patch(x,z,w,h,12),div:12,block};
+    const block=blocks.get(key),piece={x,z,w,h,mesh:null,coarse:patch(x,z,w,h,coarseDiv),div:coarseDiv,block};
+    piece.regional=grids.regional.some(({bounds:[l,t,r,b]})=>x+w>l&&x<r&&z+h>t&&z<b);
     pieces.push(piece);block.parts.push(piece);
   }
   for(const block of blocks.values()){
@@ -98,17 +102,19 @@ export async function buildGround(scene,grids,heightAt,renderer) {
     const changes=[];
     for(const p of pieces){
       const d=Math.hypot(Math.max(p.x-x,0,x-p.x-p.w),Math.max(p.z-z,0,z-p.z-p.h),alt*.55);
-      const want=d<580?120:d<1900?48:12;
+      // Resolve the original 2–5 m relief around the observer. Each outer level
+      // keeps the previous 10/25/100 m spacing and shares the same samples at its edge.
+      const want=p.regional&&d<155?150:d<580?60:d<1900?24:coarseDiv;
       if(want!==p.div)changes.push({p,want,d});
     }
     for(const {p,want} of changes.sort((a,b)=>a.d-b.d).slice(0,2)){
       if(p.mesh){p.mesh.removeFromParent();p.mesh.geometry.dispose();p.mesh=null;}
-      if(want!==12){p.mesh=new T.Mesh(patch(p.x,p.z,p.w,p.h,want),mat);p.mesh.receiveShadow=true;group.add(p.mesh);}
+      if(want!==coarseDiv){p.mesh=new T.Mesh(patch(p.x,p.z,p.w,p.h,want),mat);p.mesh.receiveShadow=true;group.add(p.mesh);}
       p.div=want;p.block.dirty=true;
     }
     for(const block of blocks.values())if(block.dirty){
       const g=block.mesh.geometry;let n=0;
-      for(const p of block.parts)if(p.div===12){g.index.array.set(block.source.subarray(p.start,p.end),n);n+=p.end-p.start;}
+      for(const p of block.parts)if(p.div===coarseDiv){g.index.array.set(block.source.subarray(p.start,p.end),n);n+=p.end-p.start;}
       block.mesh.visible=n>0;g.setDrawRange(0,n);g.index.needsUpdate=true;block.dirty=false;
     }
   }

@@ -1,3 +1,4 @@
+import {naturalPixels,terrainTint} from './atlas-appearance.js';
 import * as THREE from 'three';
 export function createHeightSampler(data){
  const {width,height,elevations,bounds}=data;
@@ -87,9 +88,9 @@ export async function createTerrain({data,heightAt,surfaceHeight,renderer,patche
  const {geometry:geo,border,meshHeightAt}=buildTerrainGeometry(data,sample,patches,{...meshOptions,shape}),segments=border.length;
  let photo;try{photo=await new THREE.TextureLoader().loadAsync(photoUrl);}catch(error){geo.dispose();throw error;}photo.colorSpace=THREE.SRGBColorSpace;photo.anisotropy=Math.min(8,renderer.capabilities.getMaxAnisotropy());
  const c=document.createElement('canvas');c.width=photo.image.width;c.height=photo.image.height;const ctx=c.getContext('2d');ctx.drawImage(photo.image,0,0,c.width,c.height);
- const pixels=ctx.getImageData(0,0,c.width,c.height);for(let i=0;i<pixels.data.length;i+=4){let r=pixels.data[i],g=pixels.data[i+1],b=pixels.data[i+2];const l=(r*.3+g*.52+b*.18);pixels.data[i]=Math.min(255,l*.26+r*.61+32);pixels.data[i+1]=Math.min(255,l*.26+g*.60+34);pixels.data[i+2]=Math.min(255,l*.22+b*.59+20);}
+ const pixels=ctx.getImageData(0,0,c.width,c.height);naturalPixels(pixels.data);
  ctx.putImageData(pixels,0,0);const natural=new THREE.CanvasTexture(c);natural.colorSpace=THREE.SRGBColorSpace;natural.anisotropy=photo.anisotropy;
- const mat=new THREE.MeshStandardMaterial({map:natural,roughness:1,color:'#f2e7ce'});const mesh=new THREE.Mesh(geo,mat);mesh.receiveShadow=true;group.add(mesh);
+ const mat=new THREE.MeshStandardMaterial({map:natural,roughness:1,color:terrainTint});const mesh=new THREE.Mesh(geo,mat);mesh.receiveShadow=true;group.add(mesh);
  // Below-floor skirts connect foundations to the tiny mesh accommodations.
  // They stop below thresholds and never close an arcade or a courtyard above ground.
  const foundationPositions=[];
@@ -106,5 +107,5 @@ export async function createTerrain({data,heightAt,surfaceHeight,renderer,patche
  for(let r=0;r<layers;r++)for(let i=0;i<segments;i++){const a=r*(segments+1)+i,b=a+segments+1;sideI.push(a,b,a+1,a+1,b,b+1);}
  const sg=new THREE.BufferGeometry();sg.setAttribute('position',new THREE.Float32BufferAttribute(sideP,3));sg.setAttribute('color',new THREE.Float32BufferAttribute(sideC,3));sg.setIndex(sideI);sg.computeVertexNormals();const sides=new THREE.Mesh(sg,new THREE.MeshStandardMaterial({vertexColors:true,roughness:1,side:THREE.DoubleSide}));sides.castShadow=true;sides.receiveShadow=true;group.add(sides);
  const base=new THREE.Mesh(new THREE.CylinderGeometry(1,1,6,160),new THREE.MeshStandardMaterial({color:'#344943',roughness:1}));base.scale.set(s.rx,1,s.rz);base.position.set(s.cx,-31,s.cz);base.receiveShadow=true;base.castShadow=true;group.add(base);
- return{group,mesh,photo,natural,meshHeightAt,setMode(mode){mat.map=mode==='photo'?photo:natural;mat.color.set(mode==='photo'?'#ffffff':'#f2e7ce');mat.needsUpdate=true;}};
+ return{group,mesh,photo,natural,meshHeightAt,setMode(mode){mat.map=mode==='photo'?photo:natural;mat.color.set(mode==='photo'?'#ffffff':terrainTint);mat.needsUpdate=true;}};
 }

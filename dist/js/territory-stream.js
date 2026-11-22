@@ -53,7 +53,7 @@ export function createBuildings({scene,world,grids,heritage}) {
     if(!far)g.computeVertexNormals();
     g.computeBoundingSphere();
     const m=new T.Mesh(g,far?aerialMat:(mat??=architecturalMaterial(night)));
-    m.receiveShadow=!far;m.castShadow=!far;group.add(m);
+    m.receiveShadow=true;m.castShadow=true;group.add(m);
     return {id,mesh:m,rows:data.rows,indices:data.index,mask:null,
       sectors:far||id==='overview'?[...new Set(data.rows.map(r=>r.sector))]:null};
   }
@@ -62,19 +62,58 @@ export function createBuildings({scene,world,grids,heritage}) {
   const stream=new SectorStream(world.sectors,async s=>mesh(await read(s.id,s.url),s.id),v=>{
     group.remove(v.mesh);v.mesh.geometry.dispose();
   },2);
-  let maskStamp=0;
+  let maskStamp=0,shell=null,shellIds=new Set(),shellRevision=0,shellSelection='',shellWanted='',shellBusy=false,openings=0;
   function mask(v,far=false){
     if(!v)return;
-    const stamp=String(maskStamp)+'|'+(far?v.sectors.filter(id=>stream.live.has(id)).join(','):'');
+    const stamp=String(maskStamp)+'|'+(far?v.sectors.filter(id=>stream.live.has(id)).join(','):shellRevision);
     if(stamp===v.mask)return;
     const attr=v.mesh.geometry.index,idx=attr.array;let count=0;
     for(const r of v.rows){
-      if((far&&stream.live.has(r.sector))||heritage.isReplaced(r.id,r.x,r.z))continue;
+      if((far&&stream.live.has(r.sector))||(!far&&v!==shell&&shellIds.has(r.id))||heritage.isReplaced(r.id,r.x,r.z))continue;
       idx.set(v.indices.subarray(r.start,r.end),count);count+=r.end-r.start;
     }
     v.mesh.geometry.setDrawRange(0,count);
     if(count!==v.indices.length||v.mask!==null)attr.needsUpdate=true;
     v.mask=stamp;
+  }
+  function removeShell(){
+    if(!shell)return;
+    group.remove(shell.mesh);shell.mesh.geometry.dispose();shell=null;shellIds=new Set();openings=0;shellRevision++;
+  }
+  function updateShell(x,z,alt,budget){
+    const reach=[19,32,49][budget],movingKey=[Math.floor(x/7),Math.floor(z/7),budget,alt>125,[...stream.live.keys()].join(','),maskStamp].join('/');
+    if(movingKey===shellSelection&&!shellBusy)return;
+    shellSelection=movingKey;
+    const candidates=[];
+    if(alt<125)for(const [sector,tile] of stream.live)for(const r of tile.rows){
+      const d=distanceTo(x,z,r.bounds);
+      if(d<=reach&&r.outerEdges.includes(true)&&!heritage.isReplaced(r.id,r.x,r.z))candidates.push({d,id:r.id,sector});
+    }
+    candidates.sort((a,b)=>a.d-b.d||a.id.localeCompare(b.id));
+    const selection=candidates.slice(0,[28,49,72][budget]),key=selection.map(r=>r.id).sort().join('/');
+    shellWanted=key;
+    if(!key){removeShell();return;}
+    if(shell&&!selection.some(r=>shellIds.has(r.id)))removeShell();
+    if(shellBusy||shell?.id===key)return;
+    const bySector=new Map();
+    for(const row of selection){
+      if(!bySector.has(row.sector))bySector.set(row.sector,[]);
+      bySector.get(row.sector).push(row.id);
+    }
+    shellBusy=true;
+    const request='close-elevations';
+    new Promise((resolve,reject)=>{
+      requests.set(request,{resolve,reject});
+      worker.postMessage({key:request,selected:[...bySector]});
+    }).then(data=>{
+      if(shellWanted!==key)return;
+      removeShell();
+      if(!data.rows.length)return;
+      shell=mesh(data,key);shellIds=new Set(data.rows.map(r=>r.id));openings=data.openings;shellRevision++;
+      mask(shell);for(const tile of stream.live.values())mask(tile);
+    }).catch(error=>console.warn('Detalle de fachadas',error)).finally(()=>{
+      shellBusy=false;if(shellWanted!==key)shellSelection='';
+    });
   }
   async function aerial(name){
     const chunks=await read('aerial-'+name,'aerial-buildings/'+name+'.bin');
@@ -102,7 +141,7 @@ export function createBuildings({scene,world,grids,heritage}) {
       }catch(error){console.warn('Silueta territorial',error);}
     }
     if(world.overview){
-      const legacy=mesh(await read('overview',world.overview),'overview');legacy.mesh.castShadow=false;
+      const legacy=mesh(await read('overview',world.overview),'overview');
       overview.push(legacy);
       aerialStats.parts=legacy.rows.length;aerialStats.chunks=1;aerialStats.fallback=true;
       aerialStats.packages.push('overview');aerialStats.complete=true;
@@ -111,10 +150,12 @@ export function createBuildings({scene,world,grids,heritage}) {
   const ready=startAerial();
   const facades=nearFacades(group);
   scene.add(group);
-  return {group,stream,ready,night,get aerialStats(){return aerialStats;},changed(){maskStamp++;},
+  return {group,stream,ready,night,get aerialStats(){return aerialStats;},get fabricStats(){return {buildings:shellIds.size,openings};},changed(){maskStamp++;},
     update(x,z,alt,budget){
       const radius=alt>2200?0:(budget===0?650:budget===1?1000:1450);
       stream.update(x,z,radius,alt>2200?0:[12,24,42][budget]);
+      updateShell(x,z,alt,budget);
+      if(shell)mask(shell);
       for(const v of overview)mask(v,true);
       for(const v of stream.live.values())mask(v);
       facades(x,z,alt,budget,stream.live,r=>!heritage.isReplaced(r.id,r.x,r.z),maskStamp);

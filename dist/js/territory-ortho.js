@@ -1,6 +1,6 @@
 import * as T from 'three';
 import {project} from './territory-coordinates.js';
-import {addSurfaceGround,openSurfacePhotography} from './territory-surface-photo.js';
+import {addSurfaceGround,openSurfacePhotography,isAtlasTerrain} from './territory-surface-photo.js';
 
 // Reuse a small moving crop of the original high-resolution PNOA plates.
 // Only one crop is resident on the GPU, including in overlapping atlas regions.
@@ -28,10 +28,12 @@ export async function closeOrthophoto(material,renderer){
     previous.call(this,shader,renderer);
     Object.assign(shader.uniforms,{uClose:closeTexture,uCloseU:u,uCloseV:v,uCloseEnabled:enabled});
     shader.fragmentShader='uniform sampler2D uClose; uniform vec3 uCloseU,uCloseV; uniform float uCloseEnabled;\n'+shader.fragmentShader.replace('#include <color_fragment>',`
+      float atlasPlate=0.;
       if(uCloseEnabled>0.5){
         vec3 p=vec3(vTerritory,1.);vec2 cuv=vec2(dot(p,uCloseU),dot(p,uCloseV));
         float edge=min(min(cuv.x,cuv.y),min(1.-cuv.x,1.-cuv.y));
-        if(edge>0.)diffuseColor.rgb=mix(diffuseColor.rgb,texture2D(uClose,vec2(cuv.x,1.-cuv.y)).rgb,smoothstep(0.,.045,edge));
+        atlasPlate=smoothstep(0.,.045,edge);
+        if(edge>0.)diffuseColor.rgb=mix(diffuseColor.rgb,texture2D(uClose,vec2(cuv.x,1.-cuv.y)).rgb,atlasPlate);
       }
       #include <color_fragment>`);
     addSurfaceGround(shader);
@@ -40,7 +42,7 @@ export async function closeOrthophoto(material,renderer){
   return function update(x,z,range){
     const local=updateFine(x,z,range);
     const q=new T.Vector3(x,z,1);
-    const sheet=!local&&range<820&&ordered.find(s=>{const a=q.dot(s.u),b=q.dot(s.v);return a>=0&&a<=1&&b>=0&&b<=1;});
+    const sheet=(!local||isAtlasTerrain())&&range<1100&&ordered.find(s=>{const a=q.dot(s.u),b=q.dot(s.v);return a>=0&&a<=1&&b>=0&&b<=1;});
     if(!sheet){
       enabled.value=0;
       if(active){ticket++;image=null;active=null;}

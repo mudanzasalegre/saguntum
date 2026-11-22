@@ -7,7 +7,11 @@ function cutout(name){
   return new T.MeshStandardMaterial({map,roughness:.94,alphaTest:.26,alphaToCoverage:true,side:T.DoubleSide});
 }
 
-export async function streetTrees(){
+let shared;
+export function streetTrees(){
+  return shared??=buildTrees().catch(error=>{shared=null;throw error;});
+}
+async function buildTrees(){
   const response=await fetch(new URL('tree-shape.json',base));
   if(!response.ok)throw Error('Arbolado '+response.status);
   const {wood,clusters,grid}=await response.json();

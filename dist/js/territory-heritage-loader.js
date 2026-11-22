@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import {landscapeDetail} from './territory-heritage-models.js';
 
 function unpack(data){
  const textures=data.textures.map(r=>{
@@ -22,21 +23,30 @@ function unpack(data){
   if(r.index)g.setIndex(attribute(r.index));for(const span of r.groups)g.addGroup(span.start,span.count,span.materialIndex);
   return g;
  });
- const group=new THREE.Group(),modern=[],historical=[];
+ const group=new THREE.Group(),modern=[],historical=[];group.name=data.name;
+ function registerPhase(node,phase){
+  if(phase===1)modern.push(node);if(phase===2){historical.push(node);node.visible=false;}
+ }
+ for(const o of data.lights||[]){
+  const light=new THREE.PointLight(new THREE.Color().fromArray(o.color),o.intensity,o.distance,o.decay);
+  light.name=o.name;light.matrixAutoUpdate=false;light.matrix.fromArray(o.matrix);
+  group.add(light);registerPhase(light,o.visibility);
+ }
  for(const o of data.objects){
   const mat=o.materials.length===1?materials[o.materials[0]]:o.materials.map(i=>materials[i]);
   const geometry=geometries[o.geometry];
   const m=o.instances?new THREE.InstancedMesh(geometry,mat,0):new THREE.Mesh(geometry,mat);
   if(o.instances){
    m.instanceMatrix=new THREE.InstancedBufferAttribute(o.instances.array,16);m.count=o.count;
+   if(o.territoryInstances){m.userData.territoryInstances=o.territoryInstances;m.computeBoundingSphere();}
    if(o.instanceColor)m.instanceColor=new THREE.InstancedBufferAttribute(o.instanceColor.array,3);
   }
   m.name=o.name;m.matrixAutoUpdate=false;m.matrix.fromArray(o.matrix);
   if(o.materialKind)m.userData.materialKind=o.materialKind;
   m.castShadow=o.cast;m.receiveShadow=o.receive;m.renderOrder=o.order;group.add(m);
-  if(o.visibility===1)modern.push(m);if(o.visibility===2){historical.push(m);m.visible=false;}
+  registerPhase(m,o.visibility);
  }
- return {group,claims:data.claims,relief:data.relief,setHistorical(on){for(const m of modern)m.visible=!on;for(const m of historical)m.visible=on;}};
+ return {group,claims:data.claims,relief:data.relief,pavement:data.pavement,contextStats:data.contextStats,setDensity:landscapeDetail(group),setHistorical(on){for(const m of modern)m.visible=!on;for(const m of historical)m.visible=on;}};
 }
 
 // A browser without worker canvas support can still use the source constructors.

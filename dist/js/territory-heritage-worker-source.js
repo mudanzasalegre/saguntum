@@ -12,7 +12,7 @@ self.document={createElement(type){
 let inventory,heightAt;
 const props=['name','metalness','roughness','envMapIntensity','clearcoat','clearcoatRoughness','ior','normalMapType','emissiveIntensity','bumpScale','opacity','transparent','alphaTest','side','vertexColors','flatShading','depthTest','depthWrite','polygonOffset','polygonOffsetFactor','polygonOffsetUnits','toneMapped','colorWrite','blending','fog'];
 async function pack(model){
- const geometries=[],materials=[],textures=[],objects=[],transfer=new Set();
+ const geometries=[],materials=[],textures=[],objects=[],lights=[],transfer=new Set();
  const geometryIds=new Map(),materialIds=new Map(),textureIds=new Map();
  function attribute(a){
   if(a.isInterleavedBufferAttribute)throw Error('Buffer intercalado de patrimonio no compatible');
@@ -47,26 +47,31 @@ async function pack(model){
   for(const key of ['map','bumpMap','normalMap','roughnessMap','alphaMap','metalnessMap','emissiveMap','aoMap'])if(m[key])data[key]=await texture(m[key]);
   materials.push(data);return i;
  }
- // Only transport meshes visible at territory scale. Closed interiors remain
- // complete in the original visit, and both supported historical states travel.
+ // Carry both supported historical phases, including their authored lighting.
  const visible=new Map();
  for(const [flag,historical] of [[1,false],[2,true]]){
   model.setHistorical(historical);
   model.group.updateMatrixWorld(true);
-  model.group.traverseVisible(o=>{if(o.isMesh)visible.set(o,(visible.get(o)||0)|flag);});
+  model.group.traverseVisible(o=>{if(o.isMesh||o.isPointLight)visible.set(o,(visible.get(o)||0)|flag);});
  }
  for(const [o,visibility] of visible){
+  if(o.isPointLight){
+   lights.push({name:o.name,visibility,matrix:o.matrixWorld.toArray(),color:o.color.toArray(),intensity:o.intensity,distance:o.distance,decay:o.decay});
+   continue;
+  }
   const ids=[];
   for(const m of Array.isArray(o.material)?o.material:[o.material])ids.push(await material(m));
   const item={name:o.name,materialKind:o.userData.materialKind,visibility,geometry:geometry(o.geometry),materials:ids,matrix:o.matrixWorld.toArray(),cast:o.castShadow,receive:o.receiveShadow,order:o.renderOrder};
   if(o.isInstancedMesh){
    item.count=o.count;item.instances=attribute(o.instanceMatrix);
+   item.territoryInstances=o.userData.territoryInstances;
    if(o.instanceColor)item.instanceColor=attribute(o.instanceColor);
   }
   objects.push(item);
  }
  if(model.relief.delta)transfer.add(model.relief.delta.buffer);
- return {payload:{objects,geometries,materials,textures,claims:model.claims,relief:model.relief},transfer:[...transfer]};
+ if(model.pavement)transfer.add(model.pavement.heights.buffer);
+ return {payload:{name:model.group.name,objects,geometries,materials,textures,lights,claims:model.claims,relief:model.relief,pavement:model.pavement,contextStats:model.contextStats},transfer:[...transfer]};
 }
 
 self.onmessage=async({data})=>{

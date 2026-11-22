@@ -14,7 +14,7 @@ export function architecturalMaterial(night){
     tex.anisotropy=4;slot.value=tex;
   })).then(()=>{ready.value=1;}).catch(e=>console.warn('Material arquitectónico',e));
   mat.defines={USE_UV:''};
-  mat.customProgramCacheKey=()=>'territorial-architecture-34';
+  mat.customProgramCacheKey=()=>'territorial-architecture-35';
   mat.onBeforeCompile=s=>{
     Object.assign(s.uniforms,slots,{uArchReady:ready,uNight:night});
     const varyings=`
@@ -68,7 +68,8 @@ export function architecturalMaterial(night){
           float coping=1.-smoothstep(.09,.17,eave);
           diffuseColor.rgb*=1.-archDetail*(.20*base+.12*(1.-smoothstep(.0,.13,abs(eave-.24))));
           diffuseColor.rgb=mix(diffuseColor.rgb,diffuseColor.rgb*.86+vec3(.125),coping*archDetail*.88);
-          if(vArchData.y>=0.&&vArchData.y<2.5&&localHeight<.8){
+          float fabricClass=floor(vArchData.y+.5),family=mod(fabricClass,6.);
+          if(fabricClass>=0.&&fabricClass<12.&&family<2.5&&localHeight<.8){
             vec2 sx,sy;
             vec2 plinthUV=surfaceUV(vArchMetric*1.45,3.,sx,sy);
             vec3 stone=textureGrad(uArchSurface,plinthUV,sx,sy).rgb*vec3(.79,.73,.63);
@@ -83,17 +84,34 @@ export function architecturalMaterial(night){
             float storey=abs(bay.y)>.0001?above/bay.y:3.05;
             bay.y=(above-threshold)/max(.65,storey-threshold);
           }
-          if(vArchData.y>=0.&&bay.y>=0.){
-            vec2 floorBay=floor(bay),f=fract(bay),style=floor(vArchData.yz+.5);
-            float seed=mod(floorBay.x+floorBay.y+style.y,3.);
-            float variant=floorBay.y<1.?(mod(floorBay.x+style.y,style.x==3.?5.:4.)<.5?2.:3.):(seed<.5?0.:1.);
-            float tone=fract(sin(dot(floorBay+style.y,vec2(11.23,41.33)))*2734.453);
+          if(fabricClass>=0.&&bay.y>=0.){
+            vec2 floorBay=floor(bay),f=fract(bay),style=vec2(family,floor(vArchData.z+.5));
+            bool yard=fabricClass>=12.;
+            float col=mod(floorBay.x+style.y,4.);
+            bool balcony=!yard&&(col<.5 || (mod(style.y,3.)<.5&&col<1.5) ||
+                         (floorBay.y==1.&&mod(style.y,5.)<.5&&mod(floorBay.x+style.y,2.)<.5));
+            float variant=floorBay.y<1.?(fabricClass<6.?2.:3.):(balcony?0.:1.);
+            // Court openings are narrower and fitted above the working plinth.
+            if(yard){
+              f.x=(f.x-.5)*1.48+.5;
+              if(floorBay.y<1.){f.y=(f.y-.61)*1.52+.61;variant=1.;}
+            }
+            float tone=mod((floorBay.x+style.y*3.)*17.+floorBay.y*37.+mod(style.y,7.)*floorBay.x*5.,97.)/97.;
             variant+=tone>.64?4.:0.;
             vec2 grid=vec2(6.,8.);
             vec2 bayUV=(vec2(style.x,variant)+.006+.988*f)/grid;
             vec2 bx=dFdx(vArchBay)*.988/grid,by=dFdy(vArchBay)*.988/grid;
-            vec4 trim=textureGrad(uArchBay,bayUV,bx,by);
-            glassAmt=textureGrad(uArchGlass,bayUV,bx,by).r*archDetail;
+            float inBay=step(0.,min(f.x,f.y))*step(max(f.x,f.y),1.);
+            vec4 trim=textureGrad(uArchBay,bayUV,bx,by)*inBay;
+            glassAmt=textureGrad(uArchGlass,bayUV,bx,by).r*archDetail*inBay;
+            // Fresnel tint and apparent depth of the glazing. Joinery remains
+            // on the rear plane of the physical recess at street LOD.
+            vec3 V=normalize(vViewPosition);
+            float grazing=pow(1.-abs(dot(normalize(vNormal),V)),2.);
+            vec2 room=clamp(f+(V.xy*.19)*(1.-grazing),0.,1.);
+            float drape=1.-smoothstep(.12,.23,room.x);
+            trim.rgb=mix(trim.rgb,mix(vec3(.105,.075,.05),vec3(.31,.42,.49),grazing+.10),glassAmt*.28);
+            trim.rgb+=glassAmt*drape*(.013+.012*cos(room.x*100.));
             trim.rgb*=mix(vec3(.95,.94,.92),vec3(1.03,1.04,1.05),tone);
             trim.rgb*=1.-glassAmt*(.12+.35*tone);
             diffuseColor.rgb=mix(diffuseColor.rgb,trim.rgb,trim.a*archDetail);
@@ -110,7 +128,7 @@ export function architecturalMaterial(night){
       float sky=pow(1.-clamp(dot(normal,normalize(vViewPosition)),0.,1.),2.);
       totalEmissiveRadiance+=glassAmt*(1.-uNight)*vec3(.016,.032,.045)*(1.+1.8*sky);
       totalEmissiveRadiance+=litWindow*uNight*vec3(.86,.48,.22);`);
-    addRoofPhotography(s,'vArchXZ','vArchData.x>3.5 && vArchData.x<4.5 ? 0.84 : 0.0');
+    addRoofPhotography(s,'vArchXZ','abs(vArchData.y+2.)<.1 && vArchData.x>=3.9 && vArchData.x<=6.1 ? 0.84 : 0.0');
   };
   return mat;
 }
