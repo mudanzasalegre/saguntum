@@ -1,0 +1,38 @@
+import {createUrbanSurface} from './urban-surface.js';
+
+// Sample the v32 foundation grading in the metric world, retaining the
+// height *difference* from MDT. A border supplies the unchanged terrain.
+export function heritageRelief(id,sites,frame,place,heightAt,sample){
+ const patches=[],cuts=[];
+ let left=Infinity,top=Infinity,right=-Infinity,bottom=-Infinity;
+ function expand(point,pad){
+  left=Math.min(left,point.x-pad);right=Math.max(right,point.x+pad);
+  top=Math.min(top,point.z-pad);bottom=Math.max(bottom,point.z+pad);
+ }
+ for(const site of Object.values(sites)){
+  for(const p of site.patches||[site.patch]){
+   if(!p?.polygon?.length||!Number.isFinite(p.height))continue;
+   patches.push(p);for(const a of p.polygon)expand(frame.world(a.x,a.z),(p.margin??1.5)+3);
+  }
+  for(const cut of site.currentMasks||[site.currentMask]){
+   if(!cut||cut.permanent===false)continue;
+   const {x,z}=cut.center,c=Math.cos(cut.yaw||0),s=Math.sin(cut.yaw||0),p=frame.world(x,z);
+   const u=frame.world(x+c*cut.width/2,z-s*cut.width/2),v=frame.world(x+s*cut.depth/2,z+c*cut.depth/2);
+   const ux=u.x-p.x,uz=u.z-p.z,vx=v.x-p.x,vz=v.z-p.z,det=ux*vz-uz*vx;
+   cuts.push([p.x,p.z,vz/det,-vx/det,-uz/det,ux/det]);
+  }
+ }
+ const theatre=sites.theatre?.group?.userData.surfaceHeight;
+ if(theatre)expand(place,58);
+ if(!Number.isFinite(left))return {cuts};
+ const bounds=[Math.floor(left/10)*10,Math.floor(top/10)*10,Math.ceil(right/10)*10,Math.ceil(bottom/10)*10];
+ const width=Math.min(193,Math.ceil((bounds[2]-bounds[0])/1.25)+1),height=Math.min(193,Math.ceil((bounds[3]-bounds[1])/1.25)+1);
+ const adjust=createUrbanSurface({data:{},heightAt:sample,patches}).groundHeight;
+ const delta=new Float32Array(width*height),det=frame.a*frame.d-frame.b*frame.c;
+ for(let j=0;j<height;j++)for(let i=0;i<width;i++){
+  const x=bounds[0]+(bounds[2]-bounds[0])*i/(width-1),z=bounds[1]+(bounds[3]-bounds[1])*j/(height-1);
+  const raw=heightAt(x,z),lx=((x-frame.tx)*frame.d-(z-frame.tz)*frame.b)/det,lz=((z-frame.tz)*frame.a-(x-frame.tx)*frame.c)/det;
+  delta[j*width+i]=(theatre?theatre(lx,lz,raw):adjust(lx,lz))-raw;
+ }
+ return {cuts,bounds,width,height,delta};
+}

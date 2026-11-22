@@ -1,0 +1,81 @@
+.simulator-entry {text-decoration:none;white-space:nowrap;display:inline-flex;align-items:center}
+#sim-return {position:fixed;z-index:9;right:14px;top:116px;padding:10px 15px;background:#213733;color:#f2e9d9;border:1px solid #8e9b87;border-radius:4px;text-decoration:none;font:600 13px var(--sans)}
+@media(max-width:740px){#sim-return{top:80px;right:8px;padding:7px 9px;font-size:12px}.topnav{gap:12px}.topbar{column-gap:5px}}
+@media(max-width:420px){.topnav{gap:8px!important}.topnav .nav-link{font-size:10px!important}.topbar{padding-inline:10px!important}.topbar .brand{gap:5px}.top-actions{margin-left:2px}}
+.territorial {--panel:rgba(23,43,42,.96);--rule:#627871;--paper:#f2f1e8;--accent:#ead19d}
+.territorial body {background:#657b77;color:var(--paper);font:500 14px/1.45 var(--sans)}
+.territorial [hidden] {display:none!important}
+#sim-world,#sim-markers {position:absolute;inset:0;overflow:hidden}
+#sim-world canvas {display:block;width:100%;height:100%;outline:0;touch-action:none}
+#sim-markers {pointer-events:none}
+.territorial button,.territorial input,.territorial select,.territorial a {font:inherit}
+.territorial button,.territorial a,.territorial select {color:inherit}
+.territorial button {background:transparent;cursor:pointer;line-height:1.2}
+.territorial a {text-decoration:none}
+.territorial :focus-visible {outline:2px solid #f6ca7e;outline-offset:2px}
+.sim-top {position:absolute;inset:0 0 auto;display:flex;align-items:center;gap:22px;height:74px;padding:0 clamp(16px,3.5vw,58px);background:#152e2e;box-shadow:0 1px 0 #bad5c434}
+#sim-brand .brand {display:flex;color:var(--paper);font:600 20px/1 var(--sans);letter-spacing:.1em}
+#sim-brand .brand small {font-family:var(--sans);font-size:9px;letter-spacing:.24em}
+.sim-divider {height:30px;width:1px;background:#54706a}
+.sim-top h1 {margin:0;font:500 29px var(--serif);letter-spacing:0;color:var(--paper)}
+.sim-atlas {margin-left:auto;border:1px solid #758a82;border-radius:3px;padding:9px 15px}
+.sim-tools,.sim-panel,.sim-bottom,.sim-map,#sim-location,#sim-stick,#sim-altitude {position:absolute;z-index:2}
+.sim-tools {left:clamp(14px,3.5vw,58px);top:94px;display:flex;gap:5px}
+.sim-tools button,.sim-bottom,.sim-map,.sim-panel,#sim-location,#sim-stick,#sim-altitude {background:var(--panel);color:var(--paper);border:1px solid #ced6bd50;box-shadow:0 3px 16px #08252532;border-radius:5px}
+.sim-tools button {height:42px;padding:0 15px;font-weight:600}
+.sim-search span {font:24px/1 Georgia;vertical-align:-2px;margin-right:4px}
+.sim-tools button[aria-expanded=true],.sim-bottom button[aria-pressed=true] {background:var(--accent);color:#23362f}
+.sim-panel {left:clamp(14px,3.5vw,58px);top:144px;width:min(326px,90vw);padding:16px 18px;max-height:calc(100dvh - 248px);overflow:auto;z-index:5;scrollbar-width:thin}
+.territorial h2 {color:var(--paper);font:500 27px/1.05 var(--serif);letter-spacing:-.015em;margin:0}
+.sim-heading,.sim-panel label,.sim-map-head,.sim-map-foot {display:flex;justify-content:space-between;align-items:center;gap:8px}
+.sim-heading {margin-bottom:15px}.sim-heading button,#sim-clear {font:26px var(--sans);padding:0 7px;color:#d8dfd4}
+.sim-panel label {font-size:14px;margin:10px 0;color:var(--paper)}
+.sim-panel select,.sim-panel input[type=search] {color:var(--paper);background:#223c39;border:1px solid var(--rule);border-radius:3px;padding:8px}
+.sim-panel input[type=search],.sim-panel input[type=range] {width:100%}
+.sim-panel input[type=range],.sim-panel input[type=checkbox] {accent-color:var(--accent)}
+.sim-panel input[type=checkbox] {width:18px;height:18px}
+.sim-panel fieldset {border:0;border-block:1px solid var(--rule);margin:14px 0;padding:8px 0}
+.sim-panel legend,.sim-kicker {color:#e1cba4;font-size:12px;font-weight:650}
+#sim-results button {display:block;padding:9px 1px;text-align:left;width:100%;border-bottom:1px solid #58706977}
+#sim-results button:hover {color:var(--accent)}
+.sim-panel summary {cursor:pointer}.sim-panel p {line-height:1.5;font-size:13px}
+.sim-map {width:clamp(186px,16vw,258px);top:94px;right:clamp(14px,3.5vw,58px);overflow:hidden}
+.sim-map-head,.sim-map-foot {padding:7px 10px}.sim-map-head button {font-weight:650}
+.sim-map-head span,.sim-map-foot {font-size:12px;color:#d8dcd0}.sim-map-foot button {text-decoration:underline}
+#sim-map {width:100%;height:clamp(112px,10vw,155px);display:block;cursor:crosshair}
+.sim-map.expanded,.map-only .sim-map {width:min(740px,90vw);top:50%;right:50%;transform:translate(50%,-50%);z-index:4}
+.sim-map.expanded #sim-map,.map-only #sim-map {height:min(55dvh,470px)}
+.sim-marker {position:absolute;pointer-events:auto;transform:translate(-50%,-100%);padding:5px 9px;background:rgba(28,47,43,.9)!important;color:#fff3cd!important;border:1px solid #ddd5b488;border-radius:3px;font-size:12px!important;font-weight:650!important;white-space:nowrap}
+.sim-marker:after {content:"";position:absolute;top:100%;left:50%;height:10px;width:1px;background:#e5d9c1}
+.sim-marker.zone {font:500 19px var(--serif)!important;letter-spacing:.01em}
+.sim-bottom {bottom:51px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:7px;padding:5px;white-space:nowrap}
+.sim-bottom button {padding:9px 12px;border-radius:3px}.sim-nav,.sim-actions {display:flex}
+.sim-actions {border-left:1px solid #627871;padding-left:7px}.sim-actions button[aria-pressed=true]{background:#567469;color:white}
+.sim-foot {position:absolute;bottom:0;left:0;right:0;display:flex;align-items:center;gap:8px;padding:7px clamp(12px,3.5vw,58px);min-height:32px;background:#152e2e;color:#dce1d7;font-size:12px}
+.sim-foot a {text-decoration:underline}.sim-foot #sim-status {margin-left:auto}
+#sim-location {left:clamp(14px,3.5vw,58px);bottom:116px;max-width:min(398px,83vw);padding:14px 40px 14px 17px}
+#sim-location h2 {margin:3px 0 10px}.sim-visit-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}.sim-visit-actions a,.sim-visit-actions button{color:#efd6a4;text-decoration:underline;text-underline-offset:3px;font-size:13px}
+#sim-era {font-size:13px;line-height:1.45}.sim-kicker {letter-spacing:.06em}#sim-clear {position:absolute;top:4px;right:2px}
+#sim-stick {bottom:118px;left:15px;width:76px;height:76px;border-radius:50%;display:grid;place-items:center;touch-action:none}
+#sim-stick i {width:29px;height:29px;border:1px solid #e7d7b1;border-radius:50%;background:#8d9989}
+#sim-altitude {bottom:118px;right:15px}#sim-altitude button{display:block;width:38px;height:36px;touch-action:none}
+.territorial .sim-attribution {font-size:11px;opacity:.95}.map-only .sim-bottom,.map-only #sim-settings-open{display:none}
+@media(min-width:801px) and (pointer:fine){#sim-stick,#sim-altitude {display:none!important}}
+@media(max-width:800px){
+ .sim-top{height:62px;gap:11px}.sim-top h1{font-size:23px}.sim-atlas{padding:7px 9px;font-size:12px!important}
+ #sim-brand .brand{font-size:16px}#sim-brand .brand-mark{width:24px}
+ .sim-tools,.sim-map{top:74px}.sim-tools{gap:3px}.sim-tools button{font-size:12px;padding:0 9px;height:36px}
+ .sim-map{width:138px}.sim-map-head,.sim-map-foot{padding:5px 7px;font-size:11px}.sim-map:not(.expanded) #sim-map{height:75px}
+ .sim-map-foot #sim-grid{display:none}.sim-map-foot{justify-content:flex-end}
+ .sim-panel{top:116px;max-height:45dvh}.sim-bottom{bottom:40px;max-width:97vw;gap:3px}
+ .sim-bottom button{font-size:12px;padding:9px 7px}.sim-actions{padding-left:3px}
+ #sim-location{bottom:100px}body[data-camera=walk] #sim-location,body[data-camera=fly] #sim-location{bottom:207px}
+ .sim-foot{min-height:30px;flex-wrap:wrap;gap:1px 6px;padding-block:4px;font-size:10px}
+ .sim-foot #sim-help{display:none}.sim-attribution{font-size:10px!important}.sim-marker.zone{font-size:16px!important}
+}
+@media(max-width:420px){.sim-top{padding:0 11px}.sim-top h1{font-size:21px}.sim-tools{left:8px}.sim-map{right:8px;width:118px}.sim-map.expanded,.map-only .sim-map{right:50%}.sim-bottom button{padding:8px 5px;font-size:11px}}
+@media(max-height:520px){.sim-top{height:44px}.sim-tools,.sim-map{top:50px}.sim-panel{top:91px;max-height:52dvh}.sim-bottom{bottom:28px}#sim-location{bottom:74px}#sim-map{height:78px}.sim-map:not(.expanded) .sim-map-foot{display:none}}
+
+.sim-top h1,.sim-atlas{white-space:nowrap}
+@media(max-width:800px){.map-only .sim-map #sim-map{height:min(54dvh,450px)}}
+@media(max-width:420px){.sim-top{gap:8px}.sim-atlas{padding:6px}.sim-top h1{font-size:19px}#sim-brand .brand{font-size:14px;gap:5px}}

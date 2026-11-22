@@ -3,13 +3,14 @@ import * as THREE from 'three';
 // A distance field of the mapped shoreline, not the circular edge of the atlas.
 // Distances control surface colour and contact foam only. They are not soundings.
 export function createShoreField({data,project,mask,mobile=false}){
- const points=data.coastline.map(c=>({...project(...c),lon:c[0],lat:c[1]}));
+ const lines=data.projectedShorelines??[data.coastline.map(c=>({...project(...c),lon:c[0],lat:c[1]}))];
  const minX=Math.min(...mask.polygons.map(p=>p.minX)),maxX=Math.max(...mask.polygons.map(p=>p.maxX));
  const minZ=Math.min(...mask.polygons.map(p=>p.minZ)),maxZ=Math.max(...mask.polygons.map(p=>p.maxZ));
- const width=mobile?768:1024,height=Math.ceil(width*(maxZ-minZ)/(maxX-minX));
+ const pixelWidth=mobile?768:1024,aspect=(maxZ-minZ)/(maxX-minX);
+ const width=data.projectedShorelines?Math.min(pixelWidth,Math.max(1,Math.floor(2048/aspect))):pixelWidth,height=Math.ceil(width*aspect);
  const cell=160,range=224,buckets=new Map(),segments=[];
  const key=(x,z)=>`${x},${z}`;
- for(let i=1;i<points.length;i++){
+ for(const points of lines)for(let i=1;i<points.length;i++){
   const a=points[i-1],b=points[i],dx=b.x-a.x,dz=b.z-a.z,len2=dx*dx+dz*dz;
   if(len2<.0001)continue;
   // Broad shoreline character comes from the existing mapped beach/coast sectors;

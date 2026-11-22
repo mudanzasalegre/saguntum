@@ -13,7 +13,7 @@ function hash(text) { let s = 2166136261; for (const c of String(text)) s = Math
 function area(poly) { let a = 0; for(let i=0,j=poly.length-1;i<poly.length;j=i++) a += poly[j].x*poly[i].z-poly[i].x*poly[j].z; return a/2; }
 function inPoly(x,z,p) { let inside=false; for(let i=0,j=p.length-1;i<p.length;j=i++) if(((p[i].z>z)!==(p[j].z>z))&&(x<(p[j].x-p[i].x)*(z-p[i].z)/(p[j].z-p[i].z)+p[i].x)) inside=!inside; return inside; }
 function distanceSegment(x,z,a,b) { const dx=b.x-a.x,dz=b.z-a.z,l=dx*dx+dz*dz; const t=l ? Math.max(0,Math.min(1,((x-a.x)*dx+(z-a.z)*dz)/l)) : 0; return Math.hypot(x-a.x-t*dx,z-a.z-t*dz); }
-function nearPoly(x,z,p,margin) { if(inPoly(x,z,p)) return true; for(let i=0;i<p.length;i++) if(distanceSegment(x,z,p[i],p[(i+1)%p.length])<margin) return true; return false; }
+function nearPoly(x,z,p,margin) { if(inPoly(x,z,p)) return true; if(margin<=0)return false; for(let i=0;i<p.length;i++) if(distanceSegment(x,z,p[i],p[(i+1)%p.length])<margin) return true; return false; }
 function polygonsOverlap(a,b,tolerance=.15){
   const deep=(p,ring)=>inPoly(p.x,p.z,ring)&&ring.every((v,i)=>distanceSegment(p.x,p.z,v,ring[(i+1)%ring.length])>tolerance);
   if(a.some(p=>deep(p,b))||b.some(p=>deep(p,a)))return true;
@@ -132,11 +132,18 @@ export function createCity({data,project,heightAt,urban,terrainHeightAt=null,exc
   buildings.name='Edificios · plantas cartográficas y alturas estimadas';roads.name='Calles · trazado OSM';vegetation.name='Vegetación mediterránea interpretativa';
   group.add(buildings,roads,vegetation);
   const castle=cleanPolygon(data.castlePolygon,project),theatre=cleanPolygon(data.theatrePolygon,project);
-  const monument=(x,z,margin=10)=>nearPoly(x,z,castle,margin)||nearPoly(x,z,theatre,margin);
-  const heritage=(x,z,margin=.2)=>exclusions.some(p=>nearPoly(x,z,p,margin));
+  const indexPolygons=(polygons,padding)=>{
+    const grid=new SpatialGrid(60);
+    for(const p of polygons)if(p.length)grid.add(bounds(p),p,padding);
+    return grid;
+  };
+  const monumentIndex=indexPolygons([castle,theatre],15),heritageIndex=indexPolygons(exclusions,5);
+  const monument=(x,z,margin=10)=>monumentIndex.get(x,z).some(p=>nearPoly(x,z,p,margin));
+  const heritage=(x,z,margin=.2)=>heritageIndex.get(x,z).some(p=>nearPoly(x,z,p,margin));
   const heritagePolygons=exclusions.filter(p=>p.length>=3).map(p=>({p,box:bounds(p)}));
   const overlapsHeritage=(p,b)=>heritagePolygons.some(h=>b.minX<h.box.maxX&&b.maxX>h.box.minX&&b.minZ<h.box.maxZ&&b.maxZ>h.box.minZ&&polygonsOverlap(p,h.p));
-  const plantedLandscape=(x,z)=>vegetationExclusions.some(p=>inPoly(x,z,p));
+  const plantedIndex=indexPolygons(vegetationExclusions,0);
+  const plantedLandscape=(x,z)=>plantedIndex.get(x,z).some(p=>inPoly(x,z,p));
   const buildingGrid=new SpatialGrid(),roadGrid=new SpatialGrid();
   const wallBuffer=buffers(),contextWallBuffer=buffers(),roofBuffer=buffers(),flatRoofBuffer=buffers(),windowBuffer=buffers(),trimBuffer=buffers();
   const facadeColors=['#ddc7a3','#f0dfc4','#d5b789','#ede0c9','#cdb894','#e0c6a6','#e8d2b0','#d0c4b2'];

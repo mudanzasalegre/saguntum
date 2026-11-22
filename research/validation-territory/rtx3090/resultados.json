@@ -1,0 +1,323 @@
+{
+  "checks": [
+    "Portada global",
+    "Panorámica territorial",
+    "Escena industrial y edificios cargados",
+    "Visita patrimonial del Alto Horno",
+    "Restauración de hora y posición",
+    "Ascenso en vuelo libre",
+    "Inicio y parada del itinerario",
+    "Cambio de época local",
+    "Mapa municipal",
+    "Regreso al Atlas",
+    "Sin errores de carga o JavaScript"
+  ],
+  "snapshots": {
+    "panorama": {
+      "ready": true,
+      "mode": "orbit",
+      "places": 31,
+      "buildings": 44838,
+      "routeMetres": 9682,
+      "hour": 16,
+      "loadMs": 752,
+      "range": 7413,
+      "camera": {
+        "mode": "orbit",
+        "eye": [
+          7384.6808891519295,
+          4749.521537039524,
+          7198.369037213418
+        ],
+        "target": [
+          5938.911591743585,
+          17.91292733948676,
+          1678.1589925633743
+        ],
+        "yaw": 0,
+        "pitch": 0
+      },
+      "sectors": 0,
+      "networkSectors": 0,
+      "traffic": {
+        "cars": 0,
+        "people": 0
+      },
+      "quality": 2,
+      "drawCalls": 29,
+      "triangles": 211984,
+      "geometries": 33,
+      "textures": 6,
+      "frameMs": 33.3,
+      "frameP95Ms": 700.2,
+      "heapMiB": 1273,
+      "heritage": {
+        "requested": [],
+        "loaded": [],
+        "loading": false,
+        "failures": {}
+      },
+      "pending": 0
+    },
+    "alto-horno": {
+      "ready": true,
+      "mode": "orbit",
+      "places": 31,
+      "buildings": 44838,
+      "routeMetres": 9682,
+      "hour": 16,
+      "loadMs": 752,
+      "range": 192,
+      "camera": {
+        "mode": "orbit",
+        "eye": [
+          8520.893095239624,
+          126.19763273776515,
+          2061.355416659452
+        ],
+        "target": [
+          8483.493095239624,
+          3.797632737765105,
+          1918.555416659452
+        ],
+        "yaw": 0,
+        "pitch": 0
+      },
+      "sectors": 10,
+      "networkSectors": 12,
+      "traffic": {
+        "cars": 30,
+        "people": 33
+      },
+      "quality": 2,
+      "drawCalls": 342,
+      "triangles": 1437747,
+      "geometries": 185,
+      "textures": 13,
+      "frameMs": 16.7,
+      "frameP95Ms": 133.4,
+      "heapMiB": 1358,
+      "heritage": {
+        "requested": [
+          "horno"
+        ],
+        "loaded": [
+          "horno"
+        ],
+        "loading": false,
+        "failures": {}
+      },
+      "pending": 2,
+      "selected": "horno"
+    },
+    "noche": {
+      "ready": true,
+      "mode": "orbit",
+      "places": 31,
+      "buildings": 44838,
+      "routeMetres": 9682,
+      "hour": 22,
+      "loadMs": 752,
+      "range": 192,
+      "camera": {
+        "mode": "orbit",
+        "eye": [
+          8520.893095239624,
+          126.19763273776515,
+          2061.355416659452
+        ],
+        "target": [
+          8483.493095239624,
+          3.797632737765105,
+          1918.555416659452
+        ],
+        "yaw": 0,
+        "pitch": 0
+      },
+      "sectors": 16,
+      "networkSectors": 12,
+      "traffic": {
+        "cars": 0,
+        "people": 34
+      },
+      "quality": 2,
+      "drawCalls": 169,
+      "triangles": 725398,
+      "geometries": 186,
+      "textures": 13,
+      "frameMs": 16.7,
+      "frameP95Ms": 166.7,
+      "heapMiB": 1347,
+      "heritage": {
+        "requested": [
+          "horno"
+        ],
+        "loaded": [
+          "horno"
+        ],
+        "loading": false,
+        "failures": {}
+      },
+      "pending": 2,
+      "selected": "horno"
+    },
+    "peaton": {
+      "ready": true,
+      "mode": "walk",
+      "places": 31,
+      "buildings": 44838,
+      "routeMetres": 9682,
+      "hour": 12,
+      "selected": null,
+      "loadMs": 525,
+      "range": 2,
+      "camera": {
+        "mode": "walk",
+        "eye": [
+          8518.6,
+          6.8999999999999995,
+          1585.4
+        ],
+        "target": [
+          8483.493095239624,
+          3.797632737765105,
+          1918.555416659452
+        ],
+        "yaw": 0.25615138256560077,
+        "pitch": -0.035
+      },
+      "sectors": 14,
+      "networkSectors": 9,
+      "traffic": {
+        "cars": 0,
+        "people": 34
+      },
+      "quality": 2,
+      "drawCalls": 60,
+      "triangles": 515689,
+      "geometries": 105,
+      "textures": 7,
+      "frameMs": 16.7,
+      "frameP95Ms": 133.3,
+      "heapMiB": 1340,
+      "heritage": {
+        "requested": [
+          "museo-industrial",
+          "talleres"
+        ],
+        "loaded": [
+          "museo-industrial",
+          "talleres"
+        ],
+        "loading": false,
+        "failures": {}
+      },
+      "pending": 0
+    },
+    "fortin": {
+      "ready": true,
+      "mode": "orbit",
+      "places": 31,
+      "buildings": 44838,
+      "routeMetres": 9682,
+      "hour": 12,
+      "selected": "grau-vell",
+      "loadMs": 525,
+      "range": 107,
+      "camera": {
+        "mode": "orbit",
+        "eye": [
+          6905.294492801511,
+          71.4,
+          4154.65269832518
+        ],
+        "target": [
+          6884.394492801512,
+          3,
+          4074.8526983251795
+        ],
+        "yaw": 0.2561513825656008,
+        "pitch": -0.035
+      },
+      "sectors": 6,
+      "networkSectors": 7,
+      "traffic": {
+        "cars": 0,
+        "people": 34
+      },
+      "quality": 2,
+      "drawCalls": 44,
+      "triangles": 390112,
+      "geometries": 72,
+      "textures": 7,
+      "frameMs": 16.7,
+      "frameP95Ms": 66.7,
+      "heapMiB": 1498,
+      "heritage": {
+        "requested": [
+          "grau-vell"
+        ],
+        "loaded": [
+          "grau-vell"
+        ],
+        "loading": false,
+        "failures": {}
+      },
+      "pending": 4,
+      "touring": false
+    },
+    "pantalan": {
+      "ready": true,
+      "mode": "orbit",
+      "places": 31,
+      "buildings": 44838,
+      "routeMetres": 9682,
+      "hour": 12,
+      "selected": "pantalan-maritimo",
+      "loadMs": 525,
+      "range": 496,
+      "camera": {
+        "mode": "orbit",
+        "eye": [
+          10356.571786776953,
+          308.3,
+          2787.6872925324365
+        ],
+        "target": [
+          10259.771786776953,
+          -8.5,
+          2418.0872925324365
+        ],
+        "yaw": 0.2561513825656008,
+        "pitch": -0.035
+      },
+      "sectors": 7,
+      "networkSectors": 6,
+      "traffic": {
+        "cars": 0,
+        "people": 4
+      },
+      "quality": 2,
+      "drawCalls": 41,
+      "triangles": 339838,
+      "geometries": 81,
+      "textures": 7,
+      "frameMs": 16.7,
+      "frameP95Ms": 33.3,
+      "heapMiB": 1521,
+      "heritage": {
+        "requested": [
+          "pantalan"
+        ],
+        "loaded": [
+          "pantalan"
+        ],
+        "loading": false,
+        "failures": {}
+      },
+      "pending": 0,
+      "touring": false
+    }
+  },
+  "errors": []
+}

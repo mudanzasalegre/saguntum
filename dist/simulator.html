@@ -1,0 +1,49 @@
+<div id="sim-world" role="application" aria-label="Territorio navegable de Sagunto"></div>
+<header class="sim-top">
+  <div id="sim-brand"></div><span class="sim-divider"></span><h1>Simulador 3D</h1>
+  <a class="sim-atlas" href="#atlas">Volver al Atlas</a>
+</header>
+<div id="sim-markers" aria-label="Lugares en el territorio"></div>
+<section class="sim-tools" aria-label="Exploración territorial">
+  <button class="sim-search" id="sim-search-open" aria-expanded="false" aria-controls="sim-places"><span aria-hidden="true">⌕</span> Buscar lugar</button>
+  <button id="sim-settings-open" aria-expanded="false" aria-controls="sim-settings">Capas y luz</button>
+</section>
+<section class="sim-panel" id="sim-places" aria-label="Lugares del simulador" hidden>
+  <div class="sim-heading"><h2>Explora Sagunto</h2><button data-close aria-label="Cerrar lugares">×</button></div>
+  <input type="search" id="sim-query" placeholder="Nombre de lugar o monumento" aria-label="Buscar por nombre">
+  <label>Ámbito <select id="sim-region"><option value="">Todos los ámbitos</option></select></label>
+  <div id="sim-results"></div>
+</section>
+<section class="sim-panel" id="sim-settings" aria-label="Ajustes del territorio" hidden>
+  <div class="sim-heading"><h2>Capas y luz</h2><button data-close aria-label="Cerrar ajustes">×</button></div>
+  <label for="sim-time">Hora solar <output id="sim-hour">16:00</output></label><input id="sim-time" type="range" min="0" max="23.75" step=".25" value="16">
+  <label>Calidad <select id="sim-quality"><option value="auto">Automática</option><option value="0">Ligera</option><option value="1">Media</option><option value="2">Alta</option></select></label>
+  <fieldset><legend>Capas visibles</legend>
+    <label>Edificios <input type="checkbox" data-flag="buildings" checked></label>
+    <label>Patrimonio <input type="checkbox" data-flag="heritage" checked></label>
+    <label>Calles y ferrocarril <input type="checkbox" data-flag="streets" checked></label>
+    <label>Paisaje y mobiliario <input type="checkbox" data-flag="land" checked></label>
+    <label>Nombres <input type="checkbox" data-flag="labels" checked></label>
+    <label>Tráfico <input type="checkbox" data-flag="cars" checked></label>
+    <label>Peatones <input type="checkbox" data-flag="people" checked></label>
+  </fieldset>
+  <details><summary>Cartografía y rendimiento</summary><p id="sim-credits"></p><p id="sim-stats"></p></details>
+</section>
+<aside class="sim-map" id="sim-map-box">
+  <div class="sim-map-head"><button id="sim-expand" aria-expanded="false">Mapa general</button><span>N ↑</span></div>
+  <canvas id="sim-map" width="540" height="350" tabindex="0" aria-label="Mapa de Sagunto. Pulsa un punto para viajar. El buscador ofrece selección por teclado."></canvas>
+  <div class="sim-map-foot"><span id="sim-grid"></span><button id="sim-extent">Ver municipio</button></div>
+</aside>
+<div id="sim-location" hidden>
+  <div><div class="sim-kicker" id="sim-zone"></div><h2 id="sim-title"></h2><p id="sim-era" hidden></p></div>
+  <div class="sim-visit-actions"><a id="sim-visit">Visita patrimonial</a><button id="sim-history" hidden>Reconstrucción histórica</button></div><button id="sim-clear" aria-label="Cerrar lugar">×</button>
+</div>
+<div class="sim-bottom">
+  <div class="sim-nav" role="group" aria-label="Modo de cámara">
+    <button data-mode="orbit" aria-pressed="true">Vista aérea</button><button data-mode="fly" aria-pressed="false">Vuelo libre</button><button data-mode="walk" aria-pressed="false">A pie</button>
+  </div>
+  <div class="sim-actions"><button id="sim-home">Panorámica</button><button id="sim-tour" aria-pressed="false">Recorrido territorial</button></div>
+</div>
+<div id="sim-stick" aria-label="Control táctil de desplazamiento" hidden><i></i></div>
+<div id="sim-altitude" hidden><button data-rise="1" aria-label="Ascender">＋</button><button data-rise="-1" aria-label="Descender">−</button></div>
+<footer class="sim-foot"><span id="sim-help">Arrastra para girar · Rueda o pellizco para acercar</span><span id="sim-status" role="status">Cargando cartografía…</span></footer>

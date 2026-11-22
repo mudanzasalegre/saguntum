@@ -30,7 +30,7 @@ export function createCoastEnvironment({data,project,heightAt,mask,mobile=false,
  };
  // Low vegetation uses a restricted shoreline band, never a fabricated wetland.
  const vegetation=new THREE.Group();vegetation.name='Matorral litoral interpretativo';const positions=[];
- const coast=data.coastline.map(c=>({coordinate:c,...project(...c)}));
+ const coast=(data.coastline||[]).map(c=>({coordinate:c,...project(...c)}));
  let seed=27026;const random=()=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296;};
  for(let i=1;i<coast.length;i++){
   const a=coast[i-1],b=coast[i];if(a.coordinate[1]<39.632||a.coordinate[1]>39.641||a.coordinate[0]>-.228)continue;

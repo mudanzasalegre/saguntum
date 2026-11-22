@@ -2,6 +2,12 @@
 
 Atlas patrimonial y paisajístico de Sagunto, Puerto de Sagunto y su costa en Three.js, con **31 lugares explorables** sobre cartografía real. Reúne monumentos, arqueología, memoria industrial, costa y paisajes en seis ámbitos territoriales, con visitas documentadas y vistas históricas.
 
+## Simulador 3D
+
+El menú principal abre el [Simulador 3D — Explora Sagunto](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador). En un territorio continuo se puede pasar de la Plaça Major al Puerto y al Grau Vell, cambiar de vuelo a peatón y abrir cualquiera de los 31 destinos del Atlas. El recorrido guiado sigue 9,68 km de calles y caminos cartografiados.
+
+El simulador usa 44.838 volúmenes cartográficos, 1.560 patios, relieve IGN, ortofotos PNOA y una red de 15.671 aristas. Carga por proximidad las escenas existentes y documenta el origen de alturas y materiales. El código estático y sus recursos se sirven directamente desde `dist/`. [Instalación, arquitectura, fuentes, pruebas y limitaciones](docs/SIMULADOR.md)
+
 ## Identidad y portada estables
 
 Por indicación del usuario, la marca **SAGUNTUM · Atlas vivo**, el título **SAGUNTUM · Sagunto y Puerto de Sagunto** y la portada representan siempre al conjunto del atlas. Las ampliaciones de monumentos se integran en sus propias visitas y no sustituyen esta identidad ni la entrada general. Esta regla se aplica a las próximas iteraciones.
