@@ -1,5 +1,4 @@
 import * as T from 'three';
-import {mergeGeometries} from 'three/addons/utils/BufferGeometryUtils.js';
 import {createGlorietaSquare} from './glorieta-square.js';
 import {buildGlorietaBuildings} from './glorieta-buildings.js';
 import {buildRomeu} from './glorieta-romeu.js';
@@ -21,19 +20,11 @@ export function createGlorieta({heightAt,project,layout,buildings,visitData,guid
  bounds.max.y+=11;
  for(const key of ['glorieta-conjunto','glorieta-despedida','glorieta-comparar'])Object.assign(focuses[key],{bounds,framePoints,fitBounds:true});
  const exclusions=[footprint(layout.perimeter),...buildings.protectedFootprints.map(f=>footprint(f.coordinates))];
- let square,near=false,nightState,showVegetation=true;
+ let square,near=null,nightState,showVegetation=true;
  const lamps=[],windows=[];
- const far=new T.Group();far.name='Glorieta · volúmenes catastrales';
- if(!guide){
-  const pieces=[];
-  for(const b of buildings.buildings){
-   const ring=footprint(b.coordinates);if(ring.length<3)continue;
-   const shape=new T.Shape(ring.map(p=>new T.Vector2(p.x,-p.z)));
-   const geo=new T.ExtrudeGeometry(shape,{depth:b.height||6,bevelEnabled:false});geo.rotateX(-Math.PI/2);geo.translate(0,heightAt(ring[0].x,ring[0].z),0);pieces.push(geo);
-  }
-  if(pieces.length){const mesh=new T.Mesh(mergeGeometries(pieces),new T.MeshStandardMaterial({color:'#c5ad92',roughness:.96}));far.add(mesh);for(const g of pieces)g.dispose();}
- }
- group.add(far,detail);
+ const leafBatches=[];
+ const distantCrown=new T.IcosahedronGeometry(.83,0);
+ group.add(detail);
  function build(){
   if(square)return;
   square=createGlorietaSquare({layout,heightAt,project});
@@ -45,15 +36,20 @@ export function createGlorieta({heightAt,project,layout,buildings,visitData,guid
    const q=project(...layout.lamps[i]),lamp=new T.PointLight('#ffd9a8',0,20,2);
    lamp.position.set(q.x+.89,heightAt(q.x,q.z)+5.7,q.z);square.group.add(lamp);lamps.push(lamp);
   }
+  for(const mesh of square.vegetation.children){
+   if(mesh.isInstancedMesh&&/ · (leaves|needles)$/.test(mesh.name))leafBatches.push([mesh,mesh.geometry]);
+  }
   square.vegetation.visible=showVegetation;
   detail.add(square.group,street,romeu);group.updateMatrixWorld(true);
  }
- if(guide){build();far.visible=false;}
+ build();
  function animate(seconds,water,night,camera){
-  near=visitOnly||!camera||Math.hypot(camera.position.x-centre.x,camera.position.z-centre.z,camera.position.y-heightAt(centre.x,centre.z))<580;
-  if(near)build();far.visible=!near;detail.visible=near;
-  if(!near)return;
-  square.setWater(water);square.update(seconds);
+  const close=visitOnly||!camera||Math.hypot(camera.position.x-centre.x,camera.position.z-centre.z,camera.position.y-heightAt(centre.x,centre.z))<580;
+  if(close!==near){
+   for(const [mesh,foliage] of leafBatches)mesh.geometry=close?foliage:distantCrown;
+   near=close;
+  }
+  square.setWater(water&&near);if(near)square.update(seconds);
   if(night!==nightState){nightState=night;square.setNight(night);
    for(const lamp of lamps){lamp.visible=night;lamp.intensity=night?65:0;}
    for(const glass of windows){glass.emissive.setHex(0xa68857);glass.emissiveIntensity=night?.32:0;}}
