@@ -1,5 +1,17 @@
 # Sincronización de Sites a GitHub
 
+## Versión 35 · Acabado patrimonial del simulador
+
+Sites publicó la versión 35 el 22 de noviembre de 2026 en el proyecto original. El despliegue `appgdep_6b02fef76c30819187908e75ab4e3193` terminó con estado `succeeded`. En producción se abrieron los soportales, se cambiaron la iluminación y el terreno y se entró en la parada del Atlas. Al volver, la diferencia de posición de cámara fue de 0,000 m. También se comprobó el enlace a Gerencia y la descarga íntegra de los módulos de escena, el worker patrimonial, los encuadres, las copas y el relieve de Sagunto. [Abrir el simulador en los soportales](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador/plaza-mayor/plaza-soportales) · [Resultado en la URL pública](../research/validation-atlas-parity/produccion.json)
+
+| Referencia | Valor |
+| --- | --- |
+| Commit de origen en Sites | `eaed495ea389b2a594772dddfcf4c2abb67c0ca8` |
+| Commit de implementación en GitHub | `cc21aae5dfaf157f157a0a988cde1b42eb8997a4` |
+| Árbol Git idéntico de `dist/` | `0977fa265aa7963aed7e82274c90379485e96009` |
+| SHA-256 del archivo registrado por Sites | `6679a248d7ce078d0420c053fd32f59633e0848cad9513a410635bc66e4a5acb` |
+| Archivos en el paquete registrado | 1.260 |
+
 ## Revisión gráfica · versión 34
 
 Sites publicó la revisión gráfica del Simulador el 22 de noviembre de 2026. El despliegue `appgdep_6b02f12722d48191a46d72049b11f1ef` terminó con estado `succeeded`. [Simulador publicado](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador) · [Comparación entre las versiones 33 y 34](../research/validation-visual/README.md)
