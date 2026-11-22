@@ -1,5 +1,16 @@
 # Sincronización de Sites a GitHub
 
+## Versión 36 · La Glorieta de Sagunto
+
+El proyecto original publicó la Glorieta el 22 de noviembre de 2026. El despliegue `appgdep_6b0304878d988191b9b7d34893fe01a9` alcanzó el estado `succeeded`. El paquete registrado contiene 1273 archivos. [Visita publicada](https://saguntum-atlas-3d.monmode.chatgpt.site/#glorieta) · [Verificación en producción](../research/glorieta-validacion/produccion/resultados.json)
+
+| Referencia | Valor |
+| --- | --- |
+| Commit de origen en Sites | `4205b8ae70c71a5e4b99eaa96a73ef9c2e0b4498` |
+| Commit de implementación en GitHub | `854eba0dff3ebe47f105ccb16dc6add66543e27e` |
+| Árbol Git idéntico de `dist/` | `cdf4dfec042f9ba208525d9898f07efff5a2cf32` |
+| SHA-256 del archivo registrado en Sites | `eecb5334ca41273659e18d4bcf468cc041de3f7359bd483e27baec4a88c02b70` |
+
 ## Versión 35 · Acabado patrimonial del simulador
 
 Sites publicó la versión 35 el 22 de noviembre de 2026 en el proyecto original. El despliegue `appgdep_6b02fef76c30819187908e75ab4e3193` terminó con estado `succeeded`. En producción se abrieron los soportales, se cambiaron la iluminación y el terreno y se entró en la parada del Atlas. Al volver, la diferencia de posición de cámara fue de 0,000 m. También se comprobó el enlace a Gerencia y la descarga íntegra de los módulos de escena, el worker patrimonial, los encuadres, las copas y el relieve de Sagunto. [Abrir el simulador en los soportales](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador/plaza-mayor/plaza-soportales) · [Resultado en la URL pública](../research/validation-atlas-parity/produccion.json)
