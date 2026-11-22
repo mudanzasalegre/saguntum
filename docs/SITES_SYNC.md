@@ -1,5 +1,21 @@
 # Sincronización de Sites a GitHub
 
+## Versión 38 · Todos los lugares del Atlas en el simulador
+
+El proyecto original de Sites publicó la versión 38 el 22 de noviembre de 2026. El despliegue `appgdep_6b03359912648191ad44f0f85bb8b267` alcanzó el estado `succeeded`. La revisión reúne 32 lugares y 529 paradas con enlaces compartibles entre el simulador y las visitas originales. [Simulador](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador) · [Documentación territorial](VISITAS_TERRITORIALES.md)
+
+| Referencia | Valor |
+| --- | --- |
+| Commit de Sites | `3b65d446c878cc22703cd6c4fc2259448a8c2f39` |
+| Commit de distribución en GitHub | `ed6eb1bc45acee0ddd7684d3e7546bf0caca7081` |
+| Árbol Git de `dist/` en ambos repositorios | `7bf39e7383bef9b5b7f59baff700da8ed6dfbc48` |
+| SHA-256 del contenido registrado por Sites | `cadb51f1ef4b5a2e8f71fb49753f1ab7b7faa11685be95e01a6bd0253d00e69d` |
+| Archivos del paquete | 1582 |
+
+En el sitio público se comprobaron la portada global y sus seis ámbitos, y se verificó por contenido la publicación de once archivos del simulador. La prueba de WebKit en Windows, con el perfil de un iPhone 13, recuperó la parada de José Romeu después de una pérdida de contexto y de un arranque interrumpido. [Identidad y ámbitos](../research/visitas-territoriales/produccion/portada.json) · [Integridad de recursos](../research/visitas-territoriales/produccion/recursos.json) · [Recuperación WebGL](../research/visitas-territoriales/produccion/recuperacion-webkit.json)
+
+En Chrome sobre la URL publicada se abrieron las 529 rutas en plano y se cargó una parada tridimensional en cada uno de los 32 lugares. La prueba recorrió la búsqueda, el mapa numerado, las capas y el historial. Entró en la visita del Casino y regresó al simulador con una diferencia de cámara de 0,000 m. También cambió de parada desde el Atlas en el Palancia y abrió esa parada en el simulador. El registro de errores de página, consola y recursos quedó vacío. [Resultados en producción](../research/visitas-territoriales/produccion/chrome/rutas.json)
+
 ## Versión 37 · Glorieta móvil y render territorial
 
 Sites publicó la versión 37 el 22 de noviembre de 2026. La distribución tiene 1.525 archivos y conserva el mismo árbol de aplicación en los dos repositorios. El despliegue público es `appgdep_6b030dcbec648191875bed1231b68144`. [Glorieta](https://saguntum-atlas-3d.monmode.chatgpt.site/#glorieta) · [Simulador](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador)
