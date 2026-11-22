@@ -1,3 +1,5 @@
+import {startRenderSession,wantsPlan,retry3D} from './render-session.js';
+startRenderSession();
 // Each reading of the atlas owns the single WebGL context of its document.
 // A full transition also releases GPU resources on memory-constrained Safari.
 const simulatorRoute = () => /^#simulador(?:\/|$)/.test(location.hash);
@@ -24,4 +26,17 @@ if (simulator) {
     link.href = '#atlas'; link.textContent = ' Volver al Atlas';
     status.append(link);
   });
-} else import('./app.js');
+} else {
+  const fallback=document.getElementById('fallback');
+  const retry=document.createElement('button');
+  retry.id='retry-atlas-3d';retry.type='button';retry.className='text-button';retry.textContent='Reintentar vista 3D';retry.onclick=retry3D;fallback.append(retry);
+  if(wantsPlan()){
+    fallback.querySelector('h2').textContent='Visita en plano';
+    fallback.querySelector('p').textContent='Puedes recorrer las paradas y consultar su historia en el plano.';
+  }
+  import('./app.js').catch(()=>{
+    document.getElementById('loading').classList.add('loaded');fallback.hidden=false;
+    fallback.querySelector('h2').textContent='No se pudo abrir el Atlas';
+    fallback.querySelector('p').textContent='Comprueba la conexión y vuelve a cargar la visita.';
+  });
+}

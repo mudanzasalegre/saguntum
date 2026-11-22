@@ -81,7 +81,7 @@ export async function createHeritage({scene,heightAt,project,grids,mobile=false,
     const needed=()=>!disposed&&desired.includes(id);
     if(!needed())continue;
     try{
-     if(!background&&grids)background=heritageWorker(grids);
+     if(id!=='glorieta'&&!background&&grids)background=heritageWorker(grids);
      let item;
      if(id!=='glorieta'&&background&&!background.closed){
       try{item=await background.load(id);}

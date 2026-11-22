@@ -1,0 +1,263 @@
+{
+  "major": {
+    "camera": {
+      "mode": "fly",
+      "eye": [
+        3668,
+        54.76,
+        -674
+      ],
+      "target": [
+        3618,
+        54.38,
+        -687
+      ],
+      "yaw": 1.3164282682416306,
+      "pitch": -0.007355318406073752,
+      "fov": 38,
+      "targetLift": 0
+    },
+    "range": 3,
+    "fabric": {
+      "buildings": 72,
+      "openings": 513
+    },
+    "quality": 2,
+    "drawCalls": 337,
+    "triangles": 883304,
+    "sectors": 34,
+    "heritage": {
+      "requested": [
+        "sangre",
+        "museo",
+        "circo",
+        "juderia"
+      ],
+      "loaded": [
+        "sangre",
+        "museo",
+        "circo",
+        "juderia"
+      ],
+      "loading": false,
+      "failures": {},
+      "lights": 0,
+      "contexts": [
+        {
+          "id": "sangre",
+          "meshes": 9,
+          "triangles": 32353,
+          "buildings": 152,
+          "pavingAreaM2": 1401
+        },
+        {
+          "id": "museo",
+          "meshes": 13,
+          "triangles": 21403,
+          "buildings": 44,
+          "pavingAreaM2": 490
+        },
+        {
+          "id": "circo",
+          "meshes": 22,
+          "triangles": 60800,
+          "buildings": 91,
+          "pavingAreaM2": 2288
+        },
+        {
+          "id": "juderia",
+          "meshes": 37,
+          "triangles": 69658,
+          "buildings": 343,
+          "pavingAreaM2": 2896
+        }
+      ],
+      "landscapes": {}
+    },
+    "p50": 16.7,
+    "p95": 16.8,
+    "errors": []
+  },
+  "barcelona": {
+    "camera": {
+      "mode": "fly",
+      "eye": [
+        8025,
+        10.7,
+        856
+      ],
+      "target": [
+        8000,
+        9.4,
+        910
+      ],
+      "yaw": 2.7080111696380316,
+      "pitch": 0.03359723850399539,
+      "fov": 38,
+      "targetLift": 0
+    },
+    "range": 2,
+    "fabric": {
+      "buildings": 17,
+      "openings": 752
+    },
+    "quality": 2,
+    "drawCalls": 252,
+    "triangles": 1114051,
+    "sectors": 32,
+    "heritage": {
+      "requested": [
+        "barrio-obrero"
+      ],
+      "loaded": [
+        "barrio-obrero"
+      ],
+      "loading": false,
+      "failures": {},
+      "lights": 0,
+      "contexts": [
+        {
+          "id": "barrio-obrero",
+          "meshes": 18,
+          "triangles": 148574,
+          "buildings": 370,
+          "pavingAreaM2": 15602
+        }
+      ],
+      "landscapes": {}
+    },
+    "p50": 16.7,
+    "p95": 16.8,
+    "errors": []
+  },
+  "naves": {
+    "camera": {
+      "mode": "fly",
+      "eye": [
+        7752,
+        64,
+        1580
+      ],
+      "target": [
+        7627,
+        9,
+        1496
+      ],
+      "yaw": 0.9791104986508351,
+      "pitch": -0.3501519408108016,
+      "fov": 38,
+      "targetLift": 0
+    },
+    "range": 56,
+    "fabric": {
+      "buildings": 1,
+      "openings": 21
+    },
+    "quality": 2,
+    "drawCalls": 107,
+    "triangles": 730394,
+    "sectors": 36,
+    "heritage": {
+      "requested": [],
+      "loaded": [],
+      "loading": false,
+      "failures": {},
+      "lights": 0
+    },
+    "p50": 16.7,
+    "p95": 16.8,
+    "errors": []
+  },
+  "manzanas": {
+    "camera": {
+      "mode": "fly",
+      "eye": [
+        8220,
+        209,
+        1128
+      ],
+      "target": [
+        8050,
+        9,
+        830
+      ],
+      "yaw": 0.5184230485735473,
+      "pitch": -0.5277914740511175,
+      "fov": 38,
+      "targetLift": 0
+    },
+    "range": 202,
+    "fabric": {
+      "buildings": 0,
+      "openings": 0
+    },
+    "quality": 2,
+    "drawCalls": 149,
+    "triangles": 1167201,
+    "sectors": 35,
+    "heritage": {
+      "requested": [
+        "barrio-obrero",
+        "casino"
+      ],
+      "loaded": [
+        "barrio-obrero",
+        "casino"
+      ],
+      "loading": false,
+      "failures": {},
+      "lights": 0,
+      "contexts": [
+        {
+          "id": "barrio-obrero",
+          "meshes": 18,
+          "triangles": 148574,
+          "buildings": 370,
+          "pavingAreaM2": 15602
+        },
+        {
+          "id": "casino",
+          "meshes": 25,
+          "triangles": 34602,
+          "buildings": 0,
+          "pavingAreaM2": 1238
+        }
+      ],
+      "landscapes": {}
+    },
+    "photo": {
+      "cells": [
+        [
+          32,
+          4
+        ],
+        [
+          31,
+          4
+        ],
+        [
+          32,
+          3
+        ],
+        [
+          31,
+          3
+        ]
+      ],
+      "requestedCells": 4,
+      "sheetCount": 4,
+      "sampleMetres": 0.25,
+      "sourceMetres": [
+        0.25,
+        0.5
+      ],
+      "photographedCoverage": 1,
+      "grains": true,
+      "atlasUploads": 4
+    },
+    "landscape": null,
+    "p50": 16.7,
+    "p95": 16.8,
+    "errors": []
+  }
+}

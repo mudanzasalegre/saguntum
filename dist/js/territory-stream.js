@@ -2,7 +2,7 @@ import * as T from 'three';
 import {insideRing} from './territory-coordinates.js';
 import {territoryBase} from './territory-ground.js';
 import {nearFacades} from './territory-facades.js';
-import {architecturalMaterial} from './territory-building-material.js';
+import {architecturalMaterial,skylineMaterial} from './territory-building-material.js';
 
 export const distanceTo=(x,z,[l,t,r,b])=>Math.hypot(Math.max(l-x,0,x-r),Math.max(t-z,0,z-b));
 export class SectorStream {
@@ -27,11 +27,11 @@ export class SectorStream {
     }
   }
 }
-export function createBuildings({scene,world,grids,heritage}) {
+export function createBuildings({scene,world,grids,heritage,photography}) {
   const group=new T.Group(), requests=new Map();
   const night={value:0};
   let mat;
-  const aerialMat=new T.MeshLambertMaterial({vertexColors:true,side:T.DoubleSide});
+  const aerialMat=skylineMaterial(photography);
   const worker=new Worker(new URL('./territory-building-worker.js',import.meta.url),{type:'module'});
   worker.postMessage({grids});
   worker.onmessage=({data})=>{
@@ -52,7 +52,7 @@ export function createBuildings({scene,world,grids,heritage}) {
     g.setIndex(new T.BufferAttribute(data.index.slice(),1));
     if(!far)g.computeVertexNormals();
     g.computeBoundingSphere();
-    const m=new T.Mesh(g,far?aerialMat:(mat??=architecturalMaterial(night)));
+    const m=new T.Mesh(g,far?aerialMat:(mat??=architecturalMaterial(night,photography)));
     m.receiveShadow=true;m.castShadow=true;group.add(m);
     return {id,mesh:m,rows:data.rows,indices:data.index,mask:null,
       sectors:far||id==='overview'?[...new Set(data.rows.map(r=>r.sector))]:null};

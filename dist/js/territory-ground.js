@@ -1,5 +1,6 @@
 import * as T from 'three';
 import {mergeGeometries} from 'three/addons/utils/BufferGeometryUtils.js';
+import {addHorizon} from './territory-horizon.js';
 import {closeOrthophoto} from './territory-ortho.js';
 import {terrainSampler} from './territory-coordinates.js';
 import {conservationGround} from './territory-heritage-ground.js';
@@ -35,9 +36,12 @@ export const makeSampler=terrainSampler;
 export async function buildGround(scene,grids,heightAt,renderer) {
   const loader=new T.TextureLoader(), group=new T.Group(), pieces=[];
   const [left,top,right,bottom]=grids.base.bounds;
-  const maps=await Promise.all([grids.base,grids.detail].map(async g=>{
+  const small=matchMedia('(pointer:coarse), (max-width:760px)').matches;
+  const file=name=>territoryBase+'landscape/'+name+(small?'-mobile':'')+'.jpg';
+  const manifestWork=resource(territoryBase+'landscape/index.json');
+  const maps=await Promise.all([grids.base,grids.detail].map(async (g,i)=>{
     if(!g?.texture) return null;
-    const tex=await loader.loadAsync(territoryBase+g.texture);
+    const tex=await loader.loadAsync(file(i?'core':'territory'));
     tex.colorSpace=T.SRGBColorSpace; tex.anisotropy=Math.min(6,renderer.capabilities.getMaxAnisotropy());return tex;
   }));
   const mat=new T.MeshStandardMaterial({map:maps[0],roughness:1,metalness:0});
@@ -55,7 +59,9 @@ export async function buildGround(scene,grids,heightAt,renderer) {
         }`);
     };
   }
-  const updateOrtho=maps[1]?await closeOrthophoto(mat,renderer):()=>{};
+  const manifest=await manifestWork;
+  const {update:updateOrtho,photography}=await closeOrthophoto(mat,renderer,maps[0],grids.base.bounds,manifest);
+  addHorizon(group,manifest,grids.base.bounds,heightAt,small).catch(error=>console.warn('Horizonte MDT25',error));
   function patch(x,z,w,h,div) {
     const pos=[],uv=[],idx=[];
     function vertex(px,pz,drop=0){
@@ -102,7 +108,7 @@ export async function buildGround(scene,grids,heightAt,renderer) {
     const changes=[];
     for(const p of pieces){
       const d=Math.hypot(Math.max(p.x-x,0,x-p.x-p.w),Math.max(p.z-z,0,z-p.z-p.h),alt*.55);
-      // Resolve the original 2–5 m relief around the observer. Each outer level
+      // Resolve the original 2â€“5 m relief around the observer. Each outer level
       // keeps the previous 10/25/100 m spacing and shares the same samples at its edge.
       const want=p.regional&&d<155?150:d<580?60:d<1900?24:coarseDiv;
       if(want!==p.div)changes.push({p,want,d});
@@ -118,6 +124,6 @@ export async function buildGround(scene,grids,heightAt,renderer) {
       block.mesh.visible=n>0;g.setDrawRange(0,n);g.index.needsUpdate=true;block.dirty=false;
     }
   }
-  return {group,update,texture:maps[0],setHeritage:heritageGround.setSource,
+  return {group,update,photography,texture:maps[0],setHeritage:heritageGround.setSource,
     showBuildings:setSurfaceBuildings,grade:heritageGround.grade,canStand:heritageGround.canStand};
 }

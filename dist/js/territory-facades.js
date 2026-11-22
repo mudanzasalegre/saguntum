@@ -5,13 +5,16 @@ import {baysOn,balconyBay,edgeSeed,joineryTone,openingBounds} from './territory-
 // Cast real balcony shadows only near the viewer. The return to the flat joinery
 // uses the same bay, floor and sill dimensions as the shader.
 export function nearFacades(group){
-  const max=11520,frame=new T.Object3D();
+  const compact=matchMedia('(pointer: coarse)').matches||(navigator.deviceMemory||8)<=4;
+  const max=compact?4500:11520,frame=new T.Object3D();
   const parts=new T.InstancedMesh(new T.BoxGeometry(),new T.MeshStandardMaterial({roughness:.73}),max);
   parts.count=0;parts.frustumCulled=false;parts.receiveShadow=true;parts.castShadow=true;
   parts.instanceMatrix.setUsage(T.DynamicDrawUsage);group.add(parts);
   const lime=new T.Color('#cfc3ac'),concrete=new T.Color('#b9b8ac'),iron=new T.Color('#4a5550'),
     zinc=new T.Color('#707b79'),awning=new T.Color('#b9b394'),edge=new T.Color('#d8d1bd'),
-    shutter=new T.Color('#526456'),louvre=new T.Color('#738170');
+    shutter=new T.Color('#526456'),louvre=new T.Color('#738170'),
+    bamboo=new T.Color('#b18c5e'),blindIvory=new T.Color('#d4cdb8'),blindSlate=new T.Color('#8b9996'),
+    blindHem=new T.Color('#72746a'),apron=new T.Color('#bc896e');
   let lastKey='',count=0;
   function piece(x,y,z,yaw,w,h,d,color,tilt=0){
     if(count>=max)return;
@@ -93,6 +96,18 @@ export function nearFacades(group){
             if(r.floor+(level+.87)*r.storey>topAtBay-.05)continue;
             const balcony=balconyBay(j,level,seed);
             const y=r.floor+(level+(balcony?.112:.286))*r.storey;
+            const shadeTone=joineryTone(j,level,seed);
+            if(distance<32&&shadeTone>.44&&shadeTone<.79){
+              // Partly lowered esparto and roller blinds sit ahead of the
+              // recessed glass. Each opening keeps its actual lintel and sill.
+              const [l,u,s,b]=openingBounds(r.style,balcony?0:1),span=(u-l)*bayWidth;
+              const head=r.floor+(level+b)*r.storey,length=(b-s)*r.storey*(.18+(shadeTone-.44)*1.55);
+              const textile=historic?bamboo:r.year>=1990&&r.seed%3===1?blindSlate:blindIvory;
+              at(px,head-length*.5,pz,0,.025,span,length,.044,textile);
+              at(px,head-length+.012,pz,0,.059,span+.015,.039,.035,blindHem);
+              if(distance<18)for(let sy=.11;sy<length-.05;sy+=.13)
+                at(px,head-sy,pz,0,.052,span,.015,.022,historic?awning:edge);
+            }
             if(distance<29&&historic){
               const mid=r.floor+(level+.58)*r.storey,head=r.floor+(level+.845)*r.storey;
               for(const side of [-1,1])at(px,mid,pz,side*(bayWidth*.213+.045),.036,.09,r.storey*.54,.092,stone);
@@ -101,7 +116,7 @@ export function nearFacades(group){
             }
             if(!balcony){
               if(distance<42)at(px,y,pz,0,.07,width,.083,.16,stone);
-              if(historic&&distance<22&&joineryTone(j,level,seed)>.64){
+              if(historic&&distance<22&&shadeTone>.64){
                 const shutterWidth=bayWidth*.195,sy=r.floor+(level+.565)*r.storey,sh=r.storey*.536;
                 for(const side of [-1,1]){
                   const sx=side*bayWidth*.339;
@@ -116,7 +131,9 @@ export function nearFacades(group){
             at(px,y,pz,0,depth*.50,w,.13,depth,stone);
             const rim=depth-.045;
             if(!historic&&r.seed%3===1){
-              at(px,y+.33,pz,0,rim,w-.04,.57,.11,concrete);
+              const panel=r.style===2&&r.year>=1940&&r.year<1990?apron:concrete;
+              at(px,y+.33,pz,0,rim,w-.04,.57,.11,panel);
+              if(distance<25)at(px,y+.62,pz,0,rim,w+.01,.045,.15,stone);
             }
             at(px,y+.12,pz,0,rim,w-.09,.04,.045,rail);
             at(px,y+h,pz,0,rim,w-.05,.055,.052,rail);
@@ -139,7 +156,12 @@ export function nearFacades(group){
         }
       }
     }
-    parts.count=count;parts.instanceMatrix.needsUpdate=true;
-    if(parts.instanceColor)parts.instanceColor.needsUpdate=true;
+    parts.count=count;
+    for(const attribute of [parts.instanceMatrix,parts.instanceColor]){
+      if(!attribute||!count)continue;
+      attribute.clearUpdateRanges();
+      attribute.addUpdateRange(0,count*attribute.itemSize);
+      attribute.needsUpdate=true;
+    }
   };
 }

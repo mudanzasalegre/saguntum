@@ -5,7 +5,7 @@ import {buildGlorietaBuildings} from './glorieta-buildings.js';
 import {buildRomeu} from './glorieta-romeu.js';
 
 // The Atlas and the territorial registry both pass the native Atlas metre grid.
-export function createGlorieta({heightAt,project,layout,buildings,visitData,guide}){
+export function createGlorieta({heightAt,project,layout,buildings,visitData,guide,visitOnly=false}){
  const group=new T.Group(),detail=new T.Group();group.name='Glorieta · plaza del Cronista Chabret';
  const centre=project(...layout.anchors.general),footprint=ring=>ring.map(ll=>project(...ll));
  const focuses={};
@@ -13,10 +13,13 @@ export function createGlorieta({heightAt,project,layout,buildings,visitData,guid
   const p=project(...stop.coordinate),target=new T.Vector3(p.x,heightAt(p.x,p.z)+stop.rise,p.z);
   focuses[stop.id]={target,offset:stop.offset,fitBounds:false,closeOffset:stop.offset.map(c=>c*.76)};
  }
- const bounds=new T.Box3();
- for(const q of footprint(layout.perimeter))bounds.expandByPoint(new T.Vector3(q.x,heightAt(q.x,q.z),q.z));
+ const bounds=new T.Box3(),framePoints=[];
+ for(const q of footprint(layout.perimeter)){
+  const foot=new T.Vector3(q.x,heightAt(q.x,q.z),q.z);
+  bounds.expandByPoint(foot);framePoints.push(foot,foot.clone().add(new T.Vector3(0,11,0)));
+ }
  bounds.max.y+=11;
- for(const key of ['glorieta-conjunto','glorieta-despedida','glorieta-comparar'])Object.assign(focuses[key],{bounds,fitBounds:true});
+ for(const key of ['glorieta-conjunto','glorieta-despedida','glorieta-comparar'])Object.assign(focuses[key],{bounds,framePoints,fitBounds:true});
  const exclusions=[footprint(layout.perimeter),...buildings.protectedFootprints.map(f=>footprint(f.coordinates))];
  let square,near=false,nightState,showVegetation=true;
  const lamps=[],windows=[];
@@ -47,12 +50,12 @@ export function createGlorieta({heightAt,project,layout,buildings,visitData,guid
  }
  if(guide){build();far.visible=false;}
  function animate(seconds,water,night,camera){
-  near=!camera||Math.hypot(camera.position.x-centre.x,camera.position.z-centre.z,camera.position.y-heightAt(centre.x,centre.z))<580;
+  near=visitOnly||!camera||Math.hypot(camera.position.x-centre.x,camera.position.z-centre.z,camera.position.y-heightAt(centre.x,centre.z))<580;
   if(near)build();far.visible=!near;detail.visible=near;
   if(!near)return;
   square.setWater(water);square.update(seconds);
   if(night!==nightState){nightState=night;square.setNight(night);
-   for(const lamp of lamps)lamp.intensity=night?65:0;
+   for(const lamp of lamps){lamp.visible=night;lamp.intensity=night?65:0;}
    for(const glass of windows){glass.emissive.setHex(0xa68857);glass.emissiveIntensity=night?.32:0;}}
  }
  const visit={focuses,selectFocus(){},setReadingMode(){}};

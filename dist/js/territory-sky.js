@@ -55,7 +55,8 @@ export function territorySky(renderer,scene,direction,horizon,zenith) {
   dome.scale.setScalar(44000);dome.renderOrder=-100;dome.frustumCulled=false;scene.add(dome);
   const probeScene=new T.Scene(),probeDome=new T.Mesh(sphere,material);
   probeDome.scale.setScalar(10);probeScene.add(probeDome);
-  const generator=new T.PMREMGenerator(renderer);
+  const probesSupported=renderer.extensions.has('EXT_color_buffer_float');
+  let generator;
   let target=null,dirty=true,lastProbe=-Infinity;
   new T.TextureLoader().load('./assets/materials/sky/clouds.webp',photo=>{
     photo.wrapS=T.RepeatWrapping;uniforms.cloudMap.value=photo;uniforms.hasClouds.value=1;dirty=true;
@@ -71,7 +72,8 @@ export function territorySky(renderer,scene,direction,horizon,zenith) {
     update(camera,quality){
       if(!dome.visible)return;
       dome.position.copy(camera.position);
-      if(!dirty||performance.now()-lastProbe<220)return;
+      if(!probesSupported||!dirty||performance.now()-lastProbe<220)return;
+      generator??=new T.PMREMGenerator(renderer);
       const previous=target;
       uniforms.probe.value=1;
       try{target=generator.fromScene(probeScene,0,.1,25,{size:quality===0?32:64});}

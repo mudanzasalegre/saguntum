@@ -14,9 +14,11 @@ export function createCanopy(scene,heightAt,heritage){
     m.count=0;m.receiveShadow=true;m.castShadow=kind!=='treeView';m.instanceMatrix.setUsage(T.DynamicDrawUsage);
     group.add(m);return m;
   }
-  const ready=Promise.all([streetTrees(),resource(territoryBase+'canopy/index.json'),resource(territoryBase+'canopy/crowns.bin','arrayBuffer')]).then(([prototype,index,bytes])=>{
+  const ready=Promise.all([streetTrees(),resource(territoryBase+'canopy/index.json'),resource(territoryBase+'canopy/crowns.bin','arrayBuffer'),
+    resource(territoryBase+'landscape/canopy-chroma.bin','arrayBuffer').catch(()=>null)]).then(([prototype,index,bytes,chroma])=>{
     if(bytes.byteLength!==index.count*7)throw Error('Tamaño del inventario de copas');
     trees=prototype;
+    const tones=chroma?.byteLength===index.count*2?new Uint8Array(chroma):null;
     const input=new DataView(bytes),groups=new Map();let offset=0;
     // Four 500 m source tiles share one draw call. Instance positions stay metric.
     for(const [tx,tz,count] of index.tiles){
@@ -27,7 +29,9 @@ export function createCanopy(scene,heightAt,heritage){
         const x=tx*500+input.getUint16(offset,true)*.25,z=tz*500+input.getUint16(offset+2,true)*.25;
         const height=input.getUint8(offset+4),radius=input.getUint8(offset+5)*.1;
         const green=input.getUint8(offset+6),y=heightAt(x,z);
-        t.rows.push({x,z,y,height,radius,shade:.70+Math.min(1,green/150)*.34,
+        const colourIndex=offset/7*2;
+        const red=tones?.[colourIndex]??125,blue=tones?.[colourIndex+1]??123;
+        t.rows.push({x,z,y,height,radius,red:.99+(red-125)/242,blue:.92+(blue-123)/210,shade:.70+Math.min(1,green/150)*.34,
           angle:((Math.round(x*4)*31+Math.round(z*4)*73)%360)*Math.PI/180});
         t.low=Math.min(t.low,y);t.high=Math.max(t.high,y+height);t.max=Math.max(t.max,height);
       }
@@ -43,7 +47,7 @@ export function createCanopy(scene,heightAt,heritage){
     dummy.position.set(r.x,r.y,r.z);dummy.rotation.set(0,r.angle,0);
     // The source tree measures 4.55 m vertically; scale the crown width independently.
     dummy.scale.set(r.radius/2.55,r.height/4.55,r.radius/2.55);dummy.updateMatrix();
-    mesh.setMatrixAt(n,dummy.matrix);color.setRGB(r.shade,r.shade*.99,r.shade*.92);mesh.setColorAt(n,color);
+    mesh.setMatrixAt(n,dummy.matrix);color.setRGB(r.shade*r.red,r.shade,r.shade*r.blue);mesh.setColorAt(n,color);
   }
   function finish(mesh,n){
     mesh.count=n;mesh.visible=n>0;mesh.instanceMatrix.needsUpdate=true;

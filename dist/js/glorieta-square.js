@@ -200,7 +200,7 @@ export function createGlorietaSquare({layout,heightAt,project=projectDefault}){
   box(fp,w,.27,d,'darkStone');box(fp,w-.26,.055,d-.25,'water',.28);
   for(const e of [-1,1])box(move(fp,e*(w/2-.085),0),.17,.13,d,'darkStone',.26);
   for(const n of [-1,1])box(move(fp,0,n*(d/2-.085)),w,.13,.17,'darkStone',.26);
-  const jetParts=[],ripple=new T.TorusGeometry(1,.022,4,30);
+  const jetParts=[],ripple=new T.TorusGeometry(1,.022,4,30),bubble=new T.IcosahedronGeometry(1,0);
   const rippleRotation=new T.Quaternion().setFromAxisAngle(new T.Vector3(1,0,0),Math.PI/2);
   mats.ripple=new T.MeshStandardMaterial({color:0xb8d0c7,roughness:.22,transparent:true,opacity:.42});
   for(let row=0;row<2;row++)for(let i=0;i<7;i++){
@@ -209,7 +209,7 @@ export function createGlorietaSquare({layout,heightAt,project=projectDefault}){
     for(const r of [.14,.23,.36])batch(water,ripple,'ripple',move(home,0,-.24,-.006),rippleRotation,scale.set(r,r*.86,.24));
     for(let j=0;j<12;j++){
       const a=tau*j/12,r=.07+.17*rand(j+i+row),center=move(home,Math.cos(a)*r,-.24+Math.sin(a)*r,.027);
-      batch(water,crown[0],'foam',center,qYaw(a),scale.set(.03+.045*rand(j+.3),.017,.045));
+      batch(water,bubble,'foam',center,qYaw(a),scale.set(.03+.045*rand(j+.3),.017,.045));
     }
     const ph=rand(i+9*row)*tau,curve=[];
     const peak=1.18+.22*Math.sin(i),strands=[];

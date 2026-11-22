@@ -8,15 +8,22 @@ const homes=['#c58c70','#d9b297','#ded4b9','#d3af88','#ab7866','#c9c6bb','#d8c2a
 const hash=id=>Array.from(id).reduce((h,k)=>(31*h+k.charCodeAt(0))>>>0,7);
 
 class Batch {
- constructor(){this.positions=[];this.colours=[];}
+ constructor(){this.positions=[];this.colours=[];this.indices=[];}
  triangle(a,b,c,color){
+  const i=this.positions.length/3;
+  this.indices.push(i,i+1,i+2);
   this.positions.push(...a,...b,...c);
   for(let i=0;i<3;i++)this.colours.push(color.r,color.g,color.b);
  }
- quad(a,b,c,d,tint){this.triangle(a,b,c,tint);this.triangle(a,c,d,tint);}
+ quad(a,b,c,d,color){
+  const i=this.positions.length/3;
+  this.indices.push(i,i+1,i+2,i,i+2,i+3);
+  this.positions.push(...a,...b,...c,...d);
+  for(let v=0;v<4;v++)this.colours.push(color.r,color.g,color.b);
+ }
  mesh(name,kind){
   const g=new T.BufferGeometry();g.setAttribute('position',new T.Float32BufferAttribute(this.positions,3));
-  g.setAttribute('color',new T.Float32BufferAttribute(this.colours,3));g.computeVertexNormals();g.computeBoundingSphere();
+  g.setAttribute('color',new T.Float32BufferAttribute(this.colours,3));g.setIndex(this.indices);g.computeVertexNormals();g.computeBoundingSphere();
   const m=new T.MeshStandardMaterial({vertexColors:true,side:T.DoubleSide,roughness:kind==='glass'?.30:kind==='metal'?.57:.88,metalness:kind==='metal'?.24:0});
   m.name=kind;const mesh=new T.Mesh(g,m);mesh.name=name+' · '+kind;mesh.userData.materialKind=kind;
   mesh.receiveShadow=true;mesh.castShadow=kind!=='asphalt'&&kind!=='paving';return mesh;

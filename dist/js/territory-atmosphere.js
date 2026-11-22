@@ -39,7 +39,7 @@ export function createAtmosphere(scene,renderer,sea,buildings,network,registrati
     horizon.set('#152031').lerp(tint.set('#b8cfdf'),light).lerp(tint.set('#f3bea4'),dusk*.72);
     zenith.set('#071224').lerp(tint.set('#427fae'),light);
     scene.background=horizon;scene.fog.color.copy(horizon);
-    scene.fog.density=.000032+(1-light)*.000021;
+    scene.fog.density=.000043+(1-light)*.000017;
     sun.color.set('#fff1db').lerp(tint.set('#ffac72'),warmth);
     sun.intensity=2.85*Math.pow(Math.max(0,direction.y),.52);
     ambient.color.set('#799acb').lerp(tint.set('#d1e1f4'),light);
@@ -52,11 +52,12 @@ export function createAtmosphere(scene,renderer,sea,buildings,network,registrati
   function update(camera,p,range,quality){
     sky.update(camera,quality);
     if(atlasMode)scene.fog.density=T.MathUtils.lerp(.000115,.000022,T.MathUtils.smoothstep(range,350,4900));
-    const enabled=(atlasMode||(range<900&&quality>0))&&direction.y>.035;
+    const shadowRange=quality===2?1800:quality===1?950:85;
+    const enabled=direction.y>.035&&(atlasMode||range<shadowRange);
     if(renderer.shadowMap.enabled!==enabled){renderer.shadowMap.enabled=enabled;invalid=true;}
-    const desiredSize=quality===2?2048:quality===1?1536:1024;
+    const desiredSize=quality===2?2048:quality===1?1536:atlasMode?1024:512;
     if(enabled&&sun.shadow.mapSize.x!==desiredSize){
-      sun.shadow.mapSize.setScalar(desiredSize);sun.shadow.map?.dispose();sun.shadow.map=null;invalid=true;
+      sun.shadow.mapSize.setScalar(desiredSize);sun.shadow.map?.dispose();sun.shadow.map=null;span=0;invalid=true;
     }
     // Quantize the shadow footprint and snap its centre to whole shadow texels.
     // The smallest footprint resolves window reveals and pavilion columns.

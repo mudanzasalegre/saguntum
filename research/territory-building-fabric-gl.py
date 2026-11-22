@@ -8,6 +8,7 @@ from playwright.sync_api import sync_playwright
 parser=argparse.ArgumentParser()
 parser.add_argument('--base',required=True);parser.add_argument('--out',type=Path,required=True)
 parser.add_argument('--new',action='store_true');parser.add_argument('--mobile',action='store_true')
+parser.add_argument('--views',nargs='+',choices=['major','barcelona','naves','manzanas'])
 opts=parser.parse_args();opts.out.mkdir(exist_ok=True,parents=True)
 root=Path(__file__).resolve().parents[1]
 
@@ -18,6 +19,9 @@ def look(eye,target):
 major=json.loads((root/'research/validation-visual/v34/carrer-major.json').read_bytes())['camera']
 views={'major':major,'barcelona':look([8025,7.4,856],[8000,9.4,910]),
        'naves':look([7752,64,1580],[7627,9,1496])}
+if opts.views:
+    views['manzanas']=look([8220,209,1128],[8050,9,830])
+    views={name:views[name] for name in opts.views}
 report={}
 with sync_playwright() as p:
     browser=p.chromium.launch(channel='chrome')
@@ -32,18 +36,24 @@ with sync_playwright() as p:
         state=dict(camera=camera,hour=14.5,quality='0' if opts.mobile else '2',flags={'labels':False})
         page.add_init_script("sessionStorage.setItem('saguntum-territorial-visit',"+json.dumps(json.dumps(state))+")")
         page.goto(opts.base.rstrip('/')+'/#simulador',wait_until='domcontentloaded',timeout=80000)
-        page.wait_for_function("window.territoryStatus?.frameMs && territoryStatus.sectors>0",timeout=90000)
-        if opts.new and name!='naves':
+        try:
+            page.wait_for_function("window.territoryStatus?.frameMs && territoryStatus.sectors>0",timeout=90000)
+        except Exception:
+            print(name,errors,page.locator('body').inner_text()[:600],flush=True)
+            raise
+        if opts.new and name in ('major','barcelona'):
             page.wait_for_function('territoryStatus.fabric?.openings>0',timeout=60000)
         page.wait_for_timeout(4500)
         page.wait_for_function("!territoryStatus.pending && !territoryStatus.heritage.loading",timeout=90000)
         frames=page.evaluate("""async () => {const a=[];let prev;await new Promise(done=>{function tick(t){if(prev)a.push(t-prev);prev=t;if(a.length<90)requestAnimationFrame(tick);else done()}requestAnimationFrame(tick)});return a.sort((a,b)=>a-b)}""")
         status=page.evaluate('territoryStatus')
-        report[name]={k:status.get(k) for k in ['camera','range','fabric','quality','drawCalls','triangles','sectors','heritage']}
+        report[name]={k:status.get(k) for k in ['camera','range','fabric','quality','drawCalls','triangles','sectors','heritage','photo','landscape']}
         report[name].update(p50=round(frames[45],2),p95=round(frames[85],2),errors=errors)
         page.screenshot(path=str(opts.out/(name+'.jpg')),quality=90)
         page.close()
         print(name,report[name]['fabric'],report[name]['p50'],report[name]['p95'],errors,flush=True)
         assert not errors
     browser.close()
-(opts.out/'checks.json').write_text(json.dumps(report,indent=2,ensure_ascii=False),encoding='utf8')
+result=opts.out/'checks.json'
+prior=json.loads(result.read_bytes()) if opts.views and result.exists() else {}
+result.write_text(json.dumps({**prior,**report},indent=2,ensure_ascii=False),encoding='utf8')

@@ -17,6 +17,17 @@ let residentSheets=0,atlasUploads=0,visibleCount=0,sourceSpacings=[];
 export function setSurfaceBuildings(visible){grains.uSurfaceBuildingMask.value=visible?1:0;}
 const atlasGround={value:1},groundTint=new T.Color(terrainTint);
 export function setTerrainAppearance(natural){atlasGround.value=natural?1:0;}
+const terrainGrade=`if(uAtlasGround>.5){
+      vec3 s=sRGBTransferOETF(vec4(max(diffuseColor.rgb,vec3(0.)),1.)).rgb;
+      float luminance=dot(s,vec3(${naturalMix.luma.join(',')}));
+      vec3 graded=clamp(luminance*vec3(${naturalMix.grey.join(',')})+s*vec3(${naturalMix.rgb.join(',')})+vec3(${naturalMix.lift.map(v=>(v/255).toFixed(7)).join(',')}),0.,1.);
+      diffuseColor.rgb=sRGBTransferEOTF(vec4(graded,1.)).rgb*uNaturalTint;
+    }`;
+export function addLandscapeGrade(shader){
+  Object.assign(shader.uniforms,{uAtlasGround:atlasGround,uNaturalTint:{value:groundTint}});
+  shader.fragmentShader='uniform float uAtlasGround;uniform vec3 uNaturalTint;\n'+shader.fragmentShader.replace(
+    '#include <color_fragment>','#include <color_fragment>\n'+terrainGrade);
+}
 export const isAtlasTerrain=()=>atlasGround.value===1;
 export function surfacePhotoMetrics(){
   const w=uniforms.uSurfaceWindow.value,weight=uniforms.uSurfaceGain.value;
@@ -82,6 +93,27 @@ export function addSurfaceGround(shader){
       vec4 land=surfacePixel(uSurfaceLand,groundUV,groundDx,groundDy);
       float inside=(1.-smoothstep(.45,.59,land.a))*uSurfaceBuildingMask;
       vec3 groundColour=mix(aerial,land.rgb,inside);
+      // PNOA records shadows cast at the flight time. Remove their strongest
+      // blue cast on ground beside actual cadastral facades before WebGL lights it.
+      float urbanCandidate=smoothstep(.975,.997,land.a)*(1.-uAtlasGround)*uSurfaceBuildingMask;
+      float areaPerPixel=max(length(groundDx),length(groundDy));
+      float oldShadow=1.-smoothstep(.055,.21,dot(aerial,vec3(.2126,.7152,.0722)));
+      if(urbanCandidate*oldShadow>.001 && areaPerPixel<.38){
+        float walls=0.;
+        for(int j=0;j<4;j++){
+          vec2 offset=j==0?vec2(6.,0.):j==1?vec2(-6.,0.):j==2?vec2(0.,6.):vec2(0.,-6.);
+          vec2 probe;
+          if(surfaceAddress(vTerritory+offset,probe)>.001)
+            walls=max(walls,1.-smoothstep(.445,.57,textureLod(uSurfaceLand,probe,0.).a));
+        }
+        if(walls>.01){
+          vec3 nearby=textureLod(uSurfaceLand,groundUV,3.).rgb;
+          float lum=dot(aerial,vec3(.2126,.7152,.0722));
+          vec3 neutral=max(nearby,vec3(.21,.195,.175));
+          vec3 pavement=neutral*(.82+1.7*lum);
+          groundColour=mix(groundColour,pavement,walls*urbanCandidate*oldShadow*(1.-smoothstep(.075,.38,areaPerPixel)));
+        }
+      }
       // Sand, alluvial gravel and dry soil use the actual sample dimensions.
       // The local image still supplies the colour of each metre of terrain.
       float soil=smoothstep(.827,.85,land.a)*(1.-smoothstep(.891,.92,land.a));
@@ -106,12 +138,7 @@ export function addSurfaceGround(shader){
       }
       diffuseColor.rgb=mix(diffuseColor.rgb,groundColour,coverage*(1.-uAtlasGround*atlasPlate));
     }
-    if(uAtlasGround>.5){
-      vec3 s=sRGBTransferOETF(vec4(max(diffuseColor.rgb,vec3(0.)),1.)).rgb;
-      float luminance=dot(s,vec3(${naturalMix.luma.join(',')}));
-      vec3 graded=clamp(luminance*vec3(${naturalMix.grey.join(',')})+s*vec3(${naturalMix.rgb.join(',')})+vec3(${naturalMix.lift.map(v=>(v/255).toFixed(7)).join(',')}),0.,1.);
-      diffuseColor.rgb=sRGBTransferEOTF(vec4(graded,1.)).rgb*uNaturalTint;
-    }
+    ${terrainGrade}
     #include <alphatest_fragment>`).replace('#include <normal_fragment_maps>',`
     #include <normal_fragment_maps>
     vec3 pDx=dFdx(-vViewPosition),pDy=dFdy(-vViewPosition);

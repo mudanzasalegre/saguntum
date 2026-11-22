@@ -61,8 +61,8 @@ function build(buildings,overview,profiles,fine=false){
     const floor=ground[ground.length>>1],height=Math.max(1,b.height||5.8),roof=Math.max(floor+height,ground.at(-1)+.6);
     const minX=Math.min(...outer.map(p=>p[0])),maxX=Math.max(...outer.map(p=>p[0]));
     const minZ=Math.min(...outer.map(p=>p[1])),maxZ=Math.max(...outer.map(p=>p[1]));
-    const x=(minX+maxX)/2,z=(minZ+maxZ)/2,style=buildingStyle(b,x,z,height);
-    const wall=new Color(style.finish),lid=new Color(b.roofColor||roofPalette[style.seed%4]);
+    const x=(minX+maxX)/2,z=(minZ+maxZ)/2,style=buildingStyle(b,x,z,height,fabric?.[4]);
+    const wall=new Color(style.finish),recess=wall.clone().multiplyScalar(.62),lid=new Color(b.roofColor||roofPalette[style.seed%4]);
     const begin=indices.length;
     const pitched=rings.length===1&&ridge(outer,b,lid);
     const eaves=!fabric?.[3]&&pitched?roof-pitched.rise:roof,outerEdges=[],edgeKinds=[];
@@ -91,6 +91,8 @@ function build(buildings,overview,profiles,fine=false){
         const a=r[i],c=r[(i+1)%r.length],dx=c[0]-a[0],dz=c[1]-a[1],len=Math.hypot(dx,dz);
         const y0=heightAt(...a)-1.2,y1=heightAt(...c)-1.2;
         const bays=baysOn(len,style.spacing),seed=edgeSeed(style.seed,i);
+        const obstruction=ri===0&&fabric?.[5]?parseInt(fabric[5][i],32)||0:0;
+        const facadeCode=seed+1024*obstruction;
         const sign=Math.sign(area)*(ri===0?1:-1),nx=dz*sign/(len||1),nz=-dx*sign/(len||1);
         let classes=ri===0?fronts?.[i]:'c';
         if(!classes){
@@ -116,12 +118,16 @@ function build(buildings,overview,profiles,fine=false){
           const family=kind==='s'?-1:style.family+(kind==='p'?0:kind==='f'?6:12);
           const surface=kind==='s'&&style.family===2?0:style.surface;
           const corner=(v,y,t)=>vertex(v[0],y,v[1],t*bays,(y-floor)/style.storey,t*len,y-floor,
-            wall,surface,family,seed,y0+1.2-floor,(y1-y0)/bays);
+            wall,surface,family,facadeCode,y0+1.2-floor,(y1-y0)/bays);
           const quad=(corners,reveal)=>{
             const off=positions.length/3;
+            const jamb=reveal&&corners.every(([t])=>t===corners[0][0]);
             for(const [t,y,inset=0] of corners){
-              vertex(a[0]+dx*t-nx*inset,y,a[1]+dz*t-nz*inset,t*bays,(y-floor)/style.storey,t*len,y-floor,
-                wall,surface,reveal?-1:family,seed,y0+1.2-floor,(y1-y0)/bays);
+              // A return turns the material's metric axis into the wall. Sills
+              // and soffits instead span bay width and depth, both in metres.
+              const mx=jamb?t*len+inset:t*len,my=reveal&&!jamb?inset:y-floor;
+              vertex(a[0]+dx*t-nx*inset,y,a[1]+dz*t-nz*inset,t*bays,(y-floor)/style.storey,mx,my,
+                inset>0?recess:wall,surface,reveal?-4:family,facadeCode,y0+1.2-floor,(y1-y0)/bays);
             }
             if((area>0)===(ri===0))indices.push(off,off+2,off+1,off,off+3,off+2);
             else indices.push(off,off+1,off+2,off,off+2,off+3);
@@ -144,7 +150,7 @@ function build(buildings,overview,profiles,fine=false){
         }
       }
     }
-    rows.push({id:b.id,rings,usage:b.usage,floor,roof,eaves,style:style.family,storey:style.storey,
+    rows.push({id:b.id,rings,usage:b.usage,year:fabric?.[4],floor,roof,eaves,style:style.family,storey:style.storey,
       spacing:style.spacing,seed:style.seed,outerEdges,edgeKinds,outerHeights:outer.map(cover.at),outerGround:outer.map(p=>heightAt(...p)),
       bounds:[minX,minZ,maxX,maxZ],x,z,start:begin,end:indices.length,sector:b.sector});
   }

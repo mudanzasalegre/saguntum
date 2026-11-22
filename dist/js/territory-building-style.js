@@ -7,7 +7,7 @@ const finishes=[
   ['#e1d3b4','#d2bfa1','#dac9ad','#ddc6a6','#d3c1a3','#d9d1bd'],
   ['#c8c5b7','#d7cdbb','#d7cdc2','#bcbeb7','#cbc6b7','#d5c8ba']
 ];
-export function buildingStyle(b,x,z,height){
+export function buildingStyle(b,x,z,height,year){
   let seed=5381;
   for(const ch of String(b.id).split('_part')[0])seed=(Math.imul(seed,33)^ch.charCodeAt(0))>>>0;
   const index=seed%6,industrial=b.usage==='industrial',rural=b.usage==='agriculture';
@@ -16,12 +16,16 @@ export function buildingStyle(b,x,z,height){
   if(industrial||rural&&height>6)family=3;
   else if(rural||b.usage==='detached')family=4;
   else if(['retail','office','publicServices'].includes(b.usage))family=5;
-  else if(center&&height<16)family=0;
-  else if(height>=9&&(seed>>>8)%4===0)family=2;
+  else if(height<16&&(year?year<1940:center))family=0;
+  else if(height>=8&&(seed>>>8)%(year>=1950&&year<=2000?3:6)===0)family=2;
   else family=1;
   const storey=family===3?height:b.levels&&height/b.levels>=2.5&&height/b.levels<=4.3?height/b.levels:3.05;
-  return {family,seed:seed%997,finish:finishes[family][index],surface:[0,0,1,2,7,0][family],storey,
-    spacing:[3.0,3.45,3.5,8.2,3.4,3.8][family]};
+  // The cadastral epoch groups possible bay rhythms and finishes. Renovations
+  // and the appearance of each individual street elevation are not surveyed.
+  const recent=year>=1990&&family===1;
+  const finish=recent?['#e9dfcd','#e3dbcc','#dadbce','#d7c5aa','#e3d5bf','#d6d5c9'][index]:finishes[family][index];
+  const spacing=[2.95,3.42,3.45,8.2,3.4,3.8][family]*(recent?1.13:year&&year<1940?.92:1);
+  return {family,seed:seed%997,finish,surface:[0,0,1,2,7,0][family],storey,spacing};
 }
 export const baysOn=(length,spacing)=>Math.max(1,Math.round(length/spacing));
 // Balconies stack on a column of openings, as in the Atlas house constructors.

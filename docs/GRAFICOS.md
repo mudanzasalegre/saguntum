@@ -1,5 +1,11 @@
 # Gráficos y texturas del Simulador 3D
 
+## Revisión 37
+
+Las cubiertas y el suelo utilizan la misma fotografía georreferenciada para mantener la continuidad entre los patios, las manzanas y sus calles. En el Carrer Major, el modelo del entorno interviene en la luz que llega a la base de cada fachada. Para revisar los cambios a nivel de peatón y a unos 200 m de altura se guardaron cuatro pares de capturas con la misma cámara. [Fuentes, mediciones y comparación](../research/realismo-urbano/README.md)
+
+Cuando la cámara orbita a baja altura y mira hacia un punto lejano, la carga de sectores, relieve, copas y patrimonio toma en cuenta el terreno que aparece en primer plano. Esto permite mirar desde el Castillo hacia las sierras y mantener visibles las murallas detalladas. Las dos distancias figuran como `range` y `detailRange` en `territoryStatus`. [Vista desde el Castillo](../research/validation-v37-landscape/sierra-despues.jpg) · [Panorámica del corredor litoral](../research/validation-v37-landscape/panorama-despues.jpg)
+
 La revisión parte de la versión 33 del proyecto original de Sites. En el Simulador, una calle puede combinar la posición de una fachada tomada de Catastro, el color de su cubierta observado desde el aire y una persiana de diseño representativo. Cada una de esas decisiones tiene un alcance distinto.
 
 | Elemento | Qué se representa y con qué precisión |

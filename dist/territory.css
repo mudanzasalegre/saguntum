@@ -77,5 +77,7 @@
 @media(max-height:520px){.sim-top{height:44px}.sim-tools,.sim-map{top:50px}.sim-panel{top:91px;max-height:52dvh}.sim-bottom{bottom:28px}#sim-location{bottom:74px}#sim-map{height:78px}.sim-map:not(.expanded) .sim-map-foot{display:none}}
 
 .sim-top h1,.sim-atlas{white-space:nowrap}
+.map-only #sim-location{z-index:5;bottom:46px}
+.map-only .sim-tools{z-index:5}
 @media(max-width:800px){.map-only .sim-map #sim-map{height:min(54dvh,450px)}}
 @media(max-width:420px){.sim-top{gap:8px}.sim-atlas{padding:6px}.sim-top h1{font-size:19px}#sim-brand .brand{font-size:14px;gap:5px}}

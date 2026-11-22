@@ -57,7 +57,8 @@ async function buildTrees(){
   // Use the photographed model's azimuth and elevation closest to the live
   // camera. The trunk centre stays fixed during every change of view.
   far.onBeforeCompile=s=>{
-    s.vertexShader=s.vertexShader.replace('#include <uv_vertex>',`#include <uv_vertex>
+    s.vertexShader='varying vec2 crownUV;varying vec3 treeRight,treeUp,treeEye;\n'+s.vertexShader.replace('#include <uv_vertex>',`#include <uv_vertex>
+      crownUV=uv;
       mat4 treeWorld=modelMatrix*instanceMatrix;
       vec3 eyeTree=normalize(cameraPosition-(treeWorld*vec4(0.,2.27,0.,1.)).xyz);
       float dx=dot(eyeTree,normalize(treeWorld[0].xyz)),dy=dot(eyeTree,normalize(treeWorld[1].xyz)),dz=dot(eyeTree,normalize(treeWorld[2].xyz));
@@ -69,9 +70,16 @@ async function buildTrees(){
     `).replace('#include <begin_vertex>',`#include <begin_vertex>
       vec3 right=vec3(cos(azimuth),0.,-sin(azimuth));
       vec3 vertical=vec3(-sin(azimuth)*sin(angle),cos(angle),-cos(azimuth)*sin(angle));
+      treeRight=normalize(mat3(treeWorld)*right);
+      treeUp=normalize(mat3(treeWorld)*vertical);
+      treeEye=eyeTree;
       transformed=vec3(0.,2.27,0.)+position.x*right+position.y*vertical;`);
-    s.fragmentShader=s.fragmentShader.replace('#include <normal_fragment_begin>',`#include <normal_fragment_begin>
-      normal=normalize(mat3(viewMatrix)*vec3(.22,.94,.19));`);
+    s.fragmentShader='varying vec2 crownUV;varying vec3 treeRight,treeUp,treeEye;\n'+s.fragmentShader.replace('#include <normal_fragment_begin>',`#include <normal_fragment_begin>
+      // A photographed crown has volume even when its distant LOD is a billboard.
+      vec2 disk=clamp((crownUV-vec2(.5,.55))*2.25,vec2(-1.),vec2(1.));
+      float outward=sqrt(max(0.,1.-dot(disk,disk)));
+      vec3 crownNormal=normalize(treeRight*disk.x+treeUp*disk.y+treeEye*outward+vec3(0.,1.65,0.));
+      normal=normalize(mat3(viewMatrix)*crownNormal);`);
   };
   return {geometry:{trunk,crown,treeView:view},material:{trunk:woodMat,crown:leaves,treeView:far}};
 }

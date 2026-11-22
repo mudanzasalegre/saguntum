@@ -1,3 +1,4 @@
+import {wantsPlan,markRendered,goToPlan,retry3D} from './render-session.js';
 import * as T from 'three';
 import {project} from './territory-coordinates.js';
 import {resource,territoryBase,networkBase,loadElevation,makeSampler,buildGround} from './territory-ground.js';
@@ -30,14 +31,16 @@ export async function openSimulator(){
   const zones=[{...sag,name:'Sagunto histórico',short:'Sagunto'},{...port,name:'Puerto de Sagunto',short:'Puerto'},{...grau,name:'Grau Vell',short:'Grau Vell'}].map(p=>({...p,zone:true}));
   const core={x:(sag.x+port.x)/2,z:(sag.z+grau.z)/2,anchors:zones,range:Math.max(6100,Math.hypot(port.x-sag.x,grau.z-sag.z)*.94)};
   let nav,buildings,network,heritage,atmosphere,renderer,canopy,selected=null,historical=false;
-  let focus2D={...core},budget=mobile?0:2,lastBudget=-1,hour=16,markerButtons=[];
+  let focus2D={...core},budget=mobile?0:2,lastBudget=-1,hour=15,markerButtons=[];
   let pixelScale=1;
-  let lighting='golden',exterior=false;
+  let lighting='solar',lightPreference='auto',terrainPreference='auto',exterior=false;
+  let presentationReady=false;
   const flags={buildings:true,heritage:true,streets:true,land:true,labels:true,cars:true,people:true};
   const status={ready:false,mode:'cargando',places:places.length,buildings:world.counts.buildingGeometries,routeMetres:index.routeLengthM};
   window.territoryStatus=status;
   const map=terrainMap({world,network:index,zones,places,image:mapImage,onPoint(x,z,p){
     if(p)select(p);else{clear();nav?.flyTo(x,z,300);focus2D={x,z};}
+    if(!renderer)syncMapLink();
     map.close();update2D();
   }});
   const credits=document.createElement('span');credits.className='sim-attribution';
@@ -55,11 +58,19 @@ export async function openSimulator(){
   $('settings-open').onclick=()=>panel('settings',$('settings').hidden);
   document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>panel(null,false));
   function save(){
-    try{sessionStorage.setItem(sessionKey,JSON.stringify({camera:nav?.snapshot(),selected:selected?.id,exterior,flags,quality:$('quality').value,hour,lighting,terrain:$('terrain').value}));}catch{}
+    const previous=readVisit()||{};
+    const state=nav?{camera:nav.snapshot(),flags,quality:$('quality').value,hour,lighting,lightPreference,terrain:terrainPreference,jets:$('jets').checked}:previous;
+    if(!nav&&previous.selected!==selected?.id)delete state.camera;
+    try{sessionStorage.setItem(sessionKey,JSON.stringify({...state,selected:selected?.id,exterior}));}catch{}
   }
-  function clear(){
+  function syncMapLink(){
+    const url=new URL(location.href);
+    url.hash=selected?'simulador/'+$('visit').hash.slice(1):'simulador';
+    history.replaceState(history.state,'',url);
+  }
+  function clear(refresh=true){
     if(historical)heritage?.setHistorical(selected.id,false);selected=null;historical=false;
-    $('location').hidden=true;status.selected=null;
+    $('location').hidden=true;status.selected=null;if(refresh&&presentationReady)applyPresentation();
   }
   function framePlace(p,move){
     const views=frames[p.id],which=exterior?views?.exterior:views;
@@ -76,23 +87,25 @@ export async function openSimulator(){
     nav.frame(vector(sample.target),vector(sample.eye),sample.fov);
   }
   function select(p,move=true,detail=false){
-    clear();panel(null,false);map.close();focus2D={x:p.x,z:p.z};
+    clear(false);panel(null,false);map.close();focus2D={x:p.x,z:p.z};
     exterior=detail;
     if(move&&p.zone)nav?.flyTo(p.x,p.z,680);
     if(!p.zone){
       selected=p;status.selected=p.id;$('title').textContent=p.name;$('zone').textContent=regions[p.region]||p.region;
       framePlace(p,move);$('history').hidden=!p.historical;$('history').textContent='Reconstrucción histórica';$('era').hidden=true;$('location').hidden=false;
     }
-    update2D();
+    if(presentationReady)applyPresentation();update2D();
   }
-  function openLinkedPlace(){
+  function openLinkedPlace(restored){
     const [,id,stop]=location.hash.split('/');
     if(!byId.has(id))return false;
-    select(byId.get(id),true,!!stop&&frames[id]?.exterior?.stop===stop);
+    const detail=!!stop&&frames[id]?.exterior?.stop===stop;
+    const sameView=restored?.camera&&restored.selected===id&&!!restored.exterior===detail;
+    select(byId.get(id),!sameView,detail);
     return true;
   }
   window.addEventListener('hashchange',()=>{if(location.hash.startsWith('#simulador/'))openLinkedPlace();});
-  $('visit').onclick=save;$('clear').onclick=clear;
+  $('visit').onclick=save;$('clear').onclick=()=>{clear();if(!renderer)syncMapLink();};
   $('frame').onclick=()=>{if(selected){exterior=!exterior;framePlace(selected,true);}};
   $('history').onclick=()=>{
     const h=selected?.historical;if(!h)return;
@@ -106,32 +119,34 @@ export async function openSimulator(){
   function results(){
     const q=normalize($('query').value.trim()),reg=$('region').value;
     const items=[...zones,...places].filter(p=>(!reg||reg===p.region)&&normalize(p.name).includes(q));
-    const nodes=items.map(p=>{const b=document.createElement('button');b.textContent=p.name;b.onclick=()=>select(p);return b;});
+    const nodes=items.map(p=>{const b=document.createElement('button');b.textContent=p.name;b.onclick=()=>{select(p);if(!renderer)syncMapLink();};return b;});
     $('results').replaceChildren(...nodes);if(!nodes.length)$('results').textContent='Ningún lugar coincide con la búsqueda.';
   }
   $('query').oninput=results;$('region').onchange=results;results();
   function update2D(){if(!renderer)map.draw(focus2D,focus2D,{x:0,z:-1});}
   function fallback(message){
     document.body.classList.add('map-only');$('status').textContent=message;status.ready=true;status.mode='mapa 2D';
+    $('retry').hidden=false;$('retry').onclick=()=>{save();retry3D();};
     $('markers').hidden=true;$('stick').hidden=true;$('altitude').hidden=true;
-    const previous=readVisit();if(previous?.selected&&byId.has(previous.selected))select(byId.get(previous.selected),false);
+    const previous=readVisit();if(previous?.selected&&byId.has(previous.selected))select(byId.get(previous.selected),false,!!previous.exterior);
     openLinkedPlace();map.draw(focus2D,focus2D,{x:0,z:-1});window.addEventListener('resize',()=>map.draw(focus2D,focus2D,{x:0,z:-1}));
   }
-  try{renderer=new T.WebGLRenderer({antialias:true,powerPreference:'high-performance'});}
+  if(wantsPlan()){fallback('Mapa 2D · Exploración en plano');return;}
+  try{renderer=new T.WebGLRenderer({antialias:!mobile,powerPreference:mobile?'default':'high-performance'});}
   catch{fallback('Mapa 2D · WebGL no disponible');return;}
   const scene=new T.Scene(),camera=new T.PerspectiveCamera(38,innerWidth/innerHeight,.2,65000);
   renderer.info.autoReset=false;
   renderer.outputColorSpace=T.SRGBColorSpace;renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=1.05;
   renderer.shadowMap.type=T.PCFSoftShadowMap;renderer.shadowMap.autoUpdate=false;
   renderer.domElement.tabIndex=0;renderer.domElement.setAttribute('aria-label','Escena tridimensional de Sagunto');$('world').append(renderer.domElement);
-  let lost=false;renderer.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();lost=true;renderer=null;fallback('Mapa 2D · Se ha interrumpido WebGL');});
+  let lost=false;renderer.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();lost=true;save();goToPlan();});
   $('status').textContent='Preparando relieve, costa y edificios…';
   const grids=await loadElevation(world.terrain),heightAt=makeSampler(grids);
   const sea=createTerritorySea({polygons:world.water,bounds:world.bounds,shorelines:world.shorelines,project,heightAt,mobile,reduced:matchMedia('(prefers-reduced-motion:reduce)').matches});
   scene.add(sea.group);
   const underSea=sea.mask.groundHeight(heightAt);
   const [ground,heritageResult]=await Promise.all([buildGround(scene,grids,underSea,renderer),createHeritage({scene,project,heightAt,grids,mobile,onChange:()=>{buildings?.changed();canopy?.changed();if(renderer)renderer.shadowMap.needsUpdate=true;}})]);
-  heritage=heritageResult;ground.setHeritage(heritage);buildings=createBuildings({scene,world,grids,heritage});network=createNetwork({scene,index,heightAt,heritage});
+  heritage=heritageResult;ground.setHeritage(heritage);buildings=createBuildings({scene,world,grids,heritage,photography:ground.photography});network=createNetwork({scene,index,heightAt,heritage});
   atmosphere=createAtmosphere(scene,renderer,sea,buildings,network,registerFrame(sag,project));
   canopy=createCanopy(scene,heightAt,heritage);
   const render=contactRenderer(renderer);
@@ -139,7 +154,13 @@ export async function openSimulator(){
     hour=Number(h);$('time').value=hour;$('hour').textContent=String(Math.floor(hour)).padStart(2,'0')+':'+String(Math.round((hour%1)*60)).padStart(2,'0');
     if(lighting==='solar')atmosphere.setHour(hour);else atmosphere.atlas(lighting);
     heritage.setAtlasLighting(lighting!=='solar');
-    $('light').value=lighting;status.lighting=lighting;status.hour=hour;
+    $('light').value=lightPreference;status.lighting=lighting;status.hour=hour;
+  }
+  function applyPresentation(){
+    lighting=lightPreference==='auto'?(selected?'golden':'solar'):lightPreference;
+    setLight(hour);
+    const terrain=terrainPreference==='auto'?(selected?'natural':'photo'):terrainPreference;
+    setTerrainAppearance(terrain==='natural');status.terrain=terrain;$('terrain').value=terrainPreference;
   }
   function onMode(mode){
     document.body.dataset.camera=mode;status.mode=mode;
@@ -162,14 +183,14 @@ export async function openSimulator(){
   function resize(){
     if(!renderer)return;
     const cap=mobile?Math.min([1.65,2,2.25][budget],Math.sqrt([850000,1450000,2300000][budget]/(innerWidth*innerHeight))):[1,1.5,2][budget];
-    renderer.setPixelRatio(Math.min(devicePixelRatio,Math.max(1,cap*pixelScale)));renderer.setSize(innerWidth,innerHeight);
+    renderer.setPixelRatio(Math.min(devicePixelRatio,Math.max(mobile?.68:1,cap*pixelScale)));renderer.setSize(innerWidth,innerHeight);
     camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();
   }
   document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{nav.setMode(b.dataset.mode);renderer.domElement.focus({preventScroll:true});});
   document.querySelectorAll('[data-flag]').forEach(b=>b.onchange=()=>{flags[b.dataset.flag]=b.checked;applyFlags();});
-  $('time').oninput=e=>{lighting='solar';setLight(e.target.value);};
-  $('light').onchange=e=>{lighting=e.target.value;setLight(hour);};
-  $('terrain').onchange=e=>{setTerrainAppearance(e.target.value==='natural');status.terrain=e.target.value;};
+  $('time').oninput=e=>{lightPreference='solar';hour=Number(e.target.value);applyPresentation();};
+  $('light').onchange=e=>{lightPreference=e.target.value;applyPresentation();};
+  $('terrain').onchange=e=>{terrainPreference=e.target.value;applyPresentation();};
   $('quality').onchange=e=>{budget=e.target.value==='auto'?(mobile?0:2):Number(e.target.value);pixelScale=1;resize();};
   $('home').onclick=()=>{clear();nav.panorama();};$('tour').onclick=()=>{clear();nav.startTour();};
   window.addEventListener('resize',resize);
@@ -190,35 +211,57 @@ export async function openSimulator(){
     }
   }
   const state=readVisit();try{sessionStorage.removeItem(sessionKey);}catch{}
-  if(state){Object.assign(flags,state.flags);$('quality').value=state.quality||'auto';if($('quality').value!=='auto')budget=Number($('quality').value);}
-  lighting=state?.lighting??(state?.hour!=null&&state.hour!==16?'solar':'golden');
-  $('terrain').value=state?.terrain==='photo'?'photo':'natural';$('terrain').dispatchEvent(new Event('change'));
-  applyFlags();setLight(state?.hour??16);resize();nav.panorama(true);
-  if(state?.camera){nav.restore(state.camera);if(byId.has(state.selected))select(byId.get(state.selected),false,!!state.exterior);}
-  openLinkedPlace();onMode(nav.mode);
-  const direction=new T.Vector3();
+  if(state){
+    Object.assign(flags,state.flags);
+    const quality=String(state.quality);
+    $('quality').value=['0','1','2'].includes(quality)?quality:'auto';
+    if($('quality').value!=='auto')budget=Number(quality);
+  }
+  const oldLight=state?.lightPreference??state?.lighting;
+  lightPreference=['golden','day','solar','auto'].includes(oldLight)?oldLight:(state?.hour!=null&&state.hour!==16?'solar':'auto');
+  terrainPreference=['natural','photo','auto'].includes(state?.terrain)?state.terrain:'auto';
+  hour=Number.isFinite(state?.hour)?state.hour:15;
+  $('jets').checked=state?.jets!==false;
+  applyFlags();resize();nav.panorama(true);
+  if(state?.camera)nav.restore(state.camera);
+  if(byId.has(state?.selected))select(byId.get(state.selected),!state.camera,!!state.exterior);
+  openLinkedPlace(state);presentationReady=true;applyPresentation();onMode(nav.mode);
+  const direction=new T.Vector3(),foreground=new T.Vector3();
+  // A low, near-horizontal orbit may look kilometres beyond a monument directly
+  // under the camera. Stream the visible foreground instead of the distant pivot.
+  function detailView(p,range){
+    const eye=camera.position,above=Math.max(0,eye.y-heightAt(eye.x,eye.z));
+    const horizontal=Math.hypot(p.x-eye.x,p.z-eye.z);
+    const weight=nav.mode==='orbit'&&horizontal>1?T.MathUtils.smoothstep(range,450,850)*
+      T.MathUtils.smoothstep(horizontal/(above+10),1.6,3.4)*(1-T.MathUtils.smoothstep(above,380,900)):0;
+    if(!weight)return {point:p,range};
+    const lead=Math.min(horizontal,Math.max(75,above*1.6));
+    foreground.copy(eye).lerp(p,lead/horizontal).lerp(p,1-weight);
+    foreground.y=heightAt(foreground.x,foreground.z);
+    return {point:foreground,range:T.MathUtils.lerp(range,Math.max(130,Math.hypot(lead,above)),weight)};
+  }
   let last=performance.now(),lastUpdate=-Infinity,prevStats=last,samples=[],slow=0;
   await buildings.ready;status.ready=true;status.loadMs=Math.round(performance.now()-start);
   function frame(now){
     if(lost)return;requestAnimationFrame(frame);
     if(document.hidden){last=now;return;}
     const ms=now-last,dt=Math.max(0,Math.min(.1,ms/1000));last=now;nav.tick(dt);
-    const p=nav.focusPoint(),range=nav.range;
+    const p=nav.focusPoint(),range=nav.range,detail=detailView(p,range),near=detail.point;
     if(now-lastUpdate>180){
-      ground.update(p.x,p.z,range);
-      if(flags.heritage)heritage.update(p.x,p.z,range,selected?.id,budget);
-      buildings.update(p.x,p.z,range,budget);network.update(p.x,p.z,range,budget,flags);
-      canopy.update(p,range,budget,flags.land);
+      ground.update(near.x,near.z,detail.range);
+      if(flags.heritage)heritage.update(near.x,near.z,detail.range,selected?.id,budget);
+      buildings.update(near.x,near.z,detail.range,budget);network.update(near.x,near.z,detail.range,budget,flags);
+      canopy.update(near,detail.range,budget,flags.land);
       map.draw(camera.position,p,camera.getWorldDirection(direction));markers(range);lastUpdate=now;
     }
-    heritage.animateGlorieta(now/1000,$('jets').checked,lighting==='solar'&&(hour<7||hour>=20));atmosphere.update(camera,p,range,budget);sea.update(dt);network.animate(dt,flags);
+    heritage.animateGlorieta(now/1000,$('jets').checked,lighting==='solar'&&(hour<7||hour>=20));atmosphere.update(camera,near,detail.range,budget);sea.update(dt);network.animate(dt,flags);
     camera.near=range>2600?3:range>450?.7:.12;camera.updateProjectionMatrix();
-    renderer.info.reset();render(scene,camera,lighting==='solar'&&budget===2&&!mobile&&range<520);
-    if(ms>0)samples.push(ms);
+    renderer.info.reset();render(scene,camera,lighting==='solar'&&budget===2&&!mobile&&detail.range<520);
+    markRendered();if(ms>0)samples.push(ms);
     if(now-prevStats>900){
       const sorted=samples.sort((a,b)=>a-b),median=sorted[Math.floor(sorted.length/2)]||16;
       const pending=buildings.stream.pending.size+network.stream.pending.size;
-      Object.assign(status,{mode:nav.mode,range:Math.round(range),camera:nav.snapshot(),sectors:buildings.stream.live.size,networkSectors:network.stream.live.size,
+      Object.assign(status,{mode:nav.mode,range:Math.round(range),detailRange:Math.round(detail.range),camera:nav.snapshot(),sectors:buildings.stream.live.size,networkSectors:network.stream.live.size,
         traffic:network.traffic,photo:surfacePhotoMetrics(),aerial:buildings.aerialStats,fabric:buildings.fabricStats,canopy:canopy.stats,localTerrain:grids.regional.length,quality:budget,pixelRatio:renderer.getPixelRatio(),drawCalls:renderer.info.render.calls,triangles:renderer.info.render.triangles,
         geometries:renderer.info.memory.geometries,textures:renderer.info.memory.textures,frameMs:Math.round(median*10)/10,
         frameP95Ms:Math.round((sorted[Math.floor(sorted.length*.95)]||median)*10)/10,
@@ -228,7 +271,7 @@ export async function openSimulator(){
       if($('quality').value==='auto'){
         slow=median>(mobile?36:29)?slow+1:median<18?Math.min(-1,slow-1):0;
         if(slow>=3&&budget>0){budget--;slow=0;}
-        else if(slow>=3&&mobile&&renderer.getPixelRatio()>1.01){pixelScale=Math.max(.5,pixelScale-.15);resize();slow=0;}
+        else if(slow>=3&&mobile&&renderer.getPixelRatio()>.69){pixelScale=Math.max(.45,pixelScale-.15);resize();slow=0;}
         else if(slow < -12&&pixelScale<1){pixelScale=Math.min(1,pixelScale+.1);resize();slow=0;}
         else if(slow < -12&&budget<(mobile?1:2)){budget++;slow=0;}
         if(lastBudget!==budget){resize();lastBudget=budget;}

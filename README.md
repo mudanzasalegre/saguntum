@@ -8,6 +8,10 @@ La visita recorre el paseo de Sagunto en **24 paradas**. Desde el jardín de Jos
 
 ## Simulador 3D
 
+La panorámica se abre con luz solar y ortofotografía. En una visita seleccionada, el ajuste **Automático** recupera el terreno y la luz del Atlas. En **Capas y luz** puedes elegir esos ajustes por separado. Las cubiertas reciben color de la fotografía aérea sobre sus huellas catastrales. Para las fachadas de las calles, la fecha declarada en Catastro orienta los acabados y las proporciones de los huecos cuando se conoce. Los alzados individuales siguen siendo aproximaciones. [Abrir el simulador](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador)
+
+El enlace a la Glorieta carga su sector, la visita y las fachadas que la rodean. Si se pierde WebGL, la misma parada se abre en su plano y ofrece **Reintentar vista 3D**. También se puede abrir el plano directamente. [Glorieta en plano](https://saguntum-atlas-3d.monmode.chatgpt.site/?vista=plano#glorieta) · [Prueba de recuperación en WebKit](research/glorieta-memoria/recuperacion-webkit.json)
+
 El menú principal abre el [Simulador 3D — Explora Sagunto](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador). En un territorio continuo se puede pasar de la Plaça Major al Puerto y al Grau Vell, cambiar de vuelo a peatón y abrir cualquiera de los 32 destinos del Atlas. El recorrido guiado sigue 9,68 km de calles y caminos cartografiados.
 
 La versión 35 lleva al simulador los entornos originales del Atlas. Se puede empezar bajo los soportales de la Plaça Major, en las oficinas de Gerencia o ante el Alto Horno, con el encuadre y la luz de su visita. En las calles vecinas, las jambas y los huecos tienen profundidad y las medianeras se distinguen de las fachadas. [Soportales](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador/plaza-mayor/plaza-soportales) · [Gerencia](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador/gerencia/gerencia-oficinas) · [Alto Horno](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador/horno/horno-acceso) · [Comparación gráfica con el Atlas](research/validation-atlas-parity/README.md)
