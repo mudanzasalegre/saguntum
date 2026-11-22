@@ -1,5 +1,20 @@
 # Sincronización de Sites a GitHub
 
+## Versión 37 · Glorieta móvil y render territorial
+
+Sites publicó la versión 37 el 22 de noviembre de 2026. La distribución tiene 1.525 archivos y conserva el mismo árbol de aplicación en los dos repositorios. El despliegue público es `appgdep_6b030dcbec648191875bed1231b68144`. [Glorieta](https://saguntum-atlas-3d.monmode.chatgpt.site/#glorieta) · [Simulador](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador)
+
+| Referencia | Valor |
+| --- | --- |
+| Commit de Sites | `a1b5f60157e72d479cbc2abc2fd83ac868b6a6c0` |
+| Commit de la distribución en GitHub | `01ee65c100b09447dda8c70fbf1eee41d4b4ca23` |
+| Árbol Git de `dist/` | `4fcdf4ac2f6e247bcbae8fb4180735ba10e1b363` |
+| SHA-256 del contenido registrado por Sites | `4c428cefba4ff5649b38ef783411c82b6ec0adbdbc0d2201ba685792614fa41d` |
+
+Las dos ortofotos originales de preparación pueden consultarse en `research/territory/originales/`. Sites sirve las variantes que el visor utiliza en cada dispositivo. En seis documentos de planos y contextos se retiraron espacios de formato y se verificó la igualdad de los datos antes de publicar. [Pruebas de la Glorieta](../research/glorieta-memoria/visita-movil.md) · [Comparación de fachadas](../research/realismo-urbano/README.md) · [Comparación de paisaje](../research/validation-v37-landscape/README.md)
+
+En la URL pública se forzó la pérdida del contexto gráfico, se abrió el plano en la parada de José Romeu y se volvió al 3D. La prueba cubrió también la recuperación de un arranque interrumpido y el recorrido simulador → plano → visita → simulador. En la prueba de ida y vuelta en 3D se midió una diferencia de cámara de 0,000 m. Los perfiles táctiles se ejecutaron en Windows. [WebKit](../research/glorieta-memoria/produccion/webkit.json) · [Chrome](../research/glorieta-memoria/produccion/chrome.json) · [Cámara](../research/glorieta-memoria/produccion/visita/resultados.json) · [Comprobación de recursos publicados](../research/glorieta-memoria/produccion/recursos.json)
+
 ## Versión 36 · La Glorieta de Sagunto
 
 El proyecto original publicó la Glorieta el 22 de noviembre de 2026. El despliegue `appgdep_6b0304878d988191b9b7d34893fe01a9` alcanzó el estado `succeeded`. El paquete registrado contiene 1273 archivos. [Visita publicada](https://saguntum-atlas-3d.monmode.chatgpt.site/#glorieta) · [Verificación en producción](../research/glorieta-validacion/produccion/resultados.json)
