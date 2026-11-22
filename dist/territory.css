@@ -79,5 +79,19 @@
 .sim-top h1,.sim-atlas{white-space:nowrap}
 .map-only #sim-location{z-index:5;bottom:46px}
 .map-only .sim-tools{z-index:5}
+#sim-guide{margin:9px 0 12px}
+#sim-guide label{font-size:12px;color:#d6c8a9}
+.sim-stop-controls{display:flex;align-items:stretch;gap:4px;margin:4px 0}
+.sim-stop-controls select,.sim-stop-controls button{border:1px solid #74877b;border-radius:3px;background:#263e38;color:#fff6e3;min-height:36px}
+.sim-stop-controls select{flex:1;min-width:0;width:230px;font-size:14px;padding:4px}
+.sim-stop-controls button{font:24px/1 var(--serif);width:36px;flex-shrink:0}
+.sim-stop-controls button:disabled{opacity:.35}
+#sim-stop-reading summary{cursor:pointer;font-size:12px;color:#e9dfc4}
+#sim-stop-note{font-size:13px;line-height:1.45;max-height:15dvh;overflow:auto}
+#sim-results small{display:block;color:#c7d5ce;font-size:12px}
+.sim-marker.sim-stop-marker{border-radius:50%;width:26px;height:26px;padding:0;font:600 13px var(--sans)!important}
+.sim-marker.sim-stop-marker[aria-current=true]{background:#e8c791!important;color:#203832!important}
+@media(max-width:800px){#sim-guide{margin:5px 0 7px}.sim-stop-controls select{width:190px}.sim-stop-controls button{min-height:40px}#sim-location:has(#sim-guide:not([hidden])){max-width:min(375px,calc(100vw - 20px));padding:8px 27px 9px 10px}#sim-location h2{font-size:21px}}
+@media(max-height:550px){#sim-location{max-height:51dvh;overflow:auto}}
 @media(max-width:800px){.map-only .sim-map #sim-map{height:min(54dvh,450px)}}
 @media(max-width:420px){.sim-top{gap:8px}.sim-atlas{padding:6px}.sim-top h1{font-size:19px}#sim-brand .brand{font-size:14px;gap:5px}}

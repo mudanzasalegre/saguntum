@@ -1,7 +1,10 @@
+import {visitMap} from './territory-visit-map.js';
 export function terrainMap({world,network,zones,places,image,onPoint}){
   const canvas=document.getElementById('sim-map'),box=document.getElementById('sim-map-box');
   const ctx=canvas.getContext('2d'),base=document.createElement('canvas');let transform,municipal=false,dirty=true,last;
-  function extent(){return municipal?world.bounds:[1700,-2650,11700,5500];}
+  const local=visitMap(redraw);
+  let visitPlace=null,useLocal=false;
+  function extent(){return useLocal&&local.bounds?local.bounds:municipal?world.bounds:[1700,-2650,11700,5500];}
   function background(){
     const r=canvas.getBoundingClientRect();if(!r.width||!r.height)return;
     const w=Math.max(1,Math.round(r.width*Math.min(2,devicePixelRatio))),h=Math.max(1,Math.round(r.height*Math.min(2,devicePixelRatio)));
@@ -12,6 +15,10 @@ export function terrainMap({world,network,zones,places,image,onPoint}){
     const {x,z}=transform;c.fillStyle='#344e4b';c.fillRect(0,0,w,h);
     const [ll,tt,rr,bb]=world.bounds;
     c.drawImage(image,x(ll),z(tt),(rr-ll)*s,(bb-tt)*s);c.fillStyle='rgba(23,42,39,.25)';c.fillRect(0,0,w,h);
+    if(useLocal&&local.bounds){
+      local.background(c,transform,box.classList.contains('expanded')||document.body.classList.contains('map-only'),w/r.width);
+      dirty=false;return;
+    }
     function line(p,color,width,close=false){
       if(!p.length)return;c.beginPath();c.moveTo(x(p[0][0]),z(p[0][1]));
       for(let i=1;i<p.length;i++)c.lineTo(x(p[i][0]),z(p[i][1]));if(close)c.closePath();c.strokeStyle=color;c.lineWidth=width;c.stroke();
@@ -49,12 +56,26 @@ export function terrainMap({world,network,zones,places,image,onPoint}){
   canvas.onclick=e=>{
     if(!transform)return;
     const r=canvas.getBoundingClientRect(),mx=(e.clientX-r.left)*canvas.width/r.width,mz=(e.clientY-r.top)*canvas.height/r.height;
+    if(useLocal&&visitPlace){
+      if(!box.classList.contains('expanded')&&!document.body.classList.contains('map-only')){document.getElementById('sim-expand').click();return;}
+      const stop=local.hit(mx,mz);if(stop)onPoint(stop.x,stop.z,visitPlace,stop.id);
+      return;
+    }
     const {cx,cz,s}=transform,xx=(mx-canvas.width/2)/s+cx,zz=(mz-canvas.height/2)/s+cz;
     const candidates=places.map(p=>[p,Math.hypot(p.x-xx,p.z-zz)]).sort((a,b)=>a[1]-b[1]);
     onPoint(xx,zz,candidates[0]?.[1]<Math.min(150,6/s)?candidates[0][0]:null);
   };
   function redraw(){dirty=true;if(last)requestAnimationFrame(()=>draw(...last));}
-  document.getElementById('sim-expand').onclick=e=>{const b=box.classList.toggle('expanded');e.currentTarget.setAttribute('aria-expanded',b);redraw();};
-  document.getElementById('sim-extent').onclick=e=>{municipal=!municipal;e.currentTarget.textContent=municipal?'Ver corredor':'Ver municipio';redraw();};
-  return {draw,close(){box.classList.remove('expanded');document.getElementById('sim-expand').setAttribute('aria-expanded','false');dirty=true;}};
+  document.getElementById('sim-expand').onclick=e=>{const b=box.classList.toggle('expanded');e.currentTarget.setAttribute('aria-expanded',b);labels();redraw();};
+  function labels(){
+    document.getElementById('sim-expand').textContent=box.classList.contains('expanded')?'Cerrar mapa':useLocal?'Mapa de paradas':'Mapa general';
+    document.getElementById('sim-extent').textContent=useLocal?'Ver territorio':municipal?(visitPlace?'Ver paradas':'Ver corredor'):'Ver municipio';
+  }
+  document.getElementById('sim-extent').onclick=()=>{
+    if(useLocal){useLocal=false;municipal=false;}
+    else if(municipal){municipal=false;useLocal=!!visitPlace;}else municipal=true;
+    labels();redraw();
+  };
+  return {draw,setVisit(p,stop){visitPlace=p;local.set(p,stop);useLocal=!!p;municipal=false;labels();redraw();},
+    close(){box.classList.remove('expanded');document.getElementById('sim-expand').setAttribute('aria-expanded','false');labels();dirty=true;}};
 }

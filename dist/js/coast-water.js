@@ -92,6 +92,10 @@ uniform vec3 foamColor;
 uniform float sunStrength;
 varying vec4 mirrorCoord;
 varying vec4 worldPosition;
+#ifdef TERRITORIAL_COAST
+uniform bool inspectPort;
+uniform vec2 inspectionOrigin, inspectionU, inspectionV;
+#endif
 
 #include <common>
 #include <packing>
@@ -112,6 +116,12 @@ vec2 swell(vec2 p,vec2 direction,float wavelength,float slope,float speed){
 void main(){
  #include <logdepthbuf_fragment>
  vec2 p=worldPosition.xz;
+ #ifdef TERRITORIAL_COAST
+ if(inspectPort){
+  vec2 delta=p-inspectionOrigin;
+  if(max(abs(dot(delta,inspectionU)),abs(dot(delta,inspectionV)))<=1.)discard;
+ }
+ #endif
  vec3 viewVector=eye-worldPosition.xyz;
  float eyeDistance=max(length(viewVector),.1);
  vec3 viewDirection=viewVector/eyeDistance;

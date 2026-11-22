@@ -180,8 +180,18 @@ function selectionFromHash(){
  let value;try{value=decodeURIComponent(location.hash.slice(1));}catch{return{name:'atlas',stopId:null};}
  if(!value||value==='atlas')return{name:'atlas',stopId:null};
  for(const name of guidedIds)if(value===name||value.startsWith(name+'/')){const stop=value.split('/')[1];return{name,stopId:guidedVisit(name)?.data?.stops.some(s=>s.id===stop)?stop:null};}
+ const [place,point]=value.split('/');
+ if(point&&byId[place]?.observationPoints)return{name:place,stopId:byId[place].observationPoints.some(p=>p.id===point)?point:null};
  if(regionInfo[value])return{name:'overview',region:value,stopId:null};
  return{name:byId[value]||value==='forum'?value:'atlas',stopId:null};
+}
+function updateSimulatorEntry(){
+ const link=document.querySelector('.simulator-entry');
+ if(link)link.href=byId[selected]?'#simulador/'+location.hash.slice(1):'#simulador';
+}
+function observationLink(id){
+ window.history.replaceState(window.history.state,'','#'+selected+(id?'/'+encodeURIComponent(id):''));
+ updateSimulatorEntry();
 }
 function castlePanel(){
  for(const id of guidedIds){
@@ -207,6 +217,7 @@ function selectVisitStop(monumentId,id){
  if(archaeologicalVisitIds.has(monumentId)&&excavation){const options=archaeologicalSelection(v,id),mode=options.mode;excavation.select(monumentId,options);if(id==='domus-compluvium'||(monumentId==='necropolis'&&mode==='historical'))excavation.setRoofOpen(false);visitStates[monumentId].sectionOpen=mode==='cut';archaeologyPanel();}
  $('close-view').setAttribute('aria-pressed','false');$('close-view').textContent='Vista cercana';
  castlePanel();window.history.replaceState(null,'','#'+monumentId+(id?'/'+encodeURIComponent(id):''));
+ updateSimulatorEntry();
  $('editorial').scrollTop=0;resize();fly(monumentId);refreshMap();updateStatus();
  if(id)$(monumentId+'-panel').querySelector('.castle-stop-title')?.focus({preventScroll:true});
 }
@@ -392,7 +403,7 @@ function coastPanel(){
  $('coast-period').textContent=periods?.[mode]||'Estado documentado';$('coast-state').textContent=mode==='historical'?(c.historicalNote||'Restitución interpretativa apoyada en documentación. El contexto territorial mantiene su cartografía contemporánea.'):(c.currentState||c.statusNote||'Estado conservado documentado.');
  const entries=Object.entries(site?.focuses||{}).filter(([id,f])=>id!=='conjunto'&&(!f.modes||f.modes.includes(mode)));
  $('coast-focuses').innerHTML=entries.length?`<button data-coast-focus="" aria-pressed="${!coastFocus}">Conjunto</button>${entries.map(([id,f])=>`<button data-coast-focus="${id}" aria-pressed="${id===coastFocus}">${escapeHtml(f.label)}</button>`).join('')}`:'';
- $('coast-focuses').querySelectorAll('button').forEach(b=>b.onclick=()=>{coastFocus=b.dataset.coastFocus||null;closeView=false;$('close-view').textContent='Vista cercana';$('close-view').setAttribute('aria-pressed','false');coastPanel();fly(selected);});
+ $('coast-focuses').querySelectorAll('button').forEach(b=>b.onclick=()=>{coastFocus=b.dataset.coastFocus||null;observationLink(coastFocus);closeView=false;$('close-view').textContent='Vista cercana';$('close-view').setAttribute('aria-pressed','false');coastPanel();fly(selected);});
  $('coast-note').textContent=ready?(coastFocus?site.focuses[coastFocus].note||'Punto de observación orbital. Arrastra para explorar.':'Selecciona un encuadre o acércate para descubrir sus detalles.'):(periods?.historical?'Puedes comparar las fases en el mapa y consultar las evidencias.':'Puedes consultar la ubicación y las evidencias del conjunto restaurado.')+' Los encuadres tridimensionales necesitan WebGL.';
  $('marine-option').hidden=c.id!=='puerto-antiguo';$('marine-label').textContent=mode==='historical'?(c.marineHistoricalLabel||'Leer hipótesis marina'):'Leer restos bajo el agua';$('marine-inspection').checked=marineInspection;$('marine-inspection').disabled=!ready;$('marine-note').hidden=!marineInspection||c.id!=='puerto-antiguo';$('marine-note').textContent=(mode==='historical'?c.marineHistoricalNote:c.marineNote)||'Lámina de agua retirada para leer los restos. Posiciones y profundidades aproximadas; fondo expositivo.';
  syncRoofButton();
@@ -407,12 +418,15 @@ function changeCoastMode(mode){
  if(pantalanIds.has(selected)){
   applyPantalanMode(selected,mode);const v=guidedVisit(),stop=v.data?.stops.find(s=>s.id===v.stopId),focus=v.model?.focuses?.[v.stopId];
   if((focus?.modes&&!focus.modes.includes(mode))||(stop?.mode&&stop.mode!==mode)){setVisitStop(selected,null);mapFocus=null;window.history.replaceState(null,'','#'+selected);}
+  updateSimulatorEntry();
   closeView=false;castlePanel();refreshMap();resize();fly(selected);updateStatus();return;
  }
  marineInspection=false;coastEnvironment?.setInspection(false);
+ observationLink(null);
  const ids=selected.startsWith('pantalan-')?['pantalan-paseo','pantalan-maritimo']:[selected];for(const id of ids)coastModes[id]=mode;coastHeritage?.setMode(selected,mode);roofOpen=false;coastFocus=null;closeView=false;$('close-view').textContent='Vista cercana';$('close-view').setAttribute('aria-pressed','false');coastPanel();refreshMap();fly(selected);if(renderer)renderer.shadowMap.needsUpdate=true;coastEnvironment?.invalidate();updateStatus();
 }
 function selectLandscapeFocus(id){
+ observationLink(id);
  landscapeFocus=id||null;mapFocus=landscapeFocus;closeView=false;$('close-view').textContent='Vista cercana';$('close-view').setAttribute('aria-pressed','false');landscapePanel();castlePanel();resize();fly(selected);refreshMap();updateStatus();
 }
 function landscapePanel(){
@@ -451,6 +465,19 @@ async function focus(name,{instant=false,keepTour=false,castleFocus=null,theatre
  }
  if(serial!==focusSerial)return;
  const guided=guidedVisit(name);if(pantalanIds.has(name)){const phase=guided?.data?.stops.find(s=>s.id===guided.stopId)?.mode;if(phase)applyPantalanMode(name,phase);}if(guided?.model?.focuses?.[guided.stopId]?.requiresSection)setVisitSection(name,true);
+ const observation=c?.observationPoints?.find(p=>p.id===visitFocus);
+ if(observation){
+  mapFocus=observation.id;
+  if(c.landscape)landscapeFocus=observation.id;
+  if(c.coastal){
+   coastFocus=observation.id;
+   if(observation.mode){coastModes[name]=observation.mode;coastHeritage?.setMode(name,observation.mode);}
+   if(observation.id==='almacen'){roofOpen=true;const roof=coastHeritage?.sites[name]?.roof;if(roof)roof.visible=false;}
+   marineInspection=['marina','gola','derrumbe'].includes(observation.id);
+   coastEnvironment?.setInspection(marineInspection);
+  }
+  observationLink(observation.id);
+ }else updateSimulatorEntry();
  excavation?.select(name,archaeologicalVisitIds.has(name)?archaeologicalSelection(guided,visitStates[name].stopId):name==='berenguer'?{mode:visitStates.berenguer.sectionOpen?'cut':'current'}:{});if((name==='domus'&&guided?.stopId==='domus-compluvium')||(name==='necropolis'&&excavation?.state.mode==='historical'))excavation?.setRoofOpen(false);applyRegionVisibility();$('close-view').disabled=!ready;archaeologyPanel();portPanel();coastPanel();landscapePanel();castlePanel();syncRoofButton();resize();fly(name,{instant:instant||changed});refreshMap();$('loading').classList.add('loaded');updateStatus();
 }
 async function resumeTour(pendingTour){
@@ -486,10 +513,10 @@ function setupUI(){
  $('help-button').onclick=helpDialog;$('source-button').onclick=sourcesDialog;$('detail-more').onclick=monumentDialog;$('detail-back').onclick=()=>focus('overview');$('reset-view').onclick=()=>focus(atlasHome?'atlas':'overview');
  document.querySelectorAll('[data-focus]').forEach(b=>b.onclick=()=>focus(b.dataset.focus));
  $('close-view').onclick=()=>toggleNearView();
- $('roof-toggle').onclick=()=>{if(!ready)return;roofOpen=!roofOpen;const roof=(byId[selected]?.coastal?coastHeritage?.sites[selected]:portHeritage?.sites[selected])?.roof;if(roof)roof.visible=!roofOpen;else if(selected==='berenguer')civic.roofs.forEach(r=>r.object.visible=!roofOpen);if(roofOpen&&byId[selected]?.coastal){const site=coastHeritage?.sites[selected];coastFocus=site?.roofFocus||coastFocus;coastPanel();}syncRoofButton();renderer.shadowMap.needsUpdate=true;coastEnvironment?.invalidate();if(roofOpen){closeView=true;$('close-view').textContent='Vista del conjunto';$('close-view').setAttribute('aria-pressed','true');fly(selected);}};
+ $('roof-toggle').onclick=()=>{if(!ready)return;roofOpen=!roofOpen;const roof=(byId[selected]?.coastal?coastHeritage?.sites[selected]:portHeritage?.sites[selected])?.roof;if(roof)roof.visible=!roofOpen;else if(selected==='berenguer')civic.roofs.forEach(r=>r.object.visible=!roofOpen);if(roofOpen&&byId[selected]?.coastal){const site=coastHeritage?.sites[selected];coastFocus=site?.roofFocus||coastFocus;observationLink(coastFocus);coastPanel();}syncRoofButton();renderer.shadowMap.needsUpdate=true;coastEnvironment?.invalidate();if(roofOpen){closeView=true;$('close-view').textContent='Vista del conjunto';$('close-view').setAttribute('aria-pressed','true');fly(selected);}};
  $('landscape-tour').onclick=()=>startTour(activeRegion);$('landscape-evidence').onclick=monumentDialog;$('landscapes-tab').onclick=()=>changeRegion(lastLandscape);$('start-tour').onclick=()=>atlasHome?territoryDialog():startTour();$('tour-close').onclick=()=>{stopTour();focus('overview');};$('tour-prev').onclick=()=>{if(tourStep>0)stepTour(tourStep-1);};$('tour-next').onclick=()=>{if(tourStep<activeTour.length-1)stepTour(tourStep+1);else{stopTour();focus('overview');toast('Has completado el recorrido. Puedes seguir explorando a tu ritmo.');}};
  $('tour-explore').onclick=()=>{stopTour();archaeologyPanel();portPanel();coastPanel();landscapePanel();castlePanel();resize();};
- $('coast-evidence').onclick=monumentDialog;document.querySelectorAll('[data-coast-mode]').forEach(b=>b.onclick=()=>changeCoastMode(b.dataset.coastMode));$('marine-inspection').onchange=e=>{marineInspection=e.target.checked;closeView=false;$('close-view').textContent='Vista cercana';$('close-view').setAttribute('aria-pressed','false');coastEnvironment?.setInspection(marineInspection);coastPanel();if(marineInspection){const f=Object.entries(coastHeritage?.sites[selected]?.focuses||{}).find(([id,f])=>/marin|sumerg|bloques|trencatimons/i.test(id+' '+f.label));if(f){coastFocus=f[0];coastPanel();fly(selected);}}};
+ $('coast-evidence').onclick=monumentDialog;document.querySelectorAll('[data-coast-mode]').forEach(b=>b.onclick=()=>changeCoastMode(b.dataset.coastMode));$('marine-inspection').onchange=e=>{marineInspection=e.target.checked;closeView=false;$('close-view').textContent='Vista cercana';$('close-view').setAttribute('aria-pressed','false');coastEnvironment?.setInspection(marineInspection);coastPanel();if(marineInspection){const f=Object.entries(coastHeritage?.sites[selected]?.focuses||{}).find(([id,f])=>/marin|sumerg|bloques|trencatimons/i.test(id+' '+f.label));if(f){coastFocus=f[0];observationLink(coastFocus);coastPanel();fly(selected);}}};
  $('archaeology-evidence').onclick=monumentDialog;document.querySelectorAll('[data-arch-mode]').forEach(b=>b.onclick=()=>archaeologyMode(b.dataset.archMode));
  $('cut-opening').oninput=e=>{excavation?.setOpening(Number(e.target.value)/100);$('cut-opening-value').textContent=e.target.value+' %';};
  $('show-cut-cover').onchange=e=>excavation?.setCoverShown(e.target.checked);

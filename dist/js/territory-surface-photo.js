@@ -1,5 +1,6 @@
 import * as T from 'three';
 import {naturalMix,terrainTint} from './atlas-appearance.js';
+import {urbanLighting,urbanBuildingsVisible} from './territory-urban-sky.js';
 
 // A four-slot photographic atlas in local ETRS89 metres. A second, smaller
 // atlas carries ground colour under buildings (RGB) and mapped land use (A).
@@ -14,7 +15,9 @@ const uniforms={
 };
 const grains={uSurfaceGrains:{value:null},uGrainTone:{value:null},uSurfaceGrainsReady:{value:0},uSurfaceBuildingMask:{value:1}};
 let residentSheets=0,atlasUploads=0,visibleCount=0,sourceSpacings=[];
-export function setSurfaceBuildings(visible){grains.uSurfaceBuildingMask.value=visible?1:0;}
+export function setSurfaceBuildings(visible){
+  grains.uSurfaceBuildingMask.value=visible?1:0;urbanBuildingsVisible(visible);
+}
 const atlasGround={value:1},groundTint=new T.Color(terrainTint);
 export function setTerrainAppearance(natural){atlasGround.value=natural?1:0;}
 const terrainGrade=`if(uAtlasGround>.5){
@@ -59,6 +62,28 @@ vec4 surfacePixel(sampler2D raster,vec2 uv,vec2 dx,vec2 dy){
 function attach(shader){
   Object.assign(shader.uniforms,uniforms);
   shader.fragmentShader=sampling+shader.fragmentShader;
+}
+
+// Modulate the road aggregate with the measured local colour. Robust
+// bounds reject vegetation, photographed vehicles and superseded shadows.
+export function addStreetPhotography(shader){
+  attach(shader);
+  shader.fragmentShader=shader.fragmentShader.replace('#include <alphatest_fragment>',`
+    if(kind==0.&&mode!=2.&&paint<.05){
+      vec2 surfaceUV;float coverage=surfaceAddress(vStreetUV.zw,surfaceUV);
+      if(coverage>.001){
+        float sourceMip=log2(3.2*uSurfaceTexels/512.);
+        vec3 sampleRoad=textureLod(uSurfacePhoto,surfaceUV,sourceMip).rgb;
+        float lum=dot(sampleRoad,vec3(.2126,.7152,.0722));
+        float green=sampleRoad.g-max(sampleRoad.r,sampleRoad.b);
+        float confidence=smoothstep(.035,.078,lum)*(1.-smoothstep(.42,.64,lum))*
+                         (1.-smoothstep(.006,.037,green));
+        vec3 localChroma=clamp(sampleRoad/max(lum,.035),vec3(.81),vec3(1.17));
+        float localValue=clamp(.79+lum*1.21,.86,1.19);
+        diffuseColor.rgb*=mix(vec3(1.),localChroma*localValue,coverage*confidence*.83);
+      }
+    }
+    #include <alphatest_fragment>`);
 }
 
 export function addRoofPhotography(shader,xzExpression,strengthExpression){
@@ -146,6 +171,7 @@ export function addSurfaceGround(shader){
     float area=dot(pDx,axisX);
     vec3 gradient=dFdx(surfaceDeltaHeight)*axisX+dFdy(surfaceDeltaHeight)*axisY;
     if(abs(area)>.00000001)normal=normalize(abs(area)*normal-sign(area)*gradient);`);
+  urbanLighting(shader);
 }
 
 function canvasTexture(side,alpha,anisotropy){

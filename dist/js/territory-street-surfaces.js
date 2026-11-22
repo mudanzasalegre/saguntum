@@ -1,4 +1,7 @@
 import * as T from 'three';
+import {appendStreetFronts} from './territory-street-fronts.js';
+import {urbanLighting} from './territory-urban-sky.js';
+import {addStreetPhotography} from './territory-surface-photo.js';
 
 const folder=new URL('../assets/materials/streets/',import.meta.url);
 const metres=[4.04,2.24,2,1.8,2.5,2.25,2,2.48];
@@ -13,7 +16,7 @@ function profile(f){
   if(f.kind==='steps')return [surfaces[f.surface]??3,4];
   const alternative=['footway','pedestrian','square'].includes(f.kind)?3:['path','track'].includes(f.kind)?2:0;
   const marking=f.car&&!f.oneway&&f.width>=6&&['primary','secondary','tertiary','trunk'].includes(f.kind);
-  return [surfaces[f.surface]??alternative,marking?1:0];
+  return [surfaces[f.surface]??alternative,marking?1:f.car?(f.oneway?8:9):0];
 }
 
 export function streetMaterial(){
@@ -54,7 +57,16 @@ export function streetMaterial(){
         float lateral=vStreetUV.x,along=vStreetUV.y,ax=abs(lateral);
         float aa=max(.012,fwidth(lateral)*.58);
         float longitudinalAA=max(.015,fwidth(along)*.58);
-        float paint=0.,steel=0.;
+        float paint=0.,steel=0.,trafficPolish=0.;
+        if(kind==0.&&(mode==1.||mode==8.||mode==9.)){
+          // Carriageway finish at driving scale. A narrow wheel path has
+          // finer exposed aggregate than the unused margins of the asphalt.
+          float lane=mode==8.||halfWidth<2.35?0.:halfWidth*.50;
+          float tracks=abs(abs(ax-lane)-.76);
+          trafficPolish=(1.-smoothstep(.15,.52,tracks))*(1.-smoothstep(.15,.76,aa));
+          float gutter=smoothstep(halfWidth-.49,halfWidth-.16,ax);
+          bed*=1.-.12*trafficPolish-.09*gutter;
+        }
         if(mode==1.){
           float dash=streetBand(abs(mod(along,8.)-2.),1.9,longitudinalAA);
           paint=streetBand(ax,.062,aa)*dash*(1.-smoothstep(.1,.63,aa));
@@ -72,6 +84,15 @@ export function streetMaterial(){
           bed=mix(bed,mix(vec3(.34,.32,.28),grain,.26),edging);
           float joint=streetBand(abs(fract(along/.84)-.5)*.84,.008,longitudinalAA);
           bed*=1.-joint*edging*.26*(1.-smoothstep(.025,.1,longitudinalAA));
+        }else if(mode==5.){
+          // Pale precast slabs at the cadastral plot line. Keep a little
+          // warm aggregate response in shade rather than the blue aerial cast.
+          bed=mix(bed,vec3(dot(bed,vec3(.22,.70,.08)))*vec3(1.10,1.035,.92),.63);
+        }else if(mode==6.){
+          bed*=vec3(1.03,.99,.93)*.83;
+        }else if(mode==7.){
+          float joint=streetBand(abs(fract(lateral/.96)-.5)*.96,.009,aa);
+          bed=mix(vec3(.32,.30,.263),grain,.20)*(1.-joint*.37);
         }else if(mode==4.){
           float nosing=streetBand(abs(fract(along/.33)-.5)*.33,.018,longitudinalAA);
           bed*=1.-.23*nosing*(1.-smoothstep(.06,.16,longitudinalAA));
@@ -79,7 +100,7 @@ export function streetMaterial(){
         diffuseColor.rgb*=bed;
       `)
       .replace('#include <roughnessmap_fragment>',`#include <roughnessmap_fragment>
-        roughnessFactor=mix(mix(.93,clamp(micro.b,.48,1.),detailWeight),.35,steel);`)
+        roughnessFactor=mix(mix(.93,clamp(micro.b,.48,1.),detailWeight)-trafficPolish*.09,.35,steel);`)
       .replace('#include <normal_fragment_maps>',`#include <normal_fragment_maps>
         vec3 pdx=dFdx(-vViewPosition),pdy=dFdy(-vViewPosition);
         vec3 tx=cross(pdy,normal)*dxStreet.x+cross(normal,pdx)*dyStreet.x;
@@ -87,6 +108,8 @@ export function streetMaterial(){
         float invT=inversesqrt(max(max(dot(tx,tx),dot(ty,ty)),1.e-10));
         vec2 xy=(micro.rg*2.-1.)*.56*detailWeight*(1.-steel);
         normal=normalize(normal*sqrt(max(1.-dot(xy,xy),.05))+(tx*xy.x+ty*xy.y)*invT);`);
+    urbanLighting(s);
+    addStreetPhotography(s);
   };
   return mat;
 }
@@ -99,7 +122,7 @@ function geometry(pos,uv,profiles,idx){
   g.setIndex(idx);g.computeVertexNormals();return g;
 }
 
-export function streetGeometry(data,heightAt){
+export function streetGeometry(data,heightAt,fronts){
   const pos=[],uv=[],profiles=[],idx=[];
   function ribbon(f){
     const points=f.points;if(!points||points.length<2)return;
@@ -139,6 +162,7 @@ export function streetGeometry(data,heightAt){
       ribbon({...road,kind:'footway',width:1.2,offset:sign*(road.width/2+.6)});
   }
   for(const rail of data.rail||[])ribbon({...rail,kind:'rail',width:3.1});
+  appendStreetFronts(fronts,heightAt,pos,uv,profiles,idx);
   return geometry(pos,uv,profiles,idx);
 }
 

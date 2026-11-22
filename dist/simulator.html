@@ -11,7 +11,7 @@
 </section>
 <section class="sim-panel" id="sim-places" aria-label="Lugares del simulador" hidden>
   <div class="sim-heading"><h2>Explora Sagunto</h2><button data-close aria-label="Cerrar lugares">×</button></div>
-  <input type="search" id="sim-query" placeholder="Nombre de lugar o monumento" aria-label="Buscar por nombre">
+  <input type="search" id="sim-query" placeholder="Nombre del lugar o de la parada" aria-label="Buscar lugares y paradas">
   <label>Ámbito <select id="sim-region"><option value="">Todos los ámbitos</option></select></label>
   <div id="sim-results"></div>
 </section>
@@ -40,6 +40,11 @@
 </aside>
 <div id="sim-location" hidden>
   <div><div class="sim-kicker" id="sim-zone"></div><h2 id="sim-title"></h2><p id="sim-era" hidden></p></div>
+  <div id="sim-guide" hidden>
+    <label for="sim-stop" id="sim-stop-label">Paradas del Atlas</label>
+    <div class="sim-stop-controls"><button id="sim-prev" aria-label="Parada anterior">‹</button><select id="sim-stop" aria-labelledby="sim-stop-label"></select><button id="sim-next" aria-label="Parada siguiente">›</button></div>
+    <details id="sim-stop-reading" hidden><summary>Sobre esta parada</summary><p id="sim-stop-note"></p></details>
+  </div>
   <div class="sim-visit-actions"><button id="sim-frame" hidden></button><a id="sim-visit">Visita patrimonial</a><button id="sim-history" hidden>Reconstrucción histórica</button></div><button id="sim-clear" aria-label="Cerrar lugar">×</button>
 </div>
 <div class="sim-bottom">

@@ -1,5 +1,6 @@
 import * as T from 'three';
 import {territorySky} from './territory-sky.js';
+import {urbanSun} from './territory-urban-sky.js';
 import {atlasLights,atlasRim,applyAtlasLighting} from './atlas-appearance.js';
 
 export function createAtmosphere(scene,renderer,sea,buildings,network,registration) {
@@ -63,6 +64,7 @@ export function createAtmosphere(scene,renderer,sea,buildings,network,registrati
     // The smallest footprint resolves window reveals and pavilion columns.
     const extent=range<26?44:range<70?85:range<140?145:range<300?225:range<650?400:
       range<1400?820:range<3000?1500:range<6000?3000:5500;
+    urbanSun(direction,p,enabled?extent:0);
     const distance=580+extent*1.55;
     if(span!==extent){
       span=extent;Object.assign(sun.shadow.camera,{left:-span,right:span,top:span,bottom:-span,far:distance+extent*1.7+320});

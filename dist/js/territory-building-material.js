@@ -2,6 +2,7 @@ import * as T from 'three';
 import {addRoofPhotography} from './territory-surface-photo.js';
 import {addRegionalRoofPhotography} from './territory-ortho.js';
 import {openingBounds} from './territory-building-style.js';
+import {urbanLighting} from './territory-urban-sky.js';
 
 const dir=new URL('../assets/materials/architecture/',import.meta.url);
 const apertures=Array.from({length:24},(_,i)=>
@@ -30,8 +31,9 @@ export function skylineMaterial(photography){
         vAerialRoofXZ=position.xz;vAerialRoofNormal=normal.y;`);
       s.fragmentShader=vary+s.fragmentShader;
       broadRoofPhoto(s,photography,'vAerialRoofXZ','vAerialRoofNormal>.85');
+      urbanLighting(s,true);
     };
-    material.customProgramCacheKey=()=>'territorial-skyline-37';
+    material.customProgramCacheKey=()=>'territorial-skyline-38';
   }
   return material;
 }
@@ -48,7 +50,7 @@ export function architecturalMaterial(night,photography){
     tex.anisotropy=4;slot.value=tex;
   })).then(()=>{ready.value=1;}).catch(e=>console.warn('Material arquitectónico',e));
   mat.defines={USE_UV:''};
-  mat.customProgramCacheKey=()=>'territorial-architecture-37';
+  mat.customProgramCacheKey=()=>'territorial-architecture-38';
   mat.onBeforeCompile=s=>{
     Object.assign(s.uniforms,slots,{uArchReady:ready,uNight:night});
     const varyings=`
@@ -95,7 +97,28 @@ export function architecturalMaterial(night,photography){
         vec3 fabric=mix(vec3(.42,.37,.27),vec3(.57,.56,.48),tone);
         room=mix(room,fabric*(.68+.17*cos(pane.x*112.)),curtain);
         vec3 reflected=mix(vec3(.155,.122,.08),vec3(.30,.45,.54),smoothstep(-.17,.53,reflection.y));
-        float fresnel=.10+.57*pow(1.-wall,2.6);
+        // Reflect the measured street enclosure at the pane. A ray leaving
+        // the roof line sees sky; one meeting the opposite block sees render.
+        if(uUrbanReady*uUrbanEnabled>.5&&vArchRange<82.&&reflection.y<.93){
+          vec2 direction=normalize(reflection.xz+vec2(.00001));
+          float slope=reflection.y/max(.04,length(reflection.xz));
+          float coverage=0.;
+          for(int stepIndex=0;stepIndex<5;stepIndex++){
+            float distance=6.+3.*float(stepIndex)+2.*float(stepIndex*stepIndex);
+            vec2 hit=urbanUv(vUrbanPoint.xz+direction*distance);
+            if(any(lessThan(hit,vec2(0.)))||any(greaterThan(hit,vec2(1.))))break;
+            vec3 field=textureLod(uUrbanField,hit,0.).rgb;
+            float top=field.r*255.-8.,rayY=vUrbanPoint.y+distance*slope;
+            float intercept=smoothstep(.0,1.8,top-rayY)*step(.005,field.r);
+            // The reflected tone follows sky exposure and daylight. It
+            // deliberately carries no fabricated signs or shop displays.
+            vec3 opposite=mix(vec3(.41,.37,.31),vec3(.105,.127,.142),field.g);
+            float weight=intercept*(1.-coverage);
+            reflected=mix(reflected,opposite,weight);coverage+=weight;
+            if(coverage>.98)break;
+          }
+        }
+        float fresnel=.18+.59*pow(1.-wall,2.4);
         vec2 rim=min(pane,1.-pane);
         float ambient=.72+.28*smoothstep(.0,.093,min(rim.x,rim.y));
         return mix(room*ambient,reflected,fresnel);
@@ -217,6 +240,7 @@ export function architecturalMaterial(night,photography){
     const isRoof='abs(vArchData.y+2.)<.1 && vArchData.x>=3.9 && vArchData.x<=6.1';
     broadRoofPhoto(s,photography,'vArchXZ',isRoof);
     addRoofPhotography(s,'vArchXZ',isRoof+' ? 0.84 : 0.0');
+    urbanLighting(s,true);
   };
   return mat;
 }

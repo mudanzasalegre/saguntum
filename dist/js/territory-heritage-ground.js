@@ -19,7 +19,7 @@ function joinRectangles(rows){
 
 export function conservationGround({group,material,heightAt,bounds}){
  const original=material.onBeforeCompile,overlay=material.clone();
- const maxCuts=2*maxLocalHeritage;
+ const maxCuts=2*maxLocalHeritage+1;
  const cuts=Array.from({length:maxCuts},()=>new T.Vector4()),cross=Array.from({length:maxCuts},()=>new T.Vector2());
  const rectangles=Array.from({length:maxLocalHeritage},()=>new T.Vector4(1,1,-1,-1)),nCuts={value:0};
  function hook(target,coarse){
@@ -57,11 +57,14 @@ export function conservationGround({group,material,heightAt,bounds}){
  function update(){
   const next=source?.relief||[];
   if(next.length===active.length&&next.every((p,i)=>p===active[i]))return;
+  const sameGrades=next.length===active.length&&next.every((p,i)=>p.delta===active[i].delta);
   active=next;
-  for(const mesh of meshes){mesh.removeFromParent();mesh.geometry.dispose();}
   const regions=joinRectangles(next.filter(p=>p.bounds).map(p=>p.bounds)),holes=next.flatMap(p=>p.cuts);
-  meshes=regions.map(tile);
-  rectangles.forEach((v,i)=>regions[i]?v.fromArray(regions[i]):v.set(1,1,-1,-1));
+  if(!sameGrades){
+   for(const mesh of meshes){mesh.removeFromParent();mesh.geometry.dispose();}
+   meshes=regions.map(tile);
+   rectangles.forEach((v,i)=>regions[i]?v.fromArray(regions[i]):v.set(1,1,-1,-1));
+  }
   holes.forEach((q,i)=>{cuts[i].set(q[0],q[1],q[2],q[3]);cross[i].set(q[4],q[5]);});
   nCuts.value=holes.length;cutsNow=holes;
  }

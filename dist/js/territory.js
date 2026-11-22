@@ -25,8 +25,13 @@ export async function openSimulator(){
   const start=performance.now(),brand=document.querySelector('.brand').cloneNode(true);
   const fragment=await resource('./simulator.html','text');
   document.body.innerHTML=fragment;$('brand').append(brand);
-  const [world,index,mapImage,inventory,frames]=await Promise.all([resource(territoryBase+'world.json'),resource(networkBase+'index.json'),imageAt(territoryBase+'map.jpg'),loadHeritageCatalog(project),resource(territoryBase+'atlas-frames.json').catch(()=>({}))]);
+  const [world,index,mapImage,inventory,frames,guides]=await Promise.all([resource(territoryBase+'world.json'),resource(networkBase+'index.json'),imageAt(territoryBase+'map.jpg'),loadHeritageCatalog(project),resource(territoryBase+'atlas-frames.json').catch(()=>({})),resource(territoryBase+'visit-stops.json')]);
   const {places}=inventory,byId=new Map(places.map(p=>[p.id,p]));
+  for(const p of places){
+    p.guide=guides[p.id];
+    for(const [i,s] of (p.guide?.stops||[]).entries())Object.assign(s,project(...s.coordinate),{number:i+1});
+  }
+  let activeStop=null,cameras={},stopCamera;
   const [sag,port,grau]=['plaza-mayor','horno','grau-vell'].map(id=>byId.get(id));
   const zones=[{...sag,name:'Sagunto histórico',short:'Sagunto'},{...port,name:'Puerto de Sagunto',short:'Puerto'},{...grau,name:'Grau Vell',short:'Grau Vell'}].map(p=>({...p,zone:true}));
   const core={x:(sag.x+port.x)/2,z:(sag.z+grau.z)/2,anchors:zones,range:Math.max(6100,Math.hypot(port.x-sag.x,grau.z-sag.z)*.94)};
@@ -38,15 +43,15 @@ export async function openSimulator(){
   const flags={buildings:true,heritage:true,streets:true,land:true,labels:true,cars:true,people:true};
   const status={ready:false,mode:'cargando',places:places.length,buildings:world.counts.buildingGeometries,routeMetres:index.routeLengthM};
   window.territoryStatus=status;
-  const map=terrainMap({world,network:index,zones,places,image:mapImage,onPoint(x,z,p){
-    if(p)select(p);else{clear();nav?.flyTo(x,z,300);focus2D={x,z};}
-    if(!renderer)syncMapLink();
+  const map=terrainMap({world,network:index,zones,places,image:mapImage,onPoint(x,z,p,stopId){
+    if(p)select(p,true,stopId);else{clear();nav?.flyTo(x,z,300);focus2D={x,z};}
+    writeLink();
     map.close();update2D();
   }});
   const credits=document.createElement('span');credits.className='sim-attribution';
   credits.innerHTML='<a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap</a> · <a href="https://www.ign.es/" target="_blank" rel="noopener">PNOA / IGN</a> · <a href="https://www.catastro.hacienda.gob.es/webinspire/" target="_blank" rel="noopener">Catastro</a> · <a href="https://icv.gva.es/" target="_blank" rel="noopener">ICV</a> · <a href="https://polyhaven.com/license" target="_blank" rel="noopener">Materiales CC0</a>';
   document.querySelector('.sim-foot').prepend(credits);
-  $('credits').textContent='Huellas de Catastro INSPIRE, MDT y ortofoto PNOA del IGN, límite municipal del ICV y red viaria de OpenStreetMap (ODbL). Las alturas derivan de LiDAR, plantas o estimación. Las fachadas y la actividad urbana son interpretativas.';
+  $('credits').textContent='Huellas y límites de parcela de Catastro INSPIRE, modelos de elevación y ortofoto PNOA del IGN, límite municipal del ICV y red viaria de OpenStreetMap (ODbL). Las alturas derivan de LiDAR, plantas o estimación. Las fachadas, el reparto del espacio entre calzada y acera y la actividad urbana son interpretativos.';
   function panel(id,open){
     for(const name of ['places','settings']){
       const visible=name===id&&open;$(name).hidden=!visible;
@@ -60,25 +65,38 @@ export async function openSimulator(){
   function save(){
     const previous=readVisit()||{};
     const state=nav?{camera:nav.snapshot(),flags,quality:$('quality').value,hour,lighting,lightPreference,terrain:terrainPreference,jets:$('jets').checked}:previous;
-    if(!nav&&previous.selected!==selected?.id)delete state.camera;
-    try{sessionStorage.setItem(sessionKey,JSON.stringify({...state,selected:selected?.id,exterior}));}catch{}
+    if(!nav&&(previous.selected!==selected?.id||savedStop(previous)!==activeStop?.id))delete state.camera;
+    try{sessionStorage.setItem(sessionKey,JSON.stringify({...state,selected:selected?.id,stop:activeStop?.id,exterior}));}catch{}
   }
-  function syncMapLink(){
+  function savedStop(state){
+    return state?.stop||(state?.exterior?frames[state.selected]?.exterior?.stop:undefined);
+  }
+  function writeLink(replace=false){
     const url=new URL(location.href);
     url.hash=selected?'simulador/'+$('visit').hash.slice(1):'simulador';
-    history.replaceState(history.state,'',url);
+    if(url.hash!==location.hash)history[replace?'replaceState':'pushState'](null,'',url);
   }
   function clear(refresh=true){
-    if(historical)heritage?.setHistorical(selected.id,false);selected=null;historical=false;
+    if(historical)heritage?.setHistorical(selected.id,false);selected=null;activeStop=null;historical=false;
+    status.stop=null;status.stopIndex=0;status.stopCount=0;
+    if(refresh){heritage?.setVisitStop(null,null);map.setVisit(null);nav?.leaveVisit();}
     $('location').hidden=true;status.selected=null;if(refresh&&presentationReady)applyPresentation();
   }
   function framePlace(p,move){
     const views=frames[p.id],which=exterior?views?.exterior:views;
     const sample=which?.[innerWidth/innerHeight<.85?'portrait':'wide'];
-    $('frame').hidden=!nav||!views?.exterior;
-    $('frame').textContent=exterior?'Vista del conjunto':(views?.exterior?.label||'Vista cercana');
-    $('visit').href=exterior&&views?.exterior?p.href+'/'+views.exterior.stop:p.href;
+    $('frame').hidden=!nav||(!activeStop&&!views?.exterior);
+    $('frame').textContent=activeStop?'Vista del conjunto':(views?.exterior?.label||'Vista cercana');
+    $('visit').href=p.href+(activeStop?'/'+activeStop.id:'');
     if(!move||!nav)return;
+    if(activeStop){
+      const frame=cameras[p.id]?.[activeStop.id];
+      if(frame){
+        const pose=stopCamera(activeStop,p,{heightAt,project,aspect:innerWidth/innerHeight,frame});
+        nav.frame(pose.target,pose.eye,pose.fov,false,true);
+      }else nav.flyTo(activeStop.x,activeStop.z,65);
+      return;
+    }
     if(!sample){nav.flyTo(p.x,p.z,100);return;}
     const local=registerFrame(p,project);
     const target=local.world(sample.target[0],sample.target[2]);
@@ -86,27 +104,59 @@ export async function openSimulator(){
     const vector=([x,y,z])=>{const v=local.world(x,z);return new T.Vector3(v.x,y+dy,v.z);};
     nav.frame(vector(sample.target),vector(sample.eye),sample.fov);
   }
-  function select(p,move=true,detail=false){
-    clear(false);panel(null,false);map.close();focus2D={x:p.x,z:p.z};
-    exterior=detail;
+  function select(p,move=true,stopId=null){
+    const previous=selected;clear(false);panel(null,false);map.close();
+    activeStop=p.guide?.stops.find(s=>s.id===stopId)||null;
+    focus2D=activeStop||p;
+    exterior=!!activeStop&&frames[p.id]?.exterior?.stop===activeStop.id;
+    map.setVisit(p.zone?null:p,activeStop);
+    const presentation=cameras[p.id]?.[stopId]?.presentation;
+    if(activeStop&&move&&nav&&!flags.heritage){flags.heritage=true;applyFlags();}
+    if(flags.heritage)heritage?.setVisitStop(p.zone?null:p.id,activeStop?.id||null,focus2D,presentation);
     if(move&&p.zone)nav?.flyTo(p.x,p.z,680);
     if(!p.zone){
       selected=p;status.selected=p.id;$('title').textContent=p.name;$('zone').textContent=regions[p.region]||p.region;
-      framePlace(p,move);$('history').hidden=!p.historical;$('history').textContent='Reconstrucción histórica';$('era').hidden=true;$('location').hidden=false;
+      const stops=p.guide?.stops||[];
+      status.stop=activeStop?.id||null;status.stopIndex=activeStop?.number||0;status.stopCount=stops.length;
+      $('guide').hidden=!stops.length;
+      if(previous!==p||!$('stop').options.length){
+        $('stop').replaceChildren(new Option('Vista del conjunto',''));
+        const groups=new Map((p.guide?.regions||[]).map(r=>{
+          const g=document.createElement('optgroup');g.label=r.name;return [r.id,g];
+        }));
+        for(const s of stops)(groups.get(s.regionId)||$('stop')).append(new Option(s.number+'. '+s.title,s.id));
+        $('stop').append(...groups.values());
+      }
+      $('stop').value=activeStop?.id||'';$('stop-label').textContent=activeStop?'Parada '+activeStop.number+' de '+stops.length:'Recorrido · '+stops.length+' paradas';
+      $('prev').disabled=!activeStop;$('next').disabled=activeStop?.number===stops.length;
+      $('stop-reading').hidden=!activeStop?.intro;$('stop-reading').open=false;$('stop-note').textContent=activeStop?.intro||'';
+      framePlace(p,move);
+      $('history').hidden=!p.historical||!!activeStop;$('history').textContent='Reconstrucción histórica';
+      const phase=presentation?.mode||activeStop?.mode||activeStop?.recommendedMode;
+      $('era').hidden=!['historical','cut'].includes(phase);
+      $('era').textContent=phase==='historical'?'Reconstrucción histórica · '+(p.historical?.period||'Interpretación del Atlas'):'Sección de la visita';
+      $('location').hidden=false;
     }
     if(presentationReady)applyPresentation();update2D();
   }
+  function chooseStop(id){
+    if(!selected)return;
+    select(selected,true,id);writeLink();
+  }
+  $('stop').onchange=e=>chooseStop(e.target.value);
+  $('prev').onclick=()=>chooseStop(selected.guide.stops[activeStop.number-2]?.id);
+  $('next').onclick=()=>chooseStop(selected.guide.stops[activeStop?.number||0]?.id);
   function openLinkedPlace(restored){
     const [,id,stop]=location.hash.split('/');
     if(!byId.has(id))return false;
-    const detail=!!stop&&frames[id]?.exterior?.stop===stop;
-    const sameView=restored?.camera&&restored.selected===id&&!!restored.exterior===detail;
-    select(byId.get(id),!sameView,detail);
+    const sameView=restored?.camera&&restored.selected===id&&savedStop(restored)===(stop||undefined);
+    select(byId.get(id),!sameView,stop);
+    if(stop&&!activeStop)writeLink(true);
     return true;
   }
-  window.addEventListener('hashchange',()=>{if(location.hash.startsWith('#simulador/'))openLinkedPlace();});
-  $('visit').onclick=save;$('clear').onclick=()=>{clear();if(!renderer)syncMapLink();};
-  $('frame').onclick=()=>{if(selected){exterior=!exterior;framePlace(selected,true);}};
+  window.addEventListener('hashchange',()=>{if(!openLinkedPlace()&&location.hash==='#simulador'){clear();nav?.panorama();focus2D=core;update2D();}});
+  $('visit').onclick=save;$('clear').onclick=()=>{clear();writeLink();};
+  $('frame').onclick=()=>chooseStop(activeStop?null:frames[selected.id]?.exterior?.stop);
   $('history').onclick=()=>{
     const h=selected?.historical;if(!h)return;
     if(!heritage||!h.inWorld){save();location.hash=h.href;return;}
@@ -119,17 +169,28 @@ export async function openSimulator(){
   function results(){
     const q=normalize($('query').value.trim()),reg=$('region').value;
     const items=[...zones,...places].filter(p=>(!reg||reg===p.region)&&normalize(p.name).includes(q));
-    const nodes=items.map(p=>{const b=document.createElement('button');b.textContent=p.name;b.onclick=()=>{select(p);if(!renderer)syncMapLink();};return b;});
+    const nodes=[];
+    function result(p,s){
+      const b=document.createElement('button');b.textContent=s?s.title:p.name;
+      if(s){const sub=document.createElement('small');sub.textContent=p.name+' · '+s.number; b.append(sub);}
+      b.onclick=()=>{select(p,true,s?.id);writeLink();};nodes.push(b);
+    }
+    for(const p of items)result(p);
+    if(q)for(const p of places)if(!reg||reg===p.region)for(const s of p.guide?.stops||[]){
+      if(normalize(s.title+' '+s.id).includes(q))result(p,s);
+    }
     $('results').replaceChildren(...nodes);if(!nodes.length)$('results').textContent='Ningún lugar coincide con la búsqueda.';
   }
   $('query').oninput=results;$('region').onchange=results;results();
   function update2D(){if(!renderer)map.draw(focus2D,focus2D,{x:0,z:-1});}
   function fallback(message){
     document.body.classList.add('map-only');$('status').textContent=message;status.ready=true;status.mode='mapa 2D';
+    $('expand').disabled=true;
     $('retry').hidden=false;$('retry').onclick=()=>{save();retry3D();};
     $('markers').hidden=true;$('stick').hidden=true;$('altitude').hidden=true;
-    const previous=readVisit();if(previous?.selected&&byId.has(previous.selected))select(byId.get(previous.selected),false,!!previous.exterior);
-    openLinkedPlace();map.draw(focus2D,focus2D,{x:0,z:-1});window.addEventListener('resize',()=>map.draw(focus2D,focus2D,{x:0,z:-1}));
+    const previous=readVisit();if(previous?.selected&&byId.has(previous.selected))select(byId.get(previous.selected),false,savedStop(previous));
+    if(!openLinkedPlace()&&selected)writeLink(true);
+    map.draw(focus2D,focus2D,{x:0,z:-1});window.addEventListener('resize',()=>map.draw(focus2D,focus2D,{x:0,z:-1}));
   }
   if(wantsPlan()){fallback('Mapa 2D · Exploración en plano');return;}
   try{renderer=new T.WebGLRenderer({antialias:!mobile,powerPreference:mobile?'default':'high-performance'});}
@@ -141,11 +202,12 @@ export async function openSimulator(){
   renderer.domElement.tabIndex=0;renderer.domElement.setAttribute('aria-label','Escena tridimensional de Sagunto');$('world').append(renderer.domElement);
   let lost=false;renderer.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();lost=true;save();goToPlan();});
   $('status').textContent='Preparando relieve, costa y edificios…';
-  const grids=await loadElevation(world.terrain),heightAt=makeSampler(grids);
+  const [grids,stopModule,visitCameras]=await Promise.all([loadElevation(world.terrain),import('./territory-visit-frames.js'),resource(territoryBase+'visit-cameras.json')]);
+  const heightAt=makeSampler(grids);stopCamera=stopModule.stopCamera;cameras=visitCameras;
   const sea=createTerritorySea({polygons:world.water,bounds:world.bounds,shorelines:world.shorelines,project,heightAt,mobile,reduced:matchMedia('(prefers-reduced-motion:reduce)').matches});
   scene.add(sea.group);
   const underSea=sea.mask.groundHeight(heightAt);
-  const [ground,heritageResult]=await Promise.all([buildGround(scene,grids,underSea,renderer),createHeritage({scene,project,heightAt,grids,mobile,onChange:()=>{buildings?.changed();canopy?.changed();if(renderer)renderer.shadowMap.needsUpdate=true;}})]);
+  const [ground,heritageResult]=await Promise.all([buildGround(scene,grids,underSea,renderer),createHeritage({scene,renderer,project,heightAt,grids,mobile,onChange:()=>{buildings?.changed();canopy?.changed();if(renderer)renderer.shadowMap.needsUpdate=true;}})]);
   heritage=heritageResult;ground.setHeritage(heritage);buildings=createBuildings({scene,world,grids,heritage,photography:ground.photography});network=createNetwork({scene,index,heightAt,heritage});
   atmosphere=createAtmosphere(scene,renderer,sea,buildings,network,registerFrame(sag,project));
   canopy=createCanopy(scene,heightAt,heritage);
@@ -178,6 +240,7 @@ export async function openSimulator(){
     if(heritage.group.visible!==flags.heritage)buildings.changed();
     buildings.group.visible=flags.buildings;heritage.group.visible=flags.heritage;$('markers').hidden=!flags.labels;
     if(!flags.heritage){heritage.clear();if(historical)clear();}
+    else if(selected&&activeStop)heritage.setVisitStop(selected.id,activeStop.id,activeStop,cameras[selected.id]?.[activeStop.id]?.presentation);
     document.querySelectorAll('[data-flag]').forEach(b=>b.checked=flags[b.dataset.flag]);
   }
   function resize(){
@@ -192,16 +255,35 @@ export async function openSimulator(){
   $('light').onchange=e=>{lightPreference=e.target.value;applyPresentation();};
   $('terrain').onchange=e=>{terrainPreference=e.target.value;applyPresentation();};
   $('quality').onchange=e=>{budget=e.target.value==='auto'?(mobile?0:2):Number(e.target.value);pixelScale=1;resize();};
-  $('home').onclick=()=>{clear();nav.panorama();};$('tour').onclick=()=>{clear();nav.startTour();};
-  window.addEventListener('resize',resize);
+  $('home').onclick=()=>{clear();nav.panorama();writeLink();};$('tour').onclick=()=>{clear();nav.startTour();writeLink();};
+  window.addEventListener('resize',()=>{resize();if(selected&&activeStop&&nav.atVisitFrame)framePlace(selected,true);});
   for(const p of [...zones,...places]){
-    const b=document.createElement('button');b.className='sim-marker'+(p.zone?' zone':'');b.textContent=p.zone?p.name:p.name;b.hidden=true;b.onclick=()=>select(p);
+    const b=document.createElement('button');b.className='sim-marker'+(p.zone?' zone':'');b.textContent=p.name;b.hidden=true;b.onclick=()=>{select(p);writeLink();};
     $('markers').append(b);markerButtons.push({p,b});
   }
+  let pinPlace=null,stopPins=[];
   function markers(range){
     const used=[];
+    const enclosed=activeStop&&nav.atVisitFrame&&(heritage.stats.visit?.interior||heritage.stats.visit?.section||heritage.stats.visit?.inspection);
+    if(pinPlace!==selected){
+      for(const {b} of stopPins)b.remove();
+      pinPlace=selected;
+      stopPins=(selected?.guide?.stops||[]).map(s=>{
+        const b=document.createElement('button');b.className='sim-marker sim-stop-marker';b.hidden=true;b.textContent=s.number;
+        b.title=s.title;b.setAttribute('aria-label','Parada '+s.number+' · '+s.title);
+        b.onclick=()=>chooseStop(s.id);$('markers').append(b);return {s,b};
+      });
+    }
+    for(const {s,b} of stopPins){
+      b.hidden=true;b.setAttribute('aria-current',String(s===activeStop));
+      if(!flags.labels||!flags.heritage||range<45||range>1800||nav.mode!=='orbit')continue;
+      const v=new T.Vector3(s.x,heightAt(s.x,s.z)+1.8,s.z).project(camera);
+      const x=(v.x+1)*innerWidth/2,y=(1-v.y)*innerHeight/2;
+      if(v.z<0||v.z>1||x<22||x>innerWidth-22||y<90||y>innerHeight-85||used.some(pt=>Math.hypot(pt[0]-x,pt[1]-y)<38))continue;
+      b.hidden=false;b.style.left=x+'px';b.style.top=y+'px';used.push([x,y]);
+    }
     for(const {p,b} of markerButtons){
-      if((range>1550)!==!!p.zone||!flags.labels){b.hidden=true;continue;}
+      if(enclosed||p===selected||(range>1550)!==!!p.zone||!flags.labels){b.hidden=true;continue;}
       const v=new T.Vector3(p.x,heightAt(p.x,p.z)+(p.zone?80:14),p.z);
       if(!p.zone&&camera.position.distanceTo(v)>Math.max(520,range*1.8)){b.hidden=true;continue;}
       v.project(camera);const x=(v.x+1)*innerWidth/2,y=(1-v.y)*innerHeight/2;
@@ -224,8 +306,9 @@ export async function openSimulator(){
   $('jets').checked=state?.jets!==false;
   applyFlags();resize();nav.panorama(true);
   if(state?.camera)nav.restore(state.camera);
-  if(byId.has(state?.selected))select(byId.get(state.selected),!state.camera,!!state.exterior);
-  openLinkedPlace(state);presentationReady=true;applyPresentation();onMode(nav.mode);
+  if(byId.has(state?.selected))select(byId.get(state.selected),!state.camera,savedStop(state));
+  if(!openLinkedPlace(state)&&selected)writeLink(true);
+  presentationReady=true;applyPresentation();onMode(nav.mode);
   const direction=new T.Vector3(),foreground=new T.Vector3();
   // A low, near-horizontal orbit may look kilometres beyond a monument directly
   // under the camera. Stream the visible foreground instead of the distant pivot.
@@ -254,6 +337,7 @@ export async function openSimulator(){
       canopy.update(near,detail.range,budget,flags.land);
       map.draw(camera.position,p,camera.getWorldDirection(direction));markers(range);lastUpdate=now;
     }
+    sea.setInspection(flags.heritage&&heritage.stats.visit?.waterCut);
     heritage.animateGlorieta(now/1000,$('jets').checked,lighting==='solar'&&(hour<7||hour>=20));atmosphere.update(camera,near,detail.range,budget);sea.update(dt);network.animate(dt,flags);
     camera.near=range>2600?3:range>450?.7:.12;camera.updateProjectionMatrix();
     renderer.info.reset();render(scene,camera,lighting==='solar'&&budget===2&&!mobile&&detail.range<520);
@@ -267,7 +351,11 @@ export async function openSimulator(){
         frameP95Ms:Math.round((sorted[Math.floor(sorted.length*.95)]||median)*10)/10,
         heapMiB:performance.memory?Math.round(performance.memory.usedJSHeapSize/1048576):null,heritage:heritage.stats,pending});
       $('stats').textContent=status.frameMs+' ms/fotograma · '+status.drawCalls+' llamadas · '+status.triangles.toLocaleString('es-ES')+' triángulos · '+status.geometries+' geometrías · '+status.textures+' texturas'+(status.heapMiB?' · JS '+status.heapMiB+' MiB':'')+' · carga inicial '+(status.loadMs/1000).toFixed(1)+' s';
-      $('status').textContent=(pending?'Cargando sectores':historical?'Reconstrucción local':'Territorio actual')+' · '+(nav.mode==='orbit'?Math.round(camera.position.y-heightAt(camera.position.x,camera.position.z)).toLocaleString('es-ES')+' m sobre terreno':nav.mode==='walk'?'A pie':'Vuelo libre');
+      const visit=heritage.stats.visit;
+      const reading=visit?.inspection?'Inspección marina':visit?.section?'Sección de la visita':visit?.mode==='historical'||historical?'Reconstrucción histórica':visit?.interior?'Interior de la visita':'Territorio actual';
+      const loadingVisit=activeStop&&flags.heritage&&nav.atVisitFrame&&!visit&&heritage.stats.loading;
+      const height=Math.round(camera.position.y-heightAt(camera.position.x,camera.position.z));
+      $('status').textContent=(loadingVisit?'Cargando la visita':pending?'Cargando sectores':reading)+' · '+(nav.mode==='orbit'?Math.abs(height).toLocaleString('es-ES')+(height<0?' m bajo el terreno':' m sobre terreno'):nav.mode==='walk'?'A pie':'Vuelo libre');
       if($('quality').value==='auto'){
         slow=median>(mobile?36:29)?slow+1:median<18?Math.min(-1,slow-1):0;
         if(slow>=3&&budget>0){budget--;slow=0;}

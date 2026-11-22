@@ -41,9 +41,14 @@ export function createTerritorySea({polygons,bounds,shorelines=[],project,height
  if(bounds)offshoreHorizon(env.water,mask,bounds);
  env.water.material.defines={...env.water.material.defines,TERRITORIAL_COAST:1};
  const u=env.water.material.uniforms;
+ Object.assign(u,{inspectPort:{value:false},inspectionOrigin:{value:new THREE.Vector2()},inspectionU:{value:new THREE.Vector2()},inspectionV:{value:new THREE.Vector2()}});
  const palette=['#195f73','#205b69','#081a25','#589e9c','#75a396','#142d36','#d5e7de','#e3dcca','#516675','#fff5df','#ffdfa4'].map(c=>new THREE.Color(c));
  let last=-1,lastY=Infinity;
  return {group:env.group,water:env.water,stats:env.stats,mask,update:env.update,
+  setInspection(cut){
+   u.inspectPort.value=!!cut;
+   if(cut){u.inspectionOrigin.value.set(cut[0],cut[1]);u.inspectionU.value.set(cut[2],cut[3]);u.inspectionV.value.set(cut[4],cut[5]);}
+  },
   setAtlasLight(mode){last=-1;lastY=Infinity;env.setLight(mode);},
   setSun(direction,daylight){
    const light=THREE.MathUtils.clamp(daylight,0,1);

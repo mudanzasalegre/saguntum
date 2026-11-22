@@ -1,5 +1,11 @@
 # Gráficos y texturas del Simulador 3D
 
+## Revisión 38
+
+Los tramos urbanos de 44 sectores incorporan aceras, bordillos y márgenes entre la calzada y las fachadas. Las alineaciones proceden de los límites de parcela de Catastro y de la red de OpenStreetMap. La separación entre acera y margen, el acabado y las juntas se estiman. Las zonas verdes, parcelas y superficies identificadas en el viario se excluyen del cálculo.
+
+Las calles y las cubiertas reciben luz de cielo en función de las alturas de los edificios próximos. El modelo de superficie normalizado del IGN también interviene en las sombras lejanas y en el reflejo de los cristales. El pavimento recoge el tono local de la ortofotografía PNOA. [Fuentes, precisión y pruebas](../research/paisaje-urbano-v38/README.md) · [Carrer de Barcelona](../research/paisaje-urbano-v38/barcelona-comparacion.jpg) · [Manzanas del Puerto](../research/paisaje-urbano-v38/manzanas-comparacion.jpg)
+
 ## Revisión 37
 
 Las cubiertas y el suelo utilizan la misma fotografía georreferenciada para mantener la continuidad entre los patios, las manzanas y sus calles. En el Carrer Major, el modelo del entorno interviene en la luz que llega a la base de cada fachada. Para revisar los cambios a nivel de peatón y a unos 200 m de altura se guardaron cuatro pares de capturas con la misma cámara. [Fuentes, mediciones y comparación](../research/realismo-urbano/README.md)

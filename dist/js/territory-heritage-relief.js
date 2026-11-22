@@ -1,5 +1,12 @@
 import {createUrbanSurface} from './urban-surface.js';
 
+export function territorialCut(cut,frame){
+ const {x,z}=cut.center,c=Math.cos(cut.yaw||0),s=Math.sin(cut.yaw||0),p=frame.world(x,z);
+ const u=frame.world(x+c*cut.width/2,z-s*cut.width/2),v=frame.world(x+s*cut.depth/2,z+c*cut.depth/2);
+ const ux=u.x-p.x,uz=u.z-p.z,vx=v.x-p.x,vz=v.z-p.z,det=ux*vz-uz*vx;
+ return [p.x,p.z,vz/det,-vx/det,-uz/det,ux/det];
+}
+
 export function reliefDelta(p,x,z){
  if(!p.bounds)return 0;
  const [l,t,r,b]=p.bounds;
@@ -26,10 +33,7 @@ export function heritageRelief(id,sites,frame,place,heightAt,sample){
   }
   for(const cut of site.currentMasks||[site.currentMask]){
    if(!cut||cut.permanent===false)continue;
-   const {x,z}=cut.center,c=Math.cos(cut.yaw||0),s=Math.sin(cut.yaw||0),p=frame.world(x,z);
-   const u=frame.world(x+c*cut.width/2,z-s*cut.width/2),v=frame.world(x+s*cut.depth/2,z+c*cut.depth/2);
-   const ux=u.x-p.x,uz=u.z-p.z,vx=v.x-p.x,vz=v.z-p.z,det=ux*vz-uz*vx;
-   cuts.push([p.x,p.z,vz/det,-vx/det,-uz/det,ux/det]);
+   cuts.push(territorialCut(cut,frame));
   }
  }
  const theatre=sites.theatre?.group?.userData.surfaceHeight;

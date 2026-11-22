@@ -56,16 +56,57 @@ function prepareLandscape(site){
 export function landscapeDetail(root){
  const meshes=[];
  root.traverse(o=>{if(o.userData.territoryInstances)meshes.push(o);});
- const density={instances:0,total:0};
+ const density={instances:0,total:0,nearby:0};
  for(const o of meshes)density.total+=o.userData.territoryInstances[0];
- let previousCap;
- return (altitude,quality)=>{
+ const sources=new Map();
+ function original(mesh){
+  if(sources.has(mesh))return sources.get(mesh);
+  mesh.updateWorldMatrix(true,false);
+  const matrices=mesh.instanceMatrix.array.slice(),colors=mesh.instanceColor?.array.slice();
+  const centres=new Float32Array(matrices.length/8),m=mesh.matrixWorld.elements;
+  for(let i=0,j=0;i<matrices.length;i+=16,j+=2){
+   const x=matrices[i+12],y=matrices[i+13],z=matrices[i+14];
+   centres[j]=m[0]*x+m[4]*y+m[8]*z+m[12];
+   centres[j+1]=m[2]*x+m[6]*y+m[10]*z+m[14];
+  }
+  const data={matrices,colors,centres};
+  sources.set(mesh,data);return data;
+ }
+ let previous;
+ return (altitude,quality,x,z)=>{
+  if(!meshes.length)return density;
   const cap=quality>=2&&altitude<200?Infinity:quality>=1&&altitude<550?160000:14000;
-  if(previousCap===cap)return density;
-  previousCap=cap;density.instances=0;
+  // Keep every original tuft and stone in the visitor's immediate surroundings
+  // on all devices. The landscape constructors span up to nine kilometres.
+  const local=Number.isFinite(x)&&Number.isFinite(z)&&altitude<700;
+  const cx=local?Math.round(x/40)*40:0,cz=local?Math.round(z/40)*40:0;
+  const key=[local,cap,cx,cz,quality].join('/');
+  if(previous===key)return density;
+  previous=key;density.instances=0;density.nearby=0;
   for(const o of meshes){
    const [count,cost]=o.userData.territoryInstances;
-   o.count=Math.min(count,Math.max(1,Math.floor(cap/cost)));
+   if(local){
+    const {matrices,colors,centres}=original(o);
+    const farCount=Math.min(count,Math.max(1,Math.floor((quality>=2?70000:quality===1?38000:14000)/cost)));
+    let used=0;
+    for(let i=0;i<count;i++){
+     const dx=centres[i*2]-cx,dz=centres[i*2+1]-cz,r2=dx*dx+dz*dz;
+     if(r2<200**2)density.nearby++;
+     else if(i>=farCount&&(r2>430**2||i%3))continue;
+     for(let k=0;k<16;k++)o.instanceMatrix.array[used*16+k]=matrices[i*16+k];
+     if(colors)for(let k=0;k<3;k++)o.instanceColor.array[used*3+k]=colors[i*3+k];
+     used++;
+    }
+    o.count=used;o.instanceMatrix.needsUpdate=true;if(colors)o.instanceColor.needsUpdate=true;
+   }else{
+    const source=sources.get(o);
+    if(source){
+     o.instanceMatrix.array.set(source.matrices);o.instanceMatrix.needsUpdate=true;
+     if(source.colors){o.instanceColor.array.set(source.colors);o.instanceColor.needsUpdate=true;}
+     sources.delete(o);
+    }
+    o.count=Math.min(count,Math.max(1,Math.floor(cap/cost)));
+   }
    density.instances+=o.count;
   }
   return density;
@@ -136,7 +177,7 @@ export function releaseModel(group){
  group.removeFromParent();
 }
 
-export async function buildHeritageModel(id,{places,records,area,heightAt,project,needed}){
+export async function buildHeritageModel(id,{places,records,area,heightAt,project,needed,bindVisit,renderer}){
  const primary=id==='pantalan'?'pantalan-paseo':id,place=places.find(p=>p.id===primary);
  const [file,func,loadFactory]=definitions[id],frame=registerFrame(place,project);
  const sample=(x,z)=>{const p=frame.world(x,z);return heightAt(p.x,p.z);};
@@ -154,12 +195,17 @@ export async function buildHeritageModel(id,{places,records,area,heightAt,projec
   requests.push(get(record.region+'-cartography','data'));
  }
  if(id==='glorieta')requests.push(get('glorieta-layout','layout'),get('glorieta-buildings','buildings'),get('glorieta-visit','guide'));
+ let sector=null;
+ if(id==='glorieta')requests.push(import('./territory-heritage-glorieta.js').then(async m=>{
+  sector={data:await m.loadGlorietaSurroundings(),build:m.createGlorietaSurroundings,resolve:m.resolveFrontageShells};
+ }));
  const [module]=await Promise.all(requests);
  if(!needed())return null;
  const {hasAtlasContext,originalSurroundings,settleSourceClaims}=await import('./territory-heritage-contexts.js');
  await settleSourceClaims(id,options);
  if(options.visitData&&id!=='castle')options.visitData.plan=await documentData(file+'-plan',false);
  if(!needed())return null;
+ if(sector)options.buildings=sector.resolve(options.buildings,sector.data.frontageCorrections);
  const made=module[func](options);
  const sites=made.sites||{[id]:made.isObject3D?{group:made}:made};
  const local=made.isObject3D?made:made.group;
@@ -175,6 +221,8 @@ export async function buildHeritageModel(id,{places,records,area,heightAt,projec
  // monument constructor has a rotated or translated local frame of its own.
  const surroundings=hasAtlasContext(id)?originalSurroundings(id,options,sites):null;
  if(surroundings)outer.add(surroundings.context.group);
+ const streets=sector?.build(sector.data,options);
+ if(streets)outer.add(streets.group);
  outer.updateMatrixWorld(true);
  for(const [key,site] of Object.entries(sites)){
   site.setSection?.(false);
@@ -201,7 +249,22 @@ export async function buildHeritageModel(id,{places,records,area,heightAt,projec
  }
  const claims=Object.entries(sites).map(([key,site])=>claimsFor(site,records[key],frame,project));
  let pavement=null,contextStats=null;
- if(id==='glorieta')pavement=sampleAtlasPavement({group:local});
+ if(id==='glorieta'){
+  pavement=sampleAtlasPavement({group:outer,surfaces:streets.roads});
+  const adjacent=contextClaims({excludedBuildingIds:sector.data.buildings.map(b=>b.id)},sector.data,project);
+  for(const id of sector.data.aliases)adjacent.ids.add(normalizeBuildingId(id));
+  claims.push(adjacent);
+  contextStats={id,buildings:options.buildings.buildings.length+streets.buildings.userData.footprintCount,
+   detailedFrontages:Object.keys(options.buildings.frontages).length,adjacentParts:streets.buildings.userData.footprintCount,
+   reconciledParts:Object.keys(sector.data.frontageCorrections).length,
+   streetWays:streets.roads.userData.wayCount,pavingAreaM2:Math.round((pavement?.coverage||0)*(pavement?.metres||0)**2)};
+  const layout=options.layout;
+  const props=[...layout.trees.map(t=>[t.point,Math.max(2.1,t.radius)]),
+   ...[...layout.lamps,...layout.benches].map(ll=>[ll,2])].map(([ll,r])=>{
+    const p=project(...ll);return [p.x,p.z,r];
+   });
+  claims.push({ids:[],rings:[],props,green:[maskRing(layout.perimeter.map(ll=>project(...ll)))]});
+ }
  if(surroundings){
   const {context,data}=surroundings;
   claims.push(contextClaims(context,data,project));
@@ -214,10 +277,12 @@ export async function buildHeritageModel(id,{places,records,area,heightAt,projec
   for(const ref of module[id+'BuildingIds']||[])claims[0].ids.add(String(ref).replace(/^cat-/,''));
   if(id==='theatre')claims[0].rings.push(maskRing(area.theatrePolygon.map(c=>project(...c))));
  }
- return {group:outer,claims,relief,pavement,contextStats,animate:made.animate,setDensity:landscapeDetail(outer),setHistorical(on){
+ const model={group:outer,claims,relief,pavement,contextStats,contextGroup:surroundings?.context.group,animate:made.animate,setDensity:landscapeDetail(outer),setHistorical(on){
   for(const site of Object.values(sites))if(site.currentGroup&&site.historicalGroup){
    site.currentGroup.visible=!on;site.historicalGroup.visible=on;
   }
   if(sites.diana){sites.diana.remains.visible=!on;sites.diana.reconstruction.visible=on;}
  }};
+ bindVisit?.({model,sites,options,frame,heightAt:adjusted,renderer});
+ return model;
 }

@@ -3,6 +3,7 @@ import {SectorStream} from './territory-stream.js';
 import {resource,networkBase} from './territory-ground.js';
 
 import {streetMaterial,streetGeometry,streetAreas} from './territory-street-surfaces.js';
+import {loadStreetFronts} from './territory-street-fronts.js';
 import {streetActors,streetFurniture} from './territory-props.js';
 
 export function createNetwork({scene,index,heightAt,heritage}){
@@ -14,13 +15,13 @@ export function createNetwork({scene,index,heightAt,heritage}){
   let props=null,night=0;
   propsReady.then(result=>{props=result;props.setNight(night);}).catch(error=>console.warn('Mobiliario',error));
   const stream=new SectorStream(index.tiles,async sector=>{
-    const [data,prepared]=await Promise.all([resource(networkBase+sector.url),propsReady.catch(()=>null)]);
+    const [data,prepared,fronts]=await Promise.all([resource(networkBase+sector.url),propsReady.catch(()=>null),loadStreetFronts(sector)]);
     const rg=new T.Group(),vg=new T.Group();
     const draw=(geometry,parent)=>{
       if(!geometry.index.count){geometry.dispose();return;}
       const mesh=new T.Mesh(geometry,surface);mesh.receiveShadow=true;parent.add(mesh);
     };
-    draw(streetGeometry(data,heightAt),rg);
+    draw(streetGeometry(data,heightAt,fronts),rg);
     draw(streetAreas(data.areas||[],heightAt),vg);
     const refresh=prepared?.build(vg,data.objects||[],data.roads,data.areas||[],heightAt,heritage);
     streets.add(rg);green.add(vg);return {rg,vg,roads:data.roads,refresh};
