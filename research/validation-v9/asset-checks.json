@@ -1,0 +1,553 @@
+{
+  "checkedAt": "2026-11-19T15:29:31.126145+00:00",
+  "pass": true,
+  "scope": "Static pre-publish asset gate; ignores temporary dist/__qa-viewport.html.",
+  "summary": {
+    "javascriptFiles": 40,
+    "relativeImports": 47,
+    "jsonFiles": 58,
+    "initialFetches": 24,
+    "htmlIds": 108,
+    "uniqueHtmlIds": 108,
+    "importmapTargets": 3
+  },
+  "syntax": [
+    {
+      "path": "dist/js/app.js",
+      "pass": true
+    },
+    {
+      "path": "dist/js/archaeology-domestic.js",
+      "pass": true
+    },
+    {
+      "path": "dist/js/archaeology-necropolis.js",
+      "pass": true
+    },
+    {
+      "path": "dist/js/archaeology-panel.js",
+      "pass": true
+    },
+    {
+      "path": "dist/js/archaeology-public.js",
+      "pass": true
+    },
+    {
+      "path": "dist/js/archaeology.js",
+      "pass": true
+    },
+    {
+      "path": "dist/js/castle-map.js",
+      "pass": true
+    },
+    {
+      "path": "dist/js/castle-panel.js",
+      "pass": true
+    },
+    {
+      "path": "dist/js/castle.js",
+      "pass": true
+    },
+    {
+      "path": "dist/js/catalog.js",
+      "pass": true
+    },
+    {
+      "path": "dist/js/city.js",
+      "pass": true
+    },
+    {
+      "path": "dist/js/coast-archaeology.js",
+      "pass": true
+    },
+    {
+      "path": "dist/js/coast-environment.js",
+      "pass": true
+    },
+    {
+      "path": "dist/js/coast-grau.js",
+      "pass": true
+    },
+    {
+      "path": "dist/js/coast-pier.js",
+      "pass": true
+    },
+    {
+      "path": "dist/js/coast.js",
+      "pass": true
+    },
+    {
+      "path": "dist/js/excavation.js",
+      "pass": true
+    },
+    {
+      "path": "dist/js/heritage-civic-data.js",
+      "pass": true
+    },
+    {
+      "path": "dist/js/heritage-civic.js",
+      "pass": true
+    },
+    {
+      "path": "dist/js/heritage-sacred.js",
+      "pass": true
+    },
+    {
+      "path": "dist/js/historic-map.js",
+      "pass": true
+    },
+    {
+      "path": "dist/js/landscape-dunes.js",
+      "pass": true
+    },
+    {
+      "path": "dist/js/landscape-environment.js",
+      "pass": true
+    },
+    {
+      "path": "dist/js/landscape-marjal.js",
+      "pass": true
+    },
+    {
+      "path": "dist/js/landscape-palancia.js",
+      "pass": true
+    },
+    {
+      "path": "dist/js/landscapes.js",
+      "pass": true
+    },
+    {
+      "path": "dist/js/map.js",
+      "pass": true
+    },
+    {
+      "path": "dist/js/monuments.js",
+      "pass": true
+    },
+    {
+      "path": "dist/js/port-garden.js",
+      "pass": true
+    },
+    {
+      "path": "dist/js/port-industrial.js",
+      "pass": true
+    },
+    {
+      "path": "dist/js/port-workers.js",
+      "pass": true
+    },
+    {
+      "path": "dist/js/port.js",
+      "pass": true
+    },
+    {
+      "path": "dist/js/santa-maria-context.js",
+      "pass": true
+    },
+    {
+      "path": "dist/js/santa-maria-map.js",
+      "pass": true
+    },
+    {
+      "path": "dist/js/santa-maria.js",
+      "pass": true
+    },
+    {
+      "path": "dist/js/terrain.js",
+      "pass": true
+    },
+    {
+      "path": "dist/js/theatre-map.js",
+      "pass": true
+    },
+    {
+      "path": "dist/js/theatre.js",
+      "pass": true
+    },
+    {
+      "path": "dist/js/theme.js",
+      "pass": true
+    },
+    {
+      "path": "dist/js/urban-surface.js",
+      "pass": true
+    }
+  ],
+  "relativeImports": [
+    {
+      "file": "dist/js/app.js",
+      "specifier": "./monuments.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/app.js",
+      "specifier": "./heritage-sacred.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/app.js",
+      "specifier": "./heritage-civic.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/app.js",
+      "specifier": "./city.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/app.js",
+      "specifier": "./archaeology.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/app.js",
+      "specifier": "./excavation.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/app.js",
+      "specifier": "./archaeology-panel.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/app.js",
+      "specifier": "./terrain.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/app.js",
+      "specifier": "./urban-surface.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/app.js",
+      "specifier": "./map.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/app.js",
+      "specifier": "./historic-map.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/app.js",
+      "specifier": "./catalog.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/app.js",
+      "specifier": "./coast.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/app.js",
+      "specifier": "./coast-environment.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/app.js",
+      "specifier": "./landscapes.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/app.js",
+      "specifier": "./landscape-environment.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/app.js",
+      "specifier": "./port.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/app.js",
+      "specifier": "./castle-panel.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/app.js",
+      "specifier": "./castle-map.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/app.js",
+      "specifier": "./theatre-map.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/app.js",
+      "specifier": "./santa-maria-map.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/app.js",
+      "specifier": "./theme.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/archaeology.js",
+      "specifier": "./archaeology-domestic.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/archaeology.js",
+      "specifier": "./archaeology-public.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/archaeology.js",
+      "specifier": "./archaeology-necropolis.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/city.js",
+      "specifier": "./urban-surface.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/coast-environment.js",
+      "specifier": "../assets/vendor/Water.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/coast.js",
+      "specifier": "./coast-pier.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/coast.js",
+      "specifier": "./coast-grau.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/coast.js",
+      "specifier": "./coast-archaeology.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/coast.js",
+      "specifier": "./port.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/heritage-civic.js",
+      "specifier": "./heritage-civic-data.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/heritage-sacred.js",
+      "specifier": "./santa-maria.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/heritage-sacred.js",
+      "specifier": "./santa-maria-context.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/landscape-environment.js",
+      "specifier": "../assets/vendor/Water.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/landscapes.js",
+      "specifier": "./landscape-marjal.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/landscapes.js",
+      "specifier": "./landscape-dunes.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/landscapes.js",
+      "specifier": "./landscape-palancia.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/landscapes.js",
+      "specifier": "./port.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/monuments.js",
+      "specifier": "./castle.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/monuments.js",
+      "specifier": "./theatre.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/monuments.js",
+      "specifier": "./castle.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/monuments.js",
+      "specifier": "./theatre.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/port.js",
+      "specifier": "./port-industrial.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/port.js",
+      "specifier": "./port-garden.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/port.js",
+      "specifier": "./port-workers.js",
+      "exists": true
+    },
+    {
+      "file": "dist/js/santa-maria-context.js",
+      "specifier": "./urban-surface.js",
+      "exists": true
+    }
+  ],
+  "initialFetches": [
+    {
+      "name": "regional",
+      "path": "dist/assets/data/regional.json",
+      "exists": true
+    },
+    {
+      "name": "landmarks",
+      "path": "dist/assets/data/landmarks.json",
+      "exists": true
+    },
+    {
+      "name": "archaeology-domestic",
+      "path": "dist/assets/data/archaeology-domestic.json",
+      "exists": true
+    },
+    {
+      "name": "archaeology-public",
+      "path": "dist/assets/data/archaeology-public.json",
+      "exists": true
+    },
+    {
+      "name": "archaeology-necropolis",
+      "path": "dist/assets/data/archaeology-necropolis.json",
+      "exists": true
+    },
+    {
+      "name": "port-industrial",
+      "path": "dist/assets/data/port-industrial.json",
+      "exists": true
+    },
+    {
+      "name": "port-garden",
+      "path": "dist/assets/data/port-garden.json",
+      "exists": true
+    },
+    {
+      "name": "port-workers",
+      "path": "dist/assets/data/port-workers.json",
+      "exists": true
+    },
+    {
+      "name": "coast-pier",
+      "path": "dist/assets/data/coast-pier.json",
+      "exists": true
+    },
+    {
+      "name": "coast-grau",
+      "path": "dist/assets/data/coast-grau.json",
+      "exists": true
+    },
+    {
+      "name": "coast-archaeology",
+      "path": "dist/assets/data/coast-archaeology.json",
+      "exists": true
+    },
+    {
+      "name": "landscape-regions",
+      "path": "dist/assets/data/landscape-regions.json",
+      "exists": true
+    },
+    {
+      "name": "landscape-marjal",
+      "path": "dist/assets/data/landscape-marjal.json",
+      "exists": true
+    },
+    {
+      "name": "landscape-dunes",
+      "path": "dist/assets/data/landscape-dunes.json",
+      "exists": true
+    },
+    {
+      "name": "landscape-palancia",
+      "path": "dist/assets/data/landscape-palancia.json",
+      "exists": true
+    },
+    {
+      "name": "landscape-territory",
+      "path": "dist/assets/data/landscape-territory.json",
+      "exists": true
+    },
+    {
+      "name": "atlas-data-summary",
+      "path": "dist/assets/data/atlas-data-summary.json",
+      "exists": true
+    },
+    {
+      "name": "historic-context",
+      "path": "dist/assets/data/historic-context.json",
+      "exists": true
+    },
+    {
+      "name": "castle-visit",
+      "path": "dist/assets/data/castle-visit.json",
+      "exists": true
+    },
+    {
+      "name": "theatre-visit",
+      "path": "dist/assets/data/theatre-visit.json",
+      "exists": true
+    },
+    {
+      "name": "theatre-plan",
+      "path": "dist/assets/data/theatre-plan.json",
+      "exists": true
+    },
+    {
+      "name": "santa-maria-visit",
+      "path": "dist/assets/data/santa-maria-visit.json",
+      "exists": true
+    },
+    {
+      "name": "santa-maria-plan",
+      "path": "dist/assets/data/santa-maria-plan.json",
+      "exists": true
+    },
+    {
+      "name": "santa-maria-context",
+      "path": "dist/assets/data/santa-maria-context.json",
+      "exists": true
+    }
+  ],
+  "importmapTargets": [
+    {
+      "specifier": "three",
+      "target": "./assets/vendor/three.module.js",
+      "exists": true
+    },
+    {
+      "specifier": "three/addons/controls/OrbitControls.js",
+      "target": "./assets/vendor/OrbitControls.js",
+      "exists": true
+    },
+    {
+      "specifier": "three/addons/utils/BufferGeometryUtils.js",
+      "target": "./assets/vendor/BufferGeometryUtils.js",
+      "exists": true
+    }
+  ],
+  "failures": []
+}

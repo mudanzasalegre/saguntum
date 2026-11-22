@@ -1,0 +1,64 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "pass": true,
+      "message": "Concurrent requests share a single model construction"
+    },
+    {
+      "pass": true,
+      "message": "Desktop retains at most two built regions"
+    },
+    {
+      "pass": true,
+      "message": "Oldest inactive region is evicted before new construction"
+    },
+    {
+      "pass": true,
+      "message": "Only the evicted region loses points and references"
+    },
+    {
+      "pass": true,
+      "message": "Eviction releases geometry, materials, both terrain textures, instance buffers and water environment"
+    },
+    {
+      "pass": true,
+      "message": "Cached-region access applies the reduced mobile capacity"
+    },
+    {
+      "pass": true,
+      "message": "Viewport resize releases the inactive region immediately"
+    },
+    {
+      "pass": true,
+      "message": "Mobile keeps one region and no orphan roots"
+    },
+    {
+      "pass": true,
+      "message": "Failed queued load clears its pending promise"
+    },
+    {
+      "pass": true,
+      "message": "Queue recovers after failed load"
+    },
+    {
+      "pass": true,
+      "message": "Superseded navigation skips an obsolete queued scene"
+    },
+    {
+      "pass": true,
+      "message": "Heavy model construction is serialized"
+    }
+  ],
+  "constructions": 8,
+  "disposed": {
+    "geometries": 6,
+    "materials": 6,
+    "textures": 12,
+    "environments": 5,
+    "instanceMeshes": 6
+  },
+  "finalRegions": [
+    "marjal"
+  ]
+}

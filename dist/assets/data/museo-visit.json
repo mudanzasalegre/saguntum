@@ -1,0 +1,1782 @@
+{
+  "schemaVersion": 1,
+  "id": "museo",
+  "title": "Casa del Mestre Penya y Museo Arqueológico",
+  "subtitle": "Veinte paradas entre la casa, las colecciones y la Judería",
+  "introduction": "Explora la replaza, reconoce la estructura de la casa y recorre sus dos plantas. La visita conecta las piezas arqueológicas con la historia del museo y con las calles del barrio, apoyándose en proyectos, planos y fuentes patrimoniales.",
+  "researchDate": "2026-11-20",
+  "regionsLabel": "ámbitos",
+  "mapButtonLabel": "Plano del museo y su entorno",
+  "overviewButtonLabel": "Ver conjunto",
+  "readingModeLabel": "Leer casa, colección y barrio",
+  "readingModeNote": "Los colores distinguen fachada, estructura, colecciones, rehabilitación y entorno. Agrupan temas de lectura; no asignan una única fecha a cada volumen.",
+  "timelineIntroduction": "La cronología separa la historia del lugar, la formación de las colecciones y la adaptación de la Casa. Los proyectos y anuncios de reparación se distinguen de las obras cuya ejecución está documentada.",
+  "visitAriaLabel": "Visita documentada a la Casa del Mestre Penya, el Museo Arqueológico y su entorno",
+  "sectionOnOverview": true,
+  "sectionInstructions": "Abre la sección para ver las dos plantas y la relación entre arcos y salas. El plano cambia a la planta de la parada seleccionada; cierra el corte para recuperar el volumen exterior.",
+  "sectionNote": "Sección didáctica de la casa rehabilitada, contrastada con planos de 2025. Se retiran cubierta y forjado para hacer legible el interior. El suelo permanece cerrado: la arqueología anterior se explica sin inventar tumbas, una cripta ni un subsuelo visitable.",
+  "methodology": [
+    "La memoria de los autores de la rehabilitación y el proyecto técnico con inspección de 2025 aportan plantas, secciones, alzado y fotografías. Se utilizan como referencia geométrica y material, conservando el margen de aproximación de una maqueta virtual.",
+    "La parcela catastral del museo incluye cuerpo principal y franja de Dolors. La cartografía y el relieve sitúan el conjunto y las viviendas próximas; las fachadas de contexto, los espesores menores y las cotas de umbral son interpretativos.",
+    "La museografía se organiza por temas documentados. Objetos, vitrinas, rótulos y posiciones expositivas son aproximaciones didácticas, no réplicas escaneadas ni certificación de un montaje actual.",
+    "El origen bajomedieval tiene dataciones discrepantes y los usos de lonja, almudín o carnicería se presentan con su grado de certeza. El arco ante el museo y el Portalet de la Sang se mantienen como elementos distintos.",
+    "El proyecto de 2025 registra patologías; el anuncio municipal de 2026 y la licitación desierta de julio no prueban reparaciones terminadas. La escena no representa como ejecutadas esas propuestas.",
+    "Las imágenes se consultan para estudiar arquitectura y materiales. Se conserva la visita sin galería de fotografías históricas ni texturas tomadas de imágenes de terceros."
+  ],
+  "readingLegend": [
+    {
+      "id": "casa",
+      "label": "La casa y su fachada",
+      "color": "#d7b36b",
+      "note": "Volumen, piedra, vanos y acceso."
+    },
+    {
+      "id": "estructura",
+      "label": "Plantas, arcos y cubierta",
+      "color": "#b6c593",
+      "note": "La organización arquitectónica del interior."
+    },
+    {
+      "id": "coleccion",
+      "label": "Objetos y memoria",
+      "color": "#c99bba",
+      "note": "Epigrafía, escultura, comercio y vida privada."
+    },
+    {
+      "id": "rehabilitacion",
+      "label": "Adaptar y conservar",
+      "color": "#7fb7c4",
+      "note": "Dolors, patio y cuidado del museo."
+    },
+    {
+      "id": "barrio",
+      "label": "Replaza y Judería",
+      "color": "#80aa85",
+      "note": "Calles, arcos y edificios de contexto."
+    }
+  ],
+  "confidenceLegend": [
+    {
+      "id": "documented",
+      "label": "Documentado",
+      "note": "La fuente respalda el hecho; no certifica exactitud métrica del modelo."
+    },
+    {
+      "id": "interpretive",
+      "label": "Interpretación",
+      "note": "Uso histórico propuesto o detalle reconstruido con un margen de aproximación."
+    },
+    {
+      "id": "disputed",
+      "label": "En debate",
+      "note": "Las fuentes no resuelven de forma única la fecha o identificación."
+    }
+  ],
+  "stops": [
+    {
+      "id": "museo-conjunto",
+      "title": "Una casa que conserva muchas historias",
+      "label": "El conjunto",
+      "regionId": "casa",
+      "period": "mixed",
+      "intro": "Comienza por el edificio y después por sus piezas. Esta visita enlaza la casa, el museo y el barrio para distinguir tres historias que se encuentran en el mismo lugar.",
+      "narrative": "Comienza por el edificio y después por sus piezas. Esta visita enlaza la casa, el museo y el barrio para distinguir tres historias que se encuentran en el mismo lugar.",
+      "facts": [
+        {
+          "text": "La sede del Museo Arqueológico se localiza en Castell, 23, en la Casa del Mestre Penya.",
+          "sourceIds": [
+            "mu-directorio"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El Museu Històric se creó en julio de 2006 para exponer en esta sede fondos del Museo Arqueológico estatal.",
+          "sourceIds": [
+            "mu-man2017"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Reconoce el volumen principal y la franja de espacios que recae a Dolors.",
+      "modelNote": "La maqueta interpreta el edificio rehabilitado. Sus proporciones se contrastan con plantas de 2025; no constituye un levantamiento completo por escáner.",
+      "sourceIds": [
+        "mu-directorio",
+        "mu-man2017",
+        "mu-via",
+        "mu-proyecto2025",
+        "mu-pnoa",
+        "mu-catastro",
+        "mu-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual compartido con el modelo, registrado con huellas cartográficas y plantas publicadas; no representa un punto medido de cada objeto ni un itinerario físico autorizado.",
+      "osmIds": [],
+      "order": 1,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "mu-catastro",
+        "mu-osm",
+        "mu-proyecto2025"
+      ],
+      "readingLayer": "casa",
+      "coordinate": [
+        -0.2779038210036165,
+        39.67851104121699
+      ],
+      "coordinates": [
+        -0.2779038210036165,
+        39.67851104121699
+      ],
+      "floor": null
+    },
+    {
+      "id": "museo-plaza",
+      "title": "Cinco calles alrededor de una replaza",
+      "label": "La replaza",
+      "regionId": "barrio",
+      "period": "mixed",
+      "intro": "Acércate desde el Castell y gira hacia la esquina. El espacio abierto ayuda a leer la llegada al museo y el cambio de dirección de las calles.",
+      "narrative": "Acércate desde el Castell y gira hacia la esquina. El espacio abierto ayuda a leer la llegada al museo y el cambio de dirección de las calles.",
+      "facts": [
+        {
+          "text": "La memoria de rehabilitación sitúa aquí la confluencia de Castell, Dolors, Sang Vella, En Jou y En Cubertorer.",
+          "sourceIds": [
+            "mu-via"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El itinerario municipal continúa por Castell desde la Plaça Major hacia las entradas del barrio judío.",
+          "sourceIds": [
+            "mu-jueria"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Compara el frente del museo con los accesos de las calles laterales.",
+      "modelNote": "La replaza se deduce de las huellas y ejes de calle. Pavimento, juntas y pequeño mobiliario tienen una colocación aproximada; no se inventa una plaza histórica regular.",
+      "sourceIds": [
+        "mu-via",
+        "mu-jueria",
+        "mu-terreno",
+        "mu-pnoa",
+        "mu-catastro",
+        "mu-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual compartido con el modelo, registrado con huellas cartográficas y plantas publicadas; no representa un punto medido de cada objeto ni un itinerario físico autorizado.",
+      "osmIds": [],
+      "order": 2,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "mu-catastro",
+        "mu-osm",
+        "mu-proyecto2025"
+      ],
+      "readingLayer": "barrio",
+      "coordinate": [
+        -0.278023344,
+        39.678532878
+      ],
+      "coordinates": [
+        -0.278023344,
+        39.678532878
+      ],
+      "floor": null
+    },
+    {
+      "id": "museo-fachada",
+      "title": "Piedra, revoco y capas de uso",
+      "label": "La fachada",
+      "regionId": "casa",
+      "period": "mixed",
+      "intro": "La fachada se lee mejor despacio: sigue sus cambios de material, mira el borde de los vanos y compara cada tramo con el edificio completo.",
+      "narrative": "La fachada se lee mejor despacio: sigue sus cambios de material, mira el borde de los vanos y compara cada tramo con el edificio completo.",
+      "facts": [
+        {
+          "text": "El proyecto distinguió el carácter institucional del volumen principal y la apariencia doméstica del cuerpo de Dolors.",
+          "sourceIds": [
+            "mu-via"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La función medieval se interpreta como lonja o carnicería; la ficha patrimonial no la considera definitivamente establecida.",
+          "sourceIds": [
+            "mu-cid"
+          ],
+          "confidence": "interpretive"
+        }
+      ],
+      "lookFor": "Observa dónde aparece la piedra y dónde continúa el revoco.",
+      "modelNote": "La textura y el desgaste son recreaciones materiales. No convierten cada junta o mancha del modelo en una lesión registrada.",
+      "sourceIds": [
+        "mu-via",
+        "mu-cid",
+        "mu-proyecto2025",
+        "mu-catastro",
+        "mu-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual compartido con el modelo, registrado con huellas cartográficas y plantas publicadas; no representa un punto medido de cada objeto ni un itinerario físico autorizado.",
+      "osmIds": [],
+      "order": 3,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "mu-catastro",
+        "mu-osm",
+        "mu-proyecto2025"
+      ],
+      "readingLayer": "casa",
+      "coordinate": [
+        -0.277985,
+        39.6785225
+      ],
+      "coordinates": [
+        -0.277985,
+        39.6785225
+      ],
+      "floor": null
+    },
+    {
+      "id": "museo-acceso",
+      "title": "El umbral del museo",
+      "label": "El acceso",
+      "regionId": "casa",
+      "period": "contemporary",
+      "intro": "La entrada cambia la escala del recorrido. Desde aquí puedes pasar de la lectura de la calle a las perspectivas interiores y observar la relación entre piedra, vidrio y suelo.",
+      "narrative": "La entrada cambia la escala del recorrido. Desde aquí puedes pasar de la lectura de la calle a las perspectivas interiores y observar la relación entre piedra, vidrio y suelo.",
+      "facts": [
+        {
+          "text": "La documentación de 2025 describe una rampa de entrada y comunicaciones adaptadas al edificio protegido.",
+          "sourceIds": [
+            "mu-proyecto2025"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Las fotografías de la rehabilitación muestran cerramientos de vidrio detrás de los grandes huecos de la planta baja.",
+          "sourceIds": [
+            "mu-via"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Mira el espesor del portal y cómo se separa de los elementos contemporáneos.",
+      "modelNote": "El acceso virtual no certifica horarios, condiciones de apertura ni accesibilidad física actual. La pendiente y los detalles del umbral son aproximados.",
+      "sourceIds": [
+        "mu-proyecto2025",
+        "mu-via",
+        "mu-catastro",
+        "mu-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual compartido con el modelo, registrado con huellas cartográficas y plantas publicadas; no representa un punto medido de cada objeto ni un itinerario físico autorizado.",
+      "osmIds": [],
+      "order": 4,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "mu-catastro",
+        "mu-osm",
+        "mu-proyecto2025"
+      ],
+      "readingLayer": "casa",
+      "coordinate": [
+        -0.27798375576722983,
+        39.67854673549048
+      ],
+      "coordinates": [
+        -0.27798375576722983,
+        39.67854673549048
+      ],
+      "floor": 0
+    },
+    {
+      "id": "museo-balcones",
+      "title": "La fachada también cambia con el tiempo",
+      "label": "Los balcones",
+      "regionId": "casa",
+      "period": "mixed",
+      "intro": "Sube la mirada desde los portales hasta los balcones. El contraste ayuda a entender que la apariencia exterior reúne transformaciones de épocas distintas.",
+      "narrative": "Sube la mirada desde los portales hasta los balcones. El contraste ayuda a entender que la apariencia exterior reúne transformaciones de épocas distintas.",
+      "facts": [
+        {
+          "text": "El alzado publicado representa tres balcones en la fachada principal.",
+          "sourceIds": [
+            "mu-via"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La bibliografía museística fecha la construcción en el siglo XIV, mientras el proyecto de 2025 propone el XIII.",
+          "sourceIds": [
+            "mu-man2017",
+            "mu-proyecto2025"
+          ],
+          "confidence": "disputed"
+        }
+      ],
+      "lookFor": "Compara la secuencia de balcones y los huecos menores.",
+      "modelNote": "Se mantiene una cronología bajomedieval general. Las barandillas, carpinterías y molduras se aproximan a las referencias sin atribuirles una fecha individual.",
+      "sourceIds": [
+        "mu-via",
+        "mu-man2017",
+        "mu-proyecto2025",
+        "mu-catastro",
+        "mu-osm"
+      ],
+      "confidence": "disputed",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual compartido con el modelo, registrado con huellas cartográficas y plantas publicadas; no representa un punto medido de cada objeto ni un itinerario físico autorizado.",
+      "osmIds": [],
+      "order": 5,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "mu-catastro",
+        "mu-osm",
+        "mu-proyecto2025"
+      ],
+      "readingLayer": "casa",
+      "coordinate": [
+        -0.2779906789520562,
+        39.67850289443048
+      ],
+      "coordinates": [
+        -0.2779906789520562,
+        39.67850289443048
+      ],
+      "floor": null
+    },
+    {
+      "id": "museo-cubierta",
+      "title": "Una cubierta contemporánea sobre la casa",
+      "label": "La cubierta",
+      "regionId": "estructura",
+      "period": "contemporary",
+      "intro": "La vista elevada permite leer la silueta y el encuentro con las medianeras. Abre la sección para relacionar el tejado con las salas de las dos plantas.",
+      "narrative": "La vista elevada permite leer la silueta y el encuentro con las medianeras. Abre la sección para relacionar el tejado con las salas de las dos plantas.",
+      "facts": [
+        {
+          "text": "La planta de 2025 documenta la cubierta principal y los espacios de patio y servicios.",
+          "sourceIds": [
+            "mu-proyecto2025"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "En febrero de 2026 se anunciaron reparaciones de cubierta y mejoras de climatización del museo.",
+          "sourceIds": [
+            "mu-ayto2026"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Sigue el borde de la cubierta, el alero y los cambios hacia el patio.",
+      "modelNote": "Se representa la configuración documentada, sin presentar como terminadas las reparaciones anunciadas. La lectura de conservación continúa en la parada de rehabilitación.",
+      "sourceIds": [
+        "mu-proyecto2025",
+        "mu-ayto2026",
+        "mu-via",
+        "mu-catastro",
+        "mu-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual compartido con el modelo, registrado con huellas cartográficas y plantas publicadas; no representa un punto medido de cada objeto ni un itinerario físico autorizado.",
+      "osmIds": [],
+      "order": 6,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "mu-catastro",
+        "mu-osm",
+        "mu-proyecto2025"
+      ],
+      "readingLayer": "rehabilitacion",
+      "coordinate": [
+        -0.27792691625395066,
+        39.67851623860662
+      ],
+      "coordinates": [
+        -0.27792691625395066,
+        39.67851623860662
+      ],
+      "floor": null
+    },
+    {
+      "id": "museo-planta-baja",
+      "title": "La historia antigua bajo los arcos",
+      "label": "La planta baja",
+      "regionId": "estructura",
+      "period": "mixed",
+      "intro": "Dentro de la casa, la arquitectura forma parte de la visita. Recorre visualmente los tramos y compara la amplitud del espacio con los muros de la planta superior.",
+      "narrative": "Dentro de la casa, la arquitectura forma parte de la visita. Recorre visualmente los tramos y compara la amplitud del espacio con los muros de la planta superior.",
+      "facts": [
+        {
+          "text": "La planta baja organiza el relato desde la arqueología saguntina y el mundo ibérico hasta la romanización y la ciudad pública romana.",
+          "sourceIds": [
+            "mu-jaume"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Las dos plantas del cuerpo principal son ámbitos diferenciados en la memoria de rehabilitación.",
+          "sourceIds": [
+            "mu-via"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Sigue el ritmo de apoyos y mira cómo se encadenan las crujías.",
+      "modelNote": "El corte retira cubierta y forjado intermedio para facilitar la lectura. El suelo permanece cerrado; no se convierte en una excavación visitable.",
+      "sourceIds": [
+        "mu-jaume",
+        "mu-via",
+        "mu-proyecto2025",
+        "mu-catastro",
+        "mu-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual compartido con el modelo, registrado con huellas cartográficas y plantas publicadas; no representa un punto medido de cada objeto ni un itinerario físico autorizado.",
+      "osmIds": [],
+      "order": 7,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "mu-catastro",
+        "mu-osm",
+        "mu-proyecto2025"
+      ],
+      "readingLayer": "estructura",
+      "coordinate": [
+        -0.2778939980442561,
+        39.67854310693676
+      ],
+      "coordinates": [
+        -0.2778939980442561,
+        39.67854310693676
+      ],
+      "floor": 0
+    },
+    {
+      "id": "museo-arcos",
+      "title": "Cómo sostiene el edificio su espacio",
+      "label": "Arcos y madera",
+      "regionId": "estructura",
+      "period": "medieval",
+      "intro": "Acerca la cámara a los arranques de los arcos. La vista desde abajo permite comprender cómo los apoyos y la madera ordenan el interior.",
+      "narrative": "Acerca la cámara a los arranques de los arcos. La vista desde abajo permite comprender cómo los apoyos y la madera ordenan el interior.",
+      "facts": [
+        {
+          "text": "La descripción patrimonial destaca los arcos apuntados y las vigas de madera vistas en la planta baja.",
+          "sourceIds": [
+            "mu-cid"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Los planos de 2025 organizan el cuerpo principal en cuatro crujías.",
+          "sourceIds": [
+            "mu-proyecto2025"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Busca la transición entre pilar, arco, muro superior y viguetas.",
+      "modelNote": "Se reproducen estructura y proporciones documentadas. La edad de cada madera y la forma exacta de cada sillar no se deducen del render.",
+      "sourceIds": [
+        "mu-cid",
+        "mu-proyecto2025",
+        "mu-via",
+        "mu-catastro",
+        "mu-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual compartido con el modelo, registrado con huellas cartográficas y plantas publicadas; no representa un punto medido de cada objeto ni un itinerario físico autorizado.",
+      "osmIds": [],
+      "order": 8,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "mu-catastro",
+        "mu-osm",
+        "mu-proyecto2025"
+      ],
+      "readingLayer": "estructura",
+      "coordinate": [
+        -0.27789286362795,
+        39.67851969812345
+      ],
+      "coordinates": [
+        -0.27789286362795,
+        39.67851969812345
+      ],
+      "floor": 0
+    },
+    {
+      "id": "museo-canteria",
+      "title": "La materia como documento",
+      "label": "Muros y cantería",
+      "regionId": "casa",
+      "period": "mixed",
+      "intro": "La cercanía permite comparar superficies, reparaciones y encuentros. Cada material cuenta una parte del uso del inmueble, aunque no todas sus fases puedan fecharse.",
+      "narrative": "La cercanía permite comparar superficies, reparaciones y encuentros. Cada material cuenta una parte del uso del inmueble, aunque no todas sus fases puedan fecharse.",
+      "facts": [
+        {
+          "text": "La rehabilitación conservó estratos de los muros y recuperó el alfarje de la planta baja.",
+          "sourceIds": [
+            "mu-proyecto2025"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El nombre popular recuerda a uno de los últimos habitantes de la casa.",
+          "sourceIds": [
+            "mu-via"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Compara el grano de la piedra con los paños revocados y las piezas de madera.",
+      "modelNote": "Las variaciones de color son una ayuda visual. No se usan como un mapa arqueológico de fases ni como inventario de piezas reutilizadas.",
+      "sourceIds": [
+        "mu-proyecto2025",
+        "mu-via",
+        "mu-catastro",
+        "mu-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual compartido con el modelo, registrado con huellas cartográficas y plantas publicadas; no representa un punto medido de cada objeto ni un itinerario físico autorizado.",
+      "osmIds": [],
+      "order": 9,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "mu-catastro",
+        "mu-osm",
+        "mu-proyecto2025"
+      ],
+      "readingLayer": "casa",
+      "coordinate": [
+        -0.27789374802469546,
+        39.67847971897791
+      ],
+      "coordinates": [
+        -0.27789374802469546,
+        39.67847971897791
+      ],
+      "floor": 0
+    },
+    {
+      "id": "museo-epigrafia",
+      "title": "Personas y lenguas escritas en piedra",
+      "label": "Las inscripciones",
+      "regionId": "coleccion",
+      "period": "mixed",
+      "intro": "Las inscripciones conservan nombres, dedicaciones y formas de escribir. Observa el soporte y distingue el objeto conservado del texto que hoy usamos para explicarlo.",
+      "narrative": "Las inscripciones conservan nombres, dedicaciones y formas de escribir. Observa el soporte y distingue el objeto conservado del texto que hoy usamos para explicarlo.",
+      "facts": [
+        {
+          "text": "La guía de la colección recoge epigrafía latina, ibérica y hebrea.",
+          "sourceIds": [
+            "mu-jaume"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El inventario de 2006 incluye la inscripción bilingüe S.1-41 A-B y piezas funerarias dedicadas a Acilius Fontanus y Gemina Myrines.",
+          "sourceIds": [
+            "mu-boe2006"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Mira los formatos de las estelas y el contraste entre soporte y vitrina.",
+      "modelNote": "Los soportes son evocaciones tipológicas. No se graban textos antiguos inventados ni se presenta su colocación virtual como la museografía actual verificada.",
+      "sourceIds": [
+        "mu-jaume",
+        "mu-boe2006",
+        "mu-catastro",
+        "mu-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual compartido con el modelo, registrado con huellas cartográficas y plantas publicadas; no representa un punto medido de cada objeto ni un itinerario físico autorizado.",
+      "osmIds": [],
+      "order": 10,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "mu-catastro",
+        "mu-osm",
+        "mu-proyecto2025"
+      ],
+      "readingLayer": "coleccion",
+      "coordinate": [
+        -0.2779487388398932,
+        39.67850072001522
+      ],
+      "coordinates": [
+        -0.2779487388398932,
+        39.67850072001522
+      ],
+      "floor": 0
+    },
+    {
+      "id": "museo-escultura",
+      "title": "El toro y la imagen de la ciudad",
+      "label": "La escultura",
+      "regionId": "coleccion",
+      "period": "iberian",
+      "intro": "Las esculturas permiten detenerse en otra escala: masa, gesto y fragmento. La visita usa volúmenes de lectura para acercar las principales familias de piezas del museo.",
+      "narrative": "Las esculturas permiten detenerse en otra escala: masa, gesto y fragmento. La visita usa volúmenes de lectura para acercar las principales familias de piezas del museo.",
+      "facts": [
+        {
+          "text": "El toro ibérico es una escultura de caliza datada en el siglo IV a. C.",
+          "sourceIds": [
+            "mu-spain"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Turespaña destaca también el Hermes Báquico y una cabeza atribuida a Diana.",
+          "sourceIds": [
+            "mu-spain"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Compara el volumen animal con los fragmentos escultóricos.",
+      "modelNote": "Las piezas modeladas son interpretaciones simplificadas, no reproducciones mediante escáner. La atribución a Diana se conserva como atribución, no identificación definitiva.",
+      "sourceIds": [
+        "mu-spain",
+        "mu-boe2006",
+        "mu-catastro",
+        "mu-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual compartido con el modelo, registrado con huellas cartográficas y plantas publicadas; no representa un punto medido de cada objeto ni un itinerario físico autorizado.",
+      "osmIds": [],
+      "order": 11,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "mu-catastro",
+        "mu-osm",
+        "mu-proyecto2025"
+      ],
+      "readingLayer": "coleccion",
+      "coordinate": [
+        -0.2779076850794866,
+        39.67857229154932
+      ],
+      "coordinates": [
+        -0.2779076850794866,
+        39.67857229154932
+      ],
+      "floor": 0
+    },
+    {
+      "id": "museo-planta-alta",
+      "title": "Una planta para leer de sala en sala",
+      "label": "La planta superior",
+      "regionId": "estructura",
+      "period": "mixed",
+      "intro": "Cambia de planta para descubrir otra organización del espacio. El plano permite orientarte mientras las perspectivas interiores muestran la relación entre paredes, vanos y exposición.",
+      "narrative": "Cambia de planta para descubrir otra organización del espacio. El plano permite orientarte mientras las perspectivas interiores muestran la relación entre paredes, vanos y exposición.",
+      "facts": [
+        {
+          "text": "La planta superior se organiza mediante una secuencia de muros de carga.",
+          "sourceIds": [
+            "mu-man2017"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El plano de 2025 conserva salas sucesivas y una franja de escalera, patio y espacios técnicos.",
+          "sourceIds": [
+            "mu-proyecto2025"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Observa las alineaciones de muros y la luz de los balcones.",
+      "modelNote": "El plano selecciona la planta del foco. Los pasos, expositores y alturas menores se simplifican; no se atribuye a todas las salas un montaje exacto de 2026.",
+      "sourceIds": [
+        "mu-man2017",
+        "mu-proyecto2025",
+        "mu-via",
+        "mu-catastro",
+        "mu-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual compartido con el modelo, registrado con huellas cartográficas y plantas publicadas; no representa un punto medido de cada objeto ni un itinerario físico autorizado.",
+      "osmIds": [],
+      "order": 12,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "mu-catastro",
+        "mu-osm",
+        "mu-proyecto2025"
+      ],
+      "readingLayer": "estructura",
+      "coordinate": [
+        -0.27788354757823674,
+        39.678541890124876
+      ],
+      "coordinates": [
+        -0.27788354757823674,
+        39.678541890124876
+      ],
+      "floor": 1
+    },
+    {
+      "id": "museo-comercio",
+      "title": "Sagunto miraba al Mediterráneo",
+      "label": "Economía y comercio",
+      "regionId": "coleccion",
+      "period": "roman",
+      "intro": "Los recipientes de transporte y los objetos marítimos conectan el museo con el puerto antiguo. Desde esta sala puedes relacionar la ciudad de tierra adentro con la costa del atlas.",
+      "narrative": "Los recipientes de transporte y los objetos marítimos conectan el museo con el puerto antiguo. Desde esta sala puedes relacionar la ciudad de tierra adentro con la costa del atlas.",
+      "facts": [
+        {
+          "text": "La sala de economía explica las relaciones mediterráneas de la ciudad a través de su puerto.",
+          "sourceIds": [
+            "mu-man2017"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El inventario oficial incluye un ánfora Dressel 2–4 saguntina y un cepo de ancla de plomo con marca.",
+          "sourceIds": [
+            "mu-boe2006"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Compara el cuello y las asas de las ánforas con el objeto de anclaje.",
+      "modelNote": "Los objetos se interpretan a partir de tipos documentados. Sus medidas menores, marcas y posición expositiva no se presentan como una copia exacta.",
+      "sourceIds": [
+        "mu-man2017",
+        "mu-boe2006",
+        "mu-catastro",
+        "mu-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual compartido con el modelo, registrado con huellas cartográficas y plantas publicadas; no representa un punto medido de cada objeto ni un itinerario físico autorizado.",
+      "osmIds": [],
+      "order": 13,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "mu-catastro",
+        "mu-osm",
+        "mu-proyecto2025"
+      ],
+      "readingLayer": "coleccion",
+      "coordinate": [
+        -0.27791174035666333,
+        39.678493301802575
+      ],
+      "coordinates": [
+        -0.27791174035666333,
+        39.678493301802575
+      ],
+      "floor": 1
+    },
+    {
+      "id": "museo-vida-privada",
+      "title": "El patrimonio de la vida cotidiana",
+      "label": "Vida privada",
+      "regionId": "coleccion",
+      "period": "roman",
+      "intro": "La visita también se acerca a interiores domésticos, objetos de uso y decoración. Mira cómo una pieza pequeña o un pavimento puede abrir preguntas sobre una casa desaparecida.",
+      "narrative": "La visita también se acerca a interiores domésticos, objetos de uso y decoración. Mira cómo una pieza pequeña o un pavimento puede abrir preguntas sobre una casa desaparecida.",
+      "facts": [
+        {
+          "text": "Las salas superiores abordan la evolución urbana y los gustos y modos de vida en el ámbito privado romano.",
+          "sourceIds": [
+            "mu-jaume"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El depósito de 2006 incluye dos mosaicos geométricos, registrados como S.3-4 y S.3-5.",
+          "sourceIds": [
+            "mu-boe2006"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Reconoce la diferencia entre piezas de exposición y el pavimento del propio museo.",
+      "modelNote": "El mosaico virtual es una evocación geométrica. No reproduce el Castigo de Dirce completo ni afirma que ese gran pavimento esté instalado en estas salas.",
+      "sourceIds": [
+        "mu-jaume",
+        "mu-boe2006",
+        "mu-catastro",
+        "mu-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual compartido con el modelo, registrado con huellas cartográficas y plantas publicadas; no representa un punto medido de cada objeto ni un itinerario físico autorizado.",
+      "osmIds": [],
+      "order": 14,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "mu-catastro",
+        "mu-osm",
+        "mu-proyecto2025"
+      ],
+      "readingLayer": "coleccion",
+      "coordinate": [
+        -0.27791185017312736,
+        39.67844565749879
+      ],
+      "coordinates": [
+        -0.27791185017312736,
+        39.67844565749879
+      ],
+      "floor": 1
+    },
+    {
+      "id": "museo-dolors",
+      "title": "La otra escala de la casa",
+      "label": "El cuerpo de Dolors",
+      "regionId": "rehabilitacion",
+      "period": "mixed",
+      "intro": "Rodea la esquina para reconocer el cambio de escala. La franja de Dolors ayuda a comprender cómo se encajan los servicios y la circulación en el conjunto.",
+      "narrative": "Rodea la esquina para reconocer el cambio de escala. La franja de Dolors ayuda a comprender cómo se encajan los servicios y la circulación en el conjunto.",
+      "facts": [
+        {
+          "text": "La memoria interpreta este cuerpo como posible vivienda autónoma o como espacios de servicio del volumen principal.",
+          "sourceIds": [
+            "mu-via"
+          ],
+          "confidence": "interpretive"
+        },
+        {
+          "text": "Los planos de 2025 concentran servicios y comunicación en los cuerpos secundarios.",
+          "sourceIds": [
+            "mu-proyecto2025"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Compara la profundidad de la franja lateral con las salas principales.",
+      "modelNote": "Todo el museo se encaja en la parcela 3558701. La parcela colindante 3558702 se mantiene como edificio de contexto; no se convierte en una ampliación del museo.",
+      "sourceIds": [
+        "mu-via",
+        "mu-proyecto2025",
+        "mu-catastro",
+        "mu-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual compartido con el modelo, registrado con huellas cartográficas y plantas publicadas; no representa un punto medido de cada objeto ni un itinerario físico autorizado.",
+      "osmIds": [],
+      "order": 15,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "mu-catastro",
+        "mu-osm",
+        "mu-proyecto2025"
+      ],
+      "readingLayer": "rehabilitacion",
+      "coordinate": [
+        -0.2778354257510006,
+        39.67856297161337
+      ],
+      "coordinates": [
+        -0.2778354257510006,
+        39.67856297161337
+      ],
+      "floor": null
+    },
+    {
+      "id": "museo-patio",
+      "title": "Luz, circulación y un lugar anterior a la casa",
+      "label": "El patio",
+      "regionId": "rehabilitacion",
+      "period": "mixed",
+      "intro": "El patio introduce una pausa en el recorrido. Desde su posición se entiende mejor el encuentro entre las salas principales y los ámbitos de apoyo.",
+      "narrative": "El patio introduce una pausa en el recorrido. Desde su posición se entiende mejor el encuentro entre las salas principales y los ámbitos de apoyo.",
+      "facts": [
+        {
+          "text": "El proyecto registra un patio interior y un ámbito con gran lucernario junto a la circulación.",
+          "sourceIds": [
+            "mu-proyecto2025"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Las fuentes institucionales señalan estructuras iberorromanas y un cementerio islámico del siglo XI en este enclave.",
+          "sourceIds": [
+            "mu-gva"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Busca cómo entra la luz en la franja de circulación.",
+      "modelNote": "El patio se representa sobre el suelo documentado. No se sitúan tumbas ni se abre una cripta: la arqueología previa se explica sin inventar su distribución.",
+      "sourceIds": [
+        "mu-proyecto2025",
+        "mu-gva",
+        "mu-cid",
+        "mu-catastro",
+        "mu-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual compartido con el modelo, registrado con huellas cartográficas y plantas publicadas; no representa un punto medido de cada objeto ni un itinerario físico autorizado.",
+      "osmIds": [],
+      "order": 16,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "mu-catastro",
+        "mu-osm",
+        "mu-proyecto2025"
+      ],
+      "readingLayer": "rehabilitacion",
+      "coordinate": [
+        -0.277830467477258,
+        39.6785178006501
+      ],
+      "coordinates": [
+        -0.277830467477258,
+        39.6785178006501
+      ],
+      "floor": 0
+    },
+    {
+      "id": "museo-rehabilitacion",
+      "title": "Conservar también forma parte de la historia",
+      "label": "Rehabilitación y cuidado",
+      "regionId": "rehabilitacion",
+      "period": "contemporary",
+      "intro": "La casa ha necesitado reparaciones para seguir acogiendo visitantes y colecciones. Esta parada separa la transformación en museo del diagnóstico y las propuestas más recientes.",
+      "narrative": "La casa ha necesitado reparaciones para seguir acogiendo visitantes y colecciones. Esta parada separa la transformación en museo del diagnóstico y las propuestas más recientes.",
+      "facts": [
+        {
+          "text": "La rehabilitación adaptó la casa a un uso público conservando su realidad material y tipológica.",
+          "sourceIds": [
+            "mu-via"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La licitación CMAYOR/2026/17Y03/0005 quedó desierta el 3 de julio de 2026 al no presentarse ofertas.",
+          "sourceIds": [
+            "mu-desierto2026"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Relaciona cubierta, muros y zonas técnicas con el cuidado de las colecciones.",
+      "modelNote": "El proyecto de 2025 y el anuncio de 2026 no equivalen a obras terminadas. No se acredita aquí su ejecución posterior ni una museografía nueva.",
+      "sourceIds": [
+        "mu-via",
+        "mu-desierto2026",
+        "mu-proyecto2025",
+        "mu-ayto2026",
+        "mu-man2017",
+        "mu-catastro",
+        "mu-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual compartido con el modelo, registrado con huellas cartográficas y plantas publicadas; no representa un punto medido de cada objeto ni un itinerario físico autorizado.",
+      "osmIds": [],
+      "order": 17,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "mu-catastro",
+        "mu-osm",
+        "mu-proyecto2025"
+      ],
+      "readingLayer": "rehabilitacion",
+      "coordinate": [
+        -0.27792691625395066,
+        39.67851623860662
+      ],
+      "coordinates": [
+        -0.27792691625395066,
+        39.67851623860662
+      ],
+      "floor": null
+    },
+    {
+      "id": "museo-arco",
+      "title": "El paso frente al museo",
+      "label": "El arco cercano",
+      "regionId": "barrio",
+      "period": "mixed",
+      "intro": "Vuelve a la calle y mira hacia el paso situado frente al museo. Desde aquí continúa el recorrido por el barrio, con cambios de luz, estrechamientos y pequeñas perspectivas.",
+      "narrative": "Vuelve a la calle y mira hacia el paso situado frente al museo. Desde aquí continúa el recorrido por el barrio, con cambios de luz, estrechamientos y pequeñas perspectivas.",
+      "facts": [
+        {
+          "text": "La ruta municipal identifica una entrada al barrio judío frente al Museo Histórico.",
+          "sourceIds": [
+            "mu-jueria"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La cartografía distingue ese paso del Portalet de la Sang situado más adelante.",
+          "sourceIds": [
+            "mu-osm"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Compara la posición del arco con la fachada del museo y con Castell.",
+      "modelNote": "Se reutiliza el arco del atlas de la Judería. No se le traslada la licencia de 1321 ni se afirma que toda su fábrica visible sea medieval.",
+      "sourceIds": [
+        "mu-jueria",
+        "mu-osm",
+        "mu-placas2020",
+        "mu-catastro"
+      ],
+      "confidence": "interpretive",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual compartido con el modelo, registrado con huellas cartográficas y plantas publicadas; no representa un punto medido de cada objeto ni un itinerario físico autorizado.",
+      "osmIds": [
+        "way/1303697035"
+      ],
+      "order": 18,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "mu-catastro",
+        "mu-osm",
+        "mu-proyecto2025"
+      ],
+      "readingLayer": "barrio",
+      "coordinate": [
+        -0.2781812925,
+        39.6785557926
+      ],
+      "coordinates": [
+        -0.2781812925,
+        39.6785557926
+      ],
+      "floor": null
+    },
+    {
+      "id": "museo-juderia",
+      "title": "Continuar por el barrio judío",
+      "label": "La conexión con la Judería",
+      "regionId": "barrio",
+      "period": "medieval",
+      "intro": "El museo forma parte de un recorrido urbano más amplio. Sigue el enlace a la visita de la Judería para explorar los accesos, las calles y la memoria del barrio.",
+      "narrative": "El museo forma parte de un recorrido urbano más amplio. Sigue el enlace a la visita de la Judería para explorar los accesos, las calles y la memoria del barrio.",
+      "facts": [
+        {
+          "text": "La ruta municipal relaciona el permiso de cierre de accesos de 1321 con el recorrido del Portalet de la Sang.",
+          "sourceIds": [
+            "mu-jueria"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "En 2020 se señalizó el museo dentro de la Red de Juderías; la comunicación municipal lo relaciona con una antigua carnicería judía.",
+          "sourceIds": [
+            "mu-placas2020"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Sitúa el arco frente al museo y el Portalet como dos puntos diferentes.",
+      "modelNote": "La asociación con la carnicería pertenece a la interpretación patrimonial del lugar. No demuestra la función de cada sala ni autoriza reconstruir una sinagoga en el museo.",
+      "sourceIds": [
+        "mu-jueria",
+        "mu-placas2020",
+        "mu-cid",
+        "mu-catastro",
+        "mu-osm"
+      ],
+      "confidence": "interpretive",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual compartido con el modelo, registrado con huellas cartográficas y plantas publicadas; no representa un punto medido de cada objeto ni un itinerario físico autorizado.",
+      "osmIds": [
+        "way/733421700"
+      ],
+      "order": 19,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "mu-catastro",
+        "mu-osm",
+        "mu-proyecto2025"
+      ],
+      "readingLayer": "barrio",
+      "coordinate": [
+        -0.278350158,
+        39.678523895
+      ],
+      "coordinates": [
+        -0.278350158,
+        39.678523895
+      ],
+      "floor": null
+    },
+    {
+      "id": "museo-entorno",
+      "title": "La casa dentro de las manzanas",
+      "label": "Calles y edificios próximos",
+      "regionId": "barrio",
+      "period": "mixed",
+      "intro": "Aléjate un poco para recuperar la escala del barrio. La continuidad del suelo, las medianeras y los tejados ayuda a entender por qué el museo adopta esta forma.",
+      "narrative": "Aléjate un poco para recuperar la escala del barrio. La continuidad del suelo, las medianeras y los tejados ayuda a entender por qué el museo adopta esta forma.",
+      "facts": [
+        {
+          "text": "Las huellas catastrales permiten separar la parcela del museo y las construcciones vecinas.",
+          "sourceIds": [
+            "mu-catastro"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El relieve oficial orienta la pendiente general y las estimaciones de altura de los edificios del contexto.",
+          "sourceIds": [
+            "mu-terreno"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Compara los patios, las alturas y las calles que rodean la replaza.",
+      "modelNote": "El entorno combina cartografía real con fachadas interpretadas. No se presenta como reproducción fotogramétrica de cada vivienda ni como medición de sus interiores.",
+      "sourceIds": [
+        "mu-catastro",
+        "mu-terreno",
+        "mu-pnoa",
+        "mu-via",
+        "mu-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual compartido con el modelo, registrado con huellas cartográficas y plantas publicadas; no representa un punto medido de cada objeto ni un itinerario físico autorizado.",
+      "osmIds": [],
+      "order": 20,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "mu-catastro",
+        "mu-osm",
+        "mu-proyecto2025"
+      ],
+      "readingLayer": "barrio",
+      "coordinate": [
+        -0.277824921,
+        39.678586777
+      ],
+      "coordinates": [
+        -0.277824921,
+        39.678586777
+      ],
+      "floor": null
+    }
+  ],
+  "regions": [
+    {
+      "id": "casa",
+      "name": "La casa y su fachada",
+      "aliases": [],
+      "summary": "Lectura del volumen, los accesos, los balcones y la materia conservada.",
+      "sourceIds": [
+        "mu-directorio",
+        "mu-man2017",
+        "mu-via",
+        "mu-proyecto2025",
+        "mu-pnoa",
+        "mu-catastro",
+        "mu-osm",
+        "mu-cid"
+      ],
+      "stopIds": [
+        "museo-conjunto",
+        "museo-fachada",
+        "museo-acceso",
+        "museo-balcones",
+        "museo-canteria"
+      ],
+      "coordinate": [
+        -0.2779038210036165,
+        39.67851104121699
+      ]
+    },
+    {
+      "id": "estructura",
+      "name": "Dos plantas y una estructura",
+      "aliases": [],
+      "summary": "Las crujías, los arcos, la madera y la cubierta relacionan las dos plantas.",
+      "sourceIds": [
+        "mu-proyecto2025",
+        "mu-ayto2026",
+        "mu-via",
+        "mu-catastro",
+        "mu-osm",
+        "mu-jaume",
+        "mu-cid",
+        "mu-man2017"
+      ],
+      "stopIds": [
+        "museo-cubierta",
+        "museo-planta-baja",
+        "museo-arcos",
+        "museo-planta-alta"
+      ],
+      "coordinate": [
+        -0.27792691625395066,
+        39.67851623860662
+      ]
+    },
+    {
+      "id": "coleccion",
+      "name": "Objetos e historia de Sagunto",
+      "aliases": [],
+      "summary": "Inscripciones, escultura, comercio y vida privada explican la colección.",
+      "sourceIds": [
+        "mu-jaume",
+        "mu-boe2006",
+        "mu-catastro",
+        "mu-osm",
+        "mu-spain",
+        "mu-man2017"
+      ],
+      "stopIds": [
+        "museo-epigrafia",
+        "museo-escultura",
+        "museo-comercio",
+        "museo-vida-privada"
+      ],
+      "coordinate": [
+        -0.2779487388398932,
+        39.67850072001522
+      ]
+    },
+    {
+      "id": "rehabilitacion",
+      "name": "Adaptar y conservar",
+      "aliases": [],
+      "summary": "Dolors, el patio y las intervenciones permiten leer la transformación del inmueble.",
+      "sourceIds": [
+        "mu-via",
+        "mu-proyecto2025",
+        "mu-catastro",
+        "mu-osm",
+        "mu-gva",
+        "mu-cid",
+        "mu-desierto2026",
+        "mu-ayto2026",
+        "mu-man2017"
+      ],
+      "stopIds": [
+        "museo-dolors",
+        "museo-patio",
+        "museo-rehabilitacion"
+      ],
+      "coordinate": [
+        -0.2778354257510006,
+        39.67856297161337
+      ]
+    },
+    {
+      "id": "barrio",
+      "name": "La replaza y la Judería",
+      "aliases": [],
+      "summary": "Calles, arcos y edificios enlazan la casa con su entorno inmediato.",
+      "sourceIds": [
+        "mu-via",
+        "mu-jueria",
+        "mu-terreno",
+        "mu-pnoa",
+        "mu-catastro",
+        "mu-osm",
+        "mu-placas2020",
+        "mu-cid"
+      ],
+      "stopIds": [
+        "museo-plaza",
+        "museo-arco",
+        "museo-juderia",
+        "museo-entorno"
+      ],
+      "coordinate": [
+        -0.278023344,
+        39.678532878
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "mu-via",
+      "title": "Casa del Mestre Peña · proyecto de rehabilitación publicado en ARAV 07",
+      "author": "Julián Esteban Chapapría, Carles Boigues Gregori y José Ignacio Casar Pinazo",
+      "url": "https://via-arquitectura.net/arav07/096-arav07.htm",
+      "type": "memoria arquitectónica, planos y fotografías de los autores",
+      "year": null,
+      "locator": "Texto del proyecto; láminas 01–19 y 21: emplazamiento, secciones, plantas, alzado, obra e interiores terminados.",
+      "note": "Referencia primaria de la intervención: las láminas representan momentos diferentes. Las fotografías se consultan para modelar, sin incorporarlas como galería ni textura.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "mu-proyecto2025",
+      "title": "Proyecto de adecuación del Museo Mestre Peña de Sagunto",
+      "author": "Fernando Cos-Gayón López / Generalitat Valenciana",
+      "url": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=ihKowu21j5t8CwPcm4L4FDXBIGteKJw%2BbX4Xx1Uy701YxEe7nC3Lu31H68efJ5SUYcvrbM14rcAdZdZL6CYnAnwSmtNeOCNrKZWURXQUmMGB0nvVKRzfe4rpHcnlPhSZ&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "type": "proyecto técnico oficial con inspección, fotografías y plantas",
+      "year": 2025,
+      "locator": "Proyecto de 1 de agosto de 2025; visita de inspección de 14 de julio. Identificación p 4; arquitectura pp 6–8; plantas pp 9–11; fotografías pp 7 y 12–19; accesos p 30. Publicado en el expediente CMAYOR/2026/17Y03/0005.",
+      "note": "Los planos de patologías documentan el edificio existente en 2025. Las soluciones propuestas no acreditan obras ejecutadas. Su fecha de origen en el siglo XIII difiere de la datación en el XIV de la bibliografía museística.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "mu-man2017",
+      "title": "El Museo Arqueológico de Sagunto (Valencia)",
+      "author": "Emilia Hernández Hervás / Museo Arqueológico Nacional",
+      "url": "https://www.man.es/man/dam/jcr%3A2af29bca-7dbf-405c-8896-b59669f1a389/man-bol-2017-35-257.pdf",
+      "type": "artículo de la directora del museo",
+      "year": 2017,
+      "locator": "Boletín del Museo Arqueológico Nacional 35, vol 6, pp 2428–2436; historia institucional, edificio y discurso en pp 2429–2432.",
+      "note": "Distingue el museo estatal de su sede autonómica y documenta la apertura en mayo de 2007. Ofrece dos referencias para el origen del Cuart de les Pedres: 1793 y 1787–1788; se mantiene la formulación finales del siglo XVIII.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "mu-cid",
+      "title": "Casa del Mestre-Penya · Museo Histórico de Sagunto",
+      "author": "Consorcio Camino del Cid",
+      "url": "https://www.caminodelcid.org/servicios/casa-del-mestre-penya---museo-historico-de-sagunto-1823124",
+      "type": "ficha patrimonial de consorcio público",
+      "year": 2021,
+      "locator": "Descripción revisada el 27 de agosto de 2021: fábrica gótica, arcos, madera y antecedentes arqueológicos.",
+      "note": "Presenta lonja o carnicería como usos posibles. Permite explicar la construcción bajomedieval sin convertir la Casa en una residencia señorial hipotética.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "mu-gva",
+      "title": "Museu Arqueològic de Sagunt",
+      "author": "Turisme Comunitat Valenciana",
+      "url": "https://www.comunitatvalenciana.com/es/valencia/sagunt-sagunto/museos/museu-arqueologic-de-sagunt",
+      "type": "ficha institucional de patrimonio",
+      "year": null,
+      "locator": "Dirección Castillo 23; historia de la colección, Casa del Mestre Peña y restos del enclave.",
+      "note": "La ficha sitúa la construcción probablemente en el siglo XIV. Su referencia a lonja y almudín se compara con las interpretaciones de otras fuentes.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "mu-directorio",
+      "title": "Museo Arqueológico de Sagunto · Directorio de Museos de España",
+      "author": "Ministerio de Cultura / institución museística",
+      "url": "https://directoriomuseos.mcu.es/dirmuseos/mostrarDetalleMuseo.do?idMuseo=1406",
+      "type": "directorio institucional",
+      "year": null,
+      "locator": "Ficha del museo en Castell 23; información aportada por la institución.",
+      "note": "Confirma identidad y domicilio. Los horarios y el acceso físico pueden variar; no se incorporan al recorrido virtual como garantía de apertura.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "mu-boe2006",
+      "title": "Convenio para la exposición de fondos estatales en la Casa del Mestre Peña",
+      "author": "Ministerio de Cultura / Generalitat Valenciana",
+      "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2006-18617",
+      "type": "convenio e inventario oficial",
+      "year": 2006,
+      "locator": "Convenio firmado el 7 de septiembre; publicado el 25 de octubre. Antecedentes 2–4 y anexo I: epigrafía, escultura, cerámica, ancla y mosaicos.",
+      "note": "Identifica piezas concretas de la colección cedida entonces. No certifica su ubicación actual en cada vitrina ni prolongaciones posteriores del depósito.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "mu-boe1962",
+      "title": "Decreto 474/1962 · protección de museos y sus colecciones",
+      "author": "Boletín Oficial del Estado",
+      "url": "https://www.boe.es/boe/dias/1962/03/09/pdfs/A03311-03313.pdf",
+      "type": "disposición histórica",
+      "year": 1962,
+      "locator": "Decreto de 1 de marzo, BOE de 9 de marzo, pp 3311–3313. Lista de Valencia en p 3313.",
+      "note": "La relación distingue Museo Saguntino y Museo del Teatro Romano. No demuestra que la Casa del Mestre Penya fuese ya sede museística en 1962.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "mu-spain",
+      "title": "Museo Arqueológico de Sagunto",
+      "author": "Turespaña",
+      "url": "https://www.spain.info/es/lugares-interes/museo-arqueologico-sagunto/",
+      "type": "ficha oficial de colección",
+      "year": null,
+      "locator": "Piezas destacadas: toro ibérico de caliza, cerámica del Pic dels Corbs, vasos ibéricos, Hermes y cabeza atribuida a Diana.",
+      "note": "La identificación con Diana se conserva como atribución. La lista no acredita una distribución actual de piezas en sala.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "mu-jaume",
+      "title": "Museo Histórico de Sagunto · salas y colecciones",
+      "author": "Rutas Jaume I",
+      "url": "https://www.rutasjaumei.com/es/que-ver-en-sagunto/844/museo-historico-de-sagunto.php",
+      "type": "guía de itinerario cultural con apoyo institucional",
+      "year": null,
+      "locator": "Descripción de las dos plantas, epigrafía y temas expositivos; fotografías del museo.",
+      "note": "Complementa el artículo de la directora. La mención del Castigo de Dirke se refiere a los fondos: no se deduce su instalación completa en la Casa.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "mu-uv",
+      "title": "El Camp de Morvedre · museos y colecciones",
+      "author": "Universitat de València / Diputació de València",
+      "url": "https://puv.uv.es/doc_pdf/comarques/morvedre.pdf",
+      "type": "estudio universitario del territorio",
+      "year": null,
+      "locator": "Apartado 7.1.4, pp 132–133: museo arqueológico y nueva ubicación desde 2007.",
+      "note": "Apoya la cronología de la sede. La fotografía de una columna reutilizada no se atribuye al museo sin una localización explícita.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "mu-smic",
+      "title": "Museo de Historia de Sagunto · presentación municipal",
+      "author": "SMIC / Ayuntamiento de Sagunto",
+      "url": "https://www.youtube.com/watch?v=caE2gw9820s",
+      "type": "descripción institucional audiovisual",
+      "year": 2015,
+      "locator": "Descripción publicada el 4 de febrero: colección epigráfica, Cuarto de les Pedres y sedes de 1925 y 1952.",
+      "note": "Se utiliza el texto descriptivo municipal. No se inserta vídeo ni se deduce de él el estado de conservación en 2026.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "mu-ayto2026",
+      "title": "Actuaciones anunciadas en el conjunto monumental de Sagunto",
+      "author": "Ajuntament de Sagunt",
+      "url": "https://aytosagunto.es/es/actualidad/2026-02-24-el-ministerio-de-cultura-elaborara-un-plan-director-para-la-actuacion-integral-sobre-el-teatro-romano-y-el-castillo-de-sagunto/",
+      "type": "comunicación institucional",
+      "year": 2026,
+      "locator": "Noticia de 24 de febrero, apartado Intervenciones de urgencia: cubierta y climatización del Museo Arqueológico.",
+      "note": "Documenta un anuncio de actuación; no un acta de finalización ni una nueva museografía ejecutada.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "mu-desierto2026",
+      "title": "Resolución de declaración de desierto · reparación del Museo Arqueológico",
+      "author": "Generalitat Valenciana / Plataforma de Contratación del Sector Público",
+      "url": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=2QAK1U9Ys7YbjPQLxhVaNm6uqU8enfQPe2fVFITWFYBPJyVczXFuEHd8buAYtHSmj9eypJTYlMJ3vIYF7vUK2aAFnVzOTgdfNJiyFKOs%2FTvDdQD9RyhUmzT4jZ2In4zL&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "type": "resolución administrativa oficial",
+      "year": 2026,
+      "locator": "Firmada el 3 de julio de 2026. Expediente CMAYOR/2026/17Y03/0005; antecedente 2 y resuelvo primero.",
+      "note": "No se presentaron ofertas. Este resultado no permite afirmar que las reparaciones del proyecto se adjudicaran o concluyeran; tampoco descarta actuaciones por otros expedientes.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "mu-jueria",
+      "title": "Barri de la Jueria · itinerario municipal",
+      "author": "Ajuntament de Sagunt / proyecto Xiuxiueig",
+      "url": "https://aytosagunto.es/es/ayuntamiento/areas-y-servicios/cultura-y-educacion/campus-abierto-a-la-ciudadania/proyecto-xiuxiueig/barri-de-la-jueria/",
+      "type": "interpretación municipal del barrio",
+      "year": null,
+      "locator": "Inicio del recorrido por Castell: entrada frente al museo; después, Portalet de la Sang.",
+      "note": "La distinción entre ambas entradas evita trasladar al arco ante el museo la referencia de 1321. Otras atribuciones discutidas del itinerario no se adoptan automáticamente.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "mu-placas2020",
+      "title": "Señalización del conjunto patrimonial judío de Sagunto",
+      "author": "Ajuntament de Sagunt",
+      "url": "https://aytosagunto.es/es/actualidad/el-conjunto-patrimonial-judio-de-sagunto-ya-cuenta-con-la-senalizacion-de-la-red-de-juderias-de-espana/",
+      "type": "documentación municipal",
+      "year": 2020,
+      "locator": "Noticia de 8 de septiembre: seis placas de la Red de Juderías, incluida la Casa del Mestre Penya.",
+      "note": "La identificación turística con una antigua carnicería judía se distingue de la certeza arqueológica sobre cada fase del edificio.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "mu-osm",
+      "title": "OpenStreetMap · museo, arcos y calles de la Judería",
+      "author": "Colaboradores de OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/1303697035",
+      "type": "cartografía colaborativa",
+      "year": null,
+      "locator": "Arco ante el museo 1303697035; Portalet de la Sang 733421700; trazado de Castell y calles próximas.",
+      "note": "Las coordenadas sitúan recorridos y elementos del atlas; no datan la fábrica de los arcos ni garantizan accesibilidad.",
+      "accessed": "2026-11-20",
+      "licenseUrl": "https://www.openstreetmap.org/copyright"
+    },
+    {
+      "id": "mu-catastro",
+      "title": "Cartografía catastral INSPIRE · Casa del Mestre Penya y entorno",
+      "author": "Dirección General del Catastro",
+      "url": "https://www.catastro.hacienda.gob.es/webinspire/index.html",
+      "type": "cartografía oficial",
+      "year": null,
+      "locator": "Municipio 46222; museo en parcela 3558701YJ3935H0001XE, concordante con el proyecto de 2025.",
+      "note": "El cuerpo principal y la franja de Dolors se encajan en la parcela del museo. Las viviendas vecinas conservan sus huellas; sus fachadas son aproximaciones.",
+      "accessed": "2026-11-20",
+      "downloadUrl": "https://www.catastro.hacienda.gob.es/INSPIRE/Buildings/46/46222-SAGUNTO%20SAGUNT/A.ES.SDGC.BU.46222.zip",
+      "licenseUrl": "https://www.catastro.hacienda.gob.es/webinspire/documentos/Licencia.pdf"
+    },
+    {
+      "id": "mu-terreno",
+      "title": "MDT05 y MDSnE · relieve del casco histórico",
+      "author": "Instituto Geográfico Nacional / CNIG",
+      "url": "https://datos.gob.es/es/catalogo/e00125901-spaignmds-normalizado",
+      "type": "modelos geográficos oficiales",
+      "year": null,
+      "locator": "Relieve del atlas y estimación de alturas de los edificios de contexto.",
+      "note": "La resolución geográfica no acredita cada peldaño, umbral ni desnivel interior.",
+      "accessed": "2026-11-20",
+      "licenseUrl": "https://www.ign.es/resources/licencia/Condiciones_licenciaUso_IGN.pdf"
+    },
+    {
+      "id": "mu-pnoa",
+      "title": "PNOA Máxima Actualidad · cubiertas y replaza",
+      "author": "Instituto Geográfico Nacional / CNIG",
+      "url": "https://datos.gob.es/es/catalogo/e00125901-spaignpnoama",
+      "type": "ortofotografía oficial",
+      "year": null,
+      "locator": "Cubiertas, patios y ocupación de manzanas alrededor de Castell y Dolors.",
+      "note": "La fecha de consulta no equivale a la del vuelo. Se utiliza como contraste del contexto, junto con las plantas documentadas.",
+      "accessed": "2026-11-20",
+      "licenseUrl": "https://www.ign.es/resources/licencia/Condiciones_licenciaUso_IGN.pdf"
+    }
+  ],
+  "timeline": [
+    {
+      "id": "mu-t-previa",
+      "date": "Antigüedad",
+      "title": "Antes de la casa",
+      "text": "El enclave conserva antecedentes iberorromanos, anteriores a la construcción bajomedieval.",
+      "sourceIds": [
+        "mu-cid"
+      ],
+      "period": "mixed",
+      "confidence": "documented",
+      "stopId": "museo-patio"
+    },
+    {
+      "id": "mu-t-islamico",
+      "date": "Siglo XI",
+      "title": "Un cementerio islámico",
+      "text": "La documentación patrimonial identifica enterramientos islámicos en este lugar.",
+      "sourceIds": [
+        "mu-gva"
+      ],
+      "period": "islamic",
+      "confidence": "documented",
+      "stopId": "museo-patio"
+    },
+    {
+      "id": "mu-t-medieval",
+      "date": "Siglos XIII–XIV",
+      "title": "El edificio bajomedieval",
+      "text": "Las fuentes difieren entre los siglos XIII y XIV; la visita conserva ese margen cronológico.",
+      "sourceIds": [
+        "mu-proyecto2025",
+        "mu-man2017"
+      ],
+      "period": "medieval",
+      "confidence": "disputed",
+      "stopId": "museo-balcones"
+    },
+    {
+      "id": "mu-t-eruditos",
+      "date": "Siglo XVI",
+      "title": "La ciudad atrae a los eruditos",
+      "text": "Viajeros e historiadores comienzan a describir y clasificar antigüedades saguntinas.",
+      "sourceIds": [
+        "mu-gva"
+      ],
+      "period": "modern",
+      "confidence": "documented",
+      "stopId": "museo-epigrafia"
+    },
+    {
+      "id": "mu-t-pedres",
+      "date": "Finales del siglo XVIII",
+      "title": "El Cuart de les Pedres",
+      "text": "Enrique Palos impulsa la reunión de inscripciones en la Casa de la Vila.",
+      "sourceIds": [
+        "mu-smic"
+      ],
+      "period": "modern",
+      "confidence": "documented",
+      "stopId": "museo-epigrafia"
+    },
+    {
+      "id": "mu-t-teatro",
+      "date": "Siglo XIX",
+      "title": "La colección junto al teatro",
+      "text": "Boix y Chabret reúnen antigüedades de la ciudad en el Teatro Romano.",
+      "sourceIds": [
+        "mu-man2017"
+      ],
+      "period": "modern",
+      "confidence": "documented",
+      "stopId": "museo-conjunto"
+    },
+    {
+      "id": "mu-t-militar",
+      "date": "1925",
+      "title": "Una sede en el castillo",
+      "text": "Se construye el Museo Histórico-Militar para materiales procedentes de las excavaciones del foro.",
+      "sourceIds": [
+        "mu-smic"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "museo-conjunto"
+    },
+    {
+      "id": "mu-t-museo",
+      "date": "1952",
+      "title": "El Museo Arqueológico",
+      "text": "Se construye un museo adosado al Teatro Romano, sede anterior a la Casa del Mestre Penya.",
+      "sourceIds": [
+        "mu-smic"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "museo-conjunto"
+    },
+    {
+      "id": "mu-t-proteccion",
+      "date": "1962",
+      "title": "Protección de los museos",
+      "text": "El decreto 474/1962 incluye al Museo Saguntino y al Museo del Teatro Romano entre los monumentos histórico-artísticos.",
+      "sourceIds": [
+        "mu-boe1962"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "museo-rehabilitacion"
+    },
+    {
+      "id": "mu-t-gestion",
+      "date": "1984",
+      "title": "Gestión autonómica",
+      "text": "El convenio de 24 de septiembre establece la gestión autonómica del museo de titularidad estatal.",
+      "sourceIds": [
+        "mu-boe2006"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "museo-conjunto"
+    },
+    {
+      "id": "mu-t-cierre",
+      "date": "1990",
+      "title": "El derrumbe de la sede anterior",
+      "text": "El hundimiento de parte de la cubierta provoca la demolición del edificio de 1952 y el traslado de fondos a almacenes.",
+      "sourceIds": [
+        "mu-man2017"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "museo-rehabilitacion"
+    },
+    {
+      "id": "mu-t-rehabilitacion",
+      "date": "2004–2005",
+      "title": "Adaptación del inmueble",
+      "text": "El proyecto técnico posterior recoge estos años como fase de rehabilitación para el uso museístico.",
+      "sourceIds": [
+        "mu-proyecto2025"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "museo-canteria"
+    },
+    {
+      "id": "mu-t-historico",
+      "date": "Julio de 2006",
+      "title": "Nace el Museu Històric",
+      "text": "La Generalitat crea el museo en la Casa del Mestre Penya rehabilitada.",
+      "sourceIds": [
+        "mu-man2017"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "museo-conjunto"
+    },
+    {
+      "id": "mu-t-deposito",
+      "date": "Septiembre de 2006",
+      "title": "El convenio de los fondos",
+      "text": "Estado y Generalitat acuerdan la cesión temporal de piezas para exponerlas en la Casa.",
+      "sourceIds": [
+        "mu-boe2006"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "museo-epigrafia"
+    },
+    {
+      "id": "mu-t-apertura",
+      "date": "Mayo de 2007",
+      "title": "Apertura al público",
+      "text": "La nueva sede comienza su recorrido museístico sobre la historia antigua de Sagunto.",
+      "sourceIds": [
+        "mu-man2017",
+        "mu-uv"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "museo-planta-baja"
+    },
+    {
+      "id": "mu-t-sefarad",
+      "date": "2020",
+      "title": "Señalización del itinerario judío",
+      "text": "El museo se incorpora a los seis puntos señalizados con placas de la Red de Juderías.",
+      "sourceIds": [
+        "mu-placas2020"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "museo-juderia"
+    },
+    {
+      "id": "mu-t-diagnostico",
+      "date": "Julio–agosto de 2025",
+      "title": "Inspección y proyecto técnico",
+      "text": "Se documentan humedades y problemas de instalaciones, con plantas del estado existente y propuestas de reparación.",
+      "sourceIds": [
+        "mu-proyecto2025"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "museo-rehabilitacion"
+    },
+    {
+      "id": "mu-t-anuncio",
+      "date": "Febrero de 2026",
+      "title": "Reparaciones anunciadas",
+      "text": "Se anuncian intervenciones en la cubierta y climatización del museo.",
+      "sourceIds": [
+        "mu-ayto2026"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "museo-cubierta"
+    },
+    {
+      "id": "mu-t-desierto",
+      "date": "Julio de 2026",
+      "title": "La licitación queda desierta",
+      "text": "El expediente de reparación no recibe ofertas. Esta resolución no acredita la ejecución posterior de las obras.",
+      "sourceIds": [
+        "mu-desierto2026"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "museo-rehabilitacion"
+    }
+  ],
+  "modelRegistration": {
+    "anchor": [
+      -0.27788452,
+      39.6784963
+    ],
+    "yawRadians": 1.5313044297461058,
+    "baseY": 58.62,
+    "upperY": 63.5,
+    "axisX": "Eje longitudinal local de la fachada principal, registrado en el plano Este/Sur.",
+    "axisZ": "Eje transversal desde la fachada principal hacia la franja de Dolors.",
+    "method": "Plantas del estado existente de 2025, memoria de rehabilitación y parcela catastral 3558701; focos compartidos con el modelo.",
+    "precision": "approximate"
+  }
+}

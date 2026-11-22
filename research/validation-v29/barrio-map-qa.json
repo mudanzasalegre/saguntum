@@ -1,0 +1,991 @@
+{
+  "pass": true,
+  "cases": 98,
+  "inputHashes": {
+    "dist/js/barrio-map.js": "cf45af8cfa0badf698652f12c823884a019ac77c8f2b1a0cfc18cdfad71398c4",
+    "dist/assets/data/barrio-plan.json": "84b749899d4d35ebcf17c141aa92fb1e1f03ac2d791fd93c6d44fc6749dd901c",
+    "dist/assets/data/barrio-visit.json": "39ad1c98959ca72e38279e092a7ce36fab327d1bb643846cce9387bf487dc14c"
+  },
+  "checks": [
+    {
+      "name": "barrio-plano",
+      "theme": "dark",
+      "readingMode": "materials",
+      "selected": null,
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-plano",
+      "theme": "dark",
+      "readingMode": "materials",
+      "selected": "barrio-sala",
+      "sectionShown": false,
+      "targets": 4,
+      "floor": 0,
+      "floorLabel": "Tipo III · casa de una planta · planta baja · tipo histórico"
+    },
+    {
+      "name": "barrio-plano",
+      "theme": "dark",
+      "readingMode": "materials",
+      "selected": "barrio-planta-alta",
+      "sectionShown": false,
+      "targets": 1,
+      "floor": 1,
+      "floorLabel": "Tipo IV · pareja de dos plantas · primera planta · tipo histórico"
+    },
+    {
+      "name": "barrio-plano",
+      "theme": "dark",
+      "readingMode": "materials",
+      "selected": "barrio-vivienda-esquina",
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-plano",
+      "theme": "dark",
+      "readingMode": "materials",
+      "selected": "barrio-seccion",
+      "sectionShown": false,
+      "targets": 4,
+      "floor": 0,
+      "floorLabel": "Tipo III · casa de una planta · planta baja · tipo histórico"
+    },
+    {
+      "name": "barrio-plano",
+      "theme": "dark",
+      "readingMode": "materials",
+      "selected": "barrio-calles",
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-plano",
+      "theme": "dark",
+      "readingMode": "periods",
+      "selected": null,
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-plano",
+      "theme": "dark",
+      "readingMode": "periods",
+      "selected": "barrio-sala",
+      "sectionShown": false,
+      "targets": 4,
+      "floor": 0,
+      "floorLabel": "Tipo III · casa de una planta · planta baja · tipo histórico"
+    },
+    {
+      "name": "barrio-plano",
+      "theme": "dark",
+      "readingMode": "periods",
+      "selected": "barrio-planta-alta",
+      "sectionShown": false,
+      "targets": 1,
+      "floor": 1,
+      "floorLabel": "Tipo IV · pareja de dos plantas · primera planta · tipo histórico"
+    },
+    {
+      "name": "barrio-plano",
+      "theme": "dark",
+      "readingMode": "periods",
+      "selected": "barrio-vivienda-esquina",
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-plano",
+      "theme": "dark",
+      "readingMode": "periods",
+      "selected": "barrio-seccion",
+      "sectionShown": false,
+      "targets": 4,
+      "floor": 0,
+      "floorLabel": "Tipo III · casa de una planta · planta baja · tipo histórico"
+    },
+    {
+      "name": "barrio-plano",
+      "theme": "dark",
+      "readingMode": "periods",
+      "selected": "barrio-calles",
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-plano",
+      "theme": "light",
+      "readingMode": "materials",
+      "selected": null,
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-plano",
+      "theme": "light",
+      "readingMode": "materials",
+      "selected": "barrio-sala",
+      "sectionShown": false,
+      "targets": 4,
+      "floor": 0,
+      "floorLabel": "Tipo III · casa de una planta · planta baja · tipo histórico"
+    },
+    {
+      "name": "barrio-plano",
+      "theme": "light",
+      "readingMode": "materials",
+      "selected": "barrio-planta-alta",
+      "sectionShown": false,
+      "targets": 1,
+      "floor": 1,
+      "floorLabel": "Tipo IV · pareja de dos plantas · primera planta · tipo histórico"
+    },
+    {
+      "name": "barrio-plano",
+      "theme": "light",
+      "readingMode": "materials",
+      "selected": "barrio-vivienda-esquina",
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-plano",
+      "theme": "light",
+      "readingMode": "materials",
+      "selected": "barrio-seccion",
+      "sectionShown": false,
+      "targets": 4,
+      "floor": 0,
+      "floorLabel": "Tipo III · casa de una planta · planta baja · tipo histórico"
+    },
+    {
+      "name": "barrio-plano",
+      "theme": "light",
+      "readingMode": "materials",
+      "selected": "barrio-calles",
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-plano",
+      "theme": "light",
+      "readingMode": "periods",
+      "selected": null,
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-plano",
+      "theme": "light",
+      "readingMode": "periods",
+      "selected": "barrio-sala",
+      "sectionShown": false,
+      "targets": 4,
+      "floor": 0,
+      "floorLabel": "Tipo III · casa de una planta · planta baja · tipo histórico"
+    },
+    {
+      "name": "barrio-plano",
+      "theme": "light",
+      "readingMode": "periods",
+      "selected": "barrio-planta-alta",
+      "sectionShown": false,
+      "targets": 1,
+      "floor": 1,
+      "floorLabel": "Tipo IV · pareja de dos plantas · primera planta · tipo histórico"
+    },
+    {
+      "name": "barrio-plano",
+      "theme": "light",
+      "readingMode": "periods",
+      "selected": "barrio-vivienda-esquina",
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-plano",
+      "theme": "light",
+      "readingMode": "periods",
+      "selected": "barrio-seccion",
+      "sectionShown": false,
+      "targets": 4,
+      "floor": 0,
+      "floorLabel": "Tipo III · casa de una planta · planta baja · tipo histórico"
+    },
+    {
+      "name": "barrio-plano",
+      "theme": "light",
+      "readingMode": "periods",
+      "selected": "barrio-calles",
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-plano-mobile",
+      "theme": "dark",
+      "readingMode": "materials",
+      "selected": null,
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-plano-mobile",
+      "theme": "dark",
+      "readingMode": "materials",
+      "selected": "barrio-sala",
+      "sectionShown": false,
+      "targets": 4,
+      "floor": 0,
+      "floorLabel": "Tipo III · casa de una planta · planta baja · tipo histórico"
+    },
+    {
+      "name": "barrio-plano-mobile",
+      "theme": "dark",
+      "readingMode": "materials",
+      "selected": "barrio-planta-alta",
+      "sectionShown": false,
+      "targets": 1,
+      "floor": 1,
+      "floorLabel": "Tipo IV · pareja de dos plantas · primera planta · tipo histórico"
+    },
+    {
+      "name": "barrio-plano-mobile",
+      "theme": "dark",
+      "readingMode": "materials",
+      "selected": "barrio-vivienda-esquina",
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-plano-mobile",
+      "theme": "dark",
+      "readingMode": "materials",
+      "selected": "barrio-seccion",
+      "sectionShown": false,
+      "targets": 4,
+      "floor": 0,
+      "floorLabel": "Tipo III · casa de una planta · planta baja · tipo histórico"
+    },
+    {
+      "name": "barrio-plano-mobile",
+      "theme": "dark",
+      "readingMode": "materials",
+      "selected": "barrio-calles",
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-plano-mobile",
+      "theme": "dark",
+      "readingMode": "periods",
+      "selected": null,
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-plano-mobile",
+      "theme": "dark",
+      "readingMode": "periods",
+      "selected": "barrio-sala",
+      "sectionShown": false,
+      "targets": 4,
+      "floor": 0,
+      "floorLabel": "Tipo III · casa de una planta · planta baja · tipo histórico"
+    },
+    {
+      "name": "barrio-plano-mobile",
+      "theme": "dark",
+      "readingMode": "periods",
+      "selected": "barrio-planta-alta",
+      "sectionShown": false,
+      "targets": 1,
+      "floor": 1,
+      "floorLabel": "Tipo IV · pareja de dos plantas · primera planta · tipo histórico"
+    },
+    {
+      "name": "barrio-plano-mobile",
+      "theme": "dark",
+      "readingMode": "periods",
+      "selected": "barrio-vivienda-esquina",
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-plano-mobile",
+      "theme": "dark",
+      "readingMode": "periods",
+      "selected": "barrio-seccion",
+      "sectionShown": false,
+      "targets": 4,
+      "floor": 0,
+      "floorLabel": "Tipo III · casa de una planta · planta baja · tipo histórico"
+    },
+    {
+      "name": "barrio-plano-mobile",
+      "theme": "dark",
+      "readingMode": "periods",
+      "selected": "barrio-calles",
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-plano-mobile",
+      "theme": "light",
+      "readingMode": "materials",
+      "selected": null,
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-plano-mobile",
+      "theme": "light",
+      "readingMode": "materials",
+      "selected": "barrio-sala",
+      "sectionShown": false,
+      "targets": 4,
+      "floor": 0,
+      "floorLabel": "Tipo III · casa de una planta · planta baja · tipo histórico"
+    },
+    {
+      "name": "barrio-plano-mobile",
+      "theme": "light",
+      "readingMode": "materials",
+      "selected": "barrio-planta-alta",
+      "sectionShown": false,
+      "targets": 1,
+      "floor": 1,
+      "floorLabel": "Tipo IV · pareja de dos plantas · primera planta · tipo histórico"
+    },
+    {
+      "name": "barrio-plano-mobile",
+      "theme": "light",
+      "readingMode": "materials",
+      "selected": "barrio-vivienda-esquina",
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-plano-mobile",
+      "theme": "light",
+      "readingMode": "materials",
+      "selected": "barrio-seccion",
+      "sectionShown": false,
+      "targets": 4,
+      "floor": 0,
+      "floorLabel": "Tipo III · casa de una planta · planta baja · tipo histórico"
+    },
+    {
+      "name": "barrio-plano-mobile",
+      "theme": "light",
+      "readingMode": "materials",
+      "selected": "barrio-calles",
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-plano-mobile",
+      "theme": "light",
+      "readingMode": "periods",
+      "selected": null,
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-plano-mobile",
+      "theme": "light",
+      "readingMode": "periods",
+      "selected": "barrio-sala",
+      "sectionShown": false,
+      "targets": 4,
+      "floor": 0,
+      "floorLabel": "Tipo III · casa de una planta · planta baja · tipo histórico"
+    },
+    {
+      "name": "barrio-plano-mobile",
+      "theme": "light",
+      "readingMode": "periods",
+      "selected": "barrio-planta-alta",
+      "sectionShown": false,
+      "targets": 1,
+      "floor": 1,
+      "floorLabel": "Tipo IV · pareja de dos plantas · primera planta · tipo histórico"
+    },
+    {
+      "name": "barrio-plano-mobile",
+      "theme": "light",
+      "readingMode": "periods",
+      "selected": "barrio-vivienda-esquina",
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-plano-mobile",
+      "theme": "light",
+      "readingMode": "periods",
+      "selected": "barrio-seccion",
+      "sectionShown": false,
+      "targets": 4,
+      "floor": 0,
+      "floorLabel": "Tipo III · casa de una planta · planta baja · tipo histórico"
+    },
+    {
+      "name": "barrio-plano-mobile",
+      "theme": "light",
+      "readingMode": "periods",
+      "selected": "barrio-calles",
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-minimap",
+      "theme": "dark",
+      "readingMode": "materials",
+      "selected": null,
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-minimap",
+      "theme": "dark",
+      "readingMode": "materials",
+      "selected": "barrio-sala",
+      "sectionShown": false,
+      "targets": 4,
+      "floor": 0,
+      "floorLabel": "Tipo III · casa de una planta · planta baja · tipo histórico"
+    },
+    {
+      "name": "barrio-minimap",
+      "theme": "dark",
+      "readingMode": "materials",
+      "selected": "barrio-planta-alta",
+      "sectionShown": false,
+      "targets": 1,
+      "floor": 1,
+      "floorLabel": "Tipo IV · pareja de dos plantas · primera planta · tipo histórico"
+    },
+    {
+      "name": "barrio-minimap",
+      "theme": "dark",
+      "readingMode": "materials",
+      "selected": "barrio-vivienda-esquina",
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-minimap",
+      "theme": "dark",
+      "readingMode": "materials",
+      "selected": "barrio-seccion",
+      "sectionShown": false,
+      "targets": 4,
+      "floor": 0,
+      "floorLabel": "Tipo III · casa de una planta · planta baja · tipo histórico"
+    },
+    {
+      "name": "barrio-minimap",
+      "theme": "dark",
+      "readingMode": "materials",
+      "selected": "barrio-calles",
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-minimap",
+      "theme": "dark",
+      "readingMode": "periods",
+      "selected": null,
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-minimap",
+      "theme": "dark",
+      "readingMode": "periods",
+      "selected": "barrio-sala",
+      "sectionShown": false,
+      "targets": 4,
+      "floor": 0,
+      "floorLabel": "Tipo III · casa de una planta · planta baja · tipo histórico"
+    },
+    {
+      "name": "barrio-minimap",
+      "theme": "dark",
+      "readingMode": "periods",
+      "selected": "barrio-planta-alta",
+      "sectionShown": false,
+      "targets": 1,
+      "floor": 1,
+      "floorLabel": "Tipo IV · pareja de dos plantas · primera planta · tipo histórico"
+    },
+    {
+      "name": "barrio-minimap",
+      "theme": "dark",
+      "readingMode": "periods",
+      "selected": "barrio-vivienda-esquina",
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-minimap",
+      "theme": "dark",
+      "readingMode": "periods",
+      "selected": "barrio-seccion",
+      "sectionShown": false,
+      "targets": 4,
+      "floor": 0,
+      "floorLabel": "Tipo III · casa de una planta · planta baja · tipo histórico"
+    },
+    {
+      "name": "barrio-minimap",
+      "theme": "dark",
+      "readingMode": "periods",
+      "selected": "barrio-calles",
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-minimap",
+      "theme": "light",
+      "readingMode": "materials",
+      "selected": null,
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-minimap",
+      "theme": "light",
+      "readingMode": "materials",
+      "selected": "barrio-sala",
+      "sectionShown": false,
+      "targets": 4,
+      "floor": 0,
+      "floorLabel": "Tipo III · casa de una planta · planta baja · tipo histórico"
+    },
+    {
+      "name": "barrio-minimap",
+      "theme": "light",
+      "readingMode": "materials",
+      "selected": "barrio-planta-alta",
+      "sectionShown": false,
+      "targets": 1,
+      "floor": 1,
+      "floorLabel": "Tipo IV · pareja de dos plantas · primera planta · tipo histórico"
+    },
+    {
+      "name": "barrio-minimap",
+      "theme": "light",
+      "readingMode": "materials",
+      "selected": "barrio-vivienda-esquina",
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-minimap",
+      "theme": "light",
+      "readingMode": "materials",
+      "selected": "barrio-seccion",
+      "sectionShown": false,
+      "targets": 4,
+      "floor": 0,
+      "floorLabel": "Tipo III · casa de una planta · planta baja · tipo histórico"
+    },
+    {
+      "name": "barrio-minimap",
+      "theme": "light",
+      "readingMode": "materials",
+      "selected": "barrio-calles",
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-minimap",
+      "theme": "light",
+      "readingMode": "periods",
+      "selected": null,
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-minimap",
+      "theme": "light",
+      "readingMode": "periods",
+      "selected": "barrio-sala",
+      "sectionShown": false,
+      "targets": 4,
+      "floor": 0,
+      "floorLabel": "Tipo III · casa de una planta · planta baja · tipo histórico"
+    },
+    {
+      "name": "barrio-minimap",
+      "theme": "light",
+      "readingMode": "periods",
+      "selected": "barrio-planta-alta",
+      "sectionShown": false,
+      "targets": 1,
+      "floor": 1,
+      "floorLabel": "Tipo IV · pareja de dos plantas · primera planta · tipo histórico"
+    },
+    {
+      "name": "barrio-minimap",
+      "theme": "light",
+      "readingMode": "periods",
+      "selected": "barrio-vivienda-esquina",
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-minimap",
+      "theme": "light",
+      "readingMode": "periods",
+      "selected": "barrio-seccion",
+      "sectionShown": false,
+      "targets": 4,
+      "floor": 0,
+      "floorLabel": "Tipo III · casa de una planta · planta baja · tipo histórico"
+    },
+    {
+      "name": "barrio-minimap",
+      "theme": "light",
+      "readingMode": "periods",
+      "selected": "barrio-calles",
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-fallback-mobile",
+      "theme": "dark",
+      "readingMode": "materials",
+      "selected": null,
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-fallback-mobile",
+      "theme": "dark",
+      "readingMode": "materials",
+      "selected": "barrio-sala",
+      "sectionShown": false,
+      "targets": 4,
+      "floor": 0,
+      "floorLabel": "Tipo III · casa de una planta · planta baja · tipo histórico"
+    },
+    {
+      "name": "barrio-fallback-mobile",
+      "theme": "dark",
+      "readingMode": "materials",
+      "selected": "barrio-planta-alta",
+      "sectionShown": false,
+      "targets": 1,
+      "floor": 1,
+      "floorLabel": "Tipo IV · pareja de dos plantas · primera planta · tipo histórico"
+    },
+    {
+      "name": "barrio-fallback-mobile",
+      "theme": "dark",
+      "readingMode": "materials",
+      "selected": "barrio-vivienda-esquina",
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-fallback-mobile",
+      "theme": "dark",
+      "readingMode": "materials",
+      "selected": "barrio-seccion",
+      "sectionShown": false,
+      "targets": 4,
+      "floor": 0,
+      "floorLabel": "Tipo III · casa de una planta · planta baja · tipo histórico"
+    },
+    {
+      "name": "barrio-fallback-mobile",
+      "theme": "dark",
+      "readingMode": "materials",
+      "selected": "barrio-calles",
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-fallback-mobile",
+      "theme": "dark",
+      "readingMode": "periods",
+      "selected": null,
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-fallback-mobile",
+      "theme": "dark",
+      "readingMode": "periods",
+      "selected": "barrio-sala",
+      "sectionShown": false,
+      "targets": 4,
+      "floor": 0,
+      "floorLabel": "Tipo III · casa de una planta · planta baja · tipo histórico"
+    },
+    {
+      "name": "barrio-fallback-mobile",
+      "theme": "dark",
+      "readingMode": "periods",
+      "selected": "barrio-planta-alta",
+      "sectionShown": false,
+      "targets": 1,
+      "floor": 1,
+      "floorLabel": "Tipo IV · pareja de dos plantas · primera planta · tipo histórico"
+    },
+    {
+      "name": "barrio-fallback-mobile",
+      "theme": "dark",
+      "readingMode": "periods",
+      "selected": "barrio-vivienda-esquina",
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-fallback-mobile",
+      "theme": "dark",
+      "readingMode": "periods",
+      "selected": "barrio-seccion",
+      "sectionShown": false,
+      "targets": 4,
+      "floor": 0,
+      "floorLabel": "Tipo III · casa de una planta · planta baja · tipo histórico"
+    },
+    {
+      "name": "barrio-fallback-mobile",
+      "theme": "dark",
+      "readingMode": "periods",
+      "selected": "barrio-calles",
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-fallback-mobile",
+      "theme": "light",
+      "readingMode": "materials",
+      "selected": null,
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-fallback-mobile",
+      "theme": "light",
+      "readingMode": "materials",
+      "selected": "barrio-sala",
+      "sectionShown": false,
+      "targets": 4,
+      "floor": 0,
+      "floorLabel": "Tipo III · casa de una planta · planta baja · tipo histórico"
+    },
+    {
+      "name": "barrio-fallback-mobile",
+      "theme": "light",
+      "readingMode": "materials",
+      "selected": "barrio-planta-alta",
+      "sectionShown": false,
+      "targets": 1,
+      "floor": 1,
+      "floorLabel": "Tipo IV · pareja de dos plantas · primera planta · tipo histórico"
+    },
+    {
+      "name": "barrio-fallback-mobile",
+      "theme": "light",
+      "readingMode": "materials",
+      "selected": "barrio-vivienda-esquina",
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-fallback-mobile",
+      "theme": "light",
+      "readingMode": "materials",
+      "selected": "barrio-seccion",
+      "sectionShown": false,
+      "targets": 4,
+      "floor": 0,
+      "floorLabel": "Tipo III · casa de una planta · planta baja · tipo histórico"
+    },
+    {
+      "name": "barrio-fallback-mobile",
+      "theme": "light",
+      "readingMode": "materials",
+      "selected": "barrio-calles",
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-fallback-mobile",
+      "theme": "light",
+      "readingMode": "periods",
+      "selected": null,
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-fallback-mobile",
+      "theme": "light",
+      "readingMode": "periods",
+      "selected": "barrio-sala",
+      "sectionShown": false,
+      "targets": 4,
+      "floor": 0,
+      "floorLabel": "Tipo III · casa de una planta · planta baja · tipo histórico"
+    },
+    {
+      "name": "barrio-fallback-mobile",
+      "theme": "light",
+      "readingMode": "periods",
+      "selected": "barrio-planta-alta",
+      "sectionShown": false,
+      "targets": 1,
+      "floor": 1,
+      "floorLabel": "Tipo IV · pareja de dos plantas · primera planta · tipo histórico"
+    },
+    {
+      "name": "barrio-fallback-mobile",
+      "theme": "light",
+      "readingMode": "periods",
+      "selected": "barrio-vivienda-esquina",
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-fallback-mobile",
+      "theme": "light",
+      "readingMode": "periods",
+      "selected": "barrio-seccion",
+      "sectionShown": false,
+      "targets": 4,
+      "floor": 0,
+      "floorLabel": "Tipo III · casa de una planta · planta baja · tipo histórico"
+    },
+    {
+      "name": "barrio-fallback-mobile",
+      "theme": "light",
+      "readingMode": "periods",
+      "selected": "barrio-calles",
+      "sectionShown": false,
+      "targets": 20,
+      "floor": null,
+      "floorLabel": "Siete manzanas y entorno"
+    },
+    {
+      "name": "barrio-plano",
+      "selected": "barrio-planta-alta",
+      "sectionOpen": true,
+      "matchedClosedFloorPlan": true,
+      "targets": 1,
+      "floor": 1
+    },
+    {
+      "name": "barrio-plano-mobile",
+      "selected": "barrio-planta-alta",
+      "sectionOpen": true,
+      "matchedClosedFloorPlan": true,
+      "targets": 1,
+      "floor": 1
+    }
+  ],
+  "limits": [
+    "Canvas system fonts may differ from loaded browser fonts.",
+    "These checks cover floor registration and interaction geometry, not browser layout or GPU rendering."
+  ]
+}

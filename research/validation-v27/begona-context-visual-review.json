@@ -1,0 +1,44 @@
+{
+  "status": "Final context source frozen after bounded NE sidewalk refinement",
+  "reviewedImages": [
+    "begona-conjunto.png",
+    "begona-fachada.png",
+    "begona-alameda.png"
+  ],
+  "visualFindings": [
+    {
+      "finding": "No duplicated buildings, canopy intrusion into church, or new Alameda ground coverage hole observed in reviewed images."
+    },
+    {
+      "finding": "Previously visible orthophoto strip beside the NE church wall belonged to unmodeled background terrain, not lost museum ground. Parent authorized paving infill within documented roadside limits.",
+      "baselineMuseumDifferenceM2": 0,
+      "addedPavingM2": 94.34,
+      "pavingTotalM2": 9347.38,
+      "sourceQA": "begona-sidewalk-refinement-qa.json"
+    },
+    {
+      "finding": "Small black rectangle on street-side urban frontage is CPU shadow-export artifact. Raycast hits inherited generic pavement above complete terrain, outside new context.",
+      "worldXZ": [
+        4990.943107486001,
+        2332.2757996122723
+      ],
+      "coordinate": [
+        -0.21974604867282688,
+        39.658048905860475
+      ],
+      "distanceOutsideNewPrecinctM": 2.71218,
+      "mesh": "Pavimentos sobre trazado OSM",
+      "source": "dist/js/city.js:277 sets castShadow=false",
+      "test": "Original CPU crop reproduces black rectangle; reversing normals alone does not remove it; obj.visible_shadow=False removes it while leaving exact geometry unchanged.",
+      "requestedRendererCorrection": "Export castShadow and preserve it as Blender obj.visible_shadow. No production road change required.",
+      "evidence": [
+        "cpu-diagnostic-begona-black-original.png",
+        "cpu-diagnostic-begona-black-no-shadow.png"
+      ]
+    }
+  ],
+  "limits": [
+    "Reviewed CPU images precede final NE sidewalk infill. Parent will render final integrated source.",
+    "CPU images validate geometry and composition, not browser/GPU performance."
+  ]
+}

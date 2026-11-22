@@ -1,0 +1,52 @@
+{
+  "pass": true,
+  "generatedAt": "2026-11-21T15:27:22.469051+00:00",
+  "suites": [
+    {
+      "name": "controllers",
+      "report": "research/validation-v31/pantalan-controller-results.json",
+      "passed": true,
+      "checks": 12,
+      "recordedInputsMatch": true,
+      "changedInputs": [],
+      "reportSha256": "156f37e9738866fa0558d10e491d0ccbe937edc05c6a3d1b62ab49dfd1f812ed"
+    },
+    {
+      "name": "legacy24",
+      "report": "research/validation-v31/legacy-visit-controller-results.json",
+      "passed": true,
+      "checks": 61,
+      "recordedInputsMatch": true,
+      "changedInputs": [],
+      "reportSha256": "13e5ec26fbe8dda75025d56bf0f2252815530cc8010b80f92b4459d5c3f7dba6"
+    },
+    {
+      "name": "layers",
+      "report": "research/validation-v31/pantalan-layer-results.json",
+      "passed": true,
+      "checks": 21,
+      "recordedInputsMatch": true,
+      "changedInputs": [],
+      "reportSha256": "a3f060fec9e03dd213a26e366cf042fe0deeb089b715e94ea395f484459ce791"
+    },
+    {
+      "name": "profile",
+      "report": "research/validation-v31/pantalan-profile-results.json",
+      "passed": true,
+      "checks": 3,
+      "recordedInputsMatch": true,
+      "changedInputs": [],
+      "reportSha256": "dea3cba7e657e8908bf7bfbc1a88c73b444eaa2afffebc2888057c8b644da194"
+    },
+    {
+      "name": "maps",
+      "report": "research/validation-v31/pantalan-map-qa.json",
+      "passed": true,
+      "checks": 704,
+      "recordedInputsMatch": true,
+      "changedInputs": [],
+      "reportSha256": "7da8887a9fcdb6b5524aa546292174c73e4a841e86e35aa3cecad1485426e352"
+    }
+  ],
+  "limits": "Exact source controller contracts, effective Three group visibility, and real Canvas drawing. No browser layout, native DOM focus or app WebGL claim."
+}

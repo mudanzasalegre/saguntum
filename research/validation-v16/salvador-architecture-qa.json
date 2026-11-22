@@ -1,0 +1,809 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "pass": true,
+      "label": "Three bays are divided by two internal diaphragm arches"
+    },
+    {
+      "pass": true,
+      "label": "Five-sided apse, seven ribs and three mapped lancets"
+    },
+    {
+      "pass": true,
+      "label": "Only south, west and north belfry openings are present"
+    },
+    {
+      "pass": true,
+      "label": "All three current bells use wooden yokes"
+    },
+    {
+      "pass": true,
+      "label": "Six registered parts and eighteen substantive stops"
+    },
+    {
+      "pass": true,
+      "label": "No lost ceiling or unverified open excavation is fabricated"
+    },
+    {
+      "pass": true,
+      "label": "All geometry, normals, colours and texture coordinates are finite"
+    },
+    {
+      "pass": true,
+      "label": "All architectural surfaces have explicit ownership and material resources"
+    },
+    {
+      "pass": true,
+      "label": "Geometry stays inside a meaningful visit budget"
+    },
+    {
+      "pass": true,
+      "label": "Mitred coping top has no overlapping coplanar triangles"
+    },
+    {
+      "pass": true,
+      "label": "No coplanar overlap in cornisa-abside"
+    },
+    {
+      "pass": true,
+      "label": "No coplanar overlap in comunion-cornisa"
+    },
+    {
+      "pass": true,
+      "label": "No coplanar overlap in cornisa-sacristia"
+    },
+    {
+      "pass": true,
+      "label": "No coplanar overlap in anexo-bajo"
+    },
+    {
+      "pass": true,
+      "label": "Communion arm vaults and arches retain positive clearance below the exterior roof"
+    },
+    {
+      "pass": true,
+      "label": "Thirty-six rays reach the continuous spherical pendentives"
+    },
+    {
+      "pass": true,
+      "label": "Real open passage: acceso-torre"
+    },
+    {
+      "pass": true,
+      "label": "Real open passage: bautismo"
+    },
+    {
+      "pass": true,
+      "label": "Real open passage: comunion"
+    },
+    {
+      "pass": true,
+      "label": "Real open passage: sacristia"
+    },
+    {
+      "pass": true,
+      "label": "Diaphragm opening is physically hollow at -7.85"
+    },
+    {
+      "pass": true,
+      "label": "Diaphragm opening is physically hollow at 0.12"
+    },
+    {
+      "pass": true,
+      "label": "Belfry has a true south aperture"
+    },
+    {
+      "pass": true,
+      "label": "Belfry has a true west aperture"
+    },
+    {
+      "pass": true,
+      "label": "Belfry has a true north aperture"
+    },
+    {
+      "pass": true,
+      "label": "Thematic reading removes material maps"
+    },
+    {
+      "pass": true,
+      "label": "Original material colours and textures return after reading mode"
+    },
+    {
+      "pass": true,
+      "label": "Interior camera retains its complete roof: salvador-nave"
+    },
+    {
+      "pass": true,
+      "label": "Interior camera retains its complete roof: salvador-arcos"
+    },
+    {
+      "pass": true,
+      "label": "Interior camera retains its complete roof: salvador-techumbre"
+    },
+    {
+      "pass": true,
+      "label": "Interior camera retains its complete roof: salvador-abside"
+    },
+    {
+      "pass": true,
+      "label": "Interior camera retains its complete roof: salvador-cruceria"
+    },
+    {
+      "pass": true,
+      "label": "Interior camera retains its complete roof: salvador-bautismo"
+    },
+    {
+      "pass": true,
+      "label": "Interior camera retains its complete roof: salvador-comunion"
+    },
+    {
+      "pass": true,
+      "label": "Interior camera retains its complete roof: salvador-cupula"
+    },
+    {
+      "pass": true,
+      "label": "Interior camera retains its complete roof: salvador-arqueologia"
+    },
+    {
+      "pass": true,
+      "label": "Interior camera retains its complete roof: salvador-artesonado"
+    },
+    {
+      "pass": true,
+      "label": "Interior camera retains its complete roof: salvador-conservacion"
+    },
+    {
+      "pass": true,
+      "label": "Normal roof blocks overhead floor probes"
+    },
+    {
+      "pass": true,
+      "label": "Section opens roofs but keeps current floors over archaeology"
+    },
+    {
+      "pass": true,
+      "label": "All eight exterior detail camera rays clear the registered context"
+    },
+    {
+      "pass": true,
+      "label": "Both production camera offsets for interiors have unobstructed target sightlines"
+    },
+    {
+      "pass": true,
+      "label": "Terrain patches are confined to six church parts"
+    }
+  ],
+  "failures": [],
+  "stats": {
+    "modelVersion": "v16",
+    "sourceBuildings": 6,
+    "stops": 18,
+    "naveBays": 3,
+    "diaphragmArches": 2,
+    "apseSides": 5,
+    "apseRibs": 7,
+    "apseLancets": 3,
+    "bellOpenings": 3,
+    "bells": 3,
+    "bellYokes": "wood-current-2023",
+    "chapelPlan": "greek-cross",
+    "currentTimberRoof": true,
+    "lostMedievalCofferingRecreated": false,
+    "undergroundExcavation": false,
+    "meshes": 103,
+    "triangles": 112568,
+    "survey": false
+  },
+  "apertureChecks": [
+    {
+      "id": "acceso-torre",
+      "hits": 0
+    },
+    {
+      "id": "bautismo",
+      "hits": 0
+    },
+    {
+      "id": "comunion",
+      "hits": 0
+    },
+    {
+      "id": "sacristia",
+      "hits": 0
+    }
+  ],
+  "corniceChecks": [
+    {
+      "component": "cornisa-abside",
+      "topTriangles": 10,
+      "maximumOverlapM2": 0
+    },
+    {
+      "component": "comunion-cornisa",
+      "topTriangles": 18,
+      "maximumOverlapM2": 0
+    },
+    {
+      "component": "cornisa-sacristia",
+      "topTriangles": 10,
+      "maximumOverlapM2": 0
+    },
+    {
+      "component": "anexo-bajo",
+      "topTriangles": 16,
+      "maximumOverlapM2": 0
+    }
+  ],
+  "pendentiveChecks": [
+    {
+      "probe": 0,
+      "hit": true,
+      "errorM": 0.0000061265242097263695
+    },
+    {
+      "probe": 1,
+      "hit": true,
+      "errorM": 0.000006360927713444653
+    },
+    {
+      "probe": 2,
+      "hit": true,
+      "errorM": 0.000005273559039231657
+    },
+    {
+      "probe": 3,
+      "hit": true,
+      "errorM": 3.900162592884726e-7
+    },
+    {
+      "probe": 4,
+      "hit": true,
+      "errorM": 1.4417900029428665e-7
+    },
+    {
+      "probe": 5,
+      "hit": true,
+      "errorM": 0.000011733304613237294
+    },
+    {
+      "probe": 6,
+      "hit": true,
+      "errorM": 0.000009340230683996253
+    },
+    {
+      "probe": 7,
+      "hit": true,
+      "errorM": 0.000010508624294303104
+    },
+    {
+      "probe": 8,
+      "hit": true,
+      "errorM": 0.0000010793388494079181
+    },
+    {
+      "probe": 9,
+      "hit": true,
+      "errorM": 0.000008764283813356144
+    },
+    {
+      "probe": 10,
+      "hit": true,
+      "errorM": 0.000019078979700992704
+    },
+    {
+      "probe": 11,
+      "hit": true,
+      "errorM": 0.000006388420863423505
+    },
+    {
+      "probe": 12,
+      "hit": true,
+      "errorM": 0.000015970289823030726
+    },
+    {
+      "probe": 13,
+      "hit": true,
+      "errorM": 0.000005333174262212026
+    },
+    {
+      "probe": 14,
+      "hit": true,
+      "errorM": 0.00000678913196416886
+    },
+    {
+      "probe": 15,
+      "hit": true,
+      "errorM": 9.312687012652532e-7
+    },
+    {
+      "probe": 16,
+      "hit": true,
+      "errorM": 0.000010452670955451993
+    },
+    {
+      "probe": 17,
+      "hit": true,
+      "errorM": 0.0000029941221333373846
+    },
+    {
+      "probe": 18,
+      "hit": true,
+      "errorM": 0.00001224730906468352
+    },
+    {
+      "probe": 19,
+      "hit": true,
+      "errorM": 0.000013088747702560966
+    },
+    {
+      "probe": 20,
+      "hit": true,
+      "errorM": 4.1916430593147425e-7
+    },
+    {
+      "probe": 21,
+      "hit": true,
+      "errorM": 0.000008732171662195753
+    },
+    {
+      "probe": 22,
+      "hit": true,
+      "errorM": 9.333699857450029e-8
+    },
+    {
+      "probe": 23,
+      "hit": true,
+      "errorM": 0.000002521245025199903
+    },
+    {
+      "probe": 24,
+      "hit": true,
+      "errorM": 0.0000010112559243324881
+    },
+    {
+      "probe": 25,
+      "hit": true,
+      "errorM": 0.000010640636275205395
+    },
+    {
+      "probe": 26,
+      "hit": true,
+      "errorM": 0.000005875806052380028
+    },
+    {
+      "probe": 27,
+      "hit": true,
+      "errorM": 0.00000721402569503482
+    },
+    {
+      "probe": 28,
+      "hit": true,
+      "errorM": 0.000007596821212096927
+    },
+    {
+      "probe": 29,
+      "hit": true,
+      "errorM": 0.0000018115086009018455
+    },
+    {
+      "probe": 30,
+      "hit": true,
+      "errorM": 0.0000014089812960804693
+    },
+    {
+      "probe": 31,
+      "hit": true,
+      "errorM": 0.000003857542717256024
+    },
+    {
+      "probe": 32,
+      "hit": true,
+      "errorM": 0.000005027257532930207
+    },
+    {
+      "probe": 33,
+      "hit": true,
+      "errorM": 0.0000043163319674022205
+    },
+    {
+      "probe": 34,
+      "hit": true,
+      "errorM": 0.000004609900105201348
+    },
+    {
+      "probe": 35,
+      "hit": true,
+      "errorM": 5.105837264096635e-7
+    }
+  ],
+  "coping": {
+    "topTriangles": 8,
+    "maximumOverlapM2": 0
+  },
+  "communionRoofClearanceM": 0.029998779296875,
+  "floorsClosed": [
+    {
+      "component": "tejado-nave",
+      "height": 59.75168230158892
+    },
+    {
+      "component": "cubierta-abside",
+      "height": 57.805369908673285
+    }
+  ],
+  "floorsOpen": [
+    {
+      "component": "juntas-pavimento",
+      "height": 46.00400161743164
+    },
+    {
+      "component": "presbiterio",
+      "height": 46.31999969482422
+    }
+  ],
+  "cameraRays": [
+    {
+      "id": "salvador-conjunto",
+      "kind": "offset",
+      "interior": false,
+      "nearest": {
+        "component": "tejado-nave",
+        "distance": 36.05605452305652,
+        "targetDistance": 46.173585522460776,
+        "ownTarget": true
+      }
+    },
+    {
+      "id": "salvador-conjunto",
+      "kind": "closeOffset",
+      "interior": false,
+      "nearest": {
+        "component": "tejado-nave",
+        "distance": 24.749460253354684,
+        "targetDistance": 34.99999999999998,
+        "ownTarget": true
+      }
+    },
+    {
+      "id": "salvador-plaza",
+      "kind": "offset",
+      "interior": false,
+      "nearest": null
+    },
+    {
+      "id": "salvador-plaza",
+      "kind": "closeOffset",
+      "interior": false,
+      "nearest": null
+    },
+    {
+      "id": "salvador-portada",
+      "kind": "offset",
+      "interior": false,
+      "nearest": null
+    },
+    {
+      "id": "salvador-portada",
+      "kind": "closeOffset",
+      "interior": false,
+      "nearest": null
+    },
+    {
+      "id": "salvador-torre",
+      "kind": "offset",
+      "interior": false,
+      "nearest": {
+        "component": "torre",
+        "distance": 11.507484487171517,
+        "targetDistance": 13.536617007214176,
+        "ownTarget": true
+      }
+    },
+    {
+      "id": "salvador-torre",
+      "kind": "closeOffset",
+      "interior": false,
+      "nearest": {
+        "component": "torre",
+        "distance": 6.384395084115567,
+        "targetDistance": 8.546344247688578,
+        "ownTarget": true
+      }
+    },
+    {
+      "id": "salvador-campanas",
+      "kind": "offset",
+      "interior": false,
+      "nearest": null
+    },
+    {
+      "id": "salvador-campanas",
+      "kind": "closeOffset",
+      "interior": false,
+      "nearest": null
+    },
+    {
+      "id": "salvador-nave",
+      "kind": "offset",
+      "interior": true,
+      "nearest": null
+    },
+    {
+      "id": "salvador-nave",
+      "kind": "closeOffset",
+      "interior": true,
+      "nearest": null
+    },
+    {
+      "id": "salvador-arcos",
+      "kind": "offset",
+      "interior": true,
+      "nearest": null
+    },
+    {
+      "id": "salvador-arcos",
+      "kind": "closeOffset",
+      "interior": true,
+      "nearest": null
+    },
+    {
+      "id": "salvador-techumbre",
+      "kind": "offset",
+      "interior": true,
+      "nearest": null
+    },
+    {
+      "id": "salvador-techumbre",
+      "kind": "closeOffset",
+      "interior": true,
+      "nearest": null
+    },
+    {
+      "id": "salvador-abside",
+      "kind": "offset",
+      "interior": true,
+      "nearest": null
+    },
+    {
+      "id": "salvador-abside",
+      "kind": "closeOffset",
+      "interior": true,
+      "nearest": null
+    },
+    {
+      "id": "salvador-cruceria",
+      "kind": "offset",
+      "interior": true,
+      "nearest": null
+    },
+    {
+      "id": "salvador-cruceria",
+      "kind": "closeOffset",
+      "interior": true,
+      "nearest": null
+    },
+    {
+      "id": "salvador-bautismo",
+      "kind": "offset",
+      "interior": true,
+      "nearest": {
+        "component": "pila-bautismal",
+        "distance": 1.681027983464753,
+        "targetDistance": 2.22598292895519,
+        "ownTarget": true
+      }
+    },
+    {
+      "id": "salvador-bautismo",
+      "kind": "closeOffset",
+      "interior": true,
+      "nearest": {
+        "component": "pila-bautismal",
+        "distance": 0.9386666120103477,
+        "targetDistance": 1.4352700094407125,
+        "ownTarget": true
+      }
+    },
+    {
+      "id": "salvador-comunion",
+      "kind": "offset",
+      "interior": true,
+      "nearest": null
+    },
+    {
+      "id": "salvador-comunion",
+      "kind": "closeOffset",
+      "interior": true,
+      "nearest": null
+    },
+    {
+      "id": "salvador-cupula",
+      "kind": "offset",
+      "interior": true,
+      "nearest": null
+    },
+    {
+      "id": "salvador-cupula",
+      "kind": "closeOffset",
+      "interior": true,
+      "nearest": null
+    },
+    {
+      "id": "salvador-sacristia",
+      "kind": "offset",
+      "interior": false,
+      "nearest": {
+        "component": "ventana-sacristia",
+        "distance": 10.40876080406498,
+        "targetDistance": 12.041594578792306,
+        "ownTarget": true
+      }
+    },
+    {
+      "id": "salvador-sacristia",
+      "kind": "closeOffset",
+      "interior": false,
+      "nearest": {
+        "component": "ventana-sacristia",
+        "distance": 6.184536870548151,
+        "targetDistance": 7.681145747868616,
+        "ownTarget": true
+      }
+    },
+    {
+      "id": "salvador-arqueologia",
+      "kind": "offset",
+      "interior": true,
+      "nearest": null
+    },
+    {
+      "id": "salvador-arqueologia",
+      "kind": "closeOffset",
+      "interior": true,
+      "nearest": null
+    },
+    {
+      "id": "salvador-artesonado",
+      "kind": "offset",
+      "interior": true,
+      "nearest": null
+    },
+    {
+      "id": "salvador-artesonado",
+      "kind": "closeOffset",
+      "interior": true,
+      "nearest": null
+    },
+    {
+      "id": "salvador-conservacion",
+      "kind": "offset",
+      "interior": true,
+      "nearest": {
+        "component": "oculo",
+        "distance": 10.195956440549178,
+        "targetDistance": 10.716809226630858,
+        "ownTarget": true
+      }
+    },
+    {
+      "id": "salvador-conservacion",
+      "kind": "closeOffset",
+      "interior": true,
+      "nearest": {
+        "component": "arco-triunfal",
+        "distance": 7.5756438449598695,
+        "targetDistance": 8.132035415564793,
+        "ownTarget": true
+      }
+    },
+    {
+      "id": "salvador-entorno",
+      "kind": "offset",
+      "interior": false,
+      "nearest": {
+        "component": "tejado-nave",
+        "distance": 34.814075274195105,
+        "targetDistance": 45.23273151159458,
+        "ownTarget": false
+      }
+    },
+    {
+      "id": "salvador-entorno",
+      "kind": "closeOffset",
+      "interior": false,
+      "nearest": {
+        "component": "tejado-nave",
+        "distance": 23.40707931123297,
+        "targetDistance": 34.423828956116985,
+        "ownTarget": false
+      }
+    }
+  ],
+  "contextCameraRays": [
+    {
+      "id": "salvador-portada",
+      "kind": "offset",
+      "position": [
+        439.279946040347,
+        52.150000000000006,
+        239.55046314853647
+      ],
+      "occlusion": null
+    },
+    {
+      "id": "salvador-portada",
+      "kind": "closeOffset",
+      "position": [
+        441.907310663055,
+        50.400000000000006,
+        239.89608597669255
+      ],
+      "occlusion": null
+    },
+    {
+      "id": "salvador-torre",
+      "kind": "offset",
+      "position": [
+        441.9848917799322,
+        57.15,
+        259.62471951199615
+      ],
+      "occlusion": null
+    },
+    {
+      "id": "salvador-torre",
+      "kind": "closeOffset",
+      "position": [
+        443.82676034145294,
+        56.35,
+        254.82393622152347
+      ],
+      "occlusion": null
+    },
+    {
+      "id": "salvador-campanas",
+      "kind": "offset",
+      "position": [
+        438.9084766322251,
+        61.15,
+        250.04162659587774
+      ],
+      "occlusion": null
+    },
+    {
+      "id": "salvador-campanas",
+      "kind": "closeOffset",
+      "position": [
+        442.1436990942764,
+        60.65,
+        248.4499810257088
+      ],
+      "occlusion": null
+    },
+    {
+      "id": "salvador-sacristia",
+      "kind": "offset",
+      "position": [
+        462.70119628843287,
+        54.2,
+        221.7531308535958
+      ],
+      "occlusion": null
+    },
+    {
+      "id": "salvador-sacristia",
+      "kind": "closeOffset",
+      "position": [
+        464.29284185860183,
+        51.2,
+        224.98835331564715
+      ],
+      "occlusion": null
+    }
+  ],
+  "limits": {
+    "interior": "Photographic and typological dimensions, not a survey",
+    "archaeology": "Closed contemporary floor; no hypothetical visible excavation"
+  }
+}

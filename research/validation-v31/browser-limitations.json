@@ -1,0 +1,22 @@
+{
+  "version": 31,
+  "browserQA": "unverified",
+  "webglQA": "unverified",
+  "reason": "No infrastructure repair has been observed after earlier managed preview URL-authority and browser WebGL failures. Read-only preview status remains stopped; the blocked browser path was not retried.",
+  "diagnostic": "sites-preview status: Sites preview stopped",
+  "validation": [
+    "Production Three.js coast geometry and cameras in Node",
+    "Real Canvas maps and hit targets",
+    "Production visit controllers and prior-guide regression",
+    "CPU renders of exported scene meshes",
+    "Independent EGL/Mesa compilation and rasterization of the actual water GLSL"
+  ],
+  "limitations": [
+    "CPU geometry images are not browser screenshots; their water is an inspection placeholder.",
+    "Standalone GLSL tests use a deterministic test reflection and do not establish integration quality in a browser.",
+    "Responsive browser layout, native focus, font loading and device GPU performance have not been measured.",
+    "Native deployment confirmation verifies publication separately."
+  ],
+  "iteration": "Paseo terrestre, mirador, tramo marítimo histórico y agua",
+  "retryAttempted": false
+}

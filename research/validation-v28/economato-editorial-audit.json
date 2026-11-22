@@ -1,0 +1,149 @@
+{
+  "reviewDate": "2026-11-21",
+  "scope": "Economato guide and documentary consistency; read-only audit of root integration",
+  "guide": {
+    "stops": 20,
+    "facts": 40,
+    "sources": 17,
+    "timelineEntries": 10,
+    "sourceReferencesResolved": true,
+    "stopIdsUnique": true,
+    "regionMembershipComplete": true,
+    "allowedFloors": [
+      0,
+      1
+    ],
+    "sectionStop": {
+      "id": "economato-seccion",
+      "floor": 1,
+      "requiresSection": true,
+      "interiorView": false
+    },
+    "registration": {
+      "status": "registered",
+      "verifiedOn": "2026-11-21",
+      "registeredFocuses": 20,
+      "planComponents": 150,
+      "guideMatchesPlanCoordinates": true,
+      "guideMatchesPlanFloorBuildingSectionAndLayer": true,
+      "positionsRemainApproximateAsDocumented": true,
+      "guideSha256": "351e5430df4fff0167cbf2481de363add049a5016f52ec7cba41e3f226695844",
+      "planSha256": "7b3822383c1e45077d6b95822b2db842a916d2832e0b8f13634beeaec63c99ae",
+      "note": "Read-only comparison after final frozen registration following soffit and camera corrections; no production file was changed by this reviewer."
+    }
+  },
+  "generatorGuard": {
+    "testEnvironment": "Isolated temporary copy of the generator and a registered sentinel guide",
+    "registeredOverwriteRejected": true,
+    "registeredSentinelBytesPreserved": true
+  },
+  "documentaryDecisions": {
+    "historicalConfiguration": 1954,
+    "historicalExteriorPhotograph": 1959,
+    "realInteriorPhotographs": "2026-01-20",
+    "flatFloorsAndRoundSupportsDocumented": true,
+    "exposedRoofTrussesClaimed": false,
+    "exactInteriorSurveyClaimed": false,
+    "futureCeamPresentedAsCompleted": false,
+    "basementInteriorInvented": false,
+    "proposalRendersIdentified": true,
+    "recentStatus": "Municipal January 2026 works report, with a November 18 firsthand visit chronicle used as attributed secondary corroboration",
+    "roofSection": "Remove high coverings and ceilings, retain intermediate floor slab",
+    "upperLevelSmaller": "One two-storey cadastral part plus four single-storey parts; upper level is smaller than the whole lower ensemble. The main body's two storeys share an interpreted envelope."
+  },
+  "integrationReview": {
+    "filesRead": [
+      "dist/assets/data/port-workers.json",
+      "dist/js/app.js",
+      "dist/js/port.js",
+      "dist/js/port-workers.js",
+      "dist/js/economato-map.js",
+      "dist/js/economato.js"
+    ],
+    "catalogHistoryAndStateConsistent": true,
+    "guideAndModelBuildingId": "economato-edificio",
+    "readingLayers": [
+      "edificio",
+      "espacios",
+      "construccion",
+      "memoria",
+      "entorno"
+    ],
+    "paletteMismatchReportedAndThenObservedCorrected": true,
+    "browserValidation": "Not performed by research agent",
+    "productionFilesOutsideResearchOwnershipEdited": false
+  },
+  "independentVisualReview": {
+    "method": "Inspection of exported PNGs, not browser rendering",
+    "reviewed": [
+      "economato-plano-mobile-light.png",
+      "economato-planta-alta-plan.png",
+      "economato-fallback-mobile.png",
+      "economato-context-source-alignment.png"
+    ],
+    "findings": "No material issue observed: mobile focus circles remain individually readable; upper floor shows stops 9 and 15; north and scale are present; context alignment follows the parcel and retains documented access.",
+    "threeDimensionalRenders": {
+      "initialRenderDirectory": "research/validation-v28/initial-renders",
+      "initialViewsInspected": [
+        "economato-conjunto.png",
+        "economato-fachada.png",
+        "economato-nave-central.png",
+        "economato-galeria.png",
+        "economato-planta-alta.png",
+        "economato-seccion.png",
+        "economato-entorno.png"
+      ],
+      "initialFindings": [
+        "Decorative floor pattern was visible on the underside of the ground-floor ceiling in nave-central and galeria; documented soffits are plain.",
+        "Opposite residential blocks obstructed the conjunto and entorno views; fachada also showed a prominent opposite block and clipped the near wing."
+      ],
+      "otherInitialConclusions": "Historical facade sequence, cylindrical supports, beams, upper-floor treatment and section semantics were reasonable within the explicitly interpretive model. No completed CEAM or invented basement interior was observed.",
+      "correctionStatus": "All seven regenerated CPU render PNGs independently inspected; the documented soffit error and camera-obstruction issues are visually resolved.",
+      "finalReview": {
+        "status": "complete",
+        "reviewDate": "2026-11-21",
+        "method": "Direct visual inspection of exported CPU render PNGs; not browser or WebGL validation.",
+        "views": [
+          {
+            "file": "economato-conjunto.png",
+            "sha256": "f2bd4e824a2113a5efcedb8fa2f2116784040c1a178f239e124f65e54aeb1c92",
+            "finding": "Corrected framing exposes all three roofed bodies and the two porticoes, with Begoña and the rear garden providing context."
+          },
+          {
+            "file": "economato-fachada.png",
+            "sha256": "e9a2e4301766fcb432c75ec2d38c82edfa4006ee1ca754bfed13b1ea9168fbc9",
+            "finding": "Corrected framing makes the three facade bodies, both recessed porticoes and the avenue legible without the previous opposite-block obstruction."
+          },
+          {
+            "file": "economato-nave-central.png",
+            "sha256": "618e903e24bc88d6637ce6c399cd97f7a7a70ae699c5f7f16bbba0d89e32806c",
+            "finding": "Plain soffit visually confirmed; decorative hydraulic pattern remains on the floor only. Cylindrical supports and beams remain legible."
+          },
+          {
+            "file": "economato-galeria.png",
+            "sha256": "d62c0a11ed6dd0a79068dd7535bfceaa6521b743accb1a7d7668b4013cfefd42",
+            "finding": "Plain soffit visually confirmed along the connecting interior; no repeated floor decoration on the ceiling."
+          },
+          {
+            "file": "economato-planta-alta.png",
+            "sha256": "7817b21c12e67f6e81f0819edb2674f1959816906f610ef841ba21212953eb1c",
+            "finding": "Plain upper ceiling, cylindrical supports and readable windows; no new material issue observed."
+          },
+          {
+            "file": "economato-seccion.png",
+            "sha256": "50b9b51e68bde67e94ac38d1ab076a5f2d4376a3402ccde09d03c3047fa15a6d",
+            "finding": "Intermediate floor slab remains visible and intact apart from the interpreted stair opening; lower annexes retain their coverings."
+          },
+          {
+            "file": "economato-entorno.png",
+            "sha256": "9d6d8a3cc34cfca1e44c12a31ff55c9eeade167562464af70bd6cec1f49e51c6",
+            "finding": "Corrected view shows the continuous avenue between the Economato and the opposite residential frontage, with Begoña visible."
+          }
+        ],
+        "materialIssuesRemainingObserved": [],
+        "interpretationLimit": "Proportions, exact interior layout, furniture, colors and unmeasured heights remain interpretive as stated in the guide; these images are not evidence of a completed CEAM or an exact current survey.",
+        "productionFilesEditedDuringVisualReview": false
+      }
+    }
+  }
+}

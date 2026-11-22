@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "pass": true,
+  "reviewedAtUTC": "2026-11-19T18:37:41.954636+00:00",
+  "method": "Manual inspection of all three final images, after geometry and final-terrain raycast checks. The images render exported Three.js meshes, not an image-generation approximation or a browser screenshot.",
+  "renderer": {
+    "application": "Blender",
+    "version": "4.3.2",
+    "engine": "Cycles CPU",
+    "samples": 64,
+    "denoising": false,
+    "resolution": [
+      1440,
+      1080
+    ],
+    "script": "research/validation-v11/render_juderia.py",
+    "scriptSha256": "5ac1b5e0b11a4fbfc22d4da26c40cf2af6ec5c38c9a738126f98647f84c345c6"
+  },
+  "export": {
+    "file": "research/validation-v11/juderia-geometry.json.gz",
+    "sha256": "a63982545696847e389ea36fbb6806695e113100bdf00c5c4f6ccf8553fecb73",
+    "exporter": "research/validation-v11/validate_juderia_model.mjs",
+    "exporterSha256": "42e262238ab094cfee39f0978d6e1f25b6cba65bc9665fb846f297c47c625812",
+    "geometryUnchangedBetweenExportAndRender": true,
+    "historicalReferencePhotographsUsedAsTextures": false,
+    "orthophoto": "dist/assets/data/orthophoto.jpg"
+  },
+  "sourceHashes": {
+    "dist/js/juderia.js": "e83aa1df8be0538e6ce520ebf0676f847ce3d488690e1deacaa7472e0869d30d",
+    "dist/js/heritage-civic.js": "c198a107d7246623e2b99eb00c9f624d8ef9d75bc29adea852d1821a81131ec1",
+    "dist/js/juderia-context.js": "fc58285789fd8a785e87d2efd1e29e42bba257222eb51e66592393d19600cf2f",
+    "dist/assets/data/juderia-visit.json": "c935eff4d0a2f4362b437bb045ac47a4d7222b62b7ab5f7e3380e7ac08e6f736",
+    "dist/assets/data/juderia-context.json": "9118ca2de239a2b4a49e2b2651d8dc261177e3b50c6a4360686e7e8a2380d045",
+    "dist/assets/data/juderia-plan.json": "cb31a29ed4c590a10bb6b8430171122bada9c4637ab3446ad31097fabd194d34"
+  },
+  "modelQA": {
+    "file": "research/validation-v11/juderia-model-qa.json",
+    "sha256": "254d548e1fe07c6f624bfb6b0250115ea7729b0ef641c58e3c50921b1f358409",
+    "checks": 619,
+    "cameras": 96,
+    "thresholdProbes": 9,
+    "passed": true
+  },
+  "images": [
+    {
+      "file": "research/validation-v11/juderia-conjunto.png",
+      "sha256": "f9d13852a1c8da5ca927ac5fb48bffd94a266098a958aca8eb9cf94f35090b3d",
+      "dimensions": [
+        1440,
+        1080
+      ],
+      "camera": {
+        "name": "juderia-conjunto",
+        "position": [
+          110,
+          180,
+          220
+        ],
+        "target": [
+          -45,
+          74,
+          85
+        ]
+      },
+      "visuallyInspected": true,
+      "pass": true,
+      "observation": "District buildings preserve their different cadastral bodies and closed roofs; the surrounding church, square and older monument models remain visible. No exposed gable wedges were observed."
+    },
+    {
+      "file": "research/validation-v11/juderia-portalet.png",
+      "sha256": "6f5da66021e0eb51a22c70e3b2bdec5ec723113ff5876bcfd0c59f43e77304fa",
+      "dimensions": [
+        1440,
+        1080
+      ],
+      "camera": {
+        "name": "juderia-portalet",
+        "position": [
+          5.760113258366891,
+          63.15638268235244,
+          89.31810857651264
+        ],
+        "target": [
+          0.3859277607457678,
+          62.93638268235244,
+          90.89231638908339
+        ],
+        "fov": 48
+      },
+      "visuallyInspected": true,
+      "pass": true,
+      "observation": "Conserved gate, individual voussoirs, plaster wall and adjacent facades read clearly. The upper wall is continuous below the coping. The passage is open down to the sloping pavement and the drain follows the ground; the spurious black threshold triangle is gone."
+    },
+    {
+      "file": "research/validation-v11/juderia-sang-vella.png",
+      "sha256": "ce8dc5da98706007173ef06fe57ad02d375b33dc792cdc06e832a17e7ab1d9c0",
+      "dimensions": [
+        1440,
+        1080
+      ],
+      "camera": {
+        "name": "juderia-sang-vella",
+        "position": [
+          -13.039284075053077,
+          64.52425943953352,
+          90.3287600001779
+        ],
+        "target": [
+          -28.677284075053077,
+          64.32425943953352,
+          85.27676000017789
+        ],
+        "fov": 52
+      },
+      "visuallyInspected": true,
+      "pass": true,
+      "observation": "The lane reads as a continuous sloping street. Segment-junction gaps, the facade-side strip and the final 0.117 square-metre sliver are closed. Domestic windows, balconies, plinths and drainage remain visible without altering their cadastral footprint."
+    }
+  ],
+  "limitations": [
+    "CPU geometry inspection does not verify browser GPU performance or pixel-identical Three.js shading.",
+    "Procedural CanvasTexture detail is approximated by the CPU materials. The street-name plaque is textured in the web model but its lettering is not reproduced in these inspection renders.",
+    "The overview export keeps neighbouring meshes within 220 metres of the district target. The web atlas has a larger regional scene.",
+    "Domestic openings, finishes, roof slopes and minor gate dimensions remain visual estimates tied to cartographic footprints, not measured photogrammetry.",
+    "No synagogue, proposed ritual bath or private domestic interior is invented."
+  ]
+}

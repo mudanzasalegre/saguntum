@@ -1,0 +1,109 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "label": "New paving excludes all architecture and entrance steps",
+      "pass": true
+    },
+    {
+      "label": "Paving does not overlap any retained context ground",
+      "pass": true
+    },
+    {
+      "label": "New building ids do not duplicate any previous context owner",
+      "pass": true
+    },
+    {
+      "label": "New paving triangles exactly cover source regions",
+      "pass": true
+    },
+    {
+      "label": "No new triangle overlaps another",
+      "pass": true
+    },
+    {
+      "label": "Five guide context stops present",
+      "pass": true
+    },
+    {
+      "label": "Legacy plaza completely remains represented",
+      "pass": true
+    },
+    {
+      "label": "Every transferred museum ground surface is covered by new paving or actual architecture",
+      "pass": true
+    },
+    {
+      "label": "No withheld demolished/open-ground parcel appears as a building obstacle",
+      "pass": true
+    },
+    {
+      "label": "All mapped tree centers avoid architecture",
+      "pass": true
+    },
+    {
+      "label": "Existing Begoña paving is unchanged outside the added roadside strip",
+      "pass": true
+    },
+    {
+      "label": "Roadside strip stays inside the photographed cadastral roadside corridor",
+      "pass": true
+    },
+    {
+      "label": "Roadside strip has no overlap with retained streets or church parcel",
+      "pass": true
+    },
+    {
+      "label": "All existing buildings, roads, furniture, trees and ownership transfer remain unchanged",
+      "pass": true
+    },
+    {
+      "label": "Earlier context files and applied transfer evidence remain byte-identical",
+      "pass": true
+    }
+  ],
+  "stats": {
+    "ownedBuildings": 64,
+    "parentParcels": 28,
+    "reusedBuildingParts": 90,
+    "ownedRoads": 0,
+    "pavingAreaM2": 9347.38,
+    "pavingVertices": 2255,
+    "pavingTriangles": 3957,
+    "trees": 37,
+    "benches": 11,
+    "lamps": 7,
+    "paths": 3,
+    "contextFocuses": 5,
+    "memorials": 1
+  },
+  "museoGroundTransferAreaM2": 3640.32,
+  "roadsideRefinement": {
+    "id": "begona-ne-sidewalk-infill",
+    "sourceId": "bg-pnoa",
+    "retrieved": "2026-11-21",
+    "flightDate": "Not verified",
+    "wallEndpoints": [
+      [
+        -0.2213397,
+        39.6588004
+      ],
+      [
+        -0.220968,
+        39.6585985
+      ]
+    ],
+    "wallLengthM": 38.978,
+    "addedPavingAreaM2": 94.34,
+    "interpretation": "Paved margin observed in PNOA; extent uses cadastral wall and existing road boundary. Neutral stone finish is approximate.",
+    "ownership": "Previously unmodeled terrain only. No museum ground, building, road or transfer-mask ownership changes."
+  },
+  "retainedContextSHA256": {
+    "horno": "034c74144297d2df56140f6380c5958a233b8de32fe7e8f35da5c1c09bbe98fb",
+    "talleres": "6100214fcb3b21d8fd182b8f728ec71252a8247d0f9842d2687764eeff3fad58",
+    "museo-industrial": "012d877440568744748948a7d3fd632059eeb110593d32eb8532291133562fe0",
+    "gerencia": "dac00377102d6300607cb5db0fcef89ad4d192f4e4c1698958689c02f2a5aca4",
+    "casino": "da45fe86e7b86124555160342ce0239ba272a022a659a1fd9ac315682983e171"
+  },
+  "appliedTransferReportSHA256": "4340ed748d01e7ad2f147d9023cc004d1cfc684705857ba94776fa9456f647ec"
+}

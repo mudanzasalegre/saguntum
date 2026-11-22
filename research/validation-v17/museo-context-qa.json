@@ -1,0 +1,280 @@
+{
+  "pass": true,
+  "checks": 45,
+  "results": [
+    {
+      "label": "All core and context source polygons, levels, surface heights and provenance remain identical",
+      "pass": true
+    },
+    {
+      "label": "Museum core contains only the two parts of3558701",
+      "pass": true
+    },
+    {
+      "label": "Adjacent3558702 remains a neighbouring context building",
+      "pass": true
+    },
+    {
+      "label": "No previous building or street ownership transfers",
+      "pass": true
+    },
+    {
+      "label": "Existing Judería arch is shared, not duplicated or excluded by this context",
+      "pass": true
+    },
+    {
+      "label": "santa-maria source context file is unchanged",
+      "pass": true
+    },
+    {
+      "label": "santa-maria retains unique building ownership",
+      "pass": true
+    },
+    {
+      "label": "santa-maria streets remain owned by their previous visit",
+      "pass": true
+    },
+    {
+      "label": "plaza-mayor source context file is unchanged",
+      "pass": true
+    },
+    {
+      "label": "plaza-mayor retains unique building ownership",
+      "pass": true
+    },
+    {
+      "label": "plaza-mayor streets remain owned by their previous visit",
+      "pass": true
+    },
+    {
+      "label": "juderia source context file is unchanged",
+      "pass": true
+    },
+    {
+      "label": "juderia retains unique building ownership",
+      "pass": true
+    },
+    {
+      "label": "juderia streets remain owned by their previous visit",
+      "pass": true
+    },
+    {
+      "label": "calvario source context file is unchanged",
+      "pass": true
+    },
+    {
+      "label": "calvario retains unique building ownership",
+      "pass": true
+    },
+    {
+      "label": "calvario streets remain owned by their previous visit",
+      "pass": true
+    },
+    {
+      "label": "berenguer source context file is unchanged",
+      "pass": true
+    },
+    {
+      "label": "berenguer retains unique building ownership",
+      "pass": true
+    },
+    {
+      "label": "berenguer streets remain owned by their previous visit",
+      "pass": true
+    },
+    {
+      "label": "sangre source context file is unchanged",
+      "pass": true
+    },
+    {
+      "label": "sangre retains unique building ownership",
+      "pass": true
+    },
+    {
+      "label": "sangre streets remain owned by their previous visit",
+      "pass": true
+    },
+    {
+      "label": "salvador source context file is unchanged",
+      "pass": true
+    },
+    {
+      "label": "salvador retains unique building ownership",
+      "pass": true
+    },
+    {
+      "label": "salvador streets remain owned by their previous visit",
+      "pass": true
+    },
+    {
+      "label": "All new street records are clipped fragments with source continuations preserved",
+      "pass": true
+    },
+    {
+      "label": "Existing visual context reuse is explicitly documented",
+      "pass": true
+    },
+    {
+      "label": "Public void is explicitly inferred, not claimed as a surveyed plaza polygon",
+      "pass": true
+    },
+    {
+      "label": "New pavement has no overlap with retained streets or cadastral/private surfaces",
+      "pass": true
+    },
+    {
+      "label": "Context construction and terrain binding do not mutate source data",
+      "pass": true
+    },
+    {
+      "label": "Neighbourhood context never flattens the relief",
+      "pass": true
+    },
+    {
+      "label": "All four public-space focus contracts are present",
+      "pass": true
+    },
+    {
+      "label": "Focus cameras retain physical world positions and finite targets",
+      "pass": true
+    },
+    {
+      "label": "Every context height has IGN or cadastral floor evidence",
+      "pass": true
+    },
+    {
+      "label": "Terrain binding does not spuriously raise domestic roofs above source heights",
+      "pass": true
+    },
+    {
+      "label": "Only source-observed planter typology is added, with independently switchable vegetation; no invented stairway",
+      "pass": true
+    },
+    {
+      "label": "All geometry attributes are finite",
+      "pass": true
+    },
+    {
+      "label": "Every pavement edge and centroid follows the exact final terrain mesh",
+      "pass": true
+    },
+    {
+      "label": "Reading mode suppresses textures and bump maps",
+      "pass": true
+    },
+    {
+      "label": "Material mode exactly restores all owned materials",
+      "pass": true
+    },
+    {
+      "label": "Rebinding terrain releases old detail and building resources",
+      "pass": true
+    },
+    {
+      "label": "Instances own independent materials and textures",
+      "pass": true
+    },
+    {
+      "label": "Disposing one instance preserves the other",
+      "pass": true
+    },
+    {
+      "label": "Dispose releases every owned resource",
+      "pass": true
+    }
+  ],
+  "stats": {
+    "buildingParts": 44,
+    "parentParcels": 21,
+    "footprintsPreserved": true,
+    "courtyards": 0,
+    "sourceHeight": 0,
+    "ignHeight": 25,
+    "storeyHeight": 19,
+    "fallbackHeight": 0,
+    "streetSamples": 563,
+    "roofCorrections": 0,
+    "maximumRoofCorrectionM": 0,
+    "preservedSantaMaria": true,
+    "preservedPlazaMayor": true,
+    "heightConflictsReviewed": 0,
+    "interpretivePlanters": 4,
+    "reusedBuildingParts": 178,
+    "reusedStreetFragments": 15,
+    "protectedArcOwner": "juderia",
+    "preservedJuderia": true,
+    "preservedCalvario": true,
+    "preservedBerenguer": true,
+    "preservedSangre": true,
+    "preservedSalvador": true
+  },
+  "geometry": {
+    "meshes": 13,
+    "triangles": 20283,
+    "finite": true
+  },
+  "pavement": {
+    "samples": 2252,
+    "maximumDrapeError": 0.0000037028291291069104,
+    "lowestPavingOffset": 0.10499629717087089
+  },
+  "publicSpaceDetails": {
+    "planters": [
+      {
+        "id": "front-planter-1",
+        "coordinate": [
+          -0.278014006,
+          39.678591268
+        ],
+        "baseM": 58.01453843860547,
+        "heightM": 0.5,
+        "treeHeightM": 1.9,
+        "maximumGroundGapM": 0.1516609823412125,
+        "source": "museo-context-restoration",
+        "interpretive": true
+      },
+      {
+        "id": "front-planter-2",
+        "coordinate": [
+          -0.278017508,
+          39.678559828
+        ],
+        "baseM": 58.105274893062635,
+        "heightM": 0.5,
+        "treeHeightM": 1.9,
+        "maximumGroundGapM": 0.14812890110510324,
+        "source": "museo-context-restoration",
+        "interpretive": true
+      },
+      {
+        "id": "front-planter-3",
+        "coordinate": [
+          -0.278021009,
+          39.67847359
+        ],
+        "baseM": 58.686827174724264,
+        "heightM": 0.5,
+        "treeHeightM": 1.9,
+        "maximumGroundGapM": 0.22377000239553269,
+        "source": "museo-context-restoration",
+        "interpretive": true
+      },
+      {
+        "id": "front-planter-4",
+        "coordinate": [
+          -0.278023344,
+          39.678442149
+        ],
+        "baseM": 59.119877879227325,
+        "heightM": 0.5,
+        "treeHeightM": 1.9,
+        "maximumGroundGapM": 0.22036010742187528,
+        "source": "museo-context-restoration",
+        "interpretive": true
+      }
+    ],
+    "stairs": [],
+    "note": "La fotografía exterior publicada por los arquitectos muestra jardineras cilíndricas y arbolillos junto al frente. Posiciones y dimensiones interpretativas; no es un inventario urbano actualizado."
+  },
+  "failures": []
+}

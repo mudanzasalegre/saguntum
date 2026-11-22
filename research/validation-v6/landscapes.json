@@ -1,0 +1,1660 @@
+{
+  "inputHashes": {
+    "dist/assets/data/archaeology-domestic.json": "4e92d18023dcbb1bbcbe80964564240f34bbed1045f0830e6332cf3a05102982",
+    "dist/assets/data/archaeology-public.json": "b995164a8c5d6948f29f9e35ef81d511a67f093d5a7a412121c7293053770acb",
+    "dist/assets/data/archaeology-necropolis.json": "4292d93e32de5aaf481c2d61ce6731df0253bde91671673c3b42fbbf1897383f",
+    "dist/assets/data/port-industrial.json": "65eb905a86888b3cfb0130f80bf71409fe6fbb0ce65eaf0d300cb2d06f8be85a",
+    "dist/assets/data/port-garden.json": "e07ec280db88d37569b09d24f7d6e2fb74e1335af8a28bb9303cb04a22ee2d4e",
+    "dist/assets/data/port-workers.json": "0c77fd17543cf1cd4262c0fe86fbde19d2050937ba7e9fd0c47be1caf76d6d1e",
+    "dist/assets/data/coast-pier.json": "70d1708bdf1a33a4ad0c31bade561afe00c31bd7285bf08f159affc3fb28d33c",
+    "dist/assets/data/coast-grau.json": "337e90fa46344458041af91c076ca758291550d0beef0ef5910e05ce5b9cca0e",
+    "dist/assets/data/coast-archaeology.json": "413cba747e81e9cf27a956f8fe743e08a17d1a4d20666629c2043f4dd1804c2a",
+    "dist/assets/data/landscape-marjal.json": "c92c72cc5708144e55ba9d454475a73bbdedce5c454a16fcf1e4a8aaa0104193",
+    "dist/assets/data/landscape-dunes.json": "8c33393c3f459f71b50b4bb534117b687cdbd17c15a3be5b8946063fcfe2be12",
+    "dist/assets/data/landscape-palancia.json": "0f338add9d002c21023136e73d36d25b2a2a5752645830da9d6728b9e083e83c",
+    "dist/assets/data/landscape-regions.json": "0d54dc37fe8c90a127e953358a09920b019bacb9445c7d07066e500919944422",
+    "dist/assets/data/marjal-cartography.json": "0446297d32a768a0622d7edb51e203fc80c0de1860906a4a680b41e3142a4c42",
+    "dist/assets/data/marjal-elevation.json": "8be9839f501589672562bcb4727fae236076dc8692e9314ce37c2cac37578911",
+    "dist/assets/data/marjal-water.json": "1dd0d832ca3c6b23f84bcdb0cdf047c2ed6b57456f79f8521a46234861bacb90",
+    "dist/assets/data/almarda-cartography.json": "e9dff068a335fbdde1776fd1925329744faaa899e0e98054d44d9a74bf253dd8",
+    "dist/assets/data/almarda-elevation.json": "a826963b33259c6738a31ac829daf9d072314f87ccad0af9b3323ef4c80515c8",
+    "dist/assets/data/almarda-water.json": "c5e022b1390adf47447d63b9d5e3d673198e9f35459c0d0e1047424577186c0c",
+    "dist/assets/data/palancia-cartography.json": "a9d815589d198b0262b6952f6f6125823a2b2e70d5294e61c791ed85924cb290",
+    "dist/assets/data/palancia-elevation.json": "efa543ceaf9c37624e6ca25cafc89393b8d7682e27ab72f9099d769903f7aa6b",
+    "dist/assets/data/palancia-water.json": "0c5f1feb1d0ad2a22c282c0f6fea71a3dedf8c1a056dd0cc717520f4e437cc6d",
+    "dist/js/landscape-marjal.js": "086ab05e5cf48a4e6e33ee4e957377bfbba56bf5aa47d0d1b4fc7f7fde3a68bc",
+    "dist/js/landscape-dunes.js": "14cb4417a62296d736a6fa3e7c7d164884cb38d85a14c26d10ed13b55ce15259",
+    "dist/js/landscape-palancia.js": "be7889cdab3c1431dd1a541c735ef936c64dd13395163cbfd486dd6e60f80ee1",
+    "dist/js/landscape-environment.js": "2b2af8ddabbcd95e478e8262c7ad872e4d61f065a2da235343b2f620b2e4fa81",
+    "dist/js/landscapes.js": "79bcdb305c8d20ad62fc642ab064ca6c61f0beba6a7091a2aa24ffae70b14ab8",
+    "dist/js/terrain.js": "ec10570603e52e850b6b5eadf81963215d18d533c551d555848ef58152fec3f8",
+    "dist/js/urban-surface.js": "d2acfae90ff47abddd51be09a21555e8ce9b6269e1500549a6eb94938f3e6111"
+  },
+  "pass": true,
+  "created": "2026-11-19T13:01:11.911Z",
+  "catalog": 31,
+  "tourStops": 31,
+  "landscapeRegions": [
+    "marjal",
+    "almarda",
+    "palancia"
+  ],
+  "focusCount": 21,
+  "checks": [
+    {
+      "pass": true,
+      "label": "31 unique catalogue places"
+    },
+    {
+      "pass": true,
+      "label": "31 valid and unique full-tour stops"
+    },
+    {
+      "pass": true,
+      "label": "Three natural landscape regions"
+    },
+    {
+      "pass": true,
+      "label": "Landscape numbering 27–29"
+    },
+    {
+      "pass": true,
+      "label": "Application models use the visible terrain mesh sampler"
+    },
+    {
+      "pass": true,
+      "label": "Application excludes detailed boardwalk/bridge roads before terrain construction"
+    },
+    {
+      "pass": true,
+      "label": "marjal 2D observation points match 3D focuses"
+    },
+    {
+      "pass": true,
+      "label": "marjal avoids duplicate roads under detailed walking structures"
+    },
+    {
+      "pass": true,
+      "label": "marjal/estany finite vectors"
+    },
+    {
+      "pass": true,
+      "label": "marjal/estany points are inside the landscape ellipse"
+    },
+    {
+      "pass": true,
+      "label": "marjal/estany available in 2D"
+    },
+    {
+      "pass": true,
+      "label": "marjal/pasarela finite vectors"
+    },
+    {
+      "pass": true,
+      "label": "marjal/pasarela points are inside the landscape ellipse"
+    },
+    {
+      "pass": true,
+      "label": "marjal/pasarela available in 2D"
+    },
+    {
+      "pass": true,
+      "label": "marjal/pasarela pedestrian eye height between 1.5 and 1.9 m"
+    },
+    {
+      "pass": true,
+      "label": "marjal/pasarela camera distance respects OrbitControls minimum 4 m"
+    },
+    {
+      "pass": true,
+      "label": "marjal/pasarela low viewpoint is outside open water"
+    },
+    {
+      "pass": true,
+      "label": "marjal/pasarela eye height 1.65 m above visible floor"
+    },
+    {
+      "pass": true,
+      "label": "marjal/saladar finite vectors"
+    },
+    {
+      "pass": true,
+      "label": "marjal/saladar points are inside the landscape ellipse"
+    },
+    {
+      "pass": true,
+      "label": "marjal/saladar available in 2D"
+    },
+    {
+      "pass": true,
+      "label": "marjal/senillar finite vectors"
+    },
+    {
+      "pass": true,
+      "label": "marjal/senillar points are inside the landscape ellipse"
+    },
+    {
+      "pass": true,
+      "label": "marjal/senillar available in 2D"
+    },
+    {
+      "pass": true,
+      "label": "marjal/panoramica finite vectors"
+    },
+    {
+      "pass": true,
+      "label": "marjal/panoramica points are inside the landscape ellipse"
+    },
+    {
+      "pass": true,
+      "label": "marjal/panoramica available in 2D"
+    },
+    {
+      "pass": true,
+      "label": "marjal/fotges finite vectors"
+    },
+    {
+      "pass": true,
+      "label": "marjal/fotges points are inside the landscape ellipse"
+    },
+    {
+      "pass": true,
+      "label": "marjal/fotges available in 2D"
+    },
+    {
+      "pass": true,
+      "label": "marjal/era finite vectors"
+    },
+    {
+      "pass": true,
+      "label": "marjal/era points are inside the landscape ellipse"
+    },
+    {
+      "pass": true,
+      "label": "marjal/era available in 2D"
+    },
+    {
+      "pass": true,
+      "label": "marjal/ceacv finite vectors"
+    },
+    {
+      "pass": true,
+      "label": "marjal/ceacv points are inside the landscape ellipse"
+    },
+    {
+      "pass": true,
+      "label": "marjal/ceacv available in 2D"
+    },
+    {
+      "pass": true,
+      "label": "marjal vegetation reparented independently of monument visibility"
+    },
+    {
+      "pass": true,
+      "label": "marjal disabling structures retains vegetation"
+    },
+    {
+      "pass": true,
+      "label": "marjal disabling vegetation retains structures"
+    },
+    {
+      "pass": true,
+      "label": "marjal water hole remains unfilled in osm-relation/2998825:0-0"
+    },
+    {
+      "pass": true,
+      "label": "marjal water hole retains source terrain"
+    },
+    {
+      "pass": true,
+      "label": "marjal water hole remains unfilled in osm-relation/2998825:0-0"
+    },
+    {
+      "pass": true,
+      "label": "marjal water hole retains source terrain"
+    },
+    {
+      "pass": true,
+      "label": "marjal water hole remains unfilled in osm-relation/15355508:0-0"
+    },
+    {
+      "pass": true,
+      "label": "marjal water hole retains source terrain"
+    },
+    {
+      "pass": true,
+      "label": "marjal triangulated water respects polygon and hole areas"
+    },
+    {
+      "pass": true,
+      "label": "marjal has at most two planar reflections"
+    },
+    {
+      "pass": true,
+      "label": "Marjal intermittent relation 14371582 has no permanent water sheet"
+    },
+    {
+      "pass": true,
+      "label": "marjal reflection pass hides other Water meshes and rejects recursion"
+    },
+    {
+      "pass": true,
+      "label": "marjal reflection restores renderer and mesh state"
+    },
+    {
+      "pass": true,
+      "label": "marjal reflections are throttled"
+    },
+    {
+      "pass": true,
+      "label": "marjal failed reflection restores renderer state"
+    },
+    {
+      "pass": true,
+      "label": "marjal enabled water animation advances"
+    },
+    {
+      "pass": true,
+      "label": "marjal reduced motion freezes waves and normal-map scrolling"
+    },
+    {
+      "pass": true,
+      "label": "marjal all geometry and instance data are finite and indexed correctly"
+    },
+    {
+      "pass": true,
+      "label": "marjal landscape model has no degenerate base triangles"
+    },
+    {
+      "pass": true,
+      "label": "almarda 2D observation points match 3D focuses"
+    },
+    {
+      "pass": true,
+      "label": "almarda avoids duplicate roads under detailed walking structures"
+    },
+    {
+      "pass": true,
+      "label": "almarda/pasarela finite vectors"
+    },
+    {
+      "pass": true,
+      "label": "almarda/pasarela points are inside the landscape ellipse"
+    },
+    {
+      "pass": true,
+      "label": "almarda/pasarela available in 2D"
+    },
+    {
+      "pass": true,
+      "label": "almarda/pasarela pedestrian eye height between 1.5 and 1.9 m"
+    },
+    {
+      "pass": true,
+      "label": "almarda/pasarela camera distance respects OrbitControls minimum 4 m"
+    },
+    {
+      "pass": true,
+      "label": "almarda/pasarela low viewpoint is outside open water"
+    },
+    {
+      "pass": true,
+      "label": "almarda/barron finite vectors"
+    },
+    {
+      "pass": true,
+      "label": "almarda/barron points are inside the landscape ellipse"
+    },
+    {
+      "pass": true,
+      "label": "almarda/barron available in 2D"
+    },
+    {
+      "pass": true,
+      "label": "almarda/barron pedestrian eye height between 1.5 and 1.9 m"
+    },
+    {
+      "pass": true,
+      "label": "almarda/barron camera distance respects OrbitControls minimum 4 m"
+    },
+    {
+      "pass": true,
+      "label": "almarda/barron low viewpoint is outside open water"
+    },
+    {
+      "pass": true,
+      "label": "almarda/quartell finite vectors"
+    },
+    {
+      "pass": true,
+      "label": "almarda/quartell points are inside the landscape ellipse"
+    },
+    {
+      "pass": true,
+      "label": "almarda/quartell available in 2D"
+    },
+    {
+      "pass": true,
+      "label": "almarda/queralt finite vectors"
+    },
+    {
+      "pass": true,
+      "label": "almarda/queralt points are inside the landscape ellipse"
+    },
+    {
+      "pass": true,
+      "label": "almarda/queralt available in 2D"
+    },
+    {
+      "pass": true,
+      "label": "almarda/microrreserva finite vectors"
+    },
+    {
+      "pass": true,
+      "label": "almarda/microrreserva points are inside the landscape ellipse"
+    },
+    {
+      "pass": true,
+      "label": "almarda/microrreserva available in 2D"
+    },
+    {
+      "pass": true,
+      "label": "almarda/microrreserva pedestrian eye height between 1.5 and 1.9 m"
+    },
+    {
+      "pass": true,
+      "label": "almarda/microrreserva camera distance respects OrbitControls minimum 4 m"
+    },
+    {
+      "pass": true,
+      "label": "almarda/microrreserva low viewpoint is outside open water"
+    },
+    {
+      "pass": true,
+      "label": "almarda/casablanca finite vectors"
+    },
+    {
+      "pass": true,
+      "label": "almarda/casablanca points are inside the landscape ellipse"
+    },
+    {
+      "pass": true,
+      "label": "almarda/casablanca available in 2D"
+    },
+    {
+      "pass": true,
+      "label": "almarda/casablanca pedestrian eye height between 1.5 and 1.9 m"
+    },
+    {
+      "pass": true,
+      "label": "almarda/casablanca camera distance respects OrbitControls minimum 4 m"
+    },
+    {
+      "pass": true,
+      "label": "almarda/casablanca low viewpoint is outside open water"
+    },
+    {
+      "pass": true,
+      "label": "almarda vegetation reparented independently of monument visibility"
+    },
+    {
+      "pass": true,
+      "label": "almarda disabling structures retains vegetation"
+    },
+    {
+      "pass": true,
+      "label": "almarda disabling vegetation retains structures"
+    },
+    {
+      "pass": true,
+      "label": "almarda triangulated water respects polygon and hole areas"
+    },
+    {
+      "pass": true,
+      "label": "almarda has at most two planar reflections"
+    },
+    {
+      "pass": true,
+      "label": "almarda reflection pass hides other Water meshes and rejects recursion"
+    },
+    {
+      "pass": true,
+      "label": "almarda reflection restores renderer and mesh state"
+    },
+    {
+      "pass": true,
+      "label": "almarda reflections are throttled"
+    },
+    {
+      "pass": true,
+      "label": "almarda failed reflection restores renderer state"
+    },
+    {
+      "pass": true,
+      "label": "almarda enabled water animation advances"
+    },
+    {
+      "pass": true,
+      "label": "almarda reduced motion freezes waves and normal-map scrolling"
+    },
+    {
+      "pass": true,
+      "label": "almarda all geometry and instance data are finite and indexed correctly"
+    },
+    {
+      "pass": true,
+      "label": "almarda landscape model has no degenerate base triangles"
+    },
+    {
+      "pass": true,
+      "label": "palancia 2D observation points match 3D focuses"
+    },
+    {
+      "pass": true,
+      "label": "palancia avoids duplicate roads under detailed walking structures"
+    },
+    {
+      "pass": true,
+      "label": "palancia/urbano finite vectors"
+    },
+    {
+      "pass": true,
+      "label": "palancia/urbano points are inside the landscape ellipse"
+    },
+    {
+      "pass": true,
+      "label": "palancia/urbano available in 2D"
+    },
+    {
+      "pass": true,
+      "label": "palancia/puentes finite vectors"
+    },
+    {
+      "pass": true,
+      "label": "palancia/puentes points are inside the landscape ellipse"
+    },
+    {
+      "pass": true,
+      "label": "palancia/puentes available in 2D"
+    },
+    {
+      "pass": true,
+      "label": "palancia/aluvial finite vectors"
+    },
+    {
+      "pass": true,
+      "label": "palancia/aluvial points are inside the landscape ellipse"
+    },
+    {
+      "pass": true,
+      "label": "palancia/aluvial available in 2D"
+    },
+    {
+      "pass": true,
+      "label": "palancia/canet finite vectors"
+    },
+    {
+      "pass": true,
+      "label": "palancia/canet points are inside the landscape ellipse"
+    },
+    {
+      "pass": true,
+      "label": "palancia/canet available in 2D"
+    },
+    {
+      "pass": true,
+      "label": "palancia/delta finite vectors"
+    },
+    {
+      "pass": true,
+      "label": "palancia/delta points are inside the landscape ellipse"
+    },
+    {
+      "pass": true,
+      "label": "palancia/delta available in 2D"
+    },
+    {
+      "pass": true,
+      "label": "palancia/restinga finite vectors"
+    },
+    {
+      "pass": true,
+      "label": "palancia/restinga points are inside the landscape ellipse"
+    },
+    {
+      "pass": true,
+      "label": "palancia/restinga available in 2D"
+    },
+    {
+      "pass": true,
+      "label": "palancia/a-pie finite vectors"
+    },
+    {
+      "pass": true,
+      "label": "palancia/a-pie points are inside the landscape ellipse"
+    },
+    {
+      "pass": true,
+      "label": "palancia/a-pie available in 2D"
+    },
+    {
+      "pass": true,
+      "label": "palancia/a-pie pedestrian eye height between 1.5 and 1.9 m"
+    },
+    {
+      "pass": true,
+      "label": "palancia/a-pie camera distance respects OrbitControls minimum 4 m"
+    },
+    {
+      "pass": true,
+      "label": "palancia/a-pie low viewpoint is outside open water"
+    },
+    {
+      "pass": true,
+      "label": "palancia/a-pie eye height 1.65 m above visible floor"
+    },
+    {
+      "pass": true,
+      "label": "palancia vegetation reparented independently of monument visibility"
+    },
+    {
+      "pass": true,
+      "label": "palancia disabling structures retains vegetation"
+    },
+    {
+      "pass": true,
+      "label": "palancia disabling vegetation retains structures"
+    },
+    {
+      "pass": true,
+      "label": "palancia triangulated water respects polygon and hole areas"
+    },
+    {
+      "pass": true,
+      "label": "palancia has at most two planar reflections"
+    },
+    {
+      "pass": true,
+      "label": "Palancia urbano remains a dry channel"
+    },
+    {
+      "pass": true,
+      "label": "Palancia puentes remains a dry channel"
+    },
+    {
+      "pass": true,
+      "label": "Palancia aluvial remains a dry channel"
+    },
+    {
+      "pass": true,
+      "label": "Palancia canet remains a dry channel"
+    },
+    {
+      "pass": true,
+      "label": "palancia reflection pass hides other Water meshes and rejects recursion"
+    },
+    {
+      "pass": true,
+      "label": "palancia reflection restores renderer and mesh state"
+    },
+    {
+      "pass": true,
+      "label": "palancia reflections are throttled"
+    },
+    {
+      "pass": true,
+      "label": "palancia failed reflection restores renderer state"
+    },
+    {
+      "pass": true,
+      "label": "palancia enabled water animation advances"
+    },
+    {
+      "pass": true,
+      "label": "palancia reduced motion freezes waves and normal-map scrolling"
+    },
+    {
+      "pass": true,
+      "label": "palancia all geometry and instance data are finite and indexed correctly"
+    },
+    {
+      "pass": true,
+      "label": "palancia landscape model has no degenerate base triangles"
+    },
+    {
+      "pass": true,
+      "label": "21 total natural-landscape observation focuses"
+    }
+  ],
+  "errors": [],
+  "warnings": [],
+  "regions": [
+    {
+      "region": "marjal",
+      "id": "marjal-moros",
+      "times": {
+        "urbanMs": 88.61964800000001,
+        "terrainMs": 1226.6910799999998,
+        "heritageMs": 247.43380100000013,
+        "environmentMs": 27.09800999999993
+      },
+      "totalMs": 2118.755594,
+      "terrain": {
+        "coreMeshSpacingM": 5,
+        "outerMeshSpacingM": 15,
+        "sourceSampleCount": 664353,
+        "foundationAdjustment": {
+          "method": "Downward caps on shared vertices of cells intersecting a model foundation polygon; visual accommodation, not altered survey measurements.",
+          "patchCount": 0,
+          "intersectingCells": 0,
+          "adjustedVertices": 0,
+          "maximumLoweringM": 0,
+          "clearanceM": 0.03,
+          "groundQueryNote": "Analytical ground queries retain foundation levels. Future pedestrian collision must account for this rendered mesh accommodation and floor meshes."
+        }
+      },
+      "sourceSamples": 664353,
+      "terrainVertices": 236603,
+      "terrainTriangles": 471186,
+      "geometry": {
+        "meshes": 31,
+        "triangles": 1998197,
+        "nonfinite": 0,
+        "invalidIndices": 0,
+        "degenerateBaseTriangles": 0,
+        "attributeBytes": 15054972
+      },
+      "heritage": {
+        "meshes": 11,
+        "triangles": 1521246,
+        "plantClumps": {
+          "reed": 1756,
+          "cattail": 239,
+          "rush": 9347,
+          "salt": 5837
+        },
+        "boardwalkLengthM": 334.8256384928601,
+        "mappedObservatories": 6,
+        "waterPolygonsForVegetationMask": 17,
+        "rejectedWaterPoints": 1031,
+        "rejectedRoadPoints": 418,
+        "rejectedBuildingPoints": 17,
+        "interpretation": "Plant distributions and minor architecture are interpretative; no live wildlife observations."
+      },
+      "water": {
+        "surfaces": 17,
+        "seaSurfaces": 1,
+        "inlandSurfaces": 16,
+        "meshes": 17,
+        "triangles": 1089,
+        "planarReflections": 2,
+        "reflectionResolution": [
+          512,
+          512
+        ],
+        "reflectionSurfaceIds": [
+          [
+            "ocean-0"
+          ],
+          [
+            "osm-1134806035-0"
+          ]
+        ],
+        "levelsM": [
+          0.08,
+          0.12,
+          0.16,
+          0.33,
+          0.58,
+          0.85,
+          0.88,
+          1,
+          2.88,
+          2.98,
+          3.28,
+          3.78,
+          4.08,
+          4.58
+        ],
+        "reducedMotion": false,
+        "levelNote": "Lagoon/pool levels estimated from the lower quartile of DEM boundary samples; sea display datum 0.08 m. Water extent is a cartographic reading, not current or constant inundation.",
+        "bathymetry": "Display-only depression below opaque water; no measured bathymetry. Original IGN raster retained unchanged.",
+        "excludedKinds": [
+          "moat",
+          "wastewater",
+          "river",
+          "intermittent=yes"
+        ],
+        "normalTextures": "Procedural, tiled normal maps; no downloaded image assets."
+      },
+      "waterAreaMaximumRelativeError": 0.000017897116799592813,
+      "waterClearance": [
+        {
+          "id": "ocean-0",
+          "areaM2": 3915234.3364867084,
+          "centroidEstimatedOccludedPercent": 0,
+          "maxGroundAboveWaterM": 0
+        },
+        {
+          "id": "osm-relation/2998825:0-0",
+          "areaM2": 1338.7619223701768,
+          "centroidEstimatedOccludedPercent": 5.14295667442443,
+          "maxGroundAboveWaterM": 0.3534509903914298
+        },
+        {
+          "id": "osm-relation/15355508:0-0",
+          "areaM2": 3961.88438351918,
+          "centroidEstimatedOccludedPercent": 0.1842404244409485,
+          "maxGroundAboveWaterM": 0.06545572691440071
+        },
+        {
+          "id": "osm-223352297-0",
+          "areaM2": 409.3767538489774,
+          "centroidEstimatedOccludedPercent": 0,
+          "maxGroundAboveWaterM": 0
+        },
+        {
+          "id": "osm-223352301-0",
+          "areaM2": 644.0420432551764,
+          "centroidEstimatedOccludedPercent": 1.0326887436794188,
+          "maxGroundAboveWaterM": 0.22574159335611732
+        },
+        {
+          "id": "osm-223352307-0",
+          "areaM2": 2305.4701214767992,
+          "centroidEstimatedOccludedPercent": 3.1722354422852477,
+          "maxGroundAboveWaterM": 0.2200001907348632
+        },
+        {
+          "id": "osm-226441792-0",
+          "areaM2": 460.8945016846992,
+          "centroidEstimatedOccludedPercent": 3.321216920898093,
+          "maxGroundAboveWaterM": 0.6874834062734334
+        },
+        {
+          "id": "osm-226441794-0",
+          "areaM2": 254.2805456276983,
+          "centroidEstimatedOccludedPercent": 0,
+          "maxGroundAboveWaterM": 0.021982836960821484
+        },
+        {
+          "id": "osm-226441795-0",
+          "areaM2": 18.100334115326405,
+          "centroidEstimatedOccludedPercent": 0,
+          "maxGroundAboveWaterM": 0
+        },
+        {
+          "id": "osm-1134806025-0",
+          "areaM2": 15478.722715063952,
+          "centroidEstimatedOccludedPercent": 0.28609563938466,
+          "maxGroundAboveWaterM": 0.2957555178818335
+        },
+        {
+          "id": "osm-1134806026-0",
+          "areaM2": 31883.79956219159,
+          "centroidEstimatedOccludedPercent": 0.19186196809821082,
+          "maxGroundAboveWaterM": 0.546887392552447
+        },
+        {
+          "id": "osm-1134806029-0",
+          "areaM2": 12066.279811709188,
+          "centroidEstimatedOccludedPercent": 0.319394823705119,
+          "maxGroundAboveWaterM": 0.1149664903652513
+        },
+        {
+          "id": "osm-1134806030-0",
+          "areaM2": 3390.658935593441,
+          "centroidEstimatedOccludedPercent": 8.861841510010853,
+          "maxGroundAboveWaterM": 0.6209147354600254
+        },
+        {
+          "id": "osm-1134806031-0",
+          "areaM2": 360.51507917791605,
+          "centroidEstimatedOccludedPercent": 10.523728155816041,
+          "maxGroundAboveWaterM": 0.2289277497521634
+        },
+        {
+          "id": "osm-1134806032-0",
+          "areaM2": 743.4964800961316,
+          "centroidEstimatedOccludedPercent": 1.9084051379808344,
+          "maxGroundAboveWaterM": 0.351394533549901
+        },
+        {
+          "id": "osm-1134806034-0",
+          "areaM2": 9195.285610292107,
+          "centroidEstimatedOccludedPercent": 0,
+          "maxGroundAboveWaterM": 0
+        },
+        {
+          "id": "osm-1134806035-0",
+          "areaM2": 57503.63421476493,
+          "centroidEstimatedOccludedPercent": 0,
+          "maxGroundAboveWaterM": 0.01046583791860034
+        }
+      ],
+      "reflections": {
+        "passes": 3,
+        "nestedReflectors": 0,
+        "reducedMotion": true,
+        "restoredAfterError": true
+      },
+      "holes": [
+        {
+          "surface": "osm-relation/2998825:0-0",
+          "point": {
+            "x": 1085.3194141002773,
+            "z": 5281.008740333514
+          },
+          "rayHits": 0
+        },
+        {
+          "surface": "osm-relation/2998825:0-0",
+          "point": {
+            "x": 1057.731671345505,
+            "z": 5258.103048000152
+          },
+          "rayHits": 0
+        },
+        {
+          "surface": "osm-relation/15355508:0-0",
+          "point": {
+            "x": 1651.7866916514893,
+            "z": 6937.204773714576
+          },
+          "rayHits": 0
+        }
+      ],
+      "dryChecks": [],
+      "focuses": [
+        {
+          "id": "estany",
+          "point": [
+            1809.9573402952135,
+            4.311024330960231,
+            6686.970136000094
+          ],
+          "position": [
+            1833.9573402952135,
+            18.31102433096023,
+            6713.970136000094
+          ],
+          "target": [
+            1809.9573402952135,
+            4.311024330960231,
+            6686.970136000094
+          ]
+        },
+        {
+          "id": "pasarela",
+          "point": [
+            2087.8461976229014,
+            2.5084835315617093,
+            6085.452516000105
+          ],
+          "position": [
+            2092.4119111204163,
+            3.158483531561709,
+            6094.941043180217
+          ],
+          "target": [
+            2087.8461976229014,
+            2.5084835315617093,
+            6085.452516000105
+          ]
+        },
+        {
+          "id": "saladar",
+          "point": [
+            2077.6336643121394,
+            0.6493932892017434,
+            6128.166000000153
+          ],
+          "position": [
+            2167.6336643121394,
+            60.64939328920175,
+            6193.166000000153
+          ],
+          "target": [
+            2077.6336643121394,
+            0.6493932892017434,
+            6128.166000000153
+          ]
+        },
+        {
+          "id": "senillar",
+          "point": [
+            1864.4384638884562,
+            2.2712307010666306,
+            5836.162508000043
+          ],
+          "position": [
+            1889.4384638884562,
+            18.27123070106663,
+            5864.162508000043
+          ],
+          "target": [
+            1864.4384638884562,
+            2.2712307010666306,
+            5836.162508000043
+          ]
+        },
+        {
+          "id": "panoramica",
+          "point": [
+            1434.8289965239003,
+            9.312610874884715,
+            5521.152207999861
+          ],
+          "position": [
+            1754.8289965239003,
+            259.31261087488474,
+            5821.152207999861
+          ],
+          "target": [
+            1434.8289965239003,
+            9.312610874884715,
+            5521.152207999861
+          ]
+        },
+        {
+          "id": "fotges",
+          "point": [
+            1764.00094039678,
+            4.207538222023119,
+            5319.125636000167
+          ],
+          "position": [
+            1788.00094039678,
+            18.207538222023118,
+            5344.125636000167
+          ],
+          "target": [
+            1764.00094039678,
+            4.207538222023119,
+            5319.125636000167
+          ]
+        },
+        {
+          "id": "era",
+          "point": [
+            1002.7302631083074,
+            2.8555100587322895,
+            6069.723000000586
+          ],
+          "position": [
+            1026.7302631083076,
+            17.85551005873229,
+            6093.723000000586
+          ],
+          "target": [
+            1002.7302631083074,
+            2.8555100587322895,
+            6069.723000000586
+          ]
+        },
+        {
+          "id": "ceacv",
+          "point": [
+            991.5495953477795,
+            7,
+            5173.463416000124
+          ],
+          "position": [
+            1073.5495953477794,
+            62,
+            5258.463416000124
+          ],
+          "target": [
+            991.5495953477795,
+            7,
+            5173.463416000124
+          ]
+        }
+      ],
+      "low": [
+        {
+          "id": "pasarela",
+          "heightAboveDisplayMesh": 2.9526016968383195,
+          "heightAboveVisibleFloor": 1.6500000024708275,
+          "floorMesh": "Carpintería y detalles del humedal · wood",
+          "distanceToTarget": 10.549899894743946,
+          "insideWater": false
+        }
+      ],
+      "excludedRoadIds": [
+        "164647482",
+        "1134646148",
+        "1134646169",
+        "156435561"
+      ],
+      "vegetationIndependent": true
+    },
+    {
+      "region": "almarda",
+      "id": "dunas-almarda",
+      "times": {
+        "urbanMs": 74.86334400000032,
+        "terrainMs": 1763.674426,
+        "heritageMs": 137.7206470000001,
+        "environmentMs": 17.36066699999992
+      },
+      "totalMs": 2732.3451649999997,
+      "terrain": {
+        "coreMeshSpacingM": 7.5,
+        "outerMeshSpacingM": 20,
+        "sourceSampleCount": 1557721,
+        "foundationAdjustment": {
+          "method": "Downward caps on shared vertices of cells intersecting a model foundation polygon; visual accommodation, not altered survey measurements.",
+          "patchCount": 0,
+          "intersectingCells": 0,
+          "adjustedVertices": 0,
+          "maximumLoweringM": 0,
+          "clearanceM": 0.03,
+          "groundQueryNote": "Analytical ground queries retain foundation levels. Future pedestrian collision must account for this rendered mesh accommodation and floor meshes."
+        }
+      },
+      "sourceSamples": 1557721,
+      "terrainVertices": 366025,
+      "terrainTriangles": 729459,
+      "geometry": {
+        "meshes": 17,
+        "triangles": 2490595,
+        "nonfinite": 0,
+        "invalidIndices": 0,
+        "degenerateBaseTriangles": 0,
+        "attributeBytes": 13366240
+      },
+      "heritage": {
+        "meshes": 11,
+        "triangles": 1754788,
+        "plantClumps": {
+          "barron": 5215,
+          "grama": 4479,
+          "mata": 3654,
+          "roseta": 1122
+        },
+        "vegetationCells": 7558,
+        "duneMasks": 6,
+        "boardwalks": 4,
+        "boardwalkLengthM": 327.5,
+        "slats": 1830,
+        "mappedFootwashers": 2,
+        "pebbleInstances": 3576,
+        "rejected": {
+          "roads": 137,
+          "buildings": 55,
+          "mask": 187,
+          "terrain": 1
+        },
+        "interpretation": "Low plants, individual pebbles and construction details are visual interpretation. No invented dune elevation, specimen inventory or post-2026 shoreline survey."
+      },
+      "water": {
+        "surfaces": 3,
+        "seaSurfaces": 1,
+        "inlandSurfaces": 2,
+        "meshes": 3,
+        "triangles": 530,
+        "planarReflections": 2,
+        "reflectionResolution": [
+          512,
+          512
+        ],
+        "reflectionSurfaceIds": [
+          [
+            "ocean-0"
+          ],
+          [
+            "gola-queralt-visible-0"
+          ]
+        ],
+        "levelsM": [
+          0.08,
+          1.08,
+          1.78
+        ],
+        "reducedMotion": false,
+        "levelNote": "Lagoon/pool levels estimated from the lower quartile of DEM boundary samples; sea display datum 0.08 m. Water extent is a cartographic reading, not current or constant inundation.",
+        "bathymetry": "Display-only depression below opaque water; no measured bathymetry. Original IGN raster retained unchanged.",
+        "excludedKinds": [
+          "moat",
+          "wastewater",
+          "river",
+          "intermittent=yes"
+        ],
+        "normalTextures": "Procedural, tiled normal maps; no downloaded image assets."
+      },
+      "waterAreaMaximumRelativeError": 0.000004503553818890784,
+      "waterClearance": [
+        {
+          "id": "ocean-0",
+          "areaM2": 12608801.90499514,
+          "centroidEstimatedOccludedPercent": 0.0073514537730398136,
+          "maxGroundAboveWaterM": 0.28041305763646945
+        },
+        {
+          "id": "gola-quartell-visible-0",
+          "areaM2": 2549.9938972424716,
+          "centroidEstimatedOccludedPercent": 1.1092565326447463,
+          "maxGroundAboveWaterM": 0.24978320404915433
+        },
+        {
+          "id": "gola-queralt-visible-0",
+          "areaM2": 2642.929323915392,
+          "centroidEstimatedOccludedPercent": 0,
+          "maxGroundAboveWaterM": 0
+        }
+      ],
+      "reflections": {
+        "passes": 3,
+        "nestedReflectors": 0,
+        "reducedMotion": true,
+        "restoredAfterError": true
+      },
+      "holes": [],
+      "dryChecks": [],
+      "focuses": [
+        {
+          "id": "pasarela",
+          "point": [
+            7009.978821196659,
+            2.65,
+            -3033.469999999456
+          ],
+          "position": [
+            6992.843698192022,
+            3.75,
+            -3035.139799999986
+          ],
+          "target": [
+            7021.9734072999045,
+            2.8,
+            -3030.1303999999777
+          ]
+        },
+        {
+          "id": "barron",
+          "point": [
+            7015.97611424828,
+            2.65,
+            -3018.9983999996084
+          ],
+          "position": [
+            7000.554503544109,
+            3.8,
+            -3033.469999999456
+          ],
+          "target": [
+            7015.97611424828,
+            2.45,
+            -3018.9983999996084
+          ]
+        },
+        {
+          "id": "quartell",
+          "point": [
+            7267.005666266202,
+            2.445541336138097,
+            -3692.4843999998184
+          ],
+          "position": [
+            7427.005666266202,
+            137.4455413361381,
+            -3497.4843999998184
+          ],
+          "target": [
+            7267.005666266202,
+            2.445541336138097,
+            -3692.4843999998184
+          ]
+        },
+        {
+          "id": "queralt",
+          "point": [
+            7655.972958471441,
+            1.7543654535620687,
+            -4800.118399999412
+          ],
+          "position": [
+            7840.972958471441,
+            146.75436545356206,
+            -4575.118399999412
+          ],
+          "target": [
+            7655.972958471441,
+            1.7543654535620687,
+            -4800.118399999412
+          ]
+        },
+        {
+          "id": "microrreserva",
+          "point": [
+            7943.843024949329,
+            3.022119019395838,
+            -5599.396000000002
+          ],
+          "position": [
+            7849.599848423831,
+            3.818945970902265,
+            -5609.3925359997575
+          ],
+          "target": [
+            7942.129512648866,
+            3.132752868610002,
+            -5604.961999999395
+          ]
+        },
+        {
+          "id": "casablanca",
+          "point": [
+            8835.469150495572,
+            2.6513968397784473,
+            -7201.402119999586
+          ],
+          "position": [
+            8835.469150495572,
+            3.7513968397784474,
+            -7201.402119999586
+          ],
+          "target": [
+            8901.696400908491,
+            -1.7200000762939454,
+            -7169.0079999999025
+          ]
+        }
+      ],
+      "low": [
+        {
+          "id": "pasarela",
+          "heightAboveDisplayMesh": 1.75,
+          "heightAboveVisibleFloor": 1.6099999696016312,
+          "floorMesh": "Pasarelas cartografiadas · tablones",
+          "distanceToTarget": 29.572563992151917,
+          "insideWater": false
+        },
+        {
+          "id": "barron",
+          "heightAboveDisplayMesh": 1.7999999999999998,
+          "heightAboveVisibleFloor": 1.659999969601631,
+          "floorMesh": "Pasarelas cartografiadas · tablones",
+          "distanceToTarget": 21.191408241704764,
+          "insideWater": false
+        },
+        {
+          "id": "microrreserva",
+          "heightAboveDisplayMesh": 1.75,
+          "heightAboveVisibleFloor": 1.75,
+          "floorMesh": "terrain",
+          "distanceToTarget": 92.63821712350618,
+          "insideWater": false
+        },
+        {
+          "id": "casablanca",
+          "heightAboveDisplayMesh": 1.75,
+          "heightAboveVisibleFloor": 1.75,
+          "floorMesh": "terrain",
+          "distanceToTarget": 73.92809947525133,
+          "insideWater": false
+        }
+      ],
+      "excludedRoadIds": [
+        "1285257808",
+        "1285257810",
+        "1285257813",
+        "1285257814"
+      ],
+      "vegetationIndependent": true
+    },
+    {
+      "region": "palancia",
+      "id": "rio-palancia",
+      "times": {
+        "urbanMs": 424.0476640000006,
+        "terrainMs": 1908.5724600000003,
+        "heritageMs": 343.72153700000035,
+        "environmentMs": 16.437536000000364
+      },
+      "totalMs": 3624.0833159999993,
+      "terrain": {
+        "coreMeshSpacingM": 7.5,
+        "outerMeshSpacingM": 20,
+        "sourceSampleCount": 1695561,
+        "foundationAdjustment": {
+          "method": "Downward caps on shared vertices of cells intersecting a model foundation polygon; visual accommodation, not altered survey measurements.",
+          "patchCount": 0,
+          "intersectingCells": 0,
+          "adjustedVertices": 0,
+          "maximumLoweringM": 0,
+          "clearanceM": 0.03,
+          "groundQueryNote": "Analytical ground queries retain foundation levels. Future pedestrian collision must account for this rendered mesh accommodation and floor meshes."
+        }
+      },
+      "sourceSamples": 1695561,
+      "terrainVertices": 435035,
+      "terrainTriangles": 867043,
+      "geometry": {
+        "meshes": 31,
+        "triangles": 1782837,
+        "nonfinite": 0,
+        "invalidIndices": 0,
+        "degenerateBaseTriangles": 0,
+        "attributeBytes": 17240672
+      },
+      "heritage": {
+        "mainAxisM": 8375,
+        "southAxisM": 901,
+        "bridgeComplexes": 3,
+        "bridgeDecks": 5,
+        "trees": 192,
+        "shrubs": 1637,
+        "reedClumps": 1438,
+        "grassClumps": 3897,
+        "cobbles": 16680,
+        "shoreCobbles": 4449,
+        "bridgeRocks": 260,
+        "waterPolygons": 1,
+        "interpretation": "Individual plants, sediment and bridge sections are not measured inventories.",
+        "meshes": 15,
+        "triangles": 908737
+      },
+      "water": {
+        "surfaces": 13,
+        "seaSurfaces": 1,
+        "inlandSurfaces": 12,
+        "meshes": 13,
+        "triangles": 367,
+        "planarReflections": 2,
+        "reflectionResolution": [
+          512,
+          512
+        ],
+        "reflectionSurfaceIds": [
+          [
+            "ocean-0"
+          ],
+          [
+            "osm-relation/17898528:1-0"
+          ]
+        ],
+        "levelsM": [
+          0.08,
+          0.88,
+          11.05,
+          11.88,
+          17.53,
+          47.88,
+          47.98,
+          48.78,
+          48.98,
+          49.38,
+          50.48,
+          52.88,
+          64.75
+        ],
+        "reducedMotion": false,
+        "levelNote": "Lagoon/pool levels estimated from the lower quartile of DEM boundary samples; sea display datum 0.08 m. Water extent is a cartographic reading, not current or constant inundation.",
+        "bathymetry": "Display-only depression below opaque water; no measured bathymetry. Original IGN raster retained unchanged.",
+        "excludedKinds": [
+          "moat",
+          "wastewater",
+          "river",
+          "intermittent=yes"
+        ],
+        "normalTextures": "Procedural, tiled normal maps; no downloaded image assets."
+      },
+      "waterAreaMaximumRelativeError": 0.000043752660067513326,
+      "waterClearance": [
+        {
+          "id": "ocean-0",
+          "areaM2": 1072175.1275947546,
+          "centroidEstimatedOccludedPercent": 0.005311593261070206,
+          "maxGroundAboveWaterM": 0.92
+        },
+        {
+          "id": "osm-relation/17898528:0-0",
+          "areaM2": 10942.781465108012,
+          "centroidEstimatedOccludedPercent": 0,
+          "maxGroundAboveWaterM": 0
+        },
+        {
+          "id": "osm-relation/17898528:1-0",
+          "areaM2": 11917.492170689045,
+          "centroidEstimatedOccludedPercent": 0.6105529528410112,
+          "maxGroundAboveWaterM": 0.2753120478987654
+        },
+        {
+          "id": "osm-1305042576-0",
+          "areaM2": 2859.518694982573,
+          "centroidEstimatedOccludedPercent": 0,
+          "maxGroundAboveWaterM": 0
+        },
+        {
+          "id": "osm-361639208-0",
+          "areaM2": 65.28294785346725,
+          "centroidEstimatedOccludedPercent": 49.44198188271476,
+          "maxGroundAboveWaterM": 0.45196454563747324
+        },
+        {
+          "id": "osm-361639209-0",
+          "areaM2": 47.48680941073462,
+          "centroidEstimatedOccludedPercent": 100,
+          "maxGroundAboveWaterM": 0.17470033085957226
+        },
+        {
+          "id": "osm-361639210-0",
+          "areaM2": 83.65958072109856,
+          "centroidEstimatedOccludedPercent": 0,
+          "maxGroundAboveWaterM": 0
+        },
+        {
+          "id": "osm-925106555-0",
+          "areaM2": 18.422841619445535,
+          "centroidEstimatedOccludedPercent": 0,
+          "maxGroundAboveWaterM": 0
+        },
+        {
+          "id": "osm-1279738139-0",
+          "areaM2": 261.4277372226934,
+          "centroidEstimatedOccludedPercent": 0,
+          "maxGroundAboveWaterM": 0
+        },
+        {
+          "id": "osm-427466028-0",
+          "areaM2": 8616.539008875552,
+          "centroidEstimatedOccludedPercent": 0,
+          "maxGroundAboveWaterM": 0
+        },
+        {
+          "id": "osm-749051449-0",
+          "areaM2": 49.211459161830135,
+          "centroidEstimatedOccludedPercent": 0,
+          "maxGroundAboveWaterM": 0
+        },
+        {
+          "id": "osm-749068280-0",
+          "areaM2": 22.662267811538186,
+          "centroidEstimatedOccludedPercent": 0,
+          "maxGroundAboveWaterM": 0
+        },
+        {
+          "id": "palancia-laguna-sur-0",
+          "areaM2": 9261.776328017935,
+          "centroidEstimatedOccludedPercent": 0.6873440587899002,
+          "maxGroundAboveWaterM": 0.11006406542151426
+        }
+      ],
+      "reflections": {
+        "passes": 3,
+        "nestedReflectors": 0,
+        "reducedMotion": true,
+        "restoredAfterError": true
+      },
+      "holes": [],
+      "dryChecks": [
+        {
+          "id": "urbano",
+          "wet": false
+        },
+        {
+          "id": "puentes",
+          "wet": false
+        },
+        {
+          "id": "aluvial",
+          "wet": false
+        },
+        {
+          "id": "canet",
+          "wet": false
+        }
+      ],
+      "focuses": [
+        {
+          "id": "urbano",
+          "point": [
+            85.67561502318091,
+            39.00944994301643,
+            -456.41200000012276
+          ],
+          "position": [
+            345.6756150231809,
+            239.00944994301642,
+            -131.41200000012276
+          ],
+          "target": [
+            85.67561502318091,
+            39.00944994301643,
+            -456.41200000012276
+          ]
+        },
+        {
+          "id": "puentes",
+          "point": [
+            433.51861201729577,
+            39.12415443111374,
+            -338.4127999998441
+          ],
+          "position": [
+            588.5186120172957,
+            154.12415443111374,
+            -153.41279999984408
+          ],
+          "target": [
+            433.51861201729577,
+            39.12415443111374,
+            -338.4127999998441
+          ]
+        },
+        {
+          "id": "aluvial",
+          "point": [
+            2698.7818732301985,
+            27.5,
+            0
+          ],
+          "position": [
+            3058.7818732301985,
+            297.5,
+            410
+          ],
+          "target": [
+            2698.7818732301985,
+            27.5,
+            0
+          ]
+        },
+        {
+          "id": "canet",
+          "point": [
+            4825.250638105547,
+            7.370086659621895,
+            500.940000000019
+          ],
+          "position": [
+            5000.250638105547,
+            132.3700866596219,
+            705.9400000000189
+          ],
+          "target": [
+            4825.250638105547,
+            7.370086659621895,
+            500.940000000019
+          ]
+        },
+        {
+          "id": "delta",
+          "point": [
+            5954.455244111071,
+            1.94109696480308,
+            1068.6719999998822
+          ],
+          "position": [
+            6434.455244111071,
+            471.9410969648031,
+            1738.6719999998822
+          ],
+          "target": [
+            5954.455244111071,
+            1.94109696480308,
+            1068.6719999998822
+          ]
+        },
+        {
+          "id": "restinga",
+          "point": [
+            6100.960545800709,
+            2.4182203399868913,
+            1292.4252000005076
+          ],
+          "position": [
+            6200.960545800709,
+            68.41822033998689,
+            1422.4252000005076
+          ],
+          "target": [
+            6100.960545800709,
+            2.4182203399868913,
+            1292.4252000005076
+          ]
+        },
+        {
+          "id": "a-pie",
+          "point": [
+            6100.960545800709,
+            2.4182203399868913,
+            1292.4252000005076
+          ],
+          "position": [
+            6102.331355641079,
+            3.596808927126777,
+            1294.1061320003769
+          ],
+          "target": [
+            6118.952424955576,
+            2.995899152312602,
+            1262.702760000407
+          ]
+        }
+      ],
+      "low": [
+        {
+          "id": "a-pie",
+          "heightAboveDisplayMesh": 1.65,
+          "heightAboveVisibleFloor": 1.65,
+          "floorMesh": "terrain",
+          "distanceToTarget": 35.535796187552485,
+          "insideWater": false
+        }
+      ],
+      "excludedRoadIds": [
+        "180732779",
+        "87552066",
+        "39303189",
+        "180732782",
+        "1124952339"
+      ],
+      "vegetationIndependent": true
+    }
+  ],
+  "exportDirectory": "/workspace/scratch/02fd1ac67942/landscape-v6",
+  "scope": "Geometry, camera, terrain, water and vegetation integration. Context city checked separately; Blender previews inspect geometry rather than compile the WebGL shader."
+}

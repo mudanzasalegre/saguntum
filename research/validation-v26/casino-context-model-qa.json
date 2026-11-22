@@ -1,0 +1,661 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "pass": true,
+      "label": "All context vertices are finite",
+      "detail": {
+        "finite": true,
+        "collapsed": 0,
+        "triangles": 34602
+      }
+    },
+    {
+      "pass": true,
+      "label": "No rendered triangle degenerates at Float32 atlas precision",
+      "detail": {
+        "finite": true,
+        "collapsed": 0,
+        "triangles": 34602
+      }
+    },
+    {
+      "pass": true,
+      "label": "No earlier building or road is duplicated or re-owned"
+    },
+    {
+      "pass": true,
+      "label": "Seven garden focuses exactly match the published guide"
+    },
+    {
+      "pass": true,
+      "label": "Outdoor focuses use canonical reading layers and finite registration"
+    },
+    {
+      "pass": true,
+      "label": "Street wall contains the documented ticket opening"
+    },
+    {
+      "pass": true,
+      "label": "The single south stage retains its traced plan"
+    },
+    {
+      "pass": true,
+      "label": "Stage front decoration and access stair face the uncovered dance floor regardless of ring order",
+      "detail": []
+    },
+    {
+      "pass": true,
+      "label": "Three distinct formal planted islands reach the map and renderer"
+    },
+    {
+      "pass": true,
+      "label": "All twelve photo-registered tree centres are retained"
+    },
+    {
+      "pass": true,
+      "label": "Complete canopy envelopes clear architecture and attached terraces"
+    },
+    {
+      "pass": true,
+      "label": "Plan canopy radii equal rendered envelope limits"
+    },
+    {
+      "pass": true,
+      "label": "Actual crown vertices and frond stems do not enter any building footprint",
+      "detail": {
+        "foliageVertices": 43803,
+        "insideBuildingVertices": 0
+      }
+    },
+    {
+      "pass": true,
+      "label": "Source hashes match the final source records"
+    },
+    {
+      "pass": true,
+      "label": "Ground rebind disposes old geometry and materials without accumulating meshes"
+    },
+    {
+      "pass": true,
+      "label": "Paving vertices and triangle interiors follow final atlas terrain",
+      "detail": {
+        "samples": 1005,
+        "maximumVertexErrorM": 0.000026634071021915118,
+        "maximumInteriorErrorM": 0.00001635279878316881
+      }
+    },
+    {
+      "pass": true,
+      "label": "Terrain-rebound geometry is finite and non-degenerate",
+      "detail": {
+        "finite": true,
+        "collapsed": 0,
+        "triangles": 34602
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera is above ground",
+      "detail": {
+        "id": "casino-jardin",
+        "type": "offset",
+        "heightM": 26.18836254355155
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera is outside every complete canopy envelope",
+      "detail": {
+        "id": "casino-jardin",
+        "type": "offset",
+        "intersected": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera is above ground",
+      "detail": {
+        "id": "casino-jardin",
+        "type": "closeOffset",
+        "heightM": 10.688362543551548
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera is outside every complete canopy envelope",
+      "detail": {
+        "id": "casino-jardin",
+        "type": "closeOffset",
+        "intersected": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera is above ground",
+      "detail": {
+        "id": "casino-pista",
+        "type": "offset",
+        "heightM": 23
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera is outside every complete canopy envelope",
+      "detail": {
+        "id": "casino-pista",
+        "type": "offset",
+        "intersected": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera is above ground",
+      "detail": {
+        "id": "casino-pista",
+        "type": "closeOffset",
+        "heightM": 9.3
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera is outside every complete canopy envelope",
+      "detail": {
+        "id": "casino-pista",
+        "type": "closeOffset",
+        "intersected": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera is above ground",
+      "detail": {
+        "id": "casino-escenario",
+        "type": "offset",
+        "heightM": 18.327746689678865
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera is outside every complete canopy envelope",
+      "detail": {
+        "id": "casino-escenario",
+        "type": "offset",
+        "intersected": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera is above ground",
+      "detail": {
+        "id": "casino-escenario",
+        "type": "closeOffset",
+        "heightM": 10.327746689678865
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera is outside every complete canopy envelope",
+      "detail": {
+        "id": "casino-escenario",
+        "type": "closeOffset",
+        "intersected": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera is above ground",
+      "detail": {
+        "id": "casino-arbolado",
+        "type": "offset",
+        "heightM": 28.146264525317285
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera is outside every complete canopy envelope",
+      "detail": {
+        "id": "casino-arbolado",
+        "type": "offset",
+        "intersected": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera is above ground",
+      "detail": {
+        "id": "casino-arbolado",
+        "type": "closeOffset",
+        "heightM": 18.146264525317285
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera is outside every complete canopy envelope",
+      "detail": {
+        "id": "casino-arbolado",
+        "type": "closeOffset",
+        "intersected": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera is above ground",
+      "detail": {
+        "id": "casino-taquilla",
+        "type": "offset",
+        "heightM": 18
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera is outside every complete canopy envelope",
+      "detail": {
+        "id": "casino-taquilla",
+        "type": "offset",
+        "intersected": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera is above ground",
+      "detail": {
+        "id": "casino-taquilla",
+        "type": "closeOffset",
+        "heightM": 8
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera is outside every complete canopy envelope",
+      "detail": {
+        "id": "casino-taquilla",
+        "type": "closeOffset",
+        "intersected": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera is above ground",
+      "detail": {
+        "id": "casino-entorno",
+        "type": "offset",
+        "heightM": 48.22373785515326
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera is outside every complete canopy envelope",
+      "detail": {
+        "id": "casino-entorno",
+        "type": "offset",
+        "intersected": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera is above ground",
+      "detail": {
+        "id": "casino-entorno",
+        "type": "closeOffset",
+        "heightM": 27.223737855153264
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera is outside every complete canopy envelope",
+      "detail": {
+        "id": "casino-entorno",
+        "type": "closeOffset",
+        "intersected": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera is above ground",
+      "detail": {
+        "id": "casino-memoria",
+        "type": "offset",
+        "heightM": 38.14092537859096
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera is outside every complete canopy envelope",
+      "detail": {
+        "id": "casino-memoria",
+        "type": "offset",
+        "intersected": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera is above ground",
+      "detail": {
+        "id": "casino-memoria",
+        "type": "closeOffset",
+        "heightM": 20.140925378590957
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera is outside every complete canopy envelope",
+      "detail": {
+        "id": "casino-memoria",
+        "type": "closeOffset",
+        "intersected": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Every material maps to the guide’s jardines or memoria legend"
+    },
+    {
+      "pass": true,
+      "label": "Textured materials restore after thematic reading"
+    },
+    {
+      "pass": true,
+      "label": "Focus selection resolves the exact tour id",
+      "detail": {
+        "id": "casino-jardin"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Focus selection resolves the exact tour id",
+      "detail": {
+        "id": "casino-pista"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Focus selection resolves the exact tour id",
+      "detail": {
+        "id": "casino-escenario"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Focus selection resolves the exact tour id",
+      "detail": {
+        "id": "casino-arbolado"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Focus selection resolves the exact tour id",
+      "detail": {
+        "id": "casino-taquilla"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Focus selection resolves the exact tour id",
+      "detail": {
+        "id": "casino-entorno"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Focus selection resolves the exact tour id",
+      "detail": {
+        "id": "casino-memoria"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Complete disposal is idempotent"
+    }
+  ],
+  "stats": {
+    "ownedBuildings": 0,
+    "duplicatedBuildings": 0,
+    "ownedRoads": 0,
+    "pavingAreaM2": 1442.64,
+    "gardenTransferAreaM2": 1450.36,
+    "pavingVertices": 734,
+    "pavingTriangles": 1007,
+    "islands": 3,
+    "trees": 12,
+    "benches": 5,
+    "paths": 3,
+    "stageAreaM2": 44.3,
+    "contextFocuses": 7,
+    "treeCrownsAdjusted": 1,
+    "treeTrunksSuppressed": 0,
+    "meshes": 25,
+    "triangles": 34602,
+    "skippedTinyTriangles": 2
+  },
+  "trees": [
+    {
+      "id": "casino-tree-0",
+      "coordinate": [
+        -0.22234,
+        39.659175926
+      ],
+      "rendered": true,
+      "kind": "palm",
+      "baseM": 5.051810662979597,
+      "heightM": 6.1,
+      "sourceCrownRadiusM": 2.35,
+      "displayCrownParameterM": 1.5889666569137286,
+      "maximumHorizontalRadiusM": 2.336208321142161,
+      "nearestBuildingDistanceM": 2.786208321142161,
+      "cameraClearanceM": 8.15804478123114,
+      "requiredFacadeGapM": 0.45,
+      "photoPosition": true,
+      "dimensionsInterpretive": true
+    },
+    {
+      "id": "casino-tree-1",
+      "coordinate": [
+        -0.22226,
+        39.659140947
+      ],
+      "rendered": true,
+      "kind": "palm",
+      "baseM": 5.114195490305006,
+      "heightM": 9.4,
+      "sourceCrownRadiusM": 3.05,
+      "displayCrownParameterM": 3.05,
+      "maximumHorizontalRadiusM": 4.1625,
+      "nearestBuildingDistanceM": 10.647092720537877,
+      "cameraClearanceM": 0.5922207977993003,
+      "requiredFacadeGapM": 0.45,
+      "photoPosition": true,
+      "dimensionsInterpretive": true
+    },
+    {
+      "id": "casino-tree-2",
+      "coordinate": [
+        -0.222225333,
+        39.659099794
+      ],
+      "rendered": true,
+      "kind": "palm",
+      "baseM": 5.199999809265137,
+      "heightM": 7.6,
+      "sourceCrownRadiusM": 2.8,
+      "displayCrownParameterM": 2.8,
+      "maximumHorizontalRadiusM": 3.85,
+      "nearestBuildingDistanceM": 15.666870700474934,
+      "cameraClearanceM": 2.496849265095729,
+      "requiredFacadeGapM": 0.45,
+      "photoPosition": true,
+      "dimensionsInterpretive": true
+    },
+    {
+      "id": "casino-tree-3",
+      "coordinate": [
+        -0.2223,
+        39.659097737
+      ],
+      "rendered": true,
+      "kind": "palm",
+      "baseM": 5.179203142703942,
+      "heightM": 3.6,
+      "sourceCrownRadiusM": 1.7,
+      "displayCrownParameterM": 1.7,
+      "maximumHorizontalRadiusM": 2.475,
+      "nearestBuildingDistanceM": 10.483882007819076,
+      "cameraClearanceM": 5.726769692200683,
+      "requiredFacadeGapM": 0.45,
+      "photoPosition": true,
+      "dimensionsInterpretive": true
+    },
+    {
+      "id": "casino-tree-4",
+      "coordinate": [
+        -0.222225333,
+        39.659054527
+      ],
+      "rendered": true,
+      "kind": "palm",
+      "baseM": 5.147756895288648,
+      "heightM": 3.7,
+      "sourceCrownRadiusM": 1.6,
+      "displayCrownParameterM": 1.6,
+      "maximumHorizontalRadiusM": 2.35,
+      "nearestBuildingDistanceM": 15.774733095803008,
+      "cameraClearanceM": 7.5322318115010765,
+      "requiredFacadeGapM": 0.45,
+      "photoPosition": true,
+      "dimensionsInterpretive": true
+    },
+    {
+      "id": "casino-tree-5",
+      "coordinate": [
+        -0.222132,
+        39.659221193
+      ],
+      "rendered": true,
+      "kind": "palm",
+      "baseM": 5,
+      "heightM": 8.4,
+      "sourceCrownRadiusM": 2.65,
+      "displayCrownParameterM": 2.65,
+      "maximumHorizontalRadiusM": 3.6625,
+      "nearestBuildingDistanceM": 13.153005575114069,
+      "cameraClearanceM": 8.263079141704543,
+      "requiredFacadeGapM": 0.45,
+      "photoPosition": true,
+      "dimensionsInterpretive": true
+    },
+    {
+      "id": "casino-tree-6",
+      "coordinate": [
+        -0.222134667,
+        39.6590607
+      ],
+      "rendered": true,
+      "kind": "palm",
+      "baseM": 5.744727940279793,
+      "heightM": 7.8,
+      "sourceCrownRadiusM": 2.8,
+      "displayCrownParameterM": 2.8,
+      "maximumHorizontalRadiusM": 3.85,
+      "nearestBuildingDistanceM": 9.314853397467568,
+      "cameraClearanceM": 9.842429560918994,
+      "requiredFacadeGapM": 0.45,
+      "photoPosition": true,
+      "dimensionsInterpretive": true
+    },
+    {
+      "id": "casino-tree-7",
+      "coordinate": [
+        -0.222206667,
+        39.658912551
+      ],
+      "rendered": true,
+      "kind": "palm",
+      "baseM": 5.8443576155483505,
+      "heightM": 8.7,
+      "sourceCrownRadiusM": 2.8,
+      "displayCrownParameterM": 2.8,
+      "maximumHorizontalRadiusM": 3.85,
+      "nearestBuildingDistanceM": 5.783250651793817,
+      "cameraClearanceM": 23.397836992058284,
+      "requiredFacadeGapM": 0.45,
+      "photoPosition": true,
+      "dimensionsInterpretive": true
+    },
+    {
+      "id": "casino-tree-11",
+      "coordinate": [
+        -0.222236,
+        39.659254115
+      ],
+      "rendered": true,
+      "kind": "columnar",
+      "baseM": 5,
+      "heightM": 6.4,
+      "sourceCrownRadiusM": 1,
+      "displayCrownParameterM": 1,
+      "maximumHorizontalRadiusM": 1.6,
+      "nearestBuildingDistanceM": 3.601767447875619,
+      "cameraClearanceM": 6.917973677521167,
+      "requiredFacadeGapM": 0.45,
+      "photoPosition": true,
+      "dimensionsInterpretive": true
+    },
+    {
+      "id": "casino-tree-12",
+      "coordinate": [
+        -0.222169333,
+        39.659219136
+      ],
+      "rendered": true,
+      "kind": "columnar",
+      "baseM": 5,
+      "heightM": 6.2,
+      "sourceCrownRadiusM": 0.9,
+      "displayCrownParameterM": 0.9,
+      "maximumHorizontalRadiusM": 1.475,
+      "nearestBuildingDistanceM": 10.209655492253308,
+      "cameraClearanceM": 7.734722474787777,
+      "requiredFacadeGapM": 0.45,
+      "photoPosition": true,
+      "dimensionsInterpretive": true
+    },
+    {
+      "id": "casino-tree-13",
+      "coordinate": [
+        -0.222105333,
+        39.659182099
+      ],
+      "rendered": true,
+      "kind": "columnar",
+      "baseM": 5.1128739320361545,
+      "heightM": 6.6,
+      "sourceCrownRadiusM": 1.1,
+      "displayCrownParameterM": 1.1,
+      "maximumHorizontalRadiusM": 1.725,
+      "nearestBuildingDistanceM": 14.960353974562429,
+      "cameraClearanceM": 9.179153343149888,
+      "requiredFacadeGapM": 0.45,
+      "photoPosition": true,
+      "dimensionsInterpretive": true
+    },
+    {
+      "id": "casino-tree-14",
+      "coordinate": [
+        -0.222185333,
+        39.658951646
+      ],
+      "rendered": true,
+      "kind": "columnar",
+      "baseM": 5.742581511140966,
+      "heightM": 5.8,
+      "sourceCrownRadiusM": 0.85,
+      "displayCrownParameterM": 0.85,
+      "maximumHorizontalRadiusM": 1.4125,
+      "nearestBuildingDistanceM": 6.636535146106765,
+      "cameraClearanceM": 19.28904234693562,
+      "requiredFacadeGapM": 0.45,
+      "photoPosition": true,
+      "dimensionsInterpretive": true
+    }
+  ]
+}

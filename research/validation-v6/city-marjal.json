@@ -1,0 +1,1143 @@
+{
+  "region": "marjal",
+  "pass": true,
+  "checks": [
+    {
+      "label": "buildings: finite attributes and instances",
+      "pass": true
+    },
+    {
+      "label": "buildings: valid indices",
+      "pass": true
+    },
+    {
+      "label": "Building normals are nonzero",
+      "pass": true
+    },
+    {
+      "label": "No degenerate building triangles",
+      "pass": true
+    },
+    {
+      "label": "roads: finite attributes and instances",
+      "pass": true
+    },
+    {
+      "label": "roads: valid indices",
+      "pass": true
+    },
+    {
+      "label": "vegetation: finite attributes and instances",
+      "pass": true
+    },
+    {
+      "label": "vegetation: valid indices",
+      "pass": true
+    },
+    {
+      "label": "terrain: finite attributes and instances",
+      "pass": true
+    },
+    {
+      "label": "terrain: valid indices",
+      "pass": true
+    },
+    {
+      "label": "Region has rendered cartographic building parts",
+      "pass": true
+    },
+    {
+      "label": "Height provenance sums to rendered parts",
+      "pass": true
+    },
+    {
+      "label": "Estimated building-part count is nonnegative",
+      "pass": true
+    },
+    {
+      "label": "All provided source heights and storeys are numeric",
+      "pass": true
+    },
+    {
+      "label": "No emitted roof triangle centres in mapped open water",
+      "pass": true
+    },
+    {
+      "label": "No emitted roofs inside custom monument footprints",
+      "pass": true
+    },
+    {
+      "label": "No context tree centres in open water",
+      "pass": true
+    },
+    {
+      "label": "No context trees duplicate custom landscape plant areas",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "warnings": [
+    "Mapped building roofs intersect a broad natural-landcover polygon. These may be documented facilities or adjacent parcels; review flagged parts, do not erase real cartography automatically."
+  ],
+  "source": {
+    "buildingParts": 848,
+    "roads": 414,
+    "landcover": 110,
+    "shape": {
+      "cx": 1480,
+      "cz": 6200,
+      "rx": 2180,
+      "rz": 1900
+    },
+    "terrainBounds": {
+      "minX": -700,
+      "maxX": 3660,
+      "minZ": 4300,
+      "maxZ": 8100
+    },
+    "terrainSize": [
+      873,
+      761
+    ]
+  },
+  "buildings": {
+    "footprintCount": 700,
+    "empiricalHeightCount": 0,
+    "ignSurfaceHeightCount": 343,
+    "osmLevelCount": 0,
+    "cadastralLevelCount": 348,
+    "estimatedHeightCount": 9,
+    "sampledRoofColorCount": 699,
+    "contextFacadeCount": 410,
+    "terrainRoofCorrections": 0,
+    "maximumRoofCorrectionM": 0,
+    "terrainRoofNote": "Display roof raised only where source terrain would intersect it; original height estimates are retained in data.",
+    "otherHeights": "OSM height > IGN normalized surface estimate > attributed OSM / DGC storeys × 3 m > deterministic visual estimate.",
+    "facades": "Generic repeated facade bays outside detailed areas; not surveyed window positions. Roof colours sampled from PNOA where available."
+  },
+  "roads": {
+    "wayCount": 337,
+    "stairTreads": 5,
+    "supportCount": 24822,
+    "taggedWidths": 0,
+    "profile": "Longitudinal DEM samples; pavement widths, treads and transverse grading are interpreted."
+  },
+  "vegetation": {
+    "treeCount": 240,
+    "mappedPositions": 202,
+    "interpretive": true
+  },
+  "excludedContextIds": 0,
+  "customExclusionPolygons": 0,
+  "landscapeVegetationExclusions": 0,
+  "geometry": {
+    "buildings": {
+      "meshes": 6,
+      "vertices": 49462,
+      "triangles": 23064,
+      "attributeBytes": 2176328,
+      "indexBytes": 138384,
+      "instanceBytes": 0,
+      "nonfinite": 0,
+      "indicesOutside": 0,
+      "degenerate": 0,
+      "zeroNormals": 0,
+      "minY": -1.2999999523162842,
+      "maxY": 29.399999618530273
+    },
+    "roads": {
+      "meshes": 5,
+      "vertices": 223402,
+      "triangles": 108258,
+      "attributeBytes": 9829688,
+      "indexBytes": 947412,
+      "instanceBytes": 0,
+      "nonfinite": 0,
+      "indicesOutside": 0,
+      "degenerate": 0,
+      "zeroNormals": 0,
+      "minY": -0.05043845996260643,
+      "maxY": 15.691720008850098
+    },
+    "vegetation": {
+      "meshes": 3,
+      "vertices": 1720,
+      "triangles": 79520,
+      "attributeBytes": 55040,
+      "indexBytes": 144,
+      "instanceBytes": 33600,
+      "nonfinite": 0,
+      "indicesOutside": 0,
+      "degenerate": 0,
+      "zeroNormals": 0,
+      "minY": 9.536743306171047e-8,
+      "maxY": 13.399999618530273
+    },
+    "terrain": {
+      "meshes": 1,
+      "vertices": 236603,
+      "triangles": 471186,
+      "attributeBytes": 7571296,
+      "indexBytes": 5654232,
+      "instanceBytes": 0,
+      "nonfinite": 0,
+      "indicesOutside": 0,
+      "degenerate": 0,
+      "zeroNormals": 0,
+      "minY": -2.4200000762939453,
+      "maxY": 15.514564514160156
+    }
+  },
+  "roofAudit": {
+    "roofTriangles": 3326,
+    "waterTriangles": 0,
+    "waterAreaM2": 0,
+    "heritageTriangles": 0,
+    "heritageAreaM2": 0,
+    "natureTriangles": 73,
+    "natureAreaM2": 3694.756784190249,
+    "submergedRoofVertices": 0,
+    "belowTerrainPoints": [],
+    "minimumRoofClearanceM": 2.2861229386329622,
+    "maximumRoofClearanceM": 24.079999923706055,
+    "examples": [
+      {
+        "x": 1002.4732462565104,
+        "z": 5179.489583333333,
+        "areaM2": 131.4775404036045,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": 998.7320760091146,
+        "z": 5188.146484375,
+        "areaM2": 131.51628535985947,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": 998.1266276041666,
+        "z": 5167.2109375,
+        "areaM2": 32.130564108490944,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": 1002.2190551757812,
+        "z": 5168.984700520833,
+        "areaM2": 29.589726865291595,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": 993.5744018554688,
+        "z": 5162.795247395833,
+        "areaM2": 16.635857090353966,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": 1005.5575561523438,
+        "z": 5170.01611328125,
+        "areaM2": 2.2219737768173218,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": 1008.5248006184896,
+        "z": 5167.722981770833,
+        "areaM2": 89.70185732841492,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": 1001.9249064127604,
+        "z": 5163.804524739583,
+        "areaM2": 58.66112220287323,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": 993.8942464192709,
+        "z": 5158.223795572917,
+        "areaM2": 40.46794240176678,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": 2496.7816569010415,
+        "z": 5682.974934895833,
+        "areaM2": 110.13473868370056,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": 2496.881591796875,
+        "z": 5689.99560546875,
+        "areaM2": 110.0223678946495,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": 596.5478719075521,
+        "z": 6920.044596354167,
+        "areaM2": 27.455723017454147,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": 597.4703165690104,
+        "z": 6923.421223958333,
+        "areaM2": 27.455723017454147,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": 450.7422688802083,
+        "z": 6747.650553385417,
+        "areaM2": 24.472914941608906,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": 449.8283996582031,
+        "z": 6744.474283854167,
+        "areaM2": 24.523943930864334,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": 455.363037109375,
+        "z": 6737.847005208333,
+        "areaM2": 16.87504532933235,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": 452.44720458984375,
+        "z": 6737.973307291667,
+        "areaM2": 16.87504532933235,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": 390.34096272786456,
+        "z": 6806.012044270833,
+        "areaM2": 51.98777288198471,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": 381.50494384765625,
+        "z": 6798.824381510417,
+        "areaM2": 26.77930100262165,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": 386.49412027994794,
+        "z": 6807.125162760417,
+        "areaM2": 36.032334089279175,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": 377.5238850911458,
+        "z": 6801.436686197917,
+        "areaM2": 38.64091269671917,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": 381.3878479003906,
+        "z": 6809.02490234375,
+        "areaM2": 35.96001789718866,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": 378.7233378092448,
+        "z": 6805.752115885417,
+        "areaM2": 7.992397241294384,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": 402.1327718098958,
+        "z": 6784.73876953125,
+        "areaM2": 58.48650298267603,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": 399.64246622721356,
+        "z": 6791.985677083333,
+        "areaM2": 58.85223163664341,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": 1780.8761800130208,
+        "z": 4561.678548177083,
+        "areaM2": 80.76996329426765,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": 1774.8160807291667,
+        "z": 4563.979166666667,
+        "areaM2": 80.76996329426765,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": 1752.714599609375,
+        "z": 4537.9560546875,
+        "areaM2": 55.001467913389206,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": 1752.0920003255208,
+        "z": 4542.8837890625,
+        "areaM2": 55.01544937491417,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": 1358.2440999348958,
+        "z": 4939.910319010417,
+        "areaM2": 57.926374316215515,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": 1355.7794596354167,
+        "z": 4945.283365885417,
+        "areaM2": 57.922264128923416,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": 1351.0473225911458,
+        "z": 4939.8955078125,
+        "areaM2": 58.31174233555794,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": 1353.5005289713542,
+        "z": 4934.51123046875,
+        "areaM2": 58.31174233555794,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": 1346.3037516276042,
+        "z": 4934.496419270833,
+        "areaM2": 57.926374316215515,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": 1348.771240234375,
+        "z": 4929.123372395833,
+        "areaM2": 57.89933928847313,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": -294.74696858723956,
+        "z": 6705.044596354167,
+        "areaM2": 15.433321595191956,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": -291.9882100423177,
+        "z": 6704.569661458333,
+        "areaM2": 17.553927898406982,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": 127.63953145345052,
+        "z": 6907.18701171875,
+        "areaM2": 36.08451599627733,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": 131.52064005533853,
+        "z": 6905.643391927083,
+        "areaM2": 36.084677059203386,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": -447.57513427734375,
+        "z": 6536.13525390625,
+        "areaM2": 58.53928363323212,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": -472.72662353515625,
+        "z": 6542.93310546875,
+        "areaM2": 80.46334556490183,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": -454.05792236328125,
+        "z": 6532.973795572917,
+        "areaM2": 47.78595149517059,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": -465.5441589355469,
+        "z": 6536.2724609375,
+        "areaM2": 69.65330672264099,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": -0.3427024682362874,
+        "z": 6754.0107421875,
+        "areaM2": 40.01417142705759,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": -1.4793322881062825,
+        "z": 6749.884440104167,
+        "areaM2": 40.008385809953324,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": 1233.0463053385417,
+        "z": 7136.469075520833,
+        "areaM2": 71.30944210290909,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": 892.1973063151041,
+        "z": 7386.59033203125,
+        "areaM2": 24.206888899207115,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": 883.406982421875,
+        "z": 7381.710774739583,
+        "areaM2": 8.227895200252533,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": 889.8783365885416,
+        "z": 7384.731282552083,
+        "areaM2": 6.581422492861748,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      },
+      {
+        "x": 884.520751953125,
+        "z": 7381.758951822917,
+        "areaM2": 2.2634820342063904,
+        "water": false,
+        "nature": "wetland",
+        "natureId": "relation/1188416:0"
+      }
+    ]
+  },
+  "suspectParts": [
+    {
+      "id": "cat-002000100YJ39A_part1-0",
+      "kind": "yes",
+      "coordinate": [
+        -0.26632105,
+        39.632433175
+      ],
+      "water": false,
+      "heritage": [],
+      "nature": [
+        {
+          "kind": "wetland",
+          "id": "relation/1188416:0"
+        }
+      ],
+      "height": null,
+      "surfaceHeightEstimate": 10,
+      "levels": 3
+    },
+    {
+      "id": "cat-002000100YJ39A_part2-0",
+      "kind": "yes",
+      "coordinate": [
+        -0.26632635,
+        39.632574225
+      ],
+      "water": false,
+      "heritage": [],
+      "nature": [
+        {
+          "kind": "wetland",
+          "id": "relation/1188416:0"
+        }
+      ],
+      "height": null,
+      "surfaceHeightEstimate": 6,
+      "levels": 2
+    },
+    {
+      "id": "cat-002000100YJ39A_part3-0",
+      "kind": "yes",
+      "coordinate": [
+        -0.2664093454545455,
+        39.63258698181818
+      ],
+      "water": false,
+      "heritage": [],
+      "nature": [
+        {
+          "kind": "wetland",
+          "id": "relation/1188416:0"
+        }
+      ],
+      "height": null,
+      "surfaceHeightEstimate": 5,
+      "levels": 1
+    },
+    {
+      "id": "cat-46222A03700004_part1-0",
+      "kind": "yes",
+      "coordinate": [
+        -0.24885715,
+        39.627917675
+      ],
+      "water": false,
+      "heritage": [],
+      "nature": [
+        {
+          "kind": "wetland",
+          "id": "relation/1188416:0"
+        }
+      ],
+      "height": null,
+      "levels": 1
+    },
+    {
+      "id": "cat-46222A03800376_part1-0",
+      "kind": "yes",
+      "coordinate": [
+        -0.27103175,
+        39.6168213
+      ],
+      "water": false,
+      "heritage": [],
+      "nature": [
+        {
+          "kind": "wetland",
+          "id": "relation/1188416:0"
+        }
+      ],
+      "height": null,
+      "surfaceHeightEstimate": 4,
+      "levels": 1
+    },
+    {
+      "id": "cat-46222A03800411_part1-0",
+      "kind": "yes",
+      "coordinate": [
+        -0.2727443,
+        39.618399374999996
+      ],
+      "water": false,
+      "heritage": [],
+      "nature": [
+        {
+          "kind": "wetland",
+          "id": "relation/1188416:0"
+        }
+      ],
+      "height": null,
+      "surfaceHeightEstimate": 3,
+      "levels": 1
+    },
+    {
+      "id": "cat-46222A03800411_part2-0",
+      "kind": "yes",
+      "coordinate": [
+        -0.27270205000000003,
+        39.618472600000004
+      ],
+      "water": false,
+      "heritage": [],
+      "nature": [
+        {
+          "kind": "wetland",
+          "id": "relation/1188416:0"
+        }
+      ],
+      "height": null,
+      "surfaceHeightEstimate": 3,
+      "levels": 1
+    },
+    {
+      "id": "cat-46222A03900480_part1-0",
+      "kind": "yes",
+      "coordinate": [
+        -0.273518375,
+        39.61788475
+      ],
+      "water": false,
+      "heritage": [],
+      "nature": [
+        {
+          "kind": "wetland",
+          "id": "relation/1188416:0"
+        }
+      ],
+      "height": null,
+      "surfaceHeightEstimate": 3,
+      "levels": 1
+    },
+    {
+      "id": "cat-46222A03900480_part2-0",
+      "kind": "yes",
+      "coordinate": [
+        -0.2733209,
+        39.618019325
+      ],
+      "water": false,
+      "heritage": [],
+      "nature": [
+        {
+          "kind": "wetland",
+          "id": "relation/1188416:0"
+        }
+      ],
+      "height": null,
+      "surfaceHeightEstimate": 3,
+      "levels": 1
+    },
+    {
+      "id": "cat-46222A07700139_part2-0",
+      "kind": "yes",
+      "coordinate": [
+        -0.2572491,
+        39.6380116
+      ],
+      "water": false,
+      "heritage": [],
+      "nature": [
+        {
+          "kind": "wetland",
+          "id": "relation/1188416:0"
+        }
+      ],
+      "height": null,
+      "surfaceHeightEstimate": 3,
+      "levels": 1
+    },
+    {
+      "id": "cat-46222A07700140_part1-0",
+      "kind": "yes",
+      "coordinate": [
+        -0.257546075,
+        39.6382129
+      ],
+      "water": false,
+      "heritage": [],
+      "nature": [
+        {
+          "kind": "wetland",
+          "id": "relation/1188416:0"
+        }
+      ],
+      "height": null,
+      "surfaceHeightEstimate": 6,
+      "levels": 2
+    },
+    {
+      "id": "cat-46222A07700147_part1-0",
+      "kind": "yes",
+      "coordinate": [
+        -0.26216105,
+        39.6346001
+      ],
+      "water": false,
+      "heritage": [],
+      "nature": [
+        {
+          "kind": "wetland",
+          "id": "relation/1188416:0"
+        }
+      ],
+      "height": null,
+      "surfaceHeightEstimate": 9,
+      "levels": 2
+    },
+    {
+      "id": "cat-46222A07700147_part2-0",
+      "kind": "yes",
+      "coordinate": [
+        -0.26221635,
+        39.63464855
+      ],
+      "water": false,
+      "heritage": [],
+      "nature": [
+        {
+          "kind": "wetland",
+          "id": "relation/1188416:0"
+        }
+      ],
+      "height": null,
+      "surfaceHeightEstimate": 10,
+      "levels": 3
+    },
+    {
+      "id": "cat-46222A07700147_part3-0",
+      "kind": "yes",
+      "coordinate": [
+        -0.262271625,
+        39.634697
+      ],
+      "water": false,
+      "heritage": [],
+      "nature": [
+        {
+          "kind": "wetland",
+          "id": "relation/1188416:0"
+        }
+      ],
+      "height": null,
+      "surfaceHeightEstimate": 8.2,
+      "levels": 1
+    },
+    {
+      "id": "cat-000930100YJ38G_part1-0",
+      "kind": "yes",
+      "coordinate": [
+        -0.28142367500000004,
+        39.618770175
+      ],
+      "water": false,
+      "heritage": [],
+      "nature": [
+        {
+          "kind": "wetland",
+          "id": "relation/1188416:0"
+        }
+      ],
+      "height": null,
+      "surfaceHeightEstimate": 3,
+      "levels": 1
+    },
+    {
+      "id": "cat-001420100YJ38G_part1-0",
+      "kind": "yes",
+      "coordinate": [
+        -0.27648754999999997,
+        39.6169589
+      ],
+      "water": false,
+      "heritage": [],
+      "nature": [
+        {
+          "kind": "wetland",
+          "id": "relation/1188416:0"
+        }
+      ],
+      "height": null,
+      "surfaceHeightEstimate": 5,
+      "levels": 1
+    },
+    {
+      "id": "cat-46207A00800036_part1-0",
+      "kind": "yes",
+      "coordinate": [
+        -0.28336886666666666,
+        39.62024486666667
+      ],
+      "water": false,
+      "heritage": [],
+      "nature": [
+        {
+          "kind": "wetland",
+          "id": "relation/1188416:0"
+        }
+      ],
+      "height": null,
+      "surfaceHeightEstimate": 2,
+      "levels": 1
+    },
+    {
+      "id": "cat-46207A00800227_part1-0",
+      "kind": "yes",
+      "coordinate": [
+        -0.278010625,
+        39.6183465
+      ],
+      "water": false,
+      "heritage": [],
+      "nature": [
+        {
+          "kind": "wetland",
+          "id": "relation/1188416:0"
+        }
+      ],
+      "height": null,
+      "surfaceHeightEstimate": 3.6,
+      "levels": 1
+    },
+    {
+      "id": "cat-46207A00900265_part1-0",
+      "kind": "yes",
+      "coordinate": [
+        -0.267643025,
+        39.6126687875
+      ],
+      "water": false,
+      "heritage": [],
+      "nature": [
+        {
+          "kind": "wetland",
+          "id": "relation/1188416:0"
+        }
+      ],
+      "height": null,
+      "levels": 1
+    },
+    {
+      "id": "cat-46207A00900422_part1-0",
+      "kind": "yes",
+      "coordinate": [
+        -0.27214530000000003,
+        39.615258075
+      ],
+      "water": false,
+      "heritage": [],
+      "nature": [
+        {
+          "kind": "wetland",
+          "id": "relation/1188416:0"
+        }
+      ],
+      "height": null,
+      "levels": 1
+    },
+    {
+      "id": "cat-5388302YJ3858N_part1-0",
+      "kind": "yes",
+      "coordinate": [
+        -0.2595704,
+        39.616288725000004
+      ],
+      "water": false,
+      "heritage": [],
+      "nature": [
+        {
+          "kind": "wetland",
+          "id": "relation/1188416:0"
+        }
+      ],
+      "height": null,
+      "surfaceHeightEstimate": 4,
+      "levels": 1
+    },
+    {
+      "id": "164649384",
+      "kind": "service",
+      "coordinate": [
+        -0.27240045,
+        39.6233508
+      ],
+      "water": false,
+      "heritage": [],
+      "nature": [
+        {
+          "kind": "wetland",
+          "id": "relation/1188416:0"
+        }
+      ],
+      "height": null,
+      "levels": null
+    },
+    {
+      "id": "164651541",
+      "kind": "public",
+      "coordinate": [
+        -0.26643436666666664,
+        39.63256158333333
+      ],
+      "water": false,
+      "heritage": [],
+      "nature": [
+        {
+          "kind": "wetland",
+          "id": "relation/1188416:0"
+        }
+      ],
+      "height": null,
+      "surfaceHeightEstimate": 7,
+      "levels": null
+    },
+    {
+      "id": "1134646146",
+      "kind": "roof",
+      "coordinate": [
+        -0.2562458,
+        39.62657642
+      ],
+      "water": false,
+      "heritage": [],
+      "nature": [
+        {
+          "kind": "wetland",
+          "id": "relation/1188416:0"
+        }
+      ],
+      "height": null,
+      "levels": null
+    },
+    {
+      "id": "1134646147",
+      "kind": "roof",
+      "coordinate": [
+        -0.25209975,
+        39.6248407
+      ],
+      "water": false,
+      "heritage": [],
+      "nature": [
+        {
+          "kind": "wetland",
+          "id": "relation/1188416:0"
+        }
+      ],
+      "height": null,
+      "levels": null
+    },
+    {
+      "id": "1134646154",
+      "kind": "roof",
+      "coordinate": [
+        -0.257409725,
+        39.631224375
+      ],
+      "water": false,
+      "heritage": [],
+      "nature": [
+        {
+          "kind": "wetland",
+          "id": "relation/1188416:0"
+        }
+      ],
+      "height": null,
+      "levels": null
+    },
+    {
+      "id": "1134646161",
+      "kind": "roof",
+      "coordinate": [
+        -0.266296175,
+        39.624474199999995
+      ],
+      "water": false,
+      "heritage": [],
+      "nature": [
+        {
+          "kind": "wetland",
+          "id": "relation/1188416:0"
+        }
+      ],
+      "height": null,
+      "levels": null
+    },
+    {
+      "id": "1134646166",
+      "kind": "roof",
+      "coordinate": [
+        -0.272876475,
+        39.62338375
+      ],
+      "water": false,
+      "heritage": [],
+      "nature": [
+        {
+          "kind": "wetland",
+          "id": "relation/1188416:0"
+        }
+      ],
+      "height": null,
+      "levels": null
+    }
+  ],
+  "treesInWater": 0,
+  "treesInLandscape": 0,
+  "times": {
+    "heritage": 14.713354000000038,
+    "urban": 77.403571,
+    "terrain": 1059.895205,
+    "city": 641.219895,
+    "audit": 207.4340699999998
+  },
+  "totalMs": 2001.0720670000003,
+  "memoryMb": 399.796875,
+  "scope": "Actual createCity geometry with current cartography, terrain and heritage exclusions. Counts are building parts, not necessarily distinct buildings. CPU checks do not validate GPU performance or texture appearance."
+}

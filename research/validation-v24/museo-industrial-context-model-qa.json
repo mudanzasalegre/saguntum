@@ -1,0 +1,156 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "pass": true,
+      "label": "Every context coordinate is finite",
+      "detail": {
+        "finite": true,
+        "collapsed": 0,
+        "total": 54848
+      }
+    },
+    {
+      "pass": true,
+      "label": "No degenerate rendered triangles",
+      "detail": {
+        "finite": true,
+        "collapsed": 0,
+        "total": 54848
+      }
+    },
+    {
+      "pass": true,
+      "label": "Eighteen mapped neighbouring parcels retain their69cadastral parts"
+    },
+    {
+      "pass": true,
+      "label": "Mapped courtyard holes survive roof triangulation"
+    },
+    {
+      "pass": true,
+      "label": "Two museum parts,69neighbours and2documented unrendered source parts have explicit owners"
+    },
+    {
+      "pass": true,
+      "label": "No source building ID is claimed by both museum and earlier contexts"
+    },
+    {
+      "pass": true,
+      "label": "Six neighbouring heritage owners are explicitly preserved"
+    },
+    {
+      "pass": true,
+      "label": "The context provides the agreed tour stop"
+    },
+    {
+      "pass": true,
+      "label": "Surroundings focus has consistent floor/elevation/local registration"
+    },
+    {
+      "pass": true,
+      "label": "Every rendered tree has a recorded reference-photo position"
+    },
+    {
+      "pass": true,
+      "label": "No undocumented external railway is added"
+    },
+    {
+      "pass": true,
+      "label": "All recorded source hashes match the current inputs"
+    },
+    {
+      "pass": true,
+      "label": "Ground rebinding releases old geometry without accumulating meshes"
+    },
+    {
+      "pass": true,
+      "label": "Ground rebinding preserves the museum datum"
+    },
+    {
+      "pass": true,
+      "label": "Every paved vertex and triangle interior follows the regional terrain",
+      "detail": {
+        "samples": 7266,
+        "maximumVertexErrorM": 0.000026649385690330485,
+        "maximumInteriorErrorM": 0.000017276640691538114
+      }
+    },
+    {
+      "pass": true,
+      "label": "Rebound geometry stays finite without collapsed triangles",
+      "detail": {
+        "finite": true,
+        "collapsed": 0,
+        "total": 54848
+      }
+    },
+    {
+      "pass": true,
+      "label": "Both surroundings cameras stay above final terrain",
+      "detail": {
+        "id": "museo-industrial-entorno",
+        "farY": 120.96284788000897,
+        "nearY": 78.96284788000897
+      }
+    },
+    {
+      "pass": true,
+      "label": "Layer reading follows the conjunto legend"
+    },
+    {
+      "pass": true,
+      "label": "Textured materials restore after thematic reading"
+    },
+    {
+      "pass": true,
+      "label": "Disposal is complete and idempotent"
+    }
+  ],
+  "stats": {
+    "buildingParts": 69,
+    "parentParcels": 18,
+    "sourceCoreParts": 2,
+    "withheldCadastralParts": 2,
+    "roadFragments": 20,
+    "pavingAreaM2": 25288.43,
+    "pavingVertices": 4971,
+    "pavingTriangles": 7267,
+    "trees": 30,
+    "streetLamps": 8,
+    "crossings": 5,
+    "railLengthM": 0,
+    "protectedHeritageOwners": 8,
+    "meshes": 16,
+    "triangles": 54848,
+    "fixedMuseumDatumM": 4.962847880008963,
+    "skippedTinyTriangles": 1
+  },
+  "crossings": [
+    {
+      "id": "museo-industrial-paso-0",
+      "stripes": 8,
+      "photoPosition": true
+    },
+    {
+      "id": "museo-industrial-paso-1",
+      "stripes": 8,
+      "photoPosition": true
+    },
+    {
+      "id": "museo-industrial-paso-2",
+      "stripes": 9,
+      "photoPosition": true
+    },
+    {
+      "id": "museo-industrial-paso-3",
+      "stripes": 9,
+      "photoPosition": true
+    },
+    {
+      "id": "museo-industrial-paso-5",
+      "stripes": 7,
+      "photoPosition": true
+    }
+  ]
+}

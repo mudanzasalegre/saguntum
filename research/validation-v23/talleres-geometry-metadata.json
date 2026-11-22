@@ -1,0 +1,4475 @@
+{
+  "stats": {
+    "modelVersion": "v23",
+    "meshes": 55,
+    "triangles": 175852,
+    "naves": 4,
+    "stops": 20,
+    "portals": 16,
+    "realWindowVoids": 88,
+    "clerestoryVoids": 110,
+    "openTrusses": 68,
+    "internalColumnRows": 3,
+    "columns": 45,
+    "documentedNominalFootprintMetres": [
+      120,
+      80
+    ],
+    "registeredEnvelopeMetres": [
+      79.85,
+      120.65
+    ],
+    "resourcesOwned": true,
+    "interpretiveGeometry": true
+  },
+  "qa": {
+    "baseY": 4,
+    "frame": {
+      "x": 5115.476783996572,
+      "z": 2524.520526000359,
+      "yaw": 1.0471975511965976
+    },
+    "floorY": 0.18,
+    "naves": [
+      {
+        "id": "nave-1",
+        "label": "Nave lateral sur",
+        "x0": -40.65,
+        "x1": -25.05,
+        "z0": -60.05,
+        "z1": 60.6,
+        "width": 15.599999999999998,
+        "centerX": -32.85,
+        "eave": 10.25,
+        "rise": 2.7,
+        "lantern": {
+          "width": 2.8,
+          "height": 1.22,
+          "length": 114.25,
+          "bottom": 12.565384615384616,
+          "eave": 13.649999999999999,
+          "peak": 14.17,
+          "z0": -56.849999999999994,
+          "z1": 57.4
+        },
+        "reportedClearWidth": 15,
+        "interpretiveRegistration": true,
+        "coordinates": [
+          [
+            -0.21913672884478488,
+            39.65627542706913
+          ],
+          [
+            -0.21904568777087033,
+            39.65639678887563
+          ],
+          [
+            -0.21782613463502973,
+            39.65585488265932
+          ],
+          [
+            -0.21791717570894428,
+            39.65573352085282
+          ]
+        ]
+      },
+      {
+        "id": "nave-2",
+        "label": "Nave central sur",
+        "x0": -25.05,
+        "x1": -0.725,
+        "z0": -60.05,
+        "z1": 60.6,
+        "width": 24.325,
+        "centerX": -12.887500000000001,
+        "eave": 14.1,
+        "rise": 3.8,
+        "lantern": {
+          "width": 4,
+          "height": 1.22,
+          "length": 114.25,
+          "bottom": 17.37512846865365,
+          "eave": 18.599999999999998,
+          "peak": 19.119999999999997,
+          "z0": -56.849999999999994,
+          "z1": 57.4
+        },
+        "reportedClearWidth": 22.5,
+        "interpretiveRegistration": true,
+        "coordinates": [
+          [
+            -0.21904568777087033,
+            39.65639678887563
+          ],
+          [
+            -0.2189037278911927,
+            39.65658602771813
+          ],
+          [
+            -0.2176841747553521,
+            39.656044121501814
+          ],
+          [
+            -0.21782613463502973,
+            39.65585488265932
+          ]
+        ]
+      },
+      {
+        "id": "nave-3",
+        "label": "Nave central norte",
+        "x0": -0.725,
+        "x1": 23.6,
+        "z0": -60.05,
+        "z1": 60.6,
+        "width": 24.325000000000003,
+        "centerX": 11.4375,
+        "eave": 14.1,
+        "rise": 3.8,
+        "lantern": {
+          "width": 4,
+          "height": 1.22,
+          "length": 114.25,
+          "bottom": 17.37512846865365,
+          "eave": 18.599999999999998,
+          "peak": 19.119999999999997,
+          "z0": -56.849999999999994,
+          "z1": 57.4
+        },
+        "reportedClearWidth": 22.5,
+        "interpretiveRegistration": true,
+        "coordinates": [
+          [
+            -0.2189037278911927,
+            39.65658602771813
+          ],
+          [
+            -0.21876176801151503,
+            39.65677526656063
+          ],
+          [
+            -0.21754221487567443,
+            39.65623336034432
+          ],
+          [
+            -0.2176841747553521,
+            39.656044121501814
+          ]
+        ]
+      },
+      {
+        "id": "nave-4",
+        "label": "Nave lateral norte",
+        "x0": 23.6,
+        "x1": 39.2,
+        "z0": -60.05,
+        "z1": 60.6,
+        "width": 15.600000000000001,
+        "centerX": 31.400000000000002,
+        "eave": 10.25,
+        "rise": 2.7,
+        "lantern": {
+          "width": 2.8,
+          "height": 1.22,
+          "length": 114.25,
+          "bottom": 12.565384615384616,
+          "eave": 13.649999999999999,
+          "peak": 14.17,
+          "z0": -56.849999999999994,
+          "z1": 57.4
+        },
+        "reportedClearWidth": 15,
+        "interpretiveRegistration": true,
+        "coordinates": [
+          [
+            -0.21876176801151503,
+            39.65677526656063
+          ],
+          [
+            -0.21867072693760048,
+            39.65689662836712
+          ],
+          [
+            -0.21745117380175988,
+            39.65635472215081
+          ],
+          [
+            -0.21754221487567443,
+            39.65623336034432
+          ]
+        ]
+      }
+    ],
+    "portals": [
+      {
+        "id": "porton-oeste-1-1",
+        "nave": "nave-1",
+        "center": [
+          -32.85,
+          1.8299999999999998,
+          -60.05
+        ],
+        "bottom": 0.18,
+        "width": 3.75,
+        "height": 3.85,
+        "localNormal": [
+          0,
+          0,
+          -1
+        ],
+        "clearHeight": 1.9549999999999998,
+        "physicalVoid": true
+      },
+      {
+        "id": "porton-oeste-2-2",
+        "nave": "nave-2",
+        "center": [
+          -20.372115384615384,
+          1.8299999999999998,
+          -60.05
+        ],
+        "bottom": 0.18,
+        "width": 3.8,
+        "height": 4.18,
+        "localNormal": [
+          0,
+          0,
+          -1
+        ],
+        "clearHeight": 2.26,
+        "physicalVoid": true
+      },
+      {
+        "id": "porton-oeste-2-3",
+        "nave": "nave-2",
+        "center": [
+          -12.887500000000001,
+          1.8299999999999998,
+          -60.05
+        ],
+        "bottom": 0.18,
+        "width": 3.8,
+        "height": 4.18,
+        "localNormal": [
+          0,
+          0,
+          -1
+        ],
+        "clearHeight": 2.26,
+        "physicalVoid": true
+      },
+      {
+        "id": "porton-oeste-2-4",
+        "nave": "nave-2",
+        "center": [
+          -5.402884615384616,
+          1.8299999999999998,
+          -60.05
+        ],
+        "bottom": 0.18,
+        "width": 3.8,
+        "height": 4.18,
+        "localNormal": [
+          0,
+          0,
+          -1
+        ],
+        "clearHeight": 2.26,
+        "physicalVoid": true
+      },
+      {
+        "id": "porton-oeste-3-5",
+        "nave": "nave-3",
+        "center": [
+          3.9528846153846144,
+          1.8299999999999998,
+          -60.05
+        ],
+        "bottom": 0.18,
+        "width": 3.8,
+        "height": 4.18,
+        "localNormal": [
+          0,
+          0,
+          -1
+        ],
+        "clearHeight": 2.26,
+        "physicalVoid": true
+      },
+      {
+        "id": "porton-oeste-3-6",
+        "nave": "nave-3",
+        "center": [
+          11.4375,
+          1.8299999999999998,
+          -60.05
+        ],
+        "bottom": 0.18,
+        "width": 3.8,
+        "height": 4.18,
+        "localNormal": [
+          0,
+          0,
+          -1
+        ],
+        "clearHeight": 2.26,
+        "physicalVoid": true
+      },
+      {
+        "id": "porton-oeste-3-7",
+        "nave": "nave-3",
+        "center": [
+          18.922115384615385,
+          1.8299999999999998,
+          -60.05
+        ],
+        "bottom": 0.18,
+        "width": 3.8,
+        "height": 4.18,
+        "localNormal": [
+          0,
+          0,
+          -1
+        ],
+        "clearHeight": 2.26,
+        "physicalVoid": true
+      },
+      {
+        "id": "porton-oeste-4-8",
+        "nave": "nave-4",
+        "center": [
+          31.400000000000002,
+          1.8299999999999998,
+          -60.05
+        ],
+        "bottom": 0.18,
+        "width": 3.75,
+        "height": 3.85,
+        "localNormal": [
+          0,
+          0,
+          -1
+        ],
+        "clearHeight": 1.9549999999999998,
+        "physicalVoid": true
+      },
+      {
+        "id": "porton-este-1-9",
+        "nave": "nave-1",
+        "center": [
+          -32.85,
+          1.8299999999999998,
+          60.6
+        ],
+        "bottom": 0.18,
+        "width": 3.75,
+        "height": 3.85,
+        "localNormal": [
+          0,
+          0,
+          1
+        ],
+        "clearHeight": 1.9549999999999998,
+        "physicalVoid": true
+      },
+      {
+        "id": "porton-este-2-10",
+        "nave": "nave-2",
+        "center": [
+          -20.372115384615384,
+          1.8299999999999998,
+          60.6
+        ],
+        "bottom": 0.18,
+        "width": 3.8,
+        "height": 4.18,
+        "localNormal": [
+          0,
+          0,
+          1
+        ],
+        "clearHeight": 2.26,
+        "physicalVoid": true
+      },
+      {
+        "id": "porton-este-2-11",
+        "nave": "nave-2",
+        "center": [
+          -12.887500000000001,
+          1.8299999999999998,
+          60.6
+        ],
+        "bottom": 0.18,
+        "width": 3.8,
+        "height": 4.18,
+        "localNormal": [
+          0,
+          0,
+          1
+        ],
+        "clearHeight": 2.26,
+        "physicalVoid": true
+      },
+      {
+        "id": "porton-este-2-12",
+        "nave": "nave-2",
+        "center": [
+          -5.402884615384616,
+          1.8299999999999998,
+          60.6
+        ],
+        "bottom": 0.18,
+        "width": 3.8,
+        "height": 4.18,
+        "localNormal": [
+          0,
+          0,
+          1
+        ],
+        "clearHeight": 2.26,
+        "physicalVoid": true
+      },
+      {
+        "id": "porton-este-3-13",
+        "nave": "nave-3",
+        "center": [
+          3.9528846153846144,
+          1.8299999999999998,
+          60.6
+        ],
+        "bottom": 0.18,
+        "width": 3.8,
+        "height": 4.18,
+        "localNormal": [
+          0,
+          0,
+          1
+        ],
+        "clearHeight": 2.26,
+        "physicalVoid": true
+      },
+      {
+        "id": "porton-este-3-14",
+        "nave": "nave-3",
+        "center": [
+          11.4375,
+          1.8299999999999998,
+          60.6
+        ],
+        "bottom": 0.18,
+        "width": 3.8,
+        "height": 4.18,
+        "localNormal": [
+          0,
+          0,
+          1
+        ],
+        "clearHeight": 2.26,
+        "physicalVoid": true
+      },
+      {
+        "id": "porton-este-3-15",
+        "nave": "nave-3",
+        "center": [
+          18.922115384615385,
+          1.8299999999999998,
+          60.6
+        ],
+        "bottom": 0.18,
+        "width": 3.8,
+        "height": 4.18,
+        "localNormal": [
+          0,
+          0,
+          1
+        ],
+        "clearHeight": 2.26,
+        "physicalVoid": true
+      },
+      {
+        "id": "porton-este-4-16",
+        "nave": "nave-4",
+        "center": [
+          31.400000000000002,
+          1.8299999999999998,
+          60.6
+        ],
+        "bottom": 0.18,
+        "width": 3.75,
+        "height": 3.85,
+        "localNormal": [
+          0,
+          0,
+          1
+        ],
+        "clearHeight": 1.9549999999999998,
+        "physicalVoid": true
+      }
+    ],
+    "windows": [
+      {
+        "type": "gable",
+        "nave": "nave-1",
+        "cx": -37.218,
+        "bottom": 4.48,
+        "width": 2.22,
+        "height": 4.3,
+        "z": -60.05,
+        "physicalVoid": true
+      },
+      {
+        "type": "gable",
+        "nave": "nave-1",
+        "cx": -32.85,
+        "bottom": 4.48,
+        "width": 2.22,
+        "height": 4.3,
+        "z": -60.05,
+        "physicalVoid": true
+      },
+      {
+        "type": "gable",
+        "nave": "nave-1",
+        "cx": -28.482000000000003,
+        "bottom": 4.48,
+        "width": 2.22,
+        "height": 4.3,
+        "z": -60.05,
+        "physicalVoid": true
+      },
+      {
+        "type": "gable",
+        "nave": "nave-2",
+        "cx": -19.698500000000003,
+        "bottom": 5.35,
+        "width": 2.95,
+        "height": 6.95,
+        "z": -60.05,
+        "physicalVoid": true
+      },
+      {
+        "type": "gable",
+        "nave": "nave-2",
+        "cx": -12.887500000000001,
+        "bottom": 5.35,
+        "width": 2.95,
+        "height": 6.95,
+        "z": -60.05,
+        "physicalVoid": true
+      },
+      {
+        "type": "gable",
+        "nave": "nave-2",
+        "cx": -6.0765,
+        "bottom": 5.35,
+        "width": 2.95,
+        "height": 6.95,
+        "z": -60.05,
+        "physicalVoid": true
+      },
+      {
+        "type": "gable",
+        "nave": "nave-3",
+        "cx": 4.626499999999998,
+        "bottom": 5.35,
+        "width": 2.95,
+        "height": 6.95,
+        "z": -60.05,
+        "physicalVoid": true
+      },
+      {
+        "type": "gable",
+        "nave": "nave-3",
+        "cx": 11.4375,
+        "bottom": 5.35,
+        "width": 2.95,
+        "height": 6.95,
+        "z": -60.05,
+        "physicalVoid": true
+      },
+      {
+        "type": "gable",
+        "nave": "nave-3",
+        "cx": 18.2485,
+        "bottom": 5.35,
+        "width": 2.95,
+        "height": 6.95,
+        "z": -60.05,
+        "physicalVoid": true
+      },
+      {
+        "type": "gable",
+        "nave": "nave-4",
+        "cx": 27.032,
+        "bottom": 4.48,
+        "width": 2.22,
+        "height": 4.3,
+        "z": -60.05,
+        "physicalVoid": true
+      },
+      {
+        "type": "gable",
+        "nave": "nave-4",
+        "cx": 31.400000000000002,
+        "bottom": 4.48,
+        "width": 2.22,
+        "height": 4.3,
+        "z": -60.05,
+        "physicalVoid": true
+      },
+      {
+        "type": "gable",
+        "nave": "nave-4",
+        "cx": 35.768,
+        "bottom": 4.48,
+        "width": 2.22,
+        "height": 4.3,
+        "z": -60.05,
+        "physicalVoid": true
+      },
+      {
+        "type": "gable",
+        "nave": "nave-1",
+        "cx": -37.218,
+        "bottom": 4.48,
+        "width": 2.22,
+        "height": 4.3,
+        "z": 60.6,
+        "physicalVoid": true
+      },
+      {
+        "type": "gable",
+        "nave": "nave-1",
+        "cx": -32.85,
+        "bottom": 4.48,
+        "width": 2.22,
+        "height": 4.3,
+        "z": 60.6,
+        "physicalVoid": true
+      },
+      {
+        "type": "gable",
+        "nave": "nave-1",
+        "cx": -28.482000000000003,
+        "bottom": 4.48,
+        "width": 2.22,
+        "height": 4.3,
+        "z": 60.6,
+        "physicalVoid": true
+      },
+      {
+        "type": "gable",
+        "nave": "nave-2",
+        "cx": -19.698500000000003,
+        "bottom": 5.35,
+        "width": 2.95,
+        "height": 6.95,
+        "z": 60.6,
+        "physicalVoid": true
+      },
+      {
+        "type": "gable",
+        "nave": "nave-2",
+        "cx": -12.887500000000001,
+        "bottom": 5.35,
+        "width": 2.95,
+        "height": 6.95,
+        "z": 60.6,
+        "physicalVoid": true
+      },
+      {
+        "type": "gable",
+        "nave": "nave-2",
+        "cx": -6.0765,
+        "bottom": 5.35,
+        "width": 2.95,
+        "height": 6.95,
+        "z": 60.6,
+        "physicalVoid": true
+      },
+      {
+        "type": "gable",
+        "nave": "nave-3",
+        "cx": 4.626499999999998,
+        "bottom": 5.35,
+        "width": 2.95,
+        "height": 6.95,
+        "z": 60.6,
+        "physicalVoid": true
+      },
+      {
+        "type": "gable",
+        "nave": "nave-3",
+        "cx": 11.4375,
+        "bottom": 5.35,
+        "width": 2.95,
+        "height": 6.95,
+        "z": 60.6,
+        "physicalVoid": true
+      },
+      {
+        "type": "gable",
+        "nave": "nave-3",
+        "cx": 18.2485,
+        "bottom": 5.35,
+        "width": 2.95,
+        "height": 6.95,
+        "z": 60.6,
+        "physicalVoid": true
+      },
+      {
+        "type": "gable",
+        "nave": "nave-4",
+        "cx": 27.032,
+        "bottom": 4.48,
+        "width": 2.22,
+        "height": 4.3,
+        "z": 60.6,
+        "physicalVoid": true
+      },
+      {
+        "type": "gable",
+        "nave": "nave-4",
+        "cx": 31.400000000000002,
+        "bottom": 4.48,
+        "width": 2.22,
+        "height": 4.3,
+        "z": 60.6,
+        "physicalVoid": true
+      },
+      {
+        "type": "gable",
+        "nave": "nave-4",
+        "cx": 35.768,
+        "bottom": 4.48,
+        "width": 2.22,
+        "height": 4.3,
+        "z": 60.6,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": -40.65,
+        "z": -57.459687499999994,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": -40.65,
+        "z": -55.099687499999995,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": -40.65,
+        "z": -49.919062499999995,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": -40.65,
+        "z": -47.559062499999996,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": -40.65,
+        "z": -42.3784375,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": -40.65,
+        "z": -40.0184375,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": -40.65,
+        "z": -34.83781249999999,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": -40.65,
+        "z": -32.47781249999999,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": -40.65,
+        "z": -27.297187499999993,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": -40.65,
+        "z": -24.937187499999993,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": -40.65,
+        "z": -19.756562499999994,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": -40.65,
+        "z": -17.396562499999995,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": -40.65,
+        "z": -12.215937499999995,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": -40.65,
+        "z": -9.855937499999996,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": -40.65,
+        "z": -4.675312499999997,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": -40.65,
+        "z": -2.3153124999999974,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": -40.65,
+        "z": 2.865312500000009,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": -40.65,
+        "z": 5.225312500000008,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": -40.65,
+        "z": 10.4059375,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": -40.65,
+        "z": 12.7659375,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": -40.65,
+        "z": 17.946562500000006,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": -40.65,
+        "z": 20.306562500000005,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": -40.65,
+        "z": 25.48718750000001,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": -40.65,
+        "z": 27.84718750000001,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": -40.65,
+        "z": 33.0278125,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": -40.65,
+        "z": 35.3878125,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": -40.65,
+        "z": 40.56843750000001,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": -40.65,
+        "z": 42.92843750000001,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": -40.65,
+        "z": 48.109062500000014,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": -40.65,
+        "z": 50.469062500000014,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": -40.65,
+        "z": 55.649687500000006,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": -40.65,
+        "z": 58.009687500000005,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": 39.2,
+        "z": -57.459687499999994,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": 39.2,
+        "z": -55.099687499999995,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": 39.2,
+        "z": -49.919062499999995,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": 39.2,
+        "z": -47.559062499999996,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": 39.2,
+        "z": -42.3784375,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": 39.2,
+        "z": -40.0184375,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": 39.2,
+        "z": -34.83781249999999,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": 39.2,
+        "z": -32.47781249999999,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": 39.2,
+        "z": -27.297187499999993,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": 39.2,
+        "z": -24.937187499999993,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": 39.2,
+        "z": -19.756562499999994,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": 39.2,
+        "z": -17.396562499999995,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": 39.2,
+        "z": -12.215937499999995,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": 39.2,
+        "z": -9.855937499999996,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": 39.2,
+        "z": -4.675312499999997,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": 39.2,
+        "z": -2.3153124999999974,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": 39.2,
+        "z": 2.865312500000009,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": 39.2,
+        "z": 5.225312500000008,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": 39.2,
+        "z": 10.4059375,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": 39.2,
+        "z": 12.7659375,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": 39.2,
+        "z": 17.946562500000006,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": 39.2,
+        "z": 20.306562500000005,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": 39.2,
+        "z": 25.48718750000001,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": 39.2,
+        "z": 27.84718750000001,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": 39.2,
+        "z": 33.0278125,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": 39.2,
+        "z": 35.3878125,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": 39.2,
+        "z": 40.56843750000001,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": 39.2,
+        "z": 42.92843750000001,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": 39.2,
+        "z": 48.109062500000014,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": 39.2,
+        "z": 50.469062500000014,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": 39.2,
+        "z": 55.649687500000006,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      },
+      {
+        "type": "lateral",
+        "x": 39.2,
+        "z": 58.009687500000005,
+        "bottom": 2.72,
+        "width": 1.88,
+        "height": 6.45,
+        "physicalVoid": true
+      }
+    ],
+    "clerestories": [
+      {
+        "x": -25.05,
+        "z": -58.449999999999996,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": -56.269999999999996,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": -54.089999999999996,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": -51.91,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": -49.73,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": -47.55,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": -45.37,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": -43.19,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": -41.01,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": -38.83,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": -36.65,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": -34.47,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": -32.29,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": -30.11,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": -27.93,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": -25.75,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": -23.57,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": -21.39,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": -19.21,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": -17.03,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": -14.850000000000001,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": -12.670000000000002,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": -10.490000000000002,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": -8.310000000000002,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": -6.130000000000003,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": -3.9500000000000024,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": -1.7700000000000022,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": 0.4099999999999979,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": 2.589999999999998,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": 4.769999999999998,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": 6.9499999999999975,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": 9.129999999999997,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": 11.309999999999997,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": 13.489999999999997,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": 15.669999999999996,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": 17.849999999999998,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": 20.029999999999998,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": 22.209999999999997,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": 24.389999999999997,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": 26.569999999999997,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": 28.749999999999996,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": 30.929999999999996,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": 33.11,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": 35.29,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": 37.47,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": 39.65,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": 41.83,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": 44.01,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": 46.19,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": 48.37,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": 50.55,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": 52.73,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": 54.91,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": 57.089999999999996,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": -25.05,
+        "z": 59.269999999999996,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": -58.449999999999996,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": -56.269999999999996,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": -54.089999999999996,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": -51.91,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": -49.73,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": -47.55,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": -45.37,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": -43.19,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": -41.01,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": -38.83,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": -36.65,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": -34.47,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": -32.29,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": -30.11,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": -27.93,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": -25.75,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": -23.57,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": -21.39,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": -19.21,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": -17.03,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": -14.850000000000001,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": -12.670000000000002,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": -10.490000000000002,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": -8.310000000000002,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": -6.130000000000003,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": -3.9500000000000024,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": -1.7700000000000022,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": 0.4099999999999979,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": 2.589999999999998,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": 4.769999999999998,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": 6.9499999999999975,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": 9.129999999999997,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": 11.309999999999997,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": 13.489999999999997,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": 15.669999999999996,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": 17.849999999999998,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": 20.029999999999998,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": 22.209999999999997,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": 24.389999999999997,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": 26.569999999999997,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": 28.749999999999996,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": 30.929999999999996,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": 33.11,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": 35.29,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": 37.47,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": 39.65,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": 41.83,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": 44.01,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": 46.19,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": 48.37,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": 50.55,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": 52.73,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": 54.91,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": 57.089999999999996,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      },
+      {
+        "x": 23.6,
+        "z": 59.269999999999996,
+        "bottom": 10.73,
+        "width": 1.3,
+        "height": 2.6,
+        "physicalVoid": true
+      }
+    ],
+    "columns": [
+      {
+        "id": "pilar-1-1",
+        "x": -25.05,
+        "z": -52.509375,
+        "height": 13.92,
+        "type": "concrete-jacket",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-1-2",
+        "x": -25.05,
+        "z": -44.96875,
+        "height": 13.92,
+        "type": "concrete-jacket",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-1-3",
+        "x": -25.05,
+        "z": -37.428124999999994,
+        "height": 13.92,
+        "type": "concrete-jacket",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-1-4",
+        "x": -25.05,
+        "z": -29.887499999999996,
+        "height": 13.92,
+        "type": "concrete-jacket",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-1-5",
+        "x": -25.05,
+        "z": -22.346874999999997,
+        "height": 13.92,
+        "type": "concrete-jacket",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-1-6",
+        "x": -25.05,
+        "z": -14.806249999999991,
+        "height": 13.92,
+        "type": "concrete-jacket",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-1-7",
+        "x": -25.05,
+        "z": -7.265624999999993,
+        "height": 13.92,
+        "type": "concrete-jacket",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-1-8",
+        "x": -25.05,
+        "z": 0.2750000000000057,
+        "height": 13.92,
+        "type": "concrete-jacket",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-1-9",
+        "x": -25.05,
+        "z": 7.815625000000011,
+        "height": 13.92,
+        "type": "concrete-jacket",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-1-10",
+        "x": -25.05,
+        "z": 15.356250000000003,
+        "height": 13.92,
+        "type": "concrete-jacket",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-1-11",
+        "x": -25.05,
+        "z": 22.89687500000001,
+        "height": 13.92,
+        "type": "steel-lattice",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-1-12",
+        "x": -25.05,
+        "z": 30.437500000000014,
+        "height": 13.92,
+        "type": "steel-lattice",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-1-13",
+        "x": -25.05,
+        "z": 37.978125000000006,
+        "height": 13.92,
+        "type": "steel-lattice",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-1-14",
+        "x": -25.05,
+        "z": 45.51875000000001,
+        "height": 13.92,
+        "type": "steel-lattice",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-1-15",
+        "x": -25.05,
+        "z": 53.059375,
+        "height": 13.92,
+        "type": "steel-lattice",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-2-1",
+        "x": -0.725,
+        "z": -52.509375,
+        "height": 13.92,
+        "type": "concrete-jacket",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-2-2",
+        "x": -0.725,
+        "z": -44.96875,
+        "height": 13.92,
+        "type": "concrete-jacket",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-2-3",
+        "x": -0.725,
+        "z": -37.428124999999994,
+        "height": 13.92,
+        "type": "concrete-jacket",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-2-4",
+        "x": -0.725,
+        "z": -29.887499999999996,
+        "height": 13.92,
+        "type": "concrete-jacket",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-2-5",
+        "x": -0.725,
+        "z": -22.346874999999997,
+        "height": 13.92,
+        "type": "concrete-jacket",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-2-6",
+        "x": -0.725,
+        "z": -14.806249999999991,
+        "height": 13.92,
+        "type": "concrete-jacket",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-2-7",
+        "x": -0.725,
+        "z": -7.265624999999993,
+        "height": 13.92,
+        "type": "concrete-jacket",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-2-8",
+        "x": -0.725,
+        "z": 0.2750000000000057,
+        "height": 13.92,
+        "type": "concrete-jacket",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-2-9",
+        "x": -0.725,
+        "z": 7.815625000000011,
+        "height": 13.92,
+        "type": "concrete-jacket",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-2-10",
+        "x": -0.725,
+        "z": 15.356250000000003,
+        "height": 13.92,
+        "type": "concrete-jacket",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-2-11",
+        "x": -0.725,
+        "z": 22.89687500000001,
+        "height": 13.92,
+        "type": "steel-lattice",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-2-12",
+        "x": -0.725,
+        "z": 30.437500000000014,
+        "height": 13.92,
+        "type": "steel-lattice",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-2-13",
+        "x": -0.725,
+        "z": 37.978125000000006,
+        "height": 13.92,
+        "type": "steel-lattice",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-2-14",
+        "x": -0.725,
+        "z": 45.51875000000001,
+        "height": 13.92,
+        "type": "steel-lattice",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-2-15",
+        "x": -0.725,
+        "z": 53.059375,
+        "height": 13.92,
+        "type": "steel-lattice",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-3-1",
+        "x": 23.6,
+        "z": -52.509375,
+        "height": 13.92,
+        "type": "concrete-jacket",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-3-2",
+        "x": 23.6,
+        "z": -44.96875,
+        "height": 13.92,
+        "type": "concrete-jacket",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-3-3",
+        "x": 23.6,
+        "z": -37.428124999999994,
+        "height": 13.92,
+        "type": "concrete-jacket",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-3-4",
+        "x": 23.6,
+        "z": -29.887499999999996,
+        "height": 13.92,
+        "type": "concrete-jacket",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-3-5",
+        "x": 23.6,
+        "z": -22.346874999999997,
+        "height": 13.92,
+        "type": "concrete-jacket",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-3-6",
+        "x": 23.6,
+        "z": -14.806249999999991,
+        "height": 13.92,
+        "type": "concrete-jacket",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-3-7",
+        "x": 23.6,
+        "z": -7.265624999999993,
+        "height": 13.92,
+        "type": "concrete-jacket",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-3-8",
+        "x": 23.6,
+        "z": 0.2750000000000057,
+        "height": 13.92,
+        "type": "concrete-jacket",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-3-9",
+        "x": 23.6,
+        "z": 7.815625000000011,
+        "height": 13.92,
+        "type": "concrete-jacket",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-3-10",
+        "x": 23.6,
+        "z": 15.356250000000003,
+        "height": 13.92,
+        "type": "concrete-jacket",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-3-11",
+        "x": 23.6,
+        "z": 22.89687500000001,
+        "height": 13.92,
+        "type": "steel-lattice",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-3-12",
+        "x": 23.6,
+        "z": 30.437500000000014,
+        "height": 13.92,
+        "type": "steel-lattice",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-3-13",
+        "x": 23.6,
+        "z": 37.978125000000006,
+        "height": 13.92,
+        "type": "steel-lattice",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-3-14",
+        "x": 23.6,
+        "z": 45.51875000000001,
+        "height": 13.92,
+        "type": "steel-lattice",
+        "positionInterpretive": true
+      },
+      {
+        "id": "pilar-3-15",
+        "x": 23.6,
+        "z": 53.059375,
+        "height": 13.92,
+        "type": "steel-lattice",
+        "positionInterpretive": true
+      }
+    ],
+    "trusses": [
+      {
+        "nave": "nave-1",
+        "z": -60.05,
+        "width": 15.599999999999998,
+        "eave": 10.25,
+        "peak": 12.95,
+        "bottomChord": 9.95,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-1",
+        "z": -52.509375,
+        "width": 15.599999999999998,
+        "eave": 10.25,
+        "peak": 12.95,
+        "bottomChord": 9.95,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-1",
+        "z": -44.96875,
+        "width": 15.599999999999998,
+        "eave": 10.25,
+        "peak": 12.95,
+        "bottomChord": 9.95,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-1",
+        "z": -37.428124999999994,
+        "width": 15.599999999999998,
+        "eave": 10.25,
+        "peak": 12.95,
+        "bottomChord": 9.95,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-1",
+        "z": -29.887499999999996,
+        "width": 15.599999999999998,
+        "eave": 10.25,
+        "peak": 12.95,
+        "bottomChord": 9.95,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-1",
+        "z": -22.346874999999997,
+        "width": 15.599999999999998,
+        "eave": 10.25,
+        "peak": 12.95,
+        "bottomChord": 9.95,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-1",
+        "z": -14.806249999999991,
+        "width": 15.599999999999998,
+        "eave": 10.25,
+        "peak": 12.95,
+        "bottomChord": 9.95,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-1",
+        "z": -7.265624999999993,
+        "width": 15.599999999999998,
+        "eave": 10.25,
+        "peak": 12.95,
+        "bottomChord": 9.95,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-1",
+        "z": 0.2750000000000057,
+        "width": 15.599999999999998,
+        "eave": 10.25,
+        "peak": 12.95,
+        "bottomChord": 9.95,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-1",
+        "z": 7.815625000000011,
+        "width": 15.599999999999998,
+        "eave": 10.25,
+        "peak": 12.95,
+        "bottomChord": 9.95,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-1",
+        "z": 15.356250000000003,
+        "width": 15.599999999999998,
+        "eave": 10.25,
+        "peak": 12.95,
+        "bottomChord": 9.95,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-1",
+        "z": 22.89687500000001,
+        "width": 15.599999999999998,
+        "eave": 10.25,
+        "peak": 12.95,
+        "bottomChord": 9.95,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-1",
+        "z": 30.437500000000014,
+        "width": 15.599999999999998,
+        "eave": 10.25,
+        "peak": 12.95,
+        "bottomChord": 9.95,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-1",
+        "z": 37.978125000000006,
+        "width": 15.599999999999998,
+        "eave": 10.25,
+        "peak": 12.95,
+        "bottomChord": 9.95,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-1",
+        "z": 45.51875000000001,
+        "width": 15.599999999999998,
+        "eave": 10.25,
+        "peak": 12.95,
+        "bottomChord": 9.95,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-1",
+        "z": 53.059375,
+        "width": 15.599999999999998,
+        "eave": 10.25,
+        "peak": 12.95,
+        "bottomChord": 9.95,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-1",
+        "z": 60.60000000000001,
+        "width": 15.599999999999998,
+        "eave": 10.25,
+        "peak": 12.95,
+        "bottomChord": 9.95,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-2",
+        "z": -60.05,
+        "width": 24.325,
+        "eave": 14.1,
+        "peak": 17.9,
+        "bottomChord": 13.799999999999999,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-2",
+        "z": -52.509375,
+        "width": 24.325,
+        "eave": 14.1,
+        "peak": 17.9,
+        "bottomChord": 13.799999999999999,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-2",
+        "z": -44.96875,
+        "width": 24.325,
+        "eave": 14.1,
+        "peak": 17.9,
+        "bottomChord": 13.799999999999999,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-2",
+        "z": -37.428124999999994,
+        "width": 24.325,
+        "eave": 14.1,
+        "peak": 17.9,
+        "bottomChord": 13.799999999999999,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-2",
+        "z": -29.887499999999996,
+        "width": 24.325,
+        "eave": 14.1,
+        "peak": 17.9,
+        "bottomChord": 13.799999999999999,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-2",
+        "z": -22.346874999999997,
+        "width": 24.325,
+        "eave": 14.1,
+        "peak": 17.9,
+        "bottomChord": 13.799999999999999,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-2",
+        "z": -14.806249999999991,
+        "width": 24.325,
+        "eave": 14.1,
+        "peak": 17.9,
+        "bottomChord": 13.799999999999999,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-2",
+        "z": -7.265624999999993,
+        "width": 24.325,
+        "eave": 14.1,
+        "peak": 17.9,
+        "bottomChord": 13.799999999999999,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-2",
+        "z": 0.2750000000000057,
+        "width": 24.325,
+        "eave": 14.1,
+        "peak": 17.9,
+        "bottomChord": 13.799999999999999,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-2",
+        "z": 7.815625000000011,
+        "width": 24.325,
+        "eave": 14.1,
+        "peak": 17.9,
+        "bottomChord": 13.799999999999999,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-2",
+        "z": 15.356250000000003,
+        "width": 24.325,
+        "eave": 14.1,
+        "peak": 17.9,
+        "bottomChord": 13.799999999999999,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-2",
+        "z": 22.89687500000001,
+        "width": 24.325,
+        "eave": 14.1,
+        "peak": 17.9,
+        "bottomChord": 13.799999999999999,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-2",
+        "z": 30.437500000000014,
+        "width": 24.325,
+        "eave": 14.1,
+        "peak": 17.9,
+        "bottomChord": 13.799999999999999,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-2",
+        "z": 37.978125000000006,
+        "width": 24.325,
+        "eave": 14.1,
+        "peak": 17.9,
+        "bottomChord": 13.799999999999999,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-2",
+        "z": 45.51875000000001,
+        "width": 24.325,
+        "eave": 14.1,
+        "peak": 17.9,
+        "bottomChord": 13.799999999999999,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-2",
+        "z": 53.059375,
+        "width": 24.325,
+        "eave": 14.1,
+        "peak": 17.9,
+        "bottomChord": 13.799999999999999,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-2",
+        "z": 60.60000000000001,
+        "width": 24.325,
+        "eave": 14.1,
+        "peak": 17.9,
+        "bottomChord": 13.799999999999999,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-3",
+        "z": -60.05,
+        "width": 24.325000000000003,
+        "eave": 14.1,
+        "peak": 17.9,
+        "bottomChord": 13.799999999999999,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-3",
+        "z": -52.509375,
+        "width": 24.325000000000003,
+        "eave": 14.1,
+        "peak": 17.9,
+        "bottomChord": 13.799999999999999,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-3",
+        "z": -44.96875,
+        "width": 24.325000000000003,
+        "eave": 14.1,
+        "peak": 17.9,
+        "bottomChord": 13.799999999999999,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-3",
+        "z": -37.428124999999994,
+        "width": 24.325000000000003,
+        "eave": 14.1,
+        "peak": 17.9,
+        "bottomChord": 13.799999999999999,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-3",
+        "z": -29.887499999999996,
+        "width": 24.325000000000003,
+        "eave": 14.1,
+        "peak": 17.9,
+        "bottomChord": 13.799999999999999,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-3",
+        "z": -22.346874999999997,
+        "width": 24.325000000000003,
+        "eave": 14.1,
+        "peak": 17.9,
+        "bottomChord": 13.799999999999999,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-3",
+        "z": -14.806249999999991,
+        "width": 24.325000000000003,
+        "eave": 14.1,
+        "peak": 17.9,
+        "bottomChord": 13.799999999999999,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-3",
+        "z": -7.265624999999993,
+        "width": 24.325000000000003,
+        "eave": 14.1,
+        "peak": 17.9,
+        "bottomChord": 13.799999999999999,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-3",
+        "z": 0.2750000000000057,
+        "width": 24.325000000000003,
+        "eave": 14.1,
+        "peak": 17.9,
+        "bottomChord": 13.799999999999999,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-3",
+        "z": 7.815625000000011,
+        "width": 24.325000000000003,
+        "eave": 14.1,
+        "peak": 17.9,
+        "bottomChord": 13.799999999999999,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-3",
+        "z": 15.356250000000003,
+        "width": 24.325000000000003,
+        "eave": 14.1,
+        "peak": 17.9,
+        "bottomChord": 13.799999999999999,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-3",
+        "z": 22.89687500000001,
+        "width": 24.325000000000003,
+        "eave": 14.1,
+        "peak": 17.9,
+        "bottomChord": 13.799999999999999,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-3",
+        "z": 30.437500000000014,
+        "width": 24.325000000000003,
+        "eave": 14.1,
+        "peak": 17.9,
+        "bottomChord": 13.799999999999999,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-3",
+        "z": 37.978125000000006,
+        "width": 24.325000000000003,
+        "eave": 14.1,
+        "peak": 17.9,
+        "bottomChord": 13.799999999999999,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-3",
+        "z": 45.51875000000001,
+        "width": 24.325000000000003,
+        "eave": 14.1,
+        "peak": 17.9,
+        "bottomChord": 13.799999999999999,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-3",
+        "z": 53.059375,
+        "width": 24.325000000000003,
+        "eave": 14.1,
+        "peak": 17.9,
+        "bottomChord": 13.799999999999999,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-3",
+        "z": 60.60000000000001,
+        "width": 24.325000000000003,
+        "eave": 14.1,
+        "peak": 17.9,
+        "bottomChord": 13.799999999999999,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-4",
+        "z": -60.05,
+        "width": 15.600000000000001,
+        "eave": 10.25,
+        "peak": 12.95,
+        "bottomChord": 9.95,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-4",
+        "z": -52.509375,
+        "width": 15.600000000000001,
+        "eave": 10.25,
+        "peak": 12.95,
+        "bottomChord": 9.95,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-4",
+        "z": -44.96875,
+        "width": 15.600000000000001,
+        "eave": 10.25,
+        "peak": 12.95,
+        "bottomChord": 9.95,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-4",
+        "z": -37.428124999999994,
+        "width": 15.600000000000001,
+        "eave": 10.25,
+        "peak": 12.95,
+        "bottomChord": 9.95,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-4",
+        "z": -29.887499999999996,
+        "width": 15.600000000000001,
+        "eave": 10.25,
+        "peak": 12.95,
+        "bottomChord": 9.95,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-4",
+        "z": -22.346874999999997,
+        "width": 15.600000000000001,
+        "eave": 10.25,
+        "peak": 12.95,
+        "bottomChord": 9.95,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-4",
+        "z": -14.806249999999991,
+        "width": 15.600000000000001,
+        "eave": 10.25,
+        "peak": 12.95,
+        "bottomChord": 9.95,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-4",
+        "z": -7.265624999999993,
+        "width": 15.600000000000001,
+        "eave": 10.25,
+        "peak": 12.95,
+        "bottomChord": 9.95,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-4",
+        "z": 0.2750000000000057,
+        "width": 15.600000000000001,
+        "eave": 10.25,
+        "peak": 12.95,
+        "bottomChord": 9.95,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-4",
+        "z": 7.815625000000011,
+        "width": 15.600000000000001,
+        "eave": 10.25,
+        "peak": 12.95,
+        "bottomChord": 9.95,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-4",
+        "z": 15.356250000000003,
+        "width": 15.600000000000001,
+        "eave": 10.25,
+        "peak": 12.95,
+        "bottomChord": 9.95,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-4",
+        "z": 22.89687500000001,
+        "width": 15.600000000000001,
+        "eave": 10.25,
+        "peak": 12.95,
+        "bottomChord": 9.95,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-4",
+        "z": 30.437500000000014,
+        "width": 15.600000000000001,
+        "eave": 10.25,
+        "peak": 12.95,
+        "bottomChord": 9.95,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-4",
+        "z": 37.978125000000006,
+        "width": 15.600000000000001,
+        "eave": 10.25,
+        "peak": 12.95,
+        "bottomChord": 9.95,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-4",
+        "z": 45.51875000000001,
+        "width": 15.600000000000001,
+        "eave": 10.25,
+        "peak": 12.95,
+        "bottomChord": 9.95,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-4",
+        "z": 53.059375,
+        "width": 15.600000000000001,
+        "eave": 10.25,
+        "peak": 12.95,
+        "bottomChord": 9.95,
+        "physicalOpen": true
+      },
+      {
+        "nave": "nave-4",
+        "z": 60.60000000000001,
+        "width": 15.600000000000001,
+        "eave": 10.25,
+        "peak": 12.95,
+        "bottomChord": 9.95,
+        "physicalOpen": true
+      }
+    ],
+    "craneRunways": [
+      {
+        "x": -25.830000000000002,
+        "y": 7.47,
+        "z0": -59.349999999999994,
+        "z1": 59.9,
+        "hollowWeb": true,
+        "retainedSystem": true
+      },
+      {
+        "x": -24.27,
+        "y": 9.17,
+        "z0": -59.349999999999994,
+        "z1": 59.9,
+        "hollowWeb": true,
+        "retainedSystem": true
+      },
+      {
+        "x": -1.505,
+        "y": 9.17,
+        "z0": -59.349999999999994,
+        "z1": 59.9,
+        "hollowWeb": true,
+        "retainedSystem": true
+      },
+      {
+        "x": 0.05500000000000005,
+        "y": 9.17,
+        "z0": -59.349999999999994,
+        "z1": 59.9,
+        "hollowWeb": true,
+        "retainedSystem": true
+      },
+      {
+        "x": 22.82,
+        "y": 9.17,
+        "z0": -59.349999999999994,
+        "z1": 59.9,
+        "hollowWeb": true,
+        "retainedSystem": true
+      },
+      {
+        "x": 24.380000000000003,
+        "y": 7.47,
+        "z0": -59.349999999999994,
+        "z1": 59.9,
+        "hollowWeb": true,
+        "retainedSystem": true
+      }
+    ],
+    "frameZ": [
+      -60.05,
+      -52.509375,
+      -44.96875,
+      -37.428124999999994,
+      -29.887499999999996,
+      -22.346874999999997,
+      -14.806249999999991,
+      -7.265624999999993,
+      0.2750000000000057,
+      7.815625000000011,
+      15.356250000000003,
+      22.89687500000001,
+      30.437500000000014,
+      37.978125000000006,
+      45.51875000000001,
+      53.059375,
+      60.60000000000001
+    ],
+    "columnRows": [
+      -25.05,
+      -0.725,
+      23.6
+    ],
+    "annex": {
+      "x0": -47.85,
+      "x1": -40.7,
+      "z0": -24.9,
+      "z1": 3.8,
+      "height": 5.45
+    },
+    "registeredEnvelope": {
+      "x0": -40.65,
+      "x1": 39.2,
+      "z0": -60.05,
+      "z1": 60.6
+    },
+    "section": {
+      "removes": "opaque roof sheets and monitor skins",
+      "retains": "masonry, piers, open trusses and purlins"
+    },
+    "documentedMetrics": {
+      "nominalLength": 120,
+      "nominalWidth": 80,
+      "nominalArea": 9600,
+      "halls": 4,
+      "reportedClearWidths": [
+        15,
+        22.5,
+        22.5,
+        15
+      ],
+      "portalRhythm": [
+        1,
+        3,
+        3,
+        1
+      ],
+      "construction": [
+        1919,
+        1930
+      ],
+      "source": "BOE-A-2024-9526; Universitat de València, ficha Talleres Generales; CONTRAST, itinerario didáctico",
+      "survey": false
+    },
+    "heightSurvey": false,
+    "railwayTracksInvented": false,
+    "travellingCraneMachineryInvented": false
+  },
+  "focuses": {
+    "talleres-conjunto": {
+      "id": "talleres-conjunto",
+      "label": "Cuatro naves, una sola arquitectura",
+      "target": [
+        5115.126783996571,
+        10.8,
+        2525.1267437830084
+      ],
+      "localTarget": [
+        -0.7,
+        6.8,
+        0
+      ],
+      "elevation": 6.8,
+      "coordinates": [
+        -0.2182965851763936,
+        39.65631650427791
+      ],
+      "offset": [
+        -167.18137870333035,
+        76,
+        23.566641993581598
+      ],
+      "closeOffset": [
+        -122.87048957087498,
+        52,
+        16.81793068761732
+      ],
+      "components": [
+        "testeros",
+        "cerchas",
+        "cubiertas"
+      ],
+      "regionId": "conjunto",
+      "readingLayer": "conjunto",
+      "period": "conjunto",
+      "requiresSection": false,
+      "interiorView": false,
+      "floor": 0,
+      "fov": 46,
+      "kind": "overview",
+      "bounds": {
+        "min": [
+          5042.583063697161,
+          3.949999999254942,
+          2460.014316809392
+        ],
+        "max": [
+          5188.121817225869,
+          23.15145492553711,
+          2590.557472306069
+        ]
+      },
+      "fitBounds": true,
+      "minDistance": 0.8,
+      "closeScale": false,
+      "sourceConfidence": "documented-envelope-and-proportional-photographic-registration"
+    },
+    "talleres-fachada": {
+      "id": "talleres-fachada",
+      "label": "Un testero que explica el interior",
+      "target": [
+        5063.121958499316,
+        11.5,
+        2495.1017437830083
+      ],
+      "localTarget": [
+        -0.7,
+        7.5,
+        -60.05
+      ],
+      "elevation": 7.5,
+      "coordinates": [
+        -0.21890358199203577,
+        39.656586222208205
+      ],
+      "offset": [
+        -76.15767664977295,
+        19,
+        -0.09103465619133999
+      ],
+      "closeOffset": [
+        -52.837168574084174,
+        13,
+        -0.4833395016046005
+      ],
+      "components": [
+        "testeros",
+        "portones",
+        "ventanales-testero",
+        "remates"
+      ],
+      "regionId": "conjunto",
+      "readingLayer": "conjunto",
+      "period": "conjunto",
+      "requiresSection": false,
+      "interiorView": false,
+      "floor": 0,
+      "fov": 52,
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          5060.121958499316,
+          8.5,
+          2492.1017437830083
+        ],
+        "max": [
+          5066.121958499316,
+          14.5,
+          2498.1017437830083
+        ]
+      },
+      "fitBounds": false,
+      "minDistance": 0.8,
+      "closeScale": false,
+      "sourceConfidence": "documented-envelope-and-proportional-photographic-registration"
+    },
+    "talleres-acceso": {
+      "id": "talleres-acceso",
+      "label": "La escala del portón",
+      "target": [
+        5057.028208499316,
+        6.8,
+        2505.656428391631
+      ],
+      "localTarget": [
+        -12.887500000000001,
+        2.8,
+        -60.05
+      ],
+      "elevation": 2.8,
+      "coordinates": [
+        -0.2189747078310315,
+        39.65649140829688
+      ],
+      "offset": [
+        -12.990381056766578,
+        2.2,
+        -7.500000000000002
+      ],
+      "closeOffset": [
+        -6.928203230275509,
+        1,
+        -4.000000000000001
+      ],
+      "components": [
+        "portones",
+        "abanicos-portones",
+        "zocalo-testero"
+      ],
+      "regionId": "conjunto",
+      "readingLayer": "conjunto",
+      "period": "conjunto",
+      "requiresSection": false,
+      "interiorView": false,
+      "floor": 0,
+      "fov": 60,
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          5054.028208499316,
+          3.8,
+          2502.656428391631
+        ],
+        "max": [
+          5060.028208499316,
+          9.8,
+          2508.656428391631
+        ]
+      },
+      "fitBounds": false,
+      "minDistance": 0.8,
+      "closeScale": false,
+      "sourceConfidence": "documented-envelope-and-proportional-photographic-registration"
+    },
+    "talleres-interior": {
+      "id": "talleres-interior",
+      "label": "Un interior que se prolonga",
+      "target": [
+        5104.702906977649,
+        10.3,
+        2533.181428391631
+      ],
+      "localTarget": [
+        -12.887500000000001,
+        6.3,
+        -5
+      ],
+      "elevation": 6.3,
+      "coordinates": [
+        -0.21841825196590076,
+        39.656244148145966
+      ],
+      "offset": [
+        -37.23909236273086,
+        -4.45,
+        -21.500000000000004
+      ],
+      "closeOffset": [
+        -27.712812921102035,
+        -4.45,
+        -16.000000000000004
+      ],
+      "components": [
+        "solera",
+        "pilares-hormigon",
+        "cerchas",
+        "clerestorios"
+      ],
+      "regionId": "conjunto",
+      "readingLayer": "conjunto",
+      "period": "conjunto",
+      "requiresSection": false,
+      "interiorView": true,
+      "floor": 1,
+      "fov": 72,
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          5101.702906977649,
+          7.300000000000001,
+          2530.181428391631
+        ],
+        "max": [
+          5107.702906977649,
+          13.3,
+          2536.181428391631
+        ]
+      },
+      "fitBounds": false,
+      "minDistance": 0.35,
+      "closeScale": false,
+      "sourceConfidence": "documented-envelope-and-proportional-photographic-registration"
+    },
+    "talleres-naves": {
+      "id": "talleres-naves",
+      "label": "Dos alturas para cuatro ámbitos",
+      "target": [
+        5117.724860207924,
+        9.8,
+        2526.6267437830084
+      ],
+      "localTarget": [
+        -0.7,
+        5.8,
+        3
+      ],
+      "elevation": 5.8,
+      "coordinates": [
+        -0.21826626060608675,
+        39.656303029610285
+      ],
+      "offset": [
+        -109.3801085141084,
+        66,
+        23.451905283832893
+      ],
+      "closeOffset": [
+        -81.1935750346352,
+        48,
+        16.631397208144115
+      ],
+      "components": [
+        "solera",
+        "cerchas",
+        "pilares-hormigon",
+        "pilares-acero"
+      ],
+      "regionId": "conjunto",
+      "readingLayer": "conjunto",
+      "period": "conjunto",
+      "requiresSection": true,
+      "interiorView": false,
+      "floor": 0,
+      "fov": 50,
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          5114.724860207924,
+          6.800000000000001,
+          2523.6267437830084
+        ],
+        "max": [
+          5120.724860207924,
+          12.8,
+          2529.6267437830084
+        ]
+      },
+      "fitBounds": false,
+      "minDistance": 0.8,
+      "closeScale": false,
+      "sourceConfidence": "documented-envelope-and-proportional-photographic-registration"
+    },
+    "talleres-cerchas": {
+      "id": "talleres-cerchas",
+      "label": "La cubierta se sostiene en triángulos",
+      "target": [
+        5096.908678343589,
+        19.1,
+        2528.681428391631
+      ],
+      "localTarget": [
+        -12.887500000000001,
+        15.1,
+        -14
+      ],
+      "elevation": 15.1,
+      "coordinates": [
+        -0.21850922567682132,
+        39.656284572148834
+      ],
+      "offset": [
+        -15.722431864335457,
+        -10.3,
+        -6.767949192431125
+      ],
+      "closeOffset": [
+        -11.042304845413264,
+        -9.5,
+        -4.8741669750802314
+      ],
+      "components": [
+        "cerchas",
+        "cartelas-cerchas",
+        "correas"
+      ],
+      "regionId": "estructura",
+      "readingLayer": "estructura",
+      "period": "estructura",
+      "requiresSection": false,
+      "interiorView": true,
+      "floor": 1,
+      "fov": 66,
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          5093.908678343589,
+          16.1,
+          2525.681428391631
+        ],
+        "max": [
+          5099.908678343589,
+          22.1,
+          2531.681428391631
+        ]
+      },
+      "fitBounds": false,
+      "minDistance": 0.35,
+      "closeScale": false,
+      "sourceConfidence": "documented-envelope-and-proportional-photographic-registration"
+    },
+    "talleres-pilares-hormigon": {
+      "id": "talleres-pilares-hormigon",
+      "label": "La huella de una fase constructiva",
+      "target": [
+        5077.068449740965,
+        10.4,
+        2531.2707123651594
+      ],
+      "localTarget": [
+        -25.05,
+        6.4,
+        -29.887499999999996
+      ],
+      "elevation": 6.4,
+      "coordinates": [
+        -0.2187407994869102,
+        39.656261312321554
+      ],
+      "offset": [
+        -3.8612159321677275,
+        -3.4,
+        -10.312177826491071
+      ],
+      "closeOffset": [
+        -2.8693575034635193,
+        -3.1,
+        -7.430127018922194
+      ],
+      "components": [
+        "pilares-hormigon",
+        "zapatas",
+        "placas-pilares"
+      ],
+      "regionId": "estructura",
+      "readingLayer": "estructura",
+      "period": "estructura",
+      "requiresSection": false,
+      "interiorView": true,
+      "floor": 1,
+      "fov": 63,
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          5074.068449740965,
+          7.4,
+          2528.2707123651594
+        ],
+        "max": [
+          5080.068449740965,
+          13.4,
+          2534.2707123651594
+        ]
+      },
+      "fitBounds": false,
+      "minDistance": 0.35,
+      "closeScale": false,
+      "sourceConfidence": "documented-envelope-and-proportional-photographic-registration"
+    },
+    "talleres-pilares-acero": {
+      "id": "talleres-pilares-acero",
+      "label": "Apoyos que dejan pasar la mirada",
+      "target": [
+        5135.841805034673,
+        10.5,
+        2565.203524865159
+      ],
+      "localTarget": [
+        -25.05,
+        6.5,
+        37.978125000000006
+      ],
+      "elevation": 6.5,
+      "coordinates": [
+        -0.21805480084799986,
+        39.65595649007488
+      ],
+      "offset": [
+        -3.9942286340599464,
+        -3.7,
+        -11.081793068761733
+      ],
+      "closeOffset": [
+        -2.792562584220407,
+        -3.5,
+        -7.9631397208144135
+      ],
+      "components": [
+        "pilares-acero",
+        "nudos-pilares",
+        "zapatas"
+      ],
+      "regionId": "estructura",
+      "readingLayer": "estructura",
+      "period": "estructura",
+      "requiresSection": false,
+      "interiorView": true,
+      "floor": 1,
+      "fov": 63,
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          5132.841805034673,
+          7.5,
+          2562.203524865159
+        ],
+        "max": [
+          5138.841805034673,
+          13.5,
+          2568.203524865159
+        ]
+      },
+      "fitBounds": false,
+      "minDistance": 0.35,
+      "closeScale": false,
+      "sourceConfidence": "documented-envelope-and-proportional-photographic-registration"
+    },
+    "talleres-cubiertas": {
+      "id": "talleres-cubiertas",
+      "label": "El perfil de la nave industrial",
+      "target": [
+        5115.992809400355,
+        19.2,
+        2525.6267437830084
+      ],
+      "localTarget": [
+        -0.7,
+        15.2,
+        1
+      ],
+      "elevation": 15.2,
+      "coordinates": [
+        -0.21828647698629133,
+        39.65631201272204
+      ],
+      "offset": [
+        -92.48780366869515,
+        46,
+        18.193575034635188
+      ],
+      "closeOffset": [
+        -66.16729559300637,
+        33,
+        12.605117766515292
+      ],
+      "components": [
+        "cubiertas",
+        "sobrecubiertas",
+        "lucernarios",
+        "canalones"
+      ],
+      "regionId": "envolvente",
+      "readingLayer": "envolvente",
+      "period": "envolvente",
+      "requiresSection": false,
+      "interiorView": false,
+      "floor": 0,
+      "fov": 49,
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          5112.992809400355,
+          16.2,
+          2522.6267437830084
+        ],
+        "max": [
+          5118.992809400355,
+          22.2,
+          2528.6267437830084
+        ]
+      },
+      "fitBounds": false,
+      "minDistance": 0.8,
+      "closeScale": false,
+      "sourceConfidence": "documented-envelope-and-proportional-photographic-registration"
+    },
+    "talleres-lucernarios": {
+      "id": "talleres-lucernarios",
+      "label": "Luz y aire desde arriba",
+      "target": [
+        5117.693288034416,
+        21.7,
+        2540.681428391631
+      ],
+      "localTarget": [
+        -12.887500000000001,
+        17.7,
+        10
+      ],
+      "elevation": 17.7,
+      "coordinates": [
+        -0.2182666291143665,
+        39.65617677480784
+      ],
+      "offset": [
+        -10.358330249197701,
+        -13,
+        -8.058845726811992
+      ],
+      "closeOffset": [
+        -7.194228634059947,
+        -12.4,
+        -5.539230484541327
+      ],
+      "components": [
+        "lucernarios",
+        "intradós-sobrecubiertas",
+        "clerestorios",
+        "cristales-altos",
+        "bastidores-lucernarios"
+      ],
+      "regionId": "envolvente",
+      "readingLayer": "envolvente",
+      "period": "envolvente",
+      "requiresSection": false,
+      "interiorView": true,
+      "floor": 1,
+      "fov": 68,
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          5114.693288034416,
+          18.7,
+          2537.681428391631
+        ],
+        "max": [
+          5120.693288034416,
+          24.7,
+          2543.681428391631
+        ]
+      },
+      "fitBounds": false,
+      "minDistance": 0.35,
+      "closeScale": false,
+      "sourceConfidence": "documented-envelope-and-proportional-photographic-registration"
+    },
+    "talleres-ventanas": {
+      "id": "talleres-ventanas",
+      "label": "El ritmo de las fachadas laterales",
+      "target": [
+        5061.376793248979,
+        10.1,
+        2540.2244586641964
+      ],
+      "localTarget": [
+        -40.65,
+        6.1,
+        -39
+      ],
+      "elevation": 6.1,
+      "coordinates": [
+        -0.21892395144313181,
+        39.65618087981797
+      ],
+      "offset": [
+        -13.601408311032397,
+        1.6,
+        7.158330249197701
+      ],
+      "closeOffset": [
+        -9.436344801571302,
+        1.1,
+        4.944228634059947
+      ],
+      "components": [
+        "arcos-laterales",
+        "ventanales-laterales",
+        "alféizares-laterales"
+      ],
+      "regionId": "envolvente",
+      "readingLayer": "envolvente",
+      "period": "envolvente",
+      "requiresSection": false,
+      "interiorView": false,
+      "floor": 0,
+      "fov": 56,
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          5058.376793248979,
+          7.1,
+          2537.2244586641964
+        ],
+        "max": [
+          5064.376793248979,
+          13.1,
+          2543.2244586641964
+        ]
+      },
+      "fitBounds": false,
+      "minDistance": 0.8,
+      "closeScale": false,
+      "sourceConfidence": "documented-envelope-and-proportional-photographic-registration"
+    },
+    "talleres-ladrillo": {
+      "id": "talleres-ladrillo",
+      "label": "La materia dibuja la arquitectura",
+      "target": [
+        5047.046958499316,
+        9.6,
+        2522.9444605146778
+      ],
+      "localTarget": [
+        -32.85,
+        5.6,
+        -60.05
+      ],
+      "elevation": 5.6,
+      "coordinates": [
+        -0.21909120830782763,
+        39.65633610797238
+      ],
+      "offset": [
+        -19.588457268119896,
+        3.2,
+        -2.071796769724493
+      ],
+      "closeOffset": [
+        -13.292304845413264,
+        2.1,
+        -0.9770526580502583
+      ],
+      "components": [
+        "pilastras-ladrillo",
+        "arcos-ventanas",
+        "zocalo-testero",
+        "cornisas"
+      ],
+      "regionId": "envolvente",
+      "readingLayer": "envolvente",
+      "period": "envolvente",
+      "requiresSection": false,
+      "interiorView": false,
+      "floor": 0,
+      "fov": 54,
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          5044.046958499316,
+          6.6,
+          2519.9444605146778
+        ],
+        "max": [
+          5050.046958499316,
+          12.6,
+          2525.9444605146778
+        ]
+      },
+      "fitBounds": false,
+      "minDistance": 0.8,
+      "closeScale": false,
+      "sourceConfidence": "documented-envelope-and-proportional-photographic-registration"
+    },
+    "talleres-ferrocarril": {
+      "id": "talleres-ferrocarril",
+      "label": "La nave y el material rodante",
+      "target": [
+        5069.190708499316,
+        6.3,
+        2484.5903604445743
+      ],
+      "localTarget": [
+        11.4375,
+        2.3,
+        -60.05
+      ],
+      "elevation": 2.3,
+      "coordinates": [
+        -0.21883274795135385,
+        39.65668064713938
+      ],
+      "offset": [
+        -13.822431864335456,
+        1,
+        -10.058845726811992
+      ],
+      "closeOffset": [
+        -8.926279441628825,
+        0.6,
+        -6.539230484541327
+      ],
+      "components": [
+        "portones",
+        "solera"
+      ],
+      "regionId": "oficios",
+      "readingLayer": "oficios",
+      "period": "oficios",
+      "requiresSection": false,
+      "interiorView": false,
+      "floor": 0,
+      "fov": 59,
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          5066.190708499316,
+          3.3,
+          2481.5903604445743
+        ],
+        "max": [
+          5072.190708499316,
+          9.3,
+          2487.5903604445743
+        ]
+      },
+      "fitBounds": false,
+      "minDistance": 0.8,
+      "closeScale": false,
+      "sourceConfidence": "documented-envelope-and-proportional-photographic-registration"
+    },
+    "talleres-gruas": {
+      "id": "talleres-gruas",
+      "label": "Mover grandes piezas por encima del suelo",
+      "target": [
+        5095.547555362511,
+        12.9,
+        2541.0389625502075
+      ],
+      "localTarget": [
+        -24.27,
+        8.9,
+        -9
+      ],
+      "elevation": 8.9,
+      "coordinates": [
+        -0.218525112612453,
+        39.656173563038536
+      ],
+      "offset": [
+        -6.892304845413263,
+        -5.8,
+        -12.062177826491073
+      ],
+      "closeOffset": [
+        -4.947818472546171,
+        -5.7,
+        -8.630127018922193
+      ],
+      "components": [
+        "vigas-carrileras",
+        "alas-carrileras",
+        "carriles-grua",
+        "mensulas-carrileras"
+      ],
+      "regionId": "oficios",
+      "readingLayer": "oficios",
+      "period": "oficios",
+      "requiresSection": false,
+      "interiorView": true,
+      "floor": 1,
+      "fov": 65,
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          5092.547555362511,
+          9.9,
+          2538.0389625502075
+        ],
+        "max": [
+          5098.547555362511,
+          15.9,
+          2544.0389625502075
+        ]
+      },
+      "fitBounds": false,
+      "minDistance": 0.35,
+      "closeScale": false,
+      "sourceConfidence": "documented-envelope-and-proportional-photographic-registration"
+    },
+    "talleres-oficios": {
+      "id": "talleres-oficios",
+      "label": "Calderería, ajuste y fundición",
+      "target": [
+        5131.587838841985,
+        8.3,
+        2520.6153604445744
+      ],
+      "localTarget": [
+        11.4375,
+        4.3,
+        12
+      ],
+      "elevation": 4.3,
+      "coordinates": [
+        -0.21810445285448427,
+        39.65635703053859
+      ],
+      "offset": [
+        -31.17691453623979,
+        -2.45,
+        -18.000000000000004
+      ],
+      "closeOffset": [
+        -22.650635094610966,
+        -2.45,
+        -10.767949192431127
+      ],
+      "components": [
+        "solera",
+        "vigas-carrileras",
+        "pilares-hormigon"
+      ],
+      "regionId": "oficios",
+      "readingLayer": "oficios",
+      "period": "oficios",
+      "requiresSection": false,
+      "interiorView": true,
+      "floor": 1,
+      "fov": 72,
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          5128.587838841985,
+          5.300000000000001,
+          2517.6153604445744
+        ],
+        "max": [
+          5134.587838841985,
+          11.3,
+          2523.6153604445744
+        ]
+      },
+      "fitBounds": false,
+      "minDistance": 0.35,
+      "closeScale": false,
+      "sourceConfidence": "documented-envelope-and-proportional-photographic-registration"
+    },
+    "talleres-ampliacion": {
+      "id": "talleres-ampliacion",
+      "label": "La forma se completa en 1930",
+      "target": [
+        5167.607923465908,
+        11.5,
+        2555.4267437830085
+      ],
+      "localTarget": [
+        -0.7,
+        7.5,
+        60.6
+      ],
+      "elevation": 7.5,
+      "coordinates": [
+        -0.21768402885619517,
+        39.65604431599189
+      ],
+      "offset": [
+        26.363448015712994,
+        28,
+        68.33716857408419
+      ],
+      "closeOffset": [
+        18.64101615137754,
+        19.6,
+        47.71281292110204
+      ],
+      "components": [
+        "testeros",
+        "pilares-acero",
+        "cubiertas"
+      ],
+      "regionId": "memoria",
+      "readingLayer": "memoria",
+      "period": "memoria",
+      "requiresSection": false,
+      "interiorView": false,
+      "floor": 0,
+      "fov": 53,
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          5164.607923465908,
+          8.5,
+          2552.4267437830085
+        ],
+        "max": [
+          5170.607923465908,
+          14.5,
+          2558.4267437830085
+        ]
+      },
+      "fitBounds": false,
+      "minDistance": 0.8,
+      "closeScale": false,
+      "sourceConfidence": "documented-envelope-and-proportional-photographic-registration"
+    },
+    "talleres-restauracion": {
+      "id": "talleres-restauracion",
+      "label": "Conservar y encontrar nuevos usos",
+      "target": [
+        5085.625504554943,
+        9.2,
+        2554.2244586641964
+      ],
+      "localTarget": [
+        -40.65,
+        5.2,
+        -11
+      ],
+      "elevation": 5.2,
+      "coordinates": [
+        -0.21864092212026784,
+        39.65605511625347
+      ],
+      "offset": [
+        -45.8467875173176,
+        23,
+        17.408965343808664
+      ],
+      "closeOffset": [
+        -32.55255888325765,
+        16,
+        12.382685902179839
+      ],
+      "components": [
+        "anexo",
+        "muros-laterales",
+        "cubierta-anexo",
+        "lucernarios"
+      ],
+      "regionId": "memoria",
+      "readingLayer": "memoria",
+      "period": "memoria",
+      "requiresSection": false,
+      "interiorView": false,
+      "floor": 0,
+      "fov": 54,
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          5082.625504554943,
+          6.199999999999999,
+          2551.2244586641964
+        ],
+        "max": [
+          5088.625504554943,
+          12.2,
+          2557.2244586641964
+        ]
+      },
+      "fitBounds": false,
+      "minDistance": 0.8,
+      "closeScale": false,
+      "sourceConfidence": "documented-envelope-and-proportional-photographic-registration"
+    },
+    "talleres-seccion": {
+      "id": "talleres-seccion",
+      "label": "Abrir la cubierta para comprender",
+      "target": [
+        5115.126783996571,
+        9.9,
+        2525.1267437830084
+      ],
+      "localTarget": [
+        -0.7,
+        5.9,
+        0
+      ],
+      "elevation": 5.9,
+      "coordinates": [
+        -0.2182965851763936,
+        39.65631650427791
+      ],
+      "offset": [
+        -101.41600689897066,
+        68,
+        17.657676649772938
+      ],
+      "closeOffset": [
+        -75.59549882328189,
+        50,
+        12.935244785437483
+      ],
+      "components": [
+        "cerchas",
+        "pilares-hormigon",
+        "pilares-acero",
+        "solera",
+        "clerestorios"
+      ],
+      "regionId": "estructura",
+      "readingLayer": "estructura",
+      "period": "estructura",
+      "requiresSection": true,
+      "interiorView": false,
+      "floor": 0,
+      "fov": 52,
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          5112.126783996571,
+          6.9,
+          2522.1267437830084
+        ],
+        "max": [
+          5118.126783996571,
+          12.9,
+          2528.1267437830084
+        ]
+      },
+      "fitBounds": false,
+      "minDistance": 0.8,
+      "closeScale": false,
+      "sourceConfidence": "documented-envelope-and-proportional-photographic-registration"
+    },
+    "talleres-memoria": {
+      "id": "talleres-memoria",
+      "label": "La arquitectura también guarda trabajo",
+      "target": [
+        5148.042321513889,
+        9.5,
+        2530.1153604445744
+      ],
+      "localTarget": [
+        11.4375,
+        5.5,
+        31
+      ],
+      "elevation": 5.5,
+      "coordinates": [
+        -0.21791239724254088,
+        39.656271690976965
+      ],
+      "offset": [
+        -35.27499074759311,
+        -3.65,
+        -16.901923788646688
+      ],
+      "closeOffset": [
+        -25.24871130596428,
+        -3.65,
+        -12.267949192431127
+      ],
+      "components": [
+        "solera",
+        "cerchas",
+        "lamparas",
+        "vigas-carrileras"
+      ],
+      "regionId": "memoria",
+      "readingLayer": "memoria",
+      "period": "memoria",
+      "requiresSection": false,
+      "interiorView": true,
+      "floor": 1,
+      "fov": 71,
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          5145.042321513889,
+          6.5,
+          2527.1153604445744
+        ],
+        "max": [
+          5151.042321513889,
+          12.5,
+          2533.1153604445744
+        ]
+      },
+      "fitBounds": false,
+      "minDistance": 0.35,
+      "closeScale": false,
+      "sourceConfidence": "documented-envelope-and-proportional-photographic-registration"
+    },
+    "talleres-entorno": {
+      "id": "talleres-entorno",
+      "label": "Un edificio dentro de la ciudad factoría",
+      "coordinate": [
+        -0.218269156,
+        39.656366866
+      ],
+      "coordinates": [
+        -0.218269156,
+        39.656366866
+      ],
+      "target": [
+        5117.476795553674,
+        16,
+        2519.5204768803337
+      ],
+      "offset": [
+        160,
+        125,
+        125
+      ],
+      "closeOffset": [
+        118,
+        74,
+        90
+      ],
+      "bounds": {
+        "min": [
+          4927.476795553674,
+          3,
+          2329.5204768803337
+        ],
+        "max": [
+          5307.476795553674,
+          39,
+          2709.5204768803337
+        ]
+      },
+      "components": [
+        "talleres-entorno"
+      ],
+      "elevation": 12,
+      "localTarget": [
+        5.330175336662943,
+        12,
+        -0.7679637436998845
+      ],
+      "floor": 0,
+      "readingLayer": "conjunto",
+      "kind": "context",
+      "fitBounds": false,
+      "fov": 56,
+      "minDistance": 5,
+      "sourceConfidence": "Mapped current setting; PNOA ground tracing, with interpreted heights and minor details.",
+      "regionId": "conjunto"
+    }
+  }
+}

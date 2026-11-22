@@ -1,0 +1,341 @@
+{
+  "sourceHashes": {
+    "dist/js/app.js": "813001a4054055d181cfb96baed0c8b21aeaf3672ce37c0d3781ad21f4ff07d4",
+    "dist/js/castle-panel.js": "f826b23eb1b4b1adcd7844f1cda1cecc5cf092e192644d216e2b2fd04f062b1b",
+    "dist/js/berenguer-visit.js": "500f8d3d6995bd33f62cc7a44cb2e2f5079537f3d3a916d6253e6a27fb3387ce",
+    "dist/assets/data/barrio-visit.json": "39ad1c98959ca72e38279e092a7ce36fab327d1bb643846cce9387bf487dc14c",
+    "dist/assets/data/begona-visit.json": "f07453524d18eec9f04ceb6d435401c62094813418e343cace6930ae0cb76cd9",
+    "dist/assets/data/berenguer-visit.json": "36da2cecfbfe9c2447434e2405a5ca94615527dca5c0c4e549ae49e6d726206e",
+    "dist/assets/data/calvario-visit.json": "b054fed27f08b1d4c1f387315b3d3d6b8ae3a6a7378e4e2fb6186a437c829088",
+    "dist/assets/data/casino-visit.json": "5eabae75f4dfcfcc087595727475b241fe98a276aa5eef636a2d1c3d0f2dd332",
+    "dist/assets/data/castle-visit.json": "291ebf4ea589d99103ecd711fccd27c4fd5948e70cb8d64068c479341636b031",
+    "dist/assets/data/circo-visit.json": "2df05f739c53e18c71ce857c468240c73859a450a2eda0edb5fe8595f8001320",
+    "dist/assets/data/domus-visit.json": "ab7e165d85958ee6661867ebd528d2609c39c329d23433a00c4723011b347d55",
+    "dist/assets/data/economato-visit.json": "351e5430df4fff0167cbf2481de363add049a5016f52ec7cba41e3f226695844",
+    "dist/assets/data/gerencia-visit.json": "f5d2df0f26f588253fba73e236d0eaac8a86ac50b0409b69fe00479c6c509b7c",
+    "dist/assets/data/horno-visit.json": "5786b7430d5207b4c77d8a743bdf228c2421b4b542a8ffde0c7c5befb1404b35",
+    "dist/assets/data/juderia-visit.json": "f657d04c1923c9982b8916d50622e0b6e5b50ca68edcb8a6a514124299563b82",
+    "dist/assets/data/museo-industrial-visit.json": "25dbf4940828ab7072434ac7c91232a8e648eda9e67819c0b6dd6b4290a03b61",
+    "dist/assets/data/museo-visit.json": "747a36c42334eb1f3548df513b09f51db9fe1be73648c050023eeb9e11aea55a",
+    "dist/assets/data/necropolis-visit.json": "afccb5c6e80a3170245119efdbd412b706c53f5dc5e62bf845dfdcddec7664c5",
+    "dist/assets/data/pantalan-maritimo-visit.json": "dc77b343063ca1e3c1fb372776422f12f0742a58aa2353e59aade1e9292fe07c",
+    "dist/assets/data/pantalan-paseo-visit.json": "304f579bd9a8820cd515bc8cad73f94e336c1c158b402db3dd39dd0607922ae4",
+    "dist/assets/data/plaza-mayor-visit.json": "c80a4560b964c27003e769add5a1c0c32b1a0109b55243c95a641282f2b36e55",
+    "dist/assets/data/portic-visit.json": "020c89e0eeb9318ad9cc59e13b57cac2fc25171c1a4021f9f861eb0d4b1b8b35",
+    "dist/assets/data/salvador-visit.json": "3c08cd0c5809f8305588f78e45582ace46da47b0d7a339f9d108b2ab79a54a00",
+    "dist/assets/data/sanatorio-visit.json": "3b5ba5958cacbe64822b4cb7f8f195f10504600a87cf3a965f86e4bd523f59bf",
+    "dist/assets/data/sangre-visit.json": "490aa9c55411448c18d0da0070d16a6f345bbb7abdb46638d55b4c19b3723f48",
+    "dist/assets/data/santa-maria-visit.json": "453bc9e3462f790e74f924831b58c910db868e3a8e813a331d2bcb46c385eed3",
+    "dist/assets/data/talleres-visit.json": "a85ba855cad2e3c83096859edacf9816ddca341e0818f315e667c4914c9473fd",
+    "dist/assets/data/theatre-visit.json": "992f8775a34e36f3bfa4c445c12ad65c84e05f2780a5ffbb913dd77bb4f27837"
+  },
+  "generatedAt": "2026-11-21T15:27:11.754Z",
+  "pass": true,
+  "checksCount": 61,
+  "method": "Data invariants and state/render contracts with a minimal element adapter; no WebGL, layout or real browser-focus assertions.",
+  "data": {
+    "visits": 24,
+    "sanatorioStops": 21,
+    "sanatorioSources": 19,
+    "barrioStops": 20,
+    "barrioSources": 12,
+    "economatoStops": 20,
+    "economatoSources": 17,
+    "begonaStops": 20,
+    "begonaFacts": 40,
+    "begonaSources": 15,
+    "begonaTimeline": 11,
+    "casinoStops": 20,
+    "casinoFacts": 40,
+    "casinoSources": 17,
+    "casinoTimeline": 10,
+    "gerenciaStops": 20,
+    "gerenciaSources": 17,
+    "museoIndustrialStops": 20,
+    "museoIndustrialSources": 18,
+    "talleresStops": 20,
+    "talleresSources": 17,
+    "hornoStops": 20,
+    "hornoSources": 12,
+    "necropolisStops": 20,
+    "necropolisFacts": 21,
+    "necropolisSources": 11,
+    "necropolisTimeline": 8,
+    "circoStops": 20,
+    "circoFacts": 22,
+    "circoSources": 7,
+    "circoTimeline": 8,
+    "domusStops": 20,
+    "domusFacts": 38,
+    "domusSources": 9,
+    "domusTimeline": 12,
+    "porticStops": 20,
+    "porticFacts": 40,
+    "porticSources": 19,
+    "porticTimeline": 18,
+    "museoStops": 20,
+    "museoFacts": 40,
+    "museoSources": 20,
+    "museoTimeline": 19,
+    "salvadorStops": 18,
+    "salvadorFacts": 40,
+    "salvadorSources": 19,
+    "salvadorTimeline": 19,
+    "sangreStops": 16,
+    "sangreFacts": 39,
+    "sangreSources": 22,
+    "sangreTimeline": 17,
+    "stops": 18,
+    "wallStops": 5,
+    "facts": 47,
+    "sources": 24,
+    "timeline": 15,
+    "wallTimeline": 6
+  },
+  "checks": [
+    {
+      "label": "Casa has 18 stops, 5 regions, 5 thematic layers, 47 facts, 24 sources and 15 events",
+      "pass": true
+    },
+    {
+      "label": "berenguer: all facts, coordinates, regions and chronology resolve",
+      "pass": true
+    },
+    {
+      "label": "diana: all facts, coordinates, regions and chronology resolve",
+      "pass": true
+    },
+    {
+      "label": "sangre: all facts, coordinates, regions and chronology resolve",
+      "pass": true
+    },
+    {
+      "label": "salvador: all facts, coordinates, regions and chronology resolve",
+      "pass": true
+    },
+    {
+      "label": "museo: all facts, coordinates, regions and chronology resolve",
+      "pass": true
+    },
+    {
+      "label": "Diana derives exactly its five stops and wall timeline without changing Casa data",
+      "pass": true
+    },
+    {
+      "label": "Independent Casa and Diana progress filters stale and out-of-scope stops",
+      "pass": true
+    },
+    {
+      "label": "Casa exposes its documented section on the overview; Diana exposes none",
+      "pass": true
+    },
+    {
+      "label": "Related links connect the house and wall while retaining separate panel IDs",
+      "pass": true
+    },
+    {
+      "label": "Casa selection, section and sources leave Diana and six prior visits unchanged",
+      "pass": true
+    },
+    {
+      "label": "Diana selection leaves Casa progress and section state unchanged",
+      "pass": true
+    },
+    {
+      "label": "Casa notebook remains usable without WebGL while section and detail are disabled",
+      "pass": true
+    },
+    {
+      "label": "Casa tabs, source details, timeline and layer legend use the correct data",
+      "pass": true
+    },
+    {
+      "label": "Map callbacks are independent for both new visits",
+      "pass": true
+    },
+    {
+      "label": "Sangre section, sources and thematic palette are independent of all previous visits",
+      "pass": true
+    },
+    {
+      "label": "Salvador section, sources and thematic palette are independent of all previous visits",
+      "pass": true
+    },
+    {
+      "label": "Museo section, sources and thematic palette are independent of all previous visits",
+      "pass": true
+    },
+    {
+      "label": "Pòrtic uses independent sources, layers, progress and a single archaeological mode control",
+      "pass": true
+    },
+    {
+      "label": "Domus museum, disputed room, sources and progress stay independent of other visits",
+      "pass": true
+    },
+    {
+      "label": "Circo uses its own plan, evidence, chronology and progress without a duplicate section control",
+      "pass": true
+    },
+    {
+      "label": "Necrópolis preserves both sectors, its evidence and independent progress without duplicate section controls",
+      "pass": true
+    },
+    {
+      "label": "Horno has independent progress, working section, source identity and all three tabs",
+      "pass": true
+    },
+    {
+      "label": "Talleres retains independent progress, roof controls, sources, reading layers and tabs",
+      "pass": true
+    },
+    {
+      "label": "Puerto guided visits use the selected region for readiness, maps, section and geometry",
+      "pass": true
+    },
+    {
+      "label": "Industrial museum has its own progress, floors, section and sources, separate from the archaeological museum",
+      "pass": true
+    },
+    {
+      "label": "Gerencia integrates office interiors, gardens, section and independent progress",
+      "pass": true
+    },
+    {
+      "label": "Casino documents source-backed interiors, exterior floors and the unfinished intervention",
+      "pass": true
+    },
+    {
+      "label": "Casino keeps independent progress, two interior levels, sources, section and fallback",
+      "pass": true
+    },
+    {
+      "label": "Begoña has independent progress, church and choir levels, sources, section and fallback",
+      "pass": true
+    },
+    {
+      "label": "Economato has independent progress, two floor levels, sources, section and fallback",
+      "pass": true
+    },
+    {
+      "label": "Barrio retains independent progress, two houses, floors, sources and fallback",
+      "pass": true
+    },
+    {
+      "label": "Production section callback frames the representative house from overview and retains an interior selection",
+      "pass": true
+    },
+    {
+      "label": "Sanatorio keeps independent progress, historical section, sources, gardens and fallback",
+      "pass": true
+    },
+    {
+      "label": "Production Sanatorio section opens the historical plan and preserves covered interior views",
+      "pass": true
+    },
+    {
+      "label": "castle: every stop is reachable and completion persists independently",
+      "pass": true
+    },
+    {
+      "label": "theatre: every stop is reachable and completion persists independently",
+      "pass": true
+    },
+    {
+      "label": "santa-maria: every stop is reachable and completion persists independently",
+      "pass": true
+    },
+    {
+      "label": "plaza-mayor: every stop is reachable and completion persists independently",
+      "pass": true
+    },
+    {
+      "label": "juderia: every stop is reachable and completion persists independently",
+      "pass": true
+    },
+    {
+      "label": "calvario: every stop is reachable and completion persists independently",
+      "pass": true
+    },
+    {
+      "label": "berenguer: every stop is reachable and completion persists independently",
+      "pass": true
+    },
+    {
+      "label": "diana: every stop is reachable and completion persists independently",
+      "pass": true
+    },
+    {
+      "label": "sangre: every stop is reachable and completion persists independently",
+      "pass": true
+    },
+    {
+      "label": "salvador: every stop is reachable and completion persists independently",
+      "pass": true
+    },
+    {
+      "label": "museo: every stop is reachable and completion persists independently",
+      "pass": true
+    },
+    {
+      "label": "portic: every stop is reachable and completion persists independently",
+      "pass": true
+    },
+    {
+      "label": "domus: every stop is reachable and completion persists independently",
+      "pass": true
+    },
+    {
+      "label": "circo: every stop is reachable and completion persists independently",
+      "pass": true
+    },
+    {
+      "label": "necropolis: every stop is reachable and completion persists independently",
+      "pass": true
+    },
+    {
+      "label": "horno: every stop is reachable and completion persists independently",
+      "pass": true
+    },
+    {
+      "label": "talleres: every stop is reachable and completion persists independently",
+      "pass": true
+    },
+    {
+      "label": "museo-industrial: every stop is reachable and completion persists independently",
+      "pass": true
+    },
+    {
+      "label": "gerencia: every stop is reachable and completion persists independently",
+      "pass": true
+    },
+    {
+      "label": "casino: every stop is reachable and completion persists independently",
+      "pass": true
+    },
+    {
+      "label": "begona: every stop is reachable and completion persists independently",
+      "pass": true
+    },
+    {
+      "label": "economato: every stop is reachable and completion persists independently",
+      "pass": true
+    },
+    {
+      "label": "barrio-obrero: every stop is reachable and completion persists independently",
+      "pass": true
+    },
+    {
+      "label": "sanatorio: every stop is reachable and completion persists independently",
+      "pass": true
+    },
+    {
+      "label": "All six earlier notebooks retain layers, source identity, maps and conditional sections",
+      "pass": true
+    },
+    {
+      "label": "Application integrates both panels, retains stable atlas branding and enables Casa overview section",
+      "pass": true
+    }
+  ]
+}

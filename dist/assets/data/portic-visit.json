@@ -1,0 +1,1796 @@
+{
+  "schemaVersion": 1,
+  "id": "portic",
+  "title": "Vía del Pòrtic y Antiga Moreria",
+  "subtitle": "Veinte paradas entre la calzada, sus edificios y la ciudad actual",
+  "introduction": "Desciende a la ciudad que permanece bajo la plaza. Recorre la vía, abre el corte de la cloaca y distingue los monumentos, las casas y las ocupaciones posteriores. Las fuentes acompañan cada parada para explicar tanto lo conservado como lo que se reconstruye.",
+  "researchDate": "2026-11-20",
+  "regionsLabel": "ámbitos",
+  "mapButtonLabel": "Plano de la vía y su entorno",
+  "overviewButtonLabel": "Ver conjunto",
+  "readingModeLabel": "Leer las capas del yacimiento",
+  "readingModeNote": "Los colores agrupan calle, monumentos, casas, fase tardía, ocupación medieval y museo actual. Algunos ámbitos reúnen varias fechas; no representan una única instantánea del pasado.",
+  "timelineIntroduction": "La secuencia distingue construcción, reforma, reutilización y estudio. Las fechas aproximadas y las atribuciones debatidas se mantienen visibles; los proyectos anunciados no se presentan como obras terminadas.",
+  "visitAriaLabel": "Visita documentada a la Vía del Pòrtic y Antiga Moreria",
+  "sectionOnOverview": true,
+  "sectionInstructions": "Abre el corte para retirar la envolvente contemporánea y observar la arqueología. Acércate a la cloaca para ver su sección; cierra el corte para recuperar el edificio y la plaza.",
+  "sectionNote": "Sección didáctica del yacimiento conservado bajo edificios de viviendas. Se levantan partes de la envolvente para mostrar los restos y el conducto. La profundidad, los apoyos actuales y las conexiones entre áreas son aproximados; no es un levantamiento topográfico integral.",
+  "methodology": [
+    "La planta arqueológica publicada en 2020, el avance de 2005 y la revisión doméstica de 2022 orientan la geometría. Se contrastan relaciones entre estructuras y dimensiones documentadas; la georreferencia de cada resto sigue siendo aproximada.",
+    "Los bloques contemporáneos se registran con huellas catastrales, relieve y ortofotografía. El solar de 1.700 m² del avance de excavación no se equipara automáticamente con toda la superficie del museo de dos edificios.",
+    "La vía conservada, las propuestas de restitución y la estructura contemporánea permanecen diferenciadas. El arco y los edificios monumentales no tienen un alzado completo acreditado; sus partes restituidas se explican como interpretación.",
+    "La calle, las cremaciones romanas, los enterramientos tardíos y la ocupación medieval pertenecen a secuencias distintas. La lectura por capas evita presentarlas como una única escena simultánea.",
+    "Las fotos del equipo de museografía y del Ayuntamiento sirven para contrastar materiales y ambiente interior. No se incorporan imágenes históricas, texturas copiadas de terceros ni datos láser que no se han obtenido.",
+    "La intervención de accesibilidad de 2022 está documentada como inaugurada. El espacio inmersivo anunciado en 2026 corresponde a la redacción de un proyecto y no se representa como instalación ejecutada."
+  ],
+  "readingLegend": [
+    {
+      "id": "via",
+      "label": "La calle y el agua",
+      "color": "#d7b36b",
+      "note": "Calzada, pórticos y redes que organizan el espacio."
+    },
+    {
+      "id": "monumental",
+      "label": "Monumentos y primeros usos",
+      "color": "#b6c593",
+      "note": "Bases monumentales, depósitos y contextos funerarios; sus cronologías no son idénticas."
+    },
+    {
+      "id": "domestico",
+      "label": "Casas y vida cotidiana",
+      "color": "#c99bba",
+      "note": "Umbrales, estancias, letrinas y cambios de ocupación."
+    },
+    {
+      "id": "tardia",
+      "label": "Transformaciones tardías",
+      "color": "#ae927c",
+      "note": "Enterramientos que reutilizan una infraestructura abandonada."
+    },
+    {
+      "id": "medieval",
+      "label": "La ocupación medieval",
+      "color": "#80aa85",
+      "note": "Viviendas y balsas sobre una secuencia anterior."
+    },
+    {
+      "id": "contemporanea",
+      "label": "Museo y ciudad actual",
+      "color": "#7fb7c4",
+      "note": "Acceso, pasarela, interpretación y edificios del entorno."
+    }
+  ],
+  "confidenceLegend": [
+    {
+      "id": "documented",
+      "label": "Documentado",
+      "note": "La fuente respalda el hecho; no certifica exactitud métrica de la maqueta."
+    },
+    {
+      "id": "interpretive",
+      "label": "Interpretación",
+      "note": "Función propuesta, cronología aproximada o complemento visual de una estructura incompleta."
+    },
+    {
+      "id": "disputed",
+      "label": "En debate",
+      "note": "Las publicaciones difieren o la identificación no está resuelta de forma única."
+    }
+  ],
+  "stops": [
+    {
+      "id": "portic-conjunto",
+      "title": "Una calle antigua bajo la ciudad actual",
+      "label": "El conjunto",
+      "regionId": "contemporanea",
+      "period": "mixed",
+      "intro": "Empieza por el conjunto y abre el corte para descubrir su profundidad. La visita enlaza el espacio urbano actual con una secuencia de calles, edificios y usos superpuestos.",
+      "narrative": "Empieza por el conjunto y abre el corte para descubrir su profundidad. La visita enlaza el espacio urbano actual con una secuencia de calles, edificios y usos superpuestos.",
+      "facts": [
+        {
+          "text": "El recorrido arqueológico conserva unos sesenta metros de calzada romana.",
+          "sourceIds": [
+            "po-dival"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El Ayuntamiento describe restos protegidos en los sótanos de dos edificios de viviendas.",
+          "sourceIds": [
+            "po-accesibilidad2022"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Compara el volumen residencial con la franja arqueológica que aparece al abrir el corte.",
+      "modelNote": "La sección retira elementos contemporáneos para hacer legible el subsuelo. Es una maqueta registrada con cartografía y planos publicados, no un escaneo integral del museo.",
+      "sourceIds": [
+        "po-dival",
+        "po-accesibilidad2022",
+        "po-excavacion2005",
+        "po-casas2022",
+        "po-anforas2020",
+        "po-catastro",
+        "po-pnoa",
+        "po-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual compartido con el modelo y registrado sobre cartografía y plantas publicadas. No es una medición de cada estructura, un punto topográfico ni un itinerario físico autorizado.",
+      "osmIds": [],
+      "order": 1,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "po-catastro",
+        "po-osm",
+        "po-anforas2020"
+      ],
+      "readingLayer": "contemporanea",
+      "coordinate": [
+        -0.27254054209525536,
+        39.67969177984905
+      ],
+      "coordinates": [
+        -0.27254054209525536,
+        39.67969177984905
+      ],
+      "floor": null
+    },
+    {
+      "id": "portic-plaza",
+      "title": "La Antiga Moreria como puerta de entrada",
+      "label": "La plaza",
+      "regionId": "contemporanea",
+      "period": "mixed",
+      "intro": "Recorre el borde de la plaza y busca la entrada antes de descender. El exterior permite entender dónde queda el yacimiento dentro de las calles del Sagunto actual.",
+      "narrative": "Recorre el borde de la plaza y busca la entrada antes de descender. El exterior permite entender dónde queda el yacimiento dentro de las calles del Sagunto actual.",
+      "facts": [
+        {
+          "text": "La dirección institucional de la Vía del Pòrtic es Plaça Antiga Moreria, 9.",
+          "sourceIds": [
+            "po-dival"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La investigación doméstica incorpora las excavaciones del antiguo campo de Romeu, iniciadas en 1991.",
+          "sourceIds": [
+            "po-casas2022"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Mira la posición de la entrada, el arbolado y el encuentro de la plaza con los edificios.",
+      "modelNote": "Pavimento, mobiliario y pequeños desniveles se interpretan a partir de la cartografía y la ortofoto. La plaza actual no se transforma en una plaza romana hipotética.",
+      "sourceIds": [
+        "po-dival",
+        "po-casas2022",
+        "po-excavacion2005",
+        "po-anforas2020",
+        "po-catastro",
+        "po-pnoa",
+        "po-osm",
+        "po-terreno"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual compartido con el modelo y registrado sobre cartografía y plantas publicadas. No es una medición de cada estructura, un punto topográfico ni un itinerario físico autorizado.",
+      "osmIds": [],
+      "order": 2,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "po-catastro",
+        "po-osm",
+        "po-anforas2020"
+      ],
+      "readingLayer": "contemporanea",
+      "coordinate": [
+        -0.273132804,
+        39.679943227
+      ],
+      "coordinates": [
+        -0.273132804,
+        39.679943227
+      ],
+      "floor": 0
+    },
+    {
+      "id": "portic-acceso",
+      "title": "Pasar del nivel de calle a la arqueología",
+      "label": "El acceso",
+      "regionId": "contemporanea",
+      "period": "contemporary",
+      "intro": "Acércate al frente acristalado y cambia a la vista interior. La perspectiva del acceso ayuda a separar las piezas antiguas de la envolvente que hoy las protege.",
+      "narrative": "Acércate al frente acristalado y cambia a la vista interior. La perspectiva del acceso ayuda a separar las piezas antiguas de la envolvente que hoy las protege.",
+      "facts": [
+        {
+          "text": "El proyecto de museografía describe sótanos acristalados integrados en un edificio residencial.",
+          "sourceIds": [
+            "po-museografia"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "En noviembre de 2022 se inauguraron mejoras de accesibilidad y seguridad del itinerario.",
+          "sourceIds": [
+            "po-accesibilidad2022"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Observa el vidrio y los soportes oscuros antes de mirar hacia el pavimento romano.",
+      "modelNote": "El acceso se registra sobre la entrada cartográfica; la comunicación interior es una aproximación visual. Los focos virtuales no acreditan un recorrido físico autorizado ni sustituyen la información de visita.",
+      "sourceIds": [
+        "po-museografia",
+        "po-accesibilidad2022",
+        "po-excavacion2005",
+        "po-casas2022",
+        "po-anforas2020",
+        "po-catastro",
+        "po-pnoa",
+        "po-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual compartido con el modelo y registrado sobre cartografía y plantas publicadas. No es una medición de cada estructura, un punto topográfico ni un itinerario físico autorizado.",
+      "osmIds": [],
+      "order": 3,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "po-catastro",
+        "po-osm",
+        "po-anforas2020"
+      ],
+      "readingLayer": "contemporanea",
+      "coordinate": [
+        -0.2728361,
+        39.6796023
+      ],
+      "coordinates": [
+        -0.2728361,
+        39.6796023
+      ],
+      "floor": 0
+    },
+    {
+      "id": "portic-pasarela",
+      "title": "Mirar los restos desde la pasarela",
+      "label": "La pasarela",
+      "regionId": "contemporanea",
+      "period": "contemporary",
+      "intro": "Sigue visualmente el borde de la tarima. La distancia entre visitante y restos permite leer el trazado sin pisar las superficies arqueológicas.",
+      "narrative": "Sigue visualmente el borde de la tarima. La distancia entre visitante y restos permite leer el trazado sin pisar las superficies arqueológicas.",
+      "facts": [
+        {
+          "text": "La actuación de 2022 añadió barandillas de hierro y madera y protección de vidrio reforzado junto a la tarima.",
+          "sourceIds": [
+            "po-accesibilidad2022"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La bibliografía de musealización ilustra la pasarela contemporánea junto a los restos de la calzada.",
+          "sourceIds": [
+            "po-calzadas2016"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Compara tarima, barandilla y estructura moderna con el tono y el desgaste de las piedras.",
+      "modelNote": "El trazado de la pasarela, sus anchos menores y sus encuentros se aproximan mediante fotografías. Las vigas y pilares contemporáneos no se confunden con el pórtico romano.",
+      "sourceIds": [
+        "po-accesibilidad2022",
+        "po-calzadas2016",
+        "po-excavacion2005",
+        "po-casas2022",
+        "po-anforas2020",
+        "po-catastro",
+        "po-pnoa",
+        "po-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual compartido con el modelo y registrado sobre cartografía y plantas publicadas. No es una medición de cada estructura, un punto topográfico ni un itinerario físico autorizado.",
+      "osmIds": [],
+      "order": 4,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "po-catastro",
+        "po-osm",
+        "po-anforas2020"
+      ],
+      "readingLayer": "contemporanea",
+      "coordinate": [
+        -0.27262223257949725,
+        39.67969429101115
+      ],
+      "coordinates": [
+        -0.27262223257949725,
+        39.67969429101115
+      ],
+      "floor": -1
+    },
+    {
+      "id": "portic-calzada",
+      "title": "El eje que organiza el barrio",
+      "label": "La calzada",
+      "regionId": "via",
+      "period": "roman",
+      "intro": "Coloca la cámara cerca del pavimento y sigue el eje de la calle. Fíjate en su cambio de dirección y en los espacios que se abren a cada lado.",
+      "narrative": "Coloca la cámara cerca del pavimento y sigue el eje de la calle. Fíjate en su cambio de dirección y en los espacios que se abren a cada lado.",
+      "facts": [
+        {
+          "text": "El estudio de 2022 identifica el eje norte–sur como kardo maximus y distingue un decumanus minor transversal.",
+          "sourceIds": [
+            "po-casas2022"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Su relación con el itinerario de la Vía Augusta se propone como interpretación del acceso a Saguntum.",
+          "sourceIds": [
+            "po-excavacion2005"
+          ],
+          "confidence": "interpretive"
+        }
+      ],
+      "lookFor": "Sigue el giro del extremo septentrional y compara la calle con las alineaciones de las casas.",
+      "modelNote": "La planta publicada orienta la restitución. La denominación kardo procede de la interpretación arqueológica; no se llama decumanus a todo el tramo conservado ni se presenta su identificación con la Vía Augusta como indiscutible.",
+      "sourceIds": [
+        "po-casas2022",
+        "po-vias2015",
+        "po-excavacion2005",
+        "po-anforas2020",
+        "po-catastro",
+        "po-pnoa",
+        "po-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual compartido con el modelo y registrado sobre cartografía y plantas publicadas. No es una medición de cada estructura, un punto topográfico ni un itinerario físico autorizado.",
+      "osmIds": [],
+      "order": 5,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "po-catastro",
+        "po-osm",
+        "po-anforas2020"
+      ],
+      "readingLayer": "via",
+      "coordinate": [
+        -0.27263362114270173,
+        39.679745981358515
+      ],
+      "coordinates": [
+        -0.27263362114270173,
+        39.679745981358515
+      ],
+      "floor": -1
+    },
+    {
+      "id": "portic-losado",
+      "title": "Las piezas y la anchura del camino",
+      "label": "El enlosado",
+      "regionId": "via",
+      "period": "roman",
+      "intro": "Baja la mirada hasta las juntas. Cambia de lado para apreciar cómo la textura, el tamaño de las piezas y la irregularidad del borde dan escala a la calle.",
+      "narrative": "Baja la mirada hasta las juntas. Cambia de lado para apreciar cómo la textura, el tamaño de las piezas y la irregularidad del borde dan escala a la calle.",
+      "facts": [
+        {
+          "text": "El avance de 2005 mide 4,10 m al norte y entre 5 y 5,40 m en el sector meridional.",
+          "sourceIds": [
+            "po-excavacion2005"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Describe losas de caliza dolomítica gris sobre capas de arena y gravas.",
+          "sourceIds": [
+            "po-excavacion2005"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Busca variaciones en las piezas, bordes rotos y diferencias entre calzada y espacios laterales.",
+      "modelNote": "Se evita una calle de anchura uniforme. Cada losa y su desgaste se generan de forma interpretativa; la maqueta no copia piedra por piedra un levantamiento fotogramétrico.",
+      "sourceIds": [
+        "po-excavacion2005",
+        "po-casas2022",
+        "po-anforas2020",
+        "po-catastro",
+        "po-pnoa",
+        "po-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual compartido con el modelo y registrado sobre cartografía y plantas publicadas. No es una medición de cada estructura, un punto topográfico ni un itinerario físico autorizado.",
+      "osmIds": [],
+      "order": 6,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "po-catastro",
+        "po-osm",
+        "po-anforas2020"
+      ],
+      "readingLayer": "via",
+      "coordinate": [
+        -0.2725984086027514,
+        39.679781799740816
+      ],
+      "coordinates": [
+        -0.2725984086027514,
+        39.679781799740816
+      ],
+      "floor": -1
+    },
+    {
+      "id": "portic-porticos",
+      "title": "Pilares con un ritmo irregular",
+      "label": "Los pórticos",
+      "regionId": "via",
+      "period": "roman",
+      "intro": "Observa ambos bordes de la calzada. Al comparar sus apoyos, la calle deja de parecer una composición simétrica y muestra mejor sus transformaciones.",
+      "narrative": "Observa ambos bordes de la calzada. Al comparar sus apoyos, la calle deja de parecer una composición simétrica y muestra mejor sus transformaciones.",
+      "facts": [
+        {
+          "text": "La excavación de 2005 enumera nueve pilares al oeste y cinco al este, con separaciones desiguales.",
+          "sourceIds": [
+            "po-excavacion2005"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La síntesis de 2015 menciona dieciséis pilares; la escena adopta los catorce individualizados en el primer inventario.",
+          "sourceIds": [
+            "po-vias2015"
+          ],
+          "confidence": "disputed"
+        }
+      ],
+      "lookFor": "Compara la distancia entre apoyos y el tratamiento de las caras de piedra.",
+      "modelNote": "Los catorce apoyos siguen el recuento explícito de 2005. Las alturas completas y cubiertas de la lectura histórica son propuestas; no se presenta una columnata corintia uniforme como hallazgo.",
+      "sourceIds": [
+        "po-excavacion2005",
+        "po-vias2015",
+        "po-casas2022",
+        "po-anforas2020",
+        "po-catastro",
+        "po-pnoa",
+        "po-osm"
+      ],
+      "confidence": "disputed",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual compartido con el modelo y registrado sobre cartografía y plantas publicadas. No es una medición de cada estructura, un punto topográfico ni un itinerario físico autorizado.",
+      "osmIds": [],
+      "order": 7,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "po-catastro",
+        "po-osm",
+        "po-anforas2020"
+      ],
+      "readingLayer": "via",
+      "coordinate": [
+        -0.27260130054464243,
+        39.679731215799016
+      ],
+      "coordinates": [
+        -0.27260130054464243,
+        39.679731215799016
+      ],
+      "floor": -1
+    },
+    {
+      "id": "portic-cloaca",
+      "title": "La infraestructura bajo las losas",
+      "label": "La cloaca",
+      "regionId": "via",
+      "period": "roman",
+      "intro": "Abre el corte y sigue el canal bajo el pavimento. Esta vista permite relacionar la superficie de circulación con el sistema que quedaba oculto debajo.",
+      "narrative": "Abre el corte y sigue el canal bajo el pavimento. Esta vista permite relacionar la superficie de circulación con el sistema que quedaba oculto debajo.",
+      "facts": [
+        {
+          "text": "La cloaca tiene 0,68 m de anchura interior y más de 1,20 m de profundidad.",
+          "sourceIds": [
+            "po-excavacion2005"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Sus paredes de mampostería y su cubrición de losas forman un conducto rectangular.",
+          "sourceIds": [
+            "po-vias2015"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Reconoce las paredes laterales, el fondo y las losas que cierran el canal.",
+      "modelNote": "La apertura es didáctica. No se añade una bóveda de cañón ni un túnel paseable: el conducto mantiene su escala estrecha y las pérdidas visibles se interpretan con prudencia.",
+      "sourceIds": [
+        "po-excavacion2005",
+        "po-vias2015",
+        "po-casas2022",
+        "po-anforas2020",
+        "po-catastro",
+        "po-pnoa",
+        "po-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual compartido con el modelo y registrado sobre cartografía y plantas publicadas. No es una medición de cada estructura, un punto topográfico ni un itinerario físico autorizado.",
+      "osmIds": [],
+      "order": 8,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "po-catastro",
+        "po-osm",
+        "po-anforas2020"
+      ],
+      "readingLayer": "via",
+      "coordinate": [
+        -0.27267587619064204,
+        39.67970299929976
+      ],
+      "coordinates": [
+        -0.27267587619064204,
+        39.67970299929976
+      ],
+      "floor": -1
+    },
+    {
+      "id": "portic-desagues",
+      "title": "Del interior de las casas al colector",
+      "label": "Los desagües",
+      "regionId": "domestico",
+      "period": "roman",
+      "intro": "Sigue un ramal desde el borde de las estancias hacia la calle. El corte permite entender conexiones que desde una vista elevada quedan escondidas entre los muros.",
+      "narrative": "Sigue un ramal desde el borde de las estancias hacia la calle. El corte permite entender conexiones que desde una vista elevada quedan escondidas entre los muros.",
+      "facts": [
+        {
+          "text": "La casa C dispone de un desagüe de 23,71 m que alcanza la cloaca.",
+          "sourceIds": [
+            "po-casas2022"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "También se documentó una tubería de plomo en el lado occidental de la vía.",
+          "sourceIds": [
+            "po-excavacion2005"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Distingue los ramales pequeños del conducto principal y mira dónde atraviesan los bordes.",
+      "modelNote": "Se representa la lógica de conexión, sin garantizar cada pendiente o empalme conservado. El abastecimiento de agua y la evacuación se explican como sistemas distintos.",
+      "sourceIds": [
+        "po-casas2022",
+        "po-excavacion2005",
+        "po-anforas2020",
+        "po-catastro",
+        "po-pnoa",
+        "po-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual compartido con el modelo y registrado sobre cartografía y plantas publicadas. No es una medición de cada estructura, un punto topográfico ni un itinerario físico autorizado.",
+      "osmIds": [],
+      "order": 9,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "po-catastro",
+        "po-osm",
+        "po-anforas2020"
+      ],
+      "readingLayer": "domestico",
+      "coordinate": [
+        -0.27263220293366014,
+        39.6796640500427
+      ],
+      "coordinates": [
+        -0.27263220293366014,
+        39.6796640500427
+      ],
+      "floor": -1
+    },
+    {
+      "id": "portic-arco",
+      "title": "Lo que queda de un paso monumental",
+      "label": "El arco",
+      "regionId": "monumental",
+      "period": "roman",
+      "intro": "Sitúate frente a los dos macizos y compara su escala con el ancho de la vía. La lectura histórica permite imaginar un paso elevado sin ocultar la escasez del alzado conservado.",
+      "narrative": "Sitúate frente a los dos macizos y compara su escala con el ancho de la vía. La lectura histórica permite imaginar un paso elevado sin ocultar la escasez del alzado conservado.",
+      "facts": [
+        {
+          "text": "Las cimentaciones atribuidas al arco miden aproximadamente 3 × 3 m y 2,80 × 3,50 m.",
+          "sourceIds": [
+            "po-vias2015"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La luz publicada varía: 2,50 m en 2015 y 3,50 m en 2022; el alzado se desconoce.",
+          "sourceIds": [
+            "po-vias2015",
+            "po-casas2022"
+          ],
+          "confidence": "disputed"
+        }
+      ],
+      "lookFor": "Compara la masa de las cimentaciones con la ligereza de la restitución sugerida.",
+      "modelNote": "Sólo las bases ofrecen apoyo geométrico firme. Altura, remate y decoración son desconocidos; la restitución se distingue de la fábrica conservada y no recibe inscripciones inventadas.",
+      "sourceIds": [
+        "po-vias2015",
+        "po-casas2022",
+        "po-excavacion2005",
+        "po-anforas2020",
+        "po-catastro",
+        "po-pnoa",
+        "po-osm"
+      ],
+      "confidence": "disputed",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual compartido con el modelo y registrado sobre cartografía y plantas publicadas. No es una medición de cada estructura, un punto topográfico ni un itinerario físico autorizado.",
+      "osmIds": [],
+      "order": 10,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "po-catastro",
+        "po-osm",
+        "po-anforas2020"
+      ],
+      "readingLayer": "monumental",
+      "coordinate": [
+        -0.27250122199248866,
+        39.67988065847597
+      ],
+      "coordinates": [
+        -0.27250122199248866,
+        39.67988065847597
+      ],
+      "floor": -1
+    },
+    {
+      "id": "portic-podio",
+      "title": "Un edificio monumental todavía incompleto",
+      "label": "El podio",
+      "regionId": "monumental",
+      "period": "roman",
+      "intro": "Rodea visualmente el basamento y mira cómo continúa hacia el límite del área excavada. La interrupción del muro también forma parte de lo que puede leerse.",
+      "narrative": "Rodea visualmente el basamento y mira cómo continúa hacia el límite del área excavada. La interrupción del muro también forma parte de lo que puede leerse.",
+      "facts": [
+        {
+          "text": "El avance registra un basamento de unos 24,35 m de longitud, prolongado bajo la calle Alorco.",
+          "sourceIds": [
+            "po-excavacion2005"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La lectura como edificio de culto es una interpretación arqueológica; no determina una advocación ni un alzado completo.",
+          "sourceIds": [
+            "po-casas2022"
+          ],
+          "confidence": "interpretive"
+        }
+      ],
+      "lookFor": "Observa el grosor del basamento y el encuentro entre muros antiguos y límites de la excavación.",
+      "modelNote": "No se completa un templo clásico con columnas, frontón o estatua de culto sin respaldo. La investigación municipal de 2018 sobre otro posible templo tampoco equivale a una confirmación.",
+      "sourceIds": [
+        "po-excavacion2005",
+        "po-casas2022",
+        "po-anforas2020",
+        "po-catastro",
+        "po-pnoa",
+        "po-osm",
+        "po-investigacion2018"
+      ],
+      "confidence": "interpretive",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual compartido con el modelo y registrado sobre cartografía y plantas publicadas. No es una medición de cada estructura, un punto topográfico ni un itinerario físico autorizado.",
+      "osmIds": [],
+      "order": 11,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "po-catastro",
+        "po-osm",
+        "po-anforas2020"
+      ],
+      "readingLayer": "monumental",
+      "coordinate": [
+        -0.27246161674222147,
+        39.67978099605715
+      ],
+      "coordinates": [
+        -0.27246161674222147,
+        39.67978099605715
+      ],
+      "floor": -1
+    },
+    {
+      "id": "portic-depositos",
+      "title": "Agua almacenada y superficies impermeables",
+      "label": "Los depósitos",
+      "regionId": "monumental",
+      "period": "roman",
+      "intro": "Mira el interior de las cubetas y el encuentro entre suelo y paredes. La vista baja ayuda a distinguir un recinto construido para contener agua de una habitación ordinaria.",
+      "narrative": "Mira el interior de las cubetas y el encuentro entre suelo y paredes. La vista baja ayuda a distinguir un recinto construido para contener agua de una habitación ordinaria.",
+      "facts": [
+        {
+          "text": "La casa C conserva un impluvium de 2,69 × 2,59 m revestido de opus signinum.",
+          "sourceIds": [
+            "po-casas2022"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Se documentaron depósitos próximos al conjunto monumental, cuya función concreta no está resuelta por completo.",
+          "sourceIds": [
+            "po-excavacion2005"
+          ],
+          "confidence": "interpretive"
+        }
+      ],
+      "lookFor": "Busca el revestimiento rojizo, los bordes y los pequeños cambios de cota.",
+      "modelNote": "Los depósitos de fases diferentes se agrupan para facilitar la lectura del agua. El impluvium de la casa C es una referencia comparativa del conjunto, no la identificación automática de todas las cubetas visibles en este foco. No se asigna a todas un uso ritual.",
+      "sourceIds": [
+        "po-casas2022",
+        "po-excavacion2005",
+        "po-anforas2020",
+        "po-catastro",
+        "po-pnoa",
+        "po-osm"
+      ],
+      "confidence": "interpretive",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual compartido con el modelo y registrado sobre cartografía y plantas publicadas. No es una medición de cada estructura, un punto topográfico ni un itinerario físico autorizado.",
+      "osmIds": [],
+      "order": 12,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "po-catastro",
+        "po-osm",
+        "po-anforas2020"
+      ],
+      "readingLayer": "monumental",
+      "coordinate": [
+        -0.27234574042715154,
+        39.679882489038015
+      ],
+      "coordinates": [
+        -0.27234574042715154,
+        39.679882489038015
+      ],
+      "floor": -1
+    },
+    {
+      "id": "portic-funerario",
+      "title": "Memoria de los primeros enterramientos",
+      "label": "El área funeraria",
+      "regionId": "monumental",
+      "period": "roman",
+      "intro": "Recorre con la mirada los recintos pequeños junto a la vía. Su disposición permite reconocer un uso del lugar que precede a parte de sus transformaciones domésticas.",
+      "narrative": "Recorre con la mirada los recintos pequeños junto a la vía. Su disposición permite reconocer un uso del lugar que precede a parte de sus transformaciones domésticas.",
+      "facts": [
+        {
+          "text": "La investigación funeraria identifica cremaciones en loculi y cistas asociadas a monumentos del sector.",
+          "sourceIds": [
+            "po-cremaciones2005"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El estudio analiza tanto restos humanos como fauna en los contextos de cremación.",
+          "sourceIds": [
+            "po-cremaciones2005"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Compara los límites de los recintos y las pequeñas estructuras conservadas.",
+      "modelNote": "Los contenedores y restos se representan de forma esquemática. Esta fase funeraria romana se mantiene distinta de las inhumaciones tardías de la cloaca; no se inventan epitafios ni identidades.",
+      "sourceIds": [
+        "po-cremaciones2005",
+        "po-excavacion2005",
+        "po-casas2022",
+        "po-anforas2020",
+        "po-catastro",
+        "po-pnoa",
+        "po-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual compartido con el modelo y registrado sobre cartografía y plantas publicadas. No es una medición de cada estructura, un punto topográfico ni un itinerario físico autorizado.",
+      "osmIds": [],
+      "order": 13,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "po-catastro",
+        "po-osm",
+        "po-anforas2020"
+      ],
+      "readingLayer": "monumental",
+      "coordinate": [
+        -0.2726726557348041,
+        39.67948146332949
+      ],
+      "coordinates": [
+        -0.2726726557348041,
+        39.67948146332949
+      ],
+      "floor": -1
+    },
+    {
+      "id": "portic-domestico",
+      "title": "Umbrales, habitaciones y actividad cotidiana",
+      "label": "Las casas",
+      "regionId": "domestico",
+      "period": "roman",
+      "intro": "Acércate a los umbrales y observa cómo se conectan los espacios. Cambia de perspectiva para distinguir un muro antiguo de los cierres que fueron modificando la circulación.",
+      "narrative": "Acércate a los umbrales y observa cómo se conectan los espacios. Cambia de perspectiva para distinguir un muro antiguo de los cierres que fueron modificando la circulación.",
+      "facts": [
+        {
+          "text": "La revisión de 2022 distingue cinco casas, denominadas A–E, conocidas sólo de manera parcial.",
+          "sourceIds": [
+            "po-casas2022"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Las ánforas del solar documentan circulación de vino y otros alimentos procedentes de distintas regiones mediterráneas.",
+          "sourceIds": [
+            "po-anforas2020"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Busca los accesos, pequeños locales y cambios de alineación entre los muros.",
+      "modelNote": "Se conservan los vacíos del registro. Los restos del segundo bloque se sugieren mediante muros bajos tipológicos, sin atribuir a cada tramo una unidad excavada precisa. Cubiertas, muebles y usos exactos de cada habitación no se dan por probados; los objetos son alusiones didácticas.",
+      "sourceIds": [
+        "po-casas2022",
+        "po-anforas2020",
+        "po-excavacion2005",
+        "po-catastro",
+        "po-pnoa",
+        "po-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual compartido con el modelo y registrado sobre cartografía y plantas publicadas. No es una medición de cada estructura, un punto topográfico ni un itinerario físico autorizado.",
+      "osmIds": [],
+      "order": 14,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "po-catastro",
+        "po-osm",
+        "po-anforas2020"
+      ],
+      "readingLayer": "domestico",
+      "coordinate": [
+        -0.272616419051696,
+        39.67956248870325
+      ],
+      "coordinates": [
+        -0.272616419051696,
+        39.67956248870325
+      ],
+      "floor": -1
+    },
+    {
+      "id": "portic-letrinas",
+      "title": "La vida doméstica también deja desagües",
+      "label": "Las letrinas",
+      "regionId": "domestico",
+      "period": "roman",
+      "intro": "Acerca la vista al borde de las estancias y sigue los canales. La relación con la calle ayuda a entender estas instalaciones sin convertirlas en una sala monumental.",
+      "narrative": "Acerca la vista al borde de las estancias y sigue los canales. La relación con la calle ayuda a entender estas instalaciones sin convertirlas en una sala monumental.",
+      "facts": [
+        {
+          "text": "El avance identifica dos letrinas al este de la vía, registradas como UE 1083 y UE 1251.",
+          "sourceIds": [
+            "po-excavacion2005"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Las reformas domésticas ocuparon antiguos espacios de pórtico y alteraron los drenajes.",
+          "sourceIds": [
+            "po-vias2015"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Compara los pequeños conductos con los muros que cambiaron el límite entre casa y calle.",
+      "modelNote": "La geometría conservada guía la escena. Asientos, cubiertas y acabados desaparecidos se mantienen simplificados; no se completa una batería de letrinas públicas sin evidencia.",
+      "sourceIds": [
+        "po-excavacion2005",
+        "po-vias2015",
+        "po-casas2022",
+        "po-anforas2020",
+        "po-catastro",
+        "po-pnoa",
+        "po-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual compartido con el modelo y registrado sobre cartografía y plantas publicadas. No es una medición de cada estructura, un punto topográfico ni un itinerario físico autorizado.",
+      "osmIds": [],
+      "order": 15,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "po-catastro",
+        "po-osm",
+        "po-anforas2020"
+      ],
+      "readingLayer": "domestico",
+      "coordinate": [
+        -0.2726991806548836,
+        39.67958252056872
+      ],
+      "coordinates": [
+        -0.2726991806548836,
+        39.67958252056872
+      ],
+      "floor": -1
+    },
+    {
+      "id": "portic-necropolis",
+      "title": "Cuando la cloaca dejó de funcionar",
+      "label": "Los enterramientos tardíos",
+      "regionId": "tardia",
+      "period": "mixed",
+      "intro": "Vuelve al canal con una lectura temporal distinta. Esta parada ayuda a comprender que un mismo espacio pudo cambiar profundamente de uso.",
+      "narrative": "Vuelve al canal con una lectura temporal distinta. Esta parada ayuda a comprender que un mismo espacio pudo cambiar profundamente de uso.",
+      "facts": [
+        {
+          "text": "El estudio bioantropológico sitúa cuatro individuos en la cloaca en un contexto de los siglos V–VI.",
+          "sourceIds": [
+            "po-cloaca2005"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Dos inhumaciones conservaban su posición primaria; los otros restos estaban alterados y carecían de ajuar.",
+          "sourceIds": [
+            "po-cloaca2005"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Relaciona el lugar de enterramiento con la estructura abandonada del conducto.",
+      "modelNote": "Se separa esta fase del saneamiento en uso. No se representa una familia identificada ni se reconstruyen individuos completos a partir de restos dispersos; el foco sirve para interpretar el contexto.",
+      "sourceIds": [
+        "po-cloaca2005",
+        "po-excavacion2005",
+        "po-casas2022",
+        "po-anforas2020",
+        "po-catastro",
+        "po-pnoa",
+        "po-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual compartido con el modelo y registrado sobre cartografía y plantas publicadas. No es una medición de cada estructura, un punto topográfico ni un itinerario físico autorizado.",
+      "osmIds": [],
+      "order": 16,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "po-catastro",
+        "po-osm",
+        "po-anforas2020"
+      ],
+      "readingLayer": "tardia",
+      "coordinate": [
+        -0.2726836229494311,
+        39.67969511925565
+      ],
+      "coordinates": [
+        -0.2726836229494311,
+        39.67969511925565
+      ],
+      "floor": -1
+    },
+    {
+      "id": "portic-medieval",
+      "title": "Nuevas casas sobre las estructuras antiguas",
+      "label": "La fase medieval",
+      "regionId": "medieval",
+      "period": "medieval",
+      "intro": "Sube la mirada hacia los muros y cubetas de esta capa. La superposición deja de ser confusión cuando se observa como una secuencia de ocupaciones.",
+      "narrative": "Sube la mirada hacia los muros y cubetas de esta capa. La superposición deja de ser confusión cuando se observa como una secuencia de ocupaciones.",
+      "facts": [
+        {
+          "text": "El estudio medieval describe dos viviendas andalusíes que continuaron utilizándose tras la conquista cristiana.",
+          "sourceIds": [
+            "po-medieval2014"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Las balsas sugieren actividad artesanal, pero su función precisa permanece abierta.",
+          "sourceIds": [
+            "po-medieval2014"
+          ],
+          "confidence": "interpretive"
+        }
+      ],
+      "lookFor": "Busca estructuras que cortan o reutilizan alineaciones más antiguas.",
+      "modelNote": "La capa medieval es una lectura diferenciada. En el bloque meridional, los muros bajos son una disposición tipológica orientativa: no se dispone de una planta completa georreferenciada de ese sótano. No se dibuja una tenería demostrada ni se fija la función de cada balsa.",
+      "sourceIds": [
+        "po-medieval2014",
+        "po-excavacion2005",
+        "po-casas2022",
+        "po-anforas2020",
+        "po-catastro",
+        "po-pnoa",
+        "po-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual compartido con el modelo y registrado sobre cartografía y plantas publicadas. No es una medición de cada estructura, un punto topográfico ni un itinerario físico autorizado.",
+      "osmIds": [],
+      "order": 17,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "po-catastro",
+        "po-osm",
+        "po-anforas2020"
+      ],
+      "readingLayer": "medieval",
+      "coordinate": [
+        -0.272953845,
+        39.679276005
+      ],
+      "coordinates": [
+        -0.272953845,
+        39.679276005
+      ],
+      "floor": -1
+    },
+    {
+      "id": "portic-musealizacion",
+      "title": "Conservar, estudiar y hacer visible",
+      "label": "La musealización",
+      "regionId": "contemporanea",
+      "period": "contemporary",
+      "intro": "Compara la arquitectura que sostiene el edificio con los restos expuestos. La visita actual también tiene su historia de documentación y adaptación.",
+      "narrative": "Compara la arquitectura que sostiene el edificio con los restos expuestos. La visita actual también tiene su historia de documentación y adaptación.",
+      "facts": [
+        {
+          "text": "En 2013 se documentaron trabajos de musealización de una segunda área, con levantamientos láser y recursos interpretativos.",
+          "sourceIds": [
+            "po-global2013"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "En abril de 2026 se contrató la redacción de un proyecto inmersivo; el anuncio no acredita su ejecución.",
+          "sourceIds": [
+            "po-proyecto2026"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Observa cómo se distinguen soportes modernos, iluminación y superficies arqueológicas.",
+      "modelNote": "El atlas utiliza geometría propia contrastada con fuentes públicas; no reutiliza el levantamiento láser de 2013. No se incorpora como terminada la sala inmersiva anunciada en 2026.",
+      "sourceIds": [
+        "po-global2013",
+        "po-proyecto2026",
+        "po-excavacion2005",
+        "po-casas2022",
+        "po-anforas2020",
+        "po-catastro",
+        "po-pnoa",
+        "po-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual compartido con el modelo y registrado sobre cartografía y plantas publicadas. No es una medición de cada estructura, un punto topográfico ni un itinerario físico autorizado.",
+      "osmIds": [],
+      "order": 18,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "po-catastro",
+        "po-osm",
+        "po-anforas2020"
+      ],
+      "readingLayer": "contemporanea",
+      "coordinate": [
+        -0.2724560319993747,
+        39.679777743966575
+      ],
+      "coordinates": [
+        -0.2724560319993747,
+        39.679777743966575
+      ],
+      "floor": -1
+    },
+    {
+      "id": "portic-historica",
+      "title": "Cómo se construye una imagen del pasado",
+      "label": "La lectura histórica",
+      "regionId": "monumental",
+      "period": "mixed",
+      "intro": "Alterna el estado conservado y las propuestas de restitución. Atiende a los límites entre evidencia y complemento visual: una imagen clara también puede mostrar lo que sigue sin saberse.",
+      "narrative": "Alterna el estado conservado y las propuestas de restitución. Atiende a los límites entre evidencia y complemento visual: una imagen clara también puede mostrar lo que sigue sin saberse.",
+      "facts": [
+        {
+          "text": "La publicación de 2020 incluye una planta del siglo II que permite comparar la posición relativa de vía y edificios.",
+          "sourceIds": [
+            "po-anforas2020"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El catálogo de decoración estudia fragmentos pétreos recuperados, no fachadas antiguas completas conservadas.",
+          "sourceIds": [
+            "po-decoracion2005"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Compara cimentaciones conservadas y volúmenes interpretados; consulta las fuentes de cada parada.",
+      "modelNote": "La lectura histórica no reúne todos los usos en un único año. Las capas ayudan a distinguir temas y fases; una cubierta o remate reconstruido nunca se presenta como resto existente.",
+      "sourceIds": [
+        "po-anforas2020",
+        "po-decoracion2005",
+        "po-excavacion2005",
+        "po-casas2022",
+        "po-catastro",
+        "po-pnoa",
+        "po-osm"
+      ],
+      "confidence": "interpretive",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual compartido con el modelo y registrado sobre cartografía y plantas publicadas. No es una medición de cada estructura, un punto topográfico ni un itinerario físico autorizado.",
+      "osmIds": [],
+      "order": 19,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "po-catastro",
+        "po-osm",
+        "po-anforas2020"
+      ],
+      "readingLayer": "monumental",
+      "coordinate": [
+        -0.27256368869825376,
+        39.67972778780576
+      ],
+      "coordinates": [
+        -0.27256368869825376,
+        39.67972778780576
+      ],
+      "floor": -1
+    },
+    {
+      "id": "portic-entorno",
+      "title": "Volver a la ciudad y al Palancia",
+      "label": "El entorno",
+      "regionId": "contemporanea",
+      "period": "mixed",
+      "intro": "Cierra el corte y amplía la vista. La relación entre la plaza, los bloques y las calles permite situar la visita dentro del resto del atlas.",
+      "narrative": "Cierra el corte y amplía la vista. La relación entre la plaza, los bloques y las calles permite situar la visita dentro del resto del atlas.",
+      "facts": [
+        {
+          "text": "El solar arqueológico se encuentra en la parte baja de Sagunto, junto al corredor del Palancia.",
+          "sourceIds": [
+            "po-medieval2014"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Las huellas catastrales sitúan los bloques actuales y sus patios alrededor de Antiga Moreria, Alorco y Horts.",
+          "sourceIds": [
+            "po-catastro"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Compara la orientación de las calles actuales con la vía antigua y la cercanía del río.",
+      "modelNote": "El contexto conserva huellas cartográficas y alturas estimadas. Balcones, carpinterías, cubiertas y vegetación se aproximan visualmente; no se afirma un inventario exacto de todas las fachadas de 2026.",
+      "sourceIds": [
+        "po-medieval2014",
+        "po-catastro",
+        "po-excavacion2005",
+        "po-casas2022",
+        "po-anforas2020",
+        "po-pnoa",
+        "po-osm",
+        "po-terreno"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual compartido con el modelo y registrado sobre cartografía y plantas publicadas. No es una medición de cada estructura, un punto topográfico ni un itinerario físico autorizado.",
+      "osmIds": [],
+      "order": 20,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "po-catastro",
+        "po-osm",
+        "po-anforas2020"
+      ],
+      "readingLayer": "contemporanea",
+      "coordinate": [
+        -0.2722026,
+        39.6798814
+      ],
+      "coordinates": [
+        -0.2722026,
+        39.6798814
+      ],
+      "floor": 0
+    }
+  ],
+  "regions": [
+    {
+      "id": "via",
+      "name": "La calle y el agua",
+      "aliases": [],
+      "summary": "Calzada, pórticos y redes que organizan el espacio.",
+      "sourceIds": [
+        "po-excavacion2005",
+        "po-casas2022",
+        "po-vias2015"
+      ],
+      "stopIds": [
+        "portic-calzada",
+        "portic-losado",
+        "portic-porticos",
+        "portic-cloaca"
+      ],
+      "coordinate": [
+        -0.2726273016201844,
+        39.67974049904953
+      ]
+    },
+    {
+      "id": "monumental",
+      "name": "Monumentos y primeros usos",
+      "aliases": [],
+      "summary": "Bases monumentales, depósitos y contextos funerarios; sus cronologías no son idénticas.",
+      "sourceIds": [
+        "po-vias2015",
+        "po-cremaciones2005",
+        "po-casas2022"
+      ],
+      "stopIds": [
+        "portic-arco",
+        "portic-podio",
+        "portic-depositos",
+        "portic-funerario",
+        "portic-historica"
+      ],
+      "coordinate": [
+        -0.2725089847189839,
+        39.679750678941275
+      ]
+    },
+    {
+      "id": "domestico",
+      "name": "Casas y vida cotidiana",
+      "aliases": [],
+      "summary": "Umbrales, estancias, letrinas y cambios de ocupación.",
+      "sourceIds": [
+        "po-casas2022",
+        "po-excavacion2005"
+      ],
+      "stopIds": [
+        "portic-desagues",
+        "portic-domestico",
+        "portic-letrinas"
+      ],
+      "coordinate": [
+        -0.27264926754674657,
+        39.679603019771555
+      ]
+    },
+    {
+      "id": "tardia",
+      "name": "Transformaciones tardías",
+      "aliases": [],
+      "summary": "Enterramientos que reutilizan una infraestructura abandonada.",
+      "sourceIds": [
+        "po-cloaca2005"
+      ],
+      "stopIds": [
+        "portic-necropolis"
+      ],
+      "coordinate": [
+        -0.2726836229494311,
+        39.67969511925565
+      ]
+    },
+    {
+      "id": "medieval",
+      "name": "La ocupación medieval",
+      "aliases": [],
+      "summary": "Viviendas y balsas sobre una secuencia anterior.",
+      "sourceIds": [
+        "po-medieval2014"
+      ],
+      "stopIds": [
+        "portic-medieval"
+      ],
+      "coordinate": [
+        -0.272953845,
+        39.679276005
+      ]
+    },
+    {
+      "id": "contemporanea",
+      "name": "Museo y ciudad actual",
+      "aliases": [],
+      "summary": "Acceso, pasarela, interpretación y edificios del entorno.",
+      "sourceIds": [
+        "po-museografia",
+        "po-accesibilidad2022",
+        "po-catastro"
+      ],
+      "stopIds": [
+        "portic-conjunto",
+        "portic-plaza",
+        "portic-acceso",
+        "portic-pasarela",
+        "portic-musealizacion",
+        "portic-entorno"
+      ],
+      "coordinate": [
+        -0.2726317184456879,
+        39.6797651236378
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "po-excavacion2005",
+      "title": "La excavación del solar de la plaça de la Moreria Vella y la Saguntum romana",
+      "author": "José Manuel Melchor Monserrat y Josep Benedito i Nuez",
+      "url": "https://www.centroarqueologicosaguntino.es/uploads/descargas/381_03_la_excavacion_del_solar.pdf",
+      "type": "publicación de los excavadores · ARSE 39",
+      "year": 2005,
+      "locator": "Páginas 11–34; calzada y cloaca, pp. 14–17; fases y estructuras, pp. 18–27; fotografías, pp. 30–34.",
+      "note": "Avance de la campaña 2002–2004 en un solar de 1.700 m². El recuento explícito es de nueve pilares occidentales y cinco orientales; las atribuciones funcionales se contrastan con publicaciones posteriores.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "po-casas2022",
+      "title": "Las casas romanas extramuros de la plaza de la Morería",
+      "author": "Josep Benedito-Nuez, José Manuel Melchor-Monserrat y Juan José Ferrer-Maestro",
+      "url": "https://doi.org/10.1344/Pyrenae2022.vol53num2.6",
+      "type": "artículo arqueológico · Pyrenae 53.2",
+      "year": 2022,
+      "locator": "Páginas 145–168; planta y sección de fases, fig. 2; descripción de las casas A–E y sus conexiones con la calle.",
+      "note": "Actualiza la lectura doméstica y distingue kardo maximus y decumanus minor. Se consultó también la copia de autor; hay interpretaciones discutidas de algunas habitaciones y edificios.",
+      "accessed": "2026-11-20",
+      "alternateUrl": "https://www.academia.edu/107852058/Las_casas_romanas_extramuros_de_la_plaza_de_la_Morer%C3%ADa_Aspectos_de_la_arquitectura_dom%C3%A9stica_en_Sagunto_en_el_Bajo_Imperio"
+    },
+    {
+      "id": "po-vias2015",
+      "title": "Las infraestructuras viarias de Saguntum en época imperial: propaganda, prestigio social y poder municipal",
+      "author": "Josep Benedito Nuez",
+      "url": "https://dialnet.unirioja.es/descarga/articulo/5239230.pdf",
+      "type": "artículo arqueológico · Potestas 8",
+      "year": 2015,
+      "locator": "Páginas 9–35; Morería, calzada y pórticos, pp. 17–21; arco y monumentos funerarios, pp. 30–32.",
+      "note": "La síntesis menciona dieciséis pilares, una anchura meridional de 5,50 m y una luz del arco de 2,50 m. El inventario de 2005 y la revisión de 2022 difieren en esos valores; la guía conserva el desacuerdo.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "po-anforas2020",
+      "title": "Exportación e importación de alimentos en Saguntum: las ánforas romanas del solar de la antigua Morería",
+      "author": "Ramón Járrega Domínguez",
+      "url": "https://recercat.cat/bitstream/handle/2072/522755/2020-exportacion-importacion-alimentos-saguntum-anforas-moreria.pdf?isAllowed=y&sequence=1",
+      "type": "estudio arqueológico · Quaderns de Prehistòria i Arqueologia de Castelló 38",
+      "year": 2020,
+      "locator": "Páginas 141–170; fig. 3, p. 143: planta arqueológica del siglo II con escala de cinco metros, elaborada por J. M. Melchor.",
+      "note": "La planta orienta relaciones y proporciones, sin ser un levantamiento georreferenciado de los sótanos actuales. El estudio advierte la complejidad de la estratigrafía y de su cuantificación.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "po-cremaciones2005",
+      "title": "Estudio bioarqueológico de las cremaciones del solar de la Morería",
+      "author": "Manuel Polo Cerdá, Elisa García-Prósper y Alfred Sanchis Serra",
+      "url": "https://centroarqueologicosaguntino.es/wp-content/uploads/2018/09/390_012_estudio_bioarqueologico.pdf",
+      "type": "estudio bioarqueológico · ARSE 39",
+      "year": 2005,
+      "locator": "Páginas 229–268; contextos funerarios, loculi, cistas y restos humanos y faunísticos.",
+      "note": "Las catorce unidades estudiadas no equivalen a catorce edificios o individuos. El análisis de cremaciones es distinto del estudio de inhumaciones tardías en la cloaca.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "po-cloaca2005",
+      "title": "Estudio bioantropológico de los restos óseos hallados en el interior de la cloaca de la vía romana del solar de la Morería",
+      "author": "Manuel Polo Cerdá y Elisa García-Prósper",
+      "url": "https://centroarqueologicosaguntino.es/wp-content/uploads/2018/09/389_011_estudio_bioantropologico.pdf",
+      "type": "estudio bioantropológico · ARSE 39",
+      "year": 2005,
+      "locator": "Páginas 209–228; contexto, número mínimo de individuos y posición, pp. 209–210.",
+      "note": "Fecha el contexto en los siglos V–VI mediante estratigrafía y cerámica. Distingue dos inhumaciones primarias de restos alterados de otros dos individuos; no demuestra parentesco entre ellos.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "po-decoracion2005",
+      "title": "Aproximación al estudio de los elementos decorativos arquitectónicos",
+      "author": "Mónica Claramonte Chiva",
+      "url": "https://centroarqueologicosaguntino.es/wp-content/uploads/2018/09/385_07_aproximacion_al_estudio.pdf",
+      "type": "estudio de materiales · ARSE 39",
+      "year": 2005,
+      "locator": "Páginas 83–123; catálogo de elementos pétreos y revestimientos procedentes de la excavación.",
+      "note": "Los fragmentos permiten estudiar materiales y decoración. Su presencia aislada no autoriza a restituir un orden completo, una inscripción o una advocación concreta.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "po-medieval2014",
+      "title": "A propósito de unas púas de rastrillo y otros materiales metálicos de época medieval procedentes de Sagunto",
+      "author": "Fernando López Bravo, Sandrine Delaporte, Josep Benedito Nuez, Mónica Claramonte Chiva y José Manuel Melchor Montserrat",
+      "url": "https://dialnet.unirioja.es/descarga/articulo/5839442.pdf",
+      "type": "estudio arqueológico · Quaderns de Prehistòria i Arqueologia de Castelló 32",
+      "year": 2014,
+      "locator": "Páginas 241–256; secuencia de fosas, viviendas y balsas, pp. 241–242; inventario de metales.",
+      "note": "Los autores mantienen abierta la función artesanal precisa de las balsas y señalan materiales mezclados en algunos niveles. No se reconstruye una tenería demostrada.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "po-museografia",
+      "title": "La Vía del Pórtico · proyecto de musealización",
+      "author": "Estudios de Afección Patrimonial",
+      "url": "https://www.estudiospatrimoniales.es/portfolio/via-del-portico/",
+      "type": "documentación del equipo de museografía",
+      "year": null,
+      "locator": "Memoria del Plan de Musealización e Interpretación; cinco fotografías del espacio acondicionado.",
+      "note": "Fuente de los autores sobre sótanos acristalados, tarima y estructura contemporánea. La fecha de subida de las fotografías no certifica su fecha de captura ni un inventario de 2026.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "po-global2013",
+      "title": "Musealización de la Vía del Pòrtic",
+      "author": "Global Mediterránea Geomática",
+      "url": "https://www.globalmediterranea.es/musealizacion-via-portic/",
+      "type": "documentación de empresa participante",
+      "year": 2013,
+      "locator": "Noticia del 14 de junio: intervención en la segunda área arqueológica junto al Ayuntamiento y Elecnor.",
+      "note": "Documenta levantamientos láser y recreaciones realizados por aquel equipo. Esos datos no se han recibido ni reutilizado en este atlas; el anuncio tampoco fija por sí solo la fecha exacta de apertura.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "po-accesibilidad2022",
+      "title": "Sagunto inaugura las mejoras de accesibilidad en la Via del Pòrtic",
+      "author": "Ajuntament de Sagunt",
+      "url": "https://aytosagunto.es/es/actualidad/sagunto-inaugura-las-mejoras-de-accesibilidad-en-la-via-del-portic/",
+      "type": "comunicación municipal y fotografías",
+      "year": 2022,
+      "locator": "4 de noviembre; barandillas de hierro, madera y vidrio reforzado; tarima del recorrido y restos conservados bajo dos edificios de viviendas.",
+      "note": "Documenta actuaciones inauguradas en 2022. No se deducen de ella horarios actuales, una ruta física continua por cada foco virtual ni condiciones de accesibilidad posteriores.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "po-investigacion2018",
+      "title": "El Ayuntamiento y la Universitat Jaume I colaboran en una excavación arqueológica en la Via del Pòrtic",
+      "author": "Ajuntament de Sagunt",
+      "url": "https://aytosagunto.es/es/actualidad/el-ayuntamiento-y-la-universitat-jaume-i-colaboran-en-una-excavacion-arqueologica-en-la-via-del-portic/",
+      "type": "comunicación municipal de investigación",
+      "year": 2018,
+      "locator": "26 de enero; georradar previo y sondeo de 3 × 3 m para contrastar la posible existencia de otro templo.",
+      "note": "La noticia describe objetivos de investigación. No es una publicación final que confirme un segundo templo ni aporte un alzado reconstruible.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "po-proyecto2026",
+      "title": "El Ayuntamiento impulsa un espacio inmersivo en la Via del Pòrtic",
+      "author": "Ajuntament de Sagunt",
+      "url": "https://aytosagunto.es/es/actualidad/2026-04-24-el-ayuntamiento-de-sagunto-impulsa-un-espacio-inmersivo-en-la-via-del-portic-para-modernizar-la-experiencia-turistica/",
+      "type": "anuncio de redacción de proyecto",
+      "year": 2026,
+      "locator": "24 de abril; adjudicación de la redacción del proyecto de un nuevo espacio inmersivo.",
+      "note": "Acredita la redacción contratada y las tecnologías previstas. No acredita la instalación, apertura ni finalización del espacio; no se incorpora una sala ejecutada al modelo.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "po-dival",
+      "title": "Vía del Pòrtic y Casa dels Peixos: yacimientos romanos en Sagunto",
+      "author": "València Turisme / Diputació de València",
+      "url": "https://turisme.dival.es/via-del-portic-y-casa-dels-peixos-yacimientos-romanos-en-sagunto/",
+      "type": "información patrimonial institucional",
+      "year": 2013,
+      "locator": "7 de diciembre; Vía del Pòrtic en Plaça Antiga Moreria, 9, y tramo conservado de sesenta metros.",
+      "note": "Se usa para identificación y escala general. El contenido histórico se desarrolla con las publicaciones arqueológicas; no se trasladan horarios o tarifas de esta ficha.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "po-calzadas2016",
+      "title": "La puesta en valor de las calzadas romanas",
+      "author": "Antonio Sánchez Verdú",
+      "url": "https://rua.ua.es/dspace/bitstream/10045/57938/1/2016_Sanchez-Verdu_CuadArqUnivNav.pdf",
+      "type": "estudio de conservación y musealización · Cuadernos de Arqueología de la Universidad de Navarra 24",
+      "year": 2016,
+      "locator": "Apartado dedicado a Sagunto y fotografía de la pasarela de la Vía del Pòrtic, fig. 3.",
+      "note": "Contraste de la integración de restos y visita en un edificio contemporáneo. No se deriva de esta imagen una planta métrica completa del recorrido actual.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "po-catastro",
+      "title": "Cartografía catastral INSPIRE · Antiga Moreria y edificios próximos",
+      "author": "Dirección General del Catastro",
+      "url": "https://www.catastro.hacienda.gob.es/webinspire/index.html",
+      "type": "cartografía oficial",
+      "year": null,
+      "locator": "Municipio 46222; bloques 4059201YJ3945N y 4059202YJ3945N.",
+      "note": "Las huellas y partes sitúan los edificios actuales. No certifican la extensión excavada exacta, las dependencias privadas ni la correspondencia métrica de cada resto subterráneo.",
+      "accessed": "2026-11-20",
+      "downloadUrl": "https://www.catastro.hacienda.gob.es/INSPIRE/Buildings/46/46222-SAGUNTO%20SAGUNT/A.ES.SDGC.BU.46222.zip",
+      "licenseUrl": "https://www.catastro.hacienda.gob.es/webinspire/documentos/Licencia.pdf"
+    },
+    {
+      "id": "po-pnoa",
+      "title": "PNOA Máxima Actualidad · Antiga Moreria, Alorco y Horts",
+      "author": "Instituto Geográfico Nacional / CNIG",
+      "url": "https://datos.gob.es/es/catalogo/e00125901-spaignpnoama",
+      "type": "ortofotografía oficial",
+      "year": null,
+      "locator": "Cubiertas, patios, viales y arbolado del entorno de la Vía del Pòrtic.",
+      "note": "La fecha de consulta no equivale a la fecha del vuelo. Se emplea como contraste del contexto, sin convertir sombras o manchas en mediciones de fachada.",
+      "accessed": "2026-11-20",
+      "licenseUrl": "https://www.ign.es/resources/licencia/Condiciones_licenciaUso_IGN.pdf"
+    },
+    {
+      "id": "po-terreno",
+      "title": "MDT05 y MDSnE · relieve y volúmenes urbanos de Sagunto",
+      "author": "Instituto Geográfico Nacional / CNIG",
+      "url": "https://datos.gob.es/es/catalogo/e00125901-spaignmds-normalizado",
+      "type": "modelos geográficos oficiales",
+      "year": null,
+      "locator": "Relieve territorial y alturas estimadas de edificios de contexto.",
+      "note": "La resolución geográfica no permite acreditar cada peldaño, cota arqueológica o umbral. Las cotas de la maqueta se presentan como aproximadas.",
+      "accessed": "2026-11-20",
+      "licenseUrl": "https://www.ign.es/resources/licencia/Condiciones_licenciaUso_IGN.pdf"
+    },
+    {
+      "id": "po-osm",
+      "title": "OpenStreetMap · entorno de la Vía del Pòrtic",
+      "author": "Colaboradores de OpenStreetMap",
+      "url": "https://www.openstreetmap.org/?mlat=39.6796023&mlon=-0.2728361#map=19/39.6796023/-0.2728361",
+      "type": "cartografía colaborativa",
+      "year": null,
+      "locator": "Ejes de calle y relación territorial del acceso con la plaza Antiga Moreria.",
+      "note": "La cartografía sitúa el lugar y las conexiones del atlas; no certifica la antigüedad de edificios ni la posición exacta de estructuras enterradas.",
+      "accessed": "2026-11-20",
+      "licenseUrl": "https://www.openstreetmap.org/copyright"
+    }
+  ],
+  "timeline": [
+    {
+      "id": "po-t-primera",
+      "date": "Siglo I d. C.",
+      "title": "Monumentos funerarios",
+      "text": "El sector incluye contextos de cremación asociados a monumentos junto a la vía.",
+      "sourceIds": [
+        "po-cremaciones2005"
+      ],
+      "period": "roman",
+      "confidence": "documented",
+      "stopId": "portic-funerario"
+    },
+    {
+      "id": "po-t-calzada",
+      "date": "Finales del siglo I d. C.",
+      "title": "Monumentalización de la vía",
+      "text": "La revisión estratigráfica vincula el enlosado y la monumentalización al final del siglo I.",
+      "sourceIds": [
+        "po-casas2022"
+      ],
+      "period": "roman",
+      "confidence": "interpretive",
+      "stopId": "portic-calzada"
+    },
+    {
+      "id": "po-t-arco",
+      "date": "Finales del I–siglo II",
+      "title": "Un paso monumental",
+      "text": "La propuesta cronológica del arco se apoya en su relación con la vía.",
+      "sourceIds": [
+        "po-casas2022"
+      ],
+      "period": "roman",
+      "confidence": "interpretive",
+      "stopId": "portic-arco"
+    },
+    {
+      "id": "po-t-podio",
+      "date": "Siglo II",
+      "title": "Un conjunto junto a la calle",
+      "text": "La planta publicada distingue el basamento monumental y las estructuras que rodean la calzada.",
+      "sourceIds": [
+        "po-anforas2020"
+      ],
+      "period": "roman",
+      "confidence": "documented",
+      "stopId": "portic-podio"
+    },
+    {
+      "id": "po-t-casas",
+      "date": "Siglos III–IV",
+      "title": "El espacio se transforma",
+      "text": "Reformas y viviendas ocupan parte de las áreas antes abiertas junto al pórtico.",
+      "sourceIds": [
+        "po-vias2015"
+      ],
+      "period": "roman",
+      "confidence": "documented",
+      "stopId": "portic-domestico"
+    },
+    {
+      "id": "po-t-intercambio",
+      "date": "Época romana",
+      "title": "Alimentos y conexiones",
+      "text": "Las ánforas permiten estudiar el vino saguntino y los productos llegados de otras regiones.",
+      "sourceIds": [
+        "po-anforas2020"
+      ],
+      "period": "roman",
+      "confidence": "documented",
+      "stopId": "portic-domestico"
+    },
+    {
+      "id": "po-t-abandono",
+      "date": "Siglos IV–V",
+      "title": "Pérdidas y reutilización",
+      "text": "La vía pierde funciones y sus materiales se reutilizan en una secuencia de abandono gradual.",
+      "sourceIds": [
+        "po-vias2015"
+      ],
+      "period": "mixed",
+      "confidence": "interpretive",
+      "stopId": "portic-historica"
+    },
+    {
+      "id": "po-t-enterramientos",
+      "date": "Siglos V–VI",
+      "title": "Inhumaciones en la cloaca",
+      "text": "Cuatro individuos documentan un uso funerario posterior al funcionamiento del colector.",
+      "sourceIds": [
+        "po-cloaca2005"
+      ],
+      "period": "mixed",
+      "confidence": "documented",
+      "stopId": "portic-necropolis"
+    },
+    {
+      "id": "po-t-andalusi",
+      "date": "Época andalusí",
+      "title": "Viviendas sobre el relleno",
+      "text": "Las fosas anteriores se rellenan para permitir nuevas construcciones domésticas.",
+      "sourceIds": [
+        "po-medieval2014"
+      ],
+      "period": "islamic",
+      "confidence": "documented",
+      "stopId": "portic-medieval"
+    },
+    {
+      "id": "po-t-medieval",
+      "date": "Baja Edad Media",
+      "title": "Continuidad de las casas",
+      "text": "Las viviendas siguen utilizándose; balsas y objetos metálicos sugieren actividades diversas.",
+      "sourceIds": [
+        "po-medieval2014"
+      ],
+      "period": "medieval",
+      "confidence": "documented",
+      "stopId": "portic-medieval"
+    },
+    {
+      "id": "po-t-romeu",
+      "date": "1991",
+      "title": "Primeros trabajos en el sector",
+      "text": "Las excavaciones del antiguo campo de Romeu documentan parte del barrio y una calle transversal.",
+      "sourceIds": [
+        "po-casas2022"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "portic-plaza"
+    },
+    {
+      "id": "po-t-excavacion",
+      "date": "2002–2004",
+      "title": "La gran excavación de Moreria",
+      "text": "El avance arqueológico estudia un solar de unos 1.700 m².",
+      "sourceIds": [
+        "po-excavacion2005"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "portic-conjunto"
+    },
+    {
+      "id": "po-t-publicacion",
+      "date": "2005",
+      "title": "Estudios del conjunto",
+      "text": "ARSE publica investigaciones sobre arquitectura, decoración, cremaciones y enterramientos tardíos.",
+      "sourceIds": [
+        "po-decoracion2005",
+        "po-cremaciones2005",
+        "po-cloaca2005"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "portic-historica"
+    },
+    {
+      "id": "po-t-segunda",
+      "date": "2013",
+      "title": "Musealización de otra área",
+      "text": "El equipo participante documenta trabajos de interpretación y registro de la segunda zona arqueológica.",
+      "sourceIds": [
+        "po-global2013"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "portic-musealizacion"
+    },
+    {
+      "id": "po-t-sondeo",
+      "date": "2018",
+      "title": "Preguntas todavía abiertas",
+      "text": "Se anuncia un sondeo para contrastar un posible segundo templo; el objetivo no equivale a un hallazgo confirmado.",
+      "sourceIds": [
+        "po-investigacion2018"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "portic-podio"
+    },
+    {
+      "id": "po-t-revision",
+      "date": "2022",
+      "title": "Revisión de las casas",
+      "text": "Un estudio específico reexamina plantas, fases y usos del conjunto doméstico.",
+      "sourceIds": [
+        "po-casas2022"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "portic-domestico"
+    },
+    {
+      "id": "po-t-accesibilidad",
+      "date": "Noviembre de 2022",
+      "title": "El recorrido se adapta",
+      "text": "Se inauguran barandillas y protecciones en el itinerario sobre tarima.",
+      "sourceIds": [
+        "po-accesibilidad2022"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "portic-pasarela"
+    },
+    {
+      "id": "po-t-inmersivo",
+      "date": "Abril de 2026",
+      "title": "Un proyecto para interpretar",
+      "text": "El Ayuntamiento adjudica la redacción de un espacio inmersivo; no se acredita aquí su ejecución.",
+      "sourceIds": [
+        "po-proyecto2026"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "portic-musealizacion"
+    }
+  ],
+  "modelRegistration": {
+    "anchor": [
+      -0.27254985,
+      39.6796972
+    ],
+    "yawRadians": -0.6477218058633083,
+    "baseY": 40.19374321016205,
+    "axisX": "Eje transversal de la vía en el sistema local de la maqueta.",
+    "axisZ": "Eje longitudinal de la vía, relacionado con la planta arqueológica publicada.",
+    "method": "Plantas arqueológicas publicadas, registro sobre huellas catastrales y focos compartidos con el modelo; coordenadas aproximadas.",
+    "precision": "approximate",
+    "surfaceY": 43.64374321016205,
+    "ceilingY": 43.46374321016205
+  }
+}

@@ -1,0 +1,1898 @@
+{
+  "schemaVersion": 1,
+  "id": "sanatorio",
+  "title": "Antiguo Sanatorio y jardines",
+  "subtitle": "Arquitectura asistencial, jardín y memoria del Puerto",
+  "introduction": "Recorre el edificio, sus jardines y el entorno urbano. Abre un fragmento de su planta baja histórica para explorar vestíbulo, capilla, sacristía y escalera, y descubre cómo el antiguo Sanatorio se convirtió en Centro Cívico.",
+  "researchDate": "2026-11-21",
+  "regionsLabel": "Ámbitos del Sanatorio",
+  "mapButtonLabel": "Plano del recinto",
+  "overviewButtonLabel": "Ver el conjunto",
+  "readingModeLabel": "Leer el Sanatorio",
+  "readingModeNote": "Cinco ámbitos para relacionar edificio, interior histórico, jardín y ciudad. Los colores orientan la visita; no son fases constructivas exactas.",
+  "timelineIntroduction": "De la construcción del Sanatorio a su vida como equipamiento municipal.",
+  "visitAriaLabel": "Visita al Antiguo Sanatorio y sus jardines",
+  "sectionOnOverview": false,
+  "sectionOpenLabel": "Abrir la planta histórica",
+  "sectionCloseLabel": "Cerrar la sección",
+  "sectionInstructions": "Abre la sección del cuerpo central para leer el fragmento histórico de la planta baja. Elige el vestíbulo, la capilla, la sacristía o la escalera para acercarte. Las alas se conservan cerradas.",
+  "sectionNote": "Reconstrucción histórica parcial basada en un fragmento de plano sin escala legible. No representa la distribución actual del Centro Cívico. Alturas, carpinterías y mobiliario interiores son interpretativos.",
+  "mapInstructions": "Elige una parada en el edificio, los jardines o las calles próximas. Cambia a la planta baja histórica para relacionar sus espacios antes de entrar.",
+  "mapNote": "Plano orientativo sobre cartografía contemporánea. La adaptación del fragmento histórico y los puntos de observación tienen precisión aproximada.",
+  "visitNote": "Investigación revisada el 21 de noviembre de 2026. La escena distingue la memoria sanitaria del edificio y sus usos cívicos contemporáneos; el interior histórico no es una reproducción del equipamiento actual.",
+  "methodology": [
+    "Se comparan fotografías históricas y contemporáneas, un fragmento de planta baja, el inventario fotográfico municipal, documentación del Centro Cívico y cartografía pública.",
+    "Las huellas del exterior proceden de cartografía contemporánea y se contrastan con PNOA. Alturas y detalles sin medición se aproximan.",
+    "El plano histórico permite identificar hall, escalera, antecapilla, capilla y sacristía. La reproducción está recortada y no ofrece escala legible; no se deduce una planta clínica completa.",
+    "La sección muestra únicamente el núcleo central de la planta baja histórica. Su adaptación geométrica, alzados interiores, carpinterías y mobiliario son interpretativos.",
+    "Se distingue el jardín documentado en 2022 de una inspección botánica actual. Las 37 especies de la publicación no equivalen a 37 ejemplares ni a un inventario vivo de 2026.",
+    "Tres chalets y dos puntos ambulatorios son funciones documentadas. Nueve construcciones auxiliares en una publicación y las partes catastrales son recuentos de naturaleza distinta.",
+    "La consulta pública del fondo CMSM desde octubre de 2025 se distingue del proyecto de instalación del Archivo Industrial en el Sanatorio, todavía en redacción en esa noticia.",
+    "El tomo municipal de 217 páginas consultado para el Barrio Obrero no aporta una ficha ni un levantamiento del Sanatorio; no se le atribuyen las medidas de esta escena."
+  ],
+  "readingLegend": [
+    {
+      "id": "edificio",
+      "label": "El conjunto asistencial",
+      "color": "#d4b17c",
+      "note": "Edificio principal, pórtico, pabellones y viviendas de médicos."
+    },
+    {
+      "id": "espacios",
+      "label": "Interior histórico",
+      "color": "#95bfc5",
+      "note": "Un fragmento documentado de la planta baja: vestíbulo, capilla, sacristía y escalera."
+    },
+    {
+      "id": "construccion",
+      "label": "Accesos y cubiertas",
+      "color": "#c79379",
+      "note": "Rampa, terraza, tejados y sección del cuerpo central."
+    },
+    {
+      "id": "memoria",
+      "label": "Jardines y memoria",
+      "color": "#b7a1ca",
+      "note": "Fuente, vegetación y transformación del antiguo equipamiento industrial."
+    },
+    {
+      "id": "entorno",
+      "label": "La ciudad alrededor",
+      "color": "#91ae87",
+      "note": "Calles, accesos urbanos y edificios próximos en su configuración contemporánea."
+    }
+  ],
+  "confidenceLegend": [
+    {
+      "id": "documented",
+      "label": "Documentado",
+      "note": "La fuente respalda el rasgo o el dato, no todas las medidas de su representación."
+    },
+    {
+      "id": "interpretive",
+      "label": "Interpretación",
+      "note": "Aproximación de forma, altura, material o uso para hacer comprensible el espacio."
+    },
+    {
+      "id": "disputed",
+      "label": "Fuentes diferentes",
+      "note": "Se mantiene visible una diferencia documental sin convertirla en una certeza."
+    }
+  ],
+  "materialEvidenceLegend": [
+    {
+      "id": "conserved",
+      "label": "Rasgo documentado",
+      "note": "Forma reconocible en fotografías, plano o cartografía."
+    },
+    {
+      "id": "rehabilitated",
+      "label": "Transformación documentada",
+      "note": "Adaptación o cambio de uso que forma parte de la historia del edificio."
+    },
+    {
+      "id": "mixed",
+      "label": "Lectura conjunta",
+      "note": "Evidencia documental y aproximaciones de representación conviven en la maqueta."
+    }
+  ],
+  "regions": [
+    {
+      "id": "edificio",
+      "name": "El conjunto asistencial",
+      "aliases": [],
+      "summary": "Edificio principal, pórtico, pabellones y viviendas de médicos.",
+      "sourceIds": [
+        "s-guia2022",
+        "s-fundacio",
+        "s-foto1949",
+        "s-contrast",
+        "s-pabellon",
+        "s-chalets",
+        "s-catastro",
+        "s-pnoa"
+      ],
+      "stopIds": [
+        "sanatorio-conjunto",
+        "sanatorio-fachada",
+        "sanatorio-portico",
+        "sanatorio-pabellones",
+        "sanatorio-chalets"
+      ],
+      "coordinate": [
+        -0.2287491,
+        39.6642851
+      ]
+    },
+    {
+      "id": "espacios",
+      "name": "Interior histórico",
+      "aliases": [],
+      "summary": "Un fragmento documentado de la planta baja: vestíbulo, capilla, sacristía y escalera.",
+      "sourceIds": [
+        "s-plano",
+        "s-guia2022"
+      ],
+      "stopIds": [
+        "sanatorio-vestibulo",
+        "sanatorio-capilla",
+        "sanatorio-sacristia",
+        "sanatorio-escalera"
+      ],
+      "coordinate": [
+        -0.2287491,
+        39.6642851
+      ]
+    },
+    {
+      "id": "construccion",
+      "name": "Accesos y cubiertas",
+      "aliases": [],
+      "summary": "Rampa, terraza, tejados y sección del cuerpo central.",
+      "sourceIds": [
+        "s-archivo",
+        "s-contrast",
+        "s-foto1949",
+        "s-pnoa",
+        "s-catastro",
+        "s-plano",
+        "s-biblioteca",
+        "s-dau2025"
+      ],
+      "stopIds": [
+        "sanatorio-accesos",
+        "sanatorio-terraza",
+        "sanatorio-cubiertas",
+        "sanatorio-seccion"
+      ],
+      "coordinate": [
+        -0.2287491,
+        39.6642851
+      ]
+    },
+    {
+      "id": "memoria",
+      "name": "Jardines y memoria",
+      "aliases": [],
+      "summary": "Fuente, vegetación y transformación del antiguo equipamiento industrial.",
+      "sourceIds": [
+        "s-guia2022",
+        "s-archivo",
+        "s-pnoa",
+        "s-jardin",
+        "s-mice2026",
+        "s-consulta2025"
+      ],
+      "stopIds": [
+        "sanatorio-jardin-occidental",
+        "sanatorio-fuente",
+        "sanatorio-jardin-oriental",
+        "sanatorio-ciudad-factoria"
+      ],
+      "coordinate": [
+        -0.2287491,
+        39.6642851
+      ]
+    },
+    {
+      "id": "entorno",
+      "name": "La ciudad alrededor",
+      "aliases": [],
+      "summary": "Calles, accesos urbanos y edificios próximos en su configuración contemporánea.",
+      "sourceIds": [
+        "s-mice2026",
+        "s-guia2022",
+        "s-osm",
+        "s-pnoa",
+        "s-social2023",
+        "s-catastro"
+      ],
+      "stopIds": [
+        "sanatorio-accesos-urbanos",
+        "sanatorio-hispanidad",
+        "sanatorio-fleming",
+        "sanatorio-frente-urbano"
+      ],
+      "coordinate": [
+        -0.2287491,
+        39.6642851
+      ]
+    }
+  ],
+  "timeline": [
+    {
+      "id": "s-t-1",
+      "date": "1945",
+      "title": "La decisión de construir",
+      "text": "AHV decide crear un nuevo Sanatorio para atender a la población del Puerto y a su personal.",
+      "sourceIds": [
+        "s-guia2022"
+      ],
+      "period": "industrial",
+      "confidence": "documented",
+      "stopId": "sanatorio-conjunto"
+    },
+    {
+      "id": "s-t-2",
+      "date": "Diciembre de 1949",
+      "title": "Comienza el servicio",
+      "text": "El edificio entra en funcionamiento después de las obras documentadas en el archivo fotográfico.",
+      "sourceIds": [
+        "s-guia2022",
+        "s-archivo"
+      ],
+      "period": "industrial",
+      "confidence": "documented",
+      "stopId": "sanatorio-fachada"
+    },
+    {
+      "id": "s-t-3",
+      "date": "1985",
+      "title": "Fin de la actividad sanitaria",
+      "text": "La Fundació sitúa en este año el final del servicio sanitario; el recinto tendrá después nuevos usos.",
+      "sourceIds": [
+        "s-fundacio"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "sanatorio-ciudad-factoria"
+    },
+    {
+      "id": "s-t-4",
+      "date": "2022",
+      "title": "Leer el jardín",
+      "text": "La guía de patrimonio industrial publica un plano botánico con 37 especies del conjunto.",
+      "sourceIds": [
+        "s-guia2022"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "sanatorio-jardin-oriental"
+    },
+    {
+      "id": "s-t-5",
+      "date": "21 de marzo de 2025",
+      "title": "Una intervención contemporánea",
+      "text": "DAU Arquitectos publica la finalización de obras de recuperación de espacios en el Centro Cívico.",
+      "sourceIds": [
+        "s-dau2025"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "sanatorio-seccion"
+    },
+    {
+      "id": "s-t-6",
+      "date": "22 de abril de 2025",
+      "title": "Destino para el Archivo Industrial",
+      "text": "El Ayuntamiento anuncia que el Centro Cívico alojará definitivamente el archivo.",
+      "sourceIds": [
+        "s-archivo2025"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "sanatorio-ciudad-factoria"
+    },
+    {
+      "id": "s-t-7",
+      "date": "30 de octubre de 2025",
+      "title": "Consulta del fondo Sierra Menera",
+      "text": "Se habilita la consulta del fondo CMSM mientras sigue en redacción el proyecto de adaptación del Centro Cívico.",
+      "sourceIds": [
+        "s-consulta2025"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "sanatorio-ciudad-factoria"
+    },
+    {
+      "id": "s-t-8",
+      "date": "2026",
+      "title": "Equipamiento cultural municipal",
+      "text": "El catálogo de espacios de Sagunto incluye el Centro Cívico y sus jardines.",
+      "sourceIds": [
+        "s-mice2026"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "sanatorio-accesos-urbanos"
+    }
+  ],
+  "modelRegistration": {
+    "status": "registered",
+    "precision": "approximate",
+    "provisionalCoordinates": false,
+    "note": "Focos registrados a partir de la geometría final y de la cartografía; las cotas no levantadas son interpretativas.",
+    "coordinates": "Registered from the implemented industrial model and contemporary cartography; component positions and unmeasured heights are interpretive."
+  },
+  "materialsModeLabel": "Materiales",
+  "sources": [
+    {
+      "id": "s-contrast",
+      "title": "Antiguo Sanatorio de AHV",
+      "author": "CONTRAST / APIPS",
+      "url": "https://www.contrastapips.com/IHACM/IBP/Port/Port_patri_sana.htm",
+      "type": "estudio patrimonial con fotografías y plano histórico",
+      "locator": "Apartados de arquitectura, jardines, edificios auxiliares e interior; fotografías históricas y contemporáneas.",
+      "year": null,
+      "note": "Las imágenes permiten contrastar formas y transformaciones. No aportan un levantamiento métrico completo del edificio actual.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "s-plano",
+      "title": "Fragmento de la planta baja histórica del Sanatorio",
+      "author": "Archivo histórico reproducido por CONTRAST / APIPS",
+      "url": "https://www.contrastapips.com/IHACM/IBP/Port/Port_patri_sana_archivos/image044.jpg",
+      "type": "reproducción fotográfica de un plano histórico",
+      "locator": "Fragmento central: hall, escalera, antecapilla, capilla, sacristía y dependencias de servicio.",
+      "year": null,
+      "note": "Se lee la organización y varios rótulos. La reproducción está recortada; no ofrece una escala legible ni la totalidad de ambas plantas.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "s-foto1949",
+      "title": "Fachada del Sanatorio en 1949",
+      "author": "Archivo histórico reproducido por CONTRAST / APIPS",
+      "url": "https://www.contrastapips.com/IHACM/IBP/Port/Port_patri_sana_archivos/image034.jpg",
+      "type": "fotografía histórica",
+      "locator": "Vista frontal: accesos contiguos, pórtico lateral y remate de la terraza.",
+      "year": 1949,
+      "note": "La fotografía documenta una fase histórica. El remate de acceso a la terraza que aparece en ella no se restituye en el exterior actual.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "s-jardin",
+      "title": "Fuente del jardín occidental",
+      "author": "CONTRAST / APIPS",
+      "url": "https://www.contrastapips.com/IHACM/IBP/Port/Port_patri_sana_archivos/image018.jpg",
+      "type": "fotografía del conjunto",
+      "locator": "Vaso oval y composición de copas, con el edificio principal al fondo.",
+      "year": null,
+      "note": "La silueta visible orienta el modelo. No se dispone de una sección acotada de la fuente.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "s-pabellon",
+      "title": "Pabellón asistencial del recinto",
+      "author": "CONTRAST / APIPS",
+      "url": "https://www.contrastapips.com/IHACM/IBP/Port/Port_patri_sana_archivos/image032.jpg",
+      "type": "fotografía arquitectónica",
+      "locator": "Fachada de ladrillo, porche de acceso y remates piramidales.",
+      "year": null,
+      "note": "Documenta este pabellón concreto; no convierte todas las construcciones auxiliares en edificios idénticos.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "s-chalets",
+      "title": "Chalet del sector oriental del Sanatorio",
+      "author": "CONTRAST / APIPS",
+      "url": "https://www.contrastapips.com/IHACM/IBP/Port/Port_patri_sana_archivos/image036.jpg",
+      "type": "fotografía arquitectónica",
+      "locator": "Mirador poligonal, zócalo elevado y porche cubierto; contrastado con las imágenes 037 y 038 de la misma serie.",
+      "year": null,
+      "note": "Se usa para reconocer el tipo exterior. No acredita una distribución interior actual.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "s-guia2022",
+      "title": "Itinerario didáctico por el patrimonio industrial del Puerto de Sagunto",
+      "author": "APIPS / CONTRAST",
+      "url": "https://www.apips.es/assets/files/CUADERNO_TP01.pdf",
+      "type": "guía patrimonial y plano botánico",
+      "locator": "Páginas impresas y PDF 43–44: Sanatorio y plano con 37 especies vegetales.",
+      "year": 2022,
+      "note": "La guía de 2022 distingue edificio, tres chalets, dos puntos de asistencia ambulatoria y jardín. El plano botánico no es un inventario actualizado a 2026.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "s-archivo",
+      "title": "Inventario fotográfico del Archivo Industrial · Placas digitalizadas",
+      "author": "Ayuntamiento de Sagunto / Archivo Industrial",
+      "url": "https://aytosagunto.es/media/ek0gqher/inventario-fotografico-archivo-industrial-placas-digit.pdf",
+      "type": "inventario municipal de fotografías históricas",
+      "locator": "Códigos 44, 232–244, 250–252, 393, 399–400, 407, 416, 925, 939, 959 y 975–979.",
+      "year": null,
+      "note": "Las fechas y títulos acreditan obras, terraza, rampa, pérgola, cierre y estanque. El índice no proporciona medidas ni sustituye la inspección de cada placa.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "s-fundacio",
+      "title": "Mediateca · Sanatorio de Altos Hornos de Vizcaya",
+      "author": "Fundació de la Comunitat Valenciana de Patrimoni Industrial i Memòria Obrera de Port de Sagunt",
+      "url": "https://www.fundacioportdesagunt.com/mediateca-cast/",
+      "type": "archivo patrimonial institucional",
+      "locator": "Serie Sanatorio: construcción, jardín, capilla, instalaciones y espacios asistenciales.",
+      "year": null,
+      "note": "La institución sitúa el servicio sanitario entre 1949 y 1985. Las fotografías de quirófano y maternidad acreditan usos históricos, pero no una planta completa georreferenciada.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "s-centrocivico",
+      "title": "Guía de instalaciones del Centro Cívico",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/es/ayuntamiento/areas-y-servicios/bibliotecas/guia-de-instalaciones-del-centro-civico/",
+      "type": "información municipal del equipamiento",
+      "locator": "Fichas de biblioteca, salón de actos, sala de exposiciones y otros espacios.",
+      "year": null,
+      "note": "Documenta el uso cívico contemporáneo, distinto de la distribución sanitaria histórica.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "s-biblioteca",
+      "title": "Sala de adultos de la biblioteca del Centro Cívico",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/es/ayuntamiento/areas-y-servicios/bibliotecas/guia-de-instalaciones-del-centro-civico/sala-adultos-biblioteca/",
+      "type": "ficha municipal de instalaciones",
+      "locator": "La ficha sitúa la sala de adultos en la primera planta.",
+      "year": null,
+      "note": "Confirma la transformación de los usos interiores. No se utiliza para completar zonas ilegibles del plano histórico.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "s-archivo2025",
+      "title": "El Centro Cívico albergará definitivamente el Archivo Industrial",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/es/actualidad/2025-04-22-el-centro-civico-albergara-definitivamente-el-archivo-industrial/",
+      "type": "anuncio municipal",
+      "locator": "Noticia de 22 de abril de 2025 sobre el destino permanente del Archivo Industrial.",
+      "year": 2025,
+      "note": "Es un anuncio de destino y acondicionamiento; no se presenta como prueba de apertura pública del archivo en esa fecha.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "s-consulta2025",
+      "title": "Consulta del fondo de la Compañía Minera de Sierra Menera",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/es/actualidad/2025-10-30-la-ciudadania-podra-consultar-el-fondo-documental-de-la-compania-minera-de-sierra-menera-a-partir-de-este-jueves/",
+      "type": "noticia municipal sobre consulta documental",
+      "locator": "Noticia de 30 de octubre de 2025: consulta del fondo CMSM y estado del proyecto de adecuación.",
+      "year": 2025,
+      "note": "Distingue la consulta del fondo CMSM del proyecto para alojar el Archivo Industrial en el Centro Cívico.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "s-dau2025",
+      "title": "Finalizamos las obras en el Centro Cívico Antiguo Sanatorio",
+      "author": "DAU Arquitectos",
+      "url": "https://www.dauarquitectosvalencia.es/noticias/finalizamos-las-obras-en-el-centro-civico-antiguo-sanatorio",
+      "type": "documentación del equipo responsable de una intervención",
+      "locator": "Publicación de 21 de marzo de 2025 sobre la recuperación de espacios del Centro Cívico.",
+      "year": 2025,
+      "note": "Describe una intervención contemporánea, no el proyecto de 1949 ni un levantamiento completo del antiguo hospital.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "s-mice2026",
+      "title": "Catálogo de espacios y recursos MICE de Sagunto",
+      "author": "Sagunto Turismo / Ayuntamiento de Sagunto",
+      "url": "https://www.saguntoturismo.com/sagunto/uploaded/PDFs/CATALOGOMICE.pdf",
+      "type": "catálogo municipal de equipamientos",
+      "locator": "Página PDF 21: Centro Cívico, Jardines del Antiguo Sanatorio s/n.",
+      "year": 2026,
+      "note": "El catálogo publicado en 2026 acredita la función cultural municipal. No informa sobre la disposición clínica original.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "s-social2023",
+      "title": "Plan estratégico zonal 2023–2026",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/media/vnvk1uam/03-plan_estrategico_zonal_2023-2026_-_sefycu_3886743.pdf",
+      "type": "plan municipal de servicios sociales",
+      "locator": "Página impresa 95: Centro Cívico, calle Doctor Fleming 2.",
+      "year": 2023,
+      "note": "La dirección y los servicios pertenecen al documento de planificación; no describen los accesos sanitarios de 1949.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "s-catastro",
+      "title": "Cartografía INSPIRE de edificios de Sagunto",
+      "author": "Dirección General del Catastro",
+      "url": "https://www.catastro.hacienda.gob.es/webinspire/index.html",
+      "type": "cartografía pública",
+      "locator": "Conjunto municipal 46222: huellas y partes edificadas del Sanatorio y de las manzanas próximas.",
+      "year": null,
+      "note": "Las partes catastrales no equivalen a habitaciones ni a un recuento histórico de pabellones. Las alturas sin levantamiento conservan precisión aproximada.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "s-pnoa",
+      "title": "PNOA Máxima Actualidad · Antiguo Sanatorio y entorno",
+      "author": "Instituto Geográfico Nacional",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma",
+      "type": "ortofotografía",
+      "locator": "Contraste de cubiertas, espacios libres, caminos y masas vegetales del recinto.",
+      "year": null,
+      "note": "Máxima Actualidad es el nombre del servicio: la fecha de consulta no es la fecha de vuelo. La imagen no permite reconocer interiores ni todas las especies vegetales.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "s-osm",
+      "title": "Cartografía del Antiguo Sanatorio y su entorno urbano",
+      "author": "Colaboradores de OpenStreetMap",
+      "url": "https://www.openstreetmap.org/#map=18/39.66429/-0.22875",
+      "type": "cartografía colaborativa",
+      "locator": "Ejes y nombres viarios: avenida Hispanidad, Doctor Fleming y calles próximas.",
+      "year": null,
+      "note": "Los trazados se contrastan con PNOA y cartografía catastral. Los anchos dibujados y el mobiliario son aproximaciones para la lectura urbana.",
+      "accessed": "2026-11-21"
+    }
+  ],
+  "stops": [
+    {
+      "id": "sanatorio-conjunto",
+      "label": "El conjunto",
+      "title": "Del Sanatorio al Centro Cívico",
+      "regionId": "edificio",
+      "period": "mixed",
+      "intro": "Reconoce el edificio en T y los jardines que lo rodean.",
+      "narrative": "La vista general permite relacionar la fachada principal, el brazo oriental y los edificios menores antes de entrar en el fragmento histórico.",
+      "facts": [
+        {
+          "text": "El Sanatorio entró en servicio en diciembre de 1949.",
+          "sourceIds": [
+            "s-guia2022"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La Fundació sitúa el final de su actividad sanitaria en 1985.",
+          "sourceIds": [
+            "s-fundacio"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La diferencia de escala entre el cuerpo principal y las construcciones del jardín.",
+      "modelNote": "El exterior se lee sobre cartografía contemporánea. La sección abre únicamente un fragmento histórico del cuerpo central; no recrea todo el hospital.",
+      "sourceIds": [
+        "s-guia2022",
+        "s-fundacio"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22859399,
+        39.66421704
+      ],
+      "coordinates": [
+        -0.22859399,
+        39.66421704
+      ],
+      "coordinateSourceIds": [
+        "s-catastro",
+        "s-pnoa",
+        "s-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "edificio",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": "sanatorio-principal",
+      "order": 1,
+      "elevation": 4.015168952516901,
+      "localTarget": [
+        13.288820790313103,
+        4.015168952516901,
+        7.576756694189294
+      ]
+    },
+    {
+      "id": "sanatorio-fachada",
+      "label": "Fachada principal",
+      "title": "Tres accesos y una fachada asimétrica",
+      "regionId": "edificio",
+      "period": "mixed",
+      "intro": "Acércate al ritmo de los huecos y a la línea de cornisa.",
+      "narrative": "Recorre visualmente los accesos contiguos del centro y después el extremo del pórtico. La lectura frontal ayuda a reconocer la composición.",
+      "facts": [
+        {
+          "text": "La fotografía de 1949 muestra tres accesos principales contiguos en el cuerpo central.",
+          "sourceIds": [
+            "s-foto1949"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La cornisa de ladrillo y los remates semicirculares de esos huecos concentran la ornamentación.",
+          "sourceIds": [
+            "s-contrast"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Ventanas superiores en arco, accesos del centro y continuidad de la cornisa.",
+      "modelNote": "El ritmo se interpreta desde las imágenes. Espesores, alturas y acabados no levantados se aproximan; no se dispersan las tres puertas por alas distintas.",
+      "sourceIds": [
+        "s-foto1949",
+        "s-contrast"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22877173,
+        39.66444307
+      ],
+      "coordinates": [
+        -0.22877173,
+        39.66444307
+      ],
+      "coordinateSourceIds": [
+        "s-catastro",
+        "s-pnoa",
+        "s-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "edificio",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": "sanatorio-principal",
+      "order": 2,
+      "elevation": 4.9151689525169004,
+      "localTarget": [
+        -1.9385161950099494,
+        4.9151689525169004,
+        -17.585282339549856
+      ]
+    },
+    {
+      "id": "sanatorio-portico",
+      "label": "Pórtico lateral",
+      "title": "El umbral cubierto",
+      "regionId": "edificio",
+      "period": "mixed",
+      "intro": "Observa el cambio de profundidad al llegar al pórtico.",
+      "narrative": "La sombra del espacio cubierto hace legible la transición entre jardín y edificio. Mueve la cámara para apreciar sus soportes y el encuentro con la fachada.",
+      "facts": [
+        {
+          "text": "El pórtico lateral ya aparece en la vista frontal de 1949.",
+          "sourceIds": [
+            "s-foto1949"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Las imágenes documentan soportes de ladrillo con capiteles sencillos.",
+          "sourceIds": [
+            "s-contrast"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Soportes, coronación y sombra bajo la cubierta.",
+      "modelNote": "La forma exterior sigue la evidencia fotográfica; el número de piezas, sus juntas y las medidas menores son aproximaciones visuales.",
+      "sourceIds": [
+        "s-foto1949",
+        "s-contrast"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22899169,
+        39.66426886
+      ],
+      "coordinates": [
+        -0.22899169,
+        39.66426886
+      ],
+      "coordinateSourceIds": [
+        "s-catastro",
+        "s-pnoa",
+        "s-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "edificio",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": "sanatorio-principal",
+      "order": 3,
+      "elevation": 2.765168952516901,
+      "localTarget": [
+        -20.784174348087802,
+        2.765168952516901,
+        1.8077877829792257
+      ]
+    },
+    {
+      "id": "sanatorio-accesos",
+      "label": "Rampa y entradas",
+      "title": "Entrar desde el jardín",
+      "regionId": "construccion",
+      "period": "mixed",
+      "intro": "Sigue la relación entre la cota del jardín y las puertas principales.",
+      "narrative": "El recorrido cercano permite entender el zócalo y la llegada a los tres accesos del bloque central.",
+      "facts": [
+        {
+          "text": "El archivo municipal registra la rampa del Sanatorio en julio y agosto de 1949.",
+          "sourceIds": [
+            "s-archivo"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Las fotografías muestran el edificio sobre un zócalo elevado respecto al jardín.",
+          "sourceIds": [
+            "s-contrast",
+            "s-foto1949"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La plataforma elevada y el recorrido junto a los accesos.",
+      "modelNote": "Pendientes y cotas se adaptan a la maqueta; no son una medición ni una certificación del itinerario accesible actual.",
+      "sourceIds": [
+        "s-archivo",
+        "s-contrast",
+        "s-foto1949"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22877305,
+        39.66444395
+      ],
+      "coordinates": [
+        -0.22877305,
+        39.66444395
+      ],
+      "coordinateSourceIds": [
+        "s-catastro",
+        "s-pnoa",
+        "s-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "construccion",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": "sanatorio-principal",
+      "order": 4,
+      "elevation": 2.465168952516901,
+      "localTarget": [
+        -2.051722632043365,
+        2.465168952516901,
+        -17.683691193898433
+      ]
+    },
+    {
+      "id": "sanatorio-vestibulo",
+      "label": "Vestíbulo histórico",
+      "title": "El hall como distribuidor",
+      "regionId": "espacios",
+      "period": "industrial",
+      "intro": "Entra en la lectura histórica del núcleo central.",
+      "narrative": "Desde el hall puedes relacionar la escalera y el paso hacia la capilla. El espacio se ofrece como una interpretación del plano conservado.",
+      "facts": [
+        {
+          "text": "El fragmento de planta baja rotula un hall junto a la escalera principal.",
+          "sourceIds": [
+            "s-plano"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "En su entorno aparecen administración, sala de médicos y un montacamillas.",
+          "sourceIds": [
+            "s-plano"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Los pasos entre el vestíbulo, la escalera y la antecapilla.",
+      "modelNote": "Se modela un fragmento histórico, no la distribución actual del Centro Cívico. Alturas, carpinterías interiores y mobiliario son interpretativos.",
+      "sourceIds": [
+        "s-plano"
+      ],
+      "confidence": "interpretive",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22869773,
+        39.66439357
+      ],
+      "coordinates": [
+        -0.22869773,
+        39.66439357
+      ],
+      "coordinateSourceIds": [
+        "s-catastro",
+        "s-pnoa",
+        "s-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "espacios",
+      "floor": 0,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "interior",
+      "requiresSection": false,
+      "interiorView": true,
+      "buildingId": "sanatorio-principal",
+      "order": 5,
+      "elevation": 2.495168952516901,
+      "localTarget": [
+        4.401044278861336,
+        2.495168952516901,
+        -12.074386496029597
+      ]
+    },
+    {
+      "id": "sanatorio-capilla",
+      "label": "Capilla histórica",
+      "title": "Un espacio de recogimiento",
+      "regionId": "espacios",
+      "period": "industrial",
+      "intro": "Reconoce el eje de la capilla y su cabecera curva.",
+      "narrative": "La vista interior y la sección superior permiten leer el espacio sin completar las zonas del hospital que quedan fuera del plano disponible.",
+      "facts": [
+        {
+          "text": "La planta histórica distingue antecapilla y capilla con cabecera curva.",
+          "sourceIds": [
+            "s-plano"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Las religiosas trinitarias y los pacientes compartían la capilla de la planta baja.",
+          "sourceIds": [
+            "s-guia2022"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Antecapilla, nave y transición hacia la cabecera.",
+      "modelNote": "El trazado se apoya en el plano; los detalles de alzado y el mobiliario son una interpretación histórica, no una inspección del interior actual.",
+      "sourceIds": [
+        "s-plano",
+        "s-guia2022"
+      ],
+      "confidence": "interpretive",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22876523,
+        39.66429758
+      ],
+      "coordinates": [
+        -0.22876523,
+        39.66429758
+      ],
+      "coordinateSourceIds": [
+        "s-catastro",
+        "s-pnoa",
+        "s-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "espacios",
+      "floor": 0,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "interior",
+      "requiresSection": false,
+      "interiorView": true,
+      "buildingId": "sanatorio-principal",
+      "order": 6,
+      "elevation": 2.215168952516901,
+      "localTarget": [
+        -1.3822968472188664,
+        2.215168952516901,
+        -1.3897641620680763
+      ]
+    },
+    {
+      "id": "sanatorio-sacristia",
+      "label": "Sacristía histórica",
+      "title": "La estancia tras la cabecera",
+      "regionId": "espacios",
+      "period": "industrial",
+      "intro": "Explora la relación entre la capilla y su espacio de servicio.",
+      "narrative": "La escala próxima hace visible cómo una estancia pequeña se integra en el núcleo central de la planta.",
+      "facts": [
+        {
+          "text": "El plano sitúa y rotula la sacristía detrás de la cabecera de la capilla.",
+          "sourceIds": [
+            "s-plano"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La reproducción consultada es un fragmento y no contiene una escala legible.",
+          "sourceIds": [
+            "s-plano"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El encuentro de la estancia con la cabecera y los muros que la delimitan.",
+      "modelNote": "La relación espacial está documentada; las dimensiones adaptadas a la huella, alturas y accesorios no son medidas históricas verificadas.",
+      "sourceIds": [
+        "s-plano"
+      ],
+      "confidence": "interpretive",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22874946,
+        39.66428572
+      ],
+      "coordinates": [
+        -0.22874946,
+        39.66428572
+      ],
+      "coordinateSourceIds": [
+        "s-catastro",
+        "s-pnoa",
+        "s-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "espacios",
+      "floor": 0,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "interior",
+      "requiresSection": false,
+      "interiorView": true,
+      "buildingId": "sanatorio-principal",
+      "order": 7,
+      "elevation": 2.495168952516901,
+      "localTarget": [
+        -0.03108107210767565,
+        2.495168952516901,
+        -0.06941877956747428
+      ]
+    },
+    {
+      "id": "sanatorio-escalera",
+      "label": "Escalera histórica",
+      "title": "La conexión entre plantas",
+      "regionId": "espacios",
+      "period": "industrial",
+      "intro": "Mira el giro de la escalera desde el vestíbulo.",
+      "narrative": "La maqueta traduce el trazado visible en planta a una forma tridimensional para explicar la circulación del núcleo central.",
+      "facts": [
+        {
+          "text": "El dibujo histórico muestra una escalera de trazado curvo junto al hall.",
+          "sourceIds": [
+            "s-plano"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El mismo fragmento distingue montacamillas y montacomidas como instalaciones separadas.",
+          "sourceIds": [
+            "s-plano"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El arranque, el giro y la conexión con el hall.",
+      "modelNote": "No se ha localizado una sección acotada ni una fotografía específica de esta escalera. Peldaños, barandilla y desarrollo vertical son interpretativos.",
+      "sourceIds": [
+        "s-plano"
+      ],
+      "confidence": "interpretive",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22865591,
+        39.66439773
+      ],
+      "coordinates": [
+        -0.22865591,
+        39.66439773
+      ],
+      "coordinateSourceIds": [
+        "s-catastro",
+        "s-pnoa",
+        "s-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "espacios",
+      "floor": 0,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "interior",
+      "requiresSection": false,
+      "interiorView": true,
+      "buildingId": "sanatorio-principal",
+      "order": 8,
+      "elevation": 3.145168952516901,
+      "localTarget": [
+        7.983706649670357,
+        3.145168952516901,
+        -12.537560693053864
+      ]
+    },
+    {
+      "id": "sanatorio-terraza",
+      "label": "Terraza",
+      "title": "Una cubierta que también se habitaba",
+      "regionId": "construccion",
+      "period": "mixed",
+      "intro": "Asciende para leer los cambios de nivel del cuerpo principal.",
+      "narrative": "La terraza permite comparar el perfil actual con las imágenes históricas sin superponer elementos desaparecidos.",
+      "facts": [
+        {
+          "text": "El inventario municipal fecha una vista de la terraza del Sanatorio el 10 de febrero de 1949.",
+          "sourceIds": [
+            "s-archivo"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La fotografía de 1949 conserva un remate de acceso a la terraza que posteriormente desapareció.",
+          "sourceIds": [
+            "s-foto1949",
+            "s-contrast"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El plano de terraza y su encuentro con los cuerpos de cubierta inclinada.",
+      "modelNote": "El remate histórico con pináculos se explica en la guía, pero no se añade como si siguiera presente en el exterior contemporáneo.",
+      "sourceIds": [
+        "s-archivo",
+        "s-foto1949",
+        "s-contrast"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22866412,
+        39.66444249
+      ],
+      "coordinates": [
+        -0.22866412,
+        39.66444249
+      ],
+      "coordinateSourceIds": [
+        "s-catastro",
+        "s-pnoa",
+        "s-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "construccion",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": "sanatorio-principal",
+      "order": 9,
+      "elevation": 9.1151689525169,
+      "localTarget": [
+        7.280805040492498,
+        9.1151689525169,
+        -17.52112661795294
+      ]
+    },
+    {
+      "id": "sanatorio-cubiertas",
+      "label": "Cubiertas",
+      "title": "La silueta del edificio en T",
+      "regionId": "construccion",
+      "period": "mixed",
+      "intro": "Rodea el edificio desde arriba para separar sus volúmenes.",
+      "narrative": "La alternancia de planos de cubierta ayuda a reconocer el cuerpo longitudinal y el brazo oriental.",
+      "facts": [
+        {
+          "text": "Las vistas del conjunto muestran cubiertas distintas en los cuerpos que forman la T.",
+          "sourceIds": [
+            "s-contrast"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La ortofotografía permite contrastar sus huellas y los encuentros de cubierta actuales.",
+          "sourceIds": [
+            "s-pnoa"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Cumbreras, aleros, terraza y la dirección del brazo oriental.",
+      "modelNote": "Se conservan las huellas cartográficas. Pendientes, alturas menores, tejas y bajantes sin levantamiento se aproximan.",
+      "sourceIds": [
+        "s-contrast",
+        "s-pnoa",
+        "s-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22867788,
+        39.66432077
+      ],
+      "coordinates": [
+        -0.22867788,
+        39.66432077
+      ],
+      "coordinateSourceIds": [
+        "s-catastro",
+        "s-pnoa",
+        "s-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "construccion",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": "sanatorio-principal",
+      "order": 10,
+      "elevation": 9.1151689525169,
+      "localTarget": [
+        6.101832363379096,
+        9.1151689525169,
+        -3.9708490035783894
+      ]
+    },
+    {
+      "id": "sanatorio-jardin-occidental",
+      "label": "Jardín occidental",
+      "title": "El jardín ante la fachada",
+      "regionId": "memoria",
+      "period": "mixed",
+      "intro": "Sigue el eje entre el edificio y la fuente.",
+      "narrative": "Mira los vacíos de los caminos y la relación entre árboles, parterres y fachada. El jardín se entiende mejor desde su recorrido que como una masa uniforme.",
+      "facts": [
+        {
+          "text": "La fotografía histórica del jardín occidental muestra parterres de trazado geométrico.",
+          "sourceIds": [
+            "s-guia2022"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El archivo registra una pérgola del jardín el 3 de agosto de 1949.",
+          "sourceIds": [
+            "s-archivo"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El eje visual, los claros del jardín y los bordes de los caminos.",
+      "modelNote": "La referencia histórica explica el diseño; la vegetación y los caminos se contrastan con la imagen aérea contemporánea. La mención de una pérgola no acredita que toda su fábrica original sobreviva.",
+      "sourceIds": [
+        "s-guia2022",
+        "s-archivo",
+        "s-pnoa"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22925507,
+        39.66475454
+      ],
+      "coordinates": [
+        -0.22925507,
+        39.66475454
+      ],
+      "coordinateSourceIds": [
+        "s-catastro",
+        "s-pnoa",
+        "s-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "memoria",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "order": 11,
+      "elevation": 1.6093856747705153,
+      "localTarget": [
+        -43.34889255603015,
+        1.6093856747705153,
+        -52.257760324814484
+      ]
+    },
+    {
+      "id": "sanatorio-fuente",
+      "label": "La fuente",
+      "title": "El centro del jardín occidental",
+      "regionId": "memoria",
+      "period": "mixed",
+      "intro": "Baja hasta el vaso y observa la composición desde varios ángulos.",
+      "narrative": "El agua y la forma baja del vaso dejan visible la fachada detrás. La fuente funciona como referencia del recorrido por el jardín.",
+      "facts": [
+        {
+          "text": "La fotografía muestra un vaso oval y una composición de tres copas de distinta presencia.",
+          "sourceIds": [
+            "s-jardin"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El archivo registra un estanque en agosto de 1949 y una fuente del estanque en junio de 1952.",
+          "sourceIds": [
+            "s-archivo"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El borde oval, la copa central y la relación con la fachada.",
+      "modelNote": "La geometría sigue la silueta fotográfica; dimensiones, funcionamiento del agua y desgaste son interpretativos. Las dos fechas no se convierten en una fecha única de terminación.",
+      "sourceIds": [
+        "s-jardin",
+        "s-archivo"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.229317,
+        39.66478
+      ],
+      "coordinates": [
+        -0.229317,
+        39.66478
+      ],
+      "coordinateSourceIds": [
+        "s-catastro",
+        "s-pnoa",
+        "s-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "memoria",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "order": 12,
+      "elevation": 1.3087149591500853,
+      "localTarget": [
+        -48.65518177166268,
+        1.3087149591500853,
+        -55.09226799995895
+      ]
+    },
+    {
+      "id": "sanatorio-jardin-oriental",
+      "label": "Jardín oriental",
+      "title": "Árboles, caminos y pabellones",
+      "regionId": "memoria",
+      "period": "mixed",
+      "intro": "Descubre el jardín situado detrás del cuerpo principal.",
+      "narrative": "Avanza entre los caminos para relacionar el arbolado y las construcciones menores. Las copas se representan con variedad sin atribuir una identificación botánica a cada árbol.",
+      "facts": [
+        {
+          "text": "La guía botánica de 2022 localiza 37 especies vegetales en el conjunto de los jardines.",
+          "sourceIds": [
+            "s-guia2022"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Su plano sitúa los edificios auxiliares entre caminos y parterres del sector oriental.",
+          "sourceIds": [
+            "s-guia2022"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Las diferencias de porte y los claros que conectan los edificios.",
+      "modelNote": "El inventario de 2022 es una referencia histórica cercana, no un censo de árboles vivos en 2026. Posiciones y especies del modelo tienen precisión aproximada.",
+      "sourceIds": [
+        "s-guia2022",
+        "s-pnoa"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22792607,
+        39.6638773
+      ],
+      "coordinates": [
+        -0.22792607,
+        39.6638773
+      ],
+      "coordinateSourceIds": [
+        "s-catastro",
+        "s-pnoa",
+        "s-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "memoria",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "order": 13,
+      "elevation": 0.35383722724263444,
+      "localTarget": [
+        70.51360350637616,
+        0.35383722724263444,
+        45.39638444353884
+      ]
+    },
+    {
+      "id": "sanatorio-pabellones",
+      "label": "Pabellones",
+      "title": "La atención en edificios menores",
+      "regionId": "edificio",
+      "period": "mixed",
+      "intro": "Compara el tamaño de los pabellones con el edificio principal.",
+      "narrative": "Los cambios de material y cubierta hacen legible la diversidad del recinto. Rodea cada volumen para apreciar sus accesos y su relación con el jardín.",
+      "facts": [
+        {
+          "text": "La guía identifica dos puntos de asistencia ambulatoria entre las construcciones del sector oriental.",
+          "sourceIds": [
+            "s-guia2022"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La fotografía de uno de ellos documenta ladrillo visto, porche y remates piramidales.",
+          "sourceIds": [
+            "s-pabellon"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Porche, paños de ladrillo y remates de cubierta.",
+      "modelNote": "La publicación de 2022 cuenta nueve construcciones auxiliares. Ese recuento no equivale al de partes catastrales, y no se extrapola el aspecto de un pabellón a todos los anexos.",
+      "sourceIds": [
+        "s-guia2022",
+        "s-pabellon"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22761475,
+        39.66359376
+      ],
+      "coordinates": [
+        -0.22761475,
+        39.66359376
+      ],
+      "coordinateSourceIds": [
+        "s-catastro",
+        "s-pnoa",
+        "s-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "edificio",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": "sanatorio-cuerpo-10",
+      "order": 14,
+      "elevation": 1.285772669413105,
+      "localTarget": [
+        97.18595471804262,
+        1.285772669413105,
+        76.96022972526453
+      ]
+    },
+    {
+      "id": "sanatorio-chalets",
+      "label": "Chalets de médicos",
+      "title": "Viviendas dentro del recinto",
+      "regionId": "edificio",
+      "period": "mixed",
+      "intro": "Acércate al extremo oriental y reconoce la escala doméstica.",
+      "narrative": "La diferencia entre una vivienda y un pabellón asistencial se lee en sus porches, miradores y volúmenes.",
+      "facts": [
+        {
+          "text": "La guía documenta tres chalets destinados a facultativos en el sector oriental.",
+          "sourceIds": [
+            "s-guia2022"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Las fotografías muestran miradores poligonales y entradas cubiertas sobre zócalos elevados.",
+          "sourceIds": [
+            "s-chalets"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Los miradores, porches y pequeños cuerpos de cubierta.",
+      "modelNote": "Los exteriores se interpretan desde fotografías y huellas actuales; no se reconstruyen distribuciones privadas o usos interiores que las fuentes no permiten conocer.",
+      "sourceIds": [
+        "s-guia2022",
+        "s-chalets",
+        "s-catastro",
+        "s-pnoa"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.2279753,
+        39.66305324
+      ],
+      "coordinates": [
+        -0.2279753,
+        39.66305324
+      ],
+      "coordinateSourceIds": [
+        "s-catastro",
+        "s-pnoa",
+        "s-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "edificio",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "order": 15,
+      "elevation": 0.2788738743083421,
+      "localTarget": [
+        66.29579949175763,
+        0.2788738743083421,
+        137.13083887203734
+      ]
+    },
+    {
+      "id": "sanatorio-accesos-urbanos",
+      "label": "Llegar al recinto",
+      "title": "Del espacio público al jardín",
+      "regionId": "entorno",
+      "period": "mixed",
+      "intro": "Sitúa los accesos en la trama urbana actual.",
+      "narrative": "La vista exterior relaciona aceras, bordes del recinto y caminos interiores para que la visita no quede aislada de la ciudad.",
+      "facts": [
+        {
+          "text": "El catálogo municipal identifica el Centro Cívico en Jardines del Antiguo Sanatorio s/n.",
+          "sourceIds": [
+            "s-mice2026"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El plano de 2022 sitúa el recinto entre Hispanidad, Doctor Fleming y Periodista Azzati.",
+          "sourceIds": [
+            "s-guia2022"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La continuidad de los recorridos peatonales y los límites del jardín.",
+      "modelNote": "La escena utiliza cartografía contemporánea. Posición de cámaras, anchos, mobiliario y detalle del cierre son aproximados; no reproduce automáticamente todos los accesos históricos.",
+      "sourceIds": [
+        "s-mice2026",
+        "s-guia2022",
+        "s-osm",
+        "s-pnoa"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22906381,
+        39.66398514
+      ],
+      "coordinates": [
+        -0.22906381,
+        39.66398514
+      ],
+      "coordinateSourceIds": [
+        "s-catastro",
+        "s-pnoa",
+        "s-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "entorno",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "entorno",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "order": 16,
+      "elevation": 0.6788738743083425,
+      "localTarget": [
+        -42.88985786766091,
+        0.6788738743083425,
+        1.5575223692487157
+      ]
+    },
+    {
+      "id": "sanatorio-hispanidad",
+      "label": "Avenida Hispanidad",
+      "title": "El frente norte del recinto",
+      "regionId": "entorno",
+      "period": "mixed",
+      "intro": "Observa el Sanatorio desde la avenida.",
+      "narrative": "La distancia de la calle permite leer juntos arbolado, fachadas y volumen principal. El contexto conserva la ciudad que hoy rodea al jardín.",
+      "facts": [
+        {
+          "text": "La avenida Hispanidad figura junto al borde norte del recinto en el plano botánico.",
+          "sourceIds": [
+            "s-guia2022"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La cartografía viaria contemporánea mantiene este eje como referencia del entorno.",
+          "sourceIds": [
+            "s-osm"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Aceras, bandas verdes y relación entre la avenida y el jardín.",
+      "modelNote": "Se muestran trazados actuales. Arbolado exterior y mobiliario se ajustan a la lectura aérea; no se les asignan especies históricas sin evidencia.",
+      "sourceIds": [
+        "s-guia2022",
+        "s-osm",
+        "s-pnoa"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22857581,
+        39.66491252
+      ],
+      "coordinates": [
+        -0.22857581,
+        39.66491252
+      ],
+      "coordinateSourceIds": [
+        "s-catastro",
+        "s-pnoa",
+        "s-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "entorno",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "entorno",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "order": 17,
+      "elevation": 2.8145173079077477,
+      "localTarget": [
+        62.45301156630936,
+        2.8145173079077477,
+        -34.61724103119883
+      ]
+    },
+    {
+      "id": "sanatorio-fleming",
+      "label": "Doctor Fleming",
+      "title": "La calle que acompaña el jardín",
+      "regionId": "entorno",
+      "period": "mixed",
+      "intro": "Recorre el borde occidental y meridional del conjunto.",
+      "narrative": "Esta perspectiva permite comprobar cómo el jardín amortigua la relación entre el edificio principal y los frentes urbanos próximos.",
+      "facts": [
+        {
+          "text": "El plano del jardín rotula la calle Doctor Fleming a lo largo de su borde oblicuo.",
+          "sourceIds": [
+            "s-guia2022"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El plan municipal 2023–2026 sitúa servicios del Centro Cívico en Doctor Fleming 2.",
+          "sourceIds": [
+            "s-social2023"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El borde oblicuo, los cruces de caminos y la distancia entre fachadas.",
+      "modelNote": "La dirección corresponde al equipamiento municipal contemporáneo; no identifica por sí sola una entrada clínica de 1949.",
+      "sourceIds": [
+        "s-guia2022",
+        "s-social2023",
+        "s-osm",
+        "s-pnoa"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22976062,
+        39.66408471
+      ],
+      "coordinates": [
+        -0.22976062,
+        39.66408471
+      ],
+      "coordinateSourceIds": [
+        "s-catastro",
+        "s-pnoa",
+        "s-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "entorno",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "entorno",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "order": 18,
+      "elevation": 2.587291031121355,
+      "localTarget": [
+        -73.69078252612445,
+        2.587291031121355,
+        -50.77008097501774
+      ]
+    },
+    {
+      "id": "sanatorio-frente-urbano",
+      "label": "Edificios próximos",
+      "title": "La ciudad frente al jardín",
+      "regionId": "entorno",
+      "period": "mixed",
+      "intro": "Aléjate lo suficiente para comparar las manzanas y el recinto.",
+      "narrative": "Las alturas y fachadas vecinas ofrecen una escala urbana para entender la amplitud del jardín.",
+      "facts": [
+        {
+          "text": "La cartografía catastral registra las huellas y partes de los edificios vecinos.",
+          "sourceIds": [
+            "s-catastro"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "PNOA permite contrastar cubiertas, patios y vegetación visibles desde arriba.",
+          "sourceIds": [
+            "s-pnoa"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Alineaciones, patios y transiciones entre las distintas alturas.",
+      "modelNote": "Las huellas provienen de cartografía pública; ventanas, balcones, materiales y alturas no verificadas se aproximan. No son levantamientos individuales de cada fachada.",
+      "sourceIds": [
+        "s-catastro",
+        "s-pnoa",
+        "s-osm"
+      ],
+      "confidence": "interpretive",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22736519,
+        39.66363176
+      ],
+      "coordinates": [
+        -0.22736519,
+        39.66363176
+      ],
+      "coordinateSourceIds": [
+        "s-catastro",
+        "s-pnoa",
+        "s-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "entorno",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "entorno",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "order": 19,
+      "elevation": 4.278873874308342,
+      "localTarget": [
+        22.89734634705102,
+        4.278873874308342,
+        137.19868004594878
+      ]
+    },
+    {
+      "id": "sanatorio-ciudad-factoria",
+      "label": "Memoria y ciudad",
+      "title": "Un equipamiento que cambia de uso",
+      "regionId": "memoria",
+      "period": "mixed",
+      "intro": "Relaciona el recinto con la memoria del Puerto industrial.",
+      "narrative": "El antiguo servicio de empresa forma hoy parte de la vida cívica. Esta parada enlaza el edificio con sus transformaciones y con el conjunto del atlas.",
+      "facts": [
+        {
+          "text": "El catálogo municipal de 2026 presenta el Centro Cívico como un espacio cultural de titularidad municipal.",
+          "sourceIds": [
+            "s-mice2026"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Desde el 30 de octubre de 2025 puede consultarse el fondo de la Compañía Minera de Sierra Menera; la adecuación del Centro Cívico seguía en proyecto.",
+          "sourceIds": [
+            "s-consulta2025"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La permanencia del edificio y el jardín dentro de una ciudad transformada.",
+      "modelNote": "La consulta del fondo se canaliza por el Archivo Municipal. Esta consulta no se convierte en prueba de apertura del Archivo Industrial en el Sanatorio. La visita no reconstruye naranjales históricos sobre calles actuales.",
+      "sourceIds": [
+        "s-mice2026",
+        "s-consulta2025"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.2287491,
+        39.6642851
+      ],
+      "coordinates": [
+        -0.2287491,
+        39.6642851
+      ],
+      "coordinateSourceIds": [
+        "s-catastro",
+        "s-pnoa",
+        "s-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "memoria",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "order": 20,
+      "elevation": 12,
+      "localTarget": [
+        0,
+        12,
+        0
+      ]
+    },
+    {
+      "id": "sanatorio-seccion",
+      "label": "Abrir la planta histórica",
+      "title": "Leer el núcleo central desde arriba",
+      "regionId": "construccion",
+      "period": "industrial",
+      "intro": "Abre el cuerpo central para relacionar sus espacios históricos.",
+      "narrative": "La sección permite leer el hall, la escalera y la secuencia de la capilla antes de entrar en cada estancia. Cierra la sección para recuperar el volumen exterior.",
+      "facts": [
+        {
+          "text": "El plano disponible muestra un fragmento de la planta baja, no la distribución completa del hospital.",
+          "sourceIds": [
+            "s-plano"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La información municipal actual sitúa una biblioteca en la primera planta del Centro Cívico.",
+          "sourceIds": [
+            "s-biblioteca"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La continuidad entre vestíbulo, antecapilla, capilla y sacristía.",
+      "modelNote": "Reconstrucción histórica parcial del núcleo central. La sección retira su planta alta, forjado y cubierta; conserva cerradas las alas. No representa la distribución actual ni inventa quirófanos, maternidad o salas ilegibles.",
+      "sourceIds": [
+        "s-plano",
+        "s-biblioteca",
+        "s-dau2025"
+      ],
+      "confidence": "interpretive",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22873392,
+        39.66438207
+      ],
+      "coordinates": [
+        -0.22873392,
+        39.66438207
+      ],
+      "coordinateSourceIds": [
+        "s-catastro",
+        "s-pnoa",
+        "s-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "construccion",
+      "floor": 0,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "interior",
+      "requiresSection": true,
+      "interiorView": false,
+      "buildingId": "sanatorio-principal",
+      "order": 21,
+      "elevation": 2.215168952516901,
+      "localTarget": [
+        1.3008028215556564,
+        2.215168952516901,
+        -10.794346298847042
+      ]
+    }
+  ]
+}

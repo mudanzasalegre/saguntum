@@ -1,0 +1,1662 @@
+{
+  "schemaVersion": 1,
+  "id": "salvador",
+  "title": "Iglesia del Salvador y su entorno",
+  "subtitle": "Dieciocho paradas entre el arrabal, la nave y su memoria",
+  "introduction": "Recorre la plaza, reconoce la piedra de la fachada y entra en los espacios de la iglesia. El itinerario conecta su estructura con las transformaciones del barrio y diferencia lo conservado, lo desaparecido y las preguntas que siguen abiertas.",
+  "researchDate": "2026-11-20",
+  "regionsLabel": "ámbitos",
+  "mapButtonLabel": "Plano de la iglesia y su entorno",
+  "overviewButtonLabel": "Ver conjunto",
+  "readingModeLabel": "Leer espacios y transformaciones",
+  "readingModeNote": "Los colores agrupan arquitectura, capillas, memoria y entorno. Un mismo espacio reúne obras de épocas diferentes.",
+  "timelineIntroduction": "La cronología separa los testimonios del arrabal, la construcción del templo y las transformaciones posteriores. Las fechas discutidas conservan su margen de incertidumbre.",
+  "visitAriaLabel": "Visita documentada a la Iglesia del Salvador y las plazas de su entorno",
+  "sectionOnOverview": true,
+  "sectionInstructions": "Abre la sección para comprender la nave, la cabecera y las capillas. En las vistas interiores puedes observar las cubiertas desde abajo; cierra el corte para recuperar la silueta exterior.",
+  "sectionNote": "Sección didáctica del edificio documentado. La planta arqueológica de 1992, la cartografía y las fotografías no forman un levantamiento actualizado de todo el conjunto. El suelo permanece cerrado; no se inventa una cripta visitable ni se restituyen los restos enterrados.",
+  "methodology": [
+    "La organización del templo se contrasta con la descripción de Bien de Interés Cultural, la memoria arqueológica de 1992 y fotografías institucionales. Las dimensiones menores, espesores y acabados son aproximados.",
+    "La cartografía catastral y OpenStreetMap sitúan el edificio, sus anexos y los dos espacios abiertos próximos. Las alturas del contexto se apoyan en relieve oficial; los focos interiores son posiciones de observación virtual.",
+    "La nave presenta una cubierta de madera sobria en las referencias visuales. Los fragmentos del antiguo artesonado pintado se estudian como patrimonio disperso: no se reinstalan como un techo conservado in situ.",
+    "La capilla de la Comunión conserva una descripción tipológica precisa, pero no se ha localizado una planimetría interior actual completa. Su mobiliario, decoración y color exterior de la cúpula se simplifican y se explican como aproximaciones.",
+    "Las excavaciones documentan estructuras anteriores y restos romanos. La identificación con una iglesia del Cid sigue abierta; tampoco se deduce una cripta conservada de los huesos removidos. Las imágenes consultadas sirven de referencia y no se añaden como galería ni texturas."
+  ],
+  "readingLegend": [
+    {
+      "id": "exterior",
+      "label": "Portada y campanario",
+      "color": "#d7b36b",
+      "note": "Acceso, fábrica pétrea, torre y campanas."
+    },
+    {
+      "id": "architecture",
+      "label": "Nave y cubiertas",
+      "color": "#b6c593",
+      "note": "Arcos, apoyos y techumbre visible."
+    },
+    {
+      "id": "chapels",
+      "label": "Cabecera y capillas",
+      "color": "#c99bba",
+      "note": "Ábside, crucería, bautismo y Comunión."
+    },
+    {
+      "id": "memory",
+      "label": "Memoria y conservación",
+      "color": "#7fb7c4",
+      "note": "Arqueología, artesonado disperso, sacristía y cuidado del conjunto."
+    },
+    {
+      "id": "context",
+      "label": "Plazas y arrabal",
+      "color": "#80aa85",
+      "note": "Dos espacios abiertos distintos, calles y edificaciones próximas."
+    }
+  ],
+  "confidenceLegend": [
+    {
+      "id": "documented",
+      "label": "Documentado",
+      "note": "La fuente respalda el hecho; no certifica precisión métrica del modelo."
+    },
+    {
+      "id": "interpretive",
+      "label": "Interpretación",
+      "note": "Lectura razonada o detalle visual aproximado."
+    },
+    {
+      "id": "disputed",
+      "label": "En debate",
+      "note": "La evidencia no permite una identificación o cronología definitiva."
+    }
+  ],
+  "stops": [
+    {
+      "id": "salvador-conjunto",
+      "title": "Una iglesia del arrabal",
+      "label": "El conjunto",
+      "regionId": "llegada",
+      "period": "mixed",
+      "intro": "Observa cómo la nave, la cabecera, la torre y los anexos forman una silueta irregular dentro de la ciudad.",
+      "narrative": "Observa cómo la nave, la cabecera, la torre y los anexos forman una silueta irregular dentro de la ciudad.",
+      "facts": [
+        {
+          "text": "La descripción BIC sitúa la construcción principal a finales del siglo XIII.",
+          "sourceIds": [
+            "sv-bic"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La fecha tradicional 1248 no prueba el inicio de esta fábrica: el documento citado menciona el arrabal, sin nombrar todavía San Salvador.",
+          "sourceIds": [
+            "sv-gomez2016"
+          ],
+          "confidence": "disputed"
+        }
+      ],
+      "lookFor": "Compara la nave alargada con el ábside poligonal y la capilla lateral.",
+      "modelNote": "La escena reúne fases conservadas. No presenta el conjunto como una obra de una única fecha ni como una restitución medieval íntegra.",
+      "sourceIds": [
+        "sv-bic",
+        "sv-gomez2016",
+        "sv-gva",
+        "sv-pnoa",
+        "sv-terreno",
+        "sv-osm",
+        "sv-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco compartido con el modelo, registrado sobre huellas cartográficas y referencias documentales; no acredita medición de la pieza ni acceso físico.",
+      "osmIds": [],
+      "order": 1,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "sv-osm",
+        "sv-catastro",
+        "sv-hortelano1992"
+      ],
+      "readingLayer": "architecture",
+      "coordinate": [
+        -0.27254757429522813,
+        39.676815169157706
+      ],
+      "coordinates": [
+        -0.27254757429522813,
+        39.676815169157706
+      ]
+    },
+    {
+      "id": "salvador-plaza",
+      "title": "El espacio abierto junto al templo",
+      "label": "La plaza peatonal",
+      "regionId": "llegada",
+      "period": "contemporary",
+      "intro": "Acércate desde la plataforma peatonal al suroeste y observa la relación entre los muros, las casas y los cambios de nivel.",
+      "narrative": "Acércate desde la plataforma peatonal al suroeste y observa la relación entre los muros, las casas y los cambios de nivel.",
+      "facts": [
+        {
+          "text": "La cartografía distingue esta plataforma del jardín triangular situado al noroeste.",
+          "sourceIds": [
+            "sv-osm-plaza",
+            "sv-osm-entorno"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La restauración de 1991–1992 eliminó construcciones adosadas y transformó el espacio público inmediato.",
+          "sourceIds": [
+            "sv-bic"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Reconoce el frente urbano, las conexiones escalonadas y el volumen de la capilla de la Comunión.",
+      "modelNote": "El pavimento, los peldaños y el mobiliario son aproximados. El texto BIC menciona derribos al norte; no se asigna esa intervención a una huella histórica concreta sin plano comparativo.",
+      "sourceIds": [
+        "sv-osm-plaza",
+        "sv-osm-entorno",
+        "sv-bic",
+        "sv-gva",
+        "sv-pnoa",
+        "sv-terreno",
+        "sv-osm",
+        "sv-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco compartido con el modelo, registrado sobre huellas cartográficas y referencias documentales; no acredita medición de la pieza ni acceso físico.",
+      "osmIds": [],
+      "order": 2,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "sv-osm-plaza",
+        "sv-catastro",
+        "sv-terreno"
+      ],
+      "readingLayer": "context",
+      "coordinate": [
+        -0.272712615,
+        39.676700323
+      ],
+      "coordinates": [
+        -0.272712615,
+        39.676700323
+      ]
+    },
+    {
+      "id": "salvador-portada",
+      "title": "Piedra, dovelas y una ventana apuntada",
+      "label": "La portada",
+      "regionId": "fachada",
+      "period": "medieval",
+      "intro": "Mira de cerca el acceso y después recorre con la vista la fachada hasta la abertura superior.",
+      "narrative": "Mira de cerca el acceso y después recorre con la vista la fachada hasta la abertura superior.",
+      "facts": [
+        {
+          "text": "La puerta tiene arco de medio punto e imposta marcada; encima se abre una ventana ligeramente apuntada.",
+          "sourceIds": [
+            "sv-cid"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Las fotografías institucionales muestran una marquesina ligera de vidrio sobre la puerta y fábricas de piedra de tonos distintos.",
+          "sourceIds": [
+            "sv-gva"
+          ],
+          "confidence": "interpretive"
+        }
+      ],
+      "lookFor": "Sigue las dovelas de la puerta, la imposta y el contraste con el gran contrafuerte.",
+      "modelNote": "El despiece y la erosión se interpretan visualmente. La marquesina responde a las fotografías consultadas; la antigua tracería de la ventana no se reconstruye como conservada.",
+      "sourceIds": [
+        "sv-cid",
+        "sv-gva",
+        "sv-osm",
+        "sv-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco compartido con el modelo, registrado sobre huellas cartográficas y referencias documentales; no acredita medición de la pieza ni acceso físico.",
+      "osmIds": [],
+      "order": 3,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "sv-osm",
+        "sv-catastro",
+        "sv-hortelano1992"
+      ],
+      "readingLayer": "exterior",
+      "coordinate": [
+        -0.27274545951320395,
+        39.67683520370154
+      ],
+      "coordinates": [
+        -0.27274545951320395,
+        39.67683520370154
+      ]
+    },
+    {
+      "id": "salvador-torre",
+      "title": "Una torre que también refuerza la fachada",
+      "label": "La torre",
+      "regionId": "fachada",
+      "period": "mixed",
+      "intro": "La torre se adosa al acceso y participa en el apoyo del edificio. Su remate actual permite leer con claridad el cuerpo de campanas.",
+      "narrative": "La torre se adosa al acceso y participa en el apoyo del edificio. Su remate actual permite leer con claridad el cuerpo de campanas.",
+      "facts": [
+        {
+          "text": "El campanario tiene dos cuerpos; sus vanos abiertos miran al norte, sur y oeste, mientras el oriental está cegado.",
+          "sourceIds": [
+            "sv-campanar"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Una escalera de caracol de piedra, con apoyo central, comunica el interior con la torre.",
+          "sourceIds": [
+            "sv-bic"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Campaners identifica la piedra azul de Morvedre y un remate histórico ya desaparecido.",
+          "sourceIds": [
+            "sv-campanar"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Distingue la imposta entre cuerpos y la profundidad de los huecos.",
+      "modelNote": "La escalera se simplifica para explicar su forma. No se añade al estado actual el antiguo remate con reloj ni se garantiza el acceso físico al campanario.",
+      "sourceIds": [
+        "sv-campanar",
+        "sv-bic",
+        "sv-osm",
+        "sv-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco compartido con el modelo, registrado sobre huellas cartográficas y referencias documentales; no acredita medición de la pieza ni acceso físico.",
+      "osmIds": [],
+      "order": 4,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "sv-osm",
+        "sv-catastro",
+        "sv-hortelano1992"
+      ],
+      "readingLayer": "exterior",
+      "coordinate": [
+        -0.27275348118303766,
+        39.67676760904073
+      ],
+      "coordinates": [
+        -0.27275348118303766,
+        39.67676760904073
+      ]
+    },
+    {
+      "id": "salvador-campanas",
+      "title": "Tres voces y una intervención reciente",
+      "label": "Las campanas",
+      "regionId": "fachada",
+      "period": "contemporary",
+      "intro": "Acércate al cuerpo superior para reconocer las diferencias de tamaño y los soportes de las campanas.",
+      "narrative": "Acércate al cuerpo superior para reconocer las diferencias de tamaño y los soportes de las campanas.",
+      "facts": [
+        {
+          "text": "Santíssima Trinitat, de Manuel Roses Vidal, data de 1943 y mide 62 cm de diámetro.",
+          "sourceIds": [
+            "sv-trinitat"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Maria del Remei, del mismo fundidor y año, alcanza 71 cm de diámetro.",
+          "sourceIds": [
+            "sv-remei"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Las tres recibieron yugos nuevos de madera en 2023. El inventario mantiene inciertas la autoría y la fecha de fundición de la pequeña.",
+          "sourceIds": [
+            "sv-campanar"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Compara los bronces, los yugos de madera y los tres vanos abiertos.",
+      "modelNote": "Las inscripciones se omiten como detalle no reproducido con precisión. La escena no sintetiza un toque histórico ni convierte la inscripción posterior de la campana menor en fecha segura.",
+      "sourceIds": [
+        "sv-trinitat",
+        "sv-remei",
+        "sv-campanar",
+        "sv-osm",
+        "sv-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco compartido con el modelo, registrado sobre huellas cartográficas y referencias documentales; no acredita medición de la pieza ni acceso físico.",
+      "osmIds": [],
+      "order": 5,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "sv-osm",
+        "sv-catastro",
+        "sv-hortelano1992"
+      ],
+      "readingLayer": "exterior",
+      "coordinate": [
+        -0.272779945093794,
+        39.67677119438357
+      ],
+      "coordinates": [
+        -0.272779945093794,
+        39.67677119438357
+      ]
+    },
+    {
+      "id": "salvador-nave",
+      "title": "Un espacio ancho dividido en tres tramos",
+      "label": "La nave",
+      "regionId": "nave",
+      "period": "medieval",
+      "intro": "Entra y sigue el eje hacia la cabecera. La anchura de la nave y la repetición de los apoyos organizan la experiencia del interior.",
+      "narrative": "Entra y sigue el eje hacia la cabecera. La anchura de la nave y la repetición de los apoyos organizan la experiencia del interior.",
+      "facts": [
+        {
+          "text": "La nave única se divide en tres tramos y se refuerza con contrafuertes exteriores.",
+          "sourceIds": [
+            "sv-bic"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La imagen institucional del interior muestra paredes claras, bancos y un óculo sobre el arco de acceso a la cabecera.",
+          "sourceIds": [
+            "sv-gva"
+          ],
+          "confidence": "interpretive"
+        }
+      ],
+      "lookFor": "Relaciona cada tramo interior con los apoyos del exterior.",
+      "modelNote": "Bancos, pavimento y disposición menor del mobiliario se simplifican; las imágenes procesionales que aparecen en alguna fotografía no se fijan como instalación permanente.",
+      "sourceIds": [
+        "sv-bic",
+        "sv-gva",
+        "sv-osm",
+        "sv-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco compartido con el modelo, registrado sobre huellas cartográficas y referencias documentales; no acredita medición de la pieza ni acceso físico.",
+      "osmIds": [],
+      "order": 6,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "sv-osm",
+        "sv-catastro",
+        "sv-hortelano1992"
+      ],
+      "readingLayer": "architecture",
+      "coordinate": [
+        -0.2725163292608109,
+        39.676812005808685
+      ],
+      "coordinates": [
+        -0.2725163292608109,
+        39.676812005808685
+      ]
+    },
+    {
+      "id": "salvador-arcos",
+      "title": "Cómo se sostiene la cubierta",
+      "label": "Los arcos diafragma",
+      "regionId": "nave",
+      "period": "medieval",
+      "intro": "Detente bajo un arco. Su espesor y sus apoyos permiten comprender la relación entre piedra y madera.",
+      "narrative": "Detente bajo un arco. Su espesor y sus apoyos permiten comprender la relación entre piedra y madera.",
+      "facts": [
+        {
+          "text": "Los arcos diafragma reciben la techumbre de madera de la nave.",
+          "sourceIds": [
+            "sv-bic"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Los arranques y piezas antiguas motivaron un debate sobre bóvedas proyectadas, terminadas o destruidas; su historia no está definitivamente resuelta.",
+          "sourceIds": [
+            "sv-gomez2016"
+          ],
+          "confidence": "disputed"
+        }
+      ],
+      "lookFor": "Sigue el arco desde el apoyo hasta la clave y observa dónde descansan las vigas.",
+      "modelNote": "Se representa el sistema visible documentado. No se completa sobre la nave una bóveda hipotética ni se equipara el estado actual con el proyecto inicial.",
+      "sourceIds": [
+        "sv-bic",
+        "sv-gomez2016",
+        "sv-osm",
+        "sv-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco compartido con el modelo, registrado sobre huellas cartográficas y referencias documentales; no acredita medición de la pieza ni acceso físico.",
+      "osmIds": [],
+      "order": 7,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "sv-osm",
+        "sv-catastro",
+        "sv-hortelano1992"
+      ],
+      "readingLayer": "architecture",
+      "coordinate": [
+        -0.2725531289680134,
+        39.676815731530866
+      ],
+      "coordinates": [
+        -0.2725531289680134,
+        39.676815731530866
+      ]
+    },
+    {
+      "id": "salvador-techumbre",
+      "title": "La madera que vemos hoy",
+      "label": "La techumbre visible",
+      "regionId": "nave",
+      "period": "mixed",
+      "intro": "Mira hacia arriba y compara las vigas con la cubierta de piedra de la cabecera. Son soluciones distintas dentro de la misma iglesia.",
+      "narrative": "Mira hacia arriba y compara las vigas con la cubierta de piedra de la cabecera. Son soluciones distintas dentro de la misma iglesia.",
+      "facts": [
+        {
+          "text": "Las referencias fotográficas institucionales muestran madera sobria, sin una restitución completa de casetones pintados.",
+          "sourceIds": [
+            "sv-gva"
+          ],
+          "confidence": "interpretive"
+        },
+        {
+          "text": "El estudio de conservación confirma que la antigua armadura ya estaba dispersa cuando fue descrita en 1923.",
+          "sourceIds": [
+            "sv-artesonado2024"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Observa correas, vigas y tablazón; después cambia a la parada dedicada al artesonado perdido.",
+      "modelNote": "La textura de madera es una interpretación. No se presenta esta cubierta como el artesonado policromado medieval ni se atribuye una fecha precisa a cada pieza actual.",
+      "sourceIds": [
+        "sv-gva",
+        "sv-artesonado2024",
+        "sv-osm",
+        "sv-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco compartido con el modelo, registrado sobre huellas cartográficas y referencias documentales; no acredita medición de la pieza ni acceso físico.",
+      "osmIds": [],
+      "order": 8,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "sv-osm",
+        "sv-catastro",
+        "sv-hortelano1992"
+      ],
+      "readingLayer": "architecture",
+      "coordinate": [
+        -0.27259617768209937,
+        39.67682008992286
+      ],
+      "coordinates": [
+        -0.27259617768209937,
+        39.67682008992286
+      ]
+    },
+    {
+      "id": "salvador-abside",
+      "title": "Una cabecera poligonal",
+      "label": "El ábside",
+      "regionId": "cabecera",
+      "period": "medieval",
+      "intro": "Avanza hacia el espacio más concentrado de la iglesia. La forma del cierre y la luz de la ventana axial hacen visible su estructura.",
+      "narrative": "Avanza hacia el espacio más concentrado de la iglesia. La forma del cierre y la luz de la ventana axial hacen visible su estructura.",
+      "facts": [
+        {
+          "text": "El ábside tiene cinco lados y se une a la nave mediante un arco triunfal apuntado y rebajado.",
+          "sourceIds": [
+            "sv-bic"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La fotografía institucional muestra piedra vista, ventana axial y altar sencillo, sin el gran retablo histórico.",
+          "sourceIds": [
+            "sv-gva"
+          ],
+          "confidence": "interpretive"
+        }
+      ],
+      "lookFor": "Reconoce los cinco paños y la transición desde la nave hasta el presbiterio.",
+      "modelNote": "El altar y la cruz tienen una representación sobria. El retablo desaparecido no se repone en el estado actual ni se inventa su pintura para decorar la escena.",
+      "sourceIds": [
+        "sv-bic",
+        "sv-gva",
+        "sv-osm",
+        "sv-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco compartido con el modelo, registrado sobre huellas cartográficas y referencias documentales; no acredita medición de la pieza ni acceso físico.",
+      "osmIds": [],
+      "order": 9,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "sv-osm",
+        "sv-catastro",
+        "sv-hortelano1992"
+      ],
+      "readingLayer": "chapels",
+      "coordinate": [
+        -0.2723935265634299,
+        39.67680038830903
+      ],
+      "coordinates": [
+        -0.2723935265634299,
+        39.67680038830903
+      ]
+    },
+    {
+      "id": "salvador-cruceria",
+      "title": "Siete nervios en la cabecera",
+      "label": "La crucería",
+      "regionId": "cabecera",
+      "period": "medieval",
+      "intro": "Eleva la mirada desde los muros hasta el encuentro de los nervios. La geometría del techo explica la forma de la cabecera.",
+      "narrative": "Eleva la mirada desde los muros hasta el encuentro de los nervios. La geometría del techo explica la forma de la cabecera.",
+      "facts": [
+        {
+          "text": "La descripción municipal identifica siete nervios y una clave con Cristo Pantocrátor.",
+          "sourceIds": [
+            "sv-xiuxiueig"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La ficha BIC distingue los nervios de la plementería de ladrillo.",
+          "sourceIds": [
+            "sv-bic"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Sigue el trazado de los nervios y compáralo con los paños claros de la bóveda.",
+      "modelNote": "La clave se señala de forma esquemática. Su relieve y su inscripción no se ofrecen como facsímil; tampoco se reponen los acabados pintados que muestran las fotografías antiguas.",
+      "sourceIds": [
+        "sv-xiuxiueig",
+        "sv-bic",
+        "sv-osm",
+        "sv-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco compartido con el modelo, registrado sobre huellas cartográficas y referencias documentales; no acredita medición de la pieza ni acceso físico.",
+      "osmIds": [],
+      "order": 10,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "sv-osm",
+        "sv-catastro",
+        "sv-hortelano1992"
+      ],
+      "readingLayer": "chapels",
+      "coordinate": [
+        -0.27240857046889005,
+        39.676801911403004
+      ],
+      "coordinates": [
+        -0.27240857046889005,
+        39.676801911403004
+      ]
+    },
+    {
+      "id": "salvador-bautismo",
+      "title": "El primer tramo y sus usos",
+      "label": "La capilla bautismal",
+      "regionId": "cabecera",
+      "period": "mixed",
+      "intro": "Vuelve hacia los pies de la nave. A un lado del acceso aparecen funciones distintas de las del altar mayor.",
+      "narrative": "Vuelve hacia los pies de la nave. A un lado del acceso aparecen funciones distintas de las del altar mayor.",
+      "facts": [
+        {
+          "text": "La capilla bautismal y el acceso a la torre se sitúan en el primer tramo del lado de la epístola.",
+          "sourceIds": [
+            "sv-bic"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Mateu describió en 1924 una pila labrada sobre una clave de bóveda; eso no acredita su disposición actual.",
+          "sourceIds": [
+            "sv-gomez2016"
+          ],
+          "confidence": "interpretive"
+        }
+      ],
+      "lookFor": "Relaciona el pequeño ámbito de bautismo con la puerta y la escalera del campanario.",
+      "modelNote": "La pila es un volumen neutro para explicar el uso. No reproduce como conservada la pieza descrita hace un siglo ni añade el ángel histórico desaparecido.",
+      "sourceIds": [
+        "sv-bic",
+        "sv-gomez2016",
+        "sv-osm",
+        "sv-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco compartido con el modelo, registrado sobre huellas cartográficas y referencias documentales; no acredita medición de la pieza ni acceso físico.",
+      "osmIds": [],
+      "order": 11,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "sv-osm",
+        "sv-catastro",
+        "sv-hortelano1992"
+      ],
+      "readingLayer": "chapels",
+      "coordinate": [
+        -0.272679753506534,
+        39.676751265317336
+      ],
+      "coordinates": [
+        -0.272679753506534,
+        39.676751265317336
+      ]
+    },
+    {
+      "id": "salvador-comunion",
+      "title": "Una capilla con organización propia",
+      "label": "La capilla de la Comunión",
+      "regionId": "cabecera",
+      "period": "modern",
+      "intro": "Desde el tramo próximo a la cabecera, entra en el volumen lateral y reconoce un espacio diferente al eje largo de la nave.",
+      "narrative": "Desde el tramo próximo a la cabecera, entra en el volumen lateral y reconoce un espacio diferente al eje largo de la nave.",
+      "facts": [
+        {
+          "text": "La Comunión se organiza en cruz griega, con pilastras de orden compuesto.",
+          "sourceIds": [
+            "sv-bic"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La documentación municipal sitúa las ampliaciones laterales entre los siglos XVII y XIX, sin precisar una fecha para cada elemento.",
+          "sourceIds": [
+            "sv-xiuxiueig"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Compara sus brazos, los apoyos y su relación con la nave principal.",
+      "modelNote": "La tipología está documentada; las dimensiones menores, molduras y mobiliario son aproximados. No se atribuye una advocación, pintura o retablo a cada pared sin inventario actual.",
+      "sourceIds": [
+        "sv-bic",
+        "sv-xiuxiueig",
+        "sv-osm",
+        "sv-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco compartido con el modelo, registrado sobre huellas cartográficas y referencias documentales; no acredita medición de la pieza ni acceso físico.",
+      "osmIds": [],
+      "order": 12,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "sv-osm",
+        "sv-catastro",
+        "sv-hortelano1992"
+      ],
+      "readingLayer": "chapels",
+      "coordinate": [
+        -0.27252211120858316,
+        39.676709301452966
+      ],
+      "coordinates": [
+        -0.27252211120858316,
+        39.676709301452966
+      ]
+    },
+    {
+      "id": "salvador-cupula",
+      "title": "Una cúpula sobre la capilla lateral",
+      "label": "La cúpula de la Comunión",
+      "regionId": "cabecera",
+      "period": "modern",
+      "intro": "Mira la cubierta de la Comunión desde dentro y después busca su pequeño volumen en el exterior.",
+      "narrative": "Mira la cubierta de la Comunión desde dentro y después busca su pequeño volumen en el exterior.",
+      "facts": [
+        {
+          "text": "La descripción patrimonial cubre la capilla con una bóveda de media naranja.",
+          "sourceIds": [
+            "sv-bic"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El cuerpo lateral se distingue de la nave en las huellas catastrales y en la ortofotografía.",
+          "sourceIds": [
+            "sv-catastro",
+            "sv-pnoa"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Relaciona el techo curvo interior con el volumen lateral de la iglesia.",
+      "modelNote": "El color y el despiece de la cubierta exterior son aproximados. No se adopta la gran cúpula azul de otros monumentos del atlas ni se añade un programa pictórico desconocido.",
+      "sourceIds": [
+        "sv-bic",
+        "sv-catastro",
+        "sv-pnoa",
+        "sv-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco compartido con el modelo, registrado sobre huellas cartográficas y referencias documentales; no acredita medición de la pieza ni acceso físico.",
+      "osmIds": [],
+      "order": 13,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "sv-osm",
+        "sv-catastro",
+        "sv-hortelano1992"
+      ],
+      "readingLayer": "chapels",
+      "coordinate": [
+        -0.27252211120858316,
+        39.676709301452966
+      ],
+      "coordinates": [
+        -0.27252211120858316,
+        39.676709301452966
+      ]
+    },
+    {
+      "id": "salvador-sacristia",
+      "title": "Los espacios que sostienen la vida del templo",
+      "label": "La sacristía",
+      "regionId": "memoria",
+      "period": "contemporary",
+      "intro": "Observa cómo las dependencias de servicio se incorporan al conjunto sin repetir la escala de la nave.",
+      "narrative": "Observa cómo las dependencias de servicio se incorporan al conjunto sin repetir la escala de la nave.",
+      "facts": [
+        {
+          "text": "La descripción BIC vincula una nueva sacristía a la intervención de 1991–1992.",
+          "sourceIds": [
+            "sv-bic"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La documentación parroquial fecha la elevación del Salvador a parroquia el 29 de diciembre de 1953.",
+          "sourceIds": [
+            "sv-arxparr"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Compara la altura y la posición de los anexos con los espacios principales.",
+      "modelNote": "La localización volumétrica se aproxima con la cartografía. No se reconstruyen como exactos el inventario, los muebles ni la distribución interior de las dependencias.",
+      "sourceIds": [
+        "sv-bic",
+        "sv-arxparr",
+        "sv-osm",
+        "sv-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco compartido con el modelo, registrado sobre huellas cartográficas y referencias documentales; no acredita medición de la pieza ni acceso físico.",
+      "osmIds": [],
+      "order": 14,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "sv-osm",
+        "sv-catastro",
+        "sv-hortelano1992"
+      ],
+      "readingLayer": "memory",
+      "coordinate": [
+        -0.27257988910706993,
+        39.67691538820103
+      ],
+      "coordinates": [
+        -0.27257988910706993,
+        39.67691538820103
+      ]
+    },
+    {
+      "id": "salvador-arqueologia",
+      "title": "Lo que se documentó bajo el pavimento",
+      "label": "La arqueología del subsuelo",
+      "regionId": "memoria",
+      "period": "mixed",
+      "intro": "Detente sobre el suelo cerrado y piensa en las sucesivas ocupaciones del lugar. La visita explica los hallazgos sin convertirlos en una excavación abierta.",
+      "narrative": "Detente sobre el suelo cerrado y piensa en las sucesivas ocupaciones del lugar. La visita explica los hallazgos sin convertirlos en una excavación abierta.",
+      "facts": [
+        {
+          "text": "En 1992 se registraron cimientos de una iglesia anterior, cuya cronología exacta no pudo fijarse.",
+          "sourceIds": [
+            "sv-hortelano1992"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Los sondeos alcanzaron espacios domésticos tardorromanos y rellenos con restos humanos removidos.",
+          "sourceIds": [
+            "sv-hortelano1992"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Identificar esos cimientos con la iglesia de San Juan promovida por el Cid sigue siendo una hipótesis.",
+          "sourceIds": [
+            "sv-cid"
+          ],
+          "confidence": "disputed"
+        }
+      ],
+      "lookFor": "Relaciona el suelo de la nave con la planta publicada de los sondeos, sin imaginar una estratigrafía uniforme bajo todo el edificio.",
+      "modelNote": "El corte sólo abre partes del edificio visible. No se reconstruyen una iglesia cidiana, una cripta intacta, enterramientos completos ni un acceso al subsuelo que no esté documentado.",
+      "sourceIds": [
+        "sv-hortelano1992",
+        "sv-cid",
+        "sv-osm",
+        "sv-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco compartido con el modelo, registrado sobre huellas cartográficas y referencias documentales; no acredita medición de la pieza ni acceso físico.",
+      "osmIds": [],
+      "order": 15,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "sv-osm",
+        "sv-catastro",
+        "sv-hortelano1992"
+      ],
+      "readingLayer": "memory",
+      "coordinate": [
+        -0.27258229100013615,
+        39.67681868398996
+      ],
+      "coordinates": [
+        -0.27258229100013615,
+        39.67681868398996
+      ]
+    },
+    {
+      "id": "salvador-artesonado",
+      "title": "Un techo perdido que conserva fragmentos",
+      "label": "El artesonado disperso",
+      "regionId": "memoria",
+      "period": "mixed",
+      "intro": "La cubierta visible permite imaginar el lugar que ocupó la armadura pintada. Las piezas separadas del edificio cuentan otra parte de su historia.",
+      "narrative": "La cubierta visible permite imaginar el lugar que ocupó la armadura pintada. Las piezas separadas del edificio cuentan otra parte de su historia.",
+      "facts": [
+        {
+          "text": "La restauración publicada en 2024 estudió un casetón de madera policromada procedente de una colección privada.",
+          "sourceIds": [
+            "sv-artesonado2024"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El fragmento, de unos 29 por 27 cm, conserva ornamentación vegetal y restos de colores y plata corlada.",
+          "sourceIds": [
+            "sv-artesonado2024"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Compara la escala de una pequeña pieza decorada con la extensión de toda la nave.",
+      "modelNote": "El fragmento se explica mediante texto; no se inventa un techo completo a partir de él ni se presenta como objeto expuesto actualmente en la iglesia.",
+      "sourceIds": [
+        "sv-artesonado2024",
+        "sv-osm",
+        "sv-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco compartido con el modelo, registrado sobre huellas cartográficas y referencias documentales; no acredita medición de la pieza ni acceso físico.",
+      "osmIds": [],
+      "order": 16,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "sv-osm",
+        "sv-catastro",
+        "sv-hortelano1992"
+      ],
+      "readingLayer": "memory",
+      "coordinate": [
+        -0.27268065499737565,
+        39.676828642681336
+      ],
+      "coordinates": [
+        -0.27268065499737565,
+        39.676828642681336
+      ]
+    },
+    {
+      "id": "salvador-conservacion",
+      "title": "Leer las transformaciones sin borrarlas",
+      "label": "La conservación",
+      "regionId": "memoria",
+      "period": "mixed",
+      "intro": "Vuelve a mirar el conjunto: las reparaciones, las pérdidas y las nuevas funciones también forman parte de su historia.",
+      "narrative": "Vuelve a mirar el conjunto: las reparaciones, las pérdidas y las nuevas funciones también forman parte de su historia.",
+      "facts": [
+        {
+          "text": "La incoación del expediente de protección se publicó en 1977.",
+          "sourceIds": [
+            "sv-proteccion1977"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La declaración como Bien de Interés Cultural corresponde al decreto de 28 de septiembre de 2007.",
+          "sourceIds": [
+            "sv-bic"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La ficha parroquial histórica registra daños en 1936 y una reconstrucción parcial posterior.",
+          "sourceIds": [
+            "sv-arxparr"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Distingue las partes de piedra, los paños encalados y las soluciones modernas que aparecen en las referencias visuales.",
+      "modelNote": "La visita reúne evidencias de varias fechas. No certifica un estado material exhaustivo de 2026 ni convierte una restauración documentada en fecha de todo lo que se ve.",
+      "sourceIds": [
+        "sv-proteccion1977",
+        "sv-bic",
+        "sv-arxparr",
+        "sv-osm",
+        "sv-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco compartido con el modelo, registrado sobre huellas cartográficas y referencias documentales; no acredita medición de la pieza ni acceso físico.",
+      "osmIds": [],
+      "order": 17,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "sv-osm",
+        "sv-catastro",
+        "sv-hortelano1992"
+      ],
+      "readingLayer": "memory",
+      "coordinate": [
+        -0.272455785187565,
+        39.67680669157487
+      ],
+      "coordinates": [
+        -0.272455785187565,
+        39.67680669157487
+      ]
+    },
+    {
+      "id": "salvador-entorno",
+      "title": "El Salvador en las calles del Raval",
+      "label": "El jardín y el arrabal",
+      "regionId": "llegada",
+      "period": "mixed",
+      "intro": "Termina junto al jardín triangular y vuelve la vista hacia la fachada, las calles y las casas que enmarcan la iglesia.",
+      "narrative": "Termina junto al jardín triangular y vuelve la vista hacia la fachada, las calles y las casas que enmarcan la iglesia.",
+      "facts": [
+        {
+          "text": "La lectura municipal relaciona el Raval con el Camí Reial y la salida hacia el Grau Vell.",
+          "sourceIds": [
+            "sv-xiuxiueig"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Las obras de calle Valencia de 2015 documentaron talleres romanos y, frente a la iglesia, una construcción islámica de posible uso público.",
+          "sourceIds": [
+            "sv-valencia2015"
+          ],
+          "confidence": "interpretive"
+        }
+      ],
+      "lookFor": "Compara el jardín del noroeste con la plaza peatonal del suroeste, las pendientes y las medianeras.",
+      "modelNote": "Las fachadas de contexto son interpretaciones sobre huellas reales. Los hallazgos de 2015 se cuentan en su lugar, pero no se abren zanjas ni se dibujan edificios antiguos como restos visibles.",
+      "sourceIds": [
+        "sv-xiuxiueig",
+        "sv-valencia2015",
+        "sv-osm-entorno",
+        "sv-osm-plaza",
+        "sv-terreno",
+        "sv-pnoa",
+        "sv-osm",
+        "sv-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco compartido con el modelo, registrado sobre huellas cartográficas y referencias documentales; no acredita medición de la pieza ni acceso físico.",
+      "osmIds": [],
+      "order": 18,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "sv-osm-entorno",
+        "sv-catastro",
+        "sv-terreno"
+      ],
+      "readingLayer": "context",
+      "coordinate": [
+        -0.272735958,
+        39.677077614
+      ],
+      "coordinates": [
+        -0.272735958,
+        39.677077614
+      ]
+    }
+  ],
+  "regions": [
+    {
+      "id": "llegada",
+      "name": "Las plazas y el arrabal",
+      "aliases": [],
+      "summary": "Dos espacios públicos distintos y la relación del templo con el barrio.",
+      "sourceIds": [
+        "sv-bic",
+        "sv-gomez2016",
+        "sv-gva",
+        "sv-pnoa",
+        "sv-terreno",
+        "sv-osm",
+        "sv-catastro",
+        "sv-osm-plaza",
+        "sv-osm-entorno",
+        "sv-xiuxiueig",
+        "sv-valencia2015"
+      ],
+      "stopIds": [
+        "salvador-conjunto",
+        "salvador-plaza",
+        "salvador-entorno"
+      ],
+      "coordinate": [
+        -0.27254757429522813,
+        39.676815169157706
+      ]
+    },
+    {
+      "id": "fachada",
+      "name": "Portada y campanario",
+      "aliases": [],
+      "summary": "La piedra del acceso, la torre y sus tres campanas.",
+      "sourceIds": [
+        "sv-cid",
+        "sv-gva",
+        "sv-osm",
+        "sv-catastro",
+        "sv-campanar",
+        "sv-bic",
+        "sv-trinitat",
+        "sv-remei"
+      ],
+      "stopIds": [
+        "salvador-portada",
+        "salvador-torre",
+        "salvador-campanas"
+      ],
+      "coordinate": [
+        -0.27274545951320395,
+        39.67683520370154
+      ]
+    },
+    {
+      "id": "nave",
+      "name": "Nave, arcos y madera",
+      "aliases": [],
+      "summary": "La estructura que organiza el espacio interior.",
+      "sourceIds": [
+        "sv-bic",
+        "sv-gva",
+        "sv-osm",
+        "sv-catastro",
+        "sv-gomez2016",
+        "sv-artesonado2024"
+      ],
+      "stopIds": [
+        "salvador-nave",
+        "salvador-arcos",
+        "salvador-techumbre"
+      ],
+      "coordinate": [
+        -0.2725163292608109,
+        39.676812005808685
+      ]
+    },
+    {
+      "id": "cabecera",
+      "name": "Cabecera y capillas",
+      "aliases": [],
+      "summary": "La crucería, el bautismo y el ámbito de la Comunión.",
+      "sourceIds": [
+        "sv-bic",
+        "sv-gva",
+        "sv-osm",
+        "sv-catastro",
+        "sv-xiuxiueig",
+        "sv-gomez2016",
+        "sv-pnoa"
+      ],
+      "stopIds": [
+        "salvador-abside",
+        "salvador-cruceria",
+        "salvador-bautismo",
+        "salvador-comunion",
+        "salvador-cupula"
+      ],
+      "coordinate": [
+        -0.2723935265634299,
+        39.67680038830903
+      ]
+    },
+    {
+      "id": "memoria",
+      "name": "Arqueología y conservación",
+      "aliases": [],
+      "summary": "La vida parroquial, el subsuelo y el patrimonio disperso.",
+      "sourceIds": [
+        "sv-bic",
+        "sv-arxparr",
+        "sv-osm",
+        "sv-catastro",
+        "sv-hortelano1992",
+        "sv-cid",
+        "sv-artesonado2024",
+        "sv-proteccion1977"
+      ],
+      "stopIds": [
+        "salvador-sacristia",
+        "salvador-arqueologia",
+        "salvador-artesonado",
+        "salvador-conservacion"
+      ],
+      "coordinate": [
+        -0.27257988910706993,
+        39.67691538820103
+      ]
+    }
+  ],
+  "timeline": [
+    {
+      "id": "sv-t-romano",
+      "date": "Siglos I–II",
+      "title": "Actividad cerca de la iglesia",
+      "text": "La excavación viaria de 2015 identificó un área metalúrgica romana entre las calles próximas.",
+      "sourceIds": [
+        "sv-valencia2015"
+      ],
+      "period": "roman",
+      "confidence": "documented",
+      "stopId": "salvador-entorno"
+    },
+    {
+      "id": "sv-t-tardorromano",
+      "date": "Siglos III–V",
+      "title": "Viviendas bajo el templo",
+      "text": "Los sondeos interiores registraron estructuras domésticas y fases tardorromanas, con límites de datación.",
+      "sourceIds": [
+        "sv-hortelano1992"
+      ],
+      "period": "roman",
+      "confidence": "interpretive",
+      "stopId": "salvador-arqueologia"
+    },
+    {
+      "id": "sv-t-arrabal",
+      "date": "1248",
+      "title": "Un documento sobre el arrabal",
+      "text": "La mención no nombra aún San Salvador; no fija por sí sola el comienzo del edificio.",
+      "sourceIds": [
+        "sv-gomez2016"
+      ],
+      "period": "medieval",
+      "confidence": "disputed",
+      "stopId": "salvador-conjunto"
+    },
+    {
+      "id": "sv-t-construccion",
+      "date": "Finales del siglo XIII",
+      "title": "La fábrica principal",
+      "text": "Es la datación adoptada por la descripción patrimonial oficial.",
+      "sourceIds": [
+        "sv-bic"
+      ],
+      "period": "medieval",
+      "confidence": "documented",
+      "stopId": "salvador-conjunto"
+    },
+    {
+      "id": "sv-t-guerra",
+      "date": "Mediados del siglo XIV",
+      "title": "La iglesia y la guerra",
+      "text": "Una orden regia exigía derribar templo y campanario por su uso militar; el alcance material se debate.",
+      "sourceIds": [
+        "sv-gomez2016"
+      ],
+      "period": "medieval",
+      "confidence": "disputed",
+      "stopId": "salvador-arcos"
+    },
+    {
+      "id": "sv-t-pintura",
+      "date": "1573",
+      "title": "Cuidado de las vigas pintadas",
+      "text": "Mateu transcribió un pago a Juan Negre para pintar las vigas de la cubierta.",
+      "sourceIds": [
+        "sv-gomez2016"
+      ],
+      "period": "modern",
+      "confidence": "documented",
+      "stopId": "salvador-artesonado"
+    },
+    {
+      "id": "sv-t-capillas",
+      "date": "Siglos XVII–XIX",
+      "title": "Ampliaciones laterales",
+      "text": "La ficha municipal sitúa en estas centurias las capillas añadidas.",
+      "sourceIds": [
+        "sv-xiuxiueig"
+      ],
+      "period": "modern",
+      "confidence": "documented",
+      "stopId": "salvador-comunion"
+    },
+    {
+      "id": "sv-t-retablo",
+      "date": "Invasión francesa",
+      "title": "Un retablo trasladado",
+      "text": "El estudio histórico recoge la llegada desde Ara Christi del retablo que presidió la cabecera.",
+      "sourceIds": [
+        "sv-gomez2016"
+      ],
+      "period": "modern",
+      "confidence": "documented",
+      "stopId": "salvador-abside"
+    },
+    {
+      "id": "sv-t-dispersion",
+      "date": "Antes de 1923",
+      "title": "Dispersión del artesonado",
+      "text": "Las noticias de 1923 ya describían piezas de la antigua armadura fuera del templo.",
+      "sourceIds": [
+        "sv-artesonado2024"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "salvador-artesonado"
+    },
+    {
+      "id": "sv-t-perdidas",
+      "date": "1936",
+      "title": "Pérdida del retablo",
+      "text": "El retablo histórico desapareció durante la Guerra Civil.",
+      "sourceIds": [
+        "sv-gomez2016"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "salvador-abside"
+    },
+    {
+      "id": "sv-t-bronces",
+      "date": "1943",
+      "title": "Dos bronces documentados",
+      "text": "Las campanas Trinitat y Remei llevan esta fecha de fundición.",
+      "sourceIds": [
+        "sv-trinitat",
+        "sv-remei"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "salvador-campanas"
+    },
+    {
+      "id": "sv-t-parroquia",
+      "date": "29 de diciembre de 1953",
+      "title": "Elevación a parroquia",
+      "text": "La documentación parroquial fecha aquí el cambio de categoría del Salvador.",
+      "sourceIds": [
+        "sv-arxparr"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "salvador-sacristia"
+    },
+    {
+      "id": "sv-t-incoacion",
+      "date": "1977",
+      "title": "Inicio del expediente de protección",
+      "text": "La resolución de 4 octubre se publicó el 29 de ese mes.",
+      "sourceIds": [
+        "sv-proteccion1977"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "salvador-conservacion"
+    },
+    {
+      "id": "sv-t-restauracion",
+      "date": "1991–1992",
+      "title": "Intervención en el conjunto",
+      "text": "Se liberaron paramentos y se construyó una sacristía.",
+      "sourceIds": [
+        "sv-bic"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "salvador-plaza"
+    },
+    {
+      "id": "sv-t-excavacion",
+      "date": "1992",
+      "title": "Investigación bajo el suelo",
+      "text": "Las campañas de febrero-marzo y junio acompañaron las obras y dejaron planos y una memoria publicada.",
+      "sourceIds": [
+        "sv-hortelano1992"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "salvador-arqueologia"
+    },
+    {
+      "id": "sv-t-bic",
+      "date": "2007",
+      "title": "Declaración BIC",
+      "text": "El decreto 169/2007 incluyó la iglesia y delimitó su entorno.",
+      "sourceIds": [
+        "sv-bic"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "salvador-conservacion"
+    },
+    {
+      "id": "sv-t-calle",
+      "date": "2015",
+      "title": "Arqueología de calle Valencia",
+      "text": "La reurbanización permitió estudiar fases romanas e islámicas del entorno.",
+      "sourceIds": [
+        "sv-valencia2015"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "salvador-entorno"
+    },
+    {
+      "id": "sv-t-yugos",
+      "date": "2023",
+      "title": "Restauración de las campanas",
+      "text": "La intervención renovó los yugos con madera.",
+      "sourceIds": [
+        "sv-campanar"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "salvador-campanas"
+    },
+    {
+      "id": "sv-t-caseton",
+      "date": "2024",
+      "title": "Estudio de una pieza dispersa",
+      "text": "Se publicó el tratamiento de un casetón; no fue la restitución del techo en la iglesia.",
+      "sourceIds": [
+        "sv-artesonado2024"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "salvador-artesonado"
+    }
+  ],
+  "sources": [
+    {
+      "id": "sv-bic",
+      "title": "Iglesia Parroquial del Salvador · declaración de Bien de Interés Cultural",
+      "author": "Generalitat Valenciana / Boletín Oficial del Estado",
+      "url": "https://www.boe.es/boe/dias/2008/01/24/pdfs/C00001-00128.pdf",
+      "type": "descripción y delimitación institucional",
+      "year": 2008,
+      "locator": "Decreto 169/2007, de 28 de septiembre; suplemento del BOE 24 de enero de 2008, pp 77–79. Descripción en p 77, entorno en pp 78–79.",
+      "note": "Base para la organización arquitectónica. La orientación «norte» de los derribos se conserva como dato del texto, sin asignarle una huella demolida exacta en la plaza actual.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "sv-xiuxiueig",
+      "title": "Església del Salvador i el Raval de Sagunt · Proyecto Xiuxiueig",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/es/ayuntamiento/areas-y-servicios/cultura-y-educacion/campus-abierto-a-la-ciudadania/proyecto-xiuxiueig/esglesia-del-salvador-i-el-raval-de-sagunt/",
+      "type": "divulgación municipal",
+      "year": null,
+      "locator": "Descripción del arrabal, cabecera, capillas y memoria de la techumbre.",
+      "note": "La fecha 1248 se presenta como tradición de la ficha, no como una datación definitiva. No se reproduce su discrepancia interna sobre la fecha de la guerra.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "sv-gva",
+      "title": "Iglesia Parroquial de El Salvador · ficha y fotografías",
+      "author": "Turisme Comunitat Valenciana",
+      "url": "https://www.comunitatvalenciana.com/es/valencia/sagunt-sagunto/monumentos/iglesia-parroquial-de-el-salvador-5",
+      "type": "referencia institucional y visual",
+      "year": null,
+      "locator": "Texto y galería: Sagunto_El_Salvador.jpg; Sagunto_EL_SALVADOR_1.jpg; Sagunto_EL_SALVADOR_2.jpg; Sagunto_Iglesia_Salvador_12.jpg.",
+      "note": "Las fotografías muestran fachada, torre e interior; no indican fecha de toma. Se consultan como evidencia visual, sin incorporarlas a la aplicación ni reutilizarlas como texturas.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "sv-hortelano1992",
+      "title": "Excavaciones arqueológicas en la iglesia de San Salvador de Sagunto (febrero-marzo, junio 1992)",
+      "author": "Ignacio Hortelano / Centro Arqueológico Saguntino",
+      "url": "https://www.centroarqueologicosaguntino.es/uploads/descargas/444_43_Excavaciones_arqueologicas_en_27.pdf",
+      "type": "memoria arqueológica de la intervención",
+      "year": 1992,
+      "locator": "ARSE 27, pp 45–61. Planta general de excavación: p 51 (página 8 del PDF); estratigrafía y discusión en pp 52–61.",
+      "note": "La planta registra los sondeos y el cuerpo principal; no es un levantamiento actual completo de capillas. La identificación cidiana y la cronología de los cimientos anteriores quedan abiertas.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "sv-gomez2016",
+      "title": "Aproximación a «La iglesia del Salvador en el arrabal de Sagunto»",
+      "author": "Juan Francisco Gómez Verdeguer",
+      "url": "https://www.academia.edu/35387994/Aproximaci%C3%B3n_a_La_iglesia_del_Salvador_en_el_arrabal_de_Sagunto_",
+      "type": "estudio histórico y reproducción documental",
+      "year": 2016,
+      "locator": "Braçal 53, pp 135–150; reproduce el trabajo de Felipe Mateu y Llopis de 1926, elaborado con observaciones de 1924.",
+      "note": "Distingue la lectura de fotografías históricas del estado conservado. Las hipótesis sobre las bóvedas iniciales no equivalen a una reconstrucción comprobada.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "sv-artesonado2024",
+      "title": "Restauración de un casetón del artesonado de la iglesia del Salvador de Sagunto",
+      "author": "Amelia Vela Giménez / Centro Arqueológico Saguntino",
+      "url": "https://centroarqueologicosaguntino.es/wp-content/uploads/2025/08/Arse_58-90-97.pdf",
+      "type": "estudio de conservación de una pieza",
+      "year": 2024,
+      "locator": "ARSE 58, pp 89–96; análisis y tratamiento de un casetón de procedencia privada.",
+      "note": "La fecha corresponde al estudio de un fragmento fuera del templo. No documenta la restitución de la techumbre medieval en su emplazamiento.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "sv-campanar",
+      "title": "Parròquia de El Salvador del Raval · inventario del campanario",
+      "author": "Campaners de la Catedral de València; ficha de Ulises Hernando Chico",
+      "url": "https://campaners.com/php/campanar.php?numer=375",
+      "type": "inventario especializado con observaciones de campo",
+      "year": 2025,
+      "locator": "Campanario 375; actualización 1 de agosto de 2025. Descripción de vanos, fábrica y restauración de las campanas en 2023.",
+      "note": "La descripción diferencia las tres campanas actuales del remate desaparecido. La menor tiene autor y fecha de fundición inciertos; no se fuerza una atribución a partir de inscripciones posteriores.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "sv-trinitat",
+      "title": "Santíssima Trinitat · campana 1721",
+      "author": "Campaners de la Catedral de València",
+      "url": "https://campaners.com/php/campana1.php?numer=1721",
+      "type": "inventario de campana",
+      "year": null,
+      "locator": "Ficha de la campana mediana: nombre, fundidor, año, diámetro e instalación.",
+      "note": "Las medidas sirven para proporciones relativas; el relieve de letras y la sonoridad no se reproducen como facsímil.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "sv-remei",
+      "title": "Maria del Remei · campana 1722",
+      "author": "Campaners de la Catedral de València",
+      "url": "https://campaners.com/php/campana1.php?numer=1722",
+      "type": "inventario de campana",
+      "year": null,
+      "locator": "Ficha de la campana mayor: nombre, fundidor, año, diámetro e instalación.",
+      "note": "Se distingue la fundición histórica de las modificaciones posteriores en yugos e instalaciones.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "sv-cid",
+      "title": "Iglesia del Salvador de Sagunto",
+      "author": "Consorcio Camino del Cid",
+      "url": "https://www.caminodelcid.org/servicios/iglesia-del-salvador-de-sagunto-1822824",
+      "type": "descripción de patrimonio de un consorcio público",
+      "year": 2017,
+      "locator": "Ficha revisada 19 de septiembre de 2017: arquitectura, escalera y cautela sobre San Juan Bautista.",
+      "note": "La posible relación con la iglesia promovida por el Cid se presenta expresamente como hipótesis arriesgada, no como identificación arqueológica.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "sv-arxparr",
+      "title": "Sagunt · El Salvador",
+      "author": "Arxiu Parroquial València",
+      "url": "https://www.arxparrvalencia.org/pdf/Mon_Ar_Val_19_corregido.pdf",
+      "type": "edición de documentación parroquial",
+      "year": null,
+      "locator": "Monumenta Archivorum Valentina 19, p 130, ficha 135 (datos tomados de Pallarés, pp 583–584). Consulta del texto indexado.",
+      "note": "La ficha describe una situación histórica, no un inventario actual. La elevación parroquial está fechada 29 de diciembre de 1953; no se traslada al presente su número antiguo de campanas.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "sv-proteccion1977",
+      "title": "Incoación del expediente de monumento histórico-artístico de la iglesia del Salvador",
+      "author": "Boletín Oficial del Estado",
+      "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-1977-26156",
+      "type": "documentación institucional",
+      "year": 1977,
+      "locator": "Resolución 4 de octubre de 1977, publicada en BOE 259, de 29 octubre, p 23911.",
+      "note": "Inicio del expediente, distinto de la declaración de Bien de Interés Cultural de 2007.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "sv-valencia2015",
+      "title": "Protección de los restos arqueológicos de la calle Valencia",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/es/actualidad/el-ayuntamiento-de-sagunto-trabaja-para-la-proteccion-de-los-restos-arqueologicos-de-la-calle-valencia-y-para-evitar-que-retrasen-las-obras/",
+      "type": "comunicación municipal sobre excavaciones",
+      "year": 2015,
+      "locator": "Noticia 3 de julio de 2015, obras de reurbanización y zanjas de servicios entre Dolz del Castellar y Aben Bahri.",
+      "note": "Hallazgos del entorno viario, distintos de la excavación interior de 1992. La atribución funcional del edificio islámico se mantiene como posibilidad.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "sv-osm",
+      "title": "OpenStreetMap · Iglesia del Salvador",
+      "author": "Colaboradores de OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/77444950",
+      "type": "cartografía colaborativa",
+      "year": null,
+      "locator": "Huella del templo 77444950 y relaciones con las calles inmediatas.",
+      "note": "Los focos de visita son posiciones virtuales aproximadas, no coordenadas levantadas de cada elemento interior.",
+      "accessed": "2026-11-20",
+      "licenseUrl": "https://www.openstreetmap.org/copyright"
+    },
+    {
+      "id": "sv-osm-plaza",
+      "title": "OpenStreetMap · plataforma peatonal al suroeste del Salvador",
+      "author": "Colaboradores de OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/733188295",
+      "type": "cartografía colaborativa",
+      "year": null,
+      "locator": "Polígono peatonal 733188295 y conexión escalonada con las calles próximas.",
+      "note": "Este espacio se distingue del jardín triangular situado al noroeste del templo.",
+      "accessed": "2026-11-20",
+      "licenseUrl": "https://www.openstreetmap.org/copyright"
+    },
+    {
+      "id": "sv-osm-entorno",
+      "title": "OpenStreetMap · jardín y Plaça del Salvador",
+      "author": "Colaboradores de OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/77445077",
+      "type": "cartografía colaborativa",
+      "year": null,
+      "locator": "Jardín 77445077; vía 77445072; relación entre Daroqui, València y el arrabal.",
+      "note": "El nombre cartográfico no se usa para deducir qué viviendas se derribaron en 1991–1992.",
+      "accessed": "2026-11-20",
+      "licenseUrl": "https://www.openstreetmap.org/copyright"
+    },
+    {
+      "id": "sv-catastro",
+      "title": "Cartografía catastral INSPIRE · El Salvador y manzanas inmediatas",
+      "author": "Dirección General del Catastro",
+      "url": "https://www.catastro.hacienda.gob.es/webinspire/index.html",
+      "type": "cartografía oficial",
+      "year": null,
+      "locator": "Municipio 46222; parcela 4056919 YJ 3945 E y sus seis cuerpos, además del contexto cercano.",
+      "note": "Huellas, patios y número de plantas orientan los volúmenes. Los huecos, alturas menores y acabados no proceden de un levantamiento de fachadas.",
+      "accessed": "2026-11-20",
+      "downloadUrl": "https://www.catastro.hacienda.gob.es/INSPIRE/Buildings/46/46222-SAGUNTO%20SAGUNT/A.ES.SDGC.BU.46222.zip",
+      "licenseUrl": "https://www.catastro.hacienda.gob.es/webinspire/documentos/Licencia.pdf"
+    },
+    {
+      "id": "sv-terreno",
+      "title": "MDT 05 y MDSnE · relieve y alturas del entorno del Salvador",
+      "author": "Instituto Geográfico Nacional / CNIG",
+      "url": "https://datos.gob.es/es/catalogo/e00125901-spaignmds-normalizado",
+      "type": "modelos geográficos oficiales",
+      "year": null,
+      "locator": "Relieve del atlas y estimación de alturas en huellas del contexto.",
+      "note": "La resolución de las superficies no acredita la cota de cada peldaño, umbral ni pavimento interior.",
+      "accessed": "2026-11-20",
+      "licenseUrl": "https://www.ign.es/resources/licencia/Condiciones_licenciaUso_IGN.pdf"
+    },
+    {
+      "id": "sv-pnoa",
+      "title": "PNOA Máxima Actualidad · cubiertas y espacios abiertos",
+      "author": "Instituto Geográfico Nacional / CNIG",
+      "url": "https://datos.gob.es/es/catalogo/e00125901-spaignpnoama",
+      "type": "ortofotografía oficial",
+      "year": null,
+      "locator": "Cubiertas, patios, anexos y espacios públicos en torno a la iglesia.",
+      "note": "La fecha de consulta no equivale a la fecha de vuelo. El color observado no determina por sí solo material, edad o estado de conservación.",
+      "accessed": "2026-11-20",
+      "licenseUrl": "https://www.ign.es/resources/licencia/Condiciones_licenciaUso_IGN.pdf"
+    }
+  ],
+  "modelRegistration": {
+    "anchor": [
+      -0.27255741,
+      39.67679895
+    ],
+    "yawRadians": 1.44,
+    "axisX": "Eje transversal local del edificio, rotado en el plano cartográfico Este/Sur",
+    "axisZ": "Eje longitudinal local, desde el acceso occidental hacia la cabecera oriental",
+    "method": "Huellas catastrales y OSM, planta arqueológica de1992, descripción BIC y fotografías institucionales; focos compartidos con el modelo.",
+    "precision": "approximate"
+  }
+}

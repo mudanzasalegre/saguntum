@@ -1,0 +1,38 @@
+import fs from 'node:fs';
+import * as THREE from 'three';
+import {createTalleresContext} from '../../dist/js/talleres-context.js';
+import {createHeightSampler,buildTerrainGeometry} from '../../dist/js/terrain.js';
+import {createUrbanSurface} from '../../dist/js/urban-surface.js';
+const {createCanvas}=await import(process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES+'/@napi-rs/canvas/index.js');
+globalThis.document={createElement:()=>createCanvas(128,128)};
+const read=n=>JSON.parse(fs.readFileSync('dist/assets/data/'+n+'.json'));
+const data=read('talleres-context'),visit=read('talleres-visit'),elevation=read('port-elevation'),cartography=read('port-cartography'),horno=read('horno-context');
+const project=(lon,lat)=>({x:(lon+.278)*111320*Math.cos(39.679*Math.PI/180),z:(39.679-lat)*111320});
+const checks=[],assert=(pass,label,detail)=>checks.push({pass:!!pass,label,...(detail?{detail}:{})});
+const rawHeight=createHeightSampler(elevation),context=createTalleresContext({contextData:data,visitData:visit,project,heightAt:rawHeight});
+const initial=context.ownedResources.geometries.slice(),meshCount=initial.length,datum=context.getState().datumM;
+function inspect(){let finite=true,collapsed=0,total=0;context.group.traverse(o=>{if(!o.isMesh)return;const p=o.geometry.attributes.position;finite&&=Array.from(p.array).every(Number.isFinite);for(let i=0;i<p.count;i+=3){const a=new THREE.Vector3().fromBufferAttribute(p,i),b=new THREE.Vector3().fromBufferAttribute(p,i+1),c=new THREE.Vector3().fromBufferAttribute(p,i+2);if(b.sub(a).cross(c.sub(a)).lengthSq()<1e-13)collapsed++;total++;}});return {finite,collapsed,total};}
+const before=inspect();assert(before.finite,'Every context coordinate is finite',before);assert(before.collapsed===0,'No degenerate rendered triangles',before);
+assert(context.qa.buildingParts.length===31&&new Set(context.qa.buildingParts.map(r=>r.parentId)).size===4,'Four actual northern parcels retain their 31 cadastral parts');
+assert(context.qa.buildingParts.reduce((n,r)=>n+r.courtyardHoles,0)===data.buildings.reduce((n,r)=>n+r.holes.length,0),'Mapped courtyard holes survive the roof triangulation');
+assert(data.coreBuildingParts.length===13&&context.excludedBuildingIds.size===45,'Thirteen nave parts, its OSM envelope and 31 neighbours have explicit owners');
+assert(![...context.excludedBuildingIds].some(id=>horno.excludedBuildingIds.includes(id)),'No source building ID is claimed by both Horno and Talleres');
+assert(data.sharedContext.heritage.some(r=>r.id==='horno')&&data.sharedContext.heritage.some(r=>r.id==='museo-industrial'),'Horno and Museo Industrial retain their separate detailed owners');
+assert(Object.keys(context.focuses).join(',')==='talleres-entorno','The context provides the agreed tour stop without a twenty-first stop');
+assert(context.focuses['talleres-entorno'].floor===0&&context.focuses['talleres-entorno'].elevation===12&&context.focuses['talleres-entorno'].localTarget.length===3,'The surroundings focus has consistent floor, elevation and nave-local target');
+assert(data.trees.length===49&&data.trees.every(r=>r.positionFromPhoto),'Every one of the 49 rendered trees has a recorded reference-photo position');
+assert(data.railAlignments.length===0,'No invented external railway or machinery yard is added');
+const urban=createUrbanSurface({data:cartography,project,heightAt:rawHeight,patches:context.patches});
+const terrain=buildTerrainGeometry(elevation,urban.groundHeight,context.patches,{shape:{cx:5350,cz:2250,rx:1700,rz:1700},core:data.pavementMesh.terrainGrid.coreBounds,coreStep:5,outerStep:12.5});
+let released=0;for(const g of initial)g.addEventListener('dispose',()=>released++);context.bindGround(terrain.meshHeightAt);
+assert(released===initial.length&&context.ownedResources.geometries.length===meshCount,'Ground rebinding releases old geometry and does not accumulate meshes');
+assert(context.getState().datumM===datum,'Ground rebinding preserves the agreed nave datum');
+let vertexError=0,centroidError=0,samples=0;
+context.group.traverse(o=>{if(!o.isMesh||!['asphalt','paving','gravel','concrete'].includes(o.userData.materialKind))return;const p=o.geometry.attributes.position;for(let i=0;i<p.count;i+=3){let x=0,y=0,z=0;for(let j=0;j<3;j++){const vx=p.getX(i+j),vy=p.getY(i+j),vz=p.getZ(i+j);vertexError=Math.max(vertexError,Math.abs(vy-terrain.meshHeightAt(vx,vz)-.035));x+=vx/3;y+=vy/3;z+=vz/3;}centroidError=Math.max(centroidError,Math.abs(y-terrain.meshHeightAt(x,z)-.035));samples++;}});
+assert(vertexError<.001&&centroidError<.001,'Every paving vertex and triangle interior follows the final regional terrain',{samples,maximumVertexErrorM:vertexError,maximumInteriorErrorM:centroidError});
+const after=inspect();assert(after.finite&&after.collapsed===0,'Rebound geometry stays finite and free of collapsed triangles',after);
+for(const[id,f]of Object.entries(context.focuses)){const p=f.target.clone().add(new THREE.Vector3(...f.offset)),q=f.target.clone().add(new THREE.Vector3(...f.closeOffset));assert(p.y>=terrain.meshHeightAt(p.x,p.z)+2.49&&q.y>=terrain.meshHeightAt(q.x,q.z)+2.49,'Both surroundings cameras stay above final terrain',{id,farY:p.y,nearY:q.y});}
+context.setReadingMode('periods');let colors=true;context.group.traverse(o=>{if(o.isMesh)colors&&=o.material.map===null&&!o.material.vertexColors&&o.material.color.equals(new THREE.Color(visit.readingLegend.find(r=>r.id==='conjunto').color));});assert(colors,'Layer reading matches the visit conjunto legend');
+context.setReadingMode('materials');let restored=true;context.group.traverse(o=>{if(o.isMesh)restored&&=o.material.vertexColors&&o.material.map===o.userData.baseMap;});assert(restored,'Textured materials restore after thematic reading');
+const keys=['geometries','materials','textures'],owned=keys.flatMap(k=>context.ownedResources[k]);let disposed=0;for(const r of owned)r.addEventListener('dispose',()=>disposed++);const stats={...context.stats},crossings=context.qa.crossings.slice();context.dispose();context.dispose();terrain.geometry.dispose();assert(disposed===owned.length&&context.group.children.length===0&&keys.every(k=>context.ownedResources[k].length===0),'Disposal is complete, locally owned and idempotent');
+const result={pass:checks.every(c=>c.pass),checks,stats,crossings};fs.writeFileSync('research/validation-v23/talleres-context-model-qa.json',JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify({pass:result.pass,checks:checks.length,stats,failures:checks.filter(c=>!c.pass)},null,2));if(!result.pass)process.exitCode=1;

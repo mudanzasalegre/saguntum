@@ -1,0 +1,5901 @@
+{
+  "stats": {
+    "modelVersion": "v28",
+    "meshes": 88,
+    "triangles": 34639,
+    "parts": 5,
+    "structures": 5,
+    "naves": 3,
+    "porticoes": 2,
+    "octagonalPillars": 4,
+    "levels": 2,
+    "architecturalFocuses": 15,
+    "interiorFocuses": 6,
+    "physicalWindows": 121,
+    "physicalDoors": 6,
+    "resourcesOwned": true,
+    "interpretiveGeometry": true
+  },
+  "qa": {
+    "origin": {
+      "x": 4814.909591372249,
+      "z": 2239.4355720000244,
+      "y": 5.702451813868209
+    },
+    "frame": {
+      "x": 9.235831299498841,
+      "z": -12.18397400000731,
+      "ux": 0.8180376703932054,
+      "uz": 0.5751646458342667,
+      "vx": -0.5751646458342667,
+      "vz": 0.8180376703932054,
+      "yaw": -0.6128054030680699,
+      "w": 52.198973315042245,
+      "d": 19.41
+    },
+    "buildingId": "economato-edificio",
+    "ground": -0.4219907953207323,
+    "base": 0.5280092046792677,
+    "upperFloor": 4.078009204679267,
+    "eaves": 7.378009204679267,
+    "top": 9.698009204679266,
+    "main": [
+      [
+        -0.2219421,
+        39.6591272
+      ],
+      [
+        -0.2218456692882362,
+        39.65907501829261
+      ],
+      [
+        -0.2218805783595925,
+        39.6590368059688
+      ],
+      [
+        -0.2218080129476803,
+        39.65899753852982
+      ],
+      [
+        -0.221773103876324,
+        39.65903575085362
+      ],
+      [
+        -0.2216394307491173,
+        39.65896341609759
+      ],
+      [
+        -0.2216743398204736,
+        39.658925203773784
+      ],
+      [
+        -0.2215851607484657,
+        39.658876946157974
+      ],
+      [
+        -0.22155025167710943,
+        39.658915158481776
+      ],
+      [
+        -0.2214437,
+        39.6588575
+      ],
+      [
+        -0.22156065233824535,
+        39.65872509995829
+      ],
+      [
+        -0.22156412095786557,
+        39.65872598862163
+      ],
+      [
+        -0.2216725676925155,
+        39.65878126837798
+      ],
+      [
+        -0.2216795345583487,
+        39.65877208044306
+      ],
+      [
+        -0.22197606959116165,
+        39.658932435113165
+      ],
+      [
+        -0.22194326998549646,
+        39.658968494547516
+      ],
+      [
+        -0.2220396593396226,
+        39.6590201048103
+      ]
+    ],
+    "registeredMain": [
+      [
+        -0.2219433,
+        39.6589685
+      ],
+      [
+        -0.2220396,
+        39.6590201
+      ],
+      [
+        -0.2219421,
+        39.6591272
+      ],
+      [
+        -0.2214437,
+        39.6588575
+      ],
+      [
+        -0.2215606,
+        39.6587251
+      ],
+      [
+        -0.2215641,
+        39.658726
+      ],
+      [
+        -0.2216726,
+        39.6587813
+      ],
+      [
+        -0.2216795,
+        39.6587721
+      ],
+      [
+        -0.2219761,
+        39.6589324
+      ],
+      [
+        -0.2219433,
+        39.6589685
+      ]
+    ],
+    "wings": [
+      {
+        "id": "norte",
+        "label": "Nave norte",
+        "x0": -26.099486657521123,
+        "x1": -16,
+        "z1": 14.56,
+        "windows": 2,
+        "rise": 1.92
+      },
+      {
+        "id": "central",
+        "label": "Nave central",
+        "x0": -8.4,
+        "x1": 5.6,
+        "z1": 19.4,
+        "windows": 3,
+        "rise": 2.32
+      },
+      {
+        "id": "sur",
+        "label": "Nave sur",
+        "x0": 14.94,
+        "x1": 26.099486657521123,
+        "z1": 17.91,
+        "windows": 2,
+        "rise": 2.02
+      }
+    ],
+    "porches": [
+      {
+        "id": "norte",
+        "x0": -16,
+        "x1": -8.4,
+        "z1": 5.2
+      },
+      {
+        "id": "sur",
+        "x0": 5.6,
+        "x1": 14.94,
+        "z1": 5.2
+      }
+    ],
+    "windows": [
+      {
+        "id": "economato-hueco-0-0",
+        "center": [
+          -10.049091829906825,
+          2.2280092046792674,
+          -25.743259083216362
+        ],
+        "normal": [
+          -0.5751646458342667,
+          0,
+          0.8180376703932054
+        ],
+        "coordinates": [
+          -0.22191799232205905,
+          39.65911415457315
+        ],
+        "width": 2.45,
+        "height": 2.4,
+        "floor": 0,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-0-1",
+        "center": [
+          -5.918211561163905,
+          2.2280092046792674,
+          -22.83882524997584
+        ],
+        "normal": [
+          -0.5751646458342667,
+          0,
+          0.8180376703932054
+        ],
+        "coordinates": [
+          -0.22186977696617716,
+          39.65908806371946
+        ],
+        "width": 2.45,
+        "height": 2.4,
+        "floor": 0,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-0-2",
+        "center": [
+          -10.049091829906825,
+          5.778009204679267,
+          -25.743259083216362
+        ],
+        "normal": [
+          -0.5751646458342667,
+          0,
+          0.8180376703932054
+        ],
+        "coordinates": [
+          -0.22191799232205905,
+          39.65911415457315
+        ],
+        "width": 2.45,
+        "height": 2.1,
+        "floor": 1,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-0-3",
+        "center": [
+          -5.918211561163905,
+          5.778009204679267,
+          -22.83882524997584
+        ],
+        "normal": [
+          -0.5751646458342667,
+          0,
+          0.8180376703932054
+        ],
+        "coordinates": [
+          -0.22186977696617716,
+          39.65908806371946
+        ],
+        "width": 2.45,
+        "height": 2.1,
+        "floor": 1,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-0-4",
+        "center": [
+          -10.049091829906825,
+          -0.0019907953207322915,
+          -25.743259083216362
+        ],
+        "normal": [
+          -0.5751646458342667,
+          0,
+          0.8180376703932054
+        ],
+        "coordinates": [
+          -0.22191799232205905,
+          39.65911415457315
+        ],
+        "width": 0.96,
+        "height": 0.38,
+        "floor": -1,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-0-5",
+        "center": [
+          -5.918211561163905,
+          -0.0019907953207322915,
+          -22.83882524997584
+        ],
+        "normal": [
+          -0.5751646458342667,
+          0,
+          0.8180376703932054
+        ],
+        "coordinates": [
+          -0.22186977696617716,
+          39.65908806371946
+        ],
+        "width": 0.96,
+        "height": 0.38,
+        "floor": -1,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-1-0",
+        "center": [
+          -5.348199505961539,
+          2.2280092046792674,
+          -19.259710390333247
+        ],
+        "normal": [
+          -0.8180376703932053,
+          0,
+          -0.5751646458342669
+        ],
+        "coordinates": [
+          -0.22186312382391435,
+          39.65905591213071
+        ],
+        "width": 1.65,
+        "height": 2.4,
+        "floor": 0,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-1-1",
+        "center": [
+          -5.348199505961539,
+          5.778009204679267,
+          -19.259710390333247
+        ],
+        "normal": [
+          -0.8180376703932053,
+          0,
+          -0.5751646458342669
+        ],
+        "coordinates": [
+          -0.22186312382391435,
+          39.65905591213071
+        ],
+        "width": 1.65,
+        "height": 2.1,
+        "floor": 1,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-2-0",
+        "center": [
+          -5.289356011383543,
+          2.2280092046792674,
+          -16.039999620225803
+        ],
+        "normal": [
+          -0.5751646458342666,
+          0,
+          0.8180376703932055
+        ],
+        "coordinates": [
+          -0.22186243700661445,
+          39.65902698910906
+        ],
+        "width": 1.75,
+        "height": 2.4,
+        "floor": 0,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-2-2",
+        "center": [
+          -5.289356011383543,
+          5.778009204679267,
+          -16.039999620225803
+        ],
+        "normal": [
+          -0.5751646458342666,
+          0,
+          0.8180376703932055
+        ],
+        "coordinates": [
+          -0.22186243700661445,
+          39.65902698910906
+        ],
+        "width": 1.75,
+        "height": 2.1,
+        "floor": 1,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-3-0",
+        "center": [
+          0.8688867890268219,
+          2.2280092046792674,
+          -14.888459081992819
+        ],
+        "normal": [
+          0.8180376703932053,
+          0,
+          0.5751646458342669
+        ],
+        "coordinates": [
+          -0.22179055841200215,
+          39.65901664469172
+        ],
+        "width": 1.65,
+        "height": 2.4,
+        "floor": 0,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-3-1",
+        "center": [
+          0.8688867890268219,
+          5.778009204679267,
+          -14.888459081992819
+        ],
+        "normal": [
+          0.8180376703932053,
+          0,
+          0.5751646458342669
+        ],
+        "coordinates": [
+          -0.22179055841200215,
+          39.65901664469172
+        ],
+        "width": 1.65,
+        "height": 2.1,
+        "floor": 1,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-4-0",
+        "center": [
+          4.273069432446727,
+          2.2280092046792674,
+          -15.673306184735196
+        ],
+        "normal": [
+          -0.5751646458342669,
+          0,
+          0.8180376703932055
+        ],
+        "coordinates": [
+          -0.22175082502178955,
+          39.65902369506095
+        ],
+        "width": 2.45,
+        "height": 2.4,
+        "floor": 0,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-4-2",
+        "center": [
+          11.90808768944998,
+          2.2280092046792674,
+          -10.305102823615371
+        ],
+        "normal": [
+          -0.5751646458342669,
+          0,
+          0.8180376703932055
+        ],
+        "coordinates": [
+          -0.22166170960365178,
+          39.65897547189026
+        ],
+        "width": 2.45,
+        "height": 2.4,
+        "floor": 0,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-4-3",
+        "center": [
+          4.273069432446727,
+          5.778009204679267,
+          -15.673306184735196
+        ],
+        "normal": [
+          -0.5751646458342669,
+          0,
+          0.8180376703932055
+        ],
+        "coordinates": [
+          -0.22175082502178955,
+          39.65902369506095
+        ],
+        "width": 2.45,
+        "height": 2.1,
+        "floor": 1,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-4-4",
+        "center": [
+          8.090578560948353,
+          5.778009204679267,
+          -12.989204504175284
+        ],
+        "normal": [
+          -0.5751646458342669,
+          0,
+          0.8180376703932055
+        ],
+        "coordinates": [
+          -0.22170626731272064,
+          39.658999583475605
+        ],
+        "width": 2.45,
+        "height": 2.1,
+        "floor": 1,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-4-5",
+        "center": [
+          11.90808768944998,
+          5.778009204679267,
+          -10.305102823615371
+        ],
+        "normal": [
+          -0.5751646458342669,
+          0,
+          0.8180376703932055
+        ],
+        "coordinates": [
+          -0.22166170960365178,
+          39.65897547189026
+        ],
+        "width": 2.45,
+        "height": 2.1,
+        "floor": 1,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-4-6",
+        "center": [
+          4.273069432446727,
+          -0.0019907953207322915,
+          -15.673306184735196
+        ],
+        "normal": [
+          -0.5751646458342669,
+          0,
+          0.8180376703932055
+        ],
+        "coordinates": [
+          -0.22175082502178955,
+          39.65902369506095
+        ],
+        "width": 0.96,
+        "height": 0.38,
+        "floor": -1,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-4-7",
+        "center": [
+          11.90808768944998,
+          -0.0019907953207322915,
+          -10.305102823615371
+        ],
+        "normal": [
+          -0.5751646458342669,
+          0,
+          0.8180376703932055
+        ],
+        "coordinates": [
+          -0.22166170960365178,
+          39.65897547189026
+        ],
+        "width": 0.96,
+        "height": 0.38,
+        "floor": -1,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-5-0",
+        "center": [
+          12.321414174531698,
+          2.2280092046792674,
+          -6.836154040313083
+        ],
+        "normal": [
+          -0.8180376703932055,
+          0,
+          -0.5751646458342666
+        ],
+        "coordinates": [
+          -0.22165688528479546,
+          39.658944309935684
+        ],
+        "width": 1.65,
+        "height": 2.4,
+        "floor": 0,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-5-1",
+        "center": [
+          12.321414174531698,
+          5.778009204679267,
+          -6.836154040313083
+        ],
+        "normal": [
+          -0.8180376703932055,
+          0,
+          -0.5751646458342666
+        ],
+        "coordinates": [
+          -0.22165688528479546,
+          39.658944309935684
+        ],
+        "width": 1.65,
+        "height": 2.1,
+        "floor": 1,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-6-0",
+        "center": [
+          12.099398068941362,
+          2.2280092046792674,
+          -3.813916465275407
+        ],
+        "normal": [
+          -0.5751646458342667,
+          0,
+          0.8180376703932055
+        ],
+        "coordinates": [
+          -0.22165947664180563,
+          39.65891716083782
+        ],
+        "width": 1.75,
+        "height": 2.4,
+        "floor": 0,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-6-2",
+        "center": [
+          17.193045963256388,
+          2.2280092046792674,
+          -0.23255793721403895
+        ],
+        "normal": [
+          -0.5751646458342667,
+          0,
+          0.8180376703932055
+        ],
+        "coordinates": [
+          -0.22160002392713368,
+          39.65888498909394
+        ],
+        "width": 1.75,
+        "height": 2.4,
+        "floor": 0,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-6-3",
+        "center": [
+          12.099398068941362,
+          5.778009204679267,
+          -3.813916465275407
+        ],
+        "normal": [
+          -0.5751646458342667,
+          0,
+          0.8180376703932055
+        ],
+        "coordinates": [
+          -0.22165947664180563,
+          39.65891716083782
+        ],
+        "width": 1.75,
+        "height": 2.1,
+        "floor": 1,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-6-5",
+        "center": [
+          17.193045963256388,
+          5.778009204679267,
+          -0.23255793721403895
+        ],
+        "normal": [
+          -0.5751646458342667,
+          0,
+          0.8180376703932055
+        ],
+        "coordinates": [
+          -0.22160002392713368,
+          39.65888498909394
+        ],
+        "width": 1.75,
+        "height": 2.1,
+        "floor": 1,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-7-0",
+        "center": [
+          19.961886016004236,
+          2.2280092046792674,
+          -1.4641162482210315
+        ],
+        "normal": [
+          0.8180376703932055,
+          0,
+          0.5751646458342666
+        ],
+        "coordinates": [
+          -0.22156770621278757,
+          39.658896052319875
+        ],
+        "width": 1.65,
+        "height": 2.4,
+        "floor": 0,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-7-1",
+        "center": [
+          19.961886016004236,
+          5.778009204679267,
+          -1.4641162482210315
+        ],
+        "normal": [
+          0.8180376703932055,
+          0,
+          0.5751646458342666
+        ],
+        "coordinates": [
+          -0.22156770621278757,
+          39.658896052319875
+        ],
+        "width": 1.65,
+        "height": 2.1,
+        "floor": 1,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-8-0",
+        "center": [
+          23.73953421219899,
+          2.2280092046792674,
+          -1.9863786434770252
+        ],
+        "normal": [
+          -0.5751646458342667,
+          0,
+          0.8180376703932054
+        ],
+        "coordinates": [
+          -0.22152361375783206,
+          39.65890074386133
+        ],
+        "width": 2.45,
+        "height": 2.4,
+        "floor": 0,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-8-1",
+        "center": [
+          28.303974446250308,
+          2.2280092046792674,
+          1.2228924520556554
+        ],
+        "normal": [
+          -0.5751646458342667,
+          0,
+          0.8180376703932054
+        ],
+        "coordinates": [
+          -0.22147033791927734,
+          39.65887191462045
+        ],
+        "width": 2.45,
+        "height": 2.4,
+        "floor": 0,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-8-2",
+        "center": [
+          23.73953421219899,
+          5.778009204679267,
+          -1.9863786434770252
+        ],
+        "normal": [
+          -0.5751646458342667,
+          0,
+          0.8180376703932054
+        ],
+        "coordinates": [
+          -0.22152361375783206,
+          39.65890074386133
+        ],
+        "width": 2.45,
+        "height": 2.1,
+        "floor": 1,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-8-3",
+        "center": [
+          28.303974446250308,
+          5.778009204679267,
+          1.2228924520556554
+        ],
+        "normal": [
+          -0.5751646458342667,
+          0,
+          0.8180376703932054
+        ],
+        "coordinates": [
+          -0.22147033791927734,
+          39.65887191462045
+        ],
+        "width": 2.45,
+        "height": 2.1,
+        "floor": 1,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-8-4",
+        "center": [
+          23.73953421219899,
+          -0.0019907953207322915,
+          -1.9863786434770252
+        ],
+        "normal": [
+          -0.5751646458342667,
+          0,
+          0.8180376703932054
+        ],
+        "coordinates": [
+          -0.22152361375783206,
+          39.65890074386133
+        ],
+        "width": 0.96,
+        "height": 0.38,
+        "floor": -1,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-8-5",
+        "center": [
+          28.303974446250308,
+          -0.0019907953207322915,
+          1.2228924520556554
+        ],
+        "normal": [
+          -0.5751646458342667,
+          0,
+          0.8180376703932054
+        ],
+        "coordinates": [
+          -0.22147033791927734,
+          39.65887191462045
+        ],
+        "width": 0.96,
+        "height": 0.38,
+        "floor": -1,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-9-0",
+        "center": [
+          29.33369912482959,
+          2.2280092046792674,
+          4.669874580282693
+        ],
+        "normal": [
+          -0.8269891632803118,
+          0,
+          -0.562217861524276
+        ],
+        "coordinates": [
+          -0.22145831904228064,
+          39.65884094999479
+        ],
+        "width": 1.65,
+        "height": 2.4,
+        "floor": 0,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-9-1",
+        "center": [
+          26.828708247936838,
+          2.2280092046792674,
+          8.354567741204084
+        ],
+        "normal": [
+          -0.8269891632803118,
+          0,
+          -0.562217861524276
+        ],
+        "coordinates": [
+          -0.221487557126842,
+          39.65880784998436
+        ],
+        "width": 1.65,
+        "height": 2.4,
+        "floor": 0,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-9-2",
+        "center": [
+          24.323717371044086,
+          2.2280092046792674,
+          12.039260902125479
+        ],
+        "normal": [
+          -0.8269891632803118,
+          0,
+          -0.562217861524276
+        ],
+        "coordinates": [
+          -0.22151679521140333,
+          39.65877474997393
+        ],
+        "width": 1.65,
+        "height": 2.4,
+        "floor": 0,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-9-3",
+        "center": [
+          21.81872649415134,
+          2.2280092046792674,
+          15.72395406304687
+        ],
+        "normal": [
+          -0.8269891632803118,
+          0,
+          -0.562217861524276
+        ],
+        "coordinates": [
+          -0.22154603329596467,
+          39.6587416499635
+        ],
+        "width": 1.65,
+        "height": 2.4,
+        "floor": 0,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-9-4",
+        "center": [
+          29.33369912482959,
+          5.778009204679267,
+          4.669874580282693
+        ],
+        "normal": [
+          -0.8269891632803118,
+          0,
+          -0.562217861524276
+        ],
+        "coordinates": [
+          -0.22145831904228064,
+          39.65884094999479
+        ],
+        "width": 1.65,
+        "height": 2.1,
+        "floor": 1,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-9-5",
+        "center": [
+          26.828708247936838,
+          5.778009204679267,
+          8.354567741204084
+        ],
+        "normal": [
+          -0.8269891632803118,
+          0,
+          -0.562217861524276
+        ],
+        "coordinates": [
+          -0.221487557126842,
+          39.65880784998436
+        ],
+        "width": 1.65,
+        "height": 2.1,
+        "floor": 1,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-9-6",
+        "center": [
+          24.323717371044086,
+          5.778009204679267,
+          12.039260902125479
+        ],
+        "normal": [
+          -0.8269891632803118,
+          0,
+          -0.562217861524276
+        ],
+        "coordinates": [
+          -0.22151679521140333,
+          39.65877474997393
+        ],
+        "width": 1.65,
+        "height": 2.1,
+        "floor": 1,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-9-7",
+        "center": [
+          21.81872649415134,
+          5.778009204679267,
+          15.72395406304687
+        ],
+        "normal": [
+          -0.8269891632803118,
+          0,
+          -0.562217861524276
+        ],
+        "coordinates": [
+          -0.22154603329596467,
+          39.6587416499635
+        ],
+        "width": 1.65,
+        "height": 2.1,
+        "floor": 1,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-13-0",
+        "center": [
+          8.793059901017413,
+          2.2280092046792674,
+          11.220765461690116
+        ],
+        "normal": [
+          0.5749011578319908,
+          0,
+          -0.818222866169992
+        ],
+        "coordinates": [
+          -0.2216980679978995,
+          39.65878210260994
+        ],
+        "width": 1.65,
+        "height": 2.4,
+        "floor": 0,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-13-1",
+        "center": [
+          5.617332236996493,
+          2.2280092046792674,
+          8.989430227133859
+        ],
+        "normal": [
+          0.5749011578319908,
+          0,
+          -0.818222866169992
+        ],
+        "coordinates": [
+          -0.22173513487700114,
+          39.65880214694371
+        ],
+        "width": 1.65,
+        "height": 2.4,
+        "floor": 0,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-13-2",
+        "center": [
+          2.4416045729755704,
+          2.2280092046792674,
+          6.758094992577604
+        ],
+        "normal": [
+          0.5749011578319908,
+          0,
+          -0.818222866169992
+        ],
+        "coordinates": [
+          -0.22177220175610277,
+          39.658822191277466
+        ],
+        "width": 1.65,
+        "height": 2.4,
+        "floor": 0,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-13-3",
+        "center": [
+          -0.7341230910453507,
+          2.2280092046792674,
+          4.526759758021348
+        ],
+        "normal": [
+          0.5749011578319908,
+          0,
+          -0.818222866169992
+        ],
+        "coordinates": [
+          -0.22180926863520437,
+          39.65884223561123
+        ],
+        "width": 1.65,
+        "height": 2.4,
+        "floor": 0,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-13-5",
+        "center": [
+          -7.085578419087193,
+          2.2280092046792674,
+          0.06408928890883558
+        ],
+        "normal": [
+          0.5749011578319908,
+          0,
+          -0.818222866169992
+        ],
+        "coordinates": [
+          -0.22188340239340762,
+          39.65888232427876
+        ],
+        "width": 1.65,
+        "height": 2.4,
+        "floor": 0,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-13-6",
+        "center": [
+          -10.261306083108115,
+          2.2280092046792674,
+          -2.1672459456474202
+        ],
+        "normal": [
+          0.5749011578319908,
+          0,
+          -0.818222866169992
+        ],
+        "coordinates": [
+          -0.22192046927250922,
+          39.65890236861252
+        ],
+        "width": 1.65,
+        "height": 2.4,
+        "floor": 0,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-13-7",
+        "center": [
+          -13.437033747129034,
+          2.2280092046792674,
+          -4.398581180203676
+        ],
+        "normal": [
+          0.5749011578319908,
+          0,
+          -0.818222866169992
+        ],
+        "coordinates": [
+          -0.22195753615161085,
+          39.65892241294628
+        ],
+        "width": 1.65,
+        "height": 2.4,
+        "floor": 0,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-13-8",
+        "center": [
+          8.793059901017413,
+          5.778009204679267,
+          11.220765461690116
+        ],
+        "normal": [
+          0.5749011578319908,
+          0,
+          -0.818222866169992
+        ],
+        "coordinates": [
+          -0.2216980679978995,
+          39.65878210260994
+        ],
+        "width": 1.65,
+        "height": 2.1,
+        "floor": 1,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-13-9",
+        "center": [
+          5.617332236996493,
+          5.778009204679267,
+          8.989430227133859
+        ],
+        "normal": [
+          0.5749011578319908,
+          0,
+          -0.818222866169992
+        ],
+        "coordinates": [
+          -0.22173513487700114,
+          39.65880214694371
+        ],
+        "width": 1.65,
+        "height": 2.1,
+        "floor": 1,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-13-10",
+        "center": [
+          2.4416045729755704,
+          5.778009204679267,
+          6.758094992577604
+        ],
+        "normal": [
+          0.5749011578319908,
+          0,
+          -0.818222866169992
+        ],
+        "coordinates": [
+          -0.22177220175610277,
+          39.658822191277466
+        ],
+        "width": 1.65,
+        "height": 2.1,
+        "floor": 1,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-13-11",
+        "center": [
+          -0.7341230910453507,
+          5.778009204679267,
+          4.526759758021348
+        ],
+        "normal": [
+          0.5749011578319908,
+          0,
+          -0.818222866169992
+        ],
+        "coordinates": [
+          -0.22180926863520437,
+          39.65884223561123
+        ],
+        "width": 1.65,
+        "height": 2.1,
+        "floor": 1,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-13-12",
+        "center": [
+          -3.9098507550662718,
+          5.778009204679267,
+          2.2954245234650923
+        ],
+        "normal": [
+          0.5749011578319908,
+          0,
+          -0.818222866169992
+        ],
+        "coordinates": [
+          -0.221846335514306,
+          39.65886227994499
+        ],
+        "width": 1.65,
+        "height": 2.1,
+        "floor": 1,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-13-13",
+        "center": [
+          -7.085578419087193,
+          5.778009204679267,
+          0.06408928890883558
+        ],
+        "normal": [
+          0.5749011578319908,
+          0,
+          -0.818222866169992
+        ],
+        "coordinates": [
+          -0.22188340239340762,
+          39.65888232427876
+        ],
+        "width": 1.65,
+        "height": 2.1,
+        "floor": 1,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-13-14",
+        "center": [
+          -10.261306083108115,
+          5.778009204679267,
+          -2.1672459456474202
+        ],
+        "normal": [
+          0.5749011578319908,
+          0,
+          -0.818222866169992
+        ],
+        "coordinates": [
+          -0.22192046927250922,
+          39.65890236861252
+        ],
+        "width": 1.65,
+        "height": 2.1,
+        "floor": 1,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-13-15",
+        "center": [
+          -13.437033747129034,
+          5.778009204679267,
+          -4.398581180203676
+        ],
+        "normal": [
+          0.5749011578319908,
+          0,
+          -0.818222866169992
+        ],
+        "coordinates": [
+          -0.22195753615161085,
+          39.65892241294628
+        ],
+        "width": 1.65,
+        "height": 2.1,
+        "floor": 1,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-14-0",
+        "center": [
+          -13.619834385197507,
+          2.2280092046792674,
+          -7.521316913174329
+        ],
+        "normal": [
+          0.8192097698184462,
+          0,
+          0.5734939869205329
+        ],
+        "coordinates": [
+          -0.22195966978832904,
+          39.65895046483034
+        ],
+        "width": 1.65,
+        "height": 2.4,
+        "floor": 0,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-14-1",
+        "center": [
+          -13.619834385197507,
+          5.778009204679267,
+          -7.521316913174329
+        ],
+        "normal": [
+          0.8192097698184462,
+          0,
+          0.5734939869205329
+        ],
+        "coordinates": [
+          -0.22195966978832904,
+          39.65895046483034
+        ],
+        "width": 1.65,
+        "height": 2.1,
+        "floor": 1,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-15-0",
+        "center": [
+          -14.279325490367357,
+          2.2280092046792674,
+          -10.964698642260117
+        ],
+        "normal": [
+          0.5710917985388404,
+          0,
+          -0.8208862026137805
+        ],
+        "coordinates": [
+          -0.221967367324028,
+          39.65898139711321
+        ],
+        "width": 1.65,
+        "height": 2.4,
+        "floor": 0,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-15-1",
+        "center": [
+          -18.408434088591036,
+          2.2280092046792674,
+          -13.83732586904665
+        ],
+        "normal": [
+          0.5710917985388404,
+          0,
+          -0.8208862026137805
+        ],
+        "coordinates": [
+          -0.22201556200109107,
+          39.6590072022446
+        ],
+        "width": 1.65,
+        "height": 2.4,
+        "floor": 0,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-15-2",
+        "center": [
+          -14.279325490367357,
+          5.778009204679267,
+          -10.964698642260117
+        ],
+        "normal": [
+          0.5710917985388404,
+          0,
+          -0.8208862026137805
+        ],
+        "coordinates": [
+          -0.221967367324028,
+          39.65898139711321
+        ],
+        "width": 1.65,
+        "height": 2.1,
+        "floor": 1,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-15-3",
+        "center": [
+          -18.408434088591036,
+          5.778009204679267,
+          -13.83732586904665
+        ],
+        "normal": [
+          0.5710917985388404,
+          0,
+          -0.8208862026137805
+        ],
+        "coordinates": [
+          -0.22201556200109107,
+          39.6590072022446
+        ],
+        "width": 1.65,
+        "height": 2.1,
+        "floor": 1,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-16-0",
+        "center": [
+          -19.428181334774802,
+          2.2280092046792674,
+          -16.763869047114504
+        ],
+        "normal": [
+          0.8188067197816391,
+          0,
+          0.5740692951555869
+        ],
+        "coordinates": [
+          -0.2220274644221698,
+          39.65903349170901
+        ],
+        "width": 1.65,
+        "height": 2.4,
+        "floor": 0,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-16-1",
+        "center": [
+          -17.338567228918652,
+          2.2280092046792674,
+          -19.74432817646368
+        ],
+        "normal": [
+          0.8188067197816391,
+          0,
+          0.5740692951555869
+        ],
+        "coordinates": [
+          -0.22200307458726415,
+          39.65906026550644
+        ],
+        "width": 1.65,
+        "height": 2.4,
+        "floor": 0,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-16-2",
+        "center": [
+          -15.248953123062506,
+          2.2280092046792674,
+          -22.724787305812853
+        ],
+        "normal": [
+          0.8188067197816391,
+          0,
+          0.5740692951555869
+        ],
+        "coordinates": [
+          -0.2219786847523585,
+          39.65908703930386
+        ],
+        "width": 1.65,
+        "height": 2.4,
+        "floor": 0,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-16-3",
+        "center": [
+          -13.159339017206356,
+          2.2280092046792674,
+          -25.70524643516203
+        ],
+        "normal": [
+          0.8188067197816391,
+          0,
+          0.5740692951555869
+        ],
+        "coordinates": [
+          -0.22195429491745283,
+          39.659113813101285
+        ],
+        "width": 1.65,
+        "height": 2.4,
+        "floor": 0,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-16-4",
+        "center": [
+          -19.428181334774802,
+          5.778009204679267,
+          -16.763869047114504
+        ],
+        "normal": [
+          0.8188067197816391,
+          0,
+          0.5740692951555869
+        ],
+        "coordinates": [
+          -0.2220274644221698,
+          39.65903349170901
+        ],
+        "width": 1.65,
+        "height": 2.1,
+        "floor": 1,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-16-5",
+        "center": [
+          -17.338567228918652,
+          5.778009204679267,
+          -19.74432817646368
+        ],
+        "normal": [
+          0.8188067197816391,
+          0,
+          0.5740692951555869
+        ],
+        "coordinates": [
+          -0.22200307458726415,
+          39.65906026550644
+        ],
+        "width": 1.65,
+        "height": 2.1,
+        "floor": 1,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-16-6",
+        "center": [
+          -15.248953123062506,
+          5.778009204679267,
+          -22.724787305812853
+        ],
+        "normal": [
+          0.8188067197816391,
+          0,
+          0.5740692951555869
+        ],
+        "coordinates": [
+          -0.2219786847523585,
+          39.65908703930386
+        ],
+        "width": 1.65,
+        "height": 2.1,
+        "floor": 1,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-16-7",
+        "center": [
+          -13.159339017206356,
+          5.778009204679267,
+          -25.70524643516203
+        ],
+        "normal": [
+          0.8188067197816391,
+          0,
+          0.5740692951555869
+        ],
+        "coordinates": [
+          -0.22195429491745283,
+          39.659113813101285
+        ],
+        "width": 1.65,
+        "height": 2.1,
+        "floor": 1,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-1-hueco-1-0",
+        "center": [
+          -17.68027813010091,
+          1.7330092046792676,
+          -5.780654847844782
+        ],
+        "normal": [
+          -0.8225254732652474,
+          0,
+          -0.568728270644058
+        ],
+        "coordinates": [
+          -0.22200706301385542,
+          39.658934828268485
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-1",
+        "wallComponent": "economato-anexo-1-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-1-hueco-1-1",
+        "center": [
+          -20.33193841506833,
+          1.7330092046792676,
+          -1.9456808481145724
+        ],
+        "normal": [
+          -0.8225254732652474,
+          0,
+          -0.568728270644058
+        ],
+        "coordinates": [
+          -0.22203801301385542,
+          39.65890037826849
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-1",
+        "wallComponent": "economato-anexo-1-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-1-hueco-3-0",
+        "center": [
+          -24.570472616820318,
+          1.7330092046792676,
+          0.16345352729266582
+        ],
+        "normal": [
+          -0.8136304226049107,
+          0,
+          -0.5813824347292877
+        ],
+        "coordinates": [
+          -0.22208748489918248,
+          39.6588814316787
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-1",
+        "wallComponent": "economato-anexo-1-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-1-hueco-3-1",
+        "center": [
+          -26.626687377375895,
+          1.7330092046792676,
+          3.041075527304236
+        ],
+        "normal": [
+          -0.8136304226049107,
+          0,
+          -0.5813824347292877
+        ],
+        "coordinates": [
+          -0.22211148489918248,
+          39.6588555816787
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-1",
+        "wallComponent": "economato-anexo-1-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-1-hueco-4-0",
+        "center": [
+          -29.446669327367307,
+          1.7330092046792676,
+          3.1925506347551718
+        ],
+        "normal": [
+          0.5724893034846597,
+          0,
+          -0.8199121888322245
+        ],
+        "coordinates": [
+          -0.22214439953830384,
+          39.65885422096088
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-1",
+        "wallComponent": "economato-anexo-1-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-1-hueco-5-0",
+        "center": [
+          -30.34475964381233,
+          1.7330092046792676,
+          0.5359186072929809
+        ],
+        "normal": [
+          0.8367997176621746,
+          0,
+          0.547509116381184
+        ],
+        "coordinates": [
+          -0.22215488198790403,
+          39.658878085783265
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-1",
+        "wallComponent": "economato-anexo-1-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-1-hueco-5-1",
+        "center": [
+          -28.48988257856042,
+          1.7330092046792676,
+          -2.2990307260806873
+        ],
+        "normal": [
+          0.8367997176621746,
+          0,
+          0.547509116381184
+        ],
+        "coordinates": [
+          -0.22213323198790402,
+          39.65890355244993
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-1",
+        "wallComponent": "economato-anexo-1-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-1-hueco-5-2",
+        "center": [
+          -26.635005513308506,
+          1.7330092046792676,
+          -5.133980059454355
+        ],
+        "normal": [
+          0.8367997176621746,
+          0,
+          0.547509116381184
+        ],
+        "coordinates": [
+          -0.22211158198790404,
+          39.6589290191166
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-1",
+        "wallComponent": "economato-anexo-1-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-1-hueco-5-3",
+        "center": [
+          -24.780128448056598,
+          1.7330092046792676,
+          -7.968929392828021
+        ],
+        "normal": [
+          0.8367997176621746,
+          0,
+          0.547509116381184
+        ],
+        "coordinates": [
+          -0.22208993198790403,
+          39.65895448578326
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-1",
+        "wallComponent": "economato-anexo-1-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-1-hueco-5-4",
+        "center": [
+          -22.925251382804685,
+          1.7330092046792676,
+          -10.803878726201688
+        ],
+        "normal": [
+          0.8367997176621746,
+          0,
+          0.547509116381184
+        ],
+        "coordinates": [
+          -0.22206828198790404,
+          39.65897995244993
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-1",
+        "wallComponent": "economato-anexo-1-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-1-hueco-5-5",
+        "center": [
+          -21.07037431755277,
+          1.7330092046792676,
+          -13.638828059575356
+        ],
+        "normal": [
+          0.8367997176621746,
+          0,
+          0.547509116381184
+        ],
+        "coordinates": [
+          -0.22204663198790403,
+          39.659005419116596
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-1",
+        "wallComponent": "economato-anexo-1-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-1-hueco-6-0",
+        "center": [
+          -18.197524164339345,
+          1.7330092046792676,
+          -13.66218545430837
+        ],
+        "normal": [
+          -0.5719552140013399,
+          0,
+          0.8202848488035615
+        ],
+        "coordinates": [
+          -0.22201310027468044,
+          39.65900562893869
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-1",
+        "wallComponent": "economato-anexo-1-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-1-hueco-6-1",
+        "center": [
+          -14.222175627264596,
+          1.7330092046792676,
+          -10.890317454346073
+        ],
+        "normal": [
+          -0.5719552140013399,
+          0,
+          0.8202848488035615
+        ],
+        "coordinates": [
+          -0.22196670027468043,
+          39.65898072893869
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-1",
+        "wallComponent": "economato-anexo-1-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-1-hueco-7-0",
+        "center": [
+          -13.385701209421521,
+          1.7330092046792676,
+          -7.909774587177329
+        ],
+        "normal": [
+          -0.8196348851842501,
+          0,
+          -0.5728862496071986
+        ],
+        "coordinates": [
+          -0.22195693700169294,
+          39.658953954389034
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-1",
+        "wallComponent": "economato-anexo-1-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-2-hueco-0-0",
+        "center": [
+          19.27656811360799,
+          1.7330092046792676,
+          18.859163674599323
+        ],
+        "normal": [
+          -0.8240008065344431,
+          0,
+          -0.5665886257511596
+        ],
+        "coordinates": [
+          -0.2215757051971218,
+          39.658713486025206
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-2",
+        "wallComponent": "economato-anexo-2-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-2-hueco-0-1",
+        "center": [
+          17.337443360250344,
+          1.7330092046792676,
+          21.679270341264672
+        ],
+        "normal": [
+          -0.8240008065344431,
+          0,
+          -0.5665886257511596
+        ],
+        "coordinates": [
+          -0.22159833853045513,
+          39.65868815269187
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-2",
+        "wallComponent": "economato-anexo-2-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-2-hueco-0-2",
+        "center": [
+          15.398318606892698,
+          1.7330092046792676,
+          24.499377007930022
+        ],
+        "normal": [
+          -0.8240008065344431,
+          0,
+          -0.5665886257511596
+        ],
+        "coordinates": [
+          -0.22162097186378846,
+          39.65866281935854
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-2",
+        "wallComponent": "economato-anexo-2-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-2-hueco-1-0",
+        "center": [
+          13.03526571397406,
+          1.7330092046792676,
+          24.89626676411125
+        ],
+        "normal": [
+          0.5737664310576052,
+          0,
+          -0.8190189757212092
+        ],
+        "coordinates": [
+          -0.22164855325777413,
+          39.658659254053504
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-2",
+        "wallComponent": "economato-anexo-2-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-2-hueco-1-1",
+        "center": [
+          10.164418647238914,
+          1.7330092046792676,
+          22.885085430806562
+        ],
+        "normal": [
+          0.5737664310576052,
+          0,
+          -0.8190189757212092
+        ],
+        "coordinates": [
+          -0.22168206159110745,
+          39.65867732072017
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-2",
+        "wallComponent": "economato-anexo-2-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-2-hueco-1-2",
+        "center": [
+          7.293571580503765,
+          1.7330092046792676,
+          20.873904097501878
+        ],
+        "normal": [
+          0.5737664310576052,
+          0,
+          -0.8190189757212092
+        ],
+        "coordinates": [
+          -0.2217155699244408,
+          39.658695387386835
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-2",
+        "wallComponent": "economato-anexo-2-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-2-hueco-1-3",
+        "center": [
+          4.42272451376862,
+          1.7330092046792676,
+          18.86272276419719
+        ],
+        "normal": [
+          0.5737664310576052,
+          0,
+          -0.8190189757212092
+        ],
+        "coordinates": [
+          -0.22174907825777412,
+          39.658713454053505
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-2",
+        "wallComponent": "economato-anexo-2-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-2-hueco-1-4",
+        "center": [
+          1.5518774470334726,
+          1.7330092046792676,
+          16.851541430892507
+        ],
+        "normal": [
+          0.5737664310576052,
+          0,
+          -0.8190189757212092
+        ],
+        "coordinates": [
+          -0.22178258659110744,
+          39.65873152072017
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-2",
+        "wallComponent": "economato-anexo-2-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-2-hueco-1-5",
+        "center": [
+          -1.3189696197016754,
+          1.7330092046792676,
+          14.84036009758782
+        ],
+        "normal": [
+          0.5737664310576052,
+          0,
+          -0.8190189757212092
+        ],
+        "coordinates": [
+          -0.2218160949244408,
+          39.658749587386836
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-2",
+        "wallComponent": "economato-anexo-2-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-2-hueco-1-6",
+        "center": [
+          -4.189816686436822,
+          1.7330092046792676,
+          12.829178764283133
+        ],
+        "normal": [
+          0.5737664310576052,
+          0,
+          -0.8190189757212092
+        ],
+        "coordinates": [
+          -0.22184960325777414,
+          39.658767654053506
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-2",
+        "wallComponent": "economato-anexo-2-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-2-hueco-1-7",
+        "center": [
+          -7.060663753171967,
+          1.7330092046792676,
+          10.817997430978448
+        ],
+        "normal": [
+          0.5737664310576052,
+          0,
+          -0.8190189757212092
+        ],
+        "coordinates": [
+          -0.22188311159110746,
+          39.65878572072017
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-2",
+        "wallComponent": "economato-anexo-2-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-2-hueco-1-8",
+        "center": [
+          -9.931510819907118,
+          1.7330092046792676,
+          8.80681609767376
+        ],
+        "normal": [
+          0.5737664310576052,
+          0,
+          -0.8190189757212092
+        ],
+        "coordinates": [
+          -0.22191661992444078,
+          39.65880378738684
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-2",
+        "wallComponent": "economato-anexo-2-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-2-hueco-1-9",
+        "center": [
+          -12.802357886642262,
+          1.7330092046792676,
+          6.7956347643690735
+        ],
+        "normal": [
+          0.5737664310576052,
+          0,
+          -0.8190189757212092
+        ],
+        "coordinates": [
+          -0.22195012825777413,
+          39.6588218540535
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-2",
+        "wallComponent": "economato-anexo-2-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-2-hueco-1-10",
+        "center": [
+          -15.673204953377411,
+          1.7330092046792676,
+          4.784453431064389
+        ],
+        "normal": [
+          0.5737664310576052,
+          0,
+          -0.8190189757212092
+        ],
+        "coordinates": [
+          -0.22198363659110748,
+          39.65883992072017
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-2",
+        "wallComponent": "economato-anexo-2-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-2-hueco-1-11",
+        "center": [
+          -18.544052020112556,
+          1.7330092046792676,
+          2.773272097759703
+        ],
+        "normal": [
+          0.5737664310576052,
+          0,
+          -0.8190189757212092
+        ],
+        "coordinates": [
+          -0.2220171449244408,
+          39.65885798738683
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-2",
+        "wallComponent": "economato-anexo-2-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-2-hueco-2-0",
+        "center": [
+          -18.729589740839607,
+          1.7330092046792676,
+          -0.01651874974675538
+        ],
+        "normal": [
+          0.8267462578721413,
+          0,
+          0.5625749950845762
+        ],
+        "coordinates": [
+          -0.2220193105082032,
+          39.658883048389775
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-2",
+        "wallComponent": "economato-anexo-2-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-2-hueco-2-1",
+        "center": [
+          -16.244996905167433,
+          1.7330092046792676,
+          -3.6678147497033295
+        ],
+        "normal": [
+          0.8267462578721413,
+          0,
+          0.5625749950845762
+        ],
+        "coordinates": [
+          -0.2219903105082032,
+          39.658915848389775
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-2",
+        "wallComponent": "economato-anexo-2-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-2-hueco-3-0",
+        "center": [
+          -13.632999697715885,
+          1.7330092046792676,
+          -4.49442232670638
+        ],
+        "normal": [
+          -0.5746855991616295,
+          0,
+          0.8183742799698919
+        ],
+        "coordinates": [
+          -0.2219598234529688,
+          39.65892327389801
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-2",
+        "wallComponent": "economato-anexo-2-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-2-hueco-3-1",
+        "center": [
+          -10.809512207062935,
+          1.7330092046792676,
+          -2.511689437849032
+        ],
+        "normal": [
+          -0.5746855991616295,
+          0,
+          0.8183742799698919
+        ],
+        "coordinates": [
+          -0.22192686789741325,
+          39.658905462786905
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-2",
+        "wallComponent": "economato-anexo-2-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-2-hueco-3-2",
+        "center": [
+          -7.9860247164099825,
+          1.7330092046792676,
+          -0.5289565489916814
+        ],
+        "normal": [
+          -0.5746855991616295,
+          0,
+          0.8183742799698919
+        ],
+        "coordinates": [
+          -0.22189391234185768,
+          39.65888765167579
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-2",
+        "wallComponent": "economato-anexo-2-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-2-hueco-3-3",
+        "center": [
+          -5.162537225757031,
+          1.7330092046792676,
+          1.4537763398656682
+        ],
+        "normal": [
+          -0.5746855991616295,
+          0,
+          0.8183742799698919
+        ],
+        "coordinates": [
+          -0.22186095678630213,
+          39.658869840564684
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-2",
+        "wallComponent": "economato-anexo-2-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-2-hueco-3-4",
+        "center": [
+          -2.3390497351040804,
+          1.7330092046792676,
+          3.4365092287230175
+        ],
+        "normal": [
+          -0.5746855991616295,
+          0,
+          0.8183742799698919
+        ],
+        "coordinates": [
+          -0.22182800123074659,
+          39.65885202945357
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-2",
+        "wallComponent": "economato-anexo-2-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-2-hueco-3-5",
+        "center": [
+          0.4844377555488708,
+          1.7330092046792676,
+          5.419242117580367
+        ],
+        "normal": [
+          -0.5746855991616295,
+          0,
+          0.8183742799698919
+        ],
+        "coordinates": [
+          -0.221795045675191,
+          39.65883421834246
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-2",
+        "wallComponent": "economato-anexo-2-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-2-hueco-3-6",
+        "center": [
+          3.3079252462018234,
+          1.7330092046792676,
+          7.401975006437718
+        ],
+        "normal": [
+          -0.5746855991616295,
+          0,
+          0.8183742799698919
+        ],
+        "coordinates": [
+          -0.22176209011963546,
+          39.65881640723135
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-2",
+        "wallComponent": "economato-anexo-2-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-2-hueco-3-7",
+        "center": [
+          6.131412736854774,
+          1.7330092046792676,
+          9.384707895295065
+        ],
+        "normal": [
+          -0.5746855991616295,
+          0,
+          0.8183742799698919
+        ],
+        "coordinates": [
+          -0.22172913456407992,
+          39.658798596120235
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-2",
+        "wallComponent": "economato-anexo-2-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-2-hueco-3-8",
+        "center": [
+          8.954900227507723,
+          1.7330092046792676,
+          11.367440784152414
+        ],
+        "normal": [
+          -0.5746855991616295,
+          0,
+          0.8183742799698919
+        ],
+        "coordinates": [
+          -0.22169617900852434,
+          39.65878078500913
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-2",
+        "wallComponent": "economato-anexo-2-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-2-hueco-5-0",
+        "center": [
+          12.507782823073061,
+          1.7330092046792676,
+          12.361123898078072
+        ],
+        "normal": [
+          -0.5521388799553589,
+          0,
+          0.8337521557643145
+        ],
+        "coordinates": [
+          -0.22165471000249964,
+          39.65877185864267
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-2",
+        "wallComponent": "economato-anexo-2-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-2-hueco-5-1",
+        "center": [
+          15.606384233077511,
+          1.7330092046792676,
+          14.413122564731689
+        ],
+        "normal": [
+          -0.5521388799553589,
+          0,
+          0.8337521557643145
+        ],
+        "coordinates": [
+          -0.221618543335833,
+          39.658753425309335
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-2",
+        "wallComponent": "economato-anexo-2-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-2-hueco-5-2",
+        "center": [
+          18.70498564308196,
+          1.7330092046792676,
+          16.465121231385307
+        ],
+        "normal": [
+          -0.5521388799553589,
+          0,
+          0.8337521557643145
+        ],
+        "coordinates": [
+          -0.22158237666916633,
+          39.658734991976004
+        ],
+        "width": 1.45,
+        "height": 2.05,
+        "floor": 0,
+        "buildingId": "economato-anexo-2",
+        "wallComponent": "economato-anexo-2-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-4-hueco-0-0",
+        "center": [
+          -37.210281157271105,
+          1.4930092046792676,
+          18.34637394339335
+        ],
+        "normal": [
+          0.8113710601332402,
+          0,
+          0.5845314386568632
+        ],
+        "coordinates": [
+          -0.22223501589195133,
+          39.65871809247266
+        ],
+        "width": 1.45,
+        "height": 1.5699999999999998,
+        "floor": 0,
+        "buildingId": "economato-anexo-4",
+        "wallComponent": "economato-anexo-4-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-4-hueco-1-0",
+        "center": [
+          -33.45651342536135,
+          1.4930092046792676,
+          17.75220463347917
+        ],
+        "normal": [
+          -0.5773627270980326,
+          0,
+          0.8164877717136511
+        ],
+        "coordinates": [
+          -0.2221912021681643,
+          39.658723429961974
+        ],
+        "width": 1.45,
+        "height": 1.5699999999999998,
+        "floor": 0,
+        "buildingId": "economato-anexo-4",
+        "wallComponent": "economato-anexo-4-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-4-hueco-2-0",
+        "center": [
+          -32.710320425818125,
+          1.4930092046792676,
+          21.52951390554652
+        ],
+        "normal": [
+          -0.8357764824823485,
+          0,
+          -0.5490698237286702
+        ],
+        "coordinates": [
+          -0.22218249265380197,
+          39.65868949797067
+        ],
+        "width": 1.45,
+        "height": 1.5699999999999998,
+        "floor": 0,
+        "buildingId": "economato-anexo-4",
+        "wallComponent": "economato-anexo-4-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-4-hueco-3-0",
+        "center": [
+          -36.46335494117296,
+          1.4930092046792676,
+          22.12262011227983
+        ],
+        "normal": [
+          0.5773978565798454,
+          0,
+          -0.8164629294811862
+        ],
+        "coordinates": [
+          -0.22222629781953485,
+          39.658684170031336
+        ],
+        "width": 1.45,
+        "height": 1.5699999999999998,
+        "floor": 0,
+        "buildingId": "economato-anexo-4",
+        "wallComponent": "economato-anexo-4-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-5-hueco-0-0",
+        "center": [
+          -26.635836877635516,
+          1.4930092046792676,
+          11.627475092739173
+        ],
+        "normal": [
+          -0.8330283811281555,
+          0,
+          -0.5532302560733684
+        ],
+        "coordinates": [
+          -0.22211159169153238,
+          39.658778449091876
+        ],
+        "width": 1.45,
+        "height": 1.5699999999999998,
+        "floor": 0,
+        "buildingId": "economato-anexo-5",
+        "wallComponent": "economato-anexo-5-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-5-hueco-1-0",
+        "center": [
+          -29.5239881598591,
+          1.4930092046792676,
+          11.619328797472058
+        ],
+        "normal": [
+          0.5654633378517379,
+          0,
+          -0.8247734316438495
+        ],
+        "coordinates": [
+          -0.2221453019985018,
+          39.65877852227096
+        ],
+        "width": 1.45,
+        "height": 1.5699999999999998,
+        "floor": 0,
+        "buildingId": "economato-anexo-5",
+        "wallComponent": "economato-anexo-5-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-5-hueco-2-0",
+        "center": [
+          -30.582537372837688,
+          1.4930092046792676,
+          8.83857783254651
+        ],
+        "normal": [
+          0.8358698065082115,
+          0,
+          0.5489277425744895
+        ],
+        "coordinates": [
+          -0.22215765731351986,
+          39.65880350206762
+        ],
+        "width": 1.45,
+        "height": 1.5699999999999998,
+        "floor": 0,
+        "buildingId": "economato-anexo-5",
+        "wallComponent": "economato-anexo-5-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-anexo-5-hueco-3-0",
+        "center": [
+          -27.695145606811074,
+          1.4930092046792676,
+          8.84637715570775
+        ],
+        "normal": [
+          -0.5879391190373592,
+          0,
+          0.808905181282438
+        ],
+        "coordinates": [
+          -0.2221239558715723,
+          39.65880343200543
+        ],
+        "width": 1.45,
+        "height": 1.5699999999999998,
+        "floor": 0,
+        "buildingId": "economato-anexo-5",
+        "wallComponent": "economato-anexo-5-muros",
+        "interpretive": true
+      }
+    ],
+    "doors": [
+      {
+        "id": "economato-hueco-2-1",
+        "center": [
+          -2.1808128638893614,
+          1.9780092046792677,
+          -13.854373966055592
+        ],
+        "normal": [
+          -0.5751646458342666,
+          0,
+          0.8180376703932055
+        ],
+        "coordinates": [
+          -0.22182615430065833,
+          39.65900735538956
+        ],
+        "width": 2.25,
+        "height": 2.9,
+        "floor": 0,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-2-3",
+        "center": [
+          -2.1808128638893614,
+          5.428009204679267,
+          -13.854373966055592
+        ],
+        "normal": [
+          -0.5751646458342666,
+          0,
+          0.8180376703932055
+        ],
+        "coordinates": [
+          -0.22182615430065833,
+          39.65900735538956
+        ],
+        "width": 1.35,
+        "height": 2.7,
+        "floor": 1,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-4-1",
+        "center": [
+          8.090578560948353,
+          1.9780092046792677,
+          -12.989204504175284
+        ],
+        "normal": [
+          -0.5751646458342669,
+          0,
+          0.8180376703932055
+        ],
+        "coordinates": [
+          -0.22170626731272064,
+          39.658999583475605
+        ],
+        "width": 2.45,
+        "height": 2.9,
+        "floor": 0,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-6-1",
+        "center": [
+          14.646222016098875,
+          1.9780092046792677,
+          -2.023237201244723
+        ],
+        "normal": [
+          -0.5751646458342667,
+          0,
+          0.8180376703932055
+        ],
+        "coordinates": [
+          -0.22162975028446966,
+          39.658901074965875
+        ],
+        "width": 2.25,
+        "height": 2.9,
+        "floor": 0,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-6-4",
+        "center": [
+          14.646222016098875,
+          5.428009204679267,
+          -2.023237201244723
+        ],
+        "normal": [
+          -0.5751646458342667,
+          0,
+          0.8180376703932055
+        ],
+        "coordinates": [
+          -0.22162975028446966,
+          39.658901074965875
+        ],
+        "width": 1.35,
+        "height": 2.7,
+        "floor": 1,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      },
+      {
+        "id": "economato-hueco-13-4",
+        "center": [
+          -3.9098507550662718,
+          1.9780092046792677,
+          2.2954245234650923
+        ],
+        "normal": [
+          0.5749011578319908,
+          0,
+          -0.818222866169992
+        ],
+        "coordinates": [
+          -0.221846335514306,
+          39.65886227994499
+        ],
+        "width": 1.7,
+        "height": 2.9,
+        "floor": 0,
+        "buildingId": "economato-edificio",
+        "wallComponent": "economato-muros",
+        "interpretive": true
+      }
+    ],
+    "columns": [
+      {
+        "id": "economato-portico-norte--14.328",
+        "kind": "octagonal-porch-pillar",
+        "base": [
+          -2.697823360853684,
+          0.5280092046792677,
+          -20.122259107475195
+        ],
+        "top": [
+          -2.697823360853684,
+          3.958009204679267,
+          -20.122259107475195
+        ],
+        "radius": 0.43,
+        "buildingId": "economato-edificio",
+        "documentedType": true
+      },
+      {
+        "id": "economato-portico-norte--10.072000000000001",
+        "kind": "octagonal-porch-pillar",
+        "base": [
+          0.7837449643397965,
+          0.5280092046792677,
+          -17.67435837480456
+        ],
+        "top": [
+          0.7837449643397965,
+          3.958009204679267,
+          -17.67435837480456
+        ],
+        "radius": 0.43,
+        "buildingId": "economato-edificio",
+        "documentedType": true
+      },
+      {
+        "id": "economato-portico-sur-7.6548",
+        "kind": "octagonal-porch-pillar",
+        "base": [
+          15.28493513986607,
+          0.5280092046792677,
+          -7.478529731029679
+        ],
+        "top": [
+          15.28493513986607,
+          3.958009204679267,
+          -7.478529731029679
+        ],
+        "radius": 0.43,
+        "buildingId": "economato-edificio",
+        "documentedType": true
+      },
+      {
+        "id": "economato-portico-sur-12.8852",
+        "kind": "octagonal-porch-pillar",
+        "base": [
+          19.563599371090692,
+          0.5280092046792677,
+          -4.470188567458131
+        ],
+        "top": [
+          19.563599371090692,
+          3.958009204679267,
+          -4.470188567458131
+        ],
+        "radius": 0.43,
+        "buildingId": "economato-edificio",
+        "documentedType": true
+      },
+      {
+        "id": "economato-soporte-0--15.15-8.75",
+        "kind": "round-interior-column",
+        "floor": 0,
+        "base": [
+          -8.190130058008055,
+          0.5280092046792677,
+          -13.739888768455906
+        ],
+        "top": [
+          -8.190130058008055,
+          3.398009204679267,
+          -13.739888768455906
+        ],
+        "radius": 0.285,
+        "buildingId": "economato-edificio"
+      },
+      {
+        "id": "economato-soporte-0--4.5-8.75",
+        "kind": "round-interior-column",
+        "floor": 0,
+        "base": [
+          0.5219711316795825,
+          0.5280092046792677,
+          -7.614385290320963
+        ],
+        "top": [
+          0.5219711316795825,
+          3.398009204679267,
+          -7.614385290320963
+        ],
+        "radius": 0.285,
+        "buildingId": "economato-edificio"
+      },
+      {
+        "id": "economato-soporte-0-6.2-8.75",
+        "kind": "round-interior-column",
+        "floor": 0,
+        "base": [
+          9.274974204886881,
+          0.5280092046792677,
+          -1.4601235798943106
+        ],
+        "top": [
+          9.274974204886881,
+          3.398009204679267,
+          -1.4601235798943106
+        ],
+        "radius": 0.285,
+        "buildingId": "economato-edificio"
+      },
+      {
+        "id": "economato-soporte-0-15.6-8.75",
+        "kind": "round-interior-column",
+        "floor": 0,
+        "base": [
+          16.964528306583013,
+          0.5280092046792677,
+          3.946424090947798
+        ],
+        "top": [
+          16.964528306583013,
+          3.398009204679267,
+          3.946424090947798
+        ],
+        "radius": 0.285,
+        "buildingId": "economato-edificio"
+      },
+      {
+        "id": "economato-soporte-0--15.15-14.7",
+        "kind": "round-interior-column",
+        "floor": 0,
+        "base": [
+          -11.612359700721942,
+          0.5280092046792677,
+          -8.872564629616333
+        ],
+        "top": [
+          -11.612359700721942,
+          3.398009204679267,
+          -8.872564629616333
+        ],
+        "radius": 0.285,
+        "buildingId": "economato-edificio"
+      },
+      {
+        "id": "economato-soporte-0--4.5-14.7",
+        "kind": "round-interior-column",
+        "floor": 0,
+        "base": [
+          -2.9002585110343038,
+          0.5280092046792677,
+          -2.7470611514813914
+        ],
+        "top": [
+          -2.9002585110343038,
+          3.398009204679267,
+          -2.7470611514813914
+        ],
+        "radius": 0.285,
+        "buildingId": "economato-edificio"
+      },
+      {
+        "id": "economato-soporte-0-6.2-14.7",
+        "kind": "round-interior-column",
+        "floor": 0,
+        "base": [
+          5.852744562172994,
+          0.5280092046792677,
+          3.407200558945261
+        ],
+        "top": [
+          5.852744562172994,
+          3.398009204679267,
+          3.407200558945261
+        ],
+        "radius": 0.285,
+        "buildingId": "economato-edificio"
+      },
+      {
+        "id": "economato-soporte-0-15.6-14.7",
+        "kind": "round-interior-column",
+        "floor": 0,
+        "base": [
+          13.542298663869126,
+          0.5280092046792677,
+          8.81374822978737
+        ],
+        "top": [
+          13.542298663869126,
+          3.398009204679267,
+          8.81374822978737
+        ],
+        "radius": 0.285,
+        "buildingId": "economato-edificio"
+      },
+      {
+        "id": "economato-soporte-1--15.15-8.75",
+        "kind": "round-interior-column",
+        "floor": 1,
+        "base": [
+          -8.190130058008055,
+          4.078009204679267,
+          -13.739888768455906
+        ],
+        "top": [
+          -8.190130058008055,
+          6.658009204679267,
+          -13.739888768455906
+        ],
+        "radius": 0.285,
+        "buildingId": "economato-edificio"
+      },
+      {
+        "id": "economato-soporte-1--4.5-8.75",
+        "kind": "round-interior-column",
+        "floor": 1,
+        "base": [
+          0.5219711316795825,
+          4.078009204679267,
+          -7.614385290320963
+        ],
+        "top": [
+          0.5219711316795825,
+          6.658009204679267,
+          -7.614385290320963
+        ],
+        "radius": 0.285,
+        "buildingId": "economato-edificio"
+      },
+      {
+        "id": "economato-soporte-1-6.2-8.75",
+        "kind": "round-interior-column",
+        "floor": 1,
+        "base": [
+          9.274974204886881,
+          4.078009204679267,
+          -1.4601235798943106
+        ],
+        "top": [
+          9.274974204886881,
+          6.658009204679267,
+          -1.4601235798943106
+        ],
+        "radius": 0.285,
+        "buildingId": "economato-edificio"
+      },
+      {
+        "id": "economato-soporte-1-15.6-8.75",
+        "kind": "round-interior-column",
+        "floor": 1,
+        "base": [
+          16.964528306583013,
+          4.078009204679267,
+          3.946424090947798
+        ],
+        "top": [
+          16.964528306583013,
+          6.658009204679267,
+          3.946424090947798
+        ],
+        "radius": 0.285,
+        "buildingId": "economato-edificio"
+      },
+      {
+        "id": "economato-soporte-1--15.15-14.7",
+        "kind": "round-interior-column",
+        "floor": 1,
+        "base": [
+          -11.612359700721942,
+          4.078009204679267,
+          -8.872564629616333
+        ],
+        "top": [
+          -11.612359700721942,
+          6.658009204679267,
+          -8.872564629616333
+        ],
+        "radius": 0.285,
+        "buildingId": "economato-edificio"
+      },
+      {
+        "id": "economato-soporte-1--4.5-14.7",
+        "kind": "round-interior-column",
+        "floor": 1,
+        "base": [
+          -2.9002585110343038,
+          4.078009204679267,
+          -2.7470611514813914
+        ],
+        "top": [
+          -2.9002585110343038,
+          6.658009204679267,
+          -2.7470611514813914
+        ],
+        "radius": 0.285,
+        "buildingId": "economato-edificio"
+      },
+      {
+        "id": "economato-soporte-1-6.2-14.7",
+        "kind": "round-interior-column",
+        "floor": 1,
+        "base": [
+          5.852744562172994,
+          4.078009204679267,
+          3.407200558945261
+        ],
+        "top": [
+          5.852744562172994,
+          6.658009204679267,
+          3.407200558945261
+        ],
+        "radius": 0.285,
+        "buildingId": "economato-edificio"
+      },
+      {
+        "id": "economato-soporte-1-15.6-14.7",
+        "kind": "round-interior-column",
+        "floor": 1,
+        "base": [
+          13.542298663869126,
+          4.078009204679267,
+          8.81374822978737
+        ],
+        "top": [
+          13.542298663869126,
+          6.658009204679267,
+          8.81374822978737
+        ],
+        "radius": 0.285,
+        "buildingId": "economato-edificio"
+      },
+      {
+        "id": "economato-montante--24.15-6.05",
+        "kind": "stair-trimmer-post",
+        "floor": 0,
+        "base": [
+          -13.99952454779438,
+          0.5280092046792677,
+          -21.12507229102596
+        ],
+        "top": [
+          -13.99952454779438,
+          3.438009204679267,
+          -21.12507229102596
+        ],
+        "radius": 0.1273,
+        "buildingId": "economato-edificio"
+      },
+      {
+        "id": "economato-montante--24.15-12.15",
+        "kind": "stair-trimmer-post",
+        "floor": 0,
+        "base": [
+          -17.508028887383407,
+          0.5280092046792677,
+          -16.135042501627403
+        ],
+        "top": [
+          -17.508028887383407,
+          3.438009204679267,
+          -16.135042501627403
+        ],
+        "radius": 0.1273,
+        "buildingId": "economato-edificio"
+      },
+      {
+        "id": "economato-montante--21.75-6.05",
+        "kind": "stair-trimmer-post",
+        "floor": 0,
+        "base": [
+          -12.036234138850688,
+          0.5280092046792677,
+          -19.74467714102372
+        ],
+        "top": [
+          -12.036234138850688,
+          3.438009204679267,
+          -19.74467714102372
+        ],
+        "radius": 0.1273,
+        "buildingId": "economato-edificio"
+      },
+      {
+        "id": "economato-montante--21.75-12.15",
+        "kind": "stair-trimmer-post",
+        "floor": 0,
+        "base": [
+          -15.544738478439715,
+          0.5280092046792677,
+          -14.754647351625165
+        ],
+        "top": [
+          -15.544738478439715,
+          3.438009204679267,
+          -14.754647351625165
+        ],
+        "radius": 0.1273,
+        "buildingId": "economato-edificio"
+      }
+    ],
+    "supports": [
+      {
+        "id": "economato-soporte-0--15.15-8.75",
+        "kind": "round-interior-column",
+        "floor": 0,
+        "base": [
+          -8.190130058008055,
+          0.5280092046792677,
+          -13.739888768455906
+        ],
+        "top": [
+          -8.190130058008055,
+          3.398009204679267,
+          -13.739888768455906
+        ],
+        "radius": 0.285,
+        "buildingId": "economato-edificio"
+      },
+      {
+        "id": "economato-soporte-0--4.5-8.75",
+        "kind": "round-interior-column",
+        "floor": 0,
+        "base": [
+          0.5219711316795825,
+          0.5280092046792677,
+          -7.614385290320963
+        ],
+        "top": [
+          0.5219711316795825,
+          3.398009204679267,
+          -7.614385290320963
+        ],
+        "radius": 0.285,
+        "buildingId": "economato-edificio"
+      },
+      {
+        "id": "economato-soporte-0-6.2-8.75",
+        "kind": "round-interior-column",
+        "floor": 0,
+        "base": [
+          9.274974204886881,
+          0.5280092046792677,
+          -1.4601235798943106
+        ],
+        "top": [
+          9.274974204886881,
+          3.398009204679267,
+          -1.4601235798943106
+        ],
+        "radius": 0.285,
+        "buildingId": "economato-edificio"
+      },
+      {
+        "id": "economato-soporte-0-15.6-8.75",
+        "kind": "round-interior-column",
+        "floor": 0,
+        "base": [
+          16.964528306583013,
+          0.5280092046792677,
+          3.946424090947798
+        ],
+        "top": [
+          16.964528306583013,
+          3.398009204679267,
+          3.946424090947798
+        ],
+        "radius": 0.285,
+        "buildingId": "economato-edificio"
+      },
+      {
+        "id": "economato-soporte-0--15.15-14.7",
+        "kind": "round-interior-column",
+        "floor": 0,
+        "base": [
+          -11.612359700721942,
+          0.5280092046792677,
+          -8.872564629616333
+        ],
+        "top": [
+          -11.612359700721942,
+          3.398009204679267,
+          -8.872564629616333
+        ],
+        "radius": 0.285,
+        "buildingId": "economato-edificio"
+      },
+      {
+        "id": "economato-soporte-0--4.5-14.7",
+        "kind": "round-interior-column",
+        "floor": 0,
+        "base": [
+          -2.9002585110343038,
+          0.5280092046792677,
+          -2.7470611514813914
+        ],
+        "top": [
+          -2.9002585110343038,
+          3.398009204679267,
+          -2.7470611514813914
+        ],
+        "radius": 0.285,
+        "buildingId": "economato-edificio"
+      },
+      {
+        "id": "economato-soporte-0-6.2-14.7",
+        "kind": "round-interior-column",
+        "floor": 0,
+        "base": [
+          5.852744562172994,
+          0.5280092046792677,
+          3.407200558945261
+        ],
+        "top": [
+          5.852744562172994,
+          3.398009204679267,
+          3.407200558945261
+        ],
+        "radius": 0.285,
+        "buildingId": "economato-edificio"
+      },
+      {
+        "id": "economato-soporte-0-15.6-14.7",
+        "kind": "round-interior-column",
+        "floor": 0,
+        "base": [
+          13.542298663869126,
+          0.5280092046792677,
+          8.81374822978737
+        ],
+        "top": [
+          13.542298663869126,
+          3.398009204679267,
+          8.81374822978737
+        ],
+        "radius": 0.285,
+        "buildingId": "economato-edificio"
+      },
+      {
+        "id": "economato-soporte-1--15.15-8.75",
+        "kind": "round-interior-column",
+        "floor": 1,
+        "base": [
+          -8.190130058008055,
+          4.078009204679267,
+          -13.739888768455906
+        ],
+        "top": [
+          -8.190130058008055,
+          6.658009204679267,
+          -13.739888768455906
+        ],
+        "radius": 0.285,
+        "buildingId": "economato-edificio"
+      },
+      {
+        "id": "economato-soporte-1--4.5-8.75",
+        "kind": "round-interior-column",
+        "floor": 1,
+        "base": [
+          0.5219711316795825,
+          4.078009204679267,
+          -7.614385290320963
+        ],
+        "top": [
+          0.5219711316795825,
+          6.658009204679267,
+          -7.614385290320963
+        ],
+        "radius": 0.285,
+        "buildingId": "economato-edificio"
+      },
+      {
+        "id": "economato-soporte-1-6.2-8.75",
+        "kind": "round-interior-column",
+        "floor": 1,
+        "base": [
+          9.274974204886881,
+          4.078009204679267,
+          -1.4601235798943106
+        ],
+        "top": [
+          9.274974204886881,
+          6.658009204679267,
+          -1.4601235798943106
+        ],
+        "radius": 0.285,
+        "buildingId": "economato-edificio"
+      },
+      {
+        "id": "economato-soporte-1-15.6-8.75",
+        "kind": "round-interior-column",
+        "floor": 1,
+        "base": [
+          16.964528306583013,
+          4.078009204679267,
+          3.946424090947798
+        ],
+        "top": [
+          16.964528306583013,
+          6.658009204679267,
+          3.946424090947798
+        ],
+        "radius": 0.285,
+        "buildingId": "economato-edificio"
+      },
+      {
+        "id": "economato-soporte-1--15.15-14.7",
+        "kind": "round-interior-column",
+        "floor": 1,
+        "base": [
+          -11.612359700721942,
+          4.078009204679267,
+          -8.872564629616333
+        ],
+        "top": [
+          -11.612359700721942,
+          6.658009204679267,
+          -8.872564629616333
+        ],
+        "radius": 0.285,
+        "buildingId": "economato-edificio"
+      },
+      {
+        "id": "economato-soporte-1--4.5-14.7",
+        "kind": "round-interior-column",
+        "floor": 1,
+        "base": [
+          -2.9002585110343038,
+          4.078009204679267,
+          -2.7470611514813914
+        ],
+        "top": [
+          -2.9002585110343038,
+          6.658009204679267,
+          -2.7470611514813914
+        ],
+        "radius": 0.285,
+        "buildingId": "economato-edificio"
+      },
+      {
+        "id": "economato-soporte-1-6.2-14.7",
+        "kind": "round-interior-column",
+        "floor": 1,
+        "base": [
+          5.852744562172994,
+          4.078009204679267,
+          3.407200558945261
+        ],
+        "top": [
+          5.852744562172994,
+          6.658009204679267,
+          3.407200558945261
+        ],
+        "radius": 0.285,
+        "buildingId": "economato-edificio"
+      },
+      {
+        "id": "economato-soporte-1-15.6-14.7",
+        "kind": "round-interior-column",
+        "floor": 1,
+        "base": [
+          13.542298663869126,
+          4.078009204679267,
+          8.81374822978737
+        ],
+        "top": [
+          13.542298663869126,
+          6.658009204679267,
+          8.81374822978737
+        ],
+        "radius": 0.285,
+        "buildingId": "economato-edificio"
+      },
+      {
+        "id": "economato-montante--24.15-6.05",
+        "kind": "stair-trimmer-post",
+        "floor": 0,
+        "base": [
+          -13.99952454779438,
+          0.5280092046792677,
+          -21.12507229102596
+        ],
+        "top": [
+          -13.99952454779438,
+          3.438009204679267,
+          -21.12507229102596
+        ],
+        "radius": 0.1273,
+        "buildingId": "economato-edificio"
+      },
+      {
+        "id": "economato-montante--24.15-12.15",
+        "kind": "stair-trimmer-post",
+        "floor": 0,
+        "base": [
+          -17.508028887383407,
+          0.5280092046792677,
+          -16.135042501627403
+        ],
+        "top": [
+          -17.508028887383407,
+          3.438009204679267,
+          -16.135042501627403
+        ],
+        "radius": 0.1273,
+        "buildingId": "economato-edificio"
+      },
+      {
+        "id": "economato-montante--21.75-6.05",
+        "kind": "stair-trimmer-post",
+        "floor": 0,
+        "base": [
+          -12.036234138850688,
+          0.5280092046792677,
+          -19.74467714102372
+        ],
+        "top": [
+          -12.036234138850688,
+          3.438009204679267,
+          -19.74467714102372
+        ],
+        "radius": 0.1273,
+        "buildingId": "economato-edificio"
+      },
+      {
+        "id": "economato-montante--21.75-12.15",
+        "kind": "stair-trimmer-post",
+        "floor": 0,
+        "base": [
+          -15.544738478439715,
+          0.5280092046792677,
+          -14.754647351625165
+        ],
+        "top": [
+          -15.544738478439715,
+          3.438009204679267,
+          -14.754647351625165
+        ],
+        "radius": 0.1273,
+        "buildingId": "economato-edificio"
+      }
+    ],
+    "furniture": [
+      {
+        "id": "economato-mostrador-central",
+        "type": "typological-counter",
+        "base": 0.5280092046792677,
+        "top": 1.5630092046792676,
+        "footprint": [
+          [
+            -0.2217975472950675,
+            39.658988690659136
+          ],
+          [
+            -0.2217689030535232,
+            39.658973190354274
+          ],
+          [
+            -0.2217744079455448,
+            39.65896716456475
+          ],
+          [
+            -0.22180305218708907,
+            39.65898266486961
+          ]
+        ],
+        "floor": 0,
+        "documentedInventory": false
+      },
+      {
+        "id": "economato-mostrador-norte",
+        "type": "typological-counter",
+        "base": 0.5280092046792677,
+        "top": 1.5630092046792676,
+        "footprint": [
+          [
+            -0.22195680678839022,
+            39.65910056723373
+          ],
+          [
+            -0.22194105245554085,
+            39.65909204206606
+          ],
+          [
+            -0.22194709441019866,
+            39.659085428394626
+          ],
+          [
+            -0.22196284874304803,
+            39.659093953562305
+          ]
+        ],
+        "floor": 0,
+        "documentedInventory": false
+      },
+      {
+        "id": "economato-mostrador-sur",
+        "type": "typological-counter",
+        "base": 0.5280092046792677,
+        "top": 1.5630092046792676,
+        "footprint": [
+          [
+            -0.22152896642238518,
+            39.65883912525809
+          ],
+          [
+            -0.221496502948635,
+            39.65882155824591
+          ],
+          [
+            -0.22150220923914515,
+            39.65881531200067
+          ],
+          [
+            -0.22153467271289534,
+            39.65883287901285
+          ]
+        ],
+        "floor": 0,
+        "documentedInventory": false
+      },
+      {
+        "id": "economato-mostrador-galeria",
+        "type": "typological-counter",
+        "base": 0.5280092046792677,
+        "top": 1.5630092046792676,
+        "footprint": [
+          [
+            -0.22181889744755587,
+            39.65887082935791
+          ],
+          [
+            -0.22175874454031286,
+            39.658838278717695
+          ],
+          [
+            -0.221764450830823,
+            39.65883203247245
+          ],
+          [
+            -0.221824603738066,
+            39.65886458311267
+          ]
+        ],
+        "floor": 0,
+        "documentedInventory": false
+      },
+      {
+        "id": "economato-estante-norte",
+        "type": "typological-shelf",
+        "base": 0.5280092046792677,
+        "top": 2.8280092046792675,
+        "footprint": [
+          [
+            -0.22190332319720688,
+            39.659101714315504
+          ],
+          [
+            -0.22187945299591996,
+            39.65908879739479
+          ],
+          [
+            -0.22188267537173748,
+            39.65908527010336
+          ],
+          [
+            -0.2219065455730244,
+            39.65909818702408
+          ]
+        ],
+        "floor": 0,
+        "documentedInventory": false
+      },
+      {
+        "id": "economato-estante-sur",
+        "type": "typological-shelf",
+        "base": 0.5280092046792677,
+        "top": 2.8280092046792675,
+        "footprint": [
+          [
+            -0.22151280670415305,
+            39.65889039349252
+          ],
+          [
+            -0.2214870268867632,
+            39.65887644321815
+          ],
+          [
+            -0.2214902492625807,
+            39.658872915926715
+          ],
+          [
+            -0.22151602907997056,
+            39.658886866201094
+          ]
+        ],
+        "floor": 0,
+        "documentedInventory": false
+      },
+      {
+        "id": "economato-estante-galeria",
+        "type": "typological-shelf",
+        "base": 0.5280092046792677,
+        "top": 2.8280092046792675,
+        "footprint": [
+          [
+            -0.22173839120321567,
+            39.658813702985924
+          ],
+          [
+            -0.22170688253751694,
+            39.65879665265057
+          ],
+          [
+            -0.22171010491333445,
+            39.658793125359146
+          ],
+          [
+            -0.2217416135790332,
+            39.6588101756945
+          ]
+        ],
+        "floor": 0,
+        "documentedInventory": false
+      }
+    ],
+    "roofs": [
+      {
+        "id": "economato-tejado-norte",
+        "buildingId": "economato-edificio",
+        "coordinates": [
+          [
+            -0.2219421,
+            39.6591272
+          ],
+          [
+            -0.2218456692882362,
+            39.65907501829261
+          ],
+          [
+            -0.2219434146880338,
+            39.65896802378596
+          ],
+          [
+            -0.2220398453997976,
+            39.65902020549334
+          ]
+        ],
+        "floor": 1,
+        "eaves": 7.378009204679267,
+        "ridge": 9.298009204679268,
+        "hiddenInSection": true,
+        "documentedShape": true,
+        "interpretedDimensions": true
+      },
+      {
+        "id": "economato-tejado-central",
+        "buildingId": "economato-edificio",
+        "coordinates": [
+          [
+            -0.221773103876324,
+            39.65903575085362
+          ],
+          [
+            -0.2216394307491173,
+            39.65896341609759
+          ],
+          [
+            -0.2217696684384081,
+            39.6588208547357
+          ],
+          [
+            -0.22190334156561475,
+            39.658893189491735
+          ]
+        ],
+        "floor": 1,
+        "eaves": 7.378009204679267,
+        "ridge": 9.698009204679266,
+        "hiddenInSection": true,
+        "documentedShape": true,
+        "interpretedDimensions": true
+      },
+      {
+        "id": "economato-tejado-sur",
+        "buildingId": "economato-edificio",
+        "coordinates": [
+          [
+            -0.22155025167710943,
+            39.658915158481776
+          ],
+          [
+            -0.2214437,
+            39.6588575
+          ],
+          [
+            -0.2215639348976906,
+            39.65872588793859
+          ],
+          [
+            -0.22167048657480004,
+            39.65878354642036
+          ]
+        ],
+        "floor": 1,
+        "eaves": 7.378009204679267,
+        "ridge": 9.398009204679267,
+        "hiddenInSection": true,
+        "documentedShape": true,
+        "interpretedDimensions": true
+      },
+      {
+        "id": "economato-conexion-norte",
+        "coordinates": [
+          [
+            -0.2218805783595925,
+            39.6590368059688
+          ],
+          [
+            -0.2218080129476803,
+            39.65899753852982
+          ],
+          [
+            -0.2219030059014671,
+            39.658893556917924
+          ],
+          [
+            -0.2219755713133793,
+            39.65893282435691
+          ]
+        ],
+        "floor": 1,
+        "eaves": 7.378009204679267,
+        "hiddenInSection": true,
+        "interpretedDimensions": true
+      },
+      {
+        "id": "economato-conexion-sur",
+        "coordinates": [
+          [
+            -0.2216743398204736,
+            39.658925203773784
+          ],
+          [
+            -0.2215851607484657,
+            39.658876946157974
+          ],
+          [
+            -0.22168015370225255,
+            39.658772964546074
+          ],
+          [
+            -0.22176933277426042,
+            39.65882122216189
+          ]
+        ],
+        "floor": 1,
+        "eaves": 7.378009204679267,
+        "hiddenInSection": true,
+        "interpretedDimensions": true
+      },
+      {
+        "id": "economato-anexo-1-cubierta",
+        "buildingId": "economato-anexo-1",
+        "coordinates": [
+          [
+            -0.22197,
+            39.6589391
+          ],
+          [
+            -0.2219913,
+            39.6589519
+          ],
+          [
+            -0.2220532,
+            39.658883
+          ],
+          [
+            -0.2220752,
+            39.6588942
+          ],
+          [
+            -0.2221232,
+            39.6588425
+          ],
+          [
+            -0.22216599999999997,
+            39.6588655
+          ],
+          [
+            -0.2220361,
+            39.6590183
+          ],
+          [
+            -0.2219433,
+            39.6589685
+          ]
+        ],
+        "floor": 0,
+        "eaves": 3.638009204679267,
+        "hiddenInSection": false,
+        "interiorSurvey": false
+      },
+      {
+        "id": "economato-anexo-2-cubierta",
+        "buildingId": "economato-anexo-2",
+        "coordinates": [
+          [
+            -0.2215641,
+            39.658726
+          ],
+          [
+            -0.221632,
+            39.65865
+          ],
+          [
+            -0.2220341,
+            39.6588668
+          ],
+          [
+            -0.2219761,
+            39.6589324
+          ],
+          [
+            -0.2216795,
+            39.6587721
+          ],
+          [
+            -0.2216726,
+            39.6587813
+          ]
+        ],
+        "floor": 0,
+        "eaves": 3.7980092046792673,
+        "hiddenInSection": false,
+        "interiorSurvey": false
+      },
+      {
+        "id": "economato-anexo-4-cubierta",
+        "buildingId": "economato-anexo-4",
+        "coordinates": [
+          [
+            -0.2222536,
+            39.6586987
+          ],
+          [
+            -0.222217,
+            39.6587378
+          ],
+          [
+            -0.222165,
+            39.6587095
+          ],
+          [
+            -0.2221994,
+            39.6586692
+          ]
+        ],
+        "floor": 0,
+        "eaves": 2.5280092046792677,
+        "hiddenInSection": false,
+        "interiorSurvey": false
+      },
+      {
+        "id": "economato-anexo-5-cubierta",
+        "buildingId": "economato-anexo-5",
+        "coordinates": [
+          [
+            -0.2221006,
+            39.6587907
+          ],
+          [
+            -0.222122,
+            39.6587659
+          ],
+          [
+            -0.222169,
+            39.6587907
+          ],
+          [
+            -0.2221469,
+            39.6588166
+          ]
+        ],
+        "floor": 0,
+        "eaves": 2.5280092046792677,
+        "hiddenInSection": false,
+        "interiorSurvey": false
+      }
+    ],
+    "stairs": [
+      {
+        "id": "economato-escalones-norte",
+        "buildingId": "economato-edificio",
+        "footprint": [
+          [
+            -0.22183310797489483,
+            39.659087987297056
+          ],
+          [
+            -0.2217614973710341,
+            39.65904923653489
+          ],
+          [
+            -0.22177358128034974,
+            39.659036009192036
+          ],
+          [
+            -0.22184519188421048,
+            39.659074759954194
+          ]
+        ],
+        "segments": [
+          [
+            [
+              -0.22183310797489483,
+              39.659087987297056
+            ],
+            [
+              -0.2217614973710341,
+              39.65904923653489
+            ]
+          ],
+          [
+            [
+              -0.22183512195978078,
+              39.65908578273991
+            ],
+            [
+              -0.22176351135592004,
+              39.65904703197775
+            ]
+          ],
+          [
+            [
+              -0.2218371359446667,
+              39.659083578182766
+            ],
+            [
+              -0.22176552534080599,
+              39.65904482742061
+            ]
+          ],
+          [
+            [
+              -0.22183914992955264,
+              39.659081373625625
+            ],
+            [
+              -0.22176753932569193,
+              39.65904262286347
+            ]
+          ],
+          [
+            [
+              -0.2218411639144386,
+              39.659079169068484
+            ],
+            [
+              -0.22176955331057785,
+              39.65904041830632
+            ]
+          ],
+          [
+            [
+              -0.2218431778993245,
+              39.65907696451134
+            ],
+            [
+              -0.2217715672954638,
+              39.65903821374918
+            ]
+          ]
+        ],
+        "steps": 6,
+        "floor": 0,
+        "external": true,
+        "interpretive": true
+      },
+      {
+        "id": "economato-escalones-sur",
+        "buildingId": "economato-edificio",
+        "footprint": [
+          [
+            -0.22162686943577595,
+            39.65897638510203
+          ],
+          [
+            -0.22153864517181954,
+            39.65892864416305
+          ],
+          [
+            -0.22155072908113516,
+            39.65891541682019
+          ],
+          [
+            -0.22163895334509157,
+            39.658963157759175
+          ]
+        ],
+        "segments": [
+          [
+            [
+              -0.22162686943577595,
+              39.65897638510203
+            ],
+            [
+              -0.22153864517181954,
+              39.65892864416305
+            ]
+          ],
+          [
+            [
+              -0.2216288834206619,
+              39.65897418054489
+            ],
+            [
+              -0.22154065915670546,
+              39.65892643960591
+            ]
+          ],
+          [
+            [
+              -0.2216308974055478,
+              39.65897197598775
+            ],
+            [
+              -0.2215426731415914,
+              39.658924235048765
+            ]
+          ],
+          [
+            [
+              -0.22163291139043376,
+              39.6589697714306
+            ],
+            [
+              -0.22154468712647735,
+              39.65892203049162
+            ]
+          ],
+          [
+            [
+              -0.2216349253753197,
+              39.65896756687346
+            ],
+            [
+              -0.2215467011113633,
+              39.658919825934476
+            ]
+          ],
+          [
+            [
+              -0.22163693936020562,
+              39.658965362316316
+            ],
+            [
+              -0.22154871509624924,
+              39.658917621377334
+            ]
+          ]
+        ],
+        "steps": 6,
+        "floor": 0,
+        "external": true,
+        "interpretive": true
+      },
+      {
+        "id": "economato-escalera-interior",
+        "buildingId": "economato-edificio",
+        "footprint": [
+          [
+            -0.22196410150629797,
+            39.659072668885116
+          ],
+          [
+            -0.22194118611306254,
+            39.65906026864123
+          ],
+          [
+            -0.22198213713907666,
+            39.659015442645995
+          ],
+          [
+            -0.2220050525323121,
+            39.659027842889884
+          ]
+        ],
+        "segments": [
+          [
+            [
+              -0.22196497268418142,
+              39.65906874778962
+            ],
+            [
+              -0.2219456855615416,
+              39.65905831091768
+            ]
+          ],
+          [
+            [
+              -0.22196688596982306,
+              39.659066653460336
+            ],
+            [
+              -0.22194759884718324,
+              39.65905621658839
+            ]
+          ],
+          [
+            [
+              -0.2219687992554647,
+              39.659064559131046
+            ],
+            [
+              -0.22194951213282488,
+              39.65905412225911
+            ]
+          ],
+          [
+            [
+              -0.22197071254110634,
+              39.659062464801764
+            ],
+            [
+              -0.22195142541846652,
+              39.65905202792982
+            ]
+          ],
+          [
+            [
+              -0.22197262582674798,
+              39.659060370472474
+            ],
+            [
+              -0.22195333870410816,
+              39.659049933600535
+            ]
+          ],
+          [
+            [
+              -0.22197453911238962,
+              39.65905827614319
+            ],
+            [
+              -0.22195525198974983,
+              39.65904783927125
+            ]
+          ],
+          [
+            [
+              -0.2219764523980313,
+              39.6590561818139
+            ],
+            [
+              -0.22195716527539144,
+              39.65904574494196
+            ]
+          ],
+          [
+            [
+              -0.22197836568367293,
+              39.65905408748462
+            ],
+            [
+              -0.2219590785610331,
+              39.65904365061268
+            ]
+          ],
+          [
+            [
+              -0.22198027896931455,
+              39.65905199315534
+            ],
+            [
+              -0.22196099184667475,
+              39.65904155628339
+            ]
+          ],
+          [
+            [
+              -0.22198219225495622,
+              39.65904989882605
+            ],
+            [
+              -0.22196290513231637,
+              39.65903946195411
+            ]
+          ],
+          [
+            [
+              -0.22198410554059786,
+              39.659047804496765
+            ],
+            [
+              -0.22196481841795804,
+              39.65903736762482
+            ]
+          ],
+          [
+            [
+              -0.2219860188262395,
+              39.659045710167476
+            ],
+            [
+              -0.22196673170359968,
+              39.65903527329554
+            ]
+          ],
+          [
+            [
+              -0.22198793211188114,
+              39.65904361583819
+            ],
+            [
+              -0.22196864498924132,
+              39.659033178966254
+            ]
+          ],
+          [
+            [
+              -0.22198984539752278,
+              39.659041521508904
+            ],
+            [
+              -0.22197055827488296,
+              39.659031084636965
+            ]
+          ],
+          [
+            [
+              -0.22199175868316443,
+              39.65903942717962
+            ],
+            [
+              -0.2219724715605246,
+              39.65902899030768
+            ]
+          ],
+          [
+            [
+              -0.22199367196880607,
+              39.65903733285034
+            ],
+            [
+              -0.22197438484616624,
+              39.65902689597839
+            ]
+          ],
+          [
+            [
+              -0.2219955852544477,
+              39.65903523852105
+            ],
+            [
+              -0.2219762981318079,
+              39.65902480164911
+            ]
+          ],
+          [
+            [
+              -0.22199749854008935,
+              39.65903314419177
+            ],
+            [
+              -0.22197821141744953,
+              39.65902270731982
+            ]
+          ],
+          [
+            [
+              -0.221999411825731,
+              39.65903104986248
+            ],
+            [
+              -0.22198012470309117,
+              39.65902061299054
+            ]
+          ],
+          [
+            [
+              -0.22200132511137263,
+              39.659028955533195
+            ],
+            [
+              -0.2219820379887328,
+              39.65901851866125
+            ]
+          ]
+        ],
+        "steps": 20,
+        "fromFloor": 0,
+        "toFloor": 1,
+        "rise": 0.17749999999999996,
+        "run": 0.285,
+        "interpretive": true
+      }
+    ],
+    "exactInteriorSurvey": false,
+    "basement": {
+      "documented": true,
+      "interiorModeled": false,
+      "exteriorVents": 6
+    },
+    "section": {
+      "floor": 1,
+      "removes": "main pitched roofs, connecting coverings and first-floor ceilings",
+      "retains": "upper floor slab, both levels of structural columns, facade gables, lower porch terraces and all undocumented annex coverings"
+    },
+    "sourceDates": {
+      "mainConfiguration": 1954,
+      "historicalFrontPhoto": 1959,
+      "closure": 1990,
+      "interiorPhotographs": "2026-01-20"
+    },
+    "modelPeriod": "historical-spatial-interpretation-not-current-fitout"
+  },
+  "focuses": {
+    "economato-conjunto": {
+      "id": "economato-conjunto",
+      "label": "La Cope, en el frente de la ciudad industrial",
+      "target": [
+        4819.544105505074,
+        9.730461018547476,
+        2233.795899363163
+      ],
+      "localTarget": [
+        4.634514132824707,
+        4.028009204679268,
+        -5.639672636861667
+      ],
+      "coordinates": [
+        -0.22174660626362505,
+        39.65893356180953
+      ],
+      "elevation": 4.028009204679268,
+      "offset": [
+        -2.1991275209761483,
+        52,
+        -45.55396621751486
+      ],
+      "closeOffset": [
+        -1.4064726161731738,
+        36,
+        -32.77227234690868
+      ],
+      "regionId": "edificio",
+      "readingLayer": "edificio",
+      "period": "edificio",
+      "components": [],
+      "interiorView": false,
+      "floor": null,
+      "buildingId": "economato-edificio",
+      "requiresSection": false,
+      "fitBounds": true,
+      "bounds": {
+        "min": [
+          4775.974841768978,
+          4.730460990122482,
+          2211.845142693994
+        ],
+        "max": [
+          4845.908128435848,
+          15.666747201136275,
+          2265.495102258203
+        ]
+      },
+      "kind": "overview",
+      "minDistance": 0.7,
+      "closeScale": false,
+      "fov": 50,
+      "sourceConfidence": "registered-envelope-primary-photographs-interpreted-interior"
+    },
+    "economato-fachada": {
+      "id": "economato-fachada",
+      "label": "Un ritmo de tres frontones y dos porches",
+      "target": [
+        4823.000169933198,
+        10.230461018547476,
+        2226.4463674958492
+      ],
+      "localTarget": [
+        8.090578560948353,
+        4.528009204679268,
+        -12.989204504175284
+      ],
+      "coordinates": [
+        -0.22170626731272064,
+        39.658999583475605
+      ],
+      "elevation": 4.528009204679268,
+      "offset": [
+        6.416229700893323,
+        23,
+        -12.60285667717341
+      ],
+      "closeOffset": [
+        5.751646458342668,
+        4,
+        -8.180376703932055
+      ],
+      "regionId": "edificio",
+      "readingLayer": "edificio",
+      "period": "edificio",
+      "components": [
+        "economato-frontones",
+        "economato-cornisas",
+        "economato-rotulo"
+      ],
+      "interiorView": false,
+      "floor": null,
+      "buildingId": "economato-edificio",
+      "requiresSection": false,
+      "fitBounds": false,
+      "bounds": {
+        "min": [
+          4820.800169933198,
+          8.030461018547477,
+          2224.2463674958494
+        ],
+        "max": [
+          4825.200169933198,
+          12.430461018547476,
+          2228.646367495849
+        ]
+      },
+      "kind": "feature",
+      "minDistance": 0.7,
+      "closeScale": false,
+      "fov": 78,
+      "sourceConfidence": "registered-envelope-primary-photographs-interpreted-interior"
+    },
+    "economato-portico-norte": {
+      "id": "economato-portico-norte",
+      "label": "El paso protegido entre las naves",
+      "target": [
+        4813.590198447117,
+        8.030461018547477,
+        2221.052626991232
+      ],
+      "localTarget": [
+        -1.319392925132531,
+        2.328009204679268,
+        -18.38294500879216
+      ],
+      "coordinates": [
+        -0.22181609986523323,
+        39.659048036049306
+      ],
+      "elevation": 2.328009204679268,
+      "offset": [
+        2.9396274934372593,
+        0.5,
+        -11.135465423583685
+      ],
+      "closeOffset": [
+        2.8502088967208703,
+        0.1,
+        -7.531023120735535
+      ],
+      "regionId": "edificio",
+      "readingLayer": "edificio",
+      "period": "edificio",
+      "components": [
+        "economato-pilares-octogonales",
+        "economato-porticos-dintel"
+      ],
+      "interiorView": false,
+      "floor": null,
+      "buildingId": "economato-edificio",
+      "requiresSection": false,
+      "fitBounds": false,
+      "bounds": {
+        "min": [
+          4811.390198447117,
+          5.830461018547477,
+          2218.8526269912322
+        ],
+        "max": [
+          4815.790198447116,
+          10.230461018547476,
+          2223.252626991232
+        ]
+      },
+      "kind": "feature",
+      "minDistance": 0.7,
+      "closeScale": false,
+      "fov": 57,
+      "sourceConfidence": "registered-envelope-primary-photographs-interpreted-interior"
+    },
+    "economato-portico-sur": {
+      "id": "economato-portico-sur",
+      "label": "Pilares sencillos para una arquitectura de servicio",
+      "target": [
+        4831.971504900852,
+        8.030461018547477,
+        2233.9765765831285
+      ],
+      "localTarget": [
+        17.06191352860279,
+        2.328009204679268,
+        -5.458995416896186
+      ],
+      "coordinates": [
+        -0.2216015544960665,
+        39.658931938765875
+      ],
+      "elevation": 2.328009204679268,
+      "offset": [
+        8.78092411535655,
+        0.5,
+        -7.272920436822459
+      ],
+      "closeOffset": [
+        5.949810184543411,
+        0.2,
+        -4.984953236280507
+      ],
+      "regionId": "edificio",
+      "readingLayer": "edificio",
+      "period": "edificio",
+      "components": [
+        "economato-porticos-escalones",
+        "economato-porticos-pretil"
+      ],
+      "interiorView": false,
+      "floor": null,
+      "buildingId": "economato-edificio",
+      "requiresSection": false,
+      "fitBounds": false,
+      "bounds": {
+        "min": [
+          4829.771504900852,
+          5.830461018547477,
+          2231.7765765831286
+        ],
+        "max": [
+          4834.171504900852,
+          10.230461018547476,
+          2236.1765765831283
+        ]
+      },
+      "kind": "feature",
+      "minDistance": 0.7,
+      "closeScale": false,
+      "fov": 58,
+      "sourceConfidence": "registered-envelope-primary-photographs-interpreted-interior"
+    },
+    "economato-nave-central": {
+      "id": "economato-nave-central",
+      "label": "El espacio principal de la cooperativa",
+      "target": [
+        4816.228572555137,
+        8.230461018547476,
+        2236.5989764683964
+      ],
+      "localTarget": [
+        1.318981182888261,
+        2.5280092046792677,
+        -2.836595531627898
+      ],
+      "coordinates": [
+        -0.22178530494059445,
+        39.65890838145465
+      ],
+      "elevation": 2.5280092046792677,
+      "offset": [
+        5.10361990514072,
+        -0.35,
+        -7.780299728407091
+      ],
+      "closeOffset": [
+        3.9929233587123343,
+        -0.35,
+        -5.50513969409037
+      ],
+      "regionId": "espacios",
+      "readingLayer": "espacios",
+      "period": "espacios",
+      "components": [
+        "economato-vigas-0",
+        "economato-mostradores"
+      ],
+      "interiorView": true,
+      "floor": 0,
+      "buildingId": "economato-edificio",
+      "requiresSection": false,
+      "fitBounds": false,
+      "bounds": {
+        "min": [
+          4814.0285725551375,
+          6.030461018547476,
+          2234.3989764683965
+        ],
+        "max": [
+          4818.428572555137,
+          10.430461018547476,
+          2238.798976468396
+        ]
+      },
+      "kind": "feature",
+      "minDistance": 0.3,
+      "closeScale": false,
+      "fov": 70,
+      "sourceConfidence": "registered-envelope-primary-photographs-interpreted-interior"
+    },
+    "economato-nave-norte": {
+      "id": "economato-nave-norte",
+      "label": "Una de las alas del frente comercial",
+      "target": [
+        4800.918460952559,
+        8.230461018547476,
+        2224.122980206911
+      ],
+      "localTarget": [
+        -13.991130419689913,
+        2.5280092046792677,
+        -15.31259179311344
+      ],
+      "coordinates": [
+        -0.22196400353060092,
+        39.65902045472326
+      ],
+      "elevation": 2.5280092046792677,
+      "offset": [
+        4.421095051531727,
+        -0.35,
+        -6.548772292981464
+      ],
+      "closeOffset": [
+        3.302725783711214,
+        -0.35,
+        -4.523494489618524
+      ],
+      "regionId": "espacios",
+      "readingLayer": "espacios",
+      "period": "espacios",
+      "components": [
+        "economato-pavimento-principal",
+        "economato-escalera"
+      ],
+      "interiorView": true,
+      "floor": 0,
+      "buildingId": "economato-edificio",
+      "requiresSection": false,
+      "fitBounds": false,
+      "bounds": {
+        "min": [
+          4798.718460952559,
+          6.030461018547476,
+          2221.9229802069112
+        ],
+        "max": [
+          4803.118460952559,
+          10.430461018547476,
+          2226.322980206911
+        ]
+      },
+      "kind": "feature",
+      "minDistance": 0.3,
+      "closeScale": false,
+      "fov": 68,
+      "sourceConfidence": "registered-envelope-primary-photographs-interpreted-interior"
+    },
+    "economato-nave-sur": {
+      "id": "economato-nave-sur",
+      "label": "El ala que se aproxima a Begoña",
+      "target": [
+        4833.628487632057,
+        8.230461018547476,
+        2248.7106631930437
+      ],
+      "localTarget": [
+        18.718896259807643,
+        2.5280092046792677,
+        9.275091193019238
+      ],
+      "coordinates": [
+        -0.22158221430538616,
+        39.65879958081933
+      ],
+      "elevation": 2.5280092046792677,
+      "offset": [
+        5.134310790709229,
+        -0.35,
+        -6.780770804591966
+      ],
+      "closeOffset": [
+        3.7628575003786278,
+        -0.35,
+        -5.177924625933088
+      ],
+      "regionId": "espacios",
+      "readingLayer": "espacios",
+      "period": "espacios",
+      "components": [
+        "economato-mostradores",
+        "economato-soportes-0"
+      ],
+      "interiorView": true,
+      "floor": 0,
+      "buildingId": "economato-edificio",
+      "requiresSection": false,
+      "fitBounds": false,
+      "bounds": {
+        "min": [
+          4831.428487632057,
+          6.030461018547476,
+          2246.510663193044
+        ],
+        "max": [
+          4835.828487632057,
+          10.430461018547476,
+          2250.9106631930435
+        ]
+      },
+      "kind": "feature",
+      "minDistance": 0.3,
+      "closeScale": false,
+      "fov": 69,
+      "sourceConfidence": "registered-envelope-primary-photographs-interpreted-interior"
+    },
+    "economato-galeria": {
+      "id": "economato-galeria",
+      "label": "El enlace transversal entre las naves",
+      "target": [
+        4825.618122045316,
+        8.380461018547477,
+        2243.93425835606
+      ],
+      "localTarget": [
+        10.708530673066846,
+        2.6780092046792676,
+        4.4986863560358
+      ],
+      "coordinates": [
+        -0.22167571075224063,
+        39.658842487797735
+      ],
+      "elevation": 2.6780092046792676,
+      "offset": [
+        -12.515976357016044,
+        -0.5,
+        -8.800019081264281
+      ],
+      "closeOffset": [
+        -9.493707906397002,
+        -0.5,
+        -6.491687776535087
+      ],
+      "regionId": "espacios",
+      "readingLayer": "espacios",
+      "period": "espacios",
+      "components": [
+        "economato-vigas-0",
+        "economato-soportes-0"
+      ],
+      "interiorView": true,
+      "floor": 0,
+      "buildingId": "economato-edificio",
+      "requiresSection": false,
+      "fitBounds": false,
+      "bounds": {
+        "min": [
+          4823.4181220453165,
+          6.180461018547477,
+          2241.7342583560603
+        ],
+        "max": [
+          4827.818122045316,
+          10.580461018547478,
+          2246.13425835606
+        ]
+      },
+      "kind": "feature",
+      "minDistance": 0.3,
+      "closeScale": false,
+      "fov": 70,
+      "sourceConfidence": "registered-envelope-primary-photographs-interpreted-interior"
+    },
+    "economato-planta-alta": {
+      "id": "economato-planta-alta",
+      "label": "El segundo nivel del espacio comercial",
+      "target": [
+        4815.85024460551,
+        11.780461018547477,
+        2237.3109230692944
+      ],
+      "localTarget": [
+        0.9406532332601669,
+        6.078009204679267,
+        -2.124648930729908
+      ],
+      "coordinates": [
+        -0.22178972075890546,
+        39.65890198595878
+      ],
+      "elevation": 6.078009204679267,
+      "offset": [
+        5.226325555699701,
+        -0.35,
+        -7.694025031531951
+      ],
+      "closeOffset": [
+        3.7628575003786278,
+        -0.35,
+        -5.177924625933088
+      ],
+      "regionId": "espacios",
+      "readingLayer": "espacios",
+      "period": "espacios",
+      "components": [
+        "economato-forjado-primera",
+        "economato-vigas-1",
+        "economato-soportes-1"
+      ],
+      "interiorView": true,
+      "floor": 1,
+      "buildingId": "economato-edificio",
+      "requiresSection": false,
+      "fitBounds": false,
+      "bounds": {
+        "min": [
+          4813.65024460551,
+          9.580461018547478,
+          2235.1109230692946
+        ],
+        "max": [
+          4818.05024460551,
+          13.980461018547476,
+          2239.510923069294
+        ]
+      },
+      "kind": "feature",
+      "minDistance": 0.3,
+      "closeScale": false,
+      "fov": 71,
+      "sourceConfidence": "registered-envelope-primary-photographs-interpreted-interior"
+    },
+    "economato-cubiertas": {
+      "id": "economato-cubiertas",
+      "label": "Teja inclinada y volúmenes bajos posteriores",
+      "target": [
+        4818.611034905514,
+        13.580461018547476,
+        2233.384342251407
+      ],
+      "localTarget": [
+        3.701443533264648,
+        7.878009204679267,
+        -6.051229748617294
+      ],
+      "coordinates": [
+        -0.22175749700073044,
+        39.65893725887306
+      ],
+      "elevation": 7.878009204679267,
+      "offset": [
+        36.95187929559109,
+        26,
+        -2.1350916898499896
+      ],
+      "closeOffset": [
+        26.956590057439847,
+        18,
+        -1.8281828341648918
+      ],
+      "regionId": "construccion",
+      "readingLayer": "construccion",
+      "period": "construccion",
+      "components": [
+        "economato-tejado-central",
+        "economato-tejado-norte",
+        "economato-tejado-sur"
+      ],
+      "interiorView": false,
+      "floor": null,
+      "buildingId": "economato-edificio",
+      "requiresSection": false,
+      "fitBounds": false,
+      "bounds": {
+        "min": [
+          4816.4110349055145,
+          11.380461018547475,
+          2231.184342251407
+        ],
+        "max": [
+          4820.811034905514,
+          15.780461018547477,
+          2235.5843422514067
+        ]
+      },
+      "kind": "feature",
+      "minDistance": 0.7,
+      "closeScale": false,
+      "fov": 55,
+      "sourceConfidence": "registered-envelope-primary-photographs-interpreted-interior"
+    },
+    "economato-carpinterias": {
+      "id": "economato-carpinterias",
+      "label": "Los huecos que iluminan la cooperativa",
+      "target": [
+        4819.482607950507,
+        7.9804610185474765,
+        2223.973159518762
+      ],
+      "localTarget": [
+        4.57301657825757,
+        2.2780092046792677,
+        -15.462412481262632
+      ],
+      "coordinates": [
+        -0.22174732405893413,
+        39.65902180057925
+      ],
+      "elevation": 2.2780092046792677,
+      "offset": [
+        2.6712559198579733,
+        0.25,
+        -8.145820511809951
+      ],
+      "closeOffset": [
+        1.9785200682978308,
+        0.1,
+        -5.943522384860913
+      ],
+      "regionId": "edificio",
+      "readingLayer": "edificio",
+      "period": "edificio",
+      "components": [
+        "economato-edificio-carpinteria",
+        "economato-zocalo",
+        "economato-edificio-rejas"
+      ],
+      "interiorView": false,
+      "floor": null,
+      "buildingId": "economato-edificio",
+      "requiresSection": false,
+      "fitBounds": false,
+      "bounds": {
+        "min": [
+          4817.282607950508,
+          5.780461018547476,
+          2221.773159518762
+        ],
+        "max": [
+          4821.682607950507,
+          10.180461018547476,
+          2226.1731595187616
+        ]
+      },
+      "kind": "feature",
+      "minDistance": 0.7,
+      "closeScale": false,
+      "fov": 59,
+      "sourceConfidence": "registered-envelope-primary-photographs-interpreted-interior"
+    },
+    "economato-almacenes": {
+      "id": "economato-almacenes",
+      "label": "La parte de servicio del Economato",
+      "target": [
+        4810.788911505598,
+        7.880461018547477,
+        2252.3333365655253
+      ],
+      "localTarget": [
+        -4.120679866651262,
+        2.1780092046792676,
+        12.897764565501014
+      ],
+      "coordinates": [
+        -0.22184879629747667,
+        39.65876703793958
+      ],
+      "elevation": 2.1780092046792676,
+      "offset": [
+        -10.352963625016802,
+        9,
+        14.724678067077697
+      ],
+      "closeOffset": [
+        -6.901975750011201,
+        5,
+        9.816452044718465
+      ],
+      "regionId": "espacios",
+      "readingLayer": "espacios",
+      "period": "espacios",
+      "components": [
+        "economato-anexo-2-muros",
+        "economato-anexo-2-cornisa"
+      ],
+      "interiorView": false,
+      "floor": null,
+      "buildingId": "economato-edificio",
+      "requiresSection": false,
+      "fitBounds": false,
+      "bounds": {
+        "min": [
+          4808.588911505598,
+          5.680461018547477,
+          2250.1333365655255
+        ],
+        "max": [
+          4812.988911505598,
+          10.080461018547478,
+          2254.533336565525
+        ]
+      },
+      "kind": "feature",
+      "minDistance": 0.7,
+      "closeScale": false,
+      "fov": 60,
+      "sourceConfidence": "registered-envelope-primary-photographs-interpreted-interior"
+    },
+    "economato-patio": {
+      "id": "economato-patio",
+      "label": "La trasera abierta hacia la Gerencia",
+      "target": [
+        4791.533239902655,
+        6.380461018547477,
+        2250.1632879209997
+      ],
+      "localTarget": [
+        -23.376351469594432,
+        0.6780092046792678,
+        10.727715920975289
+      ],
+      "coordinates": [
+        -0.22207354719769176,
+        39.65878653172906
+      ],
+      "elevation": 0.6780092046792678,
+      "offset": [
+        1.7641470030387314,
+        12,
+        18.354503135516076
+      ],
+      "closeOffset": [
+        0.7926549048029754,
+        7,
+        12.781693870606189
+      ],
+      "regionId": "entorno",
+      "readingLayer": "entorno",
+      "period": "entorno",
+      "components": [
+        "economato-anexo-1-muros",
+        "economato-anexo-4-muros",
+        "economato-anexo-5-muros"
+      ],
+      "interiorView": false,
+      "floor": null,
+      "buildingId": "economato-edificio",
+      "requiresSection": false,
+      "fitBounds": false,
+      "bounds": {
+        "min": [
+          4789.333239902655,
+          4.180461018547477,
+          2247.963287921
+        ],
+        "max": [
+          4793.7332399026545,
+          8.580461018547478,
+          2252.3632879209995
+        ]
+      },
+      "kind": "feature",
+      "minDistance": 0.7,
+      "closeScale": false,
+      "fov": 61,
+      "sourceConfidence": "registered-envelope-primary-photographs-interpreted-interior"
+    },
+    "economato-cooperativa": {
+      "id": "economato-cooperativa",
+      "label": "Un edificio para la compra cotidiana",
+      "target": [
+        4816.1709403071245,
+        7.680461018547477,
+        2228.857098238665
+      ],
+      "localTarget": [
+        1.2613489348747167,
+        1.9780092046792677,
+        -10.578473761359293
+      ],
+      "coordinates": [
+        -0.22178597762030614,
+        39.65897792761194
+      ],
+      "elevation": 1.9780092046792677,
+      "offset": [
+        1.9006973912422203,
+        0.2,
+        3.903504761995945
+      ],
+      "closeOffset": [
+        1.2884382767268279,
+        0.2,
+        2.8618048163816487
+      ],
+      "regionId": "memoria",
+      "readingLayer": "memoria",
+      "period": "memoria",
+      "components": [
+        "economato-mostradores",
+        "economato-generos",
+        "economato-estanterias"
+      ],
+      "interiorView": true,
+      "floor": 0,
+      "buildingId": "economato-edificio",
+      "requiresSection": false,
+      "fitBounds": false,
+      "bounds": {
+        "min": [
+          4813.970940307125,
+          5.4804610185474765,
+          2226.657098238665
+        ],
+        "max": [
+          4818.370940307124,
+          9.880461018547477,
+          2231.057098238665
+        ]
+      },
+      "kind": "feature",
+      "minDistance": 0.3,
+      "closeScale": false,
+      "fov": 67,
+      "sourceConfidence": "registered-envelope-primary-photographs-interpreted-interior"
+    },
+    "economato-seccion": {
+      "id": "economato-seccion",
+      "label": "Dos plantas y una lectura por capas",
+      "target": [
+        4817.2881562200955,
+        10.880461018547475,
+        2235.2658288933117
+      ],
+      "localTarget": [
+        2.3785648478458343,
+        5.178009204679267,
+        -4.169743106712922
+      ],
+      "coordinates": [
+        -0.22177293755152264,
+        39.6589203572683
+      ],
+      "elevation": 5.178009204679267,
+      "offset": [
+        39.25253787892816,
+        38,
+        -5.407242371422811
+      ],
+      "closeOffset": [
+        29.500121665335854,
+        29,
+        -3.7071311995102416
+      ],
+      "regionId": "construccion",
+      "readingLayer": "construccion",
+      "period": "construccion",
+      "components": [],
+      "interiorView": false,
+      "floor": 1,
+      "buildingId": "economato-edificio",
+      "requiresSection": true,
+      "fitBounds": false,
+      "bounds": {
+        "min": [
+          4815.088156220096,
+          8.680461018547476,
+          2233.065828893312
+        ],
+        "max": [
+          4819.488156220095,
+          13.080461018547474,
+          2237.4658288933115
+        ]
+      },
+      "kind": "feature",
+      "minDistance": 0.7,
+      "closeScale": false,
+      "fov": 54,
+      "sourceConfidence": "registered-envelope-primary-photographs-interpreted-interior"
+    },
+    "economato-acceso": {
+      "id": "economato-acceso",
+      "label": "La avenida ante los dos pórticos",
+      "coordinate": [
+        -0.221679473,
+        39.659007047
+      ],
+      "coordinates": [
+        -0.221679473,
+        39.659007047
+      ],
+      "target": [
+        4825.295789154665,
+        6.2,
+        2225.615527959905
+      ],
+      "offset": [
+        18.18777840772782,
+        25.8,
+        -39.77693699358224
+      ],
+      "closeOffset": [
+        4.869572956822594,
+        19.3,
+        -17.357628271690373
+      ],
+      "bounds": {
+        "min": [
+          4760.295789154665,
+          4.702451813868209,
+          2160.615527959905
+        ],
+        "max": [
+          4890.295789154665,
+          40.70245181386821,
+          2290.615527959905
+        ]
+      },
+      "components": [
+        "economato-acceso"
+      ],
+      "elevation": 0.49754818613179097,
+      "localTarget": [
+        0.547500302420997,
+        0.49754818613179097,
+        -17.279090400398218
+      ],
+      "floor": null,
+      "regionId": "entorno",
+      "readingLayer": "entorno",
+      "kind": "context",
+      "fitBounds": false,
+      "fov": 54,
+      "minDistance": 5,
+      "sourceConfidence": "Mapped PNOA and cadastral setting, interpreted heights and furniture; not a current condition survey."
+    },
+    "economato-entorno": {
+      "id": "economato-entorno",
+      "label": "Un frente compartido con la Gerencia",
+      "coordinate": [
+        -0.22158474,
+        39.659032653
+      ],
+      "coordinates": [
+        -0.22158474,
+        39.659032653
+      ],
+      "target": [
+        4833.412097192655,
+        7,
+        2222.7650680405586
+      ],
+      "offset": [
+        -62.157592649938124,
+        53,
+        -10.69736771193675
+      ],
+      "closeOffset": [
+        -45.61800204864085,
+        38,
+        -6.402959400947566
+      ],
+      "bounds": {
+        "min": [
+          4733.412097192655,
+          4.702451813868209,
+          2122.7650680405586
+        ],
+        "max": [
+          4933.412097192655,
+          40.70245181386821,
+          2322.7650680405586
+        ]
+      },
+      "components": [
+        "economato-entorno"
+      ],
+      "elevation": 1.2975481861317908,
+      "localTarget": [
+        5.547462252036373,
+        1.2975481861317908,
+        -24.279087430522118
+      ],
+      "floor": null,
+      "regionId": "entorno",
+      "readingLayer": "entorno",
+      "kind": "context",
+      "fitBounds": false,
+      "fov": 51,
+      "minDistance": 5,
+      "sourceConfidence": "Mapped PNOA and cadastral setting, interpreted heights and furniture; not a current condition survey."
+    },
+    "economato-arbolado": {
+      "id": "economato-arbolado",
+      "label": "La vegetación junto a la cooperativa",
+      "coordinate": [
+        -0.221921152,
+        39.6587425
+      ],
+      "coordinates": [
+        -0.221921152,
+        39.6587425
+      ],
+      "target": [
+        4804.589792191476,
+        7.6,
+        2255.064899999955
+      ],
+      "offset": [
+        -44.85072990942808,
+        37.4,
+        18.585263694430523
+      ],
+      "closeOffset": [
+        -24.016730997142076,
+        17.4,
+        6.340081404122884
+      ],
+      "bounds": {
+        "min": [
+          4714.589792191476,
+          4.702451813868209,
+          2165.064899999955
+        ],
+        "max": [
+          4894.589792191476,
+          40.70245181386821,
+          2345.064899999955
+        ]
+      },
+      "components": [
+        "economato-arbolado"
+      ],
+      "elevation": 1.8975481861317904,
+      "localTarget": [
+        0.547452422941678,
+        1.8975481861317904,
+        18.720962707764873
+      ],
+      "floor": null,
+      "regionId": "entorno",
+      "readingLayer": "entorno",
+      "kind": "context",
+      "fitBounds": false,
+      "fov": 54,
+      "minDistance": 5,
+      "sourceConfidence": "Mapped PNOA and cadastral setting, interpreted heights and furniture; not a current condition survey."
+    },
+    "economato-frente-urbano": {
+      "id": "economato-frente-urbano",
+      "label": "La escala cotidiana del entorno",
+      "coordinate": [
+        -0.221430335,
+        39.659201669
+      ],
+      "coordinates": [
+        -0.221430335,
+        39.659201669
+      ],
+      "target": [
+        4846.640840530309,
+        10.993109827866554,
+        2203.9502069204514
+      ],
+      "offset": [
+        -42.08970804256296,
+        39,
+        30.30604687008463
+      ],
+      "closeOffset": [
+        -31.736744417547015,
+        19,
+        15.58136880300708
+      ],
+      "bounds": {
+        "min": [
+          4756.640840530309,
+          4.702451813868209,
+          2113.9502069204514
+        ],
+        "max": [
+          4936.640840530309,
+          40.70245181386821,
+          2293.9502069204514
+        ]
+      },
+      "components": [
+        "economato-frente-urbano"
+      ],
+      "elevation": 5.290658013998345,
+      "localTarget": [
+        5.547429701633188,
+        5.290658013998345,
+        -47.27905806662061
+      ],
+      "floor": null,
+      "regionId": "entorno",
+      "readingLayer": "entorno",
+      "kind": "context",
+      "fitBounds": false,
+      "fov": 54,
+      "minDistance": 5,
+      "sourceConfidence": "Mapped PNOA and cadastral setting, interpreted heights and furniture; not a current condition survey."
+    },
+    "economato-ciudad-factoria": {
+      "id": "economato-ciudad-factoria",
+      "label": "Abastecimiento, ocio y vida urbana",
+      "coordinate": [
+        -0.221850591,
+        39.659022775
+      ],
+      "coordinates": [
+        -0.221850591,
+        39.659022775
+      ],
+      "target": [
+        4810.635149263126,
+        9.59395692657062,
+        2223.8646870005796
+      ],
+      "offset": [
+        117.93645083021693,
+        78,
+        -23.430611719964872
+      ],
+      "closeOffset": [
+        69.17436976225599,
+        38,
+        -14.930055860401808
+      ],
+      "bounds": {
+        "min": [
+          4650.635149263126,
+          4.702451813868209,
+          2063.8646870005796
+        ],
+        "max": [
+          4970.635149263126,
+          40.70245181386821,
+          2383.8646870005796
+        ]
+      },
+      "components": [
+        "economato-ciudad-factoria"
+      ],
+      "elevation": 3.8915051127024105,
+      "localTarget": [
+        -12.452477221210051,
+        3.8915051127024105,
+        -10.279062509073093
+      ],
+      "floor": null,
+      "regionId": "memoria",
+      "readingLayer": "memoria",
+      "kind": "context",
+      "fitBounds": false,
+      "fov": 54,
+      "minDistance": 5,
+      "sourceConfidence": "Mapped PNOA and cadastral setting, interpreted heights and furniture; not a current condition survey."
+    }
+  }
+}

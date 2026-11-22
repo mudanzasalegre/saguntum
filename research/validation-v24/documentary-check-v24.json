@@ -1,0 +1,122 @@
+{
+  "generatedAt": "2026-11-20T22:07:41.987174+00:00",
+  "result": "pass",
+  "checks": [
+    {
+      "name": "20 paradas nuevas únicas",
+      "pass": true
+    },
+    {
+      "name": "18 fuentes únicas",
+      "pass": true
+    },
+    {
+      "name": "40 hechos con confianza y fuente",
+      "pass": true
+    },
+    {
+      "name": "Todas las referencias resueltas",
+      "pass": true
+    },
+    {
+      "name": "5 ámbitos cubren cada parada una sola vez",
+      "pass": true
+    },
+    {
+      "name": "10 hitos con destinos válidos",
+      "pass": true
+    },
+    {
+      "name": "Prefijo industrial independiente",
+      "pass": true
+    },
+    {
+      "name": "Sección marcada como digital",
+      "pass": true
+    },
+    {
+      "name": "Apertura oficial identificada",
+      "pass": true
+    },
+    {
+      "name": "Registro final sin textos provisionales",
+      "pass": true
+    }
+  ],
+  "counts": {
+    "stops": 20,
+    "sources": 18,
+    "facts": 40,
+    "regions": 5,
+    "timeline": 10
+  },
+  "coordinateRegistrationAtCheck": {
+    "status": "registered",
+    "note": "Focos registrados a partir de la geometría final y de la cartografía; las cotas no levantadas son interpretativas.",
+    "precision": "approximate",
+    "coordinates": "Registered from the implemented industrial model and contemporary cartography; component positions and unmeasured heights are interpretive.",
+    "provisionalCoordinates": false
+  },
+  "guideSHA256": "186a8368c4093b3315b9c3c6202ccb662541ac75eac8df41afd9dbadfb87dcf6",
+  "archaeologicalVisitPreserved": {
+    "id": "museo",
+    "title": "Casa del Mestre Penya y Museo Arqueológico"
+  },
+  "limits": [
+    "No full final exhibition layout was recovered.",
+    "Public procurement plans were not inspected after a rejected download.",
+    "Published dimensions differ from cadastral envelope and remain explicit."
+  ],
+  "finalReview": {
+    "reviewedAt": "2026-11-20T22:17:02.574274+00:00",
+    "result": "pass",
+    "historicalGuideSHA256": "186a8368c4093b3315b9c3c6202ccb662541ac75eac8df41afd9dbadfb87dcf6",
+    "currentGuideSHA256": "25dbf4940828ab7072434ac7c91232a8e648eda9e67819c0b6dd6b4290a03b61",
+    "historicalReviewGeneratedAt": "2026-11-20T22:07:41.987174+00:00",
+    "integrationGeneratedAt": "2026-11-20T22:13:31.969Z",
+    "checks": [
+      {
+        "name": "Registro final de focos sin textos provisionales",
+        "pass": true
+      },
+      {
+        "name": "Cota sur5/6m con datum no demostrado",
+        "pass": true
+      },
+      {
+        "name": "Sección declara retirada de cubierta y forjados superiores",
+        "pass": true
+      },
+      {
+        "name": "Guía actual coincide con la integración final",
+        "pass": true
+      },
+      {
+        "name": "22 entradas de integración permanecen iguales",
+        "pass": true
+      }
+    ],
+    "coordinateRegistration": {
+      "status": "registered",
+      "note": "Focos registrados a partir de la geometría final y de la cartografía; las cotas no levantadas son interpretativas.",
+      "precision": "approximate",
+      "coordinates": "Registered from the implemented industrial model and contemporary cartography; component positions and unmeasured heights are interpretive.",
+      "provisionalCoordinates": false
+    },
+    "southPlatformInterpretation": {
+      "publishedValuesMetres": [
+        5,
+        6
+      ],
+      "referenceDatum": "unknown",
+      "note": "Se preservan ambas cifras. Relacionarlas mediante el desnivel del andén es una interpretación del modelo, no una cota de referencia demostrada en las fuentes."
+    },
+    "sectionReview": {
+      "openLabel": "Abrir sección",
+      "closeLabel": "Cerrar sección",
+      "instructions": "Retira la cubierta y los forjados superiores para leer el almacén, su estructura y la vía central.",
+      "note": "La sección digital retira también las escaleras, barandillas y soportes de las plantas superiores. Conserva los pilares, las cerchas, los andenes y el nivel inferior; las visitas interiores normales mantienen sus techos.",
+      "normalInteriorViews": "Mantienen cubierta y niveles; la retirada corresponde al control de sección digital."
+    }
+  }
+}

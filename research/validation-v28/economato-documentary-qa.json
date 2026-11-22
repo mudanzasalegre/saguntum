@@ -1,0 +1,88 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "pass": true,
+      "label": "Twenty unique stops cover the agreed Economato and surroundings route"
+    },
+    {
+      "pass": true,
+      "label": "Every source has a unique ID and a public URL"
+    },
+    {
+      "pass": true,
+      "label": "All documentary and coordinate source references resolve"
+    },
+    {
+      "pass": true,
+      "label": "Every stop has source-backed facts with explicit confidence"
+    },
+    {
+      "pass": true,
+      "label": "All stops resolve to a region and material-reading layer"
+    },
+    {
+      "pass": true,
+      "label": "Regions cover all twenty stops exactly once"
+    },
+    {
+      "pass": true,
+      "label": "Each viewpoint states what to inspect and its interpretive limit"
+    },
+    {
+      "pass": true,
+      "label": "Published stop coordinates are registered from the implemented scene"
+    },
+    {
+      "pass": true,
+      "label": "Fallback map and guide share every physical focus"
+    },
+    {
+      "pass": true,
+      "label": "Guide and plan focus coordinates agree within 1e-7 degree"
+    },
+    {
+      "pass": true,
+      "label": "All stop positions stay within the Economato district"
+    },
+    {
+      "pass": true,
+      "label": "Six interior viewpoints identify their floor in the Economato"
+    },
+    {
+      "pass": true,
+      "label": "Exterior viewpoints do not select an interior map floor"
+    },
+    {
+      "pass": true,
+      "label": "Upper-floor and roof-section views select the first floor"
+    },
+    {
+      "pass": true,
+      "label": "The architectural section is documented and available"
+    },
+    {
+      "pass": true,
+      "label": "Timeline events link to a documented stop and evidence"
+    },
+    {
+      "pass": true,
+      "label": "Section, building and floor metadata agree in guide and plan"
+    },
+    {
+      "pass": true,
+      "label": "Guide distinguishes the historic reform from the rehabilitation horizon"
+    }
+  ],
+  "counts": {
+    "stops": 20,
+    "interiorViews": 6,
+    "facts": 40,
+    "sources": 17,
+    "regions": 5,
+    "timelineEvents": 10
+  },
+  "limitations": [
+    "This checks source registration and metadata consistency, not an independent architectural survey."
+  ]
+}

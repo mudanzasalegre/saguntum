@@ -1,47 +1,87 @@
-# Local secrets and environment overrides
-.env
-.env.*
-!.env.example
-*.pem
-*.key
-*.p12
-*.pfx
-*.sqlite
-*.sqlite3
-
-# Dependencies and generated outputs
 node_modules/
-.next/
-dist/
-build/
-out/
-coverage/
-.cache/
-.vite/
-.turbo/
-.parcel-cache/
-*.tsbuildinfo
-
-# Logs, temp data and local caches
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
 .DS_Store
-Thumbs.db
-*.swp
-*.tmp
-tmp/
-temp/
-
-# Large version bundles and backup artifacts: store externally or use Releases
+research/*.osm
+research/terrain_tiles/
+research/qa-*
 *.tar.gz
 *.tgz
-*.zip
-*.7z
 
-# Local debugging and generated previews
-playwright-report/
-test-results/
-.sites-checkout/
+research/*-sources/
+
+__pycache__/
+
+# Reproducible local render caches; the actual scene code and QA images are kept.
+research/validation-v14/*-geometry.json.gz
+research/validation-v14/*.log
+
+research/validation-v15/*-geometry.json.gz
+research/validation-v15/*.log
+
+research/validation-v16/*-geometry.json.gz
+research/validation-v16/*.log
+
+# Reproducible V17 geometry exports and transient render logs
+research/validation-v17/*-geometry.json.gz
+research/validation-v17/*.log
+
+# Reproducible V18 geometry exports and transient render logs
+research/validation-v18/*-geometry.json.gz
+research/validation-v18/*.log
+
+# Reproducible V19 geometry exports and transient render logs
+research/validation-v19/*-geometry.json.gz
+research/validation-v19/*.log
+
+/research/validation-v20/*-geometry.json.gz
+/research/validation-v20/*.log
+
+/research/validation-v21/*-geometry.json.gz
+/research/validation-v21/*.log
+
+/research/validation-v21/model-drafts/
+
+/research/validation-v22/*-geometry.json.gz
+/research/validation-v22/*.log
+/research/validation-v22/model-drafts/
+
+/research/validation-v23/*-geometry.json.gz
+/research/validation-v23/*.log
+/research/validation-v23/model-drafts/
+
+# Reproducible V24 museum geometry and execution caches
+research/validation-v24/*-geometry.json.gz
+research/validation-v24/*.log
+
+# Reproducible V25 Gerencia geometry and execution caches
+research/validation-v25/*-geometry.json.gz
+research/validation-v25/*.log
+
+# Regenerable V26 Casino inspection meshes and execution logs
+research/validation-v26/*-geometry.json.gz
+research/validation-v26/*.log
+
+# Regenerable V27 Begoña inspection meshes and execution logs
+research/validation-v27/*-geometry.json.gz
+research/validation-v27/*.log
+
+# V28 generated high-volume scene exports and renderer logs
+research/validation-v28/*.json.gz
+research/validation-v28/*.log
+
+# V29 reproducible CPU export intermediates
+research/validation-v29/*-geometry.json.gz
+research/validation-v29/*-render.log
+
+# V30 reproducible CPU export intermediates
+research/validation-v30/*-geometry.json.gz
+research/validation-v30/*-render.log
+
+# V31 reproducible CPU export intermediates and shader raster inputs
+research/validation-v31/*-geometry.json.gz
+research/validation-v31/*-render.log
+research/validation-v31/*.rgba
+research/validation-v31/pantalan-model-draft.jsonl
+
+# V32 reproducible Grau geometry exports and renderer logs
+research/validation-v32/*-geometry.json.gz
+research/validation-v32/*-render.log

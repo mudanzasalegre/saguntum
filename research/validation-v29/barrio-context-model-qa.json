@@ -1,0 +1,813 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "pass": true,
+      "label": "Finite, non-degenerate Float32 geometry",
+      "detail": {
+        "finite": true,
+        "collapsed": 0,
+        "triangles": 148572
+      }
+    },
+    {
+      "pass": true,
+      "label": "No new mapped building part duplicates another detailed owner"
+    },
+    {
+      "pass": true,
+      "label": "All upgraded urban buildings retain their cadastral footprints"
+    },
+    {
+      "pass": true,
+      "label": "Road axes retain source geometry; documented widths are interpreted"
+    },
+    {
+      "pass": true,
+      "label": "All five context focuses match actual guide stops"
+    },
+    {
+      "pass": true,
+      "label": "Outdoor stops use correct layers and finite registration"
+    },
+    {
+      "pass": true,
+      "label": "All photo-registered tree centres remain represented"
+    },
+    {
+      "pass": true,
+      "label": "Complete tree crowns clear buildings and entrance steps"
+    },
+    {
+      "pass": true,
+      "label": "Plan tree radius equals actual crown envelope"
+    },
+    {
+      "pass": true,
+      "label": "Actual rendered foliage vertices do not enter architecture",
+      "detail": {
+        "foliageVertices": 58320,
+        "inside": 0
+      }
+    },
+    {
+      "pass": true,
+      "label": "Context source hashes match current terrain and cartography"
+    },
+    {
+      "pass": true,
+      "label": "Ground rebind disposes replaced resources and does not accumulate meshes"
+    },
+    {
+      "pass": true,
+      "label": "All paving follows the final 5m atlas terrain mesh",
+      "detail": {
+        "samples": 8944,
+        "maximumVertexErrorM": 0.00003883039206301758,
+        "maximumInteriorErrorM": 0.00001922153619345751
+      }
+    },
+    {
+      "pass": true,
+      "label": "Terrain-bound geometry remains finite and non-degenerate",
+      "detail": {
+        "finite": true,
+        "collapsed": 0,
+        "triangles": 148574
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears ground",
+      "detail": {
+        "id": "barrio-accesos",
+        "kind": "offset"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears complete crown envelopes",
+      "detail": {
+        "id": "barrio-accesos",
+        "kind": "offset",
+        "collisions": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears ground",
+      "detail": {
+        "id": "barrio-accesos",
+        "kind": "closeOffset"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears complete crown envelopes",
+      "detail": {
+        "id": "barrio-accesos",
+        "kind": "closeOffset",
+        "collisions": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears ground",
+      "detail": {
+        "id": "barrio-calles",
+        "kind": "offset"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears complete crown envelopes",
+      "detail": {
+        "id": "barrio-calles",
+        "kind": "offset",
+        "collisions": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears ground",
+      "detail": {
+        "id": "barrio-calles",
+        "kind": "closeOffset"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears complete crown envelopes",
+      "detail": {
+        "id": "barrio-calles",
+        "kind": "closeOffset",
+        "collisions": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears ground",
+      "detail": {
+        "id": "barrio-arbolado",
+        "kind": "offset"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears complete crown envelopes",
+      "detail": {
+        "id": "barrio-arbolado",
+        "kind": "offset",
+        "collisions": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears ground",
+      "detail": {
+        "id": "barrio-arbolado",
+        "kind": "closeOffset"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears complete crown envelopes",
+      "detail": {
+        "id": "barrio-arbolado",
+        "kind": "closeOffset",
+        "collisions": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears ground",
+      "detail": {
+        "id": "barrio-frente-urbano",
+        "kind": "offset"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears complete crown envelopes",
+      "detail": {
+        "id": "barrio-frente-urbano",
+        "kind": "offset",
+        "collisions": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears ground",
+      "detail": {
+        "id": "barrio-frente-urbano",
+        "kind": "closeOffset"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears complete crown envelopes",
+      "detail": {
+        "id": "barrio-frente-urbano",
+        "kind": "closeOffset",
+        "collisions": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears ground",
+      "detail": {
+        "id": "barrio-ciudad-factoria",
+        "kind": "offset"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears complete crown envelopes",
+      "detail": {
+        "id": "barrio-ciudad-factoria",
+        "kind": "offset",
+        "collisions": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears ground",
+      "detail": {
+        "id": "barrio-ciudad-factoria",
+        "kind": "closeOffset"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears complete crown envelopes",
+      "detail": {
+        "id": "barrio-ciudad-factoria",
+        "kind": "closeOffset",
+        "collisions": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "All surfaces and objects map to a documented guide reading layer"
+    },
+    {
+      "pass": true,
+      "label": "Textured material mode restores reversibly"
+    },
+    {
+      "pass": true,
+      "label": "Context selection resolves its real tour id",
+      "detail": {
+        "id": "barrio-accesos"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Context selection resolves its real tour id",
+      "detail": {
+        "id": "barrio-calles"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Context selection resolves its real tour id",
+      "detail": {
+        "id": "barrio-arbolado"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Context selection resolves its real tour id",
+      "detail": {
+        "id": "barrio-frente-urbano"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Context selection resolves its real tour id",
+      "detail": {
+        "id": "barrio-ciudad-factoria"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Named context groups retain an inspectable hierarchy"
+    },
+    {
+      "pass": true,
+      "label": "Complete disposal is idempotent"
+    }
+  ],
+  "stats": {
+    "buildingParts": 370,
+    "cadastralParcels": 139,
+    "reusedBuildingParts": 448,
+    "privateBlocksPreserved": 7,
+    "coreCadastralPartsPreserved": 287,
+    "roads": 14,
+    "pavingAreaM2": 15608.77,
+    "pavingTriangles": 8951,
+    "trees": 27,
+    "benches": 4,
+    "lamps": 4,
+    "crossings": 9,
+    "curbLines": 53,
+    "ownershipTransfers": 0,
+    "publicBlockEnvelopeExceptions": 2,
+    "approvedPublicPocketAreaM2": 482.1,
+    "treeCrownsAdjusted": 11,
+    "treeTrunksSuppressed": 0,
+    "meshes": 18,
+    "triangles": 148574,
+    "fixedBarrioDatumM": 8.001304708128712,
+    "skippedTinyTriangles": 7
+  },
+  "trees": [
+    {
+      "id": "barrio-tree-0",
+      "coordinate": [
+        -0.225056,
+        39.6623925
+      ],
+      "baseM": 8,
+      "heightM": 7,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 13.61893120797953,
+      "sourceCrownRadiusM": 3.5,
+      "displayCrownParameterM": 3.5,
+      "maximumHorizontalRadiusM": 4.725,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "barrio-tree-1",
+      "coordinate": [
+        -0.225134,
+        39.6623295
+      ],
+      "baseM": 8,
+      "heightM": 7.65,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 12.027725317598636,
+      "sourceCrownRadiusM": 3.8,
+      "displayCrownParameterM": 3.8,
+      "maximumHorizontalRadiusM": 5.1,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "barrio-tree-2",
+      "coordinate": [
+        -0.225194,
+        39.6622515
+      ],
+      "baseM": 8,
+      "heightM": 8.3,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 12.65025133803373,
+      "sourceCrownRadiusM": 4.1,
+      "displayCrownParameterM": 4.1,
+      "maximumHorizontalRadiusM": 5.475,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "barrio-tree-3",
+      "coordinate": [
+        -0.22503,
+        39.662268
+      ],
+      "baseM": 8,
+      "heightM": 8.95,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 22.99233825771089,
+      "sourceCrownRadiusM": 3.5,
+      "displayCrownParameterM": 3.5,
+      "maximumHorizontalRadiusM": 4.725,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "barrio-tree-4",
+      "coordinate": [
+        -0.22497,
+        39.662211
+      ],
+      "baseM": 8,
+      "heightM": 7,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 19.151614558056167,
+      "sourceCrownRadiusM": 3.8,
+      "displayCrownParameterM": 3.8,
+      "maximumHorizontalRadiusM": 5.1,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "barrio-tree-5",
+      "coordinate": [
+        -0.224826,
+        39.6622695
+      ],
+      "baseM": 8,
+      "heightM": 7.65,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 12.515177235161046,
+      "sourceCrownRadiusM": 4.1,
+      "displayCrownParameterM": 4.1,
+      "maximumHorizontalRadiusM": 5.475,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "barrio-tree-6",
+      "coordinate": [
+        -0.224878,
+        39.6621795
+      ],
+      "baseM": 8,
+      "heightM": 8.3,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 10.650124854395374,
+      "sourceCrownRadiusM": 3.5,
+      "displayCrownParameterM": 3.5,
+      "maximumHorizontalRadiusM": 4.725,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "barrio-tree-7",
+      "coordinate": [
+        -0.224972,
+        39.662115
+      ],
+      "baseM": 8,
+      "heightM": 8.95,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 11.767913424319653,
+      "sourceCrownRadiusM": 3.8,
+      "displayCrownParameterM": 3.8,
+      "maximumHorizontalRadiusM": 5.1,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "barrio-tree-8",
+      "coordinate": [
+        -0.225084,
+        39.6621705
+      ],
+      "baseM": 8,
+      "heightM": 7,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 12.468696917457608,
+      "sourceCrownRadiusM": 4.1,
+      "displayCrownParameterM": 4.1,
+      "maximumHorizontalRadiusM": 5.475,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "barrio-tree-11",
+      "coordinate": [
+        -0.226442,
+        39.6617235
+      ],
+      "baseM": 8.663124395131247,
+      "heightM": 5.3,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 2.5481203458608452,
+      "sourceCrownRadiusM": 1.8599999999999999,
+      "displayCrownParameterM": 1.398496276688676,
+      "maximumHorizontalRadiusM": 2.098120345860845,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "barrio-tree-12",
+      "coordinate": [
+        -0.226366,
+        39.6616845
+      ],
+      "baseM": 8.146794404004673,
+      "heightM": 4.6,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 2.405231479286782,
+      "sourceCrownRadiusM": 1.5,
+      "displayCrownParameterM": 1.2841851834294258,
+      "maximumHorizontalRadiusM": 1.9552314792867822,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "barrio-tree-13",
+      "coordinate": [
+        -0.226262,
+        39.661635
+      ],
+      "baseM": 8,
+      "heightM": 4.949999999999999,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 1.8686034659075559,
+      "sourceCrownRadiusM": 1.68,
+      "displayCrownParameterM": 0.8548827727260448,
+      "maximumHorizontalRadiusM": 1.4186034659075561,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "barrio-tree-14",
+      "coordinate": [
+        -0.226164,
+        39.661584
+      ],
+      "baseM": 8,
+      "heightM": 5.3,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 1.7339960850458267,
+      "sourceCrownRadiusM": 1.8599999999999999,
+      "displayCrownParameterM": 0.7471968680366614,
+      "maximumHorizontalRadiusM": 1.2839960850458267,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "barrio-tree-15",
+      "coordinate": [
+        -0.22604,
+        39.661515
+      ],
+      "baseM": 8,
+      "heightM": 4.6,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 2.0136271666213355,
+      "sourceCrownRadiusM": 1.5,
+      "displayCrownParameterM": 0.9709017332970685,
+      "maximumHorizontalRadiusM": 1.5636271666213357,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "barrio-tree-16",
+      "coordinate": [
+        -0.225752,
+        39.6613425
+      ],
+      "baseM": 8,
+      "heightM": 4.949999999999999,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 3.842218627014919,
+      "sourceCrownRadiusM": 1.68,
+      "displayCrownParameterM": 1.68,
+      "maximumHorizontalRadiusM": 2.45,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "barrio-tree-17",
+      "coordinate": [
+        -0.22565,
+        39.6612945
+      ],
+      "baseM": 8,
+      "heightM": 5.3,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 3.2712946146841535,
+      "sourceCrownRadiusM": 1.8599999999999999,
+      "displayCrownParameterM": 1.8599999999999999,
+      "maximumHorizontalRadiusM": 2.675,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "barrio-tree-18",
+      "coordinate": [
+        -0.225554,
+        39.661245
+      ],
+      "baseM": 8,
+      "heightM": 4.6,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 3.109758553100787,
+      "sourceCrownRadiusM": 1.5,
+      "displayCrownParameterM": 1.5,
+      "maximumHorizontalRadiusM": 2.225,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "barrio-tree-19",
+      "coordinate": [
+        -0.225456,
+        39.661194
+      ],
+      "baseM": 8,
+      "heightM": 4.949999999999999,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 2.9944241800016838,
+      "sourceCrownRadiusM": 1.68,
+      "displayCrownParameterM": 1.68,
+      "maximumHorizontalRadiusM": 2.45,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "barrio-tree-20",
+      "coordinate": [
+        -0.225364,
+        39.661152
+      ],
+      "baseM": 8,
+      "heightM": 5.3,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 2.360343191445194,
+      "sourceCrownRadiusM": 1.8599999999999999,
+      "displayCrownParameterM": 1.2482745531561554,
+      "maximumHorizontalRadiusM": 1.9103431914451945,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "barrio-tree-21",
+      "coordinate": [
+        -0.225256,
+        39.6610995
+      ],
+      "baseM": 8,
+      "heightM": 4.6,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 1.8962115580516135,
+      "sourceCrownRadiusM": 1.5,
+      "displayCrownParameterM": 0.8769692464412909,
+      "maximumHorizontalRadiusM": 1.4462115580516137,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "barrio-tree-22",
+      "coordinate": [
+        -0.225156,
+        39.6610455
+      ],
+      "baseM": 8,
+      "heightM": 4.949999999999999,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 1.984786314191969,
+      "sourceCrownRadiusM": 1.68,
+      "displayCrownParameterM": 0.9478290513535754,
+      "maximumHorizontalRadiusM": 1.5347863141919693,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "barrio-tree-25",
+      "coordinate": [
+        -0.224792,
+        39.660852
+      ],
+      "baseM": 7.325889674010371,
+      "heightM": 4.949999999999999,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 1.7777296057578886,
+      "sourceCrownRadiusM": 1.68,
+      "displayCrownParameterM": 0.7821836846063109,
+      "maximumHorizontalRadiusM": 1.3277296057578887,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "barrio-tree-27",
+      "coordinate": [
+        -0.224624,
+        39.6607605
+      ],
+      "baseM": 7,
+      "heightM": 4.6,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 1.9357873107582457,
+      "sourceCrownRadiusM": 1.5,
+      "displayCrownParameterM": 0.9086298486065967,
+      "maximumHorizontalRadiusM": 1.485787310758246,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "barrio-tree-30",
+      "coordinate": [
+        -0.225614,
+        39.66243
+      ],
+      "baseM": 8.03220166393881,
+      "heightM": 4.6,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 1.425594847825561,
+      "sourceCrownRadiusM": 1.5,
+      "displayCrownParameterM": 0.5004758782604488,
+      "maximumHorizontalRadiusM": 0.975594847825561,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "barrio-tree-35",
+      "coordinate": [
+        -0.225524,
+        39.6618345
+      ],
+      "baseM": 8,
+      "heightM": 5.3,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 3.343363791179482,
+      "sourceCrownRadiusM": 1.8599999999999999,
+      "displayCrownParameterM": 1.8599999999999999,
+      "maximumHorizontalRadiusM": 2.675,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "barrio-tree-36",
+      "coordinate": [
+        -0.225366,
+        39.661764
+      ],
+      "baseM": 8,
+      "heightM": 4.6,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 7.342533987764317,
+      "sourceCrownRadiusM": 1.5,
+      "displayCrownParameterM": 1.5,
+      "maximumHorizontalRadiusM": 2.225,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "barrio-tree-40",
+      "coordinate": [
+        -0.225106,
+        39.661296
+      ],
+      "baseM": 8,
+      "heightM": 4.949999999999999,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 4.042461297343785,
+      "sourceCrownRadiusM": 1.68,
+      "displayCrownParameterM": 1.68,
+      "maximumHorizontalRadiusM": 2.45,
+      "requiredFacadeGapM": 0.45
+    }
+  ]
+}

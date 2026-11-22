@@ -1,0 +1,340 @@
+{
+  "pass": true,
+  "baselineCommit": "ec5f6599e3a52d791580743c75e5242db6a8b0e9",
+  "preservedAssets": 243,
+  "unchangedDataFiles": 122,
+  "allowedIntegrationFiles": {
+    "dist/js/app.js": "Grau Vell guided visit, camera and section integration.",
+    "dist/js/coast.js": "Grau Vell model and local context integration.",
+    "dist/js/coast-grau.js": "Requested fortín architecture and retained surrounding buildings.",
+    "dist/index.html": "Grau Vell panel inside the existing complete atlas.",
+    "dist/style.css": "Grau Vell map and guide selectors.",
+    "dist/assets/data/coast-grau.json": "Grau Vell evidence or explanatory metadata, if updated."
+  },
+  "changedAllowedFiles": [
+    "dist/index.html",
+    "dist/js/app.js",
+    "dist/js/coast-grau.js",
+    "dist/js/coast.js",
+    "dist/style.css"
+  ],
+  "atlasPlaceIds": [
+    "barrio-obrero",
+    "begona",
+    "berenguer",
+    "calvario",
+    "casino",
+    "castle",
+    "circo",
+    "diana",
+    "domus",
+    "dunas-almarda",
+    "economato",
+    "gerencia",
+    "grau-vell",
+    "horno",
+    "juderia",
+    "marjal-moros",
+    "museo",
+    "museo-industrial",
+    "necropolis",
+    "pantalan-maritimo",
+    "pantalan-paseo",
+    "plaza-mayor",
+    "portic",
+    "puerto-antiguo",
+    "rio-palancia",
+    "salvador",
+    "sanatorio",
+    "sangre",
+    "santa-maria",
+    "talleres",
+    "theatre"
+  ],
+  "guidedVisitIds": [
+    "castle",
+    "theatre",
+    "santa-maria",
+    "plaza-mayor",
+    "juderia",
+    "calvario",
+    "berenguer",
+    "diana",
+    "sangre",
+    "salvador",
+    "museo",
+    "portic",
+    "domus",
+    "circo",
+    "necropolis",
+    "horno",
+    "talleres",
+    "museo-industrial",
+    "gerencia",
+    "casino",
+    "begona",
+    "economato",
+    "barrio-obrero",
+    "sanatorio",
+    "pantalan-paseo",
+    "pantalan-maritimo",
+    "grau-vell"
+  ],
+  "waterHashes": {
+    "dist/assets/data/almarda-water.json": {
+      "baseline": "c5e022b1390adf47447d63b9d5e3d673198e9f35459c0d0e1047424577186c0c",
+      "current": "c5e022b1390adf47447d63b9d5e3d673198e9f35459c0d0e1047424577186c0c",
+      "unchanged": true
+    },
+    "dist/assets/data/coast-water.json": {
+      "baseline": "4ca8b24ec5593580a63d68323a30cfaa3426c60105d8ea42cbbc16b20834d088",
+      "current": "4ca8b24ec5593580a63d68323a30cfaa3426c60105d8ea42cbbc16b20834d088",
+      "unchanged": true
+    },
+    "dist/assets/data/marjal-water.json": {
+      "baseline": "1dd0d832ca3c6b23f84bcdb0cdf047c2ed6b57456f79f8521a46234861bacb90",
+      "current": "1dd0d832ca3c6b23f84bcdb0cdf047c2ed6b57456f79f8521a46234861bacb90",
+      "unchanged": true
+    },
+    "dist/assets/data/palancia-water.json": {
+      "baseline": "0c5f1feb1d0ad2a22c282c0f6fea71a3dedf8c1a056dd0cc717520f4e437cc6d",
+      "current": "0c5f1feb1d0ad2a22c282c0f6fea71a3dedf8c1a056dd0cc717520f4e437cc6d",
+      "unchanged": true
+    },
+    "dist/js/coast-environment.js": {
+      "baseline": "1c39bfdbe7f8da13484d48ebfdbfe02d4329ced24dabd272434b99b05592b16b",
+      "current": "1c39bfdbe7f8da13484d48ebfdbfe02d4329ced24dabd272434b99b05592b16b",
+      "unchanged": true
+    },
+    "dist/js/coast-water.js": {
+      "baseline": "83cf18eb0feb536c444502c075d7aa43537900bd2cb3f1547265fd98d60b7019",
+      "current": "83cf18eb0feb536c444502c075d7aa43537900bd2cb3f1547265fd98d60b7019",
+      "unchanged": true
+    }
+  },
+  "pantalanHashes": {
+    "dist/assets/data/coast-pier.json": {
+      "baseline": "fcde3f23af190cbf5181f8a58ab6abe76c3121c9a24fc3024bf28dbe96580987",
+      "current": "fcde3f23af190cbf5181f8a58ab6abe76c3121c9a24fc3024bf28dbe96580987",
+      "unchanged": true
+    },
+    "dist/assets/data/pantalan-context.json": {
+      "baseline": "43f2d5a523465da2fe1ad7f430be17116333263e50e2111e4f73e86191d7acd4",
+      "current": "43f2d5a523465da2fe1ad7f430be17116333263e50e2111e4f73e86191d7acd4",
+      "unchanged": true
+    },
+    "dist/assets/data/pantalan-maritimo-plan.json": {
+      "baseline": "d054c37b5292275654beba38df76990ffb4092c7ec82d9aba93b4c5492c2cfb2",
+      "current": "d054c37b5292275654beba38df76990ffb4092c7ec82d9aba93b4c5492c2cfb2",
+      "unchanged": true
+    },
+    "dist/assets/data/pantalan-maritimo-visit.json": {
+      "baseline": "dc77b343063ca1e3c1fb372776422f12f0742a58aa2353e59aade1e9292fe07c",
+      "current": "dc77b343063ca1e3c1fb372776422f12f0742a58aa2353e59aade1e9292fe07c",
+      "unchanged": true
+    },
+    "dist/assets/data/pantalan-paseo-plan.json": {
+      "baseline": "e4babf82ea0e972d3c2d2d24797f05c23e5a7cd72338901aa758c52eb367f13b",
+      "current": "e4babf82ea0e972d3c2d2d24797f05c23e5a7cd72338901aa758c52eb367f13b",
+      "unchanged": true
+    },
+    "dist/assets/data/pantalan-paseo-visit.json": {
+      "baseline": "304f579bd9a8820cd515bc8cad73f94e336c1c158b402db3dd39dd0607922ae4",
+      "current": "304f579bd9a8820cd515bc8cad73f94e336c1c158b402db3dd39dd0607922ae4",
+      "unchanged": true
+    },
+    "dist/js/coast-pier.js": {
+      "baseline": "53981e3dfec586e51e1e53467e323fd62a09d932446e5c7d7669fee856c3c62f",
+      "current": "53981e3dfec586e51e1e53467e323fd62a09d932446e5c7d7669fee856c3c62f",
+      "unchanged": true
+    },
+    "dist/js/pantalan-context.js": {
+      "baseline": "a028dd2830d0fc376bf1fd56d87e4d78a66b7b553d9b8e51007f2ae4384a8a96",
+      "current": "a028dd2830d0fc376bf1fd56d87e4d78a66b7b553d9b8e51007f2ae4384a8a96",
+      "unchanged": true
+    },
+    "dist/js/pantalan-map.js": {
+      "baseline": "023b6e9fe5192e8e838db2914b83f3d49056760435fb6793fc4d30f93395c9d0",
+      "current": "023b6e9fe5192e8e838db2914b83f3d49056760435fb6793fc4d30f93395c9d0",
+      "unchanged": true
+    }
+  },
+  "checks": [
+    {
+      "pass": true,
+      "label": "All V31 distribution assets outside the six declared Grau Vell integrations remain byte-identical"
+    },
+    {
+      "pass": true,
+      "label": "All existing water data, geometry, shaders and coastal environment files are unchanged"
+    },
+    {
+      "pass": true,
+      "label": "All Pantalán model, context, maps, guides and data files are unchanged"
+    },
+    {
+      "pass": true,
+      "label": "Existing Grau Vell place identity and order remain intact"
+    },
+    {
+      "pass": true,
+      "label": "grau-vell retains its mapped anchor, footprints and existing spatial provenance"
+    },
+    {
+      "pass": true,
+      "label": "Initial data requests grow from89 in V31 to92 in V32"
+    },
+    {
+      "pass": true,
+      "label": "The89 existing request slots remain unchanged; three Grau Vell datasets are appended"
+    },
+    {
+      "pass": true,
+      "label": "Detailed visits grow from26 to27"
+    },
+    {
+      "pass": true,
+      "label": "All previous detailed visit IDs and their order remain intact"
+    },
+    {
+      "pass": true,
+      "label": "The original historic-centre catalog is byte-identical"
+    },
+    {
+      "pass": true,
+      "label": "All31 existing atlas place IDs are preserved"
+    },
+    {
+      "pass": true,
+      "label": "Every pre-existing HTML ID is retained"
+    },
+    {
+      "pass": true,
+      "label": "The complete-atlas title remains intact"
+    },
+    {
+      "pass": true,
+      "label": "SAGUNTUM branding and general home remain intact"
+    },
+    {
+      "pass": true,
+      "label": "The welcome screen retains the full atlas count"
+    },
+    {
+      "pass": true,
+      "label": "Empty and #atlas routes resolve to the complete atlas"
+    },
+    {
+      "pass": true,
+      "label": "castle guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "theatre guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mayor guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "juderia guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "calvario guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "berenguer guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "diana guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "sangre guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "salvador guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "museo guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "portic guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "domus guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "circo guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "necropolis guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "horno guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "talleres guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "museo-industrial guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "gerencia guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "casino guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "begona guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "economato guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "barrio-obrero guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "sanatorio guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "pantalan-paseo guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "pantalan-maritimo guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "Every pre-existing JSON dataset outside Grau Vell remains byte-identical"
+    }
+  ],
+  "failures": [],
+  "limitations": [
+    "Source and registry preservation are tested here; controller interaction tests cover shared routing. No browser, GPU or visual equivalence claim is made by this report."
+  ]
+}

@@ -1,0 +1,153 @@
+{
+  "guide": "dist/assets/data/gerencia-visit.json",
+  "researchDate": "2026-11-21",
+  "stops": 20,
+  "facts": 40,
+  "regions": 5,
+  "sources": 17,
+  "timelineEvents": 10,
+  "interiorViews": 3,
+  "sourceLinksResolved": true,
+  "regionCoverageComplete": true,
+  "registration": "registered",
+  "notes": [
+    "Coordinates registered by root against final geometry.",
+    "21 versus 22 dwellings remains explicit.",
+    "No claim of complete rehabilitation or general interior public access.",
+    "Three office interior views; residential divisions only typological.",
+    "Generator section text matches final guide; generator was not executed.",
+    "The original static-assets count failure is resolved: only the expected count and label changed from 66 to 69; the subsequent static validation passed all 497 checks. Both runs are retained as history.",
+    "Final guide and plan hashes refreshed after root froze geometry and regenerated model registration; all 40 fact records remain unchanged."
+  ],
+  "documentaryChecks": [
+    {
+      "label": "20 unique stops and original order retained",
+      "pass": true
+    },
+    {
+      "label": "40 source-backed facts",
+      "pass": true
+    },
+    {
+      "label": "All 40 documentary facts retained unchanged",
+      "pass": true
+    },
+    {
+      "label": "Five regions cover stops exactly once",
+      "pass": true
+    },
+    {
+      "label": "17 source records with URLs",
+      "pass": true
+    },
+    {
+      "label": "All stop, coordinate and region references resolve",
+      "pass": true
+    },
+    {
+      "label": "10 timeline links resolve",
+      "pass": true
+    },
+    {
+      "label": "Only three office interior views",
+      "pass": true
+    },
+    {
+      "label": "Section is interpretive and opened from overview",
+      "pass": true
+    },
+    {
+      "label": "Final coordinates registered",
+      "pass": true
+    },
+    {
+      "label": "Coordinates and targets finite",
+      "pass": true
+    },
+    {
+      "label": "21/22 discrepancy preserved",
+      "pass": true
+    },
+    {
+      "label": "Phase status and physical access limits retained",
+      "pass": true
+    },
+    {
+      "label": "Generator top-level section strings match final",
+      "pass": true
+    },
+    {
+      "label": "Generator section intro and note match final",
+      "pass": true
+    },
+    {
+      "label": "No distribution mutation during documentary QA",
+      "pass": true
+    }
+  ],
+  "documentaryPass": true,
+  "completedAtUTC": "2026-11-20T23:37:33.547152+00:00",
+  "sourceLinksScope": "Internal source IDs, not a new HTTP reachability audit",
+  "provisionalGuideSha256": "cf5b3f3c85e3e1b100cecd6aa0f2ba9e6cea7617e446561a1d7132746d199e52",
+  "provisionalHashMethod": "Reconstructed from literal source data in the original generator using AST extraction; generator was not executed. This is a reconstruction, not an independently recorded earlier file hash.",
+  "provisionalSnapshot": "research/validation-v25/gerencia-visit-provisional.json",
+  "finalGuideSha256": "f5d2df0f26f588253fba73e236d0eaac8a86ac50b0409b69fe00479c6c509b7c",
+  "finalPlanSha256": "ce41f042b0fd47e0f08f5eb4e75fdb0ac90f1b1c31ef3ed46c31b9234e629007",
+  "generatorSha256": "08d92f152fab28aa17bf2f775ee6b25927acd25483718a6621cfbc11ed95471d",
+  "generatorSectionUpdated": true,
+  "generatorExecuted": false,
+  "distributionMutatedByResearchAgent": false,
+  "validationRuns": [
+    {
+      "command": "node research/validation-v25/validate_visit_controllers.mjs",
+      "exitCode": 0,
+      "pass_": true,
+      "checks": 48,
+      "visits": 19,
+      "failures": []
+    },
+    {
+      "command": "python research/validation-v25/validate_static_assets.py",
+      "exitCode": 1,
+      "pass_": false,
+      "checks": 497,
+      "failures": [
+        "Stale expected count: 66 initial data requests versus actual 69 after adding gerencia-visit, gerencia-plan and gerencia-context."
+      ]
+    },
+    {
+      "command": "python research/validation-v25/validate_static_assets.py",
+      "exitCode": 0,
+      "pass": true,
+      "checks": 497,
+      "failures": [],
+      "counts": {
+        "distributionFiles": 211,
+        "javascriptFiles": 91,
+        "localImports": 179,
+        "jsonFiles": 103,
+        "initialRequests": 69,
+        "deferredRequests": 16,
+        "htmlIds": 128,
+        "localHTMLAndCSSAssets": 7,
+        "gerenciaStops": 20,
+        "gerenciaSources": 17
+      },
+      "report": "research/validation-v25/static-assets-qa.json",
+      "reportSha256": "5d0d015139938f9555185ff43fdda69ade4f11238e31c3fef69e26670c0985a2",
+      "recordedReportModifiedAtUTC": "2026-11-20T23:35:35.584959+00:00",
+      "note": "Successful run after correcting only expected initial request count 66 to 69. Original failed run retained above as history; test not rerun in this documentary refresh."
+    }
+  ],
+  "registeredHashHistory": [
+    {
+      "guideSha256": "f5d2df0f26f588253fba73e236d0eaac8a86ac50b0409b69fe00479c6c509b7c",
+      "planSha256": "bfe0c515e0e1448b559c665646b5797543eaa4c97783356bd578d3423be2d8c4",
+      "recordedAtUTC": "2026-11-20T23:27:50.393861+00:00",
+      "stage": "registered-before-final-camera-adjustments"
+    }
+  ],
+  "geometryFrozen": true,
+  "finalFactStringsUnchanged": 40,
+  "controllerAndStaticRerunDuringThisReview": false
+}

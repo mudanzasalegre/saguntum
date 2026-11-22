@@ -1,0 +1,29 @@
+{
+  "generatedAt": "2026-11-20T12:08:47.910684+00:00",
+  "result": "passed-with-webgl-limitation",
+  "browser": "Cloud Chrome",
+  "previewURL": "http://127.0.0.1:4173/#portic",
+  "viewport": {
+    "width": 1363,
+    "height": 936
+  },
+  "webgl": false,
+  "observed": [
+    "The root opens SAGUNTUM · Sagunto y Puerto de Sagunto with 31 places and 6 regions.",
+    "The places catalogue retains its 31 entries and opens Vía del Pòrtic under #portic.",
+    "The Pòrtic notebook exposes twenty stops, six groups, route, chronology, sources and related visits.",
+    "The plan dialog exposes all twenty numbered stops and selects the cloaca with the deep link #portic/portic-cloaca.",
+    "The selected cloaca map identifies Espacio arqueológico and sixteen basement stops.",
+    "The chronology tab displays the eighteen dated events and source controls.",
+    "The sources tab displays nineteen attributed source links and methodology.",
+    "The ARSE 2005 source dialog displays author, year, page references and the original source link.",
+    "Returning to the whole site restores the full twenty-stop map.",
+    "Without WebGL, 3D mode controls are disabled and the documentation/map remain usable."
+  ],
+  "screenshot": "portic-interfaz-2d.jpg",
+  "limitations": [
+    "No live GPU rendering, free camera navigation or GPU performance measurement was possible in this browser.",
+    "The 3D geometry, camera positions and mode controls were validated separately using the production model and Three.js.",
+    "Rendered PNGs use exported model geometry in Blender CPU; lighting and antialiasing differ from the live WebGL renderer."
+  ]
+}

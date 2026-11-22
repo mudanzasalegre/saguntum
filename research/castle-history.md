@@ -1,0 +1,254 @@
+# Castillo de Sagunto — documentación de la visita V7
+
+Fecha de revisión: 19 de noviembre de 2026. Alcance: exclusivamente el castillo, sus siete recintos y los elementos internos necesarios para comprenderlo. Datos de publicación: `dist/assets/data/castle-visit.json`.
+
+La visita contiene **18 paradas, 72 hechos con referencias, 14 hitos y 24 fuentes**. Se ha construido como una lectura de restos y documentos, no como la restitución íntegra de una única fase. El nombre editorial es «Castillo de Sagunto», sin atribuir carácter romano a toda la fortificación.
+
+## Criterio histórico y espacial
+
+La evidencia se separa en cuatro niveles:
+
+| Nivel | Uso en la aplicación |
+|---|---|
+| Documentado | Afirmación explícita de una excavación, inventario, estudio o institución identificada. |
+| Interpretación | Propuesta atribuida a sus investigadores, que puede cambiar con nuevos datos. |
+| No demostrado | Identificación que no debe convertirse en una certeza visual. |
+| Cartográfico | Punto o traza de navegación; no demuestra edad, altura ni función del edificio. |
+
+Una fuente oficial sirve para su ámbito de competencia, pero no elimina la necesidad de crítica. Los planos técnicos fijan relaciones espaciales; los excavadores fundamentan la interpretación arqueológica; los archivos describen actuaciones históricas; las noticias institucionales permiten distinguir obras terminadas de planes anunciados.
+
+### Decisiones que afectan al contenido
+
+- **Fecha del asedio de Aníbal:** se emplea 219 a. C.; 218 corresponde al inicio de la segunda guerra púnica. La discusión cronológica aparece en Pérez Vilatela, 2013 [cronologia-2013].
+- **Orientación del foro:** curia al noreste y basílica al oeste. La planta del Plan Director, hoja 80, coincide en esto con la síntesis de Aranegui de 2004. Se descarta una orientación meridional de la curia aparecida en una guía divulgativa [aranegui-2004; plan-director-2000].
+- **Templo republicano:** se distinguen los restos excavados y el alzado propuesto. La dedicación a una divinidad concreta no se da por demostrada [templo-aranegui-1991].
+- **Dos cisternas diferentes:** la gran estructura meridional del foro y el depósito excavado en 1983 en su límite septentrional tienen fichas separadas. Las medidas interiores publicadas no convierten la cubierta en una columnata exterior [civera-cisternas-2007; cisterna-norte-1984].
+- **Inscripción del foro:** el foco indica contexto, no la posición original exacta de cada bloque. La revisión de los manuscritos de Conyngham corresponde a una investigación de 2017 [cebrian-conyngham-2017].
+- **Nombres y fases:** los topónimos actuales son referencias para orientarse. Ni San Fernando ni Ciudadela, por ejemplo, equivalen a una fase arqueológica completa. El repertorio de nombres históricos puede variar entre autores.
+- **Estado reciente:** se distinguen la consolidación de 2023–2025 y el nuevo Plan Director anunciado en febrero de 2026. No se presenta este último como trabajo terminado [ayto-2026].
+
+- **Puerta de Almenara:** la fotografía de obra de SERANCO, p. 43, confirma el arco apuntado y los dos óculos trilobulados. Este contraste fundamenta la forma visible del modelo, no una medición exacta ni la atribución cronológica de todos sus paramentos [seranco-2019].
+
+### Documentación cartográfica prioritaria
+
+1. **Plan Director de 2000:** planta del foro en hoja 80; anatomía de recintos en hojas 110–112; serie de planos del estado existente tras el índice de la página 143. Los documentos posteriores del mismo PDF contienen propuestas, que no deben confundirse con obra ejecutada [plan-director-2000].
+2. **FORTMED 2020:** figura 3, ortofoto general y siete recintos; figuras 7–9, documentación de lienzos; figura 10, Puerta de Almenara. El trabajo de campo es de 2019. Esta consulta no supone haber obtenido ni incorporado su nube de puntos [fortmed-2020].
+3. **Archivo Municipal:** planos militares originales de 1810–1813. El plano del sitio catalogado por Defensa se publicó después del episodio que representa [archivo-obras-xix; defensa-plano-1811].
+4. **OSM del proyecto:** se conserva como base de plantas y focos. Las alturas aproximadas o procedentes de otras capas deben conservar su procedencia independiente.
+
+## Coordenadas y contrato de navegación
+
+Las coordenadas se expresan como longitud/latitud WGS84. Los puntos OSM son referencias nominales, no centroides arqueológicos calculados. Los focos de edificios derivan de su comparación con la cartografía del proyecto y la planta publicada. El número de decimales permite interoperar con el modelo, pero no implica precisión de levantamiento.
+
+`coordinate` y `coordinates` son alias deliberados. Los identificadores de parada son estables para el recorrido y las URL. `period` describe el tema histórico de la ficha, no fecha automáticamente toda la geometría que aparece dentro del encuadre.
+
+| ID | Parada | Longitud, latitud | Referencia espacial |
+|---|---|---|---|
+| `conjunto` | Una fortaleza, muchas épocas | -0.2786000, 39.6761500 | Foco aproximado; ver coordinateMethod |
+| `acceso` | El umbral y el Museo Militar | -0.2772150, 39.6759650 | Foco aproximado; ver coordinateMethod |
+| `foro` | El foro y sus terrazas | -0.2765800, 39.6760000 | Foco aproximado; ver coordinateMethod |
+| `templo` | El templo republicano | -0.2767000, 39.6763700 | Foco aproximado; ver coordinateMethod |
+| `curia` | La curia: gobierno municipal | -0.2764300, 39.6763600 | way/733215272, way/733215273 |
+| `basilica` | La basílica y sus subestructuras | -0.2769500, 39.6759400 | Foco aproximado; ver coordinateMethod |
+| `cisterna-foro` | Bajo el foro: la gran cisterna | -0.2766000, 39.6756100 | Foco aproximado; ver coordinateMethod |
+| `cisterna-norte` | La cisterna del flanco norte | -0.2767000, 39.6764300 | Foco aproximado; ver coordinateMethod |
+| `inscripcion` | Un nombre escrito en el foro | -0.2765600, 39.6760100 | Foco aproximado; ver coordinateMethod |
+| `puerta-almenara` | La Puerta de Almenara | -0.2762665, 39.6762149 | way/733215257 |
+| `almenara` | Almenara: el extremo oriental | -0.2758659, 39.6764949 | node/11125234508 |
+| `conejera` | Conejera y los Nueve Pilares | -0.2765862, 39.6767370 | node/11166834500 |
+| `puerta-san-fernando` | El paso a San Fernando | -0.2780262, 39.6759438 | Foco aproximado; ver coordinateMethod |
+| `san-fernando` | San Fernando: vida de guarnición | -0.2798156, 39.6756028 | node/11125186804 |
+| `antiquarium` | Antiquarium: las voces de la piedra | -0.2789870, 39.6755680 | Foco aproximado; ver coordinateMethod |
+| `estudiantes` | Estudiantes: el acceso antiguo | -0.2803067, 39.6760944 | node/11125234505 |
+| `ciudadela` | Ciudadela: la altura defensiva | -0.2818811, 39.6763446 | node/11125234506 |
+| `dos-mayo` | Dos de Mayo: el frente occidental | -0.2831876, 39.6768604 | node/11125234507 |
+
+La Puerta de Almenara se sitúa en la intersección entre el paso cartografiado `way/733215257` y el lienzo `way/733215258`. La curia se contrasta con `way/733215272` y `way/733215273`. Las tabernae orientales tienen trazas nominales `way/1419350908` a `way/1419350914`; no se han inventado fachadas comerciales a partir de esos nombres.
+
+La cisterna norte mantiene deliberadamente un **foco de sector**. Carecemos en esta iteración de una huella inequívoca georreferenciada. El Antiquarium se encuadra por su edificio actual, sin reconstruir una exposición interior. Los usos antiguos del inventario militar no se transforman en objetos contemporáneos dentro de la escena.
+
+## Límites y siguientes pasos de precisión
+
+La visita está documentada; la geometría sigue siendo una maqueta interpretativa. Para sustituir volúmenes aproximados por reproducción métrica harían falta levantamientos disponibles con licencia adecuada y una correspondencia explícita entre cada estructura, su fase y su geometría. El acceso público a una publicación con fotogrametría no equivale a disponer de los datos originales reutilizables.
+
+Antes de modelar alzados completos, conviene cotejar conservación, restituciones propuestas y estructuras desaparecidas. Las torres citadas por nombre en documentos pueden tener un emplazamiento reconocido sin conservar una envolvente completa que permita reproducirlas fielmente. Por ello la ficha puede explicar más historia de la que la maqueta debe materializar como volumen.
+
+No se convierten en certezas la fecha propuesta de un aljibe, la identificación de un santuario a partir de un altar ni las lecturas históricas que dependen de un manuscrito concreto. Tampoco se deducen accesibilidad física ni apertura de salas a partir de su posibilidad de navegación virtual.
+
+## Fuentes y localizadores
+
+Los IDs siguientes corresponden a `sourceIds` en cada hecho y cada hito. La bibliografía conserva la fecha del estudio; una fecha de carga o actualización informática no la sustituye.
+
+### plan-director-2000
+
+[Plan Director del Castillo de Sagunto: conocimiento del bien y estado de conservación](https://aytosagunto.es/media/b1qd4rn2/plan-director-del-castillo_-web.pdf). INTEINCO / Ministerio de Educación, Cultura y Deporte. 2000. plan técnico.
+
+Documento 1, hojas 110–112; planos generales y recintos 2.1–2.7
+
+Documento histórico fechado en 2000. La fecha informática del PDF no es su fecha de redacción; no representa por sí solo el estado de 2026.
+
+### archivo-obras-xix
+
+[Intervenciones en el Castillo, siglo XIX](https://aytosagunto.es/es/ayuntamiento/areas-y-servicios/archivo-municipal/documentos-digitalizados/intervenciones-en-el-castillo-s-xix/). Archivo Municipal de Sagunto. sin fecha de edición indicada. archivo institucional.
+
+Planos de 1810–1813, originales del Service Historique de la Défense, Vincennes; GR 1 VM 248 y GR 1 VN 105
+
+### arse-obras-2019
+
+[Histórico de obras en el Castillo de Sagunto (784–2019)](https://centroarqueologicosaguntino.es/wp-content/uploads/2021/03/art.carbonell-1.pdf). Sonia Peruga Ayete y José Ramón Carbonell Rubio. 2019. investigación de archivo.
+
+ARSE 53, pp. 111–128
+
+Las fechas o atribuciones que el estudio expresa como posibles se mantienen como hipótesis.
+
+### arse-guardia-2019
+
+[Protocolo de la guardia principal y dotación de fusilería del Castillo de Sagunto, 1882/1886](https://centroarqueologicosaguntino.es/wp-content/uploads/2021/03/art.sonia_-1.pdf). Sonia Peruga Ayete. 2019. investigación de archivo.
+
+ARSE 53, pp. 149–156, especialmente 152–155
+
+Describe inventarios y protocolos del siglo XIX; no el contenido actual de las estancias.
+
+### templo-aranegui-1991
+
+[Un templo republicano en el centro cívico saguntino](https://revistas.um.es/car/article/download/68051/125201/526121). Carmen Aranegui Gascó. 1991. investigación arqueológica.
+
+Cuadernos de Arquitectura Romana 1, pp. 67–82
+
+El PDF impreso indica 1991; la ficha de la revista agrupa el volumen como 1992 y fue cargada en 2009.
+
+### cisterna-norte-1984
+
+[La cisterna del flanco septentrional del foro de Saguntum](https://rodrick.uv.es/items/d6ecc7c2-5dc7-428b-8e75-f750cb22fd98). Carmen Aranegui Gascó. 1984. memoria de excavación.
+
+SAGVNTVM 18, pp. 195–204; DOI 10.7203/SAGVNTVM.18.5300
+
+Excavación de julio de 1983. Copia del texto: https://www.academia.edu/34691665/La_cisterna_del_flanco_septentrional_del_foro_de_Saguntum
+
+### foro-terrazas-1998
+
+[La delimitación del sector del foro municipal de Sagunto](https://publicacions.iec.cat/repository/pdf/00000451/00000022.pdf). Carmen Aranegui, Emilia Hernández y Milagro López Piñol. 1998. investigación arqueológica.
+
+Ítaca, Annexos 1, pp. 51–64, especialmente 52, 58–61
+
+### aranegui-2004
+
+[Sagunto visto por una arqueóloga](https://www.academia.edu/109677445/S_A_G_U_N_T_O_Visto_por_una_arque%C3%B3loga). Carmen Aranegui Gascó. 2004. síntesis de la investigadora.
+
+Capítulo III: El foro; apartados La curia y La basílica jurídica
+
+Versión digital firmada y fechada por la autora; las propuestas de restitución se distinguen de los restos excavados.
+
+### cebrian-epigrafia-2003
+
+[El escenario epigráfico en las ciudades](https://mupreva.org/dedalo/media/pdf/publicaciones/standar/mupreva194_mupreva153_1426.pdf). Rosario Cebrián Fernández. 2003. investigación epigráfica.
+
+Romanos y visigodos en tierras valencianas, pp. 201–204, Museu de Prehistòria de València
+
+### cebrian-conyngham-2017
+
+[Nuevas aportaciones al estudio del foro de Saguntum: las excavaciones de W. B. Conyngham en 1784](https://rodrick.uv.es/items/29f5abfd-f7ab-4354-b6c3-b651272e97ce). Rosario Cebrián Fernández. 2017. investigación arqueológica y de archivo.
+
+SAGVNTVM 49, pp. 123–143; DOI 10.7203/SAGVNTVM.49.10389
+
+### alfoldy-baebii-1977
+
+[Los Baebii de Saguntum](https://mupreva.org/pub/87/fr). Géza Alföldy. 1977. estudio epigráfico.
+
+Trabajos Varios del SIP 56; discusión de los fragmentos de la inscripción monumental del foro
+
+### spain-castillo
+
+[Castillo de Sagunto](https://www.spain.info/es/lugares-interes/castillo-sagunto/). Turespaña / Spain.info. sin fecha de edición indicada. ficha institucional.
+
+### mapa-castell
+
+[Castell — Camino Natural Ojos Negros](https://caminosnaturales.es/es/red-de-caminos-naturales/poi-detalle/ID.01.34.24.98/e1922258-0cec-40c3-8ea5-5dc29cb1844d). Ministerio de Agricultura, Pesca y Alimentación. sin fecha de edición indicada. ficha institucional.
+
+### cronologia-2013
+
+[Cronología y cronografía de la caída de Sagunto y de la expedición de Aníbal](https://www.centroarqueologicosaguntino.es/uploads/descargas/600_6%20cronologia.pdf). Luciano Pérez Vilatela. 2013. estudio de fuentes antiguas.
+
+ARSE 47, pp. 103–124
+
+Contrasta las cronologías de Polibio y Tito Livio. La toma de Sagunto se fecha en 219 a. C.
+
+### gazeta-1811
+
+[Parte de la defensa de Sagunto del 29 de septiembre de 1811](https://www.boe.es/gazeta/dias/1811/10/14/pdfs/GEI-1811-132E.pdf). Luis María Andriani; Gazeta de la Regencia de España e Indias. 1811. documento histórico primario.
+
+Gazeta extraordinaria del 14 de octubre de 1811; parte sobre el ataque de la noche del 27 al 28 de septiembre
+
+Testimonio de un mando participante; debe leerse como parte militar, no como relato neutral de todas las operaciones.
+
+### defensa-plano-1811
+
+[Plano del sitio del Castillo de Sagunto: año 1811](https://bibliotecavirtual.defensa.gob.es/BVMDefensa/es/consulta/registro.do?id=963). Biblioteca Virtual de Defensa / Depósito de la Guerra. sin fecha de edición indicada. cartografía histórica.
+
+Escala 1:3.000; edición cartográfica posterior, datada por el catálogo entre 1869 y 1901
+
+Representa el sitio de 1811 retrospectivamente; no es un levantamiento fechado en 1811.
+
+### cultura-2016
+
+[El Ministerio inicia obras de restauración y consolidación en el Castillo de Sagunto](https://www.cultura.gob.es/gl/actualidad/2016/02/20160224-sagunto.html). Ministerio de Educación, Cultura y Deporte / IPCE. 2016. actuación de conservación.
+
+Intervenciones en acceso de Armas, oeste de San Fernando y rampa hacia Ciudadela
+
+### ayto-2026
+
+[El Ministerio de Cultura elaborará un Plan Director para el Teatro Romano y el Castillo de Sagunto](https://aytosagunto.es/es/actualidad/2026-02-24-el-ministerio-de-cultura-elaborara-un-plan-director-para-la-actuacion-integral-sobre-el-teatro-romano-y-el-castillo-de-sagunto/). Ayuntamiento de Sagunto. 2026. información institucional.
+
+24 de febrero de 2026
+
+Distingue obras ejecutadas en 2023–2025 de nuevos trabajos y planes anunciados en 2026.
+
+### fortmed-2020
+
+[Técnicas digitales para el estudio del Patrimonio Defensivo: Puerta de Almenara y lienzos sur del Palacio del Gobernador y Plaza de Armas](https://doi.org/10.4995/FORTMED2020.2020.11387). Álvaro Sánchez Corrochano, Enrique Martínez Sierra, Alessandro Greco y Daniela Besana. 2020. levantamiento arquitectónico.
+
+Defensive Architecture of the Mediterranean X, pp. 455–462; figs. 3, 7–10
+
+Levantamiento fotogramétrico de 2019. Copia: https://www.academia.edu/67929397/T%C3%A9cnicas_digitales_para_el_estudio_del_Patrimonio_Defensivo_Puerta_de_Almenara_y_lienzos_sur_del_Palacio_del_Gobernador_y_Plaza_de_Armas_del_Castillo_de_Sagunto_Valencia_
+
+### civera-cisternas-2007
+
+[Les cisternes del Castell de Sagunt](https://www.centroarqueologicosaguntino.es/uploads/descargas/339_010_les_cisternes_del_castell.pdf). Manuel Civera i Gómez. 2007. inventario y medición de campo.
+
+ARSE 41, pp. 149–186; cisterna del foro, pp. 175 y 179; Estudiantes, p. 178
+
+Se utilizan las mediciones y observaciones directas. Las dataciones tipológicas generales del autor no se convierten en certezas arqueológicas.
+
+### uc3m-isis-2018
+
+[C150: inscripción de Saguntum dedicada a Isis Pelagia](https://humanidadesdigitales.uc3m.es/s/gens-isiaca-en-hispania/item/1833). Proyecto Gens isiaca en Hispania / Universidad Carlos III de Madrid. 2018. catálogo académico.
+
+Ficha actualizada el 1 de marzo de 2018; Antiquarium, inventario S.1.176
+
+La existencia del altar no demuestra por sí sola la planta o posición exacta de un santuario de Isis.
+
+### osm-castillo
+
+[Cartografía colaborativa del Castillo de Sagunto](https://www.openstreetmap.org/#map=18/39.67615/-0.2791). Colaboradores de OpenStreetMap. sin fecha de edición indicada. cartografía.
+
+Extracto ya incorporado en cartography.json; licencia ODbL
+
+Plantas y puntos para navegación; los atributos cartográficos no verifican por sí solos fechas, alturas ni atribuciones arqueológicas.
+
+### ivc-2026
+
+[Nuevas mejoras en el Conjunto Monumental de Sagunto: proyecto del antiguo Museo Militar](https://ivc.gva.es/es/escena/cultura-impulsa-la-ampliacion-del-aforo-del-teatro-romano-y-nuevas-mejoras-en-el-conjunto-monumental-de-sagunto). Generalitat Valenciana / Institut Valencià de Cultura. 2026. información institucional.
+
+4 de mayo de 2026; apartado Museo Militar. Informa de un proyecto en redacción; no acredita la apertura de los servicios propuestos.
+
+### seranco-2019
+
+[Dossier SERANCO 2019: Puerta de Almenara del Castillo de Sagunto](https://seranco.es/wp-content/uploads/2019/07/Dossier-SERANCO-2019.pdf). SERANCO, empresa constructora. 2019. documentación fotográfica de obra.
+
+Página 43 (página 43 del PDF), fotografía inferior titulada Puerta de Almenara Castillo de Sagunto. La fotografía documenta el arco apuntado y los dos óculos trilobulados visibles. No es un alzado métrico ni determina la fecha de cada fábrica. El año corresponde al dossier, no a una fecha de toma fotográfica verificada.
+
+## Verificación del paquete
+
+Comprobación estructural: 18 IDs únicos de parada, siete IDs de recinto, cuatro hechos por parada, 14 hitos y referencias de hechos/hitos resueltas dentro de las 24 fuentes. Se revisaron las orientaciones principales y la separación de los depósitos de agua. No se trasladaron horarios ni supuestas condiciones actuales de acceso desde documentación antigua.
+
+Las síntesis están redactadas para la visita y no reproducen párrafos de las fuentes. No se han copiado las imágenes, ortofotos ni planos de terceros como recursos de la aplicación; su consulta fundamenta la interpretación y la documentación. Las licencias de los datos cartográficos existentes mantienen su atribución propia.

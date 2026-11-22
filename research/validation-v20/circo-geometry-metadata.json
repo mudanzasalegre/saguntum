@@ -1,0 +1,1596 @@
+{
+  "stats": {
+    "modelVersion": "v20",
+    "gate": [
+      6.21,
+      2.07,
+      4.1
+    ],
+    "opening": [
+      1.2,
+      2.2
+    ],
+    "tribuneAreaPublished": 9,
+    "podiumWidth": 0.6,
+    "podiumHeightMaximumPublished": 1.5,
+    "stairBoxOnly": true,
+    "circusWorkingHypothesis": [
+      273,
+      70
+    ],
+    "circusLengthRange": [
+      270,
+      290
+    ],
+    "circusWidthRange": [
+      68,
+      70
+    ],
+    "euripus": [
+      190,
+      4.35
+    ],
+    "stops": 20,
+    "gateStops": 14,
+    "circusStops": 6,
+    "meshes": 51,
+    "triangles": 34830,
+    "hypotheses": [
+      "timber seating",
+      "turning posts",
+      "west closure",
+      "water",
+      "tribunal elevation"
+    ],
+    "verticalPlacement": "interpretative",
+    "survey": false,
+    "context": {
+      "buildingParts": 91,
+      "parentParcels": 21,
+      "footprintsPreserved": true,
+      "courtyards": 6,
+      "sourceHeight": 0,
+      "ignHeight": 40,
+      "storeyHeight": 51,
+      "fallbackHeight": 0,
+      "streetSamples": 2755,
+      "roofCorrections": 0,
+      "maximumRoofCorrectionM": 0,
+      "preservedSantaMaria": true,
+      "preservedPlazaMayor": true,
+      "heightConflictsReviewed": 3,
+      "interpretiveTrees": 5,
+      "sourcePlazaAreaM2": 256.8157321307386,
+      "surfaceApronAreaM2": 26.3784,
+      "reusedBuildingParts": 0,
+      "reusedStreetFragments": 0,
+      "preservedPreviousContexts": true
+    }
+  },
+  "qa": {
+    "baseY": 41.90800244513099,
+    "surfaceY": 44.15800244513099,
+    "deckY": 42.38800244513099,
+    "frame": {
+      "x": 212.6468764875382,
+      "z": -228.09467999994695,
+      "yaw": -0.307
+    },
+    "modelRegistration": {
+      "coordinate": [
+        -0.275518,
+        39.681049
+      ],
+      "yaw": -0.307,
+      "baseDepth": 2.25,
+      "gateLocal": [
+        -4.25,
+        1.3
+      ],
+      "method": "Approximate photographic registration inside the OSM enclosure, with published gate dimensions; no archaeological survey coordinates"
+    },
+    "coreOutline": [
+      {
+        "x": 206.04128656925127,
+        "z": -234.68482399944435
+      },
+      {
+        "x": 203.90796375517453,
+        "z": -227.8386440001188
+      },
+      {
+        "x": 210.0594729138351,
+        "z": -225.9239399998907
+      },
+      {
+        "x": 209.80244606876767,
+        "z": -225.1001719997558
+      },
+      {
+        "x": 218.52422367812622,
+        "z": -222.38396399965296
+      },
+      {
+        "x": 220.9145733372751,
+        "z": -230.05391199990441
+      }
+    ],
+    "gate": {
+      "x": -4.25,
+      "z": 1.3,
+      "width": 6.21,
+      "depth": 2.07,
+      "height": 4.1,
+      "openingX": -4.36,
+      "openingWidth": 1.2,
+      "openingHeight": 2.2,
+      "thresholdY": 42.15800244513099,
+      "courseAsymmetry": true,
+      "completeArch": false
+    },
+    "podiumThreshold": {
+      "x": -4.36,
+      "z": -2.3,
+      "y": 42.15800244513099,
+      "pivotSockets": 1
+    },
+    "wallSegments": [
+      {
+        "id": "muros",
+        "a": [
+          -7.78,
+          -2.3
+        ],
+        "b": [
+          -4.96,
+          -2.3
+        ],
+        "height": 1.04,
+        "width": 0.6
+      },
+      {
+        "id": "muros",
+        "a": [
+          -3.7600000000000002,
+          -2.3
+        ],
+        "b": [
+          0.6799999999999999,
+          -2.3
+        ],
+        "height": 1.28,
+        "width": 0.6
+      },
+      {
+        "id": "tribuna",
+        "a": [
+          0.6799999999999999,
+          -2.3
+        ],
+        "b": [
+          0.6799999999999999,
+          1.3
+        ],
+        "height": 1.02,
+        "width": 0.6
+      },
+      {
+        "id": "tribuna",
+        "a": [
+          -1.145,
+          1.3
+        ],
+        "b": [
+          0.6799999999999999,
+          1.3
+        ],
+        "height": 0.86,
+        "width": 0.58
+      },
+      {
+        "id": "tribuna",
+        "a": [
+          -3.8000000000000003,
+          -1.9499999999999997
+        ],
+        "b": [
+          -3.8000000000000003,
+          0.2650000000000001
+        ],
+        "height": 0.91,
+        "width": 0.34
+      },
+      {
+        "id": "muros",
+        "a": [
+          0.94,
+          1.3
+        ],
+        "b": [
+          6.65,
+          1.3
+        ],
+        "height": 0.58,
+        "width": 0.63
+      },
+      {
+        "id": "fases",
+        "a": [
+          4.4,
+          1.2
+        ],
+        "b": [
+          4.4,
+          -1.25
+        ],
+        "height": 0.44,
+        "width": 0.43
+      },
+      {
+        "id": "fases",
+        "a": [
+          4.4,
+          -1.25
+        ],
+        "b": [
+          6.48,
+          -1.25
+        ],
+        "height": 0.35,
+        "width": 0.43
+      }
+    ],
+    "tribune": {
+      "polygon": [
+        {
+          "x": 209.8005320807447,
+          "z": -231.09513388526418
+        },
+        {
+          "x": 213.61350991644238,
+          "z": -229.88633281623837
+        },
+        {
+          "x": 212.92902631110653,
+          "z": -227.72723411677453
+        },
+        {
+          "x": 209.11604847540883,
+          "z": -228.93603518580034
+        }
+      ],
+      "areaPublished": 9,
+      "registration": "proportional, not a measured plan"
+    },
+    "stairBox": {
+      "x": 1.5899999999999999,
+      "z": -0.18,
+      "w": 1.18,
+      "d": 2.12
+    },
+    "deck": {
+      "x": 0.8,
+      "z": -3.58,
+      "w": 11.8,
+      "d": 1.12
+    },
+    "stair": {
+      "x0": -5.12,
+      "x1": -7.66,
+      "z": -3.58,
+      "width": 1.02,
+      "steps": 10
+    },
+    "oldPaving": {
+      "x": 5.73,
+      "z": -2.18,
+      "w": 1.1,
+      "d": 0.8
+    },
+    "analyticalSection": {
+      "onlyMode": "cut",
+      "reportedUnits": [
+        "206",
+        "207",
+        "208",
+        "210",
+        "211"
+      ],
+      "schematic": true
+    },
+    "circus": {
+      "frame": {
+        "x": 142.52017982969738,
+        "z": -285.6793907820562,
+        "yaw": -0.307
+      },
+      "dimensions": {
+        "length": 273,
+        "width": 70,
+        "uncertainLength": [
+          270,
+          290
+        ],
+        "uncertainWidth": [
+          68,
+          70
+        ]
+      },
+      "gateU": 80,
+      "outerRadius": 35,
+      "innerRadius": 24,
+      "westClosureKnown": false,
+      "outline": [
+        {
+          "x": 22.979320540488448,
+          "z": -360.2932833249168
+        },
+        {
+          "x": 249.85150176450284,
+          "z": -288.36961971788145
+        },
+        {
+          "x": 252.01093654429326,
+          "z": -287.60641627367227
+        },
+        {
+          "x": 254.1158319149685,
+          "z": -286.70361311465507
+        },
+        {
+          "x": 256.1571743914018,
+          "z": -285.66507618255747
+        },
+        {
+          "x": 258.1262226317165,
+          "z": -284.49525265196195
+        },
+        {
+          "x": 260.01454486905374,
+          "z": -283.19915188682097
+        },
+        {
+          "x": 261.81405501769285,
+          "z": -281.782323989592
+        },
+        {
+          "x": 263.5170472989114,
+          "z": -280.25083603484626
+        },
+        {
+          "x": 265.1162292383132,
+          "z": -278.61124608912434
+        },
+        {
+          "x": 266.6047528933228,
+          "z": -276.8705751282882
+        },
+        {
+          "x": 267.97624417712717,
+          "z": -275.03627697262476
+        },
+        {
+          "x": 269.2248301534939,
+          "z": -273.1162063684433
+        },
+        {
+          "x": 270.3451641855857,
+          "z": -271.1185853528454
+        },
+        {
+          "x": 271.33244883108034,
+          "z": -269.0519680457003
+        },
+        {
+          "x": 272.1824563855552,
+          "z": -266.9252040195899
+        },
+        {
+          "x": 272.8915469861665,
+          "z": -264.74740040458096
+        },
+        {
+          "x": 273.45668419810073,
+          "z": -262.52788289009527
+        },
+        {
+          "x": 273.875448017055,
+          "z": -260.2761557908765
+        },
+        {
+          "x": 274.14604523206685,
+          "z": -258.0018613480549
+        },
+        {
+          "x": 274.2673171043186,
+          "z": -255.71473843959063
+        },
+        {
+          "x": 274.23874432903546,
+          "z": -253.4245808769033
+        },
+        {
+          "x": 274.0604492592276,
+          "z": -251.14119546626767
+        },
+        {
+          "x": 273.73319538175633,
+          "z": -248.87436001456382
+        },
+        {
+          "x": 273.25838404796593,
+          "z": -246.63378145920686
+        },
+        {
+          "x": 272.63804847288213,
+          "z": -244.42905430155065
+        },
+        {
+          "x": 271.8748450286729,
+          "z": -242.26961952176018
+        },
+        {
+          "x": 270.97204186965564,
+          "z": -240.16472415108495
+        },
+        {
+          "x": 269.9335049375581,
+          "z": -238.12338167465168
+        },
+        {
+          "x": 268.7636814069626,
+          "z": -236.154333434337
+        },
+        {
+          "x": 267.4675806418216,
+          "z": -234.26601119699973
+        },
+        {
+          "x": 266.0507527445926,
+          "z": -232.4665010483606
+        },
+        {
+          "x": 264.5192647898469,
+          "z": -230.76350876714204
+        },
+        {
+          "x": 262.87967484412496,
+          "z": -229.16432682774024
+        },
+        {
+          "x": 261.1390038832888,
+          "z": -227.67580317273064
+        },
+        {
+          "x": 259.3047057276254,
+          "z": -226.30431188892626
+        },
+        {
+          "x": 257.3846351234439,
+          "z": -225.05572591255958
+        },
+        {
+          "x": 255.38701410784606,
+          "z": -223.93539188046776
+        },
+        {
+          "x": 253.32039680070088,
+          "z": -222.94810723497312
+        },
+        {
+          "x": 251.19363277459053,
+          "z": -222.09809968049825
+        },
+        {
+          "x": 249.01582915958156,
+          "z": -221.389009079887
+        },
+        {
+          "x": 246.7963116450959,
+          "z": -220.82387186795273
+        },
+        {
+          "x": 244.54458454587714,
+          "z": -220.40510804899844
+        },
+        {
+          "x": 242.27029010305552,
+          "z": -220.1345108339866
+        },
+        {
+          "x": 239.98316719459126,
+          "z": -220.01323896173483
+        },
+        {
+          "x": 237.69300963190392,
+          "z": -220.041811737018
+        },
+        {
+          "x": 235.40962422126827,
+          "z": -220.2201068068259
+        },
+        {
+          "x": 233.14278876956445,
+          "z": -220.54736068429713
+        },
+        {
+          "x": 230.90221021420746,
+          "z": -221.0221720180875
+        },
+        {
+          "x": 228.69748305655125,
+          "z": -221.64250759317136
+        },
+        {
+          "x": 1.8253018325368764,
+          "z": -293.5661712002067
+        }
+      ]
+    },
+    "sourcePlan": "López, Sañudo y Verdasco (2017), pp.103–123; Civera (2017), pp.74–75 after Bru; Melchor et al. (2017), fig.17 and pp.43–44",
+    "archaeologyElevationSurvey": false
+  },
+  "focuses": {
+    "circo-conjunto": {
+      "id": "circo-conjunto",
+      "label": "Una puerta abre la escala del circo",
+      "target": [
+        212.2890452354491,
+        43.05800244513099,
+        -228.55430679967512
+      ],
+      "coordinates": [
+        -0.27552217658223976,
+        39.68105312887891
+      ],
+      "offset": [
+        11.554559145729304,
+        28,
+        -9.974575827965984
+      ],
+      "closeOffset": [
+        14.716492789759046,
+        12,
+        -10.02121948512106
+      ],
+      "components": [
+        "puerta",
+        "recinto"
+      ],
+      "regionId": "contemporanea",
+      "readingLayer": "contemporanea",
+      "period": "contemporanea",
+      "kind": "overview",
+      "bounds": {
+        "min": [
+          203.90796375517453,
+          41.72800244513099,
+          -234.68482399944435
+        ],
+        "max": [
+          220.9145733372751,
+          46.00800244513099,
+          -222.38396399965296
+        ]
+      },
+      "fitBounds": true,
+      "interiorView": false,
+      "floor": 0,
+      "recommendedMode": "current",
+      "requiresSection": false,
+      "minDistance": 0.8,
+      "fov": 52,
+      "closeScale": false,
+      "mapScope": "gate",
+      "sourceConfidence": "published-measurements-and-photographic-registration"
+    },
+    "circo-acceso": {
+      "id": "circo-acceso",
+      "label": "Bajar al recinto arqueológico",
+      "regionId": "contemporanea",
+      "coordinate": [
+        -0.275452412,
+        39.681074462
+      ],
+      "coordinates": [
+        -0.275452412,
+        39.681074462
+      ],
+      "target": [
+        218.26616872567905,
+        46.212639685375166,
+        -230.9291098395488
+      ],
+      "offset": [
+        5.49656,
+        0.9373603146248328,
+        8.14173
+      ],
+      "closeOffset": [
+        5.49656,
+        0.9373603146248328,
+        8.14173
+      ],
+      "bounds": {
+        "min": [
+          200.26616872567905,
+          44.212639685375166,
+          -248.9291098395488
+        ],
+        "max": [
+          236.26616872567905,
+          56.212639685375166,
+          -212.9291098395488
+        ]
+      },
+      "components": [
+        "circo-acceso"
+      ],
+      "kind": "context",
+      "minDistance": 1.3,
+      "sourceConfidence": "Street viewpoint checked against cadastral footprints; elevation is illustrative.",
+      "closeScale": false,
+      "fitBounds": false,
+      "floor": 0,
+      "recommendedMode": "current",
+      "readingLayer": "contemporanea",
+      "interiorView": false,
+      "mapScope": "gate",
+      "fov": 62
+    },
+    "circo-puerta": {
+      "id": "circo-puerta",
+      "label": "El cuerpo de sillería",
+      "target": [
+        208.20272718967598,
+        43.90800244513099,
+        -228.1398133391851
+      ],
+      "coordinates": [
+        -0.27556987181086073,
+        39.68104940543783
+      ],
+      "offset": [
+        7.48602469993021,
+        5,
+        -7.068198794037615
+      ],
+      "closeOffset": [
+        4.88913953310702,
+        2.9,
+        -5.163943708621355
+      ],
+      "components": [
+        "puerta",
+        "vano",
+        "coronacion"
+      ],
+      "regionId": "fabrica",
+      "readingLayer": "fabrica",
+      "period": "fabrica",
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          204.9301258681052,
+          41.90800244513099,
+          -230.06475318400317
+        ],
+        "max": [
+          211.47532851124677,
+          46.00800244513099,
+          -226.21487349436703
+        ]
+      },
+      "fitBounds": false,
+      "interiorView": false,
+      "floor": -1,
+      "recommendedMode": "current",
+      "requiresSection": false,
+      "minDistance": 0.8,
+      "fov": 55,
+      "closeScale": false,
+      "mapScope": "gate",
+      "sourceConfidence": "published-measurements-and-photographic-registration"
+    },
+    "circo-vano": {
+      "id": "circo-vano",
+      "label": "Un paso de escala humana",
+      "target": [
+        208.0978702991943,
+        43.32800244513099,
+        -228.1730553685833
+      ],
+      "coordinates": [
+        -0.2755710956934142,
+        39.68104970405469
+      ],
+      "offset": [
+        1.3517877378644687,
+        0.4,
+        -3.767647795609253
+      ],
+      "closeOffset": [
+        0.858025375765061,
+        0.12,
+        -2.5079658001143526
+      ],
+      "components": [
+        "vano",
+        "puerta",
+        "umbral"
+      ],
+      "regionId": "fabrica",
+      "readingLayer": "fabrica",
+      "period": "fabrica",
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          206.0978702991943,
+          41.32800244513099,
+          -230.1730553685833
+        ],
+        "max": [
+          210.0978702991943,
+          45.32800244513099,
+          -226.1730553685833
+        ]
+      },
+      "fitBounds": false,
+      "interiorView": true,
+      "floor": -1,
+      "recommendedMode": "cut",
+      "requiresSection": true,
+      "minDistance": 0.25,
+      "fov": 58,
+      "closeScale": false,
+      "mapScope": "gate",
+      "sourceConfidence": "published-measurements-and-photographic-registration"
+    },
+    "circo-sillares": {
+      "id": "circo-sillares",
+      "label": "Leer la piedra de cerca",
+      "target": [
+        209.9930333776193,
+        43.62800244513099,
+        -228.6580109399244
+      ],
+      "coordinates": [
+        -0.2755489754777856,
+        39.68105406046479
+      ],
+      "offset": [
+        1.9853897333118713,
+        1.2,
+        -2.6226375286836374
+      ],
+      "closeOffset": [
+        1.1286849869213387,
+        0.65,
+        -1.7402787708578122
+      ],
+      "components": [
+        "puerta"
+      ],
+      "regionId": "fabrica",
+      "readingLayer": "fabrica",
+      "period": "fabrica",
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          207.9930333776193,
+          41.62800244513099,
+          -230.6580109399244
+        ],
+        "max": [
+          211.9930333776193,
+          45.62800244513099,
+          -226.6580109399244
+        ]
+      },
+      "fitBounds": false,
+      "interiorView": true,
+      "floor": -1,
+      "recommendedMode": "cut",
+      "requiresSection": true,
+      "minDistance": 0.25,
+      "fov": 53,
+      "closeScale": false,
+      "mapScope": "gate",
+      "sourceConfidence": "published-measurements-and-photographic-registration"
+    },
+    "circo-umbral": {
+      "id": "circo-umbral",
+      "label": "La huella del paso",
+      "target": [
+        209.18579126131755,
+        42.14800244513099,
+        -231.60473542071125
+      ],
+      "coordinates": [
+        -0.2755583975533211,
+        39.6810805312201
+      ],
+      "offset": [
+        1.5716380905838554,
+        2.8,
+        -0.6557085573834868
+      ],
+      "closeOffset": [
+        1.105461508768955,
+        1.65,
+        -1.1706642783609078
+      ],
+      "components": [
+        "umbral",
+        "interior"
+      ],
+      "regionId": "fabrica",
+      "readingLayer": "fabrica",
+      "period": "fabrica",
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          207.18579126131755,
+          40.14800244513099,
+          -233.60473542071125
+        ],
+        "max": [
+          211.18579126131755,
+          44.14800244513099,
+          -229.60473542071125
+        ]
+      },
+      "fitBounds": false,
+      "interiorView": true,
+      "floor": -1,
+      "recommendedMode": "cut",
+      "requiresSection": true,
+      "minDistance": 0.25,
+      "fov": 55,
+      "closeScale": false,
+      "mapScope": "gate",
+      "sourceConfidence": "published-measurements-and-photographic-registration"
+    },
+    "circo-coronacion": {
+      "id": "circo-coronacion",
+      "label": "Lo que falta sobre la puerta",
+      "target": [
+        209.06064720270797,
+        45.47800244513099,
+        -227.8678330986543
+      ],
+      "coordinates": [
+        -0.27555985822633267,
+        39.68104696220894
+      ],
+      "offset": [
+        4.4149478369277135,
+        2.8,
+        -3.006365845536318
+      ],
+      "closeOffset": [
+        2.8177540853337213,
+        1.65,
+        -1.9391394778574145
+      ],
+      "components": [
+        "coronacion",
+        "vano"
+      ],
+      "regionId": "fabrica",
+      "readingLayer": "fabrica",
+      "period": "fabrica",
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          207.06064720270797,
+          43.47800244513099,
+          -229.8678330986543
+        ],
+        "max": [
+          211.06064720270797,
+          47.47800244513099,
+          -225.8678330986543
+        ]
+      },
+      "fitBounds": false,
+      "interiorView": true,
+      "floor": -1,
+      "recommendedMode": "cut",
+      "requiresSection": true,
+      "minDistance": 0.25,
+      "fov": 53,
+      "closeScale": false,
+      "mapScope": "gate",
+      "sourceConfidence": "published-measurements-and-photographic-registration"
+    },
+    "circo-interior": {
+      "id": "circo-interior",
+      "label": "Del vano hacia la arena",
+      "target": [
+        208.6176547588754,
+        42.62800244513099,
+        -229.81263583793333
+      ],
+      "coordinates": [
+        -0.2755650288042586,
+        39.681064432589274
+      ],
+      "offset": [
+        0.911265167484861,
+        3,
+        -2.5435400123703165
+      ],
+      "closeOffset": [
+        0.9733279138940634,
+        1.2,
+        -2.8385793580653385
+      ],
+      "components": [
+        "interior",
+        "umbral",
+        "muros"
+      ],
+      "regionId": "excavacion",
+      "readingLayer": "excavacion",
+      "period": "excavacion",
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          206.6176547588754,
+          40.62800244513099,
+          -231.81263583793333
+        ],
+        "max": [
+          210.6176547588754,
+          44.62800244513099,
+          -227.81263583793333
+        ]
+      },
+      "fitBounds": false,
+      "interiorView": true,
+      "floor": -1,
+      "recommendedMode": "cut",
+      "requiresSection": true,
+      "minDistance": 0.25,
+      "fov": 60,
+      "closeScale": false,
+      "mapScope": "gate",
+      "sourceConfidence": "published-measurements-and-photographic-registration"
+    },
+    "circo-muros": {
+      "id": "circo-muros",
+      "label": "La estructura junto al acceso",
+      "target": [
+        207.33649701100416,
+        42.55800244513099,
+        -232.19100393918876
+      ],
+      "coordinates": [
+        -0.2755799823910817,
+        39.68108579773571
+      ],
+      "offset": [
+        2.2691292385566015,
+        3.4,
+        -0.539492816196414
+      ],
+      "closeOffset": [
+        1.385653564514477,
+        2.1,
+        -0.39995524643180286
+      ],
+      "components": [
+        "muros"
+      ],
+      "regionId": "excavacion",
+      "readingLayer": "excavacion",
+      "period": "excavacion",
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          205.33649701100416,
+          40.55800244513099,
+          -234.19100393918876
+        ],
+        "max": [
+          209.33649701100416,
+          44.55800244513099,
+          -230.19100393918876
+        ]
+      },
+      "fitBounds": false,
+      "interiorView": false,
+      "floor": -1,
+      "recommendedMode": "cut",
+      "requiresSection": true,
+      "minDistance": 0.8,
+      "fov": 56,
+      "closeScale": false,
+      "mapScope": "gate",
+      "sourceConfidence": "published-measurements-and-photographic-registration"
+    },
+    "circo-tribuna": {
+      "id": "circo-tribuna",
+      "label": "El lugar desde el que se juzgaba la carrera",
+      "target": [
+        211.36477919592562,
+        42.60800244513099,
+        -229.41118400101936
+      ],
+      "coordinates": [
+        -0.27553296455311427,
+        39.68106082630256
+      ],
+      "offset": [
+        6.488763817983922,
+        7,
+        -3.922492079586996
+      ],
+      "closeOffset": [
+        4.168523257407045,
+        4.5,
+        -2.559963642799748
+      ],
+      "components": [
+        "tribuna",
+        "muros"
+      ],
+      "regionId": "excavacion",
+      "readingLayer": "excavacion",
+      "period": "excavacion",
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          209.36477919592562,
+          40.60800244513099,
+          -231.41118400101936
+        ],
+        "max": [
+          213.36477919592562,
+          44.60800244513099,
+          -227.41118400101936
+        ]
+      },
+      "fitBounds": false,
+      "interiorView": false,
+      "floor": -1,
+      "recommendedMode": "cut",
+      "requiresSection": true,
+      "minDistance": 0.8,
+      "fov": 57,
+      "closeScale": false,
+      "mapScope": "gate",
+      "sourceConfidence": "published-measurements-and-photographic-registration"
+    },
+    "circo-escaleras": {
+      "id": "circo-escaleras",
+      "label": "Reconocer una escalera desaparecida",
+      "target": [
+        214.2169312253342,
+        42.20800244513099,
+        -227.7857655776156
+      ],
+      "coordinates": [
+        -0.2754996744269957,
+        39.68104622498723
+      ],
+      "offset": [
+        3.601240947767895,
+        4,
+        -2.4250904387506447
+      ],
+      "closeOffset": [
+        2.4109006407538116,
+        2.8,
+        -1.6485017744645771
+      ],
+      "components": [
+        "escaleras",
+        "tribuna"
+      ],
+      "regionId": "excavacion",
+      "readingLayer": "excavacion",
+      "period": "excavacion",
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          212.2169312253342,
+          40.20800244513099,
+          -229.7857655776156
+        ],
+        "max": [
+          216.2169312253342,
+          44.20800244513099,
+          -225.7857655776156
+        ]
+      },
+      "fitBounds": false,
+      "interiorView": false,
+      "floor": -1,
+      "recommendedMode": "cut",
+      "requiresSection": true,
+      "minDistance": 0.8,
+      "fov": 57,
+      "closeScale": false,
+      "mapScope": "gate",
+      "sourceConfidence": "published-measurements-and-photographic-registration"
+    },
+    "circo-estratos": {
+      "id": "circo-estratos",
+      "label": "El suelo también cuenta la historia",
+      "target": [
+        218.6487691292629,
+        42.55800244513099,
+        -227.50325399678943
+      ],
+      "coordinates": [
+        -0.2754479463138945,
+        39.68104368715412
+      ],
+      "offset": [
+        -3.2621191564880014,
+        3.8,
+        -4.600932362997092
+      ],
+      "closeOffset": [
+        -2.0995683429166547,
+        2.45,
+        -2.9735185846774543
+      ],
+      "components": [
+        "estratos",
+        "fases"
+      ],
+      "regionId": "excavacion",
+      "readingLayer": "excavacion",
+      "period": "excavacion",
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          216.6487691292629,
+          40.55800244513099,
+          -229.50325399678943
+        ],
+        "max": [
+          220.6487691292629,
+          44.55800244513099,
+          -225.50325399678943
+        ]
+      },
+      "fitBounds": false,
+      "interiorView": true,
+      "floor": -1,
+      "recommendedMode": "cut",
+      "requiresSection": true,
+      "minDistance": 0.25,
+      "fov": 60,
+      "closeScale": false,
+      "mapScope": "gate",
+      "sourceConfidence": "published-measurements-and-photographic-registration"
+    },
+    "circo-arena": {
+      "id": "circo-arena",
+      "label": "La pista de las carreras",
+      "target": [
+        169.37329397537263,
+        42.17800244513099,
+        -287.6568286898892
+      ],
+      "coordinates": [
+        -0.27602308633641504,
+        39.681584053437746
+      ],
+      "offset": [
+        53.03087876685346,
+        30,
+        -28.297100508979554
+      ],
+      "closeOffset": [
+        34.501408141396695,
+        20,
+        -19.48468209288429
+      ],
+      "components": [
+        "arena",
+        "interior"
+      ],
+      "regionId": "espectaculo",
+      "readingLayer": "espectaculo",
+      "period": "espectaculo",
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          167.37329397537263,
+          40.17800244513099,
+          -289.6568286898892
+        ],
+        "max": [
+          171.37329397537263,
+          44.17800244513099,
+          -285.6568286898892
+        ]
+      },
+      "fitBounds": false,
+      "interiorView": false,
+      "floor": -1,
+      "recommendedMode": "historical",
+      "requiresSection": false,
+      "minDistance": 0.8,
+      "fov": 54,
+      "closeScale": false,
+      "mapScope": "circus",
+      "sourceConfidence": "published-working-hypothesis"
+    },
+    "circo-spina": {
+      "id": "circo-spina",
+      "label": "Un eje entre dos recorridos",
+      "target": [
+        144.1849085337411,
+        42.72800244513099,
+        -284.31239468040377
+      ],
+      "coordinates": [
+        -0.27631708347241246,
+        39.6815540100133
+      ],
+      "offset": [
+        42.545189718684725,
+        36,
+        -31.621303448800514
+      ],
+      "closeOffset": [
+        27.52649666166923,
+        23,
+        -20.64683950475502
+      ],
+      "components": [
+        "spina"
+      ],
+      "regionId": "espectaculo",
+      "readingLayer": "espectaculo",
+      "period": "espectaculo",
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          142.1849085337411,
+          40.72800244513099,
+          -286.31239468040377
+        ],
+        "max": [
+          146.1849085337411,
+          44.72800244513099,
+          -282.31239468040377
+        ]
+      },
+      "fitBounds": false,
+      "interiorView": false,
+      "floor": -1,
+      "recommendedMode": "historical",
+      "requiresSection": false,
+      "minDistance": 0.8,
+      "fov": 56,
+      "closeScale": false,
+      "mapScope": "circus",
+      "sourceConfidence": "published-working-hypothesis"
+    },
+    "circo-metae": {
+      "id": "circo-metae",
+      "label": "El espacio de los giros",
+      "target": [
+        237.12624327887303,
+        43.07800244513099,
+        -254.84786862289977
+      ],
+      "coordinates": [
+        -0.27523227848186776,
+        39.68128932688307
+      ],
+      "offset": [
+        -7.254773422657924,
+        12,
+        -20.133759276049176
+      ],
+      "closeOffset": [
+        -4.30175273157448,
+        7.8,
+        -12.90329118622034
+      ],
+      "components": [
+        "metae",
+        "spina"
+      ],
+      "regionId": "interpretacion",
+      "readingLayer": "interpretacion",
+      "period": "interpretacion",
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          235.12624327887303,
+          41.07800244513099,
+          -256.8478686228998
+        ],
+        "max": [
+          239.12624327887303,
+          45.07800244513099,
+          -252.84786862289977
+        ]
+      },
+      "fitBounds": false,
+      "interiorView": false,
+      "floor": -1,
+      "recommendedMode": "historical",
+      "requiresSection": false,
+      "minDistance": 0.8,
+      "fov": 57,
+      "closeScale": false,
+      "mapScope": "circus",
+      "sourceConfidence": "published-working-hypothesis"
+    },
+    "circo-graderio": {
+      "id": "circo-graderio",
+      "label": "Mirar desde las gradas",
+      "target": [
+        136.1831763709718,
+        43.72800244513099,
+        -318.63530659643015
+      ],
+      "coordinates": [
+        -0.27641047915052464,
+        39.681862336566624
+      ],
+      "offset": [
+        7.905817614325903,
+        15,
+        21.389204002230056
+      ],
+      "closeOffset": [
+        4.952796923242458,
+        10,
+        14.15873591240122
+      ],
+      "components": [
+        "graderio"
+      ],
+      "regionId": "espectaculo",
+      "readingLayer": "espectaculo",
+      "period": "espectaculo",
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          134.1831763709718,
+          41.72800244513099,
+          -320.63530659643015
+        ],
+        "max": [
+          138.1831763709718,
+          45.72800244513099,
+          -316.63530659643015
+        ]
+      },
+      "fitBounds": false,
+      "interiorView": false,
+      "floor": -1,
+      "recommendedMode": "historical",
+      "requiresSection": false,
+      "minDistance": 0.8,
+      "fov": 57,
+      "closeScale": false,
+      "mapScope": "circus",
+      "sourceConfidence": "published-working-hypothesis"
+    },
+    "circo-historica": {
+      "id": "circo-historica",
+      "label": "El circo que propone la investigación",
+      "target": [
+        142.52017982969738,
+        42.67800244513099,
+        -285.6793907820562
+      ],
+      "coordinates": [
+        -0.27633651407356535,
+        39.68156628989205
+      ],
+      "offset": [
+        42.1963457942732,
+        280,
+        -33.82999263390582
+      ],
+      "closeOffset": [
+        29.537442055991242,
+        196,
+        -23.680994843734076
+      ],
+      "components": [
+        "trazado",
+        "arena",
+        "spina"
+      ],
+      "regionId": "interpretacion",
+      "readingLayer": "interpretacion",
+      "period": "interpretacion",
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          1.8253018325368764,
+          41.72800244513099,
+          -360.2932833249168
+        ],
+        "max": [
+          274.2673171043186,
+          47.128002445130996,
+          -220.01323896173483
+        ]
+      },
+      "fitBounds": true,
+      "interiorView": false,
+      "floor": -1,
+      "recommendedMode": "historical",
+      "requiresSection": false,
+      "minDistance": 0.8,
+      "fov": 48,
+      "closeScale": false,
+      "mapScope": "circus",
+      "sourceConfidence": "published-working-hypothesis"
+    },
+    "circo-carceres": {
+      "id": "circo-carceres",
+      "label": "La salida que no conocemos por completo",
+      "target": [
+        13.546204537221968,
+        42.92800244513099,
+        -326.56708694185403
+      ],
+      "coordinates": [
+        -0.2778418896142904,
+        39.68193358863584
+      ],
+      "offset": [
+        44.54496595084374,
+        26,
+        -24.693035626228127
+      ],
+      "closeOffset": [
+        29.177428969416717,
+        17,
+        -15.927260867287949
+      ],
+      "components": [
+        "carceres"
+      ],
+      "regionId": "interpretacion",
+      "readingLayer": "interpretacion",
+      "period": "interpretacion",
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          11.546204537221968,
+          40.92800244513099,
+          -328.56708694185403
+        ],
+        "max": [
+          15.546204537221968,
+          44.92800244513099,
+          -324.56708694185403
+        ]
+      },
+      "fitBounds": false,
+      "interiorView": false,
+      "floor": -1,
+      "recommendedMode": "historical",
+      "requiresSection": false,
+      "minDistance": 0.8,
+      "fov": 56,
+      "closeScale": false,
+      "mapScope": "circus",
+      "sourceConfidence": "published-working-hypothesis"
+    },
+    "circo-fases": {
+      "id": "circo-fases",
+      "label": "Un lugar transformado muchas veces",
+      "target": [
+        216.89347869546742,
+        42.35800244513099,
+        -226.43369544625278
+      ],
+      "coordinates": [
+        -0.275468433945449,
+        39.68103407919014
+      ],
+      "offset": [
+        -2.4530766330436906,
+        5,
+        -5.498401134185739
+      ],
+      "closeOffset": [
+        -1.5718347914341653,
+        3.3,
+        -3.6454540716400627
+      ],
+      "components": [
+        "fases",
+        "estratos"
+      ],
+      "regionId": "excavacion",
+      "readingLayer": "excavacion",
+      "period": "excavacion",
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          214.89347869546742,
+          40.35800244513099,
+          -228.43369544625278
+        ],
+        "max": [
+          218.89347869546742,
+          44.35800244513099,
+          -224.43369544625278
+        ]
+      },
+      "fitBounds": false,
+      "interiorView": false,
+      "floor": -1,
+      "recommendedMode": "cut",
+      "requiresSection": true,
+      "minDistance": 0.8,
+      "fov": 58,
+      "closeScale": false,
+      "mapScope": "gate",
+      "sourceConfidence": "published-measurements-and-photographic-registration"
+    },
+    "circo-entorno": {
+      "id": "circo-entorno",
+      "label": "El monumento dentro del barrio",
+      "regionId": "contemporanea",
+      "coordinate": [
+        -0.275562555,
+        39.680985424
+      ],
+      "coordinates": [
+        -0.275562555,
+        39.680985424
+      ],
+      "target": [
+        208.82959946018025,
+        46.55930079261486,
+        -221.01739967969252
+      ],
+      "offset": [
+        17.36304,
+        0.4906992073851342,
+        6.44862
+      ],
+      "closeOffset": [
+        17.36304,
+        0.4906992073851342,
+        6.44862
+      ],
+      "bounds": {
+        "min": [
+          178.82959946018025,
+          44.55930079261486,
+          -251.01739967969252
+        ],
+        "max": [
+          238.82959946018025,
+          56.55930079261486,
+          -191.01739967969252
+        ]
+      },
+      "components": [
+        "circo-entorno"
+      ],
+      "kind": "context",
+      "minDistance": 1.3,
+      "sourceConfidence": "Street viewpoint checked against cadastral footprints; elevation is illustrative.",
+      "closeScale": false,
+      "fitBounds": false,
+      "floor": 0,
+      "recommendedMode": "current",
+      "readingLayer": "contemporanea",
+      "interiorView": false,
+      "mapScope": "gate",
+      "fov": 62
+    }
+  }
+}

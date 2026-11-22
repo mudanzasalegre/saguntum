@@ -1,0 +1,86 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "pass": true,
+      "label": "All context geometry attributes are finite"
+    },
+    {
+      "pass": true,
+      "label": "Twelve selected building envelopes represented"
+    },
+    {
+      "pass": true,
+      "label": "Six photographed context trees represented"
+    },
+    {
+      "pass": true,
+      "label": "Context never flattens coastal terrain"
+    },
+    {
+      "pass": true,
+      "label": "Only owned twelve envelopes excluded from generic city"
+    },
+    {
+      "pass": true,
+      "label": "Source cadastral footprints and metadata remain unchanged"
+    },
+    {
+      "pass": true,
+      "label": "Road complement metadata is passed through unchanged"
+    },
+    {
+      "pass": true,
+      "label": "Detailed roads do not cover model-owned promenade",
+      "intrusions": 0,
+      "samples": 37338
+    },
+    {
+      "pass": true,
+      "label": "bindGround rebuilds architecture on final terrain"
+    },
+    {
+      "pass": true,
+      "label": "bindGround disposes superseded geometry"
+    },
+    {
+      "pass": true,
+      "label": "bindGround reuses owned materials and textures"
+    },
+    {
+      "pass": true,
+      "label": "Courtyard hole remains physically open in roof and walls"
+    },
+    {
+      "pass": true,
+      "label": "Context detail has bounded render cost",
+      "meshes": 8,
+      "triangles": 84385
+    },
+    {
+      "pass": true,
+      "label": "Context dispose is idempotent and covers owned resources"
+    }
+  ],
+  "failures": [],
+  "stats": {
+    "sourceBuildingParts": 11,
+    "photoDerivedEnvelopes": 1,
+    "mainWarehouses": 4,
+    "backdropBuildingIds": 214,
+    "roadSegments": 12,
+    "surfaces": 12,
+    "curbLines": 18,
+    "photoReadTrees": 6,
+    "modelVersion": "v31",
+    "bindCount": 1,
+    "renderedBuildings": 12,
+    "renderedTrees": 6,
+    "meshes": 8,
+    "triangles": 84385,
+    "terrainConforming": true,
+    "ownershipClipped": true,
+    "flattenedTerrain": false
+  },
+  "sourceSHA256": "a028dd2830d0fc376bf1fd56d87e4d78a66b7b553d9b8e51007f2ae4384a8a96"
+}

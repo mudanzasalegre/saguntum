@@ -1,0 +1,78 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "label": "full centre ray reaches the avenue without an intervening roof, tree or building",
+      "pass": true,
+      "hits": []
+    },
+    {
+      "label": "full camera remains safely above all geometry directly below it",
+      "pass": true,
+      "verticalClearanceM": 54.87629186907958,
+      "nearestBelow": "Casino · contexto · grass · casino-jardin"
+    },
+    {
+      "label": "near centre ray reaches the avenue without an intervening roof, tree or building",
+      "pass": true,
+      "hits": []
+    },
+    {
+      "label": "near camera remains safely above all geometry directly below it",
+      "pass": true,
+      "verticalClearanceM": 39.390093668120315,
+      "nearestBelow": "Casino · contexto · gravel · casino-jardin"
+    },
+    {
+      "label": "Near view follows the same observation corridor",
+      "pass": true,
+      "angularDifferenceDegrees": 1.4602886165334685
+    },
+    {
+      "label": "Field of view matches the approved 51 degree drafts",
+      "pass": true
+    },
+    {
+      "label": "full production camera reproduces its reviewed CPU draft",
+      "pass": true
+    },
+    {
+      "label": "near production camera reproduces its reviewed CPU draft",
+      "pass": true
+    }
+  ],
+  "cameras": [
+    {
+      "name": "full",
+      "position": [
+        4771.254504542717,
+        60,
+        2212.067700328622
+      ],
+      "target": [
+        4833.412097192655,
+        7,
+        2222.7650680405586
+      ],
+      "fov": 51
+    },
+    {
+      "name": "near",
+      "position": [
+        4787.794095144014,
+        45,
+        2216.362108639611
+      ],
+      "target": [
+        4833.412097192655,
+        7,
+        2222.7650680405586
+      ],
+      "fov": 51
+    }
+  ],
+  "sourceGeometrySHA256": "218bd440244c070479d8d6df2269b22b436074b60e967d81fc340b17ce5e2d2e",
+  "sourceExport": "research/validation-v28/economato-entorno-geometry.json.gz",
+  "sourceMeshCount": 626,
+  "scope": "Camera-only review against the existing exact-mesh export. Parent performs the final integrated export and production validation."
+}

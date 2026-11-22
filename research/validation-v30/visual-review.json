@@ -1,0 +1,80 @@
+{
+  "pass": true,
+  "generatedAtUTC": "2026-11-21T14:27:25.293923+00:00",
+  "method": "Manual inspection of the eight final exact-mesh CPU images and final Canvas plans; not browser screenshots.",
+  "sourceHash": "b4e5f02dc5e0ef0e7311dab754991f62e20da6de688b5c3408ab0f57ef3ee259",
+  "imageHashes": {
+    "sanatorio-conjunto.png": "fec857c732b905be2fa26c640d40c1a4956e9bc465639ee86efcb19547111ab4",
+    "sanatorio-fachada.png": "cdfad192b6ef123bbe4547a9c3fbb74820e8a93231f94c4b8668c851ccef98f0",
+    "sanatorio-jardin-occidental.png": "73ce371c2e2f3e25a822b953707b83d578487efe31829edf91df600ccbe089cd",
+    "sanatorio-chalets.png": "3436ad26f2d88f85ea596382e8305fb5c28915efffb5142774265245e077f6ac",
+    "sanatorio-vestibulo.png": "601a61da7aa84c762135e4c6e1200237e336d2429e2042cd929ad283ae9c500d",
+    "sanatorio-capilla.png": "6044c76f9568f352039fb92b8dcc10127027679d21ea0825497b19531970efc2",
+    "sanatorio-escalera.png": "5c417c98b4966fef6570f8832d96919c7934f3d5a935c05fb82b0bf3e7c11d95",
+    "sanatorio-seccion.png": "d32e5375cfd702d58151c03b1e701dd7ff80a2630b88bfcb5a6ae40d0485f825"
+  },
+  "reviews": [
+    {
+      "scene": "sanatorio-conjunto",
+      "pass": true,
+      "observations": "Reviewed final ensemble with the surrounding blocks, roads, separate public park, garden layout and ancillary buildings. No relevant floating geometry or contextual overlap is visible."
+    },
+    {
+      "scene": "sanatorio-fachada",
+      "pass": true,
+      "observations": "Verified three open central entrances after replacing the obstructing frame, continuous base, lateral portico, terrace, roofs and the completed ramp-to-path connection."
+    },
+    {
+      "scene": "sanatorio-jardin-occidental",
+      "pass": true,
+      "observations": "Reviewed oval fountain, paths, planting, fence and the completed paved connection to the main entrance. Architecture and terrain meet coherently."
+    },
+    {
+      "scene": "sanatorio-chalets",
+      "pass": true,
+      "observations": "The revised garden-side camera reveals polygonal bay windows on two chalets and keeps the third in the group. Nearby trees and urban facades retain context."
+    },
+    {
+      "scene": "sanatorio-vestibulo",
+      "pass": true,
+      "observations": "Hall circulation, open door leaves, curved stair, floor and retained ceiling are readable from human eye height."
+    },
+    {
+      "scene": "sanatorio-capilla",
+      "pass": true,
+      "observations": "Nave, central aisle, curved apse, altar and lateral sacristy relationship remain readable. Finishes and furniture are documented as interpretive."
+    },
+    {
+      "scene": "sanatorio-escalera",
+      "pass": true,
+      "observations": "The curved stair, handrail, upper opening and landing remain visible without a near-camera solid obstruction."
+    },
+    {
+      "scene": "sanatorio-seccion",
+      "pass": true,
+      "observations": "Removal of the central upper volume reveals the historical ground-floor fragment. The chapel, hall, stair, open doors and adjoining enclosed wings remain legible."
+    }
+  ],
+  "mapImageHashes": {
+    "sanatorio-plano-mobile-light.png": "2e0805f84e1fa627a2e85f92cf57a6e9fa0e41865c557527b830075b1245bd80",
+    "sanatorio-seccion-plan.png": "127fad4bf4338028ce0b9eaa902af216d619a5427f28eadecbbaa87f8a1ab15a"
+  },
+  "mapObservations": [
+    "Mobile label leaders and real anchors remain visible in light and dark themes.",
+    "The interior map identifies the historical fragment and uses an approximate scale.",
+    "Openings and the curved stair are registered to the implemented model."
+  ],
+  "correctedIssues": [
+    "Iterable context exclusions are expanded into individual IDs.",
+    "The architectural base closes to the ground.",
+    "Fourteen open doors are not blocked by their frames.",
+    "The ramp connects to the transverse garden path.",
+    "The chalet camera reveals polygonal bay windows."
+  ],
+  "unresolvedBlockingIssues": [],
+  "limitations": [
+    "CPU sampling grain and approximate lighting do not represent the browser GPU image.",
+    "Historical unmeasured elevations, finishes, furniture and tree dimensions remain interpretive.",
+    "Browser layout, touch interaction, loaded fonts and GPU performance remain unverified."
+  ]
+}

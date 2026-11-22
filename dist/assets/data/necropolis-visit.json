@@ -1,0 +1,1364 @@
+{
+  "schemaVersion": 1,
+  "id": "necropolis",
+  "title": "Necrópolis judía e hipogeos",
+  "subtitle": "Veinte miradas a las tumbas, la roca y la memoria de la ladera",
+  "introduction": "Recorre el cementerio junto al castillo y cambia después a los hipogeos próximos al teatro. Acércate a las losas y a las entradas, abre el corte y compara cada espacio con las propuestas históricas.",
+  "researchDate": "2026-11-20",
+  "regionsLabel": "ámbitos",
+  "mapButtonLabel": "Plano de los dos sectores",
+  "overviewButtonLabel": "Ver conjunto",
+  "readingModeLabel": "Leer las capas de la necrópolis",
+  "readingModeNote": "Los colores distinguen construcción funeraria, roca, transformaciones, acondicionamiento actual e interpretación. Son temas de lectura: una cámara rupestre no recibe por ello una fecha única.",
+  "timelineIntroduction": "La cronología reúne fases funerarias e hitos de investigación. Las cavidades conservan una historia de uso abierta, que no se fecha automáticamente como las tumbas.",
+  "visitAriaLabel": "Visita documentada a la necrópolis judía y los hipogeos de Sagunto",
+  "sectionOnOverview": false,
+  "sectionInstructions": "Selecciona una tumba o una cámara y abre el corte para observar su construcción. Cambia de sector para visitar el segundo emplazamiento y activa las hipótesis cuando quieras comparar interpretaciones.",
+  "sectionNote": "El corte retira virtualmente losas, rellenos o roca. Las profundidades y las cámaras son aproximaciones didácticas; no reproducen una sección arqueológica medida.",
+  "sectorOverviews": {
+    "cementerio": "necro-conjunto",
+    "hipogeos": "necro-hipogeos"
+  },
+  "historicalStops": {
+    "cementerio": "necro-historica",
+    "hipogeos": "necro-transformaciones"
+  },
+  "methodology": [
+    "Se mantienen dos emplazamientos independientes: el sector de tumbas y el conjunto de cavidades rupestres. La visita digital cambia de foco entre ambos.",
+    "La morfología funeraria sigue la síntesis arqueológica de Hinojosa. La disposición y las dimensiones de cada tumba forman una muestra tipológica, pendiente de planimetría de excavación.",
+    "Las fotografías permiten aproximar losas, accesos y afloramientos. La puerta metálica con menorá se reconoce como un cierre contemporáneo de una cavidad.",
+    "La atribución funeraria y la cronología de cada hipogeo requieren cautela. Las cámaras, hornacinas y ampliaciones se muestran como interpretación espacial.",
+    "Los elementos históricos y actuales se distinguen en las capas. Materiales, desgaste, vegetación y luz son elaboraciones gráficas; las fotografías consultadas no se redistribuyen como texturas.",
+    "Las coordenadas de las paradas son focos de cámara del atlas y no un levantamiento topográfico ni un itinerario de accesibilidad presencial."
+  ],
+  "readingLegend": [
+    {
+      "id": "funeraria",
+      "label": "Las tumbas y sus cubiertas",
+      "color": "#c9b58d",
+      "note": "Fosas, mampostería, losas y orientación."
+    },
+    {
+      "id": "rupestre",
+      "label": "La arquitectura de la roca",
+      "color": "#b1aaa0",
+      "note": "Entradas, umbrales, cámaras y ladera."
+    },
+    {
+      "id": "transformaciones",
+      "label": "Niveles y transformaciones",
+      "color": "#b88c76",
+      "note": "Secuencia funeraria y cambios de las cavidades."
+    },
+    {
+      "id": "contemporanea",
+      "label": "El lugar que visitamos",
+      "color": "#80a7ac",
+      "note": "Senderos, cierres, protección y memoria actual."
+    },
+    {
+      "id": "interpretacion",
+      "label": "Restitución e hipótesis",
+      "color": "#b6a1bf",
+      "note": "Propuestas que permiten leer lo que sigue abierto."
+    }
+  ],
+  "confidenceLegend": [
+    {
+      "id": "documented",
+      "label": "Documentado",
+      "note": "El hecho está respaldado por una fuente; la maqueta puede conservar aproximaciones geométricas."
+    },
+    {
+      "id": "interpretive",
+      "label": "Interpretación",
+      "note": "Completa visualmente una evidencia parcial o propone una lectura espacial."
+    },
+    {
+      "id": "disputed",
+      "label": "En debate",
+      "note": "La atribución, cronología o función no está resuelta con seguridad."
+    }
+  ],
+  "stops": [
+    {
+      "id": "necro-conjunto",
+      "title": "Dos lugares en una misma ladera",
+      "label": "El cementerio",
+      "regionId": "contemporanea",
+      "period": "contemporary",
+      "archFocus": "cementerio",
+      "mapScope": "cementerio",
+      "intro": "Empieza desde arriba y localiza el castillo, el recinto de tumbas y los caminos. Después puedes pasar a las cavidades para comparar sus dos formas de construir.",
+      "narrative": "Empieza desde arriba y localiza el castillo, el recinto de tumbas y los caminos. Después puedes pasar a las cavidades para comparar sus dos formas de construir.",
+      "facts": [
+        {
+          "text": "La señalización municipal distingue el cementerio y la subida frente a los hipogeos como puntos diferentes.",
+          "sourceIds": [
+            "nc-ayto2020"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La escala del pequeño recinto dentro de la ladera.",
+      "modelNote": "El atlas reúne dos focos independientes; no dibuja una excavación continua entre ellos.",
+      "sourceIds": [
+        "nc-ayto2020"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual referido al sector geográfico y registrado en la geometría del atlas. No equivale a una medición arqueológica del elemento.",
+      "coordinate": [
+        -0.2794151,
+        39.67643805
+      ],
+      "coordinates": [
+        -0.2794151,
+        39.67643805
+      ],
+      "coordinateSourceIds": [
+        "nc-osm"
+      ],
+      "osmIds": [
+        203325111
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "contemporanea",
+      "floor": 0,
+      "order": 1,
+      "recommendedMode": "current"
+    },
+    {
+      "id": "necro-acceso",
+      "title": "Llegar al recinto de tumbas",
+      "label": "El acceso actual",
+      "regionId": "contemporanea",
+      "period": "contemporary",
+      "archFocus": "cementerio",
+      "mapScope": "cementerio",
+      "intro": "Acerca la cámara al camino y sigue el borde del recinto. Observa cómo la intervención actual permite contemplar las tumbas desde su perímetro.",
+      "narrative": "Acerca la cámara al camino y sigue el borde del recinto. Observa cómo la intervención actual permite contemplar las tumbas desde su perímetro.",
+      "facts": [
+        {
+          "text": "Las fotografías muestran caminos, carteles y cerramientos junto a las sepulturas.",
+          "sourceIds": [
+            "nc-upv2020",
+            "nc-sefarad"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La excavación de 1992 identifica una antigua puerta medieval del castillo junto a la torre.",
+          "sourceIds": [
+            "nc-pascual1993"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El suelo claro del paso, el cierre y el contraste con las losas.",
+      "modelNote": "El acceso se aproxima visualmente. No se reconstruye una puerta monumental medieval del cementerio.",
+      "sourceIds": [
+        "nc-upv2020",
+        "nc-sefarad",
+        "nc-pascual1993"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual referido al sector geográfico y registrado en la geometría del atlas. No equivale a una medición arqueológica del elemento.",
+      "coordinate": [
+        -0.27961936,
+        39.67642907
+      ],
+      "coordinates": [
+        -0.27961936,
+        39.67642907
+      ],
+      "coordinateSourceIds": [
+        "nc-osm"
+      ],
+      "osmIds": [
+        203325111
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "contemporanea",
+      "floor": 0,
+      "order": 2,
+      "recommendedMode": "current"
+    },
+    {
+      "id": "necro-fosas",
+      "title": "La forma de una sepultura",
+      "label": "Las fosas",
+      "regionId": "funeraria",
+      "period": "medieval",
+      "archFocus": "cementerio",
+      "mapScope": "cementerio",
+      "intro": "Selecciona una tumba y abre el corte. Compara su contorno con las cubiertas próximas y sigue los encuentros entre los laterales.",
+      "narrative": "Selecciona una tumba y abre el corte. Compara su contorno con las cubiertas próximas y sigue los encuentros entre los laterales.",
+      "facts": [
+        {
+          "text": "La síntesis arqueológica describe sepulturas de planta trapezoidal.",
+          "sourceIds": [
+            "nc-hinojosa2008"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Los lados convergentes y el espacio interior.",
+      "modelNote": "La forma es una referencia tipológica; número, tamaño y colocación no reproducen un inventario excavado.",
+      "sourceIds": [
+        "nc-hinojosa2008"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual referido al sector geográfico y registrado en la geometría del atlas. No equivale a una medición arqueológica del elemento.",
+      "coordinate": [
+        -0.27947054,
+        39.67641757
+      ],
+      "coordinates": [
+        -0.27947054,
+        39.67641757
+      ],
+      "coordinateSourceIds": [
+        "nc-osm"
+      ],
+      "osmIds": [
+        203325111
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "funeraria",
+      "floor": 0,
+      "order": 3,
+      "recommendedMode": "cut"
+    },
+    {
+      "id": "necro-losas",
+      "title": "Piedras que cierran la tumba",
+      "label": "Las cubiertas",
+      "regionId": "funeraria",
+      "period": "medieval",
+      "archFocus": "cementerio",
+      "mapScope": "cementerio",
+      "intro": "Mira las cubiertas de cerca antes de levantarlas. La luz lateral ayuda a distinguir la separación y el espesor de las piezas.",
+      "narrative": "Mira las cubiertas de cerca antes de levantarlas. La luz lateral ayuda a distinguir la separación y el espesor de las piezas.",
+      "facts": [
+        {
+          "text": "Las cubiertas funerarias se construyeron con losas calizas mayores que las piedras de los laterales.",
+          "sourceIds": [
+            "nc-hinojosa2008"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Las piezas contiguas y sus apoyos.",
+      "modelNote": "El estado visible conserva rellenos y cubiertas; retirarlos es una herramienta de lectura virtual.",
+      "sourceIds": [
+        "nc-hinojosa2008"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual referido al sector geográfico y registrado en la geometría del atlas. No equivale a una medición arqueológica del elemento.",
+      "coordinate": [
+        -0.27942736,
+        39.67641829
+      ],
+      "coordinates": [
+        -0.27942736,
+        39.67641829
+      ],
+      "coordinateSourceIds": [
+        "nc-osm"
+      ],
+      "osmIds": [
+        203325111
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "funeraria",
+      "floor": 0,
+      "order": 4,
+      "recommendedMode": "current"
+    },
+    {
+      "id": "necro-mamposteria",
+      "title": "Construir con piedra irregular",
+      "label": "La mampostería",
+      "regionId": "funeraria",
+      "period": "medieval",
+      "archFocus": "cementerio",
+      "mapScope": "cementerio",
+      "intro": "Baja la cámara junto a un lateral. Compara tamaño, junta y textura con la superficie de las grandes losas.",
+      "narrative": "Baja la cámara junto a un lateral. Compara tamaño, junta y textura con la superficie de las grandes losas.",
+      "facts": [
+        {
+          "text": "Las paredes funerarias emplean piedras irregulares de caliza.",
+          "sourceIds": [
+            "nc-hinojosa2008"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El aparejo menudo y su relación con las cubiertas.",
+      "modelNote": "Cada piedra y su desgaste se elaboran para el modelo, sin pretensión de réplica pieza a pieza.",
+      "sourceIds": [
+        "nc-hinojosa2008"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual referido al sector geográfico y registrado en la geometría del atlas. No equivale a una medición arqueológica del elemento.",
+      "coordinate": [
+        -0.27946646,
+        39.67641757
+      ],
+      "coordinates": [
+        -0.27946646,
+        39.67641757
+      ],
+      "coordinateSourceIds": [
+        "nc-osm"
+      ],
+      "osmIds": [
+        203325111
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "funeraria",
+      "floor": -1,
+      "order": 5,
+      "recommendedMode": "cut"
+    },
+    {
+      "id": "necro-orientacion",
+      "title": "Una dirección compartida",
+      "label": "La orientación",
+      "regionId": "funeraria",
+      "period": "medieval",
+      "archFocus": "cementerio",
+      "mapScope": "cementerio",
+      "intro": "Recupera una vista elevada y compara los ejes de las sepulturas. Utiliza la planta para reconocer la pauta general.",
+      "narrative": "Recupera una vista elevada y compara los ejes de las sepulturas. Utiliza la planta para reconocer la pauta general.",
+      "facts": [
+        {
+          "text": "Los enterramientos estudiados presentan orientación norte–sur.",
+          "sourceIds": [
+            "nc-hinojosa2008"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La dirección longitudinal de las fosas.",
+      "modelNote": "La pauta publicada guía la escena; no identifica la posición exacta de cada enterramiento.",
+      "sourceIds": [
+        "nc-hinojosa2008"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual referido al sector geográfico y registrado en la geometría del atlas. No equivale a una medición arqueológica del elemento.",
+      "coordinate": [
+        -0.27942736,
+        39.67641829
+      ],
+      "coordinates": [
+        -0.27942736,
+        39.67641829
+      ],
+      "coordinateSourceIds": [
+        "nc-osm"
+      ],
+      "osmIds": [
+        203325111
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "funeraria",
+      "floor": 0,
+      "order": 6,
+      "recommendedMode": "current"
+    },
+    {
+      "id": "necro-niveles",
+      "title": "Un suelo funerario sobre otro",
+      "label": "Los niveles",
+      "regionId": "transformaciones",
+      "period": "medieval",
+      "archFocus": "cementerio",
+      "mapScope": "cementerio",
+      "intro": "Abre la sección y observa el terreno bajo las tumbas. Relaciona el cambio de cota con las etapas de la cronología.",
+      "narrative": "Abre la sección y observa el terreno bajo las tumbas. Relaciona el cambio de cota con las etapas de la cronología.",
+      "facts": [
+        {
+          "text": "Se describen dos fases y un aporte de tierras que elevó el nivel funerario en la segunda.",
+          "sourceIds": [
+            "nc-hinojosa2008"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El espesor ilustrativo de tierra entre las lecturas del terreno.",
+      "modelNote": "Las bandas y alturas son didácticas. No muestran una columna estratigráfica medida.",
+      "sourceIds": [
+        "nc-hinojosa2008"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual referido al sector geográfico y registrado en la geometría del atlas. No equivale a una medición arqueológica del elemento.",
+      "coordinate": [
+        -0.27951548,
+        39.67640104
+      ],
+      "coordinates": [
+        -0.27951548,
+        39.67640104
+      ],
+      "coordinateSourceIds": [
+        "nc-osm"
+      ],
+      "osmIds": [
+        203325111
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "transformaciones",
+      "floor": 0,
+      "order": 7,
+      "recommendedMode": "cut"
+    },
+    {
+      "id": "necro-limites",
+      "title": "Lo excavado y lo que queda fuera",
+      "label": "Los límites",
+      "regionId": "contemporanea",
+      "period": "contemporary",
+      "archFocus": "cementerio",
+      "mapScope": "cementerio",
+      "intro": "Recorre el contorno y amplía la mirada hacia la ladera. Distingue el recinto visitable de la escala histórica del cementerio.",
+      "narrative": "Recorre el contorno y amplía la mirada hacia la ladera. Distingue el recinto visitable de la escala histórica del cementerio.",
+      "facts": [
+        {
+          "text": "La publicación de 2003 describe un estudio entonces parcial del cementerio junto al castillo.",
+          "sourceIds": [
+            "nc-civera2003"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Los bordes del espacio acondicionado y el terreno que continúa.",
+      "modelNote": "El polígono cartográfico delimita el sector representado. No fija la extensión total de la necrópolis.",
+      "sourceIds": [
+        "nc-civera2003"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual referido al sector geográfico y registrado en la geometría del atlas. No equivale a una medición arqueológica del elemento.",
+      "coordinate": [
+        -0.2794151,
+        39.67643805
+      ],
+      "coordinates": [
+        -0.2794151,
+        39.67643805
+      ],
+      "coordinateSourceIds": [
+        "nc-osm"
+      ],
+      "osmIds": [
+        203325111
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "contemporanea",
+      "floor": 0,
+      "order": 8,
+      "recommendedMode": "current"
+    },
+    {
+      "id": "necro-historica",
+      "title": "Imaginar el uso funerario medieval",
+      "label": "La vista histórica",
+      "regionId": "interpretacion",
+      "period": "medieval",
+      "archFocus": "cementerio",
+      "mapScope": "cementerio",
+      "intro": "Activa la vista histórica y compara el mismo lugar sin el acondicionamiento actual. Mantén visibles las hipótesis para distinguir sus aportaciones.",
+      "narrative": "Activa la vista histórica y compara el mismo lugar sin el acondicionamiento actual. Mantén visibles las hipótesis para distinguir sus aportaciones.",
+      "facts": [
+        {
+          "text": "La segunda fase publicada se sitúa en los siglos XIV–XV.",
+          "sourceIds": [
+            "nc-hinojosa2008"
+          ],
+          "confidence": "interpretive"
+        }
+      ],
+      "lookFor": "La relación entre tumbas cubiertas, suelo y ladera.",
+      "modelNote": "La restitución es tipológica. No añade nombres, inscripciones ni un portal antiguo sin evidencia.",
+      "sourceIds": [
+        "nc-hinojosa2008"
+      ],
+      "confidence": "interpretive",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual referido al sector geográfico y registrado en la geometría del atlas. No equivale a una medición arqueológica del elemento.",
+      "coordinate": [
+        -0.2794151,
+        39.67643805
+      ],
+      "coordinates": [
+        -0.2794151,
+        39.67643805
+      ],
+      "coordinateSourceIds": [
+        "nc-osm"
+      ],
+      "osmIds": [
+        203325111
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "interpretacion",
+      "floor": 0,
+      "order": 9,
+      "recommendedMode": "historical"
+    },
+    {
+      "id": "necro-ladera",
+      "title": "El relieve que organiza el lugar",
+      "label": "La ladera",
+      "regionId": "rupestre",
+      "period": "contemporary",
+      "archFocus": "cementerio",
+      "mapScope": "cementerio",
+      "intro": "Sal del recinto con la cámara y observa cómo el terreno acompaña los caminos. Relaciona las tumbas con los muros del castillo.",
+      "narrative": "Sal del recinto con la cámara y observa cómo el terreno acompaña los caminos. Relaciona las tumbas con los muros del castillo.",
+      "facts": [
+        {
+          "text": "El sendero documentado recorre la parte baja de las murallas y pasa por el entorno del cementerio.",
+          "sourceIds": [
+            "nc-femecv"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La pendiente, los afloramientos y la continuidad de los muros.",
+      "modelNote": "El detalle natural y vegetal completa el relieve del atlas; las plantas no forman un inventario botánico.",
+      "sourceIds": [
+        "nc-femecv"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual referido al sector geográfico y registrado en la geometría del atlas. No equivale a una medición arqueológica del elemento.",
+      "coordinate": [
+        -0.2794151,
+        39.67643805
+      ],
+      "coordinates": [
+        -0.2794151,
+        39.67643805
+      ],
+      "coordinateSourceIds": [
+        "nc-osm"
+      ],
+      "osmIds": [
+        203325111
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "rupestre",
+      "floor": 0,
+      "order": 10,
+      "recommendedMode": "current"
+    },
+    {
+      "id": "necro-hipogeos",
+      "title": "Entradas abiertas en la roca",
+      "label": "Los hipogeos",
+      "regionId": "rupestre",
+      "period": "unknown",
+      "archFocus": "hipogeos",
+      "mapScope": "hipogeos",
+      "intro": "Cambia al segundo emplazamiento y reconoce las bocas desde el exterior. Después entra con la cámara o abre el corte para leer el volumen interior.",
+      "narrative": "Cambia al segundo emplazamiento y reconoce las bocas desde el exterior. Después entra con la cámara o abre el corte para leer el volumen interior.",
+      "facts": [
+        {
+          "text": "La fotografía municipal reproducida en el estudio UPV muestra varias entradas en un afloramiento.",
+          "sourceIds": [
+            "nc-upv2020"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El frente rocoso, las aberturas y sus distintas siluetas.",
+      "modelNote": "Se representa una muestra de cavidades. Su planta interior y su atribución funeraria no tienen precisión de excavación.",
+      "sourceIds": [
+        "nc-upv2020"
+      ],
+      "confidence": "interpretive",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual referido al sector geográfico y registrado en la geometría del atlas. No equivale a una medición arqueológica del elemento.",
+      "coordinate": [
+        -0.27713375,
+        39.6766811
+      ],
+      "coordinates": [
+        -0.27713375,
+        39.6766811
+      ],
+      "coordinateSourceIds": [
+        "nc-geosefarad"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "rupestre",
+      "floor": 0,
+      "order": 11,
+      "recommendedMode": "current"
+    },
+    {
+      "id": "necro-entradas",
+      "title": "Bocas antiguas y cierre contemporáneo",
+      "label": "Las entradas",
+      "regionId": "contemporanea",
+      "period": "contemporary",
+      "archFocus": "hipogeos",
+      "mapScope": "hipogeos",
+      "intro": "Acércate a las aberturas y compara sus contornos. Localiza el cierre metálico y separa esa intervención del soporte de roca.",
+      "narrative": "Acércate a las aberturas y compara sus contornos. Localiza el cierre metálico y separa esa intervención del soporte de roca.",
+      "facts": [
+        {
+          "text": "Una fotografía recoge una puerta metálica con una menorá recortada en una boca rupestre.",
+          "sourceIds": [
+            "nc-upv2020"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La chapa, las bisagras y el hueco alrededor del cierre.",
+      "modelNote": "El cierre es contemporáneo. Su colocación en la maqueta es representativa; no identifica una puerta medieval.",
+      "sourceIds": [
+        "nc-upv2020"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual referido al sector geográfico y registrado en la geometría del atlas. No equivale a una medición arqueológica del elemento.",
+      "coordinate": [
+        -0.27715709,
+        39.676682
+      ],
+      "coordinates": [
+        -0.27715709,
+        39.676682
+      ],
+      "coordinateSourceIds": [
+        "nc-geosefarad"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "contemporanea",
+      "floor": 0,
+      "order": 12,
+      "recommendedMode": "current"
+    },
+    {
+      "id": "necro-umbral",
+      "title": "Del exterior a la cavidad",
+      "label": "El umbral",
+      "regionId": "rupestre",
+      "period": "unknown",
+      "archFocus": "hipogeos",
+      "mapScope": "hipogeos",
+      "intro": "Sitúa la cámara a la altura de la entrada y mira hacia dentro. Sigue la transición entre la superficie exterior y el suelo de la cámara.",
+      "narrative": "Sitúa la cámara a la altura de la entrada y mira hacia dentro. Sigue la transición entre la superficie exterior y el suelo de la cámara.",
+      "facts": [
+        {
+          "text": "Las fotografías muestran bocas irregulares abiertas al pie del frente de roca.",
+          "sourceIds": [
+            "nc-upv2020"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El encuentro entre suelo, jambas naturales y abertura.",
+      "modelNote": "El escalón y la profundidad se ajustan para explicar el paso; no se presentan como medidas de una boca concreta.",
+      "sourceIds": [
+        "nc-upv2020"
+      ],
+      "confidence": "interpretive",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual referido al sector geográfico y registrado en la geometría del atlas. No equivale a una medición arqueológica del elemento.",
+      "coordinate": [
+        -0.27715184,
+        39.676682
+      ],
+      "coordinates": [
+        -0.27715184,
+        39.676682
+      ],
+      "coordinateSourceIds": [
+        "nc-geosefarad"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "rupestre",
+      "floor": -1,
+      "order": 13,
+      "recommendedMode": "current"
+    },
+    {
+      "id": "necro-camara",
+      "title": "Leer un espacio excavado",
+      "label": "La cámara",
+      "regionId": "rupestre",
+      "period": "unknown",
+      "archFocus": "hipogeos",
+      "mapScope": "hipogeos",
+      "intro": "Entra virtualmente y gira hacia la abertura. Después retira la cubierta para comparar el espacio percibido desde dentro con su planta.",
+      "narrative": "Entra virtualmente y gira hacia la abertura. Después retira la cubierta para comparar el espacio percibido desde dentro con su planta.",
+      "facts": [
+        {
+          "text": "La recopilación UPV menciona cámaras cuadrangulares entre las cavidades descritas.",
+          "sourceIds": [
+            "nc-upv2020"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El volumen interior y su relación con la entrada.",
+      "modelNote": "La cámara es un esquema espacial; no hay planimetría individual suficiente para reproducirla con exactitud.",
+      "sourceIds": [
+        "nc-upv2020"
+      ],
+      "confidence": "interpretive",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual referido al sector geográfico y registrado en la geometría del atlas. No equivale a una medición arqueológica del elemento.",
+      "coordinate": [
+        -0.2770999,
+        39.676682
+      ],
+      "coordinates": [
+        -0.2770999,
+        39.676682
+      ],
+      "coordinateSourceIds": [
+        "nc-geosefarad"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "rupestre",
+      "floor": -1,
+      "order": 14,
+      "recommendedMode": "current"
+    },
+    {
+      "id": "necro-hornacina",
+      "title": "Un detalle de función abierta",
+      "label": "La hornacina",
+      "regionId": "transformaciones",
+      "period": "unknown",
+      "archFocus": "hipogeos",
+      "mapScope": "hipogeos",
+      "intro": "Acerca la cámara al rebaje lateral. Examina la forma y vuelve después a la vista general para comprender su posición dentro de la cavidad.",
+      "narrative": "Acerca la cámara al rebaje lateral. Examina la forma y vuelve después a la vista general para comprender su posición dentro de la cavidad.",
+      "facts": [
+        {
+          "text": "Se han descrito hornacinas, sin poder asignar cada una con seguridad a la etapa funeraria.",
+          "sourceIds": [
+            "nc-upv2020"
+          ],
+          "confidence": "disputed"
+        }
+      ],
+      "lookFor": "El pequeño rebaje y la continuidad de su pared.",
+      "modelNote": "La hornacina modelada representa esa posibilidad. Su función, posición y fecha concretas son interpretativas.",
+      "sourceIds": [
+        "nc-upv2020"
+      ],
+      "confidence": "disputed",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual referido al sector geográfico y registrado en la geometría del atlas. No equivale a una medición arqueológica del elemento.",
+      "coordinate": [
+        -0.27708793,
+        39.67668092
+      ],
+      "coordinates": [
+        -0.27708793,
+        39.67668092
+      ],
+      "coordinateSourceIds": [
+        "nc-geosefarad"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "transformaciones",
+      "floor": -1,
+      "order": 15,
+      "recommendedMode": "current"
+    },
+    {
+      "id": "necro-roca",
+      "title": "El soporte del paisaje",
+      "label": "El afloramiento",
+      "regionId": "rupestre",
+      "period": "unknown",
+      "archFocus": "hipogeos",
+      "mapScope": "hipogeos",
+      "intro": "Rodea el frente rocoso y compara las superficies exteriores con las del interior. Busca el contacto entre roca, tierra y vegetación.",
+      "narrative": "Rodea el frente rocoso y compara las superficies exteriores con las del interior. Busca el contacto entre roca, tierra y vegetación.",
+      "facts": [
+        {
+          "text": "Las imágenes del lugar muestran superficies rocosas expuestas y vegetación discontinua.",
+          "sourceIds": [
+            "nc-upv2020"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Las irregularidades del frente y los cambios de luz sobre sus planos.",
+      "modelNote": "Fracturas, manchas y rugosidad son recursos gráficos; no representan un análisis geológico ni de patologías.",
+      "sourceIds": [
+        "nc-upv2020"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual referido al sector geográfico y registrado en la geometría del atlas. No equivale a una medición arqueológica del elemento.",
+      "coordinate": [
+        -0.27715709,
+        39.67666628
+      ],
+      "coordinates": [
+        -0.27715709,
+        39.67666628
+      ],
+      "coordinateSourceIds": [
+        "nc-geosefarad"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "rupestre",
+      "floor": -1,
+      "order": 16,
+      "recommendedMode": "current"
+    },
+    {
+      "id": "necro-techo",
+      "title": "Comprender la cubierta de roca",
+      "label": "El techo",
+      "regionId": "rupestre",
+      "period": "unknown",
+      "archFocus": "hipogeos",
+      "mapScope": "hipogeos",
+      "intro": "Alterna la vista exterior y el corte. Observa cómo cambia la luz al revelar el espacio que queda bajo la roca.",
+      "narrative": "Alterna la vista exterior y el corte. Observa cómo cambia la luz al revelar el espacio que queda bajo la roca.",
+      "facts": [
+        {
+          "text": "Las entradas documentadas pertenecen a cavidades excavadas en el afloramiento.",
+          "sourceIds": [
+            "nc-upv2020"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La continuidad entre frente, cubierta y paredes interiores.",
+      "modelNote": "El espesor de roca mostrado es ilustrativo. La apertura superior es un recurso de la visita digital.",
+      "sourceIds": [
+        "nc-upv2020"
+      ],
+      "confidence": "interpretive",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual referido al sector geográfico y registrado en la geometría del atlas. No equivale a una medición arqueológica del elemento.",
+      "coordinate": [
+        -0.27712091,
+        39.676682
+      ],
+      "coordinates": [
+        -0.27712091,
+        39.676682
+      ],
+      "coordinateSourceIds": [
+        "nc-geosefarad"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "rupestre",
+      "floor": 0,
+      "order": 17,
+      "recommendedMode": "cut"
+    },
+    {
+      "id": "necro-transformaciones",
+      "title": "Una cavidad puede tener varias vidas",
+      "label": "Las transformaciones",
+      "regionId": "interpretacion",
+      "period": "interpretation",
+      "archFocus": "hipogeos",
+      "mapScope": "hipogeos",
+      "intro": "Compara las propuestas de uso y consulta sus límites. Vuelve al estado actual para distinguir la evidencia visible de los complementos del modelo.",
+      "narrative": "Compara las propuestas de uso y consulta sus límites. Vuelve al estado actual para distinguir la evidencia visible de los complementos del modelo.",
+      "facts": [
+        {
+          "text": "Las ampliaciones y otros rasgos interiores no pueden fecharse todos como parte de un mismo uso.",
+          "sourceIds": [
+            "nc-upv2020"
+          ],
+          "confidence": "disputed"
+        }
+      ],
+      "lookFor": "Los cambios de volumen y los elementos que aparecen con las hipótesis.",
+      "modelNote": "Esta vista no asigna a todos los hipogeos la cronología de las tumbas medievales.",
+      "sourceIds": [
+        "nc-upv2020"
+      ],
+      "confidence": "disputed",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual referido al sector geográfico y registrado en la geometría del atlas. No equivale a una medición arqueológica del elemento.",
+      "coordinate": [
+        -0.27713608,
+        39.6766811
+      ],
+      "coordinates": [
+        -0.27713608,
+        39.6766811
+      ],
+      "coordinateSourceIds": [
+        "nc-geosefarad"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "interpretacion",
+      "floor": 0,
+      "order": 18,
+      "recommendedMode": "historical"
+    },
+    {
+      "id": "necro-contexto",
+      "title": "Entre el teatro y el castillo",
+      "label": "El camino exterior",
+      "regionId": "contemporanea",
+      "period": "contemporary",
+      "archFocus": "hipogeos",
+      "mapScope": "hipogeos",
+      "intro": "Recupera el paisaje y sigue el camino con la cámara. Reconoce el teatro y las murallas como referencias para orientarte entre los dos sectores.",
+      "narrative": "Recupera el paisaje y sigue el camino con la cámara. Reconoce el teatro y las murallas como referencias para orientarte entre los dos sectores.",
+      "facts": [
+        {
+          "text": "La descripción del sendero sitúa los hipogeos en la ladera frente al Teatro Romano.",
+          "sourceIds": [
+            "nc-femecv"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La relación entre senderos, roca y edificios ya presentes en el atlas.",
+      "modelNote": "Los caminos contextualizan la escena. La visita virtual no garantiza un recorrido presencial libre de obstáculos.",
+      "sourceIds": [
+        "nc-femecv"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual referido al sector geográfico y registrado en la geometría del atlas. No equivale a una medición arqueológica del elemento.",
+      "coordinate": [
+        -0.2771781,
+        39.6766811
+      ],
+      "coordinates": [
+        -0.2771781,
+        39.6766811
+      ],
+      "coordinateSourceIds": [
+        "nc-geosefarad"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "contemporanea",
+      "floor": 0,
+      "order": 19,
+      "recommendedMode": "current"
+    },
+    {
+      "id": "necro-memoria",
+      "title": "Conservar y hacer visible la memoria",
+      "label": "La memoria del lugar",
+      "regionId": "contemporanea",
+      "period": "contemporary",
+      "archFocus": "hipogeos",
+      "mapScope": "hipogeos",
+      "intro": "Termina la visita junto a los elementos de interpretación. Regresa a las fuentes para conocer qué se ha excavado y qué sigue pendiente de estudio.",
+      "narrative": "Termina la visita junto a los elementos de interpretación. Regresa a las fuentes para conocer qué se ha excavado y qué sigue pendiente de estudio.",
+      "facts": [
+        {
+          "text": "En 2020 el Ayuntamiento documentó la instalación de seis placas de la Red de Juderías en Sagunto.",
+          "sourceIds": [
+            "nc-ayto2020"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Los recursos contemporáneos que ayudan a reconocer el patrimonio.",
+      "modelNote": "La escena se centra en arquitectura y memoria. Los detalles interpretativos no sustituyen la investigación arqueológica.",
+      "sourceIds": [
+        "nc-ayto2020"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual referido al sector geográfico y registrado en la geometría del atlas. No equivale a una medición arqueológica del elemento.",
+      "coordinate": [
+        -0.27715762,
+        39.67671119
+      ],
+      "coordinates": [
+        -0.27715762,
+        39.67671119
+      ],
+      "coordinateSourceIds": [
+        "nc-geosefarad"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "contemporanea",
+      "floor": -1,
+      "order": 20,
+      "recommendedMode": "current"
+    }
+  ],
+  "regions": [
+    {
+      "id": "funeraria",
+      "name": "Las tumbas y sus cubiertas",
+      "aliases": [],
+      "summary": "Fosas, mampostería, losas y orientación.",
+      "sourceIds": [
+        "nc-hinojosa2008"
+      ],
+      "stopIds": [
+        "necro-fosas",
+        "necro-losas",
+        "necro-mamposteria",
+        "necro-orientacion"
+      ],
+      "coordinate": [
+        -0.2794151,
+        39.67643805
+      ]
+    },
+    {
+      "id": "rupestre",
+      "name": "La arquitectura de la roca",
+      "aliases": [],
+      "summary": "Entradas, umbrales, cámaras y ladera.",
+      "sourceIds": [
+        "nc-femecv",
+        "nc-upv2020"
+      ],
+      "stopIds": [
+        "necro-ladera",
+        "necro-hipogeos",
+        "necro-umbral",
+        "necro-camara",
+        "necro-roca",
+        "necro-techo"
+      ],
+      "coordinate": [
+        -0.2771781,
+        39.6766811
+      ]
+    },
+    {
+      "id": "transformaciones",
+      "name": "Niveles y transformaciones",
+      "aliases": [],
+      "summary": "Secuencia funeraria y cambios de las cavidades.",
+      "sourceIds": [
+        "nc-hinojosa2008",
+        "nc-upv2020"
+      ],
+      "stopIds": [
+        "necro-niveles",
+        "necro-hornacina"
+      ],
+      "coordinate": [
+        -0.2771781,
+        39.6766811
+      ]
+    },
+    {
+      "id": "contemporanea",
+      "name": "El lugar que visitamos",
+      "aliases": [],
+      "summary": "Senderos, cierres, protección y memoria actual.",
+      "sourceIds": [
+        "nc-ayto2020",
+        "nc-upv2020",
+        "nc-sefarad",
+        "nc-civera2003",
+        "nc-femecv",
+        "nc-pascual1993"
+      ],
+      "stopIds": [
+        "necro-conjunto",
+        "necro-acceso",
+        "necro-limites",
+        "necro-entradas",
+        "necro-contexto",
+        "necro-memoria"
+      ],
+      "coordinate": [
+        -0.2771781,
+        39.6766811
+      ]
+    },
+    {
+      "id": "interpretacion",
+      "name": "Restitución e hipótesis",
+      "aliases": [],
+      "summary": "Propuestas que permiten leer lo que sigue abierto.",
+      "sourceIds": [
+        "nc-hinojosa2008",
+        "nc-upv2020"
+      ],
+      "stopIds": [
+        "necro-historica",
+        "necro-transformaciones"
+      ],
+      "coordinate": [
+        -0.2771781,
+        39.6766811
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "nc-hinojosa2008",
+      "title": "Los judíos en el Reino de Valencia: testigos de una historia secular",
+      "author": "José Hinojosa Montalvo",
+      "url": "https://revistes.ua.es/medieval/article/view/2008-n15-los-judios-en-el-reino-de-valencia-testigos-de-una-hist",
+      "type": "investigación histórica · Anales de la Universidad de Alicante 15",
+      "year": 2008,
+      "locator": "P. 29, síntesis de las intervenciones de Matías Calvo.",
+      "note": "Referencia de tipología y secuencia; no contiene una planta individual de las tumbas.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "nc-civera2003",
+      "title": "La judería de Morvedre",
+      "author": "Manuel Civera i Gómez",
+      "url": "https://centroarqueologicosaguntino.es/wp-content/uploads/2018/09/409_06_la_juderia_de_morvedre.pdf",
+      "type": "investigación histórica · ARSE 37",
+      "year": 2003,
+      "locator": "Mapa, p. 67; estado del estudio y propuestas de recuperación, p. 90.",
+      "note": "Documento anterior al Proyecto Salomón. Sus propuestas no equivalen a resultados de excavaciones posteriores.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "nc-obras2019",
+      "title": "Histórico de obras en el Castillo de Sagunto (784–2019)",
+      "author": "Sonia Peruga Ayete y José Ramón Carbonell Rubio",
+      "url": "https://centroarqueologicosaguntino.es/wp-content/uploads/2021/03/art.carbonell-1.pdf",
+      "type": "estudio de intervenciones arquitectónicas y arqueológicas · ARSE 53",
+      "year": 2019,
+      "locator": "Pp. 121–122: excavación de 1992, Proyecto Salomón y nuevo acceso al castillo.",
+      "note": "Permite separar investigación funeraria y obras contemporáneas del acceso.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "nc-sefarad",
+      "title": "Sagunto · Caminos de Sefarad",
+      "author": "Red de Juderías de España",
+      "url": "https://caminosdesefarad.com/wp-content/uploads/2023/05/Sagunto-web.pdf",
+      "type": "guía institucional y documentación fotográfica",
+      "year": null,
+      "locator": "Pp. 18–19 y 30–31; fotografía del recinto en p. 30.",
+      "note": "Referencia del paisaje patrimonial. No se adopta como inventario métrico de hipogeos.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "nc-upv2020",
+      "title": "Visita al casco histórico artístico de la ciudad antigua de Sagunto",
+      "author": "Melissa Molina Soria · Universitat Politècnica de València",
+      "url": "https://riunet.upv.es/server/api/core/bitstreams/0605b555-9fb5-410d-9fe7-096d2c8677e4/content",
+      "type": "trabajo académico de interpretación turística y recopilación visual",
+      "year": 2020,
+      "locator": "Pp. 22–23; fig. 53 en p. 61; figs. 60–61 en p. 65.",
+      "note": "Las imágenes orientan el aspecto exterior. Las descripciones interiores sintetizan fuentes divulgativas y no sustituyen un levantamiento arqueológico.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "nc-ayto2020",
+      "title": "El conjunto patrimonial judío de Sagunto ya cuenta con la señalización de la Red de Juderías de España",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/es/actualidad/el-conjunto-patrimonial-judio-de-sagunto-ya-cuenta-con-la-senalizacion-de-la-red-de-juderias-de-espana/",
+      "type": "comunicación municipal",
+      "year": 2020,
+      "locator": "8 de septiembre de 2020; localización de las placas.",
+      "note": "Documenta señalización contemporánea en la subida frente a los hipogeos y en el cementerio.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "nc-ayto2015",
+      "title": "Actuaciones incluidas en las ayudas de la Diputación de Valencia",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/es/actualidad/el-ayuntamiento-de-sagunto-aprueba-la-distribucion-de-las-actuaciones-incluidas-en-la-concesion-de-ayudas-de-la-diputacion-de-valencia/",
+      "type": "comunicación municipal sobre puesta en valor",
+      "year": 2015,
+      "locator": "9 de noviembre de 2015; apartado de la necrópolis medieval judía.",
+      "note": "Documenta la programación de obras y dirección arqueológica, no una fecha única de apertura.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "nc-femecv",
+      "title": "SL-CV 42 · Senda dels Lladres",
+      "author": "Federació d’Esports de Muntanya i Escalada de la Comunitat Valenciana",
+      "url": "https://senders.femecv.com/es/sendero/ver/sl-cv-42",
+      "type": "documentación del sendero",
+      "year": null,
+      "locator": "Descripción del recorrido por la ladera del castillo.",
+      "note": "Referencia de relaciones entre caminos, cementerio, murallas y teatro; no certifica accesibilidad de la visita digital.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "nc-geosefarad",
+      "title": "Geolocalización de cementerios judíos de Sagunto",
+      "author": "GeoSefarad · European Jewish Quarters",
+      "url": "https://europeanjewishquarters.wordpress.com/2022/01/19/geolocalizacion-de-cementerios-judios-de-sagunto-sagunto-jewish-quarters-geosefarad/",
+      "type": "localización de puntos de visita",
+      "year": 2022,
+      "locator": "Puntos de cementerios e hipogeos de Sagunto.",
+      "note": "El punto del hipogeo orienta el atlas; no delimita sus cámaras ni bocas individuales.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "nc-osm",
+      "title": "Cementerio judío y entorno del castillo de Sagunto",
+      "author": "Colaboradores de OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/203325111",
+      "type": "cartografía colaborativa",
+      "year": null,
+      "locator": "Way 203325111 y caminos del extracto urbano del atlas.",
+      "note": "El contorno cartográfico no representa la extensión histórica completa ni una planta arqueológica.",
+      "accessed": "2026-11-20",
+      "licenseUrl": "https://www.openstreetmap.org/copyright"
+    },
+    {
+      "id": "nc-pascual1993",
+      "title": "Una torre defensiva de época republicana en el Castell de Sagunt",
+      "author": "Ignacio Pascual Buyé y Carmen Aranegui Gascó",
+      "url": "https://roderic.uv.es/server/api/core/bitstreams/e5434d4a-f139-4446-abe5-2238b2649331/content",
+      "type": "informe de excavación · SAGVNTVM 26",
+      "year": 1993,
+      "locator": "P. 189, acceso medieval del castillo; p. 191, figs. 2–3; p. 193, enterramientos junto al muro norte.",
+      "note": "Estudia principalmente la torre republicana. El plano es de la torre y sus sondeos, no del cementerio completo ni de los hipogeos.",
+      "accessed": "2026-11-20"
+    }
+  ],
+  "timeline": [
+    {
+      "id": "nc-t-primera",
+      "date": "En torno al siglo XIV",
+      "title": "El primer nivel estudiado",
+      "text": "La síntesis de las excavaciones identifica una fase anterior al relleno que elevó el terreno.",
+      "sourceIds": [
+        "nc-hinojosa2008"
+      ],
+      "period": "medieval",
+      "confidence": "interpretive",
+      "stopId": "necro-niveles"
+    },
+    {
+      "id": "nc-t-segunda",
+      "date": "Siglos XIV–XV",
+      "title": "Un nivel funerario elevado",
+      "text": "El segundo momento de uso es la referencia temporal de la vista histórica del cementerio.",
+      "sourceIds": [
+        "nc-hinojosa2008"
+      ],
+      "period": "medieval",
+      "confidence": "interpretive",
+      "stopId": "necro-historica"
+    },
+    {
+      "id": "nc-t-1992",
+      "date": "1992",
+      "title": "Primeros enterramientos de la intervención",
+      "text": "Las obras de urgencia junto a la torre y el antiguo acceso sacaron a la luz seis sepulturas.",
+      "sourceIds": [
+        "nc-obras2019"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "necro-limites"
+    },
+    {
+      "id": "nc-t-2003",
+      "date": "2003",
+      "title": "Investigar y proponer la recuperación",
+      "text": "Civera publica el estado de conocimiento y plantea la recuperación del espacio funerario.",
+      "sourceIds": [
+        "nc-civera2003"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "necro-limites"
+    },
+    {
+      "id": "nc-t-salomon",
+      "date": "2004–2005",
+      "title": "Proyecto Salomón",
+      "text": "La cronología de obras recoge la intervención arqueológica dirigida por Matías Calvo.",
+      "sourceIds": [
+        "nc-obras2019"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "necro-fosas"
+    },
+    {
+      "id": "nc-t-acceso",
+      "date": "2006–2010",
+      "title": "Nuevo acceso al castillo",
+      "text": "El proyecto de acceso y centro de visitantes forma parte de la transformación contemporánea del entorno.",
+      "sourceIds": [
+        "nc-obras2019"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "necro-acceso"
+    },
+    {
+      "id": "nc-t-puesta-valor",
+      "date": "2015",
+      "title": "Programar la puesta en valor",
+      "text": "El Ayuntamiento incluye obras y dirección arqueológica para la necrópolis medieval judía.",
+      "sourceIds": [
+        "nc-ayto2015"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "necro-acceso"
+    },
+    {
+      "id": "nc-t-memoria",
+      "date": "2020",
+      "title": "Señalizar el patrimonio sefardí",
+      "text": "La red de placas incluye por separado la subida frente a los hipogeos y el cementerio.",
+      "sourceIds": [
+        "nc-ayto2020"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "necro-memoria"
+    }
+  ],
+  "modelRegistration": {
+    "precision": "approximate",
+    "method": "Dos emplazamientos geográficos independientes; puntos de cámara de la geometría implementada. Tumbas y cámaras mantienen una disposición interpretativa.",
+    "sectors": {
+      "cementerio": {
+        "anchor": [
+          -0.2794151,
+          39.67643805
+        ],
+        "basis": "Polígono cartográfico OSM 203325111; distribución de tumbas tipológica."
+      },
+      "hipogeos": {
+        "anchor": [
+          -0.2771781,
+          39.6766811
+        ],
+        "basis": "Punto de visita GeoSefarad; geometría de cámaras interpretativa."
+      }
+    },
+    "provisionalCoordinates": false,
+    "coordinates": "Registered from the two implemented sectors; chamber and grave layout is interpretive."
+  }
+}

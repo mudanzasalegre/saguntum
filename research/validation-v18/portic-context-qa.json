@@ -1,0 +1,581 @@
+{
+  "pass": true,
+  "checks": 50,
+  "results": [
+    {
+      "label": "Source footprints, courtyards, heights and provenance are preserved verbatim",
+      "pass": true
+    },
+    {
+      "label": "Both registered modern host parcels are explicitly reserved for the archaeological model",
+      "pass": true
+    },
+    {
+      "label": "No host building is duplicated among the neighbouring context",
+      "pass": true
+    },
+    {
+      "label": "No ownership transfers from previous visits",
+      "pass": true
+    },
+    {
+      "label": "santa-maria context remains unchanged",
+      "pass": true
+    },
+    {
+      "label": "santa-maria retains unique building ownership",
+      "pass": true
+    },
+    {
+      "label": "santa-maria retains its detailed streets",
+      "pass": true
+    },
+    {
+      "label": "plaza-mayor context remains unchanged",
+      "pass": true
+    },
+    {
+      "label": "plaza-mayor retains unique building ownership",
+      "pass": true
+    },
+    {
+      "label": "plaza-mayor retains its detailed streets",
+      "pass": true
+    },
+    {
+      "label": "juderia context remains unchanged",
+      "pass": true
+    },
+    {
+      "label": "juderia retains unique building ownership",
+      "pass": true
+    },
+    {
+      "label": "juderia retains its detailed streets",
+      "pass": true
+    },
+    {
+      "label": "calvario context remains unchanged",
+      "pass": true
+    },
+    {
+      "label": "calvario retains unique building ownership",
+      "pass": true
+    },
+    {
+      "label": "calvario retains its detailed streets",
+      "pass": true
+    },
+    {
+      "label": "berenguer context remains unchanged",
+      "pass": true
+    },
+    {
+      "label": "berenguer retains unique building ownership",
+      "pass": true
+    },
+    {
+      "label": "berenguer retains its detailed streets",
+      "pass": true
+    },
+    {
+      "label": "sangre context remains unchanged",
+      "pass": true
+    },
+    {
+      "label": "sangre retains unique building ownership",
+      "pass": true
+    },
+    {
+      "label": "sangre retains its detailed streets",
+      "pass": true
+    },
+    {
+      "label": "salvador context remains unchanged",
+      "pass": true
+    },
+    {
+      "label": "salvador retains unique building ownership",
+      "pass": true
+    },
+    {
+      "label": "salvador retains its detailed streets",
+      "pass": true
+    },
+    {
+      "label": "museo context remains unchanged",
+      "pass": true
+    },
+    {
+      "label": "museo retains unique building ownership",
+      "pass": true
+    },
+    {
+      "label": "museo retains its detailed streets",
+      "pass": true
+    },
+    {
+      "label": "Plaza and tree details are explicitly interpretive",
+      "pass": true
+    },
+    {
+      "label": "Public surfaces have no overlap with buildings, hosts, private courts or previous paving",
+      "pass": true
+    },
+    {
+      "label": "Asphalt, footways, plaza and planting form four disjoint surface regions",
+      "pass": true
+    },
+    {
+      "label": "Construction and terrain binding never mutate source data",
+      "pass": true
+    },
+    {
+      "label": "Urban context adds no terrain flattening patch",
+      "pass": true
+    },
+    {
+      "label": "All three exterior focus contracts exist",
+      "pass": true
+    },
+    {
+      "label": "Exterior cameras keep physical world positions",
+      "pass": true
+    },
+    {
+      "label": "Every context height uses source evidence",
+      "pass": true
+    },
+    {
+      "label": "Every height conflict is retained in the QA record",
+      "pass": true
+    },
+    {
+      "label": "Binding final terrain does not create false high roof corrections",
+      "pass": true
+    },
+    {
+      "label": "Vegetation can be switched independently of benches and curbs",
+      "pass": true
+    },
+    {
+      "label": "Tree trunks stand outside every registered building and host footprint",
+      "pass": true
+    },
+    {
+      "label": "All geometry attributes are finite",
+      "pass": true
+    },
+    {
+      "label": "All public paving triangles fit the exact final terrain mesh",
+      "pass": true
+    },
+    {
+      "label": "Asphalt, planting and mineral paving have distinct material treatment",
+      "pass": true
+    },
+    {
+      "label": "Close exterior eyes remain at pedestrian height outside buildings",
+      "pass": true
+    },
+    {
+      "label": "Reading mode removes all texture and bump maps",
+      "pass": true
+    },
+    {
+      "label": "Material mode restores every original context material",
+      "pass": true
+    },
+    {
+      "label": "Ground rebinding releases replaced resources without leaks",
+      "pass": true
+    },
+    {
+      "label": "Instances have independent materials and textures",
+      "pass": true
+    },
+    {
+      "label": "Disposing one context leaves the other intact",
+      "pass": true
+    },
+    {
+      "label": "Dispose releases all owned resources",
+      "pass": true
+    }
+  ],
+  "stats": {
+    "buildingParts": 152,
+    "parentParcels": 44,
+    "footprintsPreserved": true,
+    "courtyards": 10,
+    "sourceHeight": 0,
+    "ignHeight": 84,
+    "storeyHeight": 68,
+    "fallbackHeight": 0,
+    "streetSamples": 8983,
+    "roofCorrections": 0,
+    "maximumRoofCorrectionM": 0,
+    "preservedSantaMaria": true,
+    "preservedPlazaMayor": true,
+    "heightConflictsReviewed": 9,
+    "interpretiveTrees": 24,
+    "interpretiveBenches": 6,
+    "hostBuildingPartsExcluded": 27,
+    "reusedBuildingParts": 0,
+    "reusedStreetFragments": 0,
+    "preservedPreviousContexts": true
+  },
+  "geometry": {
+    "meshes": 16,
+    "triangles": 98484,
+    "finite": true
+  },
+  "pavement": {
+    "samples": 35932,
+    "maximumDrapeError": 0.000003093974666232291
+  },
+  "focusQA": [
+    {
+      "id": "portic-plaza",
+      "closeGroundClearanceM": 2.1499999999999986,
+      "closeInsideBuilding": false
+    },
+    {
+      "id": "portic-acceso",
+      "closeGroundClearanceM": 2.1499999999999986,
+      "closeInsideBuilding": false
+    },
+    {
+      "id": "portic-entorno",
+      "closeGroundClearanceM": 2.1499999999999986,
+      "closeInsideBuilding": false
+    }
+  ],
+  "publicSpaceDetails": {
+    "trees": [
+      {
+        "id": "portic-tree-1",
+        "coordinate": [
+          -0.27310946,
+          39.680230686
+        ],
+        "baseM": 44.11,
+        "heightM": 5.2,
+        "canopyRadiusM": 2.2,
+        "interpretive": true
+      },
+      {
+        "id": "portic-tree-2",
+        "coordinate": [
+          -0.273004413,
+          39.680239669
+        ],
+        "baseM": 44.11,
+        "heightM": 5.68,
+        "canopyRadiusM": 2.4200000000000004,
+        "interpretive": true
+      },
+      {
+        "id": "portic-tree-3",
+        "coordinate": [
+          -0.272887694,
+          39.680221703
+        ],
+        "baseM": 44.11,
+        "heightM": 6.16,
+        "canopyRadiusM": 2.64,
+        "interpretive": true
+      },
+      {
+        "id": "portic-tree-4",
+        "coordinate": [
+          -0.272794318,
+          39.680176788
+        ],
+        "baseM": 44.07000033175158,
+        "heightM": 6.640000000000001,
+        "canopyRadiusM": 2.8600000000000003,
+        "interpretive": true
+      },
+      {
+        "id": "portic-tree-5",
+        "coordinate": [
+          -0.27274763,
+          39.680104923
+        ],
+        "baseM": 44.01246120779703,
+        "heightM": 7.12,
+        "canopyRadiusM": 2.2,
+        "interpretive": true
+      },
+      {
+        "id": "portic-tree-6",
+        "coordinate": [
+          -0.272770974,
+          39.680024075
+        ],
+        "baseM": 44.11,
+        "heightM": 5.2,
+        "canopyRadiusM": 2.4200000000000004,
+        "interpretive": true
+      },
+      {
+        "id": "portic-tree-7",
+        "coordinate": [
+          -0.273156148,
+          39.680149838
+        ],
+        "baseM": 44.11,
+        "heightM": 5.68,
+        "canopyRadiusM": 2.64,
+        "interpretive": true
+      },
+      {
+        "id": "portic-tree-8",
+        "coordinate": [
+          -0.273202836,
+          39.680060007
+        ],
+        "baseM": 44.11,
+        "heightM": 6.16,
+        "canopyRadiusM": 2.8600000000000003,
+        "interpretive": true
+      },
+      {
+        "id": "portic-tree-9",
+        "coordinate": [
+          -0.273237852,
+          39.679988142
+        ],
+        "baseM": 44.11,
+        "heightM": 6.640000000000001,
+        "canopyRadiusM": 2.2,
+        "interpretive": true
+      },
+      {
+        "id": "portic-tree-10",
+        "coordinate": [
+          -0.273284539,
+          39.679916277
+        ],
+        "baseM": 44.126924261417244,
+        "heightM": 7.12,
+        "canopyRadiusM": 2.4200000000000004,
+        "interpretive": true
+      },
+      {
+        "id": "portic-tree-12",
+        "coordinate": [
+          -0.273261195,
+          39.679790514
+        ],
+        "baseM": 44.11,
+        "heightM": 5.68,
+        "canopyRadiusM": 2.8600000000000003,
+        "interpretive": true
+      },
+      {
+        "id": "portic-tree-13",
+        "coordinate": [
+          -0.272922709,
+          39.67995221
+        ],
+        "baseM": 44.11,
+        "heightM": 6.16,
+        "canopyRadiusM": 2.2,
+        "interpretive": true
+      },
+      {
+        "id": "portic-tree-14",
+        "coordinate": [
+          -0.272899365,
+          39.679880345
+        ],
+        "baseM": 44.11,
+        "heightM": 6.640000000000001,
+        "canopyRadiusM": 2.4200000000000004,
+        "interpretive": true
+      },
+      {
+        "id": "portic-tree-15",
+        "coordinate": [
+          -0.272981069,
+          39.679826446
+        ],
+        "baseM": 44.11,
+        "heightM": 7.12,
+        "canopyRadiusM": 2.64,
+        "interpretive": true
+      },
+      {
+        "id": "portic-tree-16",
+        "coordinate": [
+          -0.273016085,
+          39.679727632
+        ],
+        "baseM": 44.11,
+        "heightM": 5.2,
+        "canopyRadiusM": 2.8600000000000003,
+        "interpretive": true
+      },
+      {
+        "id": "portic-tree-17",
+        "coordinate": [
+          -0.272992741,
+          39.679655767
+        ],
+        "baseM": 44.11,
+        "heightM": 5.68,
+        "canopyRadiusM": 2.2,
+        "interpretive": true
+      },
+      {
+        "id": "portic-tree-18",
+        "coordinate": [
+          -0.273074444,
+          39.679673733
+        ],
+        "baseM": 44.11,
+        "heightM": 6.16,
+        "canopyRadiusM": 2.4200000000000004,
+        "interpretive": true
+      },
+      {
+        "id": "portic-tree-19",
+        "coordinate": [
+          -0.273447946,
+          39.679556953
+        ],
+        "baseM": 44.55907538115009,
+        "heightM": 6.640000000000001,
+        "canopyRadiusM": 2.64,
+        "interpretive": true
+      },
+      {
+        "id": "portic-tree-20",
+        "coordinate": [
+          -0.273354571,
+          39.679512037
+        ],
+        "baseM": 44.459707159669215,
+        "heightM": 7.12,
+        "canopyRadiusM": 2.8600000000000003,
+        "interpretive": true
+      },
+      {
+        "id": "portic-tree-21",
+        "coordinate": [
+          -0.273237852,
+          39.679494071
+        ],
+        "baseM": 44.11,
+        "heightM": 5.2,
+        "canopyRadiusM": 2.2,
+        "interpretive": true
+      },
+      {
+        "id": "portic-tree-22",
+        "coordinate": [
+          -0.27347129,
+          39.679332375
+        ],
+        "baseM": 45.084796514767056,
+        "heightM": 5.68,
+        "canopyRadiusM": 2.4200000000000004,
+        "interpretive": true
+      },
+      {
+        "id": "portic-tree-23",
+        "coordinate": [
+          -0.273377915,
+          39.679296443
+        ],
+        "baseM": 44.99089494666038,
+        "heightM": 6.16,
+        "canopyRadiusM": 2.64,
+        "interpretive": true
+      },
+      {
+        "id": "portic-tree-25",
+        "coordinate": [
+          -0.27316782,
+          39.679943227
+        ],
+        "baseM": 44.11,
+        "heightM": 7.12,
+        "canopyRadiusM": 2.2,
+        "interpretive": true
+      },
+      {
+        "id": "portic-tree-26",
+        "coordinate": [
+          -0.273051101,
+          39.679970176
+        ],
+        "baseM": 44.11,
+        "heightM": 5.2,
+        "canopyRadiusM": 2.4200000000000004,
+        "interpretive": true
+      }
+    ],
+    "benches": [
+      {
+        "id": "portic-bench-3",
+        "coordinate": [
+          -0.272817662,
+          39.680104923
+        ],
+        "baseM": 44.105,
+        "interpretive": true
+      },
+      {
+        "id": "portic-bench-4",
+        "coordinate": [
+          -0.273132804,
+          39.679862379
+        ],
+        "baseM": 44.105,
+        "interpretive": true
+      },
+      {
+        "id": "portic-bench-5",
+        "coordinate": [
+          -0.273121132,
+          39.679754581
+        ],
+        "baseM": 44.105,
+        "interpretive": true
+      },
+      {
+        "id": "portic-bench-6",
+        "coordinate": [
+          -0.273307883,
+          39.679646784
+        ],
+        "baseM": 44.105,
+        "interpretive": true
+      },
+      {
+        "id": "portic-bench-7",
+        "coordinate": [
+          -0.273377915,
+          39.679574919
+        ],
+        "baseM": 44.147448368637036,
+        "interpretive": true
+      },
+      {
+        "id": "portic-bench-8",
+        "coordinate": [
+          -0.273272867,
+          39.679431189
+        ],
+        "baseM": 44.333494031656116,
+        "interpretive": true
+      }
+    ],
+    "curbSegments": 780,
+    "note": "Copas de árboles localizadas aproximadamente en PNOA. Bancos y formas vegetales interpretativos. La presencia del parque con sombra está corroborada por el Ayuntamiento en junio2026."
+  },
+  "failures": []
+}

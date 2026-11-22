@@ -1,0 +1,1797 @@
+{
+  "schemaVersion": 1,
+  "id": "begona",
+  "title": "Iglesia de Nuestra Señora de Begoña y Alameda",
+  "subtitle": "El templo, sus naves y el paseo de la ciudad industrial",
+  "introduction": "Recorre la fachada y el campanario, entra en las naves y descubre su cubierta antes de salir a la Alameda. Esta maqueta reúne rasgos documentados y proporciones interpretadas; las fotografías de referencia corresponden a distintas fechas.",
+  "researchDate": "2026-11-21",
+  "regionsLabel": "Ámbitos de Begoña",
+  "mapButtonLabel": "Plano de Begoña",
+  "overviewButtonLabel": "Ver el conjunto",
+  "readingModeLabel": "Leer el conjunto",
+  "readingModeNote": "Cinco ámbitos de visita; sus colores ayudan a orientarse y no representan fases constructivas exactas.",
+  "timelineIntroduction": "De la construcción del templo a la conservación de su memoria. Cada hito conserva su fuente.",
+  "visitAriaLabel": "Visita a Nuestra Señora de Begoña y la Alameda",
+  "sectionOnOverview": true,
+  "sectionOpenLabel": "Abrir sección",
+  "sectionCloseLabel": "Cerrar sección",
+  "sectionInstructions": "Abre las cubiertas del templo para leer sus naves y soportes. El coro y las lámparas se retiran con ellas; Casa Abadía y dependencias conservan su cubierta.",
+  "sectionNote": "Sección digital interpretativa. La forma de la estructura se apoya en documentación; sus cotas y espesores no proceden de un levantamiento.",
+  "mapInstructions": "Elige una parada en la iglesia o en la Alameda. Usa las plantas para localizar nave y coro.",
+  "mapNote": "Plano orientativo sobre cartografía contemporánea. Distribución interior, alturas y objetos sin medición son aproximados.",
+  "visitNote": "Investigación revisada el 21 de noviembre de 2026. La visita virtual no certifica el estado de cada objeto, el funcionamiento del órgano ni el acceso físico a dependencias.",
+  "methodology": [
+    "Se cruzan documentos municipales, investigación patrimonial, organología, fotografías, Catastro, OpenStreetMap y ortofoto. Las cotas no publicadas se aproximan.",
+    "La fecha de proyecto de 1927 se distingue de la solicitud de permiso de abril de 1928 y de las obras de 1928–1929. Se prioriza el relato municipal específico frente a la cronología resumida de la ficha universitaria.",
+    "La escena sigue la organización documentada y una lectura de la fachada restaurada. Imágenes históricas, policromías y mobiliario no se presentan como un registro completo del estado en 2026.",
+    "La fotografía de la maqueta de madera sirve solo de apoyo visual. No sustituye planos ni mediciones, y no se confunde con fotografías del edificio.",
+    "La Casa Abadía se diferencia del espacio litúrgico. Las viviendas y dependencias sin documentación interior suficiente se muestran mediante sus volúmenes exteriores.",
+    "La licitación de esculturas anunciada en marzo de 2026 no prueba que estén instaladas. La escena no convierte proyectos futuros en patrimonio ya construido."
+  ],
+  "readingLegend": [
+    {
+      "id": "edificio",
+      "label": "Fachada y volumen",
+      "color": "#d4b17c",
+      "note": "El exterior y la lectura general del templo."
+    },
+    {
+      "id": "naves",
+      "label": "Naves y estructura",
+      "color": "#95bfc5",
+      "note": "Soportes, cubiertas, luz y materiales."
+    },
+    {
+      "id": "liturgia",
+      "label": "Cabecera y coro",
+      "color": "#c79379",
+      "note": "Espacios de culto y patrimonio musical."
+    },
+    {
+      "id": "anexos",
+      "label": "Anexos y ciudad factoría",
+      "color": "#b7a1ca",
+      "note": "El edificio y las relaciones con su entorno industrial."
+    },
+    {
+      "id": "alameda",
+      "label": "Alameda y barrio",
+      "color": "#91ae87",
+      "note": "Acceso, paseo, vegetación y contexto urbano."
+    }
+  ],
+  "confidenceLegend": [
+    {
+      "id": "documented",
+      "label": "Documentado",
+      "note": "La fuente respalda el rasgo o el dato; no certifica cada medida del modelo."
+    },
+    {
+      "id": "interpretive",
+      "label": "Interpretación",
+      "note": "Aproximación de forma, dimensión, color o posición para explicar el espacio."
+    },
+    {
+      "id": "disputed",
+      "label": "Fuentes diferentes",
+      "note": "Se mantiene visible una diferencia documental sin resolverla con una precisión inventada."
+    }
+  ],
+  "materialEvidenceLegend": [
+    {
+      "id": "conserved",
+      "label": "Rasgo documentado",
+      "note": "Elemento reconocido en documentación o fotografías."
+    },
+    {
+      "id": "rehabilitated",
+      "label": "Restauración documentada",
+      "note": "Transformación acreditada, diferenciada de los materiales originales."
+    },
+    {
+      "id": "mixed",
+      "label": "Lectura conjunta",
+      "note": "Rasgos documentados y aproximaciones de representación conviven en la maqueta."
+    }
+  ],
+  "regions": [
+    {
+      "id": "edificio",
+      "name": "Fachada y volumen",
+      "aliases": [],
+      "summary": "El exterior y la lectura general del templo.",
+      "sourceIds": [
+        "b-xiuxiueig",
+        "b-uv",
+        "b-guia2022",
+        "b-guia2002",
+        "b-contrast",
+        "b-catastro"
+      ],
+      "stopIds": [
+        "begona-conjunto",
+        "begona-fachada",
+        "begona-portada",
+        "begona-campanario",
+        "begona-lateral",
+        "begona-seccion"
+      ],
+      "coordinate": [
+        -0.221225,
+        39.658587
+      ]
+    },
+    {
+      "id": "naves",
+      "name": "Naves y estructura",
+      "aliases": [],
+      "summary": "Soportes, cubiertas, luz y materiales.",
+      "sourceIds": [
+        "b-guia2022",
+        "b-guia2002",
+        "b-contrast",
+        "b-xiuxiueig"
+      ],
+      "stopIds": [
+        "begona-nave",
+        "begona-arcadas",
+        "begona-cubierta",
+        "begona-materiales"
+      ],
+      "coordinate": [
+        -0.221225,
+        39.658587
+      ]
+    },
+    {
+      "id": "liturgia",
+      "name": "Cabecera y coro",
+      "aliases": [],
+      "summary": "Espacios de culto y patrimonio musical.",
+      "sourceIds": [
+        "b-guia2022",
+        "b-xiuxiueig",
+        "b-interior2004",
+        "b-organo"
+      ],
+      "stopIds": [
+        "begona-presbiterio",
+        "begona-capillas",
+        "begona-coro",
+        "begona-organo"
+      ],
+      "coordinate": [
+        -0.221225,
+        39.658587
+      ]
+    },
+    {
+      "id": "anexos",
+      "name": "Anexos y ciudad factoría",
+      "aliases": [],
+      "summary": "El edificio y las relaciones con su entorno industrial.",
+      "sourceIds": [
+        "b-contrast",
+        "b-xiuxiueig",
+        "b-memoria2025",
+        "b-esculturas2026"
+      ],
+      "stopIds": [
+        "begona-abadia",
+        "begona-ciudad-factoria"
+      ],
+      "coordinate": [
+        -0.221225,
+        39.658587
+      ]
+    },
+    {
+      "id": "alameda",
+      "name": "Alameda y barrio",
+      "aliases": [],
+      "summary": "Acceso, paseo, vegetación y contexto urbano.",
+      "sourceIds": [
+        "b-frente",
+        "b-rutas2023",
+        "b-alameda",
+        "b-pnoa",
+        "b-uv",
+        "b-catastro",
+        "b-osm"
+      ],
+      "stopIds": [
+        "begona-atrio",
+        "begona-alameda",
+        "begona-arbolado",
+        "begona-frente-urbano"
+      ],
+      "coordinate": [
+        -0.221225,
+        39.658587
+      ]
+    }
+  ],
+  "stops": [
+    {
+      "id": "begona-conjunto",
+      "title": "Begoña, frente a la Alameda",
+      "label": "El conjunto",
+      "regionId": "edificio",
+      "period": "mixed",
+      "intro": "Empieza con una vista del templo y del espacio que se abre ante él.",
+      "narrative": "Alterna la vista exterior con la sección y vuelve al paseo para relacionar las distintas escalas.",
+      "facts": [
+        {
+          "text": "Ricardo de Bastida proyectó el templo; las obras se desarrollaron en 1928–1929.",
+          "sourceIds": [
+            "b-xiuxiueig"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La inauguración se celebró el 5 de junio de 1929.",
+          "sourceIds": [
+            "b-xiuxiueig"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La torre, las tres naves y el vacío de la Alameda.",
+      "modelNote": "Maqueta interpretativa: combina cartografía, fotografías y descripciones; las medidas interiores no están levantadas.",
+      "sourceIds": [
+        "b-xiuxiueig"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.2211634,
+        39.65855926
+      ],
+      "coordinates": [
+        -0.2211634,
+        39.65855926
+      ],
+      "coordinateSourceIds": [
+        "b-catastro",
+        "b-pnoa",
+        "b-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "edificio",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": "begona-templo",
+      "order": 1,
+      "elevation": 7.179578295971811,
+      "localTarget": [
+        5.277325470978656,
+        7.179578295971811,
+        3.08830709160771
+      ]
+    },
+    {
+      "id": "begona-fachada",
+      "title": "Una fachada que asciende hacia el centro",
+      "label": "Fachada",
+      "regionId": "edificio",
+      "period": "mixed",
+      "intro": "Sitúate delante del edificio y sigue su silueta de un extremo al otro.",
+      "narrative": "Compara el ancho de las alas con el cuerpo que sobresale en el centro.",
+      "facts": [
+        {
+          "text": "La composición piramidal concentra la torre sobre el eje de la entrada.",
+          "sourceIds": [
+            "b-uv"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Cada ala de la fachada contiene tres ventanas ovaladas.",
+          "sourceIds": [
+            "b-guia2022"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Seis óculos bajos, curvas laterales y remate central.",
+      "modelNote": "La apariencia exterior toma como referencia fotografías de la fachada restaurada; el detalle ornamental se simplifica.",
+      "sourceIds": [
+        "b-uv",
+        "b-guia2022"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22106563,
+        39.65850697
+      ],
+      "coordinates": [
+        -0.22106563,
+        39.65850697
+      ],
+      "coordinateSourceIds": [
+        "b-catastro",
+        "b-pnoa",
+        "b-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "edificio",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": "begona-templo",
+      "order": 2,
+      "elevation": 15.179578295971812,
+      "localTarget": [
+        13.653871587688954,
+        15.179578295971812,
+        8.908399458110635
+      ]
+    },
+    {
+      "id": "begona-portada",
+      "title": "Columnas, volutas y un gran óvalo",
+      "label": "Portada",
+      "regionId": "edificio",
+      "period": "mixed",
+      "intro": "Acércate a la puerta para reconocer el relieve de las molduras.",
+      "narrative": "Mira cómo cada pieza genera sombra y ayuda a distinguir las dos alturas de la portada.",
+      "facts": [
+        {
+          "text": "Dos parejas de columnas jónicas enmarcan la entrada de medio punto.",
+          "sourceIds": [
+            "b-guia2002"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Sobre ella, un óculo ovalado queda encuadrado por columnas estriadas y una cornisa curva.",
+          "sourceIds": [
+            "b-guia2002"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Puerta, columnas pareadas, volutas y hueco superior.",
+      "modelNote": "Perfiles y profundidades aproximados; no se atribuye precisión escultórica a las molduras.",
+      "sourceIds": [
+        "b-guia2002"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22106372,
+        39.65850595
+      ],
+      "coordinates": [
+        -0.22106372,
+        39.65850595
+      ],
+      "coordinateSourceIds": [
+        "b-catastro",
+        "b-pnoa",
+        "b-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "edificio",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": "begona-templo",
+      "order": 3,
+      "elevation": 6.379578295971811,
+      "localTarget": [
+        13.818117589977392,
+        6.379578295971811,
+        9.022518916277358
+      ]
+    },
+    {
+      "id": "begona-campanario",
+      "title": "La torre sobre el coro",
+      "label": "Campanario",
+      "regionId": "edificio",
+      "period": "mixed",
+      "intro": "Sube con la cámara hasta la parte alta de la fachada.",
+      "narrative": "Observa el vacío entre soportes y la sucesión de balconada, balaustrada y cúpula.",
+      "facts": [
+        {
+          "text": "La torre integra un balcón convexo y una cúpula de perfil parabólico.",
+          "sourceIds": [
+            "b-contrast"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Las pequeñas torrecillas laterales completan la silueta del cuerpo central.",
+          "sourceIds": [
+            "b-contrast"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Vanos abiertos, balcón curvo y remates.",
+      "modelNote": "La parada muestra su arquitectura exterior. No reproduce un itinerario real de subida ni una inspección de las campanas.",
+      "sourceIds": [
+        "b-contrast"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22109103,
+        39.65852056
+      ],
+      "coordinates": [
+        -0.22109103,
+        39.65852056
+      ],
+      "coordinateSourceIds": [
+        "b-catastro",
+        "b-pnoa",
+        "b-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "edificio",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": "begona-templo",
+      "order": 4,
+      "elevation": 23.17957829597181,
+      "localTarget": [
+        11.47761205736716,
+        23.17957829597181,
+        7.396316637401541
+      ]
+    },
+    {
+      "id": "begona-lateral",
+      "title": "La iglesia junto a la avenida",
+      "label": "Lateral",
+      "regionId": "edificio",
+      "period": "mixed",
+      "intro": "Rodea la esquina para leer la longitud del templo.",
+      "narrative": "Busca el ritmo de los apoyos y el cambio de altura entre la nave mayor y las laterales.",
+      "facts": [
+        {
+          "text": "Los contrafuertes son visibles en el costado norte del edificio.",
+          "sourceIds": [
+            "b-guia2022"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Las ventanas rectangulares iluminan las naves laterales.",
+          "sourceIds": [
+            "b-guia2022"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Contrafuertes, ventanas y aleros.",
+      "modelNote": "Las separaciones y alturas se ajustan visualmente a la huella y a las referencias, con precisión aproximada.",
+      "sourceIds": [
+        "b-guia2022"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22111399,
+        39.65867696
+      ],
+      "coordinates": [
+        -0.22111399,
+        39.65867696
+      ],
+      "coordinateSourceIds": [
+        "b-catastro",
+        "b-pnoa",
+        "b-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "edificio",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": "begona-templo",
+      "order": 5,
+      "elevation": 7.879578295971811,
+      "localTarget": [
+        9.510440643493695,
+        7.879578295971811,
+        -10.014386071617707
+      ]
+    },
+    {
+      "id": "begona-nave",
+      "title": "Una perspectiva hacia la cabecera",
+      "label": "Nave central",
+      "regionId": "naves",
+      "period": "mixed",
+      "intro": "Entra en la nave y dirige la mirada hacia el altar.",
+      "narrative": "Compara esta vista a la altura de una persona con la planta abierta desde arriba.",
+      "facts": [
+        {
+          "text": "El espacio se organiza en tres naves longitudinales.",
+          "sourceIds": [
+            "b-guia2022"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La nave central supera en altura y anchura a las dos laterales.",
+          "sourceIds": [
+            "b-guia2022"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Pasillo central, secuencia de soportes y cabecera.",
+      "modelNote": "Bancos, lámparas y recorridos interiores se representan para dar escala, sin inventario métrico.",
+      "sourceIds": [
+        "b-guia2022"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22124296,
+        39.6586018
+      ],
+      "coordinates": [
+        -0.22124296,
+        39.6586018
+      ],
+      "coordinateSourceIds": [
+        "b-catastro",
+        "b-pnoa",
+        "b-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "naves",
+      "floor": 0,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "interior",
+      "requiresSection": false,
+      "interiorView": true,
+      "buildingId": "begona-templo",
+      "order": 6,
+      "elevation": 4.2795782959718105,
+      "localTarget": [
+        -1.5388836239914916,
+        4.2795782959718105,
+        -1.6476504223113366
+      ]
+    },
+    {
+      "id": "begona-arcadas",
+      "title": "Columnas y arcos entre las naves",
+      "label": "Arcadas",
+      "regionId": "naves",
+      "period": "mixed",
+      "intro": "Mira de forma oblicua para ver los huecos entre columnas.",
+      "narrative": "Elige un apoyo y sigue su relación con los arcos contiguos.",
+      "facts": [
+        {
+          "text": "Columnas toscanas sostienen arcadas de medio punto.",
+          "sourceIds": [
+            "b-guia2002"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El acabado de las columnas imita mármol sobre hormigón.",
+          "sourceIds": [
+            "b-guia2002"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Fustes rosados, capiteles y continuidad de las arcadas.",
+      "modelNote": "La policromía y el veteado se aproximan a fotografías de distintas fechas; no se certifica una fase cromática única.",
+      "sourceIds": [
+        "b-guia2002"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22113082,
+        39.65860637
+      ],
+      "coordinates": [
+        -0.22113082,
+        39.65860637
+      ],
+      "coordinateSourceIds": [
+        "b-catastro",
+        "b-pnoa",
+        "b-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "naves",
+      "floor": 0,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "interior",
+      "requiresSection": false,
+      "interiorView": true,
+      "buildingId": "begona-templo",
+      "order": 7,
+      "elevation": 4.979578295971811,
+      "localTarget": [
+        8.068988478887483,
+        4.979578295971811,
+        -2.1563680794847224
+      ]
+    },
+    {
+      "id": "begona-cubierta",
+      "title": "Arcos diafragma bajo el tejado",
+      "label": "Cubierta",
+      "regionId": "naves",
+      "period": "mixed",
+      "intro": "Eleva la mirada y reconoce cada tramo de la estructura.",
+      "narrative": "Desde el interior, sigue los arcos transversales y los planos inclinados que cierran la nave. La sección opcional permite relacionarlos después con el tejado exterior.",
+      "facts": [
+        {
+          "text": "Arcos diafragma de medio punto sostienen paneles planos inclinados de hormigón.",
+          "sourceIds": [
+            "b-contrast"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Los techos de las naves laterales son planos.",
+          "sourceIds": [
+            "b-contrast"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Arcos transversales y planos inclinados, visibles entre ellos.",
+      "modelNote": "Los espesores y encuentros constructivos son interpretativos; la geometría conserva el sistema descrito.",
+      "sourceIds": [
+        "b-contrast"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22118976,
+        39.65857335
+      ],
+      "coordinates": [
+        -0.22118976,
+        39.65857335
+      ],
+      "coordinateSourceIds": [
+        "b-catastro",
+        "b-pnoa",
+        "b-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "naves",
+      "floor": 0,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "interior",
+      "requiresSection": false,
+      "interiorView": true,
+      "buildingId": "begona-templo",
+      "order": 8,
+      "elevation": 12.179578295971812,
+      "localTarget": [
+        3.018942939512643,
+        12.179578295971812,
+        1.5191645418152557
+      ]
+    },
+    {
+      "id": "begona-presbiterio",
+      "title": "La cabecera y el retablo",
+      "label": "Presbiterio",
+      "regionId": "liturgia",
+      "period": "mixed",
+      "intro": "Acércate al extremo de la nave sin perder de vista su arco de acceso.",
+      "narrative": "Observa la profundidad del espacio que queda detrás del altar.",
+      "facts": [
+        {
+          "text": "Un arco semicircular sobre ménsulas escalonadas precede al ábside.",
+          "sourceIds": [
+            "b-guia2022"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La imagen de Begoña del retablo mayor fue entronizada en 1966.",
+          "sourceIds": [
+            "b-xiuxiueig"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Arco de cabecera, altar y retablo dorado.",
+      "modelNote": "Retablo e imágenes se abstraen por volumen y color; no son copias digitales de las tallas.",
+      "sourceIds": [
+        "b-guia2022",
+        "b-xiuxiueig"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22130958,
+        39.65863742
+      ],
+      "coordinates": [
+        -0.22130958,
+        39.65863742
+      ],
+      "coordinateSourceIds": [
+        "b-catastro",
+        "b-pnoa",
+        "b-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "liturgia",
+      "floor": 0,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "interior",
+      "requiresSection": false,
+      "interiorView": true,
+      "buildingId": "begona-templo",
+      "order": 9,
+      "elevation": 3.679578295971811,
+      "localTarget": [
+        -7.246432203514683,
+        3.679578295971811,
+        -5.613301593604994
+      ]
+    },
+    {
+      "id": "begona-capillas",
+      "title": "Los espacios junto al altar",
+      "label": "Capillas",
+      "regionId": "liturgia",
+      "period": "mixed",
+      "intro": "Desplaza la mirada hacia los lados de la cabecera.",
+      "narrative": "Relaciona cada espacio con la nave lateral que permite aproximarse a él.",
+      "facts": [
+        {
+          "text": "La descripción municipal identifica los retablos de los Desamparados y del Sagrado Corazón.",
+          "sourceIds": [
+            "b-xiuxiueig"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La fotografía de 2004 muestra retablos laterales flanqueando el ámbito central.",
+          "sourceIds": [
+            "b-interior2004"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El paso lateral y las composiciones a ambos lados.",
+      "modelNote": "Las advocaciones proceden de la fuente; formas, mobiliario y proporciones sin planos se interpretan.",
+      "sourceIds": [
+        "b-xiuxiueig",
+        "b-interior2004"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22124964,
+        39.65870382
+      ],
+      "coordinates": [
+        -0.22124964,
+        39.65870382
+      ],
+      "coordinateSourceIds": [
+        "b-catastro",
+        "b-pnoa",
+        "b-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "liturgia",
+      "floor": 0,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "interior",
+      "requiresSection": false,
+      "interiorView": true,
+      "buildingId": "begona-templo",
+      "order": 10,
+      "elevation": 2.5795782959718108,
+      "localTarget": [
+        -2.111056586012104,
+        2.5795782959718108,
+        -13.00437169658467
+      ]
+    },
+    {
+      "id": "begona-coro",
+      "title": "Mirar la nave desde sus pies",
+      "label": "Coro",
+      "regionId": "liturgia",
+      "period": "mixed",
+      "intro": "Vuelve hacia la entrada y observa el espacio elevado.",
+      "narrative": "La vista inversa permite entender la nave desde otro extremo.",
+      "facts": [
+        {
+          "text": "El coro se sitúa sobre la entrada, bajo la torre.",
+          "sourceIds": [
+            "b-xiuxiueig"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La fotografía organológica conserva el detalle de su barandilla metálica.",
+          "sourceIds": [
+            "b-organo"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La galería elevada y su relación con la ventana frontal.",
+      "modelNote": "Cota del coro, acceso secundario y detalles de la barandilla son aproximados.",
+      "sourceIds": [
+        "b-xiuxiueig",
+        "b-organo"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22110589,
+        39.6585285
+      ],
+      "coordinates": [
+        -0.22110589,
+        39.6585285
+      ],
+      "coordinateSourceIds": [
+        "b-catastro",
+        "b-pnoa",
+        "b-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "liturgia",
+      "floor": 1,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "interior",
+      "requiresSection": false,
+      "interiorView": true,
+      "buildingId": "begona-templo",
+      "order": 11,
+      "elevation": 6.979578295971811,
+      "localTarget": [
+        10.204705539631773,
+        6.979578295971811,
+        6.51189083660943
+      ]
+    },
+    {
+      "id": "begona-organo",
+      "title": "Un instrumento documentado",
+      "label": "Órgano",
+      "regionId": "liturgia",
+      "period": "mixed",
+      "intro": "Acércate al frente de tubos del coro.",
+      "narrative": "Compara las distintas alturas y observa la consola que organiza su interpretación.",
+      "facts": [
+        {
+          "text": "Cabanilles documentó en 1990 un órgano de Organería Española S. A., posterior a 1936.",
+          "sourceIds": [
+            "b-organo"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Sus fotografías muestran tubos descubiertos y una consola de dos teclados.",
+          "sourceIds": [
+            "b-organo"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Tubos, consola y antepecho del coro.",
+      "modelNote": "Referencia histórica simplificada. No se afirma que el instrumento pueda tocarse hoy ni se simula su sonido.",
+      "sourceIds": [
+        "b-organo"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22108145,
+        39.65851543
+      ],
+      "coordinates": [
+        -0.22108145,
+        39.65851543
+      ],
+      "coordinateSourceIds": [
+        "b-catastro",
+        "b-pnoa",
+        "b-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "liturgia",
+      "floor": 1,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "interior",
+      "requiresSection": false,
+      "interiorView": true,
+      "buildingId": "begona-templo",
+      "order": 12,
+      "elevation": 7.279578295971811,
+      "localTarget": [
+        12.298842068809348,
+        7.279578295971811,
+        7.9669139282351615
+      ]
+    },
+    {
+      "id": "begona-abadia",
+      "title": "El bloque situado tras la cabecera",
+      "label": "Casa Abadía",
+      "regionId": "anexos",
+      "period": "mixed",
+      "intro": "Rodea la parte posterior del templo para reconocer el volumen anexo.",
+      "narrative": "La planta ayuda a distinguir qué pertenece al espacio de culto y qué queda detrás.",
+      "facts": [
+        {
+          "text": "La Casa Abadía cierra el extremo occidental detrás del ábside; no es un transepto interior.",
+          "sourceIds": [
+            "b-contrast"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El salón parroquial adosado al sur se inauguró en 1946.",
+          "sourceIds": [
+            "b-xiuxiueig"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El cuerpo transversal y su relación con los anexos.",
+      "modelNote": "Se interpreta el volumen exterior. No se inventa un interior visitable de las viviendas o del salón parroquial.",
+      "sourceIds": [
+        "b-contrast",
+        "b-xiuxiueig"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22138166,
+        39.65865913
+      ],
+      "coordinates": [
+        -0.22138166,
+        39.65865913
+      ],
+      "coordinateSourceIds": [
+        "b-catastro",
+        "b-pnoa",
+        "b-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "anexos",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": "begona-templo",
+      "order": 13,
+      "elevation": 7.7795782959718105,
+      "localTarget": [
+        -13.422085605200557,
+        7.7795782959718105,
+        -8.028959901860876
+      ]
+    },
+    {
+      "id": "begona-materiales",
+      "title": "Color, estructura y revestimiento",
+      "label": "Materiales",
+      "regionId": "naves",
+      "period": "mixed",
+      "intro": "Acércate a los encuentros entre suelo, columna y pared.",
+      "narrative": "Distingue el material de soporte del acabado que percibe quien recorre el edificio.",
+      "facts": [
+        {
+          "text": "La ornamentación interior emplea estuco y la fábrica de los muros, ladrillo macizo.",
+          "sourceIds": [
+            "b-guia2022"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El texto municipal describe zócalos negros y pavimento de mármol blanco.",
+          "sourceIds": [
+            "b-xiuxiueig"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Pavimento claro, zócalo oscuro y soportes coloreados.",
+      "modelNote": "Texturas, brillo y desgaste son recursos de representación basados en referencias, sin análisis material in situ.",
+      "sourceIds": [
+        "b-guia2022",
+        "b-xiuxiueig"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22117178,
+        39.65862554
+      ],
+      "coordinates": [
+        -0.22117178,
+        39.65862554
+      ],
+      "coordinateSourceIds": [
+        "b-catastro",
+        "b-pnoa",
+        "b-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "naves",
+      "floor": 0,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "interior",
+      "requiresSection": false,
+      "interiorView": true,
+      "buildingId": "begona-templo",
+      "order": 14,
+      "elevation": 2.779578295971811,
+      "localTarget": [
+        4.559296109266114,
+        2.779578295971811,
+        -4.290509469042018
+      ]
+    },
+    {
+      "id": "begona-seccion",
+      "title": "Leer el edificio desde arriba",
+      "label": "Sección",
+      "regionId": "edificio",
+      "period": "mixed",
+      "intro": "Abre las cubiertas del templo y relaciona esta vista con las paradas interiores.",
+      "narrative": "Usa el plano para localizar cada ámbito antes de volver al exterior.",
+      "facts": [
+        {
+          "text": "La sección digital reúne las naves, las arcadas y la cabecera en una sola lectura.",
+          "sourceIds": [
+            "b-catastro"
+          ],
+          "confidence": "interpretive"
+        },
+        {
+          "text": "La huella cartográfica aporta el contorno exterior, no una planta de distribución interior.",
+          "sourceIds": [
+            "b-catastro"
+          ],
+          "confidence": "interpretive"
+        }
+      ],
+      "lookFor": "Naves, columnas, arcadas y cabecera; compáralas después con la vista desde el coro.",
+      "modelNote": "Apertura digital interpretativa: el coro se consulta en su propia parada. Casa Abadía y dependencias permanecen cubiertas porque sus interiores no se han reconstruido.",
+      "sourceIds": [
+        "b-catastro"
+      ],
+      "confidence": "interpretive",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22120174,
+        39.65857976
+      ],
+      "coordinates": [
+        -0.22120174,
+        39.65857976
+      ],
+      "coordinateSourceIds": [
+        "b-catastro",
+        "b-pnoa",
+        "b-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "edificio",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": true,
+      "interiorView": false,
+      "buildingId": "begona-templo",
+      "order": 15,
+      "elevation": 4.179578295971811,
+      "localTarget": [
+        1.9924054252099097,
+        4.179578295971811,
+        0.8059179282732307
+      ]
+    },
+    {
+      "id": "begona-atrio",
+      "title": "Entre la puerta y el paseo",
+      "label": "Plaza de acceso",
+      "regionId": "alameda",
+      "period": "mixed",
+      "intro": "Sal de nuevo a la explanada y mira hacia la fachada.",
+      "narrative": "Busca una distancia que permita reconocer el edificio completo y después acércate a sus detalles.",
+      "facts": [
+        {
+          "text": "La fotografía de la fachada restaurada muestra una amplia superficie pavimentada delante del templo.",
+          "sourceIds": [
+            "b-frente"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Ese espacio relaciona el acceso con la Alameda.",
+          "sourceIds": [
+            "b-rutas2023"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Continuidad del pavimento y vistas hacia la portada.",
+      "modelNote": "Juntas, bordes y mobiliario se aproximan a la escala del atlas.",
+      "sourceIds": [
+        "b-frente",
+        "b-rutas2023"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.2210625,
+        39.6583871
+      ],
+      "coordinates": [
+        -0.2210625,
+        39.6583871
+      ],
+      "coordinateSourceIds": [
+        "b-catastro",
+        "b-pnoa",
+        "b-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "alameda",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "order": 16,
+      "elevation": 0.563900439660995,
+      "localTarget": [
+        -10.330977803589967,
+        0.563900439660995,
+        24.131017025129573
+      ]
+    },
+    {
+      "id": "begona-alameda",
+      "title": "El paseo de la vida cotidiana",
+      "label": "Alameda",
+      "regionId": "alameda",
+      "period": "mixed",
+      "intro": "Avanza por el paseo y vuelve la vista hacia el campanario.",
+      "narrative": "Observa cómo cambian las perspectivas entre los árboles.",
+      "facts": [
+        {
+          "text": "El relato municipal recuerda la Alameda como lugar de paseo y encuentro juvenil.",
+          "sourceIds": [
+            "b-alameda"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Sus recuerdos de los años sesenta y setenta relacionan la vuelta a casa con la sirena de fábrica.",
+          "sourceIds": [
+            "b-alameda"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El eje del paseo y la torre al fondo.",
+      "modelNote": "La memoria oral explica usos históricos; la escena se apoya en cartografía contemporánea.",
+      "sourceIds": [
+        "b-alameda"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.220325,
+        39.65804032
+      ],
+      "coordinates": [
+        -0.220325,
+        39.65804032
+      ],
+      "coordinateSourceIds": [
+        "b-catastro",
+        "b-pnoa",
+        "b-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "alameda",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "order": 17,
+      "elevation": 0.2999999999999998,
+      "localTarget": [
+        -5.97919582313844,
+        0.2999999999999998,
+        98.04776413067049
+      ]
+    },
+    {
+      "id": "begona-arbolado",
+      "title": "La sombra como parte del espacio",
+      "label": "Arbolado",
+      "regionId": "alameda",
+      "period": "mixed",
+      "intro": "Mira el paseo desde un lado para leer sus claros y grupos de árboles.",
+      "narrative": "Activa y desactiva la vegetación para comparar su papel en la composición.",
+      "facts": [
+        {
+          "text": "La Alameda se documenta como paseo arbolado frente a la iglesia.",
+          "sourceIds": [
+            "b-rutas2023"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Las copas visibles en ortofoto ayudan a aproximar el reparto de la vegetación.",
+          "sourceIds": [
+            "b-pnoa"
+          ],
+          "confidence": "interpretive"
+        }
+      ],
+      "lookFor": "Copas, sombra, espacios de estancia y corredores de visión.",
+      "modelNote": "No es un inventario botánico. Especies, alturas y formas de copa sin medición se interpretan.",
+      "sourceIds": [
+        "b-rutas2023",
+        "b-pnoa"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22069792,
+        39.65823065
+      ],
+      "coordinates": [
+        -0.22069792,
+        39.65823065
+      ],
+      "coordinateSourceIds": [
+        "b-catastro",
+        "b-pnoa",
+        "b-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "alameda",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "order": 18,
+      "elevation": 2.548703749251354,
+      "localTarget": [
+        -6.810609649515317,
+        2.548703749251354,
+        59.72051060588434
+      ]
+    },
+    {
+      "id": "begona-frente-urbano",
+      "title": "El templo dentro del barrio",
+      "label": "Casas y calles",
+      "regionId": "alameda",
+      "period": "mixed",
+      "intro": "Amplía la vista para relacionar fachadas, esquinas y calles.",
+      "narrative": "Compara el tamaño del templo con las construcciones que lo acompañan.",
+      "facts": [
+        {
+          "text": "La iglesia y sus dependencias forman parte del frente de la avenida 9 d’Octubre.",
+          "sourceIds": [
+            "b-uv"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El atlas utiliza huellas de edificios y callejero para situar el contexto.",
+          "sourceIds": [
+            "b-catastro",
+            "b-osm"
+          ],
+          "confidence": "interpretive"
+        }
+      ],
+      "lookFor": "Alineaciones, alturas relativas y continuidad de las aceras.",
+      "modelNote": "Los volúmenes del entorno conservan su posición cartográfica; fachadas, cubiertas y pequeños detalles son aproximados.",
+      "sourceIds": [
+        "b-uv",
+        "b-catastro",
+        "b-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.2201625,
+        39.65831452
+      ],
+      "coordinates": [
+        -0.2201625,
+        39.65831452
+      ],
+      "coordinateSourceIds": [
+        "b-catastro",
+        "b-pnoa",
+        "b-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "alameda",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "order": 19,
+      "elevation": 5,
+      "localTarget": [
+        27.031362617762678,
+        5,
+        92.06472928591367
+      ]
+    },
+    {
+      "id": "begona-ciudad-factoria",
+      "title": "Un paisaje de trabajo y vida social",
+      "label": "Ciudad y memoria",
+      "regionId": "anexos",
+      "period": "mixed",
+      "intro": "Relaciona esta parada con la Gerencia, el Economato y los demás hitos del Puerto.",
+      "narrative": "La visita continúa más allá del edificio: puedes recorrer el atlas siguiendo sus conexiones urbanas.",
+      "facts": [
+        {
+          "text": "El Ayuntamiento documentó en 2025 la renovación del monumento de la Alameda dedicado a víctimas de accidentes laborales.",
+          "sourceIds": [
+            "b-memoria2025"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La información municipal de marzo de 2026 identifica una embarcación y una locomotora ya expuestas en este entorno.",
+          "sourceIds": [
+            "b-esculturas2026"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La relación entre espacios públicos, edificios sociales y memoria industrial.",
+      "modelNote": "Las piezas del entorno se leen como una composición interpretativa. Una licitación de nuevas esculturas no equivale a su instalación.",
+      "sourceIds": [
+        "b-memoria2025",
+        "b-esculturas2026"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22099792,
+        39.65835484
+      ],
+      "coordinates": [
+        -0.22099792,
+        39.65835484
+      ],
+      "coordinateSourceIds": [
+        "b-catastro",
+        "b-pnoa",
+        "b-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "anexos",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "order": 20,
+      "elevation": 3.55750318088149,
+      "localTarget": [
+        -10.122760163485275,
+        3.55750318088149,
+        30.72402963823039
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "b-xiuxiueig",
+      "title": "Església de la Mare de Déu de Begonya",
+      "author": "Ajuntament de Sagunt · proyecto Xiuxiueig",
+      "url": "https://aytosagunto.es/es/ayuntamiento/areas-y-servicios/cultura-y-educacion/campus-abierto-a-la-ciudadania/proyecto-xiuxiueig/esglesia-de-begonya/",
+      "type": "documentación patrimonial municipal",
+      "year": null,
+      "locator": "Proyecto, solicitud de permiso, inauguración, mobiliario litúrgico y coro.",
+      "note": "El 21 de abril de 1928 corresponde a la solicitud de permiso; no se identifica como fecha de concesión. La página no fecha sus afirmaciones sobre conservación del órgano.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "b-contrast",
+      "title": "Iglesia de Nuestra Señora de Begoña",
+      "author": "CONTRAST · Joan Costa Sanz, Antonio Ortiz López y José María Prats Escriche",
+      "url": "https://www.contrastapips.com/IHACM/IBP/Port/Port_patri_NSB.htm",
+      "type": "investigación patrimonial y observación de campo",
+      "year": 2022,
+      "locator": "Arquitectura, restauración y Casa Abadía.",
+      "note": "Distingue fotografías del edificio, referencias de otras iglesias y una maqueta de madera a escala 1:40. Esta última no es un levantamiento del edificio.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "b-guia2022",
+      "title": "Patrimonio industrial de Puerto de Sagunto. Itinerario didáctico multidisciplinar",
+      "author": "CONTRAST / Asociación de Patrimonio Industrial de Puerto Sagunto (APIPS)",
+      "url": "https://www.apips.es/assets/files/CUADERNO_TP01.pdf",
+      "type": "guía de investigación patrimonial",
+      "year": 2022,
+      "locator": "Páginas 32–33: fachada, cubierta, materiales y fotografías interiores.",
+      "note": "Publica imágenes de diferentes épocas. La guía no se usa como certificación del estado material en 2026.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "b-guia2002",
+      "title": "El Centenari del Port de Sagunt a l’escola. Itinerari didàctic per a l’ESO",
+      "author": "CONTRAST · edición alojada por el Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/media/uiwbnv5e/02_ud_quad_itinerario-did%C3%A1ctico-para-la-eso.pdf",
+      "type": "documentación arquitectónica histórica",
+      "year": 2002,
+      "locator": "Páginas 11–12: exterior e interior.",
+      "note": "Describe una fase anterior de restauración. Su diagnóstico de fachada de 2002 no se presenta como actual.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "b-uv",
+      "title": "Conjunt Històric Industrial de Sagunt · Gerencia y entorno",
+      "author": "Universitat de València",
+      "url": "https://www.uv.es/patrimoni_industrial_sagunt/bicgerencia/gerencia.html",
+      "type": "ficha patrimonial universitaria",
+      "year": null,
+      "locator": "Apartados 1–3: iglesia y relación con los equipamientos de la ciudad industrial.",
+      "note": "La datación de inicio en 1927 difiere del relato municipal más específico, que separa proyecto de 1927 y obras de 1928–1929. No se usa su presente histórico como estado actual.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "b-organo",
+      "title": "Los órganos de Santa María de Sagunto y el mundo musical de su entorno",
+      "author": "Josep Antoni Lluesma i Espanya · Cabanilles, n.º 33 / ACAO; archivo AVAMUS",
+      "url": "https://avamus.org/wp-content/uploads/2021/03/Cabanilles-033-033-1990-01-a-1990-03-Los-Organos-de-Santa-Maria-de-Sagunto-Valencia-y-el-mundo-musical-de-su-entorno.pdf",
+      "type": "investigación organológica y fotografías",
+      "year": 1990,
+      "locator": "Órgano de Begoña: autoría O.E.S.A., disposición de registros, consola y frente de tubos; páginas finales.",
+      "note": "El autor no localizó el contrato del instrumento. Las fotografías documentan su forma histórica; no acreditan su funcionamiento en 2026.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "b-alameda",
+      "title": "La Alameda",
+      "author": "Ajuntament de Sagunt · proyecto Xiuxiueig",
+      "url": "https://www.sagunto.es/va/ajuntament/arees-i-serveis/cultura-i-educacio/campus-obert-a-la-ciutadania/xiuxiueig/la-alameda/",
+      "type": "memoria oral publicada por el Ayuntamiento",
+      "year": null,
+      "locator": "Paseo, sociabilidad y relación con los turnos de fábrica.",
+      "note": "Es un relato de recuerdos de las décadas de 1960 y 1970, no un inventario urbano contemporáneo.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "b-rutas2023",
+      "title": "Rutas de la memoria obrera · Puerto de Sagunto (1939/1982)",
+      "author": "Sonia Garcés Romero y Buenaventura Navarro Herraiz · FEIS / CCOO, coordinación de Pere Beneyto, Josep Durbán y Alberto Gómez",
+      "url": "https://www.relatsiberoamerica.com/documentos/Beneyto/2023Beneytocoord.Rutas2.pdf",
+      "type": "investigación histórica con documentación de archivo",
+      "year": 2023,
+      "locator": "Páginas 51–52: iglesia, salón parroquial y Alameda.",
+      "note": "La imagen del monumento de la Alameda está fechada el 21 de octubre de 2022.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "b-memoria2025",
+      "title": "Homenaje a las personas fallecidas en AHM y CMSM",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/es/actualidad/2025-08-12-acto-de-homenaje-a-las-personas-fallecidas-en-altos-hornos-del-mediterraneo-y-en-la-compania-minera-sierra-menera/",
+      "type": "comunicación municipal y fotografías",
+      "year": 2025,
+      "locator": "Monumento de la Alameda y remodelación con nuevos nombres.",
+      "note": "",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "b-esculturas2026",
+      "title": "Licitación de dos esculturas sobre la Escuela de Aprendices",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/es/actualidad/2026-03-13-sale-a-licitacion-la-construccion-de-dos-esculturas-que-evocan-la-formacion-profesional-de-la-antigua-fabrica-siderurgica/",
+      "type": "comunicación municipal",
+      "year": 2026,
+      "locator": "Ubicación del antiguo edificio y patrimonio expuesto en el entorno de la Alameda.",
+      "note": "La licitación no demuestra instalación. Las esculturas previstas para diciembre de 2026 no se incorporan como construidas.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "b-frente",
+      "title": "Fachada restaurada de la iglesia de Begoña",
+      "author": "Joanbanjo · fotografía propia en Wikimedia Commons, reproducida por CONTRAST",
+      "url": "https://commons.wikimedia.org/w/index.php?curid=37236506",
+      "type": "fotografía arquitectónica",
+      "year": null,
+      "locator": "Frente principal, remates, óculos y espacio de acceso.",
+      "note": "CC BY-SA 4.0 según la atribución de CONTRAST. Referencia de observación; no se redistribuye la fotografía en la escena.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "b-interior2004",
+      "title": "Interior de Nuestra Señora de Begoña",
+      "author": "CONTRAST",
+      "url": "https://www.contrastapips.com/IHACM/IBP/Port/Port_patri_NSB_archivos/image009.jpg",
+      "type": "fotografía de documentación de campo",
+      "year": 2004,
+      "locator": "Columnas, arcadas, cubierta, retablo y disposición general.",
+      "note": "No representa por sí sola el color o estado del templo en 2026.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "b-catastro",
+      "title": "Cartografía INSPIRE de edificios",
+      "author": "Dirección General del Catastro",
+      "url": "https://www.catastro.hacienda.gob.es/webinspire/index.html",
+      "type": "cartografía pública",
+      "year": null,
+      "locator": "Huella y partes edificadas; referencia 8338803YJ3983N.",
+      "note": "La huella exterior no determina el reparto interior de habitaciones ni las cotas de sus elementos.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "b-pnoa",
+      "title": "PNOA Máxima Actualidad",
+      "author": "Instituto Geográfico Nacional",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma",
+      "type": "ortofotografía",
+      "year": null,
+      "locator": "Implantación, cubiertas y contexto urbano.",
+      "note": "Máxima Actualidad es el nombre del servicio; no significa que la imagen fuese tomada en la fecha de consulta.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "b-osm",
+      "title": "Cartografía de Begoña y su entorno",
+      "author": "Colaboradores de OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/443618470",
+      "type": "cartografía colaborativa",
+      "year": null,
+      "locator": "Huella del templo y relación con el callejero.",
+      "note": "Base espacial contrastada con Catastro y ortofoto; no es un levantamiento arquitectónico.",
+      "accessed": "2026-11-21"
+    }
+  ],
+  "timeline": [
+    {
+      "id": "b-t-1",
+      "date": "1927",
+      "title": "El proyecto de Bastida",
+      "text": "La ficha municipal distingue el proyecto de las obras posteriores.",
+      "sourceIds": [
+        "b-xiuxiueig"
+      ],
+      "period": "industrial",
+      "confidence": "documented",
+      "stopId": "begona-conjunto"
+    },
+    {
+      "id": "b-t-2",
+      "date": "1928",
+      "title": "Solicitud de construcción",
+      "text": "Francisco de Arana solicita permiso el 21 de abril.",
+      "sourceIds": [
+        "b-xiuxiueig"
+      ],
+      "period": "industrial",
+      "confidence": "documented",
+      "stopId": "begona-conjunto"
+    },
+    {
+      "id": "b-t-3",
+      "date": "1929",
+      "title": "Apertura del templo",
+      "text": "Inauguración el 5 de junio.",
+      "sourceIds": [
+        "b-xiuxiueig"
+      ],
+      "period": "industrial",
+      "confidence": "documented",
+      "stopId": "begona-fachada"
+    },
+    {
+      "id": "b-t-4",
+      "date": "1946",
+      "title": "Salón parroquial",
+      "text": "Se amplían los espacios destinados a actividades de la parroquia.",
+      "sourceIds": [
+        "b-contrast"
+      ],
+      "period": "industrial",
+      "confidence": "documented",
+      "stopId": "begona-abadia"
+    },
+    {
+      "id": "b-t-5",
+      "date": "1966",
+      "title": "Imagen del altar mayor",
+      "text": "La talla de Begoña es entronizada el 8 de diciembre.",
+      "sourceIds": [
+        "b-xiuxiueig"
+      ],
+      "period": "industrial",
+      "confidence": "documented",
+      "stopId": "begona-presbiterio"
+    },
+    {
+      "id": "b-t-6",
+      "date": "1967",
+      "title": "Cesión al Arzobispado",
+      "text": "AHV cede el templo en diciembre.",
+      "sourceIds": [
+        "b-contrast"
+      ],
+      "period": "industrial",
+      "confidence": "documented",
+      "stopId": "begona-ciudad-factoria"
+    },
+    {
+      "id": "b-t-7",
+      "date": "1983",
+      "title": "Retirada de ornamentos",
+      "text": "El deterioro obliga a retirar elementos de la fachada por seguridad.",
+      "sourceIds": [
+        "b-guia2022"
+      ],
+      "period": "industrial",
+      "confidence": "documented",
+      "stopId": "begona-fachada"
+    },
+    {
+      "id": "b-t-8",
+      "date": "1990",
+      "title": "Documentación del órgano",
+      "text": "Cabanilles publica fotografías y la disposición de sus registros.",
+      "sourceIds": [
+        "b-organo"
+      ],
+      "period": "industrial",
+      "confidence": "documented",
+      "stopId": "begona-organo"
+    },
+    {
+      "id": "b-t-9",
+      "date": "Siglo XXI",
+      "title": "Recuperación de la fachada",
+      "text": "CONTRAST documenta restauración y posteriores actuaciones en el interior.",
+      "sourceIds": [
+        "b-contrast"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "begona-materiales"
+    },
+    {
+      "id": "b-t-10",
+      "date": "2017",
+      "title": "Memoria del trabajo",
+      "text": "El monumento de la Alameda se inaugura el 17 de diciembre.",
+      "sourceIds": [
+        "b-rutas2023"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "begona-ciudad-factoria"
+    },
+    {
+      "id": "b-t-11",
+      "date": "2025",
+      "title": "Ampliación del recuerdo",
+      "text": "El Ayuntamiento informa de nuevos nombres en el monumento.",
+      "sourceIds": [
+        "b-memoria2025"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "begona-ciudad-factoria"
+    }
+  ],
+  "modelRegistration": {
+    "status": "registered",
+    "note": "Focos registrados a partir de la geometría final y de la cartografía; las cotas no levantadas son interpretativas.",
+    "precision": "approximate",
+    "provisionalCoordinates": false,
+    "coordinates": "Registered from the implemented industrial model and contemporary cartography; component positions and unmeasured heights are interpretive."
+  },
+  "materialsModeLabel": "Materiales"
+}

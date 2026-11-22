@@ -1,0 +1,990 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "pass": true,
+      "label": "Finite, non-degenerate Float32 geometry",
+      "detail": {
+        "finite": true,
+        "collapsed": 0,
+        "triangles": 45006
+      }
+    },
+    {
+      "pass": true,
+      "label": "No new mapped building part duplicates another detailed owner"
+    },
+    {
+      "pass": true,
+      "label": "All upgraded urban buildings retain their cadastral footprints"
+    },
+    {
+      "pass": true,
+      "label": "Existing mapped roads retain ownership"
+    },
+    {
+      "pass": true,
+      "label": "All five context focuses match actual guide stops"
+    },
+    {
+      "pass": true,
+      "label": "Outdoor stops use correct layers and finite registration"
+    },
+    {
+      "pass": true,
+      "label": "One documented corten memorial with no invented personal inscriptions"
+    },
+    {
+      "pass": true,
+      "label": "All photo-registered tree centres remain represented"
+    },
+    {
+      "pass": true,
+      "label": "Complete tree crowns clear buildings and entrance steps"
+    },
+    {
+      "pass": true,
+      "label": "Plan tree radius equals actual crown envelope"
+    },
+    {
+      "pass": true,
+      "label": "Actual rendered foliage vertices do not enter architecture",
+      "detail": {
+        "foliageVertices": 67392,
+        "inside": 0
+      }
+    },
+    {
+      "pass": true,
+      "label": "Context source hashes match current terrain and cartography"
+    },
+    {
+      "pass": true,
+      "label": "Ground rebind disposes replaced resources and does not accumulate meshes"
+    },
+    {
+      "pass": true,
+      "label": "All paving follows the final 5m atlas terrain mesh",
+      "detail": {
+        "samples": 3955,
+        "maximumVertexErrorM": 0.000024524688720349574,
+        "maximumInteriorErrorM": 0.000013608920667339264
+      }
+    },
+    {
+      "pass": true,
+      "label": "Terrain-bound geometry remains finite and non-degenerate",
+      "detail": {
+        "finite": true,
+        "collapsed": 0,
+        "triangles": 45006
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears ground",
+      "detail": {
+        "id": "begona-atrio",
+        "kind": "offset"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears complete crown envelopes",
+      "detail": {
+        "id": "begona-atrio",
+        "kind": "offset",
+        "collisions": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears ground",
+      "detail": {
+        "id": "begona-atrio",
+        "kind": "closeOffset"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears complete crown envelopes",
+      "detail": {
+        "id": "begona-atrio",
+        "kind": "closeOffset",
+        "collisions": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears ground",
+      "detail": {
+        "id": "begona-alameda",
+        "kind": "offset"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears complete crown envelopes",
+      "detail": {
+        "id": "begona-alameda",
+        "kind": "offset",
+        "collisions": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears ground",
+      "detail": {
+        "id": "begona-alameda",
+        "kind": "closeOffset"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears complete crown envelopes",
+      "detail": {
+        "id": "begona-alameda",
+        "kind": "closeOffset",
+        "collisions": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears ground",
+      "detail": {
+        "id": "begona-arbolado",
+        "kind": "offset"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears complete crown envelopes",
+      "detail": {
+        "id": "begona-arbolado",
+        "kind": "offset",
+        "collisions": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears ground",
+      "detail": {
+        "id": "begona-arbolado",
+        "kind": "closeOffset"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears complete crown envelopes",
+      "detail": {
+        "id": "begona-arbolado",
+        "kind": "closeOffset",
+        "collisions": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears ground",
+      "detail": {
+        "id": "begona-frente-urbano",
+        "kind": "offset"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears complete crown envelopes",
+      "detail": {
+        "id": "begona-frente-urbano",
+        "kind": "offset",
+        "collisions": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears ground",
+      "detail": {
+        "id": "begona-frente-urbano",
+        "kind": "closeOffset"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears complete crown envelopes",
+      "detail": {
+        "id": "begona-frente-urbano",
+        "kind": "closeOffset",
+        "collisions": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears ground",
+      "detail": {
+        "id": "begona-ciudad-factoria",
+        "kind": "offset"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears complete crown envelopes",
+      "detail": {
+        "id": "begona-ciudad-factoria",
+        "kind": "offset",
+        "collisions": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears ground",
+      "detail": {
+        "id": "begona-ciudad-factoria",
+        "kind": "closeOffset"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears complete crown envelopes",
+      "detail": {
+        "id": "begona-ciudad-factoria",
+        "kind": "closeOffset",
+        "collisions": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "All surfaces and objects map to a documented guide reading layer"
+    },
+    {
+      "pass": true,
+      "label": "Textured material mode restores reversibly"
+    },
+    {
+      "pass": true,
+      "label": "Context selection resolves its real tour id",
+      "detail": {
+        "id": "begona-atrio"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Context selection resolves its real tour id",
+      "detail": {
+        "id": "begona-alameda"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Context selection resolves its real tour id",
+      "detail": {
+        "id": "begona-arbolado"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Context selection resolves its real tour id",
+      "detail": {
+        "id": "begona-frente-urbano"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Context selection resolves its real tour id",
+      "detail": {
+        "id": "begona-ciudad-factoria"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Complete disposal is idempotent"
+    }
+  ],
+  "stats": {
+    "ownedBuildings": 64,
+    "parentParcels": 28,
+    "reusedBuildingParts": 90,
+    "ownedRoads": 0,
+    "pavingAreaM2": 9347.38,
+    "pavingVertices": 2255,
+    "pavingTriangles": 3957,
+    "trees": 37,
+    "benches": 11,
+    "lamps": 7,
+    "paths": 3,
+    "contextFocuses": 5,
+    "memorials": 1,
+    "treeCrownsAdjusted": 0,
+    "treeTrunksSuppressed": 0,
+    "meshes": 22,
+    "triangles": 45006,
+    "fixedBegonaDatumM": 5,
+    "skippedTinyTriangles": 3
+  },
+  "trees": [
+    {
+      "id": "begona-tree-3",
+      "coordinate": [
+        -0.220545833,
+        39.6584
+      ],
+      "baseM": 4.094676248458882,
+      "heightM": 7.050000000000001,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 9.482770340728054,
+      "sourceCrownRadiusM": 3.55,
+      "displayCrownParameterM": 3.55,
+      "maximumHorizontalRadiusM": 4.7875,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "begona-tree-4",
+      "coordinate": [
+        -0.220479167,
+        39.658348387
+      ],
+      "baseM": 4.069537741620168,
+      "heightM": 7.5,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 12.147262464498906,
+      "sourceCrownRadiusM": 2.8,
+      "displayCrownParameterM": 2.8,
+      "maximumHorizontalRadiusM": 3.85,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "begona-tree-5",
+      "coordinate": [
+        -0.220422917,
+        39.658320968
+      ],
+      "baseM": 4,
+      "heightM": 5.7,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 11.875540383273012,
+      "sourceCrownRadiusM": 3.05,
+      "displayCrownParameterM": 3.05,
+      "maximumHorizontalRadiusM": 4.1625,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "begona-tree-6",
+      "coordinate": [
+        -0.220314583,
+        39.658279032
+      ],
+      "baseM": 4,
+      "heightM": 6.15,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 10.362989434766671,
+      "sourceCrownRadiusM": 3.3,
+      "displayCrownParameterM": 3.3,
+      "maximumHorizontalRadiusM": 4.475,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "begona-tree-7",
+      "coordinate": [
+        -0.22020625,
+        39.658219355
+      ],
+      "baseM": 4.0714529580279955,
+      "heightM": 6.6000000000000005,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 10.48831452691802,
+      "sourceCrownRadiusM": 3.55,
+      "displayCrownParameterM": 3.55,
+      "maximumHorizontalRadiusM": 4.7875,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "begona-tree-8",
+      "coordinate": [
+        -0.2201125,
+        39.658169355
+      ],
+      "baseM": 4.005958599041771,
+      "heightM": 7.050000000000001,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 10.444673963696262,
+      "sourceCrownRadiusM": 2.8,
+      "displayCrownParameterM": 2.8,
+      "maximumHorizontalRadiusM": 3.85,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "begona-tree-9",
+      "coordinate": [
+        -0.219989583,
+        39.65811129
+      ],
+      "baseM": 4,
+      "heightM": 7.5,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 9.692487460645768,
+      "sourceCrownRadiusM": 3.05,
+      "displayCrownParameterM": 3.05,
+      "maximumHorizontalRadiusM": 4.1625,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "begona-tree-10",
+      "coordinate": [
+        -0.2198125,
+        39.658004839
+      ],
+      "baseM": 4,
+      "heightM": 5.7,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 10.868246155073233,
+      "sourceCrownRadiusM": 3.3,
+      "displayCrownParameterM": 3.3,
+      "maximumHorizontalRadiusM": 4.475,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "begona-tree-11",
+      "coordinate": [
+        -0.219679167,
+        39.657941935
+      ],
+      "baseM": 4,
+      "heightM": 6.15,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 12.234518593575107,
+      "sourceCrownRadiusM": 3.55,
+      "displayCrownParameterM": 3.55,
+      "maximumHorizontalRadiusM": 4.7875,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "begona-tree-12",
+      "coordinate": [
+        -0.219541667,
+        39.657864516
+      ],
+      "baseM": 4,
+      "heightM": 6.6000000000000005,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 13.628002254674504,
+      "sourceCrownRadiusM": 2.8,
+      "displayCrownParameterM": 2.8,
+      "maximumHorizontalRadiusM": 3.85,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "begona-tree-13",
+      "coordinate": [
+        -0.219691667,
+        39.657683871
+      ],
+      "baseM": 3.991699962736903,
+      "heightM": 7.050000000000001,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 37.473431046073856,
+      "sourceCrownRadiusM": 3.05,
+      "displayCrownParameterM": 3.05,
+      "maximumHorizontalRadiusM": 4.1625,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "begona-tree-14",
+      "coordinate": [
+        -0.220927083,
+        39.658385484
+      ],
+      "baseM": 4.481594325325703,
+      "heightM": 9.6,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 14.764900635972563,
+      "sourceCrownRadiusM": 2.8,
+      "displayCrownParameterM": 2.8,
+      "maximumHorizontalRadiusM": 3.85,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "begona-tree-15",
+      "coordinate": [
+        -0.220872917,
+        39.658332258
+      ],
+      "baseM": 4.875918881131056,
+      "heightM": 5.7,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 22.18141147513616,
+      "sourceCrownRadiusM": 3.55,
+      "displayCrownParameterM": 3.55,
+      "maximumHorizontalRadiusM": 4.7875,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "begona-tree-16",
+      "coordinate": [
+        -0.220775,
+        39.658277419
+      ],
+      "baseM": 4.900000095367432,
+      "heightM": 6.15,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 31.937656837364276,
+      "sourceCrownRadiusM": 2.8,
+      "displayCrownParameterM": 2.8,
+      "maximumHorizontalRadiusM": 3.85,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "begona-tree-17",
+      "coordinate": [
+        -0.2206875,
+        39.658245161
+      ],
+      "baseM": 4.4886525701796325,
+      "heightM": 9.05,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 30.56402824585164,
+      "sourceCrownRadiusM": 2.8,
+      "displayCrownParameterM": 2.8,
+      "maximumHorizontalRadiusM": 3.85,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "begona-tree-18",
+      "coordinate": [
+        -0.220625,
+        39.658198387
+      ],
+      "baseM": 4.261809560757907,
+      "heightM": 9.6,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 32.27538844372265,
+      "sourceCrownRadiusM": 2.8,
+      "displayCrownParameterM": 2.8,
+      "maximumHorizontalRadiusM": 3.85,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "begona-tree-19",
+      "coordinate": [
+        -0.2205625,
+        39.658169355
+      ],
+      "baseM": 4.045303900778064,
+      "heightM": 7.5,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 32.56017113732884,
+      "sourceCrownRadiusM": 3.55,
+      "displayCrownParameterM": 3.55,
+      "maximumHorizontalRadiusM": 4.7875,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "begona-tree-20",
+      "coordinate": [
+        -0.220445833,
+        39.658112903
+      ],
+      "baseM": 4,
+      "heightM": 5.7,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 31.960321043252904,
+      "sourceCrownRadiusM": 2.8,
+      "displayCrownParameterM": 2.8,
+      "maximumHorizontalRadiusM": 3.85,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "begona-tree-21",
+      "coordinate": [
+        -0.220372917,
+        39.658072581
+      ],
+      "baseM": 4,
+      "heightM": 6.15,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 32.060606701974,
+      "sourceCrownRadiusM": 3.05,
+      "displayCrownParameterM": 3.05,
+      "maximumHorizontalRadiusM": 4.1625,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "begona-tree-22",
+      "coordinate": [
+        -0.220254167,
+        39.658025806
+      ],
+      "baseM": 4,
+      "heightM": 6.6000000000000005,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 30.496770211794725,
+      "sourceCrownRadiusM": 3.3,
+      "displayCrownParameterM": 3.3,
+      "maximumHorizontalRadiusM": 4.475,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "begona-tree-23",
+      "coordinate": [
+        -0.220152083,
+        39.657966129
+      ],
+      "baseM": 4,
+      "heightM": 7.050000000000001,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 30.916081052445918,
+      "sourceCrownRadiusM": 3.55,
+      "displayCrownParameterM": 3.55,
+      "maximumHorizontalRadiusM": 4.7875,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "begona-tree-24",
+      "coordinate": [
+        -0.220079167,
+        39.657920968
+      ],
+      "baseM": 4,
+      "heightM": 7.5,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 31.445513043979307,
+      "sourceCrownRadiusM": 2.8,
+      "displayCrownParameterM": 2.8,
+      "maximumHorizontalRadiusM": 3.85,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "begona-tree-25",
+      "coordinate": [
+        -0.219927083,
+        39.657825806
+      ],
+      "baseM": 3.9577745186607887,
+      "heightM": 5.7,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 33.084139413684916,
+      "sourceCrownRadiusM": 3.05,
+      "displayCrownParameterM": 3.05,
+      "maximumHorizontalRadiusM": 4.1625,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "begona-tree-26",
+      "coordinate": [
+        -0.219797917,
+        39.657758065
+      ],
+      "baseM": 3.93694110924421,
+      "heightM": 6.15,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 35.00840261951338,
+      "sourceCrownRadiusM": 3.3,
+      "displayCrownParameterM": 3.3,
+      "maximumHorizontalRadiusM": 4.475,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "begona-tree-27",
+      "coordinate": [
+        -0.221072917,
+        39.6583
+      ],
+      "baseM": 4.859440069613779,
+      "heightM": 10.15,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 12.803881222496331,
+      "sourceCrownRadiusM": 2.8,
+      "displayCrownParameterM": 2.8,
+      "maximumHorizontalRadiusM": 3.85,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "begona-tree-28",
+      "coordinate": [
+        -0.221164583,
+        39.658233871
+      ],
+      "baseM": 5,
+      "heightM": 8.5,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 16.936777981915753,
+      "sourceCrownRadiusM": 2.8,
+      "displayCrownParameterM": 2.8,
+      "maximumHorizontalRadiusM": 3.85,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "begona-tree-29",
+      "coordinate": [
+        -0.221216667,
+        39.658172581
+      ],
+      "baseM": 4.929834405315777,
+      "heightM": 7.5,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 24.04897671049945,
+      "sourceCrownRadiusM": 3.05,
+      "displayCrownParameterM": 3.05,
+      "maximumHorizontalRadiusM": 4.1625,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "begona-tree-30",
+      "coordinate": [
+        -0.221252083,
+        39.658108065
+      ],
+      "baseM": 4.54889939573546,
+      "heightM": 5.7,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 31.674931664884074,
+      "sourceCrownRadiusM": 3.3,
+      "displayCrownParameterM": 3.3,
+      "maximumHorizontalRadiusM": 4.475,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "begona-tree-31",
+      "coordinate": [
+        -0.221320833,
+        39.658027419
+      ],
+      "baseM": 4.006645655257033,
+      "heightM": 6.15,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 41.88603029319652,
+      "sourceCrownRadiusM": 3.55,
+      "displayCrownParameterM": 3.55,
+      "maximumHorizontalRadiusM": 4.7875,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "begona-tree-32",
+      "coordinate": [
+        -0.221291667,
+        39.657919355
+      ],
+      "baseM": 4.135792144419436,
+      "heightM": 6.6000000000000005,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 36.39900653722713,
+      "sourceCrownRadiusM": 2.8,
+      "displayCrownParameterM": 2.8,
+      "maximumHorizontalRadiusM": 3.85,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "begona-tree-33",
+      "coordinate": [
+        -0.221227083,
+        39.657890323
+      ],
+      "baseM": 4.394339585266254,
+      "heightM": 7.050000000000001,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 36.3830832098102,
+      "sourceCrownRadiusM": 3.05,
+      "displayCrownParameterM": 3.05,
+      "maximumHorizontalRadiusM": 4.1625,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "begona-tree-34",
+      "coordinate": [
+        -0.221145833,
+        39.657880645
+      ],
+      "baseM": 4.419949533244088,
+      "heightM": 7.5,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 38.9473323728169,
+      "sourceCrownRadiusM": 3.3,
+      "displayCrownParameterM": 3.3,
+      "maximumHorizontalRadiusM": 4.475,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "begona-tree-35",
+      "coordinate": [
+        -0.2210625,
+        39.657862903
+      ],
+      "baseM": 4.243186467145117,
+      "heightM": 5.7,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 41.21229678439244,
+      "sourceCrownRadiusM": 3.55,
+      "displayCrownParameterM": 3.55,
+      "maximumHorizontalRadiusM": 4.7875,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "begona-tree-36",
+      "coordinate": [
+        -0.220758333,
+        39.658019355
+      ],
+      "baseM": 4,
+      "heightM": 6.15,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 54.06337592606876,
+      "sourceCrownRadiusM": 2.8,
+      "displayCrownParameterM": 2.8,
+      "maximumHorizontalRadiusM": 3.85,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "begona-tree-37",
+      "coordinate": [
+        -0.220975,
+        39.658243548
+      ],
+      "baseM": 5,
+      "heightM": 9.05,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 23.170108498514757,
+      "sourceCrownRadiusM": 2.8,
+      "displayCrownParameterM": 2.8,
+      "maximumHorizontalRadiusM": 3.85,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "begona-tree-38",
+      "coordinate": [
+        -0.2210875,
+        39.658172581
+      ],
+      "baseM": 5,
+      "heightM": 7.050000000000001,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 24.833220843187338,
+      "sourceCrownRadiusM": 3.3,
+      "displayCrownParameterM": 3.3,
+      "maximumHorizontalRadiusM": 4.475,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "begona-tree-39",
+      "coordinate": [
+        -0.220895833,
+        39.658098387
+      ],
+      "baseM": 4.783430558598023,
+      "heightM": 7.5,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 39.81745849027465,
+      "sourceCrownRadiusM": 3.55,
+      "displayCrownParameterM": 3.55,
+      "maximumHorizontalRadiusM": 4.7875,
+      "requiredFacadeGapM": 0.45
+    }
+  ]
+}

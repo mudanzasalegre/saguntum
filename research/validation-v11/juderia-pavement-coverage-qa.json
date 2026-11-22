@@ -1,0 +1,72 @@
+{
+  "method": "Whole-polyline buffers with miter joins, union, exact cadastral clipping, non-overlapping component ownership, intersection with terrain triangles.",
+  "areaM2": 2897.002395500758,
+  "triangleAreaM2": 2897.002380468987,
+  "uncoveredAreaM2": 0.00018296391684069287,
+  "excessAreaM2": 0.00016699397000106733,
+  "buildingOverlapM2": 4.335671392241038e-05,
+  "protectedPavingOverlapM2": 2.8873098029748154e-07,
+  "triangleOverlapM2": 9.381847121403553e-07,
+  "vertices": 2797,
+  "triangles": 3366,
+  "boundaryEdges": 2191,
+  "knownVisibleGaps": [
+    {
+      "id": "sang-vella-visible-wedge",
+      "point": [
+        -19.1944701,
+        89.0549997
+      ],
+      "covered": true
+    },
+    {
+      "id": "portalet-visible-wedge",
+      "point": [
+        -0.5937627,
+        91.7990675
+      ],
+      "covered": true
+    },
+    {
+      "id": "sang-vella-facade-margin-a",
+      "point": [
+        -21.49068,
+        88.57841
+      ],
+      "covered": true
+    },
+    {
+      "id": "sang-vella-facade-margin-b",
+      "point": [
+        -20.60465,
+        89.17919
+      ],
+      "covered": true
+    },
+    {
+      "id": "sang-vella-segovia-free-sliver",
+      "point": [
+        -22.417127,
+        87.550322
+      ],
+      "covered": true
+    }
+  ],
+  "visualFacadeInfill": {
+    "sourceId": "1365045242",
+    "axisLengthM": 24.366301992842768,
+    "maximumGapM": 1.2,
+    "areaM2": 13.881009914506052,
+    "smallFreeHolesClosed": 1,
+    "smallFreeHoleAreaM2": 0.1170494829099034,
+    "courtyardOverlapM2": 0.0,
+    "interpretation": "Local closure of untagged width gaps to adjoining cadastral facades; not a measured curb. Other street widths remain unchanged."
+  },
+  "inputHashes": {
+    "cartography.json": "a2b02f3311dfc3cc4b0a162400508364ce41f9ea875e77638e983e5065b23340",
+    "santa-maria-context.json": "c10e11fbfe394de3344fa7d606570ecaa67cc11d918bd9f1ee6880d0dbee752e",
+    "plaza-mayor-context.json": "1a0c282b1f15f1cf4ede43aee8a600a5a44675cc4ad8110c36656ad9d23d9fc7"
+  },
+  "pass": true,
+  "contextHash": "9118ca2de239a2b4a49e2b2651d8dc261177e3b50c6a4360686e7e8a2380d045"
+}

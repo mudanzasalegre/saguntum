@@ -1,0 +1,161 @@
+{
+  "reviewedAtUTC": "2026-11-21T10:10:50.803051+00:00",
+  "sceneAccepted": true,
+  "reviewer": "Primary agent, direct inspection of all seven final images; independent context confirmation for facade and Alameda.",
+  "browserVerified": false,
+  "webglVerified": false,
+  "renderMethod": "Blender CPU with exported production meshes, normals, textures, camera framing and castShadow flags; approximate illumination and finite inspection crop. Not browser screenshots.",
+  "views": [
+    {
+      "scene": "begona-conjunto",
+      "geometrySha256": "c870332c171312c9d284f47c585433e078d85e182e6da479c99fc619519eaf4f",
+      "renderScriptSha256": "21eb98d8210f3790decb6f72f7c87c6e20080acfd9bfee907e498fa57536cd34",
+      "samples": 32,
+      "dimensions": [
+        1440,
+        1080
+      ],
+      "recordedAtUTC": "2026-11-21T10:03:32.694843+00:00",
+      "method": "Exact-mesh CPU inspection; illumination approximates the application; not a browser screenshot.",
+      "image": "begona-conjunto.png",
+      "imageSha256": "0715d024b11a1e8a1232a358641ffd83755bb25c0fb5fd9d6aacbec5200678b8",
+      "visuallyReviewed": true,
+      "findings": [
+        "Begoña, Alameda, Museo Industrial y Gerencia se reconocen en su relación urbana.",
+        "La trama de calles y los volúmenes próximos se leen continuos, sin edificios duplicados observados."
+      ]
+    },
+    {
+      "scene": "begona-fachada",
+      "geometrySha256": "ed4b7e2a13eba13d6be7ec115b4abb0ea39f569087e29dc573bfd2f09b8441a6",
+      "renderScriptSha256": "21eb98d8210f3790decb6f72f7c87c6e20080acfd9bfee907e498fa57536cd34",
+      "samples": 32,
+      "dimensions": [
+        1440,
+        1080
+      ],
+      "recordedAtUTC": "2026-11-21T10:03:32.559827+00:00",
+      "method": "Exact-mesh CPU inspection; illumination approximates the application; not a browser screenshot.",
+      "image": "begona-fachada.png",
+      "imageSha256": "52db88341a28f1684514de9f17f2fd4062018bb2119d908cfe3df8ef489ba7ed",
+      "visuallyReviewed": true,
+      "findings": [
+        "Portada, seis óvalos laterales, campanario abierto, cúpula y torrecillas legibles.",
+        "Yugos de campanas conectados a soportes transversales; pavimento noreste continuo hasta el viario existente."
+      ]
+    },
+    {
+      "scene": "begona-nave",
+      "geometrySha256": "57fef30f5451f0c46f4b315a8c00bf7ec0c2a2790c2dcb93be26ccc3ea082204",
+      "renderScriptSha256": "21eb98d8210f3790decb6f72f7c87c6e20080acfd9bfee907e498fa57536cd34",
+      "samples": 32,
+      "dimensions": [
+        960,
+        720
+      ],
+      "recordedAtUTC": "2026-11-21T10:05:00.651593+00:00",
+      "method": "Exact-mesh CPU inspection; illumination approximates the application; not a browser screenshot.",
+      "image": "begona-nave.png",
+      "imageSha256": "67e17c3c818494f08f2c0ba739e0a3a37f00baa162ce43834e4d83790e23e77f",
+      "visuallyReviewed": true,
+      "findings": [
+        "Tres naves, columnas rosadas, arcadas, claristorio y cubierta conservada legibles.",
+        "Los bancos mantienen un pasillo central y las figuras interiores tienen apoyos."
+      ]
+    },
+    {
+      "scene": "begona-presbiterio",
+      "geometrySha256": "66931e91394b2ec42652720a869cec5a56c6b0a500a02274d74dec00809ef240",
+      "renderScriptSha256": "21eb98d8210f3790decb6f72f7c87c6e20080acfd9bfee907e498fa57536cd34",
+      "samples": 32,
+      "dimensions": [
+        960,
+        720
+      ],
+      "recordedAtUTC": "2026-11-21T10:05:01.828635+00:00",
+      "method": "Exact-mesh CPU inspection; illumination approximates the application; not a browser screenshot.",
+      "image": "begona-presbiterio.png",
+      "imageSha256": "8ca04c6200a24c5713c6207031fecb83af58d6fb54f8644c672d6e30ede6d31a",
+      "visuallyReviewed": true,
+      "findings": [
+        "Altar, nicho y retablo articulados contra la cabecera curva.",
+        "La figura abstracta central descansa sobre una peana conectada al banco del retablo."
+      ]
+    },
+    {
+      "scene": "begona-coro",
+      "geometrySha256": "033b855254c249ae52e6f4ddcc49c9e1f7a8ca3da38e13da36bd247d82c074cc",
+      "renderScriptSha256": "21eb98d8210f3790decb6f72f7c87c6e20080acfd9bfee907e498fa57536cd34",
+      "samples": 32,
+      "dimensions": [
+        960,
+        720
+      ],
+      "recordedAtUTC": "2026-11-21T10:06:44.368618+00:00",
+      "method": "Exact-mesh CPU inspection; illumination approximates the application; not a browser screenshot.",
+      "image": "begona-coro.png",
+      "imageSha256": "960ddafcbdc1e0f565076a883007b9235091383c9c89fb3193bd3c6e67fac25d",
+      "visuallyReviewed": true,
+      "findings": [
+        "La barandilla en primer término y la vista elevada permiten leer la nave desde el coro.",
+        "El techo y las lámparas permanecen visibles en esta vista interior normal."
+      ]
+    },
+    {
+      "scene": "begona-alameda",
+      "geometrySha256": "0f4b8957c0dfc9da32c0e4b96f8654783163c11aaaced303f6907a4a2c734e83",
+      "renderScriptSha256": "21eb98d8210f3790decb6f72f7c87c6e20080acfd9bfee907e498fa57536cd34",
+      "samples": 32,
+      "dimensions": [
+        960,
+        720
+      ],
+      "recordedAtUTC": "2026-11-21T10:07:01.533102+00:00",
+      "method": "Exact-mesh CPU inspection; illumination approximates the application; not a browser screenshot.",
+      "image": "begona-alameda.png",
+      "imageSha256": "0e9a20d387a51c9f1d5eaa33747c2848d427a5a7e1349c04c3bee17ffc2bac92",
+      "visuallyReviewed": true,
+      "findings": [
+        "Paseo, alineaciones de arbolado, bancos y frente urbano mantienen una composición continua.",
+        "El rectángulo negro del primer render ha desaparecido al respetar la configuración de sombras de producción."
+      ]
+    },
+    {
+      "scene": "begona-seccion",
+      "geometrySha256": "2e448a978de1e37ed29f7f385fc50ff1c2479f175ea9ab503b5c0f93e2bafa78",
+      "renderScriptSha256": "21eb98d8210f3790decb6f72f7c87c6e20080acfd9bfee907e498fa57536cd34",
+      "samples": 32,
+      "dimensions": [
+        1440,
+        1080
+      ],
+      "recordedAtUTC": "2026-11-21T10:07:42.185647+00:00",
+      "method": "Exact-mesh CPU inspection; illumination approximates the application; not a browser screenshot.",
+      "image": "begona-seccion.png",
+      "imageSha256": "5fc1fe7765fc334661358a27e1169f63a40ec8ed7b13b91f6509b5793b4dcbd7",
+      "visuallyReviewed": true,
+      "findings": [
+        "Las naves, columnas, capillas y cabecera se leen al abrir las cubiertas del templo.",
+        "Coro, órgano y lámparas dependientes se retiran conjuntamente; Casa Abadía y anexo conservan sus cubiertas."
+      ]
+    }
+  ],
+  "integrationInputHashesMatch": true,
+  "productionInputs": 49,
+  "correctedFindings": [
+    "Lateral camera moved clear of neighboring buildings.",
+    "Alameda coverage respects the historic exclusion of demolished cadastral volumes.",
+    "Turret and tower bases joined to their architectural supports.",
+    "Wing pier heights and roof/gable intersections corrected.",
+    "Bell yokes connected to supports; liturgical silhouettes connected to pedestals.",
+    "Choir plan anchor placed within its floor; pillar and railing footprints registered.",
+    "Temple section removes dependent choir, organ and lamps while keeping undocumented annexes covered.",
+    "Northeast orthophoto strip replaced by 94.34 square metres of bounded paving.",
+    "CPU renderer now honors castShadow=false on generic pavement; verified black patch removed without changing production road geometry."
+  ],
+  "limitations": [
+    "CPU images do not verify browser UI layout, WebGL performance, device FPS or GPU memory.",
+    "Unmeasured proportions, ornament, furniture and some colors remain interpretive.",
+    "Reference photographs have different dates; the interior is not presented as a complete survey of its state in 2026."
+  ]
+}

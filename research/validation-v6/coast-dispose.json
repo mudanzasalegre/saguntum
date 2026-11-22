@@ -1,0 +1,55 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "pass": true,
+      "label": "Native reflection hides itself and freezes XR/shadow updates"
+    },
+    {
+      "pass": true,
+      "label": "Reflection render target captured"
+    },
+    {
+      "pass": true,
+      "label": "Renderer state restored after successful reflection"
+    },
+    {
+      "pass": true,
+      "label": "Simulated render exception propagates"
+    },
+    {
+      "pass": true,
+      "label": "Renderer and mesh state restored after exception"
+    },
+    {
+      "pass": true,
+      "label": "Native reflection hides itself and freezes XR/shadow updates"
+    },
+    {
+      "pass": true,
+      "label": "Reflection can resume after failure"
+    },
+    {
+      "pass": true,
+      "label": "Captured render target disposed exactly once"
+    },
+    {
+      "pass": true,
+      "label": "Water geometry, material and normals disposed exactly once"
+    },
+    {
+      "pass": true,
+      "label": "Disposed coast no longer reflects or animates"
+    },
+    {
+      "pass": true,
+      "label": "Unrendered reflection texture is released without a captured target"
+    }
+  ],
+  "errors": [],
+  "capturedRenderTargets": 1,
+  "renderTargetDisposals": 1,
+  "geometryDisposals": 1,
+  "materialDisposals": 1,
+  "normalDisposals": 1
+}

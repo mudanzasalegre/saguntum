@@ -1,0 +1,52 @@
+{
+  "pass": true,
+  "method": "Exact production controller helpers and notebook wiring; actual Canvas maps and input targets with minimal DOM adapters. Does not claim browser layout, native focus or WebGL validation.",
+  "generatedAt": "2026-11-21T18:36:10.194Z",
+  "checksCount": 8,
+  "checks": [
+    {
+      "pass": true,
+      "label": "New guide belongs to the same atlas and exposes exactly twenty registered stops"
+    },
+    {
+      "pass": true,
+      "label": "Every stop selects its own camera and URL without modifying another notebook"
+    },
+    {
+      "pass": true,
+      "label": "Section opens from overview or reframes an indoor visit as a visible cut without changing water"
+    },
+    {
+      "pass": true,
+      "label": "Valid and invalid deep links resolve safely, including the initial no-WebGL path"
+    },
+    {
+      "pass": true,
+      "label": "Canvas fallback retains reachable targets on mobile and desktop, including each interior floor"
+    },
+    {
+      "pass": true,
+      "label": "Sources, thematic reading, keyboard tabs, map action and progress use the actual notebook wiring"
+    },
+    {
+      "pass": true,
+      "label": "Mobile guide uses shared half-screen layout and controls remain honest without WebGL"
+    },
+    {
+      "pass": true,
+      "label": "Leaving Grau restores its cut state and does not affect sea visibility"
+    }
+  ],
+  "sourceHashes": {
+    "dist/js/app.js": "7190ad6ab9e8f5dac8f1ab5d18e1b23b423513be0804fb620bedab097fa7c5e6",
+    "dist/js/castle-panel.js": "f826b23eb1b4b1adcd7844f1cda1cecc5cf092e192644d216e2b2fd04f062b1b",
+    "dist/js/coast.js": "a6ba3be639236306b7d11f5d7e0a6c70447792db68730084012ba18e6c99b729",
+    "dist/js/grau-map.js": "90eb16acfa95176b792361ba631455947148bea102c7dea6f9113ee4f8367fd5",
+    "dist/js/theme.js": "4702130f444a68738b9aecb53f3efb47530a07c109b830e5464bbab33ec4b42b",
+    "dist/assets/data/coast-grau.json": "337e90fa46344458041af91c076ca758291550d0beef0ef5910e05ce5b9cca0e",
+    "dist/style.css": "51080db6625a951160784ccb7f36898e226d86bdb00852c6cb61ac95e987f5f1",
+    "dist/index.html": "557ff0da0fbbd3ccec10bb5bf2b50ef4983f0da62b43b6c4c56575a2ae49570b",
+    "dist/assets/data/grau-visit.json": "e0268102fa5ea4269787ac6d7d67c7e3b7dad98f508f4b49ee0634322b3a0527",
+    "dist/assets/data/grau-plan.json": "d33a06c62e4a1d7b45b37c0990d46bc0bec9281d8cf25c26013588c220cd330f"
+  }
+}

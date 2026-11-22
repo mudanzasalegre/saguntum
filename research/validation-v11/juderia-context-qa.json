@@ -1,0 +1,2265 @@
+{
+  "pass": true,
+  "visitSource": "juderia-visit.json",
+  "stats": {
+    "buildingParts": 344,
+    "parentParcels": 146,
+    "footprintsPreserved": true,
+    "courtyards": 3,
+    "sourceHeight": 0,
+    "ignHeight": 172,
+    "storeyHeight": 172,
+    "fallbackHeight": 0,
+    "streetSamples": 3366,
+    "roofCorrections": 0,
+    "maximumRoofCorrectionM": 0,
+    "preservedSantaMaria": true,
+    "preservedPlazaMayor": true
+  },
+  "geometry": {
+    "meshes": 37,
+    "triangles": 65520,
+    "pavingSamples": 3366,
+    "buriedPaving": 0,
+    "floatingPaving": 0,
+    "minClearance": 0.10499662980436142,
+    "maxClearance": 0.10500494794298731,
+    "coincidentCount": 7305,
+    "maximumSharedHeightMismatch": 0.000003814697265625,
+    "pavementEdgeSamples": 13464,
+    "maximumPavementDrapeError": 0.000005426332354549479,
+    "knownVisibleGaps": [
+      {
+        "id": "sang-vella-visible-wedge",
+        "point": [
+          -19.1944701,
+          89.0549997
+        ],
+        "covered": true
+      },
+      {
+        "id": "portalet-visible-wedge",
+        "point": [
+          -0.5937627,
+          91.7990675
+        ],
+        "covered": true
+      },
+      {
+        "id": "sang-vella-facade-margin-a",
+        "point": [
+          -21.49068,
+          88.57841
+        ],
+        "covered": true
+      },
+      {
+        "id": "sang-vella-facade-margin-b",
+        "point": [
+          -20.60465,
+          89.17919
+        ],
+        "covered": true
+      },
+      {
+        "id": "sang-vella-segovia-free-sliver",
+        "point": [
+          -22.417127,
+          87.550322
+        ],
+        "covered": true
+      }
+    ],
+    "laneSamples": 255,
+    "maximumLaneGroundDeviation": 0.06728849513188351,
+    "maximumLaneSlope": 0.13674585834466985
+  },
+  "scenarios": [
+    {
+      "id": "desktop-minimap/dark",
+      "targets": 16,
+      "components": 414,
+      "minimumDistance": 17.077843865030413,
+      "minimumContrast": 4.7293714347501785,
+      "shadeCells": 651
+    },
+    {
+      "id": "desktop-minimap/light",
+      "targets": 16,
+      "components": 414,
+      "minimumDistance": 17.077843865030413,
+      "minimumContrast": 4.7293714347501785,
+      "shadeCells": 651
+    },
+    {
+      "id": "desktop-plan/dark",
+      "targets": 16,
+      "components": 414,
+      "minimumDistance": 32.71121034777843,
+      "minimumContrast": 4.7293714347501785,
+      "shadeCells": 7313
+    },
+    {
+      "id": "desktop-plan/light",
+      "targets": 16,
+      "components": 414,
+      "minimumDistance": 32.71121034777843,
+      "minimumContrast": 4.7293714347501785,
+      "shadeCells": 7313
+    },
+    {
+      "id": "mobile-plan/dark",
+      "targets": 16,
+      "components": 414,
+      "minimumDistance": 32.96077559104524,
+      "minimumContrast": 4.7293714347501785,
+      "shadeCells": 1290
+    },
+    {
+      "id": "mobile-plan/light",
+      "targets": 16,
+      "components": 414,
+      "minimumDistance": 32.96077559104524,
+      "minimumContrast": 4.7293714347501785,
+      "shadeCells": 1290
+    }
+  ],
+  "cameraChecks": [
+    {
+      "id": "juderia-segovia",
+      "near": false,
+      "factor": 1,
+      "position": [
+        -38.935059889099364,
+        97.95464657191644,
+        131.04531200040861
+      ],
+      "target": [
+        -29.93505988909936,
+        67.95464657191644,
+        107.04531200040861
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-segovia",
+      "near": false,
+      "factor": 1.95,
+      "position": [
+        -47.48505988909936,
+        126.45464657191644,
+        153.84531200040863
+      ],
+      "target": [
+        -29.93505988909936,
+        67.95464657191644,
+        107.04531200040861
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-segovia",
+      "near": false,
+      "factor": 3.6,
+      "position": [
+        -62.335059889099355,
+        175.95464657191644,
+        193.44531200040862
+      ],
+      "target": [
+        -29.93505988909936,
+        67.95464657191644,
+        107.04531200040861
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-segovia",
+      "near": true,
+      "factor": 1,
+      "position": [
+        -31.93505988909936,
+        80.95464657191644,
+        117.04531200040861
+      ],
+      "target": [
+        -29.93505988909936,
+        67.95464657191644,
+        107.04531200040861
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-segovia",
+      "near": true,
+      "factor": 1.95,
+      "position": [
+        -33.83505988909936,
+        93.30464657191644,
+        126.54531200040861
+      ],
+      "target": [
+        -29.93505988909936,
+        67.95464657191644,
+        107.04531200040861
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-segovia",
+      "near": true,
+      "factor": 3.6,
+      "position": [
+        -37.13505988909936,
+        114.75464657191645,
+        143.04531200040861
+      ],
+      "target": [
+        -29.93505988909936,
+        67.95464657191644,
+        107.04531200040861
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-rams",
+      "near": false,
+      "factor": 1,
+      "position": [
+        -28.19598936789125,
+        97.23892334572776,
+        107.05434200032215
+      ],
+      "target": [
+        -53.19598936789125,
+        71.23892334572776,
+        97.05434200032215
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-rams",
+      "near": false,
+      "factor": 1.95,
+      "position": [
+        -4.445989367891251,
+        121.93892334572774,
+        116.55434200032215
+      ],
+      "target": [
+        -53.19598936789125,
+        71.23892334572776,
+        97.05434200032215
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-rams",
+      "near": false,
+      "factor": 3.6,
+      "position": [
+        36.80401063210875,
+        164.83892334572778,
+        133.05434200032215
+      ],
+      "target": [
+        -53.19598936789125,
+        71.23892334572776,
+        97.05434200032215
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-rams",
+      "near": true,
+      "factor": 1,
+      "position": [
+        -41.19598936789125,
+        81.23892334572776,
+        102.05434200032215
+      ],
+      "target": [
+        -53.19598936789125,
+        71.23892334572776,
+        97.05434200032215
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-rams",
+      "near": true,
+      "factor": 1.95,
+      "position": [
+        -29.795989367891252,
+        90.73892334572776,
+        106.80434200032215
+      ],
+      "target": [
+        -53.19598936789125,
+        71.23892334572776,
+        97.05434200032215
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-rams",
+      "near": true,
+      "factor": 3.6,
+      "position": [
+        -9.995989367891248,
+        107.23892334572776,
+        115.05434200032215
+      ],
+      "target": [
+        -53.19598936789125,
+        71.23892334572776,
+        97.05434200032215
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-antigons",
+      "near": false,
+      "factor": 1,
+      "position": [
+        8.978357738061213,
+        96.6102179198224,
+        118.87170000057608
+      ],
+      "target": [
+        -9.021642261938787,
+        67.6102179198224,
+        138.87170000057608
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-antigons",
+      "near": false,
+      "factor": 1.95,
+      "position": [
+        26.078357738061214,
+        124.1602179198224,
+        99.87170000057608
+      ],
+      "target": [
+        -9.021642261938787,
+        67.6102179198224,
+        138.87170000057608
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-antigons",
+      "near": false,
+      "factor": 3.6,
+      "position": [
+        55.77835773806121,
+        172.01021791982242,
+        66.87170000057608
+      ],
+      "target": [
+        -9.021642261938787,
+        67.6102179198224,
+        138.87170000057608
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-antigons",
+      "near": true,
+      "factor": 1,
+      "position": [
+        -2.021642261938787,
+        80.6102179198224,
+        130.87170000057608
+      ],
+      "target": [
+        -9.021642261938787,
+        67.6102179198224,
+        138.87170000057608
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-antigons",
+      "near": true,
+      "factor": 1.95,
+      "position": [
+        4.628357738061213,
+        92.9602179198224,
+        123.27170000057609
+      ],
+      "target": [
+        -9.021642261938787,
+        67.6102179198224,
+        138.87170000057608
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-antigons",
+      "near": true,
+      "factor": 3.6,
+      "position": [
+        16.178357738061212,
+        114.4102179198224,
+        110.07170000057609
+      ],
+      "target": [
+        -9.021642261938787,
+        67.6102179198224,
+        138.87170000057608
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-sinagoga",
+      "near": false,
+      "factor": 1,
+      "position": [
+        -33.8323936148335,
+        92.16547367811614,
+        55.33920000001291
+      ],
+      "target": [
+        -54.8323936148335,
+        66.16547367811614,
+        62.33920000001291
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-sinagoga",
+      "near": false,
+      "factor": 1.95,
+      "position": [
+        -13.882393614833504,
+        116.86547367811613,
+        48.68920000001291
+      ],
+      "target": [
+        -54.8323936148335,
+        66.16547367811614,
+        62.33920000001291
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-sinagoga",
+      "near": false,
+      "factor": 3.6,
+      "position": [
+        20.76760638516651,
+        159.76547367811617,
+        37.139200000012906
+      ],
+      "target": [
+        -54.8323936148335,
+        66.16547367811614,
+        62.33920000001291
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-sinagoga",
+      "near": true,
+      "factor": 1,
+      "position": [
+        -43.8323936148335,
+        78.16547367811614,
+        59.33920000001291
+      ],
+      "target": [
+        -54.8323936148335,
+        66.16547367811614,
+        62.33920000001291
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-sinagoga",
+      "near": true,
+      "factor": 1.95,
+      "position": [
+        -33.382393614833504,
+        89.56547367811615,
+        56.48920000001291
+      ],
+      "target": [
+        -54.8323936148335,
+        66.16547367811614,
+        62.33920000001291
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-sinagoga",
+      "near": true,
+      "factor": 3.6,
+      "position": [
+        -15.232393614833498,
+        109.36547367811615,
+        51.53920000001291
+      ],
+      "target": [
+        -54.8323936148335,
+        66.16547367811614,
+        62.33920000001291
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-berenguer",
+      "near": false,
+      "factor": 1,
+      "position": [
+        -69.53237117340882,
+        90.01815084508519,
+        -0.6227999996985432
+      ],
+      "target": [
+        -86.53237117340882,
+        61.018150845085195,
+        23.377200000301457
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-berenguer",
+      "near": false,
+      "factor": 1.95,
+      "position": [
+        -53.38237117340882,
+        117.5681508450852,
+        -23.42279999969854
+      ],
+      "target": [
+        -86.53237117340882,
+        61.018150845085195,
+        23.377200000301457
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-berenguer",
+      "near": false,
+      "factor": 3.6,
+      "position": [
+        -25.332371173408816,
+        165.4181508450852,
+        -63.02279999969855
+      ],
+      "target": [
+        -86.53237117340882,
+        61.018150845085195,
+        23.377200000301457
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-berenguer",
+      "near": true,
+      "factor": 1,
+      "position": [
+        -79.53237117340882,
+        76.01815084508519,
+        11.377200000301457
+      ],
+      "target": [
+        -86.53237117340882,
+        61.018150845085195,
+        23.377200000301457
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-berenguer",
+      "near": true,
+      "factor": 1.95,
+      "position": [
+        -72.88237117340881,
+        90.26815084508519,
+        -0.02279999969854174
+      ],
+      "target": [
+        -86.53237117340882,
+        61.018150845085195,
+        23.377200000301457
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-berenguer",
+      "near": true,
+      "factor": 3.6,
+      "position": [
+        -61.332371173408816,
+        115.01815084508519,
+        -19.822799999698546
+      ],
+      "target": [
+        -86.53237117340882,
+        61.018150845085195,
+        23.377200000301457
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-micve",
+      "near": false,
+      "factor": 1,
+      "position": [
+        -55.13375620536671,
+        94.38777279762591,
+        25.51122800023586
+      ],
+      "target": [
+        -77.13375620536671,
+        63.387772797625914,
+        41.51122800023586
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-micve",
+      "near": false,
+      "factor": 1.95,
+      "position": [
+        -34.23375620536671,
+        123.83777279762592,
+        10.311228000235861
+      ],
+      "target": [
+        -77.13375620536671,
+        63.387772797625914,
+        41.51122800023586
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-micve",
+      "near": false,
+      "factor": 3.6,
+      "position": [
+        2.0662437946332943,
+        174.98777279762592,
+        -16.08877199976414
+      ],
+      "target": [
+        -77.13375620536671,
+        63.387772797625914,
+        41.51122800023586
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-micve",
+      "near": true,
+      "factor": 1,
+      "position": [
+        -64.13375620536671,
+        81.38777279762591,
+        33.51122800023586
+      ],
+      "target": [
+        -77.13375620536671,
+        63.387772797625914,
+        41.51122800023586
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-micve",
+      "near": true,
+      "factor": 1.95,
+      "position": [
+        -51.783756205366714,
+        98.48777279762592,
+        25.91122800023586
+      ],
+      "target": [
+        -77.13375620536671,
+        63.387772797625914,
+        41.51122800023586
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-micve",
+      "near": true,
+      "factor": 3.6,
+      "position": [
+        -30.333756205366704,
+        128.1877727976259,
+        12.71122800023586
+      ],
+      "target": [
+        -77.13375620536671,
+        63.387772797625914,
+        41.51122800023586
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-museo",
+      "near": false,
+      "factor": 1,
+      "position": [
+        -23.685404920181377,
+        89.1931919997142,
+        62.324160000474535
+      ],
+      "target": [
+        -0.6854049201813762,
+        60.1931919997142,
+        54.324160000474535
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-museo",
+      "near": false,
+      "factor": 1.95,
+      "position": [
+        -45.53540492018138,
+        116.7431919997142,
+        69.92416000047453
+      ],
+      "target": [
+        -0.6854049201813762,
+        60.1931919997142,
+        54.324160000474535
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-museo",
+      "near": false,
+      "factor": 3.6,
+      "position": [
+        -83.48540492018137,
+        164.5931919997142,
+        83.12416000047453
+      ],
+      "target": [
+        -0.6854049201813762,
+        60.1931919997142,
+        54.324160000474535
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-museo",
+      "near": true,
+      "factor": 1,
+      "position": [
+        -12.685404920181377,
+        74.1931919997142,
+        58.324160000474535
+      ],
+      "target": [
+        -0.6854049201813762,
+        60.1931919997142,
+        54.324160000474535
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-museo",
+      "near": true,
+      "factor": 1.95,
+      "position": [
+        -24.085404920181375,
+        87.4931919997142,
+        62.12416000047453
+      ],
+      "target": [
+        -0.6854049201813762,
+        60.1931919997142,
+        54.324160000474535
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-museo",
+      "near": true,
+      "factor": 3.6,
+      "position": [
+        -43.88540492018138,
+        110.59319199971421,
+        68.72416000047454
+      ],
+      "target": [
+        -0.6854049201813762,
+        60.1931919997142,
+        54.324160000474535
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-teatro",
+      "near": false,
+      "factor": 1,
+      "position": [
+        -116.26752573581294,
+        100.50298578149045,
+        89.0357639998881
+      ],
+      "target": [
+        -97.26752573581294,
+        71.50298578149045,
+        96.0357639998881
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-teatro",
+      "near": false,
+      "factor": 1.95,
+      "position": [
+        -134.31752573581292,
+        128.05298578149046,
+        82.3857639998881
+      ],
+      "target": [
+        -97.26752573581294,
+        71.50298578149045,
+        96.0357639998881
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-teatro",
+      "near": false,
+      "factor": 3.6,
+      "position": [
+        -165.66752573581294,
+        175.90298578149046,
+        70.8357639998881
+      ],
+      "target": [
+        -97.26752573581294,
+        71.50298578149045,
+        96.0357639998881
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-teatro",
+      "near": true,
+      "factor": 1,
+      "position": [
+        -106.26752573581294,
+        85.50298578149045,
+        93.0357639998881
+      ],
+      "target": [
+        -97.26752573581294,
+        71.50298578149045,
+        96.0357639998881
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-teatro",
+      "near": true,
+      "factor": 1.95,
+      "position": [
+        -114.81752573581294,
+        98.80298578149045,
+        90.18576399988811
+      ],
+      "target": [
+        -97.26752573581294,
+        71.50298578149045,
+        96.0357639998881
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-teatro",
+      "near": true,
+      "factor": 3.6,
+      "position": [
+        -129.66752573581294,
+        121.90298578149046,
+        85.2357639998881
+      ],
+      "target": [
+        -97.26752573581294,
+        71.50298578149045,
+        96.0357639998881
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-memoria",
+      "near": false,
+      "factor": 1,
+      "position": [
+        21.40988947792553,
+        89.86227528830113,
+        72.87788800008394
+      ],
+      "target": [
+        3.4098894779255318,
+        62.86227528830114,
+        88.87788800008394
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-memoria",
+      "near": false,
+      "factor": 1.95,
+      "position": [
+        38.50988947792553,
+        115.51227528830114,
+        57.67788800008394
+      ],
+      "target": [
+        3.4098894779255318,
+        62.86227528830114,
+        88.87788800008394
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-memoria",
+      "near": false,
+      "factor": 3.6,
+      "position": [
+        68.20988947792553,
+        160.06227528830115,
+        31.27788800008394
+      ],
+      "target": [
+        3.4098894779255318,
+        62.86227528830114,
+        88.87788800008394
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-memoria",
+      "near": true,
+      "factor": 1,
+      "position": [
+        11.409889477925532,
+        76.86227528830113,
+        81.87788800008394
+      ],
+      "target": [
+        3.4098894779255318,
+        62.86227528830114,
+        88.87788800008394
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-memoria",
+      "near": true,
+      "factor": 1.95,
+      "position": [
+        19.009889477925533,
+        90.16227528830115,
+        75.22788800008394
+      ],
+      "target": [
+        3.4098894779255318,
+        62.86227528830114,
+        88.87788800008394
+      ],
+      "hit": null
+    },
+    {
+      "id": "juderia-memoria",
+      "near": true,
+      "factor": 3.6,
+      "position": [
+        32.20988947792553,
+        113.26227528830114,
+        63.67788800008394
+      ],
+      "target": [
+        3.4098894779255318,
+        62.86227528830114,
+        88.87788800008394
+      ],
+      "hit": null
+    }
+  ],
+  "checks": [
+    {
+      "pass": true,
+      "label": "344 source building parts in 146 neighbourhood parcels"
+    },
+    {
+      "pass": true,
+      "label": "every context height has source or storey derivation"
+    },
+    {
+      "pass": true,
+      "label": "44 Santa Maria parts remain present in the assembled scene"
+    },
+    {
+      "pass": true,
+      "label": "all context geometry attributes are finite"
+    },
+    {
+      "pass": true,
+      "label": "pavement triangles clear the final rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "pavement triangles closely follow the final terrain"
+    },
+    {
+      "pass": true,
+      "label": "shared pavement vertices have a common height"
+    },
+    {
+      "pass": true,
+      "label": "pavement faces and T-junction edge positions conform to the actual terrain triangles"
+    },
+    {
+      "pass": true,
+      "label": "continuous pavement covers previously visible sang-vella-visible-wedge"
+    },
+    {
+      "pass": true,
+      "label": "continuous pavement covers previously visible portalet-visible-wedge"
+    },
+    {
+      "pass": true,
+      "label": "continuous pavement covers previously visible sang-vella-facade-margin-a"
+    },
+    {
+      "pass": true,
+      "label": "continuous pavement covers previously visible sang-vella-facade-margin-b"
+    },
+    {
+      "pass": true,
+      "label": "continuous pavement covers previously visible sang-vella-segovia-free-sliver"
+    },
+    {
+      "pass": true,
+      "label": "polygon union has complete single coverage after cadastral clipping"
+    },
+    {
+      "pass": true,
+      "label": "facade-side infill is restricted to the first Sang Vella lane and excludes courtyards"
+    },
+    {
+      "pass": true,
+      "label": "Sang Vella stays within 15 cm of the source terrain profile"
+    },
+    {
+      "pass": true,
+      "label": "all nine context visit focuses resolve"
+    },
+    {
+      "pass": true,
+      "label": "context focuses retain their source geographic positions"
+    },
+    {
+      "pass": true,
+      "label": "juderia-segovia/full/1 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-segovia/full/1.95 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-segovia/full/3.6 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-segovia/near/1 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-segovia/near/1.95 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-segovia/near/3.6 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-rams/full/1 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-rams/full/1.95 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-rams/full/3.6 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-rams/near/1 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-rams/near/1.95 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-rams/near/3.6 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-antigons/full/1 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-antigons/full/1.95 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-antigons/full/3.6 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-antigons/near/1 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-antigons/near/1.95 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-antigons/near/3.6 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sinagoga/full/1 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sinagoga/full/1.95 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sinagoga/full/3.6 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sinagoga/near/1 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sinagoga/near/1.95 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sinagoga/near/3.6 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-berenguer/full/1 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-berenguer/full/1.95 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-berenguer/full/3.6 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-berenguer/near/1 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-berenguer/near/1.95 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-berenguer/near/3.6 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-micve/full/1 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-micve/full/1.95 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-micve/full/3.6 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-micve/near/1 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-micve/near/1.95 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-micve/near/3.6 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-museo/full/1 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-museo/full/1.95 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-museo/full/3.6 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-museo/near/1 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-museo/near/1.95 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-museo/near/3.6 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-teatro/full/1 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-teatro/full/1.95 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-teatro/full/3.6 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-teatro/near/1 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-teatro/near/1.95 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-teatro/near/3.6 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-memoria/full/1 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-memoria/full/1.95 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-memoria/full/3.6 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-memoria/near/1 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-memoria/near/1.95 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-memoria/near/3.6 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "instances share no disposable materials or textures"
+    },
+    {
+      "pass": true,
+      "label": "period and focus changes restore every original material"
+    },
+    {
+      "pass": true,
+      "label": "disposing another instance preserves this context"
+    },
+    {
+      "pass": true,
+      "label": "rebinding terrain replaces and disposes owned geometry without resource growth"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark returns a map"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark contains all 16 unique stops"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark uses real core/context geometry and ignores malformed components"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark markers have readable separation"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark bounds include every surrounding parcel and approach"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit juderia-conjunto"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite juderia-conjunto"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit juderia-portalet"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite juderia-portalet"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit juderia-dovelas"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite juderia-dovelas"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit juderia-sang-vella"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite juderia-sang-vella"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit juderia-segovia"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite juderia-segovia"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit juderia-rams"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite juderia-rams"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit juderia-antigons"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite juderia-antigons"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit juderia-casas"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite juderia-casas"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit juderia-sinagoga"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite juderia-sinagoga"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit juderia-berenguer"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite juderia-berenguer"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit juderia-micve"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite juderia-micve"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit juderia-museo"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite juderia-museo"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit juderia-arco-museo"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite juderia-arco-museo"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit juderia-teatro"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite juderia-teatro"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit juderia-refugio"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite juderia-refugio"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit juderia-memoria"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite juderia-memoria"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark marker text meets 4.5:1 contrast"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark has the quarter-specific heading"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light returns a map"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light contains all 16 unique stops"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light uses real core/context geometry and ignores malformed components"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light markers have readable separation"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light bounds include every surrounding parcel and approach"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit juderia-conjunto"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite juderia-conjunto"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit juderia-portalet"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite juderia-portalet"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit juderia-dovelas"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite juderia-dovelas"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit juderia-sang-vella"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite juderia-sang-vella"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit juderia-segovia"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite juderia-segovia"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit juderia-rams"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite juderia-rams"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit juderia-antigons"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite juderia-antigons"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit juderia-casas"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite juderia-casas"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit juderia-sinagoga"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite juderia-sinagoga"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit juderia-berenguer"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite juderia-berenguer"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit juderia-micve"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite juderia-micve"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit juderia-museo"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite juderia-museo"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit juderia-arco-museo"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite juderia-arco-museo"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit juderia-teatro"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite juderia-teatro"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit juderia-refugio"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite juderia-refugio"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit juderia-memoria"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite juderia-memoria"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light marker text meets 4.5:1 contrast"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light has the quarter-specific heading"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark returns a map"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark contains all 16 unique stops"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark uses real core/context geometry and ignores malformed components"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark markers have readable separation"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark bounds include every surrounding parcel and approach"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit juderia-portalet"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite juderia-portalet"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit juderia-conjunto"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite juderia-conjunto"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit juderia-dovelas"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite juderia-dovelas"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit juderia-sang-vella"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite juderia-sang-vella"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit juderia-segovia"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite juderia-segovia"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit juderia-rams"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite juderia-rams"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit juderia-antigons"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite juderia-antigons"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit juderia-casas"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite juderia-casas"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit juderia-sinagoga"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite juderia-sinagoga"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit juderia-berenguer"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite juderia-berenguer"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit juderia-micve"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite juderia-micve"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit juderia-museo"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite juderia-museo"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit juderia-arco-museo"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite juderia-arco-museo"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit juderia-teatro"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite juderia-teatro"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit juderia-refugio"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite juderia-refugio"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit juderia-memoria"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite juderia-memoria"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark marker text meets 4.5:1 contrast"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark selected marker retains geographic position"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark has the quarter-specific heading"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light returns a map"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light contains all 16 unique stops"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light uses real core/context geometry and ignores malformed components"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light markers have readable separation"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light bounds include every surrounding parcel and approach"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit juderia-portalet"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite juderia-portalet"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit juderia-conjunto"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite juderia-conjunto"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit juderia-dovelas"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite juderia-dovelas"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit juderia-sang-vella"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite juderia-sang-vella"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit juderia-segovia"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite juderia-segovia"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit juderia-rams"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite juderia-rams"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit juderia-antigons"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite juderia-antigons"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit juderia-casas"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite juderia-casas"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit juderia-sinagoga"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite juderia-sinagoga"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit juderia-berenguer"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite juderia-berenguer"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit juderia-micve"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite juderia-micve"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit juderia-museo"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite juderia-museo"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit juderia-arco-museo"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite juderia-arco-museo"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit juderia-teatro"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite juderia-teatro"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit juderia-refugio"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite juderia-refugio"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit juderia-memoria"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite juderia-memoria"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light marker text meets 4.5:1 contrast"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light selected marker retains geographic position"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light has the quarter-specific heading"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark returns a map"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark contains all 16 unique stops"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark uses real core/context geometry and ignores malformed components"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark markers have readable separation"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark bounds include every surrounding parcel and approach"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit juderia-rams"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite juderia-rams"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit juderia-conjunto"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite juderia-conjunto"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit juderia-portalet"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite juderia-portalet"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit juderia-dovelas"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite juderia-dovelas"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit juderia-sang-vella"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite juderia-sang-vella"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit juderia-segovia"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite juderia-segovia"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit juderia-antigons"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite juderia-antigons"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit juderia-casas"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite juderia-casas"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit juderia-sinagoga"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite juderia-sinagoga"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit juderia-berenguer"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite juderia-berenguer"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit juderia-micve"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite juderia-micve"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit juderia-museo"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite juderia-museo"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit juderia-arco-museo"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite juderia-arco-museo"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit juderia-teatro"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite juderia-teatro"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit juderia-refugio"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite juderia-refugio"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit juderia-memoria"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite juderia-memoria"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark marker text meets 4.5:1 contrast"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark selected marker retains geographic position"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark has the quarter-specific heading"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light returns a map"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light contains all 16 unique stops"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light uses real core/context geometry and ignores malformed components"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light markers have readable separation"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light bounds include every surrounding parcel and approach"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit juderia-rams"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite juderia-rams"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit juderia-conjunto"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite juderia-conjunto"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit juderia-portalet"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite juderia-portalet"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit juderia-dovelas"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite juderia-dovelas"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit juderia-sang-vella"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite juderia-sang-vella"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit juderia-segovia"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite juderia-segovia"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit juderia-antigons"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite juderia-antigons"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit juderia-casas"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite juderia-casas"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit juderia-sinagoga"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite juderia-sinagoga"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit juderia-berenguer"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite juderia-berenguer"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit juderia-micve"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite juderia-micve"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit juderia-museo"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite juderia-museo"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit juderia-arco-museo"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite juderia-arco-museo"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit juderia-teatro"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite juderia-teatro"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit juderia-refugio"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite juderia-refugio"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit juderia-memoria"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite juderia-memoria"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light marker text meets 4.5:1 contrast"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light selected marker retains geographic position"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light has the quarter-specific heading"
+    }
+  ],
+  "failures": [],
+  "limitations": [
+    "Las huellas, patios y subdivisiones proceden de Catastro. Los huecos, revocos, puertas y balcones del caserío de contexto son una interpretación visual; no un levantamiento de cada vivienda.",
+    "Alturas IGN MDSnE o plantas catastrales, colores derivados de PNOA. Faldones y cumbreras interpretativos; los patios y las separaciones cartográficas se conservan.",
+    "Ejes viarios OSM unidos en sus giros y cruces, recortados contra huellas catastrales y pavimentos anteriores. Las caras siguen los triángulos de la malla final del terreno con una capa de 10,5 cm; anchuras sin etiqueta y despiece aproximados. En el primer callejón de Sang Vella se cierran márgenes estrechos hasta fachadas catastrales, sin invadir patios; este ajuste local de anchura es interpretativo."
+  ],
+  "inputHashes": {
+    "dist/js/juderia.js": "e83aa1df8be0538e6ce520ebf0676f847ce3d488690e1deacaa7472e0869d30d",
+    "dist/js/heritage-civic.js": "c198a107d7246623e2b99eb00c9f624d8ef9d75bc29adea852d1821a81131ec1",
+    "dist/js/juderia-context.js": "fc58285789fd8a785e87d2efd1e29e42bba257222eb51e66592393d19600cf2f",
+    "dist/js/juderia-map.js": "9d14981171b3ea7dcad942a14e66d4094b3cf7d5dce0cb0eee5c77ae3b70fbfb",
+    "dist/assets/data/juderia-context.json": "9118ca2de239a2b4a49e2b2651d8dc261177e3b50c6a4360686e7e8a2380d045",
+    "dist/assets/data/juderia-visit.json": "c935eff4d0a2f4362b437bb045ac47a4d7222b62b7ab5f7e3380e7ac08e6f736"
+  }
+}

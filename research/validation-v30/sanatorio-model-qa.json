@@ -1,0 +1,1487 @@
+{
+  "model": "Antiguo Sanatorio V30",
+  "sourceHash": "b4e5f02dc5e0ef0e7311dab754991f62e20da6de688b5c3408ab0f57ef3ee259",
+  "checks": [
+    {
+      "label": "All fourteen registered cadastral parts retained",
+      "pass": true
+    },
+    {
+      "label": "Registered footprint coordinates unchanged",
+      "pass": true
+    },
+    {
+      "label": "Sixteen architectural and garden stops",
+      "pass": true
+    },
+    {
+      "label": "Four interiors limited to registered historical ground-floor fragment",
+      "pass": true
+    },
+    {
+      "label": "Aerial section has its own documented-fragment bounds",
+      "pass": true
+    },
+    {
+      "label": "Every geometry attribute finite",
+      "pass": true
+    },
+    {
+      "label": "No degenerate triangles after Float32 conversion",
+      "pass": true,
+      "degenerate": 0
+    },
+    {
+      "label": "Bounded model draw calls and triangles",
+      "pass": true,
+      "meshes": 231,
+      "triangles": 185877
+    },
+    {
+      "label": "central raised floor has closed masonry base down to terrain",
+      "pass": true,
+      "mesh": "Sanatorio · sanatorio-principal-zocalo · stone",
+      "distance": 1.8754304815465042
+    },
+    {
+      "label": "portico raised floor has closed masonry base down to terrain",
+      "pass": true,
+      "mesh": "Sanatorio · sanatorio-portico-basamento · stone",
+      "distance": 1.492248227608337
+    },
+    {
+      "label": "left-wing raised floor has closed masonry base down to terrain",
+      "pass": true,
+      "mesh": "Sanatorio · sanatorio-principal-zocalo · stone",
+      "distance": 1.6192677905393589
+    },
+    {
+      "label": "rear-arm raised floor has closed masonry base down to terrain",
+      "pass": true,
+      "mesh": "Sanatorio · sanatorio-principal-zocalo · stone",
+      "distance": 1.7908030103699786
+    },
+    {
+      "label": "sanatorio-principal-puerta-0 has a physically unobstructed doorway",
+      "pass": true,
+      "blocked": []
+    },
+    {
+      "label": "sanatorio-principal-puerta-1 has a physically unobstructed doorway",
+      "pass": true,
+      "blocked": []
+    },
+    {
+      "label": "sanatorio-principal-puerta-2 has a physically unobstructed doorway",
+      "pass": true,
+      "blocked": []
+    },
+    {
+      "label": "sanatorio-administracion-limite-puerta has a physically unobstructed doorway",
+      "pass": true,
+      "blocked": []
+    },
+    {
+      "label": "sanatorio-sala-medicos-fondo-puerta has a physically unobstructed doorway",
+      "pass": true,
+      "blocked": []
+    },
+    {
+      "label": "sanatorio-administracion-fondo-puerta has a physically unobstructed doorway",
+      "pass": true,
+      "blocked": []
+    },
+    {
+      "label": "sanatorio-antecapilla-hall-puerta has a physically unobstructed doorway",
+      "pass": true,
+      "blocked": []
+    },
+    {
+      "label": "sanatorio-capilla-antecapilla-puerta has a physically unobstructed doorway",
+      "pass": true,
+      "blocked": []
+    },
+    {
+      "label": "sanatorio-sacristia-acceso-puerta has a physically unobstructed doorway",
+      "pass": true,
+      "blocked": []
+    },
+    {
+      "label": "sanatorio-office-hall-puerta has a physically unobstructed doorway",
+      "pass": true,
+      "blocked": []
+    },
+    {
+      "label": "sanatorio-office-corredor-puerta has a physically unobstructed doorway",
+      "pass": true,
+      "blocked": []
+    },
+    {
+      "label": "sanatorio-comedor-office-puerta has a physically unobstructed doorway",
+      "pass": true,
+      "blocked": []
+    },
+    {
+      "label": "sanatorio-comedor-hall-puerta has a physically unobstructed doorway",
+      "pass": true,
+      "blocked": []
+    },
+    {
+      "label": "sanatorio-despensa-comedor-puerta has a physically unobstructed doorway",
+      "pass": true,
+      "blocked": []
+    },
+    {
+      "label": "Ramp joins transverse garden walk through continuous paving",
+      "pass": true,
+      "uncovered": []
+    },
+    {
+      "label": "sanatorio-cuerpo-6 offset view reveals polygonal bay from garden",
+      "pass": true,
+      "inFront": 46.9257130777597,
+      "visibleSegments": 5
+    },
+    {
+      "label": "sanatorio-cuerpo-7 offset view reveals polygonal bay from garden",
+      "pass": true,
+      "inFront": 46.60739998628909,
+      "visibleSegments": 5
+    },
+    {
+      "label": "sanatorio-cuerpo-6 closeOffset view reveals polygonal bay from garden",
+      "pass": true,
+      "inFront": 30.16317192608912,
+      "visibleSegments": 5
+    },
+    {
+      "label": "sanatorio-cuerpo-7 closeOffset view reveals polygonal bay from garden",
+      "pass": true,
+      "inFront": 40.16260085175937,
+      "visibleSegments": 3
+    },
+    {
+      "label": "sanatorio-vestibulo offset eye at 1.63m",
+      "pass": true
+    },
+    {
+      "label": "sanatorio-vestibulo offset clear near camera volume",
+      "pass": true,
+      "near": []
+    },
+    {
+      "label": "sanatorio-vestibulo offset unobstructed look target",
+      "pass": true,
+      "front": []
+    },
+    {
+      "label": "sanatorio-vestibulo offset supported floor",
+      "pass": true,
+      "distance": 1.6300000047683714
+    },
+    {
+      "label": "sanatorio-vestibulo offset ceiling above camera",
+      "pass": true,
+      "distance": 1.9080002212524416
+    },
+    {
+      "label": "sanatorio-vestibulo offset retains ceiling when selecting interior from section",
+      "pass": true
+    },
+    {
+      "label": "sanatorio-vestibulo closeOffset eye at 1.63m",
+      "pass": true
+    },
+    {
+      "label": "sanatorio-vestibulo closeOffset clear near camera volume",
+      "pass": true,
+      "near": []
+    },
+    {
+      "label": "sanatorio-vestibulo closeOffset unobstructed look target",
+      "pass": true,
+      "front": []
+    },
+    {
+      "label": "sanatorio-vestibulo closeOffset supported floor",
+      "pass": true,
+      "distance": 1.6300000047683714
+    },
+    {
+      "label": "sanatorio-vestibulo closeOffset ceiling above camera",
+      "pass": true,
+      "distance": 1.9080002212524416
+    },
+    {
+      "label": "sanatorio-vestibulo closeOffset retains ceiling when selecting interior from section",
+      "pass": true
+    },
+    {
+      "label": "sanatorio-capilla offset eye at 1.63m",
+      "pass": true
+    },
+    {
+      "label": "sanatorio-capilla offset clear near camera volume",
+      "pass": true,
+      "near": []
+    },
+    {
+      "label": "sanatorio-capilla offset unobstructed look target",
+      "pass": true,
+      "front": []
+    },
+    {
+      "label": "sanatorio-capilla offset supported floor",
+      "pass": true,
+      "distance": 1.6300000047683714
+    },
+    {
+      "label": "sanatorio-capilla offset ceiling above camera",
+      "pass": true,
+      "distance": 1.9080002212524416
+    },
+    {
+      "label": "sanatorio-capilla offset retains ceiling when selecting interior from section",
+      "pass": true
+    },
+    {
+      "label": "sanatorio-capilla closeOffset eye at 1.63m",
+      "pass": true
+    },
+    {
+      "label": "sanatorio-capilla closeOffset clear near camera volume",
+      "pass": true,
+      "near": []
+    },
+    {
+      "label": "sanatorio-capilla closeOffset unobstructed look target",
+      "pass": true,
+      "front": []
+    },
+    {
+      "label": "sanatorio-capilla closeOffset supported floor",
+      "pass": true,
+      "distance": 1.6300000047683714
+    },
+    {
+      "label": "sanatorio-capilla closeOffset ceiling above camera",
+      "pass": true,
+      "distance": 1.9080002212524416
+    },
+    {
+      "label": "sanatorio-capilla closeOffset retains ceiling when selecting interior from section",
+      "pass": true
+    },
+    {
+      "label": "sanatorio-sacristia offset eye at 1.63m",
+      "pass": true
+    },
+    {
+      "label": "sanatorio-sacristia offset clear near camera volume",
+      "pass": true,
+      "near": []
+    },
+    {
+      "label": "sanatorio-sacristia offset unobstructed look target",
+      "pass": true,
+      "front": []
+    },
+    {
+      "label": "sanatorio-sacristia offset supported floor",
+      "pass": true,
+      "distance": 1.6300000047683714
+    },
+    {
+      "label": "sanatorio-sacristia offset ceiling above camera",
+      "pass": true,
+      "distance": 1.9080002212524416
+    },
+    {
+      "label": "sanatorio-sacristia offset retains ceiling when selecting interior from section",
+      "pass": true
+    },
+    {
+      "label": "sanatorio-sacristia closeOffset eye at 1.63m",
+      "pass": true
+    },
+    {
+      "label": "sanatorio-sacristia closeOffset clear near camera volume",
+      "pass": true,
+      "near": []
+    },
+    {
+      "label": "sanatorio-sacristia closeOffset unobstructed look target",
+      "pass": true,
+      "front": []
+    },
+    {
+      "label": "sanatorio-sacristia closeOffset supported floor",
+      "pass": true,
+      "distance": 1.6300000047683714
+    },
+    {
+      "label": "sanatorio-sacristia closeOffset ceiling above camera",
+      "pass": true,
+      "distance": 1.9080002212524416
+    },
+    {
+      "label": "sanatorio-sacristia closeOffset retains ceiling when selecting interior from section",
+      "pass": true
+    },
+    {
+      "label": "sanatorio-escalera offset eye at 1.63m",
+      "pass": true
+    },
+    {
+      "label": "sanatorio-escalera offset clear near camera volume",
+      "pass": true,
+      "near": []
+    },
+    {
+      "label": "sanatorio-escalera offset unobstructed look target",
+      "pass": true,
+      "front": []
+    },
+    {
+      "label": "sanatorio-escalera offset supported floor",
+      "pass": true,
+      "distance": 1.6300000047683714
+    },
+    {
+      "label": "sanatorio-escalera offset ceiling above camera",
+      "pass": true,
+      "distance": 1.9080002212524416
+    },
+    {
+      "label": "sanatorio-escalera offset retains ceiling when selecting interior from section",
+      "pass": true
+    },
+    {
+      "label": "sanatorio-escalera closeOffset eye at 1.63m",
+      "pass": true
+    },
+    {
+      "label": "sanatorio-escalera closeOffset clear near camera volume",
+      "pass": true,
+      "near": []
+    },
+    {
+      "label": "sanatorio-escalera closeOffset unobstructed look target",
+      "pass": true,
+      "front": []
+    },
+    {
+      "label": "sanatorio-escalera closeOffset supported floor",
+      "pass": true,
+      "distance": 1.6300000047683714
+    },
+    {
+      "label": "sanatorio-escalera closeOffset ceiling above camera",
+      "pass": true,
+      "distance": 1.9080002212524416
+    },
+    {
+      "label": "sanatorio-escalera closeOffset retains ceiling when selecting interior from section",
+      "pass": true
+    },
+    {
+      "label": "Section removes central upper storey and terrace",
+      "pass": true
+    },
+    {
+      "label": "Section retains ground-floor partitions",
+      "pass": true
+    },
+    {
+      "label": "Curved stair has plausible interpretable step dimensions",
+      "pass": true,
+      "id": "sanatorio-escalera-historica",
+      "buildingId": "sanatorio-principal",
+      "coordinates": [
+        [
+          -0.22870430055643914,
+          39.664402126561534
+        ],
+        [
+          -0.22866295018205793,
+          39.66443873662022
+        ],
+        [
+          -0.22860683736600498,
+          39.6644011953337
+        ],
+        [
+          -0.2286481877403862,
+          39.66436458527502
+        ]
+      ],
+      "footprint": [
+        [
+          -0.22870430055643914,
+          39.664402126561534
+        ],
+        [
+          -0.22866295018205793,
+          39.66443873662022
+        ],
+        [
+          -0.22860683736600498,
+          39.6644011953337
+        ],
+        [
+          -0.2286481877403862,
+          39.66436458527502
+        ]
+      ],
+      "floor": 0,
+      "fromFloor": 0,
+      "toFloor": 1,
+      "steps": 24,
+      "rise": 0.15625,
+      "going": 0.28923302723290806,
+      "width": 1.28,
+      "treadLines": [
+        [
+          [
+            -0.22867721909214184,
+            39.66440364770777
+          ],
+          [
+            -0.22868849450886833,
+            39.66441119132578
+          ]
+        ],
+        [
+          [
+            -0.22867630111342044,
+            39.66440425570213
+          ],
+          [
+            -0.22868431260580419,
+            39.66441396107786
+          ]
+        ],
+        [
+          [
+            -0.22867519594928443,
+            39.66440463693415
+          ],
+          [
+            -0.2286792779691846,
+            39.664415697801495
+          ]
+        ],
+        [
+          [
+            -0.22867399541033548,
+            39.66440475973329
+          ],
+          [
+            -0.2286738088473061,
+            39.664416257219784
+          ]
+        ],
+        [
+          [
+            -0.2286727992303594,
+            39.66440461389811
+          ],
+          [
+            -0.2286683595829707,
+            39.66441559285953
+          ]
+        ],
+        [
+          [
+            -0.22867170678102394,
+            39.664404211543754
+          ],
+          [
+            -0.22866338286933136,
+            39.6644137599119
+          ]
+        ],
+        [
+          [
+            -0.22866984122526393,
+            39.66440299666284
+          ],
+          [
+            -0.22866003965504023,
+            39.664411674602675
+          ]
+        ],
+        [
+          [
+            -0.22866729339486308,
+            39.664401292082
+          ],
+          [
+            -0.22865749182463938,
+            39.664409970021836
+          ]
+        ],
+        [
+          [
+            -0.2286647455644622,
+            39.66439958750116
+          ],
+          [
+            -0.2286549439942385,
+            39.664408265441
+          ]
+        ],
+        [
+          [
+            -0.22866219773406132,
+            39.66439788292032
+          ],
+          [
+            -0.22865239616383762,
+            39.66440656086016
+          ]
+        ],
+        [
+          [
+            -0.22865964990366044,
+            39.66439617833948
+          ],
+          [
+            -0.22864984833343677,
+            39.66440485627932
+          ]
+        ],
+        [
+          [
+            -0.22865710207325957,
+            39.66439447375864
+          ],
+          [
+            -0.2286473005030359,
+            39.66440315169848
+          ]
+        ],
+        [
+          [
+            -0.2286545542428587,
+            39.6643927691778
+          ],
+          [
+            -0.228644752672635,
+            39.66440144711764
+          ]
+        ],
+        [
+          [
+            -0.2286520064124578,
+            39.66439106459696
+          ],
+          [
+            -0.22864220484223413,
+            39.6643997425368
+          ]
+        ],
+        [
+          [
+            -0.22864945858205696,
+            39.66438936001612
+          ],
+          [
+            -0.22863965701183325,
+            39.66439803795596
+          ]
+        ],
+        [
+          [
+            -0.22864729889806426,
+            39.66438790530212
+          ],
+          [
+            -0.22863675702796366,
+            39.66439605305733
+          ]
+        ],
+        [
+          [
+            -0.22864657282758577,
+            39.664387159284004
+          ],
+          [
+            -0.2286334493735617,
+            39.66439265453037
+          ]
+        ],
+        [
+          [
+            -0.22864615338152444,
+            39.66438628487159
+          ],
+          [
+            -0.22863153856372675,
+            39.66438867109603
+          ]
+        ],
+        [
+          [
+            -0.22864607540501683,
+            39.66438535470596
+          ],
+          [
+            -0.22863118333741428,
+            39.66438443367485
+          ]
+        ],
+        [
+          [
+            -0.22864634537589718,
+            39.66438444605987
+          ],
+          [
+            -0.22863241320475808,
+            39.6643802942871
+          ]
+        ],
+        [
+          [
+            -0.22864694086655662,
+            39.66438363441834
+          ],
+          [
+            -0.22863512599554003,
+            39.66437659680903
+          ]
+        ],
+        [
+          [
+            -0.22864887142695367,
+            39.66438191718669
+          ],
+          [
+            -0.22863759601022718,
+            39.66437437356867
+          ]
+        ],
+        [
+          [
+            -0.22865108622213134,
+            39.66437995629074
+          ],
+          [
+            -0.22863981080540485,
+            39.664372412672726
+          ]
+        ],
+        [
+          [
+            -0.22865330101730902,
+            39.664377995394794
+          ],
+          [
+            -0.22864202560058253,
+            39.66437045177678
+          ]
+        ]
+      ],
+      "segments": [
+        [
+          [
+            -0.22867721909214184,
+            39.66440364770777
+          ],
+          [
+            -0.22868849450886833,
+            39.66441119132578
+          ]
+        ],
+        [
+          [
+            -0.22867630111342044,
+            39.66440425570213
+          ],
+          [
+            -0.22868431260580419,
+            39.66441396107786
+          ]
+        ],
+        [
+          [
+            -0.22867519594928443,
+            39.66440463693415
+          ],
+          [
+            -0.2286792779691846,
+            39.664415697801495
+          ]
+        ],
+        [
+          [
+            -0.22867399541033548,
+            39.66440475973329
+          ],
+          [
+            -0.2286738088473061,
+            39.664416257219784
+          ]
+        ],
+        [
+          [
+            -0.2286727992303594,
+            39.66440461389811
+          ],
+          [
+            -0.2286683595829707,
+            39.66441559285953
+          ]
+        ],
+        [
+          [
+            -0.22867170678102394,
+            39.664404211543754
+          ],
+          [
+            -0.22866338286933136,
+            39.6644137599119
+          ]
+        ],
+        [
+          [
+            -0.22866984122526393,
+            39.66440299666284
+          ],
+          [
+            -0.22866003965504023,
+            39.664411674602675
+          ]
+        ],
+        [
+          [
+            -0.22866729339486308,
+            39.664401292082
+          ],
+          [
+            -0.22865749182463938,
+            39.664409970021836
+          ]
+        ],
+        [
+          [
+            -0.2286647455644622,
+            39.66439958750116
+          ],
+          [
+            -0.2286549439942385,
+            39.664408265441
+          ]
+        ],
+        [
+          [
+            -0.22866219773406132,
+            39.66439788292032
+          ],
+          [
+            -0.22865239616383762,
+            39.66440656086016
+          ]
+        ],
+        [
+          [
+            -0.22865964990366044,
+            39.66439617833948
+          ],
+          [
+            -0.22864984833343677,
+            39.66440485627932
+          ]
+        ],
+        [
+          [
+            -0.22865710207325957,
+            39.66439447375864
+          ],
+          [
+            -0.2286473005030359,
+            39.66440315169848
+          ]
+        ],
+        [
+          [
+            -0.2286545542428587,
+            39.6643927691778
+          ],
+          [
+            -0.228644752672635,
+            39.66440144711764
+          ]
+        ],
+        [
+          [
+            -0.2286520064124578,
+            39.66439106459696
+          ],
+          [
+            -0.22864220484223413,
+            39.6643997425368
+          ]
+        ],
+        [
+          [
+            -0.22864945858205696,
+            39.66438936001612
+          ],
+          [
+            -0.22863965701183325,
+            39.66439803795596
+          ]
+        ],
+        [
+          [
+            -0.22864729889806426,
+            39.66438790530212
+          ],
+          [
+            -0.22863675702796366,
+            39.66439605305733
+          ]
+        ],
+        [
+          [
+            -0.22864657282758577,
+            39.664387159284004
+          ],
+          [
+            -0.2286334493735617,
+            39.66439265453037
+          ]
+        ],
+        [
+          [
+            -0.22864615338152444,
+            39.66438628487159
+          ],
+          [
+            -0.22863153856372675,
+            39.66438867109603
+          ]
+        ],
+        [
+          [
+            -0.22864607540501683,
+            39.66438535470596
+          ],
+          [
+            -0.22863118333741428,
+            39.66438443367485
+          ]
+        ],
+        [
+          [
+            -0.22864634537589718,
+            39.66438444605987
+          ],
+          [
+            -0.22863241320475808,
+            39.6643802942871
+          ]
+        ],
+        [
+          [
+            -0.22864694086655662,
+            39.66438363441834
+          ],
+          [
+            -0.22863512599554003,
+            39.66437659680903
+          ]
+        ],
+        [
+          [
+            -0.22864887142695367,
+            39.66438191718669
+          ],
+          [
+            -0.22863759601022718,
+            39.66437437356867
+          ]
+        ],
+        [
+          [
+            -0.22865108622213134,
+            39.66437995629074
+          ],
+          [
+            -0.22863981080540485,
+            39.664372412672726
+          ]
+        ],
+        [
+          [
+            -0.22865330101730902,
+            39.664377995394794
+          ],
+          [
+            -0.22864202560058253,
+            39.66437045177678
+          ]
+        ]
+      ],
+      "axis": [
+        [
+          -0.22868285680050507,
+          39.66440741951678
+        ],
+        [
+          -0.22868117533731136,
+          39.664408639802524
+        ],
+        [
+          -0.22867921443149056,
+          39.664409581183506
+        ],
+        [
+          -0.22867705096330185,
+          39.66441020675147
+        ],
+        [
+          -0.22867476975476636,
+          39.664410491980085
+        ],
+        [
+          -0.22867246024409257,
+          39.66441042568654
+        ],
+        [
+          -0.22867021297911666,
+          39.664410010469965
+        ],
+        [
+          -0.22866811606723877,
+          39.66440926260955
+        ],
+        [
+          -0.22866625075292968,
+          39.66440821227433
+        ],
+        [
+          -0.22866450366922622,
+          39.6644070434189
+        ],
+        [
+          -0.22866275658552276,
+          39.664405874563464
+        ],
+        [
+          -0.2286610095018193,
+          39.66440470570803
+        ],
+        [
+          -0.22865926241811585,
+          39.664403536852596
+        ],
+        [
+          -0.2286575153344124,
+          39.66440236799716
+        ],
+        [
+          -0.22865576825070894,
+          39.664401199141736
+        ],
+        [
+          -0.2286540211670055,
+          39.6644000302863
+        ],
+        [
+          -0.22865227408330205,
+          39.66439886143087
+        ],
+        [
+          -0.2286505269995986,
+          39.664397692575434
+        ],
+        [
+          -0.22864877991589513,
+          39.66439652372
+        ],
+        [
+          -0.22864703283219168,
+          39.664395354864574
+        ],
+        [
+          -0.22864528574848822,
+          39.66439418600914
+        ],
+        [
+          -0.22864353866478476,
+          39.66439301715371
+        ],
+        [
+          -0.2286418254717611,
+          39.664391820097585
+        ],
+        [
+          -0.2286404020052841,
+          39.664390418814286
+        ],
+        [
+          -0.22863936518524933,
+          39.66438882914106
+        ],
+        [
+          -0.22863875566174413,
+          39.66438711340344
+        ],
+        [
+          -0.22863859733205344,
+          39.6643853388695
+        ],
+        [
+          -0.22863889640373067,
+          39.6643835751125
+        ],
+        [
+          -0.22863964115122132,
+          39.66438189128319
+        ],
+        [
+          -0.228640802375581,
+          39.66438035339863
+        ],
+        [
+          -0.22864228452065713,
+          39.66437898576166
+        ],
+        [
+          -0.2286438032373504,
+          39.66437764114729
+        ],
+        [
+          -0.22864532195404366,
+          39.66437629653293
+        ],
+        [
+          -0.22864684067073693,
+          39.66437495191857
+        ],
+        [
+          -0.2286483593874302,
+          39.664373607304206
+        ],
+        [
+          -0.22864987810412346,
+          39.664372262689845
+        ]
+      ],
+      "interpretiveConstruction": true,
+      "documentedCurvedLayout": true
+    },
+    {
+      "label": "Thirty-seven documented botanical types; thirty-six represented inside their proper domain",
+      "pass": true,
+      "outsideRegisteredEnclosure": [
+        {
+          "id": 1,
+          "commonName": "Eucalipto",
+          "scientificName": "Eucalyptus camaldulensis",
+          "schematicCoordinates": [
+            -0.2302880000748802,
+            39.66519733094549
+          ],
+          "reason": "The schematic specimen is outside the registered enclosure; no forced relocation."
+        }
+      ]
+    },
+    {
+      "label": "Vegetation separate and terrain-rebindable",
+      "pass": true
+    },
+    {
+      "label": "Six cadastral-boundary garden approaches",
+      "pass": true
+    },
+    {
+      "label": "Reading and focus selection reversible",
+      "pass": true
+    },
+    {
+      "label": "Ground binding preserves interior camera datums",
+      "pass": true
+    },
+    {
+      "label": "All garden surfaces follow final ground datum",
+      "pass": true,
+      "minError": -9.536742812121801e-9,
+      "maxError": 1.192092931312505e-8
+    },
+    {
+      "label": "Owned resources disposed once",
+      "pass": true,
+      "resources": 469,
+      "disposals": 469
+    }
+  ],
+  "cameras": [
+    {
+      "id": "sanatorio-vestibulo",
+      "which": "offset",
+      "eye": [
+        4219.3427229369045,
+        6.51,
+        1622.2028692462175
+      ],
+      "height": 1.63,
+      "target": [
+        4224.002192224039,
+        6.359999999999999,
+        1625.988281504116
+      ],
+      "front": [],
+      "floor": 1.6300000047683714,
+      "ceiling": 1.9080002212524416,
+      "near": []
+    },
+    {
+      "id": "sanatorio-vestibulo",
+      "which": "closeOffset",
+      "eye": [
+        4221.134295819193,
+        6.51,
+        1623.495257193952
+      ],
+      "height": 1.63,
+      "target": [
+        4224.002192224039,
+        6.359999999999999,
+        1625.988281504116
+      ],
+      "front": [],
+      "floor": 1.6300000047683714,
+      "ceiling": 1.9080002212524416,
+      "near": []
+    },
+    {
+      "id": "sanatorio-capilla",
+      "which": "offset",
+      "eye": [
+        4222.404507702919,
+        6.51,
+        1631.8578567162563
+      ],
+      "height": 1.63,
+      "target": [
+        4218.2188510979595,
+        6.08,
+        1636.6729038380774
+      ],
+      "front": [],
+      "floor": 1.6300000047683714,
+      "ceiling": 1.9080002212524416,
+      "near": []
+    },
+    {
+      "id": "sanatorio-capilla",
+      "which": "closeOffset",
+      "eye": [
+        4221.423043395549,
+        6.51,
+        1632.9869022482694
+      ],
+      "height": 1.63,
+      "target": [
+        4218.2188510979595,
+        6.08,
+        1636.6729038380774
+      ],
+      "front": [],
+      "floor": 1.6300000047683714,
+      "ceiling": 1.9080002212524416,
+      "near": []
+    },
+    {
+      "id": "sanatorio-sacristia",
+      "which": "offset",
+      "eye": [
+        4218.473136176598,
+        6.51,
+        1639.2551236387105
+      ],
+      "height": 1.63,
+      "target": [
+        4219.570066873071,
+        6.359999999999999,
+        1637.993249220578
+      ],
+      "front": [],
+      "floor": 1.6300000047683714,
+      "ceiling": 1.9080002212524416,
+      "near": []
+    },
+    {
+      "id": "sanatorio-sacristia",
+      "which": "closeOffset",
+      "eye": [
+        4218.7618021493545,
+        6.51,
+        1638.9230514234125
+      ],
+      "height": 1.63,
+      "target": [
+        4219.570066873071,
+        6.359999999999999,
+        1637.993249220578
+      ],
+      "front": [],
+      "floor": 1.6300000047683714,
+      "ceiling": 1.9080002212524416,
+      "near": []
+    },
+    {
+      "id": "sanatorio-escalera",
+      "which": "offset",
+      "eye": [
+        4222.341831147549,
+        6.51,
+        1624.5449516403369
+      ],
+      "height": 1.63,
+      "target": [
+        4227.584854594848,
+        7.01,
+        1625.5251073070917
+      ],
+      "front": [],
+      "floor": 1.6300000047683714,
+      "ceiling": 1.9080002212524416,
+      "near": []
+    },
+    {
+      "id": "sanatorio-escalera",
+      "which": "closeOffset",
+      "eye": [
+        4223.209747164806,
+        6.51,
+        1625.2994195236759
+      ],
+      "height": 1.63,
+      "target": [
+        4227.584854594848,
+        7.01,
+        1625.5251073070917
+      ],
+      "front": [],
+      "floor": 1.6300000047683714,
+      "ceiling": 1.9080002212524416,
+      "near": []
+    }
+  ],
+  "stats": {
+    "modelVersion": "v30",
+    "meshes": 231,
+    "triangles": 185877,
+    "parts": 14,
+    "structures": 11,
+    "mainParts": 4,
+    "ancillaryParts": 10,
+    "doctorsChalets": 3,
+    "consultationPavilions": 2,
+    "adjoiningMainEntrances": 3,
+    "levels": 2,
+    "architecturalFocuses": 16,
+    "interiorFocuses": 4,
+    "physicalWindows": 197,
+    "physicalDoors": 22,
+    "botanicalTypes": 37,
+    "representedBotanicalTypes": 36,
+    "representedPlants": 67,
+    "gardenPaths": 27,
+    "gates": 6,
+    "resourcesOwned": true,
+    "interpretiveGeometry": true
+  },
+  "doorwayProbes": [
+    {
+      "id": "sanatorio-principal-puerta-0",
+      "rays": 9,
+      "blocked": []
+    },
+    {
+      "id": "sanatorio-principal-puerta-1",
+      "rays": 9,
+      "blocked": []
+    },
+    {
+      "id": "sanatorio-principal-puerta-2",
+      "rays": 9,
+      "blocked": []
+    },
+    {
+      "id": "sanatorio-administracion-limite-puerta",
+      "rays": 9,
+      "blocked": []
+    },
+    {
+      "id": "sanatorio-sala-medicos-fondo-puerta",
+      "rays": 9,
+      "blocked": []
+    },
+    {
+      "id": "sanatorio-administracion-fondo-puerta",
+      "rays": 9,
+      "blocked": []
+    },
+    {
+      "id": "sanatorio-antecapilla-hall-puerta",
+      "rays": 9,
+      "blocked": []
+    },
+    {
+      "id": "sanatorio-capilla-antecapilla-puerta",
+      "rays": 9,
+      "blocked": []
+    },
+    {
+      "id": "sanatorio-sacristia-acceso-puerta",
+      "rays": 9,
+      "blocked": []
+    },
+    {
+      "id": "sanatorio-office-hall-puerta",
+      "rays": 9,
+      "blocked": []
+    },
+    {
+      "id": "sanatorio-office-corredor-puerta",
+      "rays": 9,
+      "blocked": []
+    },
+    {
+      "id": "sanatorio-comedor-office-puerta",
+      "rays": 9,
+      "blocked": []
+    },
+    {
+      "id": "sanatorio-comedor-hall-puerta",
+      "rays": 9,
+      "blocked": []
+    },
+    {
+      "id": "sanatorio-despensa-comedor-puerta",
+      "rays": 9,
+      "blocked": []
+    }
+  ],
+  "chaletFacades": [
+    {
+      "which": "offset",
+      "id": "sanatorio-cuerpo-6",
+      "inFront": 46.9257130777597,
+      "visibleSegments": 5,
+      "samples": [
+        {
+          "mesh": "sanatorio-cuerpo-6-mirador",
+          "visible": true
+        },
+        {
+          "mesh": "sanatorio-cuerpo-6-mirador",
+          "visible": true
+        },
+        {
+          "mesh": "sanatorio-cuerpo-6-mirador",
+          "visible": true
+        },
+        {
+          "mesh": "sanatorio-cuerpo-6-mirador",
+          "visible": true
+        },
+        {
+          "mesh": "sanatorio-cuerpo-6-mirador",
+          "visible": true
+        }
+      ]
+    },
+    {
+      "which": "offset",
+      "id": "sanatorio-cuerpo-7",
+      "inFront": 46.60739998628909,
+      "visibleSegments": 5,
+      "samples": [
+        {
+          "mesh": "sanatorio-cuerpo-7-mirador",
+          "visible": true
+        },
+        {
+          "mesh": "sanatorio-cuerpo-7-mirador",
+          "visible": true
+        },
+        {
+          "mesh": "sanatorio-cuerpo-7-mirador",
+          "visible": true
+        },
+        {
+          "mesh": "sanatorio-cuerpo-7-mirador",
+          "visible": true
+        },
+        {
+          "mesh": "sanatorio-cuerpo-7-mirador",
+          "visible": true
+        }
+      ]
+    },
+    {
+      "which": "closeOffset",
+      "id": "sanatorio-cuerpo-6",
+      "inFront": 30.16317192608912,
+      "visibleSegments": 5,
+      "samples": [
+        {
+          "mesh": "sanatorio-cuerpo-6-mirador",
+          "visible": true
+        },
+        {
+          "mesh": "sanatorio-cuerpo-6-mirador",
+          "visible": true
+        },
+        {
+          "mesh": "sanatorio-cuerpo-6-mirador",
+          "visible": true
+        },
+        {
+          "mesh": "sanatorio-cuerpo-6-mirador",
+          "visible": true
+        },
+        {
+          "mesh": "sanatorio-cuerpo-6-mirador",
+          "visible": true
+        }
+      ]
+    },
+    {
+      "which": "closeOffset",
+      "id": "sanatorio-cuerpo-7",
+      "inFront": 40.16260085175937,
+      "visibleSegments": 3,
+      "samples": [
+        {
+          "mesh": "sanatorio-cuerpo-7-mirador",
+          "visible": true
+        },
+        {
+          "mesh": "sanatorio-cuerpo-7-mirador",
+          "visible": true
+        },
+        {
+          "mesh": "sanatorio-cuerpo-7-mirador",
+          "visible": true
+        },
+        {
+          "mesh": "sanatorio-frondosas",
+          "visible": false
+        },
+        {
+          "mesh": "sanatorio-frondosas",
+          "visible": false
+        }
+      ]
+    }
+  ],
+  "pass": true,
+  "issues": []
+}

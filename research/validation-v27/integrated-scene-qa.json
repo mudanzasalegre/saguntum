@@ -1,0 +1,3194 @@
+{
+  "pass": true,
+  "generatedAt": "2026-11-21T10:02:33.693Z",
+  "checks": 781,
+  "buildMs": 110712.90942899999,
+  "meshes": 877,
+  "triangles": 4165872,
+  "stats": {
+    "modelVersion": "v27",
+    "meshes": 149,
+    "triangles": 92775,
+    "structures": 3,
+    "naves": 3,
+    "diaphragmArches": 5,
+    "architecturalFocuses": 15,
+    "interiorFocuses": 8,
+    "physicalWindows": 57,
+    "physicalDoors": 3,
+    "openBelfry": true,
+    "centralTower": true,
+    "choir": true,
+    "resourcesOwned": true,
+    "interpretiveGeometry": true,
+    "context": {
+      "ownedBuildings": 64,
+      "parentParcels": 28,
+      "reusedBuildingParts": 90,
+      "ownedRoads": 0,
+      "pavingAreaM2": 9347.38,
+      "pavingVertices": 2255,
+      "pavingTriangles": 3957,
+      "trees": 37,
+      "benches": 11,
+      "lamps": 7,
+      "paths": 3,
+      "contextFocuses": 5,
+      "memorials": 1,
+      "treeCrownsAdjusted": 0,
+      "treeTrunksSuppressed": 0,
+      "meshes": 22,
+      "triangles": 45006,
+      "fixedBegonaDatumM": 5,
+      "skippedTinyTriangles": 3
+    }
+  },
+  "context": {
+    "ownedBuildings": 64,
+    "parentParcels": 28,
+    "reusedBuildingParts": 90,
+    "ownedRoads": 0,
+    "pavingAreaM2": 9347.38,
+    "pavingVertices": 2255,
+    "pavingTriangles": 3957,
+    "trees": 37,
+    "benches": 11,
+    "lamps": 7,
+    "paths": 3,
+    "contextFocuses": 5,
+    "memorials": 1,
+    "treeCrownsAdjusted": 0,
+    "treeTrunksSuppressed": 0,
+    "meshes": 22,
+    "triangles": 45006,
+    "fixedBegonaDatumM": 5,
+    "skippedTinyTriangles": 3
+  },
+  "errors": [],
+  "cameras": [
+    {
+      "id": "begona-conjunto",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 48,
+      "position": [
+        5292.420365126355,
+        279.2013812525231,
+        2231.8863954831036
+      ],
+      "target": [
+        4869.510368412071,
+        12.179578295971812,
+        2275.463467092153
+      ],
+      "clearance": 276.2013812525231,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-conjunto",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 48,
+      "position": [
+        4929.790876001532,
+        48.17957829597181,
+        2271.0747993265304
+      ],
+      "target": [
+        4869.510368412071,
+        12.179578295971812,
+        2275.463467092153
+      ],
+      "clearance": 43.28376067658502,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-conjunto",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 48,
+      "position": [
+        5659.802986101448,
+        511.16366776699476,
+        2194.0309205439103
+      ],
+      "target": [
+        4869.510368412071,
+        12.179578295971812,
+        2275.463467092153
+      ],
+      "clearance": 509.16366776699476,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-conjunto",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 48,
+      "position": [
+        4929.790876001532,
+        48.17957829597181,
+        2271.0747993265304
+      ],
+      "target": [
+        4869.510368412071,
+        12.179578295971812,
+        2275.463467092153
+      ],
+      "clearance": 43.28376067658502,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-conjunto",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 48,
+      "position": [
+        5348.514674234872,
+        314.6188546396032,
+        2226.106381428403
+      ],
+      "target": [
+        4869.510368412071,
+        12.179578295971812,
+        2275.463467092153
+      ],
+      "clearance": 311.6188546396032,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-conjunto",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 48,
+      "position": [
+        4929.790876001532,
+        48.17957829597181,
+        2271.0747993265304
+      ],
+      "target": [
+        4869.510368412071,
+        12.179578295971812,
+        2275.463467092153
+      ],
+      "clearance": 43.28376067658502,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-fachada",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 49,
+      "position": [
+        4920.436268930641,
+        29.17957829597181,
+        2290.1465408974836
+      ],
+      "target": [
+        4877.886914528782,
+        20.17957829597181,
+        2281.283559458656
+      ],
+      "clearance": 25.176140873428885,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-fachada",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 49,
+      "position": [
+        4909.051017791826,
+        26.17957829597181,
+        2290.759775360076
+      ],
+      "target": [
+        4877.886914528782,
+        20.17957829597181,
+        2281.283559458656
+      ],
+      "clearance": 21.607443834570606,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-fachada",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 49,
+      "position": [
+        4920.436268930641,
+        29.17957829597181,
+        2290.1465408974836
+      ],
+      "target": [
+        4877.886914528782,
+        20.17957829597181,
+        2281.283559458656
+      ],
+      "clearance": 25.176140873428885,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-fachada",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 49,
+      "position": [
+        4909.051017791826,
+        26.17957829597181,
+        2290.759775360076
+      ],
+      "target": [
+        4877.886914528782,
+        20.17957829597181,
+        2281.283559458656
+      ],
+      "clearance": 21.607443834570606,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-fachada",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 49,
+      "position": [
+        4920.436268930641,
+        29.17957829597181,
+        2290.1465408974836
+      ],
+      "target": [
+        4877.886914528782,
+        20.17957829597181,
+        2281.283559458656
+      ],
+      "clearance": 25.176140873428885,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-fachada",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 49,
+      "position": [
+        4909.051017791826,
+        26.17957829597181,
+        2290.759775360076
+      ],
+      "target": [
+        4877.886914528782,
+        20.17957829597181,
+        2281.283559458656
+      ],
+      "clearance": 21.607443834570606,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-portada",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 52,
+      "position": [
+        4896.006251761422,
+        13.179578295971812,
+        2285.349222780899
+      ],
+      "target": [
+        4878.05116053107,
+        11.379578295971811,
+        2281.3976789168228
+      ],
+      "clearance": 8.911390529538792,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-portada",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 52,
+      "position": [
+        4890.188309831711,
+        12.47957829597181,
+        2284.9599263610576
+      ],
+      "target": [
+        4878.05116053107,
+        11.379578295971811,
+        2281.3976789168228
+      ],
+      "clearance": 8.471244437872308,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-portada",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 52,
+      "position": [
+        4896.006251761422,
+        13.179578295971812,
+        2285.349222780899
+      ],
+      "target": [
+        4878.05116053107,
+        11.379578295971811,
+        2281.3976789168228
+      ],
+      "clearance": 8.911390529538792,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-portada",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 52,
+      "position": [
+        4890.188309831711,
+        12.47957829597181,
+        2284.9599263610576
+      ],
+      "target": [
+        4878.05116053107,
+        11.379578295971811,
+        2281.3976789168228
+      ],
+      "clearance": 8.471244437872308,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-portada",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 52,
+      "position": [
+        4896.006251761422,
+        13.179578295971812,
+        2285.349222780899
+      ],
+      "target": [
+        4878.05116053107,
+        11.379578295971811,
+        2281.3976789168228
+      ],
+      "clearance": 8.911390529538792,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-portada",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 52,
+      "position": [
+        4890.188309831711,
+        12.47957829597181,
+        2284.9599263610576
+      ],
+      "target": [
+        4878.05116053107,
+        11.379578295971811,
+        2281.3976789168228
+      ],
+      "clearance": 8.471244437872308,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-campanario",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 48,
+      "position": [
+        4900.694214589808,
+        35.17957829597181,
+        2278.8649722829864
+      ],
+      "target": [
+        4875.71065499846,
+        28.17957829597181,
+        2279.7714766379468
+      ],
+      "clearance": 30.984619258335986,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-campanario",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 48,
+      "position": [
+        4894.305675369263,
+        32.97957829597181,
+        2279.296905874587
+      ],
+      "target": [
+        4875.71065499846,
+        28.17957829597181,
+        2279.7714766379468
+      ],
+      "clearance": 28.951805337228702,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-campanario",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 48,
+      "position": [
+        4900.694214589808,
+        35.17957829597181,
+        2278.8649722829864
+      ],
+      "target": [
+        4875.71065499846,
+        28.17957829597181,
+        2279.7714766379468
+      ],
+      "clearance": 30.984619258335986,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-campanario",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 48,
+      "position": [
+        4894.305675369263,
+        32.97957829597181,
+        2279.296905874587
+      ],
+      "target": [
+        4875.71065499846,
+        28.17957829597181,
+        2279.7714766379468
+      ],
+      "clearance": 28.951805337228702,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-campanario",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 48,
+      "position": [
+        4900.694214589808,
+        35.17957829597181,
+        2278.8649722829864
+      ],
+      "target": [
+        4875.71065499846,
+        28.17957829597181,
+        2279.7714766379468
+      ],
+      "clearance": 30.984619258335986,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-campanario",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 48,
+      "position": [
+        4894.305675369263,
+        32.97957829597181,
+        2279.296905874587
+      ],
+      "target": [
+        4875.71065499846,
+        28.17957829597181,
+        2279.7714766379468
+      ],
+      "clearance": 28.951805337228702,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-lateral",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 52,
+      "position": [
+        4889.874813921063,
+        22.87957829597181,
+        2260.1744112930674
+      ],
+      "target": [
+        4873.743483584587,
+        12.879578295971811,
+        2262.3607739289278
+      ],
+      "clearance": 18.543904840677627,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-lateral",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 52,
+      "position": [
+        4885.699332014236,
+        19.87957829597181,
+        2260.926309454893
+      ],
+      "target": [
+        4873.743483584587,
+        12.879578295971811,
+        2262.3607739289278
+      ],
+      "clearance": 15.621998758612754,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-lateral",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 52,
+      "position": [
+        4889.874813921063,
+        22.87957829597181,
+        2260.1744112930674
+      ],
+      "target": [
+        4873.743483584587,
+        12.879578295971811,
+        2262.3607739289278
+      ],
+      "clearance": 18.543904840677627,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-lateral",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 52,
+      "position": [
+        4885.699332014236,
+        19.87957829597181,
+        2260.926309454893
+      ],
+      "target": [
+        4873.743483584587,
+        12.879578295971811,
+        2262.3607739289278
+      ],
+      "clearance": 15.621998758612754,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-lateral",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 52,
+      "position": [
+        4889.874813921063,
+        22.87957829597181,
+        2260.1744112930674
+      ],
+      "target": [
+        4873.743483584587,
+        12.879578295971811,
+        2262.3607739289278
+      ],
+      "clearance": 18.543904840677627,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-lateral",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 52,
+      "position": [
+        4885.699332014236,
+        19.87957829597181,
+        2260.926309454893
+      ],
+      "target": [
+        4873.743483584587,
+        12.879578295971811,
+        2262.3607739289278
+      ],
+      "clearance": 15.621998758612754,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-nave",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 70,
+      "position": [
+        4872.877411458984,
+        6.92957829597181,
+        2277.8029159845705
+      ],
+      "target": [
+        4862.694159317101,
+        9.27957829597181,
+        2270.727509578234
+      ],
+      "clearance": 2.1799998200196615,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-nave",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 70,
+      "position": [
+        4869.346122409783,
+        6.92957829597181,
+        2275.3493476339863
+      ],
+      "target": [
+        4862.694159317101,
+        9.27957829597181,
+        2270.727509578234
+      ],
+      "clearance": 2.1799998200196615,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-nave",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 70,
+      "position": [
+        4872.877411458984,
+        6.92957829597181,
+        2277.8029159845705
+      ],
+      "target": [
+        4862.694159317101,
+        9.27957829597181,
+        2270.727509578234
+      ],
+      "clearance": 2.1799998200196615,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-nave",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 70,
+      "position": [
+        4869.346122409783,
+        6.92957829597181,
+        2275.3493476339863
+      ],
+      "target": [
+        4862.694159317101,
+        9.27957829597181,
+        2270.727509578234
+      ],
+      "clearance": 2.1799998200196615,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-nave",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 70,
+      "position": [
+        4872.877411458984,
+        6.92957829597181,
+        2277.8029159845705
+      ],
+      "target": [
+        4862.694159317101,
+        9.27957829597181,
+        2270.727509578234
+      ],
+      "clearance": 2.1799998200196615,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-nave",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 70,
+      "position": [
+        4869.346122409783,
+        6.92957829597181,
+        2275.3493476339863
+      ],
+      "target": [
+        4862.694159317101,
+        9.27957829597181,
+        2270.727509578234
+      ],
+      "clearance": 2.1799998200196615,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-arcadas",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 67,
+      "position": [
+        4871.990594284107,
+        6.979578295971811,
+        2274.87314546483
+      ],
+      "target": [
+        4872.30203141998,
+        9.97957829597181,
+        2270.2187919210605
+      ],
+      "clearance": 2.2299998200196622,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-arcadas",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 67,
+      "position": [
+        4871.847147836704,
+        6.979578295971811,
+        2273.6775606218653
+      ],
+      "target": [
+        4872.30203141998,
+        9.97957829597181,
+        2270.2187919210605
+      ],
+      "clearance": 2.2299998200196622,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-arcadas",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 67,
+      "position": [
+        4871.990594284107,
+        6.979578295971811,
+        2274.87314546483
+      ],
+      "target": [
+        4872.30203141998,
+        9.97957829597181,
+        2270.2187919210605
+      ],
+      "clearance": 2.2299998200196622,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-arcadas",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 67,
+      "position": [
+        4871.847147836704,
+        6.979578295971811,
+        2273.6775606218653
+      ],
+      "target": [
+        4872.30203141998,
+        9.97957829597181,
+        2270.2187919210605
+      ],
+      "clearance": 2.2299998200196622,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-arcadas",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 67,
+      "position": [
+        4871.990594284107,
+        6.979578295971811,
+        2274.87314546483
+      ],
+      "target": [
+        4872.30203141998,
+        9.97957829597181,
+        2270.2187919210605
+      ],
+      "clearance": 2.2299998200196622,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-arcadas",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 67,
+      "position": [
+        4871.847147836704,
+        6.979578295971811,
+        2273.6775606218653
+      ],
+      "target": [
+        4872.30203141998,
+        9.97957829597181,
+        2270.2187919210605
+      ],
+      "clearance": 2.2299998200196622,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-cubierta",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 74,
+      "position": [
+        4870.4003926639325,
+        7.029578295971811,
+        2274.620640401131
+      ],
+      "target": [
+        4867.251985880605,
+        17.17957829597181,
+        2273.8943245423607
+      ],
+      "clearance": 2.279999820019663,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-cubierta",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 74,
+      "position": [
+        4868.883249001352,
+        7.029578295971811,
+        2274.1753594706015
+      ],
+      "target": [
+        4867.251985880605,
+        17.17957829597181,
+        2273.8943245423607
+      ],
+      "clearance": 2.279999820019663,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-cubierta",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 74,
+      "position": [
+        4870.4003926639325,
+        7.029578295971811,
+        2274.620640401131
+      ],
+      "target": [
+        4867.251985880605,
+        17.17957829597181,
+        2273.8943245423607
+      ],
+      "clearance": 2.279999820019663,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-cubierta",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 74,
+      "position": [
+        4868.883249001352,
+        7.029578295971811,
+        2274.1753594706015
+      ],
+      "target": [
+        4867.251985880605,
+        17.17957829597181,
+        2273.8943245423607
+      ],
+      "clearance": 2.279999820019663,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-cubierta",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 74,
+      "position": [
+        4870.4003926639325,
+        7.029578295971811,
+        2274.620640401131
+      ],
+      "target": [
+        4867.251985880605,
+        17.17957829597181,
+        2273.8943245423607
+      ],
+      "clearance": 2.279999820019663,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-cubierta",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 74,
+      "position": [
+        4868.883249001352,
+        7.029578295971811,
+        2274.1753594706015
+      ],
+      "target": [
+        4867.251985880605,
+        17.17957829597181,
+        2273.8943245423607
+      ],
+      "clearance": 2.279999820019663,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-presbiterio",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 66,
+      "position": [
+        4862.570974815385,
+        6.979578295971812,
+        2270.641919984609
+      ],
+      "target": [
+        4856.986610737578,
+        8.679578295971812,
+        2266.7618584069405
+      ],
+      "clearance": 2.229999820019663,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-presbiterio",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 66,
+      "position": [
+        4860.88532143334,
+        6.979578295971812,
+        2268.861871480887
+      ],
+      "target": [
+        4856.986610737578,
+        8.679578295971812,
+        2266.7618584069405
+      ],
+      "clearance": 2.229999820019663,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-presbiterio",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 66,
+      "position": [
+        4862.570974815385,
+        6.979578295971812,
+        2270.641919984609
+      ],
+      "target": [
+        4856.986610737578,
+        8.679578295971812,
+        2266.7618584069405
+      ],
+      "clearance": 2.229999820019663,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-presbiterio",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 66,
+      "position": [
+        4860.88532143334,
+        6.979578295971812,
+        2268.861871480887
+      ],
+      "target": [
+        4856.986610737578,
+        8.679578295971812,
+        2266.7618584069405
+      ],
+      "clearance": 2.229999820019663,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-presbiterio",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 66,
+      "position": [
+        4862.570974815385,
+        6.979578295971812,
+        2270.641919984609
+      ],
+      "target": [
+        4856.986610737578,
+        8.679578295971812,
+        2266.7618584069405
+      ],
+      "clearance": 2.229999820019663,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-presbiterio",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 66,
+      "position": [
+        4860.88532143334,
+        6.979578295971812,
+        2268.861871480887
+      ],
+      "target": [
+        4856.986610737578,
+        8.679578295971812,
+        2266.7618584069405
+      ],
+      "clearance": 2.229999820019663,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-capillas",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 64,
+      "position": [
+        4864.5510104646,
+        6.979578295971811,
+        2262.885022484458
+      ],
+      "target": [
+        4862.121986355081,
+        7.57957829597181,
+        2259.3707883039606
+      ],
+      "clearance": 2.2299998200196622,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-capillas",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 64,
+      "position": [
+        4863.907892825369,
+        6.979578295971811,
+        2261.7075677285925
+      ],
+      "target": [
+        4862.121986355081,
+        7.57957829597181,
+        2259.3707883039606
+      ],
+      "clearance": 2.2299998200196622,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-capillas",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 64,
+      "position": [
+        4864.5510104646,
+        6.979578295971811,
+        2262.885022484458
+      ],
+      "target": [
+        4862.121986355081,
+        7.57957829597181,
+        2259.3707883039606
+      ],
+      "clearance": 2.2299998200196622,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-capillas",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 64,
+      "position": [
+        4863.907892825369,
+        6.979578295971811,
+        2261.7075677285925
+      ],
+      "target": [
+        4862.121986355081,
+        7.57957829597181,
+        2259.3707883039606
+      ],
+      "clearance": 2.2299998200196622,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-capillas",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 64,
+      "position": [
+        4864.5510104646,
+        6.979578295971811,
+        2262.885022484458
+      ],
+      "target": [
+        4862.121986355081,
+        7.57957829597181,
+        2259.3707883039606
+      ],
+      "clearance": 2.2299998200196622,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-capillas",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 64,
+      "position": [
+        4863.907892825369,
+        6.979578295971811,
+        2261.7075677285925
+      ],
+      "target": [
+        4862.121986355081,
+        7.57957829597181,
+        2259.3707883039606
+      ],
+      "clearance": 2.2299998200196622,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-coro",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 72,
+      "position": [
+        4875.505347495599,
+        12.07957829597181,
+        2279.6288273152386
+      ],
+      "target": [
+        4874.437748480725,
+        11.97957829597181,
+        2278.8870508371547
+      ],
+      "clearance": 7.329999820019662,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-coro",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 72,
+      "position": [
+        4875.348034678273,
+        12.07957829597181,
+        2279.1542193954724
+      ],
+      "target": [
+        4874.437748480725,
+        11.97957829597181,
+        2278.8870508371547
+      ],
+      "clearance": 7.329999820019662,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-coro",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 72,
+      "position": [
+        4875.505347495599,
+        12.07957829597181,
+        2279.6288273152386
+      ],
+      "target": [
+        4874.437748480725,
+        11.97957829597181,
+        2278.8870508371547
+      ],
+      "clearance": 7.329999820019662,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-coro",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 72,
+      "position": [
+        4875.348034678273,
+        12.07957829597181,
+        2279.1542193954724
+      ],
+      "target": [
+        4874.437748480725,
+        11.97957829597181,
+        2278.8870508371547
+      ],
+      "clearance": 7.329999820019662,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-coro",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 72,
+      "position": [
+        4875.505347495599,
+        12.07957829597181,
+        2279.6288273152386
+      ],
+      "target": [
+        4874.437748480725,
+        11.97957829597181,
+        2278.8870508371547
+      ],
+      "clearance": 7.329999820019662,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-coro",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 72,
+      "position": [
+        4875.348034678273,
+        12.07957829597181,
+        2279.1542193954724
+      ],
+      "target": [
+        4874.437748480725,
+        11.97957829597181,
+        2278.8870508371547
+      ],
+      "clearance": 7.329999820019662,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-organo",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 66,
+      "position": [
+        4876.414039443758,
+        12.079578295971812,
+        2277.094211181905
+      ],
+      "target": [
+        4876.531885009903,
+        12.279578295971811,
+        2280.3420739287803
+      ],
+      "clearance": 7.329999820019664,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-organo",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 66,
+      "position": [
+        4876.162869113951,
+        12.079578295971812,
+        2277.8938445137674
+      ],
+      "target": [
+        4876.531885009903,
+        12.279578295971811,
+        2280.3420739287803
+      ],
+      "clearance": 7.329999820019664,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-organo",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 66,
+      "position": [
+        4876.414039443758,
+        12.079578295971812,
+        2277.094211181905
+      ],
+      "target": [
+        4876.531885009903,
+        12.279578295971811,
+        2280.3420739287803
+      ],
+      "clearance": 7.329999820019664,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-organo",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 66,
+      "position": [
+        4876.162869113951,
+        12.079578295971812,
+        2277.8938445137674
+      ],
+      "target": [
+        4876.531885009903,
+        12.279578295971811,
+        2280.3420739287803
+      ],
+      "clearance": 7.329999820019664,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-organo",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 66,
+      "position": [
+        4876.414039443758,
+        12.079578295971812,
+        2277.094211181905
+      ],
+      "target": [
+        4876.531885009903,
+        12.279578295971811,
+        2280.3420739287803
+      ],
+      "clearance": 7.329999820019664,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-organo",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 66,
+      "position": [
+        4876.162869113951,
+        12.079578295971812,
+        2277.8938445137674
+      ],
+      "target": [
+        4876.531885009903,
+        12.279578295971811,
+        2280.3420739287803
+      ],
+      "clearance": 7.329999820019664,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-abadia",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 52,
+      "position": [
+        4830.365481393356,
+        22.77957829597181,
+        2274.494230128358
+      ],
+      "target": [
+        4850.810957335892,
+        12.77957829597181,
+        2264.346200098684
+      ],
+      "clearance": 17.79788317747889,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-abadia",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 52,
+      "position": [
+        4835.682157881851,
+        19.77957829597181,
+        2272.099871943648
+      ],
+      "target": [
+        4850.810957335892,
+        12.77957829597181,
+        2264.346200098684
+      ],
+      "clearance": 15.029999820019661,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-abadia",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 52,
+      "position": [
+        4830.365481393356,
+        22.77957829597181,
+        2274.494230128358
+      ],
+      "target": [
+        4850.810957335892,
+        12.77957829597181,
+        2264.346200098684
+      ],
+      "clearance": 17.79788317747889,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-abadia",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 52,
+      "position": [
+        4835.682157881851,
+        19.77957829597181,
+        2272.099871943648
+      ],
+      "target": [
+        4850.810957335892,
+        12.77957829597181,
+        2264.346200098684
+      ],
+      "clearance": 15.029999820019661,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-abadia",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 52,
+      "position": [
+        4830.365481393356,
+        22.77957829597181,
+        2274.494230128358
+      ],
+      "target": [
+        4850.810957335892,
+        12.77957829597181,
+        2264.346200098684
+      ],
+      "clearance": 17.79788317747889,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-abadia",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 52,
+      "position": [
+        4835.682157881851,
+        19.77957829597181,
+        2272.099871943648
+      ],
+      "target": [
+        4850.810957335892,
+        12.77957829597181,
+        2264.346200098684
+      ],
+      "clearance": 15.029999820019661,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-materiales",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 58,
+      "position": [
+        4868.752871799177,
+        6.929578295971812,
+        2270.8579053586127
+      ],
+      "target": [
+        4868.792339050359,
+        7.779578295971811,
+        2268.0846505315035
+      ],
+      "clearance": 2.1799998200196633,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-materiales",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 58,
+      "position": [
+        4868.864859398756,
+        6.929578295971812,
+        2270.083335298811
+      ],
+      "target": [
+        4868.792339050359,
+        7.779578295971811,
+        2268.0846505315035
+      ],
+      "clearance": 2.1799998200196633,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-materiales",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 58,
+      "position": [
+        4868.752871799177,
+        6.929578295971812,
+        2270.8579053586127
+      ],
+      "target": [
+        4868.792339050359,
+        7.779578295971811,
+        2268.0846505315035
+      ],
+      "clearance": 2.1799998200196633,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-materiales",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 58,
+      "position": [
+        4868.864859398756,
+        6.929578295971812,
+        2270.083335298811
+      ],
+      "target": [
+        4868.792339050359,
+        7.779578295971811,
+        2268.0846505315035
+      ],
+      "clearance": 2.1799998200196633,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-materiales",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 58,
+      "position": [
+        4868.752871799177,
+        6.929578295971812,
+        2270.8579053586127
+      ],
+      "target": [
+        4868.792339050359,
+        7.779578295971811,
+        2268.0846505315035
+      ],
+      "clearance": 2.1799998200196633,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-materiales",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 58,
+      "position": [
+        4868.864859398756,
+        6.929578295971812,
+        2270.083335298811
+      ],
+      "target": [
+        4868.792339050359,
+        7.779578295971811,
+        2268.0846505315035
+      ],
+      "clearance": 2.1799998200196633,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-seccion",
+      "section": true,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 49,
+      "position": [
+        4910.193324748295,
+        51.17957829597181,
+        2265.9820608807863
+      ],
+      "target": [
+        4866.225448366303,
+        9.179578295971812,
+        2273.1810779288185
+      ],
+      "clearance": 47.17571180469329,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-seccion",
+      "section": true,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 49,
+      "position": [
+        4898.237476318646,
+        41.17957829597181,
+        2267.4165253548213
+      ],
+      "target": [
+        4866.225448366303,
+        9.179578295971812,
+        2273.1810779288185
+      ],
+      "clearance": 37.16125296338815,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-seccion",
+      "section": true,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 49,
+      "position": [
+        4910.193324748295,
+        51.17957829597181,
+        2265.9820608807863
+      ],
+      "target": [
+        4866.225448366303,
+        9.179578295971812,
+        2273.1810779288185
+      ],
+      "clearance": 47.17571180469329,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-seccion",
+      "section": true,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 49,
+      "position": [
+        4898.237476318646,
+        41.17957829597181,
+        2267.4165253548213
+      ],
+      "target": [
+        4866.225448366303,
+        9.179578295971812,
+        2273.1810779288185
+      ],
+      "clearance": 37.16125296338815,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-seccion",
+      "section": true,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 49,
+      "position": [
+        4910.193324748295,
+        51.17957829597181,
+        2265.9820608807863
+      ],
+      "target": [
+        4866.225448366303,
+        9.179578295971812,
+        2273.1810779288185
+      ],
+      "clearance": 47.17571180469329,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-seccion",
+      "section": true,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 49,
+      "position": [
+        4898.237476318646,
+        41.17957829597181,
+        2267.4165253548213
+      ],
+      "target": [
+        4866.225448366303,
+        9.179578295971812,
+        2273.1810779288185
+      ],
+      "clearance": 37.16125296338815,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-atrio",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 54,
+      "position": [
+        4937.057315710796,
+        34.388514088621605,
+        2325.151587766261
+      ],
+      "target": [
+        4878.155330382361,
+        5.588514088621602,
+        2294.6283619599953
+      ],
+      "clearance": 30.388514088621605,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-atrio",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 54,
+      "position": [
+        4906.71386872342,
+        14.738652570179632,
+        2310.787716798374
+      ],
+      "target": [
+        4878.155330382361,
+        5.588514088621602,
+        2294.6283619599953
+      ],
+      "clearance": 9.975762005375259,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": {
+        "name": "Begoña · entorno · foliage",
+        "distanceToTarget": 18.279247047567328
+      }
+    },
+    {
+      "id": "begona-atrio",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 54,
+      "position": [
+        4937.057315710796,
+        34.388514088621605,
+        2325.151587766261
+      ],
+      "target": [
+        4878.155330382361,
+        5.588514088621602,
+        2294.6283619599953
+      ],
+      "clearance": 30.388514088621605,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-atrio",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 54,
+      "position": [
+        4906.71386872342,
+        14.738652570179632,
+        2310.787716798374
+      ],
+      "target": [
+        4878.155330382361,
+        5.588514088621602,
+        2294.6283619599953
+      ],
+      "clearance": 9.975762005375259,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": {
+        "name": "Begoña · entorno · foliage",
+        "distanceToTarget": 18.279247047567328
+      }
+    },
+    {
+      "id": "begona-atrio",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 54,
+      "position": [
+        4937.057315710796,
+        34.388514088621605,
+        2325.151587766261
+      ],
+      "target": [
+        4878.155330382361,
+        5.588514088621602,
+        2294.6283619599953
+      ],
+      "clearance": 30.388514088621605,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-atrio",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 54,
+      "position": [
+        4906.71386872342,
+        14.738652570179632,
+        2310.787716798374
+      ],
+      "target": [
+        4878.155330382361,
+        5.588514088621602,
+        2294.6283619599953
+      ],
+      "clearance": 9.975762005375259,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": {
+        "name": "Begoña · entorno · foliage",
+        "distanceToTarget": 18.279247047567328
+      }
+    },
+    {
+      "id": "begona-alameda",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 54,
+      "position": [
+        5024.5178393802935,
+        56,
+        2395.175437188223
+      ],
+      "target": [
+        4941.341096461958,
+        5.3,
+        2333.2312436400507
+      ],
+      "clearance": 52.816434228208834,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": {
+        "name": "Begoña · entorno · foliage",
+        "distanceToTarget": 9.043289092355042
+      }
+    },
+    {
+      "id": "begona-alameda",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 54,
+      "position": [
+        4986.320794349128,
+        22,
+        2363.7544694463163
+      ],
+      "target": [
+        4941.341096461958,
+        5.3,
+        2333.2312436400507
+      ],
+      "clearance": 18.048673455525098,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": {
+        "name": "Begoña · entorno · foliage",
+        "distanceToTarget": 19.705509649306915
+      }
+    },
+    {
+      "id": "begona-alameda",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 54,
+      "position": [
+        5024.5178393802935,
+        56,
+        2395.175437188223
+      ],
+      "target": [
+        4941.341096461958,
+        5.3,
+        2333.2312436400507
+      ],
+      "clearance": 52.816434228208834,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": {
+        "name": "Begoña · entorno · foliage",
+        "distanceToTarget": 9.043289092355042
+      }
+    },
+    {
+      "id": "begona-alameda",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 54,
+      "position": [
+        4986.320794349128,
+        22,
+        2363.7544694463163
+      ],
+      "target": [
+        4941.341096461958,
+        5.3,
+        2333.2312436400507
+      ],
+      "clearance": 18.048673455525098,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": {
+        "name": "Begoña · entorno · foliage",
+        "distanceToTarget": 19.705509649306915
+      }
+    },
+    {
+      "id": "begona-alameda",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 54,
+      "position": [
+        5024.5178393802935,
+        56,
+        2395.175437188223
+      ],
+      "target": [
+        4941.341096461958,
+        5.3,
+        2333.2312436400507
+      ],
+      "clearance": 52.816434228208834,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": {
+        "name": "Begoña · entorno · foliage",
+        "distanceToTarget": 9.043289092355042
+      }
+    },
+    {
+      "id": "begona-alameda",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 54,
+      "position": [
+        4986.320794349128,
+        22,
+        2363.7544694463163
+      ],
+      "target": [
+        4941.341096461958,
+        5.3,
+        2333.2312436400507
+      ],
+      "clearance": 18.048673455525098,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": {
+        "name": "Begoña · entorno · foliage",
+        "distanceToTarget": 19.705509649306915
+      }
+    },
+    {
+      "id": "begona-arbolado",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 54,
+      "position": [
+        4946.338812113105,
+        30.54870376086324,
+        2349.9293082768054
+      ],
+      "target": [
+        4909.391203134358,
+        7.5487037608632415,
+        2312.044598599863
+      ],
+      "clearance": 26.54870376086324,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-arbolado",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 54,
+      "position": [
+        4929.917652566995,
+        17.54870376086324,
+        2335.2063405354525
+      ],
+      "target": [
+        4909.391203134358,
+        7.5487037608632415,
+        2312.044598599863
+      ],
+      "clearance": 13.54870376086324,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-arbolado",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 54,
+      "position": [
+        4946.338812113105,
+        30.54870376086324,
+        2349.9293082768054
+      ],
+      "target": [
+        4909.391203134358,
+        7.5487037608632415,
+        2312.044598599863
+      ],
+      "clearance": 26.54870376086324,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-arbolado",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 54,
+      "position": [
+        4929.917652566995,
+        17.54870376086324,
+        2335.2063405354525
+      ],
+      "target": [
+        4909.391203134358,
+        7.5487037608632415,
+        2312.044598599863
+      ],
+      "clearance": 13.54870376086324,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-arbolado",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 54,
+      "position": [
+        4946.338812113105,
+        30.54870376086324,
+        2349.9293082768054
+      ],
+      "target": [
+        4909.391203134358,
+        7.5487037608632415,
+        2312.044598599863
+      ],
+      "clearance": 26.54870376086324,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-arbolado",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 54,
+      "position": [
+        4929.917652566995,
+        17.54870376086324,
+        2335.2063405354525
+      ],
+      "target": [
+        4909.391203134358,
+        7.5487037608632415,
+        2312.044598599863
+      ],
+      "clearance": 13.54870376086324,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-frente-urbano",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 54,
+      "position": [
+        4985.963812619863,
+        46,
+        2361.42040146119
+      ],
+      "target": [
+        4955.263383903222,
+        10,
+        2302.708078880535
+      ],
+      "clearance": 42.0091317681178,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": {
+        "name": "Ventanas",
+        "distanceToTarget": 0.955312866740103
+      }
+    },
+    {
+      "id": "begona-frente-urbano",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 54,
+      "position": [
+        4970.970579990806,
+        26,
+        2340.054143396092
+      ],
+      "target": [
+        4955.263383903222,
+        10,
+        2302.708078880535
+      ],
+      "clearance": 22,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": {
+        "name": "Ventanas",
+        "distanceToTarget": 0.7797656036023279
+      }
+    },
+    {
+      "id": "begona-frente-urbano",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 54,
+      "position": [
+        4985.963812619863,
+        46,
+        2361.42040146119
+      ],
+      "target": [
+        4955.263383903222,
+        10,
+        2302.708078880535
+      ],
+      "clearance": 42.0091317681178,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": {
+        "name": "Ventanas",
+        "distanceToTarget": 0.955312866740103
+      }
+    },
+    {
+      "id": "begona-frente-urbano",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 54,
+      "position": [
+        4970.970579990806,
+        26,
+        2340.054143396092
+      ],
+      "target": [
+        4955.263383903222,
+        10,
+        2302.708078880535
+      ],
+      "clearance": 22,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": {
+        "name": "Ventanas",
+        "distanceToTarget": 0.7797656036023279
+      }
+    },
+    {
+      "id": "begona-frente-urbano",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 54,
+      "position": [
+        4985.963812619863,
+        46,
+        2361.42040146119
+      ],
+      "target": [
+        4955.263383903222,
+        10,
+        2302.708078880535
+      ],
+      "clearance": 42.0091317681178,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": {
+        "name": "Ventanas",
+        "distanceToTarget": 0.955312866740103
+      }
+    },
+    {
+      "id": "begona-frente-urbano",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 54,
+      "position": [
+        4970.970579990806,
+        26,
+        2340.054143396092
+      ],
+      "target": [
+        4955.263383903222,
+        10,
+        2302.708078880535
+      ],
+      "clearance": 22,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": {
+        "name": "Ventanas",
+        "distanceToTarget": 0.7797656036023279
+      }
+    },
+    {
+      "id": "begona-ciudad-factoria",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 54,
+      "position": [
+        4984.3573662796425,
+        66.59174469207244,
+        2367.8840967136025
+      ],
+      "target": [
+        4883.688518627404,
+        8.591744692072433,
+        2298.219322520497
+      ],
+      "clearance": 62.986624502993635,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-ciudad-factoria",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 54,
+      "position": [
+        4935.629360235208,
+        33.59174469207243,
+        2344.542806390885
+      ],
+      "target": [
+        4883.688518627404,
+        8.591744692072433,
+        2298.219322520497
+      ],
+      "clearance": 29.59174469207243,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-ciudad-factoria",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 54,
+      "position": [
+        4984.3573662796425,
+        66.59174469207244,
+        2367.8840967136025
+      ],
+      "target": [
+        4883.688518627404,
+        8.591744692072433,
+        2298.219322520497
+      ],
+      "clearance": 62.986624502993635,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-ciudad-factoria",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 54,
+      "position": [
+        4935.629360235208,
+        33.59174469207243,
+        2344.542806390885
+      ],
+      "target": [
+        4883.688518627404,
+        8.591744692072433,
+        2298.219322520497
+      ],
+      "clearance": 29.59174469207243,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-ciudad-factoria",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 54,
+      "position": [
+        4984.3573662796425,
+        66.59174469207244,
+        2367.8840967136025
+      ],
+      "target": [
+        4883.688518627404,
+        8.591744692072433,
+        2298.219322520497
+      ],
+      "clearance": 62.986624502993635,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-ciudad-factoria",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 54,
+      "position": [
+        4935.629360235208,
+        33.59174469207243,
+        2344.542806390885
+      ],
+      "target": [
+        4883.688518627404,
+        8.591744692072433,
+        2298.219322520497
+      ],
+      "clearance": 29.59174469207243,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-conjunto",
+      "section": true,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 48,
+      "position": [
+        5292.420365126355,
+        279.2013812525231,
+        2231.8863954831036
+      ],
+      "target": [
+        4869.510368412071,
+        12.179578295971812,
+        2275.463467092153
+      ],
+      "clearance": 276.2013812525231,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-conjunto",
+      "section": true,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 48,
+      "position": [
+        4929.790876001532,
+        48.17957829597181,
+        2271.0747993265304
+      ],
+      "target": [
+        4869.510368412071,
+        12.179578295971812,
+        2275.463467092153
+      ],
+      "clearance": 43.28376067658502,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-conjunto",
+      "section": true,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 48,
+      "position": [
+        5659.802986101448,
+        511.16366776699476,
+        2194.0309205439103
+      ],
+      "target": [
+        4869.510368412071,
+        12.179578295971812,
+        2275.463467092153
+      ],
+      "clearance": 509.16366776699476,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-conjunto",
+      "section": true,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 48,
+      "position": [
+        4929.790876001532,
+        48.17957829597181,
+        2271.0747993265304
+      ],
+      "target": [
+        4869.510368412071,
+        12.179578295971812,
+        2275.463467092153
+      ],
+      "clearance": 43.28376067658502,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-conjunto",
+      "section": true,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 48,
+      "position": [
+        5348.514674234872,
+        314.6188546396032,
+        2226.106381428403
+      ],
+      "target": [
+        4869.510368412071,
+        12.179578295971812,
+        2275.463467092153
+      ],
+      "clearance": 311.6188546396032,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "begona-conjunto",
+      "section": true,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 48,
+      "position": [
+        4929.790876001532,
+        48.17957829597181,
+        2271.0747993265304
+      ],
+      "target": [
+        4869.510368412071,
+        12.179578295971812,
+        2275.463467092153
+      ],
+      "clearance": 43.28376067658502,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    }
+  ],
+  "inputHashes": {
+    "dist/js/city.js": "b2578a5fdb0d70435fa4bc8cf92147f2a3c4922f6bcbe6bbe145f46ebb53af54",
+    "dist/js/terrain.js": "ec10570603e52e850b6b5eadf81963215d18d533c551d555848ef58152fec3f8",
+    "dist/js/urban-surface.js": "d2acfae90ff47abddd51be09a21555e8ce9b6269e1500549a6eb94938f3e6111",
+    "dist/js/port-workers.js": "04ce181ebf82463d3cfddaee47d6d1960d1b3363a67fbd67c8b3994efbbaa5d4",
+    "dist/assets/data/port-cartography.json": "da82e6776616f733bfc0617abaae8333e74d5df1f57050150c75b8f1b1c75efd",
+    "dist/assets/data/port-elevation.json": "0444001c6f0ca1d2d723768b90cb997fbcab59eb975f14f45a1742e80893e347",
+    "dist/assets/data/port-workers.json": "0c77fd17543cf1cd4262c0fe86fbde19d2050937ba7e9fd0c47be1caf76d6d1e",
+    "dist/js/app.js": "cf41027ca462cd6140cb41681a6f1e904a04dc20d60c83dc95adaecd72d65cda",
+    "dist/js/port.js": "b1919e6ed27748f148a8481c6ec328adf4b9d9bba15b9a3e1eae669797c9e346",
+    "dist/js/port-industrial.js": "e289c84a04b010889472df5e54a1db6e4e815f6a904ca031718f602358435984",
+    "dist/js/horno.js": "8bc9b1b405cdf3a8c762e609960767e797f1fc299781f623b03d36e086b453a5",
+    "dist/js/horno-context.js": "cb47ee356f0bfee8be4e9334089ce79b7cf2145a48cd95e2d7ec9f425e6963bf",
+    "dist/js/horno-map.js": "46647c05927304cdeafbcac35de970ac1a08cd6192baed535ff9e9ebaa904081",
+    "dist/js/talleres.js": "a5ece44937976c963b804d2cce08258732c3d04a6c3be4fed8fe0d64fdcca660",
+    "dist/js/talleres-context.js": "66a36d5e38f27b9f84d4107bd1f295880966f5090b520d7d34a1595ce88a1967",
+    "dist/js/talleres-map.js": "1dcc0a6a7bc003e4e8504f16d40705c2c6721e3a5ec26cca6ad79c83c50189e3",
+    "dist/assets/data/talleres-visit.json": "a85ba855cad2e3c83096859edacf9816ddca341e0818f315e667c4914c9473fd",
+    "dist/assets/data/talleres-context.json": "6100214fcb3b21d8fd182b8f728ec71252a8247d0f9842d2687764eeff3fad58",
+    "dist/assets/data/talleres-plan.json": "c36958ba5a544af8f112e25c52230da2be840ae9a98c19f05787e1499292aaae",
+    "dist/assets/data/horno-visit.json": "5786b7430d5207b4c77d8a743bdf228c2421b4b542a8ffde0c7c5befb1404b35",
+    "dist/assets/data/horno-context.json": "034c74144297d2df56140f6380c5958a233b8de32fe7e8f35da5c1c09bbe98fb",
+    "dist/assets/data/horno-plan.json": "6de0b8d525124fde32c87b8b9b2040d0297c21ba3cfe0501f3a90b2be5dbd874",
+    "dist/js/museo-industrial.js": "0cc442540f4189403ffc80dffca8f51fc585970ca1d8c9f49d5a2733b70c9670",
+    "dist/js/museo-industrial-context.js": "0f6cdfda6be0e4ca0854f32ee61107301c5a23d9cc13129fbbbdcaecde5b9346",
+    "dist/js/museo-industrial-map.js": "dcf4412d2913ca002d215a9306392e2b9268e6cfec2aa47b5943afe2f0cd25f5",
+    "dist/assets/data/museo-industrial-visit.json": "25dbf4940828ab7072434ac7c91232a8e648eda9e67819c0b6dd6b4290a03b61",
+    "dist/assets/data/museo-industrial-plan.json": "9c5e1c2c20554eea2e6ed022a6c294447b1c2cdd4626c8b75e9b6844eb29134a",
+    "dist/assets/data/museo-industrial-context.json": "012d877440568744748948a7d3fd632059eeb110593d32eb8532291133562fe0",
+    "dist/assets/data/port-industrial.json": "8f84d9fc48cde87d14935e05f2f25b85268775f595059ade1c1da12b2e3a01ea",
+    "dist/js/port-garden.js": "7a1ad412a7fcf4302f41be38364e815639b021bd8e7aa00a4054f792ad30de34",
+    "dist/assets/data/port-garden.json": "75bcbfeb3fbdea8a8e2d54116ef96bc1b3daa6b3edeba0c9784da7b39c2df91f",
+    "dist/js/gerencia.js": "a7a6339d1aa9f427ff9537dc26fb143f51cbbf69296f9ec10bda16de5f2fbd91",
+    "dist/js/gerencia-context.js": "7bcde876adb01c412e93fafd465f9bd0adf6378bc3c472e2bc36d9bcb0b46a77",
+    "dist/js/gerencia-map.js": "eebd2a7992d2b38522df73a63f97b15432a5cbb401df779dd6a410c27a35d6b6",
+    "dist/assets/data/gerencia-visit.json": "f5d2df0f26f588253fba73e236d0eaac8a86ac50b0409b69fe00479c6c509b7c",
+    "dist/assets/data/gerencia-plan.json": "53689a370453ba4265141a5a1a4ba8be07d371e7fdf308f5c02f2663fc09110a",
+    "dist/assets/data/gerencia-context.json": "dac00377102d6300607cb5db0fcef89ad4d192f4e4c1698958689c02f2a5aca4",
+    "dist/js/casino.js": "ff5af9ef7d5bd7ad2a39feae0fd23ea00cea65fb1fd856d84566a5c601380eea",
+    "dist/js/casino-context.js": "36e2e9c28808e7a9b7d349d7470b4c85a796556eb5b6af21811c600909b2f8c7",
+    "dist/js/casino-map.js": "4c47424655471c3016f4a0e10015b5b08cdfdaaf54fb99fff561bcd367370264",
+    "dist/assets/data/casino-visit.json": "5eabae75f4dfcfcc087595727475b241fe98a276aa5eef636a2d1c3d0f2dd332",
+    "dist/assets/data/casino-plan.json": "a65b34a5621668d2911dc31491ba72e9cbee71cb97beff0ef87dd714e1cdd025",
+    "dist/assets/data/casino-context.json": "da45fe86e7b86124555160342ce0239ba272a022a659a1fd9ac315682983e171",
+    "dist/js/begona.js": "390931ffd11b5c9190b8f7a92629f7e608b312556ce3af9e4afa107c80ccdb37",
+    "dist/js/begona-context.js": "bc88773dfeb73c93105c60a5f78ec34da502e351c30e058a1f8fb0e571e8c2cb",
+    "dist/js/begona-map.js": "0d3962a9ac50a7e7903a3471e0202316544c3efc0a946f60eea85ef9cddad747",
+    "dist/assets/data/begona-visit.json": "f07453524d18eec9f04ceb6d435401c62094813418e343cace6930ae0cb76cd9",
+    "dist/assets/data/begona-plan.json": "3e9abe39c31121fd3678f4bf68358535a4b087c037ba30942cfde108fda17a85",
+    "dist/assets/data/begona-context.json": "d34015349aa43ce965b8a519d128629edf303f35da9ddc0faa8a7e8a04dfada6"
+  },
+  "limitations": [
+    "CPU geometry and camera checks do not measure browser GPU performance.",
+    "Interior geometry and unmeasured details remain a documented interpretation."
+  ]
+}

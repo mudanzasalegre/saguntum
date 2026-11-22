@@ -1,0 +1,62 @@
+{
+  "pass": true,
+  "sourceHashes": {
+    "dist/js/plaza-mayor.js": "07f51ea9722f9a09932e9dd85dcdeb2a39e753fdb5c8d7fa5e5a302bad3d28b1",
+    "dist/js/heritage-civic.js": "66770e52060df61d6f964af2eec52d133a18b061d9bfa4a7a1cad8f61cc69a9d",
+    "dist/js/plaza-mayor-context.js": "655b94895ef5407affe3ea502e5eb0eeff91cf01d365fe63387ec9fa31bd8d8b",
+    "dist/assets/data/plaza-mayor-visit.json": "c80a4560b964c27003e769add5a1c0c32b1a0109b55243c95a641282f2b36e55",
+    "dist/assets/data/plaza-mayor-context.json": "1a0c282b1f15f1cf4ede43aee8a600a5a44675cc4ad8110c36656ad9d23d9fc7",
+    "dist/assets/data/plaza-mayor-plan.json": "136742e1a25c77699aa619113a40213926260fd7bbec9402f02de6a4bb29b4ef"
+  },
+  "geometryExportSha256": "0e2abceed28076be6d56da873594168f2dda16ec960fb2e69972ab9693492d1d",
+  "rendererSha256": "25bf8013bd989c618e2fd5fcc4844593b7228d1780681f3fee1a3b3706d2e72d",
+  "engine": "Blender Cycles CPU",
+  "samples": 64,
+  "denoising": false,
+  "denoisingReason": "This Blender build has no OpenImageDenoise support; the final images use more samples instead.",
+  "geometry": "Exact exported Three.js meshes and world matrices, with the existing Santa María model and immediate cartographic context.",
+  "materials": "Base and vertex colours preserved; masonry bump approximated. Canvas textures are not emulated by this exporter.",
+  "illumination": "Two sunlight sources, environment and a broad inspection fill in the open square.",
+  "isBrowserScreenshot": false,
+  "images": [
+    {
+      "file": "research/validation-v10/plaza-conjunto.png",
+      "sha256": "11d899c94df825aa1b788a52e07a7e706267de1eb155e4fb6e5985c27e8d2c76",
+      "dimensions": [
+        1440,
+        1080
+      ],
+      "meanRgb": 152.37797818072704,
+      "inspected": true,
+      "review": "Entire plaza and retained Santa María are visible with adjoining houses; former triangular gable gaps are closed."
+    },
+    {
+      "file": "research/validation-v10/plaza-almudin.png",
+      "sha256": "8ac89a737c272c772e9ed22bd4247cd497cb0ee81f99d070f98367fa67c7816a",
+      "dimensions": [
+        1440,
+        1080
+      ],
+      "meanRgb": 89.07523341049382,
+      "inspected": true,
+      "review": "Lowered arch, separate voussoirs, recessed timber leaves and four-bar shield are legible. Shield clears gallery beams. The CanvasTexture number plate is blank in this geometry-only CPU translation."
+    },
+    {
+      "file": "research/validation-v10/plaza-soportales.png",
+      "sha256": "0d81f9a603b963fd4502db0dc7b86927b9b4f53743a00e99554694ba2edd990d",
+      "dimensions": [
+        1440,
+        1080
+      ],
+      "meanRgb": 88.27892918381345,
+      "inspected": true,
+      "review": "Low view is inside the actual gallery volume, with successive arches, soffit beams, recessed domestic wall and open side towards the square; no black frame or camera inside a wall."
+    }
+  ],
+  "modelChecks": 468,
+  "allModelChecksPass": true,
+  "roofCoverageProbes": 1340,
+  "gableClosureProbes": 16,
+  "structuralApertureProbes": 162,
+  "cameraVariants": 96
+}

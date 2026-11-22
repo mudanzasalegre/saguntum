@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-20",
+  "environment": "Shared Chrome, managed Sites preview",
+  "preview": "http://127.0.0.1:4173/",
+  "viewport": { "width": 1363, "height": 936 },
+  "method": "Observed browser accessibility/DOM state, semantic control interaction and screenshot; production publication is checked separately after deployment.",
+  "interfacePass": true,
+  "checks": [
+    { "name": "Generic identity and home", "pass": true, "observed": "The brand returns to #atlas with title SAGUNTUM · Sagunto y Puerto de Sagunto, generic Sagunto/Puerto copy, 31 places and 6 regions." },
+    { "name": "Sangre guide", "pass": true, "observed": "The #sangre guide exposes 16 stops and 5 regions; starting the tour opens the first stop." },
+    { "name": "Direct stop and independent progress", "pass": true, "observed": "#sangre/sangre-cupula opens stop 9; selecting the nave through the plan opens stop 6 and increases the explored count." },
+    { "name": "Chronology", "pass": true, "observed": "The chronology tab presents the documented sequence from 1601 to the 2024 intervention." },
+    { "name": "Sources and provenance", "pass": true, "observed": "The source tab lists 22 references and the method; the La clau de la Sang dialog gives the author, 2025 publication, pages 124–143 and link." },
+    { "name": "Plan selection", "pass": true, "observed": "The modal contains 16 named stop buttons and a matching numbered plan; choosing Leer el interior desde su eje closes the modal and opens the correct stop." },
+    { "name": "Thematic reading", "pass": true, "observed": "Leer arquitectura, arte y memoria changes the pressed mode and displays the five-category legend in both the guide and full plan." },
+    { "name": "WebGL fallback", "pass": true, "observed": "Chrome reports WebGL disabled. The fallback provides access to the map/history, disables 3D section/detail actions and keeps the documentary interface usable." }
+  ],
+  "screenshot": "sangre-plan-browser.jpg",
+  "webgl": {
+    "available": false,
+    "observedError": "GL_VENDOR=Disabled; GL_RENDERER=Disabled; Could not create a WebGL context",
+    "gpuRenderingVerified": false,
+    "gpuPerformanceVerified": false
+  },
+  "limitations": [
+    "The screenshot proves the browser interface and 2D map, not WebGL rendering.",
+    "The 3D scene was inspected through renders exported from the actual regional constructor and its camera configuration.",
+    "Portrait and landscape camera checks use production framing functions; no physical phone or GPU benchmark is claimed."
+  ]
+}

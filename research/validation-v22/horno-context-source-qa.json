@@ -1,0 +1,55 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "pass": true,
+      "label": "Original mapped coordinates of all five industrial building parts preserved"
+    },
+    {
+      "pass": true,
+      "label": "All four cadastral furnace/reception parts plus OSM reception replace their generic duplicates"
+    },
+    {
+      "pass": true,
+      "label": "Terrain-aligned triangles cover every selected surface once",
+      "differenceAreaM2": 0.0005231424357740261
+    },
+    {
+      "pass": true,
+      "label": "No overlapping paving triangles",
+      "overlapAreaM2": 6.354821380227804e-07
+    },
+    {
+      "pass": true,
+      "label": "Circulation strips do not enter neighbouring mapped buildings",
+      "intersectionAreaM2": 0.0
+    },
+    {
+      "pass": true,
+      "label": "Other industrial monuments retain their owners"
+    },
+    {
+      "pass": true,
+      "label": "All paving is inside the 5 m Puerto core mesh"
+    }
+  ],
+  "stats": {
+    "buildingParts": 5,
+    "parentParcels": 2,
+    "sourceCoreParts": 5,
+    "roadFragments": 14,
+    "pavingAreaM2": 20075.92,
+    "pavingVertices": 4610,
+    "pavingTriangles": 7307,
+    "trees": 13,
+    "streetLamps": 6,
+    "railLengthM": 153.38,
+    "fenceLengthM": 99.91,
+    "protectedHeritageOwners": 8
+  },
+  "sourceHashes": {
+    "port-cartography.json": "da82e6776616f733bfc0617abaae8333e74d5df1f57050150c75b8f1b1c75efd",
+    "port-industrial.json": "0233a9ae504aa975b1a88bb62ae89349f36035aa37611791031780665a2362fd",
+    "port-elevation.json": "0444001c6f0ca1d2d723768b90cb997fbcab59eb975f14f45a1742e80893e347"
+  }
+}

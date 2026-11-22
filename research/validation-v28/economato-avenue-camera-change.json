@@ -1,0 +1,118 @@
+{
+  "onlyChangedFocus": "economato-entorno",
+  "allOtherContextValuesPreserved": true,
+  "before": {
+    "label": "Avenida 9 d’Octubre",
+    "targetCoordinates": [
+      -0.221538791,
+      39.659051713
+    ],
+    "targetHeight": 2,
+    "far": [
+      72.02481022583561,
+      45,
+      -6.813714987595631
+    ],
+    "near": [
+      22.776983108757122,
+      18,
+      -1.0995637604878539
+    ],
+    "radius": 100,
+    "fov": 54,
+    "regionId": "entorno"
+  },
+  "after": {
+    "label": "Avenida 9 d’Octubre",
+    "targetCoordinates": [
+      -0.22158474,
+      39.659032653
+    ],
+    "targetHeight": 2,
+    "far": [
+      -62.157592649938124,
+      53,
+      -10.69736771193675
+    ],
+    "near": [
+      -45.61800204864085,
+      38,
+      -6.402959400947566
+    ],
+    "radius": 100,
+    "fov": 51,
+    "regionId": "entorno"
+  },
+  "productionJSONSHA256": "4e0aa2086b3b97caa73ee5fb23af98d3f93e67cea4c423637525e44359b5bc78",
+  "draftSettings": {
+    "samples": 8,
+    "threads": 1,
+    "dimensions": [
+      640,
+      480
+    ]
+  },
+  "draftSourceSnapshot": {
+    "geometrySHA256": "218bd440244c070479d8d6df2269b22b436074b60e967d81fc340b17ce5e2d2e",
+    "sourcePath": "/workspace/sites/saguntum-atlas-3d/.sites-checkout/research/validation-v28/economato-entorno-geometry.json.gz",
+    "resolution": [
+      640,
+      480
+    ],
+    "samples": 8,
+    "threads": 1,
+    "geometryChanged": false,
+    "candidates": [
+      {
+        "name": "avenida-desde-gerencia",
+        "target": [
+          4835.712751419559,
+          7,
+          2219.4929315140766
+        ],
+        "position": [
+          4771.254500186284,
+          60,
+          2212.0677144837127
+        ],
+        "fov": 51,
+        "localTarget": [
+          5,
+          2,
+          -13
+        ],
+        "localEye": [
+          -52,
+          55,
+          18
+        ]
+      },
+      {
+        "name": "avenida-eje-oblicuo",
+        "target": [
+          4835.712751419559,
+          7,
+          2219.4929315140766
+        ],
+        "position": [
+          4780.3290628573795,
+          50,
+          2181.774937913574
+        ],
+        "fov": 50,
+        "localTarget": [
+          5,
+          2,
+          -13
+        ],
+        "localEye": [
+          -62,
+          45,
+          -12
+        ]
+      }
+    ]
+  },
+  "review": "Approved diagonal avenue view from Gerencia; near view remains on the same corridor, avenue visible throughout, no building removal.",
+  "recentering": "Original inherited target at local z=-13 fell in the opposite cadastral footprint. z=-9 lies on the retained Gerencia carriageway."
+}

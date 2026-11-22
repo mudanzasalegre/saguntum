@@ -1,0 +1,480 @@
+{
+  "pass": true,
+  "stats": {
+    "modelVersion": "v15",
+    "sourceBuildings": 9,
+    "stops": 16,
+    "chapelBays": 2,
+    "sideChapels": 4,
+    "entranceSteps": 7,
+    "presbyterySteps": 7,
+    "retabloColumns": 4,
+    "domeSides": 8,
+    "domeRestorationYear": 2024,
+    "hasLantern": false,
+    "obsoleteCentralChandelier": false,
+    "meshes": 145,
+    "triangles": 195247,
+    "survey": false
+  },
+  "checks": [
+    {
+      "pass": true,
+      "label": "all geometry attributes are finite"
+    },
+    {
+      "pass": true,
+      "label": "geometry consists of complete triangles"
+    },
+    {
+      "pass": true,
+      "label": "all nine replaced cadastral parts are excluded by exact identifier"
+    },
+    {
+      "pass": true,
+      "label": "all sixteen documentary stops resolve to model focuses"
+    },
+    {
+      "pass": true,
+      "label": "entrance portal has a real structural aperture"
+    },
+    {
+      "pass": true,
+      "label": "all four chapel arches are genuine voids"
+    },
+    {
+      "pass": true,
+      "label": "two documented stairs each have seven physical steps"
+    },
+    {
+      "pass": true,
+      "label": "entrance stairs rise continuously to the threshold"
+    },
+    {
+      "pass": true,
+      "label": "presbytery stair reaches the raised marble floor"
+    },
+    {
+      "pass": true,
+      "label": "raised presbytery platform leaves all seven stair treads visible"
+    },
+    {
+      "pass": true,
+      "label": "nave roof gable and tile courses stay behind the baroque façade instead of drawing a false pediment"
+    },
+    {
+      "pass": true,
+      "label": "portal meshes participate in thematic highlighting"
+    },
+    {
+      "pass": true,
+      "label": "material mode restores original colours, maps and geometry"
+    },
+    {
+      "pass": true,
+      "label": "closed shell hides nave and crossing floors below real roof geometry"
+    },
+    {
+      "pass": true,
+      "label": "architectural section exposes nave and crossing floor without altering terrain data"
+    },
+    {
+      "pass": true,
+      "label": "dome interior view retains the restored intrados while removing the external shell"
+    },
+    {
+      "pass": true,
+      "label": "closing the architectural section restores original mesh visibility"
+    },
+    {
+      "pass": true,
+      "label": "interior cameras use explicit positions and FOV without automatic mobile offset scaling"
+    },
+    {
+      "pass": true,
+      "label": "all cartouches and central-key vertices stay below the curved intrados and cannot pierce the blue shell"
+    },
+    {
+      "pass": true,
+      "label": "all twenty-four gilded cartouche rosettes are visible from the interior dome camera"
+    },
+    {
+      "pass": true,
+      "label": "sixteen map stops at 1340×850"
+    },
+    {
+      "pass": true,
+      "label": "distinct map targets at 1340×850"
+    },
+    {
+      "pass": true,
+      "label": "sixteen map stops at 390×420"
+    },
+    {
+      "pass": true,
+      "label": "distinct map targets at 390×420"
+    },
+    {
+      "pass": true,
+      "label": "sixteen map stops at 320×220"
+    },
+    {
+      "pass": true,
+      "label": "distinct map targets at 320×220"
+    },
+    {
+      "pass": true,
+      "label": "malformed map geometry fails closed"
+    }
+  ],
+  "errors": [],
+  "portal": [
+    {
+      "u": -1,
+      "dy": -1.5,
+      "clear": true
+    },
+    {
+      "u": -1,
+      "dy": -0.7,
+      "clear": true
+    },
+    {
+      "u": -1,
+      "dy": 0.2,
+      "clear": true
+    },
+    {
+      "u": 0,
+      "dy": -1.5,
+      "clear": true
+    },
+    {
+      "u": 0,
+      "dy": -0.7,
+      "clear": true
+    },
+    {
+      "u": 0,
+      "dy": 0.2,
+      "clear": true
+    },
+    {
+      "u": 1,
+      "dy": -1.5,
+      "clear": true
+    },
+    {
+      "u": 1,
+      "dy": -0.7,
+      "clear": true
+    },
+    {
+      "u": 1,
+      "dy": 0.2,
+      "clear": true
+    }
+  ],
+  "chapels": [
+    {
+      "chapel": 0,
+      "y": -0.9,
+      "clear": true
+    },
+    {
+      "chapel": 0,
+      "y": 0,
+      "clear": true
+    },
+    {
+      "chapel": 0,
+      "y": 0.8,
+      "clear": true
+    },
+    {
+      "chapel": 1,
+      "y": -0.9,
+      "clear": true
+    },
+    {
+      "chapel": 1,
+      "y": 0,
+      "clear": true
+    },
+    {
+      "chapel": 1,
+      "y": 0.8,
+      "clear": true
+    },
+    {
+      "chapel": 2,
+      "y": -0.9,
+      "clear": true
+    },
+    {
+      "chapel": 2,
+      "y": 0,
+      "clear": true
+    },
+    {
+      "chapel": 2,
+      "y": 0.8,
+      "clear": true
+    },
+    {
+      "chapel": 3,
+      "y": -0.9,
+      "clear": true
+    },
+    {
+      "chapel": 3,
+      "y": 0,
+      "clear": true
+    },
+    {
+      "chapel": 3,
+      "y": 0.8,
+      "clear": true
+    }
+  ],
+  "presbyteryStairs": [
+    {
+      "step": 1,
+      "expected": 65.46000000000001,
+      "visibleY": 65.45999908447266,
+      "clear": true
+    },
+    {
+      "step": 2,
+      "expected": 65.64,
+      "visibleY": 65.63999938964844,
+      "clear": true
+    },
+    {
+      "step": 3,
+      "expected": 65.82000000000001,
+      "visibleY": 65.81999969482422,
+      "clear": true
+    },
+    {
+      "step": 4,
+      "expected": 66,
+      "visibleY": 66,
+      "clear": true
+    },
+    {
+      "step": 5,
+      "expected": 66.18,
+      "visibleY": 66.18000030517578,
+      "clear": true
+    },
+    {
+      "step": 6,
+      "expected": 66.36,
+      "visibleY": 66.36000061035156,
+      "clear": true
+    },
+    {
+      "step": 7,
+      "expected": 66.54,
+      "visibleY": 66.54000091552734,
+      "clear": true
+    }
+  ],
+  "roofFront": {
+    "lime": -8.300002762441068,
+    "tiles": -8.300002926228807
+  },
+  "rosetteRays": [
+    {
+      "cartouche": 1,
+      "offset": -0.34,
+      "visible": true,
+      "hit": "Sangre · cartelas-2024 · gold"
+    },
+    {
+      "cartouche": 1,
+      "offset": 0,
+      "visible": true,
+      "hit": "Sangre · cartelas-2024 · gold"
+    },
+    {
+      "cartouche": 1,
+      "offset": 0.34,
+      "visible": true,
+      "hit": "Sangre · cartelas-2024 · gold"
+    },
+    {
+      "cartouche": 2,
+      "offset": -0.34,
+      "visible": true,
+      "hit": "Sangre · cartelas-2024 · gold"
+    },
+    {
+      "cartouche": 2,
+      "offset": 0,
+      "visible": true,
+      "hit": "Sangre · cartelas-2024 · gold"
+    },
+    {
+      "cartouche": 2,
+      "offset": 0.34,
+      "visible": true,
+      "hit": "Sangre · cartelas-2024 · gold"
+    },
+    {
+      "cartouche": 3,
+      "offset": -0.34,
+      "visible": true,
+      "hit": "Sangre · cartelas-2024 · gold"
+    },
+    {
+      "cartouche": 3,
+      "offset": 0,
+      "visible": true,
+      "hit": "Sangre · cartelas-2024 · gold"
+    },
+    {
+      "cartouche": 3,
+      "offset": 0.34,
+      "visible": true,
+      "hit": "Sangre · cartelas-2024 · gold"
+    },
+    {
+      "cartouche": 4,
+      "offset": -0.34,
+      "visible": true,
+      "hit": "Sangre · cartelas-2024 · gold"
+    },
+    {
+      "cartouche": 4,
+      "offset": 0,
+      "visible": true,
+      "hit": "Sangre · cartelas-2024 · gold"
+    },
+    {
+      "cartouche": 4,
+      "offset": 0.34,
+      "visible": true,
+      "hit": "Sangre · cartelas-2024 · gold"
+    },
+    {
+      "cartouche": 5,
+      "offset": -0.34,
+      "visible": true,
+      "hit": "Sangre · cartelas-2024 · gold"
+    },
+    {
+      "cartouche": 5,
+      "offset": 0,
+      "visible": true,
+      "hit": "Sangre · cartelas-2024 · gold"
+    },
+    {
+      "cartouche": 5,
+      "offset": 0.34,
+      "visible": true,
+      "hit": "Sangre · cartelas-2024 · gold"
+    },
+    {
+      "cartouche": 6,
+      "offset": -0.34,
+      "visible": true,
+      "hit": "Sangre · cartelas-2024 · gold"
+    },
+    {
+      "cartouche": 6,
+      "offset": 0,
+      "visible": true,
+      "hit": "Sangre · cartelas-2024 · gold"
+    },
+    {
+      "cartouche": 6,
+      "offset": 0.34,
+      "visible": true,
+      "hit": "Sangre · cartelas-2024 · gold"
+    },
+    {
+      "cartouche": 7,
+      "offset": -0.34,
+      "visible": true,
+      "hit": "Sangre · cartelas-2024 · gold"
+    },
+    {
+      "cartouche": 7,
+      "offset": 0,
+      "visible": true,
+      "hit": "Sangre · cartelas-2024 · gold"
+    },
+    {
+      "cartouche": 7,
+      "offset": 0.34,
+      "visible": true,
+      "hit": "Sangre · cartelas-2024 · gold"
+    },
+    {
+      "cartouche": 8,
+      "offset": -0.34,
+      "visible": true,
+      "hit": "Sangre · cartelas-2024 · gold"
+    },
+    {
+      "cartouche": 8,
+      "offset": 0,
+      "visible": true,
+      "hit": "Sangre · cartelas-2024 · gold"
+    },
+    {
+      "cartouche": 8,
+      "offset": 0.34,
+      "visible": true,
+      "hit": "Sangre · cartelas-2024 · gold"
+    }
+  ],
+  "section": {
+    "closed": [
+      {
+        "component": "tejado-nave",
+        "y": 77.43951567831472
+      },
+      {
+        "component": "cruz",
+        "y": 85.08999633789062
+      }
+    ],
+    "open": [
+      {
+        "component": "suelo",
+        "y": 65.35749816894531
+      },
+      {
+        "component": "suelo",
+        "y": 65.35749816894531
+      }
+    ]
+  },
+  "maps": [
+    {
+      "w": 1340,
+      "h": 850,
+      "targets": 16,
+      "components": 178
+    },
+    {
+      "w": 390,
+      "h": 420,
+      "targets": 16,
+      "components": 178
+    },
+    {
+      "w": 320,
+      "h": 220,
+      "targets": 16,
+      "components": 178
+    }
+  ],
+  "limitations": [
+    "The architectural model is a documented interpretation, not a metric survey.",
+    "This isolated geometry check supplements the integrated city/camera and visual checks."
+  ]
+}

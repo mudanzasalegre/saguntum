@@ -1,0 +1,196 @@
+{
+  "version": 28,
+  "reviewedAtUTC": "2026-11-21T11:28:19.231453+00:00",
+  "pass": true,
+  "scope": "Manual review of seven CPU renders of the final production geometry, with exact render-input and production-source hash verification.",
+  "sourceHashVerification": {
+    "files": 55,
+    "mismatches": [],
+    "sourceHashes": {
+      "dist/js/city.js": "b2578a5fdb0d70435fa4bc8cf92147f2a3c4922f6bcbe6bbe145f46ebb53af54",
+      "dist/js/terrain.js": "ec10570603e52e850b6b5eadf81963215d18d533c551d555848ef58152fec3f8",
+      "dist/js/urban-surface.js": "d2acfae90ff47abddd51be09a21555e8ce9b6269e1500549a6eb94938f3e6111",
+      "dist/js/port-workers.js": "55ce6e536cc77c49af83838307445c61f5a485d7e6a429385ba90352e2377db9",
+      "dist/assets/data/port-cartography.json": "da82e6776616f733bfc0617abaae8333e74d5df1f57050150c75b8f1b1c75efd",
+      "dist/assets/data/port-elevation.json": "0444001c6f0ca1d2d723768b90cb997fbcab59eb975f14f45a1742e80893e347",
+      "dist/assets/data/port-workers.json": "8bfa145255ce420fd1ac95d53d2f6fc41af4347cf0fa19124abb3e05c25ffadf",
+      "dist/js/app.js": "c56736189886801357fc80c3587b83e9ccf076b18696127862c340a60e032209",
+      "dist/js/port.js": "e0ee591e1e098fdac3437270c5aa28c6a13023c685e058e4fc4e62de6db67e27",
+      "dist/js/port-industrial.js": "e289c84a04b010889472df5e54a1db6e4e815f6a904ca031718f602358435984",
+      "dist/js/horno.js": "8bc9b1b405cdf3a8c762e609960767e797f1fc299781f623b03d36e086b453a5",
+      "dist/js/horno-context.js": "cb47ee356f0bfee8be4e9334089ce79b7cf2145a48cd95e2d7ec9f425e6963bf",
+      "dist/js/horno-map.js": "46647c05927304cdeafbcac35de970ac1a08cd6192baed535ff9e9ebaa904081",
+      "dist/js/talleres.js": "a5ece44937976c963b804d2cce08258732c3d04a6c3be4fed8fe0d64fdcca660",
+      "dist/js/talleres-context.js": "66a36d5e38f27b9f84d4107bd1f295880966f5090b520d7d34a1595ce88a1967",
+      "dist/js/talleres-map.js": "1dcc0a6a7bc003e4e8504f16d40705c2c6721e3a5ec26cca6ad79c83c50189e3",
+      "dist/assets/data/talleres-visit.json": "a85ba855cad2e3c83096859edacf9816ddca341e0818f315e667c4914c9473fd",
+      "dist/assets/data/talleres-context.json": "6100214fcb3b21d8fd182b8f728ec71252a8247d0f9842d2687764eeff3fad58",
+      "dist/assets/data/talleres-plan.json": "c36958ba5a544af8f112e25c52230da2be840ae9a98c19f05787e1499292aaae",
+      "dist/assets/data/horno-visit.json": "5786b7430d5207b4c77d8a743bdf228c2421b4b542a8ffde0c7c5befb1404b35",
+      "dist/assets/data/horno-context.json": "034c74144297d2df56140f6380c5958a233b8de32fe7e8f35da5c1c09bbe98fb",
+      "dist/assets/data/horno-plan.json": "6de0b8d525124fde32c87b8b9b2040d0297c21ba3cfe0501f3a90b2be5dbd874",
+      "dist/js/museo-industrial.js": "0cc442540f4189403ffc80dffca8f51fc585970ca1d8c9f49d5a2733b70c9670",
+      "dist/js/museo-industrial-context.js": "0f6cdfda6be0e4ca0854f32ee61107301c5a23d9cc13129fbbbdcaecde5b9346",
+      "dist/js/museo-industrial-map.js": "dcf4412d2913ca002d215a9306392e2b9268e6cfec2aa47b5943afe2f0cd25f5",
+      "dist/assets/data/museo-industrial-visit.json": "25dbf4940828ab7072434ac7c91232a8e648eda9e67819c0b6dd6b4290a03b61",
+      "dist/assets/data/museo-industrial-plan.json": "9c5e1c2c20554eea2e6ed022a6c294447b1c2cdd4626c8b75e9b6844eb29134a",
+      "dist/assets/data/museo-industrial-context.json": "012d877440568744748948a7d3fd632059eeb110593d32eb8532291133562fe0",
+      "dist/assets/data/port-industrial.json": "8f84d9fc48cde87d14935e05f2f25b85268775f595059ade1c1da12b2e3a01ea",
+      "dist/js/port-garden.js": "7a1ad412a7fcf4302f41be38364e815639b021bd8e7aa00a4054f792ad30de34",
+      "dist/assets/data/port-garden.json": "75bcbfeb3fbdea8a8e2d54116ef96bc1b3daa6b3edeba0c9784da7b39c2df91f",
+      "dist/js/gerencia.js": "a7a6339d1aa9f427ff9537dc26fb143f51cbbf69296f9ec10bda16de5f2fbd91",
+      "dist/js/gerencia-context.js": "7bcde876adb01c412e93fafd465f9bd0adf6378bc3c472e2bc36d9bcb0b46a77",
+      "dist/js/gerencia-map.js": "eebd2a7992d2b38522df73a63f97b15432a5cbb401df779dd6a410c27a35d6b6",
+      "dist/assets/data/gerencia-visit.json": "f5d2df0f26f588253fba73e236d0eaac8a86ac50b0409b69fe00479c6c509b7c",
+      "dist/assets/data/gerencia-plan.json": "650cc3b1054d302547e6ca791c178a61d81666d4bcc3f4d30df2b92cece838cf",
+      "dist/assets/data/gerencia-context.json": "7209989b6735a9460087ca40298da10900bc04f382212e730d06b1515cbe2e73",
+      "dist/js/casino.js": "ff5af9ef7d5bd7ad2a39feae0fd23ea00cea65fb1fd856d84566a5c601380eea",
+      "dist/js/casino-context.js": "36e2e9c28808e7a9b7d349d7470b4c85a796556eb5b6af21811c600909b2f8c7",
+      "dist/js/casino-map.js": "4c47424655471c3016f4a0e10015b5b08cdfdaaf54fb99fff561bcd367370264",
+      "dist/assets/data/casino-visit.json": "5eabae75f4dfcfcc087595727475b241fe98a276aa5eef636a2d1c3d0f2dd332",
+      "dist/assets/data/casino-plan.json": "a65b34a5621668d2911dc31491ba72e9cbee71cb97beff0ef87dd714e1cdd025",
+      "dist/assets/data/casino-context.json": "da45fe86e7b86124555160342ce0239ba272a022a659a1fd9ac315682983e171",
+      "dist/js/begona.js": "390931ffd11b5c9190b8f7a92629f7e608b312556ce3af9e4afa107c80ccdb37",
+      "dist/js/begona-context.js": "bc88773dfeb73c93105c60a5f78ec34da502e351c30e058a1f8fb0e571e8c2cb",
+      "dist/js/begona-map.js": "0d3962a9ac50a7e7903a3471e0202316544c3efc0a946f60eea85ef9cddad747",
+      "dist/assets/data/begona-visit.json": "f07453524d18eec9f04ceb6d435401c62094813418e343cace6930ae0cb76cd9",
+      "dist/assets/data/begona-plan.json": "3e9abe39c31121fd3678f4bf68358535a4b087c037ba30942cfde108fda17a85",
+      "dist/assets/data/begona-context.json": "d34015349aa43ce965b8a519d128629edf303f35da9ddc0faa8a7e8a04dfada6",
+      "dist/js/economato.js": "efcdbed64fe26a10959ce51a2deb80b720d57ec584231f4711354af444833f04",
+      "dist/js/economato-context.js": "a91732cff7b69fdda31f0fc365545f1d6510cc8fa8cf2657809eb8d4a50e7385",
+      "dist/js/economato-map.js": "d6c83882c525d45164cc5762ba403c64bfcce86137ab430cb264ade73bd5c639",
+      "dist/assets/data/economato-visit.json": "351e5430df4fff0167cbf2481de363add049a5016f52ec7cba41e3f226695844",
+      "dist/assets/data/economato-plan.json": "7b3822383c1e45077d6b95822b2db842a916d2832e0b8f13634beeaec63c99ae",
+      "dist/assets/data/economato-context.json": "4e0aa2086b3b97caa73ee5fb23af98d3f93e67cea4c423637525e44359b5bc78"
+    }
+  },
+  "productionIntegration": {
+    "checks": 782,
+    "cameraVariants": 126,
+    "meshes": 967,
+    "triangles": 4193002,
+    "errors": []
+  },
+  "images": [
+    {
+      "scene": "economato-conjunto",
+      "image": "economato-conjunto.png",
+      "imageSha256": "f2bd4e824a2113a5efcedb8fa2f2116784040c1a178f239e124f65e54aeb1c92",
+      "geometrySha256": "3ed980faae4ff0ac7d5fa898a468b401c9edf47d85baaae19d1645acd1711432",
+      "renderInput": "economato-conjunto-render-input.json",
+      "dimensions": [
+        1440,
+        1080
+      ],
+      "samples": 32,
+      "manuallyReviewed": true,
+      "approvedForGeometryAndComposition": true,
+      "observation": "Se distinguen los tres cuerpos y los dos pórticos dentro del entorno de Begoña, Gerencia y la avenida. La nueva diagonal resuelve la obstrucción dominante de la primera imagen."
+    },
+    {
+      "scene": "economato-fachada",
+      "image": "economato-fachada.png",
+      "imageSha256": "e9a2e4301766fcb432c75ec2d38c82edfa4006ee1ca754bfed13b1ea9168fbc9",
+      "geometrySha256": "67699c2c919a1c6078e04ab1cf1ccc911a8fb3de345ab5a793182517177af3d7",
+      "renderInput": "economato-fachada-render-input.json",
+      "dimensions": [
+        1440,
+        1080
+      ],
+      "samples": 32,
+      "manuallyReviewed": true,
+      "approvedForGeometryAndComposition": true,
+      "observation": "La cámara elevada desde la acera permite leer los tres frontones, los dos accesos y la calzada. La vista cercana fue contrastada en el borrador específico y en la comprobación geométrica."
+    },
+    {
+      "scene": "economato-nave-central",
+      "image": "economato-nave-central.png",
+      "imageSha256": "618e903e24bc88d6637ce6c399cd97f7a7a70ae699c5f7f16bbba0d89e32806c",
+      "geometrySha256": "08d06df25d6b028887475b1744158036ce8a14e2e99ed1b8850a3a04a082a6c6",
+      "renderInput": "economato-nave-central-render-input.json",
+      "dimensions": [
+        960,
+        720
+      ],
+      "samples": 32,
+      "manuallyReviewed": true,
+      "approvedForGeometryAndComposition": true,
+      "observation": "El techo presenta acabado liso; el pavimento hidráulico permanece en el suelo. Vigas, soportes y mobiliario apoyan físicamente y mantienen una vista a altura humana."
+    },
+    {
+      "scene": "economato-galeria",
+      "image": "economato-galeria.png",
+      "imageSha256": "d62c0a11ed6dd0a79068dd7535bfceaa6521b743accb1a7d7668b4013cfefd42",
+      "geometrySha256": "061e5979453f57d875c0b0b730c18af90dcb876bbddc453b600c63fb9051f5ba",
+      "renderInput": "economato-galeria-render-input.json",
+      "dimensions": [
+        960,
+        720
+      ],
+      "samples": 32,
+      "manuallyReviewed": true,
+      "approvedForGeometryAndComposition": true,
+      "observation": "La continuidad transversal, los soportes cilíndricos y las vigas son legibles. El techo ya no repite el dibujo hidráulico del pavimento."
+    },
+    {
+      "scene": "economato-planta-alta",
+      "image": "economato-planta-alta.png",
+      "imageSha256": "7817b21c12e67f6e81f0819edb2674f1959816906f610ef841ba21212953eb1c",
+      "geometrySha256": "e9d826bd80f621fd5e9246e8c297252ead9a55c0adcb2a500e25679c049f5ff2",
+      "renderInput": "economato-planta-alta-render-input.json",
+      "dimensions": [
+        960,
+        720
+      ],
+      "samples": 32,
+      "manuallyReviewed": true,
+      "approvedForGeometryAndComposition": true,
+      "observation": "El primer piso conserva suelo, techo y estructura durante su vista interior normal. Los huecos de fachada muestran la relación con el exterior."
+    },
+    {
+      "scene": "economato-entorno",
+      "image": "economato-entorno.png",
+      "imageSha256": "9d6d8a3cc34cfca1e44c12a31ff55c9eeade167562464af70bd6cec1f49e51c6",
+      "geometrySha256": "81ade0f24ccf9f23aae5cc71f52d47702b024c1b8d33c4b73e48c647b574d747",
+      "renderInput": "economato-entorno-render-input.json",
+      "dimensions": [
+        960,
+        720
+      ],
+      "samples": 32,
+      "manuallyReviewed": true,
+      "approvedForGeometryAndComposition": true,
+      "observation": "La avenida se aprecia continua entre ambos frentes, con el Economato a un lado y Begoña al fondo. El objetivo queda situado sobre la calzada."
+    },
+    {
+      "scene": "economato-seccion",
+      "image": "economato-seccion.png",
+      "imageSha256": "50b9b51e68bde67e94ac38d1ab076a5f2d4376a3402ccde09d03c3047fa15a6d",
+      "geometrySha256": "894275001869416601542310e85feaafb7625e78e9424f647353f8c9925e6cf1",
+      "renderInput": "economato-seccion-render-input.json",
+      "dimensions": [
+        1440,
+        1080
+      ],
+      "samples": 32,
+      "manuallyReviewed": true,
+      "approvedForGeometryAndComposition": true,
+      "observation": "Se retiran cubiertas y techo alto, manteniendo el forjado intermedio, la escalera y sus apoyos. Las dependencias bajas sin interior documentado permanecen cubiertas."
+    }
+  ],
+  "renderScriptSha256": "78e65811975642265d53161fc4a391de53b937101da6e3199397c39759c96261",
+  "resolvedFindings": [
+    "Three obstructed or cropped compositions reframed without removing the urban context",
+    "First-floor slab underside separated from the decorative upper-floor finish",
+    "Avenue target registered on the actual road footprint"
+  ],
+  "remainingMaterialFindings": [],
+  "browserQA": "unverified",
+  "webglQA": "unverified",
+  "limitations": [
+    "CPU illumination approximates the application and the images contain sampling noise.",
+    "These images are not browser screenshots and do not validate browser layout, GPU performance or exact WebGL lighting.",
+    "Unmeasured proportions, interior subdivision and commercial furniture remain interpretive; the semibasement is explained from outside."
+  ],
+  "initialReview": "initial-visual-review.json"
+}

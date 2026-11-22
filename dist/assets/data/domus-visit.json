@@ -1,0 +1,1479 @@
+{
+  "schemaVersion": 1,
+  "id": "domus",
+  "title": "Domus dels Peixos",
+  "subtitle": "Veinte miradas a una casa romana, su agua, sus pinturas y su barrio",
+  "introduction": "Descubre la casa desde la ciudad actual, abre la excavación y acércate a sus detalles. El patio, los peces pintados y las habitaciones se pueden explorar en veinte paradas, con una vista histórica que muestra cómo podría haber sido.",
+  "researchDate": "2026-11-20",
+  "regionsLabel": "ámbitos",
+  "mapButtonLabel": "Plano de la casa y su entorno",
+  "overviewButtonLabel": "Ver conjunto",
+  "readingModeLabel": "Leer las capas de la casa",
+  "readingModeNote": "Los colores relacionan vivienda, reformas, decoración, hipótesis y museo. Cada grupo puede reunir evidencias de diferentes momentos.",
+  "timelineIntroduction": "La cronología distingue uso antiguo, cambios de la vivienda, excavación y apertura al público. Los intervalos y las funciones discutidas se mantienen visibles.",
+  "visitAriaLabel": "Visita documentada a la Domus dels Peixos",
+  "sectionOnOverview": true,
+  "sectionInstructions": "Abre el corte para descubrir la casa. Acércate a una estancia, alterna la lectura por capas y compara los restos con la vista histórica.",
+  "sectionNote": "El corte retira parte de la envolvente contemporánea para hacer visible la planta. Sus cotas y la relación con el edificio actual son aproximadas. La vista histórica contiene restituciones de altura y cubierta.",
+  "methodology": [
+    "Las medidas del informe de excavación se contrastan con la planta de F. J. Hernández publicada en 2021. Se conservan proporciones documentadas y se señalan los límites de una georreferencia aproximada.",
+    "La casa, el edificio protector y la escena histórica tienen funciones distintas en la visita. Una huella urbana actual no equivale automáticamente a la superficie conocida de la vivienda romana.",
+    "La revisión de 2022 y el estudio de servicio de 2019 permiten presentar las funciones abiertas como preguntas arqueológicas. La forma de un recinto no basta para certificar su nombre.",
+    "Las fotografías publicadas orientan los materiales y el ambiente del museo. Las texturas y dibujos del atlas se realizan para la maqueta y no se presentan como copias exactas de las piezas.",
+    "Los elementos levantados, los objetos y el agua de la vista histórica ayudan a interpretar el espacio. Sus detalles visuales y su colocación no se atribuyen a un registro arqueológico inexistente.",
+    "Los focos del recorrido son posiciones de cámara. La visita virtual no certifica un itinerario físico, unas condiciones actuales de acceso ni un levantamiento topográfico integral."
+  ],
+  "readingLegend": [
+    {
+      "id": "residencial",
+      "label": "La casa romana",
+      "color": "#d5b77d",
+      "note": "Patio, accesos, estancias y materiales de la vivienda."
+    },
+    {
+      "id": "reforma",
+      "label": "Reformas y uso del agua",
+      "color": "#b8a1bf",
+      "note": "Cambios de circulación y estructuras hidráulicas de función discutida."
+    },
+    {
+      "id": "pintura",
+      "label": "Pintura y decoración",
+      "color": "#ad685d",
+      "note": "Los motivos marinos, los revestimientos y la lectura del color."
+    },
+    {
+      "id": "interpretacion",
+      "label": "Restitución e hipótesis",
+      "color": "#7db9ba",
+      "note": "Funciones propuestas, límites incompletos y partes levantadas de forma interpretativa."
+    },
+    {
+      "id": "contemporanea",
+      "label": "Museo y ciudad actual",
+      "color": "#86a7b1",
+      "note": "El edificio protector, las pasarelas, el acceso y su barrio."
+    }
+  ],
+  "confidenceLegend": [
+    {
+      "id": "documented",
+      "label": "Documentado",
+      "note": "La fuente respalda el hecho; no certifica exactitud métrica de toda la maqueta."
+    },
+    {
+      "id": "interpretive",
+      "label": "Interpretación",
+      "note": "Función propuesta, fecha aproximada o complemento visual de una evidencia incompleta."
+    },
+    {
+      "id": "disputed",
+      "label": "En debate",
+      "note": "Las publicaciones ofrecen lecturas diferentes y la visita mantiene visible esa diferencia."
+    }
+  ],
+  "stops": [
+    {
+      "id": "domus-conjunto",
+      "title": "La casa bajo la ciudad",
+      "label": "El conjunto",
+      "regionId": "contemporanea",
+      "period": "contemporary",
+      "intro": "Sitúa la casa en el atlas y abre el corte para descubrir sus espacios. El recorrido permite mirar el conjunto, acercarse a los detalles y comparar distintas lecturas de la vivienda.",
+      "narrative": "Sitúa la casa en el atlas y abre el corte para descubrir sus espacios. El recorrido permite mirar el conjunto, acercarse a los detalles y comparar distintas lecturas de la vivienda.",
+      "facts": [
+        {
+          "text": "La excavación se desarrolló en tres campañas durante 2002.",
+          "sourceIds": [
+            "dp-numismatica2021"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Los restos quedaron integrados en el edificio que sustituyó al cine Marvi.",
+          "sourceIds": [
+            "dp-numismatica2021"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Compara la envolvente urbana con la planta que aparece al abrir el corte.",
+      "modelNote": "La escena es una maqueta documentada y aproximada. El corte hace visible una parte del subsuelo, sin reproducir un levantamiento completo del inmueble.",
+      "sourceIds": [
+        "dp-numismatica2021",
+        "dp-excavacion2002",
+        "dp-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual registrado sobre la planta publicada y la cartografía del atlas. La posición orienta la visita digital; no representa una medición topográfica de cada resto.",
+      "osmIds": [
+        203064322
+      ],
+      "order": 1,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "dp-numismatica2021",
+        "dp-osm"
+      ],
+      "readingLayer": "contemporanea",
+      "coordinate": [
+        -0.27241937,
+        39.67744382
+      ],
+      "coordinates": [
+        -0.27241937,
+        39.67744382
+      ],
+      "floor": 0
+    },
+    {
+      "id": "domus-acceso",
+      "title": "Entrar desde la calle",
+      "label": "El acceso actual",
+      "regionId": "contemporanea",
+      "period": "contemporary",
+      "intro": "Acércate a la fachada y localiza el acceso de la visita. Después, busca el vestíbulo romano para entender cómo cambia la relación entre calle y vivienda.",
+      "narrative": "Acércate a la fachada y localiza el acceso de la visita. Después, busca el vestíbulo romano para entender cómo cambia la relación entre calle y vivienda.",
+      "facts": [
+        {
+          "text": "La dirección del yacimiento es calle Valencia, 2, junto a Josefa Daroqui.",
+          "sourceIds": [
+            "dp-numismatica2021"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El informe inicial sitúa la entrada romana al oeste, hacia la actual Josefa Daroqui.",
+          "sourceIds": [
+            "dp-excavacion2002"
+          ],
+          "confidence": "interpretive"
+        }
+      ],
+      "lookFor": "Observa la esquina, la acera y el paso desde la calle hacia el interior.",
+      "modelNote": "El acceso actual y el antiguo vestíbulo se presentan como focos distintos. La puerta y la distribución contemporáneas se simplifican para la lectura del atlas.",
+      "sourceIds": [
+        "dp-numismatica2021",
+        "dp-excavacion2002",
+        "dp-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual registrado sobre la planta publicada y la cartografía del atlas. La posición orienta la visita digital; no representa una medición topográfica de cada resto.",
+      "osmIds": [
+        203064322
+      ],
+      "order": 2,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "dp-numismatica2021",
+        "dp-osm"
+      ],
+      "readingLayer": "contemporanea",
+      "coordinate": [
+        -0.272296,
+        39.677419
+      ],
+      "coordinates": [
+        -0.272296,
+        39.677419
+      ],
+      "floor": 0
+    },
+    {
+      "id": "domus-museo",
+      "title": "Mirar desde la pasarela",
+      "label": "El espacio visitable",
+      "regionId": "contemporanea",
+      "period": "contemporary",
+      "intro": "Recorre visualmente el borde de la excavación. La vista cercana ayuda a comparar alturas, materiales y distancias sin perder de vista la casa completa.",
+      "narrative": "Recorre visualmente el borde de la excavación. La vista cercana ayuda a comparar alturas, materiales y distancias sin perder de vista la casa completa.",
+      "facts": [
+        {
+          "text": "La museografía se ejecutó en 2011, según el estudio numismático.",
+          "sourceIds": [
+            "dp-numismatica2021"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La Diputación fecha la apertura al público en julio de 2012.",
+          "sourceIds": [
+            "dp-dival2013"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Busca las pasarelas, los apoyos modernos y la iluminación sobre los restos.",
+      "modelNote": "La fotografía publicada del museo guía el ambiente. El trazado exacto de barandillas, luminarias y estructura actual es una aproximación visual.",
+      "sourceIds": [
+        "dp-numismatica2021",
+        "dp-dival2013"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual registrado sobre la planta publicada y la cartografía del atlas. La posición orienta la visita digital; no representa una medición topográfica de cada resto.",
+      "osmIds": [
+        203064322
+      ],
+      "order": 3,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "dp-numismatica2021",
+        "dp-osm"
+      ],
+      "readingLayer": "contemporanea",
+      "coordinate": [
+        -0.2724219,
+        39.67744054
+      ],
+      "coordinates": [
+        -0.2724219,
+        39.67744054
+      ],
+      "floor": -1
+    },
+    {
+      "id": "domus-vestibulo",
+      "title": "Un acceso que cambió de uso",
+      "label": "El vestíbulo",
+      "regionId": "residencial",
+      "period": "roman",
+      "intro": "Mira desde este umbral hacia el centro de la casa. Activa la lectura por capas y sigue las huellas de los cambios de circulación.",
+      "narrative": "Mira desde este umbral hacia el centro de la casa. Activa la lectura por capas y sigue las huellas de los cambios de circulación.",
+      "facts": [
+        {
+          "text": "Entre los siglos III y IV se anuló la entrada principal.",
+          "sourceIds": [
+            "dp-revision2022"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El vestíbulo pasó a ser una habitación accesible desde el patio.",
+          "sourceIds": [
+            "dp-revision2022"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Sigue el eje de entrada y compara los pasos abiertos con los cierres añadidos.",
+      "modelNote": "Los muros bajos permiten leer la planta. La escena reúne evidencias de varias fases; los pasos no deben entenderse como un estado único de ocupación.",
+      "sourceIds": [
+        "dp-revision2022",
+        "dp-numismatica2021"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual registrado sobre la planta publicada y la cartografía del atlas. La posición orienta la visita digital; no representa una medición topográfica de cada resto.",
+      "osmIds": [],
+      "order": 4,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "dp-numismatica2021",
+        "dp-osm"
+      ],
+      "readingLayer": "residencial",
+      "coordinate": [
+        -0.27248453,
+        39.67742962
+      ],
+      "coordinates": [
+        -0.27248453,
+        39.67742962
+      ],
+      "floor": -1
+    },
+    {
+      "id": "domus-atrio",
+      "title": "El centro de la vivienda",
+      "label": "El patio central",
+      "regionId": "residencial",
+      "period": "roman",
+      "intro": "Gira alrededor del espacio central y observa cómo se relacionan las habitaciones. Su forma permite entender la casa, aunque su clasificación arquitectónica sigue abierta.",
+      "narrative": "Gira alrededor del espacio central y observa cómo se relacionan las habitaciones. Su forma permite entender la casa, aunque su clasificación arquitectónica sigue abierta.",
+      "facts": [
+        {
+          "text": "El espacio central mide 7,31 × 3,50 m en la publicación inicial.",
+          "sourceIds": [
+            "dp-excavacion2002"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Se ha interpretado como atrio corintio y, posteriormente, como patio porticado.",
+          "sourceIds": [
+            "dp-revision2022"
+          ],
+          "confidence": "disputed"
+        }
+      ],
+      "lookFor": "Busca el estanque elevado, los apoyos y los accesos a las estancias.",
+      "modelNote": "El nombre tradicional «atrio» se conserva en la documentación; la visita usa «patio central» para hacer visible el debate.",
+      "sourceIds": [
+        "dp-excavacion2002",
+        "dp-revision2022"
+      ],
+      "confidence": "disputed",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual registrado sobre la planta publicada y la cartografía del atlas. La posición orienta la visita digital; no representa una medición topográfica de cada resto.",
+      "osmIds": [],
+      "order": 5,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "dp-numismatica2021",
+        "dp-osm"
+      ],
+      "readingLayer": "residencial",
+      "coordinate": [
+        -0.27241937,
+        39.67744382
+      ],
+      "coordinates": [
+        -0.27241937,
+        39.67744382
+      ],
+      "floor": -1
+    },
+    {
+      "id": "domus-impluvium",
+      "title": "Un estanque elevado",
+      "label": "El impluvium",
+      "regionId": "residencial",
+      "period": "roman",
+      "intro": "Acércate al borde y cambia la altura de la cámara. Mira la relación entre el vaso, su coronación y el pavimento que lo rodea.",
+      "narrative": "Acércate al borde y cambia la altura de la cámara. Mira la relación entre el vaso, su coronación y el pavimento que lo rodea.",
+      "facts": [
+        {
+          "text": "Mide 4,22 × 2,46 m exteriormente y 3,06 × 1,56 m en su interior.",
+          "sourceIds": [
+            "dp-excavacion2002"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Su borde se eleva unos 0,75 m sobre el suelo exterior.",
+          "sourceIds": [
+            "dp-excavacion2002"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Observa las esquinas redondeadas y el espesor del pretil.",
+      "modelNote": "Las medidas publicadas guían el volumen; las irregularidades y la textura son una recreación. La presencia de agua pertenece a la restitución histórica.",
+      "sourceIds": [
+        "dp-excavacion2002",
+        "dp-dival2013"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual registrado sobre la planta publicada y la cartografía del atlas. La posición orienta la visita digital; no representa una medición topográfica de cada resto.",
+      "osmIds": [],
+      "order": 6,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "dp-numismatica2021",
+        "dp-osm"
+      ],
+      "readingLayer": "residencial",
+      "coordinate": [
+        -0.27241937,
+        39.67744382
+      ],
+      "coordinates": [
+        -0.27241937,
+        39.67744382
+      ],
+      "floor": -1
+    },
+    {
+      "id": "domus-peces",
+      "title": "Los peces que dan nombre a la casa",
+      "label": "La pintura marina",
+      "regionId": "pintura",
+      "period": "roman",
+      "intro": "Baja la mirada hasta los laterales del estanque. La proximidad permite descubrir el tema pictórico y la diferencia entre superficie pintada, pérdida y soporte.",
+      "narrative": "Baja la mirada hasta los laterales del estanque. La proximidad permite descubrir el tema pictórico y la diferencia entre superficie pintada, pérdida y soporte.",
+      "facts": [
+        {
+          "text": "Las pinturas de peces y motivos marinos dieron nombre al yacimiento.",
+          "sourceIds": [
+            "dp-dival2013"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El informe de excavación documenta la decoración en el revestimiento exterior del estanque.",
+          "sourceIds": [
+            "dp-excavacion2002"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Busca las figuras marinas sobre el enlucido claro del pretil.",
+      "modelNote": "Los peces del modelo son dibujos originales inspirados en la documentación. No son un facsímil ni un mosaico arqueológico.",
+      "sourceIds": [
+        "dp-excavacion2002",
+        "dp-dival2013"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual registrado sobre la planta publicada y la cartografía del atlas. La posición orienta la visita digital; no representa una medición topográfica de cada resto.",
+      "osmIds": [],
+      "order": 7,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "dp-numismatica2021",
+        "dp-osm"
+      ],
+      "readingLayer": "pintura",
+      "coordinate": [
+        -0.27241353,
+        39.67743347
+      ],
+      "coordinates": [
+        -0.27241353,
+        39.67743347
+      ],
+      "floor": -1
+    },
+    {
+      "id": "domus-columnas",
+      "title": "Fragmentos de una arquitectura pintada",
+      "label": "Las columnas",
+      "regionId": "residencial",
+      "period": "roman",
+      "intro": "Compara los apoyos conservados con las piezas que se levantan en la restitución. Cambiar entre modos ayuda a reconocer cuánto depende de una hipótesis de alzado.",
+      "narrative": "Compara los apoyos conservados con las piezas que se levantan en la restitución. Cambiar entre modos ayuda a reconocer cuánto depende de una hipótesis de alzado.",
+      "facts": [
+        {
+          "text": "La revisión de 2022 menciona cinco fustes, uno con pintura azul y roja.",
+          "sourceIds": [
+            "dp-revision2022"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El diámetro publicado de las columnas es de unos 0,30 m.",
+          "sourceIds": [
+            "dp-excavacion2002"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Fíjate en el estuco coloreado, los arranques y el fragmento caído.",
+      "modelNote": "El número de hallazgos no acredita cinco columnas completas en pie. La altura, el orden de apoyos perdidos y la restitución superior son interpretativos.",
+      "sourceIds": [
+        "dp-revision2022",
+        "dp-excavacion2002"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual registrado sobre la planta publicada y la cartografía del atlas. La posición orienta la visita digital; no representa una medición topográfica de cada resto.",
+      "osmIds": [],
+      "order": 8,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "dp-numismatica2021",
+        "dp-osm"
+      ],
+      "readingLayer": "residencial",
+      "coordinate": [
+        -0.27241221,
+        39.67743132
+      ],
+      "coordinates": [
+        -0.27241221,
+        39.67743132
+      ],
+      "floor": -1
+    },
+    {
+      "id": "domus-compluvium",
+      "title": "Una propuesta para la luz y la lluvia",
+      "label": "La cubierta",
+      "regionId": "interpretacion",
+      "period": "roman",
+      "intro": "Activa la vista histórica y observa la abertura sobre el patio. Después vuelve al corte para comparar la propuesta de cubierta con la evidencia conservada.",
+      "narrative": "Activa la vista histórica y observa la abertura sobre el patio. Después vuelve al corte para comparar la propuesta de cubierta con la evidencia conservada.",
+      "facts": [
+        {
+          "text": "La divulgación oficial interpreta el impluvium como receptor del agua de lluvia.",
+          "sourceIds": [
+            "dp-dival2013"
+          ],
+          "confidence": "interpretive"
+        }
+      ],
+      "lookFor": "Sigue visualmente las pendientes hacia el hueco central y el estanque.",
+      "modelNote": "Las vertientes, vigas y cotas son una hipótesis didáctica. El debate entre atrio y patio porticado impide tratar esta cubierta como una solución demostrada.",
+      "sourceIds": [
+        "dp-dival2013",
+        "dp-revision2022"
+      ],
+      "confidence": "interpretive",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual registrado sobre la planta publicada y la cartografía del atlas. La posición orienta la visita digital; no representa una medición topográfica de cada resto.",
+      "osmIds": [],
+      "order": 9,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "dp-numismatica2021",
+        "dp-osm"
+      ],
+      "readingLayer": "interpretacion",
+      "coordinate": [
+        -0.27241937,
+        39.67744382
+      ],
+      "coordinates": [
+        -0.27241937,
+        39.67744382
+      ],
+      "floor": -1
+    },
+    {
+      "id": "domus-taberna",
+      "title": "Un ámbito junto a la entrada",
+      "label": "La posible taberna",
+      "regionId": "residencial",
+      "period": "roman",
+      "intro": "Observa esta estancia desde el acceso y desde el patio. Su posición invita a pensar en las relaciones entre actividad doméstica, almacenaje y calle.",
+      "narrative": "Observa esta estancia desde el acceso y desde el patio. Su posición invita a pensar en las relaciones entre actividad doméstica, almacenaje y calle.",
+      "facts": [
+        {
+          "text": "La bibliografía identifica como taberna la estancia contigua al área de servicio.",
+          "sourceIds": [
+            "dp-servicio2019"
+          ],
+          "confidence": "interpretive"
+        },
+        {
+          "text": "El informe describe un banco de 0,58 × 1,12 m.",
+          "sourceIds": [
+            "dp-excavacion2002"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Localiza el banco y los límites entre habitaciones.",
+      "modelNote": "Los recipientes y útiles añadidos en la vista histórica indican escala y posibles usos; su colocación no reproduce un inventario hallado in situ.",
+      "sourceIds": [
+        "dp-excavacion2002",
+        "dp-servicio2019"
+      ],
+      "confidence": "interpretive",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual registrado sobre la planta publicada y la cartografía del atlas. La posición orienta la visita digital; no representa una medición topográfica de cada resto.",
+      "osmIds": [],
+      "order": 10,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "dp-numismatica2021",
+        "dp-osm"
+      ],
+      "readingLayer": "residencial",
+      "coordinate": [
+        -0.27250126,
+        39.67747278
+      ],
+      "coordinates": [
+        -0.27250126,
+        39.67747278
+      ],
+      "floor": -1
+    },
+    {
+      "id": "domus-cocina",
+      "title": "La vida cotidiana en los objetos",
+      "label": "Cocina y almacenaje",
+      "regionId": "residencial",
+      "period": "roman",
+      "intro": "Acércate al pavimento y examina cómo se conecta esta habitación con las demás. Aquí los objetos recuperados son esenciales para proponer una función.",
+      "narrative": "Acércate al pavimento y examina cómo se conecta esta habitación con las demás. Aquí los objetos recuperados son esenciales para proponer una función.",
+      "facts": [
+        {
+          "text": "La estancia de 3,44 × 3,70 m queda al norte del patio.",
+          "sourceIds": [
+            "dp-servicio2019"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La cerámica sugiere uso de cocina y almacenaje; no se documentó hogar ni horno fijo.",
+          "sourceIds": [
+            "dp-servicio2019"
+          ],
+          "confidence": "interpretive"
+        }
+      ],
+      "lookFor": "Compara este suelo con los acabados del patio y la sala de recepción.",
+      "modelNote": "La restitución evita atribuir a la excavación una cocina monumental o un hogar permanente. Los enseres son ilustrativos.",
+      "sourceIds": [
+        "dp-servicio2019",
+        "dp-excavacion2002"
+      ],
+      "confidence": "interpretive",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual registrado sobre la planta publicada y la cartografía del atlas. La posición orienta la visita digital; no representa una medición topográfica de cada resto.",
+      "osmIds": [],
+      "order": 11,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "dp-numismatica2021",
+        "dp-osm"
+      ],
+      "readingLayer": "residencial",
+      "coordinate": [
+        -0.27245569,
+        39.67748721
+      ],
+      "coordinates": [
+        -0.27245569,
+        39.67748721
+      ],
+      "floor": -1
+    },
+    {
+      "id": "domus-balneum",
+      "title": "¿Baño privado o reserva de agua?",
+      "label": "Baño o depósito",
+      "regionId": "reforma",
+      "period": "roman",
+      "intro": "Mira el pequeño recinto desde arriba y atiende a su tratamiento interior. Una misma estructura permite preguntas distintas sobre el uso del agua.",
+      "narrative": "Mira el pequeño recinto desde arriba y atiende a su tratamiento interior. Una misma estructura permite preguntas distintas sobre el uso del agua.",
+      "facts": [
+        {
+          "text": "El recinto mide 1,94 × 1,36 m.",
+          "sourceIds": [
+            "dp-excavacion2002"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Se propuso un baño; otra lectura plantea almacenaje de agua para el área de servicio.",
+          "sourceIds": [
+            "dp-servicio2019"
+          ],
+          "confidence": "disputed"
+        }
+      ],
+      "lookFor": "Busca el revestimiento hidráulico y los encuentros curvos entre suelo y paredes.",
+      "modelNote": "Se representa una estructura hidráulica sin hipocausto. La forma conservada tiene prioridad sobre una escenografía de baño no acreditada.",
+      "sourceIds": [
+        "dp-excavacion2002",
+        "dp-servicio2019",
+        "dp-vivienda2014"
+      ],
+      "confidence": "disputed",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual registrado sobre la planta publicada y la cartografía del atlas. La posición orienta la visita digital; no representa una medición topográfica de cada resto.",
+      "osmIds": [],
+      "order": 12,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "dp-numismatica2021",
+        "dp-osm"
+      ],
+      "readingLayer": "reforma",
+      "coordinate": [
+        -0.2724526,
+        39.67745972
+      ],
+      "coordinates": [
+        -0.2724526,
+        39.67745972
+      ],
+      "floor": -1
+    },
+    {
+      "id": "domus-tablinum",
+      "title": "Recibir en la casa",
+      "label": "La sala de recepción",
+      "regionId": "interpretacion",
+      "period": "roman",
+      "intro": "Mira hacia el patio desde el fondo de la sala. Su posición y su decoración permiten explorar cómo se construía una imagen doméstica de prestigio.",
+      "narrative": "Mira hacia el patio desde el fondo de la sala. Su posición y su decoración permiten explorar cómo se construía una imagen doméstica de prestigio.",
+      "facts": [
+        {
+          "text": "La sala publicada mide 4,26 × 5,50 m.",
+          "sourceIds": [
+            "dp-excavacion2002"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "A la identificación como tablinum se ha añadido la propuesta de un posible triclinium.",
+          "sourceIds": [
+            "dp-revision2022"
+          ],
+          "confidence": "disputed"
+        }
+      ],
+      "lookFor": "Observa la anchura de la entrada y la relación entre suelo, zócalo y paneles.",
+      "modelNote": "El rótulo funcional permanece abierto. El mobiliario histórico es hipotético y no identifica a un propietario concreto.",
+      "sourceIds": [
+        "dp-excavacion2002",
+        "dp-revision2022"
+      ],
+      "confidence": "disputed",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual registrado sobre la planta publicada y la cartografía del atlas. La posición orienta la visita digital; no representa una medición topográfica de cada resto.",
+      "osmIds": [],
+      "order": 13,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "dp-numismatica2021",
+        "dp-osm"
+      ],
+      "readingLayer": "interpretacion",
+      "coordinate": [
+        -0.27233953,
+        39.67745951
+      ],
+      "coordinates": [
+        -0.27233953,
+        39.67745951
+      ],
+      "floor": -1
+    },
+    {
+      "id": "domus-pinturas",
+      "title": "Mármol pintado y paneles de color",
+      "label": "Las pinturas murales",
+      "regionId": "pintura",
+      "period": "roman",
+      "intro": "Acércate a los paños de pared y alterna la lectura de los restos con la propuesta histórica. El color permite imaginar la estancia sin borrar sus lagunas.",
+      "narrative": "Acércate a los paños de pared y alterna la lectura de los restos con la propuesta histórica. El color permite imaginar la estancia sin borrar sus lagunas.",
+      "facts": [
+        {
+          "text": "Los zócalos pintados imitan placas de mármol con vetas coloreadas.",
+          "sourceIds": [
+            "dp-excavacion2002"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La decoración combina paneles verdes, bandas rojas y filetes claros.",
+          "sourceIds": [
+            "dp-excavacion2002"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Compara las zonas conservadas con la continuidad propuesta en los alzados.",
+      "modelNote": "La paleta sigue las descripciones y fotografías. El dibujo, extensión y repetición del acabado son una interpretación original, no una reproducción exacta.",
+      "sourceIds": [
+        "dp-excavacion2002",
+        "dp-vivienda2014"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual registrado sobre la planta publicada y la cartografía del atlas. La posición orienta la visita digital; no representa una medición topográfica de cada resto.",
+      "osmIds": [],
+      "order": 14,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "dp-numismatica2021",
+        "dp-osm"
+      ],
+      "readingLayer": "pintura",
+      "coordinate": [
+        -0.27234627,
+        39.67748127
+      ],
+      "coordinates": [
+        -0.27234627,
+        39.67748127
+      ],
+      "floor": -1
+    },
+    {
+      "id": "domus-umbrales",
+      "title": "La casa se lee en sus pasos",
+      "label": "Los umbrales",
+      "regionId": "residencial",
+      "period": "roman",
+      "intro": "Sitúa la cámara cerca del suelo y sigue los cambios entre espacios. Una pequeña diferencia de cota puede hacer más comprensible toda la planta.",
+      "narrative": "Sitúa la cámara cerca del suelo y sigue los cambios entre espacios. Una pequeña diferencia de cota puede hacer más comprensible toda la planta.",
+      "facts": [
+        {
+          "text": "El acceso a la sala tiene una abertura de 2,24 m y un umbral de 0,48 m de fondo.",
+          "sourceIds": [
+            "dp-excavacion2002"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La piedra conserva ranuras y señales relacionadas con las hojas de la puerta.",
+          "sourceIds": [
+            "dp-excavacion2002"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Busca el escalón, la pieza pétrea y los encajes de cierre.",
+      "modelNote": "Los detalles se hacen legibles a escala de visita. No se reconstruye una carpintería completa como hallazgo conservado.",
+      "sourceIds": [
+        "dp-excavacion2002"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual registrado sobre la planta publicada y la cartografía del atlas. La posición orienta la visita digital; no representa una medición topográfica de cada resto.",
+      "osmIds": [],
+      "order": 15,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "dp-numismatica2021",
+        "dp-osm"
+      ],
+      "readingLayer": "residencial",
+      "coordinate": [
+        -0.27236362,
+        39.67745477
+      ],
+      "coordinates": [
+        -0.27236362,
+        39.67745477
+      ],
+      "floor": -1
+    },
+    {
+      "id": "domus-pavimentos",
+      "title": "Suelos que cuentan usos",
+      "label": "Los pavimentos",
+      "regionId": "residencial",
+      "period": "roman",
+      "intro": "Explora la casa a baja altura y compara cada acabado. Las variaciones de color y aparejo ayudan a orientarse entre las habitaciones.",
+      "narrative": "Explora la casa a baja altura y compara cada acabado. Las variaciones de color y aparejo ayudan a orientarse entre las habitaciones.",
+      "facts": [
+        {
+          "text": "Junto al patio se conserva un pavimento cerámico en espiga, opus spicatum.",
+          "sourceIds": [
+            "dp-excavacion2002"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El suelo del área de servicio se describe como mortero de cal blanco pulido.",
+          "sourceIds": [
+            "dp-excavacion2002"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Acércate a la espiga y compara su escala con el revestimiento del estanque.",
+      "modelNote": "Las texturas se generan para esta maqueta. El patrón explica la técnica, sin inventar un mosaico figurativo ni completar automáticamente toda la superficie.",
+      "sourceIds": [
+        "dp-excavacion2002",
+        "dp-servicio2019"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual registrado sobre la planta publicada y la cartografía del atlas. La posición orienta la visita digital; no representa una medición topográfica de cada resto.",
+      "osmIds": [],
+      "order": 16,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "dp-numismatica2021",
+        "dp-osm"
+      ],
+      "readingLayer": "residencial",
+      "coordinate": [
+        -0.27244683,
+        39.67743035
+      ],
+      "coordinates": [
+        -0.27244683,
+        39.67743035
+      ],
+      "floor": -1
+    },
+    {
+      "id": "domus-limites",
+      "title": "Hasta dónde conocemos la casa",
+      "label": "Los límites excavados",
+      "regionId": "interpretacion",
+      "period": "roman",
+      "intro": "Recorre el perímetro y busca interrupciones y bordes incompletos. Deja que esas ausencias formen parte de la lectura del edificio.",
+      "narrative": "Recorre el perímetro y busca interrupciones y bordes incompletos. Deja que esas ausencias formen parte de la lectura del edificio.",
+      "facts": [
+        {
+          "text": "Una cisterna del cine alteró el cierre occidental de la vivienda.",
+          "sourceIds": [
+            "dp-numismatica2021"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La dirección de excavación distinguió nueve estancias, algunas peor conservadas.",
+          "sourceIds": [
+            "dp-numismatica2021"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Observa los extremos de los muros y los sectores que quedan fuera de la planta legible.",
+      "modelNote": "El recorte de la escena no equivale al límite total de la casa. Los cierres, estancias o jardines no acreditados se mantienen sin una restitución cerrada.",
+      "sourceIds": [
+        "dp-numismatica2021",
+        "dp-excavacion2002"
+      ],
+      "confidence": "interpretive",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual registrado sobre la planta publicada y la cartografía del atlas. La posición orienta la visita digital; no representa una medición topográfica de cada resto.",
+      "osmIds": [],
+      "order": 17,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "dp-numismatica2021",
+        "dp-osm"
+      ],
+      "readingLayer": "interpretacion",
+      "coordinate": [
+        -0.27233339,
+        39.67742066
+      ],
+      "coordinates": [
+        -0.27233339,
+        39.67742066
+      ],
+      "floor": -1
+    },
+    {
+      "id": "domus-fases",
+      "title": "Una vivienda que se transforma",
+      "label": "Las fases de la casa",
+      "regionId": "reforma",
+      "period": "roman",
+      "intro": "Activa las capas y compara permanencias y cambios. Usa la cronología para distinguir los episodios de construcción, reforma, abandono y estudio.",
+      "narrative": "Activa las capas y compara permanencias y cambios. Usa la cronología para distinguir los episodios de construcción, reforma, abandono y estudio.",
+      "facts": [
+        {
+          "text": "El estudio de 2021 sitúa la construcción a finales del siglo I o comienzos del II, con reformas posteriores.",
+          "sourceIds": [
+            "dp-numismatica2021"
+          ],
+          "confidence": "interpretive"
+        },
+        {
+          "text": "Se estudiaron trece monedas: doce romanas y una moderna.",
+          "sourceIds": [
+            "dp-numismatica2021"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Busca los cierres que modifican los recorridos y las diferencias de fábrica.",
+      "modelNote": "Las capas agrupan temas y evidencias; no son una secuencia estratigráfica exhaustiva. Las monedas no permiten atribuir la casa a una familia conocida.",
+      "sourceIds": [
+        "dp-numismatica2021",
+        "dp-revision2022",
+        "dp-servicio2019"
+      ],
+      "confidence": "interpretive",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual registrado sobre la planta publicada y la cartografía del atlas. La posición orienta la visita digital; no representa una medición topográfica de cada resto.",
+      "osmIds": [],
+      "order": 18,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "dp-numismatica2021",
+        "dp-osm"
+      ],
+      "readingLayer": "reforma",
+      "coordinate": [
+        -0.27247501,
+        39.67747646
+      ],
+      "coordinates": [
+        -0.27247501,
+        39.67747646
+      ],
+      "floor": -1
+    },
+    {
+      "id": "domus-historica",
+      "title": "Imaginar a partir de los restos",
+      "label": "La restitución histórica",
+      "regionId": "interpretacion",
+      "period": "roman",
+      "intro": "Activa la vista histórica para explorar una propuesta de volumen, luz y uso. Regresa al corte cuando quieras contrastarla con los restos que la sustentan.",
+      "narrative": "Activa la vista histórica para explorar una propuesta de volumen, luz y uso. Regresa al corte cuando quieras contrastarla con los restos que la sustentan.",
+      "facts": [
+        {
+          "text": "La disposición axial está documentada, pero la lectura funcional de sus salas sigue en debate.",
+          "sourceIds": [
+            "dp-revision2022"
+          ],
+          "confidence": "disputed"
+        }
+      ],
+      "lookFor": "Compara cubiertas, columnas, superficies pintadas y mobiliario entre ambos modos.",
+      "modelNote": "La escena histórica es una interpretación revisable. Alturas, techos, carpinterías, agua y objetos no se presentan como una fotografía del pasado.",
+      "sourceIds": [
+        "dp-revision2022",
+        "dp-numismatica2021"
+      ],
+      "confidence": "interpretive",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual registrado sobre la planta publicada y la cartografía del atlas. La posición orienta la visita digital; no representa una medición topográfica de cada resto.",
+      "osmIds": [],
+      "order": 19,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "dp-numismatica2021",
+        "dp-osm"
+      ],
+      "readingLayer": "interpretacion",
+      "coordinate": [
+        -0.27241827,
+        39.67744774
+      ],
+      "coordinates": [
+        -0.27241827,
+        39.67744774
+      ],
+      "floor": -1
+    },
+    {
+      "id": "domus-entorno",
+      "title": "De esta casa al resto de Saguntum",
+      "label": "El entorno urbano",
+      "regionId": "contemporanea",
+      "period": "contemporary",
+      "intro": "Recupera la ciudad actual y amplía la mirada. Continúa por el atlas hacia la Vía del Pòrtic o el Museo Arqueológico para relacionar casa, calle y colecciones.",
+      "narrative": "Recupera la ciudad actual y amplía la mirada. Continúa por el atlas hacia la Vía del Pòrtic o el Museo Arqueológico para relacionar casa, calle y colecciones.",
+      "facts": [
+        {
+          "text": "Civera describe los restos aproximadamente un metro por debajo de la calle.",
+          "sourceIds": [
+            "dp-ciudad2004"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La difusión turística presenta la Domus y la Vía del Pòrtic como dos espacios de una visita conjunta.",
+          "sourceIds": [
+            "dp-dival2013"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Relaciona la manzana, las calles próximas y los accesos del barrio.",
+      "modelNote": "Las fachadas y el relieve contextualizan el yacimiento. Los niveles antiguos no se extrapolan a toda la calle y el atlas no certifica recorridos accesibles.",
+      "sourceIds": [
+        "dp-ciudad2004",
+        "dp-dival2013",
+        "dp-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual registrado sobre la planta publicada y la cartografía del atlas. La posición orienta la visita digital; no representa una medición topográfica de cada resto.",
+      "osmIds": [
+        203064322
+      ],
+      "order": 20,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "dp-numismatica2021",
+        "dp-osm"
+      ],
+      "readingLayer": "contemporanea",
+      "coordinate": [
+        -0.27295,
+        39.67749
+      ],
+      "coordinates": [
+        -0.27295,
+        39.67749
+      ],
+      "floor": 0
+    }
+  ],
+  "regions": [
+    {
+      "id": "residencial",
+      "name": "La casa romana",
+      "aliases": [],
+      "summary": "Patio, accesos, estancias y materiales de la vivienda.",
+      "sourceIds": [
+        "dp-revision2022",
+        "dp-numismatica2021",
+        "dp-excavacion2002",
+        "dp-dival2013",
+        "dp-servicio2019"
+      ],
+      "stopIds": [
+        "domus-vestibulo",
+        "domus-atrio",
+        "domus-impluvium",
+        "domus-columnas",
+        "domus-taberna",
+        "domus-cocina",
+        "domus-umbrales",
+        "domus-pavimentos"
+      ],
+      "coordinate": [
+        -0.27244381229822306,
+        39.67745918805445
+      ]
+    },
+    {
+      "id": "reforma",
+      "name": "Reformas y uso del agua",
+      "aliases": [],
+      "summary": "Cambios de circulación y estructuras hidráulicas de función discutida.",
+      "sourceIds": [
+        "dp-excavacion2002",
+        "dp-servicio2019",
+        "dp-vivienda2014",
+        "dp-numismatica2021",
+        "dp-revision2022"
+      ],
+      "stopIds": [
+        "domus-balneum",
+        "domus-fases"
+      ],
+      "coordinate": [
+        -0.27245779132959985,
+        39.677478013851456
+      ]
+    },
+    {
+      "id": "pintura",
+      "name": "Pintura y decoración",
+      "aliases": [],
+      "summary": "Los motivos marinos, los revestimientos y la lectura del color.",
+      "sourceIds": [
+        "dp-excavacion2002",
+        "dp-dival2013",
+        "dp-vivienda2014"
+      ],
+      "stopIds": [
+        "domus-peces",
+        "domus-pinturas"
+      ],
+      "coordinate": [
+        -0.27240183393757944,
+        39.677416589825455
+      ]
+    },
+    {
+      "id": "interpretacion",
+      "name": "Restitución e hipótesis",
+      "aliases": [],
+      "summary": "Funciones propuestas, límites incompletos y partes levantadas de forma interpretativa.",
+      "sourceIds": [
+        "dp-dival2013",
+        "dp-revision2022",
+        "dp-excavacion2002",
+        "dp-numismatica2021"
+      ],
+      "stopIds": [
+        "domus-compluvium",
+        "domus-tablinum",
+        "domus-limites",
+        "domus-historica"
+      ],
+      "coordinate": [
+        -0.2724410164919477,
+        39.67744788940024
+      ]
+    },
+    {
+      "id": "contemporanea",
+      "name": "Museo y ciudad actual",
+      "aliases": [],
+      "summary": "El edificio protector, las pasarelas, el acceso y su barrio.",
+      "sourceIds": [
+        "dp-numismatica2021",
+        "dp-excavacion2002",
+        "dp-osm",
+        "dp-dival2013",
+        "dp-ciudad2004"
+      ],
+      "stopIds": [
+        "domus-conjunto",
+        "domus-acceso",
+        "domus-museo",
+        "domus-entorno"
+      ],
+      "coordinate": [
+        -0.2724883698159473,
+        39.67740652187497
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "dp-excavacion2002",
+      "title": "Notícia preliminar de les excavacions de la domus romana del solar del cinema Marvi (Sagunt)",
+      "author": "Carme Antoni, Francisco José Hernández y José Manuel de Antonio",
+      "url": "https://centroarqueologicosaguntino.es/wp-content/uploads/2018/09/321_06_noticia_preliminar.pdf",
+      "type": "informe de los excavadores · ARSE 36",
+      "year": 2002,
+      "locator": "Páginas 99–116; planta, p. 102, fig. 8; medidas y materiales, pp. 103–112.",
+      "note": "Base métrica del modelo. Se contrasta con la planimetría posterior y las revisiones funcionales.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "dp-numismatica2021",
+      "title": "Hallazgos numismáticos en una domus de Saguntum. La Casa dels Peixos",
+      "author": "Tomás Hurtado Mullor",
+      "url": "https://www.museunacional.cat/pdf/Interactivo_XVI_CONGRESO_NACIONAL_DE_NUMISMATICA_1r_TOMO.pdf",
+      "type": "estudio arqueológico y numismático · XVI Congreso Nacional de Numismática",
+      "year": 2021,
+      "locator": "Páginas 311–330; contexto, pp. 311–313; planta de F. J. Hernández, p. 327, fig. 1.2; excavación y museo, p. 328, fig. 2.",
+      "note": "Publicación de las actas del congreso de 2018. Aporta un plano más completo y documentación del espacio musealizado.",
+      "accessed": "2026-11-20",
+      "alternateUrl": "https://www.academia.edu/71136613/Hallazgos_numism%C3%A1ticos_en_una_domus_de_Saguntum_La_Casa_dels_Peixos_calle_Valencia_n%C3%BAm_2_Calle_Josefa_Daroqui_s_n_Sagunto_Valencia_"
+    },
+    {
+      "id": "dp-revision2022",
+      "title": "Las casas romanas extramuros de la plaza de la Morería",
+      "author": "Josep Benedito-Nuez, José Manuel Melchor-Monserrat y Juan José Ferrer-Maestro",
+      "url": "https://doi.org/10.1344/Pyrenae2022.vol53num2.6",
+      "type": "revisión académica · Pyrenae 53.2",
+      "year": 2022,
+      "locator": "Páginas 145–168; discusión específica de la Domus dels Peixos, p. 151.",
+      "note": "Reúne las interpretaciones alternativas del patio y la recepción. No equivale a una nueva excavación de esta casa.",
+      "accessed": "2026-11-20",
+      "alternateUrl": "https://www.academia.edu/107852058/Las_casas_romanas_extramuros_de_la_plaza_de_la_Morer%C3%ADa_Aspectos_de_la_arquitectura_dom%C3%A9stica_en_Sagunto_en_el_Bajo_Imperio"
+    },
+    {
+      "id": "dp-servicio2019",
+      "title": "Áreas de servicio, producción y almacenaje en los espacios domésticos romanos del territorio valenciano",
+      "author": "Tamara Peñalver Carrascosa",
+      "url": "https://doi.org/10.1344/Pyrenae2019.vol50num2.5",
+      "type": "investigación académica · Pyrenae 50.2",
+      "year": 2019,
+      "locator": "Páginas 105–131; Domus dels Peixos, pp. 119–121, fig. 10.",
+      "note": "Analiza la cerámica, las relaciones entre estancias y la posible función del recinto hidráulico.",
+      "accessed": "2026-11-20",
+      "alternateUrl": "https://www.academia.edu/71064523/%C3%81reas_De_Servicio_Producci%C3%B3n_y_Almacenaje_en_Los_Espacios_Dom%C3%A9sticos_Romanos_Del_Territorio_Valenciano"
+    },
+    {
+      "id": "dp-vivienda2014",
+      "title": "Estado de la cuestión sobre la vivienda urbana romana en el área valenciana",
+      "author": "Tamara Peñalver Carrascosa",
+      "url": "https://doi.org/10.7203/SAGVNTVM.46.3816",
+      "type": "revisión académica · SAGVNTVM 46",
+      "year": 2014,
+      "locator": "Páginas 111–127; Domus dels Peixos, pp. 116–117, figs. 6–7.",
+      "note": "Permite seguir la evolución de las interpretaciones antes del estudio específico de 2019.",
+      "accessed": "2026-11-20",
+      "alternateUrl": "https://roderic.uv.es/bitstream/10550/42535/1/3816.pdf"
+    },
+    {
+      "id": "dp-ciudad2004",
+      "title": "Aproximació a l’evolució urbana del Saguntum antic",
+      "author": "Manuel Civera i Gómez",
+      "url": "https://www.centroarqueologicosaguntino.es/uploads/descargas/397_05_aproximacio_a.pdf",
+      "type": "estudio histórico urbano · ARSE 38",
+      "year": 2004,
+      "locator": "Apartado «La Domus dels Peixos», pp. 107–108.",
+      "note": "Referencia histórica para la relación entre restos, calle y antiguo cine; no aporta una cota topográfica de precisión.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "dp-dival2013",
+      "title": "Via del Pòrtic y Casa dels Peixos, yacimientos romanos en Sagunto",
+      "author": "Turismo de la Diputación de Valencia",
+      "url": "https://turisme.dival.es/via-del-portic-y-casa-dels-peixos-yacimientos-romanos-en-sagunto/",
+      "type": "información institucional",
+      "year": 2013,
+      "locator": "Noticia del 7 de diciembre de 2013.",
+      "note": "Documenta la apertura y la visita conjunta. Sus condiciones de visita corresponden a la fecha de publicación; consultar la información vigente antes de acudir.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "dp-turismo",
+      "title": "Qué ver en Sagunt",
+      "author": "Turismo de la Diputación de Valencia",
+      "url": "https://turisme.dival.es/que-ver-en-sagunt/",
+      "type": "información institucional para visitantes",
+      "year": null,
+      "locator": "Secciones de la Vía del Pòrtic, Domus dels Peixos y Museo Arqueológico.",
+      "note": "Punto de consulta para preparar una visita presencial y localizar la información turística del municipio.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "dp-osm",
+      "title": "Manzana del yacimiento y calles del entorno",
+      "author": "Colaboradores de OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/203064322",
+      "type": "cartografía colaborativa",
+      "year": null,
+      "locator": "Huella del edificio y referencia geográfica del atlas.",
+      "note": "Referencia urbana; no documenta por sí misma los muros antiguos, sus cotas ni las fachadas del museo.",
+      "accessed": "2026-11-20",
+      "licenseUrl": "https://www.openstreetmap.org/copyright"
+    }
+  ],
+  "timeline": [
+    {
+      "id": "dp-t-construccion",
+      "date": "Finales del siglo I–principios del II d. C.",
+      "title": "Construcción de la casa",
+      "text": "La datación publicada en 2021 sitúa aquí el origen de la vivienda.",
+      "sourceIds": [
+        "dp-numismatica2021"
+      ],
+      "period": "roman",
+      "confidence": "interpretive",
+      "stopId": "domus-fases"
+    },
+    {
+      "id": "dp-t-reformas",
+      "date": "Siglos II–III d. C.",
+      "title": "Cambios de uso",
+      "text": "Se documentan reformas; la lectura de 2019 propone cambios hacia funciones de servicio.",
+      "sourceIds": [
+        "dp-servicio2019",
+        "dp-revision2022"
+      ],
+      "period": "roman",
+      "confidence": "interpretive",
+      "stopId": "domus-cocina"
+    },
+    {
+      "id": "dp-t-acceso",
+      "date": "Siglos III–IV d. C.",
+      "title": "Se cierra la entrada",
+      "text": "El antiguo vestíbulo queda incorporado a un uso privado.",
+      "sourceIds": [
+        "dp-revision2022"
+      ],
+      "period": "roman",
+      "confidence": "documented",
+      "stopId": "domus-vestibulo"
+    },
+    {
+      "id": "dp-t-abandono",
+      "date": "Siglos III–IV d. C.",
+      "title": "Última ocupación y abandono",
+      "text": "La revisión de 2022 usa este intervalo; el estudio de 2021 sitúa el abandono en el siglo IV.",
+      "sourceIds": [
+        "dp-revision2022",
+        "dp-numismatica2021"
+      ],
+      "period": "roman",
+      "confidence": "interpretive",
+      "stopId": "domus-fases"
+    },
+    {
+      "id": "dp-t-cine",
+      "date": "Antes de 2002",
+      "title": "El solar del cine Marvi",
+      "text": "Las obras posteriores afectaron a partes de la planta y conservaron otros restos bajo sus suelos.",
+      "sourceIds": [
+        "dp-numismatica2021",
+        "dp-ciudad2004"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "domus-limites"
+    },
+    {
+      "id": "dp-t-excavacion",
+      "date": "2002",
+      "title": "Tres campañas de excavación",
+      "text": "La intervención arqueológica descubre y estudia la vivienda.",
+      "sourceIds": [
+        "dp-numismatica2021"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "domus-conjunto"
+    },
+    {
+      "id": "dp-t-proteccion",
+      "date": "2005",
+      "title": "Protección bajo el edificio",
+      "text": "Se realiza seguimiento arqueológico de la cimentación y del cubrimiento de los restos.",
+      "sourceIds": [
+        "dp-numismatica2021"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "domus-museo"
+    },
+    {
+      "id": "dp-t-museografia",
+      "date": "2011",
+      "title": "Musealización",
+      "text": "Se ejecuta el proyecto para hacer visitable el espacio.",
+      "sourceIds": [
+        "dp-numismatica2021"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "domus-museo"
+    },
+    {
+      "id": "dp-t-apertura",
+      "date": "Julio de 2012",
+      "title": "Apertura al público",
+      "text": "La casa y la Vía del Pòrtic se incorporan a la visita patrimonial.",
+      "sourceIds": [
+        "dp-dival2013"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "domus-acceso"
+    },
+    {
+      "id": "dp-t-servicio",
+      "date": "2019",
+      "title": "Releer la vida cotidiana",
+      "text": "Un estudio específico revisa cocina, almacenaje y uso del agua.",
+      "sourceIds": [
+        "dp-servicio2019"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "domus-balneum"
+    },
+    {
+      "id": "dp-t-monedas",
+      "date": "2021",
+      "title": "Publicación numismática",
+      "text": "Se publica el análisis de las monedas con planta y fotografías del yacimiento.",
+      "sourceIds": [
+        "dp-numismatica2021"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "domus-fases"
+    },
+    {
+      "id": "dp-t-revision",
+      "date": "2022",
+      "title": "Las funciones siguen abiertas",
+      "text": "Una síntesis recoge las alternativas al atrio corintio y al tablinum.",
+      "sourceIds": [
+        "dp-revision2022"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "domus-tablinum"
+    }
+  ],
+  "modelRegistration": {
+    "anchor": [
+      -0.2724193723984326,
+      39.677443815520924
+    ],
+    "yawRadians": 0.25,
+    "baseY": 43.056056841190724,
+    "axisX": "Eje local de acceso, patio y sala principal.",
+    "axisZ": "Eje transversal de la planta interpretada.",
+    "method": "Plantas arqueológicas publicadas y focos compartidos con la maqueta; coordenadas aproximadas.",
+    "precision": "approximate",
+    "surfaceY": 44.20605684119072,
+    "ceilingY": 46.556056841190724,
+    "deckY": 43.656056841190725
+  }
+}

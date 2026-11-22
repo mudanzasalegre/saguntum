@@ -1,0 +1,2342 @@
+{
+  "pass": true,
+  "retryChecks": {
+    "bothInitialRequestsReject": true,
+    "partialGroupsHidden": true,
+    "noPartialScene": true,
+    "ownedGeometriesDisposed": true,
+    "foreignGeometryPreserved": true,
+    "regionalVariablesCleared": true,
+    "regionalMapsCleared": true,
+    "foreignReferencesPreserved": true,
+    "failedRegionNotReady": true,
+    "rejectedPromiseCleared": true,
+    "exactlyOneSuccessfulTerrain": true,
+    "singleRegionCopy": true,
+    "noFailedGroupsReused": true
+  },
+  "disposedGeometryCount": 196,
+  "lazyChecks": {
+    "singleBuild": true,
+    "oneCompletion": true,
+    "cacheCompleted": true,
+    "visibleInActiveRegion": true,
+    "visibleAfterSwitch": true
+  },
+  "lazyMs": 6509.645897,
+  "permanentBefore": 25,
+  "permanentAfter": 25,
+  "errors": [],
+  "checks": [
+    {
+      "message": "28 preserved heritage catalogue places",
+      "pass": true
+    },
+    {
+      "message": "28 preserved heritage tour stops",
+      "pass": true
+    },
+    {
+      "message": "15 original Sagunto places remain registered",
+      "pass": true
+    },
+    {
+      "message": "lazy Sagunto singleBuild",
+      "pass": true
+    },
+    {
+      "message": "lazy Sagunto oneCompletion",
+      "pass": true
+    },
+    {
+      "message": "lazy Sagunto cacheCompleted",
+      "pass": true
+    },
+    {
+      "message": "lazy Sagunto visibleInActiveRegion",
+      "pass": true
+    },
+    {
+      "message": "lazy Sagunto visibleAfterSwitch",
+      "pass": true
+    },
+    {
+      "message": "texture failure retry bothInitialRequestsReject",
+      "pass": true
+    },
+    {
+      "message": "texture failure retry partialGroupsHidden",
+      "pass": true
+    },
+    {
+      "message": "texture failure retry noPartialScene",
+      "pass": true
+    },
+    {
+      "message": "texture failure retry ownedGeometriesDisposed",
+      "pass": true
+    },
+    {
+      "message": "texture failure retry foreignGeometryPreserved",
+      "pass": true
+    },
+    {
+      "message": "texture failure retry regionalVariablesCleared",
+      "pass": true
+    },
+    {
+      "message": "texture failure retry regionalMapsCleared",
+      "pass": true
+    },
+    {
+      "message": "texture failure retry foreignReferencesPreserved",
+      "pass": true
+    },
+    {
+      "message": "texture failure retry failedRegionNotReady",
+      "pass": true
+    },
+    {
+      "message": "texture failure retry rejectedPromiseCleared",
+      "pass": true
+    },
+    {
+      "message": "texture failure retry exactlyOneSuccessfulTerrain",
+      "pass": true
+    },
+    {
+      "message": "texture failure retry singleRegionCopy",
+      "pass": true
+    },
+    {
+      "message": "texture failure retry noFailedGroupsReused",
+      "pass": true
+    },
+    {
+      "message": "santa-maria retains a finite world point after deferred creation",
+      "pass": true
+    },
+    {
+      "message": "santa-maria/1363/false camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "santa-maria/1363/true camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "santa-maria/390/false camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "santa-maria/390/true camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "plaza-mayor retains a finite world point after deferred creation",
+      "pass": true
+    },
+    {
+      "message": "plaza-mayor/1363/false camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "plaza-mayor/1363/true camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "plaza-mayor/390/false camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "plaza-mayor/390/true camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "juderia retains a finite world point after deferred creation",
+      "pass": true
+    },
+    {
+      "message": "juderia/1363/false camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "juderia/1363/true camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "juderia/390/false camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "juderia/390/true camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "calvario retains a finite world point after deferred creation",
+      "pass": true
+    },
+    {
+      "message": "calvario/1363/false camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "calvario/1363/true camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "calvario/390/false camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "calvario/390/true camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "berenguer retains a finite world point after deferred creation",
+      "pass": true
+    },
+    {
+      "message": "berenguer/1363/false camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "berenguer/1363/true camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "berenguer/390/false camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "berenguer/390/true camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "sangre retains a finite world point after deferred creation",
+      "pass": true
+    },
+    {
+      "message": "sangre/1363/false camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "sangre/1363/true camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "sangre/390/false camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "sangre/390/true camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "salvador retains a finite world point after deferred creation",
+      "pass": true
+    },
+    {
+      "message": "salvador/1363/false camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "salvador/1363/true camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "salvador/390/false camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "salvador/390/true camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "museo retains a finite world point after deferred creation",
+      "pass": true
+    },
+    {
+      "message": "museo/1363/false camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "museo/1363/true camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "museo/390/false camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "museo/390/true camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "portic retains a finite world point after deferred creation",
+      "pass": true
+    },
+    {
+      "message": "portic/1363/false camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "portic/1363/true camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "portic/390/false camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "portic/390/true camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "domus retains a finite world point after deferred creation",
+      "pass": true
+    },
+    {
+      "message": "domus/1363/false camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "domus/1363/true camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "domus/390/false camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "domus/390/true camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "circo retains a finite world point after deferred creation",
+      "pass": true
+    },
+    {
+      "message": "circo/1363/false camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "circo/1363/true camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "circo/390/false camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "circo/390/true camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "diana retains a finite world point after deferred creation",
+      "pass": true
+    },
+    {
+      "message": "diana/1363/false camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "diana/1363/true camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "diana/390/false camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "diana/390/true camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "necropolis retains a finite world point after deferred creation",
+      "pass": true
+    },
+    {
+      "message": "necropolis/1363/false camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "necropolis/1363/true camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "necropolis/390/false camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "necropolis/390/true camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "theatre retains a finite world point after deferred creation",
+      "pass": true
+    },
+    {
+      "message": "theatre/1363/false camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "theatre/1363/true camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "theatre/390/false camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "theatre/390/true camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "castle retains a finite world point after deferred creation",
+      "pass": true
+    },
+    {
+      "message": "castle/1363/false camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "castle/1363/true camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "castle/390/false camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "castle/390/true camera remains finite",
+      "pass": true
+    },
+    {
+      "message": "portic geometry finite",
+      "pass": true
+    },
+    {
+      "message": "portic/portic/current correct phase",
+      "pass": true
+    },
+    {
+      "message": "portic/portic/current no mixed phases",
+      "pass": true
+    },
+    {
+      "message": "portic/portic/cut correct phase",
+      "pass": true
+    },
+    {
+      "message": "portic/portic/cut no mixed phases",
+      "pass": true
+    },
+    {
+      "message": "portic/portic/cut clipping window interior",
+      "pass": true
+    },
+    {
+      "message": "portic/portic/cut ground window",
+      "pass": true
+    },
+    {
+      "message": "portic/portic closed cover aligns",
+      "pass": true
+    },
+    {
+      "message": "portic/portic cover lifts",
+      "pass": true
+    },
+    {
+      "message": "portic/portic/cut/1363/overview context leaves archaeological view clear",
+      "pass": true
+    },
+    {
+      "message": "portic/portic/cut/1363/near context leaves archaeological view clear",
+      "pass": true
+    },
+    {
+      "message": "portic/portic/cut/390/overview context leaves archaeological view clear",
+      "pass": true
+    },
+    {
+      "message": "portic/portic/cut/390/near context leaves archaeological view clear",
+      "pass": true
+    },
+    {
+      "message": "portic/portic/historical correct phase",
+      "pass": true
+    },
+    {
+      "message": "portic/portic/historical no mixed phases",
+      "pass": true
+    },
+    {
+      "message": "portic/portic/historical clipping window interior",
+      "pass": true
+    },
+    {
+      "message": "portic/portic/historical ground window",
+      "pass": true
+    },
+    {
+      "message": "portic/portic hypotheses removable",
+      "pass": true
+    },
+    {
+      "message": "portic/portic/historical/1363/overview context leaves archaeological view clear",
+      "pass": true
+    },
+    {
+      "message": "portic/portic/historical/1363/near context leaves archaeological view clear",
+      "pass": true
+    },
+    {
+      "message": "portic/portic/historical/390/overview context leaves archaeological view clear",
+      "pass": true
+    },
+    {
+      "message": "portic/portic/historical/390/near context leaves archaeological view clear",
+      "pass": true
+    },
+    {
+      "message": "portic all original materials restored",
+      "pass": true
+    },
+    {
+      "message": "domus geometry finite",
+      "pass": true
+    },
+    {
+      "message": "domus/domus/current correct phase",
+      "pass": true
+    },
+    {
+      "message": "domus/domus/current no mixed phases",
+      "pass": true
+    },
+    {
+      "message": "domus/domus/cut correct phase",
+      "pass": true
+    },
+    {
+      "message": "domus/domus/cut no mixed phases",
+      "pass": true
+    },
+    {
+      "message": "domus/domus/cut clipping window interior",
+      "pass": true
+    },
+    {
+      "message": "domus/domus/cut ground window",
+      "pass": true
+    },
+    {
+      "message": "domus/domus closed cover aligns",
+      "pass": true
+    },
+    {
+      "message": "domus/domus cover lifts",
+      "pass": true
+    },
+    {
+      "message": "domus/domus/cut/1363/overview context leaves archaeological view clear",
+      "pass": true
+    },
+    {
+      "message": "domus/domus/cut/1363/near context leaves archaeological view clear",
+      "pass": true
+    },
+    {
+      "message": "domus/domus/cut/390/overview context leaves archaeological view clear",
+      "pass": true
+    },
+    {
+      "message": "domus/domus/cut/390/near context leaves archaeological view clear",
+      "pass": true
+    },
+    {
+      "message": "domus/domus/historical correct phase",
+      "pass": true
+    },
+    {
+      "message": "domus/domus/historical no mixed phases",
+      "pass": true
+    },
+    {
+      "message": "domus/domus/historical clipping window interior",
+      "pass": true
+    },
+    {
+      "message": "domus/domus/historical ground window",
+      "pass": true
+    },
+    {
+      "message": "domus/domus hypotheses removable",
+      "pass": true
+    },
+    {
+      "message": "domus/domus/historical/1363/overview context leaves archaeological view clear",
+      "pass": true
+    },
+    {
+      "message": "domus/domus/historical/1363/near context leaves archaeological view clear",
+      "pass": true
+    },
+    {
+      "message": "domus/domus/historical/390/overview context leaves archaeological view clear",
+      "pass": true
+    },
+    {
+      "message": "domus/domus/historical/390/near context leaves archaeological view clear",
+      "pass": true
+    },
+    {
+      "message": "domus all original materials restored",
+      "pass": true
+    },
+    {
+      "message": "circo geometry finite",
+      "pass": true
+    },
+    {
+      "message": "circo/circo/current correct phase",
+      "pass": true
+    },
+    {
+      "message": "circo/circo/current no mixed phases",
+      "pass": true
+    },
+    {
+      "message": "circo/circo/current clipping window interior",
+      "pass": true
+    },
+    {
+      "message": "circo/circo/current ground window",
+      "pass": true
+    },
+    {
+      "message": "circo/circo/historical correct phase",
+      "pass": true
+    },
+    {
+      "message": "circo/circo/historical no mixed phases",
+      "pass": true
+    },
+    {
+      "message": "circo/circo/historical clipping window interior",
+      "pass": true
+    },
+    {
+      "message": "circo/circo/historical ground window",
+      "pass": true
+    },
+    {
+      "message": "circo/circo hypotheses removable",
+      "pass": true
+    },
+    {
+      "message": "circo/circo/historical/1363/overview context leaves archaeological view clear",
+      "pass": true
+    },
+    {
+      "message": "circo/circo/historical/1363/near context leaves archaeological view clear",
+      "pass": true
+    },
+    {
+      "message": "circo/circo/historical/390/overview context leaves archaeological view clear",
+      "pass": true
+    },
+    {
+      "message": "circo/circo/historical/390/near context leaves archaeological view clear",
+      "pass": true
+    },
+    {
+      "message": "circo all original materials restored",
+      "pass": true
+    },
+    {
+      "message": "diana geometry finite",
+      "pass": true
+    },
+    {
+      "message": "diana/diana/current correct phase",
+      "pass": true
+    },
+    {
+      "message": "diana/diana/current no mixed phases",
+      "pass": true
+    },
+    {
+      "message": "diana/diana/historical correct phase",
+      "pass": true
+    },
+    {
+      "message": "diana/diana/historical no mixed phases",
+      "pass": true
+    },
+    {
+      "message": "diana/diana/historical clipping window interior",
+      "pass": true
+    },
+    {
+      "message": "diana/diana/historical ground window",
+      "pass": true
+    },
+    {
+      "message": "diana/diana hypotheses removable",
+      "pass": true
+    },
+    {
+      "message": "diana/diana/historical/1363/overview context leaves archaeological view clear",
+      "pass": true
+    },
+    {
+      "message": "diana/diana/historical/1363/near context leaves archaeological view clear",
+      "pass": true
+    },
+    {
+      "message": "diana/diana/historical/390/overview context leaves archaeological view clear",
+      "pass": true
+    },
+    {
+      "message": "diana/diana/historical/390/near context leaves archaeological view clear",
+      "pass": true
+    },
+    {
+      "message": "diana all original materials restored",
+      "pass": true
+    },
+    {
+      "message": "necropolis geometry finite",
+      "pass": true
+    },
+    {
+      "message": "necropolis/cementerio/current correct phase",
+      "pass": true
+    },
+    {
+      "message": "necropolis/cementerio/current no mixed phases",
+      "pass": true
+    },
+    {
+      "message": "necropolis/cementerio/cut correct phase",
+      "pass": true
+    },
+    {
+      "message": "necropolis/cementerio/cut no mixed phases",
+      "pass": true
+    },
+    {
+      "message": "necropolis/cementerio/cut clipping window interior",
+      "pass": true
+    },
+    {
+      "message": "necropolis/cementerio/cut ground window",
+      "pass": true
+    },
+    {
+      "message": "necropolis/cementerio closed cover aligns",
+      "pass": true
+    },
+    {
+      "message": "necropolis/cementerio cover lifts",
+      "pass": true
+    },
+    {
+      "message": "necropolis/cementerio rock or tomb lid lifts",
+      "pass": true
+    },
+    {
+      "message": "necropolis/cementerio rock or tomb lid lifts",
+      "pass": true
+    },
+    {
+      "message": "necropolis/cementerio/cut/1363/overview context leaves archaeological view clear",
+      "pass": true
+    },
+    {
+      "message": "necropolis/cementerio/cut/1363/near context leaves archaeological view clear",
+      "pass": true
+    },
+    {
+      "message": "necropolis/cementerio/cut/390/overview context leaves archaeological view clear",
+      "pass": true
+    },
+    {
+      "message": "necropolis/cementerio/cut/390/near context leaves archaeological view clear",
+      "pass": true
+    },
+    {
+      "message": "necropolis/cementerio/historical correct phase",
+      "pass": true
+    },
+    {
+      "message": "necropolis/cementerio/historical no mixed phases",
+      "pass": true
+    },
+    {
+      "message": "necropolis/cementerio/historical clipping window interior",
+      "pass": true
+    },
+    {
+      "message": "necropolis/cementerio/historical ground window",
+      "pass": true
+    },
+    {
+      "message": "necropolis/cementerio hypotheses removable",
+      "pass": true
+    },
+    {
+      "message": "necropolis/cementerio/historical/1363/overview context leaves archaeological view clear",
+      "pass": true
+    },
+    {
+      "message": "necropolis/cementerio/historical/1363/near context leaves archaeological view clear",
+      "pass": true
+    },
+    {
+      "message": "necropolis/cementerio/historical/390/overview context leaves archaeological view clear",
+      "pass": true
+    },
+    {
+      "message": "necropolis/cementerio/historical/390/near context leaves archaeological view clear",
+      "pass": true
+    },
+    {
+      "message": "necropolis/hipogeos/current correct phase",
+      "pass": true
+    },
+    {
+      "message": "necropolis/hipogeos/current no mixed phases",
+      "pass": true
+    },
+    {
+      "message": "necropolis/hipogeos/cut correct phase",
+      "pass": true
+    },
+    {
+      "message": "necropolis/hipogeos/cut no mixed phases",
+      "pass": true
+    },
+    {
+      "message": "necropolis/hipogeos/cut clipping window interior",
+      "pass": true
+    },
+    {
+      "message": "necropolis/hipogeos/cut ground window",
+      "pass": true
+    },
+    {
+      "message": "necropolis/hipogeos closed cover aligns",
+      "pass": true
+    },
+    {
+      "message": "necropolis/hipogeos cover lifts",
+      "pass": true
+    },
+    {
+      "message": "necropolis/hipogeos rock or tomb lid lifts",
+      "pass": true
+    },
+    {
+      "message": "necropolis/hipogeos rock or tomb lid lifts",
+      "pass": true
+    },
+    {
+      "message": "necropolis/hipogeos/cut/1363/overview context leaves archaeological view clear",
+      "pass": true
+    },
+    {
+      "message": "necropolis/hipogeos/cut/1363/near context leaves archaeological view clear",
+      "pass": true
+    },
+    {
+      "message": "necropolis/hipogeos/cut/390/overview context leaves archaeological view clear",
+      "pass": true
+    },
+    {
+      "message": "necropolis/hipogeos/cut/390/near context leaves archaeological view clear",
+      "pass": true
+    },
+    {
+      "message": "necropolis/hipogeos/historical correct phase",
+      "pass": true
+    },
+    {
+      "message": "necropolis/hipogeos/historical no mixed phases",
+      "pass": true
+    },
+    {
+      "message": "necropolis/hipogeos/historical clipping window interior",
+      "pass": true
+    },
+    {
+      "message": "necropolis/hipogeos/historical ground window",
+      "pass": true
+    },
+    {
+      "message": "necropolis/hipogeos hypotheses removable",
+      "pass": true
+    },
+    {
+      "message": "necropolis/hipogeos/historical/1363/overview context leaves archaeological view clear",
+      "pass": true
+    },
+    {
+      "message": "necropolis/hipogeos/historical/1363/near context leaves archaeological view clear",
+      "pass": true
+    },
+    {
+      "message": "necropolis/hipogeos/historical/390/overview context leaves archaeological view clear",
+      "pass": true
+    },
+    {
+      "message": "necropolis/hipogeos/historical/390/near context leaves archaeological view clear",
+      "pass": true
+    },
+    {
+      "message": "necropolis all original materials restored",
+      "pass": true
+    },
+    {
+      "message": "terrain mode survives cutaway",
+      "pass": true
+    },
+    {
+      "message": "local clipping enabled",
+      "pass": true
+    },
+    {
+      "message": "all 25 permanent excavation rays clear after region load",
+      "pass": true
+    },
+    {
+      "message": "all 25 permanent excavation rays remain clear after dynamic modes",
+      "pass": true
+    }
+  ],
+  "cameras": [
+    {
+      "id": "portic",
+      "focus": "portic",
+      "mode": "current",
+      "near": false,
+      "width": 1363,
+      "offscreenPercent": 0,
+      "contextOcclusion": {
+        "name": "Fachadas",
+        "distance": 172.50849465676973,
+        "point": [
+          474.8976200407212,
+          62.66679828949924,
+          -68.44503219610499
+        ]
+      },
+      "camera": [
+        573.8703203052657,
+        159.83999491287022,
+        34.12667535078661
+      ],
+      "target": [
+        464.89730601953687,
+        52.848308159609175,
+        -78.80899399987783
+      ]
+    },
+    {
+      "id": "portic",
+      "focus": "portic",
+      "mode": "current",
+      "near": true,
+      "width": 1363,
+      "offscreenPercent": 17.19412088009503,
+      "contextOcclusion": {
+        "name": "Fachadas",
+        "distance": 40.063048390279896,
+        "point": [
+          474.0841581189007,
+          62.57556332364146,
+          -66.9201265771717
+        ]
+      },
+      "camera": [
+        494.64730601953687,
+        84.34830815960918,
+        -40.30899399987783
+      ],
+      "target": [
+        464.89730601953687,
+        52.848308159609175,
+        -78.80899399987783
+      ]
+    },
+    {
+      "id": "portic",
+      "focus": "portic",
+      "mode": "current",
+      "near": false,
+      "width": 390,
+      "offscreenPercent": 0,
+      "contextOcclusion": {
+        "name": "Fachadas",
+        "distance": 370.46496977959305,
+        "point": [
+          474.8976200407212,
+          62.66679828949924,
+          -68.44503219610496
+        ]
+      },
+      "camera": [
+        687.4432021319758,
+        271.347915251822,
+        151.82948015301346
+      ],
+      "target": [
+        464.89730601953687,
+        52.848308159609175,
+        -78.80899399987783
+      ]
+    },
+    {
+      "id": "portic",
+      "focus": "portic",
+      "mode": "current",
+      "near": true,
+      "width": 390,
+      "offscreenPercent": 47.25901104551176,
+      "contextOcclusion": {
+        "name": "Fachadas",
+        "distance": 76.17766668517258,
+        "point": [
+          474.0841581189007,
+          62.57556332364146,
+          -66.9201265771717
+        ]
+      },
+      "camera": [
+        513.1838444810753,
+        103.97523123653225,
+        -16.320532461416292
+      ],
+      "target": [
+        464.89730601953687,
+        52.848308159609175,
+        -78.80899399987783
+      ]
+    },
+    {
+      "id": "portic",
+      "focus": "portic",
+      "mode": "cut",
+      "near": false,
+      "width": 1363,
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "camera": [
+        563.205579777998,
+        137.95556130035166,
+        23.074126077072748
+      ],
+      "target": [
+        464.89730601953687,
+        41.434710701135316,
+        -78.80899399987783
+      ]
+    },
+    {
+      "id": "portic",
+      "focus": "portic",
+      "mode": "cut",
+      "near": true,
+      "width": 1363,
+      "offscreenPercent": 42.037657571405774,
+      "contextOcclusion": null,
+      "camera": [
+        481.89730601953687,
+        58.64830815960917,
+        -56.80899399987783
+      ],
+      "target": [
+        464.89730601953687,
+        40.64830815960917,
+        -78.80899399987783
+      ]
+    },
+    {
+      "id": "portic",
+      "focus": "portic",
+      "mode": "cut",
+      "near": false,
+      "width": 390,
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "camera": [
+        684.081209171988,
+        256.63345197808735,
+        148.3452329035715
+      ],
+      "target": [
+        464.89730601953687,
+        41.434710701135316,
+        -78.80899399987783
+      ]
+    },
+    {
+      "id": "portic",
+      "focus": "portic",
+      "mode": "cut",
+      "near": true,
+      "width": 390,
+      "offscreenPercent": 69.58938354342854,
+      "contextOcclusion": null,
+      "camera": [
+        492.4896137118446,
+        69.86369277499378,
+        -43.10130169218552
+      ],
+      "target": [
+        464.89730601953687,
+        40.64830815960917,
+        -78.80899399987783
+      ]
+    },
+    {
+      "id": "portic",
+      "focus": "portic",
+      "mode": "historical",
+      "near": false,
+      "width": 1363,
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "camera": [
+        566.7603241785608,
+        143.58677085481645,
+        26.75813391038332
+      ],
+      "target": [
+        464.89730601953687,
+        43.57580757141113,
+        -78.80899399987783
+      ]
+    },
+    {
+      "id": "portic",
+      "focus": "portic",
+      "mode": "historical",
+      "near": true,
+      "width": 1363,
+      "offscreenPercent": 26.679142368062205,
+      "contextOcclusion": null,
+      "camera": [
+        481.89730601953687,
+        58.64830815960917,
+        -56.80899399987783
+      ],
+      "target": [
+        464.89730601953687,
+        40.64830815960917,
+        -78.80899399987783
+      ]
+    },
+    {
+      "id": "portic",
+      "focus": "portic",
+      "mode": "historical",
+      "near": false,
+      "width": 390,
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "camera": [
+        684.828519544251,
+        259.50827175931227,
+        149.1197181984622
+      ],
+      "target": [
+        464.89730601953687,
+        43.57580757141113,
+        -78.80899399987783
+      ]
+    },
+    {
+      "id": "portic",
+      "focus": "portic",
+      "mode": "historical",
+      "near": true,
+      "width": 390,
+      "offscreenPercent": 61.956364058374675,
+      "contextOcclusion": null,
+      "camera": [
+        492.4896137118446,
+        69.86369277499378,
+        -43.10130169218552
+      ],
+      "target": [
+        464.89730601953687,
+        40.64830815960917,
+        -78.80899399987783
+      ]
+    },
+    {
+      "id": "domus",
+      "focus": "domus",
+      "mode": "current",
+      "near": false,
+      "width": 1363,
+      "offscreenPercent": 0,
+      "contextOcclusion": {
+        "name": "Fachadas",
+        "distance": 81.86281871891411,
+        "point": [
+          480.4004970137268,
+          61.2751960360966,
+          177.2088073914591
+        ]
+      },
+      "camera": [
+        513.134104298727,
+        126.74241060609711,
+        213.87044755065938
+      ],
+      "target": [
+        476.45494648616335,
+        53.3840949809697,
+        172.78979080058804
+      ]
+    },
+    {
+      "id": "domus",
+      "focus": "domus",
+      "mode": "current",
+      "near": true,
+      "width": 1363,
+      "offscreenPercent": 0,
+      "contextOcclusion": {
+        "name": "Fachadas",
+        "distance": 36.955908129990405,
+        "point": [
+          479.71377212354804,
+          61.35011320568789,
+          177.13489165043433
+        ]
+      },
+      "camera": [
+        492.20494648616335,
+        91.8840949809697,
+        193.78979080058804
+      ],
+      "target": [
+        476.45494648616335,
+        53.3840949809697,
+        172.78979080058804
+      ]
+    },
+    {
+      "id": "domus",
+      "focus": "domus",
+      "mode": "current",
+      "near": false,
+      "width": 390,
+      "offscreenPercent": 0,
+      "contextOcclusion": {
+        "name": "Fachadas",
+        "distance": 196.31731118288633,
+        "point": [
+          480.4004970137268,
+          61.27519603609662,
+          177.20880739145912
+        ]
+      },
+      "camera": [
+        558.8997945956099,
+        218.2737911998628,
+        265.1280206831682
+      ],
+      "target": [
+        476.45494648616335,
+        53.3840949809697,
+        172.78979080058804
+      ]
+    },
+    {
+      "id": "domus",
+      "focus": "domus",
+      "mode": "current",
+      "near": true,
+      "width": 390,
+      "offscreenPercent": 0.03920543648719289,
+      "contextOcclusion": {
+        "name": "Fachadas",
+        "distance": 65.98963806798538,
+        "point": [
+          479.71377212354804,
+          61.35011320568788,
+          177.13489165043433
+        ]
+      },
+      "camera": [
+        502.0184080246249,
+        115.87255651943124,
+        206.8744061852034
+      ],
+      "target": [
+        476.45494648616335,
+        53.3840949809697,
+        172.78979080058804
+      ]
+    },
+    {
+      "id": "domus",
+      "focus": "domus",
+      "mode": "cut",
+      "near": false,
+      "width": 1363,
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "camera": [
+        506.4755078548064,
+        109.94521420142291,
+        206.41281953346822
+      ],
+      "target": [
+        476.45494648616335,
+        43.89997919040823,
+        172.78979080058804
+      ]
+    },
+    {
+      "id": "domus",
+      "focus": "domus",
+      "mode": "cut",
+      "near": true,
+      "width": 1363,
+      "offscreenPercent": 4.059940756229309,
+      "contextOcclusion": null,
+      "camera": [
+        485.45494648616335,
+        65.4840949809697,
+        184.78979080058804
+      ],
+      "target": [
+        476.45494648616335,
+        43.4840949809697,
+        172.78979080058804
+      ]
+    },
+    {
+      "id": "domus",
+      "focus": "domus",
+      "mode": "cut",
+      "near": false,
+      "width": 390,
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "camera": [
+        540.7738003425108,
+        185.40145767437255,
+        244.82690711969713
+      ],
+      "target": [
+        476.45494648616335,
+        43.89997919040823,
+        172.78979080058804
+      ]
+    },
+    {
+      "id": "domus",
+      "focus": "domus",
+      "mode": "cut",
+      "near": true,
+      "width": 390,
+      "offscreenPercent": 5.484404948597317,
+      "contextOcclusion": null,
+      "camera": [
+        491.0626387938557,
+        79.191787288662,
+        192.2667138775111
+      ],
+      "target": [
+        476.45494648616335,
+        43.4840949809697,
+        172.78979080058804
+      ]
+    },
+    {
+      "id": "domus",
+      "focus": "domus",
+      "mode": "historical",
+      "near": false,
+      "width": 1363,
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "camera": [
+        508.6456246278311,
+        109.26795105567439,
+        208.84335031925593
+      ],
+      "target": [
+        476.45494648616335,
+        44.88659477233887,
+        172.78979080058804
+      ]
+    },
+    {
+      "id": "domus",
+      "focus": "domus",
+      "mode": "historical",
+      "near": true,
+      "width": 1363,
+      "offscreenPercent": 1.494612443517553,
+      "contextOcclusion": null,
+      "camera": [
+        485.45494648616335,
+        65.4840949809697,
+        184.78979080058804
+      ],
+      "target": [
+        476.45494648616335,
+        43.4840949809697,
+        172.78979080058804
+      ]
+    },
+    {
+      "id": "domus",
+      "focus": "domus",
+      "mode": "historical",
+      "near": false,
+      "width": 390,
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "camera": [
+        545.4934023157447,
+        182.96350643150143,
+        250.11286132971907
+      ],
+      "target": [
+        476.45494648616335,
+        44.88659477233887,
+        172.78979080058804
+      ]
+    },
+    {
+      "id": "domus",
+      "focus": "domus",
+      "mode": "historical",
+      "near": true,
+      "width": 390,
+      "offscreenPercent": 1.7205422314911365,
+      "contextOcclusion": null,
+      "camera": [
+        491.0626387938557,
+        79.191787288662,
+        192.2667138775111
+      ],
+      "target": [
+        476.45494648616335,
+        43.4840949809697,
+        172.78979080058804
+      ]
+    },
+    {
+      "id": "circo",
+      "focus": "circo",
+      "mode": "current",
+      "near": false,
+      "width": 1363,
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "camera": [
+        237.19962349375749,
+        66.91034929527704,
+        -199.13089396239383
+      ],
+      "target": [
+        210.83743286132812,
+        44.14300283999714,
+        -229.08792877197266
+      ]
+    },
+    {
+      "id": "circo",
+      "focus": "circo",
+      "mode": "current",
+      "near": true,
+      "width": 1363,
+      "offscreenPercent": 29.989117696300017,
+      "contextOcclusion": null,
+      "camera": [
+        219.64687648753826,
+        50.528002445130994,
+        -239.09467999994695
+      ],
+      "target": [
+        212.64687648753826,
+        45.528002445130994,
+        -228.09467999994695
+      ]
+    },
+    {
+      "id": "circo",
+      "focus": "circo",
+      "mode": "current",
+      "near": false,
+      "width": 390,
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "camera": [
+        268.19024730338384,
+        93.67497894904524,
+        -163.91427599690937
+      ],
+      "target": [
+        210.83743286132812,
+        44.14300283999714,
+        -229.08792877197266
+      ]
+    },
+    {
+      "id": "circo",
+      "focus": "circo",
+      "mode": "current",
+      "near": true,
+      "width": 390,
+      "offscreenPercent": 50.39343713376863,
+      "contextOcclusion": null,
+      "camera": [
+        224.00841494907672,
+        53.64338706051561,
+        -245.9485261537931
+      ],
+      "target": [
+        212.64687648753826,
+        45.528002445130994,
+        -228.09467999994695
+      ]
+    },
+    {
+      "id": "circo",
+      "focus": "circo",
+      "mode": "historical",
+      "near": false,
+      "width": 1363,
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "camera": [
+        487.31859443502174,
+        339.18031983322015,
+        101.13194662418903
+      ],
+      "target": [
+        146.9643325805664,
+        45.23800277709961,
+        -285.63426002860115
+      ]
+    },
+    {
+      "id": "circo",
+      "focus": "circo",
+      "mode": "historical",
+      "near": true,
+      "width": 1363,
+      "offscreenPercent": 80.45893469006333,
+      "contextOcclusion": null,
+      "camera": [
+        219.64687648753826,
+        50.528002445130994,
+        -239.09467999994695
+      ],
+      "target": [
+        212.64687648753826,
+        45.528002445130994,
+        -228.09467999994695
+      ]
+    },
+    {
+      "id": "circo",
+      "focus": "circo",
+      "mode": "historical",
+      "near": false,
+      "width": 390,
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "camera": [
+        933.9582048357933,
+        724.9145288157047,
+        608.6769584432476
+      ],
+      "target": [
+        146.9643325805664,
+        45.23800277709961,
+        -285.63426002860115
+      ]
+    },
+    {
+      "id": "circo",
+      "focus": "circo",
+      "mode": "historical",
+      "near": true,
+      "width": 390,
+      "offscreenPercent": 80.95732530370678,
+      "contextOcclusion": null,
+      "camera": [
+        224.00841494907672,
+        53.64338706051561,
+        -245.9485261537931
+      ],
+      "target": [
+        212.64687648753826,
+        45.528002445130994,
+        -228.09467999994695
+      ]
+    },
+    {
+      "id": "diana",
+      "focus": "diana",
+      "mode": "current",
+      "near": false,
+      "width": 1363,
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "camera": [
+        -41.34516304572395,
+        91.88829689561021,
+        3.653496894994973
+      ],
+      "target": [
+        -70.88496398925781,
+        66.28713607788086,
+        45.00921821594238
+      ]
+    },
+    {
+      "id": "diana",
+      "focus": "diana",
+      "mode": "current",
+      "near": true,
+      "width": 1363,
+      "offscreenPercent": 26.292950761601134,
+      "contextOcclusion": {
+        "name": "Cornisas",
+        "distance": 13.488242475085762,
+        "point": [
+          -70.96560867669241,
+          66.40964000726733,
+          44.89463647678954
+        ]
+      },
+      "camera": [
+        -66.12361181149134,
+        71.2516368724684,
+        33.27384400030698
+      ],
+      "target": [
+        -71.12361181149134,
+        66.2516368724684,
+        45.27384400030698
+      ]
+    },
+    {
+      "id": "diana",
+      "focus": "diana",
+      "mode": "current",
+      "near": false,
+      "width": 390,
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "camera": [
+        -9.47794039704661,
+        119.5065565244639,
+        -40.96061481315331
+      ],
+      "target": [
+        -70.88496398925781,
+        66.28713607788086,
+        45.00921821594238
+      ]
+    },
+    {
+      "id": "diana",
+      "focus": "diana",
+      "mode": "current",
+      "near": true,
+      "width": 390,
+      "offscreenPercent": 61.696333687566415,
+      "contextOcclusion": {
+        "name": "Cornisas",
+        "distance": 22.16669978625433,
+        "point": [
+          -70.96560867669241,
+          66.40964000726733,
+          44.89463647678954
+        ]
+      },
+      "camera": [
+        -63.00822719610673,
+        74.36702148785301,
+        25.7969209233839
+      ],
+      "target": [
+        -71.12361181149134,
+        66.2516368724684,
+        45.27384400030698
+      ]
+    },
+    {
+      "id": "diana",
+      "focus": "diana",
+      "mode": "historical",
+      "near": false,
+      "width": 1363,
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "camera": [
+        -36.321231079274725,
+        94.68736035047007,
+        -3.033874642419377
+      ],
+      "target": [
+        -71.49106115518802,
+        64.20684095134521,
+        46.20388746385924
+      ]
+    },
+    {
+      "id": "diana",
+      "focus": "diana",
+      "mode": "historical",
+      "near": true,
+      "width": 1363,
+      "offscreenPercent": 45.65085158150852,
+      "contextOcclusion": null,
+      "camera": [
+        -66.12361181149134,
+        71.2516368724684,
+        33.27384400030698
+      ],
+      "target": [
+        -71.12361181149134,
+        66.2516368724684,
+        45.27384400030698
+      ]
+    },
+    {
+      "id": "diana",
+      "focus": "diana",
+      "mode": "historical",
+      "near": false,
+      "width": 390,
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "camera": [
+        7.25316294965171,
+        132.45183517553966,
+        -64.0380262829164
+      ],
+      "target": [
+        -71.49106115518802,
+        64.20684095134521,
+        46.20388746385924
+      ]
+    },
+    {
+      "id": "diana",
+      "focus": "diana",
+      "mode": "historical",
+      "near": true,
+      "width": 390,
+      "offscreenPercent": 78.11739659367396,
+      "contextOcclusion": null,
+      "camera": [
+        -63.00822719610673,
+        74.36702148785301,
+        25.7969209233839
+      ],
+      "target": [
+        -71.12361181149134,
+        66.2516368724684,
+        45.27384400030698
+      ]
+    },
+    {
+      "id": "necropolis",
+      "focus": "cementerio",
+      "mode": "current",
+      "near": false,
+      "width": 1363,
+      "offscreenPercent": 0,
+      "contextOcclusion": {
+        "name": "Terrain IGN",
+        "distance": 61.992183191011144,
+        "point": [
+          -121.68777759034765,
+          112.72342899856335,
+          284.59216608418035
+        ]
+      },
+      "camera": [
+        -151.5876639080602,
+        149.12329060273515,
+        244.29231930813305
+      ],
+      "target": [
+        -121.23956290379233,
+        112.17777633666992,
+        285.19628153127667
+      ]
+    },
+    {
+      "id": "necropolis",
+      "focus": "cementerio",
+      "mode": "current",
+      "near": true,
+      "width": 1363,
+      "offscreenPercent": 6.529630082792936,
+      "contextOcclusion": null,
+      "camera": [
+        -133.23956281930342,
+        130.47716899948017,
+        267.19627400005334
+      ],
+      "target": [
+        -121.23956281930342,
+        113.47716899948017,
+        285.19627400005334
+      ]
+    },
+    {
+      "id": "necropolis",
+      "focus": "cementerio",
+      "mode": "current",
+      "near": false,
+      "width": 390,
+      "offscreenPercent": 0,
+      "contextOcclusion": {
+        "name": "Terrain IGN",
+        "distance": 132.63702330800282,
+        "point": [
+          -121.68777759034765,
+          112.72342899856335,
+          284.59216608418035
+        ]
+      },
+      "camera": [
+        -185.66087410494367,
+        190.60372040763679,
+        198.36755773842054
+      ],
+      "target": [
+        -121.23956290379233,
+        112.17777633666992,
+        285.19628153127667
+      ]
+    },
+    {
+      "id": "necropolis",
+      "focus": "cementerio",
+      "mode": "current",
+      "near": true,
+      "width": 390,
+      "offscreenPercent": 26.368326603858232,
+      "contextOcclusion": null,
+      "camera": [
+        -140.7164858962265,
+        141.06947669178786,
+        255.98088938466873
+      ],
+      "target": [
+        -121.23956281930342,
+        113.47716899948017,
+        285.19627400005334
+      ]
+    },
+    {
+      "id": "necropolis",
+      "focus": "cementerio",
+      "mode": "cut",
+      "near": false,
+      "width": 1363,
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "camera": [
+        -151.5876639080602,
+        149.12329060273515,
+        244.29231930813305
+      ],
+      "target": [
+        -121.23956290379233,
+        112.17777633666992,
+        285.19628153127667
+      ]
+    },
+    {
+      "id": "necropolis",
+      "focus": "cementerio",
+      "mode": "cut",
+      "near": true,
+      "width": 1363,
+      "offscreenPercent": 6.529630082792936,
+      "contextOcclusion": null,
+      "camera": [
+        -133.23956281930342,
+        130.47716899948017,
+        267.19627400005334
+      ],
+      "target": [
+        -121.23956281930342,
+        113.47716899948017,
+        285.19627400005334
+      ]
+    },
+    {
+      "id": "necropolis",
+      "focus": "cementerio",
+      "mode": "cut",
+      "near": false,
+      "width": 390,
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "camera": [
+        -185.66087410494367,
+        190.60372040763679,
+        198.36755773842054
+      ],
+      "target": [
+        -121.23956290379233,
+        112.17777633666992,
+        285.19628153127667
+      ]
+    },
+    {
+      "id": "necropolis",
+      "focus": "cementerio",
+      "mode": "cut",
+      "near": true,
+      "width": 390,
+      "offscreenPercent": 26.481504139646805,
+      "contextOcclusion": null,
+      "camera": [
+        -140.7164858962265,
+        141.06947669178786,
+        255.98088938466873
+      ],
+      "target": [
+        -121.23956281930342,
+        113.47716899948017,
+        285.19627400005334
+      ]
+    },
+    {
+      "id": "necropolis",
+      "focus": "cementerio",
+      "mode": "historical",
+      "near": false,
+      "width": 1363,
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "camera": [
+        -151.47264828830032,
+        148.89800928879131,
+        244.44734036085288
+      ],
+      "target": [
+        -121.23956290379233,
+        112.09251403808594,
+        285.19628153127667
+      ]
+    },
+    {
+      "id": "necropolis",
+      "focus": "cementerio",
+      "mode": "historical",
+      "near": true,
+      "width": 1363,
+      "offscreenPercent": 5.496528755042687,
+      "contextOcclusion": null,
+      "camera": [
+        -133.23956281930342,
+        130.47716899948017,
+        267.19627400005334
+      ],
+      "target": [
+        -121.23956281930342,
+        113.47716899948017,
+        285.19627400005334
+      ]
+    },
+    {
+      "id": "necropolis",
+      "focus": "cementerio",
+      "mode": "historical",
+      "near": false,
+      "width": 390,
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "camera": [
+        -185.36067295807993,
+        190.15299584330563,
+        198.77217667549772
+      ],
+      "target": [
+        -121.23956290379233,
+        112.09251403808594,
+        285.19628153127667
+      ]
+    },
+    {
+      "id": "necropolis",
+      "focus": "cementerio",
+      "mode": "historical",
+      "near": true,
+      "width": 390,
+      "offscreenPercent": 23.680692372642838,
+      "contextOcclusion": null,
+      "camera": [
+        -140.7164858962265,
+        141.06947669178786,
+        255.98088938466873
+      ],
+      "target": [
+        -121.23956281930342,
+        113.47716899948017,
+        285.19627400005334
+      ]
+    },
+    {
+      "id": "necropolis",
+      "focus": "hipogeos",
+      "mode": "current",
+      "near": false,
+      "width": 1363,
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "camera": [
+        41.75000448945235,
+        124.55966490084127,
+        229.27316450176187
+      ],
+      "target": [
+        70.61678798755594,
+        98.44209887874754,
+        258.13994799986546
+      ]
+    },
+    {
+      "id": "necropolis",
+      "focus": "hipogeos",
+      "mode": "current",
+      "near": true,
+      "width": 1363,
+      "offscreenPercent": 0.3478090479339653,
+      "contextOcclusion": null,
+      "camera": [
+        55.61678798755594,
+        108.01193017479855,
+        246.13994799986546
+      ],
+      "target": [
+        68.61678798755594,
+        96.01193017479855,
+        258.13994799986546
+      ]
+    },
+    {
+      "id": "necropolis",
+      "focus": "hipogeos",
+      "mode": "current",
+      "near": false,
+      "width": 390,
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "camera": [
+        8.422979873788485,
+        154.7126871721562,
+        195.946139886098
+      ],
+      "target": [
+        70.61678798755594,
+        98.44209887874754,
+        258.13994799986546
+      ]
+    },
+    {
+      "id": "necropolis",
+      "focus": "hipogeos",
+      "mode": "current",
+      "near": true,
+      "width": 390,
+      "offscreenPercent": 6.015626913562103,
+      "contextOcclusion": null,
+      "camera": [
+        47.51678798755594,
+        115.48885325172162,
+        238.66302492294238
+      ],
+      "target": [
+        68.61678798755594,
+        96.01193017479855,
+        258.13994799986546
+      ]
+    },
+    {
+      "id": "necropolis",
+      "focus": "hipogeos",
+      "mode": "cut",
+      "near": false,
+      "width": 1363,
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "camera": [
+        41.75000448945235,
+        124.55966490084127,
+        229.27316450176187
+      ],
+      "target": [
+        70.61678798755594,
+        98.44209887874754,
+        258.13994799986546
+      ]
+    },
+    {
+      "id": "necropolis",
+      "focus": "hipogeos",
+      "mode": "cut",
+      "near": true,
+      "width": 1363,
+      "offscreenPercent": 0.3478090479339653,
+      "contextOcclusion": null,
+      "camera": [
+        55.61678798755594,
+        108.01193017479855,
+        246.13994799986546
+      ],
+      "target": [
+        68.61678798755594,
+        96.01193017479855,
+        258.13994799986546
+      ]
+    },
+    {
+      "id": "necropolis",
+      "focus": "hipogeos",
+      "mode": "cut",
+      "near": false,
+      "width": 390,
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "camera": [
+        8.422979873788485,
+        154.7126871721562,
+        195.946139886098
+      ],
+      "target": [
+        70.61678798755594,
+        98.44209887874754,
+        258.13994799986546
+      ]
+    },
+    {
+      "id": "necropolis",
+      "focus": "hipogeos",
+      "mode": "cut",
+      "near": true,
+      "width": 390,
+      "offscreenPercent": 6.096455776814363,
+      "contextOcclusion": null,
+      "camera": [
+        47.51678798755594,
+        115.48885325172162,
+        238.66302492294238
+      ],
+      "target": [
+        68.61678798755594,
+        96.01193017479855,
+        258.13994799986546
+      ]
+    },
+    {
+      "id": "necropolis",
+      "focus": "hipogeos",
+      "mode": "historical",
+      "near": false,
+      "width": 1363,
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "camera": [
+        41.75000448945235,
+        124.55966490084127,
+        229.27316450176187
+      ],
+      "target": [
+        70.61678798755594,
+        98.44209887874754,
+        258.13994799986546
+      ]
+    },
+    {
+      "id": "necropolis",
+      "focus": "hipogeos",
+      "mode": "historical",
+      "near": true,
+      "width": 1363,
+      "offscreenPercent": 0.15365866581889473,
+      "contextOcclusion": null,
+      "camera": [
+        55.61678798755594,
+        108.01193017479855,
+        246.13994799986546
+      ],
+      "target": [
+        68.61678798755594,
+        96.01193017479855,
+        258.13994799986546
+      ]
+    },
+    {
+      "id": "necropolis",
+      "focus": "hipogeos",
+      "mode": "historical",
+      "near": false,
+      "width": 390,
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "camera": [
+        8.422979873788485,
+        154.7126871721562,
+        195.946139886098
+      ],
+      "target": [
+        70.61678798755594,
+        98.44209887874754,
+        258.13994799986546
+      ]
+    },
+    {
+      "id": "necropolis",
+      "focus": "hipogeos",
+      "mode": "historical",
+      "near": true,
+      "width": 390,
+      "offscreenPercent": 5.001854501139194,
+      "contextOcclusion": null,
+      "camera": [
+        47.51678798755594,
+        115.48885325172162,
+        238.66302492294238
+      ],
+      "target": [
+        68.61678798755594,
+        96.01193017479855,
+        258.13994799986546
+      ]
+    }
+  ],
+  "archaeology": {
+    "portic": {
+      "phase": "Siglo II d. C.",
+      "roadLength": 60,
+      "roadWidth": [
+        4.1,
+        5.4
+      ],
+      "sewerClearWidth": 0.68,
+      "sewerClearDepth": 1.25,
+      "preservedPierLocations": 16,
+      "verticalPlacement": "interpretativa",
+      "meshes": 18,
+      "triangles": 62230
+    },
+    "domus": {
+      "phase": "Siglos II–III d. C. · reforma con balneum",
+      "atrium": [
+        7.31,
+        3.5
+      ],
+      "impluviumOuter": [
+        4.22,
+        2.46
+      ],
+      "impluviumInner": [
+        3.06,
+        1.56
+      ],
+      "tablinum": [
+        4.26,
+        5.5
+      ],
+      "balneum": [
+        1.94,
+        1.36
+      ],
+      "paint": "Pintura sobre enlucido; no mosaico figurado",
+      "verticalPlacement": "aproximación de cota publicada",
+      "meshes": 28,
+      "triangles": 14398
+    },
+    "circo": {
+      "remains": {
+        "drawCalls": 10,
+        "triangles": 7964,
+        "parts": 389
+      },
+      "reconstruction": {
+        "drawCalls": 7,
+        "triangles": 9631,
+        "parts": 700
+      },
+      "hypotheses": {
+        "drawCalls": 2,
+        "triangles": 11972,
+        "parts": 1411
+      },
+      "historicalLength": 273,
+      "historicalWidth": 70
+    },
+    "diana": {
+      "remains": {
+        "drawCalls": 9,
+        "triangles": 15056,
+        "parts": 703
+      },
+      "reconstruction": {
+        "drawCalls": 3,
+        "triangles": 2192,
+        "parts": 87
+      },
+      "hypotheses": {
+        "drawCalls": 1,
+        "triangles": 264,
+        "parts": 22
+      },
+      "visibleAncientHeight": 4.18,
+      "ancientChronology": "disputed"
+    },
+    "necropolis": {
+      "meshes": 29,
+      "triangles": 87335,
+      "surfaceTombs": 12,
+      "representativeChambers": 3,
+      "geographicFocuses": 2,
+      "interpretiveGeometry": true,
+      "minimumFloorY": 93.61193017479854
+    }
+  },
+  "buildings": {
+    "footprintCount": 9374,
+    "empiricalHeightCount": 2,
+    "ignSurfaceHeightCount": 5380,
+    "osmLevelCount": 2,
+    "cadastralLevelCount": 3977,
+    "estimatedHeightCount": 13,
+    "sampledRoofColorCount": 9374,
+    "contextFacadeCount": 3396,
+    "terrainRoofCorrections": 11,
+    "maximumRoofCorrectionM": 3.5930187702737015,
+    "terrainRoofNote": "Display roof raised only where source terrain would intersect it; original height estimates are retained in data.",
+    "otherHeights": "OSM height > IGN normalized surface estimate > attributed OSM / DGC storeys × 3 m > deterministic visual estimate.",
+    "facades": "Generic repeated facade bays outside detailed areas; not surveyed window positions. Roof colours sampled from PNOA where available."
+  },
+  "sourceMeshCounts": {
+    "terrain": 177590
+  }
+}

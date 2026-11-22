@@ -1,0 +1,148 @@
+{
+  "iteration": "V30",
+  "guide": "dist/assets/data/sanatorio-visit.json",
+  "sha256": "3b5ba5958cacbe64822b4cb7f8f195f10504600a87cf3a965f86e4bd523f59bf",
+  "passed": true,
+  "checks": [
+    {
+      "passed": true,
+      "label": "Twenty-one unique stops match the architecture/context contract"
+    },
+    {
+      "passed": true,
+      "label": "Every stop carries two source-backed facts"
+    },
+    {
+      "passed": true,
+      "label": "Guide identity matches the existing Sanatorio record"
+    },
+    {
+      "passed": true,
+      "label": "Five reading layers and regions agree"
+    },
+    {
+      "passed": true,
+      "label": "Documentary sources have unique identifiers and public HTTPS references"
+    },
+    {
+      "passed": true,
+      "label": "Sources include attribution, locator and access date"
+    },
+    {
+      "passed": true,
+      "label": "Every fact, coordinate and timeline source reference resolves"
+    },
+    {
+      "passed": true,
+      "label": "Every factual statement has a confidence level and explicit sources"
+    },
+    {
+      "passed": true,
+      "label": "Stop layer metadata is internally consistent"
+    },
+    {
+      "passed": true,
+      "label": "Region membership follows actual stop assignments"
+    },
+    {
+      "passed": true,
+      "label": "All timeline links target available stops"
+    },
+    {
+      "passed": true,
+      "label": "Reading order is complete and stable"
+    },
+    {
+      "passed": true,
+      "label": "vestibulo: historical interior is attached to the central ground-floor fragment"
+    },
+    {
+      "passed": true,
+      "label": "capilla: historical interior is attached to the central ground-floor fragment"
+    },
+    {
+      "passed": true,
+      "label": "sacristia: historical interior is attached to the central ground-floor fragment"
+    },
+    {
+      "passed": true,
+      "label": "escalera: historical interior is attached to the central ground-floor fragment"
+    },
+    {
+      "passed": true,
+      "label": "Section opens an aerial historical ground-floor reading, not a room interior"
+    },
+    {
+      "passed": true,
+      "label": "Overview preserves the closed current exterior until the section is selected"
+    },
+    {
+      "passed": true,
+      "label": "The section explicitly distinguishes the historical fragment from current interiors and measured surveys"
+    },
+    {
+      "passed": true,
+      "label": "The section is limited to the central body"
+    },
+    {
+      "passed": true,
+      "label": "Stair heights and detailed construction are not falsely treated as measured evidence"
+    },
+    {
+      "passed": true,
+      "label": "Auxiliary construction counts are distinguished from cadastral parts"
+    },
+    {
+      "passed": true,
+      "label": "The botanical source is dated instead of treated as a current tree census"
+    },
+    {
+      "passed": true,
+      "label": "The archive destination announcement is not presented as a verified opening"
+    },
+    {
+      "passed": true,
+      "label": "CMSM consultation is documented separately from the still-planned Sanatorio archive adaptation"
+    },
+    {
+      "passed": true,
+      "label": "Observation positions retain an honest approximate precision"
+    },
+    {
+      "passed": true,
+      "label": "Final model registration is complete"
+    },
+    {
+      "passed": true,
+      "label": "Registered coordinates are finite and coordinate aliases agree"
+    },
+    {
+      "passed": true,
+      "label": "Every registered stop has a finite three-dimensional scene target"
+    },
+    {
+      "passed": true,
+      "label": "Registered focuses are distinct rather than a repeated provisional origin"
+    },
+    {
+      "passed": true,
+      "label": "Registration removes provisional coordinate descriptions"
+    }
+  ],
+  "counts": {
+    "stops": 21,
+    "facts": 42,
+    "sources": 19,
+    "timelineEvents": 8,
+    "layers": 5
+  },
+  "registration": {
+    "status": "registered",
+    "precision": "approximate",
+    "provisionalCoordinates": false,
+    "note": "Focos registrados a partir de la geometría final y de la cartografía; las cotas no levantadas son interpretativas.",
+    "coordinates": "Registered from the implemented industrial model and contemporary cartography; component positions and unmeasured heights are interpretive."
+  },
+  "publicationReady": true,
+  "note": "Documentary coherence does not replace geometry, interaction, map and visual integration reviews."
+}

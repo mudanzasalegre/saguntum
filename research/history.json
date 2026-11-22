@@ -1,0 +1,229 @@
+{
+  "researchedAt": "2026-11-19",
+  "locale": "es-ES",
+  "editorialTitle": "Saguntum · Entre la piedra y el Mediterráneo",
+  "scope": "Primera exploración 3D del cerro histórico de Sagunto, centrada en el Teatro Romano y el castillo. Puerto de Sagunto aporta el contexto litoral.",
+  "entries": [
+    {
+      "id": "theatre",
+      "name": "Teatro Romano",
+      "eyebrow": "SIGLO I D. C.",
+      "description": "Un hemiciclo construido sobre la ladera del cerro. La cávea abraza la orchestra y mira hacia el edificio escénico. Su apariencia actual incorpora la rehabilitación de principios de los años noventa.",
+      "details": [
+        {
+          "label": "Origen",
+          "value": "Siglo I d. C."
+        },
+        {
+          "label": "Forma",
+          "value": "Graderío semicircular"
+        },
+        {
+          "label": "Protección histórica",
+          "value": "Monumento Nacional desde 1896"
+        }
+      ],
+      "lookFor": "Acércate a las gradas, observa los accesos radiales y gira alrededor del cuerpo escénico.",
+      "sources": [
+        "spain-theatre",
+        "local-monuments"
+      ],
+      "coordinates": [
+        -0.277925,
+        39.6768
+      ],
+      "coordinateNote": "WGS84 [longitud, latitud]; corroborado mediante cartografía OpenStreetMap por el agente de cartografía."
+    },
+    {
+      "id": "castle",
+      "name": "Castillo de Sagunto",
+      "eyebrow": "UN CERRO, MUCHAS ÉPOCAS",
+      "description": "Murallas y recintos se suceden sobre una cresta alargada. El conjunto conserva huellas de diversas culturas y se organiza en siete plazas, con vestigios del foro romano en la plaza de Armas.",
+      "details": [
+        {
+          "label": "Extensión",
+          "value": "Cerca de un kilómetro"
+        },
+        {
+          "label": "Organización",
+          "value": "Siete plazas"
+        },
+        {
+          "label": "Protección histórica",
+          "value": "Monumento Nacional desde 1931"
+        }
+      ],
+      "lookFor": "Sigue la silueta de las murallas sobre el relieve y descubre cómo cambian los recintos a lo largo del cerro.",
+      "sources": [
+        "spain-castle",
+        "local-monuments"
+      ]
+    },
+    {
+      "id": "forum",
+      "name": "Plaza de Armas",
+      "eyebrow": "EL FORO DE SAGUNTUM",
+      "description": "También conocida como plaza de Santa María Magdalena, conserva restos del foro romano, columnas y una cisterna excavada en roca. Es uno de los puntos clave para leer las capas de historia del castillo.",
+      "sources": [
+        "spain-castle"
+      ],
+      "coordinates": [
+        -0.2764992,
+        39.6758828
+      ],
+      "coordinateNote": "WGS84 [longitud, latitud]; corroborado mediante cartografía OpenStreetMap por el agente de cartografía."
+    },
+    {
+      "id": "coast",
+      "name": "Hacia Puerto de Sagunto",
+      "eyebrow": "EL HORIZONTE MEDITERRÁNEO",
+      "description": "Sagunto reúne el núcleo histórico situado junto al cerro y el núcleo de Puerto de Sagunto, próximo a la playa y al puerto marítimo. El paisaje litoral añade una segunda historia ligada al patrimonio industrial.",
+      "sources": [
+        "dival-sagunt",
+        "industrial-foundation"
+      ]
+    }
+  ],
+  "guidedTour": [
+    {
+      "id": "overview",
+      "title": "La ciudad y su cerro",
+      "text": "Comienza con una vista del conjunto. Reconoce el teatro en la ladera y la sucesión de murallas sobre la cresta.",
+      "recommendedView": "Panorámica desde el norte-noreste; teatro al frente y castillo al fondo."
+    },
+    {
+      "id": "theatre",
+      "title": "Una escena de veinte siglos",
+      "text": "La forma semicircular del graderío y el cuerpo escénico definen el teatro. El modelo representa una interpretación de su configuración actual.",
+      "recommendedView": "Cámara elevada sobre la orchestra; mostrar cávea y edificio escénico."
+    },
+    {
+      "id": "castle",
+      "title": "El castillo sobre la cresta",
+      "text": "Recorre visualmente las murallas. El recinto alargado conserva construcciones de épocas diferentes y espacios abiertos entre sus defensas.",
+      "recommendedView": "Travelling aéreo a lo largo del eje este-oeste, sin atravesar el terreno."
+    },
+    {
+      "id": "coast",
+      "title": "Del cerro al Mediterráneo",
+      "text": "Abre el mapa territorial para situar Puerto de Sagunto y la costa respecto al núcleo histórico.",
+      "recommendedView": "Vista regional o minimapa con relación geográfica real; no colocar agua inmediatamente al pie del castillo."
+    }
+  ],
+  "modelDisclosure": {
+    "short": "Interpretación 3D del paisaje y los monumentos. No es un levantamiento arqueológico.",
+    "long": "La experiencia combina referencias geográficas documentadas con modelado tridimensional interpretativo. Las alturas de muros, detalles constructivos, vegetación y acabados son aproximaciones visuales salvo que se indique una fuente de medición. No es una fotogrametría ni una reconstrucción científica del monumento en una época concreta.",
+    "implementationNote": "Adaptar esta declaración a la procedencia real del terreno suministrada por el agente de cartografía. Si no se incorpora un MDT, decir relieve aproximado; no afirmar cartografía o topografía exactas."
+  },
+  "verifiedGeometryGuidance": {
+    "theatre": {
+      "approximateDiameterM": 90,
+      "stageLengthM": 54,
+      "stageDepthM": 6.5,
+      "source": "spain-destination",
+      "qualification": "Dimensiones orientativas publicadas en la ficha turística; no equivalen a un plano as-built del edificio actual."
+    },
+    "castle": {
+      "approximateLength": "cerca de 1 km",
+      "enclosureCount": 7,
+      "plazas": [
+        "Almenara",
+        "Armas",
+        "Conejera",
+        "Ciudadela",
+        "Dos de Mayo",
+        "San Fernando",
+        "Estudiantes"
+      ],
+      "sources": [
+        "spain-castle",
+        "dival-sagunt"
+      ],
+      "qualification": "El castillo es un recinto largo e irregular, no una fortaleza compacta con gran torre central."
+    }
+  },
+  "editorialCautions": [
+    "No publicar un aforo histórico exacto: las fichas oficiales consultadas ofrecen cifras discrepantes de 6.000 y 8.000 espectadores, y otras fuentes ofrecen 4.000.",
+    "Usar teatro o hemiciclo, no anfiteatro. Una ficha de turismo comete ese error terminológico.",
+    "No afirmar que el teatro fue el primer Monumento Nacional de España: sí está verificada la declaración de 1896, pero el superlativo es incorrecto en sentido general.",
+    "Evitar horarios y accesos como datos permanentes; enlazar a información oficial actualizada.",
+    "No inventar distancias a pie ni accesibilidad universal de la subida al castillo.",
+    "La referencia visual del usuario es una isla; Sagunto no es una isla y el mar no rodea el cerro.",
+    "Las fotos históricas deben llevar su fecha y crédito; no presentarlas como el estado actual verificado en 2026."
+  ],
+  "sources": [
+    {
+      "id": "spain-theatre",
+      "publisher": "Turespaña · Portal oficial de turismo de España",
+      "title": "Teatro Romano de Sagunto",
+      "url": "https://www.spain.info/es/lugares-interes/teatro-romano-sagunto/"
+    },
+    {
+      "id": "spain-castle",
+      "publisher": "Turespaña · Portal oficial de turismo de España",
+      "title": "Castillo de Sagunto",
+      "url": "https://www.spain.info/es/lugares-interes/castillo-sagunto/"
+    },
+    {
+      "id": "spain-destination",
+      "publisher": "Turespaña · Portal oficial de turismo de España",
+      "title": "Sagunto-Sagunt",
+      "url": "https://www.spain.info/es/destino/sagunto-sagunt/"
+    },
+    {
+      "id": "local-monuments",
+      "publisher": "Sagunto Turismo",
+      "title": "Monumentos de Sagunto",
+      "url": "https://saguntoturismoblog.wordpress.com/monumentos/"
+    },
+    {
+      "id": "dival-sagunt",
+      "publisher": "Diputació de València · Valencia Turismo",
+      "title": "Qué ver en Sagunt",
+      "url": "https://turisme.dival.es/que-ver-en-sagunt/"
+    },
+    {
+      "id": "industrial-foundation",
+      "publisher": "Fundació Port de Sagunt",
+      "title": "Patrimonio industrial de Puerto de Sagunto",
+      "url": "https://www.fundacioportdesagunt.com/"
+    }
+  ],
+  "referenceImages": [
+    {
+      "id": "theatre-reference",
+      "title": "Teatro romano de Sagunto",
+      "author": "José Luis Filpo Cabana",
+      "date": "2012-12",
+      "license": "CC BY 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:Teatro_romano_de_Sagunto.jpg",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/90/Teatro_romano_de_Sagunto.jpg",
+      "downloadStatus": "not_downloaded_network_403"
+    },
+    {
+      "id": "castle-reference",
+      "title": "Castillo de Sagunto",
+      "author": "Diego Delso",
+      "authorUrl": "https://delso.photo/",
+      "date": "2015-01-03",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:Castillo_de_Sagunto,_Espa%C3%B1a,_2015-01-03,_DD_21.JPG",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/66/Castillo_de_Sagunto%2C_Espa%C3%B1a%2C_2015-01-03%2C_DD_21.JPG",
+      "downloadStatus": "not_downloaded_network_403"
+    },
+    {
+      "id": "castle-plan-reference",
+      "title": "Mapa del Castillo de Sagunto",
+      "author": "Simon Burchell",
+      "date": "2017-04-06",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "pageUrl": "https://commons.wikimedia.org/wiki/File:Mapa_del_Castillo_de_Sagunto.png",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/52/Mapa_del_Castillo_de_Sagunto.png",
+      "note": "Plano interpretativo del autor basado en bibliografía y Google Earth; no un plano oficial de medición.",
+      "downloadStatus": "not_downloaded_network_403"
+    }
+  ]
+}

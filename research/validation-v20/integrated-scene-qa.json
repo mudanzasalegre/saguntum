@@ -1,0 +1,4440 @@
+{
+  "pass": true,
+  "generatedAt": "2026-11-20T19:41:17.218Z",
+  "checks": 1010,
+  "buildMs": 40614.976276999994,
+  "meshes": 73,
+  "triangles": 89080,
+  "stats": {
+    "modelVersion": "v20",
+    "gate": [
+      6.21,
+      2.07,
+      4.1
+    ],
+    "opening": [
+      1.2,
+      2.2
+    ],
+    "tribuneAreaPublished": 9,
+    "podiumWidth": 0.6,
+    "podiumHeightMaximumPublished": 1.5,
+    "stairBoxOnly": true,
+    "circusWorkingHypothesis": [
+      273,
+      70
+    ],
+    "circusLengthRange": [
+      270,
+      290
+    ],
+    "circusWidthRange": [
+      68,
+      70
+    ],
+    "euripus": [
+      190,
+      4.35
+    ],
+    "stops": 20,
+    "gateStops": 14,
+    "circusStops": 6,
+    "meshes": 51,
+    "triangles": 34830,
+    "hypotheses": [
+      "timber seating",
+      "turning posts",
+      "west closure",
+      "water",
+      "tribunal elevation"
+    ],
+    "verticalPlacement": "interpretative",
+    "survey": false,
+    "context": {
+      "buildingParts": 91,
+      "parentParcels": 21,
+      "footprintsPreserved": true,
+      "courtyards": 6,
+      "sourceHeight": 0,
+      "ignHeight": 40,
+      "storeyHeight": 51,
+      "fallbackHeight": 0,
+      "streetSamples": 2755,
+      "roofCorrections": 0,
+      "maximumRoofCorrectionM": 0,
+      "preservedSantaMaria": true,
+      "preservedPlazaMayor": true,
+      "heightConflictsReviewed": 3,
+      "interpretiveTrees": 5,
+      "sourcePlazaAreaM2": 256.8157321307386,
+      "surfaceApronAreaM2": 26.3784,
+      "reusedBuildingParts": 0,
+      "reusedStreetFragments": 0,
+      "preservedPreviousContexts": true
+    }
+  },
+  "errors": [],
+  "cameras": [
+    {
+      "place": "circo",
+      "id": "circo-conjunto",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 52,
+      "interiorView": false,
+      "position": [
+        224.83377155525977,
+        73.45746057456768,
+        -239.3836532368588
+      ],
+      "target": [
+        212.28904523544915,
+        43.05800244513099,
+        -228.55430679967512
+      ],
+      "clearance": 28.459601333957337,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-conjunto",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 52,
+      "interiorView": false,
+      "position": [
+        227.0055380252082,
+        55.05800244513099,
+        -238.57552628479618
+      ],
+      "target": [
+        212.28904523544915,
+        43.05800244513099,
+        -228.55430679967512
+      ],
+      "clearance": 10.058002445130988,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-conjunto",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 52,
+      "interiorView": false,
+      "position": [
+        239.81388674499388,
+        109.75856215900899,
+        -252.31537075088403
+      ],
+      "target": [
+        212.28904523544915,
+        43.05800244513099,
+        -228.55430679967512
+      ],
+      "clearance": 64.75856215900899,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-conjunto",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 52,
+      "interiorView": false,
+      "position": [
+        227.0055380252082,
+        55.05800244513099,
+        -238.57552628479618
+      ],
+      "target": [
+        212.28904523544915,
+        43.05800244513099,
+        -228.55430679967512
+      ],
+      "clearance": 10.058002445130988,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-conjunto",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 52,
+      "interiorView": false,
+      "position": [
+        227.55411986933743,
+        80.0496422262863,
+        -241.7320180853157
+      ],
+      "target": [
+        212.28904523544915,
+        43.05800244513099,
+        -228.55430679967512
+      ],
+      "clearance": 35.049642226286295,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-conjunto",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 52,
+      "interiorView": false,
+      "position": [
+        227.0055380252082,
+        55.05800244513099,
+        -238.57552628479618
+      ],
+      "target": [
+        212.28904523544915,
+        43.05800244513099,
+        -228.55430679967512
+      ],
+      "clearance": 10.058002445130988,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-acceso",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 62,
+      "interiorView": false,
+      "position": [
+        223.76272872567904,
+        47.0626294504866,
+        -222.7873798395488
+      ],
+      "target": [
+        218.26616872567905,
+        46.25574014389731,
+        -230.9291098395488
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-acceso",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 62,
+      "interiorView": false,
+      "position": [
+        223.76272872567904,
+        47.0626294504866,
+        -222.7873798395488
+      ],
+      "target": [
+        218.26616872567905,
+        46.25574014389731,
+        -230.9291098395488
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-acceso",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 62,
+      "interiorView": false,
+      "position": [
+        223.76272872567904,
+        47.0626294504866,
+        -222.7873798395488
+      ],
+      "target": [
+        218.26616872567905,
+        46.25574014389731,
+        -230.9291098395488
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-acceso",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 62,
+      "interiorView": false,
+      "position": [
+        223.76272872567904,
+        47.0626294504866,
+        -222.7873798395488
+      ],
+      "target": [
+        218.26616872567905,
+        46.25574014389731,
+        -230.9291098395488
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-acceso",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 62,
+      "interiorView": false,
+      "position": [
+        223.76272872567904,
+        47.0626294504866,
+        -222.7873798395488
+      ],
+      "target": [
+        218.26616872567905,
+        46.25574014389731,
+        -230.9291098395488
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-acceso",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 62,
+      "interiorView": false,
+      "position": [
+        223.76272872567904,
+        47.0626294504866,
+        -222.7873798395488
+      ],
+      "target": [
+        218.26616872567905,
+        46.25574014389731,
+        -230.9291098395488
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-puerta",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 55,
+      "interiorView": false,
+      "position": [
+        215.68875188960624,
+        48.90800244513099,
+        -235.20801213322272
+      ],
+      "target": [
+        208.20272718967604,
+        43.90800244513099,
+        -228.1398133391851
+      ],
+      "clearance": 4.279786879447613,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Circo · vano · limestone",
+        "intended": true,
+        "point": [
+          209.08441791129596,
+          44.49689358359339,
+          -228.97229326612498
+        ],
+        "distanceToTarget": 1.348033430708602
+      }
+    },
+    {
+      "place": "circo",
+      "id": "circo-puerta",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 55,
+      "interiorView": false,
+      "position": [
+        213.09186672278307,
+        46.80800244513099,
+        -233.30375704780647
+      ],
+      "target": [
+        208.20272718967604,
+        43.90800244513099,
+        -228.1398133391851
+      ],
+      "clearance": 2.4308531034356378,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Circo · vano · limestone",
+        "intended": true,
+        "point": [
+          209.01249371250526,
+          44.38831659863449,
+          -228.99509446027
+        ],
+        "distanceToTarget": 1.2719784996747905
+      }
+    },
+    {
+      "place": "circo",
+      "id": "circo-puerta",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 55,
+      "interiorView": false,
+      "position": [
+        215.68875188960624,
+        48.90800244513099,
+        -235.20801213322272
+      ],
+      "target": [
+        208.20272718967604,
+        43.90800244513099,
+        -228.1398133391851
+      ],
+      "clearance": 4.279786879447613,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Circo · vano · limestone",
+        "intended": true,
+        "point": [
+          209.08441791129596,
+          44.49689358359339,
+          -228.97229326612498
+        ],
+        "distanceToTarget": 1.348033430708602
+      }
+    },
+    {
+      "place": "circo",
+      "id": "circo-puerta",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 55,
+      "interiorView": false,
+      "position": [
+        213.09186672278307,
+        46.80800244513099,
+        -233.30375704780647
+      ],
+      "target": [
+        208.20272718967604,
+        43.90800244513099,
+        -228.1398133391851
+      ],
+      "clearance": 2.4308531034356378,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Circo · vano · limestone",
+        "intended": true,
+        "point": [
+          209.01249371250526,
+          44.38831659863449,
+          -228.99509446027
+        ],
+        "distanceToTarget": 1.2719784996747905
+      }
+    },
+    {
+      "place": "circo",
+      "id": "circo-puerta",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 55,
+      "interiorView": false,
+      "position": [
+        215.68875188960624,
+        48.90800244513099,
+        -235.20801213322272
+      ],
+      "target": [
+        208.20272718967604,
+        43.90800244513099,
+        -228.1398133391851
+      ],
+      "clearance": 4.279786879447613,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Circo · vano · limestone",
+        "intended": true,
+        "point": [
+          209.08441791129596,
+          44.49689358359339,
+          -228.97229326612498
+        ],
+        "distanceToTarget": 1.348033430708602
+      }
+    },
+    {
+      "place": "circo",
+      "id": "circo-puerta",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 55,
+      "interiorView": false,
+      "position": [
+        213.09186672278307,
+        46.80800244513099,
+        -233.30375704780647
+      ],
+      "target": [
+        208.20272718967604,
+        43.90800244513099,
+        -228.1398133391851
+      ],
+      "clearance": 2.4308531034356378,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Circo · vano · limestone",
+        "intended": true,
+        "point": [
+          209.01249371250526,
+          44.38831659863449,
+          -228.99509446027
+        ],
+        "distanceToTarget": 1.2719784996747905
+      }
+    },
+    {
+      "place": "circo",
+      "id": "circo-vano",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 58,
+      "interiorView": true,
+      "position": [
+        209.44965803705884,
+        43.72800244513099,
+        -231.94070316419257
+      ],
+      "target": [
+        208.09787029919437,
+        43.32800244513099,
+        -228.1730553685833
+      ],
+      "clearance": 2.200000000000003,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-vano",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 58,
+      "interiorView": true,
+      "position": [
+        208.95589567495944,
+        43.44800244513099,
+        -230.68102116869767
+      ],
+      "target": [
+        208.09787029919437,
+        43.32800244513099,
+        -228.1730553685833
+      ],
+      "clearance": 1.9200000000000017,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-vano",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 58,
+      "interiorView": true,
+      "position": [
+        209.44965803705884,
+        43.72800244513099,
+        -231.94070316419257
+      ],
+      "target": [
+        208.09787029919437,
+        43.32800244513099,
+        -228.1730553685833
+      ],
+      "clearance": 2.200000000000003,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-vano",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 58,
+      "interiorView": true,
+      "position": [
+        208.95589567495944,
+        43.44800244513099,
+        -230.68102116869767
+      ],
+      "target": [
+        208.09787029919437,
+        43.32800244513099,
+        -228.1730553685833
+      ],
+      "clearance": 1.9200000000000017,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-vano",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 58,
+      "interiorView": true,
+      "position": [
+        209.44965803705884,
+        43.72800244513099,
+        -231.94070316419257
+      ],
+      "target": [
+        208.09787029919437,
+        43.32800244513099,
+        -228.1730553685833
+      ],
+      "clearance": 2.200000000000003,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-vano",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 58,
+      "interiorView": true,
+      "position": [
+        208.95589567495944,
+        43.44800244513099,
+        -230.68102116869767
+      ],
+      "target": [
+        208.09787029919437,
+        43.32800244513099,
+        -228.1730553685833
+      ],
+      "clearance": 1.9200000000000017,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-sillares",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 53,
+      "interiorView": true,
+      "position": [
+        211.97842311093123,
+        44.82800244513099,
+        -231.28064846860804
+      ],
+      "target": [
+        209.99303337761935,
+        43.62800244513099,
+        -228.6580109399244
+      ],
+      "clearance": 3.3000000000000043,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-sillares",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 53,
+      "interiorView": true,
+      "position": [
+        211.1217183645407,
+        44.27800244513099,
+        -230.3982897107822
+      ],
+      "target": [
+        209.99303337761935,
+        43.62800244513099,
+        -228.6580109399244
+      ],
+      "clearance": 2.75,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-sillares",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 53,
+      "interiorView": true,
+      "position": [
+        211.97842311093123,
+        44.82800244513099,
+        -231.28064846860804
+      ],
+      "target": [
+        209.99303337761935,
+        43.62800244513099,
+        -228.6580109399244
+      ],
+      "clearance": 3.3000000000000043,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-sillares",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 53,
+      "interiorView": true,
+      "position": [
+        211.1217183645407,
+        44.27800244513099,
+        -230.3982897107822
+      ],
+      "target": [
+        209.99303337761935,
+        43.62800244513099,
+        -228.6580109399244
+      ],
+      "clearance": 2.75,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-sillares",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 53,
+      "interiorView": true,
+      "position": [
+        211.97842311093123,
+        44.82800244513099,
+        -231.28064846860804
+      ],
+      "target": [
+        209.99303337761935,
+        43.62800244513099,
+        -228.6580109399244
+      ],
+      "clearance": 3.3000000000000043,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-sillares",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 53,
+      "interiorView": true,
+      "position": [
+        211.1217183645407,
+        44.27800244513099,
+        -230.3982897107822
+      ],
+      "target": [
+        209.99303337761935,
+        43.62800244513099,
+        -228.6580109399244
+      ],
+      "clearance": 2.75,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-umbral",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 55,
+      "interiorView": true,
+      "position": [
+        210.75742935190146,
+        44.94800244513099,
+        -232.26044397809474
+      ],
+      "target": [
+        209.1857912613176,
+        42.14800244513099,
+        -231.60473542071125
+      ],
+      "clearance": 3.4200000000000017,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-umbral",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 55,
+      "interiorView": true,
+      "position": [
+        210.29125277008657,
+        43.79800244513099,
+        -232.77539969907215
+      ],
+      "target": [
+        209.1857912613176,
+        42.14800244513099,
+        -231.60473542071125
+      ],
+      "clearance": 2.270000000000003,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-umbral",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 55,
+      "interiorView": true,
+      "position": [
+        210.75742935190146,
+        44.94800244513099,
+        -232.26044397809474
+      ],
+      "target": [
+        209.1857912613176,
+        42.14800244513099,
+        -231.60473542071125
+      ],
+      "clearance": 3.4200000000000017,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-umbral",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 55,
+      "interiorView": true,
+      "position": [
+        210.29125277008657,
+        43.79800244513099,
+        -232.77539969907215
+      ],
+      "target": [
+        209.1857912613176,
+        42.14800244513099,
+        -231.60473542071125
+      ],
+      "clearance": 2.270000000000003,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-umbral",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 55,
+      "interiorView": true,
+      "position": [
+        210.75742935190146,
+        44.94800244513099,
+        -232.26044397809474
+      ],
+      "target": [
+        209.1857912613176,
+        42.14800244513099,
+        -231.60473542071125
+      ],
+      "clearance": 3.4200000000000017,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-umbral",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 55,
+      "interiorView": true,
+      "position": [
+        210.29125277008657,
+        43.79800244513099,
+        -232.77539969907215
+      ],
+      "target": [
+        209.1857912613176,
+        42.14800244513099,
+        -231.60473542071125
+      ],
+      "clearance": 2.270000000000003,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-coronacion",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 53,
+      "interiorView": true,
+      "position": [
+        213.47559503963575,
+        48.27800244513099,
+        -230.87419894419062
+      ],
+      "target": [
+        209.06064720270803,
+        45.47800244513099,
+        -227.8678330986543
+      ],
+      "clearance": 6.75,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Circo · coronacion · limestone",
+        "intended": true,
+        "point": [
+          209.85089675161643,
+          45.97918588345748,
+          -228.40595480270187
+        ],
+        "distanceToTarget": 1.0794693866755851
+      }
+    },
+    {
+      "place": "circo",
+      "id": "circo-coronacion",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 53,
+      "interiorView": true,
+      "position": [
+        211.87840128804174,
+        47.12800244513099,
+        -229.80697257651173
+      ],
+      "target": [
+        209.06064720270803,
+        45.47800244513099,
+        -227.8678330986543
+      ],
+      "clearance": 5.600000000000001,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Circo · coronacion · limestone",
+        "intended": true,
+        "point": [
+          209.9179005762616,
+          45.979986657921465,
+          -228.45778304064413
+        ],
+        "distanceToTarget": 1.1553841051415057
+      }
+    },
+    {
+      "place": "circo",
+      "id": "circo-coronacion",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 53,
+      "interiorView": true,
+      "position": [
+        213.47559503963575,
+        48.27800244513099,
+        -230.87419894419062
+      ],
+      "target": [
+        209.06064720270803,
+        45.47800244513099,
+        -227.8678330986543
+      ],
+      "clearance": 6.75,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Circo · coronacion · limestone",
+        "intended": true,
+        "point": [
+          209.85089675161643,
+          45.97918588345748,
+          -228.40595480270187
+        ],
+        "distanceToTarget": 1.0794693866755851
+      }
+    },
+    {
+      "place": "circo",
+      "id": "circo-coronacion",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 53,
+      "interiorView": true,
+      "position": [
+        211.87840128804174,
+        47.12800244513099,
+        -229.80697257651173
+      ],
+      "target": [
+        209.06064720270803,
+        45.47800244513099,
+        -227.8678330986543
+      ],
+      "clearance": 5.600000000000001,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Circo · coronacion · limestone",
+        "intended": true,
+        "point": [
+          209.9179005762616,
+          45.979986657921465,
+          -228.45778304064413
+        ],
+        "distanceToTarget": 1.1553841051415057
+      }
+    },
+    {
+      "place": "circo",
+      "id": "circo-coronacion",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 53,
+      "interiorView": true,
+      "position": [
+        213.47559503963575,
+        48.27800244513099,
+        -230.87419894419062
+      ],
+      "target": [
+        209.06064720270803,
+        45.47800244513099,
+        -227.8678330986543
+      ],
+      "clearance": 6.75,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Circo · coronacion · limestone",
+        "intended": true,
+        "point": [
+          209.85089675161643,
+          45.97918588345748,
+          -228.40595480270187
+        ],
+        "distanceToTarget": 1.0794693866755851
+      }
+    },
+    {
+      "place": "circo",
+      "id": "circo-coronacion",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 53,
+      "interiorView": true,
+      "position": [
+        211.87840128804174,
+        47.12800244513099,
+        -229.80697257651173
+      ],
+      "target": [
+        209.06064720270803,
+        45.47800244513099,
+        -227.8678330986543
+      ],
+      "clearance": 5.600000000000001,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Circo · coronacion · limestone",
+        "intended": true,
+        "point": [
+          209.9179005762616,
+          45.979986657921465,
+          -228.45778304064413
+        ],
+        "distanceToTarget": 1.1553841051415057
+      }
+    },
+    {
+      "place": "circo",
+      "id": "circo-interior",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 60,
+      "interiorView": true,
+      "position": [
+        209.52891992636032,
+        45.62800244513099,
+        -232.35617585030366
+      ],
+      "target": [
+        208.61765475887546,
+        42.62800244513099,
+        -229.81263583793333
+      ],
+      "clearance": 4.100000000000001,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-interior",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 60,
+      "interiorView": true,
+      "position": [
+        209.5909826727695,
+        43.82800244513099,
+        -232.65121519599867
+      ],
+      "target": [
+        208.61765475887546,
+        42.62800244513099,
+        -229.81263583793333
+      ],
+      "clearance": 2.3000000000000043,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-interior",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 60,
+      "interiorView": true,
+      "position": [
+        209.52891992636032,
+        45.62800244513099,
+        -232.35617585030366
+      ],
+      "target": [
+        208.61765475887546,
+        42.62800244513099,
+        -229.81263583793333
+      ],
+      "clearance": 4.100000000000001,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-interior",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 60,
+      "interiorView": true,
+      "position": [
+        209.5909826727695,
+        43.82800244513099,
+        -232.65121519599867
+      ],
+      "target": [
+        208.61765475887546,
+        42.62800244513099,
+        -229.81263583793333
+      ],
+      "clearance": 2.3000000000000043,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-interior",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 60,
+      "interiorView": true,
+      "position": [
+        209.52891992636032,
+        45.62800244513099,
+        -232.35617585030366
+      ],
+      "target": [
+        208.61765475887546,
+        42.62800244513099,
+        -229.81263583793333
+      ],
+      "clearance": 4.100000000000001,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-interior",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 60,
+      "interiorView": true,
+      "position": [
+        209.5909826727695,
+        43.82800244513099,
+        -232.65121519599867
+      ],
+      "target": [
+        208.61765475887546,
+        42.62800244513099,
+        -229.81263583793333
+      ],
+      "clearance": 2.3000000000000043,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-muros",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 56,
+      "interiorView": false,
+      "position": [
+        209.60562624956083,
+        45.95800244513099,
+        -232.73049675538516
+      ],
+      "target": [
+        207.3364970110042,
+        42.55800244513099,
+        -232.19100393918876
+      ],
+      "clearance": 4.43,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Circo · muros · rubble",
+        "intended": true,
+        "point": [
+          207.57501224837497,
+          42.91538702829227,
+          -232.24771170837548
+        ],
+        "distanceToTarget": 0.43339246627684935
+      }
+    },
+    {
+      "place": "circo",
+      "id": "circo-muros",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 56,
+      "interiorView": false,
+      "position": [
+        208.7221505755187,
+        44.65800244513099,
+        -232.59095918562056
+      ],
+      "target": [
+        207.3364970110042,
+        42.55800244513099,
+        -232.19100393918876
+      ],
+      "clearance": 3.1300000000000026,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Circo · muros · rubble",
+        "intended": true,
+        "point": [
+          207.57208254321424,
+          42.915039463842355,
+          -232.25900338147636
+        ],
+        "distanceToTarget": 0.4331280409629534
+      }
+    },
+    {
+      "place": "circo",
+      "id": "circo-muros",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 56,
+      "interiorView": false,
+      "position": [
+        209.60562624956083,
+        45.95800244513099,
+        -232.73049675538516
+      ],
+      "target": [
+        207.3364970110042,
+        42.55800244513099,
+        -232.19100393918876
+      ],
+      "clearance": 4.43,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Circo · muros · rubble",
+        "intended": true,
+        "point": [
+          207.57501224837497,
+          42.91538702829227,
+          -232.24771170837548
+        ],
+        "distanceToTarget": 0.43339246627684935
+      }
+    },
+    {
+      "place": "circo",
+      "id": "circo-muros",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 56,
+      "interiorView": false,
+      "position": [
+        208.7221505755187,
+        44.65800244513099,
+        -232.59095918562056
+      ],
+      "target": [
+        207.3364970110042,
+        42.55800244513099,
+        -232.19100393918876
+      ],
+      "clearance": 3.1300000000000026,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Circo · muros · rubble",
+        "intended": true,
+        "point": [
+          207.57208254321424,
+          42.915039463842355,
+          -232.25900338147636
+        ],
+        "distanceToTarget": 0.4331280409629534
+      }
+    },
+    {
+      "place": "circo",
+      "id": "circo-muros",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 56,
+      "interiorView": false,
+      "position": [
+        209.60562624956083,
+        45.95800244513099,
+        -232.73049675538516
+      ],
+      "target": [
+        207.3364970110042,
+        42.55800244513099,
+        -232.19100393918876
+      ],
+      "clearance": 4.43,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Circo · muros · rubble",
+        "intended": true,
+        "point": [
+          207.57501224837497,
+          42.91538702829227,
+          -232.24771170837548
+        ],
+        "distanceToTarget": 0.43339246627684935
+      }
+    },
+    {
+      "place": "circo",
+      "id": "circo-muros",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 56,
+      "interiorView": false,
+      "position": [
+        208.7221505755187,
+        44.65800244513099,
+        -232.59095918562056
+      ],
+      "target": [
+        207.3364970110042,
+        42.55800244513099,
+        -232.19100393918876
+      ],
+      "clearance": 3.1300000000000026,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Circo · muros · rubble",
+        "intended": true,
+        "point": [
+          207.57208254321424,
+          42.915039463842355,
+          -232.25900338147636
+        ],
+        "distanceToTarget": 0.4331280409629534
+      }
+    },
+    {
+      "place": "circo",
+      "id": "circo-tribuna",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 57,
+      "interiorView": false,
+      "position": [
+        217.8535430139096,
+        49.60800244513099,
+        -233.33367608060635
+      ],
+      "target": [
+        211.36477919592568,
+        42.60800244513099,
+        -229.41118400101936
+      ],
+      "clearance": 4.981935466299014,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-tribuna",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 57,
+      "interiorView": false,
+      "position": [
+        215.53330245333274,
+        47.10800244513099,
+        -231.9711476438191
+      ],
+      "target": [
+        211.36477919592568,
+        42.60800244513099,
+        -229.41118400101936
+      ],
+      "clearance": 2.7236828146250076,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-tribuna",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 57,
+      "interiorView": false,
+      "position": [
+        217.8535430139096,
+        49.60800244513099,
+        -233.33367608060635
+      ],
+      "target": [
+        211.36477919592568,
+        42.60800244513099,
+        -229.41118400101936
+      ],
+      "clearance": 4.981935466299014,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-tribuna",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 57,
+      "interiorView": false,
+      "position": [
+        215.53330245333274,
+        47.10800244513099,
+        -231.9711476438191
+      ],
+      "target": [
+        211.36477919592568,
+        42.60800244513099,
+        -229.41118400101936
+      ],
+      "clearance": 2.7236828146250076,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-tribuna",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 57,
+      "interiorView": false,
+      "position": [
+        217.8535430139096,
+        49.60800244513099,
+        -233.33367608060635
+      ],
+      "target": [
+        211.36477919592568,
+        42.60800244513099,
+        -229.41118400101936
+      ],
+      "clearance": 4.981935466299014,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-tribuna",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 57,
+      "interiorView": false,
+      "position": [
+        215.53330245333274,
+        47.10800244513099,
+        -231.9711476438191
+      ],
+      "target": [
+        211.36477919592568,
+        42.60800244513099,
+        -229.41118400101936
+      ],
+      "clearance": 2.7236828146250076,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-escaleras",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 57,
+      "interiorView": false,
+      "position": [
+        217.81817217310217,
+        46.20800244513099,
+        -230.21085601636625
+      ],
+      "target": [
+        214.21693122533426,
+        42.20800244513099,
+        -227.7857655776156
+      ],
+      "clearance": 4.68,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-escaleras",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 57,
+      "interiorView": false,
+      "position": [
+        216.6278318660881,
+        45.008002445130984,
+        -229.43426735208016
+      ],
+      "target": [
+        214.21693122533426,
+        42.20800244513099,
+        -227.7857655776156
+      ],
+      "clearance": 3.479999999999997,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-escaleras",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 57,
+      "interiorView": false,
+      "position": [
+        217.81817217310217,
+        46.20800244513099,
+        -230.21085601636625
+      ],
+      "target": [
+        214.21693122533426,
+        42.20800244513099,
+        -227.7857655776156
+      ],
+      "clearance": 4.68,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-escaleras",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 57,
+      "interiorView": false,
+      "position": [
+        216.6278318660881,
+        45.008002445130984,
+        -229.43426735208016
+      ],
+      "target": [
+        214.21693122533426,
+        42.20800244513099,
+        -227.7857655776156
+      ],
+      "clearance": 3.479999999999997,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-escaleras",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 57,
+      "interiorView": false,
+      "position": [
+        217.81817217310217,
+        46.20800244513099,
+        -230.21085601636625
+      ],
+      "target": [
+        214.21693122533426,
+        42.20800244513099,
+        -227.7857655776156
+      ],
+      "clearance": 4.68,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-escaleras",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 57,
+      "interiorView": false,
+      "position": [
+        216.6278318660881,
+        45.008002445130984,
+        -229.43426735208016
+      ],
+      "target": [
+        214.21693122533426,
+        42.20800244513099,
+        -227.7857655776156
+      ],
+      "clearance": 3.479999999999997,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-estratos",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 60,
+      "interiorView": true,
+      "position": [
+        215.38664997277493,
+        46.358002445130985,
+        -232.10418635978652
+      ],
+      "target": [
+        218.64876912926294,
+        42.55800244513099,
+        -227.50325399678943
+      ],
+      "clearance": 1.9785293988448487,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-estratos",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 60,
+      "interiorView": true,
+      "position": [
+        216.5492007863463,
+        45.00800244513099,
+        -230.4767725814669
+      ],
+      "target": [
+        218.64876912926294,
+        42.55800244513099,
+        -227.50325399678943
+      ],
+      "clearance": 3.480000000000004,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-estratos",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 60,
+      "interiorView": true,
+      "position": [
+        215.38664997277493,
+        46.358002445130985,
+        -232.10418635978652
+      ],
+      "target": [
+        218.64876912926294,
+        42.55800244513099,
+        -227.50325399678943
+      ],
+      "clearance": 1.9785293988448487,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-estratos",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 60,
+      "interiorView": true,
+      "position": [
+        216.5492007863463,
+        45.00800244513099,
+        -230.4767725814669
+      ],
+      "target": [
+        218.64876912926294,
+        42.55800244513099,
+        -227.50325399678943
+      ],
+      "clearance": 3.480000000000004,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-estratos",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 60,
+      "interiorView": true,
+      "position": [
+        215.38664997277493,
+        46.358002445130985,
+        -232.10418635978652
+      ],
+      "target": [
+        218.64876912926294,
+        42.55800244513099,
+        -227.50325399678943
+      ],
+      "clearance": 1.9785293988448487,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-estratos",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 60,
+      "interiorView": true,
+      "position": [
+        216.5492007863463,
+        45.00800244513099,
+        -230.4767725814669
+      ],
+      "target": [
+        218.64876912926294,
+        42.55800244513099,
+        -227.50325399678943
+      ],
+      "clearance": 3.480000000000004,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-arena",
+      "mode": "historical",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 54,
+      "interiorView": false,
+      "position": [
+        222.40417274222614,
+        72.178002445131,
+        -315.95392919886876
+      ],
+      "target": [
+        169.3732939753727,
+        42.17800244513099,
+        -287.6568286898892
+      ],
+      "clearance": 27.178002445131,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-arena",
+      "mode": "historical",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 54,
+      "interiorView": false,
+      "position": [
+        203.87470211676938,
+        62.17800244513099,
+        -307.1415107827735
+      ],
+      "target": [
+        169.3732939753727,
+        42.17800244513099,
+        -287.6568286898892
+      ],
+      "clearance": 17.178002445130993,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-arena",
+      "mode": "historical",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 54,
+      "interiorView": false,
+      "position": [
+        222.40417274222614,
+        72.178002445131,
+        -315.95392919886876
+      ],
+      "target": [
+        169.3732939753727,
+        42.17800244513099,
+        -287.6568286898892
+      ],
+      "clearance": 27.178002445131,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-arena",
+      "mode": "historical",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 54,
+      "interiorView": false,
+      "position": [
+        203.87470211676938,
+        62.17800244513099,
+        -307.1415107827735
+      ],
+      "target": [
+        169.3732939753727,
+        42.17800244513099,
+        -287.6568286898892
+      ],
+      "clearance": 17.178002445130993,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-arena",
+      "mode": "historical",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 54,
+      "interiorView": false,
+      "position": [
+        222.40417274222614,
+        72.178002445131,
+        -315.95392919886876
+      ],
+      "target": [
+        169.3732939753727,
+        42.17800244513099,
+        -287.6568286898892
+      ],
+      "clearance": 27.178002445131,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-arena",
+      "mode": "historical",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 54,
+      "interiorView": false,
+      "position": [
+        203.87470211676938,
+        62.17800244513099,
+        -307.1415107827735
+      ],
+      "target": [
+        169.3732939753727,
+        42.17800244513099,
+        -287.6568286898892
+      ],
+      "clearance": 17.178002445130993,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-spina",
+      "mode": "historical",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 56,
+      "interiorView": false,
+      "position": [
+        186.73009825242588,
+        78.72800244513098,
+        -315.9336981292043
+      ],
+      "target": [
+        144.18490853374115,
+        42.72800244513099,
+        -284.31239468040377
+      ],
+      "clearance": 33.72800244513098,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-spina",
+      "mode": "historical",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 56,
+      "interiorView": false,
+      "position": [
+        171.71140519541038,
+        65.72800244513098,
+        -304.9592341851588
+      ],
+      "target": [
+        144.18490853374115,
+        42.72800244513099,
+        -284.31239468040377
+      ],
+      "clearance": 24.199999999999996,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-spina",
+      "mode": "historical",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 56,
+      "interiorView": false,
+      "position": [
+        186.73009825242588,
+        78.72800244513098,
+        -315.9336981292043
+      ],
+      "target": [
+        144.18490853374115,
+        42.72800244513099,
+        -284.31239468040377
+      ],
+      "clearance": 33.72800244513098,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-spina",
+      "mode": "historical",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 56,
+      "interiorView": false,
+      "position": [
+        171.71140519541038,
+        65.72800244513098,
+        -304.9592341851588
+      ],
+      "target": [
+        144.18490853374115,
+        42.72800244513099,
+        -284.31239468040377
+      ],
+      "clearance": 24.199999999999996,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-spina",
+      "mode": "historical",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 56,
+      "interiorView": false,
+      "position": [
+        186.73009825242588,
+        78.72800244513098,
+        -315.9336981292043
+      ],
+      "target": [
+        144.18490853374115,
+        42.72800244513099,
+        -284.31239468040377
+      ],
+      "clearance": 33.72800244513098,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-spina",
+      "mode": "historical",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 56,
+      "interiorView": false,
+      "position": [
+        171.71140519541038,
+        65.72800244513098,
+        -304.9592341851588
+      ],
+      "target": [
+        144.18490853374115,
+        42.72800244513099,
+        -284.31239468040377
+      ],
+      "clearance": 24.199999999999996,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-metae",
+      "mode": "historical",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 57,
+      "interiorView": false,
+      "position": [
+        229.87146985621516,
+        55.07800244513099,
+        -274.98162789894894
+      ],
+      "target": [
+        237.1262432788731,
+        43.07800244513099,
+        -254.84786862289977
+      ],
+      "clearance": 13.550000000000004,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-metae",
+      "mode": "historical",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 57,
+      "interiorView": false,
+      "position": [
+        232.8244905472986,
+        50.87800244513099,
+        -267.7511598091201
+      ],
+      "target": [
+        237.1262432788731,
+        43.07800244513099,
+        -254.84786862289977
+      ],
+      "clearance": 9.350000000000001,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-metae",
+      "mode": "historical",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 57,
+      "interiorView": false,
+      "position": [
+        229.87146985621516,
+        55.07800244513099,
+        -274.98162789894894
+      ],
+      "target": [
+        237.1262432788731,
+        43.07800244513099,
+        -254.84786862289977
+      ],
+      "clearance": 13.550000000000004,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-metae",
+      "mode": "historical",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 57,
+      "interiorView": false,
+      "position": [
+        232.8244905472986,
+        50.87800244513099,
+        -267.7511598091201
+      ],
+      "target": [
+        237.1262432788731,
+        43.07800244513099,
+        -254.84786862289977
+      ],
+      "clearance": 9.350000000000001,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-metae",
+      "mode": "historical",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 57,
+      "interiorView": false,
+      "position": [
+        229.87146985621516,
+        55.07800244513099,
+        -274.98162789894894
+      ],
+      "target": [
+        237.1262432788731,
+        43.07800244513099,
+        -254.84786862289977
+      ],
+      "clearance": 13.550000000000004,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-metae",
+      "mode": "historical",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 57,
+      "interiorView": false,
+      "position": [
+        232.8244905472986,
+        50.87800244513099,
+        -267.7511598091201
+      ],
+      "target": [
+        237.1262432788731,
+        43.07800244513099,
+        -254.84786862289977
+      ],
+      "clearance": 9.350000000000001,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-graderio",
+      "mode": "historical",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 57,
+      "interiorView": false,
+      "position": [
+        144.08899398529778,
+        58.72800244513099,
+        -297.2461025942001
+      ],
+      "target": [
+        136.18317637097186,
+        43.72800244513099,
+        -318.63530659643015
+      ],
+      "clearance": 17.200000000000003,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Circo · graderio · wood",
+        "intended": true,
+        "point": [
+          136.60482063456763,
+          44.52800369262695,
+          -317.4945472707815
+        ],
+        "distanceToTarget": 1.455718970156235
+      }
+    },
+    {
+      "place": "circo",
+      "id": "circo-graderio",
+      "mode": "historical",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 57,
+      "interiorView": false,
+      "position": [
+        141.13597329421432,
+        53.72800244513099,
+        -304.47657068402896
+      ],
+      "target": [
+        136.18317637097186,
+        43.72800244513099,
+        -318.63530659643015
+      ],
+      "clearance": 12.200000000000003,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Circo · graderio · wood",
+        "intended": true,
+        "point": [
+          136.57940074269067,
+          44.52800369262695,
+          -317.50260595714144
+        ],
+        "distanceToTarget": 1.4422227591409444
+      }
+    },
+    {
+      "place": "circo",
+      "id": "circo-graderio",
+      "mode": "historical",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 57,
+      "interiorView": false,
+      "position": [
+        144.08899398529778,
+        58.72800244513099,
+        -297.2461025942001
+      ],
+      "target": [
+        136.18317637097186,
+        43.72800244513099,
+        -318.63530659643015
+      ],
+      "clearance": 17.200000000000003,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Circo · graderio · wood",
+        "intended": true,
+        "point": [
+          136.60482063456763,
+          44.52800369262695,
+          -317.4945472707815
+        ],
+        "distanceToTarget": 1.455718970156235
+      }
+    },
+    {
+      "place": "circo",
+      "id": "circo-graderio",
+      "mode": "historical",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 57,
+      "interiorView": false,
+      "position": [
+        141.13597329421432,
+        53.72800244513099,
+        -304.47657068402896
+      ],
+      "target": [
+        136.18317637097186,
+        43.72800244513099,
+        -318.63530659643015
+      ],
+      "clearance": 12.200000000000003,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Circo · graderio · wood",
+        "intended": true,
+        "point": [
+          136.57940074269067,
+          44.52800369262695,
+          -317.50260595714144
+        ],
+        "distanceToTarget": 1.4422227591409444
+      }
+    },
+    {
+      "place": "circo",
+      "id": "circo-graderio",
+      "mode": "historical",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 57,
+      "interiorView": false,
+      "position": [
+        144.08899398529778,
+        58.72800244513099,
+        -297.2461025942001
+      ],
+      "target": [
+        136.18317637097186,
+        43.72800244513099,
+        -318.63530659643015
+      ],
+      "clearance": 17.200000000000003,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Circo · graderio · wood",
+        "intended": true,
+        "point": [
+          136.60482063456763,
+          44.52800369262695,
+          -317.4945472707815
+        ],
+        "distanceToTarget": 1.455718970156235
+      }
+    },
+    {
+      "place": "circo",
+      "id": "circo-graderio",
+      "mode": "historical",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 57,
+      "interiorView": false,
+      "position": [
+        141.13597329421432,
+        53.72800244513099,
+        -304.47657068402896
+      ],
+      "target": [
+        136.18317637097186,
+        43.72800244513099,
+        -318.63530659643015
+      ],
+      "clearance": 12.200000000000003,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Circo · graderio · wood",
+        "intended": true,
+        "point": [
+          136.57940074269067,
+          44.52800369262695,
+          -317.50260595714144
+        ],
+        "distanceToTarget": 1.4422227591409444
+      }
+    },
+    {
+      "place": "circo",
+      "id": "circo-historica",
+      "mode": "historical",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 48,
+      "interiorView": false,
+      "position": [
+        220.56119364146366,
+        560.5305191969534,
+        -348.2470580219267
+      ],
+      "target": [
+        142.52017982969744,
+        42.67800244513099,
+        -285.6793907820562
+      ],
+      "clearance": 522.2603239045079,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-historica",
+      "mode": "historical",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 48,
+      "interiorView": false,
+      "position": [
+        172.0576218856887,
+        238.678002445131,
+        -309.3603856257903
+      ],
+      "target": [
+        142.52017982969744,
+        42.67800244513099,
+        -285.6793907820562
+      ],
+      "clearance": 197.15,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-historica",
+      "mode": "historical",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 48,
+      "interiorView": false,
+      "position": [
+        319.8224185117416,
+        1219.1928379480203,
+        -427.82756299185496
+      ],
+      "target": [
+        142.52017982969744,
+        42.67800244513099,
+        -285.6793907820562
+      ],
+      "clearance": 1176.9725945083098,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-historica",
+      "mode": "historical",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 48,
+      "interiorView": false,
+      "position": [
+        172.0576218856887,
+        238.678002445131,
+        -309.3603856257903
+      ],
+      "target": [
+        142.52017982969744,
+        42.67800244513099,
+        -285.6793907820562
+      ],
+      "clearance": 197.15,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-historica",
+      "mode": "historical",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 48,
+      "interiorView": false,
+      "position": [
+        238.52175397448565,
+        679.7104339166937,
+        -362.6465424400636
+      ],
+      "target": [
+        142.52017982969744,
+        42.67800244513099,
+        -285.6793907820562
+      ],
+      "clearance": 641.9972301666613,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-historica",
+      "mode": "historical",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 48,
+      "interiorView": false,
+      "position": [
+        172.0576218856887,
+        238.678002445131,
+        -309.3603856257903
+      ],
+      "target": [
+        142.52017982969744,
+        42.67800244513099,
+        -285.6793907820562
+      ],
+      "clearance": 197.15,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-carceres",
+      "mode": "historical",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 56,
+      "interiorView": false,
+      "position": [
+        58.091170488065764,
+        68.928002445131,
+        -351.2601225680822
+      ],
+      "target": [
+        13.546204537222025,
+        42.92800244513099,
+        -326.56708694185403
+      ],
+      "clearance": 27.400000000000013,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-carceres",
+      "mode": "historical",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 56,
+      "interiorView": false,
+      "position": [
+        42.72363350663874,
+        59.92800244513099,
+        -342.49434780914197
+      ],
+      "target": [
+        13.546204537222025,
+        42.92800244513099,
+        -326.56708694185403
+      ],
+      "clearance": 18.400000000000006,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-carceres",
+      "mode": "historical",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 56,
+      "interiorView": false,
+      "position": [
+        58.091170488065764,
+        68.928002445131,
+        -351.2601225680822
+      ],
+      "target": [
+        13.546204537222025,
+        42.92800244513099,
+        -326.56708694185403
+      ],
+      "clearance": 27.400000000000013,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-carceres",
+      "mode": "historical",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 56,
+      "interiorView": false,
+      "position": [
+        42.72363350663874,
+        59.92800244513099,
+        -342.49434780914197
+      ],
+      "target": [
+        13.546204537222025,
+        42.92800244513099,
+        -326.56708694185403
+      ],
+      "clearance": 18.400000000000006,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-carceres",
+      "mode": "historical",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 56,
+      "interiorView": false,
+      "position": [
+        58.091170488065764,
+        68.928002445131,
+        -351.2601225680822
+      ],
+      "target": [
+        13.546204537222025,
+        42.92800244513099,
+        -326.56708694185403
+      ],
+      "clearance": 27.400000000000013,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-carceres",
+      "mode": "historical",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 56,
+      "interiorView": false,
+      "position": [
+        42.72363350663874,
+        59.92800244513099,
+        -342.49434780914197
+      ],
+      "target": [
+        13.546204537222025,
+        42.92800244513099,
+        -326.56708694185403
+      ],
+      "clearance": 18.400000000000006,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-fases",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 58,
+      "interiorView": false,
+      "position": [
+        214.4404020624238,
+        47.35800244513099,
+        -231.93209658043853
+      ],
+      "target": [
+        216.89347869546748,
+        42.35800244513099,
+        -226.43369544625278
+      ],
+      "clearance": 5.830000000000005,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-fases",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 58,
+      "interiorView": false,
+      "position": [
+        215.32164390403332,
+        45.65800244513099,
+        -230.07914951789286
+      ],
+      "target": [
+        216.89347869546748,
+        42.35800244513099,
+        -226.43369544625278
+      ],
+      "clearance": 4.130000000000003,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-fases",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 58,
+      "interiorView": false,
+      "position": [
+        214.4404020624238,
+        47.35800244513099,
+        -231.93209658043853
+      ],
+      "target": [
+        216.89347869546748,
+        42.35800244513099,
+        -226.43369544625278
+      ],
+      "clearance": 5.830000000000005,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-fases",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 58,
+      "interiorView": false,
+      "position": [
+        215.32164390403332,
+        45.65800244513099,
+        -230.07914951789286
+      ],
+      "target": [
+        216.89347869546748,
+        42.35800244513099,
+        -226.43369544625278
+      ],
+      "clearance": 4.130000000000003,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-fases",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 58,
+      "interiorView": false,
+      "position": [
+        214.4404020624238,
+        47.35800244513099,
+        -231.93209658043853
+      ],
+      "target": [
+        216.89347869546748,
+        42.35800244513099,
+        -226.43369544625278
+      ],
+      "clearance": 5.830000000000005,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-fases",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 58,
+      "interiorView": false,
+      "position": [
+        215.32164390403332,
+        45.65800244513099,
+        -230.07914951789286
+      ],
+      "target": [
+        216.89347869546748,
+        42.35800244513099,
+        -226.43369544625278
+      ],
+      "clearance": 4.130000000000003,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-entorno",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 62,
+      "interiorView": false,
+      "position": [
+        226.19263946018026,
+        46.89473212177262,
+        -214.5687796796925
+      ],
+      "target": [
+        208.82959946018025,
+        46.59819520789104,
+        -221.01739967969252
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-entorno",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 62,
+      "interiorView": false,
+      "position": [
+        226.19263946018026,
+        46.89473212177262,
+        -214.5687796796925
+      ],
+      "target": [
+        208.82959946018025,
+        46.59819520789104,
+        -221.01739967969252
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-entorno",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 62,
+      "interiorView": false,
+      "position": [
+        226.19263946018026,
+        46.89473212177262,
+        -214.5687796796925
+      ],
+      "target": [
+        208.82959946018025,
+        46.59819520789104,
+        -221.01739967969252
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-entorno",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 62,
+      "interiorView": false,
+      "position": [
+        226.19263946018026,
+        46.89473212177262,
+        -214.5687796796925
+      ],
+      "target": [
+        208.82959946018025,
+        46.59819520789104,
+        -221.01739967969252
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-entorno",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 62,
+      "interiorView": false,
+      "position": [
+        226.19263946018026,
+        46.89473212177262,
+        -214.5687796796925
+      ],
+      "target": [
+        208.82959946018025,
+        46.59819520789104,
+        -221.01739967969252
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-entorno",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 62,
+      "interiorView": false,
+      "position": [
+        226.19263946018026,
+        46.89473212177262,
+        -214.5687796796925
+      ],
+      "target": [
+        208.82959946018025,
+        46.59819520789104,
+        -221.01739967969252
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-conjunto",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 52,
+      "interiorView": false,
+      "position": [
+        218.94539217578637,
+        73.63122268134302,
+        -237.30986805815124
+      ],
+      "target": [
+        212.28904523544915,
+        42.55800244513099,
+        -228.55430679967512
+      ],
+      "clearance": 28.788830189793146,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-conjunto",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 52,
+      "interiorView": false,
+      "position": [
+        215.42056215190294,
+        57.55800244513099,
+        -232.8067886399613
+      ],
+      "target": [
+        212.28904523544915,
+        42.55800244513099,
+        -228.55430679967512
+      ],
+      "clearance": 13.12557219783622,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-conjunto",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 52,
+      "interiorView": false,
+      "position": [
+        227.75967723605672,
+        114.77814957044194,
+        -248.9039170893392
+      ],
+      "target": [
+        212.28904523544915,
+        42.55800244513099,
+        -228.55430679967512
+      ],
+      "clearance": 69.77814957044194,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-conjunto",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 52,
+      "interiorView": false,
+      "position": [
+        215.42056215190294,
+        57.55800244513099,
+        -232.8067886399613
+      ],
+      "target": [
+        212.28904523544915,
+        42.55800244513099,
+        -228.55430679967512
+      ],
+      "clearance": 13.12557219783622,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-conjunto",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 52,
+      "interiorView": false,
+      "position": [
+        220.45907838082834,
+        80.69742659760131,
+        -239.3009259782307
+      ],
+      "target": [
+        212.28904523544915,
+        42.55800244513099,
+        -228.55430679967512
+      ],
+      "clearance": 35.79196505350466,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-conjunto",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 52,
+      "interiorView": false,
+      "position": [
+        215.42056215190294,
+        57.55800244513099,
+        -232.8067886399613
+      ],
+      "target": [
+        212.28904523544915,
+        42.55800244513099,
+        -228.55430679967512
+      ],
+      "clearance": 13.12557219783622,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-conjunto",
+      "mode": "historical",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 48,
+      "interiorView": false,
+      "position": [
+        220.56119364146366,
+        560.5305191969534,
+        -348.2470580219267
+      ],
+      "target": [
+        142.52017982969744,
+        42.67800244513099,
+        -285.6793907820562
+      ],
+      "clearance": 522.2603239045079,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-conjunto",
+      "mode": "historical",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 48,
+      "interiorView": false,
+      "position": [
+        172.0576218856887,
+        238.678002445131,
+        -309.3603856257903
+      ],
+      "target": [
+        142.52017982969744,
+        42.67800244513099,
+        -285.6793907820562
+      ],
+      "clearance": 197.15,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-conjunto",
+      "mode": "historical",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 48,
+      "interiorView": false,
+      "position": [
+        319.8224185117416,
+        1219.1928379480203,
+        -427.82756299185496
+      ],
+      "target": [
+        142.52017982969744,
+        42.67800244513099,
+        -285.6793907820562
+      ],
+      "clearance": 1176.9725945083098,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-conjunto",
+      "mode": "historical",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 48,
+      "interiorView": false,
+      "position": [
+        172.0576218856887,
+        238.678002445131,
+        -309.3603856257903
+      ],
+      "target": [
+        142.52017982969744,
+        42.67800244513099,
+        -285.6793907820562
+      ],
+      "clearance": 197.15,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-conjunto",
+      "mode": "historical",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 48,
+      "interiorView": false,
+      "position": [
+        238.52175397448565,
+        679.7104339166937,
+        -362.6465424400636
+      ],
+      "target": [
+        142.52017982969744,
+        42.67800244513099,
+        -285.6793907820562
+      ],
+      "clearance": 641.9972301666613,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-conjunto",
+      "mode": "historical",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 48,
+      "interiorView": false,
+      "position": [
+        172.0576218856887,
+        238.678002445131,
+        -309.3603856257903
+      ],
+      "target": [
+        142.52017982969744,
+        42.67800244513099,
+        -285.6793907820562
+      ],
+      "clearance": 197.15,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-conjunto",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 50,
+      "interiorView": false,
+      "position": [
+        546.4365702384821,
+        101.01558441550334,
+        222.63111407208402
+      ],
+      "target": [
+        478.12370197962656,
+        49.20605684119072,
+        173.23445621097704
+      ],
+      "clearance": 58.01558441550334,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Domus dels Peixos · edificio · plaster",
+        "intended": true,
+        "point": [
+          486.59667374145897,
+          55.632088646320234,
+          179.36121531001106
+        ],
+        "distanceToTarget": 12.272828210927651
+      }
+    },
+    {
+      "place": "domus",
+      "id": "domus-conjunto",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 50,
+      "interiorView": false,
+      "position": [
+        500.75960871476315,
+        66.20605684119073,
+        189.12834580031918
+      ],
+      "target": [
+        478.12370197962656,
+        49.20605684119072,
+        173.23445621097704
+      ],
+      "clearance": 22.20605684119073,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Domus dels Peixos · edificio · plaster",
+        "intended": true,
+        "point": [
+          486.67009060412204,
+          55.6245585745849,
+          179.23533608624575
+        ],
+        "distanceToTarget": 12.25758876369634
+      }
+    },
+    {
+      "place": "domus",
+      "id": "domus-conjunto",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 50,
+      "interiorView": false,
+      "position": [
+        668.0901917966949,
+        193.27955782607933,
+        310.59817613284935
+      ],
+      "target": [
+        478.12370197962656,
+        49.20605684119072,
+        173.23445621097704
+      ],
+      "clearance": 152.27955782607933,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Domus dels Peixos · edificio · plaster",
+        "intended": true,
+        "point": [
+          486.59667374145897,
+          55.63208864632023,
+          179.36121531001106
+        ],
+        "distanceToTarget": 12.272828210927647
+      }
+    },
+    {
+      "place": "domus",
+      "id": "domus-conjunto",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 50,
+      "interiorView": false,
+      "position": [
+        500.75960871476315,
+        66.20605684119073,
+        189.12834580031918
+      ],
+      "target": [
+        478.12370197962656,
+        49.20605684119072,
+        173.23445621097704
+      ],
+      "clearance": 22.20605684119073,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Domus dels Peixos · edificio · plaster",
+        "intended": true,
+        "point": [
+          486.67009060412204,
+          55.6245585745849,
+          179.23533608624575
+        ],
+        "distanceToTarget": 12.25758876369634
+      }
+    },
+    {
+      "place": "domus",
+      "id": "domus-conjunto",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 50,
+      "interiorView": false,
+      "position": [
+        568.5285381650117,
+        117.77047190058556,
+        238.60569410304137
+      ],
+      "target": [
+        478.12370197962656,
+        49.20605684119072,
+        173.23445621097704
+      ],
+      "clearance": 74.86283982129328,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Domus dels Peixos · edificio · plaster",
+        "intended": true,
+        "point": [
+          486.5966737414589,
+          55.63208864632023,
+          179.36121531001106
+        ],
+        "distanceToTarget": 12.272828210927608
+      }
+    },
+    {
+      "place": "domus",
+      "id": "domus-conjunto",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 50,
+      "interiorView": false,
+      "position": [
+        500.75960871476315,
+        66.20605684119073,
+        189.12834580031918
+      ],
+      "target": [
+        478.12370197962656,
+        49.20605684119072,
+        173.23445621097704
+      ],
+      "clearance": 22.20605684119073,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Domus dels Peixos · edificio · plaster",
+        "intended": true,
+        "point": [
+          486.67009060412204,
+          55.6245585745849,
+          179.23533608624575
+        ],
+        "distanceToTarget": 12.25758876369634
+      }
+    },
+    {
+      "place": "domus",
+      "id": "domus-impluvium",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        482.844665810996,
+        47.406056841190725,
+        176.36375333699456
+      ],
+      "target": [
+        478.12370197962656,
+        43.406056841190725,
+        173.23445621097704
+      ],
+      "clearance": 5.140000000000001,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-impluvium",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        481.6036090341054,
+        46.306056841190724,
+        175.54535363236738
+      ],
+      "target": [
+        478.12370197962656,
+        43.406056841190725,
+        173.23445621097704
+      ],
+      "clearance": 4.039999999999999,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-impluvium",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        482.844665810996,
+        47.406056841190725,
+        176.36375333699456
+      ],
+      "target": [
+        478.12370197962656,
+        43.406056841190725,
+        173.23445621097704
+      ],
+      "clearance": 5.140000000000001,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-impluvium",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        481.6036090341054,
+        46.306056841190724,
+        175.54535363236738
+      ],
+      "target": [
+        478.12370197962656,
+        43.406056841190725,
+        173.23445621097704
+      ],
+      "clearance": 4.039999999999999,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-impluvium",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        482.844665810996,
+        47.406056841190725,
+        176.36375333699456
+      ],
+      "target": [
+        478.12370197962656,
+        43.406056841190725,
+        173.23445621097704
+      ],
+      "clearance": 5.140000000000001,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-impluvium",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        481.6036090341054,
+        46.306056841190724,
+        175.54535363236738
+      ],
+      "target": [
+        478.12370197962656,
+        43.406056841190725,
+        173.23445621097704
+      ],
+      "clearance": 4.039999999999999,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-conjunto",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 47,
+      "interiorView": false,
+      "position": [
+        708.021340860269,
+        183.44933055067213,
+        -126.77858022152023
+      ],
+      "target": [
+        467.74241368216656,
+        52.64374321016205,
+        -77.0089327963816
+      ],
+      "clearance": 141.7437291343426,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Vía del Pòrtic · huecos-actuales · shadow",
+        "intended": true,
+        "point": [
+          481.0593307785946,
+          59.89334758796076,
+          -79.76730314730193
+        ],
+        "distanceToTarget": 15.411218367818025
+      }
+    },
+    {
+      "place": "portic",
+      "id": "portic-conjunto",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 47,
+      "interiorView": false,
+      "position": [
+        513.775769430557,
+        74.64374321016206,
+        -84.8147100505774
+      ],
+      "target": [
+        467.74241368216656,
+        52.64374321016205,
+        -77.0089327963816
+      ],
+      "clearance": 31.643743210162057,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Vía del Pòrtic · volumen-actual · plaster",
+        "intended": true,
+        "point": [
+          480.7316707526362,
+          58.85149519574966,
+          -79.21149321678108
+        ],
+        "distanceToTarget": 14.56393684286028
+      }
+    },
+    {
+      "place": "portic",
+      "id": "portic-conjunto",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 47,
+      "interiorView": false,
+      "position": [
+        958.622486065027,
+        319.8742362704117,
+        -178.68629758839478
+      ],
+      "target": [
+        467.74241368216656,
+        52.64374321016205,
+        -77.0089327963816
+      ],
+      "clearance": 286.67910553135783,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Vía del Pòrtic · huecos-actuales · shadow",
+        "intended": true,
+        "point": [
+          481.05933077859453,
+          59.893347587960704,
+          -79.76730314730193
+        ],
+        "distanceToTarget": 15.41121836781795
+      }
+    },
+    {
+      "place": "portic",
+      "id": "portic-conjunto",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 47,
+      "interiorView": false,
+      "position": [
+        513.775769430557,
+        74.64374321016206,
+        -84.8147100505774
+      ],
+      "target": [
+        467.74241368216656,
+        52.64374321016205,
+        -77.0089327963816
+      ],
+      "clearance": 31.643743210162057,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Vía del Pòrtic · volumen-actual · plaster",
+        "intended": true,
+        "point": [
+          480.7316707526362,
+          58.85149519574966,
+          -79.21149321678108
+        ],
+        "distanceToTarget": 14.56393684286028
+      }
+    },
+    {
+      "place": "portic",
+      "id": "portic-conjunto",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 47,
+      "interiorView": false,
+      "position": [
+        681.5842999203117,
+        169.0572541904636,
+        -121.30260185754847
+      ],
+      "target": [
+        467.74241368216656,
+        52.64374321016205,
+        -77.0089327963816
+      ],
+      "clearance": 126.4131832434945,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Vía del Pòrtic · huecos-actuales · shadow",
+        "intended": true,
+        "point": [
+          481.0593307785946,
+          59.89334758796073,
+          -79.76730314730193
+        ],
+        "distanceToTarget": 15.411218367818012
+      }
+    },
+    {
+      "place": "portic",
+      "id": "portic-conjunto",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 47,
+      "interiorView": false,
+      "position": [
+        513.775769430557,
+        74.64374321016206,
+        -84.8147100505774
+      ],
+      "target": [
+        467.74241368216656,
+        52.64374321016205,
+        -77.0089327963816
+      ],
+      "clearance": 31.643743210162057,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Vía del Pòrtic · volumen-actual · plaster",
+        "intended": true,
+        "point": [
+          480.7316707526362,
+          58.85149519574966,
+          -79.21149321678108
+        ],
+        "distanceToTarget": 14.56393684286028
+      }
+    },
+    {
+      "place": "portic",
+      "id": "portic-cloaca",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 61,
+      "interiorView": false,
+      "position": [
+        458.2386934609486,
+        46.493743210162044,
+        -71.40899512201301
+      ],
+      "target": [
+        456.14758182630527,
+        39.493743210162044,
+        -78.25788204847481
+      ],
+      "clearance": 7.799999999999997,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Vía del Pòrtic · losado · ashlar",
+        "intended": true,
+        "point": [
+          456.3542479153488,
+          40.1855583190918,
+          -77.58100155489228
+        ],
+        "distanceToTarget": 0.9896899615013642
+      }
+    },
+    {
+      "place": "portic",
+      "id": "portic-cloaca",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 61,
+      "interiorView": false,
+      "position": [
+        457.63068572745794,
+        44.093743210162046,
+        -74.25158665018155
+      ],
+      "target": [
+        456.14758182630527,
+        39.493743210162044,
+        -78.25788204847481
+      ],
+      "clearance": 5.399999999999999,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Vía del Pòrtic · losado · ashlar",
+        "intended": true,
+        "point": [
+          456.3706326278118,
+          40.1855583190918,
+          -77.65535689904546
+        ],
+        "distanceToTarget": 0.944137892837194
+      }
+    },
+    {
+      "place": "portic",
+      "id": "portic-cloaca",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 61,
+      "interiorView": false,
+      "position": [
+        458.2386934609486,
+        46.493743210162044,
+        -71.40899512201301
+      ],
+      "target": [
+        456.14758182630527,
+        39.493743210162044,
+        -78.25788204847481
+      ],
+      "clearance": 7.799999999999997,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Vía del Pòrtic · losado · ashlar",
+        "intended": true,
+        "point": [
+          456.3542479153488,
+          40.1855583190918,
+          -77.58100155489228
+        ],
+        "distanceToTarget": 0.9896899615013642
+      }
+    },
+    {
+      "place": "portic",
+      "id": "portic-cloaca",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 61,
+      "interiorView": false,
+      "position": [
+        457.63068572745794,
+        44.093743210162046,
+        -74.25158665018155
+      ],
+      "target": [
+        456.14758182630527,
+        39.493743210162044,
+        -78.25788204847481
+      ],
+      "clearance": 5.399999999999999,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Vía del Pòrtic · losado · ashlar",
+        "intended": true,
+        "point": [
+          456.3706326278118,
+          40.1855583190918,
+          -77.65535689904546
+        ],
+        "distanceToTarget": 0.944137892837194
+      }
+    },
+    {
+      "place": "portic",
+      "id": "portic-cloaca",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 61,
+      "interiorView": false,
+      "position": [
+        458.2386934609486,
+        46.493743210162044,
+        -71.40899512201301
+      ],
+      "target": [
+        456.14758182630527,
+        39.493743210162044,
+        -78.25788204847481
+      ],
+      "clearance": 7.799999999999997,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Vía del Pòrtic · losado · ashlar",
+        "intended": true,
+        "point": [
+          456.3542479153488,
+          40.1855583190918,
+          -77.58100155489228
+        ],
+        "distanceToTarget": 0.9896899615013642
+      }
+    },
+    {
+      "place": "portic",
+      "id": "portic-cloaca",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 61,
+      "interiorView": false,
+      "position": [
+        457.63068572745794,
+        44.093743210162046,
+        -74.25158665018155
+      ],
+      "target": [
+        456.14758182630527,
+        39.493743210162044,
+        -78.25788204847481
+      ],
+      "clearance": 5.399999999999999,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Vía del Pòrtic · losado · ashlar",
+        "intended": true,
+        "point": [
+          456.3706326278118,
+          40.1855583190918,
+          -77.65535689904546
+        ],
+        "distanceToTarget": 0.944137892837194
+      }
+    }
+  ],
+  "inputHashes": {
+    "dist/js/app.js": "906a07eebdb336b37d3746bcea7f5907b5a7c7481980188ce2f1813a59b2062d",
+    "dist/js/castle-panel.js": "60a927639c38ed0a88d16e66354aa5c7d14057da44b396f8a2d0acdaae25a8ab",
+    "dist/js/theatre.js": "34831ff762ddd15d0e9fa1fd564183145a04219d47f833f529af35f545d83371",
+    "dist/js/monuments.js": "22546453225b2db827cc2e84a5fd30e1083b56eb8b79d4a1ac025709f4b34dac",
+    "dist/js/castle.js": "61463c846f79a617562ca2e31bfc42321da0c737a3d310846db44410066c54d8",
+    "dist/js/terrain.js": "ec10570603e52e850b6b5eadf81963215d18d533c551d555848ef58152fec3f8",
+    "dist/js/city.js": "b2578a5fdb0d70435fa4bc8cf92147f2a3c4922f6bcbe6bbe145f46ebb53af54",
+    "dist/js/urban-surface.js": "d2acfae90ff47abddd51be09a21555e8ce9b6269e1500549a6eb94938f3e6111",
+    "dist/js/santa-maria.js": "ab23645cee3bfb285ea19420b98d8c4eb56fa7e5b99d756aa861abba2578ff42",
+    "dist/js/santa-maria-context.js": "c58325ab7d3a33af291c50efda2625dcd757d33da9306e70f5d95b67b4d4072f",
+    "dist/js/heritage-sacred.js": "306c46bd0c5b45d01df73e51e12dd77235f018bfb68ebd20679885daf35c99e2",
+    "dist/js/heritage-civic.js": "b28e6572d494b657b1eda2a96342ce7181c8437763d4c110daae373547d51a31",
+    "dist/js/plaza-mayor.js": "07f51ea9722f9a09932e9dd85dcdeb2a39e753fdb5c8d7fa5e5a302bad3d28b1",
+    "dist/js/plaza-mayor-context.js": "655b94895ef5407affe3ea502e5eb0eeff91cf01d365fe63387ec9fa31bd8d8b",
+    "dist/js/juderia.js": "e83aa1df8be0538e6ce520ebf0676f847ce3d488690e1deacaa7472e0869d30d",
+    "dist/js/juderia-context.js": "fc58285789fd8a785e87d2efd1e29e42bba257222eb51e66592393d19600cf2f",
+    "dist/js/calvario.js": "990a076c049599574eb566b7823bc8166667d7c385a2e5fd964e6e4342d96910",
+    "dist/js/calvario-context.js": "0ef2e7a8cc33c2296cbd1b7ff8023d5eef71a48e4eb86849efd06e59b124d148",
+    "dist/js/berenguer.js": "e6d96396f1462827849e656d8a456c49d0da59f8a8c1c87cbf1e14e605909cdd",
+    "dist/js/berenguer-context.js": "4a942cd7436001937dcfd3d20ff3c1ec6272a42e4f0fbd68bf80e097b7618695",
+    "dist/js/berenguer-map.js": "1c10607f476c7a5d6358d13747385a6e946bc7df909de5c5963ec1ca2062f92e",
+    "dist/js/berenguer-visit.js": "500f8d3d6995bd33f62cc7a44cb2e2f5079537f3d3a916d6253e6a27fb3387ce",
+    "dist/js/sangre.js": "83c383bed697ee3170fb976d652b39ca5e46986d603f8c83c8a6b8edfbee8247",
+    "dist/js/sangre-context.js": "93c9fd805f9dbef41763eb67a35ded526b80e408f35c2b7c333309d7ee853aab",
+    "dist/js/sangre-map.js": "229a7ebd9cffa70b1589824533f9da5bb2187f2d7249e0abb1812903b5ad2918",
+    "dist/js/museo.js": "d548c527bf4a3b1067b5c786640155eb538daa2197f2b746a913787990d7939c",
+    "dist/js/museo-context.js": "ad983c68d8412e82634f47710a9e4c462a8e76c290345d41479d880882f74857",
+    "dist/js/museo-map.js": "6b7deb28a5c62602527e14e8ef644e20d677264373fb602aaf129304bebe94de",
+    "dist/js/salvador.js": "d3cdf9fa5b4d62bb53fdd2104c55a1fa44496130bbf21284f401dbc42484b17f",
+    "dist/js/salvador-context.js": "a5155c08c0a5107e67dac7e8a7604504ae9be78086acbdcc22bb88266c3f1498",
+    "dist/js/salvador-map.js": "2442ee3ddc10adbcfaabd37f20d86fb36aa72e70842295f10fe52fc72ec1ddd1",
+    "dist/js/archaeology-public.js": "68d9eef0f87d4f35c4244491458d4887e26d1f5387a964c03c49b865646b2c39",
+    "dist/js/archaeology.js": "57c0ec99aab825c05169036709b25ea1210cfb505445d23cb54498ef60bb8625",
+    "dist/js/archaeology-domestic.js": "2b9db5cc954c1567667edf9c027b7a68bef680f00c55851f81dfcc73a0a892ab",
+    "dist/js/portic.js": "ca004362ac6e7d265d6571a0c73ed03443089e207a9148212770d1f56c37cac6",
+    "dist/js/portic-map.js": "17aa6147234395e6a35f4e1eadaec064cfefffb43ef24a3c265ce5931405352d",
+    "dist/js/portic-context.js": "fd503594959153c47d63ade81381a5b7786c515b4600187faac5bcb4dca7f3a4",
+    "dist/js/excavation.js": "3b7b6c0340a0f4e525790d81e940b740287e82e9deef9d383d268cd54b411264",
+    "dist/js/archaeology-panel.js": "77699e8550509798c070aab3e0910b3384c4bb16cc7881ccd94e952b5283d333",
+    "dist/assets/data/plaza-mayor-visit.json": "c80a4560b964c27003e769add5a1c0c32b1a0109b55243c95a641282f2b36e55",
+    "dist/assets/data/plaza-mayor-plan.json": "136742e1a25c77699aa619113a40213926260fd7bbec9402f02de6a4bb29b4ef",
+    "dist/assets/data/plaza-mayor-context.json": "1a0c282b1f15f1cf4ede43aee8a600a5a44675cc4ad8110c36656ad9d23d9fc7",
+    "dist/assets/data/juderia-visit.json": "f657d04c1923c9982b8916d50622e0b6e5b50ca68edcb8a6a514124299563b82",
+    "dist/assets/data/juderia-plan.json": "cb31a29ed4c590a10bb6b8430171122bada9c4637ab3446ad31097fabd194d34",
+    "dist/assets/data/juderia-context.json": "9118ca2de239a2b4a49e2b2651d8dc261177e3b50c6a4360686e7e8a2380d045",
+    "dist/assets/data/calvario-visit.json": "b054fed27f08b1d4c1f387315b3d3d6b8ae3a6a7378e4e2fb6186a437c829088",
+    "dist/assets/data/calvario-plan.json": "3a9a08fb423930cb5902b83db6c5b2998ff8461935bc26656714a3039a167eef",
+    "dist/assets/data/calvario-context.json": "3c4da56852c9f4afb1ca501e37e4823b7c2eb3aa81d9b42a7da07f53bbe81766",
+    "dist/assets/data/berenguer-visit.json": "36da2cecfbfe9c2447434e2405a5ca94615527dca5c0c4e549ae49e6d726206e",
+    "dist/assets/data/berenguer-plan.json": "68af4ffba39bad39785ba588a6ffbde2d074b47179e591a8847c5a4e61ae4154",
+    "dist/assets/data/berenguer-context.json": "b222d0b510d39b340dc4d69bdaef0dc383d88faa5fb800eb247d9676871487ae",
+    "dist/assets/data/sangre-visit.json": "490aa9c55411448c18d0da0070d16a6f345bbb7abdb46638d55b4c19b3723f48",
+    "dist/assets/data/sangre-plan.json": "a8d915826156b202298fac54b9112ec08166db8b9796654bfd38d0c6dd98e3ad",
+    "dist/assets/data/sangre-context.json": "1f2384b5e0d8140cfc086857cc6c6b4c41a9c5ea651fdddd9e821fa81edbe506",
+    "dist/assets/data/museo-visit.json": "747a36c42334eb1f3548df513b09f51db9fe1be73648c050023eeb9e11aea55a",
+    "dist/assets/data/museo-plan.json": "b51b26c15cdbd715026b3b363ce9bb67ab46b24c8570712782bbeb24acf1fbe5",
+    "dist/assets/data/museo-context.json": "325612d1f799e61a32d37136938dbe3adf0723b0432cb4f926b2fce43d8d17cb",
+    "dist/assets/data/portic-visit.json": "020c89e0eeb9318ad9cc59e13b57cac2fc25171c1a4021f9f861eb0d4b1b8b35",
+    "dist/assets/data/portic-plan.json": "84cac8f3d7f2bcb9cc4a45580d58d8b05a5190de82b1ad8f2488a6e83c8f3ac4",
+    "dist/assets/data/portic-context.json": "4681606ed8324f7b144ff590db35364481b5e218f4dafe63ad39e5fc6f687af2",
+    "dist/assets/data/archaeology-domestic.json": "fbdc79ee5c30b8fb1b670d6aecfec60fa4e28ce4e5be9ab86ccbbbc8842b09f1",
+    "dist/assets/data/salvador-visit.json": "3c08cd0c5809f8305588f78e45582ace46da47b0d7a339f9d108b2ab79a54a00",
+    "dist/assets/data/salvador-plan.json": "071cb01e59c5a58a2d926f2bd70059daf35dd6d40eeeb3cba99b46381d6c3053",
+    "dist/assets/data/salvador-context.json": "427a35c79f0c714468c4b63d8652218adc0e80e7892a5f17df672187deafcd38",
+    "dist/js/domus.js": "e5efe0fb47cb0ded332795949c1807dc963d8b51fa45d90a32fe38f1bf7a3144",
+    "dist/js/domus-map.js": "ae61e737ab319976094a273dc9a65a72ca4ec163955068284275dfefe56ef4b9",
+    "dist/js/domus-context.js": "6cdb2562ff72b9f71ef14b01774450aae3433ae7eeb21a93e325208c5306167b",
+    "dist/assets/data/domus-visit.json": "ab7e165d85958ee6661867ebd528d2609c39c329d23433a00c4723011b347d55",
+    "dist/assets/data/domus-plan.json": "a63f5729845fc892ffd0d923c2a8c029719bfb1e92d932993908c74bc6d82788",
+    "dist/assets/data/domus-context.json": "b02b74552c4426a75866918e72c2825643a981115796556517204384c01d7e0d",
+    "dist/assets/data/archaeology-public.json": "36504b8846065d33d52e3de2d7237e03ac9e4ed86c8f86e39771f2a46dc81a28",
+    "dist/js/circo.js": "d3e693959b89f8e04b037a81befc75393f047d8cfd6e4909a2108ca67d750e7a",
+    "dist/js/circo-map.js": "e8fa94a76af2a03efa6a885292c067462c1a5d7a43b4002a5222317e62f0cd54",
+    "dist/js/circo-context.js": "2996ffc4cef0e4a4778eccac75986d2460595c0f21999e1a8265b57f348a5da4",
+    "dist/assets/data/circo-visit.json": "2df05f739c53e18c71ce857c468240c73859a450a2eda0edb5fe8595f8001320",
+    "dist/assets/data/circo-plan.json": "8afa1c4093113320d564a8db6d01b6f8518f91a05e26bcb003116ba40e8e640d",
+    "dist/assets/data/circo-context.json": "16b9805d5198b4353eb8b0119174a5c1923d3471bf2a8343fd08741b4bfb519a"
+  },
+  "limitations": [
+    "Geometry and camera validation does not measure browser GPU performance.",
+    "Terrain cut is explanatory; excavation heights and unmeasured details are approximate."
+  ]
+}

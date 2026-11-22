@@ -1,0 +1,1715 @@
+{
+  "schemaVersion": 1,
+  "id": "grau",
+  "title": "Fortín y poblado del Grau Vell",
+  "subtitle": "Defensa costera, comercio y paisaje mediterráneo",
+  "introduction": "Explora el fortín, los almacenes y las casas del Grau Vell. Abre la cubierta para descubrir la estructura de madera y la sala alta de la torre, y relaciona sus espacios con la historia marítima de Sagunto.",
+  "researchDate": "2026-11-21",
+  "regionsLabel": "Ámbitos del Grau Vell",
+  "mapButtonLabel": "Plano del conjunto",
+  "overviewButtonLabel": "Ver el conjunto",
+  "readingModeLabel": "Leer el Grau Vell",
+  "readingModeNote": "Cinco ámbitos relacionan arquitectura, interior, construcción, memoria y paisaje. Los colores orientan la lectura; no representan fases constructivas exactas.",
+  "timelineIntroduction": "Una secuencia de transformaciones del recinto portuario y defensivo.",
+  "visitAriaLabel": "Visita al Fortín y poblado del Grau Vell",
+  "sectionOnOverview": true,
+  "sectionOpenLabel": "Abrir las cubiertas",
+  "sectionCloseLabel": "Cerrar la sección",
+  "sectionInstructions": "Abre la sección y elige el almacén, su estructura de madera o la sala alta de la torre. Los puntos de lectura del museo explican su contenido sin reproducir una distribución completa de vitrinas.",
+  "sectionNote": "Sección didáctica de la arquitectura documentada. La torre y la batería conservan su basamento macizo; la ubicación del lagar, recepción y recursos museográficos es orientativa. La vista interior no certifica acceso presencial.",
+  "mapInstructions": "Elige una parada en el fortín, el almacén o el poblado. Usa la sección para relacionar los espacios interiores y vuelve al conjunto para leer su posición en la costa.",
+  "mapNote": "Plano orientativo sobre cartografía contemporánea. Los puntos de observación, alturas no medidas y posiciones museográficas se aproximan.",
+  "visitNote": "Investigación revisada el 21 de noviembre de 2026. El centro abrió al público el 26 de junio de 2026. La noticia de inauguración indicaba que la batería aún no era visitable; las cámaras del atlas son recursos didácticos.",
+  "methodology": [
+    "El levantamiento fotogramétrico de 2015 se contrasta con fotografías de los arquitectos de la restauración de 2020, imágenes institucionales y noticias municipales de 2026.",
+    "Las huellas proceden de Catastro y OSM y se revisan sobre ortofotografía PNOA. Las alturas no levantadas y los detalles menores se aproximan.",
+    "Los planos de 1780–1781 explican fases históricas. No se utilizan como distribución del museo inaugurado en 2026.",
+    "La torre tiene basamento terraplenado y una sala elevada. La sección no inventa habitaciones en el macizo inferior ni en el relleno de la batería.",
+    "Las fotografías de la intervención documentan el almacén, los apoyos de madera, el pozo, la escalera metálica y la escala interior de la torre.",
+    "El centro tiene cinco temas oficiales: navegación, puerto industrial, arqueología y poblado, Marjal dels Moros y restauración. Se explican sin asignarles cinco recintos inventados.",
+    "El lagar y la recepción están documentados como ámbitos de visita. Sus puntos de lectura son aproximados; no se ha verificado una planta final de esos interiores.",
+    "Las piezas descritas por el Ayuntamiento son reproducciones. La réplica de artillería no se presenta como un cañón original conservado en el fortín.",
+    "La fecha de consulta de PNOA no es la fecha de vuelo. Los registros catastrales y las normas de protección tampoco certifican el estado físico de cada alzado.",
+    "La iglesia, el antiguo colegio y las viviendas forman parte del contexto documentado. No se deducen fechas, interiores o usos actuales sin evidencia.",
+    "El yacimiento del antiguo puerto constituye otra parada del atlas. Aquí se incorpora su relación histórica con el fortín sin duplicar una reconstrucción arqueológica.",
+    "Las imágenes de investigación se emplean para contrastar el modelo; no se incorporan como texturas fotográficas ni como prueba de una reproducción exacta."
+  ],
+  "readingLegend": [
+    {
+      "id": "edificio",
+      "label": "Fortín y almacenes",
+      "color": "#d4b17c",
+      "note": "Escala, volumen y relación entre la torre y el conjunto portuario."
+    },
+    {
+      "id": "espacios",
+      "label": "Espacios interiores",
+      "color": "#95bfc5",
+      "note": "Almacén, sala alta y ámbitos de interpretación del centro."
+    },
+    {
+      "id": "construccion",
+      "label": "Cómo se construye",
+      "color": "#c79379",
+      "note": "Madera, bóveda, accesos, terraza, batería y foso."
+    },
+    {
+      "id": "memoria",
+      "label": "Comercio y memoria",
+      "color": "#b7a1ca",
+      "note": "Vida marítima, transformación patrimonial y lectura del museo."
+    },
+    {
+      "id": "entorno",
+      "label": "Poblado y paisaje",
+      "color": "#91ae87",
+      "note": "Casas, ermita, huerta, marjal y frente litoral."
+    }
+  ],
+  "confidenceLegend": [
+    {
+      "id": "documented",
+      "label": "Documentado",
+      "note": "La fuente respalda el rasgo o el dato, no todas las medidas de su representación."
+    },
+    {
+      "id": "interpretive",
+      "label": "Interpretación",
+      "note": "Aproximación de forma, altura, material o uso para hacer comprensible el espacio."
+    },
+    {
+      "id": "disputed",
+      "label": "Fuentes diferentes",
+      "note": "Se mantiene visible una diferencia documental sin convertirla en una certeza."
+    }
+  ],
+  "materialEvidenceLegend": [
+    {
+      "id": "conserved",
+      "label": "Rasgo documentado",
+      "note": "Forma reconocible en fotografías, plano o cartografía."
+    },
+    {
+      "id": "rehabilitated",
+      "label": "Transformación documentada",
+      "note": "Adaptación o cambio de uso que forma parte de la historia del edificio."
+    },
+    {
+      "id": "mixed",
+      "label": "Lectura conjunta",
+      "note": "Evidencia documental y aproximaciones de representación conviven en la maqueta."
+    }
+  ],
+  "regions": [
+    {
+      "id": "edificio",
+      "name": "Fortín y almacenes",
+      "aliases": [],
+      "summary": "Escala, volumen y relación entre la torre y el conjunto portuario.",
+      "sourceIds": [
+        "g-dival",
+        "g-upv",
+        "g-arquitectos",
+        "g-restauracion2020"
+      ],
+      "stopIds": [
+        "grau-conjunto",
+        "grau-patio",
+        "grau-torre"
+      ],
+      "coordinate": [
+        -0.23971502819312165,
+        39.63541328260844
+      ]
+    },
+    {
+      "id": "espacios",
+      "name": "Espacios interiores",
+      "aliases": [],
+      "summary": "Almacén, sala alta y ámbitos de interpretación del centro.",
+      "sourceIds": [
+        "g-upv",
+        "g-arquitectos",
+        "g-apertura2026",
+        "g-museografia2026",
+        "g-proyecto2024"
+      ],
+      "stopIds": [
+        "grau-almacen",
+        "grau-lagar",
+        "grau-recepcion",
+        "grau-sala-torre"
+      ],
+      "coordinate": [
+        -0.23965339536318858,
+        39.63547978526096
+      ]
+    },
+    {
+      "id": "construccion",
+      "name": "Cómo se construye",
+      "aliases": [],
+      "summary": "Madera, bóveda, accesos, terraza, batería y foso.",
+      "sourceIds": [
+        "g-restauracion2020",
+        "g-arquitectos",
+        "g-upv",
+        "g-apertura2026",
+        "g-museografia2026",
+        "g-arqueologia2008"
+      ],
+      "stopIds": [
+        "grau-acceso",
+        "grau-cerchas",
+        "grau-boveda",
+        "grau-terraza",
+        "grau-bateria",
+        "grau-foso"
+      ],
+      "coordinate": [
+        -0.239639381596906,
+        39.63537252821953
+      ]
+    },
+    {
+      "id": "memoria",
+      "name": "Comercio y memoria",
+      "aliases": [],
+      "summary": "Vida marítima, transformación patrimonial y lectura del museo.",
+      "sourceIds": [
+        "g-arquitectos",
+        "g-upv",
+        "g-proyecto2024",
+        "g-museografia2026",
+        "g-apertura2026",
+        "g-restauracion2020"
+      ],
+      "stopIds": [
+        "grau-pozo",
+        "grau-corral",
+        "grau-memoria-portuaria",
+        "grau-restauracion"
+      ],
+      "coordinate": [
+        -0.23958497706311277,
+        39.63560276075353
+      ]
+    },
+    {
+      "id": "entorno",
+      "name": "Poblado y paisaje",
+      "aliases": [],
+      "summary": "Casas, ermita, huerta, marjal y frente litoral.",
+      "sourceIds": [
+        "g-museografia2026",
+        "g-escuela2026",
+        "g-boe2010",
+        "g-dival",
+        "g-catastro",
+        "g-pnoa",
+        "g-ermita",
+        "g-colegio"
+      ],
+      "stopIds": [
+        "grau-marjal",
+        "grau-poblado",
+        "grau-ermita"
+      ],
+      "coordinate": [
+        -0.24022464081985231,
+        39.63478135614703
+      ]
+    }
+  ],
+  "timeline": [
+    {
+      "id": "g-t-1",
+      "date": "1459",
+      "title": "El embarque de Murviedro",
+      "text": "La autorización real concentra el embarque de mercancías en el Grau Vell.",
+      "sourceIds": [
+        "g-upv"
+      ],
+      "period": "medieval",
+      "confidence": "documented",
+      "stopId": "grau-memoria-portuaria"
+    },
+    {
+      "id": "g-t-2",
+      "date": "Siglo XVI",
+      "title": "Vigilancia y defensa",
+      "text": "La torre se incorpora al recinto de almacenamiento.",
+      "sourceIds": [
+        "g-upv"
+      ],
+      "period": "modern",
+      "confidence": "documented",
+      "stopId": "grau-torre"
+    },
+    {
+      "id": "g-t-3",
+      "date": "1607 y 1711",
+      "title": "Crecen los almacenes",
+      "text": "El estudio arquitectónico diferencia las ampliaciones meridional y septentrional.",
+      "sourceIds": [
+        "g-upv"
+      ],
+      "period": "modern",
+      "confidence": "documented",
+      "stopId": "grau-almacen"
+    },
+    {
+      "id": "g-t-4",
+      "date": "1780–1781",
+      "title": "Proyecto de batería",
+      "text": "Los planos históricos documentan el frente artillero y el foso.",
+      "sourceIds": [
+        "g-fortmed"
+      ],
+      "period": "modern",
+      "confidence": "documented",
+      "stopId": "grau-bateria"
+    },
+    {
+      "id": "g-t-5",
+      "date": "1936–1939",
+      "title": "Una nueva capa defensiva",
+      "text": "El refugio de la Guerra Civil añade otra memoria al conjunto.",
+      "sourceIds": [
+        "g-restauracion2020"
+      ],
+      "period": "industrial",
+      "confidence": "documented",
+      "stopId": "grau-foso"
+    },
+    {
+      "id": "g-t-6",
+      "date": "2010",
+      "title": "Fortín y poblado protegidos",
+      "text": "La orden delimita el entorno y reconoce las construcciones y espacios que lo acompañan.",
+      "sourceIds": [
+        "g-boe2010"
+      ],
+      "period": "mixed",
+      "confidence": "documented",
+      "stopId": "grau-poblado"
+    },
+    {
+      "id": "g-t-7",
+      "date": "29 de septiembre de 2020",
+      "title": "Restauración inaugurada",
+      "text": "Se recuperan los principales elementos defensivos, el patio y el almacén norte.",
+      "sourceIds": [
+        "g-restauracion2020"
+      ],
+      "period": "mixed",
+      "confidence": "documented",
+      "stopId": "grau-restauracion"
+    },
+    {
+      "id": "g-t-8",
+      "date": "26 de junio de 2026",
+      "title": "Abre Sagunt i la Mar",
+      "text": "El conjunto incorpora su centro de interpretación marítima.",
+      "sourceIds": [
+        "g-apertura2026",
+        "g-actividad2026"
+      ],
+      "period": "mixed",
+      "confidence": "documented",
+      "stopId": "grau-recepcion"
+    }
+  ],
+  "modelRegistration": {
+    "status": "registered",
+    "precision": "approximate",
+    "provisionalCoordinates": false,
+    "note": "Veinte focos registrados sobre el modelo V32 y la cartografía contemporánea. El registro de la cámara no convierte una posición interpretada en una medida de campo.",
+    "coordinates": "Las coordenadas, cotas locales, niveles y condiciones de sección coinciden con el plano del modelo.",
+    "interiorViews": 5
+  },
+  "materialsModeLabel": "Leer materiales",
+  "sources": [
+    {
+      "id": "g-upv",
+      "title": "La Torre del Grau Vell en la defensa de la costa de Sagunto",
+      "author": "Teresa Gil Piqueras y Pablo Rodríguez-Navarro · Universitat Politècnica de València",
+      "url": "https://doi.org/10.4995/FORTMED2015.2015.1736",
+      "type": "estudio y levantamiento fotogramétrico",
+      "locator": "FORTMED 2015, volumen II, pp. 159–166; especialmente pp. 163–165.",
+      "note": "Documenta dimensiones aproximadas, torre maciza, sala alta, bóveda y batería. Describe el estado anterior a la restauración.",
+      "year": 2015,
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "g-fortmed",
+      "title": "Defensive Architecture of the Mediterranean, volumen II",
+      "author": "Editorial Universitat Politècnica de València / FortMed",
+      "url": "https://www.fortmed.eu/2025_Caserta/OV/2-DEFENSIVE%20ARCHITECTURE%20OF%20THE%20MEDITERRANEAN_2015.pdf",
+      "type": "actas del congreso en el sitio oficial",
+      "locator": "Artículo del Grau Vell: páginas 177–184 del PDF; figuras 2–6 y descripción constructiva.",
+      "note": "Copia consultable de la publicación académica. Los planos reproducidos de 1780–1781 son documentos históricos, no planos de la museografía de 2026.",
+      "year": 2015,
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "g-arquitectos",
+      "title": "Restauración y adecuación ambiental del Grau Vell de Sagunto 2020",
+      "author": "Balaguer-Vicén Arquitectos",
+      "url": "https://www.balaguer-vicen.es/project/restauracion-y-adecuacion-ambiental-del-grau-vell-de-sagunto-2020/",
+      "type": "documentación fotográfica de los autores de la intervención",
+      "locator": "Galería: almacén con pilares y madera; escalera metálica del patio; sala de torre y escala de madera; foso y frente marítimo.",
+      "note": "Fotografías publicadas en 2021 de la restauración de 2020. Respaldan rasgos visibles; no se deducen medidas exactas ni la ubicación del equipamiento posterior.",
+      "year": 2021,
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "g-restauracion2020",
+      "title": "Inauguración de la restauración del complejo defensivo",
+      "author": "Red Eléctrica y Ayuntamiento de Sagunto",
+      "url": "https://www.redeia.com/es/sala-de-prensa/actualidad/nota-de-prensa/2020/09/red-electrica-y-el-ayuntamiento-de-sagunto-inauguran-restauracion-complejo-defensivo-Grau-Vell-Valencia",
+      "type": "comunicación de las entidades promotoras",
+      "locator": "29 de septiembre de 2020; actuaciones en torre, batería, refugio, foso, patio y almacén norte.",
+      "note": "La restauración de 2020 precede a la apertura del centro de interpretación en 2026.",
+      "year": 2020,
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "g-apertura2026",
+      "title": "El nuevo centro de interpretación Sagunt i la Mar ya es una realidad",
+      "author": "Ajuntament de Sagunt",
+      "url": "https://aytosagunto.es/es/actualidad/2026-06-25-el-nuevo-centro-de-interpretacion-sagunt-i-la-mar-ya-es-una-realidad/",
+      "type": "noticia municipal y fotografías",
+      "locator": "25 de junio de 2026; anuncia apertura al público desde el día siguiente.",
+      "note": "Distingue las cinco salas, el lagar y la recepción. La batería figura todavía no visitable en esa fecha; la vista digital no acredita acceso presencial.",
+      "year": 2026,
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "g-museografia2026",
+      "title": "Tematización del Fortín y antiguo almacén portuario",
+      "author": "Ajuntament de Sagunt",
+      "url": "https://aytosagunto.es/es/actualidad/2026-05-07-la-tematizacion-del-fortin-y-antiguo-almacen-portuario-del-grau-vell-entra-en-su-ultima-fase/",
+      "type": "documentación municipal de la musealización",
+      "locator": "7 de mayo de 2026; cinco temas, reproducciones y réplica del cañón El Destruidor.",
+      "note": "Documenta contenidos y piezas reproducidas, pero no una planta completa de su colocación final.",
+      "year": 2026,
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "g-actividad2026",
+      "title": "Actividad de Sagunt i la Mar tras su apertura",
+      "author": "Ajuntament de Sagunt",
+      "url": "https://www.sagunto.es/es/actualidad/2026-08-19-el-fortin-del-grau-vell-atrae-a-cerca-de-un-millar-de-visitantes-en-su-primer-mes-de-vida/",
+      "type": "noticia municipal",
+      "locator": "19 de agosto de 2026.",
+      "note": "Confirma que el centro ya funciona. No certifica por sí sola el acceso a cada dependencia del fortín.",
+      "year": 2026,
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "g-escuela2026",
+      "title": "Alternatura a la Escuela en el Grau Vell",
+      "author": "Ajuntament de Sagunt",
+      "url": "https://aytosagunto.es/es/actualidad/2026-10-16-alternatura-a-la-escuela-comienza-la-temporada-con-una-excursion-por-el-grau-vell-y-su-centro-de-interpretacion/",
+      "type": "noticia municipal",
+      "locator": "16 de octubre de 2026; recorrido ambiental y visita al centro.",
+      "note": "Confirma actividad educativa y relación entre el museo y la Marjal dels Moros.",
+      "year": 2026,
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "g-boe2010",
+      "title": "Delimitación y protección del Fortín y su entorno",
+      "author": "Generalitat Valenciana · BOE",
+      "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2010-14557",
+      "type": "normativa patrimonial y plano de delimitación",
+      "locator": "Orden 2/2010: artículo 7 y anexo I; plano en el PDF oficial.",
+      "note": "Identifica el valor del poblado, iglesia, colegio y espacios libres. Las reglas de edificación no se usan como mediciones del estado real.",
+      "year": 2010,
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "g-dival",
+      "title": "Grau Vell, dentro de la guía de Sagunto",
+      "author": "València Turisme · Diputació de València",
+      "url": "https://turisme.dival.es/destino/sagunto/",
+      "type": "guía turística institucional",
+      "locator": "Apartado Grau Vell.",
+      "note": "Describe el pequeño poblado, su iglesia, el conjunto defensivo y la relación con la marjal; la cifra aproximada de casas no es un censo de edificios del modelo.",
+      "year": null,
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "g-turisme",
+      "title": "Fortín o Torre del Grau Vell",
+      "author": "Turisme Comunitat Valenciana",
+      "url": "https://www.comunitatvalenciana.com/es/valencia/sagunt-sagunto/monumentos/fortin-o-torre-del-grau-vell",
+      "type": "ficha patrimonial y fotografías",
+      "locator": "Galería del conjunto restaurado; dirección C/ Levante 2B.",
+      "note": "La síntesis histórica se contrasta con el estudio arquitectónico; las imágenes sirven como evidencia formal.",
+      "year": null,
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "g-ermita",
+      "title": "Iglesia del Grau Vell",
+      "author": "Berta26 · Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Isglesia_del_Grau_Vell.jpg",
+      "type": "fotografía directa",
+      "locator": "Fotografía de 25 de mayo de 2016.",
+      "note": "Referencia de fachada, remate y espadaña. No permite fechar la obra ni reproducir su interior.",
+      "year": 2016,
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "g-colegio",
+      "title": "Colegio del Grau Vell",
+      "author": "Berta26 · Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Colegi_del_Grau_Vell.jpg",
+      "type": "fotografía directa",
+      "locator": "Fotografía de 25 de mayo de 2016.",
+      "note": "Contraste del edificio escolar dentro del poblado; no acredita su uso actual.",
+      "year": 2016,
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "g-arqueologia2008",
+      "title": "Memoria de intervención arqueológica 2008/0311, Grau Vell: Fortín",
+      "author": "Paco Blay y Francisca Molina",
+      "url": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=juo%2Bbz86Zr3iRAyuoD0s0aooIHZ9srgPwvoRXX32jjatdIN9CuShIpiPkbxHE2YXHyCHlPy%2BoS9iMNKeCRxoJ%2FsQl%2FOlOkBYH7IT1rvGtvA%3D&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "type": "memoria arqueológica publicada en contratación pública",
+      "locator": "Planta de sondeos, página 10 del PDF, y documentación del conjunto.",
+      "note": "La planta permite contrastar torre, batería, foso y refugio meridional. No es el plano de las salas del museo actual.",
+      "year": 2008,
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "g-proyecto2024",
+      "title": "Informe de aprobación del proyecto de actividad y anejos",
+      "author": "Ajuntament de Sagunt",
+      "url": "https://contrataciondelestado.es/FileSystem/servlet/GetDocumentByIdServlet?DocumentIdParam=sDtJ2ilVZ2Val1YhzIUlHIT4o343LQFCalMYqivWXT0g0%2FK7vzFNDfsCrv6lTCqJsEeXBExT5tqUFk78GwWUHza8IV4zgJEPUf3U4rkbopE%2F%2Fq7NB2iMZvNyf0xrJmjt&cifrado=QUC1GjXXSiLkydRHJBmbpw%3D%3D",
+      "type": "informe técnico municipal",
+      "locator": "Expediente 46/21-C; proyecto y documentación presentados en julio y agosto de 2024.",
+      "note": "Identifica almacén norte, patio y anexos E1/E2/E3. Sin inspección de los planos anexos no se traslada su distribución a la maqueta.",
+      "year": 2024,
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "g-catastro",
+      "title": "Cartografía de edificios INSPIRE de Sagunto",
+      "author": "Dirección General del Catastro",
+      "url": "https://www.catastro.hacienda.gob.es/webinspire/index.html",
+      "type": "cartografía pública",
+      "locator": "Huellas y partes del conjunto y del poblado; datos incorporados al atlas.",
+      "note": "Las partes catastrales no equivalen necesariamente a edificios autónomos ni aportan alzados medidos.",
+      "year": 2026,
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "g-pnoa",
+      "title": "PNOA Máxima Actualidad",
+      "author": "IGN / CNIG",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma",
+      "type": "ortofotografía",
+      "locator": "Recortes de consulta de noviembre de 2026.",
+      "note": "La fecha de consulta no identifica la fecha de vuelo. Se contrastan huellas, tejados, patios, vegetación y espacios libres.",
+      "year": null,
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "g-osm",
+      "title": "Huellas y viario del Grau Vell",
+      "author": "OpenStreetMap contributors",
+      "url": "https://www.openstreetmap.org/way/1418515035",
+      "type": "cartografía colaborativa",
+      "locator": "Torre y contexto costero; contraste con Catastro y PNOA.",
+      "note": "El foso seco se interpreta como elemento del fortín, aunque una huella de origen estuviese etiquetada como agua.",
+      "year": null,
+      "accessed": "2026-11-21"
+    }
+  ],
+  "stops": [
+    {
+      "id": "grau-conjunto",
+      "label": "El conjunto",
+      "title": "Un puerto abierto y su defensa",
+      "regionId": "edificio",
+      "period": "mixed",
+      "intro": "Relaciona torre, batería, patio y almacenes antes de acercarte.",
+      "narrative": "La vista general ayuda a seguir dos recorridos que se cruzan: las mercancías que pasan por el almacén y la vigilancia del litoral desde la torre. El poblado prolonga el conjunto hacia el sur.",
+      "facts": [
+        {
+          "text": "El Grau Vell reúne una torre, una batería, almacenes y un patio cercado.",
+          "sourceIds": [
+            "g-dival"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La torre alta detrás del cuerpo bajo de la batería y las cubiertas alargadas de los almacenes.",
+      "modelNote": "La escena reúne elementos de épocas distintas en su lectura contemporánea. La escala general procede de cartografía y referencias arquitectónicas.",
+      "sourceIds": [
+        "g-dival",
+        "g-upv",
+        "g-arquitectos"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con la geometría tridimensional y la cartografía del conjunto. La posición de observación, las cotas no levantadas y el montaje museográfico son interpretativos.",
+      "coordinate": [
+        -0.23965862650000003,
+        39.63550111699995
+      ],
+      "coordinates": [
+        -0.23965862650000003,
+        39.63550111699995
+      ],
+      "coordinateSourceIds": [
+        "g-catastro",
+        "g-pnoa",
+        "g-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "edificio",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "order": 1,
+      "elevation": 6.79807777214865,
+      "localTarget": [
+        3.55633970243116,
+        3.8000000000000003,
+        -19.447301845719267
+      ],
+      "sourceConfidence": "primary-sources-cartography-interpreted-registration"
+    },
+    {
+      "id": "grau-acceso",
+      "label": "Accesos",
+      "title": "Del frente marítimo al recinto",
+      "regionId": "construccion",
+      "period": "mixed",
+      "intro": "Busca los pasos entre calle, patio y edificio.",
+      "narrative": "Sigue visualmente los umbrales a nivel del suelo y después el acceso elevado a la torre. La restauración hace visible esa diferencia mediante una estructura ligera junto al muro.",
+      "facts": [
+        {
+          "text": "La intervención de 2020 incorporó escaleras y recuperó el patio como espacio de acceso.",
+          "sourceIds": [
+            "g-restauracion2020"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El recorrido metálico y su separación visual respecto a las fábricas de piedra.",
+      "modelNote": "Los recorridos del atlas son puntos de observación; no equivalen a un itinerario presencial abierto ni a una evaluación de accesibilidad.",
+      "sourceIds": [
+        "g-restauracion2020",
+        "g-arquitectos"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con la geometría tridimensional y la cartografía del conjunto. La posición de observación, las cotas no levantadas y el montaje museográfico son interpretativos.",
+      "coordinate": [
+        -0.23976424868818566,
+        39.63531987352054
+      ],
+      "coordinates": [
+        -0.23976424868818566,
+        39.63531987352054
+      ],
+      "coordinateSourceIds": [
+        "g-catastro",
+        "g-pnoa",
+        "g-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "construccion",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "order": 2,
+      "elevation": 5.44807777214865,
+      "localTarget": [
+        -5.492906230475455,
+        2.4500000000000006,
+        0.7287222888089673
+      ],
+      "sourceConfidence": "primary-sources-cartography-interpreted-registration"
+    },
+    {
+      "id": "grau-patio",
+      "label": "Patio",
+      "title": "El espacio que reúne el fortín",
+      "regionId": "edificio",
+      "period": "mixed",
+      "intro": "Detente entre el pozo, la torre y las naves.",
+      "narrative": "Desde aquí se entiende cómo las piezas se apoyan en un recinto común. El vacío permite observar las diferentes alturas sin perder la relación con los edificios del poblado.",
+      "facts": [
+        {
+          "text": "La restauración convirtió el patio trasero en una plaza de acceso al conjunto.",
+          "sourceIds": [
+            "g-restauracion2020"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Los cambios de fábrica del muro, el pozo y las líneas de las escaleras.",
+      "modelNote": "Pavimentos, bancos y vegetación se interpretan desde las imágenes; no son un inventario de mobiliario actualizado día a día.",
+      "sourceIds": [
+        "g-restauracion2020",
+        "g-arquitectos"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con la geometría tridimensional y la cartografía del conjunto. La posición de observación, las cotas no levantadas y el montaje museográfico son interpretativos.",
+      "coordinate": [
+        -0.23978632222222213,
+        39.63541231111108
+      ],
+      "coordinates": [
+        -0.23978632222222213,
+        39.63541231111108
+      ],
+      "coordinateSourceIds": [
+        "g-catastro",
+        "g-pnoa",
+        "g-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "edificio",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "order": 3,
+      "elevation": 4.39807777214865,
+      "localTarget": [
+        -7.384069834787169,
+        1.4,
+        -9.561430294604179
+      ],
+      "sourceConfidence": "primary-sources-cartography-interpreted-registration"
+    },
+    {
+      "id": "grau-pozo",
+      "label": "El pozo",
+      "title": "Agua en el patio de servicio",
+      "regionId": "memoria",
+      "period": "mixed",
+      "intro": "Acércate al elemento que organiza este rincón del recinto.",
+      "narrative": "Su presencia permite leer el patio como un espacio de trabajo y abastecimiento. Mira su relación con la sombra y con los accesos, sin confundirlo con una sala excavada bajo la torre.",
+      "facts": [
+        {
+          "text": "Las fotografías de la restauración muestran un brocal cuadrado y dos montantes de piedra.",
+          "sourceIds": [
+            "g-arquitectos"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La forma del brocal y el contraste entre piedra, metal y pavimento.",
+      "modelNote": "Se reproduce el elemento visible. Profundidad, funcionamiento y datación de sus piezas no se deducen de las fotografías.",
+      "sourceIds": [
+        "g-arquitectos",
+        "g-upv"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con la geometría tridimensional y la cartografía del conjunto. La posición de observación, las cotas no levantadas y el montaje museográfico son interpretativos.",
+      "coordinate": [
+        -0.23983199999999985,
+        39.63542847499997
+      ],
+      "coordinates": [
+        -0.23983199999999985,
+        39.63542847499997
+      ],
+      "coordinateSourceIds": [
+        "g-catastro",
+        "g-pnoa",
+        "g-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "memoria",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "order": 4,
+      "elevation": 3.99807777214865,
+      "localTarget": [
+        -11.297541538790483,
+        1,
+        -11.360794405803972
+      ],
+      "sourceConfidence": "primary-sources-cartography-interpreted-registration"
+    },
+    {
+      "id": "grau-corral",
+      "label": "Recinto posterior",
+      "title": "Las capas del antiguo corral",
+      "regionId": "memoria",
+      "period": "mixed",
+      "intro": "Lee el límite del patio y las construcciones adosadas.",
+      "narrative": "Las distintas fábricas y alturas invitan a mirar el fortín como una construcción transformada durante siglos. El espacio entre los muros cuenta tanto como sus volúmenes.",
+      "facts": [
+        {
+          "text": "El proyecto de actividad de 2024 identifica un anexo que anteriormente fue corral.",
+          "sourceIds": [
+            "g-proyecto2024"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Los encuentros de muros y la diferencia entre cuerpos cerrados y patio.",
+      "modelNote": "La distribución desaparecida de cocinas, alojamiento o almacenes no se reconstruye íntegramente; se conserva una lectura del recinto visible.",
+      "sourceIds": [
+        "g-proyecto2024",
+        "g-upv",
+        "g-arquitectos"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con la geometría tridimensional y la cartografía del conjunto. La posición de observación, las cotas no levantadas y el montaje museográfico son interpretativos.",
+      "coordinate": [
+        -0.2395795000000001,
+        39.63573557499987
+      ],
+      "coordinates": [
+        -0.2395795000000001,
+        39.63573557499987
+      ],
+      "coordinateSourceIds": [
+        "g-catastro",
+        "g-pnoa",
+        "g-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "memoria",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "order": 5,
+      "elevation": 4.998077772148649,
+      "localTarget": [
+        10.335551254562688,
+        1.9999999999999996,
+        -45.547166405669486
+      ],
+      "sourceConfidence": "primary-sources-cartography-interpreted-registration"
+    },
+    {
+      "id": "grau-almacen",
+      "label": "Almacén norte",
+      "title": "Una nave para guardar mercancías",
+      "regionId": "espacios",
+      "period": "modern",
+      "intro": "Abre la cubierta para leer el interior longitudinal.",
+      "narrative": "La sucesión de apoyos divide visualmente la nave sin convertirla en una serie de habitaciones cerradas. Desde esta vista puedes seguir el techo y el suelo hasta los accesos.",
+      "facts": [
+        {
+          "text": "El dintel fechado en 1711 documenta la ampliación de los almacenes del norte.",
+          "sourceIds": [
+            "g-upv"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La fila de pilares, la cumbrera y los huecos de fachada.",
+      "modelNote": "La nave se modela como arquitectura. Los cinco ámbitos museográficos documentados no se convierten en tabiques sin una planta final verificada.",
+      "sourceIds": [
+        "g-upv",
+        "g-arquitectos",
+        "g-apertura2026"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con la geometría tridimensional y la cartografía del conjunto. La posición de observación, las cotas no levantadas y el montaje museográfico son interpretativos.",
+      "coordinate": [
+        -0.23949739609261644,
+        39.63564421075594
+      ],
+      "coordinates": [
+        -0.23949739609261644,
+        39.63564421075594
+      ],
+      "coordinateSourceIds": [
+        "g-catastro",
+        "g-pnoa",
+        "g-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "espacios",
+      "floor": 0,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": "grau-almacen",
+      "order": 6,
+      "elevation": 4.924985755879257,
+      "localTarget": [
+        17.36985401547463,
+        1.9269079837306076,
+        -35.37649876825071
+      ],
+      "sourceConfidence": "primary-sources-cartography-interpreted-registration"
+    },
+    {
+      "id": "grau-cerchas",
+      "label": "Estructura de madera",
+      "title": "De los pilares a la cubierta",
+      "regionId": "construccion",
+      "period": "mixed",
+      "intro": "Mira hacia arriba y sigue cómo apoya el tejado.",
+      "narrative": "Identifica primero la línea de cumbrera, después las piezas inclinadas y finalmente su descarga sobre los pilares. Al abrir la cubierta, la estructura ayuda a comprender el volumen desde dentro.",
+      "facts": [
+        {
+          "text": "Las fotografías de los arquitectos muestran pilares con basas de sillería, madera y tornapuntas.",
+          "sourceIds": [
+            "g-arquitectos"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La diferencia entre apoyos verticales, tornapuntas y piezas repetidas del tejado.",
+      "modelNote": "La lectura describe los apoyos y las piezas de madera visibles. No se atribuye un sistema completo de cerchas donde la documentación no permite reconocerlo.",
+      "sourceIds": [
+        "g-arquitectos",
+        "g-upv"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con la geometría tridimensional y la cartografía del conjunto. La posición de observación, las cotas no levantadas y el montaje museográfico son interpretativos.",
+      "coordinate": [
+        -0.23947534207459564,
+        39.63566514318291
+      ],
+      "coordinates": [
+        -0.23947534207459564,
+        39.63566514318291
+      ],
+      "coordinateSourceIds": [
+        "g-catastro",
+        "g-pnoa",
+        "g-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "construccion",
+      "floor": 0,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": true,
+      "interiorView": false,
+      "buildingId": "grau-almacen",
+      "order": 7,
+      "elevation": 7.8749857558792575,
+      "localTarget": [
+        19.259345573141218,
+        4.876907983730607,
+        -37.70669653957975
+      ],
+      "sourceConfidence": "primary-sources-cartography-interpreted-registration"
+    },
+    {
+      "id": "grau-memoria-portuaria",
+      "label": "Memoria portuaria",
+      "title": "Mercancías, navegación e industria",
+      "regionId": "memoria",
+      "period": "mixed",
+      "intro": "Relaciona el almacén con los temas del centro de interpretación.",
+      "narrative": "Esta parada reúne tres escalas de la relación con el mar: navegación, arqueología y desarrollo industrial. Sirve para conectar el fortín con otros lugares del atlas, manteniendo legible la arquitectura que alberga el relato.",
+      "facts": [
+        {
+          "text": "El museo incorpora reproducciones de ánforas, monedas y un cepo de ancla.",
+          "sourceIds": [
+            "g-museografia2026"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El espacio de la nave y los puntos de interpretación, dejando paso entre los apoyos.",
+      "modelNote": "La ubicación de esta lectura es orientativa. Los elementos didácticos de la maqueta no reproducen cada vitrina, pieza o pantalla del montaje final.",
+      "sourceIds": [
+        "g-museografia2026",
+        "g-apertura2026"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con la geometría tridimensional y la cartografía del conjunto. La posición de observación, las cotas no levantadas y el montaje museográfico son interpretativos.",
+      "coordinate": [
+        -0.23936127165009505,
+        39.63572119419369
+      ],
+      "coordinates": [
+        -0.23936127165009505,
+        39.63572119419369
+      ],
+      "coordinateSourceIds": [
+        "g-catastro",
+        "g-pnoa",
+        "g-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "memoria",
+      "floor": 0,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": true,
+      "buildingId": "grau-almacen",
+      "order": 8,
+      "elevation": 4.384985755879257,
+      "localTarget": [
+        29.032399348195668,
+        1.3869079837306075,
+        -43.94629506129422
+      ],
+      "sourceConfidence": "documented-museum-content-interpreted-fittings-and-position"
+    },
+    {
+      "id": "grau-marjal",
+      "label": "La marjal",
+      "title": "El paisaje también forma parte del museo",
+      "regionId": "entorno",
+      "period": "mixed",
+      "intro": "Desde el interior del almacén, descubre la relación del Grau Vell con el humedal.",
+      "narrative": "Esta estación enlaza el relato del museo con el paisaje exterior. Al volver a la vista general puedes relacionar las casas, los suelos abiertos y la costa que acompañan al fortín.",
+      "facts": [
+        {
+          "text": "La Marjal dels Moros es uno de los cinco temas del centro.",
+          "sourceIds": [
+            "g-museografia2026"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El programa escolar municipal enlaza la marjal con la visita al museo.",
+          "sourceIds": [
+            "g-escuela2026"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El punto de interpretación del paisaje dentro de la nave y su relación con el espacio del almacén.",
+      "modelNote": "El tema está documentado; la estación y su posición son interpretativas. La vegetación exterior no es un inventario botánico ni una simulación de la hidrología del humedal.",
+      "sourceIds": [
+        "g-museografia2026",
+        "g-escuela2026",
+        "g-boe2010"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con la geometría tridimensional y la cartografía del conjunto. La posición de observación, las cotas no levantadas y el montaje museográfico son interpretativos.",
+      "coordinate": [
+        -0.23946420412622557,
+        39.635623496507144
+      ],
+      "coordinates": [
+        -0.23946420412622557,
+        39.635623496507144
+      ],
+      "coordinateSourceIds": [
+        "g-catastro",
+        "g-pnoa",
+        "g-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "entorno",
+      "floor": 0,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": true,
+      "buildingId": "grau-almacen",
+      "order": 9,
+      "elevation": 4.384985755879257,
+      "localTarget": [
+        20.213596149842488,
+        1.3869079837306075,
+        -33.07058859136305
+      ],
+      "sourceConfidence": "documented-museum-content-interpreted-fittings-and-position"
+    },
+    {
+      "id": "grau-restauracion",
+      "label": "Restauración",
+      "title": "Un monumento que vuelve a usarse",
+      "regionId": "memoria",
+      "period": "mixed",
+      "intro": "Descubre cómo la restauración convirtió el conjunto en un espacio cultural.",
+      "narrative": "Desde el almacén, relaciona las fábricas históricas con la estructura de madera recuperada. Vuelve al patio para comparar esos materiales con la escalera y los accesos contemporáneos.",
+      "facts": [
+        {
+          "text": "La rehabilitación se inauguró en septiembre de 2020; el museo abrió al público el 26 de junio de 2026.",
+          "sourceIds": [
+            "g-restauracion2020",
+            "g-apertura2026"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La piedra y la madera del almacén alrededor de la estación de interpretación.",
+      "modelNote": "La restauración es uno de los temas oficiales del centro. Esta estación y su posición son interpretativas; las fotografías de 2020 no documentan el montaje expositivo final de 2026.",
+      "sourceIds": [
+        "g-restauracion2020",
+        "g-apertura2026",
+        "g-arquitectos"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con la geometría tridimensional y la cartografía del conjunto. La posición de observación, las cotas no levantadas y el montaje museográfico son interpretativos.",
+      "coordinate": [
+        -0.23956713660235612,
+        39.635525798820595
+      ],
+      "coordinates": [
+        -0.23956713660235612,
+        39.635525798820595
+      ],
+      "coordinateSourceIds": [
+        "g-catastro",
+        "g-pnoa",
+        "g-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "memoria",
+      "floor": 0,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": true,
+      "buildingId": "grau-almacen",
+      "order": 10,
+      "elevation": 4.384985755879257,
+      "localTarget": [
+        11.394792951489308,
+        1.3869079837306075,
+        -22.194882121431874
+      ],
+      "sourceConfidence": "documented-museum-content-interpreted-fittings-and-position"
+    },
+    {
+      "id": "grau-lagar",
+      "label": "El lagar",
+      "title": "La memoria de la elaboración de vino",
+      "regionId": "espacios",
+      "period": "mixed",
+      "intro": "Desde el patio, descubre la memoria de la elaboración de vino.",
+      "narrative": "El centro incluye una lectura del lagar y de la producción de vino. Esta parada exterior incorpora esa memoria al recorrido digital y la relaciona con los ámbitos de servicio del conjunto.",
+      "facts": [
+        {
+          "text": "La documentación municipal identifica un lagar donde se producía vino.",
+          "sourceIds": [
+            "g-museografia2026"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La relación entre los ámbitos de servicio y la nave.",
+      "modelNote": "El punto de lectura es aproximado: no se ha verificado una planta del lagar. No se le atribuye una fecha romana ni se reconstruyen mecanismos desaparecidos.",
+      "sourceIds": [
+        "g-museografia2026",
+        "g-apertura2026"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con la geometría tridimensional y la cartografía del conjunto. La posición de observación, las cotas no levantadas y el montaje museográfico son interpretativos.",
+      "coordinate": [
+        -0.2397303019285714,
+        39.63551664099994
+      ],
+      "coordinates": [
+        -0.2397303019285714,
+        39.63551664099994
+      ],
+      "coordinateSourceIds": [
+        "g-catastro",
+        "g-pnoa",
+        "g-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "espacios",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "order": 11,
+      "elevation": 4.498077772148649,
+      "localTarget": [
+        -2.584496722476615,
+        1.4999999999999996,
+        -21.175433525651897
+      ],
+      "sourceConfidence": "documented-function-approximate-reading-point-not-an-interior-survey"
+    },
+    {
+      "id": "grau-recepcion",
+      "label": "Recepción",
+      "title": "Una entrada al relato marítimo",
+      "regionId": "espacios",
+      "period": "mixed",
+      "intro": "Sitúa el acceso al centro y su relación con el patio.",
+      "narrative": "La recepción es el primer ámbito para orientarse entre edificio histórico y recorrido interpretativo. En la visita digital funciona como enlace entre el exterior y los espacios interiores.",
+      "facts": [
+        {
+          "text": "La inauguración municipal incluye la recepción entre los ámbitos tematizados.",
+          "sourceIds": [
+            "g-apertura2026"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Los umbrales y los cambios de escala entre anexo, patio y almacén.",
+      "modelNote": "La función está documentada; la ubicación del foco y cualquier equipamiento genérico son aproximados, sin atribuir una planta de mobiliario verificada.",
+      "sourceIds": [
+        "g-apertura2026",
+        "g-proyecto2024"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con la geometría tridimensional y la cartografía del conjunto. La posición de observación, las cotas no levantadas y el montaje museográfico son interpretativos.",
+      "coordinate": [
+        -0.23969036944548164,
+        39.635430002500584
+      ],
+      "coordinates": [
+        -0.23969036944548164,
+        39.635430002500584
+      ],
+      "coordinateSourceIds": [
+        "g-catastro",
+        "g-pnoa",
+        "g-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "espacios",
+      "floor": 0,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": "grau-recepcion",
+      "order": 12,
+      "elevation": 5.01952877840569,
+      "localTarget": [
+        0.8367433256448749,
+        2.0214510062570406,
+        -11.53083577444795
+      ],
+      "sourceConfidence": "primary-sources-cartography-interpreted-registration"
+    },
+    {
+      "id": "grau-torre",
+      "label": "Torre de vigilancia",
+      "title": "Una posición elevada sobre la costa",
+      "regionId": "edificio",
+      "period": "modern",
+      "intro": "Rodea el volumen y observa sus distintos huecos.",
+      "narrative": "La altura de la torre explica su papel dentro del conjunto. La lectura cercana permite reconocer las esquinas, los cambios de aparejo y el acceso situado por encima del patio.",
+      "facts": [
+        {
+          "text": "El estudio de 2015 publica una planta aproximada de 6 × 7 m y una altura de 10,70 m.",
+          "sourceIds": [
+            "g-upv"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La diferencia entre la mampostería del cuerpo y la piedra labrada de esquinas y huecos.",
+      "modelNote": "La huella se mantiene sobre cartografía. Las dimensiones publicadas son aproximadas y no convierten todos los detalles del modelo en un levantamiento métrico.",
+      "sourceIds": [
+        "g-upv",
+        "g-arquitectos"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con la geometría tridimensional y la cartografía del conjunto. La posición de observación, las cotas no levantadas y el montaje museográfico son interpretativos.",
+      "coordinate": [
+        -0.23970013585714284,
+        39.63532641971429
+      ],
+      "coordinates": [
+        -0.23970013585714284,
+        39.63532641971429
+      ],
+      "coordinateSourceIds": [
+        "g-catastro",
+        "g-pnoa",
+        "g-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "edificio",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": "grau-torre",
+      "order": 13,
+      "elevation": 8.99807777214865,
+      "localTarget": [
+        0,
+        6,
+        0
+      ],
+      "sourceConfidence": "primary-sources-cartography-interpreted-registration"
+    },
+    {
+      "id": "grau-sala-torre",
+      "label": "Sala alta",
+      "title": "El único espacio interior de la torre",
+      "regionId": "espacios",
+      "period": "modern",
+      "intro": "Entra visualmente en la cámara elevada.",
+      "narrative": "Mira los huecos de luz y la comunicación hacia la batería. La cámara digital permite entender su posición en altura y el espesor de la envolvente.",
+      "facts": [
+        {
+          "text": "La planta baja está terraplenada; la sala se encuentra en el nivel superior.",
+          "sourceIds": [
+            "g-upv"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La estancia, el arranque de la bóveda y el paso hacia el exterior.",
+      "modelNote": "La sección no vacía el basamento. El recorrido interior es didáctico y no certifica que la dependencia esté abierta al público.",
+      "sourceIds": [
+        "g-upv",
+        "g-arquitectos",
+        "g-apertura2026"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con la geometría tridimensional y la cartografía del conjunto. La posición de observación, las cotas no levantadas y el montaje museográfico son interpretativos.",
+      "coordinate": [
+        -0.23969551398608485,
+        39.63532828678738
+      ],
+      "coordinates": [
+        -0.23969551398608485,
+        39.63532828678738
+      ],
+      "coordinateSourceIds": [
+        "g-catastro",
+        "g-pnoa",
+        "g-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "espacios",
+      "floor": 1,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": true,
+      "buildingId": "grau-torre",
+      "order": 14,
+      "elevation": 8.56807777214865,
+      "localTarget": [
+        0.3959816454525935,
+        5.57,
+        -0.20784257615923707
+      ],
+      "sourceConfidence": "primary-sources-cartography-interpreted-registration"
+    },
+    {
+      "id": "grau-boveda",
+      "label": "Bóveda y escala",
+      "title": "Subir sobre la sala",
+      "regionId": "construccion",
+      "period": "modern",
+      "intro": "Eleva la mirada hasta el techo y el hueco de acceso.",
+      "narrative": "La escala explica la relación entre la cámara y la terraza. La sección permite leer la curvatura sin perder la referencia de las paredes que la sostienen.",
+      "facts": [
+        {
+          "text": "El estudio arquitectónico describe una bóveda de cañón y un hueco de acceso en su esquina sureste.",
+          "sourceIds": [
+            "g-upv"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La curvatura, el hueco de paso y la escala de madera.",
+      "modelNote": "La fotografía de restauración muestra un acabado rugoso; la modulación exacta del aparejo y la orientación fina se aproximan. No se añade una escalera monumental.",
+      "sourceIds": [
+        "g-upv",
+        "g-arquitectos"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con la geometría tridimensional y la cartografía del conjunto. La posición de observación, las cotas no levantadas y el montaje museográfico son interpretativos.",
+      "coordinate": [
+        -0.23968162595239895,
+        39.63533009011503
+      ],
+      "coordinates": [
+        -0.23968162595239895,
+        39.63533009011503
+      ],
+      "coordinateSourceIds": [
+        "g-catastro",
+        "g-pnoa",
+        "g-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "construccion",
+      "floor": 1,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": true,
+      "buildingId": "grau-torre",
+      "order": 15,
+      "elevation": 10.19807777214865,
+      "localTarget": [
+        1.5858474729552654,
+        7.200000000000001,
+        -0.40858901122555835
+      ],
+      "sourceConfidence": "primary-sources-cartography-interpreted-registration"
+    },
+    {
+      "id": "grau-terraza",
+      "label": "Terraza de la torre",
+      "title": "Leer la costa desde arriba",
+      "regionId": "construccion",
+      "period": "modern",
+      "intro": "Sube con la cámara a la coronación.",
+      "narrative": "La vista conecta la vigilancia marítima con la escala del poblado. Observa cómo los parapetos enmarcan el horizonte y cómo el cuerpo superior modifica la silueta.",
+      "facts": [
+        {
+          "text": "El levantamiento identifica un garitón en el ángulo noroeste de la terraza.",
+          "sourceIds": [
+            "g-upv"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El remate de la torre y la relación con la plataforma inferior de la batería.",
+      "modelNote": "La cámara elevada es un recurso del atlas. No implica acceso presencial ni restitución completa de una cubierta histórica desaparecida.",
+      "sourceIds": [
+        "g-upv",
+        "g-arquitectos",
+        "g-apertura2026"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con la geometría tridimensional y la cartografía del conjunto. La posición de observación, las cotas no levantadas y el montaje museográfico son interpretativos.",
+      "coordinate": [
+        -0.23970013585714284,
+        39.63532641971429
+      ],
+      "coordinates": [
+        -0.23970013585714284,
+        39.63532641971429
+      ],
+      "coordinateSourceIds": [
+        "g-catastro",
+        "g-pnoa",
+        "g-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "construccion",
+      "floor": 2,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": "grau-torre",
+      "order": 16,
+      "elevation": 12.79807777214865,
+      "localTarget": [
+        0,
+        9.8,
+        0
+      ],
+      "sourceConfidence": "primary-sources-cartography-interpreted-registration"
+    },
+    {
+      "id": "grau-bateria",
+      "label": "Batería",
+      "title": "Artillería frente al mar",
+      "regionId": "construccion",
+      "period": "modern",
+      "intro": "Observa la plataforma baja que se adelanta a la torre.",
+      "narrative": "Su volumen ancho permite distinguir la defensa artillera de la función de vigilancia. El cordón y el parapeto recorren el frente y ayudan a leer la inclinación del muro.",
+      "facts": [
+        {
+          "text": "La réplica instalada en 2026 representa el cañón El Destruidor, de 133 mm de calibre.",
+          "sourceIds": [
+            "g-museografia2026"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El cuerpo ataluzado, las esquinas redondeadas y la réplica de artillería.",
+      "modelNote": "Se muestra una réplica contemporánea, no tres cañones históricos conservados. La visita digital no acredita apertura física: la noticia de junio indicaba que la batería aún no era visitable.",
+      "sourceIds": [
+        "g-museografia2026",
+        "g-upv",
+        "g-apertura2026"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con la geometría tridimensional y la cartografía del conjunto. La posición de observación, las cotas no levantadas y el montaje museográfico son interpretativos.",
+      "coordinate": [
+        -0.23964212142857147,
+        39.635315607142864
+      ],
+      "coordinates": [
+        -0.23964212142857147,
+        39.635315607142864
+      ],
+      "coordinateSourceIds": [
+        "g-catastro",
+        "g-pnoa",
+        "g-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "construccion",
+      "floor": 1,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": "grau-bateria",
+      "order": 17,
+      "elevation": 7.69807777214865,
+      "localTarget": [
+        4.970421848075603,
+        4.700000000000001,
+        1.2036554514143063
+      ],
+      "sourceConfidence": "primary-sources-cartography-interpreted-registration"
+    },
+    {
+      "id": "grau-foso",
+      "label": "Foso seco",
+      "title": "El vacío que protege la batería",
+      "regionId": "construccion",
+      "period": "mixed",
+      "intro": "Baja la mirada hasta la separación entre muro y calle.",
+      "narrative": "El foso aporta profundidad al frente del fortín. Recorre visualmente su borde para relacionar la escarpa de la batería con el muro exterior y los accesos.",
+      "facts": [
+        {
+          "text": "La restauración recuperó el antiguo foso y el refugio de la Guerra Civil.",
+          "sourceIds": [
+            "g-restauracion2020"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El fondo de grava, las caras de piedra y las barandillas del borde.",
+      "modelNote": "Se representa seco, como muestran las fotografías de la restauración. La profundidad visible se aproxima; no se interpreta como una lámina de mar ni se inventa un recorrido por el refugio.",
+      "sourceIds": [
+        "g-restauracion2020",
+        "g-arquitectos",
+        "g-arqueologia2008"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con la geometría tridimensional y la cartografía del conjunto. La posición de observación, las cotas no levantadas y el montaje museográfico son interpretativos.",
+      "coordinate": [
+        -0.23957281558054155,
+        39.63527803564153
+      ],
+      "coordinates": [
+        -0.23957281558054155,
+        39.63527803564153
+      ],
+      "coordinateSourceIds": [
+        "g-catastro",
+        "g-pnoa",
+        "g-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "construccion",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "order": 18,
+      "elevation": 2.84807777214865,
+      "localTarget": [
+        10.908243002750169,
+        -0.1499999999999999,
+        5.386114981408355
+      ],
+      "sourceConfidence": "primary-sources-cartography-interpreted-registration"
+    },
+    {
+      "id": "grau-poblado",
+      "label": "El poblado",
+      "title": "Casas entre el fortín y la playa",
+      "regionId": "entorno",
+      "period": "mixed",
+      "intro": "Continúa por las alineaciones de viviendas y sus pequeños vacíos.",
+      "narrative": "Al alejarte de la torre, la escena cambia de escala. Puertas, tejados, patios y medianeras permiten leer el conjunto como un barrio vivido, relacionado con la actividad del litoral.",
+      "facts": [
+        {
+          "text": "La protección patrimonial reconoce el valor de las viviendas tradicionales y sus alineaciones.",
+          "sourceIds": [
+            "g-boe2010"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Los frentes bajos, las tejas y la continuidad de los espacios libres.",
+      "modelNote": "Las huellas siguen la cartografía; alzados, colores y detalles sin levantamiento son interpretativos. Una parte catastral no equivale siempre a una casa independiente.",
+      "sourceIds": [
+        "g-boe2010",
+        "g-dival",
+        "g-catastro",
+        "g-pnoa"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con la geometría tridimensional y la cartografía del conjunto. La posición de observación, las cotas no levantadas y el montaje museográfico son interpretativos.",
+      "coordinate": [
+        -0.2403399999999993,
+        39.6347100000002
+      ],
+      "coordinates": [
+        -0.2403399999999993,
+        39.6347100000002
+      ],
+      "coordinateSourceIds": [
+        "g-catastro",
+        "g-pnoa",
+        "g-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "entorno",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "entorno",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "order": 19,
+      "elevation": 4.406720485902561,
+      "localTarget": [
+        -54.82075397056633,
+        1.408642713753911,
+        68.61984259451674
+      ],
+      "sourceConfidence": "primary-sources-cartography-interpreted-registration"
+    },
+    {
+      "id": "grau-ermita",
+      "label": "Ermita y plaza",
+      "title": "Un lugar de encuentro del poblado",
+      "regionId": "entorno",
+      "period": "mixed",
+      "intro": "Acércate a la fachada y vuelve la mirada hacia las casas.",
+      "narrative": "La pequeña iglesia ofrece otro punto de referencia dentro del recorrido. Su escala ayuda a comprender la relación entre el poblado, el espacio público y el frente litoral.",
+      "facts": [
+        {
+          "text": "La iglesia y el colegio se incluyen expresamente entre los edificios a conservar en la orden de protección.",
+          "sourceIds": [
+            "g-boe2010"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El remate de la fachada, la espadaña y el espacio libre delante del edificio.",
+      "modelNote": "La fachada se contrasta con fotografía directa. No se asignan una fecha de construcción, un interior visitable ni un uso actual no acreditados.",
+      "sourceIds": [
+        "g-boe2010",
+        "g-ermita",
+        "g-colegio",
+        "g-dival"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con la geometría tridimensional y la cartografía del conjunto. La posición de observación, las cotas no levantadas y el montaje museográfico son interpretativos.",
+      "coordinate": [
+        -0.24086971833333207,
+        39.63401057193375
+      ],
+      "coordinates": [
+        -0.24086971833333207,
+        39.63401057193375
+      ],
+      "coordinateSourceIds": [
+        "g-catastro",
+        "g-pnoa",
+        "g-osm"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "entorno",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "entorno",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "order": 20,
+      "elevation": 5.8845347622006425,
+      "localTarget": [
+        -100.20469796795442,
+        2.8864569900519927,
+        146.4801749757262
+      ],
+      "sourceConfidence": "primary-sources-cartography-interpreted-registration"
+    }
+  ]
+}

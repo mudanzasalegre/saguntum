@@ -1,0 +1,93 @@
+{
+  "pass": true,
+  "method": "Production Canvas maps, exact pixel output and hit-target verification; not browser layout.",
+  "outputs": [
+    {
+      "file": "research/validation-v32/grau-map-overview-dark.png",
+      "width": 1100,
+      "height": 800,
+      "targets": 20,
+      "floor": null,
+      "buildingId": null,
+      "openings": [],
+      "sha256": "77847cd24742326e7646655a6a027c2a1e3cc22f6d0fb703b14cd8ecdf3992e3"
+    },
+    {
+      "file": "research/validation-v32/grau-map-overview-light.png",
+      "width": 1100,
+      "height": 800,
+      "targets": 20,
+      "floor": null,
+      "buildingId": null,
+      "openings": [],
+      "sha256": "0530362ec0512e37a328adef7f0cc6312bfabc48ca0be08d047b33b04569b583"
+    },
+    {
+      "file": "research/validation-v32/grau-map-reading.png",
+      "width": 1100,
+      "height": 800,
+      "targets": 18,
+      "floor": null,
+      "buildingId": null,
+      "openings": [],
+      "sha256": "28cc3c8a4653a16e20e7b577f8d2595b6c6c5f1fcb6cd7a64781661340170bf9"
+    },
+    {
+      "file": "research/validation-v32/grau-map-tower.png",
+      "width": 900,
+      "height": 700,
+      "targets": 2,
+      "floor": 1,
+      "buildingId": "grau-torre",
+      "openings": [
+        "torre-1-0",
+        "torre-2-0",
+        "torre-5-0",
+        "torre-0-0",
+        "torre-3-0",
+        "torre-5-1"
+      ],
+      "sha256": "a4bb046b1497c471637626ca84e021948860c846d555ce1af933dfbea7d48dfc"
+    },
+    {
+      "file": "research/validation-v32/grau-map-warehouse.png",
+      "width": 1100,
+      "height": 700,
+      "targets": 5,
+      "floor": 0,
+      "buildingId": "grau-almacen",
+      "openings": [
+        "almacen-door-5-0",
+        "almacen-door-5-2",
+        "almacen-door-5-4",
+        "almacen-door-5-6",
+        "almacen-door-5-8",
+        "almacen-window-2-0",
+        "almacen-window-3-0",
+        "almacen-window-3-1",
+        "almacen-window-3-2",
+        "almacen-window-3-3"
+      ],
+      "sha256": "991c5a1ff5cc43634bfd2b490bc48e5fd233a70a4ce13c6da174c9a29f3414f0"
+    },
+    {
+      "file": "research/validation-v32/grau-map-minimap.png",
+      "width": 238,
+      "height": 138,
+      "targets": 20,
+      "floor": null,
+      "buildingId": null,
+      "openings": [],
+      "sha256": "a937466eee0a9e864c7aaa2dda343512cfe57819467b809fec6aac7c1bc3b77c"
+    }
+  ],
+  "inputHashes": {
+    "dist/js/grau-map.js": "90eb16acfa95176b792361ba631455947148bea102c7dea6f9113ee4f8367fd5",
+    "dist/assets/data/grau-visit.json": "e0268102fa5ea4269787ac6d7d67c7e3b7dad98f508f4b49ee0634322b3a0527",
+    "dist/assets/data/grau-plan.json": "d33a06c62e4a1d7b45b37c0990d46bc0bec9281d8cf25c26013588c220cd330f",
+    "dist/assets/data/coast-cartography.json": "2ef2232d368dd5ac9b8d2fd48b0ebcc760ab57aaa479b346fce1d7d59ca4dd01",
+    "dist/assets/data/coast-water.json": "4ca8b24ec5593580a63d68323a30cfaa3426c60105d8ea42cbbc16b20834d088",
+    "dist/assets/data/coast-elevation.json": "376eed79ade2cc1efb1dec90dda15d3b1ecb8b040a490ef8c945eb8585aaa0a2",
+    "dist/js/theme.js": "4702130f444a68738b9aecb53f3efb47530a07c109b830e5464bbab33ec4b42b"
+  }
+}

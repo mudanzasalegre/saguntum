@@ -1,0 +1,4353 @@
+{
+  "pass": true,
+  "generatedAt": "2026-11-20T12:10:29.218Z",
+  "checks": 1005,
+  "buildMs": 34748.356277,
+  "meshes": 109,
+  "triangles": 268774,
+  "stats": {
+    "modelVersion": "v18",
+    "roadLength": 60,
+    "roadWidth": [
+      4.1,
+      5.4
+    ],
+    "sewerClearWidth": 0.68,
+    "sewerClearDepth": 1.25,
+    "preservedPierLocations": 14,
+    "westPiers": 9,
+    "eastPiers": 5,
+    "slabCount": 165,
+    "pavingCourses": 49,
+    "interiorLights": 8,
+    "hostBuildings": 27,
+    "sourceHostParcels": 2,
+    "surfaceApronTriangles": 1053,
+    "stops": 20,
+    "interiorViews": 10,
+    "meshes": 93,
+    "triangles": 170290,
+    "phase": "Siglo II d. C.",
+    "verticalPlacement": "interpretativa",
+    "survey": false,
+    "context": {
+      "buildingParts": 152,
+      "parentParcels": 44,
+      "footprintsPreserved": true,
+      "courtyards": 10,
+      "sourceHeight": 0,
+      "ignHeight": 84,
+      "storeyHeight": 68,
+      "fallbackHeight": 0,
+      "streetSamples": 8983,
+      "roofCorrections": 0,
+      "maximumRoofCorrectionM": 0,
+      "preservedSantaMaria": true,
+      "preservedPlazaMayor": true,
+      "heightConflictsReviewed": 9,
+      "interpretiveTrees": 24,
+      "interpretiveBenches": 6,
+      "hostBuildingPartsExcluded": 27,
+      "reusedBuildingParts": 0,
+      "reusedStreetFragments": 0,
+      "preservedPreviousContexts": true
+    }
+  },
+  "errors": [],
+  "cameras": [
+    {
+      "place": "portic",
+      "id": "portic-conjunto",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 47,
+      "interiorView": false,
+      "position": [
+        708.021340860269,
+        183.44933055067213,
+        -126.77858022152023
+      ],
+      "target": [
+        467.74241368216656,
+        52.64374321016205,
+        -77.0089327963816
+      ],
+      "clearance": 141.7437291343426,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Vía del Pòrtic · huecos-actuales · shadow",
+        "intended": true,
+        "point": [
+          481.0593307785946,
+          59.89334758796076,
+          -79.76730314730193
+        ],
+        "distanceToTarget": 15.411218367818025
+      }
+    },
+    {
+      "place": "portic",
+      "id": "portic-conjunto",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 47,
+      "interiorView": false,
+      "position": [
+        513.775769430557,
+        74.64374321016206,
+        -84.8147100505774
+      ],
+      "target": [
+        467.74241368216656,
+        52.64374321016205,
+        -77.0089327963816
+      ],
+      "clearance": 31.643743210162057,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Vía del Pòrtic · volumen-actual · plaster",
+        "intended": true,
+        "point": [
+          480.7316707526362,
+          58.85149519574966,
+          -79.21149321678108
+        ],
+        "distanceToTarget": 14.56393684286028
+      }
+    },
+    {
+      "place": "portic",
+      "id": "portic-conjunto",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 47,
+      "interiorView": false,
+      "position": [
+        958.622486065027,
+        319.8742362704117,
+        -178.68629758839478
+      ],
+      "target": [
+        467.74241368216656,
+        52.64374321016205,
+        -77.0089327963816
+      ],
+      "clearance": 286.67910553135783,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Vía del Pòrtic · huecos-actuales · shadow",
+        "intended": true,
+        "point": [
+          481.05933077859453,
+          59.893347587960704,
+          -79.76730314730193
+        ],
+        "distanceToTarget": 15.41121836781795
+      }
+    },
+    {
+      "place": "portic",
+      "id": "portic-conjunto",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 47,
+      "interiorView": false,
+      "position": [
+        513.775769430557,
+        74.64374321016206,
+        -84.8147100505774
+      ],
+      "target": [
+        467.74241368216656,
+        52.64374321016205,
+        -77.0089327963816
+      ],
+      "clearance": 31.643743210162057,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Vía del Pòrtic · volumen-actual · plaster",
+        "intended": true,
+        "point": [
+          480.7316707526362,
+          58.85149519574966,
+          -79.21149321678108
+        ],
+        "distanceToTarget": 14.56393684286028
+      }
+    },
+    {
+      "place": "portic",
+      "id": "portic-conjunto",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 47,
+      "interiorView": false,
+      "position": [
+        681.5842999203117,
+        169.0572541904636,
+        -121.30260185754847
+      ],
+      "target": [
+        467.74241368216656,
+        52.64374321016205,
+        -77.0089327963816
+      ],
+      "clearance": 126.4131832434945,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Vía del Pòrtic · huecos-actuales · shadow",
+        "intended": true,
+        "point": [
+          481.0593307785946,
+          59.89334758796073,
+          -79.76730314730193
+        ],
+        "distanceToTarget": 15.411218367818012
+      }
+    },
+    {
+      "place": "portic",
+      "id": "portic-conjunto",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 47,
+      "interiorView": false,
+      "position": [
+        513.775769430557,
+        74.64374321016206,
+        -84.8147100505774
+      ],
+      "target": [
+        467.74241368216656,
+        52.64374321016205,
+        -77.0089327963816
+      ],
+      "clearance": 31.643743210162057,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Vía del Pòrtic · volumen-actual · plaster",
+        "intended": true,
+        "point": [
+          480.7316707526362,
+          58.85149519574966,
+          -79.21149321678108
+        ],
+        "distanceToTarget": 14.56393684286028
+      }
+    },
+    {
+      "place": "portic",
+      "id": "portic-plaza",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 58,
+      "interiorView": false,
+      "position": [
+        402.00002229546675,
+        104,
+        -49.999980520029226
+      ],
+      "target": [
+        419.00002229546675,
+        46,
+        -99.99998052002923
+      ],
+      "clearance": 59.79630248137245,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-plaza",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 58,
+      "interiorView": false,
+      "position": [
+        410.00002229546675,
+        46.15,
+        -84.99998052002923
+      ],
+      "target": [
+        419.00002229546675,
+        46,
+        -99.99998052002923
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-plaza",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 58,
+      "interiorView": false,
+      "position": [
+        402.00002229546675,
+        104,
+        -49.999980520029226
+      ],
+      "target": [
+        419.00002229546675,
+        46,
+        -99.99998052002923
+      ],
+      "clearance": 59.79630248137245,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-plaza",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 58,
+      "interiorView": false,
+      "position": [
+        410.00002229546675,
+        46.15,
+        -84.99998052002923
+      ],
+      "target": [
+        419.00002229546675,
+        46,
+        -99.99998052002923
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-plaza",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 58,
+      "interiorView": false,
+      "position": [
+        402.00002229546675,
+        104,
+        -49.999980520029226
+      ],
+      "target": [
+        419.00002229546675,
+        46,
+        -99.99998052002923
+      ],
+      "clearance": 59.79630248137245,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-plaza",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 58,
+      "interiorView": false,
+      "position": [
+        410.00002229546675,
+        46.15,
+        -84.99998052002923
+      ],
+      "target": [
+        419.00002229546675,
+        46,
+        -99.99998052002923
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-acceso",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        419.2499621813377,
+        58.7,
+        -60.04803599967249
+      ],
+      "target": [
+        438.2499621813377,
+        45.7,
+        -67.04803599967249
+      ],
+      "clearance": 14.700000000000003,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-acceso",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        429.2499621813377,
+        46.15,
+        -66.04803599967249
+      ],
+      "target": [
+        438.2499621813377,
+        45.7,
+        -67.04803599967249
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-acceso",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        419.2499621813377,
+        58.7,
+        -60.04803599967249
+      ],
+      "target": [
+        438.2499621813377,
+        45.7,
+        -67.04803599967249
+      ],
+      "clearance": 14.700000000000003,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-acceso",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        429.2499621813377,
+        46.15,
+        -66.04803599967249
+      ],
+      "target": [
+        438.2499621813377,
+        45.7,
+        -67.04803599967249
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-acceso",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        419.2499621813377,
+        58.7,
+        -60.04803599967249
+      ],
+      "target": [
+        438.2499621813377,
+        45.7,
+        -67.04803599967249
+      ],
+      "clearance": 14.700000000000003,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-acceso",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        429.2499621813377,
+        46.15,
+        -66.04803599967249
+      ],
+      "target": [
+        438.2499621813377,
+        45.7,
+        -67.04803599967249
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-pasarela",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 72,
+      "interiorView": true,
+      "position": [
+        455.6148759746955,
+        42.203743210162045,
+        -70.51006142099118
+      ],
+      "target": [
+        460.74353120320177,
+        42.173743210162044,
+        -77.28847536136954
+      ],
+      "clearance": 3.509999999999998,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-pasarela",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 72,
+      "interiorView": true,
+      "position": [
+        457.42498958475653,
+        42.203743210162045,
+        -72.90244281171296
+      ],
+      "target": [
+        460.74353120320177,
+        42.173743210162044,
+        -77.28847536136954
+      ],
+      "clearance": 3.509999999999998,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-pasarela",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 72,
+      "interiorView": true,
+      "position": [
+        455.6148759746955,
+        42.203743210162045,
+        -70.51006142099118
+      ],
+      "target": [
+        460.74353120320177,
+        42.173743210162044,
+        -77.28847536136954
+      ],
+      "clearance": 3.509999999999998,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-pasarela",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 72,
+      "interiorView": true,
+      "position": [
+        457.42498958475653,
+        42.203743210162045,
+        -72.90244281171296
+      ],
+      "target": [
+        460.74353120320177,
+        42.173743210162044,
+        -77.28847536136954
+      ],
+      "clearance": 3.509999999999998,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-pasarela",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 72,
+      "interiorView": true,
+      "position": [
+        455.6148759746955,
+        42.203743210162045,
+        -70.51006142099118
+      ],
+      "target": [
+        460.74353120320177,
+        42.173743210162044,
+        -77.28847536136954
+      ],
+      "clearance": 3.509999999999998,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-pasarela",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 72,
+      "interiorView": true,
+      "position": [
+        457.42498958475653,
+        42.203743210162045,
+        -72.90244281171296
+      ],
+      "target": [
+        460.74353120320177,
+        42.173743210162044,
+        -77.28847536136954
+      ],
+      "clearance": 3.509999999999998,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-calzada",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 72,
+      "interiorView": true,
+      "position": [
+        457.15262529491196,
+        42.46374321016204,
+        -69.97356628757996
+      ],
+      "target": [
+        459.7678090464273,
+        40.313743210162045,
+        -83.04264482991836
+      ],
+      "clearance": 3.769999999999996,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-calzada",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 72,
+      "interiorView": true,
+      "position": [
+        459.13278270903425,
+        42.21374321016204,
+        -74.74525116980935
+      ],
+      "target": [
+        459.7678090464273,
+        40.313743210162045,
+        -83.04264482991836
+      ],
+      "clearance": 3.519999999999996,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-calzada",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 72,
+      "interiorView": true,
+      "position": [
+        457.15262529491196,
+        42.46374321016204,
+        -69.97356628757996
+      ],
+      "target": [
+        459.7678090464273,
+        40.313743210162045,
+        -83.04264482991836
+      ],
+      "clearance": 3.769999999999996,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-calzada",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 72,
+      "interiorView": true,
+      "position": [
+        459.13278270903425,
+        42.21374321016204,
+        -74.74525116980935
+      ],
+      "target": [
+        459.7678090464273,
+        40.313743210162045,
+        -83.04264482991836
+      ],
+      "clearance": 3.519999999999996,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-calzada",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 72,
+      "interiorView": true,
+      "position": [
+        457.15262529491196,
+        42.46374321016204,
+        -69.97356628757996
+      ],
+      "target": [
+        459.7678090464273,
+        40.313743210162045,
+        -83.04264482991836
+      ],
+      "clearance": 3.769999999999996,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-calzada",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 72,
+      "interiorView": true,
+      "position": [
+        459.13278270903425,
+        42.21374321016204,
+        -74.74525116980935
+      ],
+      "target": [
+        459.7678090464273,
+        40.313743210162045,
+        -83.04264482991836
+      ],
+      "clearance": 3.519999999999996,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-losado",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 67,
+      "interiorView": true,
+      "position": [
+        464.7850630945368,
+        42.37374321016205,
+        -82.381462694097
+      ],
+      "target": [
+        462.7846650631957,
+        40.29374321016205,
+        -87.02994714778798
+      ],
+      "clearance": 3.6799999999999997,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-losado",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 67,
+      "interiorView": true,
+      "position": [
+        464.72894665873997,
+        42.21374321016205,
+        -83.30170774061095
+      ],
+      "target": [
+        462.7846650631957,
+        40.29374321016205,
+        -87.02994714778798
+      ],
+      "clearance": 3.520000000000003,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-losado",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 67,
+      "interiorView": true,
+      "position": [
+        464.7850630945368,
+        42.37374321016205,
+        -82.381462694097
+      ],
+      "target": [
+        462.7846650631957,
+        40.29374321016205,
+        -87.02994714778798
+      ],
+      "clearance": 3.6799999999999997,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-losado",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 67,
+      "interiorView": true,
+      "position": [
+        464.72894665873997,
+        42.21374321016205,
+        -83.30170774061095
+      ],
+      "target": [
+        462.7846650631957,
+        40.29374321016205,
+        -87.02994714778798
+      ],
+      "clearance": 3.520000000000003,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-losado",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 67,
+      "interiorView": true,
+      "position": [
+        464.7850630945368,
+        42.37374321016205,
+        -82.381462694097
+      ],
+      "target": [
+        462.7846650631957,
+        40.29374321016205,
+        -87.02994714778798
+      ],
+      "clearance": 3.6799999999999997,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-losado",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 67,
+      "interiorView": true,
+      "position": [
+        464.72894665873997,
+        42.21374321016205,
+        -83.30170774061095
+      ],
+      "target": [
+        462.7846650631957,
+        40.29374321016205,
+        -87.02994714778798
+      ],
+      "clearance": 3.520000000000003,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-porticos",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 67,
+      "interiorView": true,
+      "position": [
+        461.6322552036391,
+        42.44374321016205,
+        -75.56270896609853
+      ],
+      "target": [
+        462.5368961630712,
+        40.79374321016205,
+        -81.39894274607322
+      ],
+      "clearance": 3.75,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-porticos",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 67,
+      "interiorView": true,
+      "position": [
+        462.1191728508606,
+        42.29374321016205,
+        -77.20066842982901
+      ],
+      "target": [
+        462.5368961630712,
+        40.79374321016205,
+        -81.39894274607322
+      ],
+      "clearance": 3.6000000000000014,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-porticos",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 67,
+      "interiorView": true,
+      "position": [
+        461.6322552036391,
+        42.44374321016205,
+        -75.56270896609853
+      ],
+      "target": [
+        462.5368961630712,
+        40.79374321016205,
+        -81.39894274607322
+      ],
+      "clearance": 3.75,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-porticos",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 67,
+      "interiorView": true,
+      "position": [
+        462.1191728508606,
+        42.29374321016205,
+        -77.20066842982901
+      ],
+      "target": [
+        462.5368961630712,
+        40.79374321016205,
+        -81.39894274607322
+      ],
+      "clearance": 3.6000000000000014,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-porticos",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 67,
+      "interiorView": true,
+      "position": [
+        461.6322552036391,
+        42.44374321016205,
+        -75.56270896609853
+      ],
+      "target": [
+        462.5368961630712,
+        40.79374321016205,
+        -81.39894274607322
+      ],
+      "clearance": 3.75,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-porticos",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 67,
+      "interiorView": true,
+      "position": [
+        462.1191728508606,
+        42.29374321016205,
+        -77.20066842982901
+      ],
+      "target": [
+        462.5368961630712,
+        40.79374321016205,
+        -81.39894274607322
+      ],
+      "clearance": 3.6000000000000014,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-cloaca",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 61,
+      "interiorView": false,
+      "position": [
+        458.2386934609486,
+        46.493743210162044,
+        -71.40899512201301
+      ],
+      "target": [
+        456.14758182630527,
+        39.493743210162044,
+        -78.25788204847481
+      ],
+      "clearance": 7.799999999999997,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Vía del Pòrtic · losado · ashlar",
+        "intended": true,
+        "point": [
+          456.3542479153488,
+          40.1855583190918,
+          -77.58100155489228
+        ],
+        "distanceToTarget": 0.9896899615013642
+      }
+    },
+    {
+      "place": "portic",
+      "id": "portic-cloaca",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 61,
+      "interiorView": false,
+      "position": [
+        457.63068572745794,
+        44.093743210162046,
+        -74.25158665018155
+      ],
+      "target": [
+        456.14758182630527,
+        39.493743210162044,
+        -78.25788204847481
+      ],
+      "clearance": 5.399999999999999,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Vía del Pòrtic · losado · ashlar",
+        "intended": true,
+        "point": [
+          456.3706326278118,
+          40.1855583190918,
+          -77.65535689904546
+        ],
+        "distanceToTarget": 0.944137892837194
+      }
+    },
+    {
+      "place": "portic",
+      "id": "portic-cloaca",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 61,
+      "interiorView": false,
+      "position": [
+        458.2386934609486,
+        46.493743210162044,
+        -71.40899512201301
+      ],
+      "target": [
+        456.14758182630527,
+        39.493743210162044,
+        -78.25788204847481
+      ],
+      "clearance": 7.799999999999997,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Vía del Pòrtic · losado · ashlar",
+        "intended": true,
+        "point": [
+          456.3542479153488,
+          40.1855583190918,
+          -77.58100155489228
+        ],
+        "distanceToTarget": 0.9896899615013642
+      }
+    },
+    {
+      "place": "portic",
+      "id": "portic-cloaca",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 61,
+      "interiorView": false,
+      "position": [
+        457.63068572745794,
+        44.093743210162046,
+        -74.25158665018155
+      ],
+      "target": [
+        456.14758182630527,
+        39.493743210162044,
+        -78.25788204847481
+      ],
+      "clearance": 5.399999999999999,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Vía del Pòrtic · losado · ashlar",
+        "intended": true,
+        "point": [
+          456.3706326278118,
+          40.1855583190918,
+          -77.65535689904546
+        ],
+        "distanceToTarget": 0.944137892837194
+      }
+    },
+    {
+      "place": "portic",
+      "id": "portic-cloaca",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 61,
+      "interiorView": false,
+      "position": [
+        458.2386934609486,
+        46.493743210162044,
+        -71.40899512201301
+      ],
+      "target": [
+        456.14758182630527,
+        39.493743210162044,
+        -78.25788204847481
+      ],
+      "clearance": 7.799999999999997,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Vía del Pòrtic · losado · ashlar",
+        "intended": true,
+        "point": [
+          456.3542479153488,
+          40.1855583190918,
+          -77.58100155489228
+        ],
+        "distanceToTarget": 0.9896899615013642
+      }
+    },
+    {
+      "place": "portic",
+      "id": "portic-cloaca",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 61,
+      "interiorView": false,
+      "position": [
+        457.63068572745794,
+        44.093743210162046,
+        -74.25158665018155
+      ],
+      "target": [
+        456.14758182630527,
+        39.493743210162044,
+        -78.25788204847481
+      ],
+      "clearance": 5.399999999999999,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Vía del Pòrtic · losado · ashlar",
+        "intended": true,
+        "point": [
+          456.3706326278118,
+          40.1855583190918,
+          -77.65535689904546
+        ],
+        "distanceToTarget": 0.944137892837194
+      }
+    },
+    {
+      "place": "portic",
+      "id": "portic-desagues",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 66,
+      "interiorView": true,
+      "position": [
+        457.0425027655877,
+        42.32374321016205,
+        -72.31405192704352
+      ],
+      "target": [
+        459.8893149782948,
+        40.07374321016205,
+        -73.92205075340551
+      ],
+      "clearance": 3.6300000000000026,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-desagues",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 66,
+      "interiorView": true,
+      "position": [
+        457.8053660616561,
+        42.07374321016205,
+        -72.99083814994671
+      ],
+      "target": [
+        459.8893149782948,
+        40.07374321016205,
+        -73.92205075340551
+      ],
+      "clearance": 3.3800000000000026,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-desagues",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 66,
+      "interiorView": true,
+      "position": [
+        457.0425027655877,
+        42.32374321016205,
+        -72.31405192704352
+      ],
+      "target": [
+        459.8893149782948,
+        40.07374321016205,
+        -73.92205075340551
+      ],
+      "clearance": 3.6300000000000026,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-desagues",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 66,
+      "interiorView": true,
+      "position": [
+        457.8053660616561,
+        42.07374321016205,
+        -72.99083814994671
+      ],
+      "target": [
+        459.8893149782948,
+        40.07374321016205,
+        -73.92205075340551
+      ],
+      "clearance": 3.3800000000000026,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-desagues",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 66,
+      "interiorView": true,
+      "position": [
+        457.0425027655877,
+        42.32374321016205,
+        -72.31405192704352
+      ],
+      "target": [
+        459.8893149782948,
+        40.07374321016205,
+        -73.92205075340551
+      ],
+      "clearance": 3.6300000000000026,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-desagues",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 66,
+      "interiorView": true,
+      "position": [
+        457.8053660616561,
+        42.07374321016205,
+        -72.99083814994671
+      ],
+      "target": [
+        459.8893149782948,
+        40.07374321016205,
+        -73.92205075340551
+      ],
+      "clearance": 3.3800000000000026,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-arco",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 61,
+      "interiorView": false,
+      "position": [
+        476.0689362884473,
+        48.493743210162044,
+        -88.01388719370175
+      ],
+      "target": [
+        471.1111876694764,
+        40.493743210162044,
+        -98.03490154510813
+      ],
+      "clearance": 9.799999999999997,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-arco",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 61,
+      "interiorView": false,
+      "position": [
+        474.0858368408589,
+        45.493743210162044,
+        -92.0222929342643
+      ],
+      "target": [
+        471.1111876694764,
+        40.493743210162044,
+        -98.03490154510813
+      ],
+      "clearance": 6.799999999999997,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-arco",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 61,
+      "interiorView": false,
+      "position": [
+        476.0689362884473,
+        48.493743210162044,
+        -88.01388719370175
+      ],
+      "target": [
+        471.1111876694764,
+        40.493743210162044,
+        -98.03490154510813
+      ],
+      "clearance": 9.799999999999997,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-arco",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 61,
+      "interiorView": false,
+      "position": [
+        474.0858368408589,
+        45.493743210162044,
+        -92.0222929342643
+      ],
+      "target": [
+        471.1111876694764,
+        40.493743210162044,
+        -98.03490154510813
+      ],
+      "clearance": 6.799999999999997,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-arco",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 61,
+      "interiorView": false,
+      "position": [
+        476.0689362884473,
+        48.493743210162044,
+        -88.01388719370175
+      ],
+      "target": [
+        471.1111876694764,
+        40.493743210162044,
+        -98.03490154510813
+      ],
+      "clearance": 9.799999999999997,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-arco",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 61,
+      "interiorView": false,
+      "position": [
+        474.0858368408589,
+        45.493743210162044,
+        -92.0222929342643
+      ],
+      "target": [
+        471.1111876694764,
+        40.493743210162044,
+        -98.03490154510813
+      ],
+      "clearance": 6.799999999999997,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-podio",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 71,
+      "interiorView": true,
+      "position": [
+        466.13399901020614,
+        42.343743210162046,
+        -84.49578809370254
+      ],
+      "target": [
+        474.50439184426625,
+        40.54374321016205,
+        -86.9404810812809
+      ],
+      "clearance": 3.6499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-podio",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 71,
+      "interiorView": true,
+      "position": [
+        468.0820854446906,
+        42.29374321016205,
+        -86.40758286401066
+      ],
+      "target": [
+        474.50439184426625,
+        40.54374321016205,
+        -86.9404810812809
+      ],
+      "clearance": 3.6000000000000014,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-podio",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 71,
+      "interiorView": true,
+      "position": [
+        466.13399901020614,
+        42.343743210162046,
+        -84.49578809370254
+      ],
+      "target": [
+        474.50439184426625,
+        40.54374321016205,
+        -86.9404810812809
+      ],
+      "clearance": 3.6499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-podio",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 71,
+      "interiorView": true,
+      "position": [
+        468.0820854446906,
+        42.29374321016205,
+        -86.40758286401066
+      ],
+      "target": [
+        474.50439184426625,
+        40.54374321016205,
+        -86.9404810812809
+      ],
+      "clearance": 3.6000000000000014,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-podio",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 71,
+      "interiorView": true,
+      "position": [
+        466.13399901020614,
+        42.343743210162046,
+        -84.49578809370254
+      ],
+      "target": [
+        474.50439184426625,
+        40.54374321016205,
+        -86.9404810812809
+      ],
+      "clearance": 3.6499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-podio",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 71,
+      "interiorView": true,
+      "position": [
+        468.0820854446906,
+        42.29374321016205,
+        -86.40758286401066
+      ],
+      "target": [
+        474.50439184426625,
+        40.54374321016205,
+        -86.9404810812809
+      ],
+      "clearance": 3.6000000000000014,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-depositos",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 67,
+      "interiorView": true,
+      "position": [
+        486.5161153211414,
+        42.34374321016205,
+        -99.16989231465952
+      ],
+      "target": [
+        484.4321664045027,
+        40.14374321016205,
+        -98.23867971120072
+      ],
+      "clearance": 3.6500000000000057,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Vía del Pòrtic · pasarela · wood",
+        "intended": true,
+        "point": [
+          484.8868478300231,
+          40.62374496459961,
+          -98.44185411275281
+        ],
+        "distanceToTarget": 0.6916767456134693
+      }
+    },
+    {
+      "place": "portic",
+      "id": "portic-depositos",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 67,
+      "interiorView": true,
+      "position": [
+        485.67772666325413,
+        42.14374321016205,
+        -99.55343430496305
+      ],
+      "target": [
+        484.4321664045027,
+        40.14374321016205,
+        -98.23867971120072
+      ],
+      "clearance": 3.450000000000003,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Vía del Pòrtic · pasarela · wood",
+        "intended": true,
+        "point": [
+          484.7311019592319,
+          40.62374496459961,
+          -98.5542219670311
+        ],
+        "distanceToTarget": 0.6475577699008186
+      }
+    },
+    {
+      "place": "portic",
+      "id": "portic-depositos",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 67,
+      "interiorView": true,
+      "position": [
+        486.5161153211414,
+        42.34374321016205,
+        -99.16989231465952
+      ],
+      "target": [
+        484.4321664045027,
+        40.14374321016205,
+        -98.23867971120072
+      ],
+      "clearance": 3.6500000000000057,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Vía del Pòrtic · pasarela · wood",
+        "intended": true,
+        "point": [
+          484.8868478300231,
+          40.62374496459961,
+          -98.44185411275281
+        ],
+        "distanceToTarget": 0.6916767456134693
+      }
+    },
+    {
+      "place": "portic",
+      "id": "portic-depositos",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 67,
+      "interiorView": true,
+      "position": [
+        485.67772666325413,
+        42.14374321016205,
+        -99.55343430496305
+      ],
+      "target": [
+        484.4321664045027,
+        40.14374321016205,
+        -98.23867971120072
+      ],
+      "clearance": 3.450000000000003,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Vía del Pòrtic · pasarela · wood",
+        "intended": true,
+        "point": [
+          484.7311019592319,
+          40.62374496459961,
+          -98.5542219670311
+        ],
+        "distanceToTarget": 0.6475577699008186
+      }
+    },
+    {
+      "place": "portic",
+      "id": "portic-depositos",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 67,
+      "interiorView": true,
+      "position": [
+        486.5161153211414,
+        42.34374321016205,
+        -99.16989231465952
+      ],
+      "target": [
+        484.4321664045027,
+        40.14374321016205,
+        -98.23867971120072
+      ],
+      "clearance": 3.6500000000000057,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Vía del Pòrtic · pasarela · wood",
+        "intended": true,
+        "point": [
+          484.8868478300231,
+          40.62374496459961,
+          -98.44185411275281
+        ],
+        "distanceToTarget": 0.6916767456134693
+      }
+    },
+    {
+      "place": "portic",
+      "id": "portic-depositos",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 67,
+      "interiorView": true,
+      "position": [
+        485.67772666325413,
+        42.14374321016205,
+        -99.55343430496305
+      ],
+      "target": [
+        484.4321664045027,
+        40.14374321016205,
+        -98.23867971120072
+      ],
+      "clearance": 3.450000000000003,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Vía del Pòrtic · pasarela · wood",
+        "intended": true,
+        "point": [
+          484.7311019592319,
+          40.62374496459961,
+          -98.5542219670311
+        ],
+        "distanceToTarget": 0.6475577699008186
+      }
+    },
+    {
+      "place": "portic",
+      "id": "portic-funerario",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 58,
+      "interiorView": false,
+      "position": [
+        460.7567703537991,
+        53.29374321016205,
+        -37.77806755880577
+      ],
+      "target": [
+        456.4234963608748,
+        40.29374321016205,
+        -53.596497838142795
+      ],
+      "clearance": 9.293743210162049,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-funerario",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 58,
+      "interiorView": false,
+      "position": [
+        459.3770421095644,
+        48.29374321016205,
+        -42.58393376294225
+      ],
+      "target": [
+        456.4234963608748,
+        40.29374321016205,
+        -53.596497838142795
+      ],
+      "clearance": 9.600000000000001,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-funerario",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 58,
+      "interiorView": false,
+      "position": [
+        460.7567703537991,
+        53.29374321016205,
+        -37.77806755880577
+      ],
+      "target": [
+        456.4234963608748,
+        40.29374321016205,
+        -53.596497838142795
+      ],
+      "clearance": 9.293743210162049,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-funerario",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 58,
+      "interiorView": false,
+      "position": [
+        459.3770421095644,
+        48.29374321016205,
+        -42.58393376294225
+      ],
+      "target": [
+        456.4234963608748,
+        40.29374321016205,
+        -53.596497838142795
+      ],
+      "clearance": 9.600000000000001,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-funerario",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 58,
+      "interiorView": false,
+      "position": [
+        460.7567703537991,
+        53.29374321016205,
+        -37.77806755880577
+      ],
+      "target": [
+        456.4234963608748,
+        40.29374321016205,
+        -53.596497838142795
+      ],
+      "clearance": 9.293743210162049,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-funerario",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 58,
+      "interiorView": false,
+      "position": [
+        459.3770421095644,
+        48.29374321016205,
+        -42.58393376294225
+      ],
+      "target": [
+        456.4234963608748,
+        40.29374321016205,
+        -53.596497838142795
+      ],
+      "clearance": 9.600000000000001,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-domestico",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 70,
+      "interiorView": true,
+      "position": [
+        452.6594122493971,
+        42.343743210162046,
+        -66.8525029226968
+      ],
+      "target": [
+        461.24160877302864,
+        40.493743210162044,
+        -62.61624244560531
+      ],
+      "clearance": 3.6499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-domestico",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 70,
+      "interiorView": true,
+      "position": [
+        453.8640443138352,
+        42.343743210162046,
+        -67.94742830340897
+      ],
+      "target": [
+        461.24160877302864,
+        40.493743210162044,
+        -62.61624244560531
+      ],
+      "clearance": 3.6499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-domestico",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 70,
+      "interiorView": true,
+      "position": [
+        452.6594122493971,
+        42.343743210162046,
+        -66.8525029226968
+      ],
+      "target": [
+        461.24160877302864,
+        40.493743210162044,
+        -62.61624244560531
+      ],
+      "clearance": 3.6499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-domestico",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 70,
+      "interiorView": true,
+      "position": [
+        453.8640443138352,
+        42.343743210162046,
+        -67.94742830340897
+      ],
+      "target": [
+        461.24160877302864,
+        40.493743210162044,
+        -62.61624244560531
+      ],
+      "clearance": 3.6499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-domestico",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 70,
+      "interiorView": true,
+      "position": [
+        452.6594122493971,
+        42.343743210162046,
+        -66.8525029226968
+      ],
+      "target": [
+        461.24160877302864,
+        40.493743210162044,
+        -62.61624244560531
+      ],
+      "clearance": 3.6499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-domestico",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 70,
+      "interiorView": true,
+      "position": [
+        453.8640443138352,
+        42.343743210162046,
+        -67.94742830340897
+      ],
+      "target": [
+        461.24160877302864,
+        40.493743210162044,
+        -62.61624244560531
+      ],
+      "clearance": 3.6499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-letrinas",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 67,
+      "interiorView": true,
+      "position": [
+        450.8482434682015,
+        42.843743210162046,
+        -64.21012375875718
+      ],
+      "target": [
+        454.150957519627,
+        40.44374321016205,
+        -64.84618971014622
+      ],
+      "clearance": 4.149999999999999,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-letrinas",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 67,
+      "interiorView": true,
+      "position": [
+        451.45161467155515,
+        42.843743210162046,
+        -65.0075842223311
+      ],
+      "target": [
+        454.150957519627,
+        40.44374321016205,
+        -64.84618971014622
+      ],
+      "clearance": 4.149999999999999,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-letrinas",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 67,
+      "interiorView": true,
+      "position": [
+        450.8482434682015,
+        42.843743210162046,
+        -64.21012375875718
+      ],
+      "target": [
+        454.150957519627,
+        40.44374321016205,
+        -64.84618971014622
+      ],
+      "clearance": 4.149999999999999,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-letrinas",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 67,
+      "interiorView": true,
+      "position": [
+        451.45161467155515,
+        42.843743210162046,
+        -65.0075842223311
+      ],
+      "target": [
+        454.150957519627,
+        40.44374321016205,
+        -64.84618971014622
+      ],
+      "clearance": 4.149999999999999,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-letrinas",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 67,
+      "interiorView": true,
+      "position": [
+        450.8482434682015,
+        42.843743210162046,
+        -64.21012375875718
+      ],
+      "target": [
+        454.150957519627,
+        40.44374321016205,
+        -64.84618971014622
+      ],
+      "clearance": 4.149999999999999,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-letrinas",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 67,
+      "interiorView": true,
+      "position": [
+        451.45161467155515,
+        42.843743210162046,
+        -65.0075842223311
+      ],
+      "target": [
+        454.150957519627,
+        40.44374321016205,
+        -64.84618971014622
+      ],
+      "clearance": 4.149999999999999,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-necropolis",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        457.0922881745766,
+        46.523743210162046,
+        -69.89382024122256
+      ],
+      "target": [
+        455.48387350261623,
+        39.12374321016205,
+        -77.3806755385435
+      ],
+      "clearance": 7.829999999999998,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Vía del Pòrtic · losado · ashlar",
+        "intended": true,
+        "point": [
+          455.71603643697455,
+          40.19187927246094,
+          -76.30000254715404
+        ],
+        "distanceToTarget": 1.537097391186353
+      }
+    },
+    {
+      "place": "portic",
+      "id": "portic-necropolis",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        456.66529180209204,
+        43.72374321016205,
+        -72.97564990846328
+      ],
+      "target": [
+        455.48387350261623,
+        39.12374321016205,
+        -77.3806755385435
+      ],
+      "clearance": 5.030000000000001,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Vía del Pòrtic · losado · ashlar",
+        "intended": true,
+        "point": [
+          455.7582029570358,
+          40.19187927246094,
+          -76.3578132057523
+        ],
+        "distanceToTarget": 1.5041338534148414
+      }
+    },
+    {
+      "place": "portic",
+      "id": "portic-necropolis",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        457.0922881745766,
+        46.523743210162046,
+        -69.89382024122256
+      ],
+      "target": [
+        455.48387350261623,
+        39.12374321016205,
+        -77.3806755385435
+      ],
+      "clearance": 7.829999999999998,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Vía del Pòrtic · losado · ashlar",
+        "intended": true,
+        "point": [
+          455.71603643697455,
+          40.19187927246094,
+          -76.30000254715404
+        ],
+        "distanceToTarget": 1.537097391186353
+      }
+    },
+    {
+      "place": "portic",
+      "id": "portic-necropolis",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        456.66529180209204,
+        43.72374321016205,
+        -72.97564990846328
+      ],
+      "target": [
+        455.48387350261623,
+        39.12374321016205,
+        -77.3806755385435
+      ],
+      "clearance": 5.030000000000001,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Vía del Pòrtic · losado · ashlar",
+        "intended": true,
+        "point": [
+          455.7582029570358,
+          40.19187927246094,
+          -76.3578132057523
+        ],
+        "distanceToTarget": 1.5041338534148414
+      }
+    },
+    {
+      "place": "portic",
+      "id": "portic-necropolis",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        457.0922881745766,
+        46.523743210162046,
+        -69.89382024122256
+      ],
+      "target": [
+        455.48387350261623,
+        39.12374321016205,
+        -77.3806755385435
+      ],
+      "clearance": 7.829999999999998,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Vía del Pòrtic · losado · ashlar",
+        "intended": true,
+        "point": [
+          455.71603643697455,
+          40.19187927246094,
+          -76.30000254715404
+        ],
+        "distanceToTarget": 1.537097391186353
+      }
+    },
+    {
+      "place": "portic",
+      "id": "portic-necropolis",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        456.66529180209204,
+        43.72374321016205,
+        -72.97564990846328
+      ],
+      "target": [
+        455.48387350261623,
+        39.12374321016205,
+        -77.3806755385435
+      ],
+      "clearance": 5.030000000000001,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Vía del Pòrtic · losado · ashlar",
+        "intended": true,
+        "point": [
+          455.7582029570358,
+          40.19187927246094,
+          -76.3578132057523
+        ],
+        "distanceToTarget": 1.5041338534148414
+      }
+    },
+    {
+      "place": "portic",
+      "id": "portic-medieval",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 58,
+      "interiorView": false,
+      "position": [
+        437.8724495269328,
+        52.54374321016205,
+        -16.501367247682456
+      ],
+      "target": [
+        432.3324331273012,
+        40.54374321016205,
+        -30.724876599871628
+      ],
+      "clearance": 13.850000000000001,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-medieval",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 58,
+      "interiorView": false,
+      "position": [
+        435.88935007934447,
+        48.54374321016205,
+        -20.509772988245007
+      ],
+      "target": [
+        432.3324331273012,
+        40.54374321016205,
+        -30.724876599871628
+      ],
+      "clearance": 9.850000000000001,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-medieval",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 58,
+      "interiorView": false,
+      "position": [
+        437.8724495269328,
+        52.54374321016205,
+        -16.501367247682456
+      ],
+      "target": [
+        432.3324331273012,
+        40.54374321016205,
+        -30.724876599871628
+      ],
+      "clearance": 13.850000000000001,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-medieval",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 58,
+      "interiorView": false,
+      "position": [
+        435.88935007934447,
+        48.54374321016205,
+        -20.509772988245007
+      ],
+      "target": [
+        432.3324331273012,
+        40.54374321016205,
+        -30.724876599871628
+      ],
+      "clearance": 9.850000000000001,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-medieval",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 58,
+      "interiorView": false,
+      "position": [
+        437.8724495269328,
+        52.54374321016205,
+        -16.501367247682456
+      ],
+      "target": [
+        432.3324331273012,
+        40.54374321016205,
+        -30.724876599871628
+      ],
+      "clearance": 13.850000000000001,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-medieval",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 58,
+      "interiorView": false,
+      "position": [
+        435.88935007934447,
+        48.54374321016205,
+        -20.509772988245007
+      ],
+      "target": [
+        432.3324331273012,
+        40.54374321016205,
+        -30.724876599871628
+      ],
+      "clearance": 9.850000000000001,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-musealizacion",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 74,
+      "interiorView": true,
+      "position": [
+        464.4036314465025,
+        42.14374321016204,
+        -82.0430695826454
+      ],
+      "target": [
+        474.98286812241065,
+        41.993743210162044,
+        -86.5784583592687
+      ],
+      "clearance": 3.4499999999999957,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-musealizacion",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 74,
+      "interiorView": true,
+      "position": [
+        466.8171162599172,
+        42.14374321016204,
+        -85.2329114369411
+      ],
+      "target": [
+        474.98286812241065,
+        41.993743210162044,
+        -86.5784583592687
+      ],
+      "clearance": 3.4499999999999957,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-musealizacion",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 74,
+      "interiorView": true,
+      "position": [
+        464.4036314465025,
+        42.14374321016204,
+        -82.0430695826454
+      ],
+      "target": [
+        474.98286812241065,
+        41.993743210162044,
+        -86.5784583592687
+      ],
+      "clearance": 3.4499999999999957,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-musealizacion",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 74,
+      "interiorView": true,
+      "position": [
+        466.8171162599172,
+        42.14374321016204,
+        -85.2329114369411
+      ],
+      "target": [
+        474.98286812241065,
+        41.993743210162044,
+        -86.5784583592687
+      ],
+      "clearance": 3.4499999999999957,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-musealizacion",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 74,
+      "interiorView": true,
+      "position": [
+        464.4036314465025,
+        42.14374321016204,
+        -82.0430695826454
+      ],
+      "target": [
+        474.98286812241065,
+        41.993743210162044,
+        -86.5784583592687
+      ],
+      "clearance": 3.4499999999999957,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-musealizacion",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 74,
+      "interiorView": true,
+      "position": [
+        466.8171162599172,
+        42.14374321016204,
+        -85.2329114369411
+      ],
+      "target": [
+        474.98286812241065,
+        41.993743210162044,
+        -86.5784583592687
+      ],
+      "clearance": 3.4499999999999957,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-historica",
+      "mode": "historical",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 51,
+      "interiorView": false,
+      "position": [
+        467.40060046309577,
+        64.29374321016205,
+        -43.41007621281215
+      ],
+      "target": [
+        465.7593142345782,
+        41.29374321016205,
+        -81.01733853694415
+      ],
+      "clearance": 20.29374321016205,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-historica",
+      "mode": "historical",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 51,
+      "interiorView": false,
+      "position": [
+        466.4512575846875,
+        55.29374321016205,
+        -55.414190011806866
+      ],
+      "target": [
+        465.7593142345782,
+        41.29374321016205,
+        -81.01733853694415
+      ],
+      "clearance": 16.6,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-historica",
+      "mode": "historical",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 51,
+      "interiorView": false,
+      "position": [
+        467.40060046309577,
+        64.29374321016205,
+        -43.41007621281215
+      ],
+      "target": [
+        465.7593142345782,
+        41.29374321016205,
+        -81.01733853694415
+      ],
+      "clearance": 20.29374321016205,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-historica",
+      "mode": "historical",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 51,
+      "interiorView": false,
+      "position": [
+        466.4512575846875,
+        55.29374321016205,
+        -55.414190011806866
+      ],
+      "target": [
+        465.7593142345782,
+        41.29374321016205,
+        -81.01733853694415
+      ],
+      "clearance": 16.6,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-historica",
+      "mode": "historical",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 51,
+      "interiorView": false,
+      "position": [
+        467.40060046309577,
+        64.29374321016205,
+        -43.41007621281215
+      ],
+      "target": [
+        465.7593142345782,
+        41.29374321016205,
+        -81.01733853694415
+      ],
+      "clearance": 20.29374321016205,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-historica",
+      "mode": "historical",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 51,
+      "interiorView": false,
+      "position": [
+        466.4512575846875,
+        55.29374321016205,
+        -55.414190011806866
+      ],
+      "target": [
+        465.7593142345782,
+        41.29374321016205,
+        -81.01733853694415
+      ],
+      "clearance": 16.6,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-entorno",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        513.6958105353892,
+        90,
+        -126.1174479996946
+      ],
+      "target": [
+        496.6958105353893,
+        45,
+        -98.1174479996946
+      ],
+      "clearance": 47.09241898058559,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-entorno",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        502.4958105353893,
+        45.15,
+        -107.9174479996946
+      ],
+      "target": [
+        496.6958105353893,
+        45,
+        -98.1174479996946
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-entorno",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        513.6958105353892,
+        90,
+        -126.1174479996946
+      ],
+      "target": [
+        496.6958105353893,
+        45,
+        -98.1174479996946
+      ],
+      "clearance": 47.09241898058559,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-entorno",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        502.4958105353893,
+        45.15,
+        -107.9174479996946
+      ],
+      "target": [
+        496.6958105353893,
+        45,
+        -98.1174479996946
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-entorno",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        513.6958105353892,
+        90,
+        -126.1174479996946
+      ],
+      "target": [
+        496.6958105353893,
+        45,
+        -98.1174479996946
+      ],
+      "clearance": 47.09241898058559,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-entorno",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        502.4958105353893,
+        45.15,
+        -107.9174479996946
+      ],
+      "target": [
+        496.6958105353893,
+        45,
+        -98.1174479996946
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-conjunto",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 47,
+      "interiorView": false,
+      "position": [
+        489.28863636364616,
+        188.67366398116587,
+        138.11180767270102
+      ],
+      "target": [
+        466.9449532185926,
+        40.69374321016205,
+        -77.61230399973527
+      ],
+      "clearance": 144.67366398116587,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-conjunto",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 47,
+      "interiorView": false,
+      "position": [
+        469.9659676913449,
+        69.69374321016204,
+        -35.1991754714668
+      ],
+      "target": [
+        466.9449532185926,
+        40.69374321016205,
+        -77.61230399973527
+      ],
+      "clearance": 25.69374321016204,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-conjunto",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 47,
+      "interiorView": false,
+      "position": [
+        509.4065018862117,
+        321.9122230309082,
+        332.34606352150644
+      ],
+      "target": [
+        466.9449532185926,
+        40.69374321016205,
+        -77.61230399973527
+      ],
+      "clearance": 278.6407568358314,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-conjunto",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 47,
+      "interiorView": false,
+      "position": [
+        469.9659676913449,
+        69.69374321016204,
+        -35.1991754714668
+      ],
+      "target": [
+        466.9449532185926,
+        40.69374321016205,
+        -77.61230399973527
+      ],
+      "clearance": 25.69374321016204,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-conjunto",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 47,
+      "interiorView": false,
+      "position": [
+        488.5643045507851,
+        183.87648870870726,
+        131.1185185237661
+      ],
+      "target": [
+        466.9449532185926,
+        40.69374321016205,
+        -77.61230399973527
+      ],
+      "clearance": 139.87648870870726,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-conjunto",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 47,
+      "interiorView": false,
+      "position": [
+        469.9659676913449,
+        69.69374321016204,
+        -35.1991754714668
+      ],
+      "target": [
+        466.9449532185926,
+        40.69374321016205,
+        -77.61230399973527
+      ],
+      "clearance": 25.69374321016204,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-conjunto",
+      "mode": "historical",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 47,
+      "interiorView": false,
+      "position": [
+        489.28863636364616,
+        188.67366398116587,
+        138.11180767270102
+      ],
+      "target": [
+        466.9449532185926,
+        40.69374321016205,
+        -77.61230399973527
+      ],
+      "clearance": 144.67366398116587,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Vía del Pòrtic · cornisa-podio · ashlar",
+        "intended": true,
+        "point": [
+          467.01742920051953,
+          41.173744201660156,
+          -76.91256185260266
+        ],
+        "distanceToTarget": 0.8516412344815122
+      }
+    },
+    {
+      "place": "portic",
+      "id": "portic-conjunto",
+      "mode": "historical",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 47,
+      "interiorView": false,
+      "position": [
+        469.9659676913449,
+        69.69374321016204,
+        -35.1991754714668
+      ],
+      "target": [
+        466.9449532185926,
+        40.69374321016205,
+        -77.61230399973527
+      ],
+      "clearance": 25.69374321016204,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Vía del Pòrtic · cornisa-podio · ashlar",
+        "intended": true,
+        "point": [
+          466.99495632004954,
+          41.173744201660156,
+          -76.91029214642128
+        ],
+        "distanceToTarget": 0.8518931295578237
+      }
+    },
+    {
+      "place": "portic",
+      "id": "portic-conjunto",
+      "mode": "historical",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 47,
+      "interiorView": false,
+      "position": [
+        509.4065018862117,
+        321.9122230309082,
+        332.34606352150644
+      ],
+      "target": [
+        466.9449532185926,
+        40.69374321016205,
+        -77.61230399973527
+      ],
+      "clearance": 278.6407568358314,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Vía del Pòrtic · cornisa-podio · ashlar",
+        "intended": true,
+        "point": [
+          467.01742920051953,
+          41.173744201660156,
+          -76.91256185260266
+        ],
+        "distanceToTarget": 0.8516412344815122
+      }
+    },
+    {
+      "place": "portic",
+      "id": "portic-conjunto",
+      "mode": "historical",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 47,
+      "interiorView": false,
+      "position": [
+        469.9659676913449,
+        69.69374321016204,
+        -35.1991754714668
+      ],
+      "target": [
+        466.9449532185926,
+        40.69374321016205,
+        -77.61230399973527
+      ],
+      "clearance": 25.69374321016204,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Vía del Pòrtic · cornisa-podio · ashlar",
+        "intended": true,
+        "point": [
+          466.99495632004954,
+          41.173744201660156,
+          -76.91029214642128
+        ],
+        "distanceToTarget": 0.8518931295578237
+      }
+    },
+    {
+      "place": "portic",
+      "id": "portic-conjunto",
+      "mode": "historical",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 47,
+      "interiorView": false,
+      "position": [
+        488.5643045507851,
+        183.87648870870726,
+        131.1185185237661
+      ],
+      "target": [
+        466.9449532185926,
+        40.69374321016205,
+        -77.61230399973527
+      ],
+      "clearance": 139.87648870870726,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Vía del Pòrtic · cornisa-podio · ashlar",
+        "intended": true,
+        "point": [
+          467.01742920051953,
+          41.173744201660156,
+          -76.91256185260264
+        ],
+        "distanceToTarget": 0.8516412344815355
+      }
+    },
+    {
+      "place": "portic",
+      "id": "portic-conjunto",
+      "mode": "historical",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 47,
+      "interiorView": false,
+      "position": [
+        469.9659676913449,
+        69.69374321016204,
+        -35.1991754714668
+      ],
+      "target": [
+        466.9449532185926,
+        40.69374321016205,
+        -77.61230399973527
+      ],
+      "clearance": 25.69374321016204,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Vía del Pòrtic · cornisa-podio · ashlar",
+        "intended": true,
+        "point": [
+          466.99495632004954,
+          41.173744201660156,
+          -76.91029214642128
+        ],
+        "distanceToTarget": 0.8518931295578237
+      }
+    },
+    {
+      "place": "museo",
+      "id": "museo-conjunto",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 44,
+      "interiorView": false,
+      "position": [
+        -29.893011081451995,
+        90.60565350345396,
+        18.103807497298362
+      ],
+      "target": [
+        8.240194667472343,
+        63.72,
+        54.43089172430358
+      ],
+      "clearance": 35.11463576850263,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Mestre Penya · techo-alto · grey",
+        "intended": true,
+        "point": [
+          2.268950270542284,
+          67.93000030517578,
+          48.74246627233565
+        ],
+        "distanceToTarget": 9.259484129261487
+      }
+    },
+    {
+      "place": "museo",
+      "id": "museo-conjunto",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 44,
+      "interiorView": false,
+      "position": [
+        -11.112505139708057,
+        75.72,
+        37.65373433179039
+      ],
+      "target": [
+        8.240194667472343,
+        63.72,
+        54.43089172430358
+      ],
+      "clearance": 18.5215510383335,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Mestre Penya · fachada · lime",
+        "intended": true,
+        "point": [
+          1.5151324688063674,
+          67.88999938964844,
+          48.6008303837356
+        ],
+        "distanceToTarget": 9.828782819880583
+      }
+    },
+    {
+      "place": "museo",
+      "id": "museo-conjunto",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 44,
+      "interiorView": false,
+      "position": [
+        -71.74350849521062,
+        120.11216758521982,
+        -21.76450450619896
+      ],
+      "target": [
+        8.240194667472343,
+        63.72,
+        54.43089172430358
+      ],
+      "clearance": 66.29980051899764,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Mestre Penya · techo-alto · grey",
+        "intended": true,
+        "point": [
+          2.268950270542277,
+          67.93000030517578,
+          48.74246627233565
+        ],
+        "distanceToTarget": 9.259484129261491
+      }
+    },
+    {
+      "place": "museo",
+      "id": "museo-conjunto",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 44,
+      "interiorView": false,
+      "position": [
+        -11.112505139708057,
+        75.72,
+        37.65373433179039
+      ],
+      "target": [
+        8.240194667472343,
+        63.72,
+        54.43089172430358
+      ],
+      "clearance": 18.5215510383335,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Mestre Penya · fachada · lime",
+        "intended": true,
+        "point": [
+          1.5151324688063674,
+          67.88999938964844,
+          48.6008303837356
+        ],
+        "distanceToTarget": 9.828782819880583
+      }
+    },
+    {
+      "place": "museo",
+      "id": "museo-conjunto",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 44,
+      "interiorView": false,
+      "position": [
+        -35.83411922105043,
+        94.79440636938104,
+        12.44409094448725
+      ],
+      "target": [
+        8.240194667472343,
+        63.72,
+        54.43089172430358
+      ],
+      "clearance": 39.666154866422275,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Mestre Penya · techo-alto · grey",
+        "intended": true,
+        "point": [
+          2.268950270542298,
+          67.93000030517578,
+          48.74246627233565
+        ],
+        "distanceToTarget": 9.259484129261478
+      }
+    },
+    {
+      "place": "museo",
+      "id": "museo-conjunto",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 44,
+      "interiorView": false,
+      "position": [
+        -11.112505139708057,
+        75.72,
+        37.65373433179039
+      ],
+      "target": [
+        8.240194667472343,
+        63.72,
+        54.43089172430358
+      ],
+      "clearance": 18.5215510383335,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Mestre Penya · fachada · lime",
+        "intended": true,
+        "point": [
+          1.5151324688063674,
+          67.88999938964844,
+          48.6008303837356
+        ],
+        "distanceToTarget": 9.828782819880583
+      }
+    },
+    {
+      "place": "museo",
+      "id": "museo-planta-baja",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 74,
+      "interiorView": true,
+      "position": [
+        8.705342135586898,
+        60.37,
+        61.65488908261612
+      ],
+      "target": [
+        9.081782752021173,
+        60.769999999999996,
+        50.861335800110005
+      ],
+      "clearance": 1.9399996948242162,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-planta-baja",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 74,
+      "interiorView": true,
+      "position": [
+        8.807994380147845,
+        60.37,
+        59.05691631203391
+      ],
+      "target": [
+        9.081782752021173,
+        60.769999999999996,
+        50.861335800110005
+      ],
+      "clearance": 1.9399996948242162,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-planta-baja",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 74,
+      "interiorView": true,
+      "position": [
+        8.705342135586898,
+        60.37,
+        61.65488908261612
+      ],
+      "target": [
+        9.081782752021173,
+        60.769999999999996,
+        50.861335800110005
+      ],
+      "clearance": 1.9399996948242162,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-planta-baja",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 74,
+      "interiorView": true,
+      "position": [
+        8.807994380147845,
+        60.37,
+        59.05691631203391
+      ],
+      "target": [
+        9.081782752021173,
+        60.769999999999996,
+        50.861335800110005
+      ],
+      "clearance": 1.9399996948242162,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-planta-baja",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 74,
+      "interiorView": true,
+      "position": [
+        8.705342135586898,
+        60.37,
+        61.65488908261612
+      ],
+      "target": [
+        9.081782752021173,
+        60.769999999999996,
+        50.861335800110005
+      ],
+      "clearance": 1.9399996948242162,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-planta-baja",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 74,
+      "interiorView": true,
+      "position": [
+        8.807994380147845,
+        60.37,
+        59.05691631203391
+      ],
+      "target": [
+        9.081782752021173,
+        60.769999999999996,
+        50.861335800110005
+      ],
+      "clearance": 1.9399996948242162,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-planta-alta",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 74,
+      "interiorView": true,
+      "position": [
+        9.558627550760349,
+        65.21000000000001,
+        61.58852644062326
+      ],
+      "target": [
+        9.977132855508824,
+        65.18,
+        50.996791299018874
+      ],
+      "clearance": 6.779999694824227,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-planta-alta",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 74,
+      "interiorView": true,
+      "position": [
+        9.68496877483536,
+        65.21000000000001,
+        58.39102149221439
+      ],
+      "target": [
+        9.977132855508824,
+        65.18,
+        50.996791299018874
+      ],
+      "clearance": 6.779999694824227,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-planta-alta",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 74,
+      "interiorView": true,
+      "position": [
+        9.558627550760349,
+        65.21000000000001,
+        61.58852644062326
+      ],
+      "target": [
+        9.977132855508824,
+        65.18,
+        50.996791299018874
+      ],
+      "clearance": 6.779999694824227,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-planta-alta",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 74,
+      "interiorView": true,
+      "position": [
+        9.68496877483536,
+        65.21000000000001,
+        58.39102149221439
+      ],
+      "target": [
+        9.977132855508824,
+        65.18,
+        50.996791299018874
+      ],
+      "clearance": 6.779999694824227,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-planta-alta",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 74,
+      "interiorView": true,
+      "position": [
+        9.558627550760349,
+        65.21000000000001,
+        61.58852644062326
+      ],
+      "target": [
+        9.977132855508824,
+        65.18,
+        50.996791299018874
+      ],
+      "clearance": 6.779999694824227,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-planta-alta",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 74,
+      "interiorView": true,
+      "position": [
+        9.68496877483536,
+        65.21000000000001,
+        58.39102149221439
+      ],
+      "target": [
+        9.977132855508824,
+        65.18,
+        50.996791299018874
+      ],
+      "clearance": 6.779999694824227,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-arco",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 57,
+      "interiorView": false,
+      "position": [
+        -7.340346436588764,
+        61.911492568953484,
+        43.71316776811823
+      ],
+      "target": [
+        -15.532346436588764,
+        60.911492568953484,
+        49.44916776811823
+      ],
+      "clearance": 4.287260699836402,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-arco",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 57,
+      "interiorView": false,
+      "position": [
+        -9.532346436588764,
+        60.09864750867227,
+        48.24916776811823
+      ],
+      "target": [
+        -15.532346436588764,
+        60.911492568953484,
+        49.44916776811823
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-arco",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 57,
+      "interiorView": false,
+      "position": [
+        -7.340346436588764,
+        61.911492568953484,
+        43.71316776811823
+      ],
+      "target": [
+        -15.532346436588764,
+        60.911492568953484,
+        49.44916776811823
+      ],
+      "clearance": 4.287260699836402,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-arco",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 57,
+      "interiorView": false,
+      "position": [
+        -9.532346436588764,
+        60.09864750867227,
+        48.24916776811823
+      ],
+      "target": [
+        -15.532346436588764,
+        60.911492568953484,
+        49.44916776811823
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-arco",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 57,
+      "interiorView": false,
+      "position": [
+        -7.340346436588764,
+        61.911492568953484,
+        43.71316776811823
+      ],
+      "target": [
+        -15.532346436588764,
+        60.911492568953484,
+        49.44916776811823
+      ],
+      "clearance": 4.287260699836402,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-arco",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 57,
+      "interiorView": false,
+      "position": [
+        -9.532346436588764,
+        60.09864750867227,
+        48.24916776811823
+      ],
+      "target": [
+        -15.532346436588764,
+        60.911492568953484,
+        49.44916776811823
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    }
+  ],
+  "inputHashes": {
+    "dist/js/app.js": "8eaf6602847c7ac280d66313435b5fbf279b6e80398699581ffdeb936204bb0f",
+    "dist/js/castle-panel.js": "60a927639c38ed0a88d16e66354aa5c7d14057da44b396f8a2d0acdaae25a8ab",
+    "dist/js/theatre.js": "34831ff762ddd15d0e9fa1fd564183145a04219d47f833f529af35f545d83371",
+    "dist/js/monuments.js": "22546453225b2db827cc2e84a5fd30e1083b56eb8b79d4a1ac025709f4b34dac",
+    "dist/js/castle.js": "61463c846f79a617562ca2e31bfc42321da0c737a3d310846db44410066c54d8",
+    "dist/js/terrain.js": "ec10570603e52e850b6b5eadf81963215d18d533c551d555848ef58152fec3f8",
+    "dist/js/city.js": "b2578a5fdb0d70435fa4bc8cf92147f2a3c4922f6bcbe6bbe145f46ebb53af54",
+    "dist/js/urban-surface.js": "d2acfae90ff47abddd51be09a21555e8ce9b6269e1500549a6eb94938f3e6111",
+    "dist/js/santa-maria.js": "ab23645cee3bfb285ea19420b98d8c4eb56fa7e5b99d756aa861abba2578ff42",
+    "dist/js/santa-maria-context.js": "c58325ab7d3a33af291c50efda2625dcd757d33da9306e70f5d95b67b4d4072f",
+    "dist/js/heritage-sacred.js": "306c46bd0c5b45d01df73e51e12dd77235f018bfb68ebd20679885daf35c99e2",
+    "dist/js/heritage-civic.js": "b28e6572d494b657b1eda2a96342ce7181c8437763d4c110daae373547d51a31",
+    "dist/js/plaza-mayor.js": "07f51ea9722f9a09932e9dd85dcdeb2a39e753fdb5c8d7fa5e5a302bad3d28b1",
+    "dist/js/plaza-mayor-context.js": "655b94895ef5407affe3ea502e5eb0eeff91cf01d365fe63387ec9fa31bd8d8b",
+    "dist/js/juderia.js": "e83aa1df8be0538e6ce520ebf0676f847ce3d488690e1deacaa7472e0869d30d",
+    "dist/js/juderia-context.js": "fc58285789fd8a785e87d2efd1e29e42bba257222eb51e66592393d19600cf2f",
+    "dist/js/calvario.js": "990a076c049599574eb566b7823bc8166667d7c385a2e5fd964e6e4342d96910",
+    "dist/js/calvario-context.js": "0ef2e7a8cc33c2296cbd1b7ff8023d5eef71a48e4eb86849efd06e59b124d148",
+    "dist/js/berenguer.js": "e6d96396f1462827849e656d8a456c49d0da59f8a8c1c87cbf1e14e605909cdd",
+    "dist/js/berenguer-context.js": "4a942cd7436001937dcfd3d20ff3c1ec6272a42e4f0fbd68bf80e097b7618695",
+    "dist/js/berenguer-map.js": "1c10607f476c7a5d6358d13747385a6e946bc7df909de5c5963ec1ca2062f92e",
+    "dist/js/berenguer-visit.js": "500f8d3d6995bd33f62cc7a44cb2e2f5079537f3d3a916d6253e6a27fb3387ce",
+    "dist/js/sangre.js": "83c383bed697ee3170fb976d652b39ca5e46986d603f8c83c8a6b8edfbee8247",
+    "dist/js/sangre-context.js": "93c9fd805f9dbef41763eb67a35ded526b80e408f35c2b7c333309d7ee853aab",
+    "dist/js/sangre-map.js": "229a7ebd9cffa70b1589824533f9da5bb2187f2d7249e0abb1812903b5ad2918",
+    "dist/js/museo.js": "d548c527bf4a3b1067b5c786640155eb538daa2197f2b746a913787990d7939c",
+    "dist/js/museo-context.js": "ad983c68d8412e82634f47710a9e4c462a8e76c290345d41479d880882f74857",
+    "dist/js/museo-map.js": "6b7deb28a5c62602527e14e8ef644e20d677264373fb602aaf129304bebe94de",
+    "dist/js/salvador.js": "d3cdf9fa5b4d62bb53fdd2104c55a1fa44496130bbf21284f401dbc42484b17f",
+    "dist/js/salvador-context.js": "a5155c08c0a5107e67dac7e8a7604504ae9be78086acbdcc22bb88266c3f1498",
+    "dist/js/salvador-map.js": "2442ee3ddc10adbcfaabd37f20d86fb36aa72e70842295f10fe52fc72ec1ddd1",
+    "dist/js/archaeology-public.js": "2caa932b03f1910718d538227c99410e17180b201f7a05b849ded888342af73b",
+    "dist/js/archaeology.js": "634578699494f4295dc2facdc5ca94938c72a5d4cc0187e7c9aeb63aa64b0b5b",
+    "dist/js/archaeology-domestic.js": "2b9db5cc954c1567667edf9c027b7a68bef680f00c55851f81dfcc73a0a892ab",
+    "dist/js/portic.js": "ca004362ac6e7d265d6571a0c73ed03443089e207a9148212770d1f56c37cac6",
+    "dist/js/portic-map.js": "17aa6147234395e6a35f4e1eadaec064cfefffb43ef24a3c265ce5931405352d",
+    "dist/js/portic-context.js": "fd503594959153c47d63ade81381a5b7786c515b4600187faac5bcb4dca7f3a4",
+    "dist/js/excavation.js": "13ba9e9377777b11f0eb0233dabf809f386052117afc88b52d76ef5b4898d39b",
+    "dist/js/archaeology-panel.js": "92a21b09b08aeddb7825025b3f601c736bbe339e51d9667d6db1fea1d2848c0f",
+    "dist/assets/data/plaza-mayor-visit.json": "c80a4560b964c27003e769add5a1c0c32b1a0109b55243c95a641282f2b36e55",
+    "dist/assets/data/plaza-mayor-plan.json": "136742e1a25c77699aa619113a40213926260fd7bbec9402f02de6a4bb29b4ef",
+    "dist/assets/data/plaza-mayor-context.json": "1a0c282b1f15f1cf4ede43aee8a600a5a44675cc4ad8110c36656ad9d23d9fc7",
+    "dist/assets/data/juderia-visit.json": "f657d04c1923c9982b8916d50622e0b6e5b50ca68edcb8a6a514124299563b82",
+    "dist/assets/data/juderia-plan.json": "cb31a29ed4c590a10bb6b8430171122bada9c4637ab3446ad31097fabd194d34",
+    "dist/assets/data/juderia-context.json": "9118ca2de239a2b4a49e2b2651d8dc261177e3b50c6a4360686e7e8a2380d045",
+    "dist/assets/data/calvario-visit.json": "b054fed27f08b1d4c1f387315b3d3d6b8ae3a6a7378e4e2fb6186a437c829088",
+    "dist/assets/data/calvario-plan.json": "3a9a08fb423930cb5902b83db6c5b2998ff8461935bc26656714a3039a167eef",
+    "dist/assets/data/calvario-context.json": "3c4da56852c9f4afb1ca501e37e4823b7c2eb3aa81d9b42a7da07f53bbe81766",
+    "dist/assets/data/berenguer-visit.json": "36da2cecfbfe9c2447434e2405a5ca94615527dca5c0c4e549ae49e6d726206e",
+    "dist/assets/data/berenguer-plan.json": "68af4ffba39bad39785ba588a6ffbde2d074b47179e591a8847c5a4e61ae4154",
+    "dist/assets/data/berenguer-context.json": "b222d0b510d39b340dc4d69bdaef0dc383d88faa5fb800eb247d9676871487ae",
+    "dist/assets/data/sangre-visit.json": "490aa9c55411448c18d0da0070d16a6f345bbb7abdb46638d55b4c19b3723f48",
+    "dist/assets/data/sangre-plan.json": "a8d915826156b202298fac54b9112ec08166db8b9796654bfd38d0c6dd98e3ad",
+    "dist/assets/data/sangre-context.json": "1f2384b5e0d8140cfc086857cc6c6b4c41a9c5ea651fdddd9e821fa81edbe506",
+    "dist/assets/data/museo-visit.json": "747a36c42334eb1f3548df513b09f51db9fe1be73648c050023eeb9e11aea55a",
+    "dist/assets/data/museo-plan.json": "b51b26c15cdbd715026b3b363ce9bb67ab46b24c8570712782bbeb24acf1fbe5",
+    "dist/assets/data/museo-context.json": "325612d1f799e61a32d37136938dbe3adf0723b0432cb4f926b2fce43d8d17cb",
+    "dist/assets/data/portic-visit.json": "020c89e0eeb9318ad9cc59e13b57cac2fc25171c1a4021f9f861eb0d4b1b8b35",
+    "dist/assets/data/portic-plan.json": "84cac8f3d7f2bcb9cc4a45580d58d8b05a5190de82b1ad8f2488a6e83c8f3ac4",
+    "dist/assets/data/portic-context.json": "4681606ed8324f7b144ff590db35364481b5e218f4dafe63ad39e5fc6f687af2",
+    "dist/assets/data/archaeology-domestic.json": "a42bd60ab9ac4a531f4379ef6d96cfa1e1ca69b7c85e7739081d35ce5b8ec80d",
+    "dist/assets/data/salvador-visit.json": "3c08cd0c5809f8305588f78e45582ace46da47b0d7a339f9d108b2ab79a54a00",
+    "dist/assets/data/salvador-plan.json": "071cb01e59c5a58a2d926f2bd70059daf35dd6d40eeeb3cba99b46381d6c3053",
+    "dist/assets/data/salvador-context.json": "427a35c79f0c714468c4b63d8652218adc0e80e7892a5f17df672187deafcd38"
+  },
+  "limitations": [
+    "Geometry and camera validation does not measure browser GPU performance.",
+    "Terrain cut is explanatory; excavation heights and unmeasured details are approximate."
+  ]
+}

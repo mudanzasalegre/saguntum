@@ -1,0 +1,134 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "label": "buildings preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "roads preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "excludedBuildingIds preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "excludedRoadIds preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "collisionPolygons preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "foundationPatches preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "heightReview preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "coreBuildingParts preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "withheldBuildingParts preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "coreExclusion preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "focusSpecs preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "districtOutline preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "Retained museum paving outside Alameda transfer",
+      "pass": true
+    },
+    {
+      "label": "No original ground outside transfer lost",
+      "pass": true
+    },
+    {
+      "label": "All remaining museum tree and lamp centers outside transfer",
+      "pass": true
+    },
+    {
+      "label": "Museum and Begoña paving disjoint",
+      "pass": true
+    },
+    {
+      "label": "All transferred original ground is covered by Begoña paving or actual architecture",
+      "pass": true
+    },
+    {
+      "label": "Re-triangulated area preserves holes",
+      "pass": true
+    }
+  ],
+  "apply": true,
+  "affectedLines": {
+    "curbLines": 1,
+    "crossings": 0,
+    "pavingJoints": 0,
+    "parkingRows": 0,
+    "fences": 0,
+    "railAlignments": 0
+  },
+  "removedPointFeatures": {
+    "trees": [
+      "museo-industrial-arbol-32",
+      "museo-industrial-arbol-33",
+      "museo-industrial-arbol-34",
+      "museo-industrial-arbol-35",
+      "museo-industrial-arbol-36",
+      "museo-industrial-arbol-37",
+      "museo-industrial-arbol-38",
+      "museo-industrial-arbol-39",
+      "museo-industrial-arbol-40",
+      "museo-industrial-arbol-41"
+    ],
+    "lamps": []
+  },
+  "transferAreaM2": 9254.82,
+  "actuallyTransferredM2": 3640.32,
+  "beforeStats": {
+    "buildingParts": 69,
+    "parentParcels": 18,
+    "sourceCoreParts": 2,
+    "withheldCadastralParts": 2,
+    "roadFragments": 20,
+    "pavingAreaM2": 25288.43,
+    "pavingVertices": 4971,
+    "pavingTriangles": 7267,
+    "trees": 30,
+    "streetLamps": 8,
+    "crossings": 5,
+    "railLengthM": 0,
+    "protectedHeritageOwners": 8
+  },
+  "newStats": {
+    "buildingParts": 69,
+    "parentParcels": 18,
+    "sourceCoreParts": 2,
+    "withheldCadastralParts": 2,
+    "roadFragments": 20,
+    "pavingAreaM2": 21648.11,
+    "pavingVertices": 4471,
+    "pavingTriangles": 6359,
+    "trees": 20,
+    "streetLamps": 8,
+    "crossings": 5,
+    "railLengthM": 0,
+    "protectedHeritageOwners": 8
+  },
+  "beforeSHA256": "e32f3593ffbfe96f055d6c49b64dd88f02e831261dfd35252c210e4aeea3914e"
+}

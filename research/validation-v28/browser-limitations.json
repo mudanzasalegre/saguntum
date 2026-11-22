@@ -1,0 +1,18 @@
+{
+  "version": 28,
+  "browserQA": "unverified",
+  "webglQA": "unverified",
+  "reason": "The prior URL-authority and WebGL review failures have no observed recovery. This iteration has only the read-only Sites preview status: stopped. Sites troubleshooting requires a concrete repair or recovery evidence before retrying; no preview, browser route or alternative access was retried.",
+  "diagnostic": "sites-preview status: Sites preview stopped",
+  "validation": [
+    "Source and data consistency",
+    "Production Three.js scene and camera geometry in Node",
+    "Actual Canvas maps and hit targets",
+    "CPU renders of exported scene meshes"
+  ],
+  "limitations": [
+    "CPU images are not browser screenshots.",
+    "Browser responsive layout, font loading and GPU performance are not measured.",
+    "Native deployment confirmation verifies publication independently."
+  ]
+}

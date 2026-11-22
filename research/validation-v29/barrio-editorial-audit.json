@@ -1,0 +1,132 @@
+{
+  "iteration": "V29",
+  "guide": "dist/assets/data/barrio-visit.json",
+  "sha256": "39ad1c98959ca72e38279e092a7ce36fab327d1bb643846cce9387bf487dc14c",
+  "passed": true,
+  "checks": [
+    {
+      "passed": true,
+      "label": "Twenty unique stops match the shared model/context contract"
+    },
+    {
+      "passed": true,
+      "label": "Forty concise facts are present"
+    },
+    {
+      "passed": true,
+      "label": "Catalog identity remains barrio-obrero"
+    },
+    {
+      "passed": true,
+      "label": "Five reading layers and regions agree"
+    },
+    {
+      "passed": true,
+      "label": "Sources have unique identifiers and public HTTPS references"
+    },
+    {
+      "passed": true,
+      "label": "Sources have locators, attribution and access date"
+    },
+    {
+      "passed": true,
+      "label": "Every documentary and coordinate source reference resolves"
+    },
+    {
+      "passed": true,
+      "label": "Every fact has evidence and an explicit confidence level"
+    },
+    {
+      "passed": true,
+      "label": "Each stop belongs to its declared reading layer"
+    },
+    {
+      "passed": true,
+      "label": "Region membership matches the stop list"
+    },
+    {
+      "passed": true,
+      "label": "Timeline links target existing stops"
+    },
+    {
+      "passed": true,
+      "label": "Reading sequence is complete and stable"
+    },
+    {
+      "passed": true,
+      "label": "sala: low-house ground-floor association is explicit"
+    },
+    {
+      "passed": true,
+      "label": "cocina: low-house ground-floor association is explicit"
+    },
+    {
+      "passed": true,
+      "label": "dormitorios: low-house ground-floor association is explicit"
+    },
+    {
+      "passed": true,
+      "label": "Upper dwelling belongs to the second house and first floor"
+    },
+    {
+      "passed": true,
+      "label": "Section is attached to the representative low house"
+    },
+    {
+      "passed": true,
+      "label": "Interior uses and digital section are explicitly interpretive"
+    },
+    {
+      "passed": true,
+      "label": "Section explanation distinguishes historical types from current private interiors"
+    },
+    {
+      "passed": true,
+      "label": "Historic square is not conflated with Plaza de la Independencia"
+    },
+    {
+      "passed": true,
+      "label": "Street-painting tradition is not presented as a permanent invented mural"
+    },
+    {
+      "passed": true,
+      "label": "Observation coordinates retain approximate precision"
+    },
+    {
+      "passed": true,
+      "label": "Final model registration is complete"
+    },
+    {
+      "passed": true,
+      "label": "Registered coordinates are finite and aliases agree"
+    },
+    {
+      "passed": true,
+      "label": "Every registered focus has a finite local scene target"
+    },
+    {
+      "passed": true,
+      "label": "Final focuses are distinct rather than a shared provisional origin"
+    },
+    {
+      "passed": true,
+      "label": "Final coordinate descriptions do not retain provisional text"
+    }
+  ],
+  "counts": {
+    "stops": 20,
+    "facts": 40,
+    "sources": 12,
+    "timelineEvents": 6,
+    "layers": 5
+  },
+  "registration": {
+    "status": "registered",
+    "precision": "approximate",
+    "provisionalCoordinates": false,
+    "note": "Focos registrados a partir de la geometría final y de la cartografía; las cotas no levantadas son interpretativas.",
+    "coordinates": "Registered from the implemented industrial model and contemporary cartography; component positions and unmeasured heights are interpretive."
+  },
+  "publicationReady": true,
+  "note": "Documentary checks do not replace the model, map and visual integration reviews."
+}

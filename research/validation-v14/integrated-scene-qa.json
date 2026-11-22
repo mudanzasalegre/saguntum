@@ -1,0 +1,2474 @@
+{
+  "pass": true,
+  "generatedAt": "2026-11-19T22:00:53.335Z",
+  "checks": 508,
+  "buildMs": 16046.34807,
+  "meshes": 123,
+  "triangles": 116166,
+  "stats": {
+    "sourceBuildings": 6,
+    "interiorCourtyards": 2,
+    "levelsAtDifferentHeights": true,
+    "segmentalArcades": 2,
+    "retainedAnnexArches": 2,
+    "ancientBlocks": 70,
+    "ancientWallHeight": 4,
+    "subterraneanChambers": 1,
+    "stops": 18,
+    "meshes": 115,
+    "triangles": 105801,
+    "modelVersion": "v14",
+    "sourceKeys": [
+      "bg-turismo",
+      "bg-skrq",
+      "bg-conservacion2022",
+      "bg-anexo2025",
+      "bg-aranegui1992",
+      "bg-martinez2012",
+      "bg-osm",
+      "bg-catastro",
+      "bg-terreno"
+    ],
+    "survey": false,
+    "context": {
+      "buildingParts": 23,
+      "parentParcels": 9,
+      "footprintsPreserved": true,
+      "courtyards": 0,
+      "sourceHeight": 0,
+      "ignHeight": 12,
+      "storeyHeight": 11,
+      "fallbackHeight": 0,
+      "streetSamples": 396,
+      "roofCorrections": 0,
+      "maximumRoofCorrectionM": 0,
+      "preservedSantaMaria": true,
+      "preservedPlazaMayor": true,
+      "preservedJuderia": true,
+      "preservedCalvario": true
+    }
+  },
+  "errors": [],
+  "cameras": [
+    {
+      "id": "berenguer-conjunto",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -14.669863540265126,
+        134.62678796420877,
+        -47.872399114471136
+      ],
+      "target": [
+        -84,
+        73,
+        42
+      ],
+      "clearance": 82.07931433113365,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-conjunto",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -66,
+        88,
+        20
+      ],
+      "target": [
+        -84,
+        73,
+        42
+      ],
+      "clearance": 28.5293212890625,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-conjunto",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        65.98370890089845,
+        206.31885235635417,
+        -152.4233263530165
+      ],
+      "target": [
+        -84,
+        73,
+        42
+      ],
+      "clearance": 160.25201615073206,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-conjunto",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -48.94153846153846,
+        102.21538461538462,
+        -0.8492307692307719
+      ],
+      "target": [
+        -84,
+        73,
+        42
+      ],
+      "clearance": 47.50894550734301,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-conjunto",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -0.023393400635058015,
+        147.6458725327688,
+        -66.85856411028789
+      ],
+      "target": [
+        -84,
+        73,
+        42
+      ],
+      "clearance": 96.5712371710454,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-conjunto",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -66,
+        88,
+        20
+      ],
+      "target": [
+        -84,
+        73,
+        42
+      ],
+      "clearance": 28.5293212890625,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-portada",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -81.35599773842331,
+        63.020763666892805,
+        15.902409503848858
+      ],
+      "target": [
+        -86.9984,
+        62.033470709433374,
+        25.6753
+      ],
+      "clearance": 5.420929499529521,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-portada",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -86.9984,
+        62.033470709433374,
+        21.4753
+      ],
+      "target": [
+        -86.9984,
+        62.033470709433374,
+        25.6753
+      ],
+      "clearance": 3.4014238058994337,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-portada",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -74.54029234423068,
+        64.21335817253947,
+        4.097306041966586
+      ],
+      "target": [
+        -86.9984,
+        62.033470709433374,
+        25.6753
+      ],
+      "clearance": 7.179086689056703,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-portada",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -86.9984,
+        62.033470709433374,
+        21.4753
+      ],
+      "target": [
+        -86.9984,
+        62.033470709433374,
+        25.6753
+      ],
+      "clearance": 3.4014238058994337,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-portada",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -80.1182841131604,
+        63.237335596529064,
+        13.758634713515368
+      ],
+      "target": [
+        -86.9984,
+        62.033470709433374,
+        25.6753
+      ],
+      "clearance": 5.9413835283786085,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-portada",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -86.9984,
+        62.033470709433374,
+        21.4753
+      ],
+      "target": [
+        -86.9984,
+        62.033470709433374,
+        25.6753
+      ],
+      "clearance": 3.4014238058994337,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-escudo",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -86.9984,
+        64.06937991281352,
+        23.07316347537003
+      ],
+      "target": [
+        -86.9984,
+        63.843470709433376,
+        25.6553
+      ],
+      "clearance": 5.090961934227046,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-escudo",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -86.9984,
+        63.843470709433376,
+        22.255300000000002
+      ],
+      "target": [
+        -86.9984,
+        63.843470709433376,
+        25.6553
+      ],
+      "clearance": 5.093601387686547,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-escudo",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -86.9984,
+        64.34318452916267,
+        19.943583582612295
+      ],
+      "target": [
+        -86.9984,
+        63.843470709433376,
+        25.6553
+      ],
+      "clearance": 5.844499677932944,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-escudo",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -86.9984,
+        63.843470709433376,
+        22.255300000000002
+      ],
+      "target": [
+        -86.9984,
+        63.843470709433376,
+        25.6553
+      ],
+      "clearance": 5.093601387686547,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-escudo",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -86.9984,
+        64.11812911721226,
+        22.5159612926293
+      ],
+      "target": [
+        -86.9984,
+        63.843470709433376,
+        25.6553
+      ],
+      "clearance": 5.32569226428064,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-escudo",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -86.9984,
+        63.843470709433376,
+        22.255300000000002
+      ],
+      "target": [
+        -86.9984,
+        63.843470709433376,
+        25.6553
+      ],
+      "clearance": 5.093601387686547,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-patio-arcos",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 74,
+      "requiresSection": false,
+      "position": [
+        -83.1,
+        70.5,
+        36.2
+      ],
+      "target": [
+        -85.75,
+        64.8,
+        40.2
+      ],
+      "clearance": 8.888765258789064,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-patio-arcos",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 74,
+      "requiresSection": false,
+      "position": [
+        -83.45,
+        65.39999999999999,
+        40.2
+      ],
+      "target": [
+        -85.75,
+        64.8,
+        40.2
+      ],
+      "clearance": 3.3999999999999915,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-patio-arcos",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 74,
+      "requiresSection": false,
+      "position": [
+        -83.1,
+        70.5,
+        36.2
+      ],
+      "target": [
+        -85.75,
+        64.8,
+        40.2
+      ],
+      "clearance": 8.888765258789064,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-patio-arcos",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 74,
+      "requiresSection": false,
+      "position": [
+        -83.45,
+        65.39999999999999,
+        40.2
+      ],
+      "target": [
+        -85.75,
+        64.8,
+        40.2
+      ],
+      "clearance": 3.3999999999999915,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-patio-arcos",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 74,
+      "requiresSection": false,
+      "position": [
+        -83.1,
+        70.5,
+        36.2
+      ],
+      "target": [
+        -85.75,
+        64.8,
+        40.2
+      ],
+      "clearance": 8.888765258789064,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-patio-arcos",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 74,
+      "requiresSection": false,
+      "position": [
+        -83.45,
+        65.39999999999999,
+        40.2
+      ],
+      "target": [
+        -85.75,
+        64.8,
+        40.2
+      ],
+      "clearance": 3.3999999999999915,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-logia",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 58,
+      "requiresSection": false,
+      "position": [
+        -84,
+        69.10000000000001,
+        41.1
+      ],
+      "target": [
+        -86.2,
+        66.7,
+        40
+      ],
+      "clearance": 7.1000000000000085,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-logia",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 58,
+      "requiresSection": false,
+      "position": [
+        -84.4,
+        68.2,
+        40.8
+      ],
+      "target": [
+        -86.2,
+        66.7,
+        40
+      ],
+      "clearance": 6.200000000000003,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-logia",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 58,
+      "requiresSection": false,
+      "position": [
+        -84,
+        69.10000000000001,
+        41.1
+      ],
+      "target": [
+        -86.2,
+        66.7,
+        40
+      ],
+      "clearance": 7.1000000000000085,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-logia",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 58,
+      "requiresSection": false,
+      "position": [
+        -84.4,
+        68.2,
+        40.8
+      ],
+      "target": [
+        -86.2,
+        66.7,
+        40
+      ],
+      "clearance": 6.200000000000003,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-logia",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 58,
+      "requiresSection": false,
+      "position": [
+        -84,
+        69.10000000000001,
+        41.1
+      ],
+      "target": [
+        -86.2,
+        66.7,
+        40
+      ],
+      "clearance": 7.1000000000000085,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-logia",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 58,
+      "requiresSection": false,
+      "position": [
+        -84.4,
+        68.2,
+        40.8
+      ],
+      "target": [
+        -86.2,
+        66.7,
+        40
+      ],
+      "clearance": 6.200000000000003,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-escalera",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -83.39999999999999,
+        66.5,
+        41.800000000000004
+      ],
+      "target": [
+        -82.3,
+        63.4,
+        47.2
+      ],
+      "clearance": 4.5,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-escalera",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -82.6,
+        65.2,
+        43.800000000000004
+      ],
+      "target": [
+        -82.3,
+        63.4,
+        47.2
+      ],
+      "clearance": 3.200000000000003,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-escalera",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -83.39999999999999,
+        66.5,
+        41.800000000000004
+      ],
+      "target": [
+        -82.3,
+        63.4,
+        47.2
+      ],
+      "clearance": 4.5,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-escalera",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -82.6,
+        65.2,
+        43.800000000000004
+      ],
+      "target": [
+        -82.3,
+        63.4,
+        47.2
+      ],
+      "clearance": 3.200000000000003,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-escalera",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -83.39999999999999,
+        66.5,
+        41.800000000000004
+      ],
+      "target": [
+        -82.3,
+        63.4,
+        47.2
+      ],
+      "clearance": 4.5,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-escalera",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -82.6,
+        65.2,
+        43.800000000000004
+      ],
+      "target": [
+        -82.3,
+        63.4,
+        47.2
+      ],
+      "clearance": 3.200000000000003,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-patio-superior",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -89,
+        72.8,
+        61.3
+      ],
+      "target": [
+        -89,
+        65.8,
+        54.8
+      ],
+      "clearance": 7.188704223632811,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-patio-superior",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -88,
+        68.5,
+        59.3
+      ],
+      "target": [
+        -89,
+        65.8,
+        54.8
+      ],
+      "clearance": 3.4499969482421875,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-patio-superior",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -89,
+        72.8,
+        61.3
+      ],
+      "target": [
+        -89,
+        65.8,
+        54.8
+      ],
+      "clearance": 7.188704223632811,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-patio-superior",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -88,
+        68.5,
+        59.3
+      ],
+      "target": [
+        -89,
+        65.8,
+        54.8
+      ],
+      "clearance": 3.4499969482421875,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-patio-superior",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -89,
+        72.8,
+        61.3
+      ],
+      "target": [
+        -89,
+        65.8,
+        54.8
+      ],
+      "clearance": 7.188704223632811,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-patio-superior",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -88,
+        68.5,
+        59.3
+      ],
+      "target": [
+        -89,
+        65.8,
+        54.8
+      ],
+      "clearance": 3.4499969482421875,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-aljibe",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 58,
+      "requiresSection": true,
+      "position": [
+        -92.5,
+        64.35,
+        36.6
+      ],
+      "target": [
+        -89.5,
+        60.15,
+        40.5
+      ],
+      "clearance": 5.299999999999997,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-aljibe",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 58,
+      "requiresSection": true,
+      "position": [
+        -91.6,
+        63.449999999999996,
+        42.5
+      ],
+      "target": [
+        -89.5,
+        60.15,
+        40.5
+      ],
+      "clearance": 4.399999999999999,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-aljibe",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 58,
+      "requiresSection": true,
+      "position": [
+        -92.5,
+        64.35,
+        36.6
+      ],
+      "target": [
+        -89.5,
+        60.15,
+        40.5
+      ],
+      "clearance": 5.299999999999997,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-aljibe",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 58,
+      "requiresSection": true,
+      "position": [
+        -91.6,
+        63.449999999999996,
+        42.5
+      ],
+      "target": [
+        -89.5,
+        60.15,
+        40.5
+      ],
+      "clearance": 4.399999999999999,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-aljibe",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 58,
+      "requiresSection": true,
+      "position": [
+        -92.5,
+        64.35,
+        36.6
+      ],
+      "target": [
+        -89.5,
+        60.15,
+        40.5
+      ],
+      "clearance": 5.299999999999997,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-aljibe",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 58,
+      "requiresSection": true,
+      "position": [
+        -91.6,
+        63.449999999999996,
+        42.5
+      ],
+      "target": [
+        -89.5,
+        60.15,
+        40.5
+      ],
+      "clearance": 4.399999999999999,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-boveda",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": true,
+      "position": [
+        -92.1,
+        67.15,
+        43.5
+      ],
+      "target": [
+        -89.5,
+        61.15,
+        40.5
+      ],
+      "clearance": 8.100000000000009,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-boveda",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": true,
+      "position": [
+        -91.4,
+        63.949999999999996,
+        41.9
+      ],
+      "target": [
+        -89.5,
+        61.15,
+        40.5
+      ],
+      "clearance": 4.899999999999999,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-boveda",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": true,
+      "position": [
+        -92.1,
+        67.15,
+        43.5
+      ],
+      "target": [
+        -89.5,
+        61.15,
+        40.5
+      ],
+      "clearance": 8.100000000000009,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-boveda",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": true,
+      "position": [
+        -91.4,
+        63.949999999999996,
+        41.9
+      ],
+      "target": [
+        -89.5,
+        61.15,
+        40.5
+      ],
+      "clearance": 4.899999999999999,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-boveda",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": true,
+      "position": [
+        -92.1,
+        67.15,
+        43.5
+      ],
+      "target": [
+        -89.5,
+        61.15,
+        40.5
+      ],
+      "clearance": 8.100000000000009,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-boveda",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": true,
+      "position": [
+        -91.4,
+        63.949999999999996,
+        41.9
+      ],
+      "target": [
+        -89.5,
+        61.15,
+        40.5
+      ],
+      "clearance": 4.899999999999999,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "diana-conjunto",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -54.81792117723194,
+        82.06032815557062,
+        10.945235942260076
+      ],
+      "target": [
+        -71.47824933280255,
+        65.4,
+        44.2658922534013
+      ],
+      "clearance": 25.11893256402209,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "diana-conjunto",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -68.47824933280255,
+        69.4,
+        33.2658922534013
+      ],
+      "target": [
+        -71.47824933280255,
+        65.4,
+        44.2658922534013
+      ],
+      "clearance": 9.4999984741211,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "diana-conjunto",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -30.426299736862838,
+        106.45194959593971,
+        -37.838006938478124
+      ],
+      "target": [
+        -71.47824933280255,
+        65.4,
+        44.2658922534013
+      ],
+      "clearance": 54.42560072027173,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "diana-conjunto",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -65.63517240972563,
+        73.19076923076923,
+        22.84127686878591
+      ],
+      "target": [
+        -71.47824933280255,
+        65.4,
+        44.2658922534013
+      ],
+      "clearance": 13.436089532686175,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "diana-conjunto",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -51.32431660347218,
+        85.55393272933037,
+        3.9580267947405545
+      ],
+      "target": [
+        -71.47824933280255,
+        65.4,
+        44.2658922534013
+      ],
+      "clearance": 30.256452997705324,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "diana-conjunto",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -68.47824933280255,
+        69.4,
+        33.2658922534013
+      ],
+      "target": [
+        -71.47824933280255,
+        65.4,
+        44.2658922534013
+      ],
+      "clearance": 9.4999984741211,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "diana-aparejo",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -62.14518893253061,
+        72.84107464985314,
+        15.332884505284756
+      ],
+      "target": [
+        -70.88626358238376,
+        64.1,
+        44.46980000479526
+      ],
+      "clearance": 14.458696305036497,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "diana-aparejo",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -69.88626358238376,
+        65.3,
+        39.76980000479526
+      ],
+      "target": [
+        -70.88626358238376,
+        64.1,
+        44.46980000479526
+      ],
+      "clearance": 4.435944918760583,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "diana-aparejo",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -52.22338410406198,
+        82.76287947832178,
+        -17.739798256277332
+      ],
+      "target": [
+        -70.88626358238376,
+        64.1,
+        44.46980000479526
+      ],
+      "clearance": 29.347245952463858,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "diana-aparejo",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -68.93857127469145,
+        66.43723076923077,
+        35.315646158641414
+      ],
+      "target": [
+        -70.88626358238376,
+        64.1,
+        44.46980000479526
+      ],
+      "clearance": 6.476812022110714,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "diana-aparejo",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -63.19188470973535,
+        71.79437887264841,
+        18.821870429300564
+      ],
+      "target": [
+        -70.88626358238376,
+        64.1,
+        44.46980000479526
+      ],
+      "clearance": 12.54594820385703,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "diana-aparejo",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -69.88626358238376,
+        65.3,
+        39.76980000479526
+      ],
+      "target": [
+        -70.88626358238376,
+        64.1,
+        44.46980000479526
+      ],
+      "clearance": 4.435944918760583,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "diana-retorno",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -83.09407589332055,
+        69.5,
+        48.80675573811355
+      ],
+      "target": [
+        -81.39407589332055,
+        64.1,
+        48.10675573811355
+      ],
+      "clearance": 6.932539486289258,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "diana-retorno",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -82.89407589332055,
+        66.8,
+        48.60675573811355
+      ],
+      "target": [
+        -81.39407589332055,
+        64.1,
+        48.10675573811355
+      ],
+      "clearance": 4.319389767050971,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "diana-retorno",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -83.09407589332055,
+        69.5,
+        48.80675573811355
+      ],
+      "target": [
+        -81.39407589332055,
+        64.1,
+        48.10675573811355
+      ],
+      "clearance": 6.932539486289258,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "diana-retorno",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -82.89407589332055,
+        66.8,
+        48.60675573811355
+      ],
+      "target": [
+        -81.39407589332055,
+        64.1,
+        48.10675573811355
+      ],
+      "clearance": 4.319389767050971,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "diana-retorno",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -83.09407589332055,
+        69.5,
+        48.80675573811355
+      ],
+      "target": [
+        -81.39407589332055,
+        64.1,
+        48.10675573811355
+      ],
+      "clearance": 6.932539486289258,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "diana-retorno",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -82.89407589332055,
+        66.8,
+        48.60675573811355
+      ],
+      "target": [
+        -81.39407589332055,
+        64.1,
+        48.10675573811355
+      ],
+      "clearance": 4.319389767050971,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "diana-fabricas",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -61.88176799279204,
+        82.01580298729411,
+        11.393589735152261
+      ],
+      "target": [
+        -71.71862023326263,
+        68.9,
+        44.18309720338753
+      ],
+      "clearance": 24.923477977865453,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "diana-fabricas",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -70.71862023326263,
+        69.9,
+        38.783097203387534
+      ],
+      "target": [
+        -71.71862023326263,
+        68.9,
+        44.18309720338753
+      ],
+      "clearance": 9.301900295720046,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "diana-fabricas",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -49.221828666050214,
+        98.89572208961656,
+        -30.80620802065384
+      ],
+      "target": [
+        -71.71862023326263,
+        68.9,
+        44.18309720338753
+      ],
+      "clearance": 46.25936771654161,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "diana-fabricas",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -69.77092792557032,
+        70.84769230769231,
+        33.66555874184907
+      ],
+      "target": [
+        -71.71862023326263,
+        68.9,
+        44.18309720338753
+      ],
+      "clearance": 10.935816080570959,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "diana-fabricas",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -59.582757326476944,
+        85.08115054238093,
+        3.7302208474352554
+      ],
+      "target": [
+        -71.71862023326263,
+        68.9,
+        44.18309720338753
+      ],
+      "clearance": 29.551250625022718,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "diana-fabricas",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -70.71862023326263,
+        69.9,
+        38.783097203387534
+      ],
+      "target": [
+        -71.71862023326263,
+        68.9,
+        44.18309720338753
+      ],
+      "clearance": 9.301900295720046,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "diana-interpretaciones",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -57.732745221695666,
+        92.04072159508317,
+        7.512971990907495
+      ],
+      "target": [
+        -73.50649948549419,
+        65,
+        43.567267451018395
+      ],
+      "clearance": 36.01838921265913,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "diana-interpretaciones",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -69.50649948549419,
+        72,
+        33.567267451018395
+      ],
+      "target": [
+        -73.50649948549419,
+        65,
+        43.567267451018395
+      ],
+      "clearance": 12.092723078548552,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "diana-interpretaciones",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -36.92490512830609,
+        127.71130461232246,
+        -40.04780536541155
+      ],
+      "target": [
+        -73.50649948549419,
+        65,
+        43.567267451018395
+      ],
+      "clearance": 75.8413056804377,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "diana-interpretaciones",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -65.71573025472496,
+        78.63384615384615,
+        24.090344374095316
+      ],
+      "target": [
+        -73.50649948549419,
+        65,
+        43.567267451018395
+      ],
+      "clearance": 18.866575804921375,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "diana-interpretaciones",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -59.927857777831676,
+        88.27767149885003,
+        12.530372119218374
+      ],
+      "target": [
+        -73.50649948549419,
+        65,
+        43.567267451018395
+      ],
+      "clearance": 30.867970208856406,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "diana-interpretaciones",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -69.50649948549419,
+        72,
+        33.567267451018395
+      ],
+      "target": [
+        -73.50649948549419,
+        65,
+        43.567267451018395
+      ],
+      "clearance": 12.092723078548552,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-desvan",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -72.38340289639576,
+        74.3496295519068,
+        4.998834841269105
+      ],
+      "target": [
+        -84.4773,
+        72.23347070943339,
+        25.946
+      ],
+      "clearance": 18.39028570939594,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-desvan",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -84.4773,
+        72.23347070943339,
+        15.946000000000002
+      ],
+      "target": [
+        -84.4773,
+        72.23347070943339,
+        25.946
+      ],
+      "clearance": 14.440475824332076,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-desvan",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -60.08206363985151,
+        76.50208608589232,
+        -16.307629309448618
+      ],
+      "target": [
+        -84.4773,
+        72.23347070943339,
+        25.946
+      ],
+      "clearance": 22.63369616372222,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-desvan",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -84.4773,
+        72.23347070943339,
+        15.946000000000002
+      ],
+      "target": [
+        -84.4773,
+        72.23347070943339,
+        25.946
+      ],
+      "clearance": 14.440475824332076,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-desvan",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -73.68112645338847,
+        74.12255723959171,
+        7.246549489891407
+      ],
+      "target": [
+        -84.4773,
+        72.23347070943339,
+        25.946
+      ],
+      "clearance": 17.819726803823137,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-desvan",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -84.4773,
+        72.23347070943339,
+        15.946000000000002
+      ],
+      "target": [
+        -84.4773,
+        72.23347070943339,
+        25.946
+      ],
+      "clearance": 14.440475824332076,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-anexo",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -95.4807668158486,
+        77.5403234006287,
+        32.83608440324163
+      ],
+      "target": [
+        -96.425,
+        63.924970709433374,
+        36.36
+      ],
+      "clearance": 17.332839390867917,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-anexo",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -96.425,
+        69.09327070943337,
+        34.478899999999996
+      ],
+      "target": [
+        -96.425,
+        63.924970709433374,
+        36.36
+      ],
+      "clearance": 7.948273626456071,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-anexo",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -94.52607214343413,
+        91.30652532564356,
+        29.27312611843306
+      ],
+      "target": [
+        -96.425,
+        63.924970709433374,
+        36.36
+      ],
+      "clearance": 31.40605793103257,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-anexo",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -96.425,
+        69.09327070943337,
+        34.478899999999996
+      ],
+      "target": [
+        -96.425,
+        63.924970709433374,
+        36.36
+      ],
+      "clearance": 7.948273626456071,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-anexo",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -95.4250818806794,
+        78.3432712790135,
+        32.628266022315366
+      ],
+      "target": [
+        -96.425,
+        63.924970709433374,
+        36.36
+      ],
+      "clearance": 18.275274505014828,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-anexo",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -96.425,
+        69.09327070943337,
+        34.478899999999996
+      ],
+      "target": [
+        -96.425,
+        63.924970709433374,
+        36.36
+      ],
+      "clearance": 7.948273626456071,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-sorolla",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -66.45230950414916,
+        76.59303125274263,
+        -5.274317350417519
+      ],
+      "target": [
+        -84.4773,
+        66.93347070943338,
+        25.946
+      ],
+      "clearance": 21.86468947823031,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-sorolla",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -84.4773,
+        66.93347070943338,
+        12.946000000000002
+      ],
+      "target": [
+        -84.4773,
+        66.93347070943338,
+        25.946
+      ],
+      "clearance": 8.968684314474885,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-sorolla",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -43.6281432219372,
+        88.82446161628897,
+        -44.80708241641766
+      ],
+      "target": [
+        -84.4773,
+        66.93347070943338,
+        25.946
+      ],
+      "clearance": 36.954462684404206,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-sorolla",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -84.4773,
+        66.93347070943338,
+        12.946000000000002
+      ],
+      "target": [
+        -84.4773,
+        66.93347070943338,
+        25.946
+      ],
+      "clearance": 8.968684314474885,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-sorolla",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -62.307502773384265,
+        78.81422585283717,
+        -12.453360330795991
+      ],
+      "target": [
+        -84.4773,
+        66.93347070943338,
+        25.946
+      ],
+      "clearance": 24.73539015512487,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-sorolla",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -84.4773,
+        66.93347070943338,
+        12.946000000000002
+      ],
+      "target": [
+        -84.4773,
+        66.93347070943338,
+        25.946
+      ],
+      "clearance": 8.968684314474885,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-mirador",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -84.7,
+        72.2,
+        59
+      ],
+      "target": [
+        -87.7,
+        66.2,
+        54
+      ],
+      "clearance": 7.14999694824219,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-mirador",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -84.7,
+        68.9,
+        58
+      ],
+      "target": [
+        -87.7,
+        66.2,
+        54
+      ],
+      "clearance": 3.849996948242193,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-mirador",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -84.7,
+        72.2,
+        59
+      ],
+      "target": [
+        -87.7,
+        66.2,
+        54
+      ],
+      "clearance": 7.14999694824219,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-mirador",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -84.7,
+        68.9,
+        58
+      ],
+      "target": [
+        -87.7,
+        66.2,
+        54
+      ],
+      "clearance": 3.849996948242193,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-mirador",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -84.7,
+        72.2,
+        59
+      ],
+      "target": [
+        -87.7,
+        66.2,
+        54
+      ],
+      "clearance": 7.14999694824219,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "id": "berenguer-mirador",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "position": [
+        -84.7,
+        68.9,
+        58
+      ],
+      "target": [
+        -87.7,
+        66.2,
+        54
+      ],
+      "clearance": 3.849996948242193,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    }
+  ],
+  "cameraOcclusions": [],
+  "inputHashes": {
+    "dist/js/app.js": "8259c5b591b63526664cf19b4e21a1088d5dc82fcc601d0bd8b26296e86183a4",
+    "dist/js/castle-panel.js": "60a927639c38ed0a88d16e66354aa5c7d14057da44b396f8a2d0acdaae25a8ab",
+    "dist/js/theatre.js": "34831ff762ddd15d0e9fa1fd564183145a04219d47f833f529af35f545d83371",
+    "dist/js/monuments.js": "22546453225b2db827cc2e84a5fd30e1083b56eb8b79d4a1ac025709f4b34dac",
+    "dist/js/castle.js": "61463c846f79a617562ca2e31bfc42321da0c737a3d310846db44410066c54d8",
+    "dist/js/terrain.js": "ec10570603e52e850b6b5eadf81963215d18d533c551d555848ef58152fec3f8",
+    "dist/js/city.js": "b2578a5fdb0d70435fa4bc8cf92147f2a3c4922f6bcbe6bbe145f46ebb53af54",
+    "dist/js/urban-surface.js": "d2acfae90ff47abddd51be09a21555e8ce9b6269e1500549a6eb94938f3e6111",
+    "dist/js/santa-maria.js": "ab23645cee3bfb285ea19420b98d8c4eb56fa7e5b99d756aa861abba2578ff42",
+    "dist/js/santa-maria-context.js": "c58325ab7d3a33af291c50efda2625dcd757d33da9306e70f5d95b67b4d4072f",
+    "dist/js/heritage-sacred.js": "09d8044f1b658f77e083971f6301ea0dcb14831388bdbbe07c34eab7b414d9d4",
+    "dist/js/heritage-civic.js": "fb57a08bfe1a0ebfbd8c3f7d906b2eb8d90fb3bf0de540711bac7c79cb87663c",
+    "dist/js/plaza-mayor.js": "07f51ea9722f9a09932e9dd85dcdeb2a39e753fdb5c8d7fa5e5a302bad3d28b1",
+    "dist/js/plaza-mayor-context.js": "655b94895ef5407affe3ea502e5eb0eeff91cf01d365fe63387ec9fa31bd8d8b",
+    "dist/js/juderia.js": "e83aa1df8be0538e6ce520ebf0676f847ce3d488690e1deacaa7472e0869d30d",
+    "dist/js/juderia-context.js": "fc58285789fd8a785e87d2efd1e29e42bba257222eb51e66592393d19600cf2f",
+    "dist/js/calvario.js": "990a076c049599574eb566b7823bc8166667d7c385a2e5fd964e6e4342d96910",
+    "dist/js/calvario-context.js": "0ef2e7a8cc33c2296cbd1b7ff8023d5eef71a48e4eb86849efd06e59b124d148",
+    "dist/js/berenguer.js": "e6d96396f1462827849e656d8a456c49d0da59f8a8c1c87cbf1e14e605909cdd",
+    "dist/js/berenguer-context.js": "4a942cd7436001937dcfd3d20ff3c1ec6272a42e4f0fbd68bf80e097b7618695",
+    "dist/js/berenguer-map.js": "1c10607f476c7a5d6358d13747385a6e946bc7df909de5c5963ec1ca2062f92e",
+    "dist/js/berenguer-visit.js": "500f8d3d6995bd33f62cc7a44cb2e2f5079537f3d3a916d6253e6a27fb3387ce",
+    "dist/js/archaeology-public.js": "2caa932b03f1910718d538227c99410e17180b201f7a05b849ded888342af73b",
+    "dist/js/excavation.js": "2d7af18c65c4870ed7d33897fbee5caaaa531663ed39c592ea6fcdfed00b1d35",
+    "dist/assets/data/plaza-mayor-visit.json": "c80a4560b964c27003e769add5a1c0c32b1a0109b55243c95a641282f2b36e55",
+    "dist/assets/data/plaza-mayor-plan.json": "136742e1a25c77699aa619113a40213926260fd7bbec9402f02de6a4bb29b4ef",
+    "dist/assets/data/plaza-mayor-context.json": "1a0c282b1f15f1cf4ede43aee8a600a5a44675cc4ad8110c36656ad9d23d9fc7",
+    "dist/assets/data/juderia-visit.json": "c935eff4d0a2f4362b437bb045ac47a4d7222b62b7ab5f7e3380e7ac08e6f736",
+    "dist/assets/data/juderia-plan.json": "cb31a29ed4c590a10bb6b8430171122bada9c4637ab3446ad31097fabd194d34",
+    "dist/assets/data/juderia-context.json": "9118ca2de239a2b4a49e2b2651d8dc261177e3b50c6a4360686e7e8a2380d045",
+    "dist/assets/data/calvario-visit.json": "b054fed27f08b1d4c1f387315b3d3d6b8ae3a6a7378e4e2fb6186a437c829088",
+    "dist/assets/data/calvario-plan.json": "3a9a08fb423930cb5902b83db6c5b2998ff8461935bc26656714a3039a167eef",
+    "dist/assets/data/calvario-context.json": "3c4da56852c9f4afb1ca501e37e4823b7c2eb3aa81d9b42a7da07f53bbe81766",
+    "dist/assets/data/berenguer-visit.json": "36da2cecfbfe9c2447434e2405a5ca94615527dca5c0c4e549ae49e6d726206e",
+    "dist/assets/data/berenguer-plan.json": "68af4ffba39bad39785ba588a6ffbde2d074b47179e591a8847c5a4e61ae4154",
+    "dist/assets/data/berenguer-context.json": "b222d0b510d39b340dc4d69bdaef0dc383d88faa5fb800eb247d9676871487ae"
+  },
+  "limitations": [
+    "Camera centre rays are recorded separately: a facade may be the intended subject, while context obstructions require review.",
+    "Architecture is an interpretation from source plans and photographs, not a measured survey.",
+    "CPU geometry and renders do not measure browser WebGL performance."
+  ]
+}

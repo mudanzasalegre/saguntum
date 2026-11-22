@@ -1,0 +1,145 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "pass": true,
+      "name": "51 cadastral parts and 6 OSM ancillary envelopes"
+    },
+    {
+      "pass": true,
+      "name": "Every cadastral footprint and hole is byte-equivalent to source coordinates"
+    },
+    {
+      "pass": true,
+      "name": "Every ancillary OSM footprint is retained"
+    },
+    {
+      "pass": true,
+      "name": "Fortín core parcels are not duplicated"
+    },
+    {
+      "pass": true,
+      "name": "Road replacement IDs are disjoint from V31 pantalán context"
+    },
+    {
+      "pass": true,
+      "name": "All original road centerlines partition into owned and retained lengths without loss",
+      "detail": [
+        {
+          "sourceId": "399621371",
+          "originalLength": 393.3171542595221,
+          "partitionLength": 393.3171542595225,
+          "errorM": 3.979039320256561e-13
+        },
+        {
+          "sourceId": "290568977",
+          "originalLength": 244.60331449319034,
+          "partitionLength": 244.60331449319034,
+          "errorM": 0
+        },
+        {
+          "sourceId": "78613678",
+          "originalLength": 75.9119381425175,
+          "partitionLength": 75.91193814251784,
+          "errorM": 3.410605131648481e-13
+        }
+      ]
+    },
+    {
+      "pass": true,
+      "name": "Geometry has finite attributes, nonzero normals and no degenerate triangles",
+      "detail": {
+        "nonfinite": 0,
+        "zeroNormals": 0,
+        "degenerate": 0
+      }
+    },
+    {
+      "pass": true,
+      "name": "Projected roof area exactly covers the source footprints and leaves open parcels unroofed",
+      "detail": {
+        "expectedRoofArea": 2921.618352449499,
+        "renderedRoofArea": 2921.6146614551544,
+        "errorM2": -0.003690994344651699
+      }
+    },
+    {
+      "pass": true,
+      "name": "All surface vertices sit on the supplied terrain sampler",
+      "detail": {
+        "worstErrorM": 0.00002900314328849879
+      }
+    },
+    {
+      "pass": true,
+      "name": "No context flattening patch exists"
+    },
+    {
+      "pass": true,
+      "name": "PNOA bare-backshore mask excludes generic trees without modifying the water or terrain"
+    },
+    {
+      "pass": true,
+      "name": "Individually mapped trees avoid enclosed building footprints",
+      "detail": []
+    },
+    {
+      "pass": true,
+      "name": "Six dated photographic upper windows distinguish the former school"
+    },
+    {
+      "pass": true,
+      "name": "Chapel is flat-roofed, matching the photograph and PNOA"
+    },
+    {
+      "pass": true,
+      "name": "Coastal-vegetation mask compacts world-positioned matrices, colours, counts and bounds"
+    },
+    {
+      "pass": true,
+      "name": "Coastal-vegetation masking is idempotent and reports its own count"
+    },
+    {
+      "pass": true,
+      "name": "Final terrain rebinding disposes and replaces every prior geometry"
+    },
+    {
+      "pass": true,
+      "name": "Architecture is rebound together with roads and vegetation"
+    },
+    {
+      "pass": true,
+      "name": "Instances own separate materials and textures"
+    },
+    {
+      "pass": true,
+      "name": "dispose is idempotent and releases all currently owned resources",
+      "detail": {
+        "count": 33,
+        "disposalCount": 33
+      }
+    }
+  ],
+  "stats": {
+    "cadastralParts": 51,
+    "osmAncillaryParts": 6,
+    "sourceBuildingParts": 57,
+    "observedRoofOverrides": 10,
+    "ancillaryRoofObservations": 4,
+    "mappedTreeCrowns": 16,
+    "waterChanged": false,
+    "modelVersion": "v32",
+    "bindCount": 1,
+    "renderedBuildings": 55,
+    "openGroundParts": 2,
+    "facadeOpenings": 72,
+    "renderedTrees": 16,
+    "meshes": 15,
+    "triangles": 45197,
+    "terrainConforming": true,
+    "footprintPreserved": true,
+    "flattenedTerrain": false,
+    "maskedCoastalVegetation": 2
+  },
+  "evidence": "Exact Three.js geometry and source-data checks; not a browser/WebGL render. V31 water source hashes are checked by the integrated coast validation."
+}

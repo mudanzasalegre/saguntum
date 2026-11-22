@@ -1,0 +1,87 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "label": "No new ground overlaps retained roads, paths or adjacent contexts",
+      "pass": true
+    },
+    {
+      "label": "No new ground overlaps any cadastral building or porch steps",
+      "pass": true
+    },
+    {
+      "label": "All close exterior strips are covered by new ground or an explicit retained owner",
+      "pass": true
+    },
+    {
+      "label": "All transferred previous ground has complete replacement",
+      "pass": true
+    },
+    {
+      "label": "Source regions and terrain-grid triangles have identical coverage",
+      "pass": true
+    },
+    {
+      "label": "Terrain-grid triangles do not overlap",
+      "pass": true
+    },
+    {
+      "label": "No building identity duplicates an existing owner",
+      "pass": true
+    },
+    {
+      "label": "All building footprints retain exact source coordinates and holes",
+      "pass": true
+    },
+    {
+      "label": "Every new tree centre lies on owned ground outside architecture",
+      "pass": true
+    },
+    {
+      "label": "No new tree duplicates an existing mapped centre within 3.2 metres",
+      "pass": true
+    },
+    {
+      "label": "Withheld demolished cadastral parts are not turned back into obstacles",
+      "pass": true
+    },
+    {
+      "label": "Exactly five external focus IDs",
+      "pass": true
+    }
+  ],
+  "stats": {
+    "ownedBuildings": 7,
+    "parentParcels": 6,
+    "reusedBuildingParts": 77,
+    "ownedRoads": 0,
+    "pavingAreaM2": 1885.71,
+    "transferredGroundAreaM2": 759.15,
+    "newGroundCoverageM2": 1126.57,
+    "pavingVertices": 819,
+    "pavingTriangles": 986,
+    "trees": 8,
+    "benches": 0,
+    "lamps": 0,
+    "paths": 0,
+    "contextFocuses": 5
+  },
+  "transferSurfaceIds": [
+    "gerencia-sidewalk-5",
+    "gerencia-east-garden-3",
+    "gerencia-garden-2",
+    "gerencia-garden-3"
+  ],
+  "retainedOwners": [
+    "horno",
+    "talleres",
+    "museo-industrial",
+    "gerencia",
+    "casino",
+    "begona"
+  ],
+  "retainedGerenciaComponents": [
+    "gerencia-road",
+    "gerencia-path"
+  ]
+}

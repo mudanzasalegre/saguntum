@@ -1,0 +1,216 @@
+{
+  "region": "sagunto",
+  "pass": true,
+  "checks": [
+    {
+      "label": "buildings: finite attributes and instances",
+      "pass": true
+    },
+    {
+      "label": "buildings: valid indices",
+      "pass": true
+    },
+    {
+      "label": "Building normals are nonzero",
+      "pass": true
+    },
+    {
+      "label": "No degenerate building triangles",
+      "pass": true
+    },
+    {
+      "label": "roads: finite attributes and instances",
+      "pass": true
+    },
+    {
+      "label": "roads: valid indices",
+      "pass": true
+    },
+    {
+      "label": "vegetation: finite attributes and instances",
+      "pass": true
+    },
+    {
+      "label": "vegetation: valid indices",
+      "pass": true
+    },
+    {
+      "label": "terrain: finite attributes and instances",
+      "pass": true
+    },
+    {
+      "label": "terrain: valid indices",
+      "pass": true
+    },
+    {
+      "label": "Region has rendered cartographic building parts",
+      "pass": true
+    },
+    {
+      "label": "Height provenance sums to rendered parts",
+      "pass": true
+    },
+    {
+      "label": "Estimated building-part count is nonnegative",
+      "pass": true
+    },
+    {
+      "label": "All provided source heights and storeys are numeric",
+      "pass": true
+    },
+    {
+      "label": "No emitted roof triangle centres in mapped open water",
+      "pass": true
+    },
+    {
+      "label": "No emitted roofs inside custom monument footprints",
+      "pass": true
+    },
+    {
+      "label": "No context tree centres in open water",
+      "pass": true
+    },
+    {
+      "label": "No context trees duplicate custom landscape plant areas",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "warnings": [],
+  "source": {
+    "buildingParts": 10301,
+    "roads": 1206,
+    "landcover": 102,
+    "shape": {
+      "cx": 50,
+      "cz": 170,
+      "rx": 990,
+      "rz": 800
+    },
+    "terrainBounds": {
+      "minX": -950,
+      "maxX": 1100,
+      "minZ": -850,
+      "maxZ": 1100
+    },
+    "terrainSize": [
+      1025,
+      1025
+    ]
+  },
+  "buildings": {
+    "footprintCount": 9374,
+    "empiricalHeightCount": 2,
+    "ignSurfaceHeightCount": 5380,
+    "osmLevelCount": 2,
+    "cadastralLevelCount": 3977,
+    "estimatedHeightCount": 13,
+    "sampledRoofColorCount": 9374,
+    "contextFacadeCount": 3396,
+    "terrainRoofCorrections": 11,
+    "maximumRoofCorrectionM": 3.5930187702737015,
+    "terrainRoofNote": "Display roof raised only where source terrain would intersect it; original height estimates are retained in data.",
+    "otherHeights": "OSM height > IGN normalized surface estimate > attributed OSM / DGC storeys × 3 m > deterministic visual estimate.",
+    "facades": "Generic repeated facade bays outside detailed areas; not surveyed window positions. Roof colours sampled from PNOA where available."
+  },
+  "roads": {
+    "wayCount": 913,
+    "stairTreads": 1262,
+    "supportCount": 44154,
+    "taggedWidths": 5,
+    "profile": "Longitudinal DEM samples; pavement widths, treads and transverse grading are interpreted."
+  },
+  "vegetation": {
+    "treeCount": 580,
+    "mappedPositions": 0,
+    "interpretive": true
+  },
+  "excludedContextIds": 37,
+  "customExclusionPolygons": 34,
+  "landscapeVegetationExclusions": 0,
+  "geometry": {
+    "buildings": {
+      "meshes": 6,
+      "vertices": 1490685,
+      "triangles": 725717,
+      "attributeBytes": 65590140,
+      "indexBytes": 8691636,
+      "instanceBytes": 0,
+      "nonfinite": 0,
+      "indicesOutside": 0,
+      "degenerate": 0,
+      "zeroNormals": 0,
+      "minY": 33.777462005615234,
+      "maxY": 132.7385711669922
+    },
+    "roads": {
+      "meshes": 5,
+      "vertices": 377412,
+      "triangles": 178492,
+      "attributeBytes": 16606128,
+      "indexBytes": 1862316,
+      "instanceBytes": 0,
+      "nonfinite": 0,
+      "indicesOutside": 0,
+      "degenerate": 0,
+      "zeroNormals": 0,
+      "minY": 31.265207290649414,
+      "maxY": 157.6535186767578
+    },
+    "vegetation": {
+      "meshes": 4,
+      "vertices": 1776,
+      "triangles": 165570,
+      "attributeBytes": 56832,
+      "indexBytes": 564,
+      "instanceBytes": 81200,
+      "nonfinite": 0,
+      "indicesOutside": 0,
+      "degenerate": 0,
+      "zeroNormals": 0,
+      "minY": 9.536743306171047e-8,
+      "maxY": 15.300000190734863
+    },
+    "terrain": {
+      "meshes": 1,
+      "vertices": 177678,
+      "triangles": 353474,
+      "attributeBytes": 5685696,
+      "indexBytes": 4241688,
+      "instanceBytes": 0,
+      "nonfinite": 0,
+      "indicesOutside": 0,
+      "degenerate": 0,
+      "zeroNormals": 0,
+      "minY": 28.093719482421875,
+      "maxY": 169.71884155273438
+    }
+  },
+  "roofAudit": {
+    "roofTriangles": 38995,
+    "waterTriangles": 0,
+    "waterAreaM2": 0,
+    "heritageTriangles": 0,
+    "heritageAreaM2": 0,
+    "natureTriangles": 0,
+    "natureAreaM2": 0,
+    "submergedRoofVertices": 0,
+    "belowTerrainPoints": [],
+    "minimumRoofClearanceM": -0.2647226904162068,
+    "maximumRoofClearanceM": 39.480003356933594,
+    "examples": []
+  },
+  "suspectParts": [],
+  "treesInWater": 0,
+  "treesInLandscape": 0,
+  "times": {
+    "heritage": 1023.820976,
+    "urban": 96.05049499999996,
+    "terrain": 874.1665230000001,
+    "city": 2974.876494,
+    "audit": 2119.2511940000004
+  },
+  "totalMs": 7088.774924,
+  "memoryMb": 701.63671875,
+  "scope": "Actual createCity geometry with current cartography, terrain and heritage exclusions. Counts are building parts, not necessarily distinct buildings. CPU checks do not validate GPU performance or texture appearance."
+}

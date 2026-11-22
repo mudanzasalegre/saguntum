@@ -1,0 +1,208 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "pass": true,
+      "label": "Every context coordinate is finite",
+      "detail": {
+        "finite": true,
+        "collapsed": 0,
+        "total": 158988
+      }
+    },
+    {
+      "pass": true,
+      "label": "No degenerate rendered triangles",
+      "detail": {
+        "finite": true,
+        "collapsed": 0,
+        "total": 158988
+      }
+    },
+    {
+      "pass": true,
+      "label": "All selected mapped neighbouring building parts are present"
+    },
+    {
+      "pass": true,
+      "label": "Mapped courtyard holes survive roof triangulation"
+    },
+    {
+      "pass": true,
+      "label": "All core building parts and context neighbours have explicit owners"
+    },
+    {
+      "pass": true,
+      "label": "No source building ID is claimed by both museum and earlier contexts"
+    },
+    {
+      "pass": true,
+      "label": "Six neighbouring heritage owners are explicitly preserved"
+    },
+    {
+      "pass": true,
+      "label": "The context provides all seven agreed tour stops"
+    },
+    {
+      "pass": true,
+      "label": "Exterior focuses have consistent floor/elevation/local registration"
+    },
+    {
+      "pass": true,
+      "label": "Every rendered tree has a recorded reference-photo position"
+    },
+    {
+      "pass": true,
+      "label": "All recorded tree trunks are preserved outside building interiors"
+    },
+    {
+      "pass": true,
+      "label": "Complete crown envelopes keep a facade gap, including displaced lobes and palm-frond width"
+    },
+    {
+      "pass": true,
+      "label": "Plan tree radii match the constrained three-dimensional crown envelopes"
+    },
+    {
+      "pass": true,
+      "label": "No rendered foliage vertex occupies a building footprint, including shrubs",
+      "detail": {
+        "foliageVertices": 213840,
+        "foliageInsideBuildings": 0
+      }
+    },
+    {
+      "pass": true,
+      "label": "Historic walks, gate and perimeter have explicit geometry records"
+    },
+    {
+      "pass": true,
+      "label": "All recorded source hashes match the current inputs"
+    },
+    {
+      "pass": true,
+      "label": "Ground rebinding releases old geometry without accumulating meshes"
+    },
+    {
+      "pass": true,
+      "label": "Ground rebinding preserves the Gerencia datum"
+    },
+    {
+      "pass": true,
+      "label": "Every paved vertex and triangle interior follows the regional terrain",
+      "detail": {
+        "samples": 14163,
+        "maximumVertexErrorM": 0.00003215610980969452,
+        "maximumInteriorErrorM": 0.000023996016633415218
+      }
+    },
+    {
+      "pass": true,
+      "label": "Rebound geometry stays finite without collapsed triangles",
+      "detail": {
+        "finite": true,
+        "collapsed": 0,
+        "total": 158988
+      }
+    },
+    {
+      "pass": true,
+      "label": "Both surroundings cameras stay above final terrain",
+      "detail": {
+        "id": "gerencia-acceso",
+        "farY": 20.713990722194744,
+        "nearY": 8.713990722194744
+      }
+    },
+    {
+      "pass": true,
+      "label": "Both surroundings cameras stay above final terrain",
+      "detail": {
+        "id": "gerencia-paseo",
+        "farY": 29.99302154378353,
+        "nearY": 9.493021543783529
+      }
+    },
+    {
+      "pass": true,
+      "label": "Both surroundings cameras stay above final terrain",
+      "detail": {
+        "id": "gerencia-jardin-oriental",
+        "farY": 32,
+        "nearY": 10.5
+      }
+    },
+    {
+      "pass": true,
+      "label": "Both surroundings cameras stay above final terrain",
+      "detail": {
+        "id": "gerencia-arbolado",
+        "farY": 37.06942997861697,
+        "nearY": 19.069429978616967
+      }
+    },
+    {
+      "pass": true,
+      "label": "Both surroundings cameras stay above final terrain",
+      "detail": {
+        "id": "gerencia-jardin-occidental",
+        "farY": 34,
+        "nearY": 9.5
+      }
+    },
+    {
+      "pass": true,
+      "label": "Both surroundings cameras stay above final terrain",
+      "detail": {
+        "id": "gerencia-limites",
+        "farY": 26.607998410764363,
+        "nearY": 10.607998410764363
+      }
+    },
+    {
+      "pass": true,
+      "label": "Both surroundings cameras stay above final terrain",
+      "detail": {
+        "id": "gerencia-memoria",
+        "farY": 73.84442027159272,
+        "nearY": 17.844420271592725
+      }
+    },
+    {
+      "pass": true,
+      "label": "Layer reading follows the appropriate conjunto or jardines legend"
+    },
+    {
+      "pass": true,
+      "label": "Textured materials restore after thematic reading"
+    },
+    {
+      "pass": true,
+      "label": "Disposal is complete and idempotent"
+    }
+  ],
+  "stats": {
+    "buildingParts": 143,
+    "parentParcels": 47,
+    "osmBuildingFootprints": 1,
+    "sourceCoreParts": 42,
+    "roadFragments": 24,
+    "gardenPathFragments": 20,
+    "pavingAreaM2": 43827.6,
+    "pavingVertices": 9363,
+    "pavingTriangles": 14164,
+    "trees": 105,
+    "shrubs": 11,
+    "lamps": 14,
+    "benches": 4,
+    "gates": 1,
+    "boundarySegments": 2,
+    "treeCrownsAdjusted": 19,
+    "treeTrunksSuppressed": 0,
+    "meshes": 18,
+    "triangles": 158988,
+    "fixedGerenciaDatumM": 6,
+    "skippedTinyTriangles": 1
+  },
+  "crossings": []
+}

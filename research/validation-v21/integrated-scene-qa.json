@@ -1,0 +1,4915 @@
+{
+  "pass": true,
+  "generatedAt": "2026-11-20T20:29:55.651Z",
+  "checks": 1105,
+  "buildMs": 36232.624868,
+  "meshes": 52,
+  "triangles": 113132,
+  "stats": {
+    "modelVersion": "v21",
+    "surfaceTombs": 12,
+    "coveredCurrentTombs": 9,
+    "representativeChambers": 3,
+    "geographicFocuses": 2,
+    "stops": 20,
+    "meshes": 41,
+    "triangles": 75261,
+    "currentEnclosureArea": 110.689695948,
+    "continuousExcavation": false,
+    "interpretiveGeometry": true,
+    "interiorSurvey": false,
+    "modernMenorahDoor": true,
+    "humanRemains": false,
+    "context": {
+      "sectorSeparationM": 193.55671412077228,
+      "sourceCemeteryAreaM2": 110.68969594822761,
+      "chamberEnvelopeAreaM2": 108,
+      "surfaceAreaM2": 556.5423947387083,
+      "vertices": 720,
+      "triangles": 37871,
+      "pathFragments": 6,
+      "retainedRoads": 4,
+      "retainedBuildings": 3,
+      "newBuildingParts": 0,
+      "retainingWallFragments": 2,
+      "trees": 22,
+      "cypresses": 7,
+      "smallLandscapeDetails": 180,
+      "uncoveredAreaM2": 0.0000639146756444134,
+      "excessAreaM2": 0.000056037794300605885,
+      "triangleOverlapM2": -1.2505552149377763e-12,
+      "sourceBuildingOverlapM2": 0.0000023499276247834775,
+      "previousPavingOverlapM2": 0,
+      "coreOverlapM2": 0,
+      "castleTheatreOverlapM2": 2.2273494786760135e-7,
+      "mappedWallOverlapM2": 0.000007787612127740008,
+      "sectorSelectionOverlapM2": 0,
+      "plantCoreOverlapCount": 0,
+      "plantPathOverlapCount": 0,
+      "sourceFootprintsUnmodified": true,
+      "pavementTriangles": 819,
+      "buildingParts": 0,
+      "parentParcels": 0,
+      "courtyards": 0,
+      "preservedCastle": true,
+      "preservedTheatre": true,
+      "preservedPreviousContexts": true,
+      "meshes": 11
+    }
+  },
+  "terrainJoin": {
+    "vertices": 449,
+    "maximumErrorM": 0.000008381060311535293
+  },
+  "errors": [],
+  "cameras": [
+    {
+      "place": "necropolis",
+      "id": "necro-conjunto",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 51,
+      "interiorView": false,
+      "position": [
+        -128.22618798098227,
+        143.231952119205,
+        267.2306664414505
+      ],
+      "target": [
+        -121.23956281930342,
+        113.289272854867,
+        285.19627400005334
+      ],
+      "clearance": 37.385907317191595,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-conjunto",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 51,
+      "interiorView": false,
+      "position": [
+        -125.93956281930342,
+        133.289272854867,
+        273.19627400005334
+      ],
+      "target": [
+        -121.23956281930342,
+        113.289272854867,
+        285.19627400005334
+      ],
+      "clearance": 24.759091061584982,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-conjunto",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 51,
+      "interiorView": false,
+      "position": [
+        -135.63106669277673,
+        174.967146598324,
+        248.18954975397912
+      ],
+      "target": [
+        -121.23956281930342,
+        113.289272854867,
+        285.19627400005334
+      ],
+      "clearance": 76.2043959698344,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-conjunto",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 51,
+      "interiorView": false,
+      "position": [
+        -125.93956281930342,
+        133.289272854867,
+        273.19627400005334
+      ],
+      "target": [
+        -121.23956281930342,
+        113.289272854867,
+        285.19627400005334
+      ],
+      "clearance": 24.759091061584982,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-conjunto",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 51,
+      "interiorView": false,
+      "position": [
+        -128.96573373488312,
+        146.4014339216372,
+        265.3289773599912
+      ],
+      "target": [
+        -121.23956281930342,
+        113.289272854867,
+        285.19627400005334
+      ],
+      "clearance": 41.674202773472544,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-conjunto",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 51,
+      "interiorView": false,
+      "position": [
+        -125.93956281930342,
+        133.289272854867,
+        273.19627400005334
+      ],
+      "target": [
+        -121.23956281930342,
+        113.289272854867,
+        285.19627400005334
+      ],
+      "clearance": 24.759091061584982,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-acceso",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 58,
+      "interiorView": false,
+      "position": [
+        -152.73957826832196,
+        122.41757119886833,
+        276.19626156013567
+      ],
+      "target": [
+        -138.73957826832196,
+        112.41757119886833,
+        286.19626156013567
+      ],
+      "clearance": 11.69125434359161,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-acceso",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 58,
+      "interiorView": false,
+      "position": [
+        -146.73957826832196,
+        119.41757119886833,
+        279.19626156013567
+      ],
+      "target": [
+        -138.73957826832196,
+        112.41757119886833,
+        286.19626156013567
+      ],
+      "clearance": 8.707491105338377,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-acceso",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 58,
+      "interiorView": false,
+      "position": [
+        -152.73957826832196,
+        122.41757119886833,
+        276.19626156013567
+      ],
+      "target": [
+        -138.73957826832196,
+        112.41757119886833,
+        286.19626156013567
+      ],
+      "clearance": 11.69125434359161,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-acceso",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 58,
+      "interiorView": false,
+      "position": [
+        -146.73957826832196,
+        119.41757119886833,
+        279.19626156013567
+      ],
+      "target": [
+        -138.73957826832196,
+        112.41757119886833,
+        286.19626156013567
+      ],
+      "clearance": 8.707491105338377,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-acceso",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 58,
+      "interiorView": false,
+      "position": [
+        -152.73957826832196,
+        122.41757119886833,
+        276.19626156013567
+      ],
+      "target": [
+        -138.73957826832196,
+        112.41757119886833,
+        286.19626156013567
+      ],
+      "clearance": 11.69125434359161,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-acceso",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 58,
+      "interiorView": false,
+      "position": [
+        -146.73957826832196,
+        119.41757119886833,
+        279.19626156013567
+      ],
+      "target": [
+        -138.73957826832196,
+        112.41757119886833,
+        286.19626156013567
+      ],
+      "clearance": 8.707491105338377,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-fosas",
+      "mode": "cut",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 54,
+      "interiorView": false,
+      "position": [
+        -126.48956281930342,
+        116.86062895159228,
+        284.8762740000533
+      ],
+      "target": [
+        -125.98956281930342,
+        112.46062895159227,
+        287.4762740000533
+      ],
+      "clearance": 8.950507320315126,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-fosas",
+      "mode": "cut",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 54,
+      "interiorView": false,
+      "position": [
+        -126.28956281930341,
+        115.36062895159228,
+        285.9762740000533
+      ],
+      "target": [
+        -125.98956281930342,
+        112.46062895159227,
+        287.4762740000533
+      ],
+      "clearance": 7.4505073203151255,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-fosas",
+      "mode": "cut",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 54,
+      "interiorView": false,
+      "position": [
+        -126.48956281930342,
+        116.86062895159228,
+        284.8762740000533
+      ],
+      "target": [
+        -125.98956281930342,
+        112.46062895159227,
+        287.4762740000533
+      ],
+      "clearance": 8.950507320315126,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-fosas",
+      "mode": "cut",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 54,
+      "interiorView": false,
+      "position": [
+        -126.28956281930341,
+        115.36062895159228,
+        285.9762740000533
+      ],
+      "target": [
+        -125.98956281930342,
+        112.46062895159227,
+        287.4762740000533
+      ],
+      "clearance": 7.4505073203151255,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-fosas",
+      "mode": "cut",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 54,
+      "interiorView": false,
+      "position": [
+        -126.48956281930342,
+        116.86062895159228,
+        284.8762740000533
+      ],
+      "target": [
+        -125.98956281930342,
+        112.46062895159227,
+        287.4762740000533
+      ],
+      "clearance": 8.950507320315126,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-fosas",
+      "mode": "cut",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 54,
+      "interiorView": false,
+      "position": [
+        -126.28956281930341,
+        115.36062895159228,
+        285.9762740000533
+      ],
+      "target": [
+        -125.98956281930342,
+        112.46062895159227,
+        287.4762740000533
+      ],
+      "clearance": 7.4505073203151255,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-losas",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 55,
+      "interiorView": false,
+      "position": [
+        -124.48956281930342,
+        116.6676044196659,
+        284.5962740000533
+      ],
+      "target": [
+        -122.28956281930341,
+        113.56760441966591,
+        287.3962740000533
+      ],
+      "clearance": 8.757482788388756,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-losas",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 55,
+      "interiorView": false,
+      "position": [
+        -123.68956281930342,
+        115.56760441966591,
+        285.5962740000533
+      ],
+      "target": [
+        -122.28956281930341,
+        113.56760441966591,
+        287.3962740000533
+      ],
+      "clearance": 7.657482788388762,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-losas",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 55,
+      "interiorView": false,
+      "position": [
+        -124.48956281930342,
+        116.6676044196659,
+        284.5962740000533
+      ],
+      "target": [
+        -122.28956281930341,
+        113.56760441966591,
+        287.3962740000533
+      ],
+      "clearance": 8.757482788388756,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-losas",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 55,
+      "interiorView": false,
+      "position": [
+        -123.68956281930342,
+        115.56760441966591,
+        285.5962740000533
+      ],
+      "target": [
+        -122.28956281930341,
+        113.56760441966591,
+        287.3962740000533
+      ],
+      "clearance": 7.657482788388762,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-losas",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 55,
+      "interiorView": false,
+      "position": [
+        -124.48956281930342,
+        116.6676044196659,
+        284.5962740000533
+      ],
+      "target": [
+        -122.28956281930341,
+        113.56760441966591,
+        287.3962740000533
+      ],
+      "clearance": 8.757482788388756,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-losas",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 55,
+      "interiorView": false,
+      "position": [
+        -123.68956281930342,
+        115.56760441966591,
+        285.5962740000533
+      ],
+      "target": [
+        -122.28956281930341,
+        113.56760441966591,
+        287.3962740000533
+      ],
+      "clearance": 7.657482788388762,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-mamposteria",
+      "mode": "cut",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 58,
+      "interiorView": true,
+      "position": [
+        -126.53956281930343,
+        114.27062895159227,
+        286.07627400005333
+      ],
+      "target": [
+        -125.63956281930342,
+        112.37062895159227,
+        287.4762740000533
+      ],
+      "clearance": 6.360507320315122,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Necrópolis · mamposteria · limestone",
+        "intended": true,
+        "point": [
+          -125.7644533336391,
+          112.63428670407869,
+          287.28199986664225
+        ],
+        "distanceToTarget": 0.35050747485587047
+      }
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-mamposteria",
+      "mode": "cut",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 58,
+      "interiorView": true,
+      "position": [
+        -126.23956281930342,
+        113.72062895159226,
+        286.4762740000533
+      ],
+      "target": [
+        -125.63956281930342,
+        112.37062895159227,
+        287.4762740000533
+      ],
+      "clearance": 5.810507320315111,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Necrópolis · mamposteria · limestone",
+        "intended": true,
+        "point": [
+          -125.76544257666805,
+          112.65385840566269,
+          287.2664744044456
+        ],
+        "distanceToTarget": 0.37427330559948346
+      }
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-mamposteria",
+      "mode": "cut",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 58,
+      "interiorView": true,
+      "position": [
+        -126.53956281930343,
+        114.27062895159227,
+        286.07627400005333
+      ],
+      "target": [
+        -125.63956281930342,
+        112.37062895159227,
+        287.4762740000533
+      ],
+      "clearance": 6.360507320315122,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Necrópolis · mamposteria · limestone",
+        "intended": true,
+        "point": [
+          -125.7644533336391,
+          112.63428670407869,
+          287.28199986664225
+        ],
+        "distanceToTarget": 0.35050747485587047
+      }
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-mamposteria",
+      "mode": "cut",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 58,
+      "interiorView": true,
+      "position": [
+        -126.23956281930342,
+        113.72062895159226,
+        286.4762740000533
+      ],
+      "target": [
+        -125.63956281930342,
+        112.37062895159227,
+        287.4762740000533
+      ],
+      "clearance": 5.810507320315111,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Necrópolis · mamposteria · limestone",
+        "intended": true,
+        "point": [
+          -125.76544257666805,
+          112.65385840566269,
+          287.2664744044456
+        ],
+        "distanceToTarget": 0.37427330559948346
+      }
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-mamposteria",
+      "mode": "cut",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 58,
+      "interiorView": true,
+      "position": [
+        -126.53956281930343,
+        114.27062895159227,
+        286.07627400005333
+      ],
+      "target": [
+        -125.63956281930342,
+        112.37062895159227,
+        287.4762740000533
+      ],
+      "clearance": 6.360507320315122,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Necrópolis · mamposteria · limestone",
+        "intended": true,
+        "point": [
+          -125.7644533336391,
+          112.63428670407869,
+          287.28199986664225
+        ],
+        "distanceToTarget": 0.35050747485587047
+      }
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-mamposteria",
+      "mode": "cut",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 58,
+      "interiorView": true,
+      "position": [
+        -126.23956281930342,
+        113.72062895159226,
+        286.4762740000533
+      ],
+      "target": [
+        -125.63956281930342,
+        112.37062895159227,
+        287.4762740000533
+      ],
+      "clearance": 5.810507320315111,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Necrópolis · mamposteria · limestone",
+        "intended": true,
+        "point": [
+          -125.76544257666805,
+          112.65385840566269,
+          287.2664744044456
+        ],
+        "distanceToTarget": 0.37427330559948346
+      }
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-orientacion",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 52,
+      "interiorView": false,
+      "position": [
+        -121.68956281930342,
+        124.4876044196659,
+        284.3962740000533
+      ],
+      "target": [
+        -122.28956281930341,
+        113.4876044196659,
+        287.3962740000533
+      ],
+      "clearance": 16.57748278838875,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-orientacion",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 52,
+      "interiorView": false,
+      "position": [
+        -121.8895628193034,
+        120.7876044196659,
+        285.3962740000533
+      ],
+      "target": [
+        -122.28956281930341,
+        113.4876044196659,
+        287.3962740000533
+      ],
+      "clearance": 12.877482788388747,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-orientacion",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 52,
+      "interiorView": false,
+      "position": [
+        -121.68956281930342,
+        124.4876044196659,
+        284.3962740000533
+      ],
+      "target": [
+        -122.28956281930341,
+        113.4876044196659,
+        287.3962740000533
+      ],
+      "clearance": 16.57748278838875,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-orientacion",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 52,
+      "interiorView": false,
+      "position": [
+        -121.8895628193034,
+        120.7876044196659,
+        285.3962740000533
+      ],
+      "target": [
+        -122.28956281930341,
+        113.4876044196659,
+        287.3962740000533
+      ],
+      "clearance": 12.877482788388747,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-orientacion",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 52,
+      "interiorView": false,
+      "position": [
+        -121.68956281930342,
+        124.4876044196659,
+        284.3962740000533
+      ],
+      "target": [
+        -122.28956281930341,
+        113.4876044196659,
+        287.3962740000533
+      ],
+      "clearance": 16.57748278838875,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-orientacion",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 52,
+      "interiorView": false,
+      "position": [
+        -121.8895628193034,
+        120.7876044196659,
+        285.3962740000533
+      ],
+      "target": [
+        -122.28956281930341,
+        113.4876044196659,
+        287.3962740000533
+      ],
+      "clearance": 12.877482788388747,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-niveles",
+      "mode": "cut",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 55,
+      "interiorView": false,
+      "position": [
+        -130.1895628193034,
+        115.05098293023296,
+        288.36627400005335
+      ],
+      "target": [
+        -129.8395628193034,
+        112.25098293023296,
+        289.31627400005334
+      ],
+      "clearance": 7.140861298955812,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-niveles",
+      "mode": "cut",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 55,
+      "interiorView": false,
+      "position": [
+        -130.07956281930342,
+        114.15098293023297,
+        288.67627400005335
+      ],
+      "target": [
+        -129.8395628193034,
+        112.25098293023296,
+        289.31627400005334
+      ],
+      "clearance": 6.240861298955821,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-niveles",
+      "mode": "cut",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 55,
+      "interiorView": false,
+      "position": [
+        -130.1895628193034,
+        115.05098293023296,
+        288.36627400005335
+      ],
+      "target": [
+        -129.8395628193034,
+        112.25098293023296,
+        289.31627400005334
+      ],
+      "clearance": 7.140861298955812,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-niveles",
+      "mode": "cut",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 55,
+      "interiorView": false,
+      "position": [
+        -130.07956281930342,
+        114.15098293023297,
+        288.67627400005335
+      ],
+      "target": [
+        -129.8395628193034,
+        112.25098293023296,
+        289.31627400005334
+      ],
+      "clearance": 6.240861298955821,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-niveles",
+      "mode": "cut",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 55,
+      "interiorView": false,
+      "position": [
+        -130.1895628193034,
+        115.05098293023296,
+        288.36627400005335
+      ],
+      "target": [
+        -129.8395628193034,
+        112.25098293023296,
+        289.31627400005334
+      ],
+      "clearance": 7.140861298955812,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-niveles",
+      "mode": "cut",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 55,
+      "interiorView": false,
+      "position": [
+        -130.07956281930342,
+        114.15098293023297,
+        288.67627400005335
+      ],
+      "target": [
+        -129.8395628193034,
+        112.25098293023296,
+        289.31627400005334
+      ],
+      "clearance": 6.240861298955821,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-limites",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 52,
+      "interiorView": false,
+      "position": [
+        -131.23956281930342,
+        131.139272854867,
+        265.19627400005334
+      ],
+      "target": [
+        -121.23956281930342,
+        113.13927285486699,
+        285.19627400005334
+      ],
+      "clearance": 26.655720914532182,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-limites",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 52,
+      "interiorView": false,
+      "position": [
+        -128.23956281930342,
+        125.13927285486699,
+        272.19627400005334
+      ],
+      "target": [
+        -121.23956281930342,
+        113.13927285486699,
+        285.19627400005334
+      ],
+      "clearance": 17.42018330124013,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-limites",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 52,
+      "interiorView": false,
+      "position": [
+        -131.23956281930342,
+        131.139272854867,
+        265.19627400005334
+      ],
+      "target": [
+        -121.23956281930342,
+        113.13927285486699,
+        285.19627400005334
+      ],
+      "clearance": 26.655720914532182,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-limites",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 52,
+      "interiorView": false,
+      "position": [
+        -128.23956281930342,
+        125.13927285486699,
+        272.19627400005334
+      ],
+      "target": [
+        -121.23956281930342,
+        113.13927285486699,
+        285.19627400005334
+      ],
+      "clearance": 17.42018330124013,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-limites",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 52,
+      "interiorView": false,
+      "position": [
+        -131.23956281930342,
+        131.139272854867,
+        265.19627400005334
+      ],
+      "target": [
+        -121.23956281930342,
+        113.13927285486699,
+        285.19627400005334
+      ],
+      "clearance": 26.655720914532182,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-limites",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 52,
+      "interiorView": false,
+      "position": [
+        -128.23956281930342,
+        125.13927285486699,
+        272.19627400005334
+      ],
+      "target": [
+        -121.23956281930342,
+        113.13927285486699,
+        285.19627400005334
+      ],
+      "clearance": 17.42018330124013,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-historica",
+      "mode": "historical",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 52,
+      "interiorView": false,
+      "position": [
+        -129.60951410561708,
+        138.34912671380798,
+        262.17890796269074
+      ],
+      "target": [
+        -121.23956281930342,
+        113.23927285486698,
+        285.19627400005334
+      ],
+      "clearance": 34.19937038117865,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-historica",
+      "mode": "historical",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 52,
+      "interiorView": false,
+      "position": [
+        -126.53956281930341,
+        129.23927285486698,
+        270.19627400005334
+      ],
+      "target": [
+        -121.23956281930342,
+        113.23927285486698,
+        285.19627400005334
+      ],
+      "clearance": 21.870441040704094,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-historica",
+      "mode": "historical",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 52,
+      "interiorView": false,
+      "position": [
+        -138.38010258917663,
+        164.66089216448665,
+        238.05978963290198
+      ],
+      "target": [
+        -121.23956281930342,
+        113.23927285486698,
+        285.19627400005334
+      ],
+      "clearance": 69.4415279623267,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-historica",
+      "mode": "historical",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 52,
+      "interiorView": false,
+      "position": [
+        -126.53956281930341,
+        129.23927285486698,
+        270.19627400005334
+      ],
+      "target": [
+        -121.23956281930342,
+        113.23927285486698,
+        285.19627400005334
+      ],
+      "clearance": 21.870441040704094,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-historica",
+      "mode": "historical",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 52,
+      "interiorView": false,
+      "position": [
+        -129.91506748558837,
+        139.26578685372186,
+        261.33863616776966
+      ],
+      "target": [
+        -121.23956281930342,
+        113.23927285486698,
+        285.19627400005334
+      ],
+      "clearance": 35.539286246498136,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-historica",
+      "mode": "historical",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 52,
+      "interiorView": false,
+      "position": [
+        -126.53956281930341,
+        129.23927285486698,
+        270.19627400005334
+      ],
+      "target": [
+        -121.23956281930342,
+        113.23927285486698,
+        285.19627400005334
+      ],
+      "clearance": 21.870441040704094,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-ladera",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 55,
+      "interiorView": false,
+      "position": [
+        -149.23956281930342,
+        149.05478878888974,
+        247.19627400005334
+      ],
+      "target": [
+        -121.23956281930342,
+        114.05478878888974,
+        285.19627400005334
+      ],
+      "clearance": 45.93210342647835,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-ladera",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 55,
+      "interiorView": false,
+      "position": [
+        -141.23956281930342,
+        141.05478878888974,
+        259.19627400005334
+      ],
+      "target": [
+        -121.23956281930342,
+        114.05478878888974,
+        285.19627400005334
+      ],
+      "clearance": 36.71353380891627,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-ladera",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 55,
+      "interiorView": false,
+      "position": [
+        -149.23956281930342,
+        149.05478878888974,
+        247.19627400005334
+      ],
+      "target": [
+        -121.23956281930342,
+        114.05478878888974,
+        285.19627400005334
+      ],
+      "clearance": 45.93210342647835,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-ladera",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 55,
+      "interiorView": false,
+      "position": [
+        -141.23956281930342,
+        141.05478878888974,
+        259.19627400005334
+      ],
+      "target": [
+        -121.23956281930342,
+        114.05478878888974,
+        285.19627400005334
+      ],
+      "clearance": 36.71353380891627,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-ladera",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 55,
+      "interiorView": false,
+      "position": [
+        -149.23956281930342,
+        149.05478878888974,
+        247.19627400005334
+      ],
+      "target": [
+        -121.23956281930342,
+        114.05478878888974,
+        285.19627400005334
+      ],
+      "clearance": 45.93210342647835,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-ladera",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "cementerio",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 55,
+      "interiorView": false,
+      "position": [
+        -141.23956281930342,
+        141.05478878888974,
+        259.19627400005334
+      ],
+      "target": [
+        -121.23956281930342,
+        114.05478878888974,
+        285.19627400005334
+      ],
+      "clearance": 36.71353380891627,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-hipogeos",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 53,
+      "interiorView": false,
+      "position": [
+        56.85623831112434,
+        112.67773989437258,
+        241.93676830186266
+      ],
+      "target": [
+        74.21678798755593,
+        97.63193017479854,
+        258.13994799986546
+      ],
+      "clearance": 23.034356393640294,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Necrópolis · roca · rock",
+        "intended": true,
+        "point": [
+          72.81761263501178,
+          98.84454881367014,
+          256.8340510041576
+        ],
+        "distanceToTarget": 2.2657234151380297
+      }
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-hipogeos",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 53,
+      "interiorView": false,
+      "position": [
+        64.21678798755593,
+        106.33193017479854,
+        248.63994799986546
+      ],
+      "target": [
+        74.21678798755593,
+        97.63193017479854,
+        258.13994799986546
+      ],
+      "clearance": 12.930739403771284,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Necrópolis · roca · rock",
+        "intended": true,
+        "point": [
+          72.82301190706463,
+          98.84451536482598,
+          256.8158607233987
+        ],
+        "distanceToTarget": 2.2729236065747362
+      }
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-hipogeos",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 53,
+      "interiorView": false,
+      "position": [
+        31.092451733481198,
+        135.00635492832998,
+        217.89056749606237
+      ],
+      "target": [
+        74.21678798755593,
+        97.63193017479854,
+        258.13994799986546
+      ],
+      "clearance": 57.60713211441737,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Necrópolis · roca · rock",
+        "intended": true,
+        "point": [
+          72.81761263501178,
+          98.84454881367014,
+          256.8340510041576
+        ],
+        "distanceToTarget": 2.2657234151380297
+      }
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-hipogeos",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 53,
+      "interiorView": false,
+      "position": [
+        64.21678798755593,
+        106.33193017479854,
+        248.63994799986546
+      ],
+      "target": [
+        74.21678798755593,
+        97.63193017479854,
+        258.13994799986546
+      ],
+      "clearance": 12.930739403771284,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Necrópolis · roca · rock",
+        "intended": true,
+        "point": [
+          72.82301190706463,
+          98.84451536482598,
+          256.8158607233987
+        ],
+        "distanceToTarget": 2.2729236065747362
+      }
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-hipogeos",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 53,
+      "interiorView": false,
+      "position": [
+        52.17760450270221,
+        116.73255586167177,
+        237.570043414002
+      ],
+      "target": [
+        74.21678798755593,
+        97.63193017479854,
+        258.13994799986546
+      ],
+      "clearance": 29.415279232529798,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Necrópolis · roca · rock",
+        "intended": true,
+        "point": [
+          72.81761263501178,
+          98.84454881367014,
+          256.8340510041576
+        ],
+        "distanceToTarget": 2.2657234151380297
+      }
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-hipogeos",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 53,
+      "interiorView": false,
+      "position": [
+        64.21678798755593,
+        106.33193017479854,
+        248.63994799986546
+      ],
+      "target": [
+        74.21678798755593,
+        97.63193017479854,
+        258.13994799986546
+      ],
+      "clearance": 12.930739403771284,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Necrópolis · roca · rock",
+        "intended": true,
+        "point": [
+          72.82301190706463,
+          98.84451536482598,
+          256.8158607233987
+        ],
+        "distanceToTarget": 2.2729236065747362
+      }
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-entradas",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 57,
+      "interiorView": false,
+      "position": [
+        64.21678798755593,
+        102.38193017479854,
+        253.53994799986543
+      ],
+      "target": [
+        72.21678798755593,
+        97.58193017479854,
+        258.03994799986543
+      ],
+      "clearance": 8.488690052805225,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-entradas",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 57,
+      "interiorView": false,
+      "position": [
+        66.81678798755593,
+        100.78193017479855,
+        255.03994799986543
+      ],
+      "target": [
+        72.21678798755593,
+        97.58193017479854,
+        258.03994799986543
+      ],
+      "clearance": 7.341345608945531,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-entradas",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 57,
+      "interiorView": false,
+      "position": [
+        64.21678798755593,
+        102.38193017479854,
+        253.53994799986543
+      ],
+      "target": [
+        72.21678798755593,
+        97.58193017479854,
+        258.03994799986543
+      ],
+      "clearance": 8.488690052805225,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-entradas",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 57,
+      "interiorView": false,
+      "position": [
+        66.81678798755593,
+        100.78193017479855,
+        255.03994799986543
+      ],
+      "target": [
+        72.21678798755593,
+        97.58193017479854,
+        258.03994799986543
+      ],
+      "clearance": 7.341345608945531,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-entradas",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 57,
+      "interiorView": false,
+      "position": [
+        64.21678798755593,
+        102.38193017479854,
+        253.53994799986543
+      ],
+      "target": [
+        72.21678798755593,
+        97.58193017479854,
+        258.03994799986543
+      ],
+      "clearance": 8.488690052805225,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-entradas",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 57,
+      "interiorView": false,
+      "position": [
+        66.81678798755593,
+        100.78193017479855,
+        255.03994799986543
+      ],
+      "target": [
+        72.21678798755593,
+        97.58193017479854,
+        258.03994799986543
+      ],
+      "clearance": 7.341345608945531,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-umbral",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 62,
+      "interiorView": true,
+      "position": [
+        70.16678798755594,
+        98.51193017479855,
+        257.58994799986544
+      ],
+      "target": [
+        72.66678798755594,
+        97.11193017479854,
+        258.03994799986543
+      ],
+      "clearance": 5.071345608945535,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-umbral",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 62,
+      "interiorView": true,
+      "position": [
+        70.96678798755593,
+        98.21193017479854,
+        257.7399479998654
+      ],
+      "target": [
+        72.66678798755594,
+        97.11193017479854,
+        258.03994799986543
+      ],
+      "clearance": 4.7713456089455235,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-umbral",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 62,
+      "interiorView": true,
+      "position": [
+        70.16678798755594,
+        98.51193017479855,
+        257.58994799986544
+      ],
+      "target": [
+        72.66678798755594,
+        97.11193017479854,
+        258.03994799986543
+      ],
+      "clearance": 5.071345608945535,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-umbral",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 62,
+      "interiorView": true,
+      "position": [
+        70.96678798755593,
+        98.21193017479854,
+        257.7399479998654
+      ],
+      "target": [
+        72.66678798755594,
+        97.11193017479854,
+        258.03994799986543
+      ],
+      "clearance": 4.7713456089455235,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-umbral",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 62,
+      "interiorView": true,
+      "position": [
+        70.16678798755594,
+        98.51193017479855,
+        257.58994799986544
+      ],
+      "target": [
+        72.66678798755594,
+        97.11193017479854,
+        258.03994799986543
+      ],
+      "clearance": 5.071345608945535,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-umbral",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 62,
+      "interiorView": true,
+      "position": [
+        70.96678798755593,
+        98.21193017479854,
+        257.7399479998654
+      ],
+      "target": [
+        72.66678798755594,
+        97.11193017479854,
+        258.03994799986543
+      ],
+      "clearance": 4.7713456089455235,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-camara",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 67,
+      "interiorView": true,
+      "position": [
+        74.51678798755594,
+        97.90193017479854,
+        257.9199479998654
+      ],
+      "target": [
+        77.11678798755594,
+        97.68193017479854,
+        258.03994799986543
+      ],
+      "clearance": 4.461345608945521,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-camara",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 67,
+      "interiorView": true,
+      "position": [
+        75.51678798755594,
+        97.82193017479854,
+        257.95994799986545
+      ],
+      "target": [
+        77.11678798755594,
+        97.68193017479854,
+        258.03994799986543
+      ],
+      "clearance": 4.381345608945523,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-camara",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 67,
+      "interiorView": true,
+      "position": [
+        74.51678798755594,
+        97.90193017479854,
+        257.9199479998654
+      ],
+      "target": [
+        77.11678798755594,
+        97.68193017479854,
+        258.03994799986543
+      ],
+      "clearance": 4.461345608945521,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-camara",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 67,
+      "interiorView": true,
+      "position": [
+        75.51678798755594,
+        97.82193017479854,
+        257.95994799986545
+      ],
+      "target": [
+        77.11678798755594,
+        97.68193017479854,
+        258.03994799986543
+      ],
+      "clearance": 4.381345608945523,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-camara",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 67,
+      "interiorView": true,
+      "position": [
+        74.51678798755594,
+        97.90193017479854,
+        257.9199479998654
+      ],
+      "target": [
+        77.11678798755594,
+        97.68193017479854,
+        258.03994799986543
+      ],
+      "clearance": 4.461345608945521,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-camara",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 67,
+      "interiorView": true,
+      "position": [
+        75.51678798755594,
+        97.82193017479854,
+        257.95994799986545
+      ],
+      "target": [
+        77.11678798755594,
+        97.68193017479854,
+        258.03994799986543
+      ],
+      "clearance": 4.381345608945523,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-hornacina",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 59,
+      "interiorView": true,
+      "position": [
+        75.94178798755593,
+        97.75193017479853,
+        258.03994799986543
+      ],
+      "target": [
+        78.14178798755593,
+        97.45193017479853,
+        258.15994799986544
+      ],
+      "clearance": 4.3113456089455156,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-hornacina",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 59,
+      "interiorView": true,
+      "position": [
+        76.69178798755593,
+        97.67193017479853,
+        258.08994799986544
+      ],
+      "target": [
+        78.14178798755593,
+        97.45193017479853,
+        258.15994799986544
+      ],
+      "clearance": 4.231345608945517,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-hornacina",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 59,
+      "interiorView": true,
+      "position": [
+        75.94178798755593,
+        97.75193017479853,
+        258.03994799986543
+      ],
+      "target": [
+        78.14178798755593,
+        97.45193017479853,
+        258.15994799986544
+      ],
+      "clearance": 4.3113456089455156,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-hornacina",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 59,
+      "interiorView": true,
+      "position": [
+        76.69178798755593,
+        97.67193017479853,
+        258.08994799986544
+      ],
+      "target": [
+        78.14178798755593,
+        97.45193017479853,
+        258.15994799986544
+      ],
+      "clearance": 4.231345608945517,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-hornacina",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 59,
+      "interiorView": true,
+      "position": [
+        75.94178798755593,
+        97.75193017479853,
+        258.03994799986543
+      ],
+      "target": [
+        78.14178798755593,
+        97.45193017479853,
+        258.15994799986544
+      ],
+      "clearance": 4.3113456089455156,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-hornacina",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 59,
+      "interiorView": true,
+      "position": [
+        76.69178798755593,
+        97.67193017479853,
+        258.08994799986544
+      ],
+      "target": [
+        78.14178798755593,
+        97.45193017479853,
+        258.15994799986544
+      ],
+      "clearance": 4.231345608945517,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-roca",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 57,
+      "interiorView": true,
+      "position": [
+        68.91678798755594,
+        100.08193017479854,
+        258.28994799986543
+      ],
+      "target": [
+        72.21678798755593,
+        97.88193017479854,
+        259.78994799986543
+      ],
+      "clearance": 6.641345608945528,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-roca",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 57,
+      "interiorView": true,
+      "position": [
+        70.01678798755593,
+        99.38193017479854,
+        258.78994799986543
+      ],
+      "target": [
+        72.21678798755593,
+        97.88193017479854,
+        259.78994799986543
+      ],
+      "clearance": 5.941345608945525,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-roca",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 57,
+      "interiorView": true,
+      "position": [
+        68.91678798755594,
+        100.08193017479854,
+        258.28994799986543
+      ],
+      "target": [
+        72.21678798755593,
+        97.88193017479854,
+        259.78994799986543
+      ],
+      "clearance": 6.641345608945528,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-roca",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 57,
+      "interiorView": true,
+      "position": [
+        70.01678798755593,
+        99.38193017479854,
+        258.78994799986543
+      ],
+      "target": [
+        72.21678798755593,
+        97.88193017479854,
+        259.78994799986543
+      ],
+      "clearance": 5.941345608945525,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-roca",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 57,
+      "interiorView": true,
+      "position": [
+        68.91678798755594,
+        100.08193017479854,
+        258.28994799986543
+      ],
+      "target": [
+        72.21678798755593,
+        97.88193017479854,
+        259.78994799986543
+      ],
+      "clearance": 6.641345608945528,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-roca",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 57,
+      "interiorView": true,
+      "position": [
+        70.01678798755593,
+        99.38193017479854,
+        258.78994799986543
+      ],
+      "target": [
+        72.21678798755593,
+        97.88193017479854,
+        259.78994799986543
+      ],
+      "clearance": 5.941345608945525,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-techo",
+      "mode": "cut",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 55,
+      "interiorView": false,
+      "position": [
+        71.81678798755594,
+        107.18193017479854,
+        252.63994799986543
+      ],
+      "target": [
+        75.31678798755594,
+        97.18193017479854,
+        258.03994799986543
+      ],
+      "clearance": 13.741345608945522,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-techo",
+      "mode": "cut",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 55,
+      "interiorView": false,
+      "position": [
+        72.91678798755594,
+        103.88193017479854,
+        254.33994799986544
+      ],
+      "target": [
+        75.31678798755594,
+        97.18193017479854,
+        258.03994799986543
+      ],
+      "clearance": 10.441345608945525,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-techo",
+      "mode": "cut",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 55,
+      "interiorView": false,
+      "position": [
+        71.81678798755594,
+        107.18193017479854,
+        252.63994799986543
+      ],
+      "target": [
+        75.31678798755594,
+        97.18193017479854,
+        258.03994799986543
+      ],
+      "clearance": 13.741345608945522,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-techo",
+      "mode": "cut",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 55,
+      "interiorView": false,
+      "position": [
+        72.91678798755594,
+        103.88193017479854,
+        254.33994799986544
+      ],
+      "target": [
+        75.31678798755594,
+        97.18193017479854,
+        258.03994799986543
+      ],
+      "clearance": 10.441345608945525,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-techo",
+      "mode": "cut",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 55,
+      "interiorView": false,
+      "position": [
+        71.81678798755594,
+        107.18193017479854,
+        252.63994799986543
+      ],
+      "target": [
+        75.31678798755594,
+        97.18193017479854,
+        258.03994799986543
+      ],
+      "clearance": 13.741345608945522,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-techo",
+      "mode": "cut",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 55,
+      "interiorView": false,
+      "position": [
+        72.91678798755594,
+        103.88193017479854,
+        254.33994799986544
+      ],
+      "target": [
+        75.31678798755594,
+        97.18193017479854,
+        258.03994799986543
+      ],
+      "clearance": 10.441345608945525,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-transformaciones",
+      "mode": "historical",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 53,
+      "interiorView": false,
+      "position": [
+        57.77134343312041,
+        113.87737472923406,
+        240.73411454868454
+      ],
+      "target": [
+        74.01678798755593,
+        97.63193017479854,
+        258.13994799986546
+      ],
+      "clearance": 24.128651460719453,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Necrópolis · roca · rock",
+        "intended": true,
+        "point": [
+          72.80311096959046,
+          98.845607192764,
+          256.83957976633104
+        ],
+        "distanceToTarget": 2.15336512246774
+      }
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-transformaciones",
+      "mode": "historical",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 53,
+      "interiorView": false,
+      "position": [
+        64.51678798755593,
+        107.13193017479854,
+        248.13994799986546
+      ],
+      "target": [
+        74.01678798755593,
+        97.63193017479854,
+        258.13994799986546
+      ],
+      "clearance": 13.661844140099419,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Necrópolis · roca · rock",
+        "intended": true,
+        "point": [
+          72.80367206616747,
+          98.845046096187,
+          256.86298387208814
+        ],
+        "distanceToTarget": 2.1386766611815013
+      }
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-transformaciones",
+      "mode": "historical",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 53,
+      "interiorView": false,
+      "position": [
+        33.91083614332129,
+        137.73788201903318,
+        215.16928530961405
+      ],
+      "target": [
+        74.01678798755593,
+        97.63193017479854,
+        258.13994799986546
+      ],
+      "clearance": 60.181936814383434,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Necrópolis · roca · rock",
+        "intended": true,
+        "point": [
+          72.80311096959045,
+          98.84560719276402,
+          256.839579766331
+        ],
+        "distanceToTarget": 2.15336512246779
+      }
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-transformaciones",
+      "mode": "historical",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 53,
+      "interiorView": false,
+      "position": [
+        64.51678798755593,
+        107.13193017479854,
+        248.13994799986546
+      ],
+      "target": [
+        74.01678798755593,
+        97.63193017479854,
+        258.13994799986546
+      ],
+      "clearance": 13.661844140099419,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Necrópolis · roca · rock",
+        "intended": true,
+        "point": [
+          72.80367206616747,
+          98.845046096187,
+          256.86298387208814
+        ],
+        "distanceToTarget": 2.1386766611815013
+      }
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-transformaciones",
+      "mode": "historical",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 53,
+      "interiorView": false,
+      "position": [
+        53.438339984433654,
+        118.21037817792082,
+        236.091610853663
+      ],
+      "target": [
+        74.01678798755593,
+        97.63193017479854,
+        258.13994799986546
+      ],
+      "clearance": 31.127184531010215,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Necrópolis · roca · rock",
+        "intended": true,
+        "point": [
+          72.80311096959045,
+          98.84560719276402,
+          256.83957976633104
+        ],
+        "distanceToTarget": 2.153365122467756
+      }
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-transformaciones",
+      "mode": "historical",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 53,
+      "interiorView": false,
+      "position": [
+        64.51678798755593,
+        107.13193017479854,
+        248.13994799986546
+      ],
+      "target": [
+        74.01678798755593,
+        97.63193017479854,
+        258.13994799986546
+      ],
+      "clearance": 13.661844140099419,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Necrópolis · roca · rock",
+        "intended": true,
+        "point": [
+          72.80367206616747,
+          98.845046096187,
+          256.86298387208814
+        ],
+        "distanceToTarget": 2.1386766611815013
+      }
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-contexto",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 58,
+      "interiorView": false,
+      "position": [
+        65.41678798755594,
+        122.29028518659001,
+        232.13994799986546
+      ],
+      "target": [
+        70.41678798755594,
+        97.29028518659001,
+        258.13994799986546
+      ],
+      "clearance": 31.849446191553398,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-contexto",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 58,
+      "interiorView": false,
+      "position": [
+        65.41678798755594,
+        112.29028518659001,
+        247.13994799986546
+      ],
+      "target": [
+        70.41678798755594,
+        97.29028518659001,
+        258.13994799986546
+      ],
+      "clearance": 18.552712780753637,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-contexto",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 58,
+      "interiorView": false,
+      "position": [
+        65.41678798755594,
+        122.29028518659001,
+        232.13994799986546
+      ],
+      "target": [
+        70.41678798755594,
+        97.29028518659001,
+        258.13994799986546
+      ],
+      "clearance": 31.849446191553398,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-contexto",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 58,
+      "interiorView": false,
+      "position": [
+        65.41678798755594,
+        112.29028518659001,
+        247.13994799986546
+      ],
+      "target": [
+        70.41678798755594,
+        97.29028518659001,
+        258.13994799986546
+      ],
+      "clearance": 18.552712780753637,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-contexto",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 58,
+      "interiorView": false,
+      "position": [
+        65.41678798755594,
+        122.29028518659001,
+        232.13994799986546
+      ],
+      "target": [
+        70.41678798755594,
+        97.29028518659001,
+        258.13994799986546
+      ],
+      "clearance": 31.849446191553398,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-contexto",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 58,
+      "interiorView": false,
+      "position": [
+        65.41678798755594,
+        112.29028518659001,
+        247.13994799986546
+      ],
+      "target": [
+        70.41678798755594,
+        97.29028518659001,
+        258.13994799986546
+      ],
+      "clearance": 18.552712780753637,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-memoria",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 56,
+      "interiorView": true,
+      "position": [
+        68.57178798755594,
+        98.48351417479854,
+        252.98994799986545
+      ],
+      "target": [
+        72.17178798755593,
+        97.33351417479854,
+        254.78994799986546
+      ],
+      "clearance": 5.042929608945528,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-memoria",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 56,
+      "interiorView": true,
+      "position": [
+        69.77178798755592,
+        98.11351417479854,
+        253.58994799986547
+      ],
+      "target": [
+        72.17178798755593,
+        97.33351417479854,
+        254.78994799986546
+      ],
+      "clearance": 4.672929608945523,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-memoria",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 56,
+      "interiorView": true,
+      "position": [
+        68.57178798755594,
+        98.48351417479854,
+        252.98994799986545
+      ],
+      "target": [
+        72.17178798755593,
+        97.33351417479854,
+        254.78994799986546
+      ],
+      "clearance": 5.042929608945528,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-memoria",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 56,
+      "interiorView": true,
+      "position": [
+        69.77178798755592,
+        98.11351417479854,
+        253.58994799986547
+      ],
+      "target": [
+        72.17178798755593,
+        97.33351417479854,
+        254.78994799986546
+      ],
+      "clearance": 4.672929608945523,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-memoria",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 56,
+      "interiorView": true,
+      "position": [
+        68.57178798755594,
+        98.48351417479854,
+        252.98994799986545
+      ],
+      "target": [
+        72.17178798755593,
+        97.33351417479854,
+        254.78994799986546
+      ],
+      "clearance": 5.042929608945528,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-memoria",
+      "mode": "current",
+      "roofOpen": false,
+      "archFocus": "hipogeos",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 56,
+      "interiorView": true,
+      "position": [
+        69.77178798755592,
+        98.11351417479854,
+        253.58994799986547
+      ],
+      "target": [
+        72.17178798755593,
+        97.33351417479854,
+        254.78994799986546
+      ],
+      "clearance": 4.672929608945523,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-conjunto",
+      "mode": "cut",
+      "roofOpen": true,
+      "archFocus": "cementerio",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 51,
+      "interiorView": false,
+      "position": [
+        -128.22618798098227,
+        143.231952119205,
+        267.2306664414505
+      ],
+      "target": [
+        -121.23956281930342,
+        113.289272854867,
+        285.19627400005334
+      ],
+      "clearance": 37.385907317191595,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-conjunto",
+      "mode": "cut",
+      "roofOpen": true,
+      "archFocus": "cementerio",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 51,
+      "interiorView": false,
+      "position": [
+        -125.93956281930342,
+        133.289272854867,
+        273.19627400005334
+      ],
+      "target": [
+        -121.23956281930342,
+        113.289272854867,
+        285.19627400005334
+      ],
+      "clearance": 24.759091061584982,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-conjunto",
+      "mode": "cut",
+      "roofOpen": true,
+      "archFocus": "cementerio",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 51,
+      "interiorView": false,
+      "position": [
+        -135.63106669277673,
+        174.967146598324,
+        248.18954975397912
+      ],
+      "target": [
+        -121.23956281930342,
+        113.289272854867,
+        285.19627400005334
+      ],
+      "clearance": 76.2043959698344,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-conjunto",
+      "mode": "cut",
+      "roofOpen": true,
+      "archFocus": "cementerio",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 51,
+      "interiorView": false,
+      "position": [
+        -125.93956281930342,
+        133.289272854867,
+        273.19627400005334
+      ],
+      "target": [
+        -121.23956281930342,
+        113.289272854867,
+        285.19627400005334
+      ],
+      "clearance": 24.759091061584982,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-conjunto",
+      "mode": "cut",
+      "roofOpen": true,
+      "archFocus": "cementerio",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 51,
+      "interiorView": false,
+      "position": [
+        -128.96573373488312,
+        146.4014339216372,
+        265.3289773599912
+      ],
+      "target": [
+        -121.23956281930342,
+        113.289272854867,
+        285.19627400005334
+      ],
+      "clearance": 41.674202773472544,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-conjunto",
+      "mode": "cut",
+      "roofOpen": true,
+      "archFocus": "cementerio",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 51,
+      "interiorView": false,
+      "position": [
+        -125.93956281930342,
+        133.289272854867,
+        273.19627400005334
+      ],
+      "target": [
+        -121.23956281930342,
+        113.289272854867,
+        285.19627400005334
+      ],
+      "clearance": 24.759091061584982,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-hipogeos",
+      "mode": "cut",
+      "roofOpen": true,
+      "archFocus": "hipogeos",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 53,
+      "interiorView": false,
+      "position": [
+        68.36076423243051,
+        126.46981353091151,
+        245.0279004896146
+      ],
+      "target": [
+        74.91678798755594,
+        97.33193017479854,
+        258.13994799986546
+      ],
+      "clearance": 31.842321768912257,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-hipogeos",
+      "mode": "cut",
+      "roofOpen": true,
+      "archFocus": "hipogeos",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 53,
+      "interiorView": false,
+      "position": [
+        71.91678798755594,
+        110.83193017479854,
+        251.93994799986547
+      ],
+      "target": [
+        74.91678798755594,
+        97.33193017479854,
+        258.13994799986546
+      ],
+      "clearance": 14.152970008873979,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-hipogeos",
+      "mode": "cut",
+      "roofOpen": true,
+      "archFocus": "hipogeos",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 53,
+      "interiorView": false,
+      "position": [
+        60.56621333762705,
+        161.11226195226027,
+        229.43879870000768
+      ],
+      "target": [
+        74.91678798755594,
+        97.33193017479854,
+        258.13994799986546
+      ],
+      "clearance": 72.66078691674427,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-hipogeos",
+      "mode": "cut",
+      "roofOpen": true,
+      "archFocus": "hipogeos",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 53,
+      "interiorView": false,
+      "position": [
+        71.91678798755594,
+        110.83193017479854,
+        251.93994799986547
+      ],
+      "target": [
+        74.91678798755594,
+        97.33193017479854,
+        258.13994799986546
+      ],
+      "clearance": 14.152970008873979,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-hipogeos",
+      "mode": "cut",
+      "roofOpen": true,
+      "archFocus": "hipogeos",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 53,
+      "interiorView": false,
+      "position": [
+        66.94529491746809,
+        132.76078826407783,
+        242.19696185968976
+      ],
+      "target": [
+        74.91678798755594,
+        97.33193017479854,
+        258.13994799986546
+      ],
+      "clearance": 39.23794517766818,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-hipogeos",
+      "mode": "cut",
+      "roofOpen": true,
+      "archFocus": "hipogeos",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 53,
+      "interiorView": false,
+      "position": [
+        71.91678798755594,
+        110.83193017479854,
+        251.93994799986547
+      ],
+      "target": [
+        74.91678798755594,
+        97.33193017479854,
+        258.13994799986546
+      ],
+      "clearance": 14.152970008873979,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-historica",
+      "mode": "historical",
+      "roofOpen": true,
+      "archFocus": "cementerio",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 52,
+      "interiorView": false,
+      "position": [
+        -129.60951410561708,
+        138.34912671380798,
+        262.17890796269074
+      ],
+      "target": [
+        -121.23956281930342,
+        113.23927285486698,
+        285.19627400005334
+      ],
+      "clearance": 34.19937038117865,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-historica",
+      "mode": "historical",
+      "roofOpen": true,
+      "archFocus": "cementerio",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 52,
+      "interiorView": false,
+      "position": [
+        -126.53956281930341,
+        129.23927285486698,
+        270.19627400005334
+      ],
+      "target": [
+        -121.23956281930342,
+        113.23927285486698,
+        285.19627400005334
+      ],
+      "clearance": 21.870441040704094,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-historica",
+      "mode": "historical",
+      "roofOpen": true,
+      "archFocus": "cementerio",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 52,
+      "interiorView": false,
+      "position": [
+        -138.38010258917663,
+        164.66089216448665,
+        238.05978963290198
+      ],
+      "target": [
+        -121.23956281930342,
+        113.23927285486698,
+        285.19627400005334
+      ],
+      "clearance": 69.4415279623267,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-historica",
+      "mode": "historical",
+      "roofOpen": true,
+      "archFocus": "cementerio",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 52,
+      "interiorView": false,
+      "position": [
+        -126.53956281930341,
+        129.23927285486698,
+        270.19627400005334
+      ],
+      "target": [
+        -121.23956281930342,
+        113.23927285486698,
+        285.19627400005334
+      ],
+      "clearance": 21.870441040704094,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-historica",
+      "mode": "historical",
+      "roofOpen": true,
+      "archFocus": "cementerio",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 52,
+      "interiorView": false,
+      "position": [
+        -129.91506748558837,
+        139.26578685372186,
+        261.33863616776966
+      ],
+      "target": [
+        -121.23956281930342,
+        113.23927285486698,
+        285.19627400005334
+      ],
+      "clearance": 35.539286246498136,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-historica",
+      "mode": "historical",
+      "roofOpen": true,
+      "archFocus": "cementerio",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 52,
+      "interiorView": false,
+      "position": [
+        -126.53956281930341,
+        129.23927285486698,
+        270.19627400005334
+      ],
+      "target": [
+        -121.23956281930342,
+        113.23927285486698,
+        285.19627400005334
+      ],
+      "clearance": 21.870441040704094,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-transformaciones",
+      "mode": "historical",
+      "roofOpen": true,
+      "archFocus": "hipogeos",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 53,
+      "interiorView": false,
+      "position": [
+        57.77134343312041,
+        113.87737472923406,
+        240.73411454868454
+      ],
+      "target": [
+        74.01678798755593,
+        97.63193017479854,
+        258.13994799986546
+      ],
+      "clearance": 24.128651460719453,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Necrópolis · roca · rock",
+        "intended": true,
+        "point": [
+          72.80311096959046,
+          98.845607192764,
+          256.83957976633104
+        ],
+        "distanceToTarget": 2.15336512246774
+      }
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-transformaciones",
+      "mode": "historical",
+      "roofOpen": true,
+      "archFocus": "hipogeos",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 53,
+      "interiorView": false,
+      "position": [
+        64.51678798755593,
+        107.13193017479854,
+        248.13994799986546
+      ],
+      "target": [
+        74.01678798755593,
+        97.63193017479854,
+        258.13994799986546
+      ],
+      "clearance": 13.661844140099419,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Necrópolis · roca · rock",
+        "intended": true,
+        "point": [
+          72.80367206616747,
+          98.845046096187,
+          256.86298387208814
+        ],
+        "distanceToTarget": 2.1386766611815013
+      }
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-transformaciones",
+      "mode": "historical",
+      "roofOpen": true,
+      "archFocus": "hipogeos",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 53,
+      "interiorView": false,
+      "position": [
+        33.91083614332129,
+        137.73788201903318,
+        215.16928530961405
+      ],
+      "target": [
+        74.01678798755593,
+        97.63193017479854,
+        258.13994799986546
+      ],
+      "clearance": 60.181936814383434,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Necrópolis · roca · rock",
+        "intended": true,
+        "point": [
+          72.80311096959045,
+          98.84560719276402,
+          256.839579766331
+        ],
+        "distanceToTarget": 2.15336512246779
+      }
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-transformaciones",
+      "mode": "historical",
+      "roofOpen": true,
+      "archFocus": "hipogeos",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 53,
+      "interiorView": false,
+      "position": [
+        64.51678798755593,
+        107.13193017479854,
+        248.13994799986546
+      ],
+      "target": [
+        74.01678798755593,
+        97.63193017479854,
+        258.13994799986546
+      ],
+      "clearance": 13.661844140099419,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Necrópolis · roca · rock",
+        "intended": true,
+        "point": [
+          72.80367206616747,
+          98.845046096187,
+          256.86298387208814
+        ],
+        "distanceToTarget": 2.1386766611815013
+      }
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-transformaciones",
+      "mode": "historical",
+      "roofOpen": true,
+      "archFocus": "hipogeos",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 53,
+      "interiorView": false,
+      "position": [
+        53.438339984433654,
+        118.21037817792082,
+        236.091610853663
+      ],
+      "target": [
+        74.01678798755593,
+        97.63193017479854,
+        258.13994799986546
+      ],
+      "clearance": 31.127184531010215,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Necrópolis · roca · rock",
+        "intended": true,
+        "point": [
+          72.80311096959045,
+          98.84560719276402,
+          256.83957976633104
+        ],
+        "distanceToTarget": 2.153365122467756
+      }
+    },
+    {
+      "place": "necropolis",
+      "id": "necro-transformaciones",
+      "mode": "historical",
+      "roofOpen": true,
+      "archFocus": "hipogeos",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 53,
+      "interiorView": false,
+      "position": [
+        64.51678798755593,
+        107.13193017479854,
+        248.13994799986546
+      ],
+      "target": [
+        74.01678798755593,
+        97.63193017479854,
+        258.13994799986546
+      ],
+      "clearance": 13.661844140099419,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Necrópolis · roca · rock",
+        "intended": true,
+        "point": [
+          72.80367206616747,
+          98.845046096187,
+          256.86298387208814
+        ],
+        "distanceToTarget": 2.1386766611815013
+      }
+    },
+    {
+      "place": "circo",
+      "id": "circo-conjunto",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 52,
+      "interiorView": false,
+      "position": [
+        224.83377155525977,
+        73.45746057456768,
+        -239.3836532368588
+      ],
+      "target": [
+        212.28904523544915,
+        43.05800244513099,
+        -228.55430679967512
+      ],
+      "clearance": 28.459601333957337,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-conjunto",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 52,
+      "interiorView": false,
+      "position": [
+        227.0055380252082,
+        55.05800244513099,
+        -238.57552628479618
+      ],
+      "target": [
+        212.28904523544915,
+        43.05800244513099,
+        -228.55430679967512
+      ],
+      "clearance": 10.058002445130988,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-conjunto",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 52,
+      "interiorView": false,
+      "position": [
+        239.81388674499388,
+        109.75856215900899,
+        -252.31537075088403
+      ],
+      "target": [
+        212.28904523544915,
+        43.05800244513099,
+        -228.55430679967512
+      ],
+      "clearance": 64.75856215900899,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-conjunto",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 52,
+      "interiorView": false,
+      "position": [
+        227.0055380252082,
+        55.05800244513099,
+        -238.57552628479618
+      ],
+      "target": [
+        212.28904523544915,
+        43.05800244513099,
+        -228.55430679967512
+      ],
+      "clearance": 10.058002445130988,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-conjunto",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 52,
+      "interiorView": false,
+      "position": [
+        227.55411986933743,
+        80.0496422262863,
+        -241.7320180853157
+      ],
+      "target": [
+        212.28904523544915,
+        43.05800244513099,
+        -228.55430679967512
+      ],
+      "clearance": 35.049642226286295,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-conjunto",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 52,
+      "interiorView": false,
+      "position": [
+        227.0055380252082,
+        55.05800244513099,
+        -238.57552628479618
+      ],
+      "target": [
+        212.28904523544915,
+        43.05800244513099,
+        -228.55430679967512
+      ],
+      "clearance": 10.058002445130988,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "circo",
+      "id": "circo-puerta",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 55,
+      "interiorView": false,
+      "position": [
+        215.68875188960624,
+        48.90800244513099,
+        -235.20801213322272
+      ],
+      "target": [
+        208.20272718967604,
+        43.90800244513099,
+        -228.1398133391851
+      ],
+      "clearance": 4.279786879447613,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Circo · vano · limestone",
+        "intended": true,
+        "point": [
+          209.08441791129596,
+          44.49689358359339,
+          -228.97229326612498
+        ],
+        "distanceToTarget": 1.348033430708602
+      }
+    },
+    {
+      "place": "circo",
+      "id": "circo-puerta",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 55,
+      "interiorView": false,
+      "position": [
+        213.09186672278307,
+        46.80800244513099,
+        -233.30375704780647
+      ],
+      "target": [
+        208.20272718967604,
+        43.90800244513099,
+        -228.1398133391851
+      ],
+      "clearance": 2.4308531034356378,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Circo · vano · limestone",
+        "intended": true,
+        "point": [
+          209.01249371250526,
+          44.38831659863449,
+          -228.99509446027
+        ],
+        "distanceToTarget": 1.2719784996747905
+      }
+    },
+    {
+      "place": "circo",
+      "id": "circo-puerta",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 55,
+      "interiorView": false,
+      "position": [
+        215.68875188960624,
+        48.90800244513099,
+        -235.20801213322272
+      ],
+      "target": [
+        208.20272718967604,
+        43.90800244513099,
+        -228.1398133391851
+      ],
+      "clearance": 4.279786879447613,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Circo · vano · limestone",
+        "intended": true,
+        "point": [
+          209.08441791129596,
+          44.49689358359339,
+          -228.97229326612498
+        ],
+        "distanceToTarget": 1.348033430708602
+      }
+    },
+    {
+      "place": "circo",
+      "id": "circo-puerta",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 55,
+      "interiorView": false,
+      "position": [
+        213.09186672278307,
+        46.80800244513099,
+        -233.30375704780647
+      ],
+      "target": [
+        208.20272718967604,
+        43.90800244513099,
+        -228.1398133391851
+      ],
+      "clearance": 2.4308531034356378,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Circo · vano · limestone",
+        "intended": true,
+        "point": [
+          209.01249371250526,
+          44.38831659863449,
+          -228.99509446027
+        ],
+        "distanceToTarget": 1.2719784996747905
+      }
+    },
+    {
+      "place": "circo",
+      "id": "circo-puerta",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 55,
+      "interiorView": false,
+      "position": [
+        215.68875188960624,
+        48.90800244513099,
+        -235.20801213322272
+      ],
+      "target": [
+        208.20272718967604,
+        43.90800244513099,
+        -228.1398133391851
+      ],
+      "clearance": 4.279786879447613,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Circo · vano · limestone",
+        "intended": true,
+        "point": [
+          209.08441791129596,
+          44.49689358359339,
+          -228.97229326612498
+        ],
+        "distanceToTarget": 1.348033430708602
+      }
+    },
+    {
+      "place": "circo",
+      "id": "circo-puerta",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 55,
+      "interiorView": false,
+      "position": [
+        213.09186672278307,
+        46.80800244513099,
+        -233.30375704780647
+      ],
+      "target": [
+        208.20272718967604,
+        43.90800244513099,
+        -228.1398133391851
+      ],
+      "clearance": 2.4308531034356378,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Circo · vano · limestone",
+        "intended": true,
+        "point": [
+          209.01249371250526,
+          44.38831659863449,
+          -228.99509446027
+        ],
+        "distanceToTarget": 1.2719784996747905
+      }
+    },
+    {
+      "place": "domus",
+      "id": "domus-impluvium",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        482.844665810996,
+        47.406056841190725,
+        176.36375333699456
+      ],
+      "target": [
+        478.12370197962656,
+        43.406056841190725,
+        173.23445621097704
+      ],
+      "clearance": 5.140000000000001,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-impluvium",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        481.6036090341054,
+        46.306056841190724,
+        175.54535363236738
+      ],
+      "target": [
+        478.12370197962656,
+        43.406056841190725,
+        173.23445621097704
+      ],
+      "clearance": 4.039999999999999,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-impluvium",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        482.844665810996,
+        47.406056841190725,
+        176.36375333699456
+      ],
+      "target": [
+        478.12370197962656,
+        43.406056841190725,
+        173.23445621097704
+      ],
+      "clearance": 5.140000000000001,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-impluvium",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        481.6036090341054,
+        46.306056841190724,
+        175.54535363236738
+      ],
+      "target": [
+        478.12370197962656,
+        43.406056841190725,
+        173.23445621097704
+      ],
+      "clearance": 4.039999999999999,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-impluvium",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        482.844665810996,
+        47.406056841190725,
+        176.36375333699456
+      ],
+      "target": [
+        478.12370197962656,
+        43.406056841190725,
+        173.23445621097704
+      ],
+      "clearance": 5.140000000000001,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-impluvium",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        481.6036090341054,
+        46.306056841190724,
+        175.54535363236738
+      ],
+      "target": [
+        478.12370197962656,
+        43.406056841190725,
+        173.23445621097704
+      ],
+      "clearance": 4.039999999999999,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-calzada",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 72,
+      "interiorView": true,
+      "position": [
+        457.15262529491196,
+        42.46374321016204,
+        -69.97356628757996
+      ],
+      "target": [
+        459.7678090464273,
+        40.313743210162045,
+        -83.04264482991836
+      ],
+      "clearance": 3.769999999999996,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-calzada",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 72,
+      "interiorView": true,
+      "position": [
+        459.13278270903425,
+        42.21374321016204,
+        -74.74525116980935
+      ],
+      "target": [
+        459.7678090464273,
+        40.313743210162045,
+        -83.04264482991836
+      ],
+      "clearance": 3.519999999999996,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-calzada",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 72,
+      "interiorView": true,
+      "position": [
+        457.15262529491196,
+        42.46374321016204,
+        -69.97356628757996
+      ],
+      "target": [
+        459.7678090464273,
+        40.313743210162045,
+        -83.04264482991836
+      ],
+      "clearance": 3.769999999999996,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-calzada",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 72,
+      "interiorView": true,
+      "position": [
+        459.13278270903425,
+        42.21374321016204,
+        -74.74525116980935
+      ],
+      "target": [
+        459.7678090464273,
+        40.313743210162045,
+        -83.04264482991836
+      ],
+      "clearance": 3.519999999999996,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-calzada",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 72,
+      "interiorView": true,
+      "position": [
+        457.15262529491196,
+        42.46374321016204,
+        -69.97356628757996
+      ],
+      "target": [
+        459.7678090464273,
+        40.313743210162045,
+        -83.04264482991836
+      ],
+      "clearance": 3.769999999999996,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "portic",
+      "id": "portic-calzada",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 72,
+      "interiorView": true,
+      "position": [
+        459.13278270903425,
+        42.21374321016204,
+        -74.74525116980935
+      ],
+      "target": [
+        459.7678090464273,
+        40.313743210162045,
+        -83.04264482991836
+      ],
+      "clearance": 3.519999999999996,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    }
+  ],
+  "inputHashes": {
+    "dist/js/app.js": "051d52f7c4c881597bfe9e7efda2f8ea00f90928130fb567fa3225e64ca340f5",
+    "dist/js/castle-panel.js": "484052c7505691cf548b718920c4a2b24056a0cb0d6014bbcc09fb025f465d44",
+    "dist/js/theatre.js": "34831ff762ddd15d0e9fa1fd564183145a04219d47f833f529af35f545d83371",
+    "dist/js/monuments.js": "22546453225b2db827cc2e84a5fd30e1083b56eb8b79d4a1ac025709f4b34dac",
+    "dist/js/castle.js": "61463c846f79a617562ca2e31bfc42321da0c737a3d310846db44410066c54d8",
+    "dist/js/terrain.js": "ec10570603e52e850b6b5eadf81963215d18d533c551d555848ef58152fec3f8",
+    "dist/js/city.js": "b2578a5fdb0d70435fa4bc8cf92147f2a3c4922f6bcbe6bbe145f46ebb53af54",
+    "dist/js/urban-surface.js": "d2acfae90ff47abddd51be09a21555e8ce9b6269e1500549a6eb94938f3e6111",
+    "dist/js/santa-maria.js": "ab23645cee3bfb285ea19420b98d8c4eb56fa7e5b99d756aa861abba2578ff42",
+    "dist/js/santa-maria-context.js": "c58325ab7d3a33af291c50efda2625dcd757d33da9306e70f5d95b67b4d4072f",
+    "dist/js/heritage-sacred.js": "306c46bd0c5b45d01df73e51e12dd77235f018bfb68ebd20679885daf35c99e2",
+    "dist/js/heritage-civic.js": "b28e6572d494b657b1eda2a96342ce7181c8437763d4c110daae373547d51a31",
+    "dist/js/plaza-mayor.js": "07f51ea9722f9a09932e9dd85dcdeb2a39e753fdb5c8d7fa5e5a302bad3d28b1",
+    "dist/js/plaza-mayor-context.js": "655b94895ef5407affe3ea502e5eb0eeff91cf01d365fe63387ec9fa31bd8d8b",
+    "dist/js/juderia.js": "e83aa1df8be0538e6ce520ebf0676f847ce3d488690e1deacaa7472e0869d30d",
+    "dist/js/juderia-context.js": "fc58285789fd8a785e87d2efd1e29e42bba257222eb51e66592393d19600cf2f",
+    "dist/js/calvario.js": "990a076c049599574eb566b7823bc8166667d7c385a2e5fd964e6e4342d96910",
+    "dist/js/calvario-context.js": "0ef2e7a8cc33c2296cbd1b7ff8023d5eef71a48e4eb86849efd06e59b124d148",
+    "dist/js/berenguer.js": "e6d96396f1462827849e656d8a456c49d0da59f8a8c1c87cbf1e14e605909cdd",
+    "dist/js/berenguer-context.js": "4a942cd7436001937dcfd3d20ff3c1ec6272a42e4f0fbd68bf80e097b7618695",
+    "dist/js/berenguer-map.js": "1c10607f476c7a5d6358d13747385a6e946bc7df909de5c5963ec1ca2062f92e",
+    "dist/js/berenguer-visit.js": "500f8d3d6995bd33f62cc7a44cb2e2f5079537f3d3a916d6253e6a27fb3387ce",
+    "dist/js/sangre.js": "83c383bed697ee3170fb976d652b39ca5e46986d603f8c83c8a6b8edfbee8247",
+    "dist/js/sangre-context.js": "93c9fd805f9dbef41763eb67a35ded526b80e408f35c2b7c333309d7ee853aab",
+    "dist/js/sangre-map.js": "229a7ebd9cffa70b1589824533f9da5bb2187f2d7249e0abb1812903b5ad2918",
+    "dist/js/museo.js": "d548c527bf4a3b1067b5c786640155eb538daa2197f2b746a913787990d7939c",
+    "dist/js/museo-context.js": "ad983c68d8412e82634f47710a9e4c462a8e76c290345d41479d880882f74857",
+    "dist/js/museo-map.js": "6b7deb28a5c62602527e14e8ef644e20d677264373fb602aaf129304bebe94de",
+    "dist/js/salvador.js": "d3cdf9fa5b4d62bb53fdd2104c55a1fa44496130bbf21284f401dbc42484b17f",
+    "dist/js/salvador-context.js": "a5155c08c0a5107e67dac7e8a7604504ae9be78086acbdcc22bb88266c3f1498",
+    "dist/js/salvador-map.js": "2442ee3ddc10adbcfaabd37f20d86fb36aa72e70842295f10fe52fc72ec1ddd1",
+    "dist/js/archaeology-public.js": "68d9eef0f87d4f35c4244491458d4887e26d1f5387a964c03c49b865646b2c39",
+    "dist/js/archaeology.js": "60072658e3ea7d420f80984f6a555eac1d089d06cc2bcba0948d6a6c54c962cf",
+    "dist/js/archaeology-domestic.js": "2b9db5cc954c1567667edf9c027b7a68bef680f00c55851f81dfcc73a0a892ab",
+    "dist/js/portic.js": "ca004362ac6e7d265d6571a0c73ed03443089e207a9148212770d1f56c37cac6",
+    "dist/js/portic-map.js": "17aa6147234395e6a35f4e1eadaec064cfefffb43ef24a3c265ce5931405352d",
+    "dist/js/portic-context.js": "fd503594959153c47d63ade81381a5b7786c515b4600187faac5bcb4dca7f3a4",
+    "dist/js/excavation.js": "64624fd637fea3fa6a9dc5e2817b7cebc14af632261be7b922536a62b72f87ac",
+    "dist/js/archaeology-panel.js": "759b705a40a5578b86a05c016211c732b6df70f0e645ee96dc5d570acb456391",
+    "dist/assets/data/plaza-mayor-visit.json": "c80a4560b964c27003e769add5a1c0c32b1a0109b55243c95a641282f2b36e55",
+    "dist/assets/data/plaza-mayor-plan.json": "136742e1a25c77699aa619113a40213926260fd7bbec9402f02de6a4bb29b4ef",
+    "dist/assets/data/plaza-mayor-context.json": "1a0c282b1f15f1cf4ede43aee8a600a5a44675cc4ad8110c36656ad9d23d9fc7",
+    "dist/assets/data/juderia-visit.json": "f657d04c1923c9982b8916d50622e0b6e5b50ca68edcb8a6a514124299563b82",
+    "dist/assets/data/juderia-plan.json": "cb31a29ed4c590a10bb6b8430171122bada9c4637ab3446ad31097fabd194d34",
+    "dist/assets/data/juderia-context.json": "9118ca2de239a2b4a49e2b2651d8dc261177e3b50c6a4360686e7e8a2380d045",
+    "dist/assets/data/calvario-visit.json": "b054fed27f08b1d4c1f387315b3d3d6b8ae3a6a7378e4e2fb6186a437c829088",
+    "dist/assets/data/calvario-plan.json": "3a9a08fb423930cb5902b83db6c5b2998ff8461935bc26656714a3039a167eef",
+    "dist/assets/data/calvario-context.json": "3c4da56852c9f4afb1ca501e37e4823b7c2eb3aa81d9b42a7da07f53bbe81766",
+    "dist/assets/data/berenguer-visit.json": "36da2cecfbfe9c2447434e2405a5ca94615527dca5c0c4e549ae49e6d726206e",
+    "dist/assets/data/berenguer-plan.json": "68af4ffba39bad39785ba588a6ffbde2d074b47179e591a8847c5a4e61ae4154",
+    "dist/assets/data/berenguer-context.json": "b222d0b510d39b340dc4d69bdaef0dc383d88faa5fb800eb247d9676871487ae",
+    "dist/assets/data/sangre-visit.json": "490aa9c55411448c18d0da0070d16a6f345bbb7abdb46638d55b4c19b3723f48",
+    "dist/assets/data/sangre-plan.json": "a8d915826156b202298fac54b9112ec08166db8b9796654bfd38d0c6dd98e3ad",
+    "dist/assets/data/sangre-context.json": "1f2384b5e0d8140cfc086857cc6c6b4c41a9c5ea651fdddd9e821fa81edbe506",
+    "dist/assets/data/museo-visit.json": "747a36c42334eb1f3548df513b09f51db9fe1be73648c050023eeb9e11aea55a",
+    "dist/assets/data/museo-plan.json": "b51b26c15cdbd715026b3b363ce9bb67ab46b24c8570712782bbeb24acf1fbe5",
+    "dist/assets/data/museo-context.json": "325612d1f799e61a32d37136938dbe3adf0723b0432cb4f926b2fce43d8d17cb",
+    "dist/assets/data/portic-visit.json": "020c89e0eeb9318ad9cc59e13b57cac2fc25171c1a4021f9f861eb0d4b1b8b35",
+    "dist/assets/data/portic-plan.json": "84cac8f3d7f2bcb9cc4a45580d58d8b05a5190de82b1ad8f2488a6e83c8f3ac4",
+    "dist/assets/data/portic-context.json": "4681606ed8324f7b144ff590db35364481b5e218f4dafe63ad39e5fc6f687af2",
+    "dist/assets/data/archaeology-domestic.json": "fbdc79ee5c30b8fb1b670d6aecfec60fa4e28ce4e5be9ab86ccbbbc8842b09f1",
+    "dist/assets/data/salvador-visit.json": "3c08cd0c5809f8305588f78e45582ace46da47b0d7a339f9d108b2ab79a54a00",
+    "dist/assets/data/salvador-plan.json": "071cb01e59c5a58a2d926f2bd70059daf35dd6d40eeeb3cba99b46381d6c3053",
+    "dist/assets/data/salvador-context.json": "427a35c79f0c714468c4b63d8652218adc0e80e7892a5f17df672187deafcd38",
+    "dist/js/domus.js": "e5efe0fb47cb0ded332795949c1807dc963d8b51fa45d90a32fe38f1bf7a3144",
+    "dist/js/domus-map.js": "ae61e737ab319976094a273dc9a65a72ca4ec163955068284275dfefe56ef4b9",
+    "dist/js/domus-context.js": "6cdb2562ff72b9f71ef14b01774450aae3433ae7eeb21a93e325208c5306167b",
+    "dist/assets/data/domus-visit.json": "ab7e165d85958ee6661867ebd528d2609c39c329d23433a00c4723011b347d55",
+    "dist/assets/data/domus-plan.json": "a63f5729845fc892ffd0d923c2a8c029719bfb1e92d932993908c74bc6d82788",
+    "dist/assets/data/domus-context.json": "b02b74552c4426a75866918e72c2825643a981115796556517204384c01d7e0d",
+    "dist/assets/data/archaeology-public.json": "36504b8846065d33d52e3de2d7237e03ac9e4ed86c8f86e39771f2a46dc81a28",
+    "dist/js/circo.js": "d3e693959b89f8e04b037a81befc75393f047d8cfd6e4909a2108ca67d750e7a",
+    "dist/js/circo-map.js": "e8fa94a76af2a03efa6a885292c067462c1a5d7a43b4002a5222317e62f0cd54",
+    "dist/js/circo-context.js": "2996ffc4cef0e4a4778eccac75986d2460595c0f21999e1a8265b57f348a5da4",
+    "dist/assets/data/circo-visit.json": "2df05f739c53e18c71ce857c468240c73859a450a2eda0edb5fe8595f8001320",
+    "dist/assets/data/circo-plan.json": "8afa1c4093113320d564a8db6d01b6f8518f91a05e26bcb003116ba40e8e640d",
+    "dist/assets/data/circo-context.json": "16b9805d5198b4353eb8b0119174a5c1923d3471bf2a8343fd08741b4bfb519a",
+    "dist/js/necropolis.js": "31d10d9fed85cf07d7f9663edf872b1f223b20307ea4c93760ea3af4c6ceda88",
+    "dist/js/necropolis-map.js": "f6f35b8529dc51bfea4c1f92384fef9e43ac5220d2d7545ebd866ba992f8b42c",
+    "dist/js/necropolis-context.js": "0104a9bfd1014e5ea3d43e0f39b1d329793286258a263cb4d34786057df0656a",
+    "dist/assets/data/necropolis-visit.json": "afccb5c6e80a3170245119efdbd412b706c53f5dc5e62bf845dfdcddec7664c5",
+    "dist/assets/data/necropolis-plan.json": "f8048421d35ff528d399d03161a18cd7952b708bf313eb8cd96ae8ed444be47a",
+    "dist/assets/data/necropolis-context.json": "50dd8417da1ee8695cdcadceb2a6f0920d5c78d39dba6d86a9ff80c8738aef68",
+    "dist/assets/data/archaeology-necropolis.json": "c045172d81ed27cc7df70b5b22a55f93432132e31cf3fa367f9c831cd57706f4"
+  },
+  "limitations": [
+    "Geometry and camera validation does not measure browser GPU performance.",
+    "Grave layout, cavity interiors and unmeasured elevations are interpretive."
+  ]
+}

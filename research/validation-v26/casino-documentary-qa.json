@@ -1,0 +1,49 @@
+{
+  "date": "2026-11-21",
+  "generatedAt": "2026-11-21T00:22:49.135651+00:00",
+  "pass": true,
+  "checks": {
+    "unique20Stops": true,
+    "facts40": true,
+    "sources17": true,
+    "regions5": true,
+    "allCitationsResolve": true,
+    "timeline10": true,
+    "regionCoverage": true,
+    "explicitInteriorFloors": true,
+    "interiorViews7": true,
+    "terraceDiscrepancyExplicit": true,
+    "referencesOutsideDist": true,
+    "registrationFinal": true,
+    "guidePlanCoordinatesAgree": true,
+    "visibleStatusInIntroduction": true
+  },
+  "counts": {
+    "stops": 20,
+    "facts": 40,
+    "sources": 17,
+    "regions": 5,
+    "timeline": 10,
+    "downloadedReferenceImages": 34,
+    "failedImageDownloads": 1
+  },
+  "failedDownloads": [
+    {
+      "file": "biblioteca-historica.jpg",
+      "url": "http://www.casinopuertosagunto.com/wp-content/uploads/2013/10/Biblioteca-del-casino.jpg",
+      "error": "HTTP Error 404: Not Found"
+    }
+  ],
+  "registrationAtTimeOfValidation": {
+    "status": "registered",
+    "note": "Focos registrados a partir de la geometría final y de la cartografía; las cotas no levantadas son interpretativas.",
+    "precision": "approximate",
+    "coordinates": "Registered from the implemented industrial model and contemporary cartography; component positions and unmeasured heights are interpretive.",
+    "provisionalCoordinates": false
+  },
+  "inputHashes": {
+    "casino-visit.json": "5eabae75f4dfcfcc087595727475b241fe98a276aa5eef636a2d1c3d0f2dd332",
+    "casino-plan.json": "a65b34a5621668d2911dc31491ba72e9cbee71cb97beff0ef87dd714e1cdd025"
+  },
+  "limitation": "Reference identifiers and documentary data are checked here; source interpretation was reviewed separately. Geometry, cameras and browser behavior have separate checks."
+}

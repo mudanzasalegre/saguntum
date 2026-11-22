@@ -1,0 +1,188 @@
+{
+  "generatedAt": "2026-11-20T19:27:14.507Z",
+  "pass": true,
+  "checksCount": 37,
+  "method": "Data invariants and state/render contracts with a minimal element adapter; no WebGL, layout or real browser-focus assertions.",
+  "data": {
+    "circoStops": 20,
+    "circoFacts": 22,
+    "circoSources": 7,
+    "circoTimeline": 8,
+    "domusStops": 20,
+    "domusFacts": 38,
+    "domusSources": 9,
+    "domusTimeline": 12,
+    "porticStops": 20,
+    "porticFacts": 40,
+    "porticSources": 19,
+    "porticTimeline": 18,
+    "museoStops": 20,
+    "museoFacts": 40,
+    "museoSources": 20,
+    "museoTimeline": 19,
+    "salvadorStops": 18,
+    "salvadorFacts": 40,
+    "salvadorSources": 19,
+    "salvadorTimeline": 19,
+    "sangreStops": 16,
+    "sangreFacts": 39,
+    "sangreSources": 22,
+    "sangreTimeline": 17,
+    "stops": 18,
+    "wallStops": 5,
+    "facts": 47,
+    "sources": 24,
+    "timeline": 15,
+    "wallTimeline": 6
+  },
+  "checks": [
+    {
+      "label": "Casa has 18 stops, 5 regions, 5 thematic layers, 47 facts, 24 sources and 15 events",
+      "pass": true
+    },
+    {
+      "label": "berenguer: all facts, coordinates, regions and chronology resolve",
+      "pass": true
+    },
+    {
+      "label": "diana: all facts, coordinates, regions and chronology resolve",
+      "pass": true
+    },
+    {
+      "label": "sangre: all facts, coordinates, regions and chronology resolve",
+      "pass": true
+    },
+    {
+      "label": "salvador: all facts, coordinates, regions and chronology resolve",
+      "pass": true
+    },
+    {
+      "label": "museo: all facts, coordinates, regions and chronology resolve",
+      "pass": true
+    },
+    {
+      "label": "Diana derives exactly its five stops and wall timeline without changing Casa data",
+      "pass": true
+    },
+    {
+      "label": "Independent Casa and Diana progress filters stale and out-of-scope stops",
+      "pass": true
+    },
+    {
+      "label": "Casa exposes its documented section on the overview; Diana exposes none",
+      "pass": true
+    },
+    {
+      "label": "Related links connect the house and wall while retaining separate panel IDs",
+      "pass": true
+    },
+    {
+      "label": "Casa selection, section and sources leave Diana and six prior visits unchanged",
+      "pass": true
+    },
+    {
+      "label": "Diana selection leaves Casa progress and section state unchanged",
+      "pass": true
+    },
+    {
+      "label": "Casa notebook remains usable without WebGL while section and detail are disabled",
+      "pass": true
+    },
+    {
+      "label": "Casa tabs, source details, timeline and layer legend use the correct data",
+      "pass": true
+    },
+    {
+      "label": "Map callbacks are independent for both new visits",
+      "pass": true
+    },
+    {
+      "label": "Sangre section, sources and thematic palette are independent of all previous visits",
+      "pass": true
+    },
+    {
+      "label": "Salvador section, sources and thematic palette are independent of all previous visits",
+      "pass": true
+    },
+    {
+      "label": "Museo section, sources and thematic palette are independent of all previous visits",
+      "pass": true
+    },
+    {
+      "label": "Pòrtic uses independent sources, layers, progress and a single archaeological mode control",
+      "pass": true
+    },
+    {
+      "label": "Domus museum, disputed room, sources and progress stay independent of other visits",
+      "pass": true
+    },
+    {
+      "label": "Circo uses its own plan, evidence, chronology and progress without a duplicate section control",
+      "pass": true
+    },
+    {
+      "label": "castle: every stop is reachable and completion persists independently",
+      "pass": true
+    },
+    {
+      "label": "theatre: every stop is reachable and completion persists independently",
+      "pass": true
+    },
+    {
+      "label": "santa-maria: every stop is reachable and completion persists independently",
+      "pass": true
+    },
+    {
+      "label": "plaza-mayor: every stop is reachable and completion persists independently",
+      "pass": true
+    },
+    {
+      "label": "juderia: every stop is reachable and completion persists independently",
+      "pass": true
+    },
+    {
+      "label": "calvario: every stop is reachable and completion persists independently",
+      "pass": true
+    },
+    {
+      "label": "berenguer: every stop is reachable and completion persists independently",
+      "pass": true
+    },
+    {
+      "label": "diana: every stop is reachable and completion persists independently",
+      "pass": true
+    },
+    {
+      "label": "sangre: every stop is reachable and completion persists independently",
+      "pass": true
+    },
+    {
+      "label": "salvador: every stop is reachable and completion persists independently",
+      "pass": true
+    },
+    {
+      "label": "museo: every stop is reachable and completion persists independently",
+      "pass": true
+    },
+    {
+      "label": "portic: every stop is reachable and completion persists independently",
+      "pass": true
+    },
+    {
+      "label": "domus: every stop is reachable and completion persists independently",
+      "pass": true
+    },
+    {
+      "label": "circo: every stop is reachable and completion persists independently",
+      "pass": true
+    },
+    {
+      "label": "All six earlier notebooks retain layers, source identity, maps and conditional sections",
+      "pass": true
+    },
+    {
+      "label": "Application integrates both panels, retains stable atlas branding and enables Casa overview section",
+      "pass": true
+    }
+  ]
+}

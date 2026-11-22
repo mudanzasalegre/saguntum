@@ -1,0 +1,240 @@
+{
+  "pass": true,
+  "apply": true,
+  "checks": [
+    {
+      "label": "buildings preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "roads preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "paths preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "trees preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "shrubs preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "benches preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "lamps preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "gates preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "excludedBuildingIds preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "excludedRoadIds preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "collisionPolygons preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "foundationPatches preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "heightReview preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "coreBuildingParts preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "focusSpecs preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "districtOutline preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "precinctOutline preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "withheldBuildingParts preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "Only four reviewed surface IDs change",
+      "pass": true
+    },
+    {
+      "label": "Every other context file remains at its current baseline",
+      "pass": true
+    },
+    {
+      "label": "Retained Gerencia ground is disjoint from Economato ground",
+      "pass": true
+    },
+    {
+      "label": "No old ground outside the exact handoff is removed",
+      "pass": true
+    },
+    {
+      "label": "All transferred ground is completely replaced",
+      "pass": true
+    },
+    {
+      "label": "New Economato ground does not intersect building footprints or porch stairs",
+      "pass": true
+    },
+    {
+      "label": "All original surface holes survive triangulation",
+      "pass": true
+    },
+    {
+      "label": "Only the front fence is changed and both ends survive",
+      "pass": true
+    },
+    {
+      "label": "Casino handoff metadata stays exact",
+      "pass": true
+    },
+    {
+      "label": "Fallback plan only changes reviewed ground components",
+      "pass": true
+    },
+    {
+      "label": "Fallback plan id preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "Fallback plan label preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "Fallback plan coordinate preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "Fallback plan outline preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "Fallback plan buildings preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "Fallback plan partitions preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "Fallback plan floors preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "Fallback plan openings preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "Fallback plan stops preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "Fallback plan note preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "Fallback plan contextOutline preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "genericStreetExclusions retains every external exclusion including old Casino clipping",
+      "pass": true
+    },
+    {
+      "label": "vegetationExclusions retains every external exclusion including old Casino clipping",
+      "pass": true
+    }
+  ],
+  "beforeSHA256": {
+    "gerencia-context.json": "dac00377102d6300607cb5db0fcef89ad4d192f4e4c1698958689c02f2a5aca4",
+    "gerencia-plan.json": "53689a370453ba4265141a5a1a4ba8be07d371e7fdf308f5c02f2663fc09110a"
+  },
+  "candidateSHA256": {
+    "gerencia-context.json": "7209989b6735a9460087ca40298da10900bc04f382212e730d06b1515cbe2e73",
+    "gerencia-plan.json": "650cc3b1054d302547e6ca791c178a61d81666d4bcc3f4d30df2b92cece838cf"
+  },
+  "transferAreaM2": 759.15,
+  "changedSurfaceIds": [
+    "gerencia-east-garden-3",
+    "gerencia-garden-2",
+    "gerencia-garden-3",
+    "gerencia-sidewalk-5"
+  ],
+  "replacementPlanComponentIds": {
+    "gerencia-sidewalk-5": [
+      "gerencia-sidewalk-5"
+    ],
+    "gerencia-east-garden-3": [
+      "gerencia-east-garden-3",
+      "gerencia-east-garden-3-economato-split-1"
+    ],
+    "gerencia-garden-2": [
+      "gerencia-garden-2",
+      "gerencia-garden-2-economato-split-1"
+    ],
+    "gerencia-garden-3": [
+      "gerencia-garden-3"
+    ]
+  },
+  "fenceCorrections": [
+    {
+      "id": "gerencia-boundary-1",
+      "removedLengthM": 54.60002933841371,
+      "retainedLengthM": 13.1259782044497,
+      "retainedIds": [
+        "gerencia-boundary-1",
+        "gerencia-boundary-1-economato-split-1"
+      ]
+    }
+  ],
+  "changedExclusionRecords": {
+    "genericStreetExclusions": 190,
+    "vegetationExclusions": 190
+  },
+  "newStats": {
+    "buildingParts": 143,
+    "parentParcels": 47,
+    "osmBuildingFootprints": 1,
+    "sourceCoreParts": 42,
+    "roadFragments": 24,
+    "gardenPathFragments": 20,
+    "pavingAreaM2": 42734.0,
+    "pavingVertices": 9473,
+    "pavingTriangles": 13978,
+    "trees": 105,
+    "shrubs": 11,
+    "lamps": 14,
+    "benches": 4,
+    "gates": 1,
+    "boundarySegments": 4
+  },
+  "retainedContextHashes": {
+    "horno": "034c74144297d2df56140f6380c5958a233b8de32fe7e8f35da5c1c09bbe98fb",
+    "talleres": "6100214fcb3b21d8fd182b8f728ec71252a8247d0f9842d2687764eeff3fad58",
+    "museo-industrial": "012d877440568744748948a7d3fd632059eeb110593d32eb8532291133562fe0",
+    "casino": "da45fe86e7b86124555160342ce0239ba272a022a659a1fd9ac315682983e171",
+    "begona": "d34015349aa43ce965b8a519d128629edf303f35da9ddc0faa8a7e8a04dfada6"
+  }
+}

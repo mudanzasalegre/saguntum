@@ -1,0 +1,11 @@
+import fs from 'node:fs';
+import {createCivicHeritage} from '../../dist/js/heritage-civic.js';
+import {createHeightSampler} from '../../dist/js/terrain.js';
+const c=new Proxy({},{get:(o,k)=>o[k]??(()=>{}),set:(o,k,v)=>(o[k]=v,true)});globalThis.document={createElement:()=>({width:256,height:256,getContext:()=>c})};
+const read=n=>JSON.parse(fs.readFileSync('dist/assets/data/'+n+'.json'));
+const data=read('cartography'),heightAt=createHeightSampler(read('elevation')),landmarks=Object.fromEntries(read('landmarks').sites.map(s=>[s.id,s])),context=read('plaza-mayor-context'),project=(lon,lat)=>({x:(lon+.278)*111320*Math.cos(39.679*Math.PI/180),z:(39.679-lat)*111320});
+const visit=fs.existsSync('dist/assets/data/plaza-mayor-visit.json')?read('plaza-mayor-visit'):undefined;
+const civic=createCivicHeritage({data,heightAt,landmarks,project,plazaContext:context,plazaVisit:visit});
+const model=civic.sites['plaza-mayor'].userData.visit;
+fs.writeFileSync('dist/assets/data/plaza-mayor-plan.json',JSON.stringify({schemaVersion:1,...model.plan},null,2));
+console.log(JSON.stringify({stats:model.stats,portal:model.qa.portal,focuses:Object.fromEntries(Object.values(model.focuses).map(f=>[f.id,{coordinates:f.coordinates,target:f.target.toArray()}]))},null,2));

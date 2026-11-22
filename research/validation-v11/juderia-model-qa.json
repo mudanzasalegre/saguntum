@@ -1,0 +1,7897 @@
+{
+  "pass": true,
+  "inputHashes": {
+    "dist/js/juderia.js": "e83aa1df8be0538e6ce520ebf0676f847ce3d488690e1deacaa7472e0869d30d",
+    "dist/js/heritage-civic.js": "c198a107d7246623e2b99eb00c9f624d8ef9d75bc29adea852d1821a81131ec1",
+    "dist/js/juderia-context.js": "fc58285789fd8a785e87d2efd1e29e42bba257222eb51e66592393d19600cf2f",
+    "dist/assets/data/juderia-visit.json": "c935eff4d0a2f4362b437bb045ac47a4d7222b62b7ab5f7e3380e7ac08e6f736",
+    "dist/assets/data/juderia-context.json": "9118ca2de239a2b4a49e2b2651d8dc261177e3b50c6a4360686e7e8a2380d045",
+    "dist/assets/data/juderia-plan.json": "cb31a29ed4c590a10bb6b8430171122bada9c4637ab3446ad31097fabd194d34"
+  },
+  "buildMs": 8172.738625,
+  "stats": {
+    "stops": 16,
+    "coreBuildings": 12,
+    "buildingBodies": 40,
+    "documentedFacades": 0,
+    "interpretedFacades": 40,
+    "meshes": 386,
+    "triangles": 142196,
+    "trueApertures": 3,
+    "sourceKeys": [
+      "jd-xiuxiueig",
+      "jd-rutas",
+      "jd-placas",
+      "jd-osm",
+      "jd-catastro"
+    ],
+    "conservedGateId": "733421700",
+    "secondaryGatesInterpreted": true,
+    "historicalInteriorInvented": false,
+    "periods": [
+      "medieval",
+      "modern",
+      "contemporary",
+      "mixed",
+      "interpretation"
+    ],
+    "context": {
+      "buildingParts": 344,
+      "parentParcels": 146,
+      "footprintsPreserved": true,
+      "courtyards": 3,
+      "sourceHeight": 0,
+      "ignHeight": 172,
+      "storeyHeight": 172,
+      "fallbackHeight": 0,
+      "streetSamples": 3366,
+      "roofCorrections": 0,
+      "maximumRoofCorrectionM": 0,
+      "preservedSantaMaria": true,
+      "preservedPlazaMayor": true
+    }
+  },
+  "meshCount": 423,
+  "triangles": 207716,
+  "checks": [
+    {
+      "pass": true,
+      "label": "all 16 documentary stops resolve to actual model targets"
+    },
+    {
+      "pass": true,
+      "label": "model source IDs resolve to visible documentary bibliography"
+    },
+    {
+      "pass": true,
+      "label": "the original Portalet is the mapped semicircular Sang Vella gate"
+    },
+    {
+      "pass": true,
+      "label": "the different arch opposite the museum is pointed, as institutional photographs show"
+    },
+    {
+      "pass": true,
+      "label": "no undocumented synagogue, private house or ritual bath interior is invented"
+    },
+    {
+      "pass": true,
+      "label": "12 core cadastral parcels preserve all 40 distinct source building parts"
+    },
+    {
+      "pass": true,
+      "label": "all model geometry and attributes are finite"
+    },
+    {
+      "pass": true,
+      "label": "portalet is structurally open"
+    },
+    {
+      "pass": true,
+      "label": "arco-museo is structurally open"
+    },
+    {
+      "pass": true,
+      "label": "portillo-sur is structurally open"
+    },
+    {
+      "pass": true,
+      "label": "portalet wall closes continuously below coping at -0.25"
+    },
+    {
+      "pass": true,
+      "label": "portalet wall closes continuously below coping at 0"
+    },
+    {
+      "pass": true,
+      "label": "portalet wall closes continuously below coping at 0.25"
+    },
+    {
+      "pass": true,
+      "label": "arco-museo wall closes continuously below coping at -0.25"
+    },
+    {
+      "pass": true,
+      "label": "arco-museo wall closes continuously below coping at 0"
+    },
+    {
+      "pass": true,
+      "label": "arco-museo wall closes continuously below coping at 0.25"
+    },
+    {
+      "pass": true,
+      "label": "portillo-sur wall closes continuously below coping at -0.25"
+    },
+    {
+      "pass": true,
+      "label": "portillo-sur wall closes continuously below coping at 0"
+    },
+    {
+      "pass": true,
+      "label": "portillo-sur wall closes continuously below coping at 0.25"
+    },
+    {
+      "pass": true,
+      "label": "Portalet threshold remains paving, with no flat wall or stone cap across the passage: -0.3/-0.2"
+    },
+    {
+      "pass": true,
+      "label": "Portalet threshold remains paving, with no flat wall or stone cap across the passage: -0.3/0"
+    },
+    {
+      "pass": true,
+      "label": "Portalet threshold remains paving, with no flat wall or stone cap across the passage: -0.3/0.2"
+    },
+    {
+      "pass": true,
+      "label": "Portalet threshold remains paving, with no flat wall or stone cap across the passage: 0/-0.2"
+    },
+    {
+      "pass": true,
+      "label": "Portalet threshold remains paving, with no flat wall or stone cap across the passage: 0/0"
+    },
+    {
+      "pass": true,
+      "label": "Portalet threshold remains paving, with no flat wall or stone cap across the passage: 0/0.2"
+    },
+    {
+      "pass": true,
+      "label": "Portalet threshold remains paving, with no flat wall or stone cap across the passage: 0.3/-0.2"
+    },
+    {
+      "pass": true,
+      "label": "Portalet threshold remains paving, with no flat wall or stone cap across the passage: 0.3/0"
+    },
+    {
+      "pass": true,
+      "label": "Portalet threshold remains paving, with no flat wall or stone cap across the passage: 0.3/0.2"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557906YJ3935H_part1-0 covers its real footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557906YJ3935H_part2-0 covers its real footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557906YJ3935H_part3-0 covers its real footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557906YJ3935H_part3-0 gable 1 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557906YJ3935H_part3-0 gable 1 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557906YJ3935H_part3-0 gable 1 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557906YJ3935H_part3-0 gable 3 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557906YJ3935H_part3-0 gable 3 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557906YJ3935H_part3-0 gable 3 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557906YJ3935H_part3-0 gable 5 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557906YJ3935H_part3-0 gable 5 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557906YJ3935H_part3-0 gable 5 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557906YJ3935H_part3-0 gable 7 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557906YJ3935H_part3-0 gable 7 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557906YJ3935H_part3-0 gable 7 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557907YJ3935H_part1-0 covers its real footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557907YJ3935H_part2-0 covers its real footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557907YJ3935H_part2-0 gable 0 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557907YJ3935H_part2-0 gable 0 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557907YJ3935H_part2-0 gable 0 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557907YJ3935H_part2-0 gable 4 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557907YJ3935H_part2-0 gable 4 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557907YJ3935H_part2-0 gable 4 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557907YJ3935H_part3-0 covers its real footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557907YJ3935H_part3-0 gable 1 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557907YJ3935H_part3-0 gable 1 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557907YJ3935H_part3-0 gable 1 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557907YJ3935H_part3-0 gable 3 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557907YJ3935H_part3-0 gable 3 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557907YJ3935H_part3-0 gable 3 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557908YJ3935H_part1-0 covers its real footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557908YJ3935H_part2-0 covers its real footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557908YJ3935H_part2-0 gable 1 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557908YJ3935H_part2-0 gable 1 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557908YJ3935H_part2-0 gable 1 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557908YJ3935H_part2-0 gable 3 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557908YJ3935H_part2-0 gable 3 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557908YJ3935H_part2-0 gable 3 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557908YJ3935H_part3-0 covers its real footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557908YJ3935H_part3-0 gable 1 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557908YJ3935H_part3-0 gable 1 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557908YJ3935H_part3-0 gable 1 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557908YJ3935H_part3-0 gable 3 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557908YJ3935H_part3-0 gable 3 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557908YJ3935H_part3-0 gable 3 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557908YJ3935H_part4-0 covers its real footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557908YJ3935H_part4-0 gable 2 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557908YJ3935H_part4-0 gable 2 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557908YJ3935H_part4-0 gable 2 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557908YJ3935H_part4-0 gable 6 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557908YJ3935H_part4-0 gable 6 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557908YJ3935H_part4-0 gable 6 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3557908YJ3935H_part5-0 covers its real footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558805YJ3935H_part1-0 covers its real footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558805YJ3935H_part2-0 covers its real footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558805YJ3935H_part2-0 gable 1 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558805YJ3935H_part2-0 gable 1 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558805YJ3935H_part2-0 gable 1 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558805YJ3935H_part2-0 gable 3 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558805YJ3935H_part2-0 gable 3 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558805YJ3935H_part2-0 gable 3 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558805YJ3935H_part3-0 covers its real footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558805YJ3935H_part3-0 gable 1 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558805YJ3935H_part3-0 gable 1 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558805YJ3935H_part3-0 gable 1 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558805YJ3935H_part3-0 gable 3 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558805YJ3935H_part3-0 gable 3 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558805YJ3935H_part3-0 gable 3 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558805YJ3935H_part4-0 covers its real footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558805YJ3935H_part4-0 gable 2 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558805YJ3935H_part4-0 gable 2 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558805YJ3935H_part4-0 gable 2 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558805YJ3935H_part4-0 gable 5 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558805YJ3935H_part4-0 gable 5 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558805YJ3935H_part4-0 gable 5 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558805YJ3935H_part4-0 gable 6 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558805YJ3935H_part4-0 gable 6 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558805YJ3935H_part4-0 gable 6 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558805YJ3935H_part4-0 gable 7 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558805YJ3935H_part4-0 gable 7 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558805YJ3935H_part4-0 gable 7 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558806YJ3935H_part1-0 covers its real footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558806YJ3935H_part2-0 covers its real footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558806YJ3935H_part2-0 gable 1 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558806YJ3935H_part2-0 gable 1 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558806YJ3935H_part2-0 gable 1 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558806YJ3935H_part2-0 gable 7 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558806YJ3935H_part2-0 gable 7 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558806YJ3935H_part2-0 gable 7 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558806YJ3935H_part3-0 covers its real footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558806YJ3935H_part3-0 gable 1 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558806YJ3935H_part3-0 gable 1 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558806YJ3935H_part3-0 gable 1 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558806YJ3935H_part3-0 gable 5 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558806YJ3935H_part3-0 gable 5 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558806YJ3935H_part3-0 gable 5 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558806YJ3935H_part5-0 covers its real footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558808YJ3935H_part1-0 covers its real footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558809YJ3935H_part1-0 covers its real footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558809YJ3935H_part1-0 gable 3 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558809YJ3935H_part1-0 gable 3 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558809YJ3935H_part1-0 gable 3 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558809YJ3935H_part1-0 gable 5 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558809YJ3935H_part1-0 gable 5 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558809YJ3935H_part1-0 gable 5 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558809YJ3935H_part1-0 gable 7 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558809YJ3935H_part1-0 gable 7 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558809YJ3935H_part1-0 gable 7 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558809YJ3935H_part1-0 gable 9 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558809YJ3935H_part1-0 gable 9 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558809YJ3935H_part1-0 gable 9 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558809YJ3935H_part2-0 covers its real footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558810YJ3935H_part1-0 covers its real footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558810YJ3935H_part2-0 covers its real footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558810YJ3935H_part3-0 covers its real footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558810YJ3935H_part3-0 gable 0 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558810YJ3935H_part3-0 gable 0 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558810YJ3935H_part3-0 gable 0 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558810YJ3935H_part3-0 gable 2 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558810YJ3935H_part3-0 gable 2 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558810YJ3935H_part3-0 gable 2 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558810YJ3935H_part4-0 covers its real footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558810YJ3935H_part5-0 covers its real footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558810YJ3935H_part5-0 gable 0 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558810YJ3935H_part5-0 gable 0 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558810YJ3935H_part5-0 gable 0 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558810YJ3935H_part5-0 gable 2 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558810YJ3935H_part5-0 gable 2 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558810YJ3935H_part5-0 gable 2 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558230YJ3935H_part1-0 covers its real footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558230YJ3935H_part1-0 gable 0 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558230YJ3935H_part1-0 gable 0 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558230YJ3935H_part1-0 gable 0 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558230YJ3935H_part1-0 gable 2 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558230YJ3935H_part1-0 gable 2 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558230YJ3935H_part1-0 gable 2 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558230YJ3935H_part2-0 covers its real footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558230YJ3935H_part2-0 gable 1 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558230YJ3935H_part2-0 gable 1 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558230YJ3935H_part2-0 gable 1 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558230YJ3935H_part2-0 gable 3 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558230YJ3935H_part2-0 gable 3 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558230YJ3935H_part2-0 gable 3 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558229YJ3935H_part1-0 covers its real footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558229YJ3935H_part2-0 covers its real footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558229YJ3935H_part3-0 covers its real footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558229YJ3935H_part3-0 gable 1 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558229YJ3935H_part3-0 gable 1 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558229YJ3935H_part3-0 gable 1 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558229YJ3935H_part3-0 gable 3 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558229YJ3935H_part3-0 gable 3 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558229YJ3935H_part3-0 gable 3 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558229YJ3935H_part4-0 covers its real footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558229YJ3935H_part4-0 gable 1 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558229YJ3935H_part4-0 gable 1 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558229YJ3935H_part4-0 gable 1 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558229YJ3935H_part4-0 gable 3 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558229YJ3935H_part4-0 gable 3 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558229YJ3935H_part4-0 gable 3 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558228YJ3935H_part1-0 covers its real footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558228YJ3935H_part1-0 gable 1 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558228YJ3935H_part1-0 gable 1 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558228YJ3935H_part1-0 gable 1 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558228YJ3935H_part1-0 gable 3 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558228YJ3935H_part1-0 gable 3 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558228YJ3935H_part1-0 gable 3 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558228YJ3935H_part2-0 covers its real footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558228YJ3935H_part3-0 covers its real footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558228YJ3935H_part3-0 gable 1 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558228YJ3935H_part3-0 gable 1 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558228YJ3935H_part3-0 gable 1 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558228YJ3935H_part3-0 gable 3 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558228YJ3935H_part3-0 gable 3 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558228YJ3935H_part3-0 gable 3 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558228YJ3935H_part4-0 covers its real footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558227YJ3935H_part1-0 covers its real footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558227YJ3935H_part2-0 covers its real footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558227YJ3935H_part2-0 gable 1 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558227YJ3935H_part2-0 gable 1 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558227YJ3935H_part2-0 gable 1 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558227YJ3935H_part2-0 gable 5 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558227YJ3935H_part2-0 gable 5 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558227YJ3935H_part2-0 gable 5 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558227YJ3935H_part3-0 covers its real footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558227YJ3935H_part3-0 gable 1 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558227YJ3935H_part3-0 gable 1 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558227YJ3935H_part3-0 gable 1 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558227YJ3935H_part3-0 gable 3 closes at 0.25 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558227YJ3935H_part3-0 gable 3 closes at 0.55 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof cat-3558227YJ3935H_part3-0 gable 3 closes at 0.85 of ridge"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves juderia-conjunto"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves juderia-portalet"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves juderia-dovelas"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves juderia-sang-vella"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves juderia-segovia"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves juderia-rams"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves juderia-antigons"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves juderia-casas"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves juderia-sinagoga"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves juderia-berenguer"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves juderia-micve"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves juderia-museo"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves juderia-arco-museo"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves juderia-teatro"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves juderia-refugio"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves juderia-memoria"
+    },
+    {
+      "pass": true,
+      "label": "reading and selection restore original materials, textures and geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-conjunto/1363x936/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-conjunto/1363x936/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-conjunto/1363x936/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-conjunto/1363x936/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-conjunto/1363x936/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-conjunto/1363x936/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-conjunto/1363x936/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-conjunto/1363x936/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-conjunto/390x844/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-conjunto/390x844/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-conjunto/390x844/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-conjunto/390x844/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-conjunto/390x844/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-conjunto/390x844/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-conjunto/390x844/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-conjunto/390x844/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-conjunto/844x390/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-conjunto/844x390/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-conjunto/844x390/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-conjunto/844x390/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-conjunto/844x390/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-conjunto/844x390/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-conjunto/844x390/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-conjunto/844x390/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-portalet/1363x936/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-portalet/1363x936/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-portalet/1363x936/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-portalet/1363x936/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-portalet/1363x936/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-portalet/1363x936/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-portalet/1363x936/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-portalet/1363x936/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-portalet/390x844/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-portalet/390x844/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-portalet/390x844/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-portalet/390x844/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-portalet/390x844/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-portalet/390x844/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-portalet/390x844/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-portalet/390x844/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-portalet/844x390/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-portalet/844x390/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-portalet/844x390/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-portalet/844x390/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-portalet/844x390/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-portalet/844x390/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-portalet/844x390/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-portalet/844x390/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-dovelas/1363x936/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-dovelas/1363x936/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-dovelas/1363x936/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-dovelas/1363x936/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-dovelas/1363x936/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-dovelas/1363x936/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-dovelas/1363x936/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-dovelas/1363x936/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-dovelas/390x844/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-dovelas/390x844/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-dovelas/390x844/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-dovelas/390x844/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-dovelas/390x844/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-dovelas/390x844/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-dovelas/390x844/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-dovelas/390x844/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-dovelas/844x390/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-dovelas/844x390/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-dovelas/844x390/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-dovelas/844x390/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-dovelas/844x390/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-dovelas/844x390/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-dovelas/844x390/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-dovelas/844x390/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sang-vella/1363x936/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sang-vella/1363x936/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sang-vella/1363x936/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sang-vella/1363x936/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sang-vella/1363x936/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sang-vella/1363x936/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sang-vella/1363x936/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sang-vella/1363x936/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sang-vella/390x844/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sang-vella/390x844/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sang-vella/390x844/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sang-vella/390x844/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sang-vella/390x844/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sang-vella/390x844/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sang-vella/390x844/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sang-vella/390x844/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sang-vella/844x390/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sang-vella/844x390/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sang-vella/844x390/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sang-vella/844x390/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sang-vella/844x390/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sang-vella/844x390/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sang-vella/844x390/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sang-vella/844x390/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-segovia/1363x936/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-segovia/1363x936/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-segovia/1363x936/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-segovia/1363x936/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-segovia/1363x936/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-segovia/1363x936/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-segovia/1363x936/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-segovia/1363x936/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-segovia/390x844/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-segovia/390x844/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-segovia/390x844/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-segovia/390x844/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-segovia/390x844/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-segovia/390x844/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-segovia/390x844/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-segovia/390x844/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-segovia/844x390/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-segovia/844x390/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-segovia/844x390/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-segovia/844x390/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-segovia/844x390/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-segovia/844x390/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-segovia/844x390/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-segovia/844x390/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-rams/1363x936/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-rams/1363x936/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-rams/1363x936/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-rams/1363x936/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-rams/1363x936/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-rams/1363x936/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-rams/1363x936/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-rams/1363x936/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-rams/390x844/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-rams/390x844/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-rams/390x844/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-rams/390x844/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-rams/390x844/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-rams/390x844/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-rams/390x844/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-rams/390x844/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-rams/844x390/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-rams/844x390/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-rams/844x390/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-rams/844x390/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-rams/844x390/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-rams/844x390/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-rams/844x390/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-rams/844x390/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-antigons/1363x936/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-antigons/1363x936/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-antigons/1363x936/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-antigons/1363x936/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-antigons/1363x936/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-antigons/1363x936/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-antigons/1363x936/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-antigons/1363x936/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-antigons/390x844/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-antigons/390x844/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-antigons/390x844/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-antigons/390x844/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-antigons/390x844/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-antigons/390x844/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-antigons/390x844/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-antigons/390x844/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-antigons/844x390/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-antigons/844x390/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-antigons/844x390/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-antigons/844x390/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-antigons/844x390/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-antigons/844x390/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-antigons/844x390/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-antigons/844x390/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-casas/1363x936/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-casas/1363x936/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-casas/1363x936/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-casas/1363x936/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-casas/1363x936/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-casas/1363x936/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-casas/1363x936/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-casas/1363x936/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-casas/390x844/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-casas/390x844/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-casas/390x844/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-casas/390x844/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-casas/390x844/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-casas/390x844/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-casas/390x844/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-casas/390x844/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-casas/844x390/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-casas/844x390/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-casas/844x390/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-casas/844x390/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-casas/844x390/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-casas/844x390/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-casas/844x390/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-casas/844x390/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sinagoga/1363x936/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sinagoga/1363x936/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sinagoga/1363x936/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sinagoga/1363x936/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sinagoga/1363x936/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sinagoga/1363x936/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sinagoga/1363x936/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sinagoga/1363x936/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sinagoga/390x844/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sinagoga/390x844/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sinagoga/390x844/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sinagoga/390x844/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sinagoga/390x844/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sinagoga/390x844/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sinagoga/390x844/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sinagoga/390x844/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sinagoga/844x390/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sinagoga/844x390/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sinagoga/844x390/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sinagoga/844x390/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sinagoga/844x390/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sinagoga/844x390/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sinagoga/844x390/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-sinagoga/844x390/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-berenguer/1363x936/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-berenguer/1363x936/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-berenguer/1363x936/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-berenguer/1363x936/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-berenguer/1363x936/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-berenguer/1363x936/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-berenguer/1363x936/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-berenguer/1363x936/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-berenguer/390x844/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-berenguer/390x844/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-berenguer/390x844/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-berenguer/390x844/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-berenguer/390x844/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-berenguer/390x844/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-berenguer/390x844/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-berenguer/390x844/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-berenguer/844x390/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-berenguer/844x390/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-berenguer/844x390/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-berenguer/844x390/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-berenguer/844x390/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-berenguer/844x390/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-berenguer/844x390/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-berenguer/844x390/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-micve/1363x936/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-micve/1363x936/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-micve/1363x936/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-micve/1363x936/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-micve/1363x936/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-micve/1363x936/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-micve/1363x936/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-micve/1363x936/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-micve/390x844/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-micve/390x844/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-micve/390x844/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-micve/390x844/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-micve/390x844/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-micve/390x844/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-micve/390x844/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-micve/390x844/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-micve/844x390/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-micve/844x390/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-micve/844x390/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-micve/844x390/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-micve/844x390/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-micve/844x390/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-micve/844x390/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-micve/844x390/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-museo/1363x936/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-museo/1363x936/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-museo/1363x936/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-museo/1363x936/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-museo/1363x936/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-museo/1363x936/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-museo/1363x936/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-museo/1363x936/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-museo/390x844/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-museo/390x844/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-museo/390x844/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-museo/390x844/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-museo/390x844/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-museo/390x844/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-museo/390x844/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-museo/390x844/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-museo/844x390/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-museo/844x390/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-museo/844x390/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-museo/844x390/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-museo/844x390/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-museo/844x390/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-museo/844x390/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-museo/844x390/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-arco-museo/1363x936/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-arco-museo/1363x936/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-arco-museo/1363x936/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-arco-museo/1363x936/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-arco-museo/1363x936/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-arco-museo/1363x936/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-arco-museo/1363x936/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-arco-museo/1363x936/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-arco-museo/390x844/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-arco-museo/390x844/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-arco-museo/390x844/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-arco-museo/390x844/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-arco-museo/390x844/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-arco-museo/390x844/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-arco-museo/390x844/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-arco-museo/390x844/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-arco-museo/844x390/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-arco-museo/844x390/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-arco-museo/844x390/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-arco-museo/844x390/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-arco-museo/844x390/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-arco-museo/844x390/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-arco-museo/844x390/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-arco-museo/844x390/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-teatro/1363x936/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-teatro/1363x936/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-teatro/1363x936/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-teatro/1363x936/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-teatro/1363x936/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-teatro/1363x936/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-teatro/1363x936/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-teatro/1363x936/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-teatro/390x844/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-teatro/390x844/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-teatro/390x844/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-teatro/390x844/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-teatro/390x844/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-teatro/390x844/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-teatro/390x844/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-teatro/390x844/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-teatro/844x390/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-teatro/844x390/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-teatro/844x390/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-teatro/844x390/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-teatro/844x390/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-teatro/844x390/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-teatro/844x390/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-teatro/844x390/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-refugio/1363x936/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-refugio/1363x936/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-refugio/1363x936/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-refugio/1363x936/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-refugio/1363x936/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-refugio/1363x936/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-refugio/1363x936/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-refugio/1363x936/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-refugio/390x844/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-refugio/390x844/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-refugio/390x844/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-refugio/390x844/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-refugio/390x844/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-refugio/390x844/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-refugio/390x844/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-refugio/390x844/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-refugio/844x390/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-refugio/844x390/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-refugio/844x390/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-refugio/844x390/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-refugio/844x390/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-refugio/844x390/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-refugio/844x390/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-refugio/844x390/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-memoria/1363x936/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-memoria/1363x936/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-memoria/1363x936/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-memoria/1363x936/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-memoria/1363x936/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-memoria/1363x936/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-memoria/1363x936/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-memoria/1363x936/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-memoria/390x844/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-memoria/390x844/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-memoria/390x844/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-memoria/390x844/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-memoria/390x844/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-memoria/390x844/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-memoria/390x844/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-memoria/390x844/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-memoria/844x390/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-memoria/844x390/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-memoria/844x390/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-memoria/844x390/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "juderia-memoria/844x390/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "juderia-memoria/844x390/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "juderia-memoria/844x390/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "juderia-memoria/844x390/near sight line clears surrounding and own structural geometry"
+    }
+  ],
+  "errors": [],
+  "portal": {
+    "id": "portalet",
+    "authentic": true,
+    "osmId": "733421700",
+    "widthM": 4.356504604224451,
+    "depthM": 0.7145849147651704,
+    "openingWidthM": 2.48,
+    "openingHeightM": 3.55,
+    "archType": "round",
+    "heightM": 4.03,
+    "baseM": 61.086382682352436,
+    "target": [
+      0.3859277607457678,
+      62.93638268235244,
+      90.89231638908339
+    ],
+    "archTarget": [
+      0.3859277607457678,
+      64.43638268235243,
+      90.89231638908339
+    ],
+    "normal": [
+      0.9596759817180579,
+      0,
+      -0.2811085379590625
+    ],
+    "status": "Documented conserved Portalet; small dimensions visually estimated"
+  },
+  "gates": [
+    {
+      "id": "portalet",
+      "authentic": true,
+      "osmId": "733421700",
+      "widthM": 4.356504604224451,
+      "depthM": 0.7145849147651704,
+      "openingWidthM": 2.48,
+      "openingHeightM": 3.55,
+      "archType": "round",
+      "heightM": 4.03,
+      "baseM": 61.086382682352436,
+      "target": [
+        0.3859277607457678,
+        62.93638268235244,
+        90.89231638908339
+      ],
+      "archTarget": [
+        0.3859277607457678,
+        64.43638268235243,
+        90.89231638908339
+      ],
+      "normal": [
+        0.9596759817180579,
+        0,
+        -0.2811085379590625
+      ],
+      "status": "Documented conserved Portalet; small dimensions visually estimated"
+    },
+    {
+      "id": "arco-museo",
+      "authentic": false,
+      "osmId": "1303697035",
+      "widthM": 2.621502212765427,
+      "depthM": 0.85,
+      "openingWidthM": 1.901502212765427,
+      "openingHeightM": 3.25,
+      "archType": "pointed",
+      "heightM": 3.82,
+      "baseM": 58.56136107977559,
+      "target": [
+        -15.532346605898086,
+        60.41136107977559,
+        49.44916992890443
+      ],
+      "archTarget": [
+        -15.532346605898086,
+        61.611361079775584,
+        49.44916992890443
+      ],
+      "normal": [
+        0.9602361358729876,
+        0,
+        -0.27918911755960935
+      ],
+      "status": "Current mapped arch; medieval fabric not asserted"
+    },
+    {
+      "id": "portillo-sur",
+      "authentic": false,
+      "osmId": "733421698",
+      "widthM": 3.4318144747773562,
+      "depthM": 0.85,
+      "openingWidthM": 2.6,
+      "openingHeightM": 3.25,
+      "archType": "round",
+      "heightM": 3.82,
+      "baseM": 72.90604711548332,
+      "target": [
+        -11.493734959238536,
+        74.75604711548331,
+        178.13491938298586
+      ],
+      "archTarget": [
+        -11.493734959238536,
+        75.95604711548332,
+        178.13491938298586
+      ],
+      "normal": [
+        0.8801446370582979,
+        0,
+        0.47470561178220433
+      ],
+      "status": "Current mapped arch; medieval fabric not asserted"
+    }
+  ],
+  "facades": [
+    {
+      "id": "cat-3557906YJ3935H_part1-0",
+      "parentId": "3557906YJ3935H",
+      "baseM": 62.72481892430245,
+      "heightM": 4.999999999999993,
+      "sourceHeightM": 5,
+      "heightMethod": "IGN",
+      "roof": "flat",
+      "roofAxis": {
+        "midpoint": [
+          -18.270324903690778,
+          90.63674400046821
+        ],
+        "normal": [
+          0.3933042817685403,
+          -0.9194083651688909
+        ]
+      },
+      "footprint": [
+        [
+          -0.2781951,
+          39.6781197
+        ],
+        [
+          -0.2782811,
+          39.6781532
+        ],
+        [
+          -0.2782661,
+          39.6782032
+        ],
+        [
+          -0.2781604,
+          39.6781684
+        ],
+        [
+          -0.2781607,
+          39.6781445
+        ],
+        [
+          -0.2781903,
+          39.6781494
+        ],
+        [
+          -0.2781951,
+          39.6781197
+        ]
+      ],
+      "holes": [],
+      "levels": 2,
+      "streetFaces": 4,
+      "elevationStatus": "Cartographic parts and height estimates; facade openings and finishes are interpretative."
+    },
+    {
+      "id": "cat-3557906YJ3935H_part2-0",
+      "parentId": "3557906YJ3935H",
+      "baseM": 63.312243866170704,
+      "heightM": 9.149999999999991,
+      "sourceHeightM": 9.149999999999999,
+      "heightMethod": "storeys",
+      "roof": "flat",
+      "roofAxis": {
+        "midpoint": [
+          -15.271678377878828,
+          98.79093400005075
+        ],
+        "normal": [
+          -0.482821645812712,
+          0.8757187095949842
+        ]
+      },
+      "footprint": [
+        [
+          -0.2781614,
+          39.6781054
+        ],
+        [
+          -0.2781951,
+          39.6781197
+        ],
+        [
+          -0.2781903,
+          39.6781494
+        ],
+        [
+          -0.2781607,
+          39.6781445
+        ],
+        [
+          -0.2781614,
+          39.6781054
+        ]
+      ],
+      "holes": [],
+      "levels": 3,
+      "streetFaces": 0,
+      "elevationStatus": "Cartographic parts and height estimates; facade openings and finishes are interpretative."
+    },
+    {
+      "id": "cat-3557906YJ3935H_part3-0",
+      "parentId": "3557906YJ3935H",
+      "baseM": 64.16713610780477,
+      "heightM": 6.099999999999994,
+      "sourceHeightM": 6.1,
+      "heightMethod": "storeys",
+      "roof": "tiles",
+      "roofAxis": {
+        "midpoint": [
+          -14.594841019197638,
+          103.1992060001528
+        ],
+        "normal": [
+          0.978204207425813,
+          0.2076451987753079
+        ]
+      },
+      "footprint": [
+        [
+          -0.2782163,
+          39.6780504
+        ],
+        [
+          -0.2782025,
+          39.6780793
+        ],
+        [
+          -0.2781874,
+          39.6780744
+        ],
+        [
+          -0.2781822,
+          39.6780986
+        ],
+        [
+          -0.2781979,
+          39.6781034
+        ],
+        [
+          -0.2781951,
+          39.6781197
+        ],
+        [
+          -0.2781614,
+          39.6781054
+        ],
+        [
+          -0.2781793,
+          39.6780405
+        ],
+        [
+          -0.2782163,
+          39.6780504
+        ]
+      ],
+      "holes": [],
+      "levels": 2,
+      "streetFaces": 6,
+      "elevationStatus": "Cartographic parts and height estimates; facade openings and finishes are interpretative."
+    },
+    {
+      "id": "cat-3557907YJ3935H_part1-0",
+      "parentId": "3557907YJ3935H",
+      "baseM": 62.9406114461271,
+      "heightM": 3.0500000000000043,
+      "sourceHeightM": 3.05,
+      "heightMethod": "storeys",
+      "roof": "flat",
+      "roofAxis": {
+        "midpoint": [
+          -9.308655572265184,
+          95.65171000014587
+        ],
+        "normal": [
+          0.17628061578619417,
+          -0.9843399537243422
+        ]
+      },
+      "footprint": [
+        [
+          -0.2780969,
+          39.6781137
+        ],
+        [
+          -0.2781317,
+          39.678119
+        ],
+        [
+          -0.2781257,
+          39.6781431
+        ],
+        [
+          -0.2780916,
+          39.6781384
+        ],
+        [
+          -0.2780969,
+          39.6781137
+        ]
+      ],
+      "holes": [],
+      "levels": 1,
+      "streetFaces": 1,
+      "elevationStatus": "Cartographic parts and height estimates; facade openings and finishes are interpretative."
+    },
+    {
+      "id": "cat-3557907YJ3935H_part2-0",
+      "parentId": "3557907YJ3935H",
+      "baseM": 61.630492857848466,
+      "heightM": 8,
+      "sourceHeightM": 8,
+      "heightMethod": "IGN",
+      "roof": "tiles",
+      "roofAxis": {
+        "midpoint": [
+          1.3408233751132888,
+          95.46246600030727
+        ],
+        "normal": [
+          0.9769432458929127,
+          -0.21349916698718113
+        ]
+      },
+      "footprint": [
+        [
+          -0.2779786,
+          39.6781222
+        ],
+        [
+          -0.278049,
+          39.6781298
+        ],
+        [
+          -0.2780439,
+          39.6781502
+        ],
+        [
+          -0.2780372,
+          39.6781492
+        ],
+        [
+          -0.2780328,
+          39.6781699
+        ],
+        [
+          -0.2779901,
+          39.6781627
+        ],
+        [
+          -0.2779786,
+          39.6781222
+        ]
+      ],
+      "holes": [],
+      "levels": 3,
+      "streetFaces": 3,
+      "elevationStatus": "Cartographic parts and height estimates; facade openings and finishes are interpretative."
+    },
+    {
+      "id": "cat-3557907YJ3935H_part3-0",
+      "parentId": "3557907YJ3935H",
+      "baseM": 62.49755201584236,
+      "heightM": 6.799999999999997,
+      "sourceHeightM": 6.8,
+      "heightMethod": "IGN",
+      "roof": "tiles",
+      "roofAxis": {
+        "midpoint": [
+          -5.6203203455181985,
+          94.2156820003703
+        ],
+        "normal": [
+          0.20230253091773748,
+          -0.9793230753864006
+        ]
+      },
+      "footprint": [
+        [
+          -0.2780543,
+          39.6781074
+        ],
+        [
+          -0.2780969,
+          39.6781137
+        ],
+        [
+          -0.2780873,
+          39.6781571
+        ],
+        [
+          -0.2780439,
+          39.6781502
+        ],
+        [
+          -0.2780543,
+          39.6781074
+        ]
+      ],
+      "holes": [],
+      "levels": 2,
+      "streetFaces": 1,
+      "elevationStatus": "Cartographic parts and height estimates; facade openings and finishes are interpretative."
+    },
+    {
+      "id": "cat-3557908YJ3935H_part1-0",
+      "parentId": "3557908YJ3935H",
+      "baseM": 63.15389729885208,
+      "heightM": 3.0500000000000043,
+      "sourceHeightM": 3.05,
+      "heightMethod": "storeys",
+      "roof": "flat",
+      "roofAxis": {
+        "midpoint": [
+          -12.260180509813031,
+          95.12294000029442
+        ],
+        "normal": [
+          0.176405925351355,
+          -0.9843175044166046
+        ]
+      },
+      "footprint": [
+        [
+          -0.2781605,
+          39.6781479
+        ],
+        [
+          -0.2781257,
+          39.6781431
+        ],
+        [
+          -0.2781317,
+          39.678119
+        ],
+        [
+          -0.2781607,
+          39.6781223
+        ],
+        [
+          -0.2781605,
+          39.6781479
+        ]
+      ],
+      "holes": [],
+      "levels": 1,
+      "streetFaces": 1,
+      "elevationStatus": "Cartographic parts and height estimates; facade openings and finishes are interpretative."
+    },
+    {
+      "id": "cat-3557908YJ3935H_part2-0",
+      "parentId": "3557908YJ3935H",
+      "baseM": 62.03667348630029,
+      "heightM": 9.150000000000006,
+      "sourceHeightM": 9.149999999999999,
+      "heightMethod": "storeys",
+      "roof": "tiles",
+      "roofAxis": {
+        "midpoint": [
+          -4.425145515943749,
+          98.11744800009009
+        ],
+        "normal": [
+          -0.9838209350206126,
+          -0.17915459194552547
+        ]
+      },
+      "footprint": [
+        [
+          -0.2780543,
+          39.6781074
+        ],
+        [
+          -0.278049,
+          39.6781298
+        ],
+        [
+          -0.2779873,
+          39.6781233
+        ],
+        [
+          -0.2779916,
+          39.6781059
+        ],
+        [
+          -0.2780543,
+          39.6781074
+        ]
+      ],
+      "holes": [],
+      "levels": 3,
+      "streetFaces": 0,
+      "elevationStatus": "Cartographic parts and height estimates; facade openings and finishes are interpretative."
+    },
+    {
+      "id": "cat-3557908YJ3935H_part3-0",
+      "parentId": "3557908YJ3935H",
+      "baseM": 63.28816172851445,
+      "heightM": 5.200000000000003,
+      "sourceHeightM": 5.2,
+      "heightMethod": "IGN",
+      "roof": "tiles",
+      "roofAxis": {
+        "midpoint": [
+          -9.480006802311717,
+          101.27893600025516
+        ],
+        "normal": [
+          -0.19338177806232762,
+          0.9811235844242319
+        ]
+      },
+      "footprint": [
+        [
+          -0.2780856,
+          39.6780864
+        ],
+        [
+          -0.2781357,
+          39.678094
+        ],
+        [
+          -0.2781317,
+          39.678119
+        ],
+        [
+          -0.2780795,
+          39.6781111
+        ],
+        [
+          -0.2780856,
+          39.6780864
+        ]
+      ],
+      "holes": [],
+      "levels": 3,
+      "streetFaces": 1,
+      "elevationStatus": "Cartographic parts and height estimates; facade openings and finishes are interpretative."
+    },
+    {
+      "id": "cat-3557908YJ3935H_part4-0",
+      "parentId": "3557908YJ3935H",
+      "baseM": 61.773407357351644,
+      "heightM": 5.200000000000003,
+      "sourceHeightM": 5.2,
+      "heightMethod": "IGN",
+      "roof": "tiles",
+      "roofAxis": {
+        "midpoint": [
+          2.2189984291023648,
+          99.45328800027681
+        ],
+        "normal": [
+          0.9762309753027892,
+          -0.21673274524022643
+        ]
+      },
+      "footprint": [
+        [
+          -0.2780856,
+          39.6780864
+        ],
+        [
+          -0.2780795,
+          39.6781111
+        ],
+        [
+          -0.2780543,
+          39.6781074
+        ],
+        [
+          -0.2779916,
+          39.6781059
+        ],
+        [
+          -0.2779873,
+          39.6781233
+        ],
+        [
+          -0.2779786,
+          39.6781222
+        ],
+        [
+          -0.2779696,
+          39.678091
+        ],
+        [
+          -0.2780856,
+          39.6780864
+        ]
+      ],
+      "holes": [],
+      "levels": 2,
+      "streetFaces": 1,
+      "elevationStatus": "Cartographic parts and height estimates; facade openings and finishes are interpretative."
+    },
+    {
+      "id": "cat-3557908YJ3935H_part5-0",
+      "parentId": "3557908YJ3935H",
+      "baseM": 63.63216303951367,
+      "heightM": 6.099999999999994,
+      "sourceHeightM": 6.1,
+      "heightMethod": "storeys",
+      "roof": "flat",
+      "roofAxis": {
+        "midpoint": [
+          -12.73996395394475,
+          100.62771400015919
+        ],
+        "normal": [
+          -0.20072273785298406,
+          0.9796480911576372
+        ]
+      },
+      "footprint": [
+        [
+          -0.2781607,
+          39.6781223
+        ],
+        [
+          -0.2781317,
+          39.678119
+        ],
+        [
+          -0.2781357,
+          39.678094
+        ],
+        [
+          -0.2781617,
+          39.6780981
+        ],
+        [
+          -0.2781607,
+          39.6781223
+        ]
+      ],
+      "holes": [],
+      "levels": 2,
+      "streetFaces": 1,
+      "elevationStatus": "Cartographic parts and height estimates; facade openings and finishes are interpretative."
+    },
+    {
+      "id": "cat-3558805YJ3935H_part1-0",
+      "parentId": "3558805YJ3935H",
+      "baseM": 61.28910762138584,
+      "heightM": 3.049999999999997,
+      "sourceHeightM": 3.05,
+      "heightMethod": "storeys",
+      "roof": "flat",
+      "roofAxis": {
+        "midpoint": [
+          -11.7247079159194,
+          83.82952600001602
+        ],
+        "normal": [
+          0.18731014945490496,
+          0.9823008235317637
+        ]
+      },
+      "footprint": [
+        [
+          -0.2781222,
+          39.6782491
+        ],
+        [
+          -0.2781515,
+          39.6782448
+        ],
+        [
+          -0.2781608,
+          39.6782667
+        ],
+        [
+          -0.278156,
+          39.6782772
+        ],
+        [
+          -0.2781368,
+          39.6782824
+        ],
+        [
+          -0.2781222,
+          39.6782491
+        ]
+      ],
+      "holes": [],
+      "levels": 1,
+      "streetFaces": 0,
+      "elevationStatus": "Cartographic parts and height estimates; facade openings and finishes are interpretative."
+    },
+    {
+      "id": "cat-3558805YJ3935H_part2-0",
+      "parentId": "3558805YJ3935H",
+      "baseM": 61.094373144239555,
+      "heightM": 7.200000000000003,
+      "sourceHeightM": 7.2,
+      "heightMethod": "IGN",
+      "roof": "tiles",
+      "roofAxis": {
+        "midpoint": [
+          -11.094992145499937,
+          81.73671000007943
+        ],
+        "normal": [
+          -0.947510374018334,
+          0.3197250242437035
+        ]
+      },
+      "footprint": [
+        [
+          -0.2781222,
+          39.6782491
+        ],
+        [
+          -0.2781368,
+          39.6782824
+        ],
+        [
+          -0.2780927,
+          39.6782949
+        ],
+        [
+          -0.2780782,
+          39.678256
+        ],
+        [
+          -0.2781222,
+          39.6782491
+        ]
+      ],
+      "holes": [],
+      "levels": 3,
+      "streetFaces": 0,
+      "elevationStatus": "Cartographic parts and height estimates; facade openings and finishes are interpretative."
+    },
+    {
+      "id": "cat-3558805YJ3935H_part3-0",
+      "parentId": "3558805YJ3935H",
+      "baseM": 60.64384070637168,
+      "heightM": 7.200000000000003,
+      "sourceHeightM": 7.2,
+      "heightMethod": "IGN",
+      "roof": "tiles",
+      "roofAxis": {
+        "midpoint": [
+          -2.561700889193053,
+          79.33219800005972
+        ],
+        "normal": [
+          0.9758783519159374,
+          -0.21831500695516526
+        ]
+      },
+      "footprint": [
+        [
+          -0.2780782,
+          39.678256
+        ],
+        [
+          -0.2780927,
+          39.6782949
+        ],
+        [
+          -0.2780366,
+          39.6783104
+        ],
+        [
+          -0.2780232,
+          39.6782643
+        ],
+        [
+          -0.2780782,
+          39.678256
+        ]
+      ],
+      "holes": [],
+      "levels": 2,
+      "streetFaces": 1,
+      "elevationStatus": "Cartographic parts and height estimates; facade openings and finishes are interpretative."
+    },
+    {
+      "id": "cat-3558805YJ3935H_part4-0",
+      "parentId": "3558805YJ3935H",
+      "baseM": 61.39157193068734,
+      "heightM": 7.000000000000007,
+      "sourceHeightM": 7,
+      "heightMethod": "IGN",
+      "roof": "tiles",
+      "roofAxis": {
+        "midpoint": [
+          -15.670069987738563,
+          87.34723800038907
+        ],
+        "normal": [
+          -0.43202877690082786,
+          0.9018598205539343
+        ]
+      },
+      "footprint": [
+        [
+          -0.278004,
+          39.6781991
+        ],
+        [
+          -0.2781136,
+          39.6781898
+        ],
+        [
+          -0.2782522,
+          39.6782409
+        ],
+        [
+          -0.2781665,
+          39.6782907
+        ],
+        [
+          -0.278156,
+          39.6782772
+        ],
+        [
+          -0.2781608,
+          39.6782667
+        ],
+        [
+          -0.2781515,
+          39.6782448
+        ],
+        [
+          -0.2780232,
+          39.6782643
+        ],
+        [
+          -0.278004,
+          39.6781991
+        ]
+      ],
+      "holes": [],
+      "levels": 2,
+      "streetFaces": 3,
+      "elevationStatus": "Cartographic parts and height estimates; facade openings and finishes are interpretative."
+    },
+    {
+      "id": "cat-3558806YJ3935H_part1-0",
+      "parentId": "3558806YJ3935H",
+      "baseM": 62.476970849481475,
+      "heightM": 3.049999999999997,
+      "sourceHeightM": 3.05,
+      "heightMethod": "storeys",
+      "roof": "flat",
+      "roofAxis": {
+        "midpoint": [
+          -22.47271382057736,
+          83.35085000035448
+        ],
+        "normal": [
+          -0.7995993415711963,
+          0.6005338399781559
+        ]
+      },
+      "footprint": [
+        [
+          -0.2782522,
+          39.6782409
+        ],
+        [
+          -0.2782724,
+          39.6782616
+        ],
+        [
+          -0.2782466,
+          39.6782753
+        ],
+        [
+          -0.2782267,
+          39.6782557
+        ],
+        [
+          -0.2782522,
+          39.6782409
+        ]
+      ],
+      "holes": [],
+      "levels": 1,
+      "streetFaces": 1,
+      "elevationStatus": "Cartographic parts and height estimates; facade openings and finishes are interpretative."
+    },
+    {
+      "id": "cat-3558806YJ3935H_part2-0",
+      "parentId": "3558806YJ3935H",
+      "baseM": 62.50717940119807,
+      "heightM": 9,
+      "sourceHeightM": 9,
+      "heightMethod": "IGN",
+      "roof": "tiles",
+      "roofAxis": {
+        "midpoint": [
+          -26.015400501785507,
+          78.68097600035924
+        ],
+        "normal": [
+          -0.7957367944988266,
+          0.6056425958275491
+        ]
+      },
+      "footprint": [
+        [
+          -0.2782724,
+          39.6782616
+        ],
+        [
+          -0.2783349,
+          39.6783248
+        ],
+        [
+          -0.278273,
+          39.6783594
+        ],
+        [
+          -0.2782645,
+          39.678351
+        ],
+        [
+          -0.2782844,
+          39.67834
+        ],
+        [
+          -0.2782753,
+          39.6783302
+        ],
+        [
+          -0.2782547,
+          39.6783415
+        ],
+        [
+          -0.2781895,
+          39.6782775
+        ],
+        [
+          -0.2782267,
+          39.6782557
+        ],
+        [
+          -0.2782466,
+          39.6782753
+        ],
+        [
+          -0.2782724,
+          39.6782616
+        ]
+      ],
+      "holes": [],
+      "levels": 3,
+      "streetFaces": 4,
+      "elevationStatus": "Cartographic parts and height estimates; facade openings and finishes are interpretative."
+    },
+    {
+      "id": "cat-3558806YJ3935H_part3-0",
+      "parentId": "3558806YJ3935H",
+      "baseM": 61.54254127704307,
+      "heightM": 6.099999999999994,
+      "sourceHeightM": 6.1,
+      "heightMethod": "storeys",
+      "roof": "tiles",
+      "roofAxis": {
+        "midpoint": [
+          -15.006083971306465,
+          77.75702000023998
+        ],
+        "normal": [
+          0.8512648497208389,
+          -0.5247362724547995
+        ]
+      },
+      "footprint": [
+        [
+          -0.2781895,
+          39.6782775
+        ],
+        [
+          -0.2782197,
+          39.6783072
+        ],
+        [
+          -0.2781884,
+          39.6783245
+        ],
+        [
+          -0.278182,
+          39.6783184
+        ],
+        [
+          -0.2781838,
+          39.6783123
+        ],
+        [
+          -0.2781665,
+          39.6782907
+        ],
+        [
+          -0.2781895,
+          39.6782775
+        ]
+      ],
+      "holes": [],
+      "levels": 2,
+      "streetFaces": 1,
+      "elevationStatus": "Cartographic parts and height estimates; facade openings and finishes are interpretative."
+    },
+    {
+      "id": "cat-3558806YJ3935H_part5-0",
+      "parentId": "3558806YJ3935H",
+      "baseM": 62.04627961043632,
+      "heightM": 3.0500000000000043,
+      "sourceHeightM": 3.05,
+      "heightMethod": "storeys",
+      "roof": "flat",
+      "roofAxis": {
+        "midpoint": [
+          -19.24702691495459,
+          73.96657400023912
+        ],
+        "normal": [
+          -0.5721986546206372,
+          -0.8201150526909822
+        ]
+      },
+      "footprint": [
+        [
+          -0.2782197,
+          39.6783072
+        ],
+        [
+          -0.2782402,
+          39.6783272
+        ],
+        [
+          -0.2782091,
+          39.6783439
+        ],
+        [
+          -0.2781884,
+          39.6783245
+        ],
+        [
+          -0.2782197,
+          39.6783072
+        ]
+      ],
+      "holes": [],
+      "levels": 1,
+      "streetFaces": 1,
+      "elevationStatus": "Cartographic parts and height estimates; facade openings and finishes are interpretative."
+    },
+    {
+      "id": "cat-3558808YJ3935H_part1-0",
+      "parentId": "3558808YJ3935H",
+      "baseM": 62.57895384614721,
+      "heightM": 6.199999999999996,
+      "sourceHeightM": 6.2,
+      "heightMethod": "IGN",
+      "roof": "flat",
+      "roofAxis": {
+        "midpoint": [
+          -25.64699535718713,
+          68.45623400030931
+        ],
+        "normal": [
+          0.7844386439612083,
+          -0.6202064284254885
+        ]
+      },
+      "footprint": [
+        [
+          -0.2783349,
+          39.6783248
+        ],
+        [
+          -0.2783846,
+          39.678375
+        ],
+        [
+          -0.2783257,
+          39.6784107
+        ],
+        [
+          -0.278273,
+          39.6783594
+        ],
+        [
+          -0.2783349,
+          39.6783248
+        ]
+      ],
+      "holes": [],
+      "levels": 2,
+      "streetFaces": 2,
+      "elevationStatus": "Cartographic parts and height estimates; facade openings and finishes are interpretative."
+    },
+    {
+      "id": "cat-3558809YJ3935H_part1-0",
+      "parentId": "3558809YJ3935H",
+      "baseM": 62.23465261661532,
+      "heightM": 7,
+      "sourceHeightM": 7,
+      "heightMethod": "IGN",
+      "roof": "tiles",
+      "roofAxis": {
+        "midpoint": [
+          -34.66435383837701,
+          67.31520400002623
+        ],
+        "normal": [
+          -0.7968297440882479,
+          0.6042039050984835
+        ]
+      },
+      "footprint": [
+        [
+          -0.2783846,
+          39.678375
+        ],
+        [
+          -0.2784246,
+          39.6784156
+        ],
+        [
+          -0.2783948,
+          39.6784306
+        ],
+        [
+          -0.2784044,
+          39.6784455
+        ],
+        [
+          -0.2783646,
+          39.6784589
+        ],
+        [
+          -0.2783472,
+          39.6784374
+        ],
+        [
+          -0.2783842,
+          39.6784214
+        ],
+        [
+          -0.2783678,
+          39.6783932
+        ],
+        [
+          -0.278353,
+          39.6784004
+        ],
+        [
+          -0.2783503,
+          39.6783955
+        ],
+        [
+          -0.2783846,
+          39.678375
+        ]
+      ],
+      "holes": [],
+      "levels": 2,
+      "streetFaces": 2,
+      "elevationStatus": "Cartographic parts and height estimates; facade openings and finishes are interpretative."
+    },
+    {
+      "id": "cat-3558809YJ3935H_part2-0",
+      "parentId": "3558809YJ3935H",
+      "baseM": 62.28199090544797,
+      "heightM": 9.150000000000006,
+      "sourceHeightM": 9.149999999999999,
+      "heightMethod": "storeys",
+      "roof": "flat",
+      "roofAxis": {
+        "midpoint": [
+          -30.946032146371053,
+          65.22238800008964
+        ],
+        "normal": [
+          0.9082638935797154,
+          -0.41839777678593787
+        ]
+      },
+      "footprint": [
+        [
+          -0.2783678,
+          39.6783932
+        ],
+        [
+          -0.2783842,
+          39.6784214
+        ],
+        [
+          -0.2783694,
+          39.6784278
+        ],
+        [
+          -0.278353,
+          39.6784004
+        ],
+        [
+          -0.2783678,
+          39.6783932
+        ]
+      ],
+      "holes": [],
+      "levels": 3,
+      "streetFaces": 1,
+      "elevationStatus": "Cartographic parts and height estimates; facade openings and finishes are interpretative."
+    },
+    {
+      "id": "cat-3558810YJ3935H_part1-0",
+      "parentId": "3558810YJ3935H",
+      "baseM": 61.916048384055415,
+      "heightM": 3.049999999999997,
+      "sourceHeightM": 3.05,
+      "heightMethod": "storeys",
+      "roof": "flat",
+      "roofAxis": {
+        "midpoint": [
+          -26.722224325728053,
+          64.66022200024341
+        ],
+        "normal": [
+          0.6225922367189002,
+          0.782546424678662
+        ]
+      },
+      "footprint": [
+        [
+          -0.2783257,
+          39.6784107
+        ],
+        [
+          -0.2783423,
+          39.6784317
+        ],
+        [
+          -0.2783148,
+          39.6784473
+        ],
+        [
+          -0.2782981,
+          39.6784276
+        ],
+        [
+          -0.2783257,
+          39.6784107
+        ]
+      ],
+      "holes": [],
+      "levels": 1,
+      "streetFaces": 2,
+      "elevationStatus": "Cartographic parts and height estimates; facade openings and finishes are interpretative."
+    },
+    {
+      "id": "cat-3558810YJ3935H_part2-0",
+      "parentId": "3558810YJ3935H",
+      "baseM": 61.727221696777235,
+      "heightM": 9.150000000000006,
+      "sourceHeightM": 9.149999999999999,
+      "heightMethod": "storeys",
+      "roof": "flat",
+      "roofAxis": {
+        "midpoint": [
+          -30.282046129941328,
+          61.749204000236944
+        ],
+        "normal": [
+          -0.8457150819600884,
+          0.5336347066535695
+        ]
+      },
+      "footprint": [
+        [
+          -0.2783423,
+          39.6784317
+        ],
+        [
+          -0.2783646,
+          39.6784589
+        ],
+        [
+          -0.2783335,
+          39.6784697
+        ],
+        [
+          -0.2783148,
+          39.6784473
+        ],
+        [
+          -0.2783423,
+          39.6784317
+        ]
+      ],
+      "holes": [],
+      "levels": 3,
+      "streetFaces": 0,
+      "elevationStatus": "Cartographic parts and height estimates; facade openings and finishes are interpretative."
+    },
+    {
+      "id": "cat-3558810YJ3935H_part3-0",
+      "parentId": "3558810YJ3935H",
+      "baseM": 61.18695231944203,
+      "heightM": 7.599999999999994,
+      "sourceHeightM": 7.6,
+      "heightMethod": "IGN",
+      "roof": "tiles",
+      "roofAxis": {
+        "midpoint": [
+          -29.082587519615597,
+          54.66368600048739
+        ],
+        "normal": [
+          -0.37307386766141165,
+          -0.9278016432773524
+        ]
+      },
+      "footprint": [
+        [
+          -0.2783472,
+          39.6784649
+        ],
+        [
+          -0.2783632,
+          39.6785016
+        ],
+        [
+          -0.2783157,
+          39.6785163
+        ],
+        [
+          -0.278298,
+          39.6784816
+        ],
+        [
+          -0.2783472,
+          39.6784649
+        ]
+      ],
+      "holes": [],
+      "levels": 3,
+      "streetFaces": 1,
+      "elevationStatus": "Cartographic parts and height estimates; facade openings and finishes are interpretative."
+    },
+    {
+      "id": "cat-3558810YJ3935H_part4-0",
+      "parentId": "3558810YJ3935H",
+      "baseM": 62.06940166449794,
+      "heightM": 9.149999999999999,
+      "sourceHeightM": 9.149999999999999,
+      "heightMethod": "storeys",
+      "roof": "flat",
+      "roofAxis": {
+        "midpoint": [
+          -36.335028331329525,
+          63.74183200018919
+        ],
+        "normal": [
+          -0.7962517436462972,
+          0.6049654211111831
+        ]
+      },
+      "footprint": [
+        [
+          -0.2784164,
+          39.6784196
+        ],
+        [
+          -0.2784318,
+          39.6784352
+        ],
+        [
+          -0.2784044,
+          39.6784455
+        ],
+        [
+          -0.2783948,
+          39.6784306
+        ],
+        [
+          -0.2784164,
+          39.6784196
+        ]
+      ],
+      "holes": [],
+      "levels": 3,
+      "streetFaces": 0,
+      "elevationStatus": "Cartographic parts and height estimates; facade openings and finishes are interpretative."
+    },
+    {
+      "id": "cat-3558810YJ3935H_part5-0",
+      "parentId": "3558810YJ3935H",
+      "baseM": 62.13440246985671,
+      "heightM": 8.200000000000003,
+      "sourceHeightM": 8.2,
+      "heightMethod": "IGN",
+      "roof": "tiles",
+      "roofAxis": {
+        "midpoint": [
+          -35.93663672146978,
+          57.41329000058499
+        ],
+        "normal": [
+          -0.37200506066407407,
+          -0.9282307013023856
+        ]
+      },
+      "footprint": [
+        [
+          -0.2784246,
+          39.6784156
+        ],
+        [
+          -0.2784757,
+          39.6784669
+        ],
+        [
+          -0.2783632,
+          39.6785016
+        ],
+        [
+          -0.2783472,
+          39.6784649
+        ],
+        [
+          -0.2784318,
+          39.6784352
+        ],
+        [
+          -0.2784164,
+          39.6784196
+        ],
+        [
+          -0.2784246,
+          39.6784156
+        ]
+      ],
+      "holes": [],
+      "levels": 2,
+      "streetFaces": 2,
+      "elevationStatus": "Cartographic parts and height estimates; facade openings and finishes are interpretative."
+    },
+    {
+      "id": "cat-3558230YJ3935H_part1-0",
+      "parentId": "3558230YJ3935H",
+      "baseM": 64.29838315300215,
+      "heightM": 6.099999999999994,
+      "sourceHeightM": 6.1,
+      "heightMethod": "storeys",
+      "roof": "tiles",
+      "roofAxis": {
+        "midpoint": [
+          -31.087396911158606,
+          83.20056800057571
+        ],
+        "normal": [
+          0.8391918970200791,
+          0.5438354162573831
+        ]
+      },
+      "footprint": [
+        [
+          -0.2783887,
+          39.6782219
+        ],
+        [
+          -0.2784576,
+          39.6782448
+        ],
+        [
+          -0.2783954,
+          39.6783188
+        ],
+        [
+          -0.278337,
+          39.6782833
+        ],
+        [
+          -0.2783887,
+          39.6782219
+        ]
+      ],
+      "holes": [],
+      "levels": 2,
+      "streetFaces": 3,
+      "elevationStatus": "Cartographic parts and height estimates; facade openings and finishes are interpretative."
+    },
+    {
+      "id": "cat-3558230YJ3935H_part2-0",
+      "parentId": "3558230YJ3935H",
+      "baseM": 64.42679874980988,
+      "heightM": 8,
+      "sourceHeightM": 8,
+      "heightMethod": "IGN",
+      "roof": "tiles",
+      "roofAxis": {
+        "midpoint": [
+          -30.414843333226322,
+          87.77582000025618
+        ],
+        "normal": [
+          0.37539671071544356,
+          -0.926864234709715
+        ]
+      },
+      "footprint": [
+        [
+          -0.2783886,
+          39.6781819
+        ],
+        [
+          -0.2784173,
+          39.6781927
+        ],
+        [
+          -0.2784028,
+          39.6782264
+        ],
+        [
+          -0.2783072,
+          39.6781966
+        ],
+        [
+          -0.2783178,
+          39.6781651
+        ],
+        [
+          -0.2783886,
+          39.6781819
+        ]
+      ],
+      "holes": [],
+      "levels": 3,
+      "streetFaces": 3,
+      "elevationStatus": "Cartographic parts and height estimates; facade openings and finishes are interpretative."
+    },
+    {
+      "id": "cat-3558229YJ3935H_part1-0",
+      "parentId": "3558229YJ3935H",
+      "baseM": 64.6723617546259,
+      "heightM": 3.049999999999997,
+      "sourceHeightM": 3.05,
+      "heightMethod": "storeys",
+      "roof": "flat",
+      "roofAxis": {
+        "midpoint": [
+          -43.167658629427294,
+          83.22839800010996
+        ],
+        "normal": [
+          -0.6425484960424981,
+          0.7662450197120526
+        ]
+      },
+      "footprint": [
+        [
+          -0.2784968,
+          39.6782478
+        ],
+        [
+          -0.2785109,
+          39.6782569
+        ],
+        [
+          -0.2784904,
+          39.6782797
+        ],
+        [
+          -0.2784753,
+          39.6782715
+        ],
+        [
+          -0.2784968,
+          39.6782478
+        ]
+      ],
+      "holes": [],
+      "levels": 1,
+      "streetFaces": 1,
+      "elevationStatus": "Cartographic parts and height estimates; facade openings and finishes are interpretative."
+    },
+    {
+      "id": "cat-3558229YJ3935H_part2-0",
+      "parentId": "3558229YJ3935H",
+      "baseM": 64.78621566678191,
+      "heightM": 9.150000000000006,
+      "sourceHeightM": 9.149999999999999,
+      "heightMethod": "storeys",
+      "roof": "flat",
+      "roofAxis": {
+        "midpoint": [
+          -41.441294986710496,
+          84.66442600028103
+        ],
+        "normal": [
+          -0.6378446809674279,
+          0.7701650232005867
+        ]
+      },
+      "footprint": [
+        [
+          -0.2784706,
+          39.6782311
+        ],
+        [
+          -0.2784968,
+          39.6782478
+        ],
+        [
+          -0.2784792,
+          39.6782677
+        ],
+        [
+          -0.2784512,
+          39.6782524
+        ],
+        [
+          -0.2784706,
+          39.6782311
+        ]
+      ],
+      "holes": [],
+      "levels": 3,
+      "streetFaces": 2,
+      "elevationStatus": "Cartographic parts and height estimates; facade openings and finishes are interpretative."
+    },
+    {
+      "id": "cat-3558229YJ3935H_part3-0",
+      "parentId": "3558229YJ3935H",
+      "baseM": 64.24729682798416,
+      "heightM": 6.099999999999994,
+      "sourceHeightM": 6.1,
+      "heightMethod": "storeys",
+      "roof": "tiles",
+      "roofAxis": {
+        "midpoint": [
+          -36.41213638485022,
+          73.83299000026
+        ],
+        "normal": [
+          0.6188979883964367,
+          -0.7854713743726401
+        ]
+      },
+      "footprint": [
+        [
+          -0.2785109,
+          39.6782569
+        ],
+        [
+          -0.2785287,
+          39.6782679
+        ],
+        [
+          -0.2784546,
+          39.6783547
+        ],
+        [
+          -0.2783954,
+          39.6783188
+        ],
+        [
+          -0.2784512,
+          39.6782524
+        ],
+        [
+          -0.2784792,
+          39.6782677
+        ],
+        [
+          -0.2784753,
+          39.6782715
+        ],
+        [
+          -0.2784904,
+          39.6782797
+        ],
+        [
+          -0.2785109,
+          39.6782569
+        ]
+      ],
+      "holes": [],
+      "levels": 2,
+      "streetFaces": 2,
+      "elevationStatus": "Cartographic parts and height estimates; facade openings and finishes are interpretative."
+    },
+    {
+      "id": "cat-3558229YJ3935H_part4-0",
+      "parentId": "3558229YJ3935H",
+      "baseM": 65.82338951885603,
+      "heightM": 5.200000000000003,
+      "sourceHeightM": 5.2,
+      "heightMethod": "IGN",
+      "roof": "tiles",
+      "roofAxis": {
+        "midpoint": [
+          -37.89432452475107,
+          89.48458200045053
+        ],
+        "normal": [
+          0.33717363925897437,
+          -0.9414424767285886
+        ]
+      },
+      "footprint": [
+        [
+          -0.2784498,
+          39.6781609
+        ],
+        [
+          -0.2784797,
+          39.6781801
+        ],
+        [
+          -0.2784657,
+          39.6782026
+        ],
+        [
+          -0.2784189,
+          39.6781897
+        ],
+        [
+          -0.2784325,
+          39.6781562
+        ],
+        [
+          -0.2784498,
+          39.6781609
+        ]
+      ],
+      "holes": [],
+      "levels": 1,
+      "streetFaces": 5,
+      "elevationStatus": "Cartographic parts and height estimates; facade openings and finishes are interpretative."
+    },
+    {
+      "id": "cat-3558228YJ3935H_part1-0",
+      "parentId": "3558228YJ3935H",
+      "baseM": 65.83642884237375,
+      "heightM": 3.049999999999997,
+      "sourceHeightM": 3.05,
+      "heightMethod": "storeys",
+      "roof": "tiles",
+      "roofAxis": {
+        "midpoint": [
+          -48.136844300772,
+          82.40462999997504
+        ],
+        "normal": [
+          0.626583519454104,
+          -0.7793542796113385
+        ]
+      },
+      "footprint": [
+        [
+          -0.2785646,
+          39.6782257
+        ],
+        [
+          -0.2786004,
+          39.6782429
+        ],
+        [
+          -0.2785789,
+          39.6782703
+        ],
+        [
+          -0.2785448,
+          39.6782492
+        ],
+        [
+          -0.2785646,
+          39.6782257
+        ]
+      ],
+      "holes": [],
+      "levels": 1,
+      "streetFaces": 4,
+      "elevationStatus": "Cartographic parts and height estimates; facade openings and finishes are interpretative."
+    },
+    {
+      "id": "cat-3558228YJ3935H_part2-0",
+      "parentId": "3558228YJ3935H",
+      "baseM": 64.10332806572703,
+      "heightM": 9.150000000000006,
+      "sourceHeightM": 9.149999999999999,
+      "heightMethod": "storeys",
+      "roof": "flat",
+      "roofAxis": {
+        "midpoint": [
+          -45.81075135289233,
+          76.89985600011028
+        ],
+        "normal": [
+          -0.6119548633713373,
+          0.7908926887992883
+        ]
+      },
+      "footprint": [
+        [
+          -0.2785258,
+          39.6783039
+        ],
+        [
+          -0.2785436,
+          39.6783145
+        ],
+        [
+          -0.2785268,
+          39.6783358
+        ],
+        [
+          -0.2785075,
+          39.6783257
+        ],
+        [
+          -0.2785258,
+          39.6783039
+        ]
+      ],
+      "holes": [],
+      "levels": 3,
+      "streetFaces": 0,
+      "elevationStatus": "Cartographic parts and height estimates; facade openings and finishes are interpretative."
+    },
+    {
+      "id": "cat-3558228YJ3935H_part3-0",
+      "parentId": "3558228YJ3935H",
+      "baseM": 63.82030044609709,
+      "heightM": 2.799999999999997,
+      "sourceHeightM": 2.8,
+      "heightMethod": "IGN",
+      "roof": "tiles",
+      "roofAxis": {
+        "midpoint": [
+          -42.03674051112208,
+          70.64923800023024
+        ],
+        "normal": [
+          0.3583556381458131,
+          -0.9335851523075477
+        ]
+      },
+      "footprint": [
+        [
+          -0.2785268,
+          39.6783358
+        ],
+        [
+          -0.2785441,
+          39.6783407
+        ],
+        [
+          -0.2785267,
+          39.678376
+        ],
+        [
+          -0.2784546,
+          39.6783547
+        ],
+        [
+          -0.2785074,
+          39.6782928
+        ],
+        [
+          -0.2785258,
+          39.6783039
+        ],
+        [
+          -0.2785075,
+          39.6783257
+        ],
+        [
+          -0.2785268,
+          39.6783358
+        ]
+      ],
+      "holes": [],
+      "levels": 2,
+      "streetFaces": 1,
+      "elevationStatus": "Cartographic parts and height estimates; facade openings and finishes are interpretative."
+    },
+    {
+      "id": "cat-3558228YJ3935H_part4-0",
+      "parentId": "3558228YJ3935H",
+      "baseM": 64.572168450847,
+      "heightM": 3.049999999999997,
+      "sourceHeightM": 3.05,
+      "heightMethod": "storeys",
+      "roof": "flat",
+      "roofAxis": {
+        "midpoint": [
+          -47.03591264772338,
+          79.009370000242
+        ],
+        "normal": [
+          -0.6617636636320218,
+          0.7497125138987105
+        ]
+      },
+      "footprint": [
+        [
+          -0.278545,
+          39.6782785
+        ],
+        [
+          -0.2785398,
+          39.678284
+        ],
+        [
+          -0.2785582,
+          39.6782965
+        ],
+        [
+          -0.2785436,
+          39.6783145
+        ],
+        [
+          -0.2785074,
+          39.6782928
+        ],
+        [
+          -0.2785287,
+          39.6782679
+        ],
+        [
+          -0.278545,
+          39.6782785
+        ]
+      ],
+      "holes": [],
+      "levels": 1,
+      "streetFaces": 2,
+      "elevationStatus": "Cartographic parts and height estimates; facade openings and finishes are interpretative."
+    },
+    {
+      "id": "cat-3558227YJ3935H_part1-0",
+      "parentId": "3558227YJ3935H",
+      "baseM": 66.0660658086027,
+      "heightM": 6.099999999999994,
+      "sourceHeightM": 6.1,
+      "heightMethod": "storeys",
+      "roof": "flat",
+      "roofAxis": {
+        "midpoint": [
+          -56.52020323079114,
+          78.93144600051784
+        ],
+        "normal": [
+          -0.26466801035567483,
+          0.9643395897163863
+        ]
+      },
+      "footprint": [
+        [
+          -0.278641,
+          39.678287
+        ],
+        [
+          -0.2786784,
+          39.6782949
+        ],
+        [
+          -0.2786681,
+          39.6783174
+        ],
+        [
+          -0.2786321,
+          39.6783068
+        ],
+        [
+          -0.278641,
+          39.678287
+        ]
+      ],
+      "holes": [],
+      "levels": 2,
+      "streetFaces": 2,
+      "elevationStatus": "Cartographic parts and height estimates; facade openings and finishes are interpretative."
+    },
+    {
+      "id": "cat-3558227YJ3935H_part2-0",
+      "parentId": "3558227YJ3935H",
+      "baseM": 63.937214177270405,
+      "heightM": 6.099999999999994,
+      "sourceHeightM": 6.1,
+      "heightMethod": "storeys",
+      "roof": "tiles",
+      "roofAxis": {
+        "midpoint": [
+          -50.28730223785385,
+          78.31362000002116
+        ],
+        "normal": [
+          -0.4170959020958879,
+          0.9088624804968116
+        ]
+      },
+      "footprint": [
+        [
+          -0.2785643,
+          39.6782885
+        ],
+        [
+          -0.2786096,
+          39.6783045
+        ],
+        [
+          -0.2785684,
+          39.6783886
+        ],
+        [
+          -0.2785267,
+          39.678376
+        ],
+        [
+          -0.2785441,
+          39.6783407
+        ],
+        [
+          -0.2785268,
+          39.6783358
+        ],
+        [
+          -0.2785643,
+          39.6782885
+        ]
+      ],
+      "holes": [],
+      "levels": 2,
+      "streetFaces": 2,
+      "elevationStatus": "Cartographic parts and height estimates; facade openings and finishes are interpretative."
+    },
+    {
+      "id": "cat-3558227YJ3935H_part3-0",
+      "parentId": "3558227YJ3935H",
+      "baseM": 65.32304440193194,
+      "heightM": 6.099999999999994,
+      "sourceHeightM": 6.1,
+      "heightMethod": "storeys",
+      "roof": "tiles",
+      "roofAxis": {
+        "midpoint": [
+          -51.22545022235849,
+          67.0758660003932
+        ],
+        "normal": [
+          0.363180179640741,
+          -0.9317189260265777
+        ]
+      },
+      "footprint": [
+        [
+          -0.2786113,
+          39.6783006
+        ],
+        [
+          -0.2786681,
+          39.6783174
+        ],
+        [
+          -0.2786274,
+          39.6784063
+        ],
+        [
+          -0.2785684,
+          39.6783886
+        ],
+        [
+          -0.2786113,
+          39.6783006
+        ]
+      ],
+      "holes": [],
+      "levels": 2,
+      "streetFaces": 1,
+      "elevationStatus": "Cartographic parts and height estimates; facade openings and finishes are interpretative."
+    }
+  ],
+  "roofChecks": [
+    {
+      "id": "cat-3557906YJ3935H_part1-0",
+      "count": 81,
+      "gaps": []
+    },
+    {
+      "id": "cat-3557906YJ3935H_part2-0",
+      "count": 18,
+      "gaps": []
+    },
+    {
+      "id": "cat-3557906YJ3935H_part3-0",
+      "count": 32,
+      "gaps": []
+    },
+    {
+      "id": "cat-3557907YJ3935H_part1-0",
+      "count": 12,
+      "gaps": []
+    },
+    {
+      "id": "cat-3557907YJ3935H_part2-0",
+      "count": 33,
+      "gaps": []
+    },
+    {
+      "id": "cat-3557907YJ3935H_part3-0",
+      "count": 28,
+      "gaps": []
+    },
+    {
+      "id": "cat-3557908YJ3935H_part1-0",
+      "count": 14,
+      "gaps": []
+    },
+    {
+      "id": "cat-3557908YJ3935H_part2-0",
+      "count": 17,
+      "gaps": []
+    },
+    {
+      "id": "cat-3557908YJ3935H_part3-0",
+      "count": 20,
+      "gaps": []
+    },
+    {
+      "id": "cat-3557908YJ3935H_part4-0",
+      "count": 32,
+      "gaps": []
+    },
+    {
+      "id": "cat-3557908YJ3935H_part5-0",
+      "count": 11,
+      "gaps": []
+    },
+    {
+      "id": "cat-3558805YJ3935H_part1-0",
+      "count": 13,
+      "gaps": []
+    },
+    {
+      "id": "cat-3558805YJ3935H_part2-0",
+      "count": 25,
+      "gaps": []
+    },
+    {
+      "id": "cat-3558805YJ3935H_part3-0",
+      "count": 37,
+      "gaps": []
+    },
+    {
+      "id": "cat-3558805YJ3935H_part4-0",
+      "count": 191,
+      "gaps": []
+    },
+    {
+      "id": "cat-3558806YJ3935H_part1-0",
+      "count": 11,
+      "gaps": []
+    },
+    {
+      "id": "cat-3558806YJ3935H_part2-0",
+      "count": 103,
+      "gaps": []
+    },
+    {
+      "id": "cat-3558806YJ3935H_part3-0",
+      "count": 19,
+      "gaps": []
+    },
+    {
+      "id": "cat-3558806YJ3935H_part5-0",
+      "count": 15,
+      "gaps": []
+    },
+    {
+      "id": "cat-3558808YJ3935H_part1-0",
+      "count": 74,
+      "gaps": []
+    },
+    {
+      "id": "cat-3558809YJ3935H_part1-0",
+      "count": 43,
+      "gaps": []
+    },
+    {
+      "id": "cat-3558809YJ3935H_part2-0",
+      "count": 8,
+      "gaps": []
+    },
+    {
+      "id": "cat-3558810YJ3935H_part1-0",
+      "count": 12,
+      "gaps": []
+    },
+    {
+      "id": "cat-3558810YJ3935H_part2-0",
+      "count": 14,
+      "gaps": []
+    },
+    {
+      "id": "cat-3558810YJ3935H_part3-0",
+      "count": 29,
+      "gaps": []
+    },
+    {
+      "id": "cat-3558810YJ3935H_part4-0",
+      "count": 6,
+      "gaps": []
+    },
+    {
+      "id": "cat-3558810YJ3935H_part5-0",
+      "count": 70,
+      "gaps": []
+    },
+    {
+      "id": "cat-3558230YJ3935H_part1-0",
+      "count": 88,
+      "gaps": []
+    },
+    {
+      "id": "cat-3558230YJ3935H_part2-0",
+      "count": 54,
+      "gaps": []
+    },
+    {
+      "id": "cat-3558229YJ3935H_part1-0",
+      "count": 8,
+      "gaps": []
+    },
+    {
+      "id": "cat-3558229YJ3935H_part2-0",
+      "count": 12,
+      "gaps": []
+    },
+    {
+      "id": "cat-3558229YJ3935H_part3-0",
+      "count": 97,
+      "gaps": []
+    },
+    {
+      "id": "cat-3558229YJ3935H_part4-0",
+      "count": 23,
+      "gaps": []
+    },
+    {
+      "id": "cat-3558228YJ3935H_part1-0",
+      "count": 18,
+      "gaps": []
+    },
+    {
+      "id": "cat-3558228YJ3935H_part2-0",
+      "count": 8,
+      "gaps": []
+    },
+    {
+      "id": "cat-3558228YJ3935H_part3-0",
+      "count": 52,
+      "gaps": []
+    },
+    {
+      "id": "cat-3558228YJ3935H_part4-0",
+      "count": 18,
+      "gaps": []
+    },
+    {
+      "id": "cat-3558227YJ3935H_part1-0",
+      "count": 13,
+      "gaps": []
+    },
+    {
+      "id": "cat-3558227YJ3935H_part2-0",
+      "count": 71,
+      "gaps": []
+    },
+    {
+      "id": "cat-3558227YJ3935H_part3-0",
+      "count": 88,
+      "gaps": []
+    }
+  ],
+  "gableChecks": [
+    {
+      "id": "cat-3557906YJ3935H_part3-0",
+      "edge": 1,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3557906YJ3935H_part3-0",
+      "edge": 1,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3557906YJ3935H_part3-0",
+      "edge": 1,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3557906YJ3935H_part3-0",
+      "edge": 3,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3557906YJ3935H_part3-0",
+      "edge": 3,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3557906YJ3935H_part3-0",
+      "edge": 3,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3557906YJ3935H_part3-0",
+      "edge": 5,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3557906YJ3935H_part3-0",
+      "edge": 5,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3557906YJ3935H_part3-0",
+      "edge": 5,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3557906YJ3935H_part3-0",
+      "edge": 7,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3557906YJ3935H_part3-0",
+      "edge": 7,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3557906YJ3935H_part3-0",
+      "edge": 7,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3557907YJ3935H_part2-0",
+      "edge": 0,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3557907YJ3935H_part2-0",
+      "edge": 0,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3557907YJ3935H_part2-0",
+      "edge": 0,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3557907YJ3935H_part2-0",
+      "edge": 4,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3557907YJ3935H_part2-0",
+      "edge": 4,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3557907YJ3935H_part2-0",
+      "edge": 4,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3557907YJ3935H_part3-0",
+      "edge": 1,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3557907YJ3935H_part3-0",
+      "edge": 1,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3557907YJ3935H_part3-0",
+      "edge": 1,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3557907YJ3935H_part3-0",
+      "edge": 3,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3557907YJ3935H_part3-0",
+      "edge": 3,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3557907YJ3935H_part3-0",
+      "edge": 3,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3557908YJ3935H_part2-0",
+      "edge": 1,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3557908YJ3935H_part2-0",
+      "edge": 1,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3557908YJ3935H_part2-0",
+      "edge": 1,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3557908YJ3935H_part2-0",
+      "edge": 3,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3557908YJ3935H_part2-0",
+      "edge": 3,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3557908YJ3935H_part2-0",
+      "edge": 3,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3557908YJ3935H_part3-0",
+      "edge": 1,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3557908YJ3935H_part3-0",
+      "edge": 1,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3557908YJ3935H_part3-0",
+      "edge": 1,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3557908YJ3935H_part3-0",
+      "edge": 3,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3557908YJ3935H_part3-0",
+      "edge": 3,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3557908YJ3935H_part3-0",
+      "edge": 3,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3557908YJ3935H_part4-0",
+      "edge": 2,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3557908YJ3935H_part4-0",
+      "edge": 2,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3557908YJ3935H_part4-0",
+      "edge": 2,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3557908YJ3935H_part4-0",
+      "edge": 6,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3557908YJ3935H_part4-0",
+      "edge": 6,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3557908YJ3935H_part4-0",
+      "edge": 6,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3558805YJ3935H_part2-0",
+      "edge": 1,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3558805YJ3935H_part2-0",
+      "edge": 1,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3558805YJ3935H_part2-0",
+      "edge": 1,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3558805YJ3935H_part2-0",
+      "edge": 3,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3558805YJ3935H_part2-0",
+      "edge": 3,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3558805YJ3935H_part2-0",
+      "edge": 3,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3558805YJ3935H_part3-0",
+      "edge": 1,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3558805YJ3935H_part3-0",
+      "edge": 1,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3558805YJ3935H_part3-0",
+      "edge": 1,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3558805YJ3935H_part3-0",
+      "edge": 3,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3558805YJ3935H_part3-0",
+      "edge": 3,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3558805YJ3935H_part3-0",
+      "edge": 3,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3558805YJ3935H_part4-0",
+      "edge": 2,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3558805YJ3935H_part4-0",
+      "edge": 2,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3558805YJ3935H_part4-0",
+      "edge": 2,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3558805YJ3935H_part4-0",
+      "edge": 5,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3558805YJ3935H_part4-0",
+      "edge": 5,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3558805YJ3935H_part4-0",
+      "edge": 5,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3558805YJ3935H_part4-0",
+      "edge": 6,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3558805YJ3935H_part4-0",
+      "edge": 6,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3558805YJ3935H_part4-0",
+      "edge": 6,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3558805YJ3935H_part4-0",
+      "edge": 7,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3558805YJ3935H_part4-0",
+      "edge": 7,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3558805YJ3935H_part4-0",
+      "edge": 7,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3558806YJ3935H_part2-0",
+      "edge": 1,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3558806YJ3935H_part2-0",
+      "edge": 1,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3558806YJ3935H_part2-0",
+      "edge": 1,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3558806YJ3935H_part2-0",
+      "edge": 7,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3558806YJ3935H_part2-0",
+      "edge": 7,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3558806YJ3935H_part2-0",
+      "edge": 7,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3558806YJ3935H_part3-0",
+      "edge": 1,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3558806YJ3935H_part3-0",
+      "edge": 1,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3558806YJ3935H_part3-0",
+      "edge": 1,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3558806YJ3935H_part3-0",
+      "edge": 5,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3558806YJ3935H_part3-0",
+      "edge": 5,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3558806YJ3935H_part3-0",
+      "edge": 5,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3558809YJ3935H_part1-0",
+      "edge": 3,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3558809YJ3935H_part1-0",
+      "edge": 3,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3558809YJ3935H_part1-0",
+      "edge": 3,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3558809YJ3935H_part1-0",
+      "edge": 5,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3558809YJ3935H_part1-0",
+      "edge": 5,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3558809YJ3935H_part1-0",
+      "edge": 5,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3558809YJ3935H_part1-0",
+      "edge": 7,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3558809YJ3935H_part1-0",
+      "edge": 7,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3558809YJ3935H_part1-0",
+      "edge": 7,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3558809YJ3935H_part1-0",
+      "edge": 9,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3558809YJ3935H_part1-0",
+      "edge": 9,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3558809YJ3935H_part1-0",
+      "edge": 9,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3558810YJ3935H_part3-0",
+      "edge": 0,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3558810YJ3935H_part3-0",
+      "edge": 0,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3558810YJ3935H_part3-0",
+      "edge": 0,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3558810YJ3935H_part3-0",
+      "edge": 2,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3558810YJ3935H_part3-0",
+      "edge": 2,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3558810YJ3935H_part3-0",
+      "edge": 2,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3558810YJ3935H_part5-0",
+      "edge": 0,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3558810YJ3935H_part5-0",
+      "edge": 0,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3558810YJ3935H_part5-0",
+      "edge": 0,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3558810YJ3935H_part5-0",
+      "edge": 2,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3558810YJ3935H_part5-0",
+      "edge": 2,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3558810YJ3935H_part5-0",
+      "edge": 2,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3558230YJ3935H_part1-0",
+      "edge": 0,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3558230YJ3935H_part1-0",
+      "edge": 0,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3558230YJ3935H_part1-0",
+      "edge": 0,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3558230YJ3935H_part1-0",
+      "edge": 2,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3558230YJ3935H_part1-0",
+      "edge": 2,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3558230YJ3935H_part1-0",
+      "edge": 2,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3558230YJ3935H_part2-0",
+      "edge": 1,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3558230YJ3935H_part2-0",
+      "edge": 1,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3558230YJ3935H_part2-0",
+      "edge": 1,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3558230YJ3935H_part2-0",
+      "edge": 3,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3558230YJ3935H_part2-0",
+      "edge": 3,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3558230YJ3935H_part2-0",
+      "edge": 3,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3558229YJ3935H_part3-0",
+      "edge": 1,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3558229YJ3935H_part3-0",
+      "edge": 1,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3558229YJ3935H_part3-0",
+      "edge": 1,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3558229YJ3935H_part3-0",
+      "edge": 3,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3558229YJ3935H_part3-0",
+      "edge": 3,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3558229YJ3935H_part3-0",
+      "edge": 3,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3558229YJ3935H_part4-0",
+      "edge": 1,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3558229YJ3935H_part4-0",
+      "edge": 1,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3558229YJ3935H_part4-0",
+      "edge": 1,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3558229YJ3935H_part4-0",
+      "edge": 3,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3558229YJ3935H_part4-0",
+      "edge": 3,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3558229YJ3935H_part4-0",
+      "edge": 3,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3558228YJ3935H_part1-0",
+      "edge": 1,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3558228YJ3935H_part1-0",
+      "edge": 1,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3558228YJ3935H_part1-0",
+      "edge": 1,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3558228YJ3935H_part1-0",
+      "edge": 3,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3558228YJ3935H_part1-0",
+      "edge": 3,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3558228YJ3935H_part1-0",
+      "edge": 3,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3558228YJ3935H_part3-0",
+      "edge": 1,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3558228YJ3935H_part3-0",
+      "edge": 1,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3558228YJ3935H_part3-0",
+      "edge": 1,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3558228YJ3935H_part3-0",
+      "edge": 3,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3558228YJ3935H_part3-0",
+      "edge": 3,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3558228YJ3935H_part3-0",
+      "edge": 3,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3558227YJ3935H_part2-0",
+      "edge": 1,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3558227YJ3935H_part2-0",
+      "edge": 1,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3558227YJ3935H_part2-0",
+      "edge": 1,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3558227YJ3935H_part2-0",
+      "edge": 5,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3558227YJ3935H_part2-0",
+      "edge": 5,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3558227YJ3935H_part2-0",
+      "edge": 5,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3558227YJ3935H_part3-0",
+      "edge": 1,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3558227YJ3935H_part3-0",
+      "edge": 1,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3558227YJ3935H_part3-0",
+      "edge": 1,
+      "heightFraction": 0.85,
+      "closed": true
+    },
+    {
+      "id": "cat-3558227YJ3935H_part3-0",
+      "edge": 3,
+      "heightFraction": 0.25,
+      "closed": true
+    },
+    {
+      "id": "cat-3558227YJ3935H_part3-0",
+      "edge": 3,
+      "heightFraction": 0.55,
+      "closed": true
+    },
+    {
+      "id": "cat-3558227YJ3935H_part3-0",
+      "edge": 3,
+      "heightFraction": 0.85,
+      "closed": true
+    }
+  ],
+  "gateClosures": [
+    {
+      "id": "portalet",
+      "fraction": -0.25,
+      "point": [
+        1.0880368442253183,
+        64.99638268235243,
+        91.3327058018711
+      ],
+      "closed": true
+    },
+    {
+      "id": "portalet",
+      "fraction": 0,
+      "point": [
+        0.9137495506906996,
+        64.99638268235243,
+        90.73770669320591
+      ],
+      "closed": true
+    },
+    {
+      "id": "portalet",
+      "fraction": 0.25,
+      "point": [
+        0.7394622571560809,
+        64.99638268235243,
+        90.14270758454072
+      ],
+      "closed": true
+    },
+    {
+      "id": "arco-museo",
+      "fraction": -0.25,
+      "point": [
+        -14.871497049963036,
+        62.26136107977559,
+        49.7520886985316
+      ],
+      "closed": true
+    },
+    {
+      "id": "arco-museo",
+      "fraction": 0,
+      "point": [
+        -15.004216731167944,
+        62.26136107977559,
+        49.295615914246646
+      ],
+      "closed": true
+    },
+    {
+      "id": "arco-museo",
+      "fraction": 0.25,
+      "point": [
+        -15.136936412372847,
+        62.26136107977559,
+        48.83914312996169
+      ],
+      "closed": true
+    },
+    {
+      "id": "portillo-sur",
+      "fraction": -0.25,
+      "point": [
+        -11.318214056514904,
+        76.6060471154833,
+        178.96810148355397
+      ],
+      "closed": true
+    },
+    {
+      "id": "portillo-sur",
+      "fraction": 0,
+      "point": [
+        -11.00965540885647,
+        76.6060471154833,
+        178.39600746946607
+      ],
+      "closed": true
+    },
+    {
+      "id": "portillo-sur",
+      "fraction": 0.25,
+      "point": [
+        -10.701096761198038,
+        76.6060471154833,
+        177.82391345537818
+      ],
+      "closed": true
+    }
+  ],
+  "thresholdChecks": [
+    {
+      "across": -0.3,
+      "depth": -0.2,
+      "point": [
+        -0.0645055507787386,
+        61.18934075436214,
+        91.79951909732674
+      ],
+      "component": "juderia-sang-vella",
+      "material": "paving",
+      "expectedHeight": 61.189339720862755,
+      "pass": true
+    },
+    {
+      "across": -0.3,
+      "depth": 0,
+      "point": [
+        0.127429645564873,
+        61.18012355314099,
+        91.74329738973492
+      ],
+      "component": "juderia-sang-vella",
+      "material": "paving",
+      "expectedHeight": 61.18012214464442,
+      "pass": true
+    },
+    {
+      "across": -0.3,
+      "depth": 0.2,
+      "point": [
+        0.3193648419084846,
+        61.17201737880985,
+        91.6870756821431
+      ],
+      "component": "juderia-portalet",
+      "material": "paving",
+      "expectedHeight": 61.17201650569286,
+      "pass": true
+    },
+    {
+      "across": 0,
+      "depth": -0.2,
+      "point": [
+        -0.27365030302028115,
+        61.141339361394415,
+        91.0855201669285
+      ],
+      "component": "juderia-sang-vella",
+      "material": "paving",
+      "expectedHeight": 61.14133896991494,
+      "pass": true
+    },
+    {
+      "across": 0,
+      "depth": 0,
+      "point": [
+        -0.08171510667666954,
+        61.129924828751946,
+        91.02929845933669
+      ],
+      "component": "juderia-sang-vella",
+      "material": "paving",
+      "expectedHeight": 61.12992478007059,
+      "pass": true
+    },
+    {
+      "across": 0,
+      "depth": 0.2,
+      "point": [
+        0.11022008966694205,
+        61.120411077341956,
+        90.97307675174487
+      ],
+      "component": "juderia-sang-vella",
+      "material": "paving",
+      "expectedHeight": 61.12041054804022,
+      "pass": true
+    },
+    {
+      "across": 0.3,
+      "depth": -0.2,
+      "point": [
+        -0.48279505526182365,
+        61.09333805185845,
+        90.37152123653027
+      ],
+      "component": "juderia-sang-vella",
+      "material": "paving",
+      "expectedHeight": 61.09333821896712,
+      "pass": true
+    },
+    {
+      "across": 0.3,
+      "depth": 0,
+      "point": [
+        -0.2908598589182121,
+        61.08192381802976,
+        90.31529952893845
+      ],
+      "component": "juderia-sang-vella",
+      "material": "paving",
+      "expectedHeight": 61.081924029122774,
+      "pass": true
+    },
+    {
+      "across": 0.3,
+      "depth": 0.2,
+      "point": [
+        -0.0989246625746005,
+        61.070509584201055,
+        90.25907782134664
+      ],
+      "component": "juderia-sang-vella",
+      "material": "paving",
+      "expectedHeight": 61.07050983927843,
+      "pass": true
+    }
+  ],
+  "openings": [
+    {
+      "id": "portalet",
+      "kind": "gate",
+      "total": 9,
+      "clear": 9,
+      "hits": []
+    },
+    {
+      "id": "arco-museo",
+      "kind": "gate",
+      "total": 9,
+      "clear": 9,
+      "hits": []
+    },
+    {
+      "id": "portillo-sur",
+      "kind": "gate",
+      "total": 9,
+      "clear": 9,
+      "hits": []
+    }
+  ],
+  "cameras": [
+    {
+      "id": "juderia-conjunto",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 346.39946202222046,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        226.41175920229975,
+        390.0762598510713,
+        -197.34077733927816
+      ],
+      "target": [
+        -46.753183118148264,
+        87.49355451149819,
+        105.24192800029496
+      ]
+    },
+    {
+      "id": "juderia-conjunto",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 66.06537910364146,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -15.753183118148264,
+        127.49355451149819,
+        73.24192800029496
+      ],
+      "target": [
+        -46.753183118148264,
+        87.49355451149819,
+        105.24192800029496
+      ]
+    },
+    {
+      "id": "juderia-conjunto",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 690.373360967975,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        537.2355310439489,
+        734.373360967975,
+        -541.6378784561819
+      ],
+      "target": [
+        -46.753183118148264,
+        87.49355451149819,
+        105.24192800029496
+      ]
+    },
+    {
+      "id": "juderia-conjunto",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 107.16787828645909,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        13.625278420313279,
+        165.4012468191905,
+        42.91577415414111
+      ],
+      "target": [
+        -46.753183118148264,
+        87.49355451149819,
+        105.24192800029496
+      ]
+    },
+    {
+      "id": "juderia-conjunto",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 408.01105052118226,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        282.8565136648118,
+        452.599680178777,
+        -259.86419766698384
+      ],
+      "target": [
+        -46.753183118148264,
+        87.49355451149819,
+        105.24192800029496
+      ]
+    },
+    {
+      "id": "juderia-conjunto",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 66.06537910364146,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -15.753183118148264,
+        127.49355451149819,
+        73.24192800029496
+      ],
+      "target": [
+        -46.753183118148264,
+        87.49355451149819,
+        105.24192800029496
+      ]
+    },
+    {
+      "id": "juderia-portalet",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 3.9609134740167917,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        5.770570995770827,
+        65.73955710664376,
+        102.44012084697079
+      ],
+      "target": [
+        0.3859277607457678,
+        62.93638268235244,
+        90.89231638908339
+      ]
+    },
+    {
+      "id": "juderia-portalet",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 2.4127186173829713,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        4.242927760745768,
+        63.586382682352436,
+        95.4883163890834
+      ],
+      "target": [
+        0.3859277607457678,
+        62.93638268235244,
+        90.89231638908339
+      ]
+    },
+    {
+      "id": "juderia-portalet",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 5.722325629797595,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        11.763392938987042,
+        68.85934136482541,
+        115.29221390692548
+      ],
+      "target": [
+        0.3859277607457678,
+        62.93638268235244,
+        90.89231638908339
+      ]
+    },
+    {
+      "id": "juderia-portalet",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 2.5270361327702844,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        7.898176991514999,
+        64.20238268235244,
+        99.84391023523723
+      ],
+      "target": [
+        0.3859277607457678,
+        62.93638268235244,
+        90.89231638908339
+      ]
+    },
+    {
+      "id": "juderia-portalet",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 4.309850550100791,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        6.858851216804641,
+        66.30610147159274,
+        104.7740261103947
+      ],
+      "target": [
+        0.3859277607457678,
+        62.93638268235244,
+        90.89231638908339
+      ]
+    },
+    {
+      "id": "juderia-portalet",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 2.4127186173829713,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        4.242927760745768,
+        63.586382682352436,
+        95.4883163890834
+      ],
+      "target": [
+        0.3859277607457678,
+        62.93638268235244,
+        90.89231638908339
+      ]
+    },
+    {
+      "id": "juderia-dovelas",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 4.307791100638973,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        4.494829435255029,
+        65.5016929427904,
+        95.78848234605631
+      ],
+      "target": [
+        0.3859277607457678,
+        64.43638268235243,
+        90.89231638908339
+      ]
+    },
+    {
+      "id": "juderia-dovelas",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 3.8359645187099787,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        3.662927760745768,
+        64.93638268235243,
+        93.18631638908339
+      ],
+      "target": [
+        0.3859277607457678,
+        64.43638268235243,
+        90.89231638908339
+      ]
+    },
+    {
+      "id": "juderia-dovelas",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 4.607740471999627,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        6.9725154548624095,
+        66.1440797770158,
+        98.74089223615627
+      ],
+      "target": [
+        0.3859277607457678,
+        64.43638268235243,
+        90.89231638908339
+      ]
+    },
+    {
+      "id": "juderia-dovelas",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 4.083185311941328,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        6.76851545305346,
+        65.41022883619858,
+        95.36032254292954
+      ],
+      "target": [
+        0.3859277607457678,
+        64.43638268235243,
+        90.89231638908339
+      ]
+    },
+    {
+      "id": "juderia-dovelas",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 4.307791100638973,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        4.494829435255029,
+        65.5016929427904,
+        95.78848234605631
+      ],
+      "target": [
+        0.3859277607457678,
+        64.43638268235243,
+        90.89231638908339
+      ]
+    },
+    {
+      "id": "juderia-dovelas",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 3.8359645187099787,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        3.662927760745768,
+        64.93638268235243,
+        93.18631638908339
+      ],
+      "target": [
+        0.3859277607457678,
+        64.43638268235243,
+        90.89231638908339
+      ]
+    },
+    {
+      "id": "juderia-sang-vella",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 17.818022930572013,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        10.94537950341888,
+        79.78602573647508,
+        99.05780814728591
+      ],
+      "target": [
+        -18.677284075053077,
+        64.02425943953352,
+        88.27676000017789
+      ]
+    },
+    {
+      "id": "juderia-sang-vella",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 2.606685328895985,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -13.039284075053077,
+        64.52425943953352,
+        90.3287600001779
+      ],
+      "target": [
+        -18.677284075053077,
+        64.02425943953352,
+        88.27676000017789
+      ]
+    },
+    {
+      "id": "juderia-sang-vella",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 34.60278457269591,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        53.63234598083234,
+        102.49910782512755,
+        114.5935562959242
+      ],
+      "target": [
+        -18.677284075053077,
+        64.02425943953352,
+        88.27676000017789
+      ]
+    },
+    {
+      "id": "juderia-sang-vella",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 3.383421898248976,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -7.696194844283845,
+        64.99810559337968,
+        92.2734246155625
+      ],
+      "target": [
+        -18.677284075053077,
+        64.02425943953352,
+        88.27676000017789
+      ]
+    },
+    {
+      "id": "juderia-sang-vella",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 20.491916610681017,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        17.752454115175393,
+        83.40796604282632,
+        101.53521531683015
+      ],
+      "target": [
+        -18.677284075053077,
+        64.02425943953352,
+        88.27676000017789
+      ]
+    },
+    {
+      "id": "juderia-sang-vella",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 2.606685328895985,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -13.039284075053077,
+        64.52425943953352,
+        90.3287600001779
+      ],
+      "target": [
+        -18.677284075053077,
+        64.02425943953352,
+        88.27676000017789
+      ]
+    },
+    {
+      "id": "juderia-segovia",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 41.99859986256692,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -43.642464964018615,
+        113.64599682164727,
+        143.59839220019327
+      ],
+      "target": [
+        -29.93505988909936,
+        67.95464657191644,
+        107.04531200040861
+      ]
+    },
+    {
+      "id": "juderia-segovia",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 13.814184141075998,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -31.93505988909936,
+        80.95464657191644,
+        117.04531200040861
+      ],
+      "target": [
+        -29.93505988909936,
+        67.95464657191644,
+        107.04531200040861
+      ]
+    },
+    {
+      "id": "juderia-segovia",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 93.54221017454852,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -61.67636792209491,
+        173.7590066819016,
+        191.68880008839676
+      ],
+      "target": [
+        -29.93505988909936,
+        67.95464657191644,
+        107.04531200040861
+      ]
+    },
+    {
+      "id": "juderia-segovia",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 24.50765713909462,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -33.83044450448398,
+        93.27464657191643,
+        126.52223507733169
+      ],
+      "target": [
+        -29.93505988909936,
+        67.95464657191644,
+        107.04531200040861
+      ]
+    },
+    {
+      "id": "juderia-segovia",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 51.89569161244019,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -46.9173728593773,
+        124.56235647284292,
+        152.3314799211498
+      ],
+      "target": [
+        -29.93505988909936,
+        67.95464657191644,
+        107.04531200040861
+      ]
+    },
+    {
+      "id": "juderia-segovia",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 13.814184141075998,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -31.93505988909936,
+        80.95464657191644,
+        117.04531200040861
+      ],
+      "target": [
+        -29.93505988909936,
+        67.95464657191644,
+        107.04531200040861
+      ]
+    },
+    {
+      "id": "juderia-rams",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 50.55841325273852,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -11.58792291578785,
+        114.51131245591529,
+        113.69756858116352
+      ],
+      "target": [
+        -53.19598936789125,
+        71.23892334572776,
+        97.05434200032215
+      ]
+    },
+    {
+      "id": "juderia-rams",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 13.490344056227968,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -41.19598936789125,
+        81.23892334572776,
+        102.05434200032215
+      ],
+      "target": [
+        -53.19598936789125,
+        71.23892334572776,
+        97.05434200032215
+      ]
+    },
+    {
+      "id": "juderia-rams",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 104.59231173251224,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        45.452565056949716,
+        173.8334199475624,
+        136.51376377025855
+      ],
+      "target": [
+        -53.19598936789125,
+        71.23892334572776,
+        97.05434200032215
+      ]
+    },
+    {
+      "id": "juderia-rams",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 24.799429028340967,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -29.823681675583558,
+        90.71584642265083,
+        106.79280353878369
+      ],
+      "target": [
+        -53.19598936789125,
+        71.23892334572776,
+        97.05434200032215
+      ]
+    },
+    {
+      "id": "juderia-rams",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 62.21641753873319,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -1.2295249111355346,
+        125.28404638075371,
+        117.84092778302444
+      ],
+      "target": [
+        -53.19598936789125,
+        71.23892334572776,
+        97.05434200032215
+      ]
+    },
+    {
+      "id": "juderia-rams",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 13.490344056227968,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -41.19598936789125,
+        81.23892334572776,
+        102.05434200032215
+      ],
+      "target": [
+        -53.19598936789125,
+        71.23892334572776,
+        97.05434200032215
+      ]
+    },
+    {
+      "id": "juderia-antigons",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 49.56279239941309,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        19.152443535461074,
+        113.00180059341108,
+        107.56716022568735
+      ],
+      "target": [
+        -9.021642261938787,
+        67.6102179198224,
+        138.87170000057608
+      ]
+    },
+    {
+      "id": "juderia-antigons",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 16.060818086976596,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -2.021642261938787,
+        80.6102179198224,
+        130.87170000057608
+      ],
+      "target": [
+        -9.021642261938787,
+        67.6102179198224,
+        138.87170000057608
+      ]
+    },
+    {
+      "id": "juderia-antigons",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 110.98770831179178,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        57.01683698263199,
+        174.0055455916309,
+        65.49561195105301
+      ],
+      "target": [
+        -9.021642261938787,
+        67.6102179198224,
+        138.87170000057608
+      ]
+    },
+    {
+      "id": "juderia-antigons",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 29.228635579041494,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        4.6122038919073685,
+        92.93021791982241,
+        123.29016153903763
+      ],
+      "target": [
+        -9.021642261938787,
+        67.6102179198224,
+        138.87170000057608
+      ]
+    },
+    {
+      "id": "juderia-antigons",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 60.69166349750618,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        26.028514752067842,
+        124.07991533127753,
+        99.92708109612427
+      ],
+      "target": [
+        -9.021642261938787,
+        67.6102179198224,
+        138.87170000057608
+      ]
+    },
+    {
+      "id": "juderia-antigons",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 16.060818086976596,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -2.021642261938787,
+        80.6102179198224,
+        130.87170000057608
+      ],
+      "target": [
+        -9.021642261938787,
+        67.6102179198224,
+        138.87170000057608
+      ]
+    },
+    {
+      "id": "juderia-casas",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 32.29101012637633,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -1.5316176651200255,
+        95.10250216829648,
+        109.75220456591707
+      ],
+      "target": [
+        -13.279720328589663,
+        64.89309531937457,
+        89.61259999996912
+      ]
+    },
+    {
+      "id": "juderia-casas",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 9.248882174302793,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -9.279720328589663,
+        71.89309531937457,
+        96.61259999996912
+      ],
+      "target": [
+        -13.279720328589663,
+        64.89309531937457,
+        89.61259999996912
+      ]
+    },
+    {
+      "id": "juderia-casas",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 71.07886637384077,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        14.529313318021876,
+        136.40203898208995,
+        137.28522910844603
+      ],
+      "target": [
+        -13.279720328589663,
+        64.89309531937457,
+        89.61259999996912
+      ]
+    },
+    {
+      "id": "juderia-casas",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 15.406297088800741,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -5.488951097820432,
+        78.52694147322072,
+        103.24644615381527
+      ],
+      "target": [
+        -13.279720328589663,
+        64.89309531937457,
+        89.61259999996912
+      ]
+    },
+    {
+      "id": "juderia-casas",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 39.6379381268212,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        1.385003867433305,
+        102.60238610914791,
+        114.75212719315135
+      ],
+      "target": [
+        -13.279720328589663,
+        64.89309531937457,
+        89.61259999996912
+      ]
+    },
+    {
+      "id": "juderia-casas",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 9.248882174302793,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -9.279720328589663,
+        71.89309531937457,
+        96.61259999996912
+      ],
+      "target": [
+        -13.279720328589663,
+        64.89309531937457,
+        89.61259999996912
+      ]
+    },
+    {
+      "id": "juderia-sinagoga",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 55.66787933459805,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -16.081409356486965,
+        114.14288275987852,
+        49.42220524723073
+      ],
+      "target": [
+        -54.8323936148335,
+        66.16547367811614,
+        62.33920000001291
+      ]
+    },
+    {
+      "id": "juderia-sinagoga",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 15.66976714583943,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -43.8323936148335,
+        78.16547367811614,
+        59.33920000001291
+      ],
+      "target": [
+        -54.8323936148335,
+        66.16547367811614,
+        62.33920000001291
+      ]
+    },
+    {
+      "id": "juderia-sinagoga",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 117.55333373083354,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        35.60355931823019,
+        178.1337963571474,
+        32.193882355658346
+      ],
+      "target": [
+        -54.8323936148335,
+        66.16547367811614,
+        62.33920000001291
+      ]
+    },
+    {
+      "id": "juderia-sinagoga",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 28.244207685295763,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -33.40777823021811,
+        89.53778137042383,
+        56.49612307693599
+      ],
+      "target": [
+        -54.8323936148335,
+        66.16547367811614,
+        62.33920000001291
+      ]
+    },
+    {
+      "id": "juderia-sinagoga",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 67.95593432685905,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -6.695559139942738,
+        125.76345921845709,
+        46.293588508382655
+      ],
+      "target": [
+        -54.8323936148335,
+        66.16547367811614,
+        62.33920000001291
+      ]
+    },
+    {
+      "id": "juderia-sinagoga",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 15.66976714583943,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -43.8323936148335,
+        78.16547367811614,
+        59.33920000001291
+      ],
+      "target": [
+        -54.8323936148335,
+        66.16547367811614,
+        62.33920000001291
+      ]
+    },
+    {
+      "id": "juderia-berenguer",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 56.79196503358455,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -57.47470558920725,
+        110.58710978284083,
+        -17.645386706806647
+      ],
+      "target": [
+        -86.53237117340882,
+        61.018150845085195,
+        23.377200000301457
+      ]
+    },
+    {
+      "id": "juderia-berenguer",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 18.512390499873803,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -79.53237117340882,
+        76.01815084508519,
+        11.377200000301457
+      ],
+      "target": [
+        -86.53237117340882,
+        61.018150845085195,
+        23.377200000301457
+      ]
+    },
+    {
+      "id": "juderia-berenguer",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 130.2034685865388,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -16.250999996842054,
+        180.90990167569907,
+        -75.84355930779279
+      ],
+      "target": [
+        -86.53237117340882,
+        61.018150845085195,
+        23.377200000301457
+      ]
+    },
+    {
+      "id": "juderia-berenguer",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 34.78815752102296,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -72.89852501956267,
+        90.23353546046981,
+        0.004892307993763723
+      ],
+      "target": [
+        -86.53237117340882,
+        61.018150845085195,
+        23.377200000301457
+      ]
+    },
+    {
+      "id": "juderia-berenguer",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 70.51451478466124,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -49.98859239262275,
+        123.35753817701438,
+        -28.21401710198476
+      ],
+      "target": [
+        -86.53237117340882,
+        61.018150845085195,
+        23.377200000301457
+      ]
+    },
+    {
+      "id": "juderia-berenguer",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 18.512390499873803,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -79.53237117340882,
+        76.01815084508519,
+        11.377200000301457
+      ],
+      "target": [
+        -86.53237117340882,
+        61.018150845085195,
+        23.377200000301457
+      ]
+    },
+    {
+      "id": "juderia-micve",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 52.53009415807729,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -44.07850822213434,
+        109.96562222854425,
+        17.471047648794137
+      ],
+      "target": [
+        -77.13375620536671,
+        63.387772797625914,
+        41.51122800023586
+      ]
+    },
+    {
+      "id": "juderia-micve",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 21.479658166871126,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -64.13375620536671,
+        81.38777279762591,
+        33.51122800023586
+      ],
+      "target": [
+        -77.13375620536671,
+        63.387772797625914,
+        41.51122800023586
+      ]
+    },
+    {
+      "id": "juderia-micve",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 117.58013167962562,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -0.01383223618567797,
+        172.056756572381,
+        -14.575989431895792
+      ],
+      "target": [
+        -77.13375620536671,
+        63.387772797625914,
+        41.51122800023586
+      ]
+    },
+    {
+      "id": "juderia-micve",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 38.76073933747823,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -51.81375620536671,
+        98.44623433608746,
+        25.929689538697396
+      ],
+      "target": [
+        -77.13375620536671,
+        63.387772797625914,
+        41.51122800023586
+      ]
+    },
+    {
+      "id": "juderia-micve",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 66.16064984304269,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -36.07648250267247,
+        121.24120392414962,
+        11.651392580094598
+      ],
+      "target": [
+        -77.13375620536671,
+        63.387772797625914,
+        41.51122800023586
+      ]
+    },
+    {
+      "id": "juderia-micve",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 21.479658166871126,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -64.13375620536671,
+        81.38777279762591,
+        33.51122800023586
+      ],
+      "target": [
+        -77.13375620536671,
+        63.387772797625914,
+        41.51122800023586
+      ]
+    },
+    {
+      "id": "juderia-museo",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 50.58976278189845,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -43.19418899106287,
+        113.79122408908653,
+        69.10982402512897
+      ],
+      "target": [
+        -0.6854049201813762,
+        60.1931919997142,
+        54.324160000474535
+      ]
+    },
+    {
+      "id": "juderia-museo",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 14.829923625664492,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -12.685404920181377,
+        74.1931919997142,
+        58.324160000474535
+      ],
+      "target": [
+        -0.6854049201813762,
+        60.1931919997142,
+        54.324160000474535
+      ]
+    },
+    {
+      "id": "juderia-museo",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 119.44070002036204,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -101.40516873576796,
+        187.1876768106712,
+        89.3571213276351
+      ],
+      "target": [
+        -0.6854049201813762,
+        60.1931919997142,
+        54.324160000474535
+      ]
+    },
+    {
+      "id": "juderia-museo",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 25.82859151792114,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -24.05771261248907,
+        87.46088430740652,
+        62.114929231243764
+      ],
+      "target": [
+        -0.6854049201813762,
+        60.1931919997142,
+        54.324160000474535
+      ]
+    },
+    {
+      "id": "juderia-museo",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 62.281346185548514,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -53.76514512882593,
+        127.11982095843995,
+        72.78667833391611
+      ],
+      "target": [
+        -0.6854049201813762,
+        60.1931919997142,
+        54.324160000474535
+      ]
+    },
+    {
+      "id": "juderia-museo",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 14.829923625664492,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -12.685404920181377,
+        74.1931919997142,
+        58.324160000474535
+      ],
+      "target": [
+        -0.6854049201813762,
+        60.1931919997142,
+        54.324160000474535
+      ]
+    },
+    {
+      "id": "juderia-arco-museo",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 4.2708972552043605,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -4.54258868763967,
+        61.752884263156744,
+        41.754192949030134
+      ],
+      "target": [
+        -15.532346605898086,
+        60.41136107977559,
+        49.44916992890443
+      ]
+    },
+    {
+      "id": "juderia-arco-museo",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 2.9906529887123128,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -9.894346605898086,
+        60.91136107977559,
+        47.39716992890443
+      ],
+      "target": [
+        -15.532346605898086,
+        60.41136107977559,
+        49.44916992890443
+      ]
+    },
+    {
+      "id": "juderia-arco-museo",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 5.333788866796304,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        7.3329205807510665,
+        63.202531390645845,
+        33.439017025752634
+      ],
+      "target": [
+        -15.532346605898086,
+        60.41136107977559,
+        49.44916992890443
+      ]
+    },
+    {
+      "id": "juderia-arco-museo",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 3.6169777135977554,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -4.551257375128854,
+        61.38520723362174,
+        45.452505313519815
+      ],
+      "target": [
+        -15.532346605898086,
+        60.41136107977559,
+        49.44916992890443
+      ]
+    },
+    {
+      "id": "juderia-arco-museo",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 4.492083211076576,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -2.5108902441072676,
+        62.00089432706451,
+        40.3316072224552
+      ],
+      "target": [
+        -15.532346605898086,
+        60.41136107977559,
+        49.44916992890443
+      ]
+    },
+    {
+      "id": "juderia-arco-museo",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 2.9906529887123128,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -9.894346605898086,
+        60.91136107977559,
+        47.39716992890443
+      ],
+      "target": [
+        -15.532346605898086,
+        60.41136107977559,
+        49.44916992890443
+      ]
+    },
+    {
+      "id": "juderia-teatro",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 56.97985991559884,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -131.75490325921345,
+        124.1416146329965,
+        83.32988807021424
+      ],
+      "target": [
+        -97.26752573581294,
+        71.50298578149045,
+        96.0357639998881
+      ]
+    },
+    {
+      "id": "juderia-teatro",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 18.095025354153094,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -106.26752573581294,
+        85.50298578149045,
+        93.0357639998881
+      ],
+      "target": [
+        -97.26752573581294,
+        71.50298578149045,
+        96.0357639998881
+      ]
+    },
+    {
+      "id": "juderia-teatro",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 124.71293652346567,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -176.77270578833816,
+        192.85299744060788,
+        66.74438187527356
+      ],
+      "target": [
+        -97.26752573581294,
+        71.50298578149045,
+        96.0357639998881
+      ]
+    },
+    {
+      "id": "juderia-teatro",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 32.76917149861953,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -114.7967565050437,
+        98.77067808918277,
+        90.19268707681118
+      ],
+      "target": [
+        -97.26752573581294,
+        71.50298578149045,
+        96.0357639998881
+      ]
+    },
+    {
+      "id": "juderia-teatro",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 68.9179508229268,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -139.93001417541723,
+        136.61941550509698,
+        80.31800510108653
+      ],
+      "target": [
+        -97.26752573581294,
+        71.50298578149045,
+        96.0357639998881
+      ]
+    },
+    {
+      "id": "juderia-teatro",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 18.095025354153094,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -106.26752573581294,
+        85.50298578149045,
+        93.0357639998881
+      ],
+      "target": [
+        -97.26752573581294,
+        71.50298578149045,
+        96.0357639998881
+      ]
+    },
+    {
+      "id": "juderia-refugio",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 8.467093989333762,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        1.2582583549643154,
+        81.34173809547733,
+        185.01270120745238
+      ],
+      "target": [
+        -11.493734959238536,
+        74.75604711548331,
+        178.13491938298586
+      ]
+    },
+    {
+      "id": "juderia-refugio",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 3.4710545210207187,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -6.2128671368887485,
+        76.25604711548331,
+        180.98315305367908
+      ],
+      "target": [
+        -11.493734959238536,
+        74.75604711548331,
+        178.13491938298586
+      ]
+    },
+    {
+      "id": "juderia-refugio",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 14.640133798385904,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        16.045735489159654,
+        88.97864256837036,
+        192.98832030929165
+      ],
+      "target": [
+        -11.493734959238536,
+        74.75604711548331,
+        178.13491938298586
+      ]
+    },
+    {
+      "id": "juderia-refugio",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 4.835460749430382,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -1.2082293237080268,
+        77.67758557702177,
+        183.6824021939053
+      ],
+      "target": [
+        -11.493734959238536,
+        74.75604711548331,
+        178.13491938298586
+      ]
+    },
+    {
+      "id": "juderia-refugio",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 9.845837992707757,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        3.9436241203115614,
+        82.72857924752961,
+        186.46105201801774
+      ],
+      "target": [
+        -11.493734959238536,
+        74.75604711548331,
+        178.13491938298586
+      ]
+    },
+    {
+      "id": "juderia-refugio",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 3.4710545210207187,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -6.2128671368887485,
+        76.25604711548331,
+        180.98315305367908
+      ],
+      "target": [
+        -11.493734959238536,
+        74.75604711548331,
+        178.13491938298586
+      ]
+    },
+    {
+      "id": "juderia-memoria",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 51.24202509996832,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        36.10898550412587,
+        111.91091932760165,
+        59.81202486568364
+      ],
+      "target": [
+        3.4098894779255318,
+        62.86227528830114,
+        88.87788800008394
+      ]
+    },
+    {
+      "id": "juderia-memoria",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 15.866806408147106,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        11.409889477925532,
+        76.86227528830113,
+        81.87788800008394
+      ],
+      "target": [
+        3.4098894779255318,
+        62.86227528830114,
+        88.87788800008394
+      ]
+    },
+    {
+      "id": "juderia-memoria",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 113.05172871595764,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        80.56506495945186,
+        178.59503851059065,
+        20.29550979428275
+      ],
+      "target": [
+        3.4098894779255318,
+        62.86227528830114,
+        88.87788800008394
+      ]
+    },
+    {
+      "id": "juderia-memoria",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 28.738728117570794,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        18.991427939463996,
+        90.12996759599345,
+        75.24404184623779
+      ],
+      "target": [
+        3.4098894779255318,
+        62.86227528830114,
+        88.87788800008394
+      ]
+    },
+    {
+      "id": "juderia-memoria",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 63.090159813665295,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        44.18208903270729,
+        124.02057462047378,
+        52.63593284027793
+      ],
+      "target": [
+        3.4098894779255318,
+        62.86227528830114,
+        88.87788800008394
+      ]
+    },
+    {
+      "id": "juderia-memoria",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 15.866806408147106,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        11.409889477925532,
+        76.86227528830113,
+        81.87788800008394
+      ],
+      "target": [
+        3.4098894779255318,
+        62.86227528830114,
+        88.87788800008394
+      ]
+    }
+  ],
+  "limitations": [
+    "Source cadastral building parts and mapped gates are retained; dimensions and facade finishes are interpretations, not photogrammetry.",
+    "The original medieval Portalet is distinguished from the two other current arches.",
+    "No synagogue, proposed ritual bath or private interior is invented.",
+    "CPU renders inspect Three.js meshes and do not measure browser GPU rendering."
+  ]
+}

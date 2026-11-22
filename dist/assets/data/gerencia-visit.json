@@ -1,0 +1,1805 @@
+{
+  "schemaVersion": 1,
+  "id": "gerencia",
+  "title": "Gerencia y ciudad jardín",
+  "subtitle": "Oficinas, viviendas y paisaje de la ciudad factoría",
+  "introduction": "Un recinto donde la empresa administraba, alojaba y organizaba la vida cotidiana. Recorre las oficinas, reconoce las distintas viviendas y descubre un jardín recuperado por etapas.",
+  "researchDate": "2026-11-21",
+  "regionsLabel": "Ámbitos de la Gerencia",
+  "mapButtonLabel": "Plano del recinto",
+  "overviewButtonLabel": "Ver el conjunto",
+  "readingModeLabel": "Leer el conjunto",
+  "readingModeNote": "Los colores distinguen cinco ámbitos de lectura; no representan fases exactas de construcción.",
+  "timelineIntroduction": "De la iniciativa minera y las oficinas a la defensa ciudadana y la recuperación del jardín: fechas documentadas, con sus límites.",
+  "visitAriaLabel": "Visita a la Gerencia y ciudad jardín",
+  "sectionOnOverview": true,
+  "sectionOpenLabel": "Abrir sección",
+  "sectionCloseLabel": "Cerrar sección",
+  "sectionInstructions": "Retira las cubiertas y los forjados superiores para leer los edificios, las agrupaciones de viviendas y los espacios principales de las oficinas.",
+  "sectionNote": "La sección digital oculta también los elementos que dependen de las plantas superiores, como escaleras, barandillas y mobiliario. Conserva los muros y los niveles inferiores. Las divisiones residenciales son tipológicas; los interiores normales de las oficinas mantienen sus techos.",
+  "mapInstructions": "Selecciona una parada para acercarte a las oficinas, las viviendas, el jardín o sus límites.",
+  "mapNote": "La planta orienta la visita. Los detalles y las cotas sin levantamiento permanecen aproximados.",
+  "visitNote": "Documentación revisada el 21 de noviembre de 2026. Está acreditada la apertura del jardín oriental en diciembre de 2023; no la rehabilitación completa del recinto ni la apertura de los interiores. Consulta la información municipal para la visita física.",
+  "methodology": [
+    "Se conserva la cartografía heredada del atlas y se contrasta con descripciones patrimoniales, fotografías de campo y documentación municipal. La maqueta no es un levantamiento arquitectónico.",
+    "Las viviendas se identifican con el catálogo tipológico A–G. El recuento de 21 viviendas de CONTRAST difiere de las 22 citadas por UV y APIVA; esta diferencia no se corrige añadiendo un edificio hipotético.",
+    "Las oficinas permiten tres aproximaciones interiores: vestíbulo, escalera y salas. Los rasgos respaldados por texto o fotografía se combinan con proporciones, comunicaciones secundarias y mobiliario interpretativos.",
+    "Las plantas residenciales publicadas se utilizan solo para una lectura tipológica de las filas de cuatro. No se traslada una propuesta académica de reutilización al estado actual ni se inventa una distribución completa de todos los chalés.",
+    "Las fotografías municipales de 2023 documentan la recuperación oriental. Las fuentes de 2026 se separan entre fases pendientes y adjudicación del entorno; no se presentan proyectos como obras terminadas.",
+    "El arbolado y los materiales expresan caracteres visibles, sin atribuir una especie botánica exacta o un estado de conservación a cada elemento cuando falta un inventario.",
+    "La sección abierta, los encuadres y los colores son herramientas de lectura. Las coordenadas de observación y las cotas sin medición no certifican accesibilidad ni dimensiones reales."
+  ],
+  "readingLegend": [
+    {
+      "id": "conjunto",
+      "label": "Recinto y ciudad",
+      "color": "#8ebbc2",
+      "note": "Oficinas, viviendas, acceso y relación con el espacio urbano."
+    },
+    {
+      "id": "oficinas",
+      "label": "La sede administrativa",
+      "color": "#d4ac79",
+      "note": "Fachadas, ampliación, vestíbulo, escalera y salas de representación."
+    },
+    {
+      "id": "viviendas",
+      "label": "Las formas de habitar",
+      "color": "#c29272",
+      "note": "Chalés exentos, parejas, filas, porches y cubiertas."
+    },
+    {
+      "id": "jardines",
+      "label": "El jardín y sus etapas",
+      "color": "#93b18f",
+      "note": "Paseos, arbolado y diferentes estados de recuperación."
+    },
+    {
+      "id": "memoria",
+      "label": "Empresa y ciudadanía",
+      "color": "#b59ac7",
+      "note": "Jerarquía residencial, defensa patrimonial y uso ciudadano."
+    }
+  ],
+  "confidenceLegend": [
+    {
+      "id": "documented",
+      "label": "Documentado",
+      "note": "La fuente respalda el dato; no certifica cada medida o pieza del modelo."
+    },
+    {
+      "id": "interpretive",
+      "label": "Interpretación",
+      "note": "Aproximación espacial o recurso digital utilizado para explicar el conjunto."
+    },
+    {
+      "id": "disputed",
+      "label": "Fuentes diferentes",
+      "note": "Los documentos ofrecen recuentos o datos que no se han podido conciliar."
+    }
+  ],
+  "materialEvidenceLegend": [
+    {
+      "id": "conserved",
+      "label": "Elemento conservado",
+      "note": "Rasgo reconocido en las fuentes patrimoniales y visuales."
+    },
+    {
+      "id": "rehabilitated",
+      "label": "Recuperación documentada",
+      "note": "Ámbito o tratamiento asociado a una intervención acreditada."
+    },
+    {
+      "id": "mixed",
+      "label": "Lectura conjunta",
+      "note": "El foco reúne arquitectura, historia y simplificaciones de representación."
+    }
+  ],
+  "stops": [
+    {
+      "id": "gerencia-conjunto",
+      "title": "Una ciudad dentro de la ciudad",
+      "label": "El conjunto",
+      "regionId": "conjunto",
+      "period": "mixed",
+      "intro": "Oficinas, viviendas y jardines hacen visible la organización de una ciudad industrial.",
+      "narrative": "Comienza con la vista de conjunto. Lee los edificios junto a sus espacios libres: la distancia entre una casa y otra también forma parte de la composición.",
+      "facts": [
+        {
+          "text": "La Gerencia reunía oficinas y residencias de personal técnico y directivo de la siderúrgica.",
+          "sourceIds": [
+            "g-apiva2017"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "CONTRAST identifica 21 viviendas; UV y APIVA publican 22. Viviendas y edificios no son recuentos equivalentes.",
+          "sourceIds": [
+            "g-jardin-contrast",
+            "g-uv",
+            "g-apiva2017"
+          ],
+          "confidence": "disputed"
+        }
+      ],
+      "lookFor": "El frente de oficinas, las casas agrupadas y la continuidad del jardín.",
+      "modelNote": "El atlas conserva los contornos cartográficos; no fuerza el número de volúmenes para resolver una discrepancia documental.",
+      "sourceIds": [
+        "g-apiva2017",
+        "g-jardin-contrast",
+        "g-uv"
+      ],
+      "confidence": "disputed",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22322,
+        39.65894
+      ],
+      "coordinates": [
+        -0.22322,
+        39.65894
+      ],
+      "coordinateSourceIds": [
+        "g-catastro",
+        "g-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "conjunto",
+      "floor": null,
+      "order": 1,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 3,
+      "localTarget": [
+        0,
+        3,
+        0
+      ],
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null
+    },
+    {
+      "id": "gerencia-acceso",
+      "title": "Cruzar el límite del recinto",
+      "label": "El acceso",
+      "regionId": "conjunto",
+      "period": "mixed",
+      "intro": "El paso entre calle y jardín permite leer los cambios de uso del conjunto.",
+      "narrative": "Acércate a la verja y sigue la transición entre la acera, el acceso y el paseo. Observa cómo cambia la escala al entrar en el recinto.",
+      "facts": [
+        {
+          "text": "El cerramiento formó parte de la separación del espacio residencial de la Gerencia respecto a la ciudad.",
+          "sourceIds": [
+            "g-apiva2017"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La apertura anunciada el 16 de diciembre de 2023 corresponde a la zona este de los jardines.",
+          "sourceIds": [
+            "g-apertura2023"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Murete, barrotes, puerta y continuidad del camino.",
+      "modelNote": "La posición del acceso orienta la visita digital. No certifica horarios ni acceso a todos los edificios.",
+      "sourceIds": [
+        "g-apiva2017",
+        "g-apertura2023"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.222636,
+        39.65959156
+      ],
+      "coordinates": [
+        -0.222636,
+        39.65959156
+      ],
+      "coordinateSourceIds": [
+        "g-catastro",
+        "g-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "conjunto",
+      "floor": null,
+      "order": 2,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 1.3331049971322848,
+      "localTarget": [
+        50.03455917353767,
+        1.3331049971322848,
+        -72.53210448019718
+      ],
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null
+    },
+    {
+      "id": "gerencia-oficinas",
+      "title": "La fachada de la administración",
+      "label": "Oficinas de 1921",
+      "regionId": "oficinas",
+      "period": "mixed",
+      "intro": "Un frente largo y ordenado expresa la función representativa de las oficinas.",
+      "narrative": "Recorre la fachada desde sus extremos hacia el centro. Compara el zócalo, el ritmo de las ventanas y la entrada elevada antes de acceder al interior digital.",
+      "facts": [
+        {
+          "text": "Las oficinas generales se construyeron en 1921.",
+          "sourceIds": [
+            "g-uv",
+            "g-apiva2017"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El edificio acogió la administración de compañías siderúrgicas, mineras y navieras, además del servicio de Aduanas.",
+          "sourceIds": [
+            "g-apiva2017"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El cuerpo central, la escalinata y los vanos de la fachada.",
+      "modelNote": "La huella procede de cartografía. La repetición de huecos y la altura se ajustan visualmente a las referencias, sin levantamiento métrico.",
+      "sourceIds": [
+        "g-uv",
+        "g-apiva2017"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22314521,
+        39.65968168
+      ],
+      "coordinates": [
+        -0.22314521,
+        39.65968168
+      ],
+      "coordinateSourceIds": [
+        "g-catastro",
+        "g-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "oficinas",
+      "floor": null,
+      "order": 3,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 5.534049773646979,
+      "localTarget": [
+        6.407819913035658,
+        5.534049773646979,
+        -82.56429478718488
+      ],
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": "oficinas-1921"
+    },
+    {
+      "id": "gerencia-vestibulo",
+      "title": "El vestíbulo representativo",
+      "label": "Vestíbulo",
+      "regionId": "oficinas",
+      "period": "mixed",
+      "intro": "La entrada conduce a un espacio que distribuye la planta y presenta la escalera.",
+      "narrative": "Mira primero el contraste entre paramentos y pavimento. Después gira hacia la escalera para leer la relación entre el acceso y los niveles superiores.",
+      "facts": [
+        {
+          "text": "La ficha universitaria describe una distribución casi simétrica articulada por el vestíbulo principal.",
+          "sourceIds": [
+            "g-uv"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Se documentan revestimientos pulidos de piedra y conglomerados con tonos verdes oscuros y ocres.",
+          "sourceIds": [
+            "g-uv"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La base de los muros, el suelo y el arranque de la escalera.",
+      "modelNote": "Rasgos materiales documentados; dimensiones, juntas y distribución secundaria interpretativas.",
+      "sourceIds": [
+        "g-uv"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22318395,
+        39.65963636
+      ],
+      "coordinates": [
+        -0.22318395,
+        39.65963636
+      ],
+      "coordinateSourceIds": [
+        "g-catastro",
+        "g-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "oficinas",
+      "floor": 0,
+      "order": 4,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 3.534049773646979,
+      "localTarget": [
+        3.0887861021753245,
+        3.534049773646979,
+        -77.51868499692802
+      ],
+      "requiresSection": false,
+      "interiorView": true,
+      "buildingId": "oficinas-1921"
+    },
+    {
+      "id": "gerencia-escalera",
+      "title": "Subir hacia la planta noble",
+      "label": "Escalera",
+      "regionId": "oficinas",
+      "period": "mixed",
+      "intro": "La escalera concentra luz, materiales y representación institucional.",
+      "narrative": "Sigue la dirección de los peldaños y levanta la mirada hacia la vidriera. La visita utiliza una aproximación espacial para explicar este recorrido.",
+      "facts": [
+        {
+          "text": "La fotografía de 2022 muestra peldaños de piedra pulida y una barandilla de madera con balaustres torneados.",
+          "sourceIds": [
+            "g-escalera2022"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La vidriera del hueco de escalera representa un paisaje industrial y portuario.",
+          "sourceIds": [
+            "g-oficinas-contrast"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El pasamanos, los descansillos y la entrada de luz coloreada.",
+      "modelNote": "La vidriera se interpreta mediante color y composición general; no se presenta como reproducción exacta de sus paneles.",
+      "sourceIds": [
+        "g-escalera2022",
+        "g-oficinas-contrast"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22319524,
+        39.65963132
+      ],
+      "coordinates": [
+        -0.22319524,
+        39.65963132
+      ],
+      "coordinateSourceIds": [
+        "g-catastro",
+        "g-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "oficinas",
+      "floor": 0,
+      "order": 5,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 4.434049773646979,
+      "localTarget": [
+        2.121495672203705,
+        4.434049773646979,
+        -76.95801644592366
+      ],
+      "requiresSection": false,
+      "interiorView": true,
+      "buildingId": "oficinas-1921"
+    },
+    {
+      "id": "gerencia-salas",
+      "title": "Las salas de dirección",
+      "label": "Planta noble",
+      "regionId": "oficinas",
+      "period": "mixed",
+      "intro": "El piso superior concentra los espacios de representación de la empresa.",
+      "narrative": "Observa el espesor visual de las paredes y la luz de los ventanales. El ambiente ayuda a comprender la función de las salas sin atribuir una disposición exacta al mobiliario.",
+      "facts": [
+        {
+          "text": "La planta noble albergaba dependencias de dirección y salas de juntas.",
+          "sourceIds": [
+            "g-uv"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La descripción patrimonial señala revestimientos de madera en las salas principales.",
+          "sourceIds": [
+            "g-uv"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El revestimiento inferior de madera y la relación con los huecos exteriores.",
+      "modelNote": "No se ha recuperado un plano completo de distribución ni un inventario de muebles. Sala y mobiliario se muestran como interpretación.",
+      "sourceIds": [
+        "g-uv"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22303909,
+        39.65953614
+      ],
+      "coordinates": [
+        -0.22303909,
+        39.65953614
+      ],
+      "coordinateSourceIds": [
+        "g-catastro",
+        "g-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "oficinas",
+      "floor": 1,
+      "order": 6,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 6.834049773646979,
+      "localTarget": [
+        15.499815504306566,
+        6.834049773646979,
+        -66.36223622595104
+      ],
+      "requiresSection": false,
+      "interiorView": true,
+      "buildingId": "oficinas-1921"
+    },
+    {
+      "id": "gerencia-ampliacion",
+      "title": "El segundo edificio de oficinas",
+      "label": "Ampliación de 1952",
+      "regionId": "oficinas",
+      "period": "mixed",
+      "intro": "Dos edificios de distinta época se leen como una misma sede administrativa.",
+      "narrative": "Compara sus ritmos de fachada y observa el cuerpo que los enlaza. La retracción de la unión permite distinguir las dos piezas.",
+      "facts": [
+        {
+          "text": "La documentación de CONTRAST fecha en 1952 la ampliación de las oficinas.",
+          "sourceIds": [
+            "g-oficinas-contrast"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El enlace entre ambos edificios incorpora un arco carpanel en un cuerpo retranqueado.",
+          "sourceIds": [
+            "g-oficinas-contrast"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La junta entre volúmenes y el arco del enlace.",
+      "modelNote": "El cuerpo de 1921 se sitúa al sureste de la ampliación. La diferencia de fechas no implica que todos sus acabados actuales sean originales.",
+      "sourceIds": [
+        "g-oficinas-contrast"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22363733,
+        39.65995782
+      ],
+      "coordinates": [
+        -0.22363733,
+        39.65995782
+      ],
+      "coordinateSourceIds": [
+        "g-catastro",
+        "g-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "oficinas",
+      "floor": null,
+      "order": 7,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 5.234049773646979,
+      "localTarget": [
+        -35.755432795698646,
+        5.234049773646979,
+        -113.30372239974689
+      ],
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": "oficinas-1952"
+    },
+    {
+      "id": "gerencia-chale-norte",
+      "title": "Chalés A: altura y miradores",
+      "label": "Chalé norte",
+      "regionId": "viviendas",
+      "period": "mixed",
+      "intro": "Los primeros chalés muestran una volumetría más compleja que una vivienda en fila.",
+      "narrative": "Rodea el volumen para comparar frente y laterales. El cuerpo alto y los salientes cambian la silueta según el punto de observación.",
+      "facts": [
+        {
+          "text": "El catálogo identifica A1 y A2 entre los primeros chalés, vinculados a influencias regionalistas del norte peninsular.",
+          "sourceIds": [
+            "g-tipologias-contrast"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "En A1 y A2, una buhardilla parcial genera un cuerpo central más alto.",
+          "sourceIds": [
+            "g-tipologias-contrast"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El cuerpo central, las transiciones curvas y los miradores.",
+      "modelNote": "La correspondencia A1/A2 se apoya en el plano tipológico; altura y detalle no proceden de un levantamiento individual.",
+      "sourceIds": [
+        "g-tipologias-contrast"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.2236667,
+        39.65949443
+      ],
+      "coordinates": [
+        -0.2236667,
+        39.65949443
+      ],
+      "coordinateSourceIds": [
+        "g-catastro",
+        "g-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "viviendas",
+      "floor": null,
+      "order": 8,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 3.16,
+      "localTarget": [
+        -38.271504207462016,
+        3.16,
+        -61.719292799481934
+      ],
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": "vivienda-1"
+    },
+    {
+      "id": "gerencia-chales-centrales",
+      "title": "Una familia de arquitecturas",
+      "label": "Chalés centrales",
+      "regionId": "viviendas",
+      "period": "mixed",
+      "intro": "La ciudad jardín combina casas exentas, parejas y viviendas agrupadas.",
+      "narrative": "Compara las siluetas y busca diferencias dentro de un lenguaje común. Evita leer todas las casas como copias de una misma fachada.",
+      "facts": [
+        {
+          "text": "El inventario distingue cinco viviendas aisladas, cuatro parejas y dos filas de cuatro viviendas.",
+          "sourceIds": [
+            "g-jardin-contrast"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La descripción de CONTRAST reconoce remates curvos y rasgos de influencia art déco en parte de las viviendas.",
+          "sourceIds": [
+            "g-jardin-contrast"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Las variantes de hastial, cuerpos salientes y agrupación de accesos.",
+      "modelNote": "Las variantes se distribuyen según el catálogo A–G. No se equipara una huella edificada con una sola vivienda.",
+      "sourceIds": [
+        "g-jardin-contrast"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22339465,
+        39.6590251
+      ],
+      "coordinates": [
+        -0.22339465,
+        39.6590251
+      ],
+      "coordinateSourceIds": [
+        "g-catastro",
+        "g-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "viviendas",
+      "floor": null,
+      "order": 9,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 3.16,
+      "localTarget": [
+        -14.963562618659834,
+        3.16,
+        -9.472984121740993
+      ],
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": "vivienda-4"
+    },
+    {
+      "id": "gerencia-porches",
+      "title": "Entre la casa y el jardín",
+      "label": "Porches y terrazas",
+      "regionId": "viviendas",
+      "period": "mixed",
+      "intro": "Los porches crean una transición cubierta hacia el espacio exterior.",
+      "narrative": "Sitúate bajo el vuelo o frente a sus apoyos y mira hacia el jardín. Compara el abrigo de la planta baja con la terraza superior.",
+      "facts": [
+        {
+          "text": "En las casas de la etapa CSM, el porche delantero sostiene una terraza superior, salvo en el tipo E.",
+          "sourceIds": [
+            "g-tipologias-contrast"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Los tipos A, B y C incorporan miradores poligonales, ausentes en las filas D y en la vivienda E.",
+          "sourceIds": [
+            "g-tipologias-contrast"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Los apoyos del porche, el borde de terraza y los miradores.",
+      "modelNote": "Las fotografías guían los rasgos visibles. Espesores, barandillas y pequeños detalles se simplifican.",
+      "sourceIds": [
+        "g-tipologias-contrast"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22337012,
+        39.65844914
+      ],
+      "coordinates": [
+        -0.22337012,
+        39.65844914
+      ],
+      "coordinateSourceIds": [
+        "g-catastro",
+        "g-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "viviendas",
+      "floor": null,
+      "order": 10,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 2.2932801847624043,
+      "localTarget": [
+        -12.861248026564434,
+        2.2932801847624043,
+        54.64268847196656
+      ],
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": "vivienda-8"
+    },
+    {
+      "id": "gerencia-adosadas",
+      "title": "Dos filas, ocho viviendas",
+      "label": "Viviendas en fila",
+      "regionId": "viviendas",
+      "period": "mixed",
+      "intro": "La repetición introduce otra escala dentro del jardín residencial.",
+      "narrative": "Sigue el ritmo de los accesos y busca la diferencia entre una unidad doméstica y el volumen que agrupa toda la fila.",
+      "facts": [
+        {
+          "text": "Las dos filas D reúnen cuatro viviendas cada una y se documentan construidas en 1928.",
+          "sourceIds": [
+            "g-jardin-contrast"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El estudio de la UPV reproduce plantas baja y primera y alzados del tipo de viviendas en fila.",
+          "sourceIds": [
+            "g-upv2023"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La secuencia de cuatro unidades y la continuidad de sus cubiertas.",
+      "modelNote": "La sección utiliza divisiones proporcionales de esta tipología. No afirma la distribución exacta de cada casa ni permite una visita interior residencial.",
+      "sourceIds": [
+        "g-jardin-contrast",
+        "g-upv2023"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22318267,
+        39.6584321
+      ],
+      "coordinates": [
+        -0.22318267,
+        39.6584321
+      ],
+      "coordinateSourceIds": [
+        "g-catastro",
+        "g-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "viviendas",
+      "floor": null,
+      "order": 11,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 2.7932801847624043,
+      "localTarget": [
+        3.1986990868904286,
+        2.7932801847624043,
+        56.539428000260145
+      ],
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": "vivienda-8"
+    },
+    {
+      "id": "gerencia-cubiertas",
+      "title": "La silueta de la ciudad jardín",
+      "label": "Cubiertas",
+      "regionId": "viviendas",
+      "period": "mixed",
+      "intro": "Tejados, chimeneas y aleros distinguen los distintos grupos de viviendas.",
+      "narrative": "Eleva la cámara para comparar pendientes y encuentros. Después vuelve a una vista baja para comprobar cómo los aleros recortan la luz.",
+      "facts": [
+        {
+          "text": "La documentación del conjunto describe cubiertas inclinadas, aleros de madera y chimeneas rematadas por pequeños tejadillos.",
+          "sourceIds": [
+            "g-jardin-contrast"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Las huellas catastrales describen contornos edificados; por sí solas no identifican la forma de una cubierta ni una distribución interior.",
+          "sourceIds": [
+            "g-catastro"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Los encuentros entre faldones y los remates del tejado.",
+      "modelNote": "Las cubiertas se contrastan con ortofotografía y fotografía. Su integridad visual no certifica el estado de cada teja o chimenea.",
+      "sourceIds": [
+        "g-jardin-contrast",
+        "g-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22339465,
+        39.6590251
+      ],
+      "coordinates": [
+        -0.22339465,
+        39.6590251
+      ],
+      "coordinateSourceIds": [
+        "g-catastro",
+        "g-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "viviendas",
+      "floor": null,
+      "order": 12,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 8.36,
+      "localTarget": [
+        -14.963562618659834,
+        8.36,
+        -9.472984121740993
+      ],
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": "vivienda-4"
+    },
+    {
+      "id": "gerencia-paseo",
+      "title": "El hilo del jardín",
+      "label": "Paseo central",
+      "regionId": "jardines",
+      "period": "mixed",
+      "intro": "El recorrido permite relacionar las casas sin perder la continuidad del espacio verde.",
+      "narrative": "Avanza entre claros y sombras. Observa cómo se encadenan entradas, cruces y pequeñas superficies de estancia.",
+      "facts": [
+        {
+          "text": "La intervención oriental recuperó recorridos peatonales y para medios no motorizados.",
+          "sourceIds": [
+            "g-recepcion2023"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El proyecto mantuvo la organización en islas de los espacios ajardinados.",
+          "sourceIds": [
+            "g-recepcion2023"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Bordes de camino, bifurcaciones y vacíos entre las plantaciones.",
+      "modelNote": "Los caminos cartográficos orientan el trazado. Anchos y encuentros de detalle son aproximados.",
+      "sourceIds": [
+        "g-recepcion2023"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22323333,
+        39.65893313
+      ],
+      "coordinates": [
+        -0.22323333,
+        39.65893313
+      ],
+      "coordinateSourceIds": [
+        "g-catastro",
+        "g-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "jardines",
+      "floor": null,
+      "order": 13,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 1.7000000000000002,
+      "localTarget": [
+        -1.1423129751037777,
+        1.7000000000000002,
+        0.7649910400173212
+      ],
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null
+    },
+    {
+      "id": "gerencia-jardin-oriental",
+      "title": "El jardín que volvió a abrirse",
+      "label": "Jardín oriental",
+      "regionId": "jardines",
+      "period": "mixed",
+      "intro": "La recuperación oriental hace legible una nueva etapa de uso ciudadano.",
+      "narrative": "Acércate al pavimento y al mobiliario. Compara los árboles adultos con las áreas de plantación reciente documentadas en las fotografías de la obra.",
+      "facts": [
+        {
+          "text": "La zona este abrió al público el 16 de diciembre de 2023.",
+          "sourceIds": [
+            "g-apertura2023"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El ámbito oriental del proyecto ocupa 13.433,49 m², entre el paseo central y la Alameda.",
+          "sourceIds": [
+            "g-edusi2022"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Los caminos claros, bancos, farolas delgadas y parterres.",
+      "modelNote": "Los acabados se inspiran en las fotografías municipales de 2023. La escena no convierte la recuperación de esta zona en una restauración de todo el recinto.",
+      "sourceIds": [
+        "g-apertura2023",
+        "g-edusi2022"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22207333,
+        39.65852778
+      ],
+      "coordinates": [
+        -0.22207333,
+        39.65852778
+      ],
+      "coordinateSourceIds": [
+        "g-catastro",
+        "g-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "jardines",
+      "floor": null,
+      "order": 14,
+      "fabricStatus": "rehabilitated",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 1,
+      "localTarget": [
+        98.24140045178501,
+        1,
+        45.88855304015033
+      ],
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null
+    },
+    {
+      "id": "gerencia-arbolado",
+      "title": "La arquitectura de la sombra",
+      "label": "Arbolado",
+      "regionId": "jardines",
+      "period": "mixed",
+      "intro": "Las copas y los claros condicionan la percepción de los edificios.",
+      "narrative": "Mira a través del arbolado en vez de buscar una vista despejada de cada casa. La superposición de ramas, fachadas y caminos define la profundidad del jardín.",
+      "facts": [
+        {
+          "text": "El estudio de 2023 y las fotografías municipales documentan palmeras y árboles de gran porte en el recinto.",
+          "sourceIds": [
+            "g-upv2023",
+            "g-recepcion2023"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La actuación adjudicada en marzo de 2026 propone especies autóctonas y control de invasoras en las inmediaciones.",
+          "sourceIds": [
+            "g-paisaje2026"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Las diferencias de altura y densidad de las copas.",
+      "modelNote": "La posición y especie de cada árbol no están inventariadas en la maqueta. La actuación de 2026 se explica como proyecto adjudicado, sin simular su finalización.",
+      "sourceIds": [
+        "g-upv2023",
+        "g-recepcion2023",
+        "g-paisaje2026"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22307333,
+        39.6586142
+      ],
+      "coordinates": [
+        -0.22307333,
+        39.6586142
+      ],
+      "coordinateSourceIds": [
+        "g-catastro",
+        "g-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "jardines",
+      "floor": null,
+      "order": 15,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 5.071716418074061,
+      "localTarget": [
+        12.565785428603704,
+        5.071716418074061,
+        36.268278639887285
+      ],
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null
+    },
+    {
+      "id": "gerencia-jardin-occidental",
+      "title": "Un proceso todavía abierto",
+      "label": "Jardín occidental",
+      "regionId": "jardines",
+      "period": "mixed",
+      "intro": "La recuperación del conjunto comprende ámbitos con situaciones diferentes.",
+      "narrative": "Compara este sector con el jardín oriental. La visita conserva esa diferencia para que la lectura del recinto no borre los trabajos pendientes.",
+      "facts": [
+        {
+          "text": "El acuerdo municipal de febrero de 2026 sitúa las fases 2 y 3 pendientes de ejecución.",
+          "sourceIds": [
+            "g-fases2026"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La adjudicación de marzo de 2026 se refiere a restauración paisajística del entorno y no acredita la terminación de aquellas fases.",
+          "sourceIds": [
+            "g-paisaje2026",
+            "g-fases2026"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La continuidad del terreno y los cambios de tratamiento entre sectores.",
+      "modelNote": "Se evita presentar todo el jardín como recién rehabilitado. El último estado documental localizado no certifica cada cambio material posterior.",
+      "sourceIds": [
+        "g-fases2026",
+        "g-paisaje2026"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.224436,
+        39.65868827
+      ],
+      "coordinates": [
+        -0.224436,
+        39.65868827
+      ],
+      "coordinateSourceIds": [
+        "g-catastro",
+        "g-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "jardines",
+      "floor": null,
+      "order": 16,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 1.4000000000000004,
+      "localTarget": [
+        -104.18154786818741,
+        1.4000000000000004,
+        28.022360960229435
+      ],
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null
+    },
+    {
+      "id": "gerencia-limites",
+      "title": "La Gerencia junto a la ciudad",
+      "label": "Límites y entorno",
+      "regionId": "conjunto",
+      "period": "mixed",
+      "intro": "Calles, cerramientos y edificios vecinos ayudan a situar el recinto.",
+      "narrative": "Aleja la cámara hasta reconocer el frente urbano. Vuelve después al borde del jardín para leer el cambio de textura y de escala.",
+      "facts": [
+        {
+          "text": "Las fotografías de la intervención oriental muestran un cerramiento de barrotes oscuros sobre un murete claro.",
+          "sourceIds": [
+            "g-recepcion2023"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El entorno del atlas combina calles de OpenStreetMap y huellas de Catastro, contrastadas con ortofotografía.",
+          "sourceIds": [
+            "g-osm",
+            "g-catastro",
+            "g-pnoa"
+          ],
+          "confidence": "interpretive"
+        }
+      ],
+      "lookFor": "La relación entre acera, muro, vegetación y fachadas cercanas.",
+      "modelNote": "El perímetro es una lectura cartográfica, no un deslinde jurídico. No se reconstruyen interiores de edificios vecinos.",
+      "sourceIds": [
+        "g-recepcion2023",
+        "g-osm",
+        "g-catastro",
+        "g-pnoa"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22482533,
+        39.65900926
+      ],
+      "coordinates": [
+        -0.22482533,
+        39.65900926
+      ],
+      "coordinateSourceIds": [
+        "g-catastro",
+        "g-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "conjunto",
+      "floor": null,
+      "order": 17,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 2.5955086690141513,
+      "localTarget": [
+        -137.5378920920066,
+        2.5955086690141513,
+        -7.709911879998799
+      ],
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null
+    },
+    {
+      "id": "gerencia-jerarquia",
+      "title": "Vivienda y posición en la empresa",
+      "label": "Jerarquía residencial",
+      "regionId": "memoria",
+      "period": "mixed",
+      "intro": "La forma de habitar también revela la organización del trabajo.",
+      "narrative": "Compara el espacio libre y las agrupaciones residenciales. La arquitectura permite formular preguntas sobre quién habitaba cada lugar y cómo se relacionaba con la fábrica.",
+      "facts": [
+        {
+          "text": "La documentación didáctica relaciona la Gerencia con las viviendas de personal directivo y distingue su carácter del Barrio Obrero.",
+          "sourceIds": [
+            "g-apiva2017"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La ciudad jardín comenzó con la iniciativa minera de 1907 y se desarrolló principalmente durante los años veinte.",
+          "sourceIds": [
+            "g-jardin-contrast"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La distancia entre casas, jardines propios y áreas de relación.",
+      "modelNote": "La visita explica una organización social documentada, sin asignar nombres de residentes a una casa cuando no existe prueba suficiente.",
+      "sourceIds": [
+        "g-apiva2017",
+        "g-jardin-contrast"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22345344,
+        39.65880525
+      ],
+      "coordinates": [
+        -0.22345344,
+        39.65880525
+      ],
+      "coordinateSourceIds": [
+        "g-catastro",
+        "g-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "memoria",
+      "floor": null,
+      "order": 18,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 5,
+      "localTarget": [
+        -20,
+        5,
+        15
+      ],
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null
+    },
+    {
+      "id": "gerencia-seccion",
+      "title": "Leer el edificio por dentro",
+      "label": "Sección digital",
+      "regionId": "oficinas",
+      "period": "mixed",
+      "intro": "Retirar cubiertas y forjados superiores permite relacionar el volumen exterior con los espacios inferiores.",
+      "narrative": "Activa la sección y compara el edificio completo con su vista abierta. En las viviendas, observa sobre todo la forma de las agrupaciones y el tamaño de sus volúmenes.",
+      "facts": [
+        {
+          "text": "Las oficinas se describen con dos plantas habitables y un nivel de sótano o semisótano.",
+          "sourceIds": [
+            "g-uv",
+            "g-oficinas-contrast"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Las divisiones representadas en las filas residenciales son una lectura proporcional de la tipología documentada en el estudio de la UPV.",
+          "sourceIds": [
+            "g-upv2023"
+          ],
+          "confidence": "interpretive"
+        }
+      ],
+      "lookFor": "El vestíbulo y el hueco de escalera de las oficinas; la repetición de las viviendas en fila.",
+      "modelNote": "La apertura es una herramienta digital que retira cubiertas, forjados y elementos superiores para facilitar la lectura. La distribución de las viviendas es una interpretación tipológica.",
+      "sourceIds": [
+        "g-uv",
+        "g-oficinas-contrast",
+        "g-upv2023"
+      ],
+      "confidence": "interpretive",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22318267,
+        39.65963786
+      ],
+      "coordinates": [
+        -0.22318267,
+        39.65963786
+      ],
+      "coordinateSourceIds": [
+        "g-catastro",
+        "g-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "oficinas",
+      "floor": null,
+      "order": 19,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 4.33404977364698,
+      "localTarget": [
+        3.1986990868904357,
+        4.33404977364698,
+        -77.68577519948644
+      ],
+      "requiresSection": true,
+      "interiorView": false,
+      "buildingId": "oficinas-1921"
+    },
+    {
+      "id": "gerencia-memoria",
+      "title": "De recinto de empresa a patrimonio compartido",
+      "label": "Memoria ciudadana",
+      "regionId": "memoria",
+      "period": "mixed",
+      "intro": "La historia de la Gerencia continúa en su defensa y en sus nuevos usos.",
+      "narrative": "Termina mirando el conjunto desde el jardín. El recorrido reúne arquitectura, paisaje y memoria de quienes reclamaron conservarlos.",
+      "facts": [
+        {
+          "text": "La Comisión Ciudadana para la Defensa de la Gerencia se constituyó en septiembre de 1995.",
+          "sourceIds": [
+            "g-comision"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La apertura de los jardines orientales en 2023 incorporó una parte del recinto al uso público.",
+          "sourceIds": [
+            "g-apertura2023"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La relación entre los edificios históricos y los espacios de paseo actuales.",
+      "modelNote": "El archivo histórico y las noticias actuales se leen con sus fechas. La experiencia virtual no acredita el acceso físico a las viviendas ni a las salas de oficinas.",
+      "sourceIds": [
+        "g-comision",
+        "g-apertura2023"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22351867,
+        39.65858128
+      ],
+      "coordinates": [
+        -0.22351867,
+        39.65858128
+      ],
+      "coordinateSourceIds": [
+        "g-catastro",
+        "g-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "memoria",
+      "floor": null,
+      "order": 20,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 2.7995301321606103,
+      "localTarget": [
+        -25.588478912128267,
+        2.7995301321606103,
+        39.9331556801767
+      ],
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null
+    }
+  ],
+  "regions": [
+    {
+      "id": "conjunto",
+      "name": "Recinto y ciudad",
+      "aliases": [],
+      "summary": "Oficinas, viviendas, acceso y relación con el espacio urbano.",
+      "sourceIds": [
+        "g-apiva2017",
+        "g-jardin-contrast",
+        "g-uv",
+        "g-apertura2023",
+        "g-recepcion2023",
+        "g-osm",
+        "g-catastro",
+        "g-pnoa"
+      ],
+      "stopIds": [
+        "gerencia-conjunto",
+        "gerencia-acceso",
+        "gerencia-limites"
+      ],
+      "coordinate": [
+        -0.2231067,
+        39.6588633
+      ]
+    },
+    {
+      "id": "oficinas",
+      "name": "La sede administrativa",
+      "aliases": [],
+      "summary": "Fachadas, ampliación, vestíbulo, escalera y salas de representación.",
+      "sourceIds": [
+        "g-uv",
+        "g-apiva2017",
+        "g-escalera2022",
+        "g-oficinas-contrast",
+        "g-upv2023"
+      ],
+      "stopIds": [
+        "gerencia-oficinas",
+        "gerencia-vestibulo",
+        "gerencia-escalera",
+        "gerencia-salas",
+        "gerencia-ampliacion",
+        "gerencia-seccion"
+      ],
+      "coordinate": [
+        -0.223265,
+        39.65967
+      ]
+    },
+    {
+      "id": "viviendas",
+      "name": "Las formas de habitar",
+      "aliases": [],
+      "summary": "Chalés exentos, parejas, filas, porches y cubiertas.",
+      "sourceIds": [
+        "g-tipologias-contrast",
+        "g-jardin-contrast",
+        "g-upv2023",
+        "g-catastro"
+      ],
+      "stopIds": [
+        "gerencia-chale-norte",
+        "gerencia-chales-centrales",
+        "gerencia-porches",
+        "gerencia-adosadas",
+        "gerencia-cubiertas"
+      ],
+      "coordinate": [
+        -0.2234217,
+        39.6591326
+      ]
+    },
+    {
+      "id": "jardines",
+      "name": "El jardín y sus etapas",
+      "aliases": [],
+      "summary": "Paseos, arbolado y diferentes estados de recuperación.",
+      "sourceIds": [
+        "g-recepcion2023",
+        "g-apertura2023",
+        "g-edusi2022",
+        "g-upv2023",
+        "g-paisaje2026",
+        "g-fases2026"
+      ],
+      "stopIds": [
+        "gerencia-paseo",
+        "gerencia-jardin-oriental",
+        "gerencia-arbolado",
+        "gerencia-jardin-occidental"
+      ],
+      "coordinate": [
+        -0.2231875,
+        39.65884
+      ]
+    },
+    {
+      "id": "memoria",
+      "name": "Empresa y ciudadanía",
+      "aliases": [],
+      "summary": "Jerarquía residencial, defensa patrimonial y uso ciudadano.",
+      "sourceIds": [
+        "g-apiva2017",
+        "g-jardin-contrast",
+        "g-comision",
+        "g-apertura2023"
+      ],
+      "stopIds": [
+        "gerencia-jerarquia",
+        "gerencia-memoria"
+      ],
+      "coordinate": [
+        -0.22328,
+        39.658775
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "g-uv",
+      "title": "Conjunto de la Gerencia: oficinas y ciudad jardín",
+      "author": "Universitat de València",
+      "url": "https://www.uv.es/patrimoni_industrial_sagunt/bicgerencia/gerencia.html",
+      "type": "ficha patrimonial universitaria",
+      "year": null,
+      "locator": "Descripción de las oficinas, su interior y el conjunto residencial.",
+      "note": "Fuente histórica: no acredita el estado de visita actual. Publica 22 viviendas.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "g-oficinas-contrast",
+      "title": "Las oficinas generales de la compañía siderúrgica",
+      "author": "CONTRAST · Joan Costa Sanz, Antonio Ortiz López y José María Prats Escriche",
+      "url": "https://contrastapips.com/IHACM/IBP/Port/Port_patri_ofi.htm",
+      "type": "documentación de campo, fotografías y explicación arquitectónica",
+      "year": 2022,
+      "locator": "Fachadas, ampliación de 1952, vínculo entre cuerpos y fotografías interiores.",
+      "note": "Distingue piedra real, revoco que imita sillería y ladrillo. Las fotografías de 2022 no prueban apertura pública.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "g-jardin-contrast",
+      "title": "La Gerencia: ciudad jardín I",
+      "author": "CONTRAST · Joan Costa Sanz, Antonio Ortiz López y José María Prats Escriche",
+      "url": "https://contrastapips.com/IHACM/IBP/Port/Port_patri_jardi.htm",
+      "type": "inventario histórico y documentación de campo",
+      "year": 2022,
+      "locator": "Origen, grupos de viviendas, cronología y características comunes.",
+      "note": "Recuenta 21 viviendas: cinco aisladas, ocho en cuatro parejas y ocho en dos filas de cuatro. No se ha conciliado con las 22 de UV y APIVA.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "g-tipologias-contrast",
+      "title": "La Gerencia: ciudad jardín II",
+      "author": "CONTRAST · equipo de investigación y dibujos de Ciriaco Galán López",
+      "url": "https://www.contrastapips.com/IHACM/IBP/Port/Port_patri_jardi2.htm",
+      "type": "catálogo tipológico con plano de situación y fotografías",
+      "year": 2022,
+      "locator": "Mapa A–G; apartados A1/A2, B1, B2, C, D, E, F y G.",
+      "note": "El texto comparativo de casas del País Vasco no es un plano interior de los chalés de Sagunto.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "g-apiva2017",
+      "title": "Cuaderno del estudiante: patrimonio industrial del Puerto de Sagunto",
+      "author": "APIVA · Cristina Baena Tomás y Sonia Garcés Romero · Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/media/qwub41a1/01_cuaderno_estudiante_cast.pdf",
+      "type": "publicación didáctica municipal",
+      "year": 2017,
+      "locator": "Páginas PDF 14–15: oficinas, Gerencia y ciudad jardín; historia de la ciudad factoría.",
+      "note": "Publica 22 chalés. Explica la jerarquía residencial y el cierre siderúrgico; no es un inventario métrico de edificios.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "g-upv2023",
+      "title": "Estudio y propuesta de reutilización adaptativa de las casas-chalet del conjunto siderúrgico de Puerto de Sagunto",
+      "author": "Hilary Katline Quintanilla Gutierrez · Universitat Politècnica de València",
+      "url": "https://riunet.upv.es/server/api/core/bitstreams/06657e4e-6424-4bb1-a304-83c9dfa5c30f/content",
+      "type": "trabajo académico con estudio del estado y reproducción de planos",
+      "year": 2023,
+      "locator": "Páginas PDF 18–20, figuras 10–11: viviendas en fila; página PDF 29: vegetación.",
+      "note": "Los planos del estudio histórico se distinguen de la propuesta de reutilización que comienza en la página PDF 58. Esta última no se representa como obra ejecutada.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "g-apertura2023",
+      "title": "El Ayuntamiento abre al público la zona este de los jardines de la Gerencia",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/es/actualidad/el-ayuntamiento-abre-al-publico-la-zona-este-de-los-jardines-de-la-gerencia/",
+      "type": "noticia municipal de apertura efectiva",
+      "year": 2023,
+      "locator": "16 de diciembre de 2023: apertura de la zona oriental.",
+      "note": "Acredita la apertura de los jardines de esa fase, no el acceso al interior de oficinas ni viviendas.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "g-recepcion2023",
+      "title": "Las obras de la zona este de la antigua Gerencia de AHM han finalizado",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/es/actualidad/las-obras-de-la-zona-este-de-la-antigua-gerencia-de-ahm-han-finalizado/",
+      "type": "recepción parcial y reportaje fotográfico municipal",
+      "year": 2023,
+      "locator": "15 de noviembre de 2023: senderos, islas, plantaciones, mobiliario y edificios.",
+      "note": "Su previsión de apertura se contrasta con la noticia posterior del 16 de diciembre. Las imágenes permiten reconocer acabados del jardín oriental.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "g-edusi2022",
+      "title": "Acuerdo de la Junta de Gobierno sobre la ciudad jardín de la Gerencia",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/media/nirmen0d/trasllat_acord_n_43_jgl_de_23062022_-_sefycu_3346295_ciudad-jardin-gerencia.pdf",
+      "type": "documento administrativo del proyecto",
+      "year": 2022,
+      "locator": "23 de junio de 2022: delimitación oriental entre el paseo central y la Alameda.",
+      "note": "Superficie de la actuación oriental: 13.433,49 m². El ámbito del proyecto no debe confundirse con todo el recinto.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "g-fases2026",
+      "title": "El Pleno insta a cumplir los compromisos de financiación de la Gerencia",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/es/actualidad/2026-02-06-el-pleno-de-la-corporacion-municipal-ha-acordado-instar-a-la-diputacion-de-valencia-a-cumplir-los-compromisos-de-financiacion-de-la-gerencia/",
+      "type": "acuerdo municipal y estado de las fases",
+      "year": 2026,
+      "locator": "6 de febrero de 2026: fase 1 acabada; fases 2 y 3 pendientes.",
+      "note": "Última confirmación localizada del estado de estas fases. No se convierte la falta de una noticia posterior en prueba de inmovilidad de cada elemento.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "g-paisaje2026",
+      "title": "Adjudicado el contrato para la restauración paisajística en el entorno de la Gerencia",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/es/actualidad/2026-03-03-adjudicado-el-contrato-para-la-restauracion-paisajistica-en-el-entorno-de-la-gerencia-de-puerto-de-sagunto/",
+      "type": "adjudicación municipal de una actuación en el entorno",
+      "year": 2026,
+      "locator": "3 de marzo de 2026: vegetación autóctona, control de invasoras, corredores y camino.",
+      "note": "Es una adjudicación. La propia página diferencia una fotografía del estado de una recreación futura. No confirma finalización.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "g-comision",
+      "title": "La Comisión Ciudadana para la Defensa de la Gerencia",
+      "author": "Archivo de la Comisión Ciudadana alojado en Universitat de València",
+      "url": "https://www.uv.es/revert/comisciuta/comisio.html",
+      "type": "archivo de participantes en la movilización ciudadana",
+      "year": null,
+      "locator": "Manifiesto de mayo de 1995, constitución de septiembre de 1995 y solicitud de protección de abril de 1998.",
+      "note": "La petición de declaración como BIC se identifica como solicitud, sin atribuirle por sí sola efectos de declaración.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "g-mediateca",
+      "title": "Mediateca del patrimonio industrial del Port de Sagunt",
+      "author": "Fundació de Patrimoni Industrial i Memòria Obrera del Port de Sagunt",
+      "url": "https://www.fundacioportdesagunt.com/mediateca-cast/",
+      "type": "archivo fotográfico de la entidad patrimonial",
+      "year": null,
+      "locator": "Colecciones históricas sobre oficinas, viviendas y ciudad factoría.",
+      "note": "Referencia de contexto visual. Las imágenes de archivo conservan su condición histórica y sus créditos.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "g-pnoa",
+      "title": "PNOA Máxima Actualidad",
+      "author": "Instituto Geográfico Nacional",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma",
+      "type": "ortofotografía de referencia cartográfica",
+      "year": null,
+      "locator": "Servicio WMS utilizado por el atlas para contrastar cubiertas y ocupación del suelo.",
+      "note": "La fecha de consulta no equivale a la fecha de vuelo de cada ortofotografía.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "g-catastro",
+      "title": "Cartografía INSPIRE de edificios",
+      "author": "Dirección General del Catastro",
+      "url": "https://www.catastro.hacienda.gob.es/webinspire/index.html",
+      "type": "cartografía oficial de contornos edificados",
+      "year": null,
+      "locator": "Huellas y componentes edificados del registro heredado del atlas.",
+      "note": "Los contornos no definen distribución interior, detalles de fachada ni unidades de vivienda.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "g-osm",
+      "title": "Cartografía de calles y elementos urbanos",
+      "author": "Colaboradores de OpenStreetMap",
+      "url": "https://www.openstreetmap.org/copyright",
+      "type": "cartografía colaborativa del entorno",
+      "year": null,
+      "locator": "Calles, recorrido principal y contexto urbano, contrastados con otras fuentes.",
+      "note": "Información cartográfica orientativa; no es un deslinde jurídico ni una certificación de acceso.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "g-escalera2022",
+      "title": "Escalera de las oficinas: fotografía de mayo de 2022",
+      "author": "CONTRAST",
+      "url": "https://contrastapips.com/IHACM/IBP/Port/Port_patri_ofi_archivos/image045.jpg",
+      "type": "fotografía documental interior",
+      "year": 2022,
+      "locator": "Peldaños y zócalos de piedra pulida; balaustres y pasamanos de madera.",
+      "note": "Referencia visual descargada para el modelado. Geometría métrica y encuadre de la visita virtual aproximados.",
+      "accessed": "2026-11-21"
+    }
+  ],
+  "timeline": [
+    {
+      "id": "g-t-1",
+      "date": "1907",
+      "title": "El origen residencial",
+      "text": "La iniciativa minera sitúa el inicio de la ciudad jardín antes de la gran ampliación siderúrgica.",
+      "sourceIds": [
+        "g-jardin-contrast"
+      ],
+      "period": "industrial",
+      "confidence": "documented",
+      "stopId": "gerencia-jerarquia"
+    },
+    {
+      "id": "g-t-2",
+      "date": "1921",
+      "title": "Una sede para las compañías",
+      "text": "Se construye el primer edificio de oficinas generales.",
+      "sourceIds": [
+        "g-apiva2017"
+      ],
+      "period": "industrial",
+      "confidence": "documented",
+      "stopId": "gerencia-oficinas"
+    },
+    {
+      "id": "g-t-3",
+      "date": "1922–1928",
+      "title": "El núcleo de la ciudad jardín",
+      "text": "Se desarrolla la mayor parte del conjunto residencial; las dos filas de cuatro viviendas se fechan en 1928.",
+      "sourceIds": [
+        "g-jardin-contrast"
+      ],
+      "period": "industrial",
+      "confidence": "documented",
+      "stopId": "gerencia-adosadas"
+    },
+    {
+      "id": "g-t-4",
+      "date": "Desde 1945",
+      "title": "Nuevas parejas de viviendas",
+      "text": "El catálogo sitúa G1–2 a partir de 1945 y F1–2 a partir de 1956, en la etapa de Altos Hornos de Vizcaya.",
+      "sourceIds": [
+        "g-tipologias-contrast"
+      ],
+      "period": "industrial",
+      "confidence": "documented",
+      "stopId": "gerencia-chales-centrales"
+    },
+    {
+      "id": "g-t-5",
+      "date": "1952",
+      "title": "Ampliación de las oficinas",
+      "text": "Un nuevo cuerpo aumenta la sede y se conecta mediante un enlace retranqueado.",
+      "sourceIds": [
+        "g-oficinas-contrast"
+      ],
+      "period": "industrial",
+      "confidence": "documented",
+      "stopId": "gerencia-ampliacion"
+    },
+    {
+      "id": "g-t-6",
+      "date": "1984",
+      "title": "El final de la siderurgia integral",
+      "text": "El cierre siderúrgico cambia la relación de los espacios industriales y residenciales con la ciudad.",
+      "sourceIds": [
+        "g-apiva2017"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "gerencia-jerarquia"
+    },
+    {
+      "id": "g-t-7",
+      "date": "1995",
+      "title": "Defensa ciudadana",
+      "text": "El manifiesto de mayo precede a la constitución de la Comisión Ciudadana en septiembre.",
+      "sourceIds": [
+        "g-comision"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "gerencia-memoria"
+    },
+    {
+      "id": "g-t-8",
+      "date": "1998",
+      "title": "Una solicitud de protección",
+      "text": "La Comisión documenta la solicitud de declaración como BIC presentada en abril; una petición no equivale a una declaración.",
+      "sourceIds": [
+        "g-comision"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "gerencia-memoria"
+    },
+    {
+      "id": "g-t-9",
+      "date": "16 diciembre 2023",
+      "title": "El jardín oriental se abre",
+      "text": "La primera zona recuperada inicia su etapa de uso público.",
+      "sourceIds": [
+        "g-apertura2023"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "gerencia-jardin-oriental"
+    },
+    {
+      "id": "g-t-10",
+      "date": "2026",
+      "title": "Recuperación por etapas",
+      "text": "Febrero documenta fases pendientes; marzo anuncia una adjudicación paisajística en las inmediaciones.",
+      "sourceIds": [
+        "g-fases2026",
+        "g-paisaje2026"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "gerencia-jardin-occidental"
+    }
+  ],
+  "modelRegistration": {
+    "status": "registered",
+    "note": "Focos registrados a partir de la geometría final y de la cartografía; las cotas no levantadas son interpretativas.",
+    "precision": "approximate",
+    "coordinates": "Registered from the implemented industrial model and contemporary cartography; component positions and unmeasured heights are interpretive.",
+    "provisionalCoordinates": false
+  },
+  "materialsModeLabel": "Materiales"
+}

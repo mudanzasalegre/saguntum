@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-20",
+  "scope": "documentary integrity; not rendering or publication QA",
+  "visit": "horno",
+  "stops": 20,
+  "sources": 12,
+  "regions": 5,
+  "timeline": 8,
+  "facts": 40,
+  "checks": {
+    "uniqueStopAndSourceIds": true,
+    "allFactAndCoordinateReferencesResolve": true,
+    "allTimelineStopsResolve": true,
+    "everyStopHasEvidenceAndModelNote": true,
+    "regionalStopMembershipValid": true,
+    "spanishCopyAndHistoricCurrentDistinctionReviewed": true
+  },
+  "registration": {
+    "status": "pending-model-registration",
+    "coordinateOrder": "longitude,latitude",
+    "anchor": [
+      -0.2203074,
+      39.6542918
+    ],
+    "verticalReference": "Cotas del proyecto y altura exterior oficial conservadas como referencias distintas; geometría final registrada por el constructor del modelo."
+  },
+  "issues": [],
+  "remainingChecks": [
+    "Final camera and elevation registration against model by integration owner",
+    "Visual comparison of model, section, site plan and source photographs",
+    "Desktop/mobile navigation, deep links and publication by integration owner"
+  ]
+}

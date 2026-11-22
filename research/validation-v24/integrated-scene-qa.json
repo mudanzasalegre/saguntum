@@ -1,0 +1,3124 @@
+{
+  "pass": true,
+  "generatedAt": "2026-11-20T22:13:31.969Z",
+  "checks": 757,
+  "buildMs": 35656.378257000004,
+  "meshes": 378,
+  "triangles": 3997574,
+  "stats": {
+    "modelVersion": "v24",
+    "meshes": 54,
+    "triangles": 35106,
+    "bays": 3,
+    "stops": 20,
+    "portals": 2,
+    "largeWindowVoids": 16,
+    "allWindowVoids": 18,
+    "openTrusses": 13,
+    "columns": 22,
+    "northVisitorFloors": 3,
+    "resourcesOwned": true,
+    "interpretiveGeometry": true,
+    "mappedEnvelopeMetres": [
+      20.22,
+      60.67
+    ],
+    "documentedEnvelopeMetres": [
+      18,
+      70
+    ],
+    "context": {
+      "buildingParts": 69,
+      "parentParcels": 18,
+      "sourceCoreParts": 2,
+      "withheldCadastralParts": 2,
+      "roadFragments": 20,
+      "pavingAreaM2": 25288.43,
+      "pavingVertices": 4971,
+      "pavingTriangles": 7267,
+      "trees": 30,
+      "streetLamps": 8,
+      "crossings": 5,
+      "railLengthM": 0,
+      "protectedHeritageOwners": 8,
+      "meshes": 16,
+      "triangles": 54848,
+      "fixedMuseumDatumM": 4.962847880008963,
+      "skippedTinyTriangles": 1
+    }
+  },
+  "context": {
+    "buildingParts": 69,
+    "parentParcels": 18,
+    "sourceCoreParts": 2,
+    "withheldCadastralParts": 2,
+    "roadFragments": 20,
+    "pavingAreaM2": 25288.43,
+    "pavingVertices": 4971,
+    "pavingTriangles": 7267,
+    "trees": 30,
+    "streetLamps": 8,
+    "crossings": 5,
+    "railLengthM": 0,
+    "protectedHeritageOwners": 8,
+    "meshes": 16,
+    "triangles": 54848,
+    "fixedMuseumDatumM": 4.962847880008963,
+    "skippedTinyTriangles": 1
+  },
+  "errors": [],
+  "cameras": [
+    {
+      "id": "museo-industrial-conjunto",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 48,
+      "position": [
+        4871.146482555502,
+        72.14356580785952,
+        2490.6349840921234
+      ],
+      "target": [
+        4828.806176129009,
+        9.962847880008962,
+        2388.142394000448
+      ],
+      "clearance": 67.14356580785952,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-conjunto",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 48,
+      "position": [
+        4852.594467149551,
+        43.962847880008965,
+        2444.747316139092
+      ],
+      "target": [
+        4828.806176129009,
+        9.962847880008962,
+        2388.142394000448
+      ],
+      "clearance": 38.21851591258565,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-conjunto",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 48,
+      "position": [
+        4914.787162560333,
+        136.2340045077089,
+        2596.275370394533
+      ],
+      "target": [
+        4828.806176129009,
+        9.962847880008962,
+        2388.142394000448
+      ],
+      "clearance": 132.2340045077089,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-conjunto",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 48,
+      "position": [
+        4852.594467149551,
+        43.962847880008965,
+        2444.747316139092
+      ],
+      "target": [
+        4828.806176129009,
+        9.962847880008962,
+        2388.142394000448
+      ],
+      "clearance": 38.21851591258565,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-conjunto",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 48,
+      "position": [
+        4869.893762951247,
+        70.30382937396878,
+        2487.6025431927715
+      ],
+      "target": [
+        4828.806176129009,
+        9.962847880008962,
+        2388.142394000448
+      ],
+      "clearance": 65.30382937396878,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-conjunto",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 48,
+      "position": [
+        4852.594467149551,
+        43.962847880008965,
+        2444.747316139092
+      ],
+      "target": [
+        4828.806176129009,
+        9.962847880008962,
+        2388.142394000448
+      ],
+      "clearance": 38.21851591258565,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-fachada",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 55,
+      "position": [
+        4878.354361451197,
+        22.96284788000896,
+        2438.8932516905215
+      ],
+      "target": [
+        4855.037569810999,
+        10.962847880008962,
+        2403.378082711512
+      ],
+      "clearance": 17.96284788000896,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-fachada",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 55,
+      "position": [
+        4871.353639943151,
+        19.46284788000896,
+        2429.044906734805
+      ],
+      "target": [
+        4855.037569810999,
+        10.962847880008962,
+        2403.378082711512
+      ],
+      "clearance": 14.462847880008962,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-fachada",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 55,
+      "position": [
+        4878.354361451197,
+        22.96284788000896,
+        2438.8932516905215
+      ],
+      "target": [
+        4855.037569810999,
+        10.962847880008962,
+        2403.378082711512
+      ],
+      "clearance": 17.96284788000896,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-fachada",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 55,
+      "position": [
+        4871.353639943151,
+        19.46284788000896,
+        2429.044906734805
+      ],
+      "target": [
+        4855.037569810999,
+        10.962847880008962,
+        2403.378082711512
+      ],
+      "clearance": 14.462847880008962,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-fachada",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 55,
+      "position": [
+        4878.354361451197,
+        22.96284788000896,
+        2438.8932516905215
+      ],
+      "target": [
+        4855.037569810999,
+        10.962847880008962,
+        2403.378082711512
+      ],
+      "clearance": 17.96284788000896,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-fachada",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 55,
+      "position": [
+        4871.353639943151,
+        19.46284788000896,
+        2429.044906734805
+      ],
+      "target": [
+        4855.037569810999,
+        10.962847880008962,
+        2403.378082711512
+      ],
+      "clearance": 14.462847880008962,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-acceso",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 62,
+      "position": [
+        4866.641453866934,
+        8.662847880008963,
+        2411.2742764031846
+      ],
+      "target": [
+        4855.037569810999,
+        7.562847880008963,
+        2403.378082711512
+      ],
+      "clearance": 4.028819113225311,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-acceso",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 62,
+      "position": [
+        4862.518734469357,
+        8.262847880008962,
+        2408.4171476401016
+      ],
+      "target": [
+        4855.037569810999,
+        7.562847880008963,
+        2403.378082711512
+      ],
+      "clearance": 4.008959170509856,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-acceso",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 62,
+      "position": [
+        4866.641453866934,
+        8.662847880008963,
+        2411.2742764031846
+      ],
+      "target": [
+        4855.037569810999,
+        7.562847880008963,
+        2403.378082711512
+      ],
+      "clearance": 4.028819113225311,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-acceso",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 62,
+      "position": [
+        4862.518734469357,
+        8.262847880008962,
+        2408.4171476401016
+      ],
+      "target": [
+        4855.037569810999,
+        7.562847880008963,
+        2403.378082711512
+      ],
+      "clearance": 4.008959170509856,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-acceso",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 62,
+      "position": [
+        4866.641453866934,
+        8.662847880008963,
+        2411.2742764031846
+      ],
+      "target": [
+        4855.037569810999,
+        7.562847880008963,
+        2403.378082711512
+      ],
+      "clearance": 4.028819113225311,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-acceso",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 62,
+      "position": [
+        4862.518734469357,
+        8.262847880008962,
+        2408.4171476401016
+      ],
+      "target": [
+        4855.037569810999,
+        7.562847880008963,
+        2403.378082711512
+      ],
+      "clearance": 4.008959170509856,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-nave-central",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 71,
+      "position": [
+        4847.830097704871,
+        6.812847880008964,
+        2399.191846831943
+      ],
+      "target": [
+        4827.941452421015,
+        9.862847880008964,
+        2387.6401461444707
+      ],
+      "clearance": 2.920000103596,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-nave-central",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 71,
+      "position": [
+        4842.8426545993,
+        6.812847880008964,
+        2395.8324702128834
+      ],
+      "target": [
+        4827.941452421015,
+        9.862847880008964,
+        2387.6401461444707
+      ],
+      "clearance": 2.920000103596,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-nave-central",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 71,
+      "position": [
+        4847.830097704871,
+        6.812847880008964,
+        2399.191846831943
+      ],
+      "target": [
+        4827.941452421015,
+        9.862847880008964,
+        2387.6401461444707
+      ],
+      "clearance": 2.920000103596,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-nave-central",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 71,
+      "position": [
+        4842.8426545993,
+        6.812847880008964,
+        2395.8324702128834
+      ],
+      "target": [
+        4827.941452421015,
+        9.862847880008964,
+        2387.6401461444707
+      ],
+      "clearance": 2.920000103596,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-nave-central",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 71,
+      "position": [
+        4847.830097704871,
+        6.812847880008964,
+        2399.191846831943
+      ],
+      "target": [
+        4827.941452421015,
+        9.862847880008964,
+        2387.6401461444707
+      ],
+      "clearance": 2.920000103596,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-nave-central",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 71,
+      "position": [
+        4842.8426545993,
+        6.812847880008964,
+        2395.8324702128834
+      ],
+      "target": [
+        4827.941452421015,
+        9.862847880008964,
+        2387.6401461444707
+      ],
+      "clearance": 2.920000103596,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-via",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 64,
+      "position": [
+        4836.890038214538,
+        7.3428478800089625,
+        2392.143790479445
+      ],
+      "target": [
+        4830.535623544996,
+        4.3428478800089625,
+        2389.146889712402
+      ],
+      "clearance": 3.4500001035959986,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-via",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 64,
+      "position": [
+        4834.887196485757,
+        7.142847880008962,
+        2391.211789937894
+      ],
+      "target": [
+        4830.535623544996,
+        4.3428478800089625,
+        2389.146889712402
+      ],
+      "clearance": 3.2500001035959984,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-via",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 64,
+      "position": [
+        4836.890038214538,
+        7.3428478800089625,
+        2392.143790479445
+      ],
+      "target": [
+        4830.535623544996,
+        4.3428478800089625,
+        2389.146889712402
+      ],
+      "clearance": 3.4500001035959986,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-via",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 64,
+      "position": [
+        4834.887196485757,
+        7.142847880008962,
+        2391.211789937894
+      ],
+      "target": [
+        4830.535623544996,
+        4.3428478800089625,
+        2389.146889712402
+      ],
+      "clearance": 3.2500001035959984,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-via",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 64,
+      "position": [
+        4836.890038214538,
+        7.3428478800089625,
+        2392.143790479445
+      ],
+      "target": [
+        4830.535623544996,
+        4.3428478800089625,
+        2389.146889712402
+      ],
+      "clearance": 3.4500001035959986,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-via",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 64,
+      "position": [
+        4834.887196485757,
+        7.142847880008962,
+        2391.211789937894
+      ],
+      "target": [
+        4830.535623544996,
+        4.3428478800089625,
+        2389.146889712402
+      ],
+      "clearance": 3.2500001035959984,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-andenes",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 62,
+      "position": [
+        4829.2691015522205,
+        6.912847880008963,
+        2389.33642082282
+      ],
+      "target": [
+        4821.145917033926,
+        5.412847880008963,
+        2387.3937748741882
+      ],
+      "clearance": 3.020000103595999,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-andenes",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 62,
+      "position": [
+        4826.906393139846,
+        6.612847880008963,
+        2388.4266906660746
+      ],
+      "target": [
+        4821.145917033926,
+        5.412847880008963,
+        2387.3937748741882
+      ],
+      "clearance": 2.720000103595999,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-andenes",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 62,
+      "position": [
+        4829.2691015522205,
+        6.912847880008963,
+        2389.33642082282
+      ],
+      "target": [
+        4821.145917033926,
+        5.412847880008963,
+        2387.3937748741882
+      ],
+      "clearance": 3.020000103595999,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-andenes",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 62,
+      "position": [
+        4826.906393139846,
+        6.612847880008963,
+        2388.4266906660746
+      ],
+      "target": [
+        4821.145917033926,
+        5.412847880008963,
+        2387.3937748741882
+      ],
+      "clearance": 2.720000103595999,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-andenes",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 62,
+      "position": [
+        4829.2691015522205,
+        6.912847880008963,
+        2389.33642082282
+      ],
+      "target": [
+        4821.145917033926,
+        5.412847880008963,
+        2387.3937748741882
+      ],
+      "clearance": 3.020000103595999,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-andenes",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 62,
+      "position": [
+        4826.906393139846,
+        6.612847880008963,
+        2388.4266906660746
+      ],
+      "target": [
+        4821.145917033926,
+        5.412847880008963,
+        2387.3937748741882
+      ],
+      "clearance": 2.720000103595999,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-cerchas",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 68,
+      "position": [
+        4833.129794668977,
+        8.462847880008963,
+        2390.653633280333
+      ],
+      "target": [
+        4821.888386465059,
+        16.562847880008963,
+        2384.124411152631
+      ],
+      "clearance": 4.570000103596,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-cerchas",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 68,
+      "position": [
+        4829.922023764991,
+        8.662847880008963,
+        2388.212280002428
+      ],
+      "target": [
+        4821.888386465059,
+        16.562847880008963,
+        2384.124411152631
+      ],
+      "clearance": 4.770000103595999,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-cerchas",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 68,
+      "position": [
+        4833.129794668977,
+        8.462847880008963,
+        2390.653633280333
+      ],
+      "target": [
+        4821.888386465059,
+        16.562847880008963,
+        2384.124411152631
+      ],
+      "clearance": 4.570000103596,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-cerchas",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 68,
+      "position": [
+        4829.922023764991,
+        8.662847880008963,
+        2388.212280002428
+      ],
+      "target": [
+        4821.888386465059,
+        16.562847880008963,
+        2384.124411152631
+      ],
+      "clearance": 4.770000103595999,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-cerchas",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 68,
+      "position": [
+        4833.129794668977,
+        8.462847880008963,
+        2390.653633280333
+      ],
+      "target": [
+        4821.888386465059,
+        16.562847880008963,
+        2384.124411152631
+      ],
+      "clearance": 4.570000103596,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-cerchas",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 68,
+      "position": [
+        4829.922023764991,
+        8.662847880008963,
+        2388.212280002428
+      ],
+      "target": [
+        4821.888386465059,
+        16.562847880008963,
+        2384.124411152631
+      ],
+      "clearance": 4.770000103595999,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-pilares",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 62,
+      "position": [
+        4827.528751783401,
+        6.812847880008964,
+        2386.3596469512995
+      ],
+      "target": [
+        4821.766132188199,
+        9.362847880008964,
+        2380.3527995750974
+      ],
+      "clearance": 2.920000103596,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-pilares",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 62,
+      "position": [
+        4825.553864455412,
+        6.812847880008964,
+        2384.981307355356
+      ],
+      "target": [
+        4821.766132188199,
+        9.362847880008964,
+        2380.3527995750974
+      ],
+      "clearance": 2.920000103596,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-pilares",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 62,
+      "position": [
+        4827.528751783401,
+        6.812847880008964,
+        2386.3596469512995
+      ],
+      "target": [
+        4821.766132188199,
+        9.362847880008964,
+        2380.3527995750974
+      ],
+      "clearance": 2.920000103596,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-pilares",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 62,
+      "position": [
+        4825.553864455412,
+        6.812847880008964,
+        2384.981307355356
+      ],
+      "target": [
+        4821.766132188199,
+        9.362847880008964,
+        2380.3527995750974
+      ],
+      "clearance": 2.920000103596,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-pilares",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 62,
+      "position": [
+        4827.528751783401,
+        6.812847880008964,
+        2386.3596469512995
+      ],
+      "target": [
+        4821.766132188199,
+        9.362847880008964,
+        2380.3527995750974
+      ],
+      "clearance": 2.920000103596,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-pilares",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 62,
+      "position": [
+        4825.553864455412,
+        6.812847880008964,
+        2384.981307355356
+      ],
+      "target": [
+        4821.766132188199,
+        9.362847880008964,
+        2380.3527995750974
+      ],
+      "clearance": 2.920000103596,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-cubierta",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 50,
+      "position": [
+        4847.266352897628,
+        45.462847880008965,
+        2443.9655242751946
+      ],
+      "target": [
+        4828.806176129009,
+        16.46284788000896,
+        2388.142394000448
+      ],
+      "clearance": 39.508174894734275,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-cubierta",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 50,
+      "position": [
+        4842.4143948174515,
+        37.462847880008965,
+        2428.4265892155386
+      ],
+      "target": [
+        4828.806176129009,
+        16.46284788000896,
+        2388.142394000448
+      ],
+      "clearance": 31.462847880008965,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-cubierta",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 50,
+      "position": [
+        4847.266352897628,
+        45.462847880008965,
+        2443.9655242751946
+      ],
+      "target": [
+        4828.806176129009,
+        16.46284788000896,
+        2388.142394000448
+      ],
+      "clearance": 39.508174894734275,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-cubierta",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 50,
+      "position": [
+        4842.4143948174515,
+        37.462847880008965,
+        2428.4265892155386
+      ],
+      "target": [
+        4828.806176129009,
+        16.46284788000896,
+        2388.142394000448
+      ],
+      "clearance": 31.462847880008965,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-cubierta",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 50,
+      "position": [
+        4847.266352897628,
+        45.462847880008965,
+        2443.9655242751946
+      ],
+      "target": [
+        4828.806176129009,
+        16.46284788000896,
+        2388.142394000448
+      ],
+      "clearance": 39.508174894734275,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-cubierta",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 50,
+      "position": [
+        4842.4143948174515,
+        37.462847880008965,
+        2428.4265892155386
+      ],
+      "target": [
+        4828.806176129009,
+        16.46284788000896,
+        2388.142394000448
+      ],
+      "clearance": 31.462847880008965,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-ventanas",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 58,
+      "position": [
+        4821.188790945264,
+        14.262847880008962,
+        2405.2393979181657
+      ],
+      "target": [
+        4821.1342791811,
+        10.762847880008962,
+        2395.3780071203337
+      ],
+      "clearance": 8.972635756499837,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-ventanas",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 58,
+      "position": [
+        4820.996650666423,
+        12.762847880008962,
+        2402.583633976614
+      ],
+      "target": [
+        4821.1342791811,
+        10.762847880008962,
+        2395.3780071203337
+      ],
+      "clearance": 8.328155716507826,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-ventanas",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 58,
+      "position": [
+        4821.188790945264,
+        14.262847880008962,
+        2405.2393979181657
+      ],
+      "target": [
+        4821.1342791811,
+        10.762847880008962,
+        2395.3780071203337
+      ],
+      "clearance": 8.972635756499837,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-ventanas",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 58,
+      "position": [
+        4820.996650666423,
+        12.762847880008962,
+        2402.583633976614
+      ],
+      "target": [
+        4821.1342791811,
+        10.762847880008962,
+        2395.3780071203337
+      ],
+      "clearance": 8.328155716507826,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-ventanas",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 58,
+      "position": [
+        4821.188790945264,
+        14.262847880008962,
+        2405.2393979181657
+      ],
+      "target": [
+        4821.1342791811,
+        10.762847880008962,
+        2395.3780071203337
+      ],
+      "clearance": 8.972635756499837,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-ventanas",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 58,
+      "position": [
+        4820.996650666423,
+        12.762847880008962,
+        2402.583633976614
+      ],
+      "target": [
+        4821.1342791811,
+        10.762847880008962,
+        2395.3780071203337
+      ],
+      "clearance": 8.328155716507826,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-estanterias",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 62,
+      "position": [
+        4823.218607783405,
+        6.862847880008963,
+        2391.7894037321594
+      ],
+      "target": [
+        4816.473297181914,
+        7.062847880008963,
+        2391.456560091078
+      ],
+      "clearance": 2.970000103595999,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-estanterias",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 62,
+      "position": [
+        4821.238036439429,
+        6.862847880008963,
+        2391.2172698742024
+      ],
+      "target": [
+        4816.473297181914,
+        7.062847880008963,
+        2391.456560091078
+      ],
+      "clearance": 2.970000103595999,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-estanterias",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 62,
+      "position": [
+        4823.218607783405,
+        6.862847880008963,
+        2391.7894037321594
+      ],
+      "target": [
+        4816.473297181914,
+        7.062847880008963,
+        2391.456560091078
+      ],
+      "clearance": 2.970000103595999,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-estanterias",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 62,
+      "position": [
+        4821.238036439429,
+        6.862847880008963,
+        2391.2172698742024
+      ],
+      "target": [
+        4816.473297181914,
+        7.062847880008963,
+        2391.456560091078
+      ],
+      "clearance": 2.970000103595999,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-estanterias",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 62,
+      "position": [
+        4823.218607783405,
+        6.862847880008963,
+        2391.7894037321594
+      ],
+      "target": [
+        4816.473297181914,
+        7.062847880008963,
+        2391.456560091078
+      ],
+      "clearance": 2.970000103595999,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-estanterias",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 62,
+      "position": [
+        4821.238036439429,
+        6.862847880008963,
+        2391.2172698742024
+      ],
+      "target": [
+        4816.473297181914,
+        7.062847880008963,
+        2391.456560091078
+      ],
+      "clearance": 2.970000103595999,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-planta-primera",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 65,
+      "position": [
+        4835.4794572392375,
+        9.212847880008962,
+        2384.617153693196
+      ],
+      "target": [
+        4827.696943867294,
+        8.862847880008962,
+        2380.0969229894026
+      ],
+      "clearance": 5.320000103595998,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-planta-primera",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 65,
+      "position": [
+        4833.0582308568555,
+        9.212847880008962,
+        2383.2108596964604
+      ],
+      "target": [
+        4827.696943867294,
+        8.862847880008962,
+        2380.0969229894026
+      ],
+      "clearance": 5.320000103595998,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-planta-primera",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 65,
+      "position": [
+        4835.4794572392375,
+        9.212847880008962,
+        2384.617153693196
+      ],
+      "target": [
+        4827.696943867294,
+        8.862847880008962,
+        2380.0969229894026
+      ],
+      "clearance": 5.320000103595998,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-planta-primera",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 65,
+      "position": [
+        4833.0582308568555,
+        9.212847880008962,
+        2383.2108596964604
+      ],
+      "target": [
+        4827.696943867294,
+        8.862847880008962,
+        2380.0969229894026
+      ],
+      "clearance": 5.320000103595998,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-planta-primera",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 65,
+      "position": [
+        4835.4794572392375,
+        9.212847880008962,
+        2384.617153693196
+      ],
+      "target": [
+        4827.696943867294,
+        8.862847880008962,
+        2380.0969229894026
+      ],
+      "clearance": 5.320000103595998,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-planta-primera",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 65,
+      "position": [
+        4833.0582308568555,
+        9.212847880008962,
+        2383.2108596964604
+      ],
+      "target": [
+        4827.696943867294,
+        8.862847880008962,
+        2380.0969229894026
+      ],
+      "clearance": 5.320000103595998,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-planta-segunda",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 65,
+      "position": [
+        4835.4794572392375,
+        11.712847880008963,
+        2384.617153693196
+      ],
+      "target": [
+        4828.561667575287,
+        11.362847880008964,
+        2380.5991708453794
+      ],
+      "clearance": 7.820000103596,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-planta-segunda",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 65,
+      "position": [
+        4833.922954564849,
+        11.712847880008963,
+        2383.713107552437
+      ],
+      "target": [
+        4828.561667575287,
+        11.362847880008964,
+        2380.5991708453794
+      ],
+      "clearance": 7.820000103596,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-planta-segunda",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 65,
+      "position": [
+        4835.4794572392375,
+        11.712847880008963,
+        2384.617153693196
+      ],
+      "target": [
+        4828.561667575287,
+        11.362847880008964,
+        2380.5991708453794
+      ],
+      "clearance": 7.820000103596,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-planta-segunda",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 65,
+      "position": [
+        4833.922954564849,
+        11.712847880008963,
+        2383.713107552437
+      ],
+      "target": [
+        4828.561667575287,
+        11.362847880008964,
+        2380.5991708453794
+      ],
+      "clearance": 7.820000103596,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-planta-segunda",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 65,
+      "position": [
+        4835.4794572392375,
+        11.712847880008963,
+        2384.617153693196
+      ],
+      "target": [
+        4828.561667575287,
+        11.362847880008964,
+        2380.5991708453794
+      ],
+      "clearance": 7.820000103596,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-planta-segunda",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 65,
+      "position": [
+        4833.922954564849,
+        11.712847880008963,
+        2383.713107552437
+      ],
+      "target": [
+        4828.561667575287,
+        11.362847880008964,
+        2380.5991708453794
+      ],
+      "clearance": 7.820000103596,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-escalera",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 65,
+      "position": [
+        4847.819166933457,
+        6.812847880008962,
+        2389.9224236827804
+      ],
+      "target": [
+        4854.173581603,
+        8.362847880008962,
+        2392.9193244498238
+      ],
+      "clearance": 2.9200001035959984,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-escalera",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 65,
+      "position": [
+        4848.957284954245,
+        6.812847880008962,
+        2390.3521763683543
+      ],
+      "target": [
+        4854.173581603,
+        8.362847880008962,
+        2392.9193244498238
+      ],
+      "clearance": 2.9200001035959984,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-escalera",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 65,
+      "position": [
+        4847.819166933457,
+        6.812847880008962,
+        2389.9224236827804
+      ],
+      "target": [
+        4854.173581603,
+        8.362847880008962,
+        2392.9193244498238
+      ],
+      "clearance": 2.9200001035959984,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-escalera",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 65,
+      "position": [
+        4848.957284954245,
+        6.812847880008962,
+        2390.3521763683543
+      ],
+      "target": [
+        4854.173581603,
+        8.362847880008962,
+        2392.9193244498238
+      ],
+      "clearance": 2.9200001035959984,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-escalera",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 65,
+      "position": [
+        4847.819166933457,
+        6.812847880008962,
+        2389.9224236827804
+      ],
+      "target": [
+        4854.173581603,
+        8.362847880008962,
+        2392.9193244498238
+      ],
+      "clearance": 2.9200001035959984,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-escalera",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 65,
+      "position": [
+        4848.957284954245,
+        6.812847880008962,
+        2390.3521763683543
+      ],
+      "target": [
+        4854.173581603,
+        8.362847880008962,
+        2392.9193244498238
+      ],
+      "clearance": 2.9200001035959984,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-memoria",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 65,
+      "position": [
+        4836.520946988256,
+        6.962847880008963,
+        2398.7524039245395
+      ],
+      "target": [
+        4829.100909468329,
+        6.962847880008963,
+        2395.599144784717
+      ],
+      "clearance": 3.0700001035959987,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-memoria",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 65,
+      "position": [
+        4834.108013790283,
+        6.962847880008963,
+        2397.9291461385938
+      ],
+      "target": [
+        4829.100909468329,
+        6.962847880008963,
+        2395.599144784717
+      ],
+      "clearance": 3.0700001035959987,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-memoria",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 65,
+      "position": [
+        4836.520946988256,
+        6.962847880008963,
+        2398.7524039245395
+      ],
+      "target": [
+        4829.100909468329,
+        6.962847880008963,
+        2395.599144784717
+      ],
+      "clearance": 3.0700001035959987,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-memoria",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 65,
+      "position": [
+        4834.108013790283,
+        6.962847880008963,
+        2397.9291461385938
+      ],
+      "target": [
+        4829.100909468329,
+        6.962847880008963,
+        2395.599144784717
+      ],
+      "clearance": 3.0700001035959987,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-memoria",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 65,
+      "position": [
+        4836.520946988256,
+        6.962847880008963,
+        2398.7524039245395
+      ],
+      "target": [
+        4829.100909468329,
+        6.962847880008963,
+        2395.599144784717
+      ],
+      "clearance": 3.0700001035959987,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-memoria",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 65,
+      "position": [
+        4834.108013790283,
+        6.962847880008963,
+        2397.9291461385938
+      ],
+      "target": [
+        4829.100909468329,
+        6.962847880008963,
+        2395.599144784717
+      ],
+      "clearance": 3.0700001035959987,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-siderurgia",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 65,
+      "position": [
+        4843.764218467158,
+        6.812847880008963,
+        2388.2726606889955
+      ],
+      "target": [
+        4837.208904655225,
+        6.562847880008963,
+        2385.62164940515
+      ],
+      "clearance": 2.9200001035959993,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-siderurgia",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 65,
+      "position": [
+        4841.711151952779,
+        6.812847880008963,
+        2387.4271325182444
+      ],
+      "target": [
+        4837.208904655225,
+        6.562847880008963,
+        2385.62164940515
+      ],
+      "clearance": 2.9200001035959993,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-siderurgia",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 65,
+      "position": [
+        4843.764218467158,
+        6.812847880008963,
+        2388.2726606889955
+      ],
+      "target": [
+        4837.208904655225,
+        6.562847880008963,
+        2385.62164940515
+      ],
+      "clearance": 2.9200001035959993,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-siderurgia",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 65,
+      "position": [
+        4841.711151952779,
+        6.812847880008963,
+        2387.4271325182444
+      ],
+      "target": [
+        4837.208904655225,
+        6.562847880008963,
+        2385.62164940515
+      ],
+      "clearance": 2.9200001035959993,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-siderurgia",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 65,
+      "position": [
+        4843.764218467158,
+        6.812847880008963,
+        2388.2726606889955
+      ],
+      "target": [
+        4837.208904655225,
+        6.562847880008963,
+        2385.62164940515
+      ],
+      "clearance": 2.9200001035959993,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-siderurgia",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 65,
+      "position": [
+        4841.711151952779,
+        6.812847880008963,
+        2387.4271325182444
+      ],
+      "target": [
+        4837.208904655225,
+        6.562847880008963,
+        2385.62164940515
+      ],
+      "clearance": 2.9200001035959993,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-ferroviario",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 69,
+      "position": [
+        4826.212005005028,
+        6.812847880008962,
+        2386.6356504325167
+      ],
+      "target": [
+        4814.970596801109,
+        7.462847880008963,
+        2380.106428304815
+      ],
+      "clearance": 2.9200001035959984,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-ferroviario",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 69,
+      "position": [
+        4822.903784529846,
+        6.812847880008962,
+        2384.3672418962105
+      ],
+      "target": [
+        4814.970596801109,
+        7.462847880008963,
+        2380.106428304815
+      ],
+      "clearance": 2.9200001035959984,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-ferroviario",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 69,
+      "position": [
+        4826.212005005028,
+        6.812847880008962,
+        2386.6356504325167
+      ],
+      "target": [
+        4814.970596801109,
+        7.462847880008963,
+        2380.106428304815
+      ],
+      "clearance": 2.9200001035959984,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-ferroviario",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 69,
+      "position": [
+        4822.903784529846,
+        6.812847880008962,
+        2384.3672418962105
+      ],
+      "target": [
+        4814.970596801109,
+        7.462847880008963,
+        2380.106428304815
+      ],
+      "clearance": 2.9200001035959984,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-ferroviario",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 69,
+      "position": [
+        4826.212005005028,
+        6.812847880008962,
+        2386.6356504325167
+      ],
+      "target": [
+        4814.970596801109,
+        7.462847880008963,
+        2380.106428304815
+      ],
+      "clearance": 2.9200001035959984,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-ferroviario",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 69,
+      "position": [
+        4822.903784529846,
+        6.812847880008962,
+        2384.3672418962105
+      ],
+      "target": [
+        4814.970596801109,
+        7.462847880008963,
+        2380.106428304815
+      ],
+      "clearance": 2.9200001035959984,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-rehabilitacion",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 53,
+      "position": [
+        4874.731472162435,
+        26.96284788000896,
+        2366.812900704963
+      ],
+      "target": [
+        4835.089296807282,
+        8.962847880008962,
+        2377.3247004134464
+      ],
+      "clearance": 22.32454289547791,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-rehabilitacion",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 53,
+      "position": [
+        4863.795699650669,
+        21.96284788000896,
+        2369.712707521096
+      ],
+      "target": [
+        4835.089296807282,
+        8.962847880008962,
+        2377.3247004134464
+      ],
+      "clearance": 17.565299345469807,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-rehabilitacion",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 53,
+      "position": [
+        4874.731472162435,
+        26.96284788000896,
+        2366.812900704963
+      ],
+      "target": [
+        4835.089296807282,
+        8.962847880008962,
+        2377.3247004134464
+      ],
+      "clearance": 22.32454289547791,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-rehabilitacion",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 53,
+      "position": [
+        4863.795699650669,
+        21.96284788000896,
+        2369.712707521096
+      ],
+      "target": [
+        4835.089296807282,
+        8.962847880008962,
+        2377.3247004134464
+      ],
+      "clearance": 17.565299345469807,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-rehabilitacion",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 53,
+      "position": [
+        4874.731472162435,
+        26.96284788000896,
+        2366.812900704963
+      ],
+      "target": [
+        4835.089296807282,
+        8.962847880008962,
+        2377.3247004134464
+      ],
+      "clearance": 22.32454289547791,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-rehabilitacion",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 53,
+      "position": [
+        4863.795699650669,
+        21.96284788000896,
+        2369.712707521096
+      ],
+      "target": [
+        4835.089296807282,
+        8.962847880008962,
+        2377.3247004134464
+      ],
+      "clearance": 17.565299345469807,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-seccion",
+      "section": true,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 51,
+      "position": [
+        4850.083227869666,
+        61.962847880008965,
+        2449.070934679061
+      ],
+      "target": [
+        4828.806176129009,
+        8.962847880008962,
+        2388.142394000448
+      ],
+      "clearance": 56.067841459996394,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-seccion",
+      "section": true,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 51,
+      "position": [
+        4844.366546081495,
+        47.962847880008965,
+        2433.029751763428
+      ],
+      "target": [
+        4828.806176129009,
+        8.962847880008962,
+        2388.142394000448
+      ],
+      "clearance": 41.962847880008965,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-seccion",
+      "section": true,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 51,
+      "position": [
+        4850.083227869666,
+        61.962847880008965,
+        2449.070934679061
+      ],
+      "target": [
+        4828.806176129009,
+        8.962847880008962,
+        2388.142394000448
+      ],
+      "clearance": 56.067841459996394,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-seccion",
+      "section": true,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 51,
+      "position": [
+        4844.366546081495,
+        47.962847880008965,
+        2433.029751763428
+      ],
+      "target": [
+        4828.806176129009,
+        8.962847880008962,
+        2388.142394000448
+      ],
+      "clearance": 41.962847880008965,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-seccion",
+      "section": true,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 51,
+      "position": [
+        4850.083227869666,
+        61.962847880008965,
+        2449.070934679061
+      ],
+      "target": [
+        4828.806176129009,
+        8.962847880008962,
+        2388.142394000448
+      ],
+      "clearance": 56.067841459996394,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-seccion",
+      "section": true,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 51,
+      "position": [
+        4844.366546081495,
+        47.962847880008965,
+        2433.029751763428
+      ],
+      "target": [
+        4828.806176129009,
+        8.962847880008962,
+        2388.142394000448
+      ],
+      "clearance": 41.962847880008965,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-entorno",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 55,
+      "position": [
+        4942.806176129009,
+        120.96284788000897,
+        2487.142394000448
+      ],
+      "target": [
+        4828.806176129009,
+        12.962847880008962,
+        2388.142394000448
+      ],
+      "clearance": 116.57136158062457,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-entorno",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 55,
+      "position": [
+        4908.806176129009,
+        78.96284788000897,
+        2456.142394000448
+      ],
+      "target": [
+        4828.806176129009,
+        12.962847880008962,
+        2388.142394000448
+      ],
+      "clearance": 73.96284788000897,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-entorno",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 55,
+      "position": [
+        4942.806176129009,
+        120.96284788000897,
+        2487.142394000448
+      ],
+      "target": [
+        4828.806176129009,
+        12.962847880008962,
+        2388.142394000448
+      ],
+      "clearance": 116.57136158062457,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-entorno",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 55,
+      "position": [
+        4908.806176129009,
+        78.96284788000897,
+        2456.142394000448
+      ],
+      "target": [
+        4828.806176129009,
+        12.962847880008962,
+        2388.142394000448
+      ],
+      "clearance": 73.96284788000897,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-entorno",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 55,
+      "position": [
+        4942.806176129009,
+        120.96284788000897,
+        2487.142394000448
+      ],
+      "target": [
+        4828.806176129009,
+        12.962847880008962,
+        2388.142394000448
+      ],
+      "clearance": 116.57136158062457,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-entorno",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 55,
+      "position": [
+        4908.806176129009,
+        78.96284788000897,
+        2456.142394000448
+      ],
+      "target": [
+        4828.806176129009,
+        12.962847880008962,
+        2388.142394000448
+      ],
+      "clearance": 73.96284788000897,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-conjunto",
+      "section": true,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 48,
+      "position": [
+        4871.146482555502,
+        72.14356580785952,
+        2490.6349840921234
+      ],
+      "target": [
+        4828.806176129009,
+        9.962847880008962,
+        2388.142394000448
+      ],
+      "clearance": 67.14356580785952,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-conjunto",
+      "section": true,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 48,
+      "position": [
+        4852.594467149551,
+        43.962847880008965,
+        2444.747316139092
+      ],
+      "target": [
+        4828.806176129009,
+        9.962847880008962,
+        2388.142394000448
+      ],
+      "clearance": 38.21851591258565,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-conjunto",
+      "section": true,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 48,
+      "position": [
+        4914.787162560333,
+        136.2340045077089,
+        2596.275370394533
+      ],
+      "target": [
+        4828.806176129009,
+        9.962847880008962,
+        2388.142394000448
+      ],
+      "clearance": 132.2340045077089,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-conjunto",
+      "section": true,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 48,
+      "position": [
+        4852.594467149551,
+        43.962847880008965,
+        2444.747316139092
+      ],
+      "target": [
+        4828.806176129009,
+        9.962847880008962,
+        2388.142394000448
+      ],
+      "clearance": 38.21851591258565,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-conjunto",
+      "section": true,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 48,
+      "position": [
+        4869.893762951247,
+        70.30382937396878,
+        2487.6025431927715
+      ],
+      "target": [
+        4828.806176129009,
+        9.962847880008962,
+        2388.142394000448
+      ],
+      "clearance": 65.30382937396878,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "museo-industrial-conjunto",
+      "section": true,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 48,
+      "position": [
+        4852.594467149551,
+        43.962847880008965,
+        2444.747316139092
+      ],
+      "target": [
+        4828.806176129009,
+        9.962847880008962,
+        2388.142394000448
+      ],
+      "clearance": 38.21851591258565,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    }
+  ],
+  "inputHashes": {
+    "dist/js/app.js": "a82710bd5510cb15e1e4383f57ff29e5cae309bb0e6b0ccdc767eb85edc7c83e",
+    "dist/js/port.js": "84aa7524a33d1a3886d303774b40ad8a8c52d3df0f1ea7f58b4251854c970e0b",
+    "dist/js/port-industrial.js": "e289c84a04b010889472df5e54a1db6e4e815f6a904ca031718f602358435984",
+    "dist/js/horno.js": "8bc9b1b405cdf3a8c762e609960767e797f1fc299781f623b03d36e086b453a5",
+    "dist/js/horno-context.js": "cb47ee356f0bfee8be4e9334089ce79b7cf2145a48cd95e2d7ec9f425e6963bf",
+    "dist/js/horno-map.js": "46647c05927304cdeafbcac35de970ac1a08cd6192baed535ff9e9ebaa904081",
+    "dist/js/talleres.js": "a5ece44937976c963b804d2cce08258732c3d04a6c3be4fed8fe0d64fdcca660",
+    "dist/js/talleres-context.js": "66a36d5e38f27b9f84d4107bd1f295880966f5090b520d7d34a1595ce88a1967",
+    "dist/js/talleres-map.js": "1dcc0a6a7bc003e4e8504f16d40705c2c6721e3a5ec26cca6ad79c83c50189e3",
+    "dist/assets/data/talleres-visit.json": "a85ba855cad2e3c83096859edacf9816ddca341e0818f315e667c4914c9473fd",
+    "dist/assets/data/talleres-context.json": "6100214fcb3b21d8fd182b8f728ec71252a8247d0f9842d2687764eeff3fad58",
+    "dist/assets/data/talleres-plan.json": "c36958ba5a544af8f112e25c52230da2be840ae9a98c19f05787e1499292aaae",
+    "dist/assets/data/horno-visit.json": "5786b7430d5207b4c77d8a743bdf228c2421b4b542a8ffde0c7c5befb1404b35",
+    "dist/assets/data/horno-context.json": "034c74144297d2df56140f6380c5958a233b8de32fe7e8f35da5c1c09bbe98fb",
+    "dist/assets/data/horno-plan.json": "6de0b8d525124fde32c87b8b9b2040d0297c21ba3cfe0501f3a90b2be5dbd874",
+    "dist/js/museo-industrial.js": "0cc442540f4189403ffc80dffca8f51fc585970ca1d8c9f49d5a2733b70c9670",
+    "dist/js/museo-industrial-context.js": "0f6cdfda6be0e4ca0854f32ee61107301c5a23d9cc13129fbbbdcaecde5b9346",
+    "dist/js/museo-industrial-map.js": "dcf4412d2913ca002d215a9306392e2b9268e6cfec2aa47b5943afe2f0cd25f5",
+    "dist/assets/data/museo-industrial-visit.json": "25dbf4940828ab7072434ac7c91232a8e648eda9e67819c0b6dd6b4290a03b61",
+    "dist/assets/data/museo-industrial-plan.json": "5b701f3fde05fe6735e591c89c695bf400020f8101f8fd168f3467bf39b0f99b",
+    "dist/assets/data/museo-industrial-context.json": "e32f3593ffbfe96f055d6c49b64dd88f02e831261dfd35252c210e4aeea3914e",
+    "dist/assets/data/port-industrial.json": "8f84d9fc48cde87d14935e05f2f25b85268775f595059ade1c1da12b2e3a01ea"
+  },
+  "limitations": [
+    "CPU geometry and camera checks do not measure browser GPU performance.",
+    "Interior geometry and unmeasured details remain a documented interpretation."
+  ]
+}

@@ -1,0 +1,167 @@
+{
+  "reviewedAtUTC": "2026-11-20T23:45:18.418350+00:00",
+  "sceneAccepted": true,
+  "reviewer": "Primary agent, direct image inspection",
+  "browserVerified": false,
+  "webglVerified": false,
+  "renderMethod": "Blender CPU with exact exported Three.js geometry, normals, textures and observation cameras; approximate lighting and finite inspection crop.",
+  "views": [
+    {
+      "scene": "gerencia-conjunto",
+      "geometrySha256": "ec7aa68c9476cccdbd0669638706ca9852e1e6fa4a279566270255a7223a471b",
+      "renderScriptSha256": "c4e1217d12fa73b45fa2a2012fa52de6789f4571684f936edd629de5e1bf49dd",
+      "samples": 32,
+      "dimensions": [
+        1440,
+        1080
+      ],
+      "recordedAtUTC": "2026-11-20T23:37:49.440325+00:00",
+      "method": "Exact-mesh CPU inspection; illumination approximates the application; not a browser screenshot.",
+      "image": "gerencia-conjunto.png",
+      "imageSha256": "dedfea00b99d4435824ab1a5d7e3ea7b45d8b4c72e41dcf8cee5c2a867c32c01",
+      "visuallyReviewed": true,
+      "findings": [
+        "Oficinas, grupos residenciales y jardines legibles en la región integrada.",
+        "Los paseos conectan las piezas y conservan las áreas occidentales abiertas."
+      ]
+    },
+    {
+      "scene": "gerencia-oficinas",
+      "geometrySha256": "8c7f2356db4833895d6a8dc6faa8ee02218453740303c52fe4e1d430d5787486",
+      "renderScriptSha256": "c4e1217d12fa73b45fa2a2012fa52de6789f4571684f936edd629de5e1bf49dd",
+      "samples": 32,
+      "dimensions": [
+        1440,
+        1080
+      ],
+      "recordedAtUTC": "2026-11-20T23:37:49.269814+00:00",
+      "method": "Exact-mesh CPU inspection; illumination approximates the application; not a browser screenshot.",
+      "image": "gerencia-oficinas.png",
+      "imageSha256": "6ac487b0988288cdbb30ce314e4be207472cb3a18d1ecf14d3c89a191b9b9e99",
+      "visuallyReviewed": true,
+      "findings": [
+        "La cámara corregida muestra la fachada, el acceso elevado y la relación con la calle sin quedar tras edificios vecinos.",
+        "Huecos de ventana y puerta, bandas de fachada y cubiertas visibles."
+      ]
+    },
+    {
+      "scene": "gerencia-vestibulo",
+      "geometrySha256": "90e50702820609389d7d6481a48dd828e9d78ca645bf51461e9d1e2a06c85a2a",
+      "renderScriptSha256": "c4e1217d12fa73b45fa2a2012fa52de6789f4571684f936edd629de5e1bf49dd",
+      "samples": 32,
+      "dimensions": [
+        960,
+        720
+      ],
+      "recordedAtUTC": "2026-11-20T23:39:33.221943+00:00",
+      "method": "Exact-mesh CPU inspection; illumination approximates the application; not a browser screenshot.",
+      "image": "gerencia-vestibulo.png",
+      "imageSha256": "b82bca69316d1c1e68be429156ea1038220fb1ad13a2d8621992aa4cd08988a7",
+      "visuallyReviewed": true,
+      "findings": [
+        "La escalera de dos tramos, la vidriera y el zócalo del vestíbulo quedan visibles.",
+        "La vista interior mantiene los techos."
+      ]
+    },
+    {
+      "scene": "gerencia-salas",
+      "geometrySha256": "3780e5ef04b2f32872b21b69e8efc48d9fa33db3ce345d42dd7787692926a58b",
+      "renderScriptSha256": "c4e1217d12fa73b45fa2a2012fa52de6789f4571684f936edd629de5e1bf49dd",
+      "samples": 32,
+      "dimensions": [
+        960,
+        720
+      ],
+      "recordedAtUTC": "2026-11-20T23:39:33.253168+00:00",
+      "method": "Exact-mesh CPU inspection; illumination approximates the application; not a browser screenshot.",
+      "image": "gerencia-salas.png",
+      "imageSha256": "ed48c90a5f54b92e49a881d34dbbcc94ba9ee60103df83bf3dd79c05e2fbb147",
+      "visuallyReviewed": true,
+      "findings": [
+        "La copa antes presente en la sala queda fuera del edificio.",
+        "Ventanas, revestimientos y mobiliario interpretativo visibles."
+      ]
+    },
+    {
+      "scene": "gerencia-chales-centrales",
+      "geometrySha256": "b9044a81fa418cf0d255f4e2fa2b82587d1437acb1fa2b4b337e4947e7b13843",
+      "renderScriptSha256": "c4e1217d12fa73b45fa2a2012fa52de6789f4571684f936edd629de5e1bf49dd",
+      "samples": 24,
+      "dimensions": [
+        960,
+        720
+      ],
+      "recordedAtUTC": "2026-11-20T23:40:54.309151+00:00",
+      "method": "Exact-mesh CPU inspection; illumination approximates the application; not a browser screenshot.",
+      "image": "gerencia-chales-centrales.png",
+      "imageSha256": "00a974336f02d382ef4f2371ecfe9f0935e79ac726dde9a5a07e0c963fa7fe6a",
+      "visuallyReviewed": true,
+      "findings": [
+        "Porches, balcones, carpinterías y cubiertas se distinguen entre los grupos.",
+        "Las copas se separan de las fachadas."
+      ]
+    },
+    {
+      "scene": "gerencia-paseo",
+      "geometrySha256": "71fa2ad530ed239059e22e9db6ce62984f94867e2127f225c1c7e88abe0d097b",
+      "renderScriptSha256": "c4e1217d12fa73b45fa2a2012fa52de6789f4571684f936edd629de5e1bf49dd",
+      "samples": 24,
+      "dimensions": [
+        960,
+        720
+      ],
+      "recordedAtUTC": "2026-11-20T23:41:18.636539+00:00",
+      "method": "Exact-mesh CPU inspection; illumination approximates the application; not a browser screenshot.",
+      "image": "gerencia-paseo.png",
+      "imageSha256": "a2bfbeba14662531dcbba6b5e59d0402596f17d572842f737c71b6d1edd28e48",
+      "visuallyReviewed": true,
+      "findings": [
+        "El eje de recorrido y sus ramales permanecen legibles entre edificios y vegetación."
+      ]
+    },
+    {
+      "scene": "gerencia-seccion",
+      "geometrySha256": "4f2d089aaf593cd85bb977231fb05bc8bce3262d945bf04415b8678a1f9ab8d9",
+      "renderScriptSha256": "c4e1217d12fa73b45fa2a2012fa52de6789f4571684f936edd629de5e1bf49dd",
+      "samples": 32,
+      "dimensions": [
+        1440,
+        1080
+      ],
+      "recordedAtUTC": "2026-11-20T23:42:30.143313+00:00",
+      "method": "Exact-mesh CPU inspection; illumination approximates the application; not a browser screenshot.",
+      "image": "gerencia-seccion.png",
+      "imageSha256": "03ed93878a2e06d77cf2122af1247884f9d08bf3b031e4e03509314ebe6205d2",
+      "visuallyReviewed": true,
+      "findings": [
+        "Cubiertas, forjados, escaleras y mobiliario de los niveles retirados no aparecen flotando.",
+        "Permanecen la envolvente y los niveles inferiores; las divisiones residenciales son tipológicas."
+      ]
+    }
+  ],
+  "mapImagesReviewed": [
+    "gerencia-plano.png",
+    "gerencia-plano-mobile-light.png",
+    "gerencia-vestibulo-plan.png",
+    "gerencia-salas-plan.png"
+  ],
+  "integration": {
+    "checks": 762,
+    "cameras": 126,
+    "pass": true,
+    "inputHashesUnchanged": true,
+    "inputCount": 30
+  },
+  "knownObservations": [
+    {
+      "scope": "Exterior generic OSM crossings outside the Gerencia precinct",
+      "observation": "A few dark triangles remain in the CPU overview. Read-only ray inspection identifies two coplanar faces of the inherited Pavimentos sobre trazado OSM mesh at y=7.12, with intact terrain below around y=7. They are not holes in the new Gerencia surfaces.",
+      "status": "Localized inherited overlap; appearance in WebGL unverified."
+    }
+  ],
+  "limitations": [
+    "CPU inspection images are not browser screenshots and do not establish GPU performance.",
+    "The inspection exporter crops distant surroundings; the production atlas retains its full region.",
+    "Interiors, botanical dimensions and unmeasured details remain documented interpretations."
+  ]
+}

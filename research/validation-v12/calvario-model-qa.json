@@ -1,0 +1,4822 @@
+{
+  "pass": true,
+  "inputHashes": {
+    "dist/js/calvario.js": "990a076c049599574eb566b7823bc8166667d7c385a2e5fd964e6e4342d96910",
+    "dist/js/heritage-sacred.js": "52290123d2aed4fbddacbe6ecfc7e0a7d328df8056e858239bad5be93afd11e6",
+    "dist/js/calvario-context.js": "0ef2e7a8cc33c2296cbd1b7ff8023d5eef71a48e4eb86849efd06e59b124d148",
+    "dist/assets/data/calvario-visit.json": "b054fed27f08b1d4c1f387315b3d3d6b8ae3a6a7378e4e2fb6186a437c829088",
+    "dist/assets/data/calvario-context.json": "3c4da56852c9f4afb1ca501e37e4823b7c2eb3aa81d9b42a7da07f53bbe81766",
+    "dist/assets/data/calvario-plan.json": "3a9a08fb423930cb5902b83db6c5b2998ff8461935bc26656714a3039a167eef"
+  },
+  "buildMs": 16830.202594,
+  "stats": {
+    "stops": 18,
+    "meshes": 193,
+    "triangles": 240933,
+    "stationTotalDocumented": 14,
+    "waysideRepresentations": 11,
+    "facadeNiches": 3,
+    "retainingWalls": 8,
+    "cypresses": 20,
+    "trueApertures": 2,
+    "sourceKeys": [
+      "cv-turismo",
+      "cv-osm",
+      "cv-cofradia",
+      "cv-restauracion",
+      "cv-campana",
+      "cv-civera2001"
+    ],
+    "periods": [
+      "route",
+      "hermitage",
+      "ceramic",
+      "restoration",
+      "landscape"
+    ],
+    "context": {
+      "buildingParts": 156,
+      "parentParcels": 60,
+      "footprintsPreserved": true,
+      "courtyards": 3,
+      "sourceHeight": 0,
+      "ignHeight": 71,
+      "storeyHeight": 85,
+      "fallbackHeight": 0,
+      "streetSamples": 1133,
+      "roofCorrections": 2,
+      "maximumRoofCorrectionM": 0.5096927628173944,
+      "preservedSantaMaria": true,
+      "preservedPlazaMayor": true,
+      "preservedJuderia": true
+    }
+  },
+  "meshes": 219,
+  "triangles": 265918,
+  "checks": [
+    {
+      "pass": true,
+      "label": "18 documentary stops have model targets"
+    },
+    {
+      "pass": true,
+      "label": "model sources resolve to the bibliography"
+    },
+    {
+      "pass": true,
+      "label": "fourteen documentary stations and three documented facade niches"
+    },
+    {
+      "pass": true,
+      "label": "uncertain placement and absence of invented interior are declared"
+    },
+    {
+      "pass": true,
+      "label": "bell retains inventoried25cm diameter and20cm height"
+    },
+    {
+      "pass": true,
+      "label": "all eight source wall polylines retained"
+    },
+    {
+      "pass": true,
+      "label": "own vegetation layer can be switched"
+    },
+    {
+      "pass": true,
+      "label": "all five untouched access ways retained, including the connection to the Castle"
+    },
+    {
+      "pass": true,
+      "label": "all three reconstructed ways replace their generic counterparts"
+    },
+    {
+      "pass": true,
+      "label": "all model and context geometry finite"
+    },
+    {
+      "pass": true,
+      "label": "espadaña has a structurally open aperture"
+    },
+    {
+      "pass": true,
+      "label": "arco-acceso has a structurally open aperture"
+    },
+    {
+      "pass": true,
+      "label": "nave roof completely covers its plan"
+    },
+    {
+      "pass": true,
+      "label": "all sampled path faces remain above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "paving perimeter side faces close into final terrain without exposed undersides"
+    },
+    {
+      "pass": true,
+      "label": "perimetro-1 wall footing remains continuously embedded at 25 cm sampling"
+    },
+    {
+      "pass": true,
+      "label": "perimetro-2 wall footing remains continuously embedded at 25 cm sampling"
+    },
+    {
+      "pass": true,
+      "label": "perimetro-3 wall footing remains continuously embedded at 25 cm sampling"
+    },
+    {
+      "pass": true,
+      "label": "perimetro-4 wall footing remains continuously embedded at 25 cm sampling"
+    },
+    {
+      "pass": true,
+      "label": "perimetro-5 wall footing remains continuously embedded at 25 cm sampling"
+    },
+    {
+      "pass": true,
+      "label": "perimetro-6 wall footing remains continuously embedded at 25 cm sampling"
+    },
+    {
+      "pass": true,
+      "label": "perimetro-7 wall footing remains continuously embedded at 25 cm sampling"
+    },
+    {
+      "pass": true,
+      "label": "perimetro-8 wall footing remains continuously embedded at 25 cm sampling"
+    },
+    {
+      "pass": true,
+      "label": "perimetro-9 wall footing remains continuously embedded at 25 cm sampling"
+    },
+    {
+      "pass": true,
+      "label": "perimetro-10 wall footing remains continuously embedded at 25 cm sampling"
+    },
+    {
+      "pass": true,
+      "label": "fachada wall footing remains continuously embedded at 25 cm sampling"
+    },
+    {
+      "pass": true,
+      "label": "entrance step 0 has solid support below all four terrain corners"
+    },
+    {
+      "pass": true,
+      "label": "entrance step 0 clears terrain at all four corners"
+    },
+    {
+      "pass": true,
+      "label": "entrance step 1 has solid support below all four terrain corners"
+    },
+    {
+      "pass": true,
+      "label": "entrance step 1 clears terrain at all four corners"
+    },
+    {
+      "pass": true,
+      "label": "entrance step 2 has solid support below all four terrain corners"
+    },
+    {
+      "pass": true,
+      "label": "entrance step 2 clears terrain at all four corners"
+    },
+    {
+      "pass": true,
+      "label": "entrance step 3 has solid support below all four terrain corners"
+    },
+    {
+      "pass": true,
+      "label": "entrance step 3 clears terrain at all four corners"
+    },
+    {
+      "pass": true,
+      "label": "entrance step 4 has solid support below all four terrain corners"
+    },
+    {
+      "pass": true,
+      "label": "entrance step 4 clears terrain at all four corners"
+    },
+    {
+      "pass": true,
+      "label": "entrance step 5 has solid support below all four terrain corners"
+    },
+    {
+      "pass": true,
+      "label": "entrance step 5 clears terrain at all four corners"
+    },
+    {
+      "pass": true,
+      "label": "entrance step 6 has solid support below all four terrain corners"
+    },
+    {
+      "pass": true,
+      "label": "entrance step 6 clears terrain at all four corners"
+    },
+    {
+      "pass": true,
+      "label": "entrance step 7 has solid support below all four terrain corners"
+    },
+    {
+      "pass": true,
+      "label": "entrance step 7 clears terrain at all four corners"
+    },
+    {
+      "pass": true,
+      "label": "last entrance tread meets the door threshold"
+    },
+    {
+      "pass": true,
+      "label": "selection calvario-conjunto"
+    },
+    {
+      "pass": true,
+      "label": "selection calvario-acceso"
+    },
+    {
+      "pass": true,
+      "label": "selection calvario-escalinata"
+    },
+    {
+      "pass": true,
+      "label": "selection calvario-zigzag"
+    },
+    {
+      "pass": true,
+      "label": "selection calvario-casalicios"
+    },
+    {
+      "pass": true,
+      "label": "selection calvario-ceramica"
+    },
+    {
+      "pass": true,
+      "label": "selection calvario-muros"
+    },
+    {
+      "pass": true,
+      "label": "selection calvario-cipreses"
+    },
+    {
+      "pass": true,
+      "label": "selection calvario-explanada"
+    },
+    {
+      "pass": true,
+      "label": "selection calvario-fachada"
+    },
+    {
+      "pass": true,
+      "label": "selection calvario-portada"
+    },
+    {
+      "pass": true,
+      "label": "selection calvario-hornacinas"
+    },
+    {
+      "pass": true,
+      "label": "selection calvario-laterales"
+    },
+    {
+      "pass": true,
+      "label": "selection calvario-campana"
+    },
+    {
+      "pass": true,
+      "label": "selection calvario-viacrucis"
+    },
+    {
+      "pass": true,
+      "label": "selection calvario-passio"
+    },
+    {
+      "pass": true,
+      "label": "selection calvario-mirador"
+    },
+    {
+      "pass": true,
+      "label": "selection calvario-memoria"
+    },
+    {
+      "pass": true,
+      "label": "reading modes restore original materials and geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-conjunto/1363x936/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-conjunto/1363x936/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-conjunto/1363x936/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-conjunto/1363x936/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-conjunto/1363x936/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-conjunto/1363x936/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-conjunto/1363x936/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-conjunto/1363x936/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-conjunto/390x844/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-conjunto/390x844/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-conjunto/390x844/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-conjunto/390x844/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-conjunto/390x844/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-conjunto/390x844/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-conjunto/390x844/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-conjunto/390x844/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-conjunto/844x390/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-conjunto/844x390/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-conjunto/844x390/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-conjunto/844x390/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-conjunto/844x390/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-conjunto/844x390/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-conjunto/844x390/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-conjunto/844x390/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-acceso/1363x936/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-acceso/1363x936/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-acceso/1363x936/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-acceso/1363x936/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-acceso/1363x936/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-acceso/1363x936/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-acceso/1363x936/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-acceso/1363x936/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-acceso/390x844/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-acceso/390x844/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-acceso/390x844/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-acceso/390x844/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-acceso/390x844/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-acceso/390x844/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-acceso/390x844/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-acceso/390x844/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-acceso/844x390/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-acceso/844x390/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-acceso/844x390/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-acceso/844x390/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-acceso/844x390/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-acceso/844x390/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-acceso/844x390/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-acceso/844x390/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-escalinata/1363x936/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-escalinata/1363x936/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-escalinata/1363x936/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-escalinata/1363x936/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-escalinata/1363x936/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-escalinata/1363x936/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-escalinata/1363x936/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-escalinata/1363x936/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-escalinata/390x844/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-escalinata/390x844/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-escalinata/390x844/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-escalinata/390x844/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-escalinata/390x844/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-escalinata/390x844/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-escalinata/390x844/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-escalinata/390x844/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-escalinata/844x390/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-escalinata/844x390/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-escalinata/844x390/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-escalinata/844x390/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-escalinata/844x390/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-escalinata/844x390/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-escalinata/844x390/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-escalinata/844x390/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-zigzag/1363x936/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-zigzag/1363x936/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-zigzag/1363x936/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-zigzag/1363x936/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-zigzag/1363x936/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-zigzag/1363x936/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-zigzag/1363x936/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-zigzag/1363x936/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-zigzag/390x844/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-zigzag/390x844/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-zigzag/390x844/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-zigzag/390x844/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-zigzag/390x844/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-zigzag/390x844/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-zigzag/390x844/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-zigzag/390x844/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-zigzag/844x390/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-zigzag/844x390/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-zigzag/844x390/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-zigzag/844x390/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-zigzag/844x390/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-zigzag/844x390/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-zigzag/844x390/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-zigzag/844x390/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-casalicios/1363x936/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-casalicios/1363x936/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-casalicios/1363x936/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-casalicios/1363x936/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-casalicios/1363x936/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-casalicios/1363x936/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-casalicios/1363x936/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-casalicios/1363x936/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-casalicios/390x844/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-casalicios/390x844/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-casalicios/390x844/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-casalicios/390x844/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-casalicios/390x844/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-casalicios/390x844/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-casalicios/390x844/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-casalicios/390x844/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-casalicios/844x390/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-casalicios/844x390/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-casalicios/844x390/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-casalicios/844x390/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-casalicios/844x390/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-casalicios/844x390/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-casalicios/844x390/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-casalicios/844x390/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-ceramica/1363x936/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-ceramica/1363x936/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-ceramica/1363x936/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-ceramica/1363x936/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-ceramica/1363x936/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-ceramica/1363x936/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-ceramica/1363x936/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-ceramica/1363x936/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-ceramica/390x844/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-ceramica/390x844/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-ceramica/390x844/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-ceramica/390x844/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-ceramica/390x844/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-ceramica/390x844/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-ceramica/390x844/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-ceramica/390x844/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-ceramica/844x390/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-ceramica/844x390/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-ceramica/844x390/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-ceramica/844x390/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-ceramica/844x390/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-ceramica/844x390/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-ceramica/844x390/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-ceramica/844x390/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-muros/1363x936/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-muros/1363x936/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-muros/1363x936/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-muros/1363x936/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-muros/1363x936/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-muros/1363x936/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-muros/1363x936/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-muros/1363x936/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-muros/390x844/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-muros/390x844/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-muros/390x844/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-muros/390x844/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-muros/390x844/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-muros/390x844/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-muros/390x844/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-muros/390x844/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-muros/844x390/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-muros/844x390/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-muros/844x390/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-muros/844x390/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-muros/844x390/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-muros/844x390/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-muros/844x390/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-muros/844x390/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-cipreses/1363x936/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-cipreses/1363x936/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-cipreses/1363x936/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-cipreses/1363x936/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-cipreses/1363x936/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-cipreses/1363x936/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-cipreses/1363x936/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-cipreses/1363x936/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-cipreses/390x844/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-cipreses/390x844/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-cipreses/390x844/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-cipreses/390x844/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-cipreses/390x844/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-cipreses/390x844/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-cipreses/390x844/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-cipreses/390x844/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-cipreses/844x390/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-cipreses/844x390/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-cipreses/844x390/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-cipreses/844x390/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-cipreses/844x390/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-cipreses/844x390/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-cipreses/844x390/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-cipreses/844x390/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-explanada/1363x936/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-explanada/1363x936/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-explanada/1363x936/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-explanada/1363x936/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-explanada/1363x936/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-explanada/1363x936/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-explanada/1363x936/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-explanada/1363x936/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-explanada/390x844/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-explanada/390x844/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-explanada/390x844/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-explanada/390x844/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-explanada/390x844/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-explanada/390x844/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-explanada/390x844/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-explanada/390x844/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-explanada/844x390/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-explanada/844x390/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-explanada/844x390/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-explanada/844x390/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-explanada/844x390/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-explanada/844x390/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-explanada/844x390/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-explanada/844x390/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-fachada/1363x936/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-fachada/1363x936/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-fachada/1363x936/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-fachada/1363x936/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-fachada/1363x936/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-fachada/1363x936/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-fachada/1363x936/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-fachada/1363x936/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-fachada/390x844/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-fachada/390x844/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-fachada/390x844/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-fachada/390x844/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-fachada/390x844/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-fachada/390x844/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-fachada/390x844/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-fachada/390x844/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-fachada/844x390/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-fachada/844x390/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-fachada/844x390/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-fachada/844x390/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-fachada/844x390/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-fachada/844x390/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-fachada/844x390/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-fachada/844x390/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-portada/1363x936/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-portada/1363x936/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-portada/1363x936/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-portada/1363x936/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-portada/1363x936/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-portada/1363x936/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-portada/1363x936/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-portada/1363x936/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-portada/390x844/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-portada/390x844/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-portada/390x844/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-portada/390x844/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-portada/390x844/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-portada/390x844/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-portada/390x844/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-portada/390x844/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-portada/844x390/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-portada/844x390/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-portada/844x390/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-portada/844x390/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-portada/844x390/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-portada/844x390/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-portada/844x390/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-portada/844x390/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-hornacinas/1363x936/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-hornacinas/1363x936/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-hornacinas/1363x936/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-hornacinas/1363x936/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-hornacinas/1363x936/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-hornacinas/1363x936/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-hornacinas/1363x936/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-hornacinas/1363x936/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-hornacinas/390x844/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-hornacinas/390x844/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-hornacinas/390x844/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-hornacinas/390x844/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-hornacinas/390x844/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-hornacinas/390x844/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-hornacinas/390x844/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-hornacinas/390x844/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-hornacinas/844x390/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-hornacinas/844x390/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-hornacinas/844x390/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-hornacinas/844x390/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-hornacinas/844x390/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-hornacinas/844x390/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-hornacinas/844x390/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-hornacinas/844x390/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-laterales/1363x936/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-laterales/1363x936/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-laterales/1363x936/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-laterales/1363x936/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-laterales/1363x936/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-laterales/1363x936/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-laterales/1363x936/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-laterales/1363x936/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-laterales/390x844/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-laterales/390x844/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-laterales/390x844/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-laterales/390x844/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-laterales/390x844/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-laterales/390x844/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-laterales/390x844/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-laterales/390x844/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-laterales/844x390/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-laterales/844x390/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-laterales/844x390/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-laterales/844x390/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-laterales/844x390/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-laterales/844x390/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-laterales/844x390/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-laterales/844x390/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-campana/1363x936/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-campana/1363x936/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-campana/1363x936/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-campana/1363x936/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-campana/1363x936/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-campana/1363x936/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-campana/1363x936/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-campana/1363x936/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-campana/390x844/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-campana/390x844/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-campana/390x844/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-campana/390x844/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-campana/390x844/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-campana/390x844/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-campana/390x844/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-campana/390x844/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-campana/844x390/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-campana/844x390/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-campana/844x390/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-campana/844x390/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-campana/844x390/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-campana/844x390/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-campana/844x390/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-campana/844x390/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-viacrucis/1363x936/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-viacrucis/1363x936/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-viacrucis/1363x936/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-viacrucis/1363x936/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-viacrucis/1363x936/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-viacrucis/1363x936/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-viacrucis/1363x936/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-viacrucis/1363x936/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-viacrucis/390x844/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-viacrucis/390x844/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-viacrucis/390x844/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-viacrucis/390x844/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-viacrucis/390x844/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-viacrucis/390x844/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-viacrucis/390x844/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-viacrucis/390x844/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-viacrucis/844x390/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-viacrucis/844x390/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-viacrucis/844x390/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-viacrucis/844x390/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-viacrucis/844x390/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-viacrucis/844x390/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-viacrucis/844x390/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-viacrucis/844x390/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-passio/1363x936/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-passio/1363x936/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-passio/1363x936/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-passio/1363x936/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-passio/1363x936/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-passio/1363x936/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-passio/1363x936/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-passio/1363x936/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-passio/390x844/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-passio/390x844/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-passio/390x844/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-passio/390x844/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-passio/390x844/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-passio/390x844/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-passio/390x844/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-passio/390x844/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-passio/844x390/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-passio/844x390/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-passio/844x390/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-passio/844x390/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-passio/844x390/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-passio/844x390/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-passio/844x390/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-passio/844x390/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-mirador/1363x936/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-mirador/1363x936/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-mirador/1363x936/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-mirador/1363x936/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-mirador/1363x936/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-mirador/1363x936/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-mirador/1363x936/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-mirador/1363x936/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-mirador/390x844/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-mirador/390x844/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-mirador/390x844/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-mirador/390x844/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-mirador/390x844/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-mirador/390x844/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-mirador/390x844/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-mirador/390x844/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-mirador/844x390/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-mirador/844x390/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-mirador/844x390/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-mirador/844x390/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-mirador/844x390/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-mirador/844x390/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-mirador/844x390/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-mirador/844x390/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-memoria/1363x936/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-memoria/1363x936/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-memoria/1363x936/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-memoria/1363x936/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-memoria/1363x936/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-memoria/1363x936/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-memoria/1363x936/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-memoria/1363x936/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-memoria/390x844/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-memoria/390x844/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-memoria/390x844/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-memoria/390x844/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-memoria/390x844/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-memoria/390x844/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-memoria/390x844/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-memoria/390x844/near sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-memoria/844x390/full camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-memoria/844x390/full sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-memoria/844x390/full focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-memoria/844x390/full sightline clears context and own geometry"
+    },
+    {
+      "pass": true,
+      "label": "calvario-memoria/844x390/near camera clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-memoria/844x390/near sightline clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "calvario-memoria/844x390/near focus fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "calvario-memoria/844x390/near sightline clears context and own geometry"
+    }
+  ],
+  "errors": [],
+  "preservedAccessWays": [
+    {
+      "id": "733321151",
+      "vertices": 3,
+      "preserved": true
+    },
+    {
+      "id": "733321152",
+      "vertices": 4,
+      "preserved": true
+    },
+    {
+      "id": "733321153",
+      "vertices": 3,
+      "preserved": true
+    },
+    {
+      "id": "733321154",
+      "vertices": 29,
+      "preserved": true
+    },
+    {
+      "id": "1419281600",
+      "vertices": 2,
+      "preserved": true
+    }
+  ],
+  "pavementEdges": {
+    "edges": 2022,
+    "samples": 8062,
+    "minimumEmbeddingM": 0.3072638404350272,
+    "unsupported": [],
+    "upperSurfacePositionsUnchanged": true,
+    "upperSurfacePositionHashes": {
+      "Calvario · camino · paving": "4c4c7b93a60c2bf8ba49f9449e5373e27dad0fc11a70b6cb87a55bb97a6f506a",
+      "Calvario · explanada · paving": "262abad1aaaa9b5af0703b0569c40cb157de33e3744cbaac3c787a81b929be58",
+      "Calvario · escalera-733321150 · paving": "81c8b97d70afb7cb621f9ccdee9b6d15e9b5c01bec4c060ae6327591950d6d4a",
+      "Calvario · escalera-1419281599 · paving": "c889e06674b124a64cc526ea81c6c60caafa83438e815c92d078329b2f054166"
+    }
+  },
+  "footings": [
+    {
+      "id": "perimetro-1",
+      "bottom": 85.0202693672938,
+      "sampleCount": 60,
+      "maximumSampleSpacingM": 0.24787271240222125,
+      "minimumEmbeddingM": 0.7304485657636235,
+      "unsupported": []
+    },
+    {
+      "id": "perimetro-2",
+      "bottom": 85.73146890311058,
+      "sampleCount": 16,
+      "maximumSampleSpacingM": 0.23888540110994444,
+      "minimumEmbeddingM": 0.5299980768698873,
+      "unsupported": []
+    },
+    {
+      "id": "perimetro-3",
+      "bottom": 85.73146890311058,
+      "sampleCount": 18,
+      "maximumSampleSpacingM": 0.22139152755427244,
+      "minimumEmbeddingM": 0.5299980768698873,
+      "unsupported": []
+    },
+    {
+      "id": "perimetro-4",
+      "bottom": 85.73146890311058,
+      "sampleCount": 14,
+      "maximumSampleSpacingM": 0.24403429168529087,
+      "minimumEmbeddingM": 0.5299980768698873,
+      "unsupported": []
+    },
+    {
+      "id": "perimetro-5",
+      "bottom": 85.73146890311058,
+      "sampleCount": 18,
+      "maximumSampleSpacingM": 0.22551752427340782,
+      "minimumEmbeddingM": 0.5299980768698873,
+      "unsupported": []
+    },
+    {
+      "id": "perimetro-6",
+      "bottom": 85.73146890311058,
+      "sampleCount": 18,
+      "maximumSampleSpacingM": 0.23272122721373165,
+      "minimumEmbeddingM": 0.5299980768698873,
+      "unsupported": []
+    },
+    {
+      "id": "perimetro-7",
+      "bottom": 85.73146890311058,
+      "sampleCount": 16,
+      "maximumSampleSpacingM": 0.228225208257931,
+      "minimumEmbeddingM": 0.5299980768698873,
+      "unsupported": []
+    },
+    {
+      "id": "perimetro-8",
+      "bottom": 85.73146890311058,
+      "sampleCount": 14,
+      "maximumSampleSpacingM": 0.24920446409466532,
+      "minimumEmbeddingM": 0.5299980768698873,
+      "unsupported": []
+    },
+    {
+      "id": "perimetro-9",
+      "bottom": 85.73146890311058,
+      "sampleCount": 20,
+      "maximumSampleSpacingM": 0.2242249473275796,
+      "minimumEmbeddingM": 0.5299980768698873,
+      "unsupported": []
+    },
+    {
+      "id": "perimetro-10",
+      "bottom": 84.84266843892735,
+      "sampleCount": 58,
+      "maximumSampleSpacingM": 0.24839988363782647,
+      "minimumEmbeddingM": 0.6033587489464907,
+      "unsupported": []
+    },
+    {
+      "id": "fachada",
+      "bottom": 84.98546461426116,
+      "sampleCount": 92,
+      "maximumSampleSpacingM": 0.24666531009368795,
+      "minimumEmbeddingM": 0.41279476563983053,
+      "unsupported": []
+    }
+  ],
+  "ermita": {
+    "osmId": "733104780",
+    "frontWidthM": 11.099938954215958,
+    "yaw": -0.44031845848625695,
+    "baseM": 86.33146890311058,
+    "front": [
+      -216.80214381615593,
+      109.28841000051946
+    ],
+    "eavesM": 6.15,
+    "ridgeM": 7.7,
+    "bell": {
+      "diameterM": 0.25,
+      "heightM": 0.2,
+      "date": 1860,
+      "source": "cv-campana"
+    },
+    "facade": "Restored ochre and white ashlar-pattern render; not bare stone",
+    "niches": 3,
+    "dimensions": "Footprint cartographic; elevations and architectural dimensions visually estimated"
+  },
+  "entranceSteps": [
+    {
+      "index": 0,
+      "top": 85.09146890311058,
+      "bottom": 84.3546385076878,
+      "polygon": [
+        {
+          "x": -219.32901808736696,
+          "z": 104.32826822658883
+        },
+        {
+          "x": -211.36839752226612,
+          "z": 108.07907083649694
+        },
+        {
+          "x": -211.54741310137538,
+          "z": 108.45900954528584
+        },
+        {
+          "x": -219.50803366647622,
+          "z": 104.70820693537773
+        }
+      ],
+      "samples": [
+        {
+          "point": [
+            -219.32901808736696,
+            104.32826822658883
+          ],
+          "ground": 84.79963104825761
+        },
+        {
+          "point": [
+            -211.36839752226612,
+            108.07907083649694
+          ],
+          "ground": 84.65255088836756
+        },
+        {
+          "point": [
+            -211.54741310137538,
+            108.45900954528584
+          ],
+          "ground": 84.76888528053824
+        },
+        {
+          "point": [
+            -219.50803366647622,
+            104.70820693537773
+          ],
+          "ground": 84.8872127414786
+        }
+      ],
+      "supported": true,
+      "clear": true
+    },
+    {
+      "index": 1,
+      "top": 85.27146890311059,
+      "bottom": 84.44773633380343,
+      "polygon": [
+        {
+          "x": -219.43618599695859,
+          "z": 104.71995054576314
+        },
+        {
+          "x": -211.6022116681207,
+          "z": 108.41108129596816
+        },
+        {
+          "x": -211.78122724722994,
+          "z": 108.79102000475706
+        },
+        {
+          "x": -219.61520157606782,
+          "z": 105.09988925455204
+        }
+      ],
+      "samples": [
+        {
+          "point": [
+            -219.43618599695859,
+            104.71995054576314
+          ],
+          "ground": 84.8832913917698
+        },
+        {
+          "point": [
+            -211.6022116681207,
+            108.41108129596816
+          ],
+          "ground": 84.76402159273843
+        },
+        {
+          "point": [
+            -211.78122724722994,
+            108.79102000475706
+          ],
+          "ground": 84.86201695252969
+        },
+        {
+          "point": [
+            -219.61520157606782,
+            105.09988925455204
+          ],
+          "ground": 84.96761528328366
+        }
+      ],
+      "supported": true,
+      "clear": true
+    },
+    {
+      "index": 2,
+      "top": 85.45146890311058,
+      "bottom": 84.54083415991907,
+      "polygon": [
+        {
+          "x": -219.5433539065502,
+          "z": 105.11163286493745
+        },
+        {
+          "x": -211.83602581397528,
+          "z": 108.74309175543938
+        },
+        {
+          "x": -212.01504139308452,
+          "z": 109.12303046422828
+        },
+        {
+          "x": -219.72236948565944,
+          "z": 105.49157157372635
+        }
+      ],
+      "samples": [
+        {
+          "point": [
+            -219.5433539065502,
+            105.11163286493745
+          ],
+          "ground": 84.96331092587165
+        },
+        {
+          "point": [
+            -211.83602581397528,
+            108.74309175543938
+          ],
+          "ground": 84.85715326472987
+        },
+        {
+          "point": [
+            -212.01504139308452,
+            109.12303046422828
+          ],
+          "ground": 84.95514862452113
+        },
+        {
+          "point": [
+            -219.72236948565944,
+            105.49157157372635
+          ],
+          "ground": 85.0409698473785
+        }
+      ],
+      "supported": true,
+      "clear": true
+    },
+    {
+      "index": 3,
+      "top": 85.63146890311059,
+      "bottom": 84.63393198603472,
+      "polygon": [
+        {
+          "x": -219.6505218161418,
+          "z": 105.50331518411174
+        },
+        {
+          "x": -212.06983995982984,
+          "z": 109.07510221491061
+        },
+        {
+          "x": -212.2488555389391,
+          "z": 109.45504092369953
+        },
+        {
+          "x": -219.82953739525107,
+          "z": 105.88325389290065
+        }
+      ],
+      "samples": [
+        {
+          "point": [
+            -219.6505218161418,
+            105.50331518411174
+          ],
+          "ground": 85.03597196748242
+        },
+        {
+          "point": [
+            -212.06983995982984,
+            109.07510221491061
+          ],
+          "ground": 84.95028493672132
+        },
+        {
+          "point": [
+            -212.2488555389391,
+            109.45504092369953
+          ],
+          "ground": 85.04828029651257
+        },
+        {
+          "point": [
+            -219.82953739525107,
+            105.88325389290065
+          ],
+          "ground": 85.1176118918488
+        }
+      ],
+      "supported": true,
+      "clear": true
+    },
+    {
+      "index": 4,
+      "top": 85.81146890311058,
+      "bottom": 84.72702981215035,
+      "polygon": [
+        {
+          "x": -219.7576897257334,
+          "z": 105.89499750328605
+        },
+        {
+          "x": -212.30365410568444,
+          "z": 109.40711267438184
+        },
+        {
+          "x": -212.4826696847937,
+          "z": 109.78705138317075
+        },
+        {
+          "x": -219.93670530484266,
+          "z": 106.27493621207496
+        }
+      ],
+      "samples": [
+        {
+          "point": [
+            -219.7576897257334,
+            105.89499750328605
+          ],
+          "ground": 85.11261401195273
+        },
+        {
+          "point": [
+            -212.30365410568444,
+            109.40711267438184
+          ],
+          "ground": 85.04341660871276
+        },
+        {
+          "point": [
+            -212.4826696847937,
+            109.78705138317075
+          ],
+          "ground": 85.14141196850402
+        },
+        {
+          "point": [
+            -219.93670530484266,
+            106.27493621207496
+          ],
+          "ground": 85.19425393631909
+        }
+      ],
+      "supported": true,
+      "clear": true
+    },
+    {
+      "index": 5,
+      "top": 85.99146890311059,
+      "bottom": 84.82012763826602,
+      "polygon": [
+        {
+          "x": -219.86485763532502,
+          "z": 106.28667982246036
+        },
+        {
+          "x": -212.53746825153902,
+          "z": 109.73912313385306
+        },
+        {
+          "x": -212.71648383064826,
+          "z": 110.11906184264197
+        },
+        {
+          "x": -220.04387321443426,
+          "z": 106.66661853124927
+        }
+      ],
+      "samples": [
+        {
+          "point": [
+            -219.86485763532502,
+            106.28667982246036
+          ],
+          "ground": 85.18925605642302
+        },
+        {
+          "point": [
+            -212.53746825153902,
+            109.73912313385306
+          ],
+          "ground": 85.13701594778426
+        },
+        {
+          "point": [
+            -212.71648383064826,
+            110.11906184264197
+          ],
+          "ground": 85.26061409252424
+        },
+        {
+          "point": [
+            -220.04387321443426,
+            106.66661853124927
+          ],
+          "ground": 85.26988457251963
+        }
+      ],
+      "supported": true,
+      "clear": true
+    },
+    {
+      "index": 6,
+      "top": 86.17146890311058,
+      "bottom": 84.93335532654045,
+      "polygon": [
+        {
+          "x": -219.97202554491665,
+          "z": 106.67836214163468
+        },
+        {
+          "x": -212.7712823973936,
+          "z": 110.07113359332429
+        },
+        {
+          "x": -212.95029797650284,
+          "z": 110.45107230211319
+        },
+        {
+          "x": -220.15104112402588,
+          "z": 107.05830085042358
+        }
+      ],
+      "samples": [
+        {
+          "point": [
+            -219.97202554491665,
+            106.67836214163468
+          ],
+          "ground": 85.26589810089332
+        },
+        {
+          "point": [
+            -212.7712823973936,
+            110.07113359332429
+          ],
+          "ground": 85.24540911037748
+        },
+        {
+          "point": [
+            -212.95029797650284,
+            110.45107230211319
+          ],
+          "ground": 85.42604507466353
+        },
+        {
+          "point": [
+            -220.15104112402588,
+            107.05830085042358
+          ],
+          "ground": 85.34405607747254
+        }
+      ],
+      "supported": true,
+      "clear": true
+    },
+    {
+      "index": 7,
+      "top": 86.35146890311059,
+      "bottom": 85.03803302400704,
+      "polygon": [
+        {
+          "x": -220.07919345450824,
+          "z": 107.07004446080899
+        },
+        {
+          "x": -213.00509654324816,
+          "z": 110.40314405279551
+        },
+        {
+          "x": -213.18411212235742,
+          "z": 110.78308276158441
+        },
+        {
+          "x": -220.2582090336175,
+          "z": 107.44998316959789
+        }
+      ],
+      "samples": [
+        {
+          "point": [
+            -220.07919345450824,
+            107.07004446080899
+          ],
+          "ground": 85.34071450035825
+        },
+        {
+          "point": [
+            -213.00509654324816,
+            110.40314405279551
+          ],
+          "ground": 85.41084009251679
+        },
+        {
+          "point": [
+            -213.18411212235742,
+            110.78308276158441
+          ],
+          "ground": 85.59147605680285
+        },
+        {
+          "point": [
+            -220.2582090336175,
+            107.44998316959789
+          ],
+          "ground": 85.41849125358125
+        }
+      ],
+      "supported": true,
+      "clear": true
+    }
+  ],
+  "openings": [
+    {
+      "id": "espadaña",
+      "total": 9,
+      "clear": 9,
+      "hits": []
+    },
+    {
+      "id": "arco-acceso",
+      "total": 9,
+      "clear": 9,
+      "hits": []
+    }
+  ],
+  "roofs": [
+    {
+      "id": "nave",
+      "count": 138,
+      "gaps": []
+    }
+  ],
+  "paving": {
+    "samples": 31784,
+    "minClearance": 0.07868099403567896,
+    "maxClearance": 0.21125007146036978,
+    "below": []
+  },
+  "cameras": [
+    {
+      "id": "calvario-conjunto",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 199.2489195095099,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -73.4526301744221,
+        250.28624122496257,
+        -91.37914689992544
+      ],
+      "target": [
+        -224.40157086871423,
+        93.1339194062475,
+        86.45111200019954
+      ]
+    },
+    {
+      "id": "calvario-conjunto",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 70.88271301247912,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -183.40157086871423,
+        133.13391940624751,
+        38.451112000199544
+      ],
+      "target": [
+        -224.40157086871423,
+        93.1339194062475,
+        86.45111200019954
+      ]
+    },
+    {
+      "id": "calvario-conjunto",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 442.14132317878256,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        152.72281033672797,
+        485.75656285300926,
+        -357.83240558429407
+      ],
+      "target": [
+        -224.40157086871423,
+        93.1339194062475,
+        86.45111200019954
+      ]
+    },
+    {
+      "id": "calvario-conjunto",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 112.76649874024866,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -144.5461862533296,
+        171.0416117139398,
+        -7.038118769031229
+      ],
+      "target": [
+        -224.40157086871423,
+        93.1339194062475,
+        86.45111200019954
+      ]
+    },
+    {
+      "id": "calvario-conjunto",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 244.0470133781139,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -32.37978323784259,
+        293.0470133781139,
+        -139.76633644164926
+      ],
+      "target": [
+        -224.40157086871423,
+        93.1339194062475,
+        86.45111200019954
+      ]
+    },
+    {
+      "id": "calvario-conjunto",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 70.88271301247912,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -183.40157086871423,
+        133.13391940624751,
+        38.451112000199544
+      ],
+      "target": [
+        -224.40157086871423,
+        93.1339194062475,
+        86.45111200019954
+      ]
+    },
+    {
+      "id": "calvario-acceso",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 15.572313193694399,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -158.97546448940673,
+        81.96668372198903,
+        66.23463485723123
+      ],
+      "target": [
+        -174.94960587733425,
+        72.6484345790313,
+        75.55288400018895
+      ]
+    },
+    {
+      "id": "calvario-acceso",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 5.890402511145766,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -168.94960587733425,
+        74.8484345790313,
+        72.55288400018895
+      ],
+      "target": [
+        -174.94960587733425,
+        72.6484345790313,
+        75.55288400018895
+      ]
+    },
+    {
+      "id": "calvario-acceso",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 30.22677883142491,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -137.57874740141315,
+        94.4481020233186,
+        53.75321655590165
+      ],
+      "target": [
+        -174.94960587733425,
+        72.6484345790313,
+        75.55288400018895
+      ]
+    },
+    {
+      "id": "calvario-acceso",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 9.45306446672133,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -163.2634520311804,
+        76.93335765595438,
+        69.70980707711203
+      ],
+      "target": [
+        -174.94960587733425,
+        72.6484345790313,
+        75.55288400018895
+      ]
+    },
+    {
+      "id": "calvario-acceso",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 18.010637571440313,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -155.66000537129372,
+        83.90070154088829,
+        64.30061703833196
+      ],
+      "target": [
+        -174.94960587733425,
+        72.6484345790313,
+        75.55288400018895
+      ]
+    },
+    {
+      "id": "calvario-acceso",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 5.890402511145766,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -168.94960587733425,
+        74.8484345790313,
+        72.55288400018895
+      ],
+      "target": [
+        -174.94960587733425,
+        72.6484345790313,
+        75.55288400018895
+      ]
+    },
+    {
+      "id": "calvario-escalinata",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 25.647229016431723,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -153.5472727426053,
+        96.54367328854354,
+        98.19807230313961
+      ],
+      "target": [
+        -176.3803886482197,
+        79.41883635933273,
+        111.04170000004771
+      ]
+    },
+    {
+      "id": "calvario-escalinata",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 8.823170060416857,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -168.3803886482197,
+        84.41883635933273,
+        106.04170000004771
+      ],
+      "target": [
+        -176.3803886482197,
+        79.41883635933273,
+        111.04170000004771
+      ]
+    },
+    {
+      "id": "calvario-escalinata",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 57.202566352602986,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -119.36081209159376,
+        122.1835187768022,
+        78.96818818694561
+      ],
+      "target": [
+        -176.3803886482197,
+        79.41883635933273,
+        111.04170000004771
+      ]
+    },
+    {
+      "id": "calvario-escalinata",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 16.176965484921354,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -160.79885018668125,
+        89.15729789779427,
+        101.30323846158618
+      ],
+      "target": [
+        -176.3803886482197,
+        79.41883635933273,
+        111.04170000004771
+      ]
+    },
+    {
+      "id": "calvario-escalinata",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 31.985204194066426,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -147.33910415255374,
+        101.1997997310822,
+        94.70597747123561
+      ],
+      "target": [
+        -176.3803886482197,
+        79.41883635933273,
+        111.04170000004771
+      ]
+    },
+    {
+      "id": "calvario-escalinata",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 8.823170060416857,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -168.3803886482197,
+        84.41883635933273,
+        106.04170000004771
+      ],
+      "target": [
+        -176.3803886482197,
+        79.41883635933273,
+        111.04170000004771
+      ]
+    },
+    {
+      "id": "calvario-zigzag",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 106.16351894695458,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -146.30923759566437,
+        166.28686418631932,
+        13.277379720588257
+      ],
+      "target": [
+        -207.4206639711166,
+        84.02148252705672,
+        83.79056399995619
+      ]
+    },
+    {
+      "id": "calvario-zigzag",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 26.7306242619227,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -188.4206639711166,
+        97.02148252705672,
+        68.79056399995619
+      ],
+      "target": [
+        -207.4206639711166,
+        84.02148252705672,
+        83.79056399995619
+      ]
+    },
+    {
+      "id": "calvario-zigzag",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 234.05833706366275,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -58.15328518184208,
+        284.95833858954165,
+        -88.44102691074517
+      ],
+      "target": [
+        -207.4206639711166,
+        84.02148252705672,
+        83.79056399995619
+      ]
+    },
+    {
+      "id": "calvario-zigzag",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 44.073733474609384,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -170.41451012496276,
+        109.34148252705671,
+        54.57517938457157
+      ],
+      "target": [
+        -207.4206639711166,
+        84.02148252705672,
+        83.79056399995619
+      ]
+    },
+    {
+      "id": "calvario-zigzag",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 129.88494786862634,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -130.30035558858896,
+        187.83728227276703,
+        -5.194407210652628
+      ],
+      "target": [
+        -207.4206639711166,
+        84.02148252705672,
+        83.79056399995619
+      ]
+    },
+    {
+      "id": "calvario-zigzag",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 26.7306242619227,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -188.4206639711166,
+        97.02148252705672,
+        68.79056399995619
+      ],
+      "target": [
+        -207.4206639711166,
+        84.02148252705672,
+        83.79056399995619
+      ]
+    },
+    {
+      "id": "calvario-casalicios",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 11.345256224561268,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -199.21123987758318,
+        84.1846817075774,
+        76.24800366723329
+      ],
+      "target": [
+        -207.65152879032584,
+        79.49563231160926,
+        85.62610245916959
+      ]
+    },
+    {
+      "id": "calvario-casalicios",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 6.554506962613658,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -202.65152879032584,
+        81.19563231160926,
+        80.62610245916959
+      ],
+      "target": [
+        -207.65152879032584,
+        79.49563231160926,
+        85.62610245916959
+      ]
+    },
+    {
+      "id": "calvario-casalicios",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 20.108975343368073,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -189.63735082877258,
+        89.50350895691662,
+        65.61034916855486
+      ],
+      "target": [
+        -207.65152879032584,
+        79.49563231160926,
+        85.62610245916959
+      ]
+    },
+    {
+      "id": "calvario-casalicios",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 10.207141979946513,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -197.9130672518643,
+        82.80670923468618,
+        75.88764092070805
+      ],
+      "target": [
+        -207.65152879032584,
+        79.49563231160926,
+        85.62610245916959
+      ]
+    },
+    {
+      "id": "calvario-casalicios",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 12.968794043952897,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -197.4726475768413,
+        85.15056631910068,
+        74.31623444418675
+      ],
+      "target": [
+        -207.65152879032584,
+        79.49563231160926,
+        85.62610245916959
+      ]
+    },
+    {
+      "id": "calvario-casalicios",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 6.554506962613658,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -202.65152879032584,
+        81.19563231160926,
+        80.62610245916959
+      ],
+      "target": [
+        -207.65152879032584,
+        79.49563231160926,
+        85.62610245916959
+      ]
+    },
+    {
+      "id": "calvario-ceramica",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 5.593928883974016,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -203.61589843243553,
+        80.84084243090602,
+        81.59047210127927
+      ],
+      "target": [
+        -207.65152879032584,
+        79.49563231160926,
+        85.62610245916959
+      ]
+    },
+    {
+      "id": "calvario-ceramica",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 4.811976271199811,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -204.65152879032584,
+        80.69563231160926,
+        82.62610245916959
+      ],
+      "target": [
+        -207.65152879032584,
+        79.49563231160926,
+        85.62610245916959
+      ]
+    },
+    {
+      "id": "calvario-ceramica",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 9.31734396337906,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -199.11865582651055,
+        82.33992329954769,
+        77.09322949535428
+      ],
+      "target": [
+        -207.65152879032584,
+        79.49563231160926,
+        85.62610245916959
+      ]
+    },
+    {
+      "id": "calvario-ceramica",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 7.6598561764962625,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -201.80845186724892,
+        81.83286308084003,
+        79.78302553609267
+      ],
+      "target": [
+        -207.65152879032584,
+        79.49563231160926,
+        85.62610245916959
+      ]
+    },
+    {
+      "id": "calvario-ceramica",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 6.378844066999562,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -202.79921136520855,
+        81.11307145331502,
+        80.7737850340523
+      ],
+      "target": [
+        -207.65152879032584,
+        79.49563231160926,
+        85.62610245916959
+      ]
+    },
+    {
+      "id": "calvario-ceramica",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 4.811976271199811,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -204.65152879032584,
+        80.69563231160926,
+        82.62610245916959
+      ],
+      "target": [
+        -207.65152879032584,
+        79.49563231160926,
+        85.62610245916959
+      ]
+    },
+    {
+      "id": "calvario-muros",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 38.64437362545695,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -182.12854390525814,
+        106.2538892725178,
+        62.21527344641341
+      ],
+      "target": [
+        -207.40352884811625,
+        80.97890432965968,
+        89.43448800026061
+      ]
+    },
+    {
+      "id": "calvario-muros",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 11.352012279117872,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -199.40352884811625,
+        85.97890432965968,
+        81.43448800026061
+      ],
+      "target": [
+        -207.40352884811625,
+        80.97890432965968,
+        89.43448800026061
+      ]
+    },
+    {
+      "id": "calvario-muros",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 82.36966394905212,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -144.29722579414633,
+        144.0852073836296,
+        21.473853942139144
+      ],
+      "target": [
+        -207.40352884811625,
+        80.97890432965968,
+        89.43448800026061
+      ]
+    },
+    {
+      "id": "calvario-muros",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 19.07543592284493,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -191.8219903865778,
+        90.71736586812122,
+        73.85294953872216
+      ],
+      "target": [
+        -207.40352884811625,
+        80.97890432965968,
+        89.43448800026061
+      ]
+    },
+    {
+      "id": "calvario-muros",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 47.55897002340565,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -175.25847908002729,
+        113.12395409774865,
+        54.81674209616481
+      ],
+      "target": [
+        -207.40352884811625,
+        80.97890432965968,
+        89.43448800026061
+      ]
+    },
+    {
+      "id": "calvario-muros",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 11.352012279117872,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -199.40352884811625,
+        85.97890432965968,
+        81.43448800026061
+      ],
+      "target": [
+        -207.40352884811625,
+        80.97890432965968,
+        89.43448800026061
+      ]
+    },
+    {
+      "id": "calvario-cipreses",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 47.216807759405384,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -187.3002463740912,
+        114.5078859844292,
+        60.68869802924302
+      ],
+      "target": [
+        -221.87414022552906,
+        85.69630777489763,
+        93.34182000004546
+      ]
+    },
+    {
+      "id": "calvario-cipreses",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 14.655968164302152,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -211.87414022552906,
+        92.69630777489763,
+        84.34182000004546
+      ],
+      "target": [
+        -221.87414022552906,
+        85.69630777489763,
+        93.34182000004546
+      ]
+    },
+    {
+      "id": "calvario-cipreses",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 98.88465267788774,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -134.66607762743917,
+        158.3696932733059,
+        10.978649768516092
+      ],
+      "target": [
+        -221.87414022552906,
+        85.69630777489763,
+        93.34182000004546
+      ]
+    },
+    {
+      "id": "calvario-cipreses",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 26.139466269065466,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -202.397217148606,
+        99.33015392874378,
+        75.8125892308147
+      ],
+      "target": [
+        -221.87414022552906,
+        85.69630777489763,
+        93.34182000004546
+      ]
+    },
+    {
+      "id": "calvario-cipreses",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 57.462782816678555,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -177.74202399733952,
+        122.4730712983889,
+        51.66148800675535
+      ],
+      "target": [
+        -221.87414022552906,
+        85.69630777489763,
+        93.34182000004546
+      ]
+    },
+    {
+      "id": "calvario-cipreses",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 14.655968164302152,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -211.87414022552906,
+        92.69630777489763,
+        84.34182000004546
+      ],
+      "target": [
+        -221.87414022552906,
+        85.69630777489763,
+        93.34182000004546
+      ]
+    },
+    {
+      "id": "calvario-explanada",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 34.975762643612654,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -202.36896070166048,
+        108.85499290128956,
+        78.65574113716553
+      ],
+      "target": [
+        -215.65132937902504,
+        86.78146890311058,
+        106.84594687259079
+      ]
+    },
+    {
+      "id": "calvario-explanada",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 10.784235843765316,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -210.53659854733218,
+        91.78146890311058,
+        95.99055519290782
+      ],
+      "target": [
+        -215.65132937902504,
+        86.78146890311058,
+        106.84594687259079
+      ]
+    },
+    {
+      "id": "calvario-explanada",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 79.5111776821525,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -182.77215128630087,
+        141.4222746433523,
+        37.06390593096802
+      ],
+      "target": [
+        -215.65132937902504,
+        86.78146890311058,
+        106.84594687259079
+      ]
+    },
+    {
+      "id": "calvario-explanada",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 19.116794452044473,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -205.68940748222013,
+        96.51993044157211,
+        85.70298400108518
+      ],
+      "target": [
+        -215.65132937902504,
+        86.78146890311058,
+        106.84594687259079
+      ]
+    },
+    {
+      "id": "calvario-explanada",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 43.00308234160457,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -198.81023322999803,
+        114.76912299034431,
+        71.10277660054348
+      ],
+      "target": [
+        -215.65132937902504,
+        86.78146890311058,
+        106.84594687259079
+      ]
+    },
+    {
+      "id": "calvario-explanada",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 10.784235843765316,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -210.53659854733218,
+        91.78146890311058,
+        95.99055519290782
+      ],
+      "target": [
+        -215.65132937902504,
+        86.78146890311058,
+        106.84594687259079
+      ]
+    },
+    {
+      "id": "calvario-fachada",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 31.590411355138357,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -195.9318306306405,
+        103.74962859717839,
+        74.94001687657413
+      ],
+      "target": [
+        -216.63165278843283,
+        91.03146890311058,
+        108.9265636111967
+      ]
+    },
+    {
+      "id": "calvario-fachada",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 13.349076261925958,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -209.38578411020126,
+        93.53146890311058,
+        93.54809206497916
+      ],
+      "target": [
+        -216.63165278843283,
+        91.03146890311058,
+        108.9265636111967
+      ]
+    },
+    {
+      "id": "calvario-fachada",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 56.42577972851739,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -172.45871544920664,
+        118.171724841244,
+        36.40006614464653
+      ],
+      "target": [
+        -216.63165278843283,
+        91.03146890311058,
+        108.9265636111967
+      ]
+    },
+    {
+      "id": "calvario-fachada",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 21.89397886806843,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -202.51893010129257,
+        95.90069967234135,
+        78.97403287656375
+      ],
+      "target": [
+        -216.63165278843283,
+        91.03146890311058,
+        108.9265636111967
+      ]
+    },
+    {
+      "id": "calvario-fachada",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 36.13245155440583,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -191.6691765387865,
+        106.3686421832619,
+        67.94126628818856
+      ],
+      "target": [
+        -216.63165278843283,
+        91.03146890311058,
+        108.9265636111967
+      ]
+    },
+    {
+      "id": "calvario-fachada",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 13.349076261925958,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -209.38578411020126,
+        93.53146890311058,
+        93.54809206497916
+      ],
+      "target": [
+        -216.63165278843283,
+        91.03146890311058,
+        108.9265636111967
+      ]
+    },
+    {
+      "id": "calvario-portada",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 9.636282688274264,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -211.3121169081593,
+        91.25159548766801,
+        97.63649822267585
+      ],
+      "target": [
+        -216.63165278843283,
+        88.13146890311057,
+        108.9265636111967
+      ]
+    },
+    {
+      "id": "calvario-portada",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 5.1137661716912675,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -214.07428737258638,
+        89.13146890311057,
+        103.49886777135521
+      ],
+      "target": [
+        -216.63165278843283,
+        88.13146890311057,
+        108.9265636111967
+      ]
+    },
+    {
+      "id": "calvario-portada",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 17.812586027658696,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -205.29502157383314,
+        94.78086938242035,
+        84.86594806520361
+      ],
+      "target": [
+        -216.63165278843283,
+        88.13146890311057,
+        108.9265636111967
+      ]
+    },
+    {
+      "id": "calvario-portada",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 8.178442505297795,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -211.6506918400304,
+        90.07916121080288,
+        98.3550821754439
+      ],
+      "target": [
+        -216.63165278843283,
+        88.13146890311057,
+        108.9265636111967
+      ]
+    },
+    {
+      "id": "calvario-portada",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 11.136497890870558,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -210.2194287050942,
+        91.89250206067537,
+        95.31740092931649
+      ],
+      "target": [
+        -216.63165278843283,
+        88.13146890311057,
+        108.9265636111967
+      ]
+    },
+    {
+      "id": "calvario-portada",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 5.1137661716912675,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -214.07428737258638,
+        89.13146890311057,
+        103.49886777135521
+      ],
+      "target": [
+        -216.63165278843283,
+        88.13146890311057,
+        108.9265636111967
+      ]
+    },
+    {
+      "id": "calvario-hornacinas",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 18.99006222454348,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -206.05359279312512,
+        96.7921064670288,
+        86.47592285631569
+      ],
+      "target": [
+        -216.62312823704667,
+        91.28146890311058,
+        108.90847129173056
+      ]
+    },
+    {
+      "id": "calvario-hornacinas",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 9.782118221308494,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -212.3608525439693,
+        92.28146890311058,
+        99.86231155866142
+      ],
+      "target": [
+        -216.62312823704667,
+        91.28146890311058,
+        108.90847129173056
+      ]
+    },
+    {
+      "id": "calvario-hornacinas",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 34.66229105732786,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -194.20696211432647,
+        102.96858303696142,
+        61.332895718689436
+      ],
+      "target": [
+        -216.62312823704667,
+        91.28146890311058,
+        108.90847129173056
+      ]
+    },
+    {
+      "id": "calvario-hornacinas",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 13.710862132949615,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -208.3215266563759,
+        93.22916121080289,
+        91.2893355654759
+      ],
+      "target": [
+        -216.62312823704667,
+        91.28146890311058,
+        108.90847129173056
+      ]
+    },
+    {
+      "id": "calvario-hornacinas",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 22.478373826045967,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -203.9022767727613,
+        97.91373787046894,
+        81.9100172796
+      ],
+      "target": [
+        -216.62312823704667,
+        91.28146890311058,
+        108.90847129173056
+      ]
+    },
+    {
+      "id": "calvario-hornacinas",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 9.782118221308494,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -212.3608525439693,
+        92.28146890311058,
+        99.86231155866142
+      ],
+      "target": [
+        -216.62312823704667,
+        91.28146890311058,
+        108.90847129173056
+      ]
+    },
+    {
+      "id": "calvario-laterales",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 21.442925554094188,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -188.2843045368316,
+        105.17773796913427,
+        126.81528304475206
+      ],
+      "target": [
+        -212.9062867955834,
+        90.33146890311058,
+        115.2141528863688
+      ]
+    },
+    {
+      "id": "calvario-laterales",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 8.247231319488932,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -202.95551108920736,
+        94.33146890311058,
+        119.90265614875393
+      ],
+      "target": [
+        -212.9062867955834,
+        90.33146890311058,
+        115.2141528863688
+      ]
+    },
+    {
+      "id": "calvario-laterales",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 48.532011607292645,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -153.98672301123293,
+        125.85808442913265,
+        142.9752616855783
+      ],
+      "target": [
+        -212.9062867955834,
+        90.33146890311058,
+        115.2141528863688
+      ]
+    },
+    {
+      "id": "calvario-laterales",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 13.80534661643567,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -193.52523749670328,
+        98.1222381338798,
+        124.34591462510662
+      ],
+      "target": [
+        -212.9062867955834,
+        90.33146890311058,
+        115.2141528863688
+      ]
+    },
+    {
+      "id": "calvario-laterales",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 25.369586461055576,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -183.11638536920032,
+        108.29382820377992,
+        129.25024958325585
+      ],
+      "target": [
+        -212.9062867955834,
+        90.33146890311058,
+        115.2141528863688
+      ]
+    },
+    {
+      "id": "calvario-laterales",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 8.247231319488932,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -202.95551108920736,
+        94.33146890311058,
+        119.90265614875393
+      ],
+      "target": [
+        -212.9062867955834,
+        90.33146890311058,
+        115.2141528863688
+      ]
+    },
+    {
+      "id": "calvario-campana",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 13.050577885123616,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -213.64543999669954,
+        96.73221094141718,
+        102.58869157846347
+      ],
+      "target": [
+        -216.695586923829,
+        95.22146890311058,
+        109.06225600719273
+      ]
+    },
+    {
+      "id": "calvario-campana",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 11.093618986802213,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -214.99067664659805,
+        95.72146890311058,
+        105.44379211396507
+      ],
+      "target": [
+        -216.695586923829,
+        95.22146890311058,
+        109.06225600719273
+      ]
+    },
+    {
+      "id": "calvario-campana",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 17.64770581510473,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -210.23966103343918,
+        98.4190980245322,
+        95.36034157585364
+      ],
+      "target": [
+        -216.695586923829,
+        95.22146890311058,
+        109.06225600719273
+      ]
+    },
+    {
+      "id": "calvario-campana",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 12.73914686177281,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -213.37494629156072,
+        96.19531505695673,
+        102.01460171669086
+      ],
+      "target": [
+        -216.695586923829,
+        95.22146890311058,
+        109.06225600719273
+      ]
+    },
+    {
+      "id": "calvario-campana",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 13.903758788019687,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -213.02695976851172,
+        97.03854506331606,
+        101.27604281080657
+      ],
+      "target": [
+        -216.695586923829,
+        95.22146890311058,
+        109.06225600719273
+      ]
+    },
+    {
+      "id": "calvario-campana",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 11.093618986802213,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -214.99067664659805,
+        95.72146890311058,
+        105.44379211396507
+      ],
+      "target": [
+        -216.695586923829,
+        95.22146890311058,
+        109.06225600719273
+      ]
+    },
+    {
+      "id": "calvario-viacrucis",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 59.32257446133349,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -174.08569614974235,
+        121.27579184906114,
+        37.3819419066703
+      ],
+      "target": [
+        -224.17881426965232,
+        80.45917708469005,
+        76.3432559999336
+      ]
+    },
+    {
+      "id": "calvario-viacrucis",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 16.329506571613308,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -211.17881426965232,
+        88.45917708469005,
+        66.3432559999336
+      ],
+      "target": [
+        -224.17881426965232,
+        80.45917708469005,
+        76.3432559999336
+      ]
+    },
+    {
+      "id": "calvario-viacrucis",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 124.21110298835384,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -98.5718689298916,
+        182.80557699116176,
+        -21.351034819880283
+      ],
+      "target": [
+        -224.17881426965232,
+        80.45917708469005,
+        76.3432559999336
+      ]
+    },
+    {
+      "id": "calvario-viacrucis",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 28.50121662788665,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -198.85881426965233,
+        96.04071554622851,
+        56.866332923010525
+      ],
+      "target": [
+        -224.17881426965232,
+        80.45917708469005,
+        76.3432559999336
+      ]
+    },
+    {
+      "id": "calvario-viacrucis",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 71.05028260518759,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -160.37258981075706,
+        132.4494340511973,
+        26.716192531903957
+      ],
+      "target": [
+        -224.17881426965232,
+        80.45917708469005,
+        76.3432559999336
+      ]
+    },
+    {
+      "id": "calvario-viacrucis",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 16.329506571613308,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -211.17881426965232,
+        88.45917708469005,
+        66.3432559999336
+      ],
+      "target": [
+        -224.17881426965232,
+        80.45917708469005,
+        76.3432559999336
+      ]
+    },
+    {
+      "id": "calvario-passio",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 47.312558437999044,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -168.7164552488792,
+        115.8639897327805,
+        71.35639482215889
+      ],
+      "target": [
+        -205.09885480398822,
+        87.3908074722604,
+        102.99326400051456
+      ]
+    },
+    {
+      "id": "calvario-passio",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 16.548445941269918,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -192.09885480398822,
+        94.3908074722604,
+        92.99326400051456
+      ],
+      "target": [
+        -205.09885480398822,
+        87.3908074722604,
+        102.99326400051456
+      ]
+    },
+    {
+      "id": "calvario-passio",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 98.13755945674967,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -114.6275152751459,
+        158.19446449483263,
+        24.322533975434283
+      ],
+      "target": [
+        -205.09885480398822,
+        87.3908074722604,
+        102.99326400051456
+      ]
+    },
+    {
+      "id": "calvario-passio",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 28.63440193847545,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -179.77885480398822,
+        101.02465362610656,
+        83.51634092359149
+      ],
+      "target": [
+        -205.09885480398822,
+        87.3908074722604,
+        102.99326400051456
+      ]
+    },
+    {
+      "id": "calvario-passio",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 57.44076157959192,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -159.37595244853426,
+        123.17394844609393,
+        63.234218474032865
+      ],
+      "target": [
+        -205.09885480398822,
+        87.3908074722604,
+        102.99326400051456
+      ]
+    },
+    {
+      "id": "calvario-passio",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 16.548445941269918,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -192.09885480398822,
+        94.3908074722604,
+        92.99326400051456
+      ],
+      "target": [
+        -205.09885480398822,
+        87.3908074722604,
+        102.99326400051456
+      ]
+    },
+    {
+      "id": "calvario-mirador",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 31.369349140315705,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -193.81212428288308,
+        119.59837340985703,
+        137.00210201351393
+      ],
+      "target": [
+        -234.1000504893366,
+        88.97954949295234,
+        103.16024400009297
+      ]
+    },
+    {
+      "id": "calvario-mirador",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 10.718082512971876,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -222.1000504893366,
+        96.97954949295234,
+        113.16024400009297
+      ],
+      "target": [
+        -234.1000504893366,
+        88.97954949295234,
+        103.16024400009297
+      ]
+    },
+    {
+      "id": "calvario-mirador",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 86.87643679858859,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -132.14922921965723,
+        166.46217365790866,
+        188.79893386662366
+      ],
+      "target": [
+        -234.1000504893366,
+        88.97954949295234,
+        103.16024400009297
+      ]
+    },
+    {
+      "id": "calvario-mirador",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 14.850474716750199,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -210.72774279702892,
+        104.5610879544908,
+        122.63716707701604
+      ],
+      "target": [
+        -234.1000504893366,
+        88.97954949295234,
+        103.16024400009297
+      ]
+    },
+    {
+      "id": "calvario-mirador",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 41.34939637630684,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -182.61430967987192,
+        128.10871250814552,
+        146.4082662800433
+      ],
+      "target": [
+        -234.1000504893366,
+        88.97954949295234,
+        103.16024400009297
+      ]
+    },
+    {
+      "id": "calvario-mirador",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 10.718082512971876,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -222.1000504893366,
+        96.97954949295234,
+        113.16024400009297
+      ],
+      "target": [
+        -234.1000504893366,
+        88.97954949295234,
+        103.16024400009297
+      ]
+    },
+    {
+      "id": "calvario-memoria",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 40.99421116504658,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -180.4106654082588,
+        112.08273883861877,
+        74.78820520737351
+      ],
+      "target": [
+        -215.65132937902504,
+        90.83146890311058,
+        106.84594687259079
+      ]
+    },
+    {
+      "id": "calvario-memoria",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 16.129324791638354,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -202.07314888764506,
+        95.83146890311058,
+        94.45106831152742
+      ],
+      "target": [
+        -215.65132937902504,
+        90.83146890311058,
+        106.84594687259079
+      ]
+    },
+    {
+      "id": "calvario-memoria",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 75.5011707369132,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -138.0556400121627,
+        137.62420078622608,
+        36.25866832072094
+      ],
+      "target": [
+        -215.65132937902504,
+        90.83146890311058,
+        106.84594687259079
+      ]
+    },
+    {
+      "id": "calvario-memoria",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 26.63796352892041,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -189.2052116835065,
+        100.56993044157211,
+        82.70453724442737
+      ],
+      "target": [
+        -215.65132937902504,
+        90.83146890311058,
+        106.84594687259079
+      ]
+    },
+    {
+      "id": "calvario-memoria",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 48.440384595705794,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -173.14200367811964,
+        116.46597896784061,
+        68.17604602132778
+      ],
+      "target": [
+        -215.65132937902504,
+        90.83146890311058,
+        106.84594687259079
+      ]
+    },
+    {
+      "id": "calvario-memoria",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 16.129324791638354,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -202.07314888764506,
+        95.83146890311058,
+        94.45106831152742
+      ],
+      "target": [
+        -215.65132937902504,
+        90.83146890311058,
+        106.84594687259079
+      ]
+    }
+  ],
+  "limitations": [
+    "Footprint, path and wall polylines cartographic; heights and details are interpreted, not photogrammetry.",
+    "Eleven wayside representations and three niches compose a schematic fourteen-station reading. Exact wayside positions and ceramic correspondence remain unverified.",
+    "Texture files and mesh geometry exported from Three.js without architectural additions. CPU rendering does not verify WebGL performance."
+  ]
+}

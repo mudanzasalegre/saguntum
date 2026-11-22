@@ -1,0 +1,104 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "pass": true,
+      "label": "Every surrounding-surface, wall, plant and rock coordinate is finite"
+    },
+    {
+      "pass": true,
+      "label": "No collapsed triangles in the added surroundings",
+      "detail": {
+        "degenerate": 0,
+        "triangleCount": 37691
+      }
+    },
+    {
+      "pass": true,
+      "label": "Two map sectors remain separate"
+    },
+    {
+      "pass": true,
+      "label": "Every mapped context component belongs to a geographical sector"
+    },
+    {
+      "pass": true,
+      "label": "All three context observations select the matching archaeological focus"
+    },
+    {
+      "pass": true,
+      "label": "Castle and theatre geometry retain ownership; no duplicate context building"
+    },
+    {
+      "pass": true,
+      "label": "Photo-guided cypress screen is present outside the graves"
+    },
+    {
+      "pass": true,
+      "label": "Rebinding terrain releases every previous geometry"
+    },
+    {
+      "pass": true,
+      "label": "Rebinding preserves mesh ownership without accumulating surfaces"
+    },
+    {
+      "pass": true,
+      "label": "Paths follow the rebound terrain, including the west apron of the hipogea",
+      "detail": {
+        "maximumErrorM": 0.000003906249997381872
+      }
+    },
+    {
+      "pass": true,
+      "label": "Natural rock and landscape remain distinct from current paths and retaining walls"
+    },
+    {
+      "pass": true,
+      "label": "Texture and vertex-colour materials restore after layer reading"
+    },
+    {
+      "pass": true,
+      "label": "Disposal is complete and idempotent"
+    },
+    {
+      "pass": true,
+      "label": "Disposed context holds no resources"
+    }
+  ],
+  "stats": {
+    "sectorSeparationM": 193.55671412077228,
+    "sourceCemeteryAreaM2": 110.68969594822761,
+    "chamberEnvelopeAreaM2": 108,
+    "surfaceAreaM2": 556.5423947387083,
+    "vertices": 720,
+    "triangles": 37691,
+    "pathFragments": 6,
+    "retainedRoads": 4,
+    "retainedBuildings": 3,
+    "newBuildingParts": 0,
+    "retainingWallFragments": 2,
+    "trees": 22,
+    "cypresses": 7,
+    "smallLandscapeDetails": 180,
+    "uncoveredAreaM2": 0.0000639146756444134,
+    "excessAreaM2": 0.000056037794300605885,
+    "triangleOverlapM2": -1.2505552149377763e-12,
+    "sourceBuildingOverlapM2": 0.0000023499276247834775,
+    "previousPavingOverlapM2": 0,
+    "coreOverlapM2": 0,
+    "castleTheatreOverlapM2": 2.2273494786760135e-7,
+    "mappedWallOverlapM2": 0.000007787612127740008,
+    "sectorSelectionOverlapM2": 0,
+    "plantCoreOverlapCount": 0,
+    "plantPathOverlapCount": 0,
+    "sourceFootprintsUnmodified": true,
+    "pavementTriangles": 819,
+    "buildingParts": 0,
+    "parentParcels": 0,
+    "courtyards": 0,
+    "preservedCastle": true,
+    "preservedTheatre": true,
+    "preservedPreviousContexts": true,
+    "meshes": 11
+  }
+}

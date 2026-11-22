@@ -1,0 +1,76 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "pass": true,
+      "label": "Every detailed neighbouring part preserves its Catastro coordinates"
+    },
+    {
+      "pass": true,
+      "label": "Both museum cadastral parts are assigned to the museum owner"
+    },
+    {
+      "pass": true,
+      "label": "Two PNOA-conflicting cadastral parts are retained in evidence but not extruded over open ground"
+    },
+    {
+      "pass": true,
+      "label": "Terrain triangles cover paving once",
+      "differenceAreaM2": 6.306060260814081e-06
+    },
+    {
+      "pass": true,
+      "label": "Paving triangles do not overlap"
+    },
+    {
+      "pass": true,
+      "label": "Public paving does not cross buildings"
+    },
+    {
+      "pass": true,
+      "label": "Earlier Horno and Talleres districts remain disjoint"
+    },
+    {
+      "pass": true,
+      "label": "No building ID is claimed by two detailed contexts"
+    },
+    {
+      "pass": true,
+      "label": "Protected heritage parcels retain their existing owners"
+    },
+    {
+      "pass": true,
+      "label": "All paving lies on the5m Puerto core mesh"
+    },
+    {
+      "pass": true,
+      "label": "Observed tree positions remain outside museum"
+    },
+    {
+      "pass": true,
+      "label": "Shared regional buildings remain uncovered"
+    }
+  ],
+  "stats": {
+    "buildingParts": 69,
+    "parentParcels": 18,
+    "sourceCoreParts": 2,
+    "withheldCadastralParts": 2,
+    "roadFragments": 20,
+    "pavingAreaM2": 25288.43,
+    "pavingVertices": 4971,
+    "pavingTriangles": 7267,
+    "trees": 30,
+    "streetLamps": 8,
+    "crossings": 5,
+    "railLengthM": 0,
+    "protectedHeritageOwners": 8
+  },
+  "sourceHashes": {
+    "port-cartography.json": "da82e6776616f733bfc0617abaae8333e74d5df1f57050150c75b8f1b1c75efd",
+    "port-industrial.json": "8f84d9fc48cde87d14935e05f2f25b85268775f595059ade1c1da12b2e3a01ea",
+    "port-elevation.json": "0444001c6f0ca1d2d723768b90cb997fbcab59eb975f14f45a1742e80893e347",
+    "horno-context.json": "034c74144297d2df56140f6380c5958a233b8de32fe7e8f35da5c1c09bbe98fb",
+    "talleres-context.json": "6100214fcb3b21d8fd182b8f728ec71252a8247d0f9842d2687764eeff3fad58"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-19",
+  "preview": "http://127.0.0.1:4173/",
+  "viewport": [
+    1363,
+    936
+  ],
+  "renderer": "WebGL disabled in managed Chrome; 2D fallback",
+  "checks": {
+    "coastCatalog": "4 of 28, places 23–26",
+    "pierHistoricalSync": "23 and 24 retain shared historical phase across navigation",
+    "fortPhase": "Current only; no historical toggle",
+    "ancientPhase": "Puerto romano · siglos I–II d.C.",
+    "ancientEvidence": "Source links, documented versus interpreted table, approximate underwater placement",
+    "coastTour": "1/4 to 4/4, all four places",
+    "fullTour": "1/28",
+    "saguntoTour": "1/15",
+    "portRegion": "9 places",
+    "regionalMap": "Four coastal locations and clickable labels",
+    "fallback": "Map, source text, epoch toggles remain usable; 3D-only controls disabled",
+    "fortFallbackCopy": "Mentions restored ensemble, no offer of a nonexistent historical phase"
+  },
+  "gpuValidation": false,
+  "limitations": [
+    "Real-time Three.js renderer, water reflections and GPU frame time not verified in this browser.",
+    "Portrait camera frusta verified mathematically; no native mobile browser emulation performed."
+  ],
+  "screenshot": "catalogo-costa-navegador.jpg"
+}

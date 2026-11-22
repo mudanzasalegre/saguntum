@@ -1,0 +1,76 @@
+// Source-preserving buildings, ground-conforming exterior paving and Canvas UI.
+import fs from 'node:fs';
+import {createRequire} from 'node:module';
+import {createHash} from 'node:crypto';
+import * as THREE from 'three';
+import {createCalvarioContext} from '../../dist/js/calvario-context.js';
+import {drawCalvarioMap} from '../../dist/js/calvario-map.js';
+import {createHeightSampler,buildTerrainGeometry} from '../../dist/js/terrain.js';
+import {getMapPalette} from '../../dist/js/theme.js';
+const require=createRequire(import.meta.url),{createCanvas,GlobalFonts}=require(process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES+'/@napi-rs/canvas');
+globalThis.document={createElement:()=>createCanvas(256,256)};
+GlobalFonts.registerFromPath('dist/assets/fonts/manrope.ttf','Manrope');
+GlobalFonts.registerFromPath('dist/assets/fonts/manrope-semibold.ttf','Manrope');
+const read=n=>JSON.parse(fs.readFileSync('dist/assets/data/'+n+'.json'));
+const contextData=read('calvario-context'),data=read('cartography'),elevation=read('elevation'),visit=read('calvario-visit'),corePlan=read('calvario-plan');
+const heightAt=createHeightSampler(elevation),terrain=buildTerrainGeometry(elevation,heightAt,[]),ground=terrain.meshHeightAt;
+const context=createCalvarioContext({data,heightAt,contextData});context.bindGround(ground);
+const plan={...corePlan,components:[...corePlan.components.filter(c=>!['context-building','street'].includes(c.kind)),...context.plan.components]};
+const checks=[],failures=[],check=(value,label,detail)=>{checks.push({pass:!!value,label});if(!value)failures.push({label,detail});};
+const legendColors=new Map((visit.readingLegend||[]).map(item=>[item.id,item.color.toLowerCase()]));
+check(legendColors.size===5&&['route','hermitage','ceramic','restoration','landscape'].every(id=>legendColors.has(id))&&visit.stops.every(stop=>legendColors.has(stop.readingLayer)),'Every thematic stop declares one of the five displayed reading layers');
+check(context.stats.buildingParts===156&&context.stats.parentParcels===60,'156 parts from60 complete source parcels');
+check(context.stats.ignHeight===71&&context.stats.storeyHeight===85&&context.stats.fallbackHeight===0,'All156 heights derive from IGN or cadastral storeys',context.stats);
+check(context.patches.length===0,'The surrounding houses introduce no terrain-flattening patches');
+check(context.stats.courtyards===3,'Three courtyard holes retained');
+check(context.stats.maximumRoofCorrectionM<.5,'Limited display correction below50cm for low roofs on steep source terrain',context.qa.buildings.filter(b=>b.roofCorrectionM>.001));
+let finite=true,meshes=0,triangles=0,pavingSamples=0,maximumDrapeError=0;
+context.group.traverse(o=>{if(!o.isMesh)return;meshes++;triangles+=(o.geometry.index?.count||o.geometry.attributes.position.count)/3;
+ for(const attr of Object.values(o.geometry.attributes))for(const n of attr.array)if(!Number.isFinite(n))finite=false;
+ if(o.userData.materialKind!=='paving')return;const p=o.geometry.attributes.position;
+ for(let i=0;i<p.count;i+=3)for(const weights of[[.5,.5,0],[0,.5,.5],[.5,0,.5],[1/3,1/3,1/3]]){let x=0,y=0,z=0;for(let n=0;n<3;n++){x+=p.getX(i+n)*weights[n];y+=p.getY(i+n)*weights[n];z+=p.getZ(i+n)*weights[n];}maximumDrapeError=Math.max(maximumDrapeError,Math.abs(y-ground(x,z)-.105));pavingSamples++;}
+});
+check(finite,'Every geometry attribute is finite');
+check(pavingSamples>4000&&maximumDrapeError<.001,'Exterior paving faces and edges follow the final terrain triangles',{pavingSamples,maximumDrapeError});
+const originals=context.ownedResources.materials.map(m=>({m,map:m.map,color:m.color.clone(),vertexColors:m.vertexColors}));
+context.setReadingMode('periods');context.selectFocus(null);context.setReadingMode('materials');
+check(originals.every(({m,map,color,vertexColors})=>m.map===map&&m.color.equals(color)&&m.vertexColors===vertexColors),'Reading mode restores original materials');
+const second=createCalvarioContext({data,heightAt,contextData}),materials=new Set(context.ownedResources.materials),textures=new Set(context.ownedResources.textures);
+check(second.ownedResources.materials.every(m=>!materials.has(m))&&second.ownedResources.textures.every(t=>!textures.has(t)),'Instances have independent disposable resources');
+second.dispose();check(second.ownedResources.geometries.length===0&&context.ownedResources.geometries.length>0,'Disposing another context preserves this instance');
+const before=Object.fromEntries(Object.entries(context.ownedResources).map(([k,v])=>[k,v.length]));context.bindGround(ground);
+check(Object.entries(before).every(([k,v])=>context.ownedResources[k].length===v),'Rebinding terrain disposes replaced resources without growth');
+const scenarios=[],surfaces=[{id:'desktop-minimap',width:460,height:240,large:false,selected:null},{id:'desktop-plan',width:1100,height:700,large:true,selected:'calvario-portada'},{id:'mobile-plan',width:300,height:320,large:true,selected:'calvario-casalicios'}];
+const luminance=hex=>{const c=hex.slice(1).match(/.{2}/g).map(v=>parseInt(v,16)/255).map(v=>v<=.04045?v/12.92:((v+.055)/1.055)**2.4);return c[0]*.2126+c[1]*.7152+c[2]*.0722;};
+const contrast=(a,b)=>{const x=luminance(a),y=luminance(b);return(Math.max(x,y)+.05)/(Math.min(x,y)+.05);};
+for(const surface of surfaces)for(const theme of['dark','light']){
+ const canvas=createCanvas(surface.width,surface.height),ctx=canvas.getContext('2d'),texts=[],fills=[],strokes=[],palette=getMapPalette(theme);let arc=null,closed=false;
+ const proxy=new Proxy(ctx,{get(t,k){const value=Reflect.get(t,k,t);if(typeof value!=='function')return value;return(...args)=>{if(k==='beginPath'){arc=null;closed=false;}if(k==='closePath')closed=true;if(k==='arc')arc={x:args[0],y:args[1],r:args[2]};if(k==='fill'&&arc)fills.push({...arc,color:t.fillStyle});if(k==='stroke')strokes.push({color:t.strokeStyle,alpha:t.globalAlpha,width:t.lineWidth,closed});if(k==='fillText')texts.push({text:String(args[0]),x:args[1],y:args[2],color:t.fillStyle});return value.apply(t,args);};},set(t,k,v){return Reflect.set(t,k,v,t);}});canvas.getContext=()=>proxy;
+ const result=drawCalvarioMap(canvas,data,visit,{...surface,heightAt:ground,palette,readingMode:'periods',modelGeometry:plan}),name=surface.id+'/'+theme;
+ check(!!result,name+' renders');if(!result)continue;
+ check(result.targets.length===18&&new Set(result.targets.map(t=>t.id)).size===18,name+' has18 unique route stops');
+ check(result.outlineSource==='calvario-plan',name+' uses the Calvario plan');
+ let minDistance=Infinity,minContrast=Infinity;
+ for(let i=0;i<result.targets.length;i++)for(let j=i+1;j<result.targets.length;j++)minDistance=Math.min(minDistance,Math.hypot(result.targets[i].x-result.targets[j].x,result.targets[i].y-result.targets[j].y));
+ check(minDistance>=(surface.large?32:17)-.0001,name+' markers remain separated',minDistance);
+ for(const target of result.targets){
+  check(result.hitTarget(target.x,target.y)===target.id,name+' selects '+target.id);
+  const label=texts.find(t=>t.text===String(target.index)),fill=fills.findLast(f=>Math.abs(f.x-target.x)<.0001&&Math.abs(f.y-target.y)<.0001&&f.r===(surface.large?13:7));
+  const stop=visit.stops.find(stop=>stop.id===target.id),expected=legendColors.get(stop.readingLayer);
+  check(target.readingLayer===stop.readingLayer&&target.period===stop.period&&fill?.color.toLowerCase()===expected,name+' colours '+target.id+' by the announced layer',{readingLayer:target.readingLayer,expected,actual:fill?.color});
+  if(label&&fill)minContrast=Math.min(minContrast,contrast(label.color,fill.color));
+ }
+ const parcelStrokes=strokes.filter(s=>s.closed&&Math.abs(s.alpha-.48)<.01),streetStrokes=strokes.filter(s=>!s.closed&&Math.abs(s.alpha-.9)<.01&&Math.abs(s.width-(surface.large?1.5:.8))<.001);
+ check(parcelStrokes.length===156&&parcelStrokes.every(s=>s.color.toLowerCase()===palette.building.toLowerCase()),name+' keeps surrounding cadastral buildings neutral',{count:parcelStrokes.length});
+ check(streetStrokes.length===10&&streetStrokes.every(s=>s.color.toLowerCase()===palette.road.toLowerCase()),name+' keeps exterior approach streets neutral',{count:streetStrokes.length});
+ check(minContrast>=4.5,name+' marker labels meet4.5:1contrast',minContrast);
+ check(!surface.large||result.contourSegments>0,name+' exposes terrain relief');
+ check(!texts.some(t=>/JUDERÍA|PORTALET|TEATRO/.test(t.text)),name+' heading belongs to Calvario');
+ scenarios.push({id:name,targets:result.targets.length,components:result.components,minDistance,minContrast,contourSegments:result.contourSegments});
+ fs.writeFileSync('research/validation-v12/calvario-map-'+surface.id+'-'+theme+'.png',canvas.toBuffer('image/png'));
+}
+const files=['dist/js/calvario-context.js','dist/js/calvario-map.js','dist/js/juderia-context.js','dist/assets/data/calvario-context.json','dist/assets/data/calvario-plan.json','dist/assets/data/calvario-visit.json'];
+const result={pass:failures.length===0,checks,failures,stats:context.stats,geometry:{meshes,triangles,pavingSamples,maximumDrapeError},roofCorrections:context.qa.buildings.filter(b=>b.roofCorrectionM>.001),scenarios,limitations:context.qa.limitations,inputHashes:Object.fromEntries(files.map(f=>[f,createHash('sha256').update(fs.readFileSync(f)).digest('hex')]))};
+fs.writeFileSync('research/validation-v12/calvario-context-qa.json',JSON.stringify(result,null,2)+'\n');
+console.log(JSON.stringify({pass:result.pass,checks:checks.length,stats:result.stats,geometry:result.geometry,scenarios,failures},null,2));
+if(failures.length)process.exitCode=1;

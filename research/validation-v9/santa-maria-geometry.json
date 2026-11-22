@@ -1,0 +1,3800 @@
+{
+  "pass": true,
+  "inputHashes": {
+    "dist/js/santa-maria.js": "ab23645cee3bfb285ea19420b98d8c4eb56fa7e5b99d756aa861abba2578ff42",
+    "dist/js/heritage-sacred.js": "5097593d680f6be9ae04ae163c8d780e2cef0546f60a4660c67468e1924f1f05",
+    "dist/assets/data/santa-maria-visit.json": "453bc9e3462f790e74f924831b58c910db868e3a8e813a331d2bcb46c385eed3",
+    "dist/assets/data/santa-maria-plan.json": "07be3e8e5d9a65f3111216a3b9ca89d0580c593a01f09b41f111b9302603cb45",
+    "dist/js/santa-maria-context.js": "c58325ab7d3a33af291c50efda2625dcd757d33da9306e70f5d95b67b4d4072f"
+  },
+  "buildMs": 1439.8277110000001,
+  "stats": {
+    "stops": 16,
+    "components": 37,
+    "meshes": 87,
+    "triangles": 174093,
+    "trueApertures": 25,
+    "naves": 3,
+    "mainVaultBays": 4,
+    "gothicMainVaultBays": 2,
+    "apseWindows": 3,
+    "apseButtresses": 4,
+    "towerHeightM": 58,
+    "cartographicOutline": true,
+    "sourceKeys": [
+      "sm-cabrera-1987",
+      "sm-zaragoza-2000",
+      "sm-perales-2023",
+      "sm-turismo",
+      "sm-campaners",
+      "sm-osm"
+    ],
+    "periods": [
+      "medieval",
+      "modern",
+      "contemporary",
+      "mixed",
+      "interpretation"
+    ],
+    "context": {
+      "buildingParts": 44,
+      "parentParcels": 16,
+      "footprintsPreserved": true,
+      "courtyards": 0,
+      "sourceHeight": 0,
+      "ignHeight": 28,
+      "storeyHeight": 16,
+      "fallbackHeight": 0,
+      "northStairTreads": 48,
+      "northApronSegments": 8,
+      "streetSamples": 139,
+      "roofCorrections": 0,
+      "maximumRoofCorrectionM": 0,
+      "inscriptionPanels": 2
+    },
+    "contextMeshes": 26
+  },
+  "meshCount": 113,
+  "triangles": 196358,
+  "checks": [
+    {
+      "pass": true,
+      "label": "all 16 documentary stop IDs resolve to model targets"
+    },
+    {
+      "pass": true,
+      "label": "every model source key resolves to the displayed bibliography"
+    },
+    {
+      "pass": true,
+      "label": "three naves, four longitudinal divisions and two large Gothic vault bays follow the published plan"
+    },
+    {
+      "pass": true,
+      "label": "three high apse windows and four external buttresses are represented"
+    },
+    {
+      "pass": true,
+      "label": "published 24 m main vault and 58 m tower are distinguished from approximate elevations"
+    },
+    {
+      "pass": true,
+      "label": "the blocked crypt is not invented as a visitable interior"
+    },
+    {
+      "pass": true,
+      "label": "all church geometry and attribute values are finite"
+    },
+    {
+      "pass": true,
+      "label": "all nave, aisle, apse and chapel floor samples stand above final triangle terrain"
+    },
+    {
+      "pass": true,
+      "label": "capilla-norte-5.55 is a genuine pierced masonry opening with ground clearance"
+    },
+    {
+      "pass": true,
+      "label": "capilla-norte--5.75 is a genuine pierced masonry opening with ground clearance"
+    },
+    {
+      "pass": true,
+      "label": "capilla-norte--11.85 is a genuine pierced masonry opening with ground clearance"
+    },
+    {
+      "pass": true,
+      "label": "capilla-sur is a genuine pierced masonry opening with ground clearance"
+    },
+    {
+      "pass": true,
+      "label": "ventanal-cabecera--12.2 is a genuine pierced masonry opening with ground clearance"
+    },
+    {
+      "pass": true,
+      "label": "ventanal-cabecera-9.95 is a genuine pierced masonry opening with ground clearance"
+    },
+    {
+      "pass": true,
+      "label": "portada-norte is a genuine pierced masonry opening with ground clearance"
+    },
+    {
+      "pass": true,
+      "label": "portada-sur is a genuine pierced masonry opening with ground clearance"
+    },
+    {
+      "pass": true,
+      "label": "arcada--8.2-0 is a genuine pierced masonry opening with ground clearance"
+    },
+    {
+      "pass": true,
+      "label": "arcada--8.2-1 is a genuine pierced masonry opening with ground clearance"
+    },
+    {
+      "pass": true,
+      "label": "arcada--8.2-2 is a genuine pierced masonry opening with ground clearance"
+    },
+    {
+      "pass": true,
+      "label": "arcada--8.2-3 is a genuine pierced masonry opening with ground clearance"
+    },
+    {
+      "pass": true,
+      "label": "arcada-5.8-0 is a genuine pierced masonry opening with ground clearance"
+    },
+    {
+      "pass": true,
+      "label": "arcada-5.8-1 is a genuine pierced masonry opening with ground clearance"
+    },
+    {
+      "pass": true,
+      "label": "arcada-5.8-2 is a genuine pierced masonry opening with ground clearance"
+    },
+    {
+      "pass": true,
+      "label": "arcada-5.8-3 is a genuine pierced masonry opening with ground clearance"
+    },
+    {
+      "pass": true,
+      "label": "ventanal-abside-1 is a genuine pierced masonry opening with ground clearance"
+    },
+    {
+      "pass": true,
+      "label": "ventanal-abside-2 is a genuine pierced masonry opening with ground clearance"
+    },
+    {
+      "pass": true,
+      "label": "ventanal-abside-3 is a genuine pierced masonry opening with ground clearance"
+    },
+    {
+      "pass": true,
+      "label": "portada-principal is a genuine pierced masonry opening with ground clearance"
+    },
+    {
+      "pass": true,
+      "label": "ventana-base-torre is a genuine pierced masonry opening with ground clearance"
+    },
+    {
+      "pass": true,
+      "label": "vano-campanario-0 is a genuine pierced masonry opening with ground clearance"
+    },
+    {
+      "pass": true,
+      "label": "vano-campanario-1 is a genuine pierced masonry opening with ground clearance"
+    },
+    {
+      "pass": true,
+      "label": "vano-campanario-2 is a genuine pierced masonry opening with ground clearance"
+    },
+    {
+      "pass": true,
+      "label": "vano-campanario-3 is a genuine pierced masonry opening with ground clearance"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves santa-maria-conjunto"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves santa-maria-plaza-mayor"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves santa-maria-cavallers"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves santa-maria-portada-norte"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves santa-maria-escalinata"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves santa-maria-portada-sur"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves santa-maria-portada-principal"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves santa-maria-naves"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves santa-maria-bovedas"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves santa-maria-capillas"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves santa-maria-abside"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves santa-maria-contrafuertes"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves santa-maria-campanario"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves santa-maria-reloj"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves santa-maria-sagrario"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves santa-maria-berenguer"
+    },
+    {
+      "pass": true,
+      "label": "didactic section removes roof and vault webs"
+    },
+    {
+      "pass": true,
+      "label": "section retains octagonal supports, arcades, ribs and apse envelope"
+    },
+    {
+      "pass": true,
+      "label": "interior focuses explicitly require the didactic section"
+    },
+    {
+      "pass": true,
+      "label": "all visit modes restore original resource identity, materials and visibility"
+    },
+    {
+      "pass": true,
+      "label": "new church instances own independent disposable materials"
+    },
+    {
+      "pass": true,
+      "label": "new church instances own independent disposable textures"
+    },
+    {
+      "pass": true,
+      "label": "regional rebuild never reuses the disposed legacy chapel palette"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-conjunto/1363x936/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-conjunto/1363x936/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-conjunto/1363x936/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-conjunto/1363x936/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-conjunto/1363x936/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-conjunto/1363x936/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-conjunto/1363x936/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-conjunto/390x844/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-conjunto/390x844/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-conjunto/390x844/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-conjunto/390x844/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-conjunto/390x844/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-conjunto/390x844/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-conjunto/390x844/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-conjunto/844x390/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-conjunto/844x390/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-conjunto/844x390/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-conjunto/844x390/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-conjunto/844x390/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-conjunto/844x390/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-conjunto/844x390/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-plaza-mayor/1363x936/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-plaza-mayor/1363x936/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-plaza-mayor/1363x936/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-plaza-mayor/1363x936/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-plaza-mayor/1363x936/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-plaza-mayor/1363x936/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-plaza-mayor/1363x936/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-plaza-mayor/390x844/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-plaza-mayor/390x844/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-plaza-mayor/390x844/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-plaza-mayor/390x844/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-plaza-mayor/390x844/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-plaza-mayor/390x844/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-plaza-mayor/390x844/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-plaza-mayor/844x390/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-plaza-mayor/844x390/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-plaza-mayor/844x390/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-plaza-mayor/844x390/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-plaza-mayor/844x390/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-plaza-mayor/844x390/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-plaza-mayor/844x390/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-cavallers/1363x936/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-cavallers/1363x936/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-cavallers/1363x936/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-cavallers/1363x936/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-cavallers/1363x936/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-cavallers/1363x936/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-cavallers/1363x936/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-cavallers/390x844/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-cavallers/390x844/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-cavallers/390x844/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-cavallers/390x844/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-cavallers/390x844/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-cavallers/390x844/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-cavallers/390x844/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-cavallers/844x390/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-cavallers/844x390/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-cavallers/844x390/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-cavallers/844x390/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-cavallers/844x390/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-cavallers/844x390/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-cavallers/844x390/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-norte/1363x936/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-norte/1363x936/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-norte/1363x936/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-norte/1363x936/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-norte/1363x936/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-norte/1363x936/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-norte/1363x936/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-norte/390x844/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-norte/390x844/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-norte/390x844/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-norte/390x844/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-norte/390x844/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-norte/390x844/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-norte/390x844/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-norte/844x390/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-norte/844x390/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-norte/844x390/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-norte/844x390/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-norte/844x390/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-norte/844x390/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-norte/844x390/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-escalinata/1363x936/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-escalinata/1363x936/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-escalinata/1363x936/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-escalinata/1363x936/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-escalinata/1363x936/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-escalinata/1363x936/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-escalinata/1363x936/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-escalinata/390x844/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-escalinata/390x844/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-escalinata/390x844/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-escalinata/390x844/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-escalinata/390x844/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-escalinata/390x844/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-escalinata/390x844/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-escalinata/844x390/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-escalinata/844x390/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-escalinata/844x390/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-escalinata/844x390/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-escalinata/844x390/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-escalinata/844x390/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-escalinata/844x390/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-sur/1363x936/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-sur/1363x936/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-sur/1363x936/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-sur/1363x936/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-sur/1363x936/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-sur/1363x936/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-sur/1363x936/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-sur/390x844/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-sur/390x844/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-sur/390x844/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-sur/390x844/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-sur/390x844/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-sur/390x844/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-sur/390x844/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-sur/844x390/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-sur/844x390/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-sur/844x390/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-sur/844x390/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-sur/844x390/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-sur/844x390/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-sur/844x390/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-principal/1363x936/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-principal/1363x936/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-principal/1363x936/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-principal/1363x936/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-principal/1363x936/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-principal/1363x936/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-principal/1363x936/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-principal/390x844/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-principal/390x844/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-principal/390x844/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-principal/390x844/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-principal/390x844/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-principal/390x844/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-principal/390x844/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-principal/844x390/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-principal/844x390/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-principal/844x390/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-principal/844x390/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-principal/844x390/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-principal/844x390/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-portada-principal/844x390/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-naves/1363x936/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-naves/1363x936/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-naves/1363x936/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-naves/1363x936/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-naves/1363x936/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-naves/1363x936/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-naves/1363x936/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-naves/390x844/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-naves/390x844/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-naves/390x844/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-naves/390x844/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-naves/390x844/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-naves/390x844/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-naves/390x844/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-naves/844x390/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-naves/844x390/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-naves/844x390/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-naves/844x390/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-naves/844x390/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-naves/844x390/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-naves/844x390/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-bovedas/1363x936/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-bovedas/1363x936/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-bovedas/1363x936/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-bovedas/1363x936/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-bovedas/1363x936/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-bovedas/1363x936/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-bovedas/1363x936/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-bovedas/390x844/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-bovedas/390x844/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-bovedas/390x844/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-bovedas/390x844/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-bovedas/390x844/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-bovedas/390x844/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-bovedas/390x844/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-bovedas/844x390/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-bovedas/844x390/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-bovedas/844x390/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-bovedas/844x390/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-bovedas/844x390/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-bovedas/844x390/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-bovedas/844x390/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-capillas/1363x936/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-capillas/1363x936/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-capillas/1363x936/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-capillas/1363x936/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-capillas/1363x936/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-capillas/1363x936/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-capillas/1363x936/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-capillas/390x844/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-capillas/390x844/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-capillas/390x844/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-capillas/390x844/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-capillas/390x844/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-capillas/390x844/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-capillas/390x844/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-capillas/844x390/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-capillas/844x390/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-capillas/844x390/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-capillas/844x390/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-capillas/844x390/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-capillas/844x390/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-capillas/844x390/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-abside/1363x936/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-abside/1363x936/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-abside/1363x936/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-abside/1363x936/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-abside/1363x936/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-abside/1363x936/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-abside/1363x936/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-abside/390x844/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-abside/390x844/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-abside/390x844/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-abside/390x844/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-abside/390x844/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-abside/390x844/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-abside/390x844/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-abside/844x390/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-abside/844x390/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-abside/844x390/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-abside/844x390/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-abside/844x390/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-abside/844x390/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-abside/844x390/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-contrafuertes/1363x936/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-contrafuertes/1363x936/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-contrafuertes/1363x936/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-contrafuertes/1363x936/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-contrafuertes/1363x936/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-contrafuertes/1363x936/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-contrafuertes/1363x936/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-contrafuertes/390x844/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-contrafuertes/390x844/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-contrafuertes/390x844/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-contrafuertes/390x844/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-contrafuertes/390x844/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-contrafuertes/390x844/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-contrafuertes/390x844/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-contrafuertes/844x390/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-contrafuertes/844x390/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-contrafuertes/844x390/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-contrafuertes/844x390/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-contrafuertes/844x390/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-contrafuertes/844x390/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-contrafuertes/844x390/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-campanario/1363x936/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-campanario/1363x936/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-campanario/1363x936/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-campanario/1363x936/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-campanario/1363x936/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-campanario/1363x936/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-campanario/1363x936/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-campanario/390x844/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-campanario/390x844/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-campanario/390x844/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-campanario/390x844/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-campanario/390x844/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-campanario/390x844/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-campanario/390x844/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-campanario/844x390/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-campanario/844x390/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-campanario/844x390/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-campanario/844x390/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-campanario/844x390/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-campanario/844x390/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-campanario/844x390/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-reloj/1363x936/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-reloj/1363x936/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-reloj/1363x936/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-reloj/1363x936/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-reloj/1363x936/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-reloj/1363x936/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-reloj/1363x936/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-reloj/390x844/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-reloj/390x844/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-reloj/390x844/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-reloj/390x844/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-reloj/390x844/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-reloj/390x844/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-reloj/390x844/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-reloj/844x390/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-reloj/844x390/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-reloj/844x390/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-reloj/844x390/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-reloj/844x390/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-reloj/844x390/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-reloj/844x390/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-sagrario/1363x936/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-sagrario/1363x936/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-sagrario/1363x936/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-sagrario/1363x936/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-sagrario/1363x936/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-sagrario/1363x936/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-sagrario/1363x936/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-sagrario/390x844/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-sagrario/390x844/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-sagrario/390x844/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-sagrario/390x844/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-sagrario/390x844/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-sagrario/390x844/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-sagrario/390x844/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-sagrario/844x390/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-sagrario/844x390/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-sagrario/844x390/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-sagrario/844x390/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-sagrario/844x390/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-sagrario/844x390/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-sagrario/844x390/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-berenguer/1363x936/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-berenguer/1363x936/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-berenguer/1363x936/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-berenguer/1363x936/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-berenguer/1363x936/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-berenguer/1363x936/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-berenguer/1363x936/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-berenguer/390x844/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-berenguer/390x844/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-berenguer/390x844/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-berenguer/390x844/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-berenguer/390x844/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-berenguer/390x844/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-berenguer/390x844/near view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-berenguer/844x390/full camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-berenguer/844x390/full target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-berenguer/844x390/full view clears immediate context and retained civic buildings"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-berenguer/844x390/full fit box lies inside the actual usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-berenguer/844x390/near camera stands above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-berenguer/844x390/near target is not occluded by terrain"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria-berenguer/844x390/near view clears immediate context and retained civic buildings"
+    }
+  ],
+  "errors": [],
+  "openings": [
+    {
+      "id": "capilla-norte-5.55",
+      "kind": "window",
+      "total": 4,
+      "clear": 4,
+      "hits": []
+    },
+    {
+      "id": "capilla-norte--5.75",
+      "kind": "window",
+      "total": 4,
+      "clear": 4,
+      "hits": []
+    },
+    {
+      "id": "capilla-norte--11.85",
+      "kind": "window",
+      "total": 4,
+      "clear": 4,
+      "hits": []
+    },
+    {
+      "id": "capilla-sur",
+      "kind": "window",
+      "total": 4,
+      "clear": 4,
+      "hits": []
+    },
+    {
+      "id": "ventanal-cabecera--12.2",
+      "kind": "window",
+      "total": 4,
+      "clear": 4,
+      "hits": []
+    },
+    {
+      "id": "ventanal-cabecera-9.95",
+      "kind": "window",
+      "total": 4,
+      "clear": 4,
+      "hits": []
+    },
+    {
+      "id": "portada-norte",
+      "kind": "door",
+      "total": 6,
+      "clear": 6,
+      "hits": []
+    },
+    {
+      "id": "portada-sur",
+      "kind": "door",
+      "total": 6,
+      "clear": 6,
+      "hits": []
+    },
+    {
+      "id": "arcada--8.2-0",
+      "kind": "arcade",
+      "total": 6,
+      "clear": 6,
+      "hits": []
+    },
+    {
+      "id": "arcada--8.2-1",
+      "kind": "arcade",
+      "total": 6,
+      "clear": 6,
+      "hits": []
+    },
+    {
+      "id": "arcada--8.2-2",
+      "kind": "arcade",
+      "total": 6,
+      "clear": 6,
+      "hits": []
+    },
+    {
+      "id": "arcada--8.2-3",
+      "kind": "arcade",
+      "total": 6,
+      "clear": 6,
+      "hits": []
+    },
+    {
+      "id": "arcada-5.8-0",
+      "kind": "arcade",
+      "total": 6,
+      "clear": 6,
+      "hits": []
+    },
+    {
+      "id": "arcada-5.8-1",
+      "kind": "arcade",
+      "total": 6,
+      "clear": 6,
+      "hits": []
+    },
+    {
+      "id": "arcada-5.8-2",
+      "kind": "arcade",
+      "total": 6,
+      "clear": 6,
+      "hits": []
+    },
+    {
+      "id": "arcada-5.8-3",
+      "kind": "arcade",
+      "total": 6,
+      "clear": 6,
+      "hits": []
+    },
+    {
+      "id": "ventanal-abside-1",
+      "kind": "window",
+      "total": 4,
+      "clear": 4,
+      "hits": []
+    },
+    {
+      "id": "ventanal-abside-2",
+      "kind": "window",
+      "total": 4,
+      "clear": 4,
+      "hits": []
+    },
+    {
+      "id": "ventanal-abside-3",
+      "kind": "window",
+      "total": 4,
+      "clear": 4,
+      "hits": []
+    },
+    {
+      "id": "portada-principal",
+      "kind": "door",
+      "total": 6,
+      "clear": 6,
+      "hits": []
+    },
+    {
+      "id": "ventana-base-torre",
+      "kind": "window",
+      "total": 4,
+      "clear": 4,
+      "hits": []
+    },
+    {
+      "id": "vano-campanario-0",
+      "kind": "belfry",
+      "total": 6,
+      "clear": 6,
+      "hits": []
+    },
+    {
+      "id": "vano-campanario-1",
+      "kind": "belfry",
+      "total": 6,
+      "clear": 6,
+      "hits": []
+    },
+    {
+      "id": "vano-campanario-2",
+      "kind": "belfry",
+      "total": 6,
+      "clear": 6,
+      "hits": []
+    },
+    {
+      "id": "vano-campanario-3",
+      "kind": "belfry",
+      "total": 6,
+      "clear": 6,
+      "hits": []
+    }
+  ],
+  "floors": [
+    {
+      "point": [
+        -115.72494100538898,
+        59.443026938028446,
+        -11.383265673589769
+      ],
+      "ground": 59.163028717041016,
+      "clearance": 0.2799982209874301
+    },
+    {
+      "point": [
+        -103.74002120582463,
+        59.443026938028446,
+        -6.347225820887015
+      ],
+      "ground": 59.163028717041016,
+      "clearance": 0.2799982209874301
+    },
+    {
+      "point": [
+        -91.75510140626028,
+        59.443026938028446,
+        -1.3111859681842613
+      ],
+      "ground": 59.163028717041016,
+      "clearance": 0.2799982209874301
+    },
+    {
+      "point": [
+        -83.45784923733112,
+        59.443026938028446,
+        2.1753031606099533
+      ],
+      "ground": 59.163028717041016,
+      "clearance": 0.2799982209874301
+    },
+    {
+      "point": [
+        -99.47875671507614,
+        59.443026938028446,
+        -16.488311805133776
+      ],
+      "ground": 59.163028717041016,
+      "clearance": 0.2799982209874301
+    },
+    {
+      "point": [
+        -108.0012856965731,
+        59.443026938028446,
+        3.7938601633597426
+      ],
+      "ground": 59.163028717041016,
+      "clearance": 0.2799982209874301
+    },
+    {
+      "point": [
+        -94.38867990623694,
+        59.443026938028446,
+        -20.85765020815515
+      ],
+      "ground": 57.41632152072352,
+      "clearance": 2.0267054173049246
+    }
+  ],
+  "cameras": [
+    {
+      "id": "santa-maria-conjunto",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 211.8494122327275,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        177.47199153619027,
+        256.8494122327275,
+        -127.14896263917105
+      ],
+      "target": [
+        -104.11733055114746,
+        82.49902643898493,
+        -1.4499931335449219
+      ]
+    },
+    {
+      "id": "santa-maria-conjunto",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 84.23100728790445,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -22.006808858031448,
+        137.05902643898492,
+        -38.10339989586816
+      ],
+      "target": [
+        -104.11733055114746,
+        82.49902643898493,
+        -1.4499931335449219
+      ]
+    },
+    {
+      "id": "santa-maria-conjunto",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 416.36994463080293,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        493.25273341112666,
+        452.36994463080293,
+        -268.1106779100731
+      ],
+      "target": [
+        -104.11733055114746,
+        82.49902643898493,
+        -1.4499931335449219
+      ]
+    },
+    {
+      "id": "santa-maria-conjunto",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 137.5906802481607,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        55.80870093113697,
+        188.76511874667725,
+        -72.83955153523911
+      ],
+      "target": [
+        -104.11733055114746,
+        82.49902643898493,
+        -1.4499931335449219
+      ]
+    },
+    {
+      "id": "santa-maria-conjunto",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 247.34112451659453,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        234.81691832062336,
+        292.3554109476888,
+        -152.7472280483371
+      ],
+      "target": [
+        -104.11733055114746,
+        82.49902643898493,
+        -1.4499931335449219
+      ]
+    },
+    {
+      "id": "santa-maria-conjunto",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 84.23100728790445,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -22.006808858031448,
+        137.05902643898492,
+        -38.10339989586816
+      ],
+      "target": [
+        -104.11733055114746,
+        82.49902643898493,
+        -1.4499931335449219
+      ]
+    },
+    {
+      "id": "santa-maria-plaza-mayor",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 35.728963466472216,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -14.435706281694436,
+        87.50026890975658,
+        -53.54546126482828
+      ],
+      "target": [
+        -53.97563746460084,
+        54.38903791869624,
+        -47.86760000016529
+      ]
+    },
+    {
+      "id": "santa-maria-plaza-mayor",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 17.770281690123923,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -42.04475462117293,
+        69.38903791869623,
+        -50.44714154400551
+      ],
+      "target": [
+        -53.97563746460084,
+        54.38903791869624,
+        -47.86760000016529
+      ]
+    },
+    {
+      "id": "santa-maria-plaza-mayor",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 80.84565518953164,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        39.67117481434545,
+        132.810045244201,
+        -61.31510969708814
+      ],
+      "target": [
+        -53.97563746460084,
+        54.38903791869624,
+        -47.86760000016529
+      ]
+    },
+    {
+      "id": "santa-maria-plaza-mayor",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 32.43937584218632,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -30.737948726478173,
+        83.60442253408085,
+        -52.891753222475636
+      ],
+      "target": [
+        -53.97563746460084,
+        54.38903791869624,
+        -47.86760000016529
+      ]
+    },
+    {
+      "id": "santa-maria-plaza-mayor",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 43.879798767394185,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -4.610043334157048,
+        95.7284014775963,
+        -54.956408360092205
+      ],
+      "target": [
+        -53.97563746460084,
+        54.38903791869624,
+        -47.86760000016529
+      ]
+    },
+    {
+      "id": "santa-maria-plaza-mayor",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 17.770281690123923,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -42.04475462117293,
+        69.38903791869623,
+        -50.44714154400551
+      ],
+      "target": [
+        -53.97563746460084,
+        54.38903791869624,
+        -47.86760000016529
+      ]
+    },
+    {
+      "id": "santa-maria-cavallers",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 40.41879588152715,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -61.94805835447612,
+        93.73451313687022,
+        -24.128425211980456
+      ],
+      "target": [
+        -99.96640478163984,
+        56.6396335594634,
+        -33.397545949919184
+      ]
+    },
+    {
+      "id": "santa-maria-cavallers",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 10.188670534047489,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -90.74723570505188,
+        64.13963355946339,
+        -29.523669140147835
+      ],
+      "target": [
+        -99.96640478163984,
+        56.6396335594634,
+        -33.397545949919184
+      ]
+    },
+    {
+      "id": "santa-maria-cavallers",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 90.03640812490855,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -10.361608004951577,
+        144.06792695873614,
+        -11.55131227395474
+      ],
+      "target": [
+        -99.96640478163984,
+        56.6396335594634,
+        -33.397545949919184
+      ]
+    },
+    {
+      "id": "santa-maria-cavallers",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 17.25632940198222,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -82.01030008785466,
+        71.24732586715571,
+        -25.85242588657991
+      ],
+      "target": [
+        -99.96640478163984,
+        56.6396335594634,
+        -33.397545949919184
+      ]
+    },
+    {
+      "id": "santa-maria-cavallers",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 49.63405812501827,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -52.58009879874784,
+        102.8749246555961,
+        -21.844455593350983
+      ],
+      "target": [
+        -99.96640478163984,
+        56.6396335594634,
+        -33.397545949919184
+      ]
+    },
+    {
+      "id": "santa-maria-cavallers",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 10.188670534047489,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -90.74723570505188,
+        64.13963355946339,
+        -29.523669140147835
+      ],
+      "target": [
+        -99.96640478163984,
+        56.6396335594634,
+        -33.397545949919184
+      ]
+    },
+    {
+      "id": "santa-maria-portada-norte",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 24.458937443585555,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -58.33617140116554,
+        78.01823533615136,
+        -22.14060364859093
+      ],
+      "target": [
+        -87.20964167366178,
+        64.82302693802845,
+        -21.550694258143427
+      ]
+    },
+    {
+      "id": "santa-maria-portada-norte",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 18.981425027766093,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -71.06088492940793,
+        72.74302693802845,
+        -21.88062700116262
+      ],
+      "target": [
+        -87.20964167366178,
+        64.82302693802845,
+        -21.550694258143427
+      ]
+    },
+    {
+      "id": "santa-maria-portada-norte",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 37.045077058757755,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -32.043407811357206,
+        90.03405787690703,
+        -22.677787021287863
+      ],
+      "target": [
+        -87.20964167366178,
+        64.82302693802845,
+        -21.550694258143427
+      ]
+    },
+    {
+      "id": "santa-maria-portada-norte",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 26.86227644421237,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -55.756832384084305,
+        80.24875001495153,
+        -22.19330172377773
+      ],
+      "target": [
+        -87.20964167366178,
+        64.82302693802845,
+        -21.550694258143427
+      ]
+    },
+    {
+      "id": "santa-maria-portada-norte",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 24.924372988358435,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -57.252265283366725,
+        78.51358165141501,
+        -22.162748766279194
+      ],
+      "target": [
+        -87.20964167366178,
+        64.82302693802845,
+        -21.550694258143427
+      ]
+    },
+    {
+      "id": "santa-maria-portada-norte",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 18.981425027766093,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -71.06088492940793,
+        72.74302693802845,
+        -21.88062700116262
+      ],
+      "target": [
+        -87.20964167366178,
+        64.82302693802845,
+        -21.550694258143427
+      ]
+    },
+    {
+      "id": "santa-maria-escalinata",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 38.456220485087215,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -45.911112545198,
+        91.45622048508721,
+        -21.164440525581448
+      ],
+      "target": [
+        -85.74531623956821,
+        59.82302693802845,
+        -25.035540169093675
+      ]
+    },
+    {
+      "id": "santa-maria-escalinata",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 14.343800479211843,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -70.55679897792314,
+        67.82302693802845,
+        -23.75142826092156
+      ],
+      "target": [
+        -85.74531623956821,
+        59.82302693802845,
+        -25.035540169093675
+      ]
+    },
+    {
+      "id": "santa-maria-escalinata",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 79.18002060112254,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        8.673259057102058,
+        134.80283799972744,
+        -15.859915221844394
+      ],
+      "target": [
+        -85.74531623956821,
+        59.82302693802845,
+        -25.035540169093675
+      ]
+    },
+    {
+      "id": "santa-maria-escalinata",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 22.009955229027128,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -56.162758003810254,
+        75.4045653995669,
+        -22.53448528333076
+      ],
+      "target": [
+        -85.74531623956821,
+        59.82302693802845,
+        -25.035540169093675
+      ]
+    },
+    {
+      "id": "santa-maria-escalinata",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 46.32784873249415,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -35.99873861598651,
+        99.32784873249415,
+        -20.20115310861336
+      ],
+      "target": [
+        -85.74531623956821,
+        59.82302693802845,
+        -25.035540169093675
+      ]
+    },
+    {
+      "id": "santa-maria-escalinata",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 14.343800479211843,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -70.55679897792314,
+        67.82302693802845,
+        -23.75142826092156
+      ],
+      "target": [
+        -85.74531623956821,
+        59.82302693802845,
+        -25.035540169093675
+      ]
+    },
+    {
+      "id": "santa-maria-portada-sur",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 14.216941120731462,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -116.05859350595081,
+        76.15238187749758,
+        43.82672835873285
+      ],
+      "target": [
+        -103.080914963295,
+        64.72302693802845,
+        16.22024144863746
+      ]
+    },
+    {
+      "id": "santa-maria-portada-sur",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 11.736844544410026,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -111.46067638920523,
+        72.64302693802846,
+        34.045908292961315
+      ],
+      "target": [
+        -103.080914963295,
+        64.72302693802845,
+        16.22024144863746
+      ]
+    },
+    {
+      "id": "santa-maria-portada-sur",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 22.978202131210125,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -129.52970166104743,
+        88.01629698577456,
+        72.48285277465234
+      ],
+      "target": [
+        -103.080914963295,
+        64.72302693802845,
+        16.22024144863746
+      ]
+    },
+    {
+      "id": "santa-maria-portada-sur",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 17.56980348378739,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -119.40211183283708,
+        80.14875001495153,
+        50.93915564081286
+      ],
+      "target": [
+        -103.080914963295,
+        64.72302693802845,
+        16.22024144863746
+      ]
+    },
+    {
+      "id": "santa-maria-portada-sur",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 15.846266886723868,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -118.32885109318266,
+        78.15178259336594,
+        48.65608486948786
+      ],
+      "target": [
+        -103.080914963295,
+        64.72302693802845,
+        16.22024144863746
+      ]
+    },
+    {
+      "id": "santa-maria-portada-sur",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 11.736844544410026,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -111.46067638920523,
+        72.64302693802846,
+        34.045908292961315
+      ],
+      "target": [
+        -103.080914963295,
+        64.72302693802845,
+        16.22024144863746
+      ]
+    },
+    {
+      "id": "santa-maria-portada-principal",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 34.24428412028498,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -175.75778678484915,
+        89.4741100761168,
+        -40.26999636562958
+      ],
+      "target": [
+        -121.037044485295,
+        68.62302693802845,
+        -13.5069315180131
+      ]
+    },
+    {
+      "id": "santa-maria-portada-principal",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 22.25949227169159,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -146.86074393829995,
+        79.18302693802845,
+        -26.1369016906173
+      ],
+      "target": [
+        -121.037044485295,
+        68.62302693802845,
+        -13.5069315180131
+      ]
+    },
+    {
+      "id": "santa-maria-portada-principal",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 65.70783567088722,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -253.12363169893592,
+        118.95400374278617,
+        -78.10842905887934
+      ],
+      "target": [
+        -121.037044485295,
+        68.62302693802845,
+        -13.5069315180131
+      ]
+    },
+    {
+      "id": "santa-maria-portada-principal",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 33.8987362230279,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -171.3336652660708,
+        89.19065770725922,
+        -38.10622726957759
+      ],
+      "target": [
+        -121.037044485295,
+        68.62302693802845,
+        -13.5069315180131
+      ]
+    },
+    {
+      "id": "santa-maria-portada-principal",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 40.04419007568059,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -189.8072145171178,
+        94.82757885920537,
+        -47.141353179692246
+      ],
+      "target": [
+        -121.037044485295,
+        68.62302693802845,
+        -13.5069315180131
+      ]
+    },
+    {
+      "id": "santa-maria-portada-principal",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 22.25949227169159,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -146.86074393829995,
+        79.18302693802845,
+        -26.1369016906173
+      ],
+      "target": [
+        -121.037044485295,
+        68.62302693802845,
+        -13.5069315180131
+      ]
+    },
+    {
+      "id": "santa-maria-naves",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 85.29411687443913,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -133.09899804403898,
+        136.86588057676613,
+        -88.55010809302594
+      ],
+      "target": [
+        -98.61602529103308,
+        68.32302693802845,
+        -4.08566311664918
+      ]
+    },
+    {
+      "id": "santa-maria-naves",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 43.44429377855789,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -112.64207219915987,
+        98.24302693802845,
+        -38.44181552245601
+      ],
+      "target": [
+        -98.61602529103308,
+        68.32302693802845,
+        -4.08566311664918
+      ]
+    },
+    {
+      "id": "santa-maria-naves",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 169.15225092369178,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -173.98752556720214,
+        218.141250238141,
+        -188.70466286076206
+      ],
+      "target": [
+        -98.61602529103308,
+        68.32302693802845,
+        -4.08566311664918
+      ]
+    },
+    {
+      "id": "santa-maria-naves",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 73.91551681666543,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -125.93444896132311,
+        126.59798078418231,
+        -71.00087687934372
+      ],
+      "target": [
+        -98.61602529103308,
+        68.32302693802845,
+        -4.08566311664918
+      ]
+    },
+    {
+      "id": "santa-maria-naves",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 100.87713357240662,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -140.5242438117739,
+        151.62526740617304,
+        -106.73790376473903
+      ],
+      "target": [
+        -98.61602529103308,
+        68.32302693802845,
+        -4.08566311664918
+      ]
+    },
+    {
+      "id": "santa-maria-naves",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 43.44429377855789,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -112.64207219915987,
+        98.24302693802845,
+        -38.44181552245601
+      ],
+      "target": [
+        -98.61602529103308,
+        68.32302693802845,
+        -4.08566311664918
+      ]
+    },
+    {
+      "id": "santa-maria-bovedas",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 73.72286391814625,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -114.5386702100638,
+        127.15874803936408,
+        -60.97176943651499
+      ],
+      "target": [
+        -93.0845238450803,
+        77.32302693802845,
+        -1.7613370307863705
+      ]
+    },
+    {
+      "id": "santa-maria-bovedas",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 47.314464675504105,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -102.96874322937289,
+        101.96302693802845,
+        -29.040395063701926
+      ],
+      "target": [
+        -93.0845238450803,
+        77.32302693802845,
+        -1.7613370307863705
+      ]
+    },
+    {
+      "id": "santa-maria-bovedas",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 137.40104372535515,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -140.19721628872654,
+        186.76084660288757,
+        -131.785754871964
+      ],
+      "target": [
+        -93.0845238450803,
+        77.32302693802845,
+        -1.7613370307863705
+      ]
+    },
+    {
+      "id": "santa-maria-bovedas",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 71.3638987040141,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -112.33594190741019,
+        125.31416539956692,
+        -54.89254852258806
+      ],
+      "target": [
+        -93.0845238450803,
+        77.32302693802845,
+        -1.7613370307863705
+      ]
+    },
+    {
+      "id": "santa-maria-bovedas",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 86.07756222180994,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -119.19819262913092,
+        137.98232758392493,
+        -73.83139724661748
+      ],
+      "target": [
+        -93.0845238450803,
+        77.32302693802845,
+        -1.7613370307863705
+      ]
+    },
+    {
+      "id": "santa-maria-bovedas",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 47.314464675504105,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -102.96874322937289,
+        101.96302693802845,
+        -29.040395063701926
+      ],
+      "target": [
+        -93.0845238450803,
+        77.32302693802845,
+        -1.7613370307863705
+      ]
+    },
+    {
+      "id": "santa-maria-capillas",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 47.338079074990716,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -100.3548154923067,
+        101.08806537756155,
+        -56.911206616840104
+      ],
+      "target": [
+        -94.534324519671,
+        65.12302693802845,
+        -21.027319435116457
+      ]
+    },
+    {
+      "id": "santa-maria-capillas",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 35.57130831819224,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -98.25011292224418,
+        89.76302693802845,
+        -43.93551265386033
+      ],
+      "target": [
+        -94.534324519671,
+        65.12302693802845,
+        -21.027319435116457
+      ]
+    },
+    {
+      "id": "santa-maria-capillas",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 95.7913112488678,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -107.58947588281094,
+        145.7913112488678,
+        -101.51358440102554
+      ],
+      "target": [
+        -94.534324519671,
+        65.12302693802845,
+        -21.027319435116457
+      ]
+    },
+    {
+      "id": "santa-maria-capillas",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 60.25196397154051,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -101.77153700837508,
+        113.11416539956691,
+        -65.64543115039298
+      ],
+      "target": [
+        -94.534324519671,
+        65.12302693802845,
+        -21.027319435116457
+      ]
+    },
+    {
+      "id": "santa-maria-capillas",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 56.2801784791053,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -101.6686102093006,
+        109.2060536573276,
+        -65.0108775253932
+      ],
+      "target": [
+        -94.534324519671,
+        65.12302693802845,
+        -21.027319435116457
+      ]
+    },
+    {
+      "id": "santa-maria-capillas",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 35.57130831819224,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -98.25011292224418,
+        89.76302693802845,
+        -43.93551265386033
+      ],
+      "target": [
+        -94.534324519671,
+        65.12302693802845,
+        -21.027319435116457
+      ]
+    },
+    {
+      "id": "santa-maria-abside",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 42.501066327188795,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -43.096528027258984,
+        105.53050376627547,
+        66.54709983345757
+      ],
+      "target": [
+        -79.80892037479363,
+        72.82302693802845,
+        3.8170455752843724
+      ]
+    },
+    {
+      "id": "santa-maria-abside",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 28.763025412149545,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -63.241610279456836,
+        88.66302693802845,
+        32.12542306684951
+      ],
+      "target": [
+        -79.80892037479363,
+        72.82302693802845,
+        3.8170455752843724
+      ]
+    },
+    {
+      "id": "santa-maria-abside",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 80.21321734367983,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        3.4071359802154717,
+        146.9611329269817,
+        146.00739048347907
+      ],
+      "target": [
+        -79.80892037479363,
+        72.82302693802845,
+        3.8170455752843724
+      ]
+    },
+    {
+      "id": "santa-maria-abside",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 40.63885665484975,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -47.54089794295304,
+        103.6744730918746,
+        58.95305465885585
+      ],
+      "target": [
+        -79.80892037479363,
+        72.82302693802845,
+        3.8170455752843724
+      ]
+    },
+    {
+      "id": "santa-maria-abside",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 48.79211639045067,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -34.65158869409137,
+        113.05419372199364,
+        80.97687323426834
+      ],
+      "target": [
+        -79.80892037479363,
+        72.82302693802845,
+        3.8170455752843724
+      ]
+    },
+    {
+      "id": "santa-maria-abside",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 28.763025412149545,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -63.241610279456836,
+        88.66302693802845,
+        32.12542306684951
+      ],
+      "target": [
+        -79.80892037479363,
+        72.82302693802845,
+        3.8170455752843724
+      ]
+    },
+    {
+      "id": "santa-maria-contrafuertes",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 53.66581511177829,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -116.15447069883658,
+        118.11721551034033,
+        67.69577778270573
+      ],
+      "target": [
+        -102.83855101368385,
+        79.32302693802845,
+        5.963231176831698
+      ]
+    },
+    {
+      "id": "santa-maria-contrafuertes",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 36.25878544428492,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -108.46777257684259,
+        96.92302693802844,
+        32.060278224206016
+      ],
+      "target": [
+        -102.83855101368385,
+        79.32302693802845,
+        5.963231176831698
+      ]
+    },
+    {
+      "id": "santa-maria-contrafuertes",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 91.37371594889831,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -131.6287536078884,
+        163.19951274471083,
+        139.434487046674
+      ],
+      "target": [
+        -102.83855101368385,
+        79.32302693802845,
+        5.963231176831698
+      ]
+    },
+    {
+      "id": "santa-maria-contrafuertes",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 49.86231670746212,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -113.8025425505438,
+        113.60241155341308,
+        56.79224896448691
+      ],
+      "target": [
+        -102.83855101368385,
+        79.32302693802845,
+        5.963231176831698
+      ]
+    },
+    {
+      "id": "santa-maria-contrafuertes",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 61.20444406991001,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -118.96455853127513,
+        126.3040384902005,
+        80.72333293355551
+      ],
+      "target": [
+        -102.83855101368385,
+        79.32302693802845,
+        5.963231176831698
+      ]
+    },
+    {
+      "id": "santa-maria-contrafuertes",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 36.25878544428492,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -108.46777257684259,
+        96.92302693802844,
+        32.060278224206016
+      ],
+      "target": [
+        -102.83855101368385,
+        79.32302693802845,
+        5.963231176831698
+      ]
+    },
+    {
+      "id": "santa-maria-campanario",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 72.898257351226,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        38.50969704056335,
+        124.87408758324318,
+        -60.36423698763094
+      ],
+      "target": [
+        -78.35351076125617,
+        83.72350670468586,
+        -14.618663872871473
+      ]
+    },
+    {
+      "id": "santa-maria-campanario",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 44.95845589291828,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -41.0941269658062,
+        97.80350670468586,
+        -29.20368081435494
+      ],
+      "target": [
+        -78.35351076125617,
+        83.72350670468586,
+        -14.618663872871473
+      ]
+    },
+    {
+      "id": "santa-maria-campanario",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 133.6225425380934,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        193.45825558394733,
+        179.43551294791746,
+        -121.01814806196478
+      ],
+      "target": [
+        -78.35351076125617,
+        83.72350670468586,
+        -14.618663872871473
+      ]
+    },
+    {
+      "id": "santa-maria-campanario",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 58.718064944526475,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -5.783695553502824,
+        111.14701439699355,
+        -43.025789177360814
+      ],
+      "target": [
+        -78.35351076125617,
+        83.72350670468586,
+        -14.618663872871473
+      ]
+    },
+    {
+      "id": "santa-maria-campanario",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 83.86809164874089,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        66.64793527594905,
+        134.7822945378988,
+        -71.37882283316267
+      ],
+      "target": [
+        -78.35351076125617,
+        83.72350670468586,
+        -14.618663872871473
+      ]
+    },
+    {
+      "id": "santa-maria-campanario",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 44.95845589291828,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -41.0941269658062,
+        97.80350670468586,
+        -29.20368081435494
+      ],
+      "target": [
+        -78.35351076125617,
+        83.72350670468586,
+        -14.618663872871473
+      ]
+    },
+    {
+      "id": "santa-maria-reloj",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 37.41194835288996,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -55.99347103308935,
+        89.69316674191761,
+        -37.01168004977958
+      ],
+      "target": [
+        -77.17585221108568,
+        83.72350670468586,
+        -17.421291272154214
+      ]
+    },
+    {
+      "id": "santa-maria-reloj",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 35.19673518314786,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -62.62765980345604,
+        88.12350670468587,
+        -30.876093302306394
+      ],
+      "target": [
+        -77.17585221108568,
+        83.72350670468586,
+        -17.421291272154214
+      ]
+    },
+    {
+      "id": "santa-maria-reloj",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 45.18788021251302,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -32.36238024465749,
+        96.35292690440755,
+        -58.8667421362665
+      ],
+      "target": [
+        -77.17585221108568,
+        83.72350670468586,
+        -17.421291272154214
+      ]
+    },
+    {
+      "id": "santa-maria-reloj",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 40.34819296110524,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -48.84044976791779,
+        92.29335285853202,
+        -43.62710568780446
+      ],
+      "target": [
+        -77.17585221108568,
+        83.72350670468586,
+        -17.421291272154214
+      ]
+    },
+    {
+      "id": "santa-maria-reloj",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 37.987060843515145,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -54.576966592833685,
+        90.09236879000177,
+        -38.32172505636585
+      ],
+      "target": [
+        -77.17585221108568,
+        83.72350670468586,
+        -17.421291272154214
+      ]
+    },
+    {
+      "id": "santa-maria-reloj",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 35.19673518314786,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -62.62765980345604,
+        88.12350670468587,
+        -30.876093302306394
+      ],
+      "target": [
+        -77.17585221108568,
+        83.72350670468586,
+        -17.421291272154214
+      ]
+    },
+    {
+      "id": "santa-maria-sagrario",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 44.39069108052056,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -76.2183492471747,
+        104.85218104349715,
+        29.563303094441174
+      ],
+      "target": [
+        -72.67057429198778,
+        58.06424246926937,
+        3.866190280901538
+      ]
+    },
+    {
+      "id": "santa-maria-sagrario",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 14.338424059692734,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -74.55347574073701,
+        72.06424246926937,
+        16.091356215738497
+      ],
+      "target": [
+        -72.67057429198778,
+        58.06424246926937,
+        3.866190280901538
+      ]
+    },
+    {
+      "id": "santa-maria-sagrario",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 97.08843460248795,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -80.64387717237624,
+        163.21589670706553,
+        61.61812387361931
+      ],
+      "target": [
+        -72.67057429198778,
+        58.06424246926937,
+        3.866190280901538
+      ]
+    },
+    {
+      "id": "santa-maria-sagrario",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 24.9361708034912,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -76.33788695985936,
+        85.33193477696167,
+        27.677051932445522
+      ],
+      "target": [
+        -72.67057429198778,
+        58.06424246926937,
+        3.866190280901538
+      ]
+    },
+    {
+      "id": "santa-maria-sagrario",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 54.50295182900627,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -77.02201312276866,
+        115.45087361012715,
+        35.38437166168805
+      ],
+      "target": [
+        -72.67057429198778,
+        58.06424246926937,
+        3.866190280901538
+      ]
+    },
+    {
+      "id": "santa-maria-sagrario",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 14.338424059692734,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -74.55347574073701,
+        72.06424246926937,
+        16.091356215738497
+      ],
+      "target": [
+        -72.67057429198778,
+        58.06424246926937,
+        3.866190280901538
+      ]
+    },
+    {
+      "id": "santa-maria-berenguer",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 31.550500176863252,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -75.95951407728393,
+        99.85277594267083,
+        70.45024598359691
+      ],
+      "target": [
+        -88.04026199781735,
+        66.01993458104693,
+        30.969224000433258
+      ]
+    },
+    {
+      "id": "santa-maria-berenguer",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 22.51340000463091,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -86.38263736163593,
+        85.01993458104693,
+        42.51271916288403
+      ],
+      "target": [
+        -88.04026199781735,
+        66.01993458104693,
+        30.969224000433258
+      ]
+    },
+    {
+      "id": "santa-maria-berenguer",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 71.91469767030873,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -59.199008024116324,
+        146.79155375406296,
+        125.22515828926142
+      ],
+      "target": [
+        -88.04026199781735,
+        66.01993458104693,
+        30.969224000433258
+      ]
+    },
+    {
+      "id": "santa-maria-berenguer",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 39.25099589564298,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -84.81171924488552,
+        103.02608842720078,
+        53.452400732221996
+      ],
+      "target": [
+        -88.04026199781735,
+        66.01993458104693,
+        30.969224000433258
+      ]
+    },
+    {
+      "id": "santa-maria-berenguer",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 38.5754750644893,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -72.91585160824839,
+        108.37673076323136,
+        80.39722158806893
+      ],
+      "target": [
+        -88.04026199781735,
+        66.01993458104693,
+        30.969224000433258
+      ]
+    },
+    {
+      "id": "santa-maria-berenguer",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 22.51340000463091,
+      "terrainOcclusion": null,
+      "contextOcclusion": null,
+      "offFrameCorners": 0,
+      "position": [
+        -86.38263736163593,
+        85.01993458104693,
+        42.51271916288403
+      ],
+      "target": [
+        -88.04026199781735,
+        66.01993458104693,
+        30.969224000433258
+      ]
+    }
+  ],
+  "limitations": [
+    "Published plans and mapped OSM envelope are registered schematically, not as survey-grade photogrammetry.",
+    "Section is didactic and does not certify physical public access.",
+    "Window tracery and mouldings are simplified; lost sculpture, historic altarpiece and crypt are not recreated.",
+    "Only vault height and overall tower height are documentary dimensions; floor, secondary roofs and mouldings are approximate."
+  ]
+}

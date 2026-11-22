@@ -1,0 +1,14 @@
+import fs from 'node:fs';
+import {createPortic} from '../../dist/js/portic.js';
+import {createPorticContext} from '../../dist/js/portic-context.js';
+import {createHeightSampler} from '../../dist/js/terrain.js';
+const {createCanvas}=await import(process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES+'/@napi-rs/canvas/index.js');
+globalThis.document={createElement:()=>createCanvas(256,256)};
+const read=n=>JSON.parse(fs.readFileSync('dist/assets/data/'+n+'.json'));
+const visitData=fs.existsSync('dist/assets/data/portic-visit.json')?read('portic-visit'):{};
+const model=createPortic({record:read('archaeology-domestic').sites.find(s=>s.id==='portic'),heightAt:createHeightSampler(read('elevation')),contextData:read('portic-context'),visitData});
+const context=createPorticContext({contextData:read('portic-context'),visitData,heightAt:createHeightSampler(read('elevation'))});
+Object.assign(model.visit.focuses,context.focuses);model.visit.plan.components.push(...context.plan.components);model.visit.plan.contextOutline=context.plan.outline;model.visit.plan.stops=Object.values(model.visit.focuses).map(q=>({id:q.id,label:q.label,coordinates:q.coordinates,regionId:q.regionId,readingLayer:q.readingLayer,floor:q.floor,sourceConfidence:q.sourceConfidence}));
+fs.writeFileSync('dist/assets/data/portic-plan.json',JSON.stringify(model.visit.plan,null,2));
+fs.writeFileSync('research/validation-v18/portic-geometry-metadata.json',JSON.stringify({stats:model.stats,qa:model.visit.qa,focuses:Object.fromEntries(Object.entries(model.visit.focuses).map(([id,q])=>[id,{...q,target:q.target.toArray(),bounds:{min:q.bounds.min.toArray(),max:q.bounds.max.toArray()}}]))},null,2));
+console.log(JSON.stringify(model.stats));

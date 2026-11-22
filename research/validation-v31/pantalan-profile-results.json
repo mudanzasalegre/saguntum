@@ -1,0 +1,25 @@
+{
+  "pass": true,
+  "checks": 3,
+  "profile": {
+    "capElevationSource": "support.elevation",
+    "testMetres": [
+      4.15,
+      8.15
+    ],
+    "observedVerticalPixels": 12,
+    "exaggerationPixelsPerMetre": 3
+  },
+  "guideElevations": {
+    "juegos": 8.2,
+    "escollera": 4.4
+  },
+  "method": "Real Canvas map renderer command trace and guide/plan elevation consistency. Not browser layout.",
+  "sourceHashes": {
+    "dist/js/pantalan-map.js": "023b6e9fe5192e8e838db2914b83f3d49056760435fb6793fc4d30f93395c9d0",
+    "dist/assets/data/pantalan-paseo-visit.json": "304f579bd9a8820cd515bc8cad73f94e336c1c158b402db3dd39dd0607922ae4",
+    "dist/assets/data/pantalan-paseo-plan.json": "e4babf82ea0e972d3c2d2d24797f05c23e5a7cd72338901aa758c52eb367f13b",
+    "dist/assets/data/pantalan-maritimo-visit.json": "dc77b343063ca1e3c1fb372776422f12f0742a58aa2353e59aade1e9292fe07c",
+    "dist/assets/data/pantalan-maritimo-plan.json": "d054c37b5292275654beba38df76990ffb4092c7ec82d9aba93b4c5492c2cfb2"
+  }
+}

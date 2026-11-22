@@ -1,0 +1,2606 @@
+{
+  "stats": {
+    "modelVersion": "v27",
+    "meshes": 149,
+    "triangles": 92775,
+    "structures": 3,
+    "naves": 3,
+    "diaphragmArches": 5,
+    "architecturalFocuses": 15,
+    "interiorFocuses": 8,
+    "physicalWindows": 57,
+    "physicalDoors": 3,
+    "openBelfry": true,
+    "centralTower": true,
+    "choir": true,
+    "resourcesOwned": true,
+    "interpretiveGeometry": true
+  },
+  "qa": {
+    "origin": {
+      "x": 4864.233042941093,
+      "z": 2272.3751600005453,
+      "y": 5
+    },
+    "frame": {
+      "x": 13.489625585400518,
+      "z": 8.79427999994391,
+      "ux": 0.57059729083362,
+      "uz": -0.8212300114421862,
+      "vx": 0.8212300114421862,
+      "vz": 0.57059729083362,
+      "yaw": 0.9635633427191787,
+      "w": 26.35145781116568,
+      "d": 26.367
+    },
+    "buildingId": "begona-templo",
+    "base": 0.17957829597181102,
+    "upperFloor": 5.379578295971811,
+    "top": 15.429578295971812,
+    "footprint": [
+      [
+        -0.2213352,
+        39.6587953
+      ],
+      [
+        -0.2209798,
+        39.6586052
+      ],
+      [
+        -0.2211553,
+        39.6584108
+      ],
+      [
+        -0.221408,
+        39.658546
+      ],
+      [
+        -0.22133049999999999,
+        39.6586318
+      ],
+      [
+        -0.2214332,
+        39.6586867
+      ]
+    ],
+    "main": [
+      [
+        -0.22140803669416714,
+        39.65854595036622
+      ],
+      [
+        -0.22123253669416715,
+        39.658740350366216
+      ],
+      [
+        -0.2209798,
+        39.6586052
+      ],
+      [
+        -0.2211553,
+        39.6584108
+      ]
+    ],
+    "annex": [
+      [
+        -0.22143321083420364,
+        39.65868672365268
+      ],
+      [
+        -0.22133522445555875,
+        39.658795262410564
+      ],
+      [
+        -0.22123253669416715,
+        39.658740350366216
+      ],
+      [
+        -0.22133052307281204,
+        39.65863181160833
+      ]
+    ],
+    "hall": [
+      [
+        -0.22141009188749303,
+        39.65854372107442
+      ],
+      [
+        -0.22151965233859974,
+        39.6586023082738
+      ],
+      [
+        -0.22146244316972558,
+        39.65866567843009
+      ],
+      [
+        -0.22144369822340015,
+        39.65865652970163
+      ],
+      [
+        -0.2214370507568144,
+        39.65864138006151
+      ],
+      [
+        -0.2214738362245942,
+        39.658597169545246
+      ],
+      [
+        -0.22144175770069213,
+        39.65857870299558
+      ],
+      [
+        -0.22138464252443385,
+        39.65863960753477
+      ],
+      [
+        -0.2214517953051425,
+        39.65867715812082
+      ],
+      [
+        -0.22143992057311657,
+        39.65869031167014
+      ],
+      [
+        -0.22133055182883596,
+        39.65863182698555
+      ]
+    ],
+    "windows": [
+      {
+        "id": "begona-lateral--1-0",
+        "buildingId": "begona-templo",
+        "center": [
+          2.120874356888063,
+          5.054578295971811,
+          17.182612328830317
+        ],
+        "normal": [
+          -0.57059729083362,
+          0,
+          0.8212300114421862
+        ],
+        "width": 2.4,
+        "height": 1.85,
+        "physicalVoid": true,
+        "floor": 0,
+        "closedLeaf": false
+      },
+      {
+        "id": "begona-lateral--1-1",
+        "buildingId": "begona-templo",
+        "center": [
+          -1.2461686900249025,
+          5.054578295971811,
+          14.843163436412473
+        ],
+        "normal": [
+          -0.57059729083362,
+          0,
+          0.8212300114421862
+        ],
+        "width": 2.4,
+        "height": 1.85,
+        "physicalVoid": true,
+        "floor": 0,
+        "closedLeaf": false
+      },
+      {
+        "id": "begona-lateral--1-3",
+        "buildingId": "begona-templo",
+        "center": [
+          -7.98025478385083,
+          5.054578295971811,
+          10.16426565157679
+        ],
+        "normal": [
+          -0.57059729083362,
+          0,
+          0.8212300114421862
+        ],
+        "width": 2.4,
+        "height": 1.85,
+        "physicalVoid": true,
+        "floor": 0,
+        "closedLeaf": false
+      },
+      {
+        "id": "begona-lateral--1-4",
+        "buildingId": "begona-templo",
+        "center": [
+          -11.347297830763791,
+          5.054578295971811,
+          7.824816759158948
+        ],
+        "normal": [
+          -0.57059729083362,
+          0,
+          0.8212300114421862
+        ],
+        "width": 2.4,
+        "height": 1.85,
+        "physicalVoid": true,
+        "floor": 0,
+        "closedLeaf": false
+      },
+      {
+        "id": "begona-oculo--1-0",
+        "buildingId": "begona-templo",
+        "center": [
+          6.500624475586937,
+          10.229578295971812,
+          10.879073391871401
+        ],
+        "normal": [
+          0.57059729083362,
+          0,
+          -0.8212300114421862
+        ],
+        "width": 1.44,
+        "height": 1.44,
+        "physicalVoid": true
+      },
+      {
+        "id": "begona-oculo--1-1",
+        "buildingId": "begona-templo",
+        "center": [
+          3.1335814286739727,
+          10.229578295971812,
+          8.53962449945356
+        ],
+        "normal": [
+          0.57059729083362,
+          0,
+          -0.8212300114421862
+        ],
+        "width": 1.44,
+        "height": 1.44,
+        "physicalVoid": true
+      },
+      {
+        "id": "begona-oculo--1-2",
+        "buildingId": "begona-templo",
+        "center": [
+          -0.2334616182389907,
+          10.229578295971812,
+          6.2001756070357175
+        ],
+        "normal": [
+          0.57059729083362,
+          0,
+          -0.8212300114421862
+        ],
+        "width": 1.44,
+        "height": 1.44,
+        "physicalVoid": true
+      },
+      {
+        "id": "begona-oculo--1-3",
+        "buildingId": "begona-templo",
+        "center": [
+          -3.600504665151955,
+          10.229578295971812,
+          3.860726714617875
+        ],
+        "normal": [
+          0.57059729083362,
+          0,
+          -0.8212300114421862
+        ],
+        "width": 1.44,
+        "height": 1.44,
+        "physicalVoid": true
+      },
+      {
+        "id": "begona-oculo--1-4",
+        "buildingId": "begona-templo",
+        "center": [
+          -6.967547712064917,
+          10.229578295971812,
+          1.5212778222000347
+        ],
+        "normal": [
+          0.57059729083362,
+          0,
+          -0.8212300114421862
+        ],
+        "width": 1.44,
+        "height": 1.44,
+        "physicalVoid": true
+      },
+      {
+        "id": "begona-lateral-1-0",
+        "buildingId": "begona-templo",
+        "center": [
+          17.385183709789082,
+          5.054578295971811,
+          -4.786487675528437
+        ],
+        "normal": [
+          0.57059729083362,
+          0,
+          -0.8212300114421862
+        ],
+        "width": 2.4,
+        "height": 1.85,
+        "physicalVoid": true,
+        "floor": 0,
+        "closedLeaf": false
+      },
+      {
+        "id": "begona-lateral-1-1",
+        "buildingId": "begona-templo",
+        "center": [
+          14.018140662876116,
+          5.054578295971811,
+          -7.12593656794628
+        ],
+        "normal": [
+          0.57059729083362,
+          0,
+          -0.8212300114421862
+        ],
+        "width": 2.4,
+        "height": 1.85,
+        "physicalVoid": true,
+        "floor": 0,
+        "closedLeaf": false
+      },
+      {
+        "id": "begona-lateral-1-3",
+        "buildingId": "begona-templo",
+        "center": [
+          7.284054569050188,
+          5.054578295971811,
+          -11.804834352781963
+        ],
+        "normal": [
+          0.57059729083362,
+          0,
+          -0.8212300114421862
+        ],
+        "width": 2.4,
+        "height": 1.85,
+        "physicalVoid": true,
+        "floor": 0,
+        "closedLeaf": false
+      },
+      {
+        "id": "begona-lateral-1-4",
+        "buildingId": "begona-templo",
+        "center": [
+          3.9170115221372264,
+          5.054578295971811,
+          -14.144283245199805
+        ],
+        "normal": [
+          0.57059729083362,
+          0,
+          -0.8212300114421862
+        ],
+        "width": 2.4,
+        "height": 1.85,
+        "physicalVoid": true,
+        "floor": 0,
+        "closedLeaf": false
+      },
+      {
+        "id": "begona-oculo-1-0",
+        "buildingId": "begona-templo",
+        "center": [
+          13.233672507423654,
+          10.229578295971812,
+          1.188559256853603
+        ],
+        "normal": [
+          0.57059729083362,
+          0,
+          -0.8212300114421862
+        ],
+        "width": 1.44,
+        "height": 1.44,
+        "physicalVoid": true
+      },
+      {
+        "id": "begona-oculo-1-1",
+        "buildingId": "begona-templo",
+        "center": [
+          9.866629460510689,
+          10.229578295971812,
+          -1.1508896355642393
+        ],
+        "normal": [
+          0.57059729083362,
+          0,
+          -0.8212300114421862
+        ],
+        "width": 1.44,
+        "height": 1.44,
+        "physicalVoid": true
+      },
+      {
+        "id": "begona-oculo-1-2",
+        "buildingId": "begona-templo",
+        "center": [
+          6.499586413597726,
+          10.229578295971812,
+          -3.490338527982081
+        ],
+        "normal": [
+          0.57059729083362,
+          0,
+          -0.8212300114421862
+        ],
+        "width": 1.44,
+        "height": 1.44,
+        "physicalVoid": true
+      },
+      {
+        "id": "begona-oculo-1-3",
+        "buildingId": "begona-templo",
+        "center": [
+          3.1325433666847613,
+          10.229578295971812,
+          -5.829787420399924
+        ],
+        "normal": [
+          0.57059729083362,
+          0,
+          -0.8212300114421862
+        ],
+        "width": 1.44,
+        "height": 1.44,
+        "physicalVoid": true
+      },
+      {
+        "id": "begona-oculo-1-4",
+        "buildingId": "begona-templo",
+        "center": [
+          -0.23449968022820045,
+          10.229578295971812,
+          -8.169236312817764
+        ],
+        "normal": [
+          0.57059729083362,
+          0,
+          -0.8212300114421862
+        ],
+        "width": 1.44,
+        "height": 1.44,
+        "physicalVoid": true
+      },
+      {
+        "id": "begona-oval-portada",
+        "buildingId": "begona-templo",
+        "center": [
+          13.423927184485143,
+          9.629578295971811,
+          8.74863221667722
+        ],
+        "normal": [
+          0.8212300114421862,
+          0,
+          0.57059729083362
+        ],
+        "width": 2.66,
+        "height": 3.86,
+        "physicalVoid": true
+      },
+      {
+        "id": "begona-oculo-reloj",
+        "buildingId": "begona-templo",
+        "center": [
+          13.423927184485143,
+          14.179578295971812,
+          8.74863221667722
+        ],
+        "normal": [
+          0.8212300114421862,
+          0,
+          0.57059729083362
+        ],
+        "width": 0.7,
+        "height": 0.84,
+        "physicalVoid": true
+      },
+      {
+        "id": "begona-oval-ala--1-6.6",
+        "buildingId": "begona-templo",
+        "center": [
+          9.65798506498325,
+          3.7095782959718107,
+          14.168750292195648
+        ],
+        "normal": [
+          0.8212300114421862,
+          0,
+          0.57059729083362
+        ],
+        "width": 1.3,
+        "height": 1.8,
+        "physicalVoid": true
+      },
+      {
+        "id": "begona-oval-ala--1-9.2",
+        "buildingId": "begona-templo",
+        "center": [
+          8.17443210881584,
+          3.7095782959718107,
+          16.303948321945334
+        ],
+        "normal": [
+          0.8212300114421862,
+          0,
+          0.57059729083362
+        ],
+        "width": 1.3,
+        "height": 1.8,
+        "physicalVoid": true
+      },
+      {
+        "id": "begona-oval-ala--1-11.65",
+        "buildingId": "begona-templo",
+        "center": [
+          6.776468746273471,
+          3.7095782959718107,
+          18.31596184997869
+        ],
+        "normal": [
+          0.8212300114421862,
+          0,
+          0.57059729083362
+        ],
+        "width": 1.3,
+        "height": 1.8,
+        "physicalVoid": true
+      },
+      {
+        "id": "begona-oval-ala-1-6.6",
+        "buildingId": "begona-templo",
+        "center": [
+          17.189869303987034,
+          3.7095782959718107,
+          3.3285141411587915
+        ],
+        "normal": [
+          0.8212300114421862,
+          0,
+          0.57059729083362
+        ],
+        "width": 1.3,
+        "height": 1.8,
+        "physicalVoid": true
+      },
+      {
+        "id": "begona-oval-ala-1-9.2",
+        "buildingId": "begona-templo",
+        "center": [
+          18.673422260154446,
+          3.7095782959718107,
+          1.193316111409107
+        ],
+        "normal": [
+          0.8212300114421862,
+          0,
+          0.57059729083362
+        ],
+        "width": 1.3,
+        "height": 1.8,
+        "physicalVoid": true
+      },
+      {
+        "id": "begona-oval-ala-1-11.65",
+        "buildingId": "begona-templo",
+        "center": [
+          20.071385622696816,
+          3.7095782959718107,
+          -0.8186974166242482
+        ],
+        "normal": [
+          0.8212300114421862,
+          0,
+          0.57059729083362
+        ],
+        "width": 1.3,
+        "height": 1.8,
+        "physicalVoid": true
+      },
+      {
+        "id": "begona-campana-vano-0-0",
+        "buildingId": "begona-templo",
+        "center": [
+          12.798923306708991,
+          20.754578295971815,
+          10.927527843540695
+        ],
+        "normal": [
+          0.8212300114421862,
+          0,
+          0.57059729083362
+        ],
+        "width": 1.62,
+        "height": 4.95,
+        "physicalVoid": true,
+        "belfry": true
+      },
+      {
+        "id": "begona-campana-vano-0-1",
+        "buildingId": "begona-templo",
+        "center": [
+          14.023425092837938,
+          20.754578295971815,
+          9.165168238985764
+        ],
+        "normal": [
+          0.8212300114421862,
+          0,
+          0.57059729083362
+        ],
+        "width": 1.62,
+        "height": 4.95,
+        "physicalVoid": true,
+        "belfry": true
+      },
+      {
+        "id": "begona-campana-vano-0-2",
+        "buildingId": "begona-templo",
+        "center": [
+          15.247926878966886,
+          20.754578295971815,
+          7.402808634430832
+        ],
+        "normal": [
+          0.8212300114421862,
+          0,
+          0.57059729083362
+        ],
+        "width": 1.62,
+        "height": 4.95,
+        "physicalVoid": true,
+        "belfry": true
+      },
+      {
+        "id": "begona-campana-vano-1-0",
+        "buildingId": "begona-templo",
+        "center": [
+          15.084250370864037,
+          20.754578295971815,
+          5.153264235959163
+        ],
+        "normal": [
+          0.57059729083362,
+          0,
+          -0.8212300114421862
+        ],
+        "width": 1.18,
+        "height": 4.95,
+        "physicalVoid": true,
+        "belfry": true
+      },
+      {
+        "id": "begona-campana-vano-1-1",
+        "buildingId": "begona-templo",
+        "center": [
+          13.702941491618281,
+          20.754578295971815,
+          4.193519592777014
+        ],
+        "normal": [
+          0.57059729083362,
+          0,
+          -0.8212300114421862
+        ],
+        "width": 1.18,
+        "height": 4.95,
+        "physicalVoid": true,
+        "belfry": true
+      },
+      {
+        "id": "begona-campana-vano-1-2",
+        "buildingId": "begona-templo",
+        "center": [
+          12.321632612372523,
+          20.754578295971815,
+          3.2337749495948653
+        ],
+        "normal": [
+          0.57059729083362,
+          0,
+          -0.8212300114421862
+        ],
+        "width": 1.18,
+        "height": 4.95,
+        "physicalVoid": true,
+        "belfry": true
+      },
+      {
+        "id": "begona-campana-vano-2-0",
+        "buildingId": "begona-templo",
+        "center": [
+          10.156300808025332,
+          20.754578295971815,
+          3.8651054312623883
+        ],
+        "normal": [
+          -0.8212300114421861,
+          0,
+          -0.5705972908336201
+        ],
+        "width": 1.62,
+        "height": 4.95,
+        "physicalVoid": true,
+        "belfry": true
+      },
+      {
+        "id": "begona-campana-vano-2-1",
+        "buildingId": "begona-templo",
+        "center": [
+          8.931799021896385,
+          20.754578295971815,
+          5.62746503581732
+        ],
+        "normal": [
+          -0.8212300114421861,
+          0,
+          -0.5705972908336201
+        ],
+        "width": 1.62,
+        "height": 4.95,
+        "physicalVoid": true,
+        "belfry": true
+      },
+      {
+        "id": "begona-campana-vano-2-2",
+        "buildingId": "begona-templo",
+        "center": [
+          7.707297235767435,
+          20.754578295971815,
+          7.38982464037225
+        ],
+        "normal": [
+          -0.8212300114421861,
+          0,
+          -0.5705972908336201
+        ],
+        "width": 1.62,
+        "height": 4.95,
+        "physicalVoid": true,
+        "belfry": true
+      },
+      {
+        "id": "begona-campana-vano-3-0",
+        "buildingId": "begona-templo",
+        "center": [
+          7.870973743870287,
+          20.754578295971815,
+          9.639369038843919
+        ],
+        "normal": [
+          -0.5705972908336201,
+          0,
+          0.8212300114421861
+        ],
+        "width": 1.18,
+        "height": 4.95,
+        "physicalVoid": true,
+        "belfry": true
+      },
+      {
+        "id": "begona-campana-vano-3-1",
+        "buildingId": "begona-templo",
+        "center": [
+          9.252282623116043,
+          20.754578295971815,
+          10.599113682026067
+        ],
+        "normal": [
+          -0.5705972908336201,
+          0,
+          0.8212300114421861
+        ],
+        "width": 1.18,
+        "height": 4.95,
+        "physicalVoid": true,
+        "belfry": true
+      },
+      {
+        "id": "begona-campana-vano-3-2",
+        "buildingId": "begona-templo",
+        "center": [
+          10.633591502361801,
+          20.754578295971815,
+          11.558858325208217
+        ],
+        "normal": [
+          -0.5705972908336201,
+          0,
+          0.8212300114421861
+        ],
+        "width": 1.18,
+        "height": 4.95,
+        "physicalVoid": true,
+        "belfry": true
+      },
+      {
+        "id": "begona-abadia-0--4.904242968527614-0",
+        "buildingId": "begona-templo",
+        "center": [
+          -16.422992798942335,
+          1.799578295971811,
+          -13.103580825343002
+        ],
+        "normal": [
+          0.8212300114421861,
+          0,
+          0.5705972908336201
+        ],
+        "width": 1.1,
+        "height": 1.7,
+        "physicalVoid": true,
+        "annex": true
+      },
+      {
+        "id": "begona-abadia-0-0-0",
+        "buildingId": "begona-templo",
+        "center": [
+          -13.624645047510649,
+          1.799578295971811,
+          -17.131092334502195
+        ],
+        "normal": [
+          0.8212300114421861,
+          0,
+          0.5705972908336201
+        ],
+        "width": 1.1,
+        "height": 1.7,
+        "physicalVoid": true,
+        "annex": true
+      },
+      {
+        "id": "begona-abadia-0-4.9042429685276145-0",
+        "buildingId": "begona-templo",
+        "center": [
+          -10.82629729607896,
+          1.799578295971811,
+          -21.15860384366139
+        ],
+        "normal": [
+          0.8212300114421861,
+          0,
+          0.5705972908336201
+        ],
+        "width": 1.1,
+        "height": 1.7,
+        "physicalVoid": true,
+        "annex": true
+      },
+      {
+        "id": "begona-abadia-0--4.904242968527614-1",
+        "buildingId": "begona-templo",
+        "center": [
+          -16.422992798942335,
+          4.94957829597181,
+          -13.103580825343002
+        ],
+        "normal": [
+          0.8212300114421861,
+          0,
+          0.5705972908336201
+        ],
+        "width": 1.1,
+        "height": 1.7,
+        "physicalVoid": true,
+        "annex": true
+      },
+      {
+        "id": "begona-abadia-0-0-1",
+        "buildingId": "begona-templo",
+        "center": [
+          -13.624645047510649,
+          4.94957829597181,
+          -17.131092334502195
+        ],
+        "normal": [
+          0.8212300114421861,
+          0,
+          0.5705972908336201
+        ],
+        "width": 1.1,
+        "height": 1.7,
+        "physicalVoid": true,
+        "annex": true
+      },
+      {
+        "id": "begona-abadia-0-4.9042429685276145-1",
+        "buildingId": "begona-templo",
+        "center": [
+          -10.82629729607896,
+          4.94957829597181,
+          -21.15860384366139
+        ],
+        "normal": [
+          0.8212300114421861,
+          0,
+          0.5705972908336201
+        ],
+        "width": 1.1,
+        "height": 1.7,
+        "physicalVoid": true,
+        "annex": true
+      },
+      {
+        "id": "begona-abadia-0--4.904242968527614-2",
+        "buildingId": "begona-templo",
+        "center": [
+          -16.422992798942335,
+          8.099578295971812,
+          -13.103580825343002
+        ],
+        "normal": [
+          0.8212300114421861,
+          0,
+          0.5705972908336201
+        ],
+        "width": 1.1,
+        "height": 1.7,
+        "physicalVoid": true,
+        "annex": true
+      },
+      {
+        "id": "begona-abadia-0-0-2",
+        "buildingId": "begona-templo",
+        "center": [
+          -13.624645047510649,
+          8.099578295971812,
+          -17.131092334502195
+        ],
+        "normal": [
+          0.8212300114421861,
+          0,
+          0.5705972908336201
+        ],
+        "width": 1.1,
+        "height": 1.7,
+        "physicalVoid": true,
+        "annex": true
+      },
+      {
+        "id": "begona-abadia-0-4.9042429685276145-2",
+        "buildingId": "begona-templo",
+        "center": [
+          -10.82629729607896,
+          8.099578295971812,
+          -21.15860384366139
+        ],
+        "normal": [
+          0.8212300114421861,
+          0,
+          0.5705972908336201
+        ],
+        "width": 1.1,
+        "height": 1.7,
+        "physicalVoid": true,
+        "annex": true
+      },
+      {
+        "id": "begona-abadia-1--2.6782499999999994-0",
+        "buildingId": "begona-templo",
+        "center": [
+          -7.255500688263599,
+          1.799578295971811,
+          -21.63914474965367
+        ],
+        "normal": [
+          -0.5705972908336199,
+          0,
+          0.8212300114421863
+        ],
+        "width": 1.1,
+        "height": 1.7,
+        "physicalVoid": true,
+        "annex": true
+      },
+      {
+        "id": "begona-abadia-1-2.6782500000000002-0",
+        "buildingId": "begona-templo",
+        "center": [
+          -2.8565821319735276,
+          1.799578295971811,
+          -18.582740361303387
+        ],
+        "normal": [
+          -0.5705972908336199,
+          0,
+          0.8212300114421863
+        ],
+        "width": 1.1,
+        "height": 1.7,
+        "physicalVoid": true,
+        "annex": true
+      },
+      {
+        "id": "begona-abadia-1--2.6782499999999994-1",
+        "buildingId": "begona-templo",
+        "center": [
+          -7.255500688263599,
+          4.94957829597181,
+          -21.63914474965367
+        ],
+        "normal": [
+          -0.5705972908336199,
+          0,
+          0.8212300114421863
+        ],
+        "width": 1.1,
+        "height": 1.7,
+        "physicalVoid": true,
+        "annex": true
+      },
+      {
+        "id": "begona-abadia-1-2.6782500000000002-1",
+        "buildingId": "begona-templo",
+        "center": [
+          -2.8565821319735276,
+          4.94957829597181,
+          -18.582740361303387
+        ],
+        "normal": [
+          -0.5705972908336199,
+          0,
+          0.8212300114421863
+        ],
+        "width": 1.1,
+        "height": 1.7,
+        "physicalVoid": true,
+        "annex": true
+      },
+      {
+        "id": "begona-abadia-1--2.6782499999999994-2",
+        "buildingId": "begona-templo",
+        "center": [
+          -7.255500688263599,
+          8.099578295971812,
+          -21.63914474965367
+        ],
+        "normal": [
+          -0.5705972908336199,
+          0,
+          0.8212300114421863
+        ],
+        "width": 1.1,
+        "height": 1.7,
+        "physicalVoid": true,
+        "annex": true
+      },
+      {
+        "id": "begona-abadia-1-2.6782500000000002-2",
+        "buildingId": "begona-templo",
+        "center": [
+          -2.8565821319735276,
+          8.099578295971812,
+          -18.582740361303387
+        ],
+        "normal": [
+          -0.5705972908336199,
+          0,
+          0.8212300114421863
+        ],
+        "width": 1.1,
+        "height": 1.7,
+        "physicalVoid": true,
+        "annex": true
+      },
+      {
+        "id": "begona-abadia-3--2.67825-1",
+        "buildingId": "begona-templo",
+        "center": [
+          -11.228801494635244,
+          4.94957829597181,
+          -6.533055034283495
+        ],
+        "normal": [
+          0.5705972908336199,
+          0,
+          -0.8212300114421865
+        ],
+        "width": 1.1,
+        "height": 1.7,
+        "physicalVoid": true,
+        "annex": true
+      },
+      {
+        "id": "begona-abadia-3-2.6782499999999994-1",
+        "buildingId": "begona-templo",
+        "center": [
+          -15.627720050925316,
+          4.94957829597181,
+          -9.589459422633778
+        ],
+        "normal": [
+          0.5705972908336199,
+          0,
+          -0.8212300114421865
+        ],
+        "width": 1.1,
+        "height": 1.7,
+        "physicalVoid": true,
+        "annex": true
+      },
+      {
+        "id": "begona-abadia-3--2.67825-2",
+        "buildingId": "begona-templo",
+        "center": [
+          -11.228801494635244,
+          8.099578295971812,
+          -6.533055034283495
+        ],
+        "normal": [
+          0.5705972908336199,
+          0,
+          -0.8212300114421865
+        ],
+        "width": 1.1,
+        "height": 1.7,
+        "physicalVoid": true,
+        "annex": true
+      },
+      {
+        "id": "begona-abadia-3-2.6782499999999994-2",
+        "buildingId": "begona-templo",
+        "center": [
+          -15.627720050925316,
+          8.099578295971812,
+          -9.589459422633778
+        ],
+        "normal": [
+          0.5705972908336199,
+          0,
+          -0.8212300114421865
+        ],
+        "width": 1.1,
+        "height": 1.7,
+        "physicalVoid": true,
+        "annex": true
+      }
+    ],
+    "doors": [
+      {
+        "id": "begona-lateral--1-2",
+        "buildingId": "begona-templo",
+        "center": [
+          -4.613211736937865,
+          1.699578295971811,
+          12.503714543994631
+        ],
+        "normal": [
+          -0.57059729083362,
+          0,
+          0.8212300114421862
+        ],
+        "width": 1.8,
+        "height": 3.1,
+        "physicalVoid": true,
+        "floor": 0,
+        "closedLeaf": true
+      },
+      {
+        "id": "begona-lateral-1-2",
+        "buildingId": "begona-templo",
+        "center": [
+          10.651097615963153,
+          1.699578295971811,
+          -9.465385460364121
+        ],
+        "normal": [
+          0.57059729083362,
+          0,
+          -0.8212300114421862
+        ],
+        "width": 1.8,
+        "height": 3.1,
+        "physicalVoid": true,
+        "floor": 0,
+        "closedLeaf": true
+      },
+      {
+        "id": "begona-puerta-principal",
+        "buildingId": "begona-templo",
+        "center": [
+          13.423927184485143,
+          2.439578295971811,
+          8.74863221667722
+        ],
+        "normal": [
+          0.8212300114421862,
+          0,
+          0.57059729083362
+        ],
+        "width": 3.25,
+        "height": 4.55,
+        "physicalVoid": true,
+        "floor": 0,
+        "external": true
+      }
+    ],
+    "diaphragms": [
+      {
+        "z": -4.55,
+        "spring": 8.529578295971811,
+        "radius": 5.78,
+        "roof": "inclined flat concrete panels",
+        "vault": false
+      },
+      {
+        "z": -8.65,
+        "spring": 8.529578295971811,
+        "radius": 5.78,
+        "roof": "inclined flat concrete panels",
+        "vault": false
+      },
+      {
+        "z": -12.75,
+        "spring": 8.529578295971811,
+        "radius": 5.78,
+        "roof": "inclined flat concrete panels",
+        "vault": false
+      },
+      {
+        "z": -16.85,
+        "spring": 8.529578295971811,
+        "radius": 5.78,
+        "roof": "inclined flat concrete panels",
+        "vault": false
+      },
+      {
+        "z": -20.95,
+        "spring": 8.529578295971811,
+        "radius": 5.78,
+        "roof": "inclined flat concrete panels",
+        "vault": false
+      }
+    ],
+    "columns": [
+      {
+        "x": -5.9,
+        "z": -2.5,
+        "base": 0.299578295971811,
+        "top": 4.749578295971811,
+        "radius": 0.34
+      },
+      {
+        "x": -5.9,
+        "z": -6.6,
+        "base": 0.299578295971811,
+        "top": 4.749578295971811,
+        "radius": 0.34
+      },
+      {
+        "x": -5.9,
+        "z": -10.7,
+        "base": 0.299578295971811,
+        "top": 4.749578295971811,
+        "radius": 0.34
+      },
+      {
+        "x": -5.9,
+        "z": -14.8,
+        "base": 0.299578295971811,
+        "top": 4.749578295971811,
+        "radius": 0.34
+      },
+      {
+        "x": -5.9,
+        "z": -18.9,
+        "base": 0.299578295971811,
+        "top": 4.749578295971811,
+        "radius": 0.34
+      },
+      {
+        "x": -5.9,
+        "z": -23,
+        "base": 0.299578295971811,
+        "top": 4.749578295971811,
+        "radius": 0.34
+      },
+      {
+        "x": 5.9,
+        "z": -2.5,
+        "base": 0.299578295971811,
+        "top": 4.749578295971811,
+        "radius": 0.34
+      },
+      {
+        "x": 5.9,
+        "z": -6.6,
+        "base": 0.299578295971811,
+        "top": 4.749578295971811,
+        "radius": 0.34
+      },
+      {
+        "x": 5.9,
+        "z": -10.7,
+        "base": 0.299578295971811,
+        "top": 4.749578295971811,
+        "radius": 0.34
+      },
+      {
+        "x": 5.9,
+        "z": -14.8,
+        "base": 0.299578295971811,
+        "top": 4.749578295971811,
+        "radius": 0.34
+      },
+      {
+        "x": 5.9,
+        "z": -18.9,
+        "base": 0.299578295971811,
+        "top": 4.749578295971811,
+        "radius": 0.34
+      },
+      {
+        "x": 5.9,
+        "z": -23,
+        "base": 0.299578295971811,
+        "top": 4.749578295971811,
+        "radius": 0.34
+      }
+    ],
+    "roofs": [
+      {
+        "id": "nave-central",
+        "coordinates": [
+          [
+            -0.2213595805354195,
+            39.65859962488052
+          ],
+          [
+            -0.2212809928529148,
+            39.65868667585191
+          ],
+          [
+            -0.22102825615874766,
+            39.65855152548569
+          ],
+          [
+            -0.22110684384125234,
+            39.658464474514304
+          ]
+        ],
+        "eaves": 17.42957829597181,
+        "ridge": 20.42957829597181,
+        "type": "diaphragm arches with pitched flat concrete panels"
+      }
+    ],
+    "stairs": [
+      {
+        "id": "templo-acceso",
+        "buildingId": "begona-templo",
+        "footprint": [
+          [
+            -0.22108317605386035,
+            39.65848518096852
+          ],
+          [
+            -0.22104521420722673,
+            39.65852723101402
+          ],
+          [
+            -0.22102441401659667,
+            39.658516108159894
+          ],
+          [
+            -0.2210623758632303,
+            39.65847405811439
+          ]
+        ],
+        "segments": [
+          [
+            [
+              -0.22106247171664334,
+              39.65847410937179
+            ],
+            [
+              -0.2210245098700097,
+              39.65851615941729
+            ]
+          ],
+          [
+            [
+              -0.2210684146282519,
+              39.65847728733011
+            ],
+            [
+              -0.22103045278161831,
+              39.65851933737561
+            ]
+          ],
+          [
+            [
+              -0.22107435753986052,
+              39.65848046528843
+            ],
+            [
+              -0.2210363956932269,
+              39.65852251533393
+            ]
+          ]
+        ],
+        "steps": 3,
+        "external": true,
+        "interpretive": true
+      }
+    ],
+    "exactInteriorSurvey": false,
+    "organ": {
+      "sourceYear": 1990,
+      "builder": "OESA",
+      "case": "unencased silver pipe front",
+      "currentFunctionUnknown": true
+    },
+    "section": {
+      "removes": "temple roof tiles, flat ceiling panels, diaphragm arches, suspended lamps, choir floor, choir rail and organ",
+      "retains": "ground nave, arcades, clerestory walls, apse, altar, facade, bell tower, Casa Abadía roof and gable, and parish annex roof"
+    },
+    "sourceDates": {
+      "project": 1927,
+      "construction": "1928–1929",
+      "inauguration": "1929-06-05",
+      "facadeRestoration": "2003–2004",
+      "organReference": 1990
+    }
+  },
+  "focuses": {
+    "begona-conjunto": {
+      "id": "begona-conjunto",
+      "label": "Begoña, frente a la Alameda",
+      "target": [
+        4869.510368412071,
+        12.179578295971812,
+        2275.463467092153
+      ],
+      "localTarget": [
+        5.277325470978656,
+        7.179578295971811,
+        3.08830709160771
+      ],
+      "coordinates": [
+        -0.22116340341304175,
+        39.65855925739228
+      ],
+      "elevation": 7.179578295971811,
+      "offset": [
+        83.94157172814901,
+        53,
+        -8.649424015968563
+      ],
+      "closeOffset": [
+        60.28050758946031,
+        36,
+        -4.388667765622937
+      ],
+      "regionId": "edificio",
+      "readingLayer": "edificio",
+      "period": "edificio",
+      "components": [],
+      "interiorView": false,
+      "floor": null,
+      "buildingId": "begona-templo",
+      "requiresSection": false,
+      "fitBounds": true,
+      "bounds": {
+        "min": [
+          4838.873549685478,
+          4.659578293561935,
+          2236.415794360511
+        ],
+        "max": [
+          5039.7498213898825,
+          38.35457992553711,
+          2376.14332251992
+        ]
+      },
+      "kind": "overview",
+      "minDistance": 0.7,
+      "closeScale": false,
+      "fov": 48,
+      "sourceConfidence": "cartographic-footprint-primary-photographs-interpreted-proportions"
+    },
+    "begona-fachada": {
+      "id": "begona-fachada",
+      "label": "Una fachada que asciende hacia el centro",
+      "target": [
+        4877.886914528782,
+        20.17957829597181,
+        2281.283559458656
+      ],
+      "localTarget": [
+        13.653871587688954,
+        15.179578295971812,
+        8.908399458110635
+      ],
+      "coordinates": [
+        -0.22106563293173917,
+        39.65850697485215
+      ],
+      "elevation": 15.179578295971812,
+      "offset": [
+        42.549354401858984,
+        9,
+        8.862981438827635
+      ],
+      "closeOffset": [
+        31.164103263043973,
+        6,
+        9.476215901420357
+      ],
+      "regionId": "edificio",
+      "readingLayer": "edificio",
+      "period": "edificio",
+      "components": [
+        "fachada-cornisa-curva",
+        "portada-entablamento",
+        "campanario-cornisas"
+      ],
+      "interiorView": false,
+      "floor": null,
+      "buildingId": "begona-templo",
+      "requiresSection": false,
+      "fitBounds": false,
+      "bounds": {
+        "min": [
+          4875.686914528782,
+          17.979578295971812,
+          2279.083559458656
+        ],
+        "max": [
+          4880.086914528782,
+          22.37957829597181,
+          2283.4835594586557
+        ]
+      },
+      "kind": "feature",
+      "minDistance": 0.7,
+      "closeScale": false,
+      "fov": 49,
+      "sourceConfidence": "cartographic-footprint-primary-photographs-interpreted-proportions"
+    },
+    "begona-portada": {
+      "id": "begona-portada",
+      "label": "Columnas, volutas y un gran óvalo",
+      "target": [
+        4878.05116053107,
+        11.379578295971811,
+        2281.3976789168228
+      ],
+      "localTarget": [
+        13.818117589977392,
+        6.379578295971811,
+        9.022518916277358
+      ],
+      "coordinates": [
+        -0.22106371586347834,
+        39.658505949704306
+      ],
+      "elevation": 6.379578295971811,
+      "offset": [
+        17.955091230352505,
+        1.8,
+        3.9515438640762355
+      ],
+      "closeOffset": [
+        12.137149300640715,
+        1.1,
+        3.5622474442346945
+      ],
+      "regionId": "edificio",
+      "readingLayer": "edificio",
+      "period": "edificio",
+      "components": [
+        "portada-volutas",
+        "portada-capiteles-jonicos",
+        "portada-cornisa-mixtilinea"
+      ],
+      "interiorView": false,
+      "floor": null,
+      "buildingId": "begona-templo",
+      "requiresSection": false,
+      "fitBounds": false,
+      "bounds": {
+        "min": [
+          4875.8511605310705,
+          9.179578295971812,
+          2279.197678916823
+        ],
+        "max": [
+          4880.25116053107,
+          13.57957829597181,
+          2283.5976789168226
+        ]
+      },
+      "kind": "feature",
+      "minDistance": 0.7,
+      "closeScale": false,
+      "fov": 52,
+      "sourceConfidence": "cartographic-footprint-primary-photographs-interpreted-proportions"
+    },
+    "begona-campanario": {
+      "id": "begona-campanario",
+      "label": "La torre sobre el coro",
+      "target": [
+        4875.71065499846,
+        28.17957829597181,
+        2279.7714766379468
+      ],
+      "localTarget": [
+        11.47761205736716,
+        23.17957829597181,
+        7.396316637401541
+      ],
+      "coordinates": [
+        -0.22109103408619524,
+        39.658520558061106
+      ],
+      "elevation": 23.17957829597181,
+      "offset": [
+        24.983559591348023,
+        7,
+        -0.9065043549603935
+      ],
+      "closeOffset": [
+        18.595020370802615,
+        4.8,
+        -0.4745707633597487
+      ],
+      "regionId": "edificio",
+      "readingLayer": "edificio",
+      "period": "edificio",
+      "components": [
+        "campanario-campanas",
+        "campanario-balcon",
+        "campanario-cupula"
+      ],
+      "interiorView": false,
+      "floor": null,
+      "buildingId": "begona-templo",
+      "requiresSection": false,
+      "fitBounds": false,
+      "bounds": {
+        "min": [
+          4873.51065499846,
+          25.979578295971812,
+          2277.571476637947
+        ],
+        "max": [
+          4877.91065499846,
+          30.37957829597181,
+          2281.9714766379466
+        ]
+      },
+      "kind": "feature",
+      "minDistance": 0.7,
+      "closeScale": false,
+      "fov": 48,
+      "sourceConfidence": "cartographic-footprint-primary-photographs-interpreted-proportions"
+    },
+    "begona-lateral": {
+      "id": "begona-lateral",
+      "label": "La iglesia junto a la avenida",
+      "target": [
+        4873.743483584587,
+        12.879578295971811,
+        2262.3607739289278
+      ],
+      "localTarget": [
+        9.510440643493695,
+        7.879578295971811,
+        -10.014386071617707
+      ],
+      "coordinates": [
+        -0.22111399477825844,
+        39.65867696034918
+      ],
+      "elevation": 7.879578295971811,
+      "offset": [
+        16.131330336476054,
+        10,
+        -2.1863626358606094
+      ],
+      "closeOffset": [
+        11.955848429648636,
+        7,
+        -1.4344644740349102
+      ],
+      "regionId": "edificio",
+      "readingLayer": "edificio",
+      "period": "edificio",
+      "components": [
+        "laterales-contrafuertes",
+        "claristorio-muros"
+      ],
+      "interiorView": false,
+      "floor": null,
+      "buildingId": "begona-templo",
+      "requiresSection": false,
+      "fitBounds": false,
+      "bounds": {
+        "min": [
+          4871.543483584587,
+          10.679578295971812,
+          2260.160773928928
+        ],
+        "max": [
+          4875.943483584587,
+          15.07957829597181,
+          2264.5607739289276
+        ]
+      },
+      "kind": "feature",
+      "minDistance": 0.7,
+      "closeScale": false,
+      "fov": 52,
+      "sourceConfidence": "cartographic-footprint-primary-photographs-interpreted-proportions"
+    },
+    "begona-nave": {
+      "id": "begona-nave",
+      "label": "Una perspectiva hacia la cabecera",
+      "target": [
+        4862.694159317101,
+        9.27957829597181,
+        2270.727509578234
+      ],
+      "localTarget": [
+        -1.5388836239914916,
+        4.2795782959718105,
+        -1.6476504223113366
+      ],
+      "coordinates": [
+        -0.22124296174586638,
+        39.658601801027864
+      ],
+      "elevation": 4.2795782959718105,
+      "offset": [
+        10.18325214188311,
+        -2.35,
+        7.075406406336888
+      ],
+      "closeOffset": [
+        6.651963092681708,
+        -2.35,
+        4.621838055752321
+      ],
+      "regionId": "naves",
+      "readingLayer": "naves",
+      "period": "naves",
+      "components": [
+        "arcadas-arcos",
+        "claristorio-imposta",
+        "diafragmas-arcos"
+      ],
+      "interiorView": true,
+      "floor": 0,
+      "buildingId": "begona-templo",
+      "requiresSection": false,
+      "fitBounds": false,
+      "bounds": {
+        "min": [
+          4860.494159317102,
+          7.079578295971809,
+          2268.527509578234
+        ],
+        "max": [
+          4864.894159317101,
+          11.479578295971809,
+          2272.9275095782336
+        ]
+      },
+      "kind": "feature",
+      "minDistance": 0.3,
+      "closeScale": false,
+      "fov": 70,
+      "sourceConfidence": "cartographic-footprint-primary-photographs-interpreted-proportions"
+    },
+    "begona-arcadas": {
+      "id": "begona-arcadas",
+      "label": "Columnas y arcos entre las naves",
+      "target": [
+        4872.30203141998,
+        9.97957829597181,
+        2270.2187919210605
+      ],
+      "localTarget": [
+        8.068988478887483,
+        4.979578295971811,
+        -2.1563680794847224
+      ],
+      "coordinates": [
+        -0.2211308193107023,
+        39.65860637089543
+      ],
+      "elevation": 4.979578295971811,
+      "offset": [
+        -0.3114371358732331,
+        -3,
+        4.6543535437694326
+      ],
+      "closeOffset": [
+        -0.45488358327672396,
+        -3,
+        3.458768700804569
+      ],
+      "regionId": "naves",
+      "readingLayer": "naves",
+      "period": "naves",
+      "components": [
+        "columnas-fustes",
+        "arcadas-arcos"
+      ],
+      "interiorView": true,
+      "floor": 0,
+      "buildingId": "begona-templo",
+      "requiresSection": false,
+      "fitBounds": false,
+      "bounds": {
+        "min": [
+          4870.10203141998,
+          7.7795782959718105,
+          2268.0187919210607
+        ],
+        "max": [
+          4874.50203141998,
+          12.179578295971812,
+          2272.4187919210603
+        ]
+      },
+      "kind": "feature",
+      "minDistance": 0.3,
+      "closeScale": false,
+      "fov": 67,
+      "sourceConfidence": "cartographic-footprint-primary-photographs-interpreted-proportions"
+    },
+    "begona-cubierta": {
+      "id": "begona-cubierta",
+      "label": "Arcos diafragma bajo el tejado",
+      "target": [
+        4867.251985880605,
+        17.17957829597181,
+        2273.8943245423607
+      ],
+      "localTarget": [
+        3.018942939512643,
+        12.179578295971812,
+        1.5191645418152557
+      ],
+      "coordinates": [
+        -0.22118976310162822,
+        39.65857335317515
+      ],
+      "elevation": 12.179578295971812,
+      "offset": [
+        3.1484067833269025,
+        -10.15,
+        0.7263158587702364
+      ],
+      "closeOffset": [
+        1.6312631207468133,
+        -10.15,
+        0.2810349282408996
+      ],
+      "regionId": "naves",
+      "readingLayer": "naves",
+      "period": "naves",
+      "components": [
+        "diafragmas-arcos",
+        "nave-paneles-hormigon",
+        "diafragmas-mensulas"
+      ],
+      "interiorView": true,
+      "floor": 0,
+      "buildingId": "begona-templo",
+      "requiresSection": false,
+      "fitBounds": false,
+      "bounds": {
+        "min": [
+          4865.051985880606,
+          14.979578295971812,
+          2271.694324542361
+        ],
+        "max": [
+          4869.451985880605,
+          19.37957829597181,
+          2276.0943245423605
+        ]
+      },
+      "kind": "feature",
+      "minDistance": 0.3,
+      "closeScale": false,
+      "fov": 74,
+      "sourceConfidence": "cartographic-footprint-primary-photographs-interpreted-proportions"
+    },
+    "begona-presbiterio": {
+      "id": "begona-presbiterio",
+      "label": "La cabecera y el retablo",
+      "target": [
+        4856.986610737578,
+        8.679578295971812,
+        2266.7618584069405
+      ],
+      "localTarget": [
+        -7.246432203514683,
+        3.679578295971811,
+        -5.613301593604994
+      ],
+      "coordinates": [
+        -0.22130957986793037,
+        39.6586374249155
+      ],
+      "elevation": 3.679578295971811,
+      "offset": [
+        5.584364077806866,
+        -1.7,
+        3.8800615776686156
+      ],
+      "closeOffset": [
+        3.8987106957624293,
+        -1.7,
+        2.100013073946835
+      ],
+      "regionId": "liturgia",
+      "readingLayer": "liturgia",
+      "period": "liturgia",
+      "components": [
+        "retablo-coronacion",
+        "triunfal-arco",
+        "altar-mesa"
+      ],
+      "interiorView": true,
+      "floor": 0,
+      "buildingId": "begona-templo",
+      "requiresSection": false,
+      "fitBounds": false,
+      "bounds": {
+        "min": [
+          4854.7866107375785,
+          6.479578295971812,
+          2264.5618584069407
+        ],
+        "max": [
+          4859.186610737578,
+          10.879578295971811,
+          2268.9618584069403
+        ]
+      },
+      "kind": "feature",
+      "minDistance": 0.3,
+      "closeScale": false,
+      "fov": 66,
+      "sourceConfidence": "cartographic-footprint-primary-photographs-interpreted-proportions"
+    },
+    "begona-capillas": {
+      "id": "begona-capillas",
+      "label": "Los espacios junto al altar",
+      "target": [
+        4862.121986355081,
+        7.57957829597181,
+        2259.3707883039606
+      ],
+      "localTarget": [
+        -2.111056586012104,
+        2.5795782959718108,
+        -13.00437169658467
+      ],
+      "coordinates": [
+        -0.2212496401100878,
+        39.65870381972419
+      ],
+      "elevation": 2.5795782959718108,
+      "offset": [
+        2.429024109518315,
+        -0.6,
+        3.514234180497759
+      ],
+      "closeOffset": [
+        1.7859064702878633,
+        -0.6,
+        2.3367794246321036
+      ],
+      "regionId": "liturgia",
+      "readingLayer": "liturgia",
+      "period": "liturgia",
+      "components": [
+        "capillas-retablos",
+        "capillas-nichos"
+      ],
+      "interiorView": true,
+      "floor": 0,
+      "buildingId": "begona-templo",
+      "requiresSection": false,
+      "fitBounds": false,
+      "bounds": {
+        "min": [
+          4859.921986355082,
+          5.37957829597181,
+          2257.1707883039608
+        ],
+        "max": [
+          4864.321986355081,
+          9.77957829597181,
+          2261.5707883039604
+        ]
+      },
+      "kind": "feature",
+      "minDistance": 0.3,
+      "closeScale": false,
+      "fov": 64,
+      "sourceConfidence": "cartographic-footprint-primary-photographs-interpreted-proportions"
+    },
+    "begona-coro": {
+      "id": "begona-coro",
+      "label": "Mirar la nave desde sus pies",
+      "target": [
+        4874.437748480725,
+        11.97957829597181,
+        2278.8870508371547
+      ],
+      "localTarget": [
+        10.204705539631773,
+        6.979578295971811,
+        6.51189083660943
+      ],
+      "coordinates": [
+        -0.2211058913652167,
+        39.65852850295691
+      ],
+      "elevation": 6.979578295971811,
+      "offset": [
+        1.0675990148748422,
+        0.1,
+        0.7417764780837061
+      ],
+      "closeOffset": [
+        0.9102861975480536,
+        0.1,
+        0.2671685583176021
+      ],
+      "regionId": "liturgia",
+      "readingLayer": "liturgia",
+      "period": "liturgia",
+      "components": [
+        "coro-barandilla",
+        "coro-forjado"
+      ],
+      "interiorView": true,
+      "floor": 1,
+      "buildingId": "begona-templo",
+      "requiresSection": false,
+      "fitBounds": false,
+      "bounds": {
+        "min": [
+          4872.237748480725,
+          9.77957829597181,
+          2276.687050837155
+        ],
+        "max": [
+          4876.637748480724,
+          14.179578295971812,
+          2281.0870508371545
+        ]
+      },
+      "kind": "feature",
+      "minDistance": 0.3,
+      "closeScale": false,
+      "fov": 72,
+      "sourceConfidence": "cartographic-footprint-primary-photographs-interpreted-proportions"
+    },
+    "begona-organo": {
+      "id": "begona-organo",
+      "label": "Un instrumento documentado",
+      "target": [
+        4876.531885009903,
+        12.279578295971811,
+        2280.3420739287803
+      ],
+      "localTarget": [
+        12.298842068809348,
+        7.279578295971811,
+        7.9669139282351615
+      ],
+      "coordinates": [
+        -0.22108144874489105,
+        39.65851543232188
+      ],
+      "elevation": 7.279578295971811,
+      "offset": [
+        -0.11784556614485098,
+        -0.2,
+        -3.2478627468752435
+      ],
+      "closeOffset": [
+        -0.36901589595120043,
+        -0.2,
+        -2.448229415013089
+      ],
+      "regionId": "liturgia",
+      "readingLayer": "liturgia",
+      "period": "liturgia",
+      "components": [
+        "organo-tubos",
+        "organo-consola"
+      ],
+      "interiorView": true,
+      "floor": 1,
+      "buildingId": "begona-templo",
+      "requiresSection": false,
+      "fitBounds": false,
+      "bounds": {
+        "min": [
+          4874.331885009903,
+          10.07957829597181,
+          2278.1420739287805
+        ],
+        "max": [
+          4878.731885009903,
+          14.479578295971812,
+          2282.54207392878
+        ]
+      },
+      "kind": "feature",
+      "minDistance": 0.3,
+      "closeScale": false,
+      "fov": 66,
+      "sourceConfidence": "cartographic-footprint-primary-photographs-interpreted-proportions"
+    },
+    "begona-abadia": {
+      "id": "begona-abadia",
+      "label": "El bloque situado tras la cabecera",
+      "target": [
+        4850.810957335892,
+        12.77957829597181,
+        2264.346200098684
+      ],
+      "localTarget": [
+        -13.422085605200557,
+        7.7795782959718105,
+        -8.028959901860876
+      ],
+      "coordinates": [
+        -0.2213816616779065,
+        39.65865912504403
+      ],
+      "elevation": 7.7795782959718105,
+      "offset": [
+        -20.445475942536447,
+        10,
+        10.148030029673903
+      ],
+      "closeOffset": [
+        -15.12879945404179,
+        7,
+        7.753671844963834
+      ],
+      "regionId": "anexos",
+      "readingLayer": "anexos",
+      "period": "anexos",
+      "components": [
+        "abadia-entramado",
+        "abadia-muros",
+        "salon-cubierta"
+      ],
+      "interiorView": false,
+      "floor": null,
+      "buildingId": "begona-templo",
+      "requiresSection": false,
+      "fitBounds": false,
+      "bounds": {
+        "min": [
+          4848.610957335893,
+          10.57957829597181,
+          2262.1462000986844
+        ],
+        "max": [
+          4853.010957335892,
+          14.979578295971809,
+          2266.546200098684
+        ]
+      },
+      "kind": "feature",
+      "minDistance": 0.7,
+      "closeScale": false,
+      "fov": 52,
+      "sourceConfidence": "cartographic-footprint-primary-photographs-interpreted-proportions"
+    },
+    "begona-materiales": {
+      "id": "begona-materiales",
+      "label": "Color, estructura y revestimiento",
+      "target": [
+        4868.792339050359,
+        7.779578295971811,
+        2268.0846505315035
+      ],
+      "localTarget": [
+        4.559296109266114,
+        2.779578295971811,
+        -4.290509469042018
+      ],
+      "coordinates": [
+        -0.22117178420332284,
+        39.658625542126025
+      ],
+      "elevation": 2.779578295971811,
+      "offset": [
+        -0.03946725118193717,
+        -0.85,
+        2.773254827109139
+      ],
+      "closeOffset": [
+        0.07252034839683141,
+        -0.85,
+        1.998684767307842
+      ],
+      "regionId": "naves",
+      "readingLayer": "naves",
+      "period": "naves",
+      "components": [
+        "columnas-fustes",
+        "naves-zocalo-negro",
+        "claristorio-bicromia"
+      ],
+      "interiorView": true,
+      "floor": 0,
+      "buildingId": "begona-templo",
+      "requiresSection": false,
+      "fitBounds": false,
+      "bounds": {
+        "min": [
+          4866.592339050359,
+          5.579578295971811,
+          2265.8846505315037
+        ],
+        "max": [
+          4870.992339050359,
+          9.979578295971812,
+          2270.2846505315033
+        ]
+      },
+      "kind": "feature",
+      "minDistance": 0.3,
+      "closeScale": false,
+      "fov": 58,
+      "sourceConfidence": "cartographic-footprint-primary-photographs-interpreted-proportions"
+    },
+    "begona-seccion": {
+      "id": "begona-seccion",
+      "label": "Leer el edificio desde arriba",
+      "target": [
+        4866.225448366303,
+        9.179578295971812,
+        2273.1810779288185
+      ],
+      "localTarget": [
+        1.9924054252099097,
+        4.179578295971811,
+        0.8059179282732307
+      ],
+      "coordinates": [
+        -0.22120174477825844,
+        39.658579760349184
+      ],
+      "elevation": 4.179578295971811,
+      "offset": [
+        43.96787638199218,
+        42,
+        -7.1990170480319335
+      ],
+      "closeOffset": [
+        32.012027952343544,
+        32,
+        -5.764552573997024
+      ],
+      "regionId": "edificio",
+      "readingLayer": "edificio",
+      "period": "edificio",
+      "components": [],
+      "interiorView": false,
+      "floor": null,
+      "buildingId": "begona-templo",
+      "requiresSection": true,
+      "fitBounds": false,
+      "bounds": {
+        "min": [
+          4864.025448366303,
+          6.979578295971812,
+          2270.9810779288186
+        ],
+        "max": [
+          4868.425448366303,
+          11.379578295971811,
+          2275.3810779288183
+        ]
+      },
+      "kind": "feature",
+      "minDistance": 0.7,
+      "closeScale": false,
+      "fov": 49,
+      "sourceConfidence": "cartographic-footprint-primary-photographs-interpreted-proportions"
+    },
+    "begona-atrio": {
+      "id": "begona-atrio",
+      "label": "Entre la puerta y el paseo",
+      "coordinate": [
+        -0.2210625,
+        39.658387097
+      ],
+      "coordinates": [
+        -0.2210625,
+        39.658387097
+      ],
+      "target": [
+        4878.155330382361,
+        5.563900439660995,
+        2294.6283619599953
+      ],
+      "offset": [
+        58.90198532843442,
+        28.8,
+        30.5232258062656
+      ],
+      "closeOffset": [
+        28.55853834105892,
+        9.179939400792232,
+        16.159354838378476
+      ],
+      "bounds": {
+        "min": [
+          4813.155330382361,
+          4,
+          2229.6283619599953
+        ],
+        "max": [
+          4943.155330382361,
+          40,
+          2359.6283619599953
+        ]
+      },
+      "components": [
+        "begona-atrio"
+      ],
+      "elevation": 0.563900439660995,
+      "localTarget": [
+        -10.330977803589967,
+        0.563900439660995,
+        24.131017025129573
+      ],
+      "floor": null,
+      "regionId": "alameda",
+      "readingLayer": "alameda",
+      "kind": "context",
+      "fitBounds": false,
+      "fov": 54,
+      "minDistance": 5,
+      "sourceConfidence": "Mapped PNOA and cadastral setting, interpreted heights and furniture; not a current condition survey."
+    },
+    "begona-alameda": {
+      "id": "begona-alameda",
+      "label": "El paseo de la vida cotidiana",
+      "coordinate": [
+        -0.220325,
+        39.658040323
+      ],
+      "coordinates": [
+        -0.220325,
+        39.658040323
+      ],
+      "target": [
+        4941.341096461958,
+        5.3,
+        2333.2312436400507
+      ],
+      "offset": [
+        83.17674291833555,
+        50.7,
+        61.94419354817228
+      ],
+      "closeOffset": [
+        44.979697887170005,
+        16.7,
+        30.5232258062656
+      ],
+      "bounds": {
+        "min": [
+          4821.341096461958,
+          4,
+          2213.2312436400507
+        ],
+        "max": [
+          5061.341096461958,
+          40,
+          2453.2312436400507
+        ]
+      },
+      "components": [
+        "begona-alameda"
+      ],
+      "elevation": 0.2999999999999998,
+      "localTarget": [
+        -5.97919582313844,
+        0.2999999999999998,
+        98.04776413067049
+      ],
+      "floor": null,
+      "regionId": "alameda",
+      "readingLayer": "alameda",
+      "kind": "context",
+      "fitBounds": false,
+      "fov": 54,
+      "minDistance": 5,
+      "sourceConfidence": "Mapped PNOA and cadastral setting, interpreted heights and furniture; not a current condition survey."
+    },
+    "begona-arbolado": {
+      "id": "begona-arbolado",
+      "label": "La sombra como parte del espacio",
+      "coordinate": [
+        -0.220697917,
+        39.658230645
+      ],
+      "coordinates": [
+        -0.220697917,
+        39.658230645
+      ],
+      "target": [
+        4909.391203134358,
+        7.548703749251354,
+        2312.044598599863
+      ],
+      "offset": [
+        36.94760897874676,
+        23,
+        37.88470967694229
+      ],
+      "closeOffset": [
+        20.526449432636582,
+        10,
+        23.16174193558936
+      ],
+      "bounds": {
+        "min": [
+          4844.391203134358,
+          4,
+          2247.044598599863
+        ],
+        "max": [
+          4974.391203134358,
+          40,
+          2377.044598599863
+        ]
+      },
+      "components": [
+        "begona-arbolado"
+      ],
+      "elevation": 2.548703749251354,
+      "localTarget": [
+        -6.810609649515317,
+        2.548703749251354,
+        59.72051060588434
+      ],
+      "floor": null,
+      "regionId": "alameda",
+      "readingLayer": "alameda",
+      "kind": "context",
+      "fitBounds": false,
+      "fov": 54,
+      "minDistance": 5,
+      "sourceConfidence": "Mapped PNOA and cadastral setting, interpreted heights and furniture; not a current condition survey."
+    },
+    "begona-frente-urbano": {
+      "id": "begona-frente-urbano",
+      "label": "El templo dentro del barrio",
+      "coordinate": [
+        -0.2201625,
+        39.658314516
+      ],
+      "coordinates": [
+        -0.2201625,
+        39.658314516
+      ],
+      "target": [
+        4955.263383903222,
+        10,
+        2302.708078880535
+      ],
+      "offset": [
+        30.700428716641,
+        36,
+        58.71232258065493
+      ],
+      "closeOffset": [
+        15.707196087583725,
+        16,
+        37.34606451555692
+      ],
+      "bounds": {
+        "min": [
+          4890.263383903222,
+          4,
+          2237.708078880535
+        ],
+        "max": [
+          5020.263383903222,
+          40,
+          2367.708078880535
+        ]
+      },
+      "components": [
+        "begona-frente-urbano"
+      ],
+      "elevation": 5,
+      "localTarget": [
+        27.031362617762678,
+        5,
+        92.06472928591367
+      ],
+      "floor": null,
+      "regionId": "alameda",
+      "readingLayer": "alameda",
+      "kind": "context",
+      "fitBounds": false,
+      "fov": 54,
+      "minDistance": 5,
+      "sourceConfidence": "Mapped PNOA and cadastral setting, interpreted heights and furniture; not a current condition survey."
+    },
+    "begona-ciudad-factoria": {
+      "id": "begona-ciudad-factoria",
+      "label": "Un paisaje de trabajo y vida social",
+      "coordinate": [
+        -0.220997917,
+        39.658354839
+      ],
+      "coordinates": [
+        -0.220997917,
+        39.658354839
+      ],
+      "target": [
+        4883.688518627404,
+        8.55750318088149,
+        2298.219322520497
+      ],
+      "offset": [
+        100.66884765223858,
+        58,
+        69.66477419310559
+      ],
+      "closeOffset": [
+        51.94084160780403,
+        25,
+        46.32348387038792
+      ],
+      "bounds": {
+        "min": [
+          4738.688518627404,
+          4,
+          2153.219322520497
+        ],
+        "max": [
+          5028.688518627404,
+          40,
+          2443.219322520497
+        ]
+      },
+      "components": [
+        "begona-ciudad-factoria"
+      ],
+      "elevation": 3.55750318088149,
+      "localTarget": [
+        -10.122760163485275,
+        3.55750318088149,
+        30.72402963823039
+      ],
+      "floor": null,
+      "regionId": "anexos",
+      "readingLayer": "anexos",
+      "kind": "context",
+      "fitBounds": false,
+      "fov": 54,
+      "minDistance": 5,
+      "sourceConfidence": "Mapped PNOA and cadastral setting, interpreted heights and furniture; not a current condition survey."
+    }
+  }
+}

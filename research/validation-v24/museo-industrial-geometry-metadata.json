@@ -1,0 +1,1754 @@
+{
+  "stats": {
+    "modelVersion": "v24",
+    "meshes": 54,
+    "triangles": 35106,
+    "bays": 3,
+    "stops": 20,
+    "portals": 2,
+    "largeWindowVoids": 16,
+    "allWindowVoids": 18,
+    "openTrusses": 13,
+    "columns": 22,
+    "northVisitorFloors": 3,
+    "resourcesOwned": true,
+    "interpretiveGeometry": true,
+    "mappedEnvelopeMetres": [
+      20.22,
+      60.67
+    ],
+    "documentedEnvelopeMetres": [
+      18,
+      70
+    ]
+  },
+  "qa": {
+    "baseY": 4.962847880008963,
+    "frame": {
+      "x": 4828.806176129009,
+      "z": 2388.142394000448,
+      "yaw": 1.0446
+    },
+    "width": 20.22,
+    "length": 60.67,
+    "floorY": 0.18,
+    "trackY": -0.82,
+    "portals": [
+      {
+        "id": "portal-noroeste",
+        "center": [
+          0,
+          1.98,
+          -30.335
+        ],
+        "bottom": 0.18,
+        "width": 3.6,
+        "height": 4.2,
+        "localNormal": [
+          0,
+          0,
+          -1
+        ],
+        "physicalVoid": true
+      },
+      {
+        "id": "portal-sureste",
+        "center": [
+          0,
+          1.98,
+          30.335
+        ],
+        "bottom": 0.18,
+        "width": 3.6,
+        "height": 4.2,
+        "localNormal": [
+          0,
+          0,
+          1
+        ],
+        "physicalVoid": true
+      }
+    ],
+    "windows": [
+      {
+        "cx": -6.1,
+        "bottom": 2.25,
+        "width": 2.55,
+        "height": 6.25,
+        "type": "gable",
+        "z": -30.335,
+        "physicalVoid": true
+      },
+      {
+        "cx": 6.1,
+        "bottom": 2.25,
+        "width": 2.55,
+        "height": 6.25,
+        "type": "gable",
+        "z": -30.335,
+        "physicalVoid": true
+      },
+      {
+        "cx": 0,
+        "bottom": 9.2,
+        "width": 2.5,
+        "height": 1.35,
+        "type": "gable",
+        "z": -30.335,
+        "physicalVoid": true
+      },
+      {
+        "cx": -6.1,
+        "bottom": 2.25,
+        "width": 2.55,
+        "height": 6.25,
+        "type": "gable",
+        "z": 30.335,
+        "physicalVoid": true
+      },
+      {
+        "cx": 6.1,
+        "bottom": 2.25,
+        "width": 2.55,
+        "height": 6.25,
+        "type": "gable",
+        "z": 30.335,
+        "physicalVoid": true
+      },
+      {
+        "cx": 0,
+        "bottom": 9.2,
+        "width": 2.5,
+        "height": 1.35,
+        "type": "gable",
+        "z": 30.335,
+        "physicalVoid": true
+      },
+      {
+        "cx": 27.807083333333335,
+        "bottom": 2.1,
+        "width": 2.35,
+        "height": 6.85,
+        "type": "south",
+        "x": -10.11,
+        "z": -27.807083333333335,
+        "physicalVoid": true
+      },
+      {
+        "cx": 22.75125,
+        "bottom": 2.1,
+        "width": 2.35,
+        "height": 6.85,
+        "type": "south",
+        "x": -10.11,
+        "z": -22.75125,
+        "physicalVoid": true
+      },
+      {
+        "cx": 17.695416666666667,
+        "bottom": 2.1,
+        "width": 2.35,
+        "height": 6.85,
+        "type": "south",
+        "x": -10.11,
+        "z": -17.695416666666667,
+        "physicalVoid": true
+      },
+      {
+        "cx": 12.639583333333334,
+        "bottom": 2.1,
+        "width": 2.35,
+        "height": 6.85,
+        "type": "south",
+        "x": -10.11,
+        "z": -12.639583333333334,
+        "physicalVoid": true
+      },
+      {
+        "cx": 7.583750000000002,
+        "bottom": 2.1,
+        "width": 2.35,
+        "height": 6.85,
+        "type": "south",
+        "x": -10.11,
+        "z": -7.583750000000002,
+        "physicalVoid": true
+      },
+      {
+        "cx": 2.5279166666666697,
+        "bottom": 2.1,
+        "width": 2.35,
+        "height": 6.85,
+        "type": "south",
+        "x": -10.11,
+        "z": -2.5279166666666697,
+        "physicalVoid": true
+      },
+      {
+        "cx": -2.5279166666666626,
+        "bottom": 2.1,
+        "width": 2.35,
+        "height": 6.85,
+        "type": "south",
+        "x": -10.11,
+        "z": 2.5279166666666626,
+        "physicalVoid": true
+      },
+      {
+        "cx": -7.583749999999995,
+        "bottom": 2.1,
+        "width": 2.35,
+        "height": 6.85,
+        "type": "south",
+        "x": -10.11,
+        "z": 7.583749999999995,
+        "physicalVoid": true
+      },
+      {
+        "cx": -12.639583333333334,
+        "bottom": 2.1,
+        "width": 2.35,
+        "height": 6.85,
+        "type": "south",
+        "x": -10.11,
+        "z": 12.639583333333334,
+        "physicalVoid": true
+      },
+      {
+        "cx": -17.695416666666667,
+        "bottom": 2.1,
+        "width": 2.35,
+        "height": 6.85,
+        "type": "south",
+        "x": -10.11,
+        "z": 17.695416666666667,
+        "physicalVoid": true
+      },
+      {
+        "cx": -22.75125,
+        "bottom": 2.1,
+        "width": 2.35,
+        "height": 6.85,
+        "type": "south",
+        "x": -10.11,
+        "z": 22.75125,
+        "physicalVoid": true
+      },
+      {
+        "cx": -27.80708333333333,
+        "bottom": 2.1,
+        "width": 2.35,
+        "height": 6.85,
+        "type": "south",
+        "x": -10.11,
+        "z": 27.80708333333333,
+        "physicalVoid": true
+      }
+    ],
+    "columns": [
+      {
+        "x": -3.2,
+        "z": -25.27916666666667,
+        "height": 10.5
+      },
+      {
+        "x": -3.2,
+        "z": -20.223333333333336,
+        "height": 10.5
+      },
+      {
+        "x": -3.2,
+        "z": -15.1675,
+        "height": 10.5
+      },
+      {
+        "x": -3.2,
+        "z": -10.111666666666668,
+        "height": 10.5
+      },
+      {
+        "x": -3.2,
+        "z": -5.055833333333336,
+        "height": 10.5
+      },
+      {
+        "x": -3.2,
+        "z": 0,
+        "height": 10.5
+      },
+      {
+        "x": -3.2,
+        "z": 5.055833333333332,
+        "height": 10.5
+      },
+      {
+        "x": -3.2,
+        "z": 10.111666666666665,
+        "height": 10.5
+      },
+      {
+        "x": -3.2,
+        "z": 15.167499999999997,
+        "height": 10.5
+      },
+      {
+        "x": -3.2,
+        "z": 20.22333333333333,
+        "height": 10.5
+      },
+      {
+        "x": -3.2,
+        "z": 25.27916666666666,
+        "height": 10.5
+      },
+      {
+        "x": 3.2,
+        "z": -25.27916666666667,
+        "height": 10.5
+      },
+      {
+        "x": 3.2,
+        "z": -20.223333333333336,
+        "height": 10.5
+      },
+      {
+        "x": 3.2,
+        "z": -15.1675,
+        "height": 10.5
+      },
+      {
+        "x": 3.2,
+        "z": -10.111666666666668,
+        "height": 10.5
+      },
+      {
+        "x": 3.2,
+        "z": -5.055833333333336,
+        "height": 10.5
+      },
+      {
+        "x": 3.2,
+        "z": 0,
+        "height": 10.5
+      },
+      {
+        "x": 3.2,
+        "z": 5.055833333333332,
+        "height": 10.5
+      },
+      {
+        "x": 3.2,
+        "z": 10.111666666666665,
+        "height": 10.5
+      },
+      {
+        "x": 3.2,
+        "z": 15.167499999999997,
+        "height": 10.5
+      },
+      {
+        "x": 3.2,
+        "z": 20.22333333333333,
+        "height": 10.5
+      },
+      {
+        "x": 3.2,
+        "z": 25.27916666666666,
+        "height": 10.5
+      }
+    ],
+    "trusses": [
+      {
+        "z": -30.335,
+        "x0": -10.11,
+        "x1": 10.11,
+        "eave": 10.7,
+        "rise": 2.5
+      },
+      {
+        "z": -25.27916666666667,
+        "x0": -10.11,
+        "x1": 10.11,
+        "eave": 10.7,
+        "rise": 2.5
+      },
+      {
+        "z": -20.223333333333336,
+        "x0": -10.11,
+        "x1": 10.11,
+        "eave": 10.7,
+        "rise": 2.5
+      },
+      {
+        "z": -15.1675,
+        "x0": -10.11,
+        "x1": 10.11,
+        "eave": 10.7,
+        "rise": 2.5
+      },
+      {
+        "z": -10.111666666666668,
+        "x0": -10.11,
+        "x1": 10.11,
+        "eave": 10.7,
+        "rise": 2.5
+      },
+      {
+        "z": -5.055833333333336,
+        "x0": -10.11,
+        "x1": 10.11,
+        "eave": 10.7,
+        "rise": 2.5
+      },
+      {
+        "z": 0,
+        "x0": -10.11,
+        "x1": 10.11,
+        "eave": 10.7,
+        "rise": 2.5
+      },
+      {
+        "z": 5.055833333333332,
+        "x0": -10.11,
+        "x1": 10.11,
+        "eave": 10.7,
+        "rise": 2.5
+      },
+      {
+        "z": 10.111666666666665,
+        "x0": -10.11,
+        "x1": 10.11,
+        "eave": 10.7,
+        "rise": 2.5
+      },
+      {
+        "z": 15.167499999999997,
+        "x0": -10.11,
+        "x1": 10.11,
+        "eave": 10.7,
+        "rise": 2.5
+      },
+      {
+        "z": 20.22333333333333,
+        "x0": -10.11,
+        "x1": 10.11,
+        "eave": 10.7,
+        "rise": 2.5
+      },
+      {
+        "z": 25.27916666666666,
+        "x0": -10.11,
+        "x1": 10.11,
+        "eave": 10.7,
+        "rise": 2.5
+      },
+      {
+        "z": 30.335,
+        "x0": -10.11,
+        "x1": 10.11,
+        "eave": 10.7,
+        "rise": 2.5
+      }
+    ],
+    "gallerySlabs": [
+      {
+        "side": "north",
+        "y": 2.62,
+        "range": [
+          3.2,
+          10.11
+        ],
+        "floor": 1
+      },
+      {
+        "side": "north",
+        "y": 5.06,
+        "range": [
+          3.2,
+          10.11
+        ],
+        "floor": 2
+      },
+      {
+        "side": "north",
+        "y": 7.5,
+        "range": [
+          3.2,
+          10.11
+        ],
+        "floor": 3
+      },
+      {
+        "side": "south",
+        "y": 5.18,
+        "range": [
+          -10.11,
+          -3.2
+        ],
+        "floor": 2
+      }
+    ],
+    "stairs": [
+      {
+        "floor": 0,
+        "x": 8.61,
+        "z": 24.335,
+        "from": 0.18,
+        "to": 2.62,
+        "width": 2.2,
+        "run": 4.7,
+        "interpretivePosition": true
+      },
+      {
+        "floor": 1,
+        "x": 8.61,
+        "z": 24.335,
+        "from": 2.62,
+        "to": 5.06,
+        "width": 2.2,
+        "run": 4.7,
+        "interpretivePosition": true
+      }
+    ],
+    "shelves": [
+      {
+        "x": -9.059999999999999,
+        "z": -19,
+        "width": 0.95,
+        "length": 3.7,
+        "originalType": true,
+        "locationInterpretive": true
+      },
+      {
+        "x": -9.059999999999999,
+        "z": -9,
+        "width": 0.95,
+        "length": 3.7,
+        "originalType": true,
+        "locationInterpretive": true
+      },
+      {
+        "x": -9.059999999999999,
+        "z": 1,
+        "width": 0.95,
+        "length": 3.7,
+        "originalType": true,
+        "locationInterpretive": true
+      },
+      {
+        "x": -9.059999999999999,
+        "z": 11,
+        "width": 0.95,
+        "length": 3.7,
+        "originalType": true,
+        "locationInterpretive": true
+      }
+    ],
+    "railXs": [
+      -0.835,
+      0.835,
+      0.165
+    ],
+    "northFloors": [
+      0.18,
+      2.62,
+      5.06
+    ],
+    "southFloor": 5.18,
+    "annex": {
+      "x0": 10.05,
+      "x1": 14.36,
+      "z0": -19.1,
+      "z1": 19.4,
+      "height": 3.45
+    },
+    "towerZ": [
+      -24,
+      24
+    ],
+    "documentedMetrics": {
+      "nominalLength": 70,
+      "nominalWidth": 18,
+      "nominalArea": 1260,
+      "bays": 3,
+      "platformRise": 1,
+      "southPublishedSlabHeight": 6,
+      "southPublishedDatum": "unspecified",
+      "southPortfolioPlatformHeight": 5,
+      "northHistoricClearHeight": 2.2,
+      "northAnnexNominalLength": 34,
+      "construction": 1927,
+      "source": "Fundació Patrimoni Industrial Port de Sagunt; proyecto de musealización; Ayuntamiento de Sagunto",
+      "survey": false
+    },
+    "heightSurvey": false,
+    "exhibitionInventoryReconstructed": false,
+    "section": {
+      "removes": "roofs, upper gallery slabs, gallery rails, stair and upper furniture",
+      "retains": "ground floor, rail channel, original-type shelving, masonry, concrete piers and open roof trusses"
+    }
+  },
+  "focuses": {
+    "museo-industrial-conjunto": {
+      "id": "museo-industrial-conjunto",
+      "label": "Un almacén convertido en memoria",
+      "target": [
+        4828.806176129009,
+        9.962847880008962,
+        2388.142394000448
+      ],
+      "localTarget": [
+        0,
+        5,
+        0
+      ],
+      "elevation": 5,
+      "coordinates": [
+        -0.2216385,
+        39.65754705
+      ],
+      "offset": [
+        32.68432363276705,
+        48,
+        79.11848702211478
+      ],
+      "closeOffset": [
+        23.788291020541934,
+        34,
+        56.60492213864448
+      ],
+      "components": [
+        "testeros",
+        "muro-sur",
+        "cubierta"
+      ],
+      "regionId": "conjunto",
+      "readingLayer": "conjunto",
+      "period": "conjunto",
+      "requiresSection": false,
+      "interiorView": false,
+      "floor": null,
+      "fov": 48,
+      "kind": "overview",
+      "bounds": {
+        "min": [
+          4796.973982570306,
+          3.892847827556875,
+          2361.807860147029
+        ],
+        "max": [
+          4860.638369687712,
+          18.75284784186199,
+          2412.636263630871
+        ]
+      },
+      "fitBounds": true,
+      "minDistance": 0.7,
+      "closeScale": false,
+      "sourceConfidence": "documented-structure-photographic-proportions"
+    },
+    "museo-industrial-fachada": {
+      "id": "museo-industrial-fachada",
+      "label": "Arcos y ladrillo sobre el frente claro",
+      "target": [
+        4855.037569810999,
+        10.962847880008962,
+        2403.378082711512
+      ],
+      "localTarget": [
+        0,
+        6,
+        30.335
+      ],
+      "elevation": 6,
+      "coordinates": [
+        -0.22133232894216875,
+        39.65741018610572
+      ],
+      "offset": [
+        23.316791640197927,
+        12,
+        35.51516897900946
+      ],
+      "closeOffset": [
+        16.3160701321521,
+        8.5,
+        25.666824023293067
+      ],
+      "components": [
+        "testeros",
+        "portones",
+        "arcos-ladrillo",
+        "remates-testero"
+      ],
+      "regionId": "envolvente",
+      "readingLayer": "envolvente",
+      "period": "envolvente",
+      "requiresSection": false,
+      "interiorView": false,
+      "floor": null,
+      "fov": 55,
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          4853.037569810999,
+          8.962847880008962,
+          2401.378082711512
+        ],
+        "max": [
+          4857.037569810999,
+          12.962847880008962,
+          2405.378082711512
+        ]
+      },
+      "fitBounds": false,
+      "minDistance": 0.7,
+      "closeScale": false,
+      "sourceConfidence": "documented-structure-photographic-proportions"
+    },
+    "museo-industrial-acceso": {
+      "id": "museo-industrial-acceso",
+      "label": "Entrar desde la calle Fundición",
+      "target": [
+        4855.037569810999,
+        7.562847880008963,
+        2403.378082711512
+      ],
+      "localTarget": [
+        0,
+        2.6,
+        30.335
+      ],
+      "elevation": 2.6,
+      "coordinates": [
+        -0.22133232894216875,
+        39.65741018610572
+      ],
+      "offset": [
+        11.6038840559353,
+        1.1,
+        7.896193691672623
+      ],
+      "closeOffset": [
+        7.481164658357423,
+        0.7,
+        5.039064928589812
+      ],
+      "components": [
+        "portones",
+        "hojas-puerta",
+        "testeros"
+      ],
+      "regionId": "conjunto",
+      "readingLayer": "conjunto",
+      "period": "conjunto",
+      "requiresSection": false,
+      "interiorView": false,
+      "floor": null,
+      "fov": 62,
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          4853.037569810999,
+          5.562847880008963,
+          2401.378082711512
+        ],
+        "max": [
+          4857.037569810999,
+          9.562847880008963,
+          2405.378082711512
+        ]
+      },
+      "fitBounds": false,
+      "minDistance": 0.7,
+      "closeScale": false,
+      "sourceConfidence": "documented-structure-photographic-proportions"
+    },
+    "museo-industrial-nave-central": {
+      "id": "museo-industrial-nave-central",
+      "label": "El vacío que ordena el edificio",
+      "target": [
+        4827.941452421015,
+        9.862847880008964,
+        2387.6401461444707
+      ],
+      "localTarget": [
+        0,
+        4.9,
+        -1
+      ],
+      "elevation": 4.9,
+      "coordinates": [
+        -0.2216485929967968,
+        39.65755156174861
+      ],
+      "offset": [
+        19.888645283856025,
+        -3.05,
+        11.55170068747245
+      ],
+      "closeOffset": [
+        14.901202178284409,
+        -3.05,
+        8.192324068412578
+      ],
+      "components": [
+        "pilares",
+        "cerchas",
+        "suelo-vidrio",
+        "vigas-altas"
+      ],
+      "regionId": "conjunto",
+      "readingLayer": "conjunto",
+      "period": "conjunto",
+      "requiresSection": false,
+      "interiorView": true,
+      "floor": 0,
+      "fov": 71,
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          4825.941452421015,
+          7.862847880008964,
+          2385.6401461444707
+        ],
+        "max": [
+          4829.941452421015,
+          11.862847880008964,
+          2389.6401461444707
+        ]
+      },
+      "fitBounds": false,
+      "minDistance": 0.3,
+      "closeScale": false,
+      "sourceConfidence": "documented-structure-photographic-proportions"
+    },
+    "museo-industrial-via": {
+      "id": "museo-industrial-via",
+      "label": "La vía permanece bajo los pies",
+      "target": [
+        4830.535623544996,
+        4.3428478800089625,
+        2389.146889712402
+      ],
+      "localTarget": [
+        0,
+        -0.6199999999999999,
+        2
+      ],
+      "elevation": -0.6199999999999999,
+      "coordinates": [
+        -0.22161831400640636,
+        39.65753802650276
+      ],
+      "offset": [
+        6.35441466954242,
+        3,
+        2.996900767043198
+      ],
+      "closeOffset": [
+        4.351572940760778,
+        2.8,
+        2.0649002254924067
+      ],
+      "components": [
+        "carriles",
+        "traviesas",
+        "balasto",
+        "suelo-vidrio"
+      ],
+      "regionId": "oficios",
+      "readingLayer": "oficios",
+      "period": "oficios",
+      "requiresSection": false,
+      "interiorView": true,
+      "floor": 0,
+      "fov": 64,
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          4828.535623544996,
+          2.3428478800089625,
+          2387.146889712402
+        ],
+        "max": [
+          4832.535623544996,
+          6.3428478800089625,
+          2391.146889712402
+        ]
+      },
+      "fitBounds": false,
+      "minDistance": 0.3,
+      "closeScale": false,
+      "sourceConfidence": "documented-structure-photographic-proportions"
+    },
+    "museo-industrial-andenes": {
+      "id": "museo-industrial-andenes",
+      "label": "La diferencia de un metro",
+      "target": [
+        4821.145917033926,
+        5.412847880008963,
+        2387.3937748741882
+      ],
+      "localTarget": [
+        -3.2,
+        0.45,
+        -7
+      ],
+      "elevation": 0.45,
+      "coordinates": [
+        -0.22172791002749742,
+        39.65755377492927
+      ],
+      "offset": [
+        8.123184518294874,
+        1.5,
+        1.9426459486315286
+      ],
+      "closeOffset": [
+        5.760476105919698,
+        1.2,
+        1.0329157918863667
+      ],
+      "components": [
+        "andenes",
+        "solera-andenes",
+        "bastidores-vidrio"
+      ],
+      "regionId": "oficios",
+      "readingLayer": "oficios",
+      "period": "oficios",
+      "requiresSection": false,
+      "interiorView": true,
+      "floor": 0,
+      "fov": 62,
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          4819.145917033926,
+          3.4128478800089628,
+          2385.3937748741882
+        ],
+        "max": [
+          4823.145917033926,
+          7.412847880008963,
+          2389.3937748741882
+        ]
+      },
+      "fitBounds": false,
+      "minDistance": 0.3,
+      "closeScale": false,
+      "sourceConfidence": "documented-structure-photographic-proportions"
+    },
+    "museo-industrial-cerchas": {
+      "id": "museo-industrial-cerchas",
+      "label": "Una cubierta sostenida por piezas abiertas",
+      "target": [
+        4821.888386465059,
+        16.562847880008963,
+        2384.124411152631
+      ],
+      "localTarget": [
+        0,
+        11.6,
+        -8
+      ],
+      "elevation": 11.6,
+      "coordinates": [
+        -0.22171924397437448,
+        39.65758314398893
+      ],
+      "offset": [
+        11.241408203918622,
+        -8.1,
+        6.5292221277018205
+      ],
+      "closeOffset": [
+        8.033637299932193,
+        -7.9,
+        4.087868849796698
+      ],
+      "components": [
+        "cerchas",
+        "correas",
+        "vigas-altas"
+      ],
+      "regionId": "estructura",
+      "readingLayer": "estructura",
+      "period": "estructura",
+      "requiresSection": false,
+      "interiorView": true,
+      "floor": 0,
+      "fov": 68,
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          4819.888386465059,
+          14.562847880008963,
+          2382.124411152631
+        ],
+        "max": [
+          4823.888386465059,
+          18.562847880008963,
+          2386.124411152631
+        ]
+      },
+      "fitBounds": false,
+      "minDistance": 0.3,
+      "closeScale": false,
+      "sourceConfidence": "documented-structure-photographic-proportions"
+    },
+    "museo-industrial-pilares": {
+      "id": "museo-industrial-pilares",
+      "label": "La estructura y las huellas del almacén",
+      "target": [
+        4821.766132188199,
+        9.362847880008964,
+        2380.3527995750974
+      ],
+      "localTarget": [
+        3.2,
+        4.4,
+        -10
+      ],
+      "elevation": 4.4,
+      "coordinates": [
+        -0.2217206709180483,
+        39.657617024797204
+      ],
+      "offset": [
+        5.762619595202676,
+        -2.55,
+        6.006847376202107
+      ],
+      "closeOffset": [
+        3.787732267213112,
+        -2.55,
+        4.628507780258408
+      ],
+      "components": [
+        "pilares",
+        "basas-pilares",
+        "vigas-galerias"
+      ],
+      "regionId": "estructura",
+      "readingLayer": "estructura",
+      "period": "estructura",
+      "requiresSection": false,
+      "interiorView": true,
+      "floor": 0,
+      "fov": 62,
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          4819.766132188199,
+          7.362847880008964,
+          2378.3527995750974
+        ],
+        "max": [
+          4823.766132188199,
+          11.362847880008964,
+          2382.3527995750974
+        ]
+      },
+      "fitBounds": false,
+      "minDistance": 0.3,
+      "closeScale": false,
+      "sourceConfidence": "documented-structure-photographic-proportions"
+    },
+    "museo-industrial-cubierta": {
+      "id": "museo-industrial-cubierta",
+      "label": "Un perfil continuo a dos aguas",
+      "target": [
+        4828.806176129009,
+        16.46284788000896,
+        2388.142394000448
+      ],
+      "localTarget": [
+        0,
+        11.5,
+        0
+      ],
+      "elevation": 11.5,
+      "coordinates": [
+        -0.2216385,
+        39.65754705
+      ],
+      "offset": [
+        18.46017676861911,
+        29,
+        55.823130274746646
+      ],
+      "closeOffset": [
+        13.60821868844192,
+        21,
+        40.28419521509075
+      ],
+      "components": [
+        "cubierta",
+        "cumbrera",
+        "cerchas"
+      ],
+      "regionId": "envolvente",
+      "readingLayer": "envolvente",
+      "period": "envolvente",
+      "requiresSection": false,
+      "interiorView": false,
+      "floor": null,
+      "fov": 50,
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          4826.806176129009,
+          14.462847880008962,
+          2386.142394000448
+        ],
+        "max": [
+          4830.806176129009,
+          18.46284788000896,
+          2390.142394000448
+        ]
+      },
+      "fitBounds": false,
+      "minDistance": 0.7,
+      "closeScale": false,
+      "sourceConfidence": "documented-structure-photographic-proportions"
+    },
+    "museo-industrial-ventanas": {
+      "id": "museo-industrial-ventanas",
+      "label": "La luz entra desde los laterales",
+      "target": [
+        4821.1342791811,
+        10.762847880008962,
+        2395.3780071203337
+      ],
+      "localTarget": [
+        -10.11,
+        5.8,
+        -3
+      ],
+      "elevation": 5.8,
+      "coordinates": [
+        -0.22172804586373068,
+        39.65748205167876
+      ],
+      "offset": [
+        0.054511764163663656,
+        3.5,
+        9.861390797832108
+      ],
+      "closeOffset": [
+        -0.13762851467740678,
+        2,
+        7.2056268562802845
+      ],
+      "components": [
+        "ventanales-sur",
+        "arcos-ladrillo",
+        "muro-sur"
+      ],
+      "regionId": "envolvente",
+      "readingLayer": "envolvente",
+      "period": "envolvente",
+      "requiresSection": false,
+      "interiorView": false,
+      "floor": null,
+      "fov": 58,
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          4819.1342791811,
+          8.762847880008962,
+          2393.3780071203337
+        ],
+        "max": [
+          4823.1342791811,
+          12.762847880008962,
+          2397.3780071203337
+        ]
+      },
+      "fitBounds": false,
+      "minDistance": 0.7,
+      "closeScale": false,
+      "sourceConfidence": "documented-structure-photographic-proportions"
+    },
+    "museo-industrial-estanterias": {
+      "id": "museo-industrial-estanterias",
+      "label": "Guardar, clasificar y recuperar",
+      "target": [
+        4816.473297181914,
+        7.062847880008963,
+        2391.456560091078
+      ],
+      "localTarget": [
+        -9.059999999999999,
+        2.1,
+        -9
+      ],
+      "elevation": 2.1,
+      "coordinates": [
+        -0.22178244853125662,
+        39.657517278475645
+      ],
+      "offset": [
+        6.745310601491337,
+        -0.2,
+        0.3328436410817841
+      ],
+      "closeOffset": [
+        4.764739257515325,
+        -0.2,
+        -0.23929021687547225
+      ],
+      "components": [
+        "estanterias",
+        "baldas"
+      ],
+      "regionId": "oficios",
+      "readingLayer": "oficios",
+      "period": "oficios",
+      "requiresSection": false,
+      "interiorView": true,
+      "floor": 0,
+      "fov": 62,
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          4814.473297181914,
+          5.062847880008963,
+          2389.456560091078
+        ],
+        "max": [
+          4818.473297181914,
+          9.062847880008963,
+          2393.456560091078
+        ]
+      },
+      "fitBounds": false,
+      "minDistance": 0.3,
+      "closeScale": false,
+      "sourceConfidence": "documented-structure-photographic-proportions"
+    },
+    "museo-industrial-planta-primera": {
+      "id": "museo-industrial-planta-primera",
+      "label": "Mirar la nave desde una galería",
+      "target": [
+        4827.696943867294,
+        8.862847880008962,
+        2380.0969229894026
+      ],
+      "localTarget": [
+        6.4,
+        3.9,
+        -5
+      ],
+      "elevation": 3.9,
+      "coordinates": [
+        -0.2216514468841445,
+        39.65761932336517
+      ],
+      "offset": [
+        7.782513371943661,
+        0.35,
+        4.520230703793568
+      ],
+      "closeOffset": [
+        5.361286989561189,
+        0.35,
+        3.1139367070577912
+      ],
+      "components": [
+        "forjados-norte",
+        "barandillas",
+        "soportes-expositivos"
+      ],
+      "regionId": "memoria",
+      "readingLayer": "memoria",
+      "period": "memoria",
+      "requiresSection": false,
+      "interiorView": true,
+      "floor": 1,
+      "fov": 65,
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          4825.696943867294,
+          6.862847880008962,
+          2378.0969229894026
+        ],
+        "max": [
+          4829.696943867294,
+          10.862847880008962,
+          2382.0969229894026
+        ]
+      },
+      "fitBounds": false,
+      "minDistance": 0.3,
+      "closeScale": false,
+      "sourceConfidence": "documented-structure-photographic-proportions"
+    },
+    "museo-industrial-planta-segunda": {
+      "id": "museo-industrial-planta-segunda",
+      "label": "La memoria desde el nivel alto",
+      "target": [
+        4828.561667575287,
+        11.362847880008964,
+        2380.5991708453794
+      ],
+      "localTarget": [
+        6.4,
+        6.4,
+        -4
+      ],
+      "elevation": 6.4,
+      "coordinates": [
+        -0.2216413538873477,
+        39.657614811616554
+      ],
+      "offset": [
+        6.917789663949922,
+        0.35,
+        4.017982847816505
+      ],
+      "closeOffset": [
+        5.361286989561189,
+        0.35,
+        3.1139367070577912
+      ],
+      "components": [
+        "forjados-norte",
+        "barandillas",
+        "soportes-expositivos"
+      ],
+      "regionId": "memoria",
+      "readingLayer": "memoria",
+      "period": "memoria",
+      "requiresSection": false,
+      "interiorView": true,
+      "floor": 2,
+      "fov": 65,
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          4826.561667575287,
+          9.362847880008964,
+          2378.5991708453794
+        ],
+        "max": [
+          4830.561667575287,
+          13.362847880008964,
+          2382.5991708453794
+        ]
+      },
+      "fitBounds": false,
+      "minDistance": 0.3,
+      "closeScale": false,
+      "sourceConfidence": "documented-structure-photographic-proportions"
+    },
+    "museo-industrial-escalera": {
+      "id": "museo-industrial-escalera",
+      "label": "Comunicar los niveles",
+      "target": [
+        4854.173581603,
+        8.362847880008962,
+        2392.9193244498238
+      ],
+      "localTarget": [
+        8.61,
+        3.4,
+        24.335
+      ],
+      "elevation": 3.4,
+      "coordinates": [
+        -0.22134241335425922,
+        39.65750413829995
+      ],
+      "offset": [
+        -6.35441466954242,
+        -1.55,
+        -2.996900767043198
+      ],
+      "closeOffset": [
+        -5.216296648754518,
+        -1.55,
+        -2.56714808146947
+      ],
+      "components": [
+        "escalera",
+        "pasamanos",
+        "forjados-norte"
+      ],
+      "regionId": "estructura",
+      "readingLayer": "estructura",
+      "period": "estructura",
+      "requiresSection": false,
+      "interiorView": true,
+      "floor": 0,
+      "fov": 65,
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          4852.173581603,
+          6.362847880008962,
+          2390.9193244498238
+        ],
+        "max": [
+          4856.173581603,
+          10.362847880008962,
+          2394.9193244498238
+        ]
+      },
+      "fitBounds": false,
+      "minDistance": 0.3,
+      "closeScale": false,
+      "sourceConfidence": "documented-structure-photographic-proportions"
+    },
+    "museo-industrial-memoria": {
+      "id": "museo-industrial-memoria",
+      "label": "Las personas también forman el patrimonio",
+      "target": [
+        4829.100909468329,
+        6.962847880008963,
+        2395.599144784717
+      ],
+      "localTarget": [
+        -6.3,
+        2,
+        4
+      ],
+      "elevation": 2,
+      "coordinates": [
+        -0.22163505989234228,
+        39.65748006517441
+      ],
+      "offset": [
+        7.420037519926985,
+        0,
+        3.1532591398227647
+      ],
+      "closeOffset": [
+        5.0071043219541025,
+        0,
+        2.330001353876977
+      ],
+      "components": [
+        "paneles-memoria",
+        "pilares",
+        "solera-andenes"
+      ],
+      "regionId": "memoria",
+      "readingLayer": "memoria",
+      "period": "memoria",
+      "requiresSection": false,
+      "interiorView": true,
+      "floor": 0,
+      "fov": 65,
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          4827.100909468329,
+          4.962847880008963,
+          2393.599144784717
+        ],
+        "max": [
+          4831.100909468329,
+          8.962847880008962,
+          2397.599144784717
+        ]
+      },
+      "fitBounds": false,
+      "minDistance": 0.3,
+      "closeScale": false,
+      "sourceConfidence": "documented-structure-photographic-proportions"
+    },
+    "museo-industrial-siderurgia": {
+      "id": "museo-industrial-siderurgia",
+      "label": "Del proceso industrial al objeto conservado",
+      "target": [
+        4837.208904655225,
+        6.562847880008963,
+        2385.62164940515
+      ],
+      "localTarget": [
+        6.4,
+        1.6,
+        6
+      ],
+      "elevation": 1.6,
+      "coordinates": [
+        -0.2215404239193796,
+        39.65756969413039
+      ],
+      "offset": [
+        6.555313811933245,
+        0.25,
+        2.6510112838457016
+      ],
+      "closeOffset": [
+        4.502247297553897,
+        0.25,
+        1.805483113094285
+      ],
+      "components": [
+        "soportes-expositivos",
+        "vitrinas",
+        "pilares"
+      ],
+      "regionId": "memoria",
+      "readingLayer": "memoria",
+      "period": "memoria",
+      "requiresSection": false,
+      "interiorView": true,
+      "floor": 0,
+      "fov": 65,
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          4835.208904655225,
+          4.562847880008963,
+          2383.62164940515
+        ],
+        "max": [
+          4839.208904655225,
+          8.562847880008963,
+          2387.62164940515
+        ]
+      },
+      "fitBounds": false,
+      "minDistance": 0.3,
+      "closeScale": false,
+      "sourceConfidence": "documented-structure-photographic-proportions"
+    },
+    "museo-industrial-ferroviario": {
+      "id": "museo-industrial-ferroviario",
+      "label": "Un almacén ligado al ferrocarril",
+      "target": [
+        4814.970596801109,
+        7.462847880008963,
+        2380.106428304815
+      ],
+      "localTarget": [
+        0,
+        2.5,
+        -16
+      ],
+      "elevation": 2.5,
+      "coordinates": [
+        -0.22179998794874894,
+        39.65761923797786
+      ],
+      "offset": [
+        11.241408203918622,
+        -0.65,
+        6.5292221277018205
+      ],
+      "closeOffset": [
+        7.9331877287367805,
+        -0.65,
+        4.260813591395446
+      ],
+      "components": [
+        "carriles",
+        "suelo-vidrio",
+        "andenes"
+      ],
+      "regionId": "oficios",
+      "readingLayer": "oficios",
+      "period": "oficios",
+      "requiresSection": false,
+      "interiorView": true,
+      "floor": 0,
+      "fov": 69,
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          4812.970596801109,
+          5.462847880008963,
+          2378.106428304815
+        ],
+        "max": [
+          4816.970596801109,
+          9.462847880008962,
+          2382.106428304815
+        ]
+      },
+      "fitBounds": false,
+      "minDistance": 0.3,
+      "closeScale": false,
+      "sourceConfidence": "documented-structure-photographic-proportions"
+    },
+    "museo-industrial-rehabilitacion": {
+      "id": "museo-industrial-rehabilitacion",
+      "label": "Conservar el contenedor, abrir el museo",
+      "target": [
+        4835.089296807282,
+        8.962847880008962,
+        2377.3247004134464
+      ],
+      "localTarget": [
+        12.51,
+        4,
+        0
+      ],
+      "elevation": 4,
+      "coordinates": [
+        -0.2215651638392199,
+        39.65764422655037
+      ],
+      "offset": [
+        39.6421753551533,
+        18,
+        -10.511799708483636
+      ],
+      "closeOffset": [
+        28.706402843386872,
+        13,
+        -7.611992892350219
+      ],
+      "components": [
+        "anexo",
+        "torres-acceso",
+        "cubiertas-torres"
+      ],
+      "regionId": "memoria",
+      "readingLayer": "memoria",
+      "period": "memoria",
+      "requiresSection": false,
+      "interiorView": false,
+      "floor": null,
+      "fov": 53,
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          4833.089296807282,
+          6.962847880008962,
+          2375.3247004134464
+        ],
+        "max": [
+          4837.089296807282,
+          10.962847880008962,
+          2379.3247004134464
+        ]
+      },
+      "fitBounds": false,
+      "minDistance": 0.7,
+      "closeScale": false,
+      "sourceConfidence": "documented-structure-photographic-proportions"
+    },
+    "museo-industrial-seccion": {
+      "id": "museo-industrial-seccion",
+      "label": "Una sección para leer el almacén",
+      "target": [
+        4828.806176129009,
+        8.962847880008962,
+        2388.142394000448
+      ],
+      "localTarget": [
+        0,
+        4,
+        0
+      ],
+      "elevation": 4,
+      "coordinates": [
+        -0.2216385,
+        39.65754705
+      ],
+      "offset": [
+        21.277051740656617,
+        53,
+        60.92854067861319
+      ],
+      "closeOffset": [
+        15.56036995248569,
+        39,
+        44.887357762980216
+      ],
+      "components": [
+        "andenes",
+        "pilares",
+        "cerchas",
+        "carriles"
+      ],
+      "regionId": "estructura",
+      "readingLayer": "estructura",
+      "period": "estructura",
+      "requiresSection": true,
+      "interiorView": false,
+      "floor": null,
+      "fov": 51,
+      "kind": "feature",
+      "bounds": {
+        "min": [
+          4826.806176129009,
+          6.962847880008962,
+          2386.142394000448
+        ],
+        "max": [
+          4830.806176129009,
+          10.962847880008962,
+          2390.142394000448
+        ]
+      },
+      "fitBounds": false,
+      "minDistance": 0.7,
+      "closeScale": false,
+      "sourceConfidence": "documented-structure-photographic-proportions"
+    },
+    "museo-industrial-entorno": {
+      "id": "museo-industrial-entorno",
+      "label": "Entre la ciudad y la antigua fábrica",
+      "coordinate": [
+        -0.2216385,
+        39.65754705
+      ],
+      "coordinates": [
+        -0.2216385,
+        39.65754705
+      ],
+      "target": [
+        4828.806176129009,
+        12.962847880008962,
+        2388.142394000448
+      ],
+      "offset": [
+        114,
+        108,
+        99
+      ],
+      "closeOffset": [
+        80,
+        66,
+        68
+      ],
+      "bounds": {
+        "min": [
+          4678.806176129009,
+          3.9628478800089626,
+          2238.142394000448
+        ],
+        "max": [
+          4978.806176129009,
+          39.962847880008965,
+          2538.142394000448
+        ]
+      },
+      "components": [
+        "museo-industrial-entorno"
+      ],
+      "elevation": 8,
+      "localTarget": [
+        0,
+        8,
+        0
+      ],
+      "floor": 0,
+      "readingLayer": "conjunto",
+      "kind": "context",
+      "fitBounds": false,
+      "fov": 55,
+      "minDistance": 5,
+      "sourceConfidence": "Mapped current setting; PNOA ground tracing, with interpreted heights and minor details.",
+      "regionId": "conjunto"
+    }
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "version": "V24",
+  "reviewedAt": "2026-11-20T22:18:51.530756+00:00",
+  "method": "Inspección visual por el agente principal de seis renders CPU de las mallas y texturas reales de la integración final.",
+  "geometryReview": "passed",
+  "browserQA": "unverified",
+  "webglQA": "unverified",
+  "integrationReport": "research/validation-v24/integrated-scene-qa.json",
+  "inputHashes": {
+    "dist/js/app.js": "a82710bd5510cb15e1e4383f57ff29e5cae309bb0e6b0ccdc767eb85edc7c83e",
+    "dist/js/port.js": "84aa7524a33d1a3886d303774b40ad8a8c52d3df0f1ea7f58b4251854c970e0b",
+    "dist/js/port-industrial.js": "e289c84a04b010889472df5e54a1db6e4e815f6a904ca031718f602358435984",
+    "dist/js/horno.js": "8bc9b1b405cdf3a8c762e609960767e797f1fc299781f623b03d36e086b453a5",
+    "dist/js/horno-context.js": "cb47ee356f0bfee8be4e9334089ce79b7cf2145a48cd95e2d7ec9f425e6963bf",
+    "dist/js/horno-map.js": "46647c05927304cdeafbcac35de970ac1a08cd6192baed535ff9e9ebaa904081",
+    "dist/js/talleres.js": "a5ece44937976c963b804d2cce08258732c3d04a6c3be4fed8fe0d64fdcca660",
+    "dist/js/talleres-context.js": "66a36d5e38f27b9f84d4107bd1f295880966f5090b520d7d34a1595ce88a1967",
+    "dist/js/talleres-map.js": "1dcc0a6a7bc003e4e8504f16d40705c2c6721e3a5ec26cca6ad79c83c50189e3",
+    "dist/assets/data/talleres-visit.json": "a85ba855cad2e3c83096859edacf9816ddca341e0818f315e667c4914c9473fd",
+    "dist/assets/data/talleres-context.json": "6100214fcb3b21d8fd182b8f728ec71252a8247d0f9842d2687764eeff3fad58",
+    "dist/assets/data/talleres-plan.json": "c36958ba5a544af8f112e25c52230da2be840ae9a98c19f05787e1499292aaae",
+    "dist/assets/data/horno-visit.json": "5786b7430d5207b4c77d8a743bdf228c2421b4b542a8ffde0c7c5befb1404b35",
+    "dist/assets/data/horno-context.json": "034c74144297d2df56140f6380c5958a233b8de32fe7e8f35da5c1c09bbe98fb",
+    "dist/assets/data/horno-plan.json": "6de0b8d525124fde32c87b8b9b2040d0297c21ba3cfe0501f3a90b2be5dbd874",
+    "dist/js/museo-industrial.js": "0cc442540f4189403ffc80dffca8f51fc585970ca1d8c9f49d5a2733b70c9670",
+    "dist/js/museo-industrial-context.js": "0f6cdfda6be0e4ca0854f32ee61107301c5a23d9cc13129fbbbdcaecde5b9346",
+    "dist/js/museo-industrial-map.js": "dcf4412d2913ca002d215a9306392e2b9268e6cfec2aa47b5943afe2f0cd25f5",
+    "dist/assets/data/museo-industrial-visit.json": "25dbf4940828ab7072434ac7c91232a8e648eda9e67819c0b6dd6b4290a03b61",
+    "dist/assets/data/museo-industrial-plan.json": "5b701f3fde05fe6735e591c89c695bf400020f8101f8fd168f3467bf39b0f99b",
+    "dist/assets/data/museo-industrial-context.json": "e32f3593ffbfe96f055d6c49b64dd88f02e831261dfd35252c210e4aeea3914e",
+    "dist/assets/data/port-industrial.json": "8f84d9fc48cde87d14935e05f2f25b85268775f595059ade1c1da12b2e3a01ea"
+  },
+  "productionInputsUnchanged": true,
+  "renderScriptSha256": "7cefc9eaf6a16d166e18c38bb121f0a78872a3e44aedbdeed0d9109bbd60ff49",
+  "views": [
+    {
+      "id": "museo-industrial-conjunto",
+      "image": "research/validation-v24/museo-industrial-conjunto.png",
+      "sha256": "a608380aa11d6243bb6832ec733e8201b908d94b0deef26058afe1ef7d93a09e",
+      "dimensions": [
+        1440,
+        1080
+      ],
+      "samples": 32,
+      "visuallyReviewed": true,
+      "geometryFinding": "Exterior cerrado: revoco claro, marcos de ladrillo, cubierta y encaje del museo entre el edificio cívico, la avenida y la Gerencia visibles."
+    },
+    {
+      "id": "museo-industrial-fachada",
+      "image": "research/validation-v24/museo-industrial-fachada.png",
+      "sha256": "620cf1bc43f9830b39b6316f6b307ac3b18ccd98211c048022372dbe9f565490",
+      "dimensions": [
+        960,
+        720
+      ],
+      "samples": 20,
+      "visuallyReviewed": true,
+      "geometryFinding": "Portón, ventanas altas y luneta visibles con huecos físicos; la acera y el acceso quedan libres del edificio contiguo."
+    },
+    {
+      "id": "museo-industrial-nave-central",
+      "image": "research/validation-v24/museo-industrial-nave-central.png",
+      "sha256": "e69bee7bbc1ae5522052b8f7ade5edb60964439f69fc989600120666118fb75b",
+      "dimensions": [
+        960,
+        720
+      ],
+      "samples": 24,
+      "visuallyReviewed": true,
+      "geometryFinding": "Eje longitudinal legible, pilares y cerchas abiertos, galerías asimétricas y cubierta conservada. La transparencia del vidrio y la iluminación CPU son aproximadas."
+    },
+    {
+      "id": "museo-industrial-corte",
+      "image": "research/validation-v24/museo-industrial-corte.png",
+      "sha256": "e587d4fe15cb1603991646a534e681ed17d425359c5506ed83a1df47d24bf6d4",
+      "dimensions": [
+        1440,
+        1080
+      ],
+      "samples": 24,
+      "visuallyReviewed": true,
+      "geometryFinding": "Se retiran cubierta y plantas superiores con sus elementos dependientes; se conservan pilares, cerchas y nivel inferior, sin mobiliario superior flotante."
+    },
+    {
+      "id": "museo-industrial-planta-primera",
+      "image": "research/validation-v24/museo-industrial-planta-primera.png",
+      "sha256": "cb95b0ef04f96143ec0cc9f81d09ee94bfb75e2beab0a8319455d660824a7ca1",
+      "dimensions": [
+        960,
+        720
+      ],
+      "samples": 20,
+      "visuallyReviewed": true,
+      "geometryFinding": "Cámara situada dentro de la primera galería, por debajo del techo, con corredor continuo, ventanas y barandilla hacia el espacio central."
+    },
+    {
+      "id": "museo-industrial-planta-segunda",
+      "image": "research/validation-v24/museo-industrial-planta-segunda.png",
+      "sha256": "79bdf858dac646c5153390fd681dfbecdc545b3767e85756a9a80fe2bb0fb599",
+      "dimensions": [
+        960,
+        720
+      ],
+      "samples": 20,
+      "visuallyReviewed": true,
+      "geometryFinding": "Cámara situada dentro de la segunda galería, con suelo y techo propios y comunicación visual con la nave central."
+    }
+  ],
+  "correctionsBeforeFinalReview": [
+    "Acercada la cámara de ventanas para evitar la obstrucción del edificio cívico vecino.",
+    "Sustituido el acabado pétreo excesivo de los muros por revoco claro con grano fino, contrastado con fotografías municipales.",
+    "Alineadas las instrucciones de sección con la retirada efectiva de cubiertas y forjados superiores."
+  ],
+  "limits": [
+    "Los PNG no son capturas del navegador. El motor CPU adapta materiales, vidrio y unidades de iluminación.",
+    "Las imágenes interiores conservan ruido de muestreo y luz auxiliar de inspección; no acreditan calidad fotométrica ni el acabado del render WebGL.",
+    "No se ha medido FPS, memoria GPU ni comportamiento táctil real.",
+    "La museografía esquemática no reproduce el inventario ni la posición exacta de las piezas del museo actual."
+  ]
+}

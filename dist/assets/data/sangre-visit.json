@@ -1,0 +1,1583 @@
+{
+  "schemaVersion": 1,
+  "id": "sangre",
+  "title": "Ermita de la Sangre y plaza de Sang Nova",
+  "subtitle": "Dieciséis paradas entre la plaza, la cúpula y la memoria",
+  "introduction": "Explora la ermita desde el barrio hasta sus espacios interiores. La visita reúne arquitectura, pinturas, objetos y conservación con fuentes para cada hecho, y permite abrir el edificio para entender cómo se relacionan sus partes.",
+  "researchDate": "2026-11-20",
+  "regionsLabel": "ámbitos",
+  "mapButtonLabel": "Plano de la ermita y su plaza",
+  "overviewButtonLabel": "Ver conjunto",
+  "readingModeLabel": "Leer arquitectura, arte y memoria",
+  "readingModeNote": "Los colores distinguen temas de lectura. No asignan una fecha única a muros, objetos o espacios que han cambiado con el tiempo.",
+  "timelineIntroduction": "Las fechas distinguen la construcción, los objetos conservados y las intervenciones. La escena sigue las referencias documentadas más recientes para cada parte y explica sus límites.",
+  "visitAriaLabel": "Visita documentada a la Ermita de la Sangre, la plaza y su entorno",
+  "sectionOnOverview": true,
+  "sectionInstructions": "Abre la sección para retirar visualmente cubiertas y leer la nave, el crucero, la cabecera y las dependencias. Cierra la sección para recuperar su silueta dentro del barrio.",
+  "sectionNote": "Sección didáctica apoyada en planos publicados en 2001 y documentación posterior. Espesores, cotas menores, pinturas y mobiliario se simplifican; no es un levantamiento actualizado ni garantiza acceso físico a las dependencias.",
+  "methodology": [
+    "La planta, las cubiertas, los cortes y los alzados publicados en 2001 se contrastan con fotografías y documentación posterior. Las cotas y los detalles menores son aproximados.",
+    "El conjunto se sitúa mediante cartografía catastral, OpenStreetMap y relieve oficial. Las paradas son focos de observación virtual, no mediciones geodésicas de piezas interiores.",
+    "La intervención de 2024 y una fotografía fechada guían el estado de la cúpula. La pintura de 1973 pertenece a la bóveda del presbiterio, un espacio distinto.",
+    "La pintura, la escultura y el mobiliario se representan de forma esquemática. Las atribuciones siguen abiertas y la museografía no reproduce un inventario actualizado. Las fotografías consultadas sirven como referencias, sin reutilizarse como texturas.",
+    "La relación de la sede anterior con una antigua sinagoga requiere cautela documental. No se reconstruye una sinagoga bajo esta ermita ni se confunde el edificio con el Portalet de la Sang."
+  ],
+  "readingLegend": [
+    {
+      "id": "exterior",
+      "label": "Fachada y acceso",
+      "color": "#d7b36b",
+      "note": "Puerta, escalinata, espadaña y envolvente exterior."
+    },
+    {
+      "id": "architecture",
+      "label": "Espacios y estructura",
+      "color": "#b6c593",
+      "note": "Relación entre nave, capillas, crucero y cabecera."
+    },
+    {
+      "id": "art",
+      "label": "Arte y conservación",
+      "color": "#c99bba",
+      "note": "Pinturas, ornamentación y acabados con cronologías distintas."
+    },
+    {
+      "id": "memory",
+      "label": "Devoción y memoria",
+      "color": "#7fb7c4",
+      "note": "Objetos, sacristía, museo y cuidado del patrimonio."
+    },
+    {
+      "id": "context",
+      "label": "Plaza y barrio",
+      "color": "#80aa85",
+      "note": "Calles, edificios y pendientes del entorno inmediato."
+    }
+  ],
+  "confidenceLegend": [
+    {
+      "id": "documented",
+      "label": "Documentado",
+      "note": "La fuente respalda el hecho; no certifica precisión métrica del modelo."
+    },
+    {
+      "id": "interpretive",
+      "label": "Interpretación",
+      "note": "Lectura razonada, atribución o detalle visual aproximado."
+    },
+    {
+      "id": "disputed",
+      "label": "En debate",
+      "note": "La evidencia disponible no permite una identificación definitiva."
+    }
+  ],
+  "modelRegistration": {
+    "anchor": [
+      -0.27730776,
+      39.67818601
+    ],
+    "yawRadians": 1.23,
+    "axisX": "Eje transversal local del edificio, rotado en el plano cartográfico Este/Sur",
+    "axisZ": "Eje longitudinal local, desde el acceso hacia la cabecera",
+    "method": "Huellas OSM y catastrales; planta y secciones de 2001; fotografías fechadas y relieve oficial; focos compartidos con el modelo.",
+    "precision": "approximate"
+  },
+  "stops": [
+    {
+      "id": "sangre-conjunto",
+      "title": "Una ermita que forma parte de la ciudad",
+      "label": "El conjunto",
+      "regionId": "llegada",
+      "period": "mixed",
+      "coordinate": [
+        -0.2772900492699145,
+        39.67819756985458
+      ],
+      "coordinates": [
+        -0.2772900492699145,
+        39.67819756985458
+      ],
+      "intro": "Empieza por la silueta completa. Mira cómo se encajan la plaza, el acceso, la cubierta y los cuerpos adosados.",
+      "narrative": "Empieza por la silueta completa. Mira cómo se encajan la plaza, el acceso, la cubierta y los cuerpos adosados.",
+      "facts": [
+        {
+          "text": "La Cofradía sitúa la construcción entre 1601 y 1607, año desde el que ocupa esta sede.",
+          "sourceIds": [
+            "sg-cofradia"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El edificio barroco tiene planta de cruz latina.",
+          "sourceIds": [
+            "sg-gva"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Compara el volumen principal con el crucero y los anexos.",
+      "modelNote": "El exterior combina registro cartográfico, planos y referencias visuales de distintas fechas. El detalle material es una interpretación.",
+      "sourceIds": [
+        "sg-cofradia",
+        "sg-gva",
+        "sg-osmv15",
+        "sg-catastro",
+        "sg-libro2001",
+        "sg-terreno",
+        "sg-pnoa"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura compartido con la maqueta, registrado sobre huellas cartográficas y la planta publicada en 2001; posición aproximada, no acceso físico comprobado.",
+      "osmIds": [],
+      "order": 1,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "sg-osmv15",
+        "sg-catastro",
+        "sg-libro2001"
+      ],
+      "readingLayer": "architecture"
+    },
+    {
+      "id": "sangre-plaza",
+      "title": "La plaza que abre Sang Nova",
+      "label": "La plaza",
+      "regionId": "llegada",
+      "period": "mixed",
+      "coordinate": [
+        -0.27745959,
+        39.678236436
+      ],
+      "coordinates": [
+        -0.27745959,
+        39.678236436
+      ],
+      "intro": "Acércate desde la calle y observa el espacio que se ensancha delante de la fachada. El pavimento y las casas ayudan a entender su escala.",
+      "narrative": "Acércate desde la calle y observa el espacio que se ensancha delante de la fachada. El pavimento y las casas ayudan a entender su escala.",
+      "facts": [
+        {
+          "text": "La ficha turística identifica una pequeña plaza formada por Sang Nova, cerca de la calle del Castillo.",
+          "sourceIds": [
+            "sg-plaza"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La programación municipal de abril de 2025 anunció aquí un concierto de Sagunt in Excelsis.",
+          "sourceIds": [
+            "sg-musica2025"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Sigue el vacío entre las fachadas y el cambio de cota hacia la entrada.",
+      "modelNote": "Los límites se ajustan a las huellas y calles; los pavimentos, balcones y pequeñas cotas son aproximados.",
+      "sourceIds": [
+        "sg-plaza",
+        "sg-musica2025",
+        "sg-osmv15",
+        "sg-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura compartido con la maqueta, registrado sobre huellas cartográficas y la planta publicada en 2001; posición aproximada, no acceso físico comprobado.",
+      "osmIds": [],
+      "order": 2,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "sg-osmv15",
+        "sg-catastro"
+      ],
+      "readingLayer": "context"
+    },
+    {
+      "id": "sangre-escalinata",
+      "title": "Siete peldaños entre la calle y el templo",
+      "label": "La escalinata",
+      "regionId": "llegada",
+      "period": "mixed",
+      "coordinate": [
+        -0.27741292670609896,
+        39.6782311077221
+      ],
+      "coordinates": [
+        -0.27741292670609896,
+        39.6782311077221
+      ],
+      "intro": "Observa el encuentro de la piedra del acceso con los muros. La subida permite leer la implantación del edificio sin separar la ermita de su ladera.",
+      "narrative": "Observa el encuentro de la piedra del acceso con los muros. La subida permite leer la implantación del edificio sin separar la ermita de su ladera.",
+      "facts": [
+        {
+          "text": "La entrada se eleva sobre siete peldaños de piedra roja.",
+          "sourceIds": [
+            "sg-xiuxiueig"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Corresa describe roca visible en varios puntos del conjunto, incluido el crucero y bajo el altar.",
+          "sourceIds": [
+            "sg-corresa2012"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Compara las huellas rojizas, el umbral y la base de la fachada.",
+      "modelNote": "Se conserva el número documentado de peldaños. Su anchura, desgaste y altura se ajustan visualmente; no son medidas de campo.",
+      "sourceIds": [
+        "sg-xiuxiueig",
+        "sg-corresa2012",
+        "sg-osmv15",
+        "sg-catastro",
+        "sg-libro2001"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura compartido con la maqueta, registrado sobre huellas cartográficas y la planta publicada en 2001; posición aproximada, no acceso físico comprobado.",
+      "osmIds": [],
+      "order": 3,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "sg-osmv15",
+        "sg-catastro",
+        "sg-libro2001"
+      ],
+      "readingLayer": "exterior"
+    },
+    {
+      "id": "sangre-portada",
+      "title": "Piedra, hierro y un pequeño Ecce Homo",
+      "label": "La portada",
+      "regionId": "fachada",
+      "period": "mixed",
+      "coordinate": [
+        -0.27739950589391055,
+        39.67822744467838
+      ],
+      "coordinates": [
+        -0.27739950589391055,
+        39.67822744467838
+      ],
+      "intro": "Recorre la fachada de abajo arriba: puerta, ornamentación central y ventana. La composición concentra la mirada en un eje estrecho.",
+      "narrative": "Recorre la fachada de abajo arriba: puerta, ornamentación central y ventana. La composición concentra la mirada en un eje estrecho.",
+      "facts": [
+        {
+          "text": "La puerta es de madera con dos hojas y revestimiento metálico exterior.",
+          "sourceIds": [
+            "sg-xiuxiueig"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Un Ecce Homo ocupa el óvalo sobre el acceso; por encima se abre una ventana.",
+          "sourceIds": [
+            "sg-xiuxiueig"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Cabrera describe pilastras dóricas pareadas en la portada de piedra.",
+          "sourceIds": [
+            "sg-libro2001"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Fíjate en el espesor de la portada, las molduras y la relación entre los huecos.",
+      "modelNote": "La figura y el relieve se sintetizan en geometría original; no reproducen el rostro ni una obra escultórica con precisión fotográfica.",
+      "sourceIds": [
+        "sg-xiuxiueig",
+        "sg-libro2001",
+        "sg-osmv15",
+        "sg-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura compartido con la maqueta, registrado sobre huellas cartográficas y la planta publicada en 2001; posición aproximada, no acceso físico comprobado.",
+      "osmIds": [],
+      "order": 4,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "sg-osmv15",
+        "sg-catastro",
+        "sg-libro2001"
+      ],
+      "readingLayer": "exterior"
+    },
+    {
+      "id": "sangre-espadana",
+      "title": "Una campana sobre la fachada",
+      "label": "La espadaña",
+      "regionId": "fachada",
+      "period": "mixed",
+      "coordinate": [
+        -0.2773953256409338,
+        39.678226303730334
+      ],
+      "coordinates": [
+        -0.2773953256409338,
+        39.678226303730334
+      ],
+      "intro": "Eleva la mirada hasta el remate de ladrillo. Su tamaño importa: es una pieza pequeña dentro de una fachada de fuerte presencia.",
+      "narrative": "Eleva la mirada hasta el remate de ladrillo. Su tamaño importa: es una pieza pequeña dentro de una fachada de fuerte presencia.",
+      "facts": [
+        {
+          "text": "El inventario de Campaners describe una espadaña de ladrillo integrado en el remate, cerrada por detrás.",
+          "sourceIds": [
+            "sg-campanar"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La campana Salvador fue fundida en 1950 por Roses Hermanos, en Silla; su diámetro inventariado es de 28 cm.",
+          "sourceIds": [
+            "sg-campana"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Busca la pequeña campana, el arco de ladrillo y el remate superior.",
+      "modelNote": "La escala se apoya en el inventario; el mecanismo y el estado de uso no se presentan como comprobados en la actualidad.",
+      "sourceIds": [
+        "sg-campanar",
+        "sg-campana",
+        "sg-osmv15",
+        "sg-catastro",
+        "sg-libro2001"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura compartido con la maqueta, registrado sobre huellas cartográficas y la planta publicada en 2001; posición aproximada, no acceso físico comprobado.",
+      "osmIds": [],
+      "order": 5,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "sg-osmv15",
+        "sg-catastro",
+        "sg-libro2001"
+      ],
+      "readingLayer": "exterior"
+    },
+    {
+      "id": "sangre-nave",
+      "title": "Leer el interior desde su eje",
+      "label": "La nave",
+      "regionId": "interior",
+      "period": "mixed",
+      "coordinate": [
+        -0.27728784913676885,
+        39.67819696935561
+      ],
+      "coordinates": [
+        -0.27728784913676885,
+        39.67819696935561
+      ],
+      "intro": "Abre la sección y sigue la sucesión de tramos. La lectura espacial permite comprender cómo el acceso conduce al crucero y la cabecera.",
+      "narrative": "Abre la sección y sigue la sucesión de tramos. La lectura espacial permite comprender cómo el acceso conduce al crucero y la cabecera.",
+      "facts": [
+        {
+          "text": "La nave se cubre con bóveda de cañón y lunetos.",
+          "sourceIds": [
+            "sg-libro2001"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La Cofradía fecha el pavimento de mármol en 1969.",
+          "sourceIds": [
+            "sg-cofradia"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Sigue las pilastras, la cornisa y las aberturas laterales.",
+      "modelNote": "Las proporciones se contrastan con planta y cortes publicados. El despiece y las vetas del pavimento son una aproximación visual.",
+      "sourceIds": [
+        "sg-libro2001",
+        "sg-cofradia",
+        "sg-osmv15",
+        "sg-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura compartido con la maqueta, registrado sobre huellas cartográficas y la planta publicada en 2001; posición aproximada, no acceso físico comprobado.",
+      "osmIds": [],
+      "order": 6,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "sg-osmv15",
+        "sg-catastro",
+        "sg-libro2001"
+      ],
+      "readingLayer": "architecture"
+    },
+    {
+      "id": "sangre-capillas",
+      "title": "Espacios laterales para la devoción",
+      "label": "Las capillas",
+      "regionId": "interior",
+      "period": "mixed",
+      "coordinate": [
+        -0.277334440974562,
+        39.67824905014789
+      ],
+      "coordinates": [
+        -0.277334440974562,
+        39.67824905014789
+      ],
+      "intro": "Desplaza la mirada a ambos lados de la nave. Los espacios laterales interrumpen los muros y acercan las piezas devocionales al recorrido.",
+      "narrative": "Desplaza la mirada a ambos lados de la nave. Los espacios laterales interrumpen los muros y acercan las piezas devocionales al recorrido.",
+      "facts": [
+        {
+          "text": "El estudio de 2012 describe capillas poco profundas entre contrafuertes.",
+          "sourceIds": [
+            "sg-corresa2025"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El conjunto procesional descrito por la Cofradía reúne trece pasos y la Vera Cruz, con imágenes renovadas desde 1942.",
+          "sourceIds": [
+            "sg-pasos"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Observa cómo las capillas se abren entre los soportes, sin convertirse en naves laterales continuas.",
+      "modelNote": "Las imágenes son volúmenes de lectura. Su disposición digital no pretende inventariar la colocación real de cada paso en una fecha determinada.",
+      "sourceIds": [
+        "sg-corresa2025",
+        "sg-pasos",
+        "sg-osmv15",
+        "sg-catastro",
+        "sg-libro2001"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura compartido con la maqueta, registrado sobre huellas cartográficas y la planta publicada en 2001; posición aproximada, no acceso físico comprobado.",
+      "osmIds": [],
+      "order": 7,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "sg-osmv15",
+        "sg-catastro",
+        "sg-libro2001"
+      ],
+      "readingLayer": "memory"
+    },
+    {
+      "id": "sangre-crucero",
+      "title": "El punto donde se cruzan los espacios",
+      "label": "El crucero",
+      "regionId": "interior",
+      "period": "mixed",
+      "coordinate": [
+        -0.27726969803831725,
+        39.6781920152391
+      ],
+      "coordinates": [
+        -0.27726969803831725,
+        39.6781920152391
+      ],
+      "intro": "Sitúate en el encuentro de los dos ejes. Mira hacia las ventanas laterales y después hacia arriba para entender qué sostiene la cúpula.",
+      "narrative": "Sitúate en el encuentro de los dos ejes. Mira hacia las ventanas laterales y después hacia arriba para entender qué sostiene la cúpula.",
+      "facts": [
+        {
+          "text": "La descripción municipal distingue una nave longitudinal y otra transversal.",
+          "sourceIds": [
+            "sg-xiuxiueig"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Los planos de 2001 muestran los brazos del crucero y las dependencias adosadas.",
+          "sourceIds": [
+            "sg-libro2001"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Relaciona arcos, ventanas y cornisa con el arranque de las pechinas.",
+      "modelNote": "La sección permite ver relaciones espaciales. La apertura de cubierta es un recurso didáctico, sin correspondencia con una obra real.",
+      "sourceIds": [
+        "sg-xiuxiueig",
+        "sg-libro2001",
+        "sg-osmv15",
+        "sg-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura compartido con la maqueta, registrado sobre huellas cartográficas y la planta publicada en 2001; posición aproximada, no acceso físico comprobado.",
+      "osmIds": [],
+      "order": 8,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "sg-osmv15",
+        "sg-catastro",
+        "sg-libro2001"
+      ],
+      "readingLayer": "architecture"
+    },
+    {
+      "id": "sangre-cupula",
+      "title": "Azul al exterior, una nueva clave por dentro",
+      "label": "La cúpula",
+      "regionId": "arte",
+      "period": "mixed",
+      "coordinate": [
+        -0.27726969803831725,
+        39.6781920152391
+      ],
+      "coordinates": [
+        -0.27726969803831725,
+        39.6781920152391
+      ],
+      "intro": "Compara la silueta exterior con el interior abierto. La ornamentación se reconoce mejor cuando cambia el punto de vista.",
+      "narrative": "Compara la silueta exterior con el interior abierto. La ornamentación se reconoce mejor cuando cambia el punto de vista.",
+      "facts": [
+        {
+          "text": "La cúpula exterior combina base octogonal y tejas vidriadas azules.",
+          "sourceIds": [
+            "sg-gva"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La intervención de 2024 incorporó una clave con el Santo Cáliz sostenido por dos ángeles y retiró la antigua cadena colgante.",
+          "sourceIds": [
+            "sg-corresa2025"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La fotografía del 26 de septiembre de 2024 documenta cartelas radiales y un remate central de tonos grises y dorados.",
+          "sourceIds": [
+            "sg-foto2024"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Busca el ritmo radial, el anillo de arranque y el cáliz central.",
+      "modelNote": "El modelo sigue el estado documentado en 2024. La ornamentación se simplifica; no se añade la lámpara colgante de fotografías anteriores.",
+      "sourceIds": [
+        "sg-gva",
+        "sg-corresa2025",
+        "sg-foto2024",
+        "sg-osmv15",
+        "sg-catastro",
+        "sg-libro2001"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura compartido con la maqueta, registrado sobre huellas cartográficas y la planta publicada en 2001; posición aproximada, no acceso físico comprobado.",
+      "osmIds": [],
+      "order": 9,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "sg-osmv15",
+        "sg-catastro",
+        "sg-libro2001"
+      ],
+      "readingLayer": "art"
+    },
+    {
+      "id": "sangre-pechinas",
+      "title": "Las imágenes entre el cuadrado y el círculo",
+      "label": "Las pechinas",
+      "regionId": "arte",
+      "period": "mixed",
+      "coordinate": [
+        -0.277219031694135,
+        39.678210592796184
+      ],
+      "coordinates": [
+        -0.277219031694135,
+        39.678210592796184
+      ],
+      "intro": "Observa los cuatro apoyos curvos situados debajo de la cúpula. Aquí se encuentran la estructura y el relato pintado.",
+      "narrative": "Observa los cuatro apoyos curvos situados debajo de la cúpula. Aquí se encuentran la estructura y el relato pintado.",
+      "facts": [
+        {
+          "text": "Las pinturas de las pechinas, con escenas de la Pasión, se atribuyen a José Vergara o José Camarón Bonanat, en el siglo XVIII.",
+          "sourceIds": [
+            "sg-cofradia"
+          ],
+          "confidence": "interpretive"
+        },
+        {
+          "text": "La Cofradía identifica estas pinturas y los medallones entre los elementos que sobrevivieron a las pérdidas de 1936.",
+          "sourceIds": [
+            "sg-cofradia"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Distingue las cuatro pechinas de las cartelas radiales y del remate central de la cúpula.",
+      "modelNote": "Las superficies coloreadas indican la presencia de pintura. No sustituyen los originales por frescos inventados ni resuelven la atribución de autoría.",
+      "sourceIds": [
+        "sg-cofradia",
+        "sg-osmv15",
+        "sg-catastro",
+        "sg-libro2001"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura compartido con la maqueta, registrado sobre huellas cartográficas y la planta publicada en 2001; posición aproximada, no acceso físico comprobado.",
+      "osmIds": [],
+      "order": 10,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "sg-osmv15",
+        "sg-catastro",
+        "sg-libro2001"
+      ],
+      "readingLayer": "art"
+    },
+    {
+      "id": "sangre-presbiterio",
+      "title": "Una cabecera construida en distintas épocas",
+      "label": "El presbiterio",
+      "regionId": "arte",
+      "period": "mixed",
+      "coordinate": [
+        -0.27717454227976795,
+        39.678166043658614
+      ],
+      "coordinates": [
+        -0.27717454227976795,
+        39.678166043658614
+      ],
+      "intro": "Mira el altar desde la nave y después desde el lateral. La altura de la cabecera organiza la visión de todo el interior.",
+      "narrative": "Mira el altar desde la nave y después desde el lateral. La altura de la cabecera organiza la visión de todo el interior.",
+      "facts": [
+        {
+          "text": "La cabecera se eleva mediante siete peldaños interiores de mármol.",
+          "sourceIds": [
+            "sg-libro2001"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La Cofradía fecha el altar mayor en 1965 y su Ecce Homo en 1981.",
+          "sourceIds": [
+            "sg-cofradia"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La Oración en el Huerto de la bóveda del presbiterio fue pintada en 1973.",
+          "sourceIds": [
+            "sg-cofradia"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Relaciona escalera, balaustrada, retablo y bóveda de cabecera.",
+      "modelNote": "La pintura de 1973 corresponde al presbiterio. La clave de 2024 pertenece a la cúpula del crucero: son lugares diferentes.",
+      "sourceIds": [
+        "sg-libro2001",
+        "sg-cofradia",
+        "sg-osmv15",
+        "sg-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura compartido con la maqueta, registrado sobre huellas cartográficas y la planta publicada en 2001; posición aproximada, no acceso físico comprobado.",
+      "osmIds": [],
+      "order": 11,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "sg-osmv15",
+        "sg-catastro",
+        "sg-libro2001"
+      ],
+      "readingLayer": "art"
+    },
+    {
+      "id": "sangre-veracruz",
+      "title": "Dos piezas, dos historias",
+      "label": "La Vera Cruz",
+      "regionId": "arte",
+      "period": "mixed",
+      "coordinate": [
+        -0.2773089665143262,
+        39.678261064430814
+      ],
+      "coordinates": [
+        -0.2773089665143262,
+        39.678261064430814
+      ],
+      "intro": "Detente ante la capilla y diferencia el Cristo conservado del objeto procesional que da nombre a esta tradición.",
+      "narrative": "Detente ante la capilla y diferencia el Cristo conservado del objeto procesional que da nombre a esta tradición.",
+      "facts": [
+        {
+          "text": "La Cofradía describe en la capilla un Cristo crucificado anónimo de los siglos XVI o XVII.",
+          "sourceIds": [
+            "sg-cofradia"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La Vera Cruz procesional de caoba fue realizada por Andrés Gallart en 1951.",
+          "sourceIds": [
+            "sg-veracruz"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "En 1974 se añadió su relicario; la identificación de la reliquia pertenece a la tradición religiosa.",
+          "sourceIds": [
+            "sg-veracruz"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Compara la escala del crucificado y la función de una cruz que participa en procesión.",
+      "modelNote": "El modelo señala el crucificado de la capilla. La cruz procesional se diferencia en la narración, sin fijar su ubicación en la escena ni certificar procedencias materiales de reliquias.",
+      "sourceIds": [
+        "sg-cofradia",
+        "sg-veracruz",
+        "sg-osmv15",
+        "sg-catastro",
+        "sg-libro2001"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura compartido con la maqueta, registrado sobre huellas cartográficas y la planta publicada en 2001; posición aproximada, no acceso físico comprobado.",
+      "osmIds": [],
+      "order": 12,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "sg-osmv15",
+        "sg-catastro",
+        "sg-libro2001"
+      ],
+      "readingLayer": "memory"
+    },
+    {
+      "id": "sangre-sacristia",
+      "title": "El trabajo que mantiene vivo el templo",
+      "label": "La sacristía",
+      "regionId": "memoria",
+      "period": "mixed",
+      "coordinate": [
+        -0.277148008149601,
+        39.67821341565375
+      ],
+      "coordinates": [
+        -0.277148008149601,
+        39.67821341565375
+      ],
+      "intro": "La visita entra en las dependencias de servicio para entender el cuidado cotidiano del conjunto. Abre la sección si la cubierta impide verlas.",
+      "narrative": "La visita entra en las dependencias de servicio para entender el cuidado cotidiano del conjunto. Abre la sección si la cubierta impide verlas.",
+      "facts": [
+        {
+          "text": "La planta publicada sitúa la sacristía junto al lado izquierdo del presbiterio, visto desde la nave.",
+          "sourceIds": [
+            "sg-libro2001"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El balance de la Cofradía de 2021 recoge la renovación de suelo, pintura y mobiliario de sacristía.",
+          "sourceIds": [
+            "sg-balance2021"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Comprueba su relación con la cabecera y con los cuerpos anexos.",
+      "modelNote": "Se explica el volumen documentado. No se reconstruye como exacto el inventario ni la distribución actual de armarios y objetos.",
+      "sourceIds": [
+        "sg-libro2001",
+        "sg-balance2021",
+        "sg-osmv15",
+        "sg-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura compartido con la maqueta, registrado sobre huellas cartográficas y la planta publicada en 2001; posición aproximada, no acceso físico comprobado.",
+      "osmIds": [],
+      "order": 13,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "sg-osmv15",
+        "sg-catastro",
+        "sg-libro2001"
+      ],
+      "readingLayer": "memory"
+    },
+    {
+      "id": "sangre-museo",
+      "title": "La memoria en la planta superior",
+      "label": "El museo",
+      "regionId": "memoria",
+      "period": "mixed",
+      "coordinate": [
+        -0.27727769450891576,
+        39.67806581161929
+      ],
+      "coordinates": [
+        -0.27727769450891576,
+        39.67806581161929
+      ],
+      "intro": "Sube virtualmente al cuerpo del museo y relaciona sus salas con el resto de la ermita. El recorrido explica una colección sin sustituir su visita real.",
+      "narrative": "Sube virtualmente al cuerpo del museo y relaciona sus salas con el resto de la ermita. El recorrido explica una colección sin sustituir su visita real.",
+      "facts": [
+        {
+          "text": "La Cofradía sitúa el Museo de la Sangre en la primera planta.",
+          "sourceIds": [
+            "sg-museo"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Su historia menciona manuscritos, libros, estampas y objetos vinculados a la institución.",
+          "sourceIds": [
+            "sg-historia"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "En 2023 el Ayuntamiento comunicó la instalación de una pantalla interpretativa en el museo.",
+          "sourceIds": [
+            "sg-luz2023"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Observa la diferencia entre el anexo y el espacio alto de la nave.",
+      "modelNote": "La sala expresa ubicación y escala. Las vitrinas y piezas no se reproducen como una museografía medida y actualizada.",
+      "sourceIds": [
+        "sg-museo",
+        "sg-historia",
+        "sg-luz2023",
+        "sg-osmv15",
+        "sg-catastro",
+        "sg-libro2001"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura compartido con la maqueta, registrado sobre huellas cartográficas y la planta publicada en 2001; posición aproximada, no acceso físico comprobado.",
+      "osmIds": [],
+      "order": 14,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "sg-osmv15",
+        "sg-catastro",
+        "sg-libro2001"
+      ],
+      "readingLayer": "memory"
+    },
+    {
+      "id": "sangre-conservacion",
+      "title": "Un interior que sigue cambiando",
+      "label": "La conservación",
+      "regionId": "memoria",
+      "period": "mixed",
+      "coordinate": [
+        -0.27726969803831725,
+        39.6781920152391
+      ],
+      "coordinates": [
+        -0.27726969803831725,
+        39.6781920152391
+      ],
+      "intro": "La escena reúne una arquitectura antigua y decisiones recientes de conservación. Mira los acabados con esa diferencia de fechas en mente.",
+      "narrative": "La escena reúne una arquitectura antigua y decisiones recientes de conservación. Mira los acabados con esa diferencia de fechas en mente.",
+      "facts": [
+        {
+          "text": "La actuación de 2024 trató humedades y recuperó grises ceniza en la ornamentación del crucero; la ejecutó Conservart SL.",
+          "sourceIds": [
+            "sg-corresa2025"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "En diciembre de 2023 terminó una renovación de iluminación y sonido que retiró luminarias que ocultaban pinturas.",
+          "sourceIds": [
+            "sg-luz2023"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La Cofradía custodia una reproducción del Santo Cáliz de la catedral de València.",
+          "sourceIds": [
+            "sg-grial"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Compara superficies claras, molduras más oscuras y acentos metálicos.",
+      "modelNote": "La paleta toma como referencia el estado documentado en 2024; la iluminación digital busca legibilidad y no reproduce una programación lumínica real.",
+      "sourceIds": [
+        "sg-corresa2025",
+        "sg-luz2023",
+        "sg-grial",
+        "sg-osmv15",
+        "sg-catastro",
+        "sg-libro2001"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura compartido con la maqueta, registrado sobre huellas cartográficas y la planta publicada en 2001; posición aproximada, no acceso físico comprobado.",
+      "osmIds": [],
+      "order": 15,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "sg-osmv15",
+        "sg-catastro",
+        "sg-libro2001"
+      ],
+      "readingLayer": "art"
+    },
+    {
+      "id": "sangre-entorno",
+      "title": "Volver al barrio, distinguir sus historias",
+      "label": "El entorno",
+      "regionId": "llegada",
+      "period": "mixed",
+      "coordinate": [
+        -0.277337034,
+        39.678447539
+      ],
+      "coordinates": [
+        -0.277337034,
+        39.678447539
+      ],
+      "intro": "Termina alejándote por Sang Nova. El atlas permite enlazar esta visita con los espacios vecinos conservando la identidad de cada lugar.",
+      "narrative": "Termina alejándote por Sang Nova. El atlas permite enlazar esta visita con los espacios vecinos conservando la identidad de cada lugar.",
+      "facts": [
+        {
+          "text": "Sang Nova y las calles inmediatas conectan la plaza con la trama de viviendas del casco histórico.",
+          "sourceIds": [
+            "sg-osmv15"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Cabrera advierte que no se ha probado documentalmente la identificación concreta de la antigua sinagoga en Sang Vella.",
+          "sourceIds": [
+            "sg-libro2001"
+          ],
+          "confidence": "disputed"
+        },
+        {
+          "text": "La divulgación municipal sitúa esa sede anterior a unos cien metros de la ermita actual.",
+          "sourceIds": [
+            "sg-xiuxiueig"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Sigue las fachadas, las pendientes y el paso desde la plaza hacia las calles estrechas.",
+      "modelNote": "Esta ermita no es el Portalet de la Sang. No se representa una sinagoga bajo el edificio actual; el contexto combina huellas reales y fachadas interpretadas.",
+      "sourceIds": [
+        "sg-osmv15",
+        "sg-libro2001",
+        "sg-xiuxiueig",
+        "sg-osmv15",
+        "sg-catastro",
+        "sg-terreno",
+        "sg-pnoa"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura compartido con la maqueta, registrado sobre huellas cartográficas y la planta publicada en 2001; posición aproximada, no acceso físico comprobado.",
+      "osmIds": [],
+      "order": 16,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "sg-osmv15",
+        "sg-catastro"
+      ],
+      "readingLayer": "context"
+    }
+  ],
+  "regions": [
+    {
+      "id": "llegada",
+      "name": "La plaza y la ladera",
+      "aliases": [],
+      "summary": "Entrar desde el barrio, reconocer el desnivel y volver a las calles próximas.",
+      "coordinate": [
+        -0.2772900492699145,
+        39.67819756985458
+      ],
+      "sourceIds": [
+        "sg-cofradia",
+        "sg-gva",
+        "sg-osmv15",
+        "sg-catastro",
+        "sg-libro2001",
+        "sg-terreno",
+        "sg-pnoa",
+        "sg-plaza",
+        "sg-musica2025",
+        "sg-xiuxiueig",
+        "sg-corresa2012"
+      ],
+      "stopIds": [
+        "sangre-conjunto",
+        "sangre-plaza",
+        "sangre-escalinata",
+        "sangre-entorno"
+      ]
+    },
+    {
+      "id": "fachada",
+      "name": "La fachada",
+      "aliases": [],
+      "summary": "Un recorrido desde la puerta hasta el remate de la espadaña.",
+      "coordinate": [
+        -0.27739950589391055,
+        39.67822744467838
+      ],
+      "sourceIds": [
+        "sg-xiuxiueig",
+        "sg-libro2001",
+        "sg-osmv15",
+        "sg-catastro",
+        "sg-campanar",
+        "sg-campana"
+      ],
+      "stopIds": [
+        "sangre-portada",
+        "sangre-espadana"
+      ]
+    },
+    {
+      "id": "interior",
+      "name": "La arquitectura interior",
+      "aliases": [],
+      "summary": "Nave, capillas y crucero como espacios conectados.",
+      "coordinate": [
+        -0.27728784913676885,
+        39.67819696935561
+      ],
+      "sourceIds": [
+        "sg-libro2001",
+        "sg-cofradia",
+        "sg-osmv15",
+        "sg-catastro",
+        "sg-corresa2025",
+        "sg-pasos",
+        "sg-xiuxiueig"
+      ],
+      "stopIds": [
+        "sangre-nave",
+        "sangre-capillas",
+        "sangre-crucero"
+      ]
+    },
+    {
+      "id": "arte",
+      "name": "Cúpula y cabecera",
+      "aliases": [],
+      "summary": "Ornamentación, pintura y piezas con cronologías diferentes.",
+      "coordinate": [
+        -0.27726969803831725,
+        39.6781920152391
+      ],
+      "sourceIds": [
+        "sg-gva",
+        "sg-corresa2025",
+        "sg-foto2024",
+        "sg-osmv15",
+        "sg-catastro",
+        "sg-libro2001",
+        "sg-cofradia",
+        "sg-veracruz"
+      ],
+      "stopIds": [
+        "sangre-cupula",
+        "sangre-pechinas",
+        "sangre-presbiterio",
+        "sangre-veracruz"
+      ]
+    },
+    {
+      "id": "memoria",
+      "name": "Cuidado y memoria",
+      "aliases": [],
+      "summary": "Sacristía, museo y conservación del conjunto.",
+      "coordinate": [
+        -0.277148008149601,
+        39.67821341565375
+      ],
+      "sourceIds": [
+        "sg-libro2001",
+        "sg-balance2021",
+        "sg-osmv15",
+        "sg-catastro",
+        "sg-museo",
+        "sg-historia",
+        "sg-luz2023",
+        "sg-corresa2025",
+        "sg-grial"
+      ],
+      "stopIds": [
+        "sangre-sacristia",
+        "sangre-museo",
+        "sangre-conservacion"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "sg-cofradia",
+      "title": "Ermita de la Sangre",
+      "author": "Cofradía de la Purísima Sangre de Sagunto",
+      "url": "https://semanasantasagunto.com/ermita-de-la-sangre/",
+      "type": "documentación institucional",
+      "year": null,
+      "locator": "Historia del edificio, mobiliario y pinturas; galería de referencia",
+      "note": "Los objetos y reformas tienen fechas distintas a la construcción. La atribución pictórica se conserva como atribución.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "sg-historia",
+      "title": "Historia de la Cofradía",
+      "author": "Cofradía de la Purísima Sangre de Sagunto",
+      "url": "https://semanasantasagunto.com/historia/",
+      "type": "documentación institucional",
+      "year": null,
+      "locator": "Consagración, patrimonio documental y tradición de la institución",
+      "note": "La memoria fundacional de la cofradía no fecha por sí sola el edificio actual.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "sg-xiuxiueig",
+      "title": "Ermita de la Puríssima Sang · proyecto Xiuxiueig",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/es/ayuntamiento/areas-y-servicios/cultura-y-educacion/campus-abierto-a-la-ciudadania/proyecto-xiuxiueig/ermita-de-la-purissima-sang/",
+      "type": "documentación institucional",
+      "year": null,
+      "locator": "Fachada, escalera, puerta y posición en la ladera",
+      "note": "La mención al siglo XVII asociada a Vergara se contrasta con las fuentes que sitúan las pinturas en el XVIII.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "sg-gva",
+      "title": "Ermita de la Santísima Sangre",
+      "author": "Turisme Comunitat Valenciana",
+      "url": "https://www.comunitatvalenciana.com/es/valencia/sagunt-sagunto/monumentos/ermita-de-la-santisima-sangre",
+      "type": "documentación institucional",
+      "year": null,
+      "locator": "Ficha y fotografías del monumento",
+      "note": "Referencia de forma y emplazamiento; no aporta un levantamiento métrico.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "sg-plaza",
+      "title": "Ermita de la Sang · Ruta del Grial",
+      "author": "Turisme Comunitat Valenciana",
+      "url": "https://www.activo.comunitatvalenciana.com/ruta-del-grial/recursos/ermita-de-la-sang",
+      "type": "documentación institucional",
+      "year": null,
+      "locator": "Pequeña plaza de Sang Nova y relación con la calle del Castillo",
+      "note": "Se emplea su descripción espacial; la cronología se contrasta con la documentación específica.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "sg-libro2001",
+      "title": "Setmana Santa Saguntina 2001 · arquitectura de la ermita",
+      "author": "Francisco J. Ribelles Villar y equipo; Valentín Cabrera Fombuena",
+      "url": "https://semanasantasagunto.com/wp-content/libros/llibre_2001_opt.pdf",
+      "type": "estudios y levantamiento arquitectónico",
+      "year": 2001,
+      "locator": "Planos: pp.166–170; Cabrera, «La Ermita de la Sangre»: pp.175–190. Páginas impresas.",
+      "note": "Planta, cubiertas, cortes y alzados de 2001: referencia espacial anterior a las intervenciones recientes.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "sg-corresa2012",
+      "title": "L’ermita de la Sang de Sagunt: temple i Monument alhora",
+      "author": "Ignasi Corresa i Marín",
+      "url": "https://www.academia.edu/108823233/Lermita_de_la_Sang_de_Sagunt_temple_i_Monument_alhora",
+      "type": "estudio del historiador, copia del autor",
+      "year": 2012,
+      "locator": "Apartados de contexto, fábrica y templo barroco",
+      "note": "Interpretación arquitectónica y relación con la roca; distinguir descripción material y lectura histórica.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "sg-corresa2025",
+      "title": "La clau de la Sang",
+      "author": "Ignasi Corresa i Marín",
+      "url": "https://www.academia.edu/129476628/La_clau_de_la_Sang",
+      "type": "estudio de la intervención, copia del autor",
+      "year": 2025,
+      "locator": "Setmana Santa Saguntina 2025, pp.124–143; intervención de 2024, pp.132–135",
+      "note": "Actualiza el acabado del crucero y la cúpula. La restitución digital sintetiza sus detalles, sin reproducir las ilustraciones.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "sg-foto2024",
+      "title": "Detalle de la clave de la cúpula, 26 de septiembre de 2024",
+      "author": "Icorresa / Ignasi Corresa",
+      "url": "https://commons.wikimedia.org/wiki/File:Detall_de_la_clau_de_la_c%C3%BApula_de_l%27ermita_de_la_Sang_de_Sagunt.jpg",
+      "type": "fotografía original del autor",
+      "year": 2024,
+      "locator": "Fotografía fechada 26-09-2024; subida el 11-10-2024",
+      "note": "Inspección visual de la clave y ornamentación. Referencia de investigación; la fotografía no se incorpora como textura ni galería.",
+      "accessed": "2026-11-20",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    {
+      "id": "sg-campanar",
+      "title": "Ermita de la Sang · inventario de la espadaña",
+      "author": "Campaners de la Catedral de València",
+      "url": "https://www.campaners.com/php/campanar.php?numer=898",
+      "type": "inventario especializado de campo",
+      "year": null,
+      "locator": "Campanario 898: descripción constructiva",
+      "note": "Se usa la descripción de la espadaña, sin trasladar al presente diagnósticos antiguos de conservación.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "sg-campana",
+      "title": "Salvador · campana de la Ermita de la Sang",
+      "author": "Campaners de la Catedral de València",
+      "url": "https://campaners.com/php/campana1.php?numer=2833",
+      "type": "inventario especializado de campo",
+      "year": null,
+      "locator": "Campana 2833: fundición y dimensiones",
+      "note": "El diámetro corresponde a la campana inventariada; no determina todas las medidas del modelo.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "sg-pasos",
+      "title": "Pasos de la Semana Santa Saguntina",
+      "author": "Cofradía de la Purísima Sangre de Sagunto",
+      "url": "https://semanasantasagunto.com/pasos/",
+      "type": "documentación institucional",
+      "year": null,
+      "locator": "Composición del conjunto procesional y renovación desde 1942",
+      "note": "No se supone que la disposición de cada imagen permanezca fija durante todo el año.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "sg-veracruz",
+      "title": "Santísima Vera Cruz",
+      "author": "Cofradía de la Purísima Sangre de Sagunto",
+      "url": "https://semanasantasagunto.com/santisima-vera-cruz/",
+      "type": "documentación institucional",
+      "year": null,
+      "locator": "Cruz procesional de 1951 y relicario de 1974",
+      "note": "La tradición religiosa de la reliquia se identifica como tal; no se confunde la cruz procesional con el Cristo de la capilla.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "sg-museo",
+      "title": "Museo de la Sangre",
+      "author": "Cofradía de la Purísima Sangre de Sagunto",
+      "url": "https://semanasantasagunto.com/museo-de-la-sangre/",
+      "type": "documentación institucional",
+      "year": null,
+      "locator": "Ubicación en primera planta y galería del museo",
+      "note": "La visita no reconstruye una distribución actual y exacta de cada vitrina y objeto.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "sg-grial",
+      "title": "La Ruta del Grial en Sagunto",
+      "author": "Cofradía de la Purísima Sangre de Sagunto",
+      "url": "https://semanasantasagunto.com/ruta-grial/",
+      "type": "documentación institucional",
+      "year": null,
+      "locator": "Custodia de una reproducción del Santo Cáliz",
+      "note": "Se trata de una reproducción; no se presenta como el cáliz original.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "sg-balance2021",
+      "title": "Despedida del presidente · balance de actuaciones",
+      "author": "Miguel Chordá Piedra / Cofradía de la Purísima Sangre",
+      "url": "https://semanasantasagunto.com/despedida-presidente/",
+      "type": "documentación institucional",
+      "year": 2021,
+      "locator": "30 de junio de 2021; sacristía, humedades y archivo",
+      "note": "Testimonio institucional de las actuaciones comunicadas al finalizar ese mandato.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "sg-luz2023",
+      "title": "Finaliza la adecuación de la iluminación y sonido del interior de la Ermita de La Sang",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/es/actualidad/finaliza-la-adecuacion-de-la-iluminacion-y-sonido-del-interior-de-la-ermita-de-la-sang/",
+      "type": "documentación institucional",
+      "year": 2023,
+      "locator": "12 de diciembre de 2023; texto y fotografías",
+      "note": "Sus fotografías preceden a la intervención de 2024; no se mezclan sus acabados con el estado posterior.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "sg-musica2025",
+      "title": "Sagunt in Excelsis · programación de la edición XXI",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/es/actualidad/2025-04-02-la-xxi-edicion-del-ciclo-de-musica-sacra-sagunt-in-excelsis-empieza-este-domingo-y-ofrece-cinco-conciertos-gratuitos/",
+      "type": "documentación institucional",
+      "year": 2025,
+      "locator": "Anuncio de 2 de abril de 2025; concierto previsto en Sang Nova",
+      "note": "Acredita la programación anunciada, no una comprobación de la celebración del acto.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "sg-osmv15",
+      "title": "OpenStreetMap · Sang Nova y manzanas inmediatas",
+      "author": "Colaboradores de OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/203084352",
+      "type": "cartografía colaborativa",
+      "year": null,
+      "locator": "Ermita: vías 203084352 y 1303709333; Sang Nova: vía 87552079",
+      "note": "Focos virtuales aproximados; las coordenadas no acreditan mediciones interiores ni accesibilidad física.",
+      "accessed": "2026-11-20",
+      "licenseUrl": "https://www.openstreetmap.org/copyright"
+    },
+    {
+      "id": "sg-catastro",
+      "title": "Cartografía catastral INSPIRE · Ermita de la Sang y entorno",
+      "author": "Dirección General del Catastro",
+      "url": "https://www.catastro.hacienda.gob.es/webinspire/index.html",
+      "type": "cartografía oficial",
+      "year": null,
+      "locator": "Municipio 46222, huellas y cuerpos del edificio y sus manzanas contiguas",
+      "note": "Base de ocupación y alturas por plantas; los detalles de fachada se interpretan con otras referencias.",
+      "accessed": "2026-11-20",
+      "downloadUrl": "https://www.catastro.hacienda.gob.es/INSPIRE/Buildings/46/46222-SAGUNTO%20SAGUNT/A.ES.SDGC.BU.46222.zip",
+      "licenseUrl": "https://www.catastro.hacienda.gob.es/webinspire/documentos/Licencia.pdf"
+    },
+    {
+      "id": "sg-terreno",
+      "title": "MDT05 y MDSnE · relieve de la ladera histórica",
+      "author": "Instituto Geográfico Nacional / CNIG",
+      "url": "https://datos.gob.es/es/catalogo/e00125901-spaignmds-normalizado",
+      "type": "modelos geográficos oficiales",
+      "year": null,
+      "locator": "Relieve del atlas y alturas estimadas del contexto",
+      "note": "Las superficies generales no resuelven cada peldaño, umbral o cota interior.",
+      "accessed": "2026-11-20",
+      "licenseUrl": "https://www.ign.es/resources/licencia/Condiciones_licenciaUso_IGN.pdf"
+    },
+    {
+      "id": "sg-pnoa",
+      "title": "PNOA Máxima Actualidad · cubiertas del casco histórico",
+      "author": "Instituto Geográfico Nacional / CNIG",
+      "url": "https://datos.gob.es/es/catalogo/e00125901-spaignpnoama",
+      "type": "ortofotografía oficial",
+      "year": null,
+      "locator": "Relación de cubiertas, patios y medianeras con el callejero",
+      "note": "La fecha de consulta no equivale a la fecha de vuelo ni acredita el estado de cada fachada.",
+      "accessed": "2026-11-20",
+      "licenseUrl": "https://www.ign.es/resources/licencia/Condiciones_licenciaUso_IGN.pdf"
+    }
+  ],
+  "timeline": [
+    {
+      "id": "sg-t-construccion",
+      "date": "1601–1607",
+      "title": "El edificio actual",
+      "text": "La Cofradía fecha aquí las obras y el establecimiento de su sede.",
+      "sourceIds": [
+        "sg-cofradia"
+      ],
+      "period": "modern",
+      "confidence": "documented",
+      "stopId": "sangre-conjunto"
+    },
+    {
+      "id": "sg-t-pinturas",
+      "date": "Siglo XVIII · atribución",
+      "title": "La decoración pintada",
+      "text": "Las pinturas conservadas se atribuyen a Vergara o Camarón Bonanat.",
+      "sourceIds": [
+        "sg-cofradia"
+      ],
+      "period": "modern",
+      "confidence": "interpretive",
+      "stopId": "sangre-pechinas"
+    },
+    {
+      "id": "sg-t-consagracion",
+      "date": "1753",
+      "title": "La consagración",
+      "text": "La historia de la Cofradía recoge esta fecha de consagración.",
+      "sourceIds": [
+        "sg-historia"
+      ],
+      "period": "modern",
+      "confidence": "documented",
+      "stopId": "sangre-conjunto"
+    },
+    {
+      "id": "sg-t-perdidas",
+      "date": "1936",
+      "title": "Pérdidas de patrimonio",
+      "text": "La Cofradía documenta la destrucción de imágenes y otros bienes.",
+      "sourceIds": [
+        "sg-cofradia"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "sangre-pechinas"
+    },
+    {
+      "id": "sg-t-pasos",
+      "date": "Desde 1942",
+      "title": "Renovar las imágenes",
+      "text": "Comienza la reposición del conjunto procesional descrito por la Cofradía.",
+      "sourceIds": [
+        "sg-pasos"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "sangre-capillas"
+    },
+    {
+      "id": "sg-t-salvador",
+      "date": "1950",
+      "title": "La campana Salvador",
+      "text": "Roses Hermanos fundió la campana inventariada de la espadaña.",
+      "sourceIds": [
+        "sg-campana"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "sangre-espadana"
+    },
+    {
+      "id": "sg-t-cruz",
+      "date": "1951",
+      "title": "Una nueva Vera Cruz",
+      "text": "Andrés Gallart realizó la cruz procesional.",
+      "sourceIds": [
+        "sg-veracruz"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "sangre-veracruz"
+    },
+    {
+      "id": "sg-t-altar",
+      "date": "1965",
+      "title": "Altar mayor",
+      "text": "La Cofradía fecha la instalación del altar mayor.",
+      "sourceIds": [
+        "sg-libro2001"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "sangre-presbiterio"
+    },
+    {
+      "id": "sg-t-pavimento",
+      "date": "1969",
+      "title": "Pavimento de mármol",
+      "text": "Se fecha el pavimento de la ermita.",
+      "sourceIds": [
+        "sg-libro2001"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "sangre-nave"
+    },
+    {
+      "id": "sg-t-boveda",
+      "date": "1973",
+      "title": "Pintura de la cabecera",
+      "text": "Se pintó la Oración en el Huerto del presbiterio.",
+      "sourceIds": [
+        "sg-cofradia"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "sangre-presbiterio"
+    },
+    {
+      "id": "sg-t-relicario",
+      "date": "1974",
+      "title": "Relicario de la Vera Cruz",
+      "text": "Se incorporó el relicario a la cruz procesional.",
+      "sourceIds": [
+        "sg-veracruz"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "sangre-veracruz"
+    },
+    {
+      "id": "sg-t-eccehomo",
+      "date": "1981",
+      "title": "Ecce Homo del altar",
+      "text": "La Cofradía fecha esta imagen del retablo.",
+      "sourceIds": [
+        "sg-libro2001"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "sangre-presbiterio"
+    },
+    {
+      "id": "sg-t-planos",
+      "date": "2001",
+      "title": "Documentar la arquitectura",
+      "text": "Se publicaron planta, cubiertas, secciones y alzados del conjunto.",
+      "sourceIds": [
+        "sg-libro2001"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "sangre-crucero"
+    },
+    {
+      "id": "sg-t-sacristia",
+      "date": "2021 · balance publicado",
+      "title": "Cuidar las dependencias",
+      "text": "El balance institucional recoge mejoras en la sacristía y trabajos contra humedades.",
+      "sourceIds": [
+        "sg-balance2021"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "sangre-sacristia"
+    },
+    {
+      "id": "sg-t-iluminacion",
+      "date": "Diciembre de 2023",
+      "title": "Iluminación y sonido",
+      "text": "El Ayuntamiento comunicó la finalización de su renovación interior.",
+      "sourceIds": [
+        "sg-luz2023"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "sangre-conservacion"
+    },
+    {
+      "id": "sg-t-restauracion",
+      "date": "2024",
+      "title": "Restauración del crucero",
+      "text": "Se renovaron acabados y ornamentación y se incorporó la nueva clave de la cúpula.",
+      "sourceIds": [
+        "sg-corresa2025"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "sangre-cupula"
+    },
+    {
+      "id": "sg-t-foto",
+      "date": "26 de septiembre de 2024",
+      "title": "Un estado documentado",
+      "text": "La fotografía de Corresa registra el remate restaurado de la cúpula.",
+      "sourceIds": [
+        "sg-foto2024"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "sangre-cupula"
+    }
+  ]
+}

@@ -1,0 +1,246 @@
+"""Buildless distribution gate: syntax, local imports/assets, data, IDs and visit links.
+
+Run after removing temporary browser QA entrypoints. This does not mutate dist.
+"""
+from pathlib import Path
+from html.parser import HTMLParser
+from concurrent.futures import ThreadPoolExecutor
+import collections,hashlib,json,math,re,subprocess
+
+ROOT=Path(__file__).resolve().parents[2]
+DIST=ROOT/'dist'
+checks=[]
+def check(value,label,detail=None):
+    checks.append({'pass':bool(value),'label':label,**({'detail':detail}if not value and detail is not None else{})})
+def short(path):return str(path.relative_to(ROOT))
+def digest(path):return hashlib.sha256(path.read_bytes()).hexdigest()
+def local_path(value,relative_to):
+    if not value or re.match(r'^(?:[a-z]+:|//|#)',value,re.I):return None
+    return (DIST/value.lstrip('/') if value.startswith('/') else relative_to/value).resolve()
+
+files=[ROOT/p for p in subprocess.check_output(['rg','--files','dist'],cwd=ROOT,text=True).splitlines()]
+temporary=[p for p in files if p.name.startswith('__qa')]
+check(not temporary,'temporary QA pages are absent from the distribution',[short(p)for p in temporary])
+js=[p for p in files if p.suffix=='.js']
+def syntax(path):
+    result=subprocess.run(['node','--check',str(path)],text=True,capture_output=True)
+    return path,result.returncode==0,result.stderr.strip()
+with ThreadPoolExecutor(max_workers=8)as pool:
+    for path,ok,error in pool.map(syntax,js):check(ok,'JavaScript syntax: '+short(path),error)
+
+html=(DIST/'index.html').read_text()
+import_map=json.loads(re.search(r'<script\s+type="importmap"[^>]*>(.*?)</script>',html,re.S).group(1))['imports']
+imports=[]
+for source in js:
+    text=re.sub(r'/\*[\s\S]*?\*/','',source.read_text())
+    text=re.sub(r'^\s*//.*$','',text,flags=re.M)
+    specs=re.findall(r'''(?:\bfrom\s*|\bimport\s*\(\s*|\bimport\s*)["']([^"']+)["']''',text)
+    for spec in specs:
+        if spec.startswith(('.', '/')):target=local_path(spec.split('?')[0],source.parent)
+        elif spec in import_map:target=local_path(import_map[spec],DIST)
+        elif re.match(r'^https?://',spec):continue
+        else:target=None
+        imports.append({'source':short(source),'specifier':spec,'target':short(target)if target and target.is_relative_to(ROOT)else None})
+        check(target is not None and target.is_file(),'module dependency: '+short(source)+' → '+spec,imports[-1])
+for spec,url in import_map.items():
+    path=local_path(url,DIST);check(path and path.is_file(),'import-map target: '+spec,url)
+
+class Document(HTMLParser):
+    def __init__(self):super().__init__();self.ids=[];self.assets=[];self.references=[]
+    def handle_starttag(self,tag,attrs):
+        a=dict(attrs)
+        if a.get('id'):self.ids.append(a['id'])
+        for key in('src','href'):
+            if a.get(key):self.assets.append(a[key])
+        for key in('aria-controls','aria-labelledby','for'):
+            if a.get(key):self.references.extend(a[key].split())
+document=Document();document.feed(html)
+counts=collections.Counter(document.ids)
+check(all(n==1 for n in counts.values()),'initial HTML IDs are unique',{id:n for id,n in counts.items()if n>1})
+check(all(id in counts for id in document.references),'initial HTML accessibility targets exist',[id for id in document.references if id not in counts])
+assets=[]
+for value in document.assets:
+    path=local_path(value.split('?')[0],DIST)
+    if path:assets.append(path);check(path.is_file(),'HTML local asset: '+value)
+def css_urls(text):
+    # Consume quoted data URIs as a whole: an SVG's internal url(%23filter)
+    # is not a separate filesystem reference in the surrounding stylesheet.
+    cursor=0
+    while match:=re.search(r'url\(\s*',text[cursor:],re.I):
+        start=cursor+match.end();quote=text[start:start+1]
+        if quote in("'",'"'):
+            begin=start+1;end=begin
+            while end<len(text):
+                if text[end]==quote and text[end-1]!='\\':break
+                end+=1
+            value=text[begin:end];cursor=text.find(')',end)+1
+        else:
+            end=text.find(')',start)
+            if end<0:break
+            value=text[start:end].strip();cursor=end+1
+        if cursor<=start:break
+        yield value
+for source in[p for p in files if p.suffix=='.css']:
+    for value in css_urls(source.read_text()):
+        path=local_path(value.split('?')[0],source.parent)
+        if path:assets.append(path);check(path.is_file(),'CSS local asset: '+value)
+
+json_files=[p for p in files if p.suffix=='.json']
+json_data={}
+for path in json_files:
+    try:json_data[path.stem]=json.loads(path.read_text());check(True,'JSON parses: '+short(path))
+    except Exception as exc:check(False,'JSON parses: '+short(path),str(exc))
+
+app=(DIST/'js/app.js').read_text()
+initial=re.search(r'const loaded=await Promise\.all\(\[(.*?)\]\.map',app,re.S)
+initial_names=re.findall(r"'([^']+)'",initial.group(1))if initial else[]
+check(len(initial_names)==92,'92 initial data requests are declared',initial_names)
+check(initial_names[72:75]==['begona-visit','begona-plan','begona-context'],'Begoña retains its three original request slots',initial_names[-3:])
+for name in ['begona.js','begona-context.js','begona-map.js']:check((DIST/'js'/name).is_file(),'Begoña implementation module exists: '+name)
+check(initial_names[75:78]==['economato-visit','economato-plan','economato-context'],'Economato occupies three appended request slots')
+for name in ['economato.js','economato-context.js','economato-map.js']:check((DIST/'js'/name).is_file(),'Economato implementation module exists: '+name)
+check(initial_names[78:81]==['barrio-visit','barrio-plan','barrio-context'],'Barrio occupies three appended request slots')
+for name in ['barrio.js','barrio-context.js','barrio-map.js']:check((DIST/'js'/name).is_file(),'Barrio implementation module exists: '+name)
+check(initial_names[81:84]==['sanatorio-visit','sanatorio-plan','sanatorio-context'],'Sanatorio occupies three appended request slots')
+for name in ['sanatorio.js','sanatorio-context.js','sanatorio-map.js']:check((DIST/'js'/name).is_file(),'Sanatorio implementation module exists: '+name)
+check(initial_names[84:89]==['pantalan-paseo-visit','pantalan-paseo-plan','pantalan-maritimo-visit','pantalan-maritimo-plan','pantalan-context'],'Pantalán appends exactly five dataset slots')
+for name in ['coast-pier.js','coast-water.js','pantalan-map.js','pantalan-context.js']:check((DIST/'js'/name).is_file(),'Pantalán implementation module exists: '+name)
+check(initial_names[89:92]==['grau-visit','grau-plan','grau-context'],'Grau Vell appends exactly three dataset slots')
+for name in ['coast-grau.js','grau-visit.js','grau-map.js','grau-context.js']:check((DIST/'js'/name).is_file(),'Grau Vell implementation module exists: '+name)
+deferred=['cartography','elevation','port-cartography','port-elevation','coast-cartography','coast-elevation','coast-water']+[region+'-'+name for region in['marjal','almarda','palancia']for name in['cartography','elevation','water']]
+for name in initial_names+deferred:check((DIST/'assets/data'/f'{name}.json').is_file(),'runtime data request: '+name)
+
+visit=json_data.get('gerencia-visit',{});plan=json_data.get('gerencia-plan',{})
+stops=visit.get('stops',[]);plan_stops=plan.get('stops',[]);stop_ids=[s['id']for s in stops];plan_ids=[s['id']for s in plan_stops]
+check(len(stop_ids)==len(set(stop_ids)) and len(stop_ids)>=10,'Unique Gerencia stop IDs cover the documented visit')
+check(set(stop_ids)==set(plan_ids),'serialized gerencia plan and historical visit share all stop IDs')
+by_id={s['id']:s for s in plan_stops}
+# Visit coordinates are published to eight decimals; the model retains full
+# precision. A 1e-7 degree tolerance is below 1.2 cm at this latitude and checks
+# the same physical focus without treating decimal serialization as a move.
+def same_coordinate(a,b):
+    return isinstance(a,list) and isinstance(b,list) and len(a)==len(b)==2 and all(abs(x-y)<=1e-7 for x,y in zip(a,b))
+check(all(same_coordinate(s.get('coordinate',s.get('coordinates')),by_id.get(s['id'],{}).get('coordinates')) for s in stops),'historical visit coordinates agree with serialized model plan within 1e-7 degree')
+source_ids={s['id']for s in visit.get('sources',[])};region_ids={r['id']for r in visit.get('regions',[])}
+check(all(s.get('regionId')in region_ids for s in stops),'all gerencia stops belong to a declared historical region')
+reference_ids=[]
+def walk(value):
+    if isinstance(value,dict):
+        for key,item in value.items():
+            if key in('sourceIds','coordinateSourceIds'):reference_ids.extend(item)
+            else:walk(item)
+    elif isinstance(value,list):
+        for item in value:walk(item)
+walk(visit)
+check(all(id in source_ids for id in reference_ids),'all historical and coordinate citations resolve',[id for id in reference_ids if id not in source_ids])
+check(bool(visit.get('sectionInstructions')),'gerencia visit documents its implemented section')
+casino=json_data.get('casino-visit',{});casino_plan=json_data.get('casino-plan',{})
+casino_stops=casino.get('stops',[]);casino_plan_stops=casino_plan.get('stops',[])
+casino_ids=[s['id']for s in casino_stops];casino_plan_ids=[s['id']for s in casino_plan_stops]
+casino_sources={s['id']for s in casino.get('sources',[])}
+casino_regions={r['id']for r in casino.get('regions',[])}
+check(len(casino_ids)==len(set(casino_ids))==20,'Casino has twenty unique documented stops')
+check(sum(len(s.get('facts',[]))for s in casino_stops)==40,'Casino has forty source-backed facts')
+check(set(casino_ids)==set(casino_plan_ids),'serialized Casino plan and historical visit share all stop IDs')
+casino_by_id={s['id']:s for s in casino_plan_stops}
+check(all(same_coordinate(s.get('coordinate',s.get('coordinates')),casino_by_id.get(s['id'],{}).get('coordinates'))for s in casino_stops),'Casino guide and plan coordinates agree within 1e-7 degree')
+check(all(s.get('regionId')in casino_regions for s in casino_stops),'Casino stops belong to declared historical regions')
+check(casino.get('modelRegistration',{}).get('provisionalCoordinates')is False,'Casino focus registration is final')
+check(len([s for s in casino_stops if s.get('interiorView')])==7,'Casino has seven documented interior viewpoints')
+check(all(s.get('floor')in(0,1)if s.get('interiorView')else s.get('floor')is None for s in casino_stops),'Casino interior floors are explicit and exterior floors are null')
+casino_references=[]
+def casino_walk(value):
+    if isinstance(value,dict):
+        for key,item in value.items():
+            if key in('sourceIds','coordinateSourceIds'):casino_references.extend(item)
+            else:casino_walk(item)
+    elif isinstance(value,list):
+        for item in value:casino_walk(item)
+casino_walk(casino)
+check(all(id in casino_sources for id in casino_references),'Casino historical and coordinate citations resolve',[id for id in casino_references if id not in casino_sources])
+check(bool(casino.get('sectionInstructions')),'Casino visit explains its implemented section')
+check('obras en curso'in casino.get('visitNote','')and'Casino Playa'in casino.get('visitNote',''),'Casino guide distinguishes virtual interiors from the documented works and temporary venue')
+for id in['castle-panel','theatre-panel','santa-maria-panel','plaza-mayor-panel','juderia-panel','calvario-panel','berenguer-panel','diana-panel','sangre-panel','salvador-panel','museo-panel','portic-panel','domus-panel','circo-panel','necropolis-panel','horno-panel','talleres-panel','museo-industrial-panel','gerencia-panel','casino-panel','begona-panel','economato-panel','barrio-obrero-panel','sanatorio-panel','pantalan-paseo-panel','pantalan-maritimo-panel','grau-vell-panel']:check(id in counts,'separate guided-visit panel exists: '+id)
+
+
+# V32: actual declarations and data, without creating browser/GPU claims.
+guided_match=re.search(r"const guidedIds=\[(.*?)\];",app,re.S)
+guided_ids=re.findall(r"'([^']+)'",guided_match.group(1))if guided_match else[]
+check(len(guided_ids)==len(set(guided_ids))==27,'Twenty-seven unique detailed visits are declared',guided_ids)
+check(all(id+'-panel'in counts for id in guided_ids),'Every detailed visit has its own HTML panel')
+catalog_text=(DIST/'js/catalog.js').read_text()
+catalog_ids=re.findall(r"\{id:'([^']+)'",catalog_text)
+registered_place_ids=set(catalog_ids)
+for name in initial_names:
+    for record in json_data.get(name,{}).get('sites',[]):registered_place_ids.add(record['id'])
+check(len(registered_place_ids)==31,'Thirty-one atlas places are preserved',sorted(registered_place_ids))
+check(set(guided_ids)<=registered_place_ids,'Every detailed visit belongs to the registered atlas')
+check('<title>SAGUNTUM · Sagunto y Puerto de Sagunto</title>'in html,'Global SAGUNTUM title remains intact')
+check('href="#atlas"'in html and 'ATLAS VIVO'in html,'Brand links to the complete atlas')
+check('31 lugares · 6 ámbitos'in html,'The welcome screen retains the whole-atlas count')
+check("if(!value||value==='atlas')return{name:'atlas',stopId:null};"in app,'Empty hash and #atlas both retain the general home')
+check(len(initial_names)==len(set(initial_names)),'Initial dataset names are unique')
+new_stop_total=0
+for name in ['pantalan-paseo','pantalan-maritimo']:
+    guide=json_data.get(name+'-visit',{});plan=json_data.get(name+'-plan',{})
+    gs=guide.get('stops',[]);ps={s['id']:s for s in plan.get('stops',[])}
+    ids=[s['id']for s in gs];sources={s['id']for s in guide.get('sources',[])};regions={r['id']for r in guide.get('regions',[])}
+    new_stop_total+=len(gs)
+    check(len(ids)==len(set(ids))==10,name+' has ten unique stops')
+    check(set(ids)==set(ps),name+' guide and model plan use identical stop IDs')
+    check(all(same_coordinate(s.get('coordinates'),ps.get(s['id'],{}).get('coordinates'))for s in gs),name+' geographic focus registration matches its plan')
+    check(all(s.get('localTarget')==ps.get(s['id'],{}).get('localTarget') and s.get('elevation')==ps.get(s['id'],{}).get('elevation')for s in gs),name+' final targets and elevations exactly match its plan')
+    check(all(s.get('regionId')in regions for s in gs),name+' every stop belongs to a populated guide region')
+    check(all(s.get('regionId')==ps.get(s['id'],{}).get('regionId') and s.get('readingLayer')==ps.get(s['id'],{}).get('readingLayer')for s in gs),name+' reading layers match the model plan')
+    check(all(not s.get('mode')or s['mode']in ps.get(s['id'],{}).get('modes',[])for s in gs),name+' stop presentation modes are supported by the model')
+    refs=[]
+    def collect_refs(value):
+        if isinstance(value,dict):
+            for key,item in value.items():
+                if key in('sourceIds','coordinateSourceIds'):refs.extend(item)
+                else:collect_refs(item)
+        elif isinstance(value,list):
+            for item in value:collect_refs(item)
+    collect_refs(guide)
+    check(all(id in sources for id in refs),name+' every historical and spatial source reference resolves',[id for id in refs if id not in sources])
+    check(all(t.get('stopId')in ids for t in guide.get('timeline',[])),name+' timeline targets resolve')
+    check(guide.get('modelRegistration',{}).get('status')=='registered'and guide.get('modelRegistration',{}).get('provisionalCoordinates')is False,name+' model registration is final')
+    check([m.get('id')for m in guide.get('presentationModes',[])]==['current','historical'],name+' separates contemporary and historical presentation')
+    check(all(r.get('id')in guided_ids for r in guide.get('relatedVisits',[])),name+' related visits resolve')
+check(not any(k.startswith('section')for k in json_data.get('pantalan-paseo-visit',{})),'Terrestrial promenade exposes no water-section control')
+check(bool(json_data.get('pantalan-maritimo-visit',{}).get('sectionInstructions')),'Maritime visit explains the limited underwater inspection')
+check(new_stop_total==20,'The Pantalán adds twenty guided viewpoints')
+
+# Grau Vell: the new guide must remain registered to actual model targets.
+grau=json_data.get('grau-visit',{});grau_plan=json_data.get('grau-plan',{})
+grau_stops=grau.get('stops',[]);grau_plan_stops={s['id']:s for s in grau_plan.get('stops',[])}
+grau_ids=[s['id']for s in grau_stops];grau_sources={s['id']for s in grau.get('sources',[])}
+grau_regions={r['id']for r in grau.get('regions',[])}
+check(len(grau_ids)==len(set(grau_ids))==20,'Grau Vell has twenty unique observation stops')
+check(set(grau_ids)==set(grau_plan_stops),'Grau Vell guide and plan use the same stop IDs')
+check(all(same_coordinate(s.get('coordinates'),grau_plan_stops.get(s['id'],{}).get('coordinates'))for s in grau_stops),'Grau Vell geographic coordinates match the registered plan')
+check(all(s.get('localTarget')==grau_plan_stops.get(s['id'],{}).get('localTarget') and s.get('elevation')==grau_plan_stops.get(s['id'],{}).get('elevation')for s in grau_stops),'Grau Vell focus targets and elevations exactly match the plan')
+check(all(s.get('regionId')in grau_regions for s in grau_stops),'Grau Vell stops have declared regions')
+check(all(s.get('regionId')==grau_plan_stops.get(s['id'],{}).get('regionId') and s.get('readingLayer')==grau_plan_stops.get(s['id'],{}).get('readingLayer')for s in grau_stops),'Grau Vell reading categories match the implemented model plan')
+check(grau.get('modelRegistration',{}).get('status')=='registered'and grau.get('modelRegistration',{}).get('provisionalCoordinates')is False,'Grau Vell guide coordinates are final')
+check({x.get('id')for x in grau.get('readingLegend',[])}=={'edificio','espacios','construccion','memoria','entorno'},'Grau Vell declares the five shared reading categories')
+grau_refs=[]
+def grau_walk(value):
+    if isinstance(value,dict):
+        for key,item in value.items():
+            if key in('sourceIds','coordinateSourceIds'):grau_refs.extend(item)
+            else:grau_walk(item)
+    elif isinstance(value,list):
+        for item in value:grau_walk(item)
+grau_walk(grau)
+check(all(id in grau_sources for id in grau_refs),'Grau Vell factual and spatial sources all resolve',[id for id in grau_refs if id not in grau_sources])
+check(all(t.get('stopId')in grau_ids for t in grau.get('timeline',[])),'Grau Vell timeline links resolve')
+check(all(s.get('facts') and s.get('modelNote')for s in grau_stops),'Every Grau Vell stop has evidence and a representation note')
+check(bool(grau.get('sectionInstructions'))and bool(grau.get('sectionNote')),'Grau Vell documents its architectural section')
+check('26 de junio de 2026'in grau.get('visitNote','') and 'batería'in grau.get('visitNote',''),'Grau Vell records actual opening and the documented battery access limit')
+
+result={'pass':all(c['pass']for c in checks),'stage':'preflight'if temporary else'final','counts':{'distributionFiles':len(files),'javascriptFiles':len(js),'localImports':len(imports),'jsonFiles':len(json_files),'initialRequests':len(initial_names),'atlasPlaces':len(registered_place_ids),'detailedVisits':len(guided_ids),'pantalanStops':new_stop_total,'grauStops':len(grau_stops),'grauSources':len(grau_sources),'deferredRequests':len(deferred),'htmlIds':len(document.ids),'localHTMLAndCSSAssets':len(assets),'gerenciaStops':len(stops),'gerenciaSources':len(source_ids),'casinoStops':len(casino_stops),'casinoSources':len(casino_sources)},'checks':checks,'failures':[c for c in checks if not c['pass']],'imports':imports,'hashes':{short(p):digest(p)for p in files if p.suffix in('.js','.json','.html','.css')}}
+report_name='static-assets-preflight.json'if temporary else'static-assets-qa.json'
+(ROOT/'research/validation-v32'/report_name).write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
+print(json.dumps({'pass':result['pass'],'stage':result['stage'],'counts':result['counts'],'checks':len(checks),'failures':result['failures']},ensure_ascii=False,indent=2))
+raise SystemExit(0 if result['pass']else 1)

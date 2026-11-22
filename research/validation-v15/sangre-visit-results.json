@@ -1,0 +1,76 @@
+{
+  "generatedAt": "2026-11-20T07:40:59.142Z",
+  "pass": true,
+  "checksCount": 9,
+  "scope": "Documentary data integrity, qualified claims, concise factual summaries and shared geographical focuses. Source counts exclude bibliographic metadata and original explanatory interface copy. Physical accuracy and browser behavior are verified separately.",
+  "data": {
+    "stops": 16,
+    "regions": 5,
+    "layers": 5,
+    "facts": 39,
+    "sources": 22,
+    "timeline": 17
+  },
+  "factAndTimelineWordsBySource": {
+    "sg-cofradia": 151,
+    "sg-historia": 22,
+    "sg-xiuxiueig": 62,
+    "sg-gva": 18,
+    "sg-plaza": 17,
+    "sg-libro2001": 108,
+    "sg-corresa2012": 16,
+    "sg-corresa2025": 64,
+    "sg-foto2024": 31,
+    "sg-campanar": 16,
+    "sg-campana": 28,
+    "sg-pasos": 29,
+    "sg-veracruz": 43,
+    "sg-museo": 12,
+    "sg-grial": 13,
+    "sg-balance2021": 29,
+    "sg-luz2023": 40,
+    "sg-musica2025": 15,
+    "sg-osmv15": 17,
+    "sg-catastro": 0,
+    "sg-terreno": 0,
+    "sg-pnoa": 0
+  },
+  "checks": [
+    {
+      "label": "Sixteen stable stops and ordered route",
+      "pass": true
+    },
+    {
+      "label": "Every fact and chronology item resolves to documentary evidence",
+      "pass": true
+    },
+    {
+      "label": "All five regions partition the route and thematic layers remain explicit",
+      "pass": true
+    },
+    {
+      "label": "Coordinates resolve to the same focus as the exported model plan",
+      "pass": true
+    },
+    {
+      "label": "Plaza and street focus coordinates match the contextual scene",
+      "pass": true
+    },
+    {
+      "label": "Evidence qualifiers prevent false certainty about paintings and the synagogue",
+      "pass": true
+    },
+    {
+      "label": "Presbytery painting and restored dome key are separate spatial and dated claims",
+      "pass": true
+    },
+    {
+      "label": "Cutaway and collections identify the limits of the virtual visit",
+      "pass": true
+    },
+    {
+      "label": "Concise fact and timeline summaries remain below 200 words per source",
+      "pass": true
+    }
+  ]
+}

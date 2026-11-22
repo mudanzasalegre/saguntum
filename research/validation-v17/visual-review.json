@@ -1,0 +1,48 @@
+{
+  "pass": true,
+  "generatedAt": "2026-11-20T09:46:35.190907+00:00",
+  "method": "Visual inspection of the exact Three.js geometry exported to Blender/Cycles CPU;128 maximum adaptive samples, no denoiser. Lighting differs from browser hemisphere lighting.",
+  "observations": [
+    "Exterior and narrow streets remain coherent with the registered footprints.",
+    "Ground-floor pointed arches, timber, openings and floor transitions are legible.",
+    "Upper rooms retain their closed ceiling and unobstructed connections.",
+    "Section removes roof and intermediate floor without floating upper exhibits or removing the neighbouring buildings."
+  ],
+  "images": [
+    {
+      "file": "research/validation-v17/museo-conjunto.png",
+      "size": [
+        1440,
+        1080
+      ],
+      "sha256": "3bda1274447568ad1446cb185f0e04182ec1afbd36bc2aa553a3b1e13a321e87"
+    },
+    {
+      "file": "research/validation-v17/museo-seccion.png",
+      "size": [
+        1440,
+        1080
+      ],
+      "sha256": "86cb48bde806090d4f1f9a18f2ed77d67bb44495d72c6537a57c72dc031243d1"
+    },
+    {
+      "file": "research/validation-v17/museo-planta-baja.png",
+      "size": [
+        1440,
+        1080
+      ],
+      "sha256": "239d9604dee7ed0d8941562a64e5128f97fc1e4c0f38bc07e909f087c2118e3a"
+    },
+    {
+      "file": "research/validation-v17/museo-planta-alta.png",
+      "size": [
+        1440,
+        1080
+      ],
+      "sha256": "d83e1782e08affb740c9f62e7edf29225f5dfdc7ce1a1a8f2a3fa9dde3272def"
+    }
+  ],
+  "geometryAndStaticHashesCurrent": true,
+  "webglBrowserVerification": false,
+  "limitation": "The available browser disables WebGL; the actual notebook, floor plan and navigation were checked in the supported 2D mode."
+}

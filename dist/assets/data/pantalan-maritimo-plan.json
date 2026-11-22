@@ -1,0 +1,1453 @@
+{
+  "schemaVersion": 1,
+  "id": "pantalan-maritimo",
+  "label": "Pantalán marítimo · apoyos y plataforma",
+  "axis": {
+    "origin": [
+      -0.2108985578746818,
+      39.65445390087127
+    ],
+    "unit": [
+      0.8560044716501247,
+      0.5169684173283615
+    ],
+    "originWorld": [
+      5748.9573230290125,
+      2732.4717550107257
+    ]
+  },
+  "chainage": [
+    480,
+    1656
+  ],
+  "components": [
+    {
+      "id": "tablero-1",
+      "label": "Tablero retirado · cuatro vigas",
+      "kind": "historicDeck",
+      "mode": "historical",
+      "elevation": 5.78,
+      "coordinates": [
+        [
+          -0.2060810467009042,
+          39.65225247054231
+        ],
+        [
+          -0.19918710044468207,
+          39.64904812084812
+        ],
+        [
+          -0.19923054539227605,
+          39.64899275584457
+        ],
+        [
+          -0.2061244916484982,
+          39.652197105538754
+        ]
+      ],
+      "localBounds": [
+        480,
+        1170,
+        -3.6,
+        3.6
+      ]
+    },
+    {
+      "id": "tablero-2",
+      "label": "Tablero retirado · ocho vigas",
+      "kind": "historicDeck",
+      "mode": "historical",
+      "elevation": 5.78,
+      "coordinates": [
+        [
+          -0.1991659512028325,
+          39.64907507283944
+        ],
+        [
+          -0.19766726723408856,
+          39.64837847507983
+        ],
+        [
+          -0.1977530106653817,
+          39.64826920609365
+        ],
+        [
+          -0.19925169463412562,
+          39.64896580385325
+        ]
+      ],
+      "localBounds": [
+        1170,
+        1320,
+        -7.105,
+        7.105
+      ]
+    },
+    {
+      "id": "plataforma",
+      "label": "Plataforma conservada",
+      "kind": "platform",
+      "mode": "both",
+      "elevation": 5.78,
+      "coordinates": [
+        [
+          -0.19765824637344231,
+          39.64838997100765
+        ],
+        [
+          -0.19494063277678664,
+          39.64712680707024
+        ],
+        [
+          -0.19506131318676992,
+          39.64697301539369
+        ],
+        [
+          -0.1977789267834256,
+          39.648236179331114
+        ]
+      ],
+      "localBounds": [
+        1320,
+        1592,
+        -8.6,
+        11.4
+      ]
+    },
+    {
+      "id": "cinta",
+      "label": "Cinta cubierta",
+      "kind": "conveyor",
+      "mode": "historical",
+      "elevation": 6.8,
+      "coordinates": [
+        [
+          -0.20608557221627857,
+          39.652246703354436
+        ],
+        [
+          -0.19829241557881008,
+          39.64862439500449
+        ],
+        [
+          -0.1983068972280081,
+          39.64860594000331
+        ],
+        [
+          -0.20610005386547658,
+          39.65222824835325
+        ]
+      ],
+      "localBounds": [
+        480,
+        1260,
+        -2.85,
+        -0.45
+      ]
+    },
+    {
+      "id": "transferencias",
+      "label": "Transferencias",
+      "kind": "machinery",
+      "mode": "historical",
+      "elevation": 8.35,
+      "coordinates": [
+        [
+          -0.19828547645523606,
+          39.648633238025894
+        ],
+        [
+          -0.1979357835291958,
+          39.64847069854865
+        ],
+        [
+          -0.19799672713623734,
+          39.648393033751994
+        ],
+        [
+          -0.1983464200622776,
+          39.64855557322924
+        ]
+      ],
+      "localBounds": [
+        1260,
+        1295,
+        -4,
+        6.1
+      ]
+    },
+    {
+      "id": "cargador",
+      "label": "Cargador móvil",
+      "kind": "machinery",
+      "mode": "historical",
+      "elevation": 18,
+      "coordinates": [
+        [
+          -0.1965848911427862,
+          39.647863783717725
+        ],
+        [
+          -0.19647498765174498,
+          39.647812699882024
+        ],
+        [
+          -0.19668617836921573,
+          39.647543564448064
+        ],
+        [
+          -0.19679608186025696,
+          39.64759464828377
+        ]
+      ],
+      "localBounds": [
+        1429,
+        1440,
+        -6,
+        29
+      ]
+    },
+    {
+      "id": "pasarela",
+      "label": "Pasarela a duques de alba",
+      "kind": "footbridge",
+      "mode": "historical",
+      "elevation": 5.8,
+      "coordinates": [
+        [
+          -0.19503174648632401,
+          39.64701069435445
+        ],
+        [
+          -0.19443227289882645,
+          39.6467320552506
+        ],
+        [
+          -0.19444313413572492,
+          39.64671821399972
+        ],
+        [
+          -0.19504260772322252,
+          39.64699685310356
+        ]
+      ],
+      "localBounds": [
+        1592,
+        1652,
+        6.5,
+        8.3
+      ]
+    },
+    {
+      "id": "tolva-1466",
+      "label": "Tolva histórica",
+      "kind": "machinery",
+      "mode": "historical",
+      "elevation": 5.8,
+      "coordinates": [
+        [
+          -0.19627332201578424,
+          39.64767698748427
+        ],
+        [
+          -0.19620538167586785,
+          39.64764540838583
+        ],
+        [
+          -0.19624641301526216,
+          39.647593119215806
+        ],
+        [
+          -0.19631435335517855,
+          39.64762469831424
+        ]
+      ],
+      "localBounds": [
+        1462.6,
+        1469.4,
+        -2,
+        4.8
+      ]
+    },
+    {
+      "id": "tolva-1491",
+      "label": "Tolva histórica",
+      "kind": "machinery",
+      "mode": "historical",
+      "elevation": 5.8,
+      "coordinates": [
+        [
+          -0.1960235413543269,
+          39.647560887857665
+        ],
+        [
+          -0.1959556010144105,
+          39.647529308759225
+        ],
+        [
+          -0.19599663235380482,
+          39.6474770195892
+        ],
+        [
+          -0.1960645726937212,
+          39.64750859868764
+        ]
+      ],
+      "localBounds": [
+        1487.6,
+        1494.4,
+        -2,
+        4.8
+      ]
+    },
+    {
+      "id": "tolva-1516",
+      "label": "Tolva histórica",
+      "kind": "machinery",
+      "mode": "historical",
+      "elevation": 5.8,
+      "coordinates": [
+        [
+          -0.1957737606928696,
+          39.64744478823106
+        ],
+        [
+          -0.1957058203529532,
+          39.64741320913263
+        ],
+        [
+          -0.1957468516923475,
+          39.6473609199626
+        ],
+        [
+          -0.1958147920322639,
+          39.647392499061034
+        ]
+      ],
+      "localBounds": [
+        1512.6,
+        1519.4,
+        -2,
+        4.8
+      ]
+    },
+    {
+      "id": "tolva-1541",
+      "label": "Tolva histórica",
+      "kind": "machinery",
+      "mode": "historical",
+      "elevation": 5.8,
+      "coordinates": [
+        [
+          -0.19552398003141225,
+          39.64732868860446
+        ],
+        [
+          -0.19545603969149586,
+          39.64729710950603
+        ],
+        [
+          -0.19549707103089017,
+          39.647244820336
+        ],
+        [
+          -0.19556501137080656,
+          39.64727639943444
+        ]
+      ],
+      "localBounds": [
+        1537.6,
+        1544.4,
+        -2,
+        4.8
+      ]
+    },
+    {
+      "id": "tolva-1566",
+      "label": "Tolva histórica",
+      "kind": "machinery",
+      "mode": "historical",
+      "elevation": 5.8,
+      "coordinates": [
+        [
+          -0.19527419936995494,
+          39.64721258897786
+        ],
+        [
+          -0.19520625903003855,
+          39.647181009879425
+        ],
+        [
+          -0.19524729036943286,
+          39.647128720709404
+        ],
+        [
+          -0.19531523070934925,
+          39.64716029980784
+        ]
+      ],
+      "localBounds": [
+        1562.6,
+        1569.4,
+        -2,
+        4.8
+      ]
+    }
+  ],
+  "supports": [
+    {
+      "id": "historic-480",
+      "coordinates": [
+        -0.2061027691747012,
+        39.65222478804053
+      ],
+      "station": 480,
+      "mode": "historical",
+      "elevation": 4.15,
+      "kind": "tripod",
+      "current": false
+    },
+    {
+      "id": "13152977086",
+      "coordinates": [
+        -0.2058085,
+        39.6520808
+      ],
+      "station": 510,
+      "offsetSouth": 0.687,
+      "mode": "both",
+      "elevation": 4.15,
+      "kind": "tripod",
+      "current": true
+    },
+    {
+      "id": "13152977087",
+      "coordinates": [
+        -0.205511,
+        39.6519428
+      ],
+      "station": 540,
+      "offsetSouth": 0.66,
+      "mode": "both",
+      "elevation": 4.15,
+      "kind": "tripod",
+      "current": true
+    },
+    {
+      "id": "13152977088",
+      "coordinates": [
+        -0.2052025,
+        39.651802
+      ],
+      "station": 570,
+      "offsetSouth": 0.413,
+      "mode": "both",
+      "elevation": 4.15,
+      "kind": "tripod",
+      "current": true
+    },
+    {
+      "id": "13152977089",
+      "coordinates": [
+        -0.2049051,
+        39.6516654
+      ],
+      "station": 600,
+      "offsetSouth": 0.258,
+      "mode": "both",
+      "elevation": 4.15,
+      "kind": "tripod",
+      "current": true
+    },
+    {
+      "id": "13152977090",
+      "coordinates": [
+        -0.2046058,
+        39.6515246
+      ],
+      "station": 630,
+      "offsetSouth": 0.418,
+      "mode": "both",
+      "elevation": 4.15,
+      "kind": "tripod",
+      "current": true
+    },
+    {
+      "id": "13152977091",
+      "coordinates": [
+        -0.2043065,
+        39.6513838
+      ],
+      "station": 660,
+      "offsetSouth": 0.578,
+      "mode": "both",
+      "elevation": 4.15,
+      "kind": "tripod",
+      "current": true
+    },
+    {
+      "id": "13152977092",
+      "coordinates": [
+        -0.2040128,
+        39.651253
+      ],
+      "station": 690,
+      "offsetSouth": 0.034,
+      "mode": "both",
+      "elevation": 4.15,
+      "kind": "tripod",
+      "current": true
+    },
+    {
+      "id": "13152977093",
+      "coordinates": [
+        -0.2037117,
+        39.6511107
+      ],
+      "station": 720,
+      "offsetSouth": 0.258,
+      "mode": "both",
+      "elevation": 4.15,
+      "kind": "tripod",
+      "current": true
+    },
+    {
+      "id": "historic-750",
+      "coordinates": [
+        -0.2034051380309621,
+        39.65097091207324
+      ],
+      "station": 750,
+      "mode": "historical",
+      "elevation": 4.15,
+      "kind": "tripod",
+      "current": false
+    },
+    {
+      "id": "historic-780",
+      "coordinates": [
+        -0.20310540123721332,
+        39.65083159252132
+      ],
+      "station": 780,
+      "mode": "historical",
+      "elevation": 4.15,
+      "kind": "tripod",
+      "current": false
+    },
+    {
+      "id": "historic-810",
+      "coordinates": [
+        -0.20280566444346454,
+        39.6506922729694
+      ],
+      "station": 810,
+      "mode": "historical",
+      "elevation": 4.15,
+      "kind": "tripod",
+      "current": false
+    },
+    {
+      "id": "13152977094",
+      "coordinates": [
+        -0.202509,
+        39.6505617
+      ],
+      "station": 840,
+      "offsetSouth": -0.697,
+      "mode": "both",
+      "elevation": 4.15,
+      "kind": "tripod",
+      "current": true
+    },
+    {
+      "id": "13152977095",
+      "coordinates": [
+        -0.2022061,
+        39.6504209
+      ],
+      "station": 870,
+      "offsetSouth": -0.696,
+      "mode": "both",
+      "elevation": 4.15,
+      "kind": "tripod",
+      "current": true
+    },
+    {
+      "id": "13152977096",
+      "coordinates": [
+        -0.2019031,
+        39.6502815
+      ],
+      "station": 900,
+      "offsetSouth": -0.833,
+      "mode": "both",
+      "elevation": 4.15,
+      "kind": "tripod",
+      "current": true
+    },
+    {
+      "id": "13152977097",
+      "coordinates": [
+        -0.2016001,
+        39.6501449
+      ],
+      "station": 930,
+      "offsetSouth": -1.237,
+      "mode": "both",
+      "elevation": 4.15,
+      "kind": "tripod",
+      "current": true
+    },
+    {
+      "id": "13152977098",
+      "coordinates": [
+        -0.2013045,
+        39.6500055
+      ],
+      "station": 960,
+      "offsetSouth": -1.046,
+      "mode": "both",
+      "elevation": 4.15,
+      "kind": "tripod",
+      "current": true
+    },
+    {
+      "id": "13152977099",
+      "coordinates": [
+        -0.2010071,
+        39.6498732
+      ],
+      "station": 990,
+      "offsetSouth": -1.611,
+      "mode": "both",
+      "elevation": 4.15,
+      "kind": "tripod",
+      "current": true
+    },
+    {
+      "id": "13152977100",
+      "coordinates": [
+        -0.2007041,
+        39.6497324
+      ],
+      "station": 1020,
+      "offsetSouth": -1.615,
+      "mode": "both",
+      "elevation": 4.15,
+      "kind": "tripod",
+      "current": true
+    },
+    {
+      "id": "historic-1050",
+      "coordinates": [
+        -0.2004077700934742,
+        39.64957771655403
+      ],
+      "station": 1050,
+      "mode": "historical",
+      "elevation": 4.15,
+      "kind": "tripod",
+      "current": false
+    },
+    {
+      "id": "historic-1080",
+      "coordinates": [
+        -0.20010803329972543,
+        39.64943839700211
+      ],
+      "station": 1080,
+      "mode": "historical",
+      "elevation": 4.15,
+      "kind": "tripod",
+      "current": false
+    },
+    {
+      "id": "historic-1110",
+      "coordinates": [
+        -0.19980829650597665,
+        39.64929907745019
+      ],
+      "station": 1110,
+      "mode": "historical",
+      "elevation": 4.15,
+      "kind": "tripod",
+      "current": false
+    },
+    {
+      "id": "historic-1140",
+      "coordinates": [
+        -0.19950855971222786,
+        39.64915975789827
+      ],
+      "station": 1140,
+      "mode": "historical",
+      "elevation": 4.15,
+      "kind": "tripod",
+      "current": false
+    },
+    {
+      "id": "13153013201",
+      "coordinates": [
+        -0.1992262,
+        39.6490127
+      ],
+      "station": 1170,
+      "offsetSouth": 1.507,
+      "mode": "both",
+      "elevation": 4.15,
+      "kind": "transition",
+      "current": true
+    },
+    {
+      "id": "13153013202",
+      "coordinates": [
+        -0.1989232,
+        39.6488761
+      ],
+      "station": 1200,
+      "offsetSouth": 1.103,
+      "mode": "both",
+      "elevation": 4.15,
+      "kind": "transition",
+      "current": true
+    },
+    {
+      "id": "13153013203",
+      "coordinates": [
+        -0.1986221,
+        39.6487381
+      ],
+      "station": 1230,
+      "offsetSouth": 0.917,
+      "mode": "both",
+      "elevation": 4.15,
+      "kind": "transition",
+      "current": true
+    },
+    {
+      "id": "13153013204",
+      "coordinates": [
+        -0.1983173,
+        39.6486044
+      ],
+      "station": 1260,
+      "offsetSouth": 0.158,
+      "mode": "both",
+      "elevation": 4.15,
+      "kind": "transition",
+      "current": true
+    },
+    {
+      "id": "13153013205",
+      "coordinates": [
+        -0.198018,
+        39.6484636
+      ],
+      "station": 1290,
+      "offsetSouth": 0.318,
+      "mode": "both",
+      "elevation": 4.15,
+      "kind": "transition",
+      "current": true
+    },
+    {
+      "id": "13153013206",
+      "coordinates": [
+        -0.1977298,
+        39.6483285
+      ],
+      "station": 1320,
+      "offsetSouth": 0.427,
+      "mode": "both",
+      "elevation": 4.15,
+      "kind": "transition",
+      "current": true
+    },
+    {
+      "id": "12093770990",
+      "coordinates": [
+        -0.1963453,
+        39.6475992
+      ],
+      "station": 1461.8,
+      "offsetSouth": 8.6,
+      "mode": "both",
+      "elevation": 3.4,
+      "kind": "auxiliary",
+      "current": true
+    },
+    {
+      "id": "12093770991",
+      "coordinates": [
+        -0.1957765,
+        39.6473504
+      ],
+      "station": 1517.83,
+      "offsetSouth": 7.116,
+      "mode": "both",
+      "elevation": 3.4,
+      "kind": "auxiliary",
+      "current": true
+    },
+    {
+      "id": "12093770992",
+      "coordinates": [
+        -0.195388,
+        39.6471897
+      ],
+      "station": 1555.57,
+      "offsetSouth": 5.222,
+      "mode": "both",
+      "elevation": 3.4,
+      "kind": "auxiliary",
+      "current": true
+    },
+    {
+      "id": "12093770993",
+      "coordinates": [
+        -0.1952268,
+        39.6471133
+      ],
+      "station": 1571.79,
+      "offsetSouth": 5.362,
+      "mode": "both",
+      "elevation": 3.4,
+      "kind": "auxiliary",
+      "current": true
+    },
+    {
+      "id": "12093770994",
+      "coordinates": [
+        -0.1951296,
+        39.6470798
+      ],
+      "station": 1580.85,
+      "offsetSouth": 4.249,
+      "mode": "both",
+      "elevation": 3.4,
+      "kind": "auxiliary",
+      "current": true
+    }
+  ],
+  "stops": [
+    {
+      "id": "pantalan-maritimo-conjunto",
+      "label": "Un eje discontinuo sobre el mar",
+      "offset": [
+        -74.04715667204903,
+        490,
+        -786.5379956421591
+      ],
+      "closeOffset": [
+        -51.833009670434315,
+        343,
+        -550.5765969495113
+      ],
+      "kind": "overview",
+      "coordinates": [
+        -0.20006411118793313,
+        39.649407487492965
+      ],
+      "localTarget": [
+        1085,
+        5,
+        1
+      ],
+      "elevation": 5,
+      "modes": [
+        "current",
+        "historical"
+      ],
+      "components": [],
+      "readingLayer": "edificio",
+      "regionId": "edificio",
+      "minDistance": 0.8,
+      "fov": 38,
+      "closeScale": false,
+      "interiorView": false,
+      "structuralView": false,
+      "pedestrianView": false,
+      "sourceConfidence": "documented-section-dimensions-cartographic-registration",
+      "point": [
+        6677.20520635207,
+        5,
+        3294.238492283648
+      ],
+      "bounds": {
+        "min": [
+          6158.348695830254,
+          0.08,
+          2981.539914486755
+        ],
+        "max": [
+          7172.187380672231,
+          36,
+          3619.3876150858973
+        ]
+      }
+    },
+    {
+      "id": "pantalan-maritimo-tripodes",
+      "label": "Trípodes sobre el agua",
+      "offset": [
+        -6.5691313800458,
+        13,
+        -41.35029036066975
+      ],
+      "closeOffset": [
+        -4.598391966032059,
+        9.1,
+        -28.945203252468826
+      ],
+      "kind": "feature",
+      "coordinates": [
+        -0.20470641107873985,
+        39.65157155429804
+      ],
+      "localTarget": [
+        620,
+        2.6,
+        0.4
+      ],
+      "elevation": 2.6,
+      "modes": [
+        "current",
+        "historical"
+      ],
+      "components": [
+        "tripodes",
+        "apoyos"
+      ],
+      "readingLayer": "construccion",
+      "regionId": "construccion",
+      "minDistance": 0.8,
+      "fov": 38,
+      "closeScale": false,
+      "interiorView": false,
+      "structuralView": false,
+      "pedestrianView": false,
+      "sourceConfidence": "primary-sources-with-interpreted-photographic-details",
+      "point": [
+        6279.473308085158,
+        2.6,
+        3053.33457554297
+      ],
+      "bounds": {
+        "min": [
+          6253.127128159245,
+          0.08,
+          3034.237035710865
+        ],
+        "max": [
+          6301.097035915034,
+          4.3,
+          3068.6455012937845
+        ]
+      }
+    },
+    {
+      "id": "pantalan-maritimo-vanos",
+      "label": "Los vanos que faltan",
+      "offset": [
+        -16.04531222936373,
+        34,
+        -85.62445886230307
+      ],
+      "closeOffset": [
+        -11.231718560554611,
+        23.799999999999997,
+        -59.93712120361214
+      ],
+      "kind": "feature",
+      "coordinates": [
+        -0.20308541878429673,
+        39.65082230455119
+      ],
+      "localTarget": [
+        782,
+        2.7,
+        0
+      ],
+      "elevation": 2.7,
+      "modes": [
+        "current",
+        "historical"
+      ],
+      "components": [
+        "tripodes",
+        "tablero"
+      ],
+      "readingLayer": "espacios",
+      "regionId": "espacios",
+      "minDistance": 0.8,
+      "fov": 38,
+      "closeScale": false,
+      "interiorView": false,
+      "structuralView": false,
+      "pedestrianView": false,
+      "sourceConfidence": "primary-sources-with-interpreted-photographic-details",
+      "point": [
+        6418.35281985941,
+        2.7,
+        3136.7410573615043
+      ],
+      "bounds": {
+        "min": [
+          6328.455521664456,
+          0.08,
+          3079.7302564357606
+        ],
+        "max": [
+          6500.546077809513,
+          8.6,
+          3189.0991425312927
+        ]
+      }
+    },
+    {
+      "id": "pantalan-maritimo-transicion",
+      "label": "De cuatro a ocho vigas",
+      "offset": [
+        -9.425694834243636,
+        26,
+        -61.76695133234045
+      ],
+      "closeOffset": [
+        -6.597986383970545,
+        18.2,
+        -43.23686593263831
+      ],
+      "kind": "feature",
+      "coordinates": [
+        -0.19851124727254832,
+        39.64869305251672
+      ],
+      "localTarget": [
+        1240,
+        4.1,
+        0.3
+      ],
+      "elevation": 4.1,
+      "modes": [
+        "current",
+        "historical"
+      ],
+      "components": [
+        "transicion",
+        "apoyos",
+        "tablero"
+      ],
+      "readingLayer": "construccion",
+      "regionId": "construccion",
+      "minDistance": 0.8,
+      "fov": 38,
+      "closeScale": false,
+      "interiorView": false,
+      "structuralView": false,
+      "pedestrianView": false,
+      "sourceConfidence": "primary-sources-with-interpreted-photographic-details",
+      "point": [
+        6810.247777349969,
+        4.1,
+        3373.769393839389
+      ],
+      "bounds": {
+        "min": [
+          6759.186874595784,
+          0.08,
+          3338.231293771633
+        ],
+        "max": [
+          6870.178905871052,
+          11.1,
+          3413.9635753974385
+        ]
+      }
+    },
+    {
+      "id": "pantalan-maritimo-plataforma",
+      "label": "La plataforma terminal",
+      "offset": [
+        -40.51603980169726,
+        115,
+        -223.06602277977544
+      ],
+      "closeOffset": [
+        -28.36122786118808,
+        80.5,
+        -156.14621594584278
+      ],
+      "kind": "feature",
+      "coordinates": [
+        -0.1963597797801061,
+        39.64768149320067
+      ],
+      "localTarget": [
+        1456,
+        5.1,
+        1.4
+      ],
+      "elevation": 5.1,
+      "modes": [
+        "current",
+        "historical"
+      ],
+      "components": [
+        "plataforma"
+      ],
+      "readingLayer": "edificio",
+      "regionId": "edificio",
+      "minDistance": 0.8,
+      "fov": 38,
+      "closeScale": false,
+      "interiorView": false,
+      "structuralView": false,
+      "pedestrianView": false,
+      "sourceConfidence": "primary-sources-with-interpreted-photographic-details",
+      "point": [
+        6994.576077967335,
+        5.1,
+        3486.3761769011303
+      ],
+      "bounds": {
+        "min": [
+          6870.111591184286,
+          0.08,
+          3405.615120387327
+        ],
+        "max": [
+          7119.793175538566,
+          8,
+          3567.8254027265925
+        ]
+      }
+    },
+    {
+      "id": "pantalan-maritimo-pilotes",
+      "label": "Bajo la losa: tres líneas de apoyo",
+      "offset": [
+        -19.755417534718603,
+        1.6,
+        11.433436842390517
+      ],
+      "closeOffset": [
+        -19.755417534718603,
+        1.6,
+        11.433436842390517
+      ],
+      "kind": "feature",
+      "coordinates": [
+        -0.19677941129135443,
+        39.647876540573364
+      ],
+      "localTarget": [
+        1414,
+        2,
+        1.4
+      ],
+      "elevation": 2,
+      "modes": [
+        "current",
+        "historical"
+      ],
+      "components": [
+        "plataforma"
+      ],
+      "readingLayer": "construccion",
+      "regionId": "construccion",
+      "minDistance": 0.4,
+      "fov": 46,
+      "closeScale": false,
+      "interiorView": false,
+      "structuralView": true,
+      "pedestrianView": false,
+      "sourceConfidence": "primary-sources-with-interpreted-photographic-details",
+      "point": [
+        6958.623890158029,
+        2,
+        3464.6635033733387
+      ],
+      "bounds": {
+        "min": [
+          6943.7279757461965,
+          0.08,
+          3450.074404277566
+        ],
+        "max": [
+          6973.416410886395,
+          5.8,
+          3479.423803363443
+        ]
+      }
+    },
+    {
+      "id": "pantalan-maritimo-cinta",
+      "label": "Cintas y transferencia del mineral",
+      "offset": [
+        -6.001676947643137,
+        25,
+        -59.699077663027
+      ],
+      "closeOffset": [
+        -4.201173863350196,
+        17.5,
+        -41.78935436411889
+      ],
+      "kind": "feature",
+      "coordinates": [
+        -0.19823813035426519,
+        39.64855456239271
+      ],
+      "localTarget": [
+        1268,
+        7.8,
+        1.4
+      ],
+      "elevation": 7.8,
+      "modes": [
+        "historical"
+      ],
+      "components": [
+        "cinta",
+        "transferencias"
+      ],
+      "readingLayer": "memoria",
+      "regionId": "memoria",
+      "minDistance": 0.8,
+      "fov": 38,
+      "closeScale": false,
+      "interiorView": false,
+      "structuralView": false,
+      "pedestrianView": false,
+      "sourceConfidence": "primary-sources-with-interpreted-photographic-details",
+      "point": [
+        6833.647237297111,
+        7.8,
+        3389.1861144433983
+      ],
+      "bounds": {
+        "min": [
+          6792.5710489901385,
+          3.2,
+          3360.9610754623895
+        ],
+        "max": [
+          6872.908022977317,
+          11.4,
+          3416.5484174840803
+        ]
+      }
+    },
+    {
+      "id": "pantalan-maritimo-cargador",
+      "label": "El cargador de brazo móvil",
+      "offset": [
+        -66.79236048600032,
+        26,
+        27.418617410587686
+      ],
+      "closeOffset": [
+        -46.754652340200224,
+        18.2,
+        19.19303218741138
+      ],
+      "kind": "feature",
+      "coordinates": [
+        -0.19661941129748306,
+        39.647732909618824
+      ],
+      "localTarget": [
+        1434,
+        18,
+        8
+      ],
+      "elevation": 18,
+      "modes": [
+        "historical"
+      ],
+      "components": [
+        "cargador",
+        "transferencias"
+      ],
+      "readingLayer": "memoria",
+      "regionId": "memoria",
+      "minDistance": 0.8,
+      "fov": 38,
+      "closeScale": false,
+      "interiorView": false,
+      "structuralView": false,
+      "pedestrianView": false,
+      "sourceConfidence": "primary-sources-with-interpreted-photographic-details",
+      "point": [
+        6972.331988036664,
+        18,
+        3480.652501232797
+      ],
+      "bounds": {
+        "min": [
+          6921.582477159534,
+          5.6,
+          3443.1758824892904
+        ],
+        "max": [
+          6987.45151848712,
+          34.1,
+          3503.620346947727
+        ]
+      }
+    },
+    {
+      "id": "pantalan-maritimo-tolvas",
+      "label": "Las cinco tolvas de la plataforma",
+      "offset": [
+        -74.85226545686464,
+        32,
+        27.22385637588966
+      ],
+      "closeOffset": [
+        -52.396585819805246,
+        22.4,
+        19.05669946312276
+      ],
+      "kind": "feature",
+      "coordinates": [
+        -0.19576030619260854,
+        39.64740285409683
+      ],
+      "localTarget": [
+        1516,
+        9.5,
+        1.4
+      ],
+      "elevation": 9.5,
+      "modes": [
+        "historical"
+      ],
+      "components": [
+        "tolvas"
+      ],
+      "readingLayer": "memoria",
+      "regionId": "memoria",
+      "minDistance": 0.8,
+      "fov": 38,
+      "closeScale": false,
+      "interiorView": false,
+      "structuralView": false,
+      "pedestrianView": false,
+      "sourceConfidence": "primary-sources-with-interpreted-photographic-details",
+      "point": [
+        7045.936346266341,
+        9.5,
+        3517.3942819408317
+      ],
+      "bounds": {
+        "min": [
+          6994.249068245246,
+          5.6,
+          3483.3046580062046
+        ],
+        "max": [
+          7099.232239547273,
+          13.1,
+          3552.689043604446
+        ]
+      }
+    },
+    {
+      "id": "pantalan-maritimo-pasarela",
+      "label": "Pasarela y duques de alba",
+      "offset": [
+        -50.65572187258026,
+        22,
+        21.977211869748047
+      ],
+      "closeOffset": [
+        -35.45900531080618,
+        15.399999999999999,
+        15.384048308823632
+      ],
+      "kind": "feature",
+      "coordinates": [
+        -0.19475742276394106,
+        39.64687374214721
+      ],
+      "localTarget": [
+        1620,
+        5.7,
+        7.4
+      ],
+      "elevation": 5.7,
+      "modes": [
+        "historical"
+      ],
+      "components": [
+        "pasarela"
+      ],
+      "readingLayer": "construccion",
+      "regionId": "construccion",
+      "minDistance": 0.8,
+      "fov": 38,
+      "closeScale": false,
+      "interiorView": false,
+      "structuralView": false,
+      "pedestrianView": false,
+      "sourceConfidence": "primary-sources-with-interpreted-photographic-details",
+      "point": [
+        7131.8590008139845,
+        5.7,
+        3576.295024172882
+      ],
+      "bounds": {
+        "min": [
+          7103.203291681784,
+          0.08,
+          3556.9305857962677
+        ],
+        "max": [
+          7164.69133862097,
+          8.5,
+          3598.415505530469
+        ]
+      }
+    }
+  ],
+  "levels": [
+    {
+      "id": "mar",
+      "label": "Nivel del mar de visualización",
+      "elevation": 0.08
+    },
+    {
+      "id": "apoyo",
+      "label": "Encepados",
+      "elevation": 4.15
+    },
+    {
+      "id": "plataforma",
+      "label": "Tablero histórico / plataforma",
+      "elevation": 5.78
+    }
+  ],
+  "profile": [
+    {
+      "s": 480,
+      "elevation": 5.78
+    },
+    {
+      "s": 1320,
+      "elevation": 5.78
+    },
+    {
+      "s": 1592,
+      "elevation": 5.78
+    },
+    {
+      "s": 1652,
+      "elevation": 5.8
+    }
+  ],
+  "historicalDate": "1984–1987",
+  "currentAsOf": "2026-11-21",
+  "note": "El estado actual muestra sólo apoyos registrados y plataforma conservada. Los tableros continuos, cintas, máquinas y pasarela final pertenecen exclusivamente a la reconstrucción interpretativa de 1984–1987. No se modela una rehabilitación marítima futura como terminada."
+}

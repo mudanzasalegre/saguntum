@@ -1,0 +1,1800 @@
+{
+  "schemaVersion": 1,
+  "id": "museo-industrial",
+  "title": "Nave de Efectos y Repuestos",
+  "subtitle": "Museo Industrial y de la Memoria Obrera",
+  "introduction": "Un antiguo almacén ferroviario conserva su estructura, sus galerías y la vía bajo vidrio. Recorre su arquitectura y descubre cómo este espacio cuenta la historia industrial y obrera del Puerto.",
+  "researchDate": "2026-11-20",
+  "regionsLabel": "Ámbitos del museo",
+  "mapButtonLabel": "Plano de la nave",
+  "overviewButtonLabel": "Ver el conjunto",
+  "readingModeLabel": "Leer los componentes",
+  "readingModeNote": "Los colores distinguen cinco ámbitos de lectura del edificio y su memoria; no representan fases exactas de construcción.",
+  "timelineIntroduction": "Del almacén de repuestos a la rehabilitación y la apertura del museo: una cronología con fuentes y fechas diferenciadas.",
+  "visitAriaLabel": "Visita al Museo Industrial y de la Memoria Obrera",
+  "sectionOnOverview": true,
+  "sectionOpenLabel": "Abrir sección",
+  "sectionCloseLabel": "Cerrar sección",
+  "sectionInstructions": "Retira la cubierta y los forjados superiores para leer el almacén, su estructura y la vía central.",
+  "sectionNote": "La sección digital retira también las escaleras, barandillas y soportes de las plantas superiores. Conserva los pilares, las cerchas, los andenes y el nivel inferior; las visitas interiores normales mantienen sus techos.",
+  "mapInstructions": "Selecciona una parada para acercarte al interior, a una galería o al entorno de la nave.",
+  "mapNote": "La planta orienta las paradas. Las cotas y detalles no levantados se identifican como aproximaciones.",
+  "visitNote": "Documentación revisada el 20 de noviembre de 2026. El Ayuntamiento confirma la apertura del museo el 15 de octubre de 2026. Para horarios y condiciones de visita física, consulta las fuentes de la entidad gestora.",
+  "methodology": [
+    "La escena reúne la envolvente conservada, la estructura del almacén y los elementos de rehabilitación reconocibles en fotografías. Las fuentes municipales de octubre y noviembre de 2026 confirman la apertura y el uso museístico.",
+    "La huella del atlas procede de Catastro y su contraste con PNOA. Su envolvente aproximada de 60,7 × 20,2 m difiere de las dimensiones nominales publicadas: 70 × 18 m en la Fundación y 70 × 19,10 m en la ficha universitaria. La diferencia permanece explícita.",
+    "Las referencias de forjados y andenes ayudan a interpretar la sección. La plataforma sur se describe a 6 m en la ficha general y a 5 m en el portfolio de espacios; una diferencia de cota de referencia es plausible, pero no está demostrada.",
+    "Los apoyos, espesores, carpinterías y tramos de comunicación sin plano acotado recuperado son aproximaciones. La asignación de cada nivel a una temática no pretende reproducir una planta museográfica definitiva.",
+    "Las fotografías de 2022 y de la apertura de 2026 documentan el eje de vidrio, las galerías y parte de los acabados. Los objetos citados en la colección se explican sin inventar su forma o posición en la escena.",
+    "El texto de la ficha universitaria y las fuentes gestoras coinciden en 1927. El año 1921 de su cabecera resumida se trata como discrepancia editorial y no se utiliza para fechar el edificio.",
+    "La cubierta abierta es una herramienta digital; las imágenes históricas y actuales no se mezclan para presentar elementos desaparecidos como si se conservaran.",
+    "El número de paradas y los encuadres son decisiones de la visita virtual. Los datos cartográficos y los controles numéricos de la maqueta no equivalen a una medición arquitectónica o topográfica."
+  ],
+  "readingLegend": [
+    {
+      "id": "conjunto",
+      "label": "El edificio y la ciudad",
+      "color": "#8ebbc2",
+      "note": "Volumen, acceso, nave central y entorno."
+    },
+    {
+      "id": "estructura",
+      "label": "Apoyos, cerchas y niveles",
+      "color": "#d4ac79",
+      "note": "Estructura resistente, comunicaciones y sección digital."
+    },
+    {
+      "id": "envolvente",
+      "label": "Materia, cubierta y luz",
+      "color": "#93b18f",
+      "note": "Fachadas, ventanales y piel exterior."
+    },
+    {
+      "id": "oficios",
+      "label": "El almacén ferroviario",
+      "color": "#c29272",
+      "note": "Vía, andenes, estanterías y transporte de repuestos."
+    },
+    {
+      "id": "memoria",
+      "label": "Museo y memoria obrera",
+      "color": "#b59ac7",
+      "note": "Galerías, colección, rehabilitación y experiencia del trabajo."
+    }
+  ],
+  "confidenceLegend": [
+    {
+      "id": "documented",
+      "label": "Documentado",
+      "note": "La fuente respalda el dato; no certifica la exactitud métrica de cada pieza del modelo."
+    },
+    {
+      "id": "interpretive",
+      "label": "Interpretación",
+      "note": "Geometría, material o recurso de visualización aproximado para explicar el edificio."
+    },
+    {
+      "id": "disputed",
+      "label": "Fuentes diferentes",
+      "note": "Las fuentes difieren en un detalle; la discrepancia queda explícita."
+    }
+  ],
+  "materialEvidenceLegend": [
+    {
+      "id": "conserved",
+      "label": "Arquitectura conservada",
+      "note": "Componente reconocido en la descripción patrimonial y en las referencias visuales."
+    },
+    {
+      "id": "rehabilitated",
+      "label": "Intervención posterior",
+      "note": "Elemento añadido, reparado o previsto durante la adaptación y conservación, según la fuente indicada."
+    },
+    {
+      "id": "mixed",
+      "label": "Lectura conjunta",
+      "note": "El foco reúne arquitectura, historia de usos y simplificaciones de representación."
+    }
+  ],
+  "stops": [
+    {
+      "id": "museo-industrial-conjunto",
+      "title": "Un almacén convertido en memoria",
+      "label": "El conjunto",
+      "regionId": "conjunto",
+      "period": "mixed",
+      "intro": "La forma alargada conserva la lógica de un edificio pensado para recibir y guardar.",
+      "narrative": "Rodea la nave antes de entrar. Su eje longitudinal, la cubierta y el anexo permiten reconocer un conjunto compacto dentro del paisaje industrial del Puerto.",
+      "facts": [
+        {
+          "text": "La Compañía Siderúrgica del Mediterráneo construyó el almacén en 1927.",
+          "sourceIds": [
+            "mi-fundacion"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La Fundación publica 70 × 18 m; la ficha universitaria, 70 × 19,10 m.",
+          "sourceIds": [
+            "mi-fundacion",
+            "mi-uv"
+          ],
+          "confidence": "disputed"
+        }
+      ],
+      "lookFor": "La nave principal y el cuerpo bajo adosado al flanco norte.",
+      "modelNote": "El modelo adopta la huella cartográfica actual. Las medidas publicadas se conservan como referencia, no se fuerzan sobre la parcela.",
+      "sourceIds": [
+        "mi-fundacion",
+        "mi-uv"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.2216385,
+        39.65754705
+      ],
+      "coordinates": [
+        -0.2216385,
+        39.65754705
+      ],
+      "coordinateSourceIds": [
+        "mi-catastro",
+        "mi-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "conjunto",
+      "floor": null,
+      "order": 1,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 5,
+      "localTarget": [
+        0,
+        5,
+        0
+      ],
+      "requiresSection": false,
+      "interiorView": false
+    },
+    {
+      "id": "museo-industrial-fachada",
+      "title": "Arcos y ladrillo sobre el frente claro",
+      "label": "La fachada",
+      "regionId": "envolvente",
+      "period": "mixed",
+      "intro": "El testero reúne la entrada y la luz de los espacios laterales.",
+      "narrative": "Acércate al frente y compara el portón central con los dos grandes ventanales. Recorre después la línea del zócalo y las esquinas: cada material ayuda a leer una parte de la construcción.",
+      "facts": [
+        {
+          "text": "La fotografía municipal muestra cerramientos claros, recercados de ladrillo y un portón central de arco.",
+          "sourceIds": [
+            "mi-aerea2022"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Los grandes vanos y la cubierta a dos aguas relacionan la nave con la arquitectura de Talleres Generales.",
+          "sourceIds": [
+            "mi-apiva"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El hueco alto del eje, los ventanales laterales y los remates de cubierta.",
+      "modelNote": "Los acabados se recrean con materiales propios; juntas, carpinterías y proporciones menores son aproximaciones visuales.",
+      "sourceIds": [
+        "mi-aerea2022",
+        "mi-apiva"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22133233,
+        39.65741019
+      ],
+      "coordinates": [
+        -0.22133233,
+        39.65741019
+      ],
+      "coordinateSourceIds": [
+        "mi-catastro",
+        "mi-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "envolvente",
+      "floor": null,
+      "order": 2,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 6,
+      "localTarget": [
+        0,
+        6,
+        30.335
+      ],
+      "requiresSection": false,
+      "interiorView": false
+    },
+    {
+      "id": "museo-industrial-acceso",
+      "title": "Entrar desde la calle Fundición",
+      "label": "El acceso",
+      "regionId": "conjunto",
+      "period": "mixed",
+      "intro": "La aproximación pone en relación la nave con la ciudad que la rodea.",
+      "narrative": "Pasa del espacio abierto al umbral y observa el cambio de escala. La cámara permite estudiar el encuentro entre el acceso histórico y la adaptación contemporánea.",
+      "facts": [
+        {
+          "text": "La dirección publicada del museo es calle Fundición, 80, Puerto de Sagunto.",
+          "sourceIds": [
+            "mi-actividad2026"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El museo abrió al público el 15 de octubre de 2026.",
+          "sourceIds": [
+            "mi-apertura2026"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El portón, la explanada pavimentada y el volumen contemporáneo de comunicación.",
+      "modelNote": "El recorrido de cámara es digital y no describe por sí solo el itinerario accesible ni las condiciones de acceso del museo.",
+      "sourceIds": [
+        "mi-actividad2026",
+        "mi-apertura2026"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22133233,
+        39.65741019
+      ],
+      "coordinates": [
+        -0.22133233,
+        39.65741019
+      ],
+      "coordinateSourceIds": [
+        "mi-catastro",
+        "mi-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "conjunto",
+      "floor": null,
+      "order": 3,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 2.6,
+      "localTarget": [
+        0,
+        2.6,
+        30.335
+      ],
+      "requiresSection": false,
+      "interiorView": false
+    },
+    {
+      "id": "museo-industrial-nave-central",
+      "title": "El vacío que ordena el edificio",
+      "label": "La nave central",
+      "regionId": "conjunto",
+      "period": "mixed",
+      "intro": "Un eje continuo permite entender las galerías y las diferencias de altura.",
+      "narrative": "Mira hacia el extremo de la nave y después a ambos lados. La comparación entre el espacio central y las plataformas muestra cómo una misma cubierta contiene secciones distintas.",
+      "facts": [
+        {
+          "text": "El vano central queda libre en toda su altura.",
+          "sourceIds": [
+            "mi-fundacion"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Las fotografías de 2022 y de la apertura de 2026 muestran el pavimento transparente en el eje interior.",
+          "sourceIds": [
+            "mi-interior2022",
+            "mi-interior2026"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La perspectiva longitudinal y las plataformas abiertas hacia el centro.",
+      "modelNote": "La escena permite leer la arquitectura. No reproduce la colocación completa de paneles y vitrinas de la exposición actual.",
+      "sourceIds": [
+        "mi-fundacion",
+        "mi-interior2022",
+        "mi-interior2026"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22164859,
+        39.65755156
+      ],
+      "coordinates": [
+        -0.22164859,
+        39.65755156
+      ],
+      "coordinateSourceIds": [
+        "mi-catastro",
+        "mi-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "conjunto",
+      "floor": 0,
+      "order": 4,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 4.9,
+      "localTarget": [
+        0,
+        4.9,
+        -1
+      ],
+      "requiresSection": false,
+      "interiorView": true
+    },
+    {
+      "id": "museo-industrial-via",
+      "title": "La vía permanece bajo los pies",
+      "label": "La vía bajo vidrio",
+      "regionId": "oficios",
+      "period": "mixed",
+      "intro": "El suelo deja ver una parte esencial de la antigua logística del almacén.",
+      "narrative": "Baja la mirada hacia la franja central. El ritmo de la estructura del vidrio, el balasto y los carriles permite relacionar el uso ferroviario con la visita contemporánea.",
+      "facts": [
+        {
+          "text": "La rehabilitación conservó la vía y la cubrió con vidrio reforzado transitable.",
+          "sourceIds": [
+            "mi-rehabilitacion2022"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El detalle municipal muestra carriles y lecho de piedra bajo la superficie transparente.",
+          "sourceIds": [
+            "mi-via2022"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Los carriles visibles a través del suelo y los bordes del antiguo paso ferroviario.",
+      "modelNote": "El vidrio es una aproximación visual. El modelo no certifica su composición, carga admisible ni el número exacto de piezas.",
+      "sourceIds": [
+        "mi-rehabilitacion2022",
+        "mi-via2022"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22161831,
+        39.65753803
+      ],
+      "coordinates": [
+        -0.22161831,
+        39.65753803
+      ],
+      "coordinateSourceIds": [
+        "mi-catastro",
+        "mi-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "oficios",
+      "floor": 0,
+      "order": 5,
+      "fabricStatus": "rehabilitated",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": -0.6199999999999999,
+      "localTarget": [
+        0,
+        -0.6199999999999999,
+        2
+      ],
+      "requiresSection": false,
+      "interiorView": true
+    },
+    {
+      "id": "museo-industrial-andenes",
+      "title": "La diferencia de un metro",
+      "label": "Los andenes",
+      "regionId": "oficios",
+      "period": "mixed",
+      "intro": "Los lados del paso ferroviario estaban preparados para recibir las cargas.",
+      "narrative": "Observa el encuentro entre el eje y las zonas laterales. La sección permite leer el desnivel histórico incluso donde la adaptación del museo ha resuelto una superficie continua de circulación.",
+      "facts": [
+        {
+          "text": "La entidad gestora describe los vanos laterales elevados un metro, a modo de andenes.",
+          "sourceIds": [
+            "mi-fundacion"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La nave almacenaba matrices y repuestos para la maquinaria siderúrgica.",
+          "sourceIds": [
+            "mi-apertura2026"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La relación entre el lecho de vía, los apoyos laterales y la cota de circulación.",
+      "modelNote": "La cota histórica de andén se distingue de la superficie actual del vidrio; los espesores no levantados son interpretativos.",
+      "sourceIds": [
+        "mi-fundacion",
+        "mi-apertura2026"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22172791,
+        39.65755377
+      ],
+      "coordinates": [
+        -0.22172791,
+        39.65755377
+      ],
+      "coordinateSourceIds": [
+        "mi-catastro",
+        "mi-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "oficios",
+      "floor": 0,
+      "order": 6,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 0.45,
+      "localTarget": [
+        -3.2,
+        0.45,
+        -7
+      ],
+      "requiresSection": false,
+      "interiorView": true
+    },
+    {
+      "id": "museo-industrial-cerchas",
+      "title": "Una cubierta sostenida por piezas abiertas",
+      "label": "Las cerchas",
+      "regionId": "estructura",
+      "period": "mixed",
+      "intro": "La estructura alta dibuja una secuencia ligera sobre el gran vacío.",
+      "narrative": "Levanta la vista desde el eje interior. Sigue los cordones y las diagonales, y compara su ritmo con el de los pilares y los huecos laterales.",
+      "facts": [
+        {
+          "text": "Las fotografías del interior muestran cerchas metálicas bajo la cubierta.",
+          "sourceIds": [
+            "mi-interior2022"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La plataforma sur permite contemplar la estructura alta desde una cota intermedia.",
+          "sourceIds": [
+            "mi-portfolio"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Las diagonales, los apoyos y el espacio libre entre cada cercha.",
+      "modelNote": "Se reproducen el carácter y el ritmo estructural; perfiles, uniones y cargas no proceden de un cálculo ni de un levantamiento.",
+      "sourceIds": [
+        "mi-interior2022",
+        "mi-portfolio"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22171924,
+        39.65758314
+      ],
+      "coordinates": [
+        -0.22171924,
+        39.65758314
+      ],
+      "coordinateSourceIds": [
+        "mi-catastro",
+        "mi-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "estructura",
+      "floor": 0,
+      "order": 7,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 11.6,
+      "localTarget": [
+        0,
+        11.6,
+        -8
+      ],
+      "requiresSection": false,
+      "interiorView": true
+    },
+    {
+      "id": "museo-industrial-pilares",
+      "title": "La estructura y las huellas del almacén",
+      "label": "Los pilares",
+      "regionId": "estructura",
+      "period": "mixed",
+      "intro": "Los apoyos ordenan el espacio y conservan una lectura del antiguo trabajo.",
+      "narrative": "Compara la continuidad de los pilares con los cantos de las plataformas. Desde cerca puedes distinguir la estructura resistente de las barandillas y cierres añadidos.",
+      "facts": [
+        {
+          "text": "La fotografía interior identifica pilares y vigas de hormigón en las galerías.",
+          "sourceIds": [
+            "mi-interior2022"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "En la apertura de 2026 aún se aprecian marcas oscuras pintadas en algunos apoyos.",
+          "sourceIds": [
+            "mi-interior2026"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Los apoyos bajo las galerías y los cambios entre hormigón y metal.",
+      "modelNote": "Las marcas se leen como evidencia visual; no se reconstruye un sistema completo de inventario ni se asigna una fecha a cada apoyo.",
+      "sourceIds": [
+        "mi-interior2022",
+        "mi-interior2026"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22172067,
+        39.65761702
+      ],
+      "coordinates": [
+        -0.22172067,
+        39.65761702
+      ],
+      "coordinateSourceIds": [
+        "mi-catastro",
+        "mi-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "estructura",
+      "floor": 0,
+      "order": 8,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 4.4,
+      "localTarget": [
+        3.2,
+        4.4,
+        -10
+      ],
+      "requiresSection": false,
+      "interiorView": true
+    },
+    {
+      "id": "museo-industrial-cubierta",
+      "title": "Un perfil continuo a dos aguas",
+      "label": "La cubierta",
+      "regionId": "envolvente",
+      "period": "mixed",
+      "intro": "La cubierta unifica exteriormente la diversidad del interior.",
+      "narrative": "Desde arriba, recorre la cumbrera y observa cómo se remata cada testero. Después abre la cubierta para comparar su forma con las cerchas que la sostienen.",
+      "facts": [
+        {
+          "text": "La ficha patrimonial describe una cubierta a doble vertiente.",
+          "sourceIds": [
+            "mi-uv"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La imagen municipal de 2022 muestra un acabado gris continuo y el anexo de menor altura.",
+          "sourceIds": [
+            "mi-aerea2022"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La cumbrera, los faldones y la transición hacia los cuerpos añadidos.",
+      "modelNote": "Materiales y espesores son aproximados. La apertura digital no representa una situación real del museo.",
+      "sourceIds": [
+        "mi-uv",
+        "mi-aerea2022"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.2216385,
+        39.65754705
+      ],
+      "coordinates": [
+        -0.2216385,
+        39.65754705
+      ],
+      "coordinateSourceIds": [
+        "mi-catastro",
+        "mi-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "envolvente",
+      "floor": null,
+      "order": 9,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 11.5,
+      "localTarget": [
+        0,
+        11.5,
+        0
+      ],
+      "requiresSection": false,
+      "interiorView": false
+    },
+    {
+      "id": "museo-industrial-ventanas",
+      "title": "La luz entra desde los laterales",
+      "label": "Los ventanales",
+      "regionId": "envolvente",
+      "period": "mixed",
+      "intro": "Los vanos altos hacen legible el volumen de la nave.",
+      "narrative": "Observa el arranque de las ventanas y su remate semicircular. Desde dentro, compara el hueco completo con las plataformas que cruzan visualmente su altura.",
+      "facts": [
+        {
+          "text": "Los ventanales verticales de arco de medio punto forman parte del lenguaje patrimonial del edificio.",
+          "sourceIds": [
+            "mi-uv"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Las fotografías muestran carpinterías subdivididas y recercados de ladrillo.",
+          "sourceIds": [
+            "mi-aerea2022",
+            "mi-portfolio"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La repetición de los huecos, sus arcos y el encuentro con la cubierta.",
+      "modelNote": "La luz del render es interpretativa: no es un estudio de iluminación natural ni mide la transmitancia de los vidrios.",
+      "sourceIds": [
+        "mi-uv",
+        "mi-aerea2022",
+        "mi-portfolio"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22172805,
+        39.65748205
+      ],
+      "coordinates": [
+        -0.22172805,
+        39.65748205
+      ],
+      "coordinateSourceIds": [
+        "mi-catastro",
+        "mi-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "envolvente",
+      "floor": null,
+      "order": 10,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 5.8,
+      "localTarget": [
+        -10.11,
+        5.8,
+        -3
+      ],
+      "requiresSection": false,
+      "interiorView": false
+    },
+    {
+      "id": "museo-industrial-estanterias",
+      "title": "Guardar, clasificar y recuperar",
+      "label": "Las estanterías",
+      "regionId": "oficios",
+      "period": "mixed",
+      "intro": "El almacén era también un sistema para encontrar cada repuesto.",
+      "narrative": "Mira las zonas de almacenamiento y su relación con los pasos. Esta parada explica la organización del trabajo a partir de los elementos conservados y de las fuentes, sin completar un inventario imaginado.",
+      "facts": [
+        {
+          "text": "La rehabilitación mantuvo parte del mobiliario interior, incluidas estanterías.",
+          "sourceIds": [
+            "mi-rehabilitacion2022"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Entre los suministros del almacén figuraban grandes repuestos de motores y maquinaria.",
+          "sourceIds": [
+            "mi-contrasta"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La estructura de almacenamiento y la proximidad del eje de transporte.",
+      "modelNote": "La presencia de estanterías está documentada; su contenido, posición de cada balda y estado exacto no se presentan como inventario museístico.",
+      "sourceIds": [
+        "mi-rehabilitacion2022",
+        "mi-contrasta"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22178245,
+        39.65751728
+      ],
+      "coordinates": [
+        -0.22178245,
+        39.65751728
+      ],
+      "coordinateSourceIds": [
+        "mi-catastro",
+        "mi-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "oficios",
+      "floor": 0,
+      "order": 11,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 2.1,
+      "localTarget": [
+        -9.059999999999999,
+        2.1,
+        -9
+      ],
+      "requiresSection": false,
+      "interiorView": true
+    },
+    {
+      "id": "museo-industrial-planta-primera",
+      "title": "Mirar la nave desde una galería",
+      "label": "La primera galería",
+      "regionId": "memoria",
+      "period": "mixed",
+      "intro": "Al ganar altura cambia la lectura del vacío central.",
+      "narrative": "Recorre visualmente el borde protegido y mira hacia el suelo de vidrio. El museo permite relacionar la escala del trabajo industrial con la historia de la ciudad que creció alrededor.",
+      "facts": [
+        {
+          "text": "La rehabilitación destinó espacios expositivos a tres plantas del ala norte y una planta del ala sur.",
+          "sourceIds": [
+            "mi-rehabilitacion2022"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El programa museográfico incluye un ámbito sobre la vida en la ciudad factoría.",
+          "sourceIds": [
+            "mi-proyecto2026"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La abertura hacia el eje y la relación entre barandillas, pilares y ventanas.",
+      "modelNote": "Las plantas del modelo son referencias espaciales; el tema de esta parada no fija la ubicación exacta de una vitrina o sala actual.",
+      "sourceIds": [
+        "mi-rehabilitacion2022",
+        "mi-proyecto2026"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22165145,
+        39.65761932
+      ],
+      "coordinates": [
+        -0.22165145,
+        39.65761932
+      ],
+      "coordinateSourceIds": [
+        "mi-catastro",
+        "mi-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "memoria",
+      "floor": 1,
+      "order": 12,
+      "fabricStatus": "rehabilitated",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 3.9,
+      "localTarget": [
+        6.4,
+        3.9,
+        -5
+      ],
+      "requiresSection": false,
+      "interiorView": true
+    },
+    {
+      "id": "museo-industrial-planta-segunda",
+      "title": "La memoria desde el nivel alto",
+      "label": "La galería superior",
+      "regionId": "memoria",
+      "period": "mixed",
+      "intro": "Desde la parte alta se reúnen estructura, historia y perspectiva.",
+      "narrative": "Compara la altura del cuerpo de galerías con el espacio bajo cubierta. La parada invita a leer las transformaciones del edificio y las experiencias de quienes trabajaron en la factoría.",
+      "facts": [
+        {
+          "text": "La Fundación describe tres forjados al norte con una altura libre de 2,20 m entre ellos.",
+          "sourceIds": [
+            "mi-fundacion"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La memoria de la lucha obrera forma parte del recorrido temático de la exposición.",
+          "sourceIds": [
+            "mi-proyecto2026"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La proximidad a las cerchas y la sucesión de niveles al otro lado del vacío.",
+      "modelNote": "Los espesores y cotas de referencia no medidos son aproximados. No se equipara automáticamente cada forjado estructural con una planta de exposición.",
+      "sourceIds": [
+        "mi-fundacion",
+        "mi-proyecto2026"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22164135,
+        39.65761481
+      ],
+      "coordinates": [
+        -0.22164135,
+        39.65761481
+      ],
+      "coordinateSourceIds": [
+        "mi-catastro",
+        "mi-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "memoria",
+      "floor": 2,
+      "order": 13,
+      "fabricStatus": "rehabilitated",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 6.4,
+      "localTarget": [
+        6.4,
+        6.4,
+        -4
+      ],
+      "requiresSection": false,
+      "interiorView": true
+    },
+    {
+      "id": "museo-industrial-escalera",
+      "title": "Comunicar los niveles",
+      "label": "Escaleras y accesibilidad",
+      "regionId": "estructura",
+      "period": "mixed",
+      "intro": "La adaptación al museo hace compatibles distintas cotas del antiguo almacén.",
+      "narrative": "Observa cómo los recorridos verticales se relacionan con las galerías. Los accesos contemporáneos se leen como otra etapa del edificio, junto a la estructura industrial.",
+      "facts": [
+        {
+          "text": "La comunicación municipal de 2022 documenta ascensores y medidas de accesibilidad.",
+          "sourceIds": [
+            "mi-rehabilitacion2022"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La foto exterior identifica un volumen contemporáneo junto al testero y el anexo.",
+          "sourceIds": [
+            "mi-aerea2022"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La continuidad de los niveles y las protecciones en sus bordes.",
+      "modelNote": "La posición y el trazado simplificados de comunicaciones no constituyen un plano de evacuación ni una guía de accesibilidad del edificio real.",
+      "sourceIds": [
+        "mi-rehabilitacion2022",
+        "mi-aerea2022"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22134241,
+        39.65750414
+      ],
+      "coordinates": [
+        -0.22134241,
+        39.65750414
+      ],
+      "coordinateSourceIds": [
+        "mi-catastro",
+        "mi-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "estructura",
+      "floor": 0,
+      "order": 14,
+      "fabricStatus": "rehabilitated",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 3.4,
+      "localTarget": [
+        8.61,
+        3.4,
+        24.335
+      ],
+      "requiresSection": false,
+      "interiorView": true
+    },
+    {
+      "id": "museo-industrial-memoria",
+      "title": "Las personas también forman el patrimonio",
+      "label": "Memoria obrera",
+      "regionId": "memoria",
+      "period": "mixed",
+      "intro": "Herramientas, imágenes y testimonios permiten acercarse a la experiencia del trabajo.",
+      "narrative": "Detén el recorrido arquitectónico para escuchar lo que el edificio representa. La historia de una fábrica incluye los oficios, las familias, la vida cotidiana y los conflictos que acompañaron sus cambios.",
+      "facts": [
+        {
+          "text": "El museo incorpora testimonios audiovisuales y fondos fotográficos de archivos públicos.",
+          "sourceIds": [
+            "mi-coleccion2026"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La misión de la Fundación integra objetos, recuerdos, imágenes y sonidos de la historia siderúrgica.",
+          "sourceIds": [
+            "mi-institucion"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La relación entre los espacios de trabajo y el relato de la comunidad.",
+      "modelNote": "Las referencias a la colección son documentales; la maqueta no sustituye el contenido de la exposición ni reproduce testimonios no consultados.",
+      "sourceIds": [
+        "mi-coleccion2026",
+        "mi-institucion"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22163506,
+        39.65748007
+      ],
+      "coordinates": [
+        -0.22163506,
+        39.65748007
+      ],
+      "coordinateSourceIds": [
+        "mi-catastro",
+        "mi-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "memoria",
+      "floor": 0,
+      "order": 15,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 2,
+      "localTarget": [
+        -6.3,
+        2,
+        4
+      ],
+      "requiresSection": false,
+      "interiorView": true
+    },
+    {
+      "id": "museo-industrial-siderurgia",
+      "title": "Del proceso industrial al objeto conservado",
+      "label": "Siderurgia y colección",
+      "regionId": "memoria",
+      "period": "mixed",
+      "intro": "Los repuestos conectaban este almacén con el resto de la factoría.",
+      "narrative": "Relaciona la nave con el Alto Horno y Talleres Generales. El recorrido museístico amplía esa lectura con objetos y documentos que muestran técnicas, mediciones y trabajo cotidiano.",
+      "facts": [
+        {
+          "text": "El proyecto de 2026 dedica su primer ámbito al proceso de siderurgia integral.",
+          "sourceIds": [
+            "mi-proyecto2026"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La colección anunciada incluye un microscopio metalográfico de 1924 y un nivel óptico de 1918.",
+          "sourceIds": [
+            "mi-coleccion2026"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La escala del almacén y sus conexiones con las otras instalaciones industriales.",
+      "modelNote": "No se han colocado réplicas de esas piezas sin documentación espacial y visual suficiente.",
+      "sourceIds": [
+        "mi-proyecto2026",
+        "mi-coleccion2026"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22154042,
+        39.65756969
+      ],
+      "coordinates": [
+        -0.22154042,
+        39.65756969
+      ],
+      "coordinateSourceIds": [
+        "mi-catastro",
+        "mi-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "memoria",
+      "floor": 0,
+      "order": 16,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 1.6,
+      "localTarget": [
+        6.4,
+        1.6,
+        6
+      ],
+      "requiresSection": false,
+      "interiorView": true
+    },
+    {
+      "id": "museo-industrial-ferroviario",
+      "title": "Un almacén ligado al ferrocarril",
+      "label": "La logística ferroviaria",
+      "regionId": "oficios",
+      "period": "mixed",
+      "intro": "La dirección del edificio responde a un sistema de circulación mayor.",
+      "narrative": "Sigue el eje de la nave hasta sus extremos e imagina la secuencia de llegada, descarga y clasificación que explican las fuentes. El relato histórico se apoya en la vía conservada.",
+      "facts": [
+        {
+          "text": "CONTRAST describe vías de ancho ibérico y métrico y un puente grúa histórico de diez toneladas.",
+          "sourceIds": [
+            "mi-contrasta"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La ficha universitaria relaciona la orientación del almacén con el paso ferroviario.",
+          "sourceIds": [
+            "mi-uv"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La alineación longitudinal y la diferencia entre la vía interior conservada y el entorno actual.",
+      "modelNote": "No se reconstruye una red exterior desaparecida ni se introduce una locomotora o puente grúa completo como si siguieran presentes.",
+      "sourceIds": [
+        "mi-contrasta",
+        "mi-uv"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22179999,
+        39.65761924
+      ],
+      "coordinates": [
+        -0.22179999,
+        39.65761924
+      ],
+      "coordinateSourceIds": [
+        "mi-catastro",
+        "mi-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "oficios",
+      "floor": 0,
+      "order": 17,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 2.5,
+      "localTarget": [
+        0,
+        2.5,
+        -16
+      ],
+      "requiresSection": false,
+      "interiorView": true
+    },
+    {
+      "id": "museo-industrial-rehabilitacion",
+      "title": "Conservar el contenedor, abrir el museo",
+      "label": "La rehabilitación",
+      "regionId": "memoria",
+      "period": "mixed",
+      "intro": "La recuperación arquitectónica y la apertura pública son momentos distintos.",
+      "narrative": "Compara el sistema de almacenamiento con las superficies de circulación y los nuevos accesos. Cada intervención permite seguir utilizando la nave y, al mismo tiempo, reconocer su origen.",
+      "facts": [
+        {
+          "text": "Las obras iniciadas en 2011 se interrumpieron y se reanudaron en 2021.",
+          "sourceIds": [
+            "mi-proyecto2026"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La rehabilitación terminó en 2022; la apertura del museo llegó en octubre de 2026.",
+          "sourceIds": [
+            "mi-rehabilitacion2022",
+            "mi-apertura2026"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La convivencia entre estructura industrial, vidrio y comunicaciones contemporáneas.",
+      "modelNote": "Se distinguen las obras documentadas de las soluciones geométricas aproximadas del modelo.",
+      "sourceIds": [
+        "mi-proyecto2026",
+        "mi-rehabilitacion2022",
+        "mi-apertura2026"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22156516,
+        39.65764423
+      ],
+      "coordinates": [
+        -0.22156516,
+        39.65764423
+      ],
+      "coordinateSourceIds": [
+        "mi-catastro",
+        "mi-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "memoria",
+      "floor": null,
+      "order": 18,
+      "fabricStatus": "rehabilitated",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 4,
+      "localTarget": [
+        12.51,
+        4,
+        0
+      ],
+      "requiresSection": false,
+      "interiorView": false
+    },
+    {
+      "id": "museo-industrial-seccion",
+      "title": "Una sección para leer el almacén",
+      "label": "La sección digital",
+      "regionId": "estructura",
+      "period": "mixed",
+      "intro": "La maqueta abierta permite comparar los tres vanos de una sola mirada.",
+      "narrative": "Retira las cubiertas y los forjados superiores para reconocer los pilares, las cerchas y el eje ferroviario. Cierra la sección y vuelve a las galerías para recuperar la percepción del edificio completo.",
+      "facts": [
+        {
+          "text": "La asimetría entre las galerías laterales está documentada por la entidad gestora.",
+          "sourceIds": [
+            "mi-fundacion"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La retirada visual de cubiertas y forjados superiores es una herramienta interpretativa del atlas.",
+          "sourceIds": [
+            "mi-fundacion"
+          ],
+          "confidence": "interpretive"
+        }
+      ],
+      "lookFor": "La continuidad del eje ferroviario y su relación con los andenes, los pilares y las cerchas.",
+      "modelNote": "La sección es digital. Retira también las escaleras y el mobiliario superior; no representa una ruina ni una intervención física en el edificio.",
+      "sourceIds": [
+        "mi-fundacion"
+      ],
+      "confidence": "interpretive",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.2216385,
+        39.65754705
+      ],
+      "coordinates": [
+        -0.2216385,
+        39.65754705
+      ],
+      "coordinateSourceIds": [
+        "mi-catastro",
+        "mi-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "estructura",
+      "floor": null,
+      "order": 19,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 4,
+      "localTarget": [
+        0,
+        4,
+        0
+      ],
+      "requiresSection": true,
+      "interiorView": false
+    },
+    {
+      "id": "museo-industrial-entorno",
+      "title": "Entre la ciudad y la antigua fábrica",
+      "label": "El entorno",
+      "regionId": "conjunto",
+      "period": "mixed",
+      "intro": "Las calles actuales acercan el antiguo almacén al tejido urbano.",
+      "narrative": "Aléjate para comparar la nave con las edificaciones, jardines y espacios abiertos próximos. La visita completa enlaza arquitectura industrial, ciudad y paisaje.",
+      "facts": [
+        {
+          "text": "La ortofotografía permite reconocer cubiertas, viario y espacios abiertos alrededor del museo.",
+          "sourceIds": [
+            "mi-pnoa"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Las huellas de la parcela y los edificios próximos proceden de cartografía catastral incorporada al atlas.",
+          "sourceIds": [
+            "mi-catastro"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La aproximación por Fundición y las diferencias de escala entre nave y edificios próximos.",
+      "modelNote": "Árboles, acabados, alturas secundarias y mobiliario se simplifican. La escena no es una medición topográfica del estado de hoy.",
+      "sourceIds": [
+        "mi-pnoa",
+        "mi-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.2216385,
+        39.65754705
+      ],
+      "coordinates": [
+        -0.2216385,
+        39.65754705
+      ],
+      "coordinateSourceIds": [
+        "mi-catastro",
+        "mi-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "conjunto",
+      "floor": 0,
+      "order": 20,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 8,
+      "localTarget": [
+        0,
+        8,
+        0
+      ],
+      "requiresSection": false,
+      "interiorView": false
+    }
+  ],
+  "regions": [
+    {
+      "id": "conjunto",
+      "name": "El edificio y la ciudad",
+      "aliases": [],
+      "summary": "Volumen, acceso, nave central y entorno.",
+      "sourceIds": [
+        "mi-fundacion",
+        "mi-uv",
+        "mi-actividad2026",
+        "mi-apertura2026",
+        "mi-interior2022",
+        "mi-interior2026",
+        "mi-pnoa",
+        "mi-catastro"
+      ],
+      "stopIds": [
+        "museo-industrial-conjunto",
+        "museo-industrial-acceso",
+        "museo-industrial-nave-central",
+        "museo-industrial-entorno"
+      ],
+      "coordinate": [
+        -0.2216385,
+        39.65754705
+      ]
+    },
+    {
+      "id": "estructura",
+      "name": "Apoyos, cerchas y niveles",
+      "aliases": [],
+      "summary": "Estructura resistente, comunicaciones y sección digital.",
+      "sourceIds": [
+        "mi-interior2022",
+        "mi-portfolio",
+        "mi-interior2026",
+        "mi-rehabilitacion2022",
+        "mi-aerea2022",
+        "mi-fundacion"
+      ],
+      "stopIds": [
+        "museo-industrial-cerchas",
+        "museo-industrial-pilares",
+        "museo-industrial-escalera",
+        "museo-industrial-seccion"
+      ],
+      "coordinate": [
+        -0.2216385,
+        39.65754705
+      ]
+    },
+    {
+      "id": "envolvente",
+      "name": "Materia, cubierta y luz",
+      "aliases": [],
+      "summary": "Fachadas, ventanales y piel exterior.",
+      "sourceIds": [
+        "mi-aerea2022",
+        "mi-apiva",
+        "mi-uv",
+        "mi-portfolio"
+      ],
+      "stopIds": [
+        "museo-industrial-fachada",
+        "museo-industrial-cubierta",
+        "museo-industrial-ventanas"
+      ],
+      "coordinate": [
+        -0.2216385,
+        39.65754705
+      ]
+    },
+    {
+      "id": "oficios",
+      "name": "El almacén ferroviario",
+      "aliases": [],
+      "summary": "Vía, andenes, estanterías y transporte de repuestos.",
+      "sourceIds": [
+        "mi-rehabilitacion2022",
+        "mi-via2022",
+        "mi-fundacion",
+        "mi-apertura2026",
+        "mi-contrasta",
+        "mi-uv"
+      ],
+      "stopIds": [
+        "museo-industrial-via",
+        "museo-industrial-andenes",
+        "museo-industrial-estanterias",
+        "museo-industrial-ferroviario"
+      ],
+      "coordinate": [
+        -0.2216385,
+        39.65754705
+      ]
+    },
+    {
+      "id": "memoria",
+      "name": "Museo y memoria obrera",
+      "aliases": [],
+      "summary": "Galerías, colección, rehabilitación y experiencia del trabajo.",
+      "sourceIds": [
+        "mi-rehabilitacion2022",
+        "mi-proyecto2026",
+        "mi-fundacion",
+        "mi-coleccion2026",
+        "mi-institucion",
+        "mi-apertura2026"
+      ],
+      "stopIds": [
+        "museo-industrial-planta-primera",
+        "museo-industrial-planta-segunda",
+        "museo-industrial-memoria",
+        "museo-industrial-siderurgia",
+        "museo-industrial-rehabilitacion"
+      ],
+      "coordinate": [
+        -0.2216385,
+        39.65754705
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "mi-fundacion",
+      "title": "La Nave Almacén de Efectos y Repuestos",
+      "author": "Fundació de Patrimoni Industrial i Memòria Obrera del Port de Sagunt",
+      "url": "https://www.fundacioportdesagunt.com/archivo/",
+      "type": "descripción del inmueble por su entidad gestora",
+      "year": null,
+      "locator": "Apartado Museo: geometría, vanos, andenes, forjados y anexo.",
+      "note": "Medidas publicadas nominales; no es un plano acotado del estado actual. El texto histórico de futuro museo se actualiza mediante las noticias municipales de octubre y noviembre de 2026.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "mi-portfolio",
+      "title": "Portfolio de espacios de la Fundació",
+      "author": "Fundació de Patrimoni Industrial i Memòria Obrera del Port de Sagunt",
+      "url": "https://www.fundacioportdesagunt.com/wp-content/uploads/2025/01/Portfolio-espacios-Fundacio-Patrimoni-Industrial-Port-de-Sagunt-1.pdf",
+      "type": "publicación y fotografías de la entidad gestora",
+      "year": 2025,
+      "locator": "Páginas 6–9: nave, sala Gonzalo Montiel, plataforma sur y zona de catering.",
+      "note": "PDF descargado y páginas examinadas. La descripción general sitúa el forjado sur a 6 m; la ficha de la plataforma habla de 5 m. No se fuerza una equivalencia sin una cota de referencia común.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "mi-uv",
+      "title": "Almacén de Efectos y Repuestos",
+      "author": "Universitat de València · documentación del conjunto histórico industrial",
+      "url": "https://www.uv.es/patrimoni_industrial_sagunt/bicgerencia/gerencia.html",
+      "type": "ficha patrimonial",
+      "year": null,
+      "locator": "Apartado 8; referencias a Girona y Vila (1991), p. 210, y Costa et al. (1995), p. 9.",
+      "note": "El cuerpo de la ficha fecha el edificio en 1927 y da 70 × 19,10 m. La cabecera resumida dice 1921; se conserva como discrepancia editorial y se utiliza 1927, coincidente con las fuentes de la entidad gestora.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "mi-contrasta",
+      "title": "Antigua nave de efectos y repuestos",
+      "author": "Grup CONTRAST · itinerario didáctico de patrimonio industrial",
+      "url": "https://www.contrastapips.com/IHACM/IBP/Port/Port_patri_rec.htm",
+      "type": "investigación patrimonial y observación del edificio",
+      "year": null,
+      "locator": "Descripción, fotografías y explicación de usos ferroviarios.",
+      "note": "Aporta finalización en marzo de 1927, orientación NO–SE, medidas nominales y transporte de repuestos. Las expresiones sobre la futura apertura pertenecen a una etapa anterior.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "mi-apiva",
+      "title": "Patrimonio industrial de Puerto de Sagunto · Cuaderno docente",
+      "author": "Cristina Baena Tomás y Sonia Garcés Romero · APIVA y Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/media/fdlfw1mz/02_cuaderno_docente_cast_pantalla.pdf",
+      "type": "publicación educativa patrimonial",
+      "year": 2017,
+      "locator": "Apartado Nave Almacén de Efectos y Repuestos y explicación de la ciudad factoría.",
+      "note": "Primera edición, septiembre de 2017. Se utiliza para arquitectura y contexto histórico, no para certificar la apertura de 2026.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "mi-rehabilitacion2022",
+      "title": "Finalizan las obras de rehabilitación del museo",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/es/actualidad/finalizan-los-trabajos-de-rehabilitacion-de-la-nave-que-albergara-el-museo-industrial-y-de-la-memoria-obrera/",
+      "type": "comunicación institucional",
+      "year": 2022,
+      "locator": "25 de octubre; estructura, estanterías, vía bajo vidrio, distribución y accesibilidad.",
+      "note": "Distingue la terminación de la rehabilitación arquitectónica de la musealización posterior.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "mi-proyecto2026",
+      "title": "Adecuación para Museo Industrial y de la Memoria Obrera",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/es/actualidad/2026-01-07-adjudicado-el-contrato-para-adecuar-la-nave-de-efectos-y-repuestos-como-museo-industrial-y-de-la-memoria-obrera-de-puerto-de-sagunto/",
+      "type": "comunicación institucional sobre museografía",
+      "year": 2026,
+      "locator": "7 de enero; secuencia temática de tres plantas y antecedentes de obra.",
+      "note": "Describe el proyecto de exposición. Su orden temático se emplea como relato; no permite ubicar cada vitrina ni cada pieza en la maqueta.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "mi-apertura2026",
+      "title": "El museo abre sus puertas al público",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://app-aytosaguntopro-webs-webumbraco.azurewebsites.net/es/actualidad/2026-10-15-el-museo-industrial-y-de-la-memoria-obrera-de-puerto-de-sagunto-abre-sus-puertas-al-publico/",
+      "type": "noticia oficial de apertura",
+      "year": 2026,
+      "locator": "15 de octubre de 2026.",
+      "note": "Confirma la apertura efectiva, a diferencia de los anuncios y previsiones anteriores.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "mi-coleccion2026",
+      "title": "Presentación de la exposición y sus fondos",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://app-aytosaguntopro-webs-webumbraco.azurewebsites.net/es/actualidad/2026-10-13-el-museo-industrial-y-de-la-memoria-obrera-de-puerto-de-sagunto-abre-sus-puertas-el-15-de-octubre/",
+      "type": "presentación institucional de la colección",
+      "year": 2026,
+      "locator": "13 de octubre; objetos, archivos, testimonios y recursos accesibles.",
+      "note": "Identifica objetos y fondos del museo, pero no aporta una planta museográfica final con su colocación.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "mi-actividad2026",
+      "title": "Balance de las dos primeras semanas de apertura",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://www.sagunto.es/es/actualidad/2026-11-05-el-museo-industrial-y-de-la-memoria-obrera-de-puerto-de-sagunto-recibe-mas-de-1-000-visitantes-en-sus-dos-primeras-semanas/",
+      "type": "seguimiento institucional",
+      "year": 2026,
+      "locator": "5 de noviembre de 2026; apertura, dirección, recorrido y exposiciones.",
+      "note": "Confirma actividad posterior a la inauguración. Horarios y gratuidad son información fechada, no un compromiso permanente del atlas.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "mi-companytown",
+      "title": "Cronología de la ciudad factoría",
+      "author": "Fundació de Patrimoni Industrial i Memòria Obrera del Port de Sagunt",
+      "url": "https://www.fundacioportdesagunt.com/company-town/",
+      "type": "cronología patrimonial",
+      "year": null,
+      "locator": "Secuencia 1900–1984, procedente del cuaderno del grupo CONTRAST (2002).",
+      "note": "Permite situar el almacén dentro de la evolución de la industria y del trabajo; no se usa como plano urbano actual.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "mi-institucion",
+      "title": "La Fundació y la memoria del trabajo",
+      "author": "Fundació de Patrimoni Industrial i Memòria Obrera del Port de Sagunt",
+      "url": "https://www.fundacioportdesagunt.com/la-fundacion/",
+      "type": "presentación de la entidad gestora",
+      "year": null,
+      "locator": "Nuestra misión: patrimonio material, archivos y memoria colectiva.",
+      "note": "Referencia para el propósito del museo y del archivo; no se confunden sus objetivos con un inventario íntegro de lo expuesto.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "mi-aerea2022",
+      "title": "Nave rehabilitada y acceso de Fundición",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/media/qstfwznq/c1_visitamuseo.jpg",
+      "type": "fotografía municipal",
+      "year": 2022,
+      "locator": "Fotografía publicada con la noticia de rehabilitación de 25 de octubre de 2022.",
+      "note": "Examinada para cubierta, fachada, caja de acceso contemporánea y relación con el viario. No mide alturas ni acredita por sí sola el estado de 2026.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "mi-interior2022",
+      "title": "Eje central y galerías después de la rehabilitación",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/media/c04clhsq/c_visita.jpg",
+      "type": "fotografía municipal",
+      "year": 2022,
+      "locator": "Vista longitudinal interior con la vía cubierta de vidrio.",
+      "note": "Examinada para pilares, cerchas, plataformas y barandillas. El mobiliario temporal de esta fotografía no se convierte en distribución museográfica actual.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "mi-via2022",
+      "title": "Detalle del ferrocarril bajo el vidrio",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/media/ycfmkfjw/c_vias.jpg",
+      "type": "fotografía municipal",
+      "year": 2022,
+      "locator": "Detalle del pavimento transparente y el lecho ferroviario.",
+      "note": "Se distinguen elementos de vía y balasto; la fotografía no certifica todas las cotas ni el trazado exterior desaparecido.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "mi-interior2026",
+      "title": "Interior durante la apertura del museo",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://app-aytosaguntopro-webs-webumbraco.azurewebsites.net/media/kwjdlpbi/c3pa_img_8808_retoc.jpg",
+      "type": "fotografía de apertura",
+      "year": 2026,
+      "locator": "Publicada el 15 de octubre; visita inaugural.",
+      "note": "Confirma el pavimento de vidrio y las galerías en uso. La presencia de visitantes impide leer un plano completo de la museografía.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "mi-catastro",
+      "title": "Cartografía de edificios INSPIRE",
+      "author": "Dirección General del Catastro",
+      "url": "https://www.catastro.hacienda.gob.es/webinspire/index.html",
+      "type": "cartografía oficial",
+      "year": 2026,
+      "locator": "Parcela 8335601YJ3983S y edificios del entorno; datos del atlas de agosto de 2026.",
+      "note": "La huella cartográfica y las partes construidas no son un levantamiento de interiores. La envolvente medida en el atlas difiere de las dimensiones publicadas históricas.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "mi-pnoa",
+      "title": "Ortofotografía PNOA",
+      "author": "Instituto Geográfico Nacional · CNIG",
+      "url": "https://pnoa.ign.es/",
+      "type": "ortofotografía oficial",
+      "year": null,
+      "locator": "Lectura de cubiertas, calles y espacios abiertos.",
+      "note": "La fecha de consulta no equivale a la fecha de vuelo. Los árboles y detalles del entorno se interpretan a partir de la imagen disponible.",
+      "accessed": "2026-11-20"
+    }
+  ],
+  "timeline": [
+    {
+      "id": "mi-t-1",
+      "date": "1900–1917",
+      "title": "El origen de la ciudad factoría",
+      "text": "Las compañías minera y siderúrgica impulsan el sistema productivo alrededor del cual crece el Puerto.",
+      "sourceIds": [
+        "mi-companytown"
+      ],
+      "period": "industrial",
+      "confidence": "documented",
+      "stopId": "museo-industrial-ferroviario"
+    },
+    {
+      "id": "mi-t-2",
+      "date": "1927",
+      "title": "Un almacén para la siderurgia",
+      "text": "La Compañía Siderúrgica del Mediterráneo construye la nave para sus repuestos.",
+      "sourceIds": [
+        "mi-fundacion"
+      ],
+      "period": "industrial",
+      "confidence": "documented",
+      "stopId": "museo-industrial-conjunto"
+    },
+    {
+      "id": "mi-t-3",
+      "date": "1983–1984",
+      "title": "Reconversión y lucha obrera",
+      "text": "La crisis y el cierre de la cabecera transforman el trabajo y el paisaje industrial.",
+      "sourceIds": [
+        "mi-companytown"
+      ],
+      "period": "industrial",
+      "confidence": "documented",
+      "stopId": "museo-industrial-memoria"
+    },
+    {
+      "id": "mi-t-4",
+      "date": "1994",
+      "title": "La nave pasa a la Fundació",
+      "text": "La noticia municipal de apertura sitúa en este año la incorporación del edificio a la entidad patrimonial.",
+      "sourceIds": [
+        "mi-apertura2026"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "museo-industrial-rehabilitacion"
+    },
+    {
+      "id": "mi-t-5",
+      "date": "2007",
+      "title": "Cesión para rehabilitar",
+      "text": "La nave se cede al Ayuntamiento para impulsar su recuperación.",
+      "sourceIds": [
+        "mi-apertura2026"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "museo-industrial-rehabilitacion"
+    },
+    {
+      "id": "mi-t-6",
+      "date": "2011–2013",
+      "title": "Obras e interrupción",
+      "text": "Comienzan las obras de adaptación, que se suspenden dos años después.",
+      "sourceIds": [
+        "mi-proyecto2026"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "museo-industrial-rehabilitacion"
+    },
+    {
+      "id": "mi-t-7",
+      "date": "2021–2022",
+      "title": "Se completa la rehabilitación",
+      "text": "Las obras se reanudan; en octubre de 2022 el Ayuntamiento comunica su finalización.",
+      "sourceIds": [
+        "mi-rehabilitacion2022",
+        "mi-proyecto2026"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "museo-industrial-rehabilitacion"
+    },
+    {
+      "id": "mi-t-8",
+      "date": "Enero de 2026",
+      "title": "La producción museográfica",
+      "text": "Se adjudica el equipamiento expositivo para contar industria, ciudad factoría y memoria obrera.",
+      "sourceIds": [
+        "mi-proyecto2026"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "museo-industrial-siderurgia"
+    },
+    {
+      "id": "mi-t-9",
+      "date": "15 de octubre de 2026",
+      "title": "El museo abre al público",
+      "text": "La apertura efectiva inicia una nueva etapa de uso público del edificio.",
+      "sourceIds": [
+        "mi-apertura2026"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "museo-industrial-acceso"
+    },
+    {
+      "id": "mi-t-10",
+      "date": "Noviembre de 2026",
+      "title": "Un museo en actividad",
+      "text": "El seguimiento municipal confirma visitas y programación después de la inauguración.",
+      "sourceIds": [
+        "mi-actividad2026"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "museo-industrial-memoria"
+    }
+  ],
+  "modelRegistration": {
+    "status": "registered",
+    "note": "Focos registrados a partir de la geometría final y de la cartografía; las cotas no levantadas son interpretativas.",
+    "precision": "approximate",
+    "coordinates": "Registered from the implemented industrial model and contemporary cartography; component positions and unmeasured heights are interpretive.",
+    "provisionalCoordinates": false
+  },
+  "materialsModeLabel": "Materiales"
+}

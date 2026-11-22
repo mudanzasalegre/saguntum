@@ -1,0 +1,93 @@
+{
+  "generatedAt": "2026-11-19T20:32:09.197152+00:00",
+  "pass": true,
+  "surface": "Managed preview through CUA Chrome",
+  "url": "http://127.0.0.1:4173/#calvario",
+  "checks": [
+    {
+      "pass": true,
+      "description": "La aplicación abre #calvario y anuncia 18 paradas en cinco ámbitos."
+    },
+    {
+      "pass": true,
+      "description": "Iniciar visita, Siguiente y Anterior actualizan el contenido, el hash y el foco."
+    },
+    {
+      "pass": true,
+      "description": "Cronología muestra sus doce hitos; Fuentes muestra las dieciocho referencias."
+    },
+    {
+      "pass": true,
+      "description": "La cita de 1854 abre un diálogo con autor, edición 2010, página 18 y enlace al PDF original."
+    },
+    {
+      "pass": true,
+      "description": "La leyenda definitiva ofrece cinco capas de arquitectura y paisaje."
+    },
+    {
+      "pass": true,
+      "description": "Click real en el marcador 10 del Canvas abre #calvario/calvario-fachada."
+    },
+    {
+      "pass": true,
+      "description": "Vista general vuelve a #sagunto, quince paradas regionales y catálogo de 31 lugares."
+    },
+    {
+      "pass": true,
+      "description": "Los accesos a Judería, Teatro, Castillo, Plaça Major y Santa María siguen abriendo sus cuadernos."
+    },
+    {
+      "pass": true,
+      "description": "El progreso del Calvario persiste al volver; Judería y Teatro mantienen sus progresos anteriores."
+    },
+    {
+      "pass": true,
+      "description": "La visita funciona en 390 × 844 y 844 × 390 sin desbordamiento horizontal del documento."
+    },
+    {
+      "pass": true,
+      "description": "En móvil, seleccionar la parada 14 de la lista del plano abre la campana y enfoca el título."
+    },
+    {
+      "pass": true,
+      "description": "Los temas Atlas oscuro y Lectura clara conservan controles y plano legibles."
+    },
+    {
+      "pass": true,
+      "description": "Las teclas End y Home seleccionan Fuentes y Recorrido respectivamente."
+    }
+  ],
+  "viewports": {
+    "portrait": {
+      "focus": "Una pieza fechada en 1860",
+      "height": 844,
+      "scrollWidth": 390,
+      "width": 390
+    },
+    "landscape": {
+      "focus": "El umbral entre el barrio y la ladera",
+      "heading": {
+        "height": 55.09375,
+        "width": 292,
+        "x": 35,
+        "y": 248.375
+      },
+      "height": 390,
+      "scrollWidth": 844,
+      "width": 844
+    }
+  },
+  "resolvedIssue": "La animación del indicador de carga oculto expandía el ancho de documento móvil. Se limita su dibujo al contenedor y se confirma 390/390 y 844/844.",
+  "screenshots": [
+    "calvario-desktop.jpg",
+    "calvario-map-light.jpg",
+    "calvario-mobile-portrait.jpg",
+    "calvario-mobile-landscape.jpg",
+    "calvario-mobile-map.jpg"
+  ],
+  "limitations": [
+    "El navegador declara GL_RENDERER=Disabled. La prueba real comprueba documentación, navegación, Canvas 2D y disposición responsive, no rendimiento ni iluminación WebGL.",
+    "Los tamaños móviles se prueban en un iframe de dimensiones conocidas. El archivo temporal se retira del paquete publicado.",
+    "El servidor de desarrollo recarga la página al cambiar archivos; las comprobaciones guardadas se hicieron después de reabrir y completar las acciones."
+  ]
+}

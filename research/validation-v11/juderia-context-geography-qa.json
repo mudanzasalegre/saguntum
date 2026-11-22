@@ -1,0 +1,270 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "pass": true,
+      "label": "344 source parts in 146 surrounding parcels"
+    },
+    {
+      "pass": true,
+      "label": "all context source outlines and courtyard rings unchanged"
+    },
+    {
+      "pass": true,
+      "label": "unique context source IDs"
+    },
+    {
+      "pass": true,
+      "label": "all 40 detailed-core source parts retain their original attributes"
+    },
+    {
+      "pass": true,
+      "label": "12 core parcels retain 40 source parts"
+    },
+    {
+      "pass": true,
+      "label": "core union preserves every source component and courtyard without convex filling"
+    },
+    {
+      "pass": true,
+      "label": "no complete protected building is duplicated; only measured edge discrepancies remain",
+      "detail": 0.13910800931796147
+    },
+    {
+      "pass": true,
+      "label": "context has no significant overlap with detailed core",
+      "detail": 0.031364902531701766
+    },
+    {
+      "pass": true,
+      "label": "core source parts are not rendered twice"
+    },
+    {
+      "pass": true,
+      "label": "no source part from Santa Maria or Plaça Major is replaced"
+    },
+    {
+      "pass": true,
+      "label": "Santa Maria retains 44 parts in 16 parcels"
+    },
+    {
+      "pass": true,
+      "label": "Plaça Major retains 94 context parts in 36 parcels and 13 core façades"
+    },
+    {
+      "pass": true,
+      "label": "all detailed source parts suppress generic city duplicates"
+    },
+    {
+      "pass": true,
+      "label": "all three mapped context courtyard openings retained"
+    },
+    {
+      "pass": true,
+      "label": "all road fragments lie on their original OSM axes"
+    },
+    {
+      "pass": true,
+      "label": "partial streets retain generic continuation outside detailed area"
+    },
+    {
+      "pass": true,
+      "label": "fully replaced streets suppress duplicate ribbons"
+    },
+    {
+      "pass": true,
+      "label": "public paved area avoids protected buildings"
+    },
+    {
+      "pass": true,
+      "label": "no private Berenguer footpath or lift becomes an asserted public route"
+    },
+    {
+      "pass": true,
+      "label": "retained Roman Theatre cadastral bodies are not reconstructed as neighbourhood houses"
+    }
+  ],
+  "stats": {
+    "coreParcels": 12,
+    "coreCadastralParts": 40,
+    "contextParts": 344,
+    "contextParcels": 146,
+    "OSMDuplicates": [
+      "845117355",
+      "845119079",
+      "845201792",
+      "845201797",
+      "1303700987",
+      "1303700992",
+      "1303705984"
+    ],
+    "protectedFootprints": 160,
+    "mappedCourtyards": 3,
+    "surfaces": 1,
+    "roads": 26,
+    "boundaryRejected": [
+      {
+        "id": "cat-3457707YJ3935E_part1-0",
+        "areaM2": 19.548,
+        "fractionInside": 0.05931,
+        "reason": "Centre and majority of footprint lie outside the detail area."
+      },
+      {
+        "id": "cat-3457910YJ3935E_part2-0",
+        "areaM2": 76.853,
+        "fractionInside": 0.08654,
+        "reason": "Centre and majority of footprint lie outside the detail area."
+      },
+      {
+        "id": "cat-3457911YJ3935G_part5-0",
+        "areaM2": 33.86,
+        "fractionInside": 0.03821,
+        "reason": "Centre and majority of footprint lie outside the detail area."
+      },
+      {
+        "id": "cat-3458211YJ3935G_part3-0",
+        "areaM2": 401.603,
+        "fractionInside": 0.34072,
+        "reason": "Centre and majority of footprint lie outside the detail area."
+      },
+      {
+        "id": "cat-3458801YJ3935G_part2-0",
+        "areaM2": 74.387,
+        "fractionInside": 0.14163,
+        "reason": "Centre and majority of footprint lie outside the detail area."
+      },
+      {
+        "id": "cat-3458801YJ3935G_part3-0",
+        "areaM2": 5.747,
+        "fractionInside": 0.07136,
+        "reason": "Centre and majority of footprint lie outside the detail area."
+      },
+      {
+        "id": "cat-3458802YJ3935G_part3-0",
+        "areaM2": 65.086,
+        "fractionInside": 0.48169,
+        "reason": "Centre and majority of footprint lie outside the detail area."
+      },
+      {
+        "id": "cat-3557601YJ3935F_part2-0",
+        "areaM2": 15.447,
+        "fractionInside": 0.07706,
+        "reason": "Centre and majority of footprint lie outside the detail area."
+      },
+      {
+        "id": "cat-3557602YJ3935F_part1-0",
+        "areaM2": 5.082,
+        "fractionInside": 0.03063,
+        "reason": "Centre and majority of footprint lie outside the detail area."
+      },
+      {
+        "id": "cat-3557605YJ3935H_part1-0",
+        "areaM2": 54.396,
+        "fractionInside": 0.30217,
+        "reason": "Centre and majority of footprint lie outside the detail area."
+      },
+      {
+        "id": "cat-3557701YJ3935F_part3-0",
+        "areaM2": 9.92,
+        "fractionInside": 0.37094,
+        "reason": "Centre and majority of footprint lie outside the detail area."
+      },
+      {
+        "id": "cat-3557706YJ3935F_part1-0",
+        "areaM2": 115.955,
+        "fractionInside": 0.30287,
+        "reason": "Centre and majority of footprint lie outside the detail area."
+      },
+      {
+        "id": "cat-3559812YJ3935H_part1-0",
+        "areaM2": 14.569,
+        "fractionInside": 0.22008,
+        "reason": "Centre and majority of footprint lie outside the detail area."
+      },
+      {
+        "id": "cat-3559812YJ3935H_part4-0",
+        "areaM2": 14.367,
+        "fractionInside": 0.10158,
+        "reason": "Centre and majority of footprint lie outside the detail area."
+      },
+      {
+        "id": "cat-3559812YJ3935H_part6-0",
+        "areaM2": 5.07,
+        "fractionInside": 0.15773,
+        "reason": "Centre and majority of footprint lie outside the detail area."
+      },
+      {
+        "id": "cat-3559813YJ3935H_part3-0",
+        "areaM2": 16.216,
+        "fractionInside": 0.4088,
+        "reason": "Centre and majority of footprint lie outside the detail area."
+      },
+      {
+        "id": "cat-3559814YJ3935H_part1-0",
+        "areaM2": 24.833,
+        "fractionInside": 0.16226,
+        "reason": "Centre and majority of footprint lie outside the detail area."
+      },
+      {
+        "id": "cat-3559815YJ3935H_part2-0",
+        "areaM2": 84.436,
+        "fractionInside": 0.4659,
+        "reason": "Centre and majority of footprint lie outside the detail area."
+      },
+      {
+        "id": "cat-3559815YJ3935H_part3-0",
+        "areaM2": 26.452,
+        "fractionInside": 0.17263,
+        "reason": "Centre and majority of footprint lie outside the detail area."
+      },
+      {
+        "id": "cat-3657302YJ3935H_part1-0",
+        "areaM2": 17.083,
+        "fractionInside": 0.03137,
+        "reason": "Centre and majority of footprint lie outside the detail area."
+      },
+      {
+        "id": "cat-3657303YJ3935H_part1-0",
+        "areaM2": 31.896,
+        "fractionInside": 0.05022,
+        "reason": "Centre and majority of footprint lie outside the detail area."
+      },
+      {
+        "id": "cat-3657335YJ3935H_part3-0",
+        "areaM2": 9.036,
+        "fractionInside": 0.08049,
+        "reason": "Centre and majority of footprint lie outside the detail area."
+      }
+    ],
+    "protectedLargeRejected": [
+      {
+        "id": "cat-3458401YJ3935G_part1-0",
+        "areaM2": 1792.805,
+        "reason": "Overlaps retained monument footprint; not a neighbourhood house."
+      },
+      {
+        "id": "cat-3556901YJ3935N_part1-0",
+        "areaM2": 6660.132,
+        "reason": "Overlaps retained monument footprint; not a neighbourhood house."
+      },
+      {
+        "id": "cat-3556901YJ3935N_part2-0",
+        "areaM2": 1073.867,
+        "reason": "Overlaps retained monument footprint; not a neighbourhood house."
+      }
+    ]
+  },
+  "sourceBoundaryOverlapM2": {
+    "protectedTotal": 0.3055967930920438,
+    "coreTotal": 0.07561503312870534
+  },
+  "inputHashes": {
+    "dist/assets/data/cartography.json": "a2b02f3311dfc3cc4b0a162400508364ce41f9ea875e77638e983e5065b23340",
+    "dist/assets/data/juderia-context.json": "9118ca2de239a2b4a49e2b2651d8dc261177e3b50c6a4360686e7e8a2380d045",
+    "dist/assets/data/plaza-mayor-context.json": "1a0c282b1f15f1cf4ede43aee8a600a5a44675cc4ad8110c36656ad9d23d9fc7",
+    "dist/assets/data/santa-maria-context.json": "c10e11fbfe394de3344fa7d606570ecaa67cc11d918bd9f1ee6880d0dbee752e"
+  },
+  "limitations": [
+    "Small disagreements at boundaries between OSM monument envelopes and Catastro parts are retained and quantified; source polygons are not moved to disguise them."
+  ]
+}

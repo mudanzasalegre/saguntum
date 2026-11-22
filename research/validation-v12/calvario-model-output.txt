@@ -1,0 +1,57 @@
+(node:5) ExperimentalWarning: `--experimental-loader` may be removed in the future; instead use `register()`:
+--import 'data:text/javascript,import { register } from "node:module"; import { pathToFileURL } from "node:url"; register("./research/validate_loader.mjs", pathToFileURL("./"));'
+(Use `node --trace-warnings ...` to show where the warning was created)
+{
+  "pass": true,
+  "checks": 494,
+  "stats": {
+    "stops": 18,
+    "meshes": 193,
+    "triangles": 240933,
+    "stationTotalDocumented": 14,
+    "waysideRepresentations": 11,
+    "facadeNiches": 3,
+    "retainingWalls": 8,
+    "cypresses": 20,
+    "trueApertures": 2,
+    "sourceKeys": [
+      "cv-turismo",
+      "cv-osm",
+      "cv-cofradia",
+      "cv-restauracion",
+      "cv-campana",
+      "cv-civera2001"
+    ],
+    "periods": [
+      "route",
+      "hermitage",
+      "ceramic",
+      "restoration",
+      "landscape"
+    ],
+    "context": {
+      "buildingParts": 156,
+      "parentParcels": 60,
+      "footprintsPreserved": true,
+      "courtyards": 3,
+      "sourceHeight": 0,
+      "ignHeight": 71,
+      "storeyHeight": 85,
+      "fallbackHeight": 0,
+      "streetSamples": 1133,
+      "roofCorrections": 2,
+      "maximumRoofCorrectionM": 0.5096927628173944,
+      "preservedSantaMaria": true,
+      "preservedPlazaMayor": true,
+      "preservedJuderia": true
+    }
+  },
+  "errors": [],
+  "cameraIssues": [],
+  "paving": {
+    "samples": 31784,
+    "minClearance": 0.07868099403567896,
+    "maxClearance": 0.21125007146036978,
+    "below": []
+  }
+}

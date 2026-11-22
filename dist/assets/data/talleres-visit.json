@@ -1,0 +1,1834 @@
+{
+  "schemaVersion": 1,
+  "id": "talleres",
+  "title": "Nave de Talleres Generales",
+  "subtitle": "Cuatro naves. Un espacio de trabajo.",
+  "introduction": "Una visita a la arquitectura industrial del Puerto: sus grandes luces, los materiales que la sostienen y la memoria de sus oficios. Explora el interior, abre la cubierta y relaciona el edificio con su entorno.",
+  "researchDate": "2026-11-20",
+  "regionsLabel": "Ámbitos de la nave",
+  "mapButtonLabel": "Plano de la nave",
+  "overviewButtonLabel": "Ver el conjunto",
+  "readingModeLabel": "Leer los componentes",
+  "readingModeNote": "Los colores distinguen cinco ámbitos de lectura; no representan fechas exactas ni certifican la composición de cada pieza.",
+  "timelineIntroduction": "La cronología distingue la etapa industrial, las adaptaciones culturales y las actuaciones documentadas sobre su conservación.",
+  "visitAriaLabel": "Visita a la Nave de Talleres Generales",
+  "sectionOnOverview": true,
+  "sectionOpenLabel": "Abrir cubiertas",
+  "sectionCloseLabel": "Cerrar cubiertas",
+  "sectionInstructions": "Abre la cubierta para comparar las cuatro naves y sus apoyos. Ciérrala para recorrer el interior bajo las cerchas y observar la luz cenital.",
+  "sectionNote": "La cubierta abierta es un recurso de lectura digital. No representa el estado del edificio ni una intervención propuesta.",
+  "mapInstructions": "Selecciona una parada en la planta o en la lista para acercarte a un detalle de la nave.",
+  "mapNote": "La planta permite orientar los focos de la visita. Los detalles y alturas no medidos son aproximados.",
+  "visitNote": "Visita digital documentada el 20 de noviembre de 2026. Los focos de cámara no acreditan acceso físico ni apertura pública del recinto.",
+  "methodology": [
+    "La descripción patrimonial oficial, las fichas de estudio y las fotografías definen la configuración principal del conjunto. La geometría parte de su huella cartográfica y explicita las aproximaciones.",
+    "Las dimensiones generales publicadas de 120 × 80 m no equivalen a luces estructurales útiles. CONTRAST aporta luces de 22,5 m y 15 m; la escena distingue medidas publicadas, lectura visual y adaptación a la huella.",
+    "Las fuentes coinciden en cuatro naves, dos centrales más altas y un interior comunicado. Difieren entre tres hileras internas de pilares y cuatro filas descritas en fichas: se conserva esta diferencia documental.",
+    "La existencia de hormigón y acero está documentada, pero no se ha recuperado un plano que permita fechar y clasificar cada apoyo. Tampoco se certifican alturas por comparación fotográfica.",
+    "Las fotografías históricas se utilizan para comprender actividades y cambios. Las contemporáneas sin fecha identificada se tratan como testimonios de forma, no como verificación del estado exacto de 2026.",
+    "La adaptación cultural introdujo proyectos e instalaciones posteriores. La nave diáfana del modelo es una lectura de su arquitectura y no un plano actualizado de distribución de actividades.",
+    "Los acabados se elaboran como materiales propios. Las fotografías consultadas no se incorporan como texturas ni se utilizan para simular documentación métrica.",
+    "Los anuncios de rehabilitación y mantenimiento se distinguen de una inauguración. No se ha confirmado en las fuentes consultadas una apertura general posterior al último estado institucional descrito."
+  ],
+  "readingLegend": [
+    {
+      "id": "conjunto",
+      "label": "La nave y su entorno",
+      "color": "#8ebbc2",
+      "note": "Volumen, accesos, cuatro naves y paisaje industrial."
+    },
+    {
+      "id": "estructura",
+      "label": "Apoyos y cerchas",
+      "color": "#d4ac79",
+      "note": "Hormigón, acero y lectura del interior mediante sección."
+    },
+    {
+      "id": "envolvente",
+      "label": "Materia, aire y luz",
+      "color": "#93b18f",
+      "note": "Piedra, ladrillo, ventanas, cubiertas y lucernarios."
+    },
+    {
+      "id": "oficios",
+      "label": "El espacio del trabajo",
+      "color": "#c29272",
+      "note": "Ferrocarril, transporte de cargas y funciones industriales."
+    },
+    {
+      "id": "memoria",
+      "label": "Transformaciones y memoria",
+      "color": "#b59ac7",
+      "note": "Ampliaciones, conservación y memoria obrera."
+    }
+  ],
+  "confidenceLegend": [
+    {
+      "id": "documented",
+      "label": "Documentado",
+      "note": "La fuente respalda el dato; no certifica la exactitud métrica de cada pieza del modelo."
+    },
+    {
+      "id": "interpretive",
+      "label": "Interpretación",
+      "note": "Geometría, material o recurso de visualización aproximado para explicar el edificio."
+    },
+    {
+      "id": "disputed",
+      "label": "Fuentes diferentes",
+      "note": "Las fuentes difieren en un detalle; la discrepancia queda explícita."
+    }
+  ],
+  "materialEvidenceLegend": [
+    {
+      "id": "conserved",
+      "label": "Arquitectura conservada",
+      "note": "Componente reconocido en la descripción patrimonial y en las referencias visuales."
+    },
+    {
+      "id": "rehabilitated",
+      "label": "Intervención posterior",
+      "note": "Elemento añadido, reparado o previsto durante la adaptación y conservación, según la fuente indicada."
+    },
+    {
+      "id": "mixed",
+      "label": "Lectura conjunta",
+      "note": "El foco reúne arquitectura, historia de usos y simplificaciones de representación."
+    }
+  ],
+  "stops": [
+    {
+      "id": "talleres-conjunto",
+      "title": "Cuatro naves, una sola arquitectura",
+      "label": "El conjunto",
+      "regionId": "conjunto",
+      "period": "mixed",
+      "intro": "Las cubiertas escalonadas anuncian la organización del edificio antes de entrar.",
+      "narrative": "La maqueta permite recorrer el volumen completo y entender por qué las dos naves centrales dominan la silueta. Al rodearla, compara el ancho de los frentes con la profundidad de las fachadas laterales: la continuidad del interior es la clave de la composición.",
+      "facts": [
+        {
+          "text": "El edificio reúne cuatro naves comunicadas; las dos centrales son más altas.",
+          "sourceIds": [
+            "tg-boe2024"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La ficha patrimonial universitaria describe una planta de unos 120 × 80 m.",
+          "sourceIds": [
+            "tg-uv"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Los cuatro perfiles de cubierta y los cuerpos elevados que recorren sus cumbreras.",
+      "modelNote": "La huella se apoya en cartografía real. Las cotas de alero, cerchas y remates son aproximadas cuando no existe una medición recuperada.",
+      "sourceIds": [
+        "tg-boe2024",
+        "tg-uv"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual pendiente de registro con la geometría final; la coordenada inicial identifica el edificio.",
+      "coordinate": [
+        -0.21829659,
+        39.6563165
+      ],
+      "coordinates": [
+        -0.21829659,
+        39.6563165
+      ],
+      "coordinateSourceIds": [
+        "tg-osm",
+        "tg-pnoa"
+      ],
+      "osmIds": [
+        154001633
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "conjunto",
+      "floor": 0,
+      "order": 1,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 6.8,
+      "localTarget": [
+        -0.7,
+        6.8,
+        0
+      ],
+      "requiresSection": false,
+      "interiorView": false
+    },
+    {
+      "id": "talleres-fachada",
+      "title": "Un testero que explica el interior",
+      "label": "Los testeros",
+      "regionId": "conjunto",
+      "period": "mixed",
+      "intro": "Cada perfil a dos aguas corresponde a una de las cuatro naves.",
+      "narrative": "Acércate al frente para leer sus huecos de arriba abajo. Las ventanas altas aportan luz, mientras que los portones responden al movimiento de personas, piezas y vehículos. El ladrillo enlaza visualmente las aberturas con los apoyos y las cornisas.",
+      "facts": [
+        {
+          "text": "Los accesos principales se orientan hacia los testeros este y oeste.",
+          "sourceIds": [
+            "tg-uv"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La ficha describe una secuencia de portalones 1 + 3 + 3 + 1.",
+          "sourceIds": [
+            "tg-uv"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La diferencia de altura entre los perfiles centrales y laterales, las ventanas y los arcos de los accesos.",
+      "modelNote": "El número y la proporción de los huecos se contrastan con fichas y fotografías. Cierres, carpinterías y estado superficial no son un inventario actualizado de cada pieza.",
+      "sourceIds": [
+        "tg-uv"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual pendiente de registro con la geometría final; la coordenada inicial identifica el edificio.",
+      "coordinate": [
+        -0.21890358,
+        39.65658622
+      ],
+      "coordinates": [
+        -0.21890358,
+        39.65658622
+      ],
+      "coordinateSourceIds": [
+        "tg-osm",
+        "tg-pnoa"
+      ],
+      "osmIds": [
+        154001633
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "conjunto",
+      "floor": 0,
+      "order": 2,
+      "fabricStatus": "conserved",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 7.5,
+      "localTarget": [
+        -0.7,
+        7.5,
+        -60.05
+      ],
+      "requiresSection": false,
+      "interiorView": false
+    },
+    {
+      "id": "talleres-acceso",
+      "title": "La escala del portón",
+      "label": "Los accesos",
+      "regionId": "conjunto",
+      "period": "mixed",
+      "intro": "Los grandes huecos permiten comprender la dimensión del trabajo que albergaba la nave.",
+      "narrative": "Desde este punto, la proximidad del arco y el grosor del muro ayudan a percibir la transición hacia el espacio cubierto. La entrada de la cámara es una forma de explorar el modelo; los accesos físicos dependen de las condiciones y autorizaciones del recinto.",
+      "facts": [
+        {
+          "text": "El repertorio exterior combina portones de arco, ventanas altas y mampostería.",
+          "sourceIds": [
+            "tg-boe2024"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La comunicación municipal de enero de 2025 situaba la seguridad y una intervención interior antes de la apertura.",
+          "sourceIds": [
+            "tg-ayto2025"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La curva del arco, el zócalo y el contraste entre el exterior iluminado y la profundidad de la nave.",
+      "modelNote": "Esta visita digital no acredita la apertura pública del edificio. La posición de cámara no representa un itinerario autorizado.",
+      "sourceIds": [
+        "tg-boe2024",
+        "tg-ayto2025"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual pendiente de registro con la geometría final; la coordenada inicial identifica el edificio.",
+      "coordinate": [
+        -0.21897471,
+        39.65649141
+      ],
+      "coordinates": [
+        -0.21897471,
+        39.65649141
+      ],
+      "coordinateSourceIds": [
+        "tg-osm",
+        "tg-pnoa"
+      ],
+      "osmIds": [
+        154001633
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "conjunto",
+      "floor": 0,
+      "order": 3,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 2.8,
+      "localTarget": [
+        -12.887500000000001,
+        2.8,
+        -60.05
+      ],
+      "requiresSection": false,
+      "interiorView": false
+    },
+    {
+      "id": "talleres-interior",
+      "title": "Un interior que se prolonga",
+      "label": "El espacio diáfano",
+      "regionId": "conjunto",
+      "period": "mixed",
+      "intro": "El espacio cambia con la luz, aunque la estructura mantiene una lectura continua.",
+      "narrative": "La perspectiva longitudinal reúne suelo, apoyos y cubierta. Mira también de lado: las naves se relacionan visualmente entre sí y las diferencias de altura no equivalen a recintos cerrados. La cámara permite detenerse en esta continuidad sin reconstruir una distribución actual de actividades.",
+      "facts": [
+        {
+          "text": "La descripción patrimonial caracteriza el interior como un conjunto unitario y diáfano.",
+          "sourceIds": [
+            "tg-apiva2017"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La fotografía de Film Office permite reconocer la continuidad visual entre naves y las vigas longitudinales.",
+          "sourceIds": [
+            "tg-interior"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La sucesión de soportes, el borde de las cubiertas laterales y la luz que entra por encima de ellos.",
+      "modelNote": "Se representa la lógica espacial conservada. Mobiliario, compartimentaciones culturales temporales e instalaciones de detalle no se reconstruyen como si fueran un estado actual comprobado.",
+      "sourceIds": [
+        "tg-apiva2017",
+        "tg-interior"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual pendiente de registro con la geometría final; la coordenada inicial identifica el edificio.",
+      "coordinate": [
+        -0.21841825,
+        39.65624415
+      ],
+      "coordinates": [
+        -0.21841825,
+        39.65624415
+      ],
+      "coordinateSourceIds": [
+        "tg-osm",
+        "tg-pnoa"
+      ],
+      "osmIds": [
+        154001633
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "conjunto",
+      "floor": 1,
+      "order": 4,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 6.3,
+      "localTarget": [
+        -12.887500000000001,
+        6.3,
+        -5
+      ],
+      "requiresSection": false,
+      "interiorView": true
+    },
+    {
+      "id": "talleres-naves",
+      "title": "Dos alturas para cuatro ámbitos",
+      "label": "Las cuatro naves",
+      "regionId": "conjunto",
+      "period": "industrial",
+      "intro": "Las naves centrales ofrecen mayor luz y altura; las laterales completan el conjunto.",
+      "narrative": "El cambio de sección puede leerse desde el suelo o mediante la cubierta abierta. Recorrer transversalmente la maqueta ayuda a distinguir qué pertenece a cada nave sin perder la percepción del gran interior compartido.",
+      "facts": [
+        {
+          "text": "CONTRAST publica luces de aproximadamente 22,5 m en las naves centrales y 15 m en las laterales.",
+          "sourceIds": [
+            "tg-contrasta"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La envolvente de unos 120 × 80 m expresa dimensiones generales del edificio.",
+          "sourceIds": [
+            "tg-uv"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La relación entre las dos naves centrales elevadas y las laterales más estrechas.",
+      "modelNote": "Las luces interiores publicadas suman unos 75 m y no deben confundirse con los aproximadamente 80 m exteriores. La modulación exacta de muros y apoyos es interpretativa.",
+      "sourceIds": [
+        "tg-contrasta",
+        "tg-uv"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual pendiente de registro con la geometría final; la coordenada inicial identifica el edificio.",
+      "coordinate": [
+        -0.21826626,
+        39.65630303
+      ],
+      "coordinates": [
+        -0.21826626,
+        39.65630303
+      ],
+      "coordinateSourceIds": [
+        "tg-osm",
+        "tg-pnoa"
+      ],
+      "osmIds": [
+        154001633
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "conjunto",
+      "floor": 0,
+      "order": 5,
+      "fabricStatus": "conserved",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 5.8,
+      "localTarget": [
+        -0.7,
+        5.8,
+        3
+      ],
+      "requiresSection": true,
+      "interiorView": false
+    },
+    {
+      "id": "talleres-cerchas",
+      "title": "La cubierta se sostiene en triángulos",
+      "label": "Las cerchas",
+      "regionId": "estructura",
+      "period": "mixed",
+      "intro": "Una red ligera de barras salva el espacio entre los apoyos.",
+      "narrative": "En la vista interior, sigue una cercha de un extremo al otro y después compara su repetición en profundidad. Las piezas secundarias enlazan los pórticos y sostienen la superficie de cubierta. La sombra permite reconocer esta jerarquía sin exagerar el grosor de cada barra.",
+      "facts": [
+        {
+          "text": "La ficha del conjunto describe cerchas metálicas con tirantes.",
+          "sourceIds": [
+            "tg-uv"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La fotografía interior muestra las barras de cubierta y su repetición longitudinal.",
+          "sourceIds": [
+            "tg-interior"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Los cordones inclinados, el tirante inferior y las diagonales que componen la cercha.",
+      "modelNote": "La forma general sigue las fotografías; secciones, uniones y separación de elementos son aproximadas. La maqueta no sirve para evaluación estructural.",
+      "sourceIds": [
+        "tg-uv",
+        "tg-interior"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual pendiente de registro con la geometría final; la coordenada inicial identifica el edificio.",
+      "coordinate": [
+        -0.21850923,
+        39.65628457
+      ],
+      "coordinates": [
+        -0.21850923,
+        39.65628457
+      ],
+      "coordinateSourceIds": [
+        "tg-osm",
+        "tg-pnoa"
+      ],
+      "osmIds": [
+        154001633
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "estructura",
+      "floor": 1,
+      "order": 6,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 15.1,
+      "localTarget": [
+        -12.887500000000001,
+        15.1,
+        -14
+      ],
+      "requiresSection": false,
+      "interiorView": true
+    },
+    {
+      "id": "talleres-pilares-hormigon",
+      "title": "La huella de una fase constructiva",
+      "label": "Pilares de hormigón",
+      "regionId": "estructura",
+      "period": "industrial",
+      "intro": "La lectura material revela que el edificio no se levantó en una única operación.",
+      "narrative": "Observa la masa de los apoyos y su encuentro con las vigas. La comparación con los tramos metálicos hace visible una historia constructiva por fases. En el modelo, el color ayuda a distinguir materiales sin convertir cada cambio de acabado en una fecha exacta.",
+      "facts": [
+        {
+          "text": "La descripción de APIVA identifica hormigón en la parte más antigua y acero laminado en la fase final.",
+          "sourceIds": [
+            "tg-apiva2017"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El BOE incorpora esta diferenciación material en la descripción patrimonial.",
+          "sourceIds": [
+            "tg-boe2024"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Las superficies macizas del apoyo y su relación con los elementos longitudinales.",
+      "modelNote": "La existencia de ambos materiales está documentada. No se ha recuperado un plano que asigne a cada pilar su fecha y composición; la distribución material del modelo es aproximada.",
+      "sourceIds": [
+        "tg-apiva2017",
+        "tg-boe2024"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual pendiente de registro con la geometría final; la coordenada inicial identifica el edificio.",
+      "coordinate": [
+        -0.2187408,
+        39.65626131
+      ],
+      "coordinates": [
+        -0.2187408,
+        39.65626131
+      ],
+      "coordinateSourceIds": [
+        "tg-osm",
+        "tg-pnoa"
+      ],
+      "osmIds": [
+        154001633
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "estructura",
+      "floor": 1,
+      "order": 7,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 6.4,
+      "localTarget": [
+        -25.05,
+        6.4,
+        -29.887499999999996
+      ],
+      "requiresSection": false,
+      "interiorView": true
+    },
+    {
+      "id": "talleres-pilares-acero",
+      "title": "Apoyos que dejan pasar la mirada",
+      "label": "Pilares metálicos",
+      "regionId": "estructura",
+      "period": "industrial",
+      "intro": "Las piezas esbeltas mantienen la conexión visual entre las naves.",
+      "narrative": "Acércate al soporte para ver cómo una estructura formada por perfiles ocupa menos espacio visual que un muro. Las diagonales y uniones se leen como parte del sistema; su repetición ordena la profundidad del edificio.",
+      "facts": [
+        {
+          "text": "La documentación oficial identifica acero laminado en una fase constructiva del conjunto.",
+          "sourceIds": [
+            "tg-boe2024"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "CONTRAST describe tres hileras internas de pilares de celosía; otras fichas hablan de cuatro filas de pilares.",
+          "sourceIds": [
+            "tg-contrasta",
+            "tg-apiva2017"
+          ],
+          "confidence": "disputed"
+        }
+      ],
+      "lookFor": "La sección abierta de los soportes y la relación entre pilares, vigas carrileras y cerchas.",
+      "modelNote": "Las fuentes difieren en el conteo de filas. La escena conserva cuatro naves y documenta esta diferencia sin introducir una divisoria adicional para resolverla artificialmente.",
+      "sourceIds": [
+        "tg-boe2024",
+        "tg-contrasta",
+        "tg-apiva2017"
+      ],
+      "confidence": "disputed",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual pendiente de registro con la geometría final; la coordenada inicial identifica el edificio.",
+      "coordinate": [
+        -0.2180548,
+        39.65595649
+      ],
+      "coordinates": [
+        -0.2180548,
+        39.65595649
+      ],
+      "coordinateSourceIds": [
+        "tg-osm",
+        "tg-pnoa"
+      ],
+      "osmIds": [
+        154001633
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "estructura",
+      "floor": 1,
+      "order": 8,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 6.5,
+      "localTarget": [
+        -25.05,
+        6.5,
+        37.978125000000006
+      ],
+      "requiresSection": false,
+      "interiorView": true
+    },
+    {
+      "id": "talleres-cubiertas",
+      "title": "El perfil de la nave industrial",
+      "label": "Las cubiertas",
+      "regionId": "envolvente",
+      "period": "mixed",
+      "intro": "Cuatro cubiertas paralelas expresan la organización del edificio.",
+      "narrative": "La vista elevada permite seguir cada cumbrera y reconocer los puntos donde cambia la altura. Los remates de fachada y el dibujo de los faldones participan de una misma composición. Con la cubierta cerrada se aprecia mejor la silueta del conjunto.",
+      "facts": [
+        {
+          "text": "Cada nave tiene cubierta a dos aguas y un cuerpo elevado sobre la cumbrera.",
+          "sourceIds": [
+            "tg-boe2024"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La fotografía exterior de 2008 registra la continuidad de esos cuerpos longitudinales.",
+          "sourceIds": [
+            "tg-exterior2008"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Las cuatro cumbreras, sus diferencias de nivel y los cuerpos de ventilación.",
+      "modelNote": "El acabado y despiece de la cubierta se interpretan visualmente. No se identifica la composición química de una placa a partir de una fotografía.",
+      "sourceIds": [
+        "tg-boe2024",
+        "tg-exterior2008"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual pendiente de registro con la geometría final; la coordenada inicial identifica el edificio.",
+      "coordinate": [
+        -0.21828648,
+        39.65631201
+      ],
+      "coordinates": [
+        -0.21828648,
+        39.65631201
+      ],
+      "coordinateSourceIds": [
+        "tg-osm",
+        "tg-pnoa"
+      ],
+      "osmIds": [
+        154001633
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "envolvente",
+      "floor": 0,
+      "order": 9,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 15.2,
+      "localTarget": [
+        -0.7,
+        15.2,
+        1
+      ],
+      "requiresSection": false,
+      "interiorView": false
+    },
+    {
+      "id": "talleres-lucernarios",
+      "title": "Luz y aire desde arriba",
+      "label": "Luz cenital",
+      "regionId": "envolvente",
+      "period": "mixed",
+      "intro": "La iluminación superior permite leer la profundidad de las naves centrales.",
+      "narrative": "Observa cómo la luz desciende desde la cumbrera y también desde el desnivel entre las naves. En una arquitectura de grandes luces, esas bandas altas completan la iluminación de los ventanales laterales y hacen perceptible el volumen de la cubierta.",
+      "facts": [
+        {
+          "text": "Los cuerpos de cumbrera se describen como dispositivos de iluminación, renovación de aire y evacuación de gases.",
+          "sourceIds": [
+            "tg-boe2024"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La fotografía interior muestra un lucernario longitudinal y huecos altos de contornos redondeados.",
+          "sourceIds": [
+            "tg-interior"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La banda luminosa central y los huecos altos junto a las cubiertas laterales.",
+      "modelNote": "La luz del render es una interpretación de la iluminación natural. Los valores de vidrio y exposición no son una simulación luminotécnica del recinto.",
+      "sourceIds": [
+        "tg-boe2024",
+        "tg-interior"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual pendiente de registro con la geometría final; la coordenada inicial identifica el edificio.",
+      "coordinate": [
+        -0.21826663,
+        39.65617677
+      ],
+      "coordinates": [
+        -0.21826663,
+        39.65617677
+      ],
+      "coordinateSourceIds": [
+        "tg-osm",
+        "tg-pnoa"
+      ],
+      "osmIds": [
+        154001633
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "envolvente",
+      "floor": 1,
+      "order": 10,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 17.7,
+      "localTarget": [
+        -12.887500000000001,
+        17.7,
+        10
+      ],
+      "requiresSection": false,
+      "interiorView": true
+    },
+    {
+      "id": "talleres-ventanas",
+      "title": "El ritmo de las fachadas laterales",
+      "label": "Los ventanales",
+      "regionId": "envolvente",
+      "period": "mixed",
+      "intro": "Las parejas de arcos aligeran visualmente los muros largos.",
+      "narrative": "En la vista próxima, compara las partes transparentes, los montantes y las pilastras. Desde dentro, las ventanas se convierten en una secuencia de luz; desde fuera, organizan el gran plano de fachada y ayudan a percibir su escala.",
+      "facts": [
+        {
+          "text": "Las fachadas laterales presentan grandes ventanales de medio punto agrupados por parejas.",
+          "sourceIds": [
+            "tg-uv"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La fotografía exterior permite contrastar su ritmo y la relación con el zócalo.",
+          "sourceIds": [
+            "tg-exterior2008"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El montante compartido entre arcos y las franjas de ladrillo que separan las parejas.",
+      "modelNote": "La disposición general está documentada. Vidrios, roturas, reparaciones y carpinterías particulares varían con el tiempo; el modelo sintetiza su lectura.",
+      "sourceIds": [
+        "tg-uv",
+        "tg-exterior2008"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual pendiente de registro con la geometría final; la coordenada inicial identifica el edificio.",
+      "coordinate": [
+        -0.21892395,
+        39.65618088
+      ],
+      "coordinates": [
+        -0.21892395,
+        39.65618088
+      ],
+      "coordinateSourceIds": [
+        "tg-osm",
+        "tg-pnoa"
+      ],
+      "osmIds": [
+        154001633
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "envolvente",
+      "floor": 0,
+      "order": 11,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 6.1,
+      "localTarget": [
+        -40.65,
+        6.1,
+        -39
+      ],
+      "requiresSection": false,
+      "interiorView": false
+    },
+    {
+      "id": "talleres-ladrillo",
+      "title": "La materia dibuja la arquitectura",
+      "label": "Piedra y ladrillo",
+      "regionId": "envolvente",
+      "period": "mixed",
+      "intro": "La diferencia entre piedra, revoco y ladrillo ordena los frentes.",
+      "narrative": "La fachada gana relieve donde el material cambia: bordes de ventana, esquinas, zócalos y cornisas. La proximidad de la cámara permite reconocer estas capas sin convertir el muro en una superficie uniforme ni atribuir la misma edad a todas sus reparaciones.",
+      "facts": [
+        {
+          "text": "El repertorio exterior combina ladrillo rojo, mampostería y remates ornamentales de bolas.",
+          "sourceIds": [
+            "tg-apiva2017"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "CONTRAST describe un zócalo de piedra y molduras claras que continúan por los arcos y perfiles.",
+          "sourceIds": [
+            "tg-contrasta"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Las jambas de ladrillo, la mampostería, el arranque de los arcos y los remates de cornisa.",
+      "modelNote": "Las texturas son elaboraciones propias de apariencia material. Desgaste, manchas y juntas tienen una función visual y no se presentan como un mapa patológico medido.",
+      "sourceIds": [
+        "tg-apiva2017",
+        "tg-contrasta"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual pendiente de registro con la geometría final; la coordenada inicial identifica el edificio.",
+      "coordinate": [
+        -0.21909121,
+        39.65633611
+      ],
+      "coordinates": [
+        -0.21909121,
+        39.65633611
+      ],
+      "coordinateSourceIds": [
+        "tg-osm",
+        "tg-pnoa"
+      ],
+      "osmIds": [
+        154001633
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "envolvente",
+      "floor": 0,
+      "order": 12,
+      "fabricStatus": "conserved",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 5.6,
+      "localTarget": [
+        -32.85,
+        5.6,
+        -60.05
+      ],
+      "requiresSection": false,
+      "interiorView": false
+    },
+    {
+      "id": "talleres-ferrocarril",
+      "title": "La nave y el material rodante",
+      "label": "El ferrocarril",
+      "regionId": "oficios",
+      "period": "industrial",
+      "intro": "Los talleres formaban parte de una red de movimiento y reparación.",
+      "narrative": "La amplitud de los accesos y la profundidad del edificio ayudan a imaginar la entrada del material rodante. La fotografía histórica permite conocer ese uso sin llenar la escena contemporánea de locomotoras cuya presencia actual no está demostrada.",
+      "facts": [
+        {
+          "text": "La imagen fechada en 1949 muestra reparación de locomotoras de la CMSM en los talleres de la CSM.",
+          "sourceIds": [
+            "tg-foto1949"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "CONTRAST documenta entradas ferroviarias de ancho ibérico y métrico.",
+          "sourceIds": [
+            "tg-contrasta"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La alineación de los accesos con los espacios de trabajo longitudinales.",
+      "modelNote": "El foco explica una relación histórica. Los trazados ferroviarios interiores que no han podido verificarse no se ofrecen como vías conservadas ni como recorridos transitables.",
+      "sourceIds": [
+        "tg-foto1949",
+        "tg-contrasta"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual pendiente de registro con la geometría final; la coordenada inicial identifica el edificio.",
+      "coordinate": [
+        -0.21883275,
+        39.65668065
+      ],
+      "coordinates": [
+        -0.21883275,
+        39.65668065
+      ],
+      "coordinateSourceIds": [
+        "tg-osm",
+        "tg-pnoa"
+      ],
+      "osmIds": [
+        154001633
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "oficios",
+      "floor": 0,
+      "order": 13,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 2.3,
+      "localTarget": [
+        11.4375,
+        2.3,
+        -60.05
+      ],
+      "requiresSection": false,
+      "interiorView": true
+    },
+    {
+      "id": "talleres-gruas",
+      "title": "Mover grandes piezas por encima del suelo",
+      "label": "Vigas carrileras",
+      "regionId": "oficios",
+      "period": "mixed",
+      "intro": "La estructura longitudinal también sirvió al transporte de cargas.",
+      "narrative": "Busca las vigas que recorren las naves a una altura intermedia entre el suelo y la cubierta. Permiten explicar el principio de los puentes grúa: desplazar cargas sin ocupar continuamente el pavimento. La historia de estos equipos debe leerse junto a las adaptaciones posteriores.",
+      "facts": [
+        {
+          "text": "CONTRAST documenta puentes grúa asociados a las naves industriales.",
+          "sourceIds": [
+            "tg-contrasta"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La licitación cultural de 2004 incluyó la construcción de puentes grúa en las naves centrales.",
+          "sourceIds": [
+            "tg-boe2004"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Los apoyos y vigas longitudinales visibles en la referencia fotográfica interior.",
+      "modelNote": "La presencia histórica del sistema no permite atribuir antigüedad industrial a cualquier equipo posterior. Se muestran los elementos observables y se evita reconstruir un puente grúa operativo sin documentación suficiente.",
+      "sourceIds": [
+        "tg-contrasta",
+        "tg-boe2004"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual pendiente de registro con la geometría final; la coordenada inicial identifica el edificio.",
+      "coordinate": [
+        -0.21852511,
+        39.65617356
+      ],
+      "coordinates": [
+        -0.21852511,
+        39.65617356
+      ],
+      "coordinateSourceIds": [
+        "tg-osm",
+        "tg-pnoa"
+      ],
+      "osmIds": [
+        154001633
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "oficios",
+      "floor": 1,
+      "order": 14,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 8.9,
+      "localTarget": [
+        -24.27,
+        8.9,
+        -9
+      ],
+      "requiresSection": false,
+      "interiorView": true
+    },
+    {
+      "id": "talleres-oficios",
+      "title": "Calderería, ajuste y fundición",
+      "label": "Los oficios",
+      "regionId": "oficios",
+      "period": "industrial",
+      "intro": "El valor del edificio incluye los conocimientos y trabajos que sostuvo.",
+      "narrative": "La visita puede pasar de la forma arquitectónica a las tareas: fabricar, reparar, ajustar y fundir. El espacio amplio facilitaba movimientos y reorganizaciones; cada uso dejó una relación particular entre personas, herramientas y materiales.",
+      "facts": [
+        {
+          "text": "Los ámbitos centrales se dedicaron inicialmente a calderería y reparación de locomotoras; los laterales, a fundición y ajuste.",
+          "sourceIds": [
+            "tg-apiva2017"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La maquinaria y servicios pasaron a nuevos talleres en 1957; desde 1965 el conjunto se destinó a fundición.",
+          "sourceIds": [
+            "tg-boe2024"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La escala de las naves y la ausencia de muros que interrumpan el espacio principal.",
+      "modelNote": "La función histórica de cada ámbito se explica de forma general. No se dibuja una distribución de máquinas por fecha sin un plano documentado.",
+      "sourceIds": [
+        "tg-apiva2017",
+        "tg-boe2024"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual pendiente de registro con la geometría final; la coordenada inicial identifica el edificio.",
+      "coordinate": [
+        -0.21810445,
+        39.65635703
+      ],
+      "coordinates": [
+        -0.21810445,
+        39.65635703
+      ],
+      "coordinateSourceIds": [
+        "tg-osm",
+        "tg-pnoa"
+      ],
+      "osmIds": [
+        154001633
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "oficios",
+      "floor": 1,
+      "order": 15,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 4.3,
+      "localTarget": [
+        11.4375,
+        4.3,
+        12
+      ],
+      "requiresSection": false,
+      "interiorView": true
+    },
+    {
+      "id": "talleres-ampliacion",
+      "title": "La forma se completa en 1930",
+      "label": "La ampliación",
+      "regionId": "memoria",
+      "period": "industrial",
+      "intro": "El volumen conservado reúne más de una etapa de construcción.",
+      "narrative": "Comparar una fotografía temprana con el edificio completo ayuda a entender que la nave no nació exactamente como se ve hoy. El corte del modelo permite leer sus componentes, pero no equivale a una restitución precisa de todas las fases desaparecidas.",
+      "facts": [
+        {
+          "text": "La edificación se remonta a 1919 y en 1930 alcanzó prácticamente su dimensión y aspecto actuales.",
+          "sourceIds": [
+            "tg-boe2024"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La fotografía de León de 1925 muestra la nave lateral sur con menor desarrollo que después de la ampliación.",
+          "sourceIds": [
+            "tg-foto1925"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La continuidad final de las cubiertas y la relación de las naves laterales con las centrales.",
+      "modelNote": "La fase anterior se explica con su fotografía histórica. No se inventa una planta de 1919 ni se asignan fechas exactas a juntas que no han sido estudiadas.",
+      "sourceIds": [
+        "tg-boe2024",
+        "tg-foto1925"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual pendiente de registro con la geometría final; la coordenada inicial identifica el edificio.",
+      "coordinate": [
+        -0.21768403,
+        39.65604432
+      ],
+      "coordinates": [
+        -0.21768403,
+        39.65604432
+      ],
+      "coordinateSourceIds": [
+        "tg-osm",
+        "tg-pnoa"
+      ],
+      "osmIds": [
+        154001633
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "memoria",
+      "floor": 0,
+      "order": 16,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 7.5,
+      "localTarget": [
+        -0.7,
+        7.5,
+        60.6
+      ],
+      "requiresSection": false,
+      "interiorView": false
+    },
+    {
+      "id": "talleres-restauracion",
+      "title": "Conservar y encontrar nuevos usos",
+      "label": "La conservación",
+      "regionId": "memoria",
+      "period": "contemporary",
+      "intro": "La recuperación del edificio se ha desarrollado mediante proyectos y actuaciones sucesivas.",
+      "narrative": "Los usos culturales forman parte de esa historia, pero cada noticia describe un momento concreto. La visita mantiene visible la diferencia entre una obra anunciada, un elemento comprobado y un espacio abierto al público.",
+      "facts": [
+        {
+          "text": "En 2004 se licitó una fase de habilitación teatral y urbanización del entorno.",
+          "sourceIds": [
+            "tg-boe2004"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "En mayo de 2026 el IVC incluía la nave en contratos de asistencia técnica y mantenimiento en tramitación.",
+          "sourceIds": [
+            "tg-ivc2026"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La arquitectura que permanece reconocible a través de los cambios de uso.",
+      "modelNote": "No se ha localizado en las fuentes consultadas una confirmación de apertura general posterior. La visita virtual no representa una sala polivalente futura como obra terminada.",
+      "sourceIds": [
+        "tg-boe2004",
+        "tg-ivc2026"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual pendiente de registro con la geometría final; la coordenada inicial identifica el edificio.",
+      "coordinate": [
+        -0.21864092,
+        39.65605512
+      ],
+      "coordinates": [
+        -0.21864092,
+        39.65605512
+      ],
+      "coordinateSourceIds": [
+        "tg-osm",
+        "tg-pnoa"
+      ],
+      "osmIds": [
+        154001633
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "memoria",
+      "floor": 0,
+      "order": 17,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 5.2,
+      "localTarget": [
+        -40.65,
+        5.2,
+        -11
+      ],
+      "requiresSection": false,
+      "interiorView": false
+    },
+    {
+      "id": "talleres-seccion",
+      "title": "Abrir la cubierta para comprender",
+      "label": "La sección abierta",
+      "regionId": "estructura",
+      "period": "mixed",
+      "intro": "La cubierta desmontable es una herramienta de lectura de la maqueta.",
+      "narrative": "Al abrirla puedes comparar las luces, seguir las filas de apoyos y entender la relación transversal entre las cuatro naves. Después, al cerrarla, el mismo lugar recupera sus sombras y su iluminación superior. Ambas vistas explican aspectos distintos del mismo edificio.",
+      "facts": [
+        {
+          "text": "Las fuentes coinciden en la existencia de cuatro naves comunicadas y dos alturas principales.",
+          "sourceIds": [
+            "tg-boe2024",
+            "tg-apiva2017"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La apertura de cubierta se introduce como recurso de observación digital.",
+          "sourceIds": [
+            "tg-osm"
+          ],
+          "confidence": "interpretive"
+        }
+      ],
+      "lookFor": "El contraste entre el perímetro, los soportes interiores y los planos de cubierta.",
+      "modelNote": "La sección es una operación de visualización, no una ruina, una intervención propuesta ni un estado histórico del edificio. La cartografía respalda su ubicación, no el corte virtual.",
+      "sourceIds": [
+        "tg-boe2024",
+        "tg-apiva2017",
+        "tg-osm"
+      ],
+      "confidence": "interpretive",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual pendiente de registro con la geometría final; la coordenada inicial identifica el edificio.",
+      "coordinate": [
+        -0.21829659,
+        39.6563165
+      ],
+      "coordinates": [
+        -0.21829659,
+        39.6563165
+      ],
+      "coordinateSourceIds": [
+        "tg-osm",
+        "tg-pnoa"
+      ],
+      "osmIds": [
+        154001633
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "estructura",
+      "floor": 0,
+      "order": 18,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 5.9,
+      "localTarget": [
+        -0.7,
+        5.9,
+        0
+      ],
+      "requiresSection": true,
+      "interiorView": false
+    },
+    {
+      "id": "talleres-memoria",
+      "title": "La arquitectura también guarda trabajo",
+      "label": "La memoria obrera",
+      "regionId": "memoria",
+      "period": "mixed",
+      "intro": "La escala monumental cobra sentido cuando se relaciona con quienes trabajaban aquí.",
+      "narrative": "Las imágenes del interior industrial documentan una ocupación humana y técnica que el volumen vacío apenas permite adivinar. La conservación patrimonial añade otra tarea: explicar esos usos y mantener legibles las transformaciones, sin sustituirlas por una escena idealizada.",
+      "facts": [
+        {
+          "text": "La fotografía fechada en 1928 registra el interior en su etapa productiva.",
+          "sourceIds": [
+            "tg-foto1928"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El decreto de 2024 incluye la Nave de Talleres Generales como bien de relevancia local en el ámbito protegido del Alto Horno.",
+          "sourceIds": [
+            "tg-boe2024"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La relación entre la altura del edificio, los accesos y la escala de las personas.",
+      "modelNote": "Los acabados evocan el uso prolongado del edificio, pero no reconstruyen un día concreto de trabajo ni sus sonidos, maquinaria o condiciones ambientales.",
+      "sourceIds": [
+        "tg-foto1928",
+        "tg-boe2024"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual pendiente de registro con la geometría final; la coordenada inicial identifica el edificio.",
+      "coordinate": [
+        -0.2179124,
+        39.65627169
+      ],
+      "coordinates": [
+        -0.2179124,
+        39.65627169
+      ],
+      "coordinateSourceIds": [
+        "tg-osm",
+        "tg-pnoa"
+      ],
+      "osmIds": [
+        154001633
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "memoria",
+      "floor": 1,
+      "order": 19,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 5.5,
+      "localTarget": [
+        11.4375,
+        5.5,
+        31
+      ],
+      "requiresSection": false,
+      "interiorView": true
+    },
+    {
+      "id": "talleres-entorno",
+      "title": "Un edificio dentro de la ciudad factoría",
+      "label": "El entorno",
+      "regionId": "conjunto",
+      "period": "mixed",
+      "intro": "La nave se entiende mejor junto a los otros testimonios industriales del Puerto.",
+      "narrative": "Al alejar la cámara aparecen la explanada, las vías urbanas y los volúmenes próximos. La relación con el Alto Horno y la Nave de Efectos y Repuestos permite leer un paisaje productivo transformado. Cada inmueble conserva una función histórica propia.",
+      "facts": [
+        {
+          "text": "El BOE integra Talleres Generales y otros bienes próximos en la lectura del entorno del Alto Horno nº 2.",
+          "sourceIds": [
+            "tg-boe2024"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Talleres Generales y la Nave de Efectos y Recambios son edificios distintos, también diferenciados en la comunicación municipal de 2026.",
+          "sourceIds": [
+            "tg-ayto2026"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La posición de la nave, su explanada y la continuidad espacial con el patrimonio industrial próximo.",
+      "modelNote": "El contexto corresponde a cartografía contemporánea interpretada. No se reconstruye toda la siderúrgica desaparecida ni se presenta la explanada como espacio de acceso libre confirmado.",
+      "sourceIds": [
+        "tg-boe2024",
+        "tg-ayto2026"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual pendiente de registro con la geometría final; la coordenada inicial identifica el edificio.",
+      "coordinate": [
+        -0.21826916,
+        39.65636687
+      ],
+      "coordinates": [
+        -0.21826916,
+        39.65636687
+      ],
+      "coordinateSourceIds": [
+        "tg-osm",
+        "tg-pnoa"
+      ],
+      "osmIds": [
+        154001633
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "conjunto",
+      "floor": 0,
+      "order": 20,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 12,
+      "localTarget": [
+        5.330175336662943,
+        12,
+        -0.7679637436998845
+      ],
+      "requiresSection": false,
+      "interiorView": false
+    }
+  ],
+  "regions": [
+    {
+      "id": "conjunto",
+      "name": "La nave y su entorno",
+      "aliases": [],
+      "summary": "Volumen, accesos, cuatro naves y paisaje industrial.",
+      "sourceIds": [
+        "tg-boe2024",
+        "tg-uv",
+        "tg-ayto2025",
+        "tg-apiva2017",
+        "tg-interior",
+        "tg-contrasta",
+        "tg-ayto2026"
+      ],
+      "stopIds": [
+        "talleres-conjunto",
+        "talleres-fachada",
+        "talleres-acceso",
+        "talleres-interior",
+        "talleres-naves",
+        "talleres-entorno"
+      ],
+      "coordinate": [
+        -0.2182925,
+        39.65632195
+      ]
+    },
+    {
+      "id": "estructura",
+      "name": "Apoyos y cerchas",
+      "aliases": [],
+      "summary": "Hormigón, acero y lectura del interior mediante sección.",
+      "sourceIds": [
+        "tg-uv",
+        "tg-interior",
+        "tg-apiva2017",
+        "tg-boe2024",
+        "tg-contrasta",
+        "tg-osm"
+      ],
+      "stopIds": [
+        "talleres-cerchas",
+        "talleres-pilares-hormigon",
+        "talleres-pilares-acero",
+        "talleres-seccion"
+      ],
+      "coordinate": [
+        -0.2182925,
+        39.65632195
+      ]
+    },
+    {
+      "id": "envolvente",
+      "name": "Materia, aire y luz",
+      "aliases": [],
+      "summary": "Piedra, ladrillo, ventanas, cubiertas y lucernarios.",
+      "sourceIds": [
+        "tg-boe2024",
+        "tg-exterior2008",
+        "tg-interior",
+        "tg-uv",
+        "tg-apiva2017",
+        "tg-contrasta"
+      ],
+      "stopIds": [
+        "talleres-cubiertas",
+        "talleres-lucernarios",
+        "talleres-ventanas",
+        "talleres-ladrillo"
+      ],
+      "coordinate": [
+        -0.2182925,
+        39.65632195
+      ]
+    },
+    {
+      "id": "oficios",
+      "name": "El espacio del trabajo",
+      "aliases": [],
+      "summary": "Ferrocarril, transporte de cargas y funciones industriales.",
+      "sourceIds": [
+        "tg-foto1949",
+        "tg-contrasta",
+        "tg-boe2004",
+        "tg-apiva2017",
+        "tg-boe2024"
+      ],
+      "stopIds": [
+        "talleres-ferrocarril",
+        "talleres-gruas",
+        "talleres-oficios"
+      ],
+      "coordinate": [
+        -0.2182925,
+        39.65632195
+      ]
+    },
+    {
+      "id": "memoria",
+      "name": "Transformaciones y memoria",
+      "aliases": [],
+      "summary": "Ampliaciones, conservación y memoria obrera.",
+      "sourceIds": [
+        "tg-boe2024",
+        "tg-foto1925",
+        "tg-boe2004",
+        "tg-ivc2026",
+        "tg-foto1928"
+      ],
+      "stopIds": [
+        "talleres-ampliacion",
+        "talleres-restauracion",
+        "talleres-memoria"
+      ],
+      "coordinate": [
+        -0.2182925,
+        39.65632195
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "tg-boe2024",
+      "title": "Nave de Talleres Generales en la protección del Alto Horno nº 2",
+      "author": "Generalitat Valenciana · Decreto 26/2024, publicado en el BOE",
+      "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2024-9526",
+      "type": "descripción patrimonial oficial",
+      "year": 2024,
+      "locator": "Anexo I, apartado 4.2.a; descripción de la Nave de Talleres Generales y su inclusión como bien de relevancia local.",
+      "note": "Fuente principal para la configuración de cuatro naves, fases constructivas y materiales. Su descripción se basa principalmente en el cuaderno de APIVA; ambas no son testimonios independientes.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "tg-apiva2017",
+      "title": "Patrimonio Industrial de Puerto de Sagunto · Cuaderno didáctico docente",
+      "author": "Cristina Baena Tomás y Sonia Garcés Romero · APIVA, con la colaboración del Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/media/fdlfw1mz/02_cuaderno_docente_cast_pantalla.pdf",
+      "type": "publicación educativa patrimonial",
+      "year": 2017,
+      "locator": "Página 9 del PDF, apartado Nave de Talleres Generales; historia general en páginas 6–8.",
+      "note": "Primera edición, septiembre de 2017. La publicación describe pilares de hormigón y acero según fases y la continuidad del interior; sus usos presentes deben leerse con fecha de 2017.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "tg-contrasta",
+      "title": "Naves de los Talleres Generales (1919–1930)",
+      "author": "Grup CONTRAST · Joan Costa Sanz, Antonio Ortiz López y José María Prats Escriche; dibujos de Ciriaco Galán López",
+      "url": "https://www.contrastapips.com/IHACM/IBP/Port/Port_patri_naus.htm",
+      "type": "itinerario de investigación y observación patrimonial",
+      "year": null,
+      "locator": "Texto arquitectónico e histórico; fotografías de 1925, 1928, 1949 y 2008; vista interior atribuida a Sagunto Film Office.",
+      "note": "Declara 120 × 80 m exteriores y luces aproximadas de 22,5 m para las naves centrales y 15 m para las laterales. El total de luces no equivale al ancho exterior. La explicación bélica de determinados refuerzos se identifica en la propia fuente como tradición oral pendiente de prueba.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "tg-uv",
+      "title": "Conjunt Històric Industrial de Sagunt · Talleres Generales",
+      "author": "Documentación de la primera solicitud patrimonial del conjunto de la Gerencia y su entorno · Universitat de València",
+      "url": "https://www.uv.es/patrimoni_industrial_sagunt/bicgerencia/gerencia.html",
+      "type": "ficha de expediente patrimonial",
+      "year": null,
+      "locator": "Apartado 7, Talleres Generales; referencias a Girona y Vila (1991), p. 211.",
+      "note": "Describe accesos en los testeros este y oeste, parejas de ventanas laterales y ritmo de portalones 1+3+3+1. Sus expresiones de actualidad corresponden a la fecha original de redacción, no a 2026.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "tg-interior",
+      "title": "Interior longitudinal de la Nave de Talleres Generales",
+      "author": "Sagunto Film Office · fotografía reproducida y atribuida por CONTRAST",
+      "url": "https://www.contrastapips.com/IHACM/IBP/Port/Port_patri_naus_archivos/image027.jpg",
+      "type": "referencia fotográfica del edificio conservado",
+      "year": null,
+      "locator": "Vista desde una nave central hacia el mar; pie descriptivo en la página de CONTRAST.",
+      "note": "Permite reconocer cerchas, soportes, vigas longitudinales, iluminación alta y lucernario. Fecha de toma no identificada. La página original de Film Office devolvió un error de disponibilidad al consultarla; se examinó la reproducción atribuida. No acredita el estado exacto de 2026.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "tg-exterior2008",
+      "title": "Los Talleres Generales en 2008",
+      "author": "Ayuntamiento de Sagunto · fotografía reproducida por CONTRAST",
+      "url": "https://www.contrastapips.com/IHACM/IBP/Port/Port_patri_naus_archivos/image026.jpg",
+      "type": "fotografía municipal fechada",
+      "year": 2008,
+      "locator": "Vista oblicua de un testero y la fachada lateral; pie en CONTRAST.",
+      "note": "Referencia para perfiles, remates, portones, ventanas y anexos existentes en esa fecha. No se traslada al presente todo el vallado ni las instalaciones temporales de la fotografía.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "tg-foto1925",
+      "title": "Talleres Generales antes de la ampliación de 1930",
+      "author": "Fotografía de León, 1925 · reproducción en el itinerario CONTRAST",
+      "url": "https://www.contrastapips.com/IHACM/IBP/Port/Port_patri_naus_archivos/image021.jpg",
+      "type": "fotografía histórica",
+      "year": 1925,
+      "locator": "Vista exterior con menor desarrollo de la nave lateral sur.",
+      "note": "La fecha y autor proceden del pie documental. Sirve para comprender la ampliación; no se usa como plantilla del estado conservado.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "tg-foto1928",
+      "title": "Interior de los Talleres Generales en 1928",
+      "author": "Reproducción de Girona y Vila (1991), publicada por CONTRAST",
+      "url": "https://www.contrastapips.com/IHACM/IBP/Port/Port_patri_naus_archivos/image022.jpg",
+      "type": "fotografía histórica",
+      "year": 1928,
+      "locator": "Vista interior de la etapa industrial.",
+      "note": "Permite comparar escala, estructura y ocupación productiva. Su mobiliario y maquinaria no se trasladan a la escena contemporánea.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "tg-foto1949",
+      "title": "Reparación de locomotoras de la CMSM en los talleres de la CSM",
+      "author": "Reproducción de Girona y Vila (1991), publicada por CONTRAST",
+      "url": "https://www.contrastapips.com/IHACM/IBP/Port/Port_patri_naus_archivos/image025.jpg",
+      "type": "fotografía histórica",
+      "year": 1949,
+      "locator": "Vista de reparación del material ferroviario; datación del pie documental.",
+      "note": "Acredita una actividad histórica, no la presencia actual de esas locomotoras.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "tg-boe2004",
+      "title": "Habilitación de la Nave de Talleres Generales para uso teatral y urbanización del entorno · Fase V.1",
+      "author": "Fundación Comunidad Valenciana Ciudad de las Artes Escénicas · anuncio oficial de contratación",
+      "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-B-2004-29060",
+      "type": "anuncio de proyecto de adaptación cultural",
+      "year": 2004,
+      "locator": "BOE de 3 de febrero de 2004, expediente ANTG-01/04; objeto del contrato.",
+      "note": "Documenta intervenciones previstas en nave sur, pavimentos, instalaciones, sótanos y puentes grúa para las naves centrales. Una licitación no certifica por sí sola la ejecución íntegra ni permite identificar como original cada equipo de fotografías posteriores.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "tg-ayto2018",
+      "title": "La antigua Nave de Talleres Generales pasa a ser propiedad de la Generalitat",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/es/actualidad/la-antigua-nave-de-talleres-generales-de-puerto-de-sagunto-pasa-a-ser-propiedad-de-la-generalitat/",
+      "type": "comunicación institucional fechada",
+      "year": 2018,
+      "locator": "11 de enero de 2018; transmisión de titularidad y objetivos culturales.",
+      "note": "La superficie de 10.000 m² se comunica como magnitud general. Los usos o reaperturas deseados en esa noticia no se presentan como acontecimientos consumados.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "tg-ayto2024",
+      "title": "El pleno solicita una intervención inmediata en la Nave de Talleres",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/es/actualidad/el-pleno-del-ayuntamiento-de-sagunto-acuerda-solicitar-una-intervencion-inmediata-en-la-nave-de-talleres/",
+      "type": "comunicación institucional fechada",
+      "year": 2024,
+      "locator": "5 de febrero de 2024; deterioro del cerramiento y antecedentes del proyecto adjudicado en 2019.",
+      "note": "Permite diferenciar el proyecto de sala polivalente de su ejecución. La noticia comunica que las obras previstas no habían comenzado.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "tg-ayto2025",
+      "title": "El Ayuntamiento y la Generalitat siguen trabajando para poner en uso la Nave de Talleres Generales",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/es/actualidad/el-ayuntamiento-y-la-generalitat-siguen-trabajando-para-poner-en-uso-la-nave-de-talleres-generales/",
+      "type": "comunicación institucional fechada",
+      "year": 2025,
+      "locator": "10 de enero de 2025; prioridad de seguridad e intervención interior previa a la apertura.",
+      "note": "Los plazos anunciados son previsiones. La noticia no demuestra que la apertura se produjera después.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "tg-ayto2026",
+      "title": "Balance municipal y actuaciones pendientes para 2026",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/es/actualidad/2026-01-15-sagunto-consolida-su-crecimiento-y-se-prepara-para-la-puesta-en-funcionamiento-de-la-gigafactoria-de-powerco-en-2026/",
+      "type": "comunicación institucional fechada",
+      "year": 2026,
+      "locator": "15 de enero de 2026; apartado Actuaciones pendientes.",
+      "note": "La Nave de Talleres figura entre las actuaciones reclamadas a otras administraciones. No confundirla con la distinta Nave de Efectos y Recambios, destinada a museo.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "tg-ivc2026",
+      "title": "Mejoras y conservación en el conjunto patrimonial de Sagunto",
+      "author": "Institut Valencià de Cultura · Generalitat Valenciana",
+      "url": "https://ivc.gva.es/es/escena/cultura-impulsa-la-ampliacion-del-aforo-del-teatro-romano-y-nuevas-mejoras-en-el-conjunto-monumental-de-sagunto",
+      "type": "comunicación institucional fechada",
+      "year": 2026,
+      "locator": "4 de mayo de 2026; apartado Otras actuaciones.",
+      "note": "Incluye la Nave de Talleres en la asistencia técnica y mantenimiento en tramitación. La noticia no anuncia una apertura general de la nave al público.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "tg-osm",
+      "title": "Huella cartográfica de la Nave de Talleres Generales",
+      "author": "Colaboradores de OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/154001633",
+      "type": "cartografía colaborativa",
+      "year": null,
+      "locator": "Edificio 154001633, ubicación y perímetro.",
+      "note": "La cartografía registra la situación y la envolvente del edificio. No constituye un levantamiento estructural ni un inventario interior.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "tg-pnoa",
+      "title": "Ortofotografía de Puerto de Sagunto",
+      "author": "Instituto Geográfico Nacional · Plan Nacional de Ortofotografía Aérea",
+      "url": "https://pnoa.ign.es/",
+      "type": "cartografía y ortofotografía oficial",
+      "year": null,
+      "locator": "Contraste del entorno y las cubiertas mediante el servicio PNOA empleado por el atlas.",
+      "note": "El terreno y el espacio urbano se interpretan a partir de cartografía contemporánea. Las alturas no medidas y los detalles menores del contexto son aproximados.",
+      "accessed": "2026-11-20"
+    }
+  ],
+  "timeline": [
+    {
+      "id": "tg-t-construccion",
+      "date": "1919",
+      "title": "Los primeros talleres",
+      "text": "El edificio nace para atender los trabajos y reparaciones de la siderúrgica y su sistema ferroviario.",
+      "sourceIds": [
+        "tg-boe2024",
+        "tg-foto1949"
+      ],
+      "period": "industrial",
+      "confidence": "documented",
+      "stopId": "talleres-conjunto"
+    },
+    {
+      "id": "tg-t-fotografia",
+      "date": "1925–1928",
+      "title": "Un edificio todavía en transformación",
+      "text": "Las fotografías conservan la apariencia exterior anterior a la ampliación y una vista del interior industrial.",
+      "sourceIds": [
+        "tg-foto1925",
+        "tg-foto1928"
+      ],
+      "period": "industrial",
+      "confidence": "documented",
+      "stopId": "talleres-ampliacion"
+    },
+    {
+      "id": "tg-t-ampliacion",
+      "date": "1930",
+      "title": "Se completa el gran volumen",
+      "text": "La ampliación configura prácticamente las dimensiones y la silueta que identifican el conjunto conservado.",
+      "sourceIds": [
+        "tg-boe2024"
+      ],
+      "period": "industrial",
+      "confidence": "documented",
+      "stopId": "talleres-ampliacion"
+    },
+    {
+      "id": "tg-t-traslado",
+      "date": "1957",
+      "title": "Los servicios se trasladan",
+      "text": "La maquinaria y los servicios pasan a los nuevos talleres. No debe confundirse ese nuevo establecimiento con estas naves históricas.",
+      "sourceIds": [
+        "tg-apiva2017"
+      ],
+      "period": "industrial",
+      "confidence": "documented",
+      "stopId": "talleres-oficios"
+    },
+    {
+      "id": "tg-t-fundicion",
+      "date": "1965",
+      "title": "Una nueva etapa de fundición",
+      "text": "El conjunto vuelve a emplearse como taller de fundición, dentro de la evolución de la factoría.",
+      "sourceIds": [
+        "tg-boe2024"
+      ],
+      "period": "industrial",
+      "confidence": "documented",
+      "stopId": "talleres-oficios"
+    },
+    {
+      "id": "tg-t-reconversion",
+      "date": "1983–1984",
+      "title": "Reconversión y cierre siderúrgico",
+      "text": "La reconversión transforma la industria y la vida del Puerto. Los edificios conservados se convierten en testimonios de aquel paisaje del trabajo.",
+      "sourceIds": [
+        "tg-apiva2017"
+      ],
+      "period": "industrial",
+      "confidence": "documented",
+      "stopId": "talleres-memoria"
+    },
+    {
+      "id": "tg-t-teatro",
+      "date": "2004",
+      "title": "Adaptación para usos culturales",
+      "text": "Se licita una fase de habilitación teatral con instalaciones, intervención en la nave sur y urbanización. El documento describe un proyecto, no certifica por sí solo su ejecución completa.",
+      "sourceIds": [
+        "tg-boe2004"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "talleres-restauracion"
+    },
+    {
+      "id": "tg-t-titularidad",
+      "date": "2018",
+      "title": "Titularidad de la Generalitat",
+      "text": "El Ayuntamiento comunica la adquisición de la nave por la Generalitat y sus objetivos de recuperación cultural.",
+      "sourceIds": [
+        "tg-ayto2018"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "talleres-restauracion"
+    },
+    {
+      "id": "tg-t-proteccion",
+      "date": "2024",
+      "title": "Reconocimiento y conservación",
+      "text": "El decreto del Alto Horno incorpora la nave como bien de relevancia local; las comunicaciones municipales reclaman actuaciones sobre su deterioro.",
+      "sourceIds": [
+        "tg-boe2024",
+        "tg-ayto2024"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "talleres-memoria"
+    },
+    {
+      "id": "tg-t-intervenciones",
+      "date": "2025–2026",
+      "title": "La recuperación sigue en curso",
+      "text": "Las fuentes institucionales consultadas hablan de seguridad, actuaciones pendientes y mantenimiento. No se toma una previsión de obras como confirmación de apertura.",
+      "sourceIds": [
+        "tg-ayto2025",
+        "tg-ayto2026",
+        "tg-ivc2026"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "talleres-restauracion"
+    }
+  ],
+  "modelRegistration": {
+    "status": "registered",
+    "coordinateOrder": "longitude,latitude",
+    "anchor": [
+      -0.2182925,
+      39.65632195
+    ],
+    "verticalReference": "Origen local del modelo pendiente de registro. Las alturas de detalle no se presentan como cotas levantadas.",
+    "precision": "approximate",
+    "coordinates": "Registered from the implemented industrial model and contemporary cartography; component positions and unmeasured heights are interpretive.",
+    "provisionalCoordinates": false
+  },
+  "materialsModeLabel": "Materiales"
+}

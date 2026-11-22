@@ -1,0 +1,100 @@
+{
+  "iteration": 3,
+  "cataloguePlaces": 15,
+  "geographicAreas": 16,
+  "integrationChecks": 86,
+  "passed": true,
+  "geometry": {
+    "portic": {
+      "phase": "Siglo II d. C.",
+      "roadLength": 60,
+      "roadWidth": [
+        4.1,
+        5.4
+      ],
+      "sewerClearWidth": 0.68,
+      "sewerClearDepth": 1.25,
+      "preservedPierLocations": 16,
+      "verticalPlacement": "interpretativa",
+      "meshes": 18,
+      "triangles": 62230
+    },
+    "domus": {
+      "phase": "Siglos II–III d. C. · reforma con balneum",
+      "atrium": [
+        7.31,
+        3.5
+      ],
+      "impluviumOuter": [
+        4.22,
+        2.46
+      ],
+      "impluviumInner": [
+        3.06,
+        1.56
+      ],
+      "tablinum": [
+        4.26,
+        5.5
+      ],
+      "balneum": [
+        1.94,
+        1.36
+      ],
+      "paint": "Pintura sobre enlucido; no mosaico figurado",
+      "verticalPlacement": "aproximación de cota publicada",
+      "meshes": 28,
+      "triangles": 14398
+    },
+    "circo": {
+      "remains": {
+        "drawCalls": 10,
+        "triangles": 7964,
+        "parts": 389
+      },
+      "reconstruction": {
+        "drawCalls": 7,
+        "triangles": 9631,
+        "parts": 700
+      },
+      "hypotheses": {
+        "drawCalls": 2,
+        "triangles": 11972,
+        "parts": 1411
+      },
+      "historicalLength": 273,
+      "historicalWidth": 70
+    },
+    "diana": {
+      "remains": {
+        "drawCalls": 9,
+        "triangles": 15056,
+        "parts": 703
+      },
+      "reconstruction": {
+        "drawCalls": 3,
+        "triangles": 2192,
+        "parts": 87
+      },
+      "hypotheses": {
+        "drawCalls": 1,
+        "triangles": 264,
+        "parts": 22
+      },
+      "visibleAncientHeight": 4.18,
+      "ancientChronology": "disputed"
+    },
+    "necropolis": {
+      "meshes": 29,
+      "triangles": 87335,
+      "surfaceTombs": 12,
+      "representativeChambers": 3,
+      "geographicFocuses": 2,
+      "interpretiveGeometry": true,
+      "minimumFloorY": 93.61193017479854
+    }
+  },
+  "cameraIssues": [],
+  "browser": "Managed Chrome: WebGL disabled; catalogue, map, evidence and all 15 tour steps verified in 2D fallback; mobile 390 x 844 verified.",
+  "renderVerification": "CPU renders of actual Three.js geometry; Domus clipping polygons and projected camera matrix reproduced. Not an end-to-end WebGL test."
+}

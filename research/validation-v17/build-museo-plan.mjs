@@ -1,0 +1,18 @@
+import fs from 'node:fs';
+import {createMuseo} from '../../dist/js/museo.js';
+import {createMuseoContext} from '../../dist/js/museo-context.js';
+import {createHeightSampler} from '../../dist/js/terrain.js';
+const {createCanvas}=await import(process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES+'/@napi-rs/canvas/index.js');
+globalThis.document={createElement:()=>createCanvas(256,256)};
+const read=name=>JSON.parse(fs.readFileSync('dist/assets/data/'+name+'.json'));
+const data=read('cartography'),landmarks=read('landmarks').sites,visitData=fs.existsSync('dist/assets/data/museo-visit.json')?read('museo-visit'):{stops:[]},contextData=read('museo-context'),record=landmarks.find(row=>row.id==='museo'),heightAt=createHeightSampler(read('elevation'));
+const project=(lon,lat)=>({x:(lon+.278)*111320*Math.cos(39.679*Math.PI/180),z:(39.679-lat)*111320});
+const model=createMuseo({record,heightAt,project,visitData,contextData});
+const context=createMuseoContext({data,landmarks,project,heightAt,visitData,contextData});
+const visit=model.visit;visit.plan.components.push(...context.plan.components);visit.plan.contextOutline=context.plan.outline;Object.assign(visit.focuses,context.focuses);
+const stops=new Map((visitData.stops||[]).map(stop=>[stop.id,stop]));
+visit.plan.stops=Object.values(visit.focuses).map(f=>({id:f.id,label:stops.get(f.id)?.title||f.label,coordinates:f.coordinates,regionId:stops.get(f.id)?.regionId||f.regionId,readingLayer:stops.get(f.id)?.readingLayer||f.readingLayer,floor:f.floor??null,sourceConfidence:f.sourceConfidence}));
+visit.plan.anchor=record.coordinate;visit.plan.yawRadians=visit.qa.frame.yaw;visit.plan.modelRegistration={anchor:record.coordinate,yawRadians:visit.qa.frame.yaw,baseY:visit.qa.baseY,upperY:visit.qa.upperY};
+fs.writeFileSync('dist/assets/data/museo-plan.json',JSON.stringify({schemaVersion:1,...visit.plan},null,2));
+fs.writeFileSync('/workspace/scratch/02fd1ac67942/museo-focus-coordinates.json',JSON.stringify(visit.plan.stops,null,2));
+console.log(JSON.stringify({stats:visit.stats,planComponents:visit.plan.components.length,stops:visit.plan.stops.length},null,2));

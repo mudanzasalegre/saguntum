@@ -1,0 +1,3322 @@
+{
+  "pass": true,
+  "generatedAt": "2026-11-21T14:20:49.284Z",
+  "checks": 828,
+  "buildMs": 202071.810675,
+  "meshes": 1405,
+  "triangles": 4442193,
+  "stats": {
+    "modelVersion": "v30",
+    "meshes": 231,
+    "triangles": 185877,
+    "parts": 14,
+    "structures": 11,
+    "mainParts": 4,
+    "ancillaryParts": 10,
+    "doctorsChalets": 3,
+    "consultationPavilions": 2,
+    "adjoiningMainEntrances": 3,
+    "levels": 2,
+    "architecturalFocuses": 16,
+    "interiorFocuses": 4,
+    "physicalWindows": 197,
+    "physicalDoors": 22,
+    "botanicalTypes": 37,
+    "representedBotanicalTypes": 36,
+    "representedPlants": 67,
+    "gardenPaths": 27,
+    "gates": 6,
+    "resourcesOwned": true,
+    "interpretiveGeometry": true,
+    "context": {
+      "buildingParts": 103,
+      "cadastralParcels": 24,
+      "reusedBuildingParts": 156,
+      "coreCadastralPartsPreserved": 14,
+      "roads": 65,
+      "paths": 43,
+      "pavingAreaM2": 51108.7,
+      "pavingTriangles": 14599,
+      "trees": 96,
+      "benches": 3,
+      "lamps": 5,
+      "crossings": 12,
+      "curbLines": 29,
+      "ownershipTransfers": 0,
+      "historicalPrecinctAreaM2": 26228.15,
+      "treeCrownsAdjusted": 0,
+      "treeTrunksSuppressed": 0,
+      "meshes": 20,
+      "triangles": 184074,
+      "fixedSanatorioDatumM": 11.721126125691658,
+      "skippedTinyTriangles": 0
+    }
+  },
+  "context": {
+    "buildingParts": 103,
+    "cadastralParcels": 24,
+    "reusedBuildingParts": 156,
+    "coreCadastralPartsPreserved": 14,
+    "roads": 65,
+    "paths": 43,
+    "pavingAreaM2": 51108.7,
+    "pavingTriangles": 14599,
+    "trees": 96,
+    "benches": 3,
+    "lamps": 5,
+    "crossings": 12,
+    "curbLines": 29,
+    "ownershipTransfers": 0,
+    "historicalPrecinctAreaM2": 26228.15,
+    "treeCrownsAdjusted": 0,
+    "treeTrunksSuppressed": 0,
+    "meshes": 20,
+    "triangles": 184074,
+    "fixedSanatorioDatumM": 11.721126125691658,
+    "skippedTinyTriangles": 0
+  },
+  "errors": [],
+  "cameras": [
+    {
+      "id": "sanatorio-conjunto",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 51,
+      "position": [
+        3814.0887356776593,
+        393.25364789334986,
+        1635.9003070498313
+      ],
+      "target": [
+        4232.8899687354915,
+        15.73629507820856,
+        1645.6394246943348
+      ],
+      "clearance": 379.254076373927,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-conjunto",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 51,
+      "position": [
+        4051.783839170395,
+        170.73629507820857,
+        1640.5827623612827
+      ],
+      "target": [
+        4232.8899687354915,
+        15.73629507820856,
+        1645.6394246943348
+      ],
+      "clearance": 158.47327940893896,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-conjunto",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 51,
+      "position": [
+        3419.995134862763,
+        748.4989556846999,
+        1626.7357591967634
+      ],
+      "target": [
+        4232.8899687354915,
+        15.73629507820856,
+        1645.6394246943348
+      ],
+      "clearance": 732.4989556846999,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-conjunto",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 51,
+      "position": [
+        4051.783839170395,
+        170.73629507820857,
+        1640.5827623612827
+      ],
+      "target": [
+        4232.8899687354915,
+        15.73629507820856,
+        1645.6394246943348
+      ],
+      "clearance": 158.47327940893896,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-conjunto",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 51,
+      "position": [
+        3855.66344057538,
+        355.7772240001786,
+        1636.8671163857973
+      ],
+      "target": [
+        4232.8899687354915,
+        15.73629507820856,
+        1645.6394246943348
+      ],
+      "clearance": 341.80053006703685,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-conjunto",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 51,
+      "position": [
+        4051.783839170395,
+        170.73629507820857,
+        1640.5827623612827
+      ],
+      "target": [
+        4232.8899687354915,
+        15.73629507820856,
+        1645.6394246943348
+      ],
+      "clearance": 158.47327940893896,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-fachada",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 65,
+      "position": [
+        4180.681862319252,
+        33.63629507820856,
+        1588.3304932400608
+      ],
+      "target": [
+        4217.662631750168,
+        16.63629507820856,
+        1620.4773856605957
+      ],
+      "clearance": 22.496424081860326,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-fachada",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 65,
+      "position": [
+        4194.266634763262,
+        22.13629507820856,
+        1600.13955576189
+      ],
+      "target": [
+        4217.662631750168,
+        16.63629507820856,
+        1620.4773856605957
+      ],
+      "clearance": 11.136295078208558,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-fachada",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 65,
+      "position": [
+        4180.681862319252,
+        33.63629507820856,
+        1588.3304932400608
+      ],
+      "target": [
+        4217.662631750168,
+        16.63629507820856,
+        1620.4773856605957
+      ],
+      "clearance": 22.496424081860326,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-fachada",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 65,
+      "position": [
+        4194.266634763262,
+        22.13629507820856,
+        1600.13955576189
+      ],
+      "target": [
+        4217.662631750168,
+        16.63629507820856,
+        1620.4773856605957
+      ],
+      "clearance": 11.136295078208558,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-fachada",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 65,
+      "position": [
+        4180.681862319252,
+        33.63629507820856,
+        1588.3304932400608
+      ],
+      "target": [
+        4217.662631750168,
+        16.63629507820856,
+        1620.4773856605957
+      ],
+      "clearance": 22.496424081860326,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-fachada",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 65,
+      "position": [
+        4194.266634763262,
+        22.13629507820856,
+        1600.13955576189
+      ],
+      "target": [
+        4217.662631750168,
+        16.63629507820856,
+        1620.4773856605957
+      ],
+      "clearance": 11.136295078208558,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-portico",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 65,
+      "position": [
+        4181.690449184067,
+        18.48629507820856,
+        1638.2327251794854
+      ],
+      "target": [
+        4198.8169735970905,
+        14.48629507820856,
+        1639.8704557831247
+      ],
+      "clearance": 7.4071862131798305,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-portico",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 65,
+      "position": [
+        4189.499001810355,
+        14.98629507820856,
+        1638.3955314523146
+      ],
+      "target": [
+        4198.8169735970905,
+        14.48629507820856,
+        1639.8704557831247
+      ],
+      "clearance": 3.95326648458993,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-portico",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 65,
+      "position": [
+        4181.690449184067,
+        18.48629507820856,
+        1638.2327251794854
+      ],
+      "target": [
+        4198.8169735970905,
+        14.48629507820856,
+        1639.8704557831247
+      ],
+      "clearance": 7.4071862131798305,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-portico",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 65,
+      "position": [
+        4189.499001810355,
+        14.98629507820856,
+        1638.3955314523146
+      ],
+      "target": [
+        4198.8169735970905,
+        14.48629507820856,
+        1639.8704557831247
+      ],
+      "clearance": 3.95326648458993,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-portico",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 65,
+      "position": [
+        4181.690449184067,
+        18.48629507820856,
+        1638.2327251794854
+      ],
+      "target": [
+        4198.8169735970905,
+        14.48629507820856,
+        1639.8704557831247
+      ],
+      "clearance": 7.4071862131798305,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-portico",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 65,
+      "position": [
+        4189.499001810355,
+        14.98629507820856,
+        1638.3955314523146
+      ],
+      "target": [
+        4198.8169735970905,
+        14.48629507820856,
+        1639.8704557831247
+      ],
+      "clearance": 3.95326648458993,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-accesos",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 65,
+      "position": [
+        4213.758629997203,
+        14.366295078208559,
+        1611.7836367389366
+      ],
+      "target": [
+        4217.549425313135,
+        14.186295078208559,
+        1620.378976806247
+      ],
+      "clearance": 2.998086331961799,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-accesos",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 65,
+      "position": [
+        4214.106873015712,
+        14.366295078208559,
+        1614.7363857631613
+      ],
+      "target": [
+        4217.549425313135,
+        14.186295078208559,
+        1620.378976806247
+      ],
+      "clearance": 2.753562223812679,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-accesos",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 65,
+      "position": [
+        4213.758629997203,
+        14.366295078208559,
+        1611.7836367389366
+      ],
+      "target": [
+        4217.549425313135,
+        14.186295078208559,
+        1620.378976806247
+      ],
+      "clearance": 2.998086331961799,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-accesos",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 65,
+      "position": [
+        4214.106873015712,
+        14.366295078208559,
+        1614.7363857631613
+      ],
+      "target": [
+        4217.549425313135,
+        14.186295078208559,
+        1620.378976806247
+      ],
+      "clearance": 2.753562223812679,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-accesos",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 65,
+      "position": [
+        4213.758629997203,
+        14.366295078208559,
+        1611.7836367389366
+      ],
+      "target": [
+        4217.549425313135,
+        14.186295078208559,
+        1620.378976806247
+      ],
+      "clearance": 2.998086331961799,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-accesos",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 65,
+      "position": [
+        4214.106873015712,
+        14.366295078208559,
+        1614.7363857631613
+      ],
+      "target": [
+        4217.549425313135,
+        14.186295078208559,
+        1620.378976806247
+      ],
+      "clearance": 2.753562223812679,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-vestibulo",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 68,
+      "position": [
+        4219.3427229369045,
+        14.366295078208559,
+        1622.2028692462175
+      ],
+      "target": [
+        4224.002192224039,
+        14.216295078208558,
+        1625.988281504116
+      ],
+      "clearance": 2.5800001410747697,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-vestibulo",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 68,
+      "position": [
+        4221.134295819193,
+        14.366295078208559,
+        1623.495257193952
+      ],
+      "target": [
+        4224.002192224039,
+        14.216295078208558,
+        1625.988281504116
+      ],
+      "clearance": 2.5800001410747697,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-vestibulo",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 68,
+      "position": [
+        4219.3427229369045,
+        14.366295078208559,
+        1622.2028692462175
+      ],
+      "target": [
+        4224.002192224039,
+        14.216295078208558,
+        1625.988281504116
+      ],
+      "clearance": 2.5800001410747697,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-vestibulo",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 68,
+      "position": [
+        4221.134295819193,
+        14.366295078208559,
+        1623.495257193952
+      ],
+      "target": [
+        4224.002192224039,
+        14.216295078208558,
+        1625.988281504116
+      ],
+      "clearance": 2.5800001410747697,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-vestibulo",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 68,
+      "position": [
+        4219.3427229369045,
+        14.366295078208559,
+        1622.2028692462175
+      ],
+      "target": [
+        4224.002192224039,
+        14.216295078208558,
+        1625.988281504116
+      ],
+      "clearance": 2.5800001410747697,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-vestibulo",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 68,
+      "position": [
+        4221.134295819193,
+        14.366295078208559,
+        1623.495257193952
+      ],
+      "target": [
+        4224.002192224039,
+        14.216295078208558,
+        1625.988281504116
+      ],
+      "clearance": 2.5800001410747697,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-capilla",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 68,
+      "position": [
+        4222.404507702919,
+        14.366295078208559,
+        1631.8578567162563
+      ],
+      "target": [
+        4218.2188510979595,
+        13.936295078208559,
+        1636.6729038380774
+      ],
+      "clearance": 2.688562335357762,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-capilla",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 68,
+      "position": [
+        4221.423043395549,
+        14.366295078208559,
+        1632.9869022482694
+      ],
+      "target": [
+        4218.2188510979595,
+        13.936295078208559,
+        1636.6729038380774
+      ],
+      "clearance": 2.754537100434236,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-capilla",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 68,
+      "position": [
+        4222.404507702919,
+        14.366295078208559,
+        1631.8578567162563
+      ],
+      "target": [
+        4218.2188510979595,
+        13.936295078208559,
+        1636.6729038380774
+      ],
+      "clearance": 2.688562335357762,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-capilla",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 68,
+      "position": [
+        4221.423043395549,
+        14.366295078208559,
+        1632.9869022482694
+      ],
+      "target": [
+        4218.2188510979595,
+        13.936295078208559,
+        1636.6729038380774
+      ],
+      "clearance": 2.754537100434236,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-capilla",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 68,
+      "position": [
+        4222.404507702919,
+        14.366295078208559,
+        1631.8578567162563
+      ],
+      "target": [
+        4218.2188510979595,
+        13.936295078208559,
+        1636.6729038380774
+      ],
+      "clearance": 2.688562335357762,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-capilla",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 68,
+      "position": [
+        4221.423043395549,
+        14.366295078208559,
+        1632.9869022482694
+      ],
+      "target": [
+        4218.2188510979595,
+        13.936295078208559,
+        1636.6729038380774
+      ],
+      "clearance": 2.754537100434236,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-sacristia",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 71,
+      "position": [
+        4218.473136176598,
+        14.366295078208559,
+        1639.2551236387105
+      ],
+      "target": [
+        4219.570066873071,
+        14.216295078208558,
+        1637.993249220578
+      ],
+      "clearance": 2.8721706656719377,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-sacristia",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 71,
+      "position": [
+        4218.7618021493545,
+        14.366295078208559,
+        1638.9230514234125
+      ],
+      "target": [
+        4219.570066873071,
+        14.216295078208558,
+        1637.993249220578
+      ],
+      "clearance": 2.8721706656719377,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-sacristia",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 71,
+      "position": [
+        4218.473136176598,
+        14.366295078208559,
+        1639.2551236387105
+      ],
+      "target": [
+        4219.570066873071,
+        14.216295078208558,
+        1637.993249220578
+      ],
+      "clearance": 2.8721706656719377,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-sacristia",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 71,
+      "position": [
+        4218.7618021493545,
+        14.366295078208559,
+        1638.9230514234125
+      ],
+      "target": [
+        4219.570066873071,
+        14.216295078208558,
+        1637.993249220578
+      ],
+      "clearance": 2.8721706656719377,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-sacristia",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 71,
+      "position": [
+        4218.473136176598,
+        14.366295078208559,
+        1639.2551236387105
+      ],
+      "target": [
+        4219.570066873071,
+        14.216295078208558,
+        1637.993249220578
+      ],
+      "clearance": 2.8721706656719377,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-sacristia",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 71,
+      "position": [
+        4218.7618021493545,
+        14.366295078208559,
+        1638.9230514234125
+      ],
+      "target": [
+        4219.570066873071,
+        14.216295078208558,
+        1637.993249220578
+      ],
+      "clearance": 2.8721706656719377,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-escalera",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 70,
+      "position": [
+        4222.341831147549,
+        14.366295078208559,
+        1624.5449516403369
+      ],
+      "target": [
+        4227.584854594848,
+        14.866295078208559,
+        1625.5251073070917
+      ],
+      "clearance": 2.5800001410747697,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-escalera",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 70,
+      "position": [
+        4223.209747164806,
+        14.366295078208559,
+        1625.2994195236759
+      ],
+      "target": [
+        4227.584854594848,
+        14.866295078208559,
+        1625.5251073070917
+      ],
+      "clearance": 2.5800001410747697,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-escalera",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 70,
+      "position": [
+        4222.341831147549,
+        14.366295078208559,
+        1624.5449516403369
+      ],
+      "target": [
+        4227.584854594848,
+        14.866295078208559,
+        1625.5251073070917
+      ],
+      "clearance": 2.5800001410747697,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-escalera",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 70,
+      "position": [
+        4223.209747164806,
+        14.366295078208559,
+        1625.2994195236759
+      ],
+      "target": [
+        4227.584854594848,
+        14.866295078208559,
+        1625.5251073070917
+      ],
+      "clearance": 2.5800001410747697,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-escalera",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 70,
+      "position": [
+        4222.341831147549,
+        14.366295078208559,
+        1624.5449516403369
+      ],
+      "target": [
+        4227.584854594848,
+        14.866295078208559,
+        1625.5251073070917
+      ],
+      "clearance": 2.5800001410747697,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-escalera",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 70,
+      "position": [
+        4223.209747164806,
+        14.366295078208559,
+        1625.2994195236759
+      ],
+      "target": [
+        4227.584854594848,
+        14.866295078208559,
+        1625.5251073070917
+      ],
+      "clearance": 2.5800001410747697,
+      "interiorView": true,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-terraza",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 59,
+      "position": [
+        4220.775286684619,
+        41.83629507820856,
+        1594.0328894608372
+      ],
+      "target": [
+        4226.881952985671,
+        20.836295078208558,
+        1620.5415413821927
+      ],
+      "clearance": 30.752917870520946,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-terraza",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 59,
+      "position": [
+        4222.319200674699,
+        31.836295078208558,
+        1605.975097363534
+      ],
+      "target": [
+        4226.881952985671,
+        20.836295078208558,
+        1620.5415413821927
+      ],
+      "clearance": 20.689910948656312,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-terraza",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 59,
+      "position": [
+        4220.775286684619,
+        41.83629507820856,
+        1594.0328894608372
+      ],
+      "target": [
+        4226.881952985671,
+        20.836295078208558,
+        1620.5415413821927
+      ],
+      "clearance": 30.752917870520946,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-terraza",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 59,
+      "position": [
+        4222.319200674699,
+        31.836295078208558,
+        1605.975097363534
+      ],
+      "target": [
+        4226.881952985671,
+        20.836295078208558,
+        1620.5415413821927
+      ],
+      "clearance": 20.689910948656312,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-terraza",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 59,
+      "position": [
+        4220.775286684619,
+        41.83629507820856,
+        1594.0328894608372
+      ],
+      "target": [
+        4226.881952985671,
+        20.836295078208558,
+        1620.5415413821927
+      ],
+      "clearance": 30.752917870520946,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-terraza",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 59,
+      "position": [
+        4222.319200674699,
+        31.836295078208558,
+        1605.975097363534
+      ],
+      "target": [
+        4226.881952985671,
+        20.836295078208558,
+        1620.5415413821927
+      ],
+      "clearance": 20.689910948656312,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-cubiertas",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 56,
+      "position": [
+        4234.064107474931,
+        59.83629507820856,
+        1601.6096461550264
+      ],
+      "target": [
+        4225.702980308557,
+        20.836295078208558,
+        1634.091818996567
+      ],
+      "clearance": 48.14102406470178,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-cubiertas",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 56,
+      "position": [
+        4229.668995374462,
+        47.83629507820856,
+        1609.7141504350122
+      ],
+      "target": [
+        4225.702980308557,
+        20.836295078208558,
+        1634.091818996567
+      ],
+      "clearance": 36.08881342092579,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-cubiertas",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 56,
+      "position": [
+        4234.064107474931,
+        59.83629507820856,
+        1601.6096461550264
+      ],
+      "target": [
+        4225.702980308557,
+        20.836295078208558,
+        1634.091818996567
+      ],
+      "clearance": 48.14102406470178,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-cubiertas",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 56,
+      "position": [
+        4229.668995374462,
+        47.83629507820856,
+        1609.7141504350122
+      ],
+      "target": [
+        4225.702980308557,
+        20.836295078208558,
+        1634.091818996567
+      ],
+      "clearance": 36.08881342092579,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-cubiertas",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 56,
+      "position": [
+        4234.064107474931,
+        59.83629507820856,
+        1601.6096461550264
+      ],
+      "target": [
+        4225.702980308557,
+        20.836295078208558,
+        1634.091818996567
+      ],
+      "clearance": 48.14102406470178,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-cubiertas",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 56,
+      "position": [
+        4229.668995374462,
+        47.83629507820856,
+        1609.7141504350122
+      ],
+      "target": [
+        4225.702980308557,
+        20.836295078208558,
+        1634.091818996567
+      ],
+      "clearance": 36.08881342092579,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-jardin-occidental",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 60,
+      "position": [
+        4165.484186225891,
+        59.330511800462176,
+        1543.3190431261037
+      ],
+      "target": [
+        4176.252255389148,
+        13.330511800462173,
+        1585.8049076753312
+      ],
+      "clearance": 47.267429579887406,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-jardin-occidental",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 60,
+      "position": [
+        4169.686831161569,
+        33.330511800462176,
+        1562.872502552625
+      ],
+      "target": [
+        4176.252255389148,
+        13.330511800462173,
+        1585.8049076753312
+      ],
+      "clearance": 21.330511800462176,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-jardin-occidental",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 60,
+      "position": [
+        4165.484186225891,
+        59.330511800462176,
+        1543.3190431261037
+      ],
+      "target": [
+        4176.252255389148,
+        13.330511800462173,
+        1585.8049076753312
+      ],
+      "clearance": 47.267429579887406,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-jardin-occidental",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 60,
+      "position": [
+        4169.686831161569,
+        33.330511800462176,
+        1562.872502552625
+      ],
+      "target": [
+        4176.252255389148,
+        13.330511800462173,
+        1585.8049076753312
+      ],
+      "clearance": 21.330511800462176,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-jardin-occidental",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 60,
+      "position": [
+        4165.484186225891,
+        59.330511800462176,
+        1543.3190431261037
+      ],
+      "target": [
+        4176.252255389148,
+        13.330511800462173,
+        1585.8049076753312
+      ],
+      "clearance": 47.267429579887406,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-jardin-occidental",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 60,
+      "position": [
+        4169.686831161569,
+        33.330511800462176,
+        1562.872502552625
+      ],
+      "target": [
+        4176.252255389148,
+        13.330511800462173,
+        1585.8049076753312
+      ],
+      "clearance": 21.330511800462176,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-fuente",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 61,
+      "position": [
+        4160.380032050397,
+        20.529841084841742,
+        1573.7855735943194
+      ],
+      "target": [
+        4170.945966173515,
+        13.029841084841744,
+        1582.9704000001866
+      ],
+      "clearance": 8.529841084841742,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-fuente",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 61,
+      "position": [
+        4164.15357995151,
+        15.729841084841745,
+        1577.065868739272
+      ],
+      "target": [
+        4170.945966173515,
+        13.029841084841744,
+        1582.9704000001866
+      ],
+      "clearance": 3.7298410848417447,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-fuente",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 61,
+      "position": [
+        4160.380032050397,
+        20.529841084841742,
+        1573.7855735943194
+      ],
+      "target": [
+        4170.945966173515,
+        13.029841084841744,
+        1582.9704000001866
+      ],
+      "clearance": 8.529841084841742,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-fuente",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 61,
+      "position": [
+        4164.15357995151,
+        15.729841084841745,
+        1577.065868739272
+      ],
+      "target": [
+        4170.945966173515,
+        13.029841084841744,
+        1582.9704000001866
+      ],
+      "clearance": 3.7298410848417447,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-fuente",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 61,
+      "position": [
+        4160.380032050397,
+        20.529841084841742,
+        1573.7855735943194
+      ],
+      "target": [
+        4170.945966173515,
+        13.029841084841744,
+        1582.9704000001866
+      ],
+      "clearance": 8.529841084841742,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-fuente",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 61,
+      "position": [
+        4164.15357995151,
+        15.729841084841745,
+        1577.065868739272
+      ],
+      "target": [
+        4170.945966173515,
+        13.029841084841744,
+        1582.9704000001866
+      ],
+      "clearance": 3.7298410848417447,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-jardin-oriental",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 58,
+      "position": [
+        4331.189847391568,
+        59.07496335293429,
+        1672.7896338316596
+      ],
+      "target": [
+        4290.114751451554,
+        12.074963352934292,
+        1683.4590524436844
+      ],
+      "clearance": 48.159722775140395,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-jardin-oriental",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 58,
+      "position": [
+        4312.489748096502,
+        33.07496335293429,
+        1679.0591064055416
+      ],
+      "target": [
+        4290.114751451554,
+        12.074963352934292,
+        1683.4590524436844
+      ],
+      "clearance": 22.318919670482302,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-jardin-oriental",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 58,
+      "position": [
+        4331.189847391568,
+        59.07496335293429,
+        1672.7896338316596
+      ],
+      "target": [
+        4290.114751451554,
+        12.074963352934292,
+        1683.4590524436844
+      ],
+      "clearance": 48.159722775140395,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-jardin-oriental",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 58,
+      "position": [
+        4312.489748096502,
+        33.07496335293429,
+        1679.0591064055416
+      ],
+      "target": [
+        4290.114751451554,
+        12.074963352934292,
+        1683.4590524436844
+      ],
+      "clearance": 22.318919670482302,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-jardin-oriental",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 58,
+      "position": [
+        4331.189847391568,
+        59.07496335293429,
+        1672.7896338316596
+      ],
+      "target": [
+        4290.114751451554,
+        12.074963352934292,
+        1683.4590524436844
+      ],
+      "clearance": 48.159722775140395,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-jardin-oriental",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 58,
+      "position": [
+        4312.489748096502,
+        33.07496335293429,
+        1679.0591064055416
+      ],
+      "target": [
+        4290.114751451554,
+        12.074963352934292,
+        1683.4590524436844
+      ],
+      "clearance": 22.318919670482302,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-pabellones",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 59,
+      "position": [
+        4343.493055687041,
+        31.006898795104764,
+        1711.7377686427837
+      ],
+      "target": [
+        4316.787102663221,
+        13.006898795104764,
+        1715.02289772541
+      ],
+      "clearance": 21.006898795104764,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-pabellones",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 59,
+      "position": [
+        4332.305557364567,
+        19.006898795104764,
+        1713.9377416618552
+      ],
+      "target": [
+        4316.787102663221,
+        13.006898795104764,
+        1715.02289772541
+      ],
+      "clearance": 8.866477382000731,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-pabellones",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 59,
+      "position": [
+        4343.493055687041,
+        31.006898795104764,
+        1711.7377686427837
+      ],
+      "target": [
+        4316.787102663221,
+        13.006898795104764,
+        1715.02289772541
+      ],
+      "clearance": 21.006898795104764,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-pabellones",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 59,
+      "position": [
+        4332.305557364567,
+        19.006898795104764,
+        1713.9377416618552
+      ],
+      "target": [
+        4316.787102663221,
+        13.006898795104764,
+        1715.02289772541
+      ],
+      "clearance": 8.866477382000731,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-pabellones",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 59,
+      "position": [
+        4343.493055687041,
+        31.006898795104764,
+        1711.7377686427837
+      ],
+      "target": [
+        4316.787102663221,
+        13.006898795104764,
+        1715.02289772541
+      ],
+      "clearance": 21.006898795104764,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-pabellones",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 59,
+      "position": [
+        4332.305557364567,
+        19.006898795104764,
+        1713.9377416618552
+      ],
+      "target": [
+        4316.787102663221,
+        13.006898795104764,
+        1715.02289772541
+      ],
+      "clearance": 8.866477382000731,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-chalets",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 62,
+      "position": [
+        4313.056824449608,
+        31,
+        1737.8526300659735
+      ],
+      "target": [
+        4285.896947436936,
+        12,
+        1775.193506872183
+      ],
+      "clearance": 21,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-chalets",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 62,
+      "position": [
+        4298.786332084646,
+        21,
+        1746.6476882045852
+      ],
+      "target": [
+        4285.896947436936,
+        12,
+        1775.193506872183
+      ],
+      "clearance": 11,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-chalets",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 62,
+      "position": [
+        4313.056824449608,
+        31,
+        1737.8526300659735
+      ],
+      "target": [
+        4285.896947436936,
+        12,
+        1775.193506872183
+      ],
+      "clearance": 21,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-chalets",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 62,
+      "position": [
+        4298.786332084646,
+        21,
+        1746.6476882045852
+      ],
+      "target": [
+        4285.896947436936,
+        12,
+        1775.193506872183
+      ],
+      "clearance": 11,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-chalets",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 62,
+      "position": [
+        4313.056824449608,
+        31,
+        1737.8526300659735
+      ],
+      "target": [
+        4285.896947436936,
+        12,
+        1775.193506872183
+      ],
+      "clearance": 21,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-chalets",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 62,
+      "position": [
+        4298.786332084646,
+        21,
+        1746.6476882045852
+      ],
+      "target": [
+        4285.896947436936,
+        12,
+        1775.193506872183
+      ],
+      "clearance": 11,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-accesos-urbanos",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 54,
+      "position": [
+        4156.638346492463,
+        42.4,
+        1711.4538812404626
+      ],
+      "target": [
+        4192.638346492463,
+        12.4,
+        1671.4538812404626
+      ],
+      "clearance": 31.4,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-accesos-urbanos",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 54,
+      "position": [
+        4174.638346492463,
+        24.4,
+        1690.4538812404626
+      ],
+      "target": [
+        4192.638346492463,
+        12.4,
+        1671.4538812404626
+      ],
+      "clearance": 12.49276728372701,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-accesos-urbanos",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 54,
+      "position": [
+        4156.638346492463,
+        42.4,
+        1711.4538812404626
+      ],
+      "target": [
+        4192.638346492463,
+        12.4,
+        1671.4538812404626
+      ],
+      "clearance": 31.4,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-accesos-urbanos",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 54,
+      "position": [
+        4174.638346492463,
+        24.4,
+        1690.4538812404626
+      ],
+      "target": [
+        4192.638346492463,
+        12.4,
+        1671.4538812404626
+      ],
+      "clearance": 12.49276728372701,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-accesos-urbanos",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 54,
+      "position": [
+        4156.638346492463,
+        42.4,
+        1711.4538812404626
+      ],
+      "target": [
+        4192.638346492463,
+        12.4,
+        1671.4538812404626
+      ],
+      "clearance": 31.4,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-accesos-urbanos",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 54,
+      "position": [
+        4174.638346492463,
+        24.4,
+        1690.4538812404626
+      ],
+      "target": [
+        4192.638346492463,
+        12.4,
+        1671.4538812404626
+      ],
+      "clearance": 12.49276728372701,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-hispanidad",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 54,
+      "position": [
+        4196.448046623777,
+        48.53564318809859,
+        1524.2178283200296
+      ],
+      "target": [
+        4234.448046623777,
+        14.53564318809859,
+        1568.2178283200296
+      ],
+      "clearance": 36.53564318809859,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-hispanidad",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 54,
+      "position": [
+        4214.448046623777,
+        31.53564318809859,
+        1545.2178283200296
+      ],
+      "target": [
+        4234.448046623777,
+        14.53564318809859,
+        1568.2178283200296
+      ],
+      "clearance": 19.801540239014855,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-hispanidad",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 54,
+      "position": [
+        4196.448046623777,
+        48.53564318809859,
+        1524.2178283200296
+      ],
+      "target": [
+        4234.448046623777,
+        14.53564318809859,
+        1568.2178283200296
+      ],
+      "clearance": 36.53564318809859,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-hispanidad",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 54,
+      "position": [
+        4214.448046623777,
+        31.53564318809859,
+        1545.2178283200296
+      ],
+      "target": [
+        4234.448046623777,
+        14.53564318809859,
+        1568.2178283200296
+      ],
+      "clearance": 19.801540239014855,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-hispanidad",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 54,
+      "position": [
+        4196.448046623777,
+        48.53564318809859,
+        1524.2178283200296
+      ],
+      "target": [
+        4234.448046623777,
+        14.53564318809859,
+        1568.2178283200296
+      ],
+      "clearance": 36.53564318809859,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-hispanidad",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 54,
+      "position": [
+        4214.448046623777,
+        31.53564318809859,
+        1545.2178283200296
+      ],
+      "target": [
+        4234.448046623777,
+        14.53564318809859,
+        1568.2178283200296
+      ],
+      "clearance": 19.801540239014855,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-fleming",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 54,
+      "position": [
+        4074.9389782150065,
+        66.31755882575227,
+        1704.369637520485
+      ],
+      "target": [
+        4132.9389782150065,
+        14.317558825752275,
+        1660.369637520485
+      ],
+      "clearance": 54.31609430198131,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-fleming",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 54,
+      "position": [
+        4105.9389782150065,
+        42.31755882575227,
+        1683.369637520485
+      ],
+      "target": [
+        4132.9389782150065,
+        14.317558825752275,
+        1660.369637520485
+      ],
+      "clearance": 30.336338461690755,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-fleming",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 54,
+      "position": [
+        4074.9389782150065,
+        66.31755882575227,
+        1704.369637520485
+      ],
+      "target": [
+        4132.9389782150065,
+        14.317558825752275,
+        1660.369637520485
+      ],
+      "clearance": 54.31609430198131,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-fleming",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 54,
+      "position": [
+        4105.9389782150065,
+        42.31755882575227,
+        1683.369637520485
+      ],
+      "target": [
+        4132.9389782150065,
+        14.317558825752275,
+        1660.369637520485
+      ],
+      "clearance": 30.336338461690755,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-fleming",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 54,
+      "position": [
+        4074.9389782150065,
+        66.31755882575227,
+        1704.369637520485
+      ],
+      "target": [
+        4132.9389782150065,
+        14.317558825752275,
+        1660.369637520485
+      ],
+      "clearance": 54.31609430198131,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-fleming",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 54,
+      "position": [
+        4105.9389782150065,
+        42.31755882575227,
+        1683.369637520485
+      ],
+      "target": [
+        4132.9389782150065,
+        14.317558825752275,
+        1660.369637520485
+      ],
+      "clearance": 30.336338461690755,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-frente-urbano",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 55,
+      "position": [
+        4283.16831698068,
+        59,
+        1742.7922541600717
+      ],
+      "target": [
+        4338.16831698068,
+        16,
+        1710.7922541600717
+      ],
+      "clearance": 48.96810988883905,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-frente-urbano",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 55,
+      "position": [
+        4312.16831698068,
+        40,
+        1727.7922541600717
+      ],
+      "target": [
+        4338.16831698068,
+        16,
+        1710.7922541600717
+      ],
+      "clearance": 29.733636084263168,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-frente-urbano",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 55,
+      "position": [
+        4283.16831698068,
+        59,
+        1742.7922541600717
+      ],
+      "target": [
+        4338.16831698068,
+        16,
+        1710.7922541600717
+      ],
+      "clearance": 48.96810988883905,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-frente-urbano",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 55,
+      "position": [
+        4312.16831698068,
+        40,
+        1727.7922541600717
+      ],
+      "target": [
+        4338.16831698068,
+        16,
+        1710.7922541600717
+      ],
+      "clearance": 29.733636084263168,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-frente-urbano",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 55,
+      "position": [
+        4283.16831698068,
+        59,
+        1742.7922541600717
+      ],
+      "target": [
+        4338.16831698068,
+        16,
+        1710.7922541600717
+      ],
+      "clearance": 48.96810988883905,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-frente-urbano",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 55,
+      "position": [
+        4312.16831698068,
+        40,
+        1727.7922541600717
+      ],
+      "target": [
+        4338.16831698068,
+        16,
+        1710.7922541600717
+      ],
+      "clearance": 29.733636084263168,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-ciudad-factoria",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 54,
+      "position": [
+        4024.601147945178,
+        241.49412441253662,
+        1876.0626680001455
+      ],
+      "target": [
+        4219.601147945178,
+        23.49412441253662,
+        1638.0626680001455
+      ],
+      "clearance": 230.49412441253662,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-ciudad-factoria",
+      "section": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 54,
+      "position": [
+        4105.601147945178,
+        149.49412441253662,
+        1779.0626680001455
+      ],
+      "target": [
+        4219.601147945178,
+        23.49412441253662,
+        1638.0626680001455
+      ],
+      "clearance": 138.2636599956595,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-ciudad-factoria",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 54,
+      "position": [
+        4024.601147945178,
+        241.49412441253662,
+        1876.0626680001455
+      ],
+      "target": [
+        4219.601147945178,
+        23.49412441253662,
+        1638.0626680001455
+      ],
+      "clearance": 230.49412441253662,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-ciudad-factoria",
+      "section": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 54,
+      "position": [
+        4105.601147945178,
+        149.49412441253662,
+        1779.0626680001455
+      ],
+      "target": [
+        4219.601147945178,
+        23.49412441253662,
+        1638.0626680001455
+      ],
+      "clearance": 138.2636599956595,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-ciudad-factoria",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 54,
+      "position": [
+        4024.601147945178,
+        241.49412441253662,
+        1876.0626680001455
+      ],
+      "target": [
+        4219.601147945178,
+        23.49412441253662,
+        1638.0626680001455
+      ],
+      "clearance": 230.49412441253662,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-ciudad-factoria",
+      "section": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 54,
+      "position": [
+        4105.601147945178,
+        149.49412441253662,
+        1779.0626680001455
+      ],
+      "target": [
+        4219.601147945178,
+        23.49412441253662,
+        1638.0626680001455
+      ],
+      "clearance": 138.2636599956595,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-seccion",
+      "section": true,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 55,
+      "position": [
+        4216.58104459607,
+        46.56892112305593,
+        1596.48805682397
+      ],
+      "target": [
+        4220.9019507667335,
+        13.936295078208559,
+        1627.2683217012984
+      ],
+      "clearance": 35.396425153088735,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-seccion",
+      "section": true,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 55,
+      "position": [
+        4218.011423889036,
+        36.93629507820856,
+        1606.2054431143315
+      ],
+      "target": [
+        4220.9019507667335,
+        13.936295078208559,
+        1627.2683217012984
+      ],
+      "clearance": 25.803739967750552,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-seccion",
+      "section": true,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 55,
+      "position": [
+        4212.642834457882,
+        76.31132552842814,
+        1568.4339527985135
+      ],
+      "target": [
+        4220.9019507667335,
+        13.936295078208559,
+        1627.2683217012984
+      ],
+      "clearance": 64.41999625094968,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-seccion",
+      "section": true,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 55,
+      "position": [
+        4218.011423889036,
+        36.93629507820856,
+        1606.2054431143315
+      ],
+      "target": [
+        4220.9019507667335,
+        13.936295078208559,
+        1627.2683217012984
+      ],
+      "clearance": 25.803739967750552,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-seccion",
+      "section": true,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 55,
+      "position": [
+        4216.09485595123,
+        50.24074633926519,
+        1593.0246594074445
+      ],
+      "target": [
+        4220.9019507667335,
+        13.936295078208559,
+        1627.2683217012984
+      ],
+      "clearance": 39.102150109519656,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-seccion",
+      "section": true,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 55,
+      "position": [
+        4218.011423889036,
+        36.93629507820856,
+        1606.2054431143315
+      ],
+      "target": [
+        4220.9019507667335,
+        13.936295078208559,
+        1627.2683217012984
+      ],
+      "clearance": 25.803739967750552,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-conjunto",
+      "section": true,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 51,
+      "position": [
+        3814.0887356776593,
+        393.25364789334986,
+        1635.9003070498313
+      ],
+      "target": [
+        4232.8899687354915,
+        15.73629507820856,
+        1645.6394246943348
+      ],
+      "clearance": 379.254076373927,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-conjunto",
+      "section": true,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 51,
+      "position": [
+        4051.783839170395,
+        170.73629507820857,
+        1640.5827623612827
+      ],
+      "target": [
+        4232.8899687354915,
+        15.73629507820856,
+        1645.6394246943348
+      ],
+      "clearance": 158.47327940893896,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-conjunto",
+      "section": true,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 51,
+      "position": [
+        3419.995134862763,
+        748.4989556846999,
+        1626.7357591967634
+      ],
+      "target": [
+        4232.8899687354915,
+        15.73629507820856,
+        1645.6394246943348
+      ],
+      "clearance": 732.4989556846999,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-conjunto",
+      "section": true,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 51,
+      "position": [
+        4051.783839170395,
+        170.73629507820857,
+        1640.5827623612827
+      ],
+      "target": [
+        4232.8899687354915,
+        15.73629507820856,
+        1645.6394246943348
+      ],
+      "clearance": 158.47327940893896,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-conjunto",
+      "section": true,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 51,
+      "position": [
+        3855.66344057538,
+        355.7772240001786,
+        1636.8671163857973
+      ],
+      "target": [
+        4232.8899687354915,
+        15.73629507820856,
+        1645.6394246943348
+      ],
+      "clearance": 341.80053006703685,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    },
+    {
+      "id": "sanatorio-conjunto",
+      "section": true,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 51,
+      "position": [
+        4051.783839170395,
+        170.73629507820857,
+        1640.5827623612827
+      ],
+      "target": [
+        4232.8899687354915,
+        15.73629507820856,
+        1645.6394246943348
+      ],
+      "clearance": 158.47327940893896,
+      "interiorView": false,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "context": null
+    }
+  ],
+  "inputHashes": {
+    "dist/js/city.js": "b2578a5fdb0d70435fa4bc8cf92147f2a3c4922f6bcbe6bbe145f46ebb53af54",
+    "dist/js/terrain.js": "ec10570603e52e850b6b5eadf81963215d18d533c551d555848ef58152fec3f8",
+    "dist/js/urban-surface.js": "d2acfae90ff47abddd51be09a21555e8ce9b6269e1500549a6eb94938f3e6111",
+    "dist/js/port-workers.js": "40fdd44589f653d3ff4aeb751078c52866b81e9360b62cb30c1d7c16544817b6",
+    "dist/assets/data/port-cartography.json": "da82e6776616f733bfc0617abaae8333e74d5df1f57050150c75b8f1b1c75efd",
+    "dist/assets/data/port-elevation.json": "0444001c6f0ca1d2d723768b90cb997fbcab59eb975f14f45a1742e80893e347",
+    "dist/assets/data/port-workers.json": "5c6e5ef80e8f2f6ad79d6da793db8886c31ecee93c71121d8fa892e1655cf739",
+    "dist/js/app.js": "176d229d50ccc73b8e71ea55b426c9d1cb98b61b6be263e971399085ba9bd2bd",
+    "dist/js/port.js": "83fbc8a67915cd705da27d7754d649c25b7aaa2c9bc4b96e4bd29771284fd8be",
+    "dist/js/port-industrial.js": "e289c84a04b010889472df5e54a1db6e4e815f6a904ca031718f602358435984",
+    "dist/js/horno.js": "8bc9b1b405cdf3a8c762e609960767e797f1fc299781f623b03d36e086b453a5",
+    "dist/js/horno-context.js": "cb47ee356f0bfee8be4e9334089ce79b7cf2145a48cd95e2d7ec9f425e6963bf",
+    "dist/js/horno-map.js": "46647c05927304cdeafbcac35de970ac1a08cd6192baed535ff9e9ebaa904081",
+    "dist/js/talleres.js": "a5ece44937976c963b804d2cce08258732c3d04a6c3be4fed8fe0d64fdcca660",
+    "dist/js/talleres-context.js": "66a36d5e38f27b9f84d4107bd1f295880966f5090b520d7d34a1595ce88a1967",
+    "dist/js/talleres-map.js": "1dcc0a6a7bc003e4e8504f16d40705c2c6721e3a5ec26cca6ad79c83c50189e3",
+    "dist/assets/data/talleres-visit.json": "a85ba855cad2e3c83096859edacf9816ddca341e0818f315e667c4914c9473fd",
+    "dist/assets/data/talleres-context.json": "6100214fcb3b21d8fd182b8f728ec71252a8247d0f9842d2687764eeff3fad58",
+    "dist/assets/data/talleres-plan.json": "c36958ba5a544af8f112e25c52230da2be840ae9a98c19f05787e1499292aaae",
+    "dist/assets/data/horno-visit.json": "5786b7430d5207b4c77d8a743bdf228c2421b4b542a8ffde0c7c5befb1404b35",
+    "dist/assets/data/horno-context.json": "034c74144297d2df56140f6380c5958a233b8de32fe7e8f35da5c1c09bbe98fb",
+    "dist/assets/data/horno-plan.json": "6de0b8d525124fde32c87b8b9b2040d0297c21ba3cfe0501f3a90b2be5dbd874",
+    "dist/js/museo-industrial.js": "0cc442540f4189403ffc80dffca8f51fc585970ca1d8c9f49d5a2733b70c9670",
+    "dist/js/museo-industrial-context.js": "0f6cdfda6be0e4ca0854f32ee61107301c5a23d9cc13129fbbbdcaecde5b9346",
+    "dist/js/museo-industrial-map.js": "dcf4412d2913ca002d215a9306392e2b9268e6cfec2aa47b5943afe2f0cd25f5",
+    "dist/assets/data/museo-industrial-visit.json": "25dbf4940828ab7072434ac7c91232a8e648eda9e67819c0b6dd6b4290a03b61",
+    "dist/assets/data/museo-industrial-plan.json": "9c5e1c2c20554eea2e6ed022a6c294447b1c2cdd4626c8b75e9b6844eb29134a",
+    "dist/assets/data/museo-industrial-context.json": "012d877440568744748948a7d3fd632059eeb110593d32eb8532291133562fe0",
+    "dist/assets/data/port-industrial.json": "8f84d9fc48cde87d14935e05f2f25b85268775f595059ade1c1da12b2e3a01ea",
+    "dist/js/port-garden.js": "7a1ad412a7fcf4302f41be38364e815639b021bd8e7aa00a4054f792ad30de34",
+    "dist/assets/data/port-garden.json": "75bcbfeb3fbdea8a8e2d54116ef96bc1b3daa6b3edeba0c9784da7b39c2df91f",
+    "dist/js/gerencia.js": "a7a6339d1aa9f427ff9537dc26fb143f51cbbf69296f9ec10bda16de5f2fbd91",
+    "dist/js/gerencia-context.js": "7bcde876adb01c412e93fafd465f9bd0adf6378bc3c472e2bc36d9bcb0b46a77",
+    "dist/js/gerencia-map.js": "eebd2a7992d2b38522df73a63f97b15432a5cbb401df779dd6a410c27a35d6b6",
+    "dist/assets/data/gerencia-visit.json": "f5d2df0f26f588253fba73e236d0eaac8a86ac50b0409b69fe00479c6c509b7c",
+    "dist/assets/data/gerencia-plan.json": "650cc3b1054d302547e6ca791c178a61d81666d4bcc3f4d30df2b92cece838cf",
+    "dist/assets/data/gerencia-context.json": "7209989b6735a9460087ca40298da10900bc04f382212e730d06b1515cbe2e73",
+    "dist/js/casino.js": "ff5af9ef7d5bd7ad2a39feae0fd23ea00cea65fb1fd856d84566a5c601380eea",
+    "dist/js/casino-context.js": "36e2e9c28808e7a9b7d349d7470b4c85a796556eb5b6af21811c600909b2f8c7",
+    "dist/js/casino-map.js": "4c47424655471c3016f4a0e10015b5b08cdfdaaf54fb99fff561bcd367370264",
+    "dist/assets/data/casino-visit.json": "5eabae75f4dfcfcc087595727475b241fe98a276aa5eef636a2d1c3d0f2dd332",
+    "dist/assets/data/casino-plan.json": "a65b34a5621668d2911dc31491ba72e9cbee71cb97beff0ef87dd714e1cdd025",
+    "dist/assets/data/casino-context.json": "da45fe86e7b86124555160342ce0239ba272a022a659a1fd9ac315682983e171",
+    "dist/js/begona.js": "390931ffd11b5c9190b8f7a92629f7e608b312556ce3af9e4afa107c80ccdb37",
+    "dist/js/begona-context.js": "bc88773dfeb73c93105c60a5f78ec34da502e351c30e058a1f8fb0e571e8c2cb",
+    "dist/js/begona-map.js": "0d3962a9ac50a7e7903a3471e0202316544c3efc0a946f60eea85ef9cddad747",
+    "dist/assets/data/begona-visit.json": "f07453524d18eec9f04ceb6d435401c62094813418e343cace6930ae0cb76cd9",
+    "dist/assets/data/begona-plan.json": "3e9abe39c31121fd3678f4bf68358535a4b087c037ba30942cfde108fda17a85",
+    "dist/assets/data/begona-context.json": "d34015349aa43ce965b8a519d128629edf303f35da9ddc0faa8a7e8a04dfada6",
+    "dist/js/economato.js": "efcdbed64fe26a10959ce51a2deb80b720d57ec584231f4711354af444833f04",
+    "dist/js/economato-context.js": "a91732cff7b69fdda31f0fc365545f1d6510cc8fa8cf2657809eb8d4a50e7385",
+    "dist/js/economato-map.js": "d6c83882c525d45164cc5762ba403c64bfcce86137ab430cb264ade73bd5c639",
+    "dist/assets/data/economato-visit.json": "351e5430df4fff0167cbf2481de363add049a5016f52ec7cba41e3f226695844",
+    "dist/assets/data/economato-plan.json": "7b3822383c1e45077d6b95822b2db842a916d2832e0b8f13634beeaec63c99ae",
+    "dist/assets/data/economato-context.json": "4e0aa2086b3b97caa73ee5fb23af98d3f93e67cea4c423637525e44359b5bc78",
+    "dist/js/barrio.js": "1323dcc38d63e9a672c50f00cad9c8f75ce072232fc7e4bb22db3352f3b2ce6a",
+    "dist/js/barrio-context.js": "33e917be697976b2e892ae7bccaee7e7c5b4dc10a31f62039898d07fa1acee11",
+    "dist/js/barrio-map.js": "cf45af8cfa0badf698652f12c823884a019ac77c8f2b1a0cfc18cdfad71398c4",
+    "dist/assets/data/barrio-visit.json": "39ad1c98959ca72e38279e092a7ce36fab327d1bb643846cce9387bf487dc14c",
+    "dist/assets/data/barrio-plan.json": "84b749899d4d35ebcf17c141aa92fb1e1f03ac2d791fd93c6d44fc6749dd901c",
+    "dist/assets/data/barrio-context.json": "98690982e777d7a400bee367a4d5862141c731b9d4ce482392d565239bfa4715",
+    "dist/js/sanatorio.js": "b4e5f02dc5e0ef0e7311dab754991f62e20da6de688b5c3408ab0f57ef3ee259",
+    "dist/js/sanatorio-context.js": "470df5c881611631143bb33de7b448c9db85bd441d4f557afafded676542a085",
+    "dist/js/sanatorio-map.js": "37e972020516309cec40604941f67e402d2c373be0b1862e8af84ea5bae0bd22",
+    "dist/assets/data/sanatorio-visit.json": "3b5ba5958cacbe64822b4cb7f8f195f10504600a87cf3a965f86e4bd523f59bf",
+    "dist/assets/data/sanatorio-plan.json": "c619ebf8dbc032591687fc3cf4b91fa0b7c6a01246a1b66d48a52380ebd90ac2",
+    "dist/assets/data/sanatorio-context.json": "b7bf5008454c101c06bb964d8a41e592f9c0c40ec14b701a57beb3d2e0e177d5"
+  },
+  "limitations": [
+    "CPU geometry and camera checks do not measure browser GPU performance.",
+    "Interior geometry and unmeasured details remain a documented interpretation."
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "stage": "V26",
+  "browserQA": "unverified",
+  "reason": "The previously observed browser URL-authority failure and unavailable WebGL remain unresolved. No concrete infrastructure recovery has been observed, so no preview retry or alternate browser-control route is used.",
+  "webglQA": "unverified",
+  "priorObservedWebGL": "The review browser did not provide WebGL during V22.",
+  "alternativeChecks": [
+    "Production Puerto build and observation-camera geometry",
+    "Canvas map render and hit targets at desktop/mobile sizes in both themes",
+    "Visitor-controller interaction and independent progress across twenty notebooks",
+    "Exact-mesh CPU inspection renders with approximate illumination",
+    "Static module, asset, data, source-reference and deep-link registration checks"
+  ],
+  "limits": [
+    "CPU images are not browser screenshots.",
+    "No device FPS, GPU memory or complete browser layout claim."
+  ],
+  "publication": "Native Sites saved-version and deployment records verify publication independently of browser QA."
+}

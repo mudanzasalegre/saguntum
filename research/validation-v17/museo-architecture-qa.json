@@ -1,0 +1,718 @@
+{
+  "pass": true,
+  "checks": 149,
+  "errors": [],
+  "stats": {
+    "modelVersion": "v17",
+    "sourceBuildings": 2,
+    "storeys": 2,
+    "structuralBays": 4,
+    "diaphragmLines": 3,
+    "pointedInteriorOpenings": 6,
+    "glazedDolorsArches": 2,
+    "principalBalconies": 3,
+    "currentModernRoof": true,
+    "stairFlights": 2,
+    "stops": 20,
+    "sharedArchDuplicated": false,
+    "undergroundExcavation": false,
+    "archaeologicalObjects": "schematic-documented-types",
+    "meshes": 113,
+    "triangles": 41179,
+    "survey": false
+  },
+  "apertureChecks": [
+    {
+      "id": "conexion-dolors-baja",
+      "dy": -0.62,
+      "hits": []
+    },
+    {
+      "id": "conexion-dolors-baja",
+      "dy": 0,
+      "hits": []
+    },
+    {
+      "id": "conexion-dolors-baja",
+      "dy": 0.52,
+      "hits": []
+    },
+    {
+      "id": "conexion-dolors-alta",
+      "dy": -0.62,
+      "hits": []
+    },
+    {
+      "id": "conexion-dolors-alta",
+      "dy": 0,
+      "hits": []
+    },
+    {
+      "id": "conexion-dolors-alta",
+      "dy": 0.52,
+      "hits": []
+    },
+    {
+      "id": "arcada-0-0",
+      "dy": -0.62,
+      "hits": []
+    },
+    {
+      "id": "arcada-0-0",
+      "dy": 0,
+      "hits": []
+    },
+    {
+      "id": "arcada-0-0",
+      "dy": 0.52,
+      "hits": []
+    },
+    {
+      "id": "arcada-0-1",
+      "dy": -0.62,
+      "hits": []
+    },
+    {
+      "id": "arcada-0-1",
+      "dy": 0,
+      "hits": []
+    },
+    {
+      "id": "arcada-0-1",
+      "dy": 0.52,
+      "hits": []
+    },
+    {
+      "id": "arcada-1-0",
+      "dy": -0.62,
+      "hits": []
+    },
+    {
+      "id": "arcada-1-0",
+      "dy": 0,
+      "hits": []
+    },
+    {
+      "id": "arcada-1-0",
+      "dy": 0.52,
+      "hits": []
+    },
+    {
+      "id": "arcada-1-1",
+      "dy": -0.62,
+      "hits": []
+    },
+    {
+      "id": "arcada-1-1",
+      "dy": 0,
+      "hits": []
+    },
+    {
+      "id": "arcada-1-1",
+      "dy": 0.52,
+      "hits": []
+    },
+    {
+      "id": "arcada-2-0",
+      "dy": -0.62,
+      "hits": []
+    },
+    {
+      "id": "arcada-2-0",
+      "dy": 0,
+      "hits": []
+    },
+    {
+      "id": "arcada-2-0",
+      "dy": 0.52,
+      "hits": []
+    },
+    {
+      "id": "arcada-2-1",
+      "dy": -0.62,
+      "hits": []
+    },
+    {
+      "id": "arcada-2-1",
+      "dy": 0,
+      "hits": []
+    },
+    {
+      "id": "arcada-2-1",
+      "dy": 0.52,
+      "hits": []
+    },
+    {
+      "id": "paso-alto-0",
+      "dy": -0.62,
+      "hits": []
+    },
+    {
+      "id": "paso-alto-0",
+      "dy": 0,
+      "hits": []
+    },
+    {
+      "id": "paso-alto-0",
+      "dy": 0.52,
+      "hits": []
+    },
+    {
+      "id": "paso-alto-1",
+      "dy": -0.62,
+      "hits": []
+    },
+    {
+      "id": "paso-alto-1",
+      "dy": 0,
+      "hits": []
+    },
+    {
+      "id": "paso-alto-1",
+      "dy": 0.52,
+      "hits": []
+    },
+    {
+      "id": "paso-alto-2",
+      "dy": -0.62,
+      "hits": []
+    },
+    {
+      "id": "paso-alto-2",
+      "dy": 0,
+      "hits": []
+    },
+    {
+      "id": "paso-alto-2",
+      "dy": 0.52,
+      "hits": []
+    },
+    {
+      "id": "entrada",
+      "dy": -0.62,
+      "hits": []
+    },
+    {
+      "id": "entrada",
+      "dy": 0,
+      "hits": []
+    },
+    {
+      "id": "entrada",
+      "dy": 0.52,
+      "hits": []
+    }
+  ],
+  "landingHeights": [
+    {
+      "u": -2.79,
+      "component": "forjado-dolors",
+      "height": 63.5
+    },
+    {
+      "u": -2.68,
+      "component": "rellano-superior",
+      "height": 63.5
+    },
+    {
+      "u": -2.5,
+      "component": "rellano-superior",
+      "height": 63.5
+    },
+    {
+      "u": -2.31,
+      "component": "rellano-superior",
+      "height": 63.5
+    },
+    {
+      "u": -2.17,
+      "component": "escalera",
+      "height": 63.5
+    }
+  ],
+  "normalCeilings": [
+    {
+      "id": "museo-planta-baja",
+      "hit": "viguetas",
+      "height": 63.01499938964844
+    },
+    {
+      "id": "museo-arcos",
+      "hit": "forjado",
+      "height": 63.27000045776367
+    },
+    {
+      "id": "museo-canteria",
+      "hit": "canecillos",
+      "height": 62.82500076293945
+    },
+    {
+      "id": "museo-epigrafia",
+      "hit": "forjado",
+      "height": 63.27000045776367
+    },
+    {
+      "id": "museo-escultura",
+      "hit": "forjado",
+      "height": 63.27000045776367
+    },
+    {
+      "id": "museo-planta-alta",
+      "hit": "techo-alto",
+      "height": 67.93000030517578
+    },
+    {
+      "id": "museo-comercio",
+      "hit": "muros-planta-alta",
+      "height": 66.75
+    },
+    {
+      "id": "museo-vida-privada",
+      "hit": "techo-alto",
+      "height": 67.93000030517578
+    },
+    {
+      "id": "museo-patio",
+      "hit": "cubierta-dolors",
+      "height": 66.85499829664204
+    }
+  ],
+  "openFloor": [
+    {
+      "component": "tarima-baja",
+      "y": 58.643001556396484
+    },
+    {
+      "component": "tarima-baja",
+      "y": 58.643001556396484
+    }
+  ],
+  "cameras": [
+    {
+      "id": "museo-planta-baja",
+      "key": "offset",
+      "aspect": 1.4561965811965811,
+      "blockers": []
+    },
+    {
+      "id": "museo-planta-baja",
+      "key": "offset",
+      "aspect": 0.46208530805687204,
+      "blockers": []
+    },
+    {
+      "id": "museo-planta-baja",
+      "key": "offset",
+      "aspect": 2.164102564102564,
+      "blockers": []
+    },
+    {
+      "id": "museo-planta-baja",
+      "key": "closeOffset",
+      "aspect": 1.4561965811965811,
+      "blockers": []
+    },
+    {
+      "id": "museo-planta-baja",
+      "key": "closeOffset",
+      "aspect": 0.46208530805687204,
+      "blockers": []
+    },
+    {
+      "id": "museo-planta-baja",
+      "key": "closeOffset",
+      "aspect": 2.164102564102564,
+      "blockers": []
+    },
+    {
+      "id": "museo-arcos",
+      "key": "offset",
+      "aspect": 1.4561965811965811,
+      "blockers": []
+    },
+    {
+      "id": "museo-arcos",
+      "key": "offset",
+      "aspect": 0.46208530805687204,
+      "blockers": []
+    },
+    {
+      "id": "museo-arcos",
+      "key": "offset",
+      "aspect": 2.164102564102564,
+      "blockers": []
+    },
+    {
+      "id": "museo-arcos",
+      "key": "closeOffset",
+      "aspect": 1.4561965811965811,
+      "blockers": []
+    },
+    {
+      "id": "museo-arcos",
+      "key": "closeOffset",
+      "aspect": 0.46208530805687204,
+      "blockers": []
+    },
+    {
+      "id": "museo-arcos",
+      "key": "closeOffset",
+      "aspect": 2.164102564102564,
+      "blockers": []
+    },
+    {
+      "id": "museo-canteria",
+      "key": "offset",
+      "aspect": 1.4561965811965811,
+      "blockers": []
+    },
+    {
+      "id": "museo-canteria",
+      "key": "offset",
+      "aspect": 0.46208530805687204,
+      "blockers": []
+    },
+    {
+      "id": "museo-canteria",
+      "key": "offset",
+      "aspect": 2.164102564102564,
+      "blockers": []
+    },
+    {
+      "id": "museo-canteria",
+      "key": "closeOffset",
+      "aspect": 1.4561965811965811,
+      "blockers": []
+    },
+    {
+      "id": "museo-canteria",
+      "key": "closeOffset",
+      "aspect": 0.46208530805687204,
+      "blockers": []
+    },
+    {
+      "id": "museo-canteria",
+      "key": "closeOffset",
+      "aspect": 2.164102564102564,
+      "blockers": []
+    },
+    {
+      "id": "museo-epigrafia",
+      "key": "offset",
+      "aspect": 1.4561965811965811,
+      "blockers": []
+    },
+    {
+      "id": "museo-epigrafia",
+      "key": "offset",
+      "aspect": 0.46208530805687204,
+      "blockers": []
+    },
+    {
+      "id": "museo-epigrafia",
+      "key": "offset",
+      "aspect": 2.164102564102564,
+      "blockers": []
+    },
+    {
+      "id": "museo-epigrafia",
+      "key": "closeOffset",
+      "aspect": 1.4561965811965811,
+      "blockers": []
+    },
+    {
+      "id": "museo-epigrafia",
+      "key": "closeOffset",
+      "aspect": 0.46208530805687204,
+      "blockers": []
+    },
+    {
+      "id": "museo-epigrafia",
+      "key": "closeOffset",
+      "aspect": 2.164102564102564,
+      "blockers": []
+    },
+    {
+      "id": "museo-escultura",
+      "key": "offset",
+      "aspect": 1.4561965811965811,
+      "blockers": []
+    },
+    {
+      "id": "museo-escultura",
+      "key": "offset",
+      "aspect": 0.46208530805687204,
+      "blockers": []
+    },
+    {
+      "id": "museo-escultura",
+      "key": "offset",
+      "aspect": 2.164102564102564,
+      "blockers": []
+    },
+    {
+      "id": "museo-escultura",
+      "key": "closeOffset",
+      "aspect": 1.4561965811965811,
+      "blockers": []
+    },
+    {
+      "id": "museo-escultura",
+      "key": "closeOffset",
+      "aspect": 0.46208530805687204,
+      "blockers": []
+    },
+    {
+      "id": "museo-escultura",
+      "key": "closeOffset",
+      "aspect": 2.164102564102564,
+      "blockers": []
+    },
+    {
+      "id": "museo-planta-alta",
+      "key": "offset",
+      "aspect": 1.4561965811965811,
+      "blockers": []
+    },
+    {
+      "id": "museo-planta-alta",
+      "key": "offset",
+      "aspect": 0.46208530805687204,
+      "blockers": []
+    },
+    {
+      "id": "museo-planta-alta",
+      "key": "offset",
+      "aspect": 2.164102564102564,
+      "blockers": []
+    },
+    {
+      "id": "museo-planta-alta",
+      "key": "closeOffset",
+      "aspect": 1.4561965811965811,
+      "blockers": []
+    },
+    {
+      "id": "museo-planta-alta",
+      "key": "closeOffset",
+      "aspect": 0.46208530805687204,
+      "blockers": []
+    },
+    {
+      "id": "museo-planta-alta",
+      "key": "closeOffset",
+      "aspect": 2.164102564102564,
+      "blockers": []
+    },
+    {
+      "id": "museo-comercio",
+      "key": "offset",
+      "aspect": 1.4561965811965811,
+      "blockers": []
+    },
+    {
+      "id": "museo-comercio",
+      "key": "offset",
+      "aspect": 0.46208530805687204,
+      "blockers": []
+    },
+    {
+      "id": "museo-comercio",
+      "key": "offset",
+      "aspect": 2.164102564102564,
+      "blockers": []
+    },
+    {
+      "id": "museo-comercio",
+      "key": "closeOffset",
+      "aspect": 1.4561965811965811,
+      "blockers": []
+    },
+    {
+      "id": "museo-comercio",
+      "key": "closeOffset",
+      "aspect": 0.46208530805687204,
+      "blockers": []
+    },
+    {
+      "id": "museo-comercio",
+      "key": "closeOffset",
+      "aspect": 2.164102564102564,
+      "blockers": []
+    },
+    {
+      "id": "museo-vida-privada",
+      "key": "offset",
+      "aspect": 1.4561965811965811,
+      "blockers": []
+    },
+    {
+      "id": "museo-vida-privada",
+      "key": "offset",
+      "aspect": 0.46208530805687204,
+      "blockers": []
+    },
+    {
+      "id": "museo-vida-privada",
+      "key": "offset",
+      "aspect": 2.164102564102564,
+      "blockers": []
+    },
+    {
+      "id": "museo-vida-privada",
+      "key": "closeOffset",
+      "aspect": 1.4561965811965811,
+      "blockers": []
+    },
+    {
+      "id": "museo-vida-privada",
+      "key": "closeOffset",
+      "aspect": 0.46208530805687204,
+      "blockers": []
+    },
+    {
+      "id": "museo-vida-privada",
+      "key": "closeOffset",
+      "aspect": 2.164102564102564,
+      "blockers": []
+    },
+    {
+      "id": "museo-patio",
+      "key": "offset",
+      "aspect": 1.4561965811965811,
+      "blockers": []
+    },
+    {
+      "id": "museo-patio",
+      "key": "offset",
+      "aspect": 0.46208530805687204,
+      "blockers": []
+    },
+    {
+      "id": "museo-patio",
+      "key": "offset",
+      "aspect": 2.164102564102564,
+      "blockers": []
+    },
+    {
+      "id": "museo-patio",
+      "key": "closeOffset",
+      "aspect": 1.4561965811965811,
+      "blockers": []
+    },
+    {
+      "id": "museo-patio",
+      "key": "closeOffset",
+      "aspect": 0.46208530805687204,
+      "blockers": []
+    },
+    {
+      "id": "museo-patio",
+      "key": "closeOffset",
+      "aspect": 2.164102564102564,
+      "blockers": []
+    }
+  ],
+  "mapResults": [
+    {
+      "selected": "museo-conjunto",
+      "size": [
+        740,
+        470
+      ],
+      "floor": null,
+      "markers": 20,
+      "bounds": {
+        "minX": -38.000002005286035,
+        "maxX": 28.808202193363048,
+        "minZ": 34.22555600049526,
+        "maxZ": 75.25766399992784
+      }
+    },
+    {
+      "selected": "museo-conjunto",
+      "size": [
+        320,
+        190
+      ],
+      "floor": null,
+      "markers": 20,
+      "bounds": {
+        "minX": -38.000002005286035,
+        "maxX": 28.808202193363048,
+        "minZ": 34.22555600049526,
+        "maxZ": 75.25766399992784
+      }
+    },
+    {
+      "selected": "museo-planta-baja",
+      "size": [
+        740,
+        470
+      ],
+      "floor": 0,
+      "markers": 7,
+      "bounds": {
+        "minX": -8.100406042254512,
+        "maxX": 28.808202193363048,
+        "minZ": 34.22555600049526,
+        "maxZ": 75.25766399992784
+      }
+    },
+    {
+      "selected": "museo-planta-baja",
+      "size": [
+        320,
+        190
+      ],
+      "floor": 0,
+      "markers": 7,
+      "bounds": {
+        "minX": -8.100406042254512,
+        "maxX": 28.808202193363048,
+        "minZ": 34.22555600049526,
+        "maxZ": 75.25766399992784
+      }
+    },
+    {
+      "selected": "museo-planta-alta",
+      "size": [
+        740,
+        470
+      ],
+      "floor": 1,
+      "markers": 3,
+      "bounds": {
+        "minX": -8.100406042254512,
+        "maxX": 28.808202193363048,
+        "minZ": 34.22555600049526,
+        "maxZ": 75.25766399992784
+      }
+    },
+    {
+      "selected": "museo-planta-alta",
+      "size": [
+        320,
+        190
+      ],
+      "floor": 1,
+      "markers": 3,
+      "bounds": {
+        "minX": -8.100406042254512,
+        "maxX": 28.808202193363048,
+        "minZ": 34.22555600049526,
+        "maxZ": 75.25766399992784
+      }
+    }
+  ],
+  "hashes": {
+    "dist/js/museo.js": "d548c527bf4a3b1067b5c786640155eb538daa2197f2b746a913787990d7939c",
+    "dist/js/museo-map.js": "6b7deb28a5c62602527e14e8ef644e20d677264373fb602aaf129304bebe94de",
+    "dist/assets/data/museo-plan.json": "b51b26c15cdbd715026b3b363ce9bb67ab46b24c8570712782bbeb24acf1fbe5"
+  },
+  "limitations": [
+    "Interior heights, surface condition and exhibition placement are interpretive; plans are proportionally registered rather than measured.",
+    "Nine near-field rays test each of54 interior camera/aspect combinations; full integrated scene checks and render review remain separate.",
+    "No historical photograph, documentary scan or original artwork has been used as a distributed texture."
+  ]
+}

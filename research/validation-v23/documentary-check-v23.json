@@ -1,0 +1,55 @@
+{
+  "date": "2026-11-20",
+  "scope": "Documentary and guide data validation; visual/model validation belongs to integration QA",
+  "result": "pass",
+  "counts": {
+    "stops": 20,
+    "regions": 5,
+    "sources": 17,
+    "timeline": 10
+  },
+  "checks": [
+    "Unique stop IDs and all source references resolve",
+    "Each stop has two source-attributed statements with explicit confidence",
+    "All regions and timeline entries resolve to defined stops",
+    "Exterior dimensions distinguished from clear spans",
+    "Different pillar-row counts explicitly retained",
+    "Photographs dated or explicitly undated",
+    "Modern crane adaptation distinguished from original industrial equipment",
+    "Safety works and opening forecasts distinguished from public opening",
+    "Cultural use not rendered as a completed future project",
+    "Distinct reading and material controls; explicit roof labels"
+  ],
+  "limitations": [
+    "No measured elevation/section plan recovered",
+    "Pillar-by-pillar phase and material assignment not independently verified",
+    "Film Office original page unavailable; attributed reproduction inspected",
+    "2018 rehabilitation PDF server rejected retrieval",
+    "No institutional confirmation of general public reopening found in consulted sources"
+  ],
+  "coordinateRegistrationAtCheck": {
+    "status": "pending-model-registration",
+    "coordinateOrder": "longitude,latitude",
+    "anchor": [
+      -0.2182925,
+      39.65632195
+    ],
+    "verticalReference": "Origen local del modelo pendiente de registro. Las alturas de detalle no se presentan como cotas levantadas.",
+    "precision": "approximate",
+    "coordinates": "Los focos se registrarán con la geometría final y la cartografía contemporánea; los detalles no medidos son interpretativos.",
+    "provisionalCoordinates": true
+  },
+  "coordinateRegistrationFinal": {
+    "status": "registered",
+    "coordinateOrder": "longitude,latitude",
+    "anchor": [
+      -0.2182925,
+      39.65632195
+    ],
+    "verticalReference": "Origen local del modelo pendiente de registro. Las alturas de detalle no se presentan como cotas levantadas.",
+    "precision": "approximate",
+    "coordinates": "Registered from the implemented industrial model and contemporary cartography; component positions and unmeasured heights are interpretive.",
+    "provisionalCoordinates": false
+  },
+  "coordinateRegistrationEvidence": "build-talleres-plan.mjs; talleres-geometry-metadata.json; integrated-scene-qa.json; static-assets-qa.json"
+}

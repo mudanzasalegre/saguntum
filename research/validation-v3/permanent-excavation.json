@@ -1,0 +1,2273 @@
+{
+  "pass": true,
+  "errors": [],
+  "checks": [
+    {
+      "pass": true,
+      "message": "all 25 interior points originally have terrain"
+    },
+    {
+      "pass": true,
+      "message": "all 25 interior points have no terrain after permanent opening"
+    },
+    {
+      "pass": true,
+      "message": "all 48 exterior points keep terrain, including 2.5cm beyond boundary"
+    },
+    {
+      "pass": true,
+      "message": "all exterior terrain heights unchanged within 0.1mm"
+    },
+    {
+      "pass": true,
+      "message": "permanent geometry subtraction preserves every context material reference"
+    },
+    {
+      "pass": true,
+      "message": "Terrain IGN has finite attributes"
+    },
+    {
+      "pass": true,
+      "message": "Terrain IGN adds no degenerate triangles"
+    },
+    {
+      "pass": true,
+      "message": "Terrain IGN has no triangle area remaining 1mm inside the rectangular opening"
+    },
+    {
+      "pass": true,
+      "message": "Fachadas has finite attributes"
+    },
+    {
+      "pass": true,
+      "message": "Fachadas adds no degenerate triangles"
+    },
+    {
+      "pass": true,
+      "message": "Fachadas has no triangle area remaining 1mm inside the rectangular opening"
+    },
+    {
+      "pass": true,
+      "message": "Azoteas has finite attributes"
+    },
+    {
+      "pass": true,
+      "message": "Azoteas adds no degenerate triangles"
+    },
+    {
+      "pass": true,
+      "message": "Azoteas has no triangle area remaining 1mm inside the rectangular opening"
+    },
+    {
+      "pass": true,
+      "message": "Ventanas has finite attributes"
+    },
+    {
+      "pass": true,
+      "message": "Ventanas adds no degenerate triangles"
+    },
+    {
+      "pass": true,
+      "message": "Ventanas has no triangle area remaining 1mm inside the rectangular opening"
+    },
+    {
+      "pass": true,
+      "message": "Cornisas has finite attributes"
+    },
+    {
+      "pass": true,
+      "message": "Cornisas adds no degenerate triangles"
+    },
+    {
+      "pass": true,
+      "message": "Cornisas has no triangle area remaining 1mm inside the rectangular opening"
+    },
+    {
+      "pass": true,
+      "message": "all interior downward rays also clear the remaining context"
+    },
+    {
+      "pass": true,
+      "message": "portic restores all context materials"
+    },
+    {
+      "pass": true,
+      "message": "portic preserves permanent geometry"
+    },
+    {
+      "pass": true,
+      "message": "domus restores all context materials"
+    },
+    {
+      "pass": true,
+      "message": "domus preserves permanent geometry"
+    },
+    {
+      "pass": true,
+      "message": "circo restores all context materials"
+    },
+    {
+      "pass": true,
+      "message": "circo preserves permanent geometry"
+    },
+    {
+      "pass": true,
+      "message": "diana restores all context materials"
+    },
+    {
+      "pass": true,
+      "message": "diana preserves permanent geometry"
+    },
+    {
+      "pass": true,
+      "message": "necropolis restores all context materials"
+    },
+    {
+      "pass": true,
+      "message": "necropolis preserves permanent geometry"
+    },
+    {
+      "pass": true,
+      "message": "new covers respect already-hidden parent city layer"
+    },
+    {
+      "pass": true,
+      "message": "permanent hole remains open after all dynamic selections and disposal"
+    },
+    {
+      "pass": true,
+      "message": "external terrain remains unchanged after all modes"
+    }
+  ],
+  "window": {
+    "center": {
+      "x": 210.89148770331764,
+      "z": -229.17570276392206
+    },
+    "width": 18.299999999999997,
+    "depth": 9.9,
+    "yaw": -0.307,
+    "floorY": 41.778002445130994
+  },
+  "executionMs": 1300.4265180000002,
+  "statistics": {
+    "windows": 1,
+    "meshes": 5,
+    "removedTriangles": 96,
+    "addedTriangles": 129
+  },
+  "changedMeshes": [
+    {
+      "name": "Terrain IGN",
+      "before": {
+        "triangles": 353440,
+        "finite": true,
+        "degenerate": 0,
+        "smallestArea": 0.0006090261700621753,
+        "interiorOverlap": 0,
+        "overlapArea": 0,
+        "maxOverlap": 0
+      },
+      "after": {
+        "triangles": 353474,
+        "finite": true,
+        "degenerate": 0,
+        "smallestArea": 0.0006090261700621753,
+        "interiorOverlap": 0,
+        "overlapArea": 0,
+        "maxOverlap": 0
+      }
+    },
+    {
+      "name": "Fachadas",
+      "before": {
+        "triangles": 35688,
+        "finite": true,
+        "degenerate": 0,
+        "smallestArea": 0.35928495051691295,
+        "interiorOverlap": 0,
+        "overlapArea": 0,
+        "maxOverlap": 0
+      },
+      "after": {
+        "triangles": 35688,
+        "finite": true,
+        "degenerate": 0,
+        "smallestArea": 0.35928495051691295,
+        "interiorOverlap": 0,
+        "overlapArea": 0,
+        "maxOverlap": 0
+      }
+    },
+    {
+      "name": "Azoteas",
+      "before": {
+        "triangles": 7303,
+        "finite": true,
+        "degenerate": 0,
+        "smallestArea": 0.00018611701671034098,
+        "interiorOverlap": 0,
+        "overlapArea": 0,
+        "maxOverlap": 0
+      },
+      "after": {
+        "triangles": 7312,
+        "finite": true,
+        "degenerate": 0,
+        "smallestArea": 0.00018611701671034098,
+        "interiorOverlap": 0,
+        "overlapArea": 0,
+        "maxOverlap": 0
+      }
+    },
+    {
+      "name": "Ventanas",
+      "before": {
+        "triangles": 155726,
+        "finite": true,
+        "degenerate": 0,
+        "smallestArea": 0.2124676626665212,
+        "interiorOverlap": 0,
+        "overlapArea": 0,
+        "maxOverlap": 0
+      },
+      "after": {
+        "triangles": 155721,
+        "finite": true,
+        "degenerate": 0,
+        "smallestArea": 0.07337230000383091,
+        "interiorOverlap": 0,
+        "overlapArea": 0,
+        "maxOverlap": 0
+      }
+    },
+    {
+      "name": "Cornisas",
+      "before": {
+        "triangles": 252828,
+        "finite": true,
+        "degenerate": 0,
+        "smallestArea": 0.026085343544623094,
+        "interiorOverlap": 0,
+        "overlapArea": 0,
+        "maxOverlap": 0
+      },
+      "after": {
+        "triangles": 252823,
+        "finite": true,
+        "degenerate": 0,
+        "smallestArea": 0.011970695207406857,
+        "interiorOverlap": 0,
+        "overlapArea": 0,
+        "maxOverlap": 0
+      }
+    }
+  ],
+  "materialCount": 103,
+  "interiorSamples": 25,
+  "exteriorSamples": 48,
+  "maxExteriorHeightError": 0.0000018655958342606027,
+  "beforeInner": [
+    {
+      "label": "inside -0.98,-0.98",
+      "u": -8.966999999999999,
+      "v": -4.851,
+      "x": 203.8097181366033,
+      "z": -236.5097214306531,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 45.03329125819255,
+        "distance": 454.96670874180745
+      }
+    },
+    {
+      "label": "inside -0.98,-0.6",
+      "u": -8.966999999999999,
+      "v": -2.97,
+      "x": 203.2412794338939,
+      "z": -234.71666860341622,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.96099741509698,
+        "distance": 455.039002584903
+      }
+    },
+    {
+      "label": "inside -0.98,0",
+      "u": -8.966999999999999,
+      "v": 0,
+      "x": 202.34374464014226,
+      "z": -231.88553256041067,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.849856334166475,
+        "distance": 455.1501436658335
+      }
+    },
+    {
+      "label": "inside -0.98,0.6",
+      "u": -8.966999999999999,
+      "v": 2.97,
+      "x": 201.44620984639062,
+      "z": -229.0543965174051,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.8264616712508,
+        "distance": 455.1735383287492
+      }
+    },
+    {
+      "label": "inside -0.98,0.98",
+      "u": -8.966999999999999,
+      "v": 4.851,
+      "x": 200.87777114368123,
+      "z": -227.26134369016825,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.939718325133526,
+        "distance": 455.0602816748665
+      }
+    },
+    {
+      "label": "inside -0.6,-0.98",
+      "u": -5.489999999999999,
+      "v": -4.851,
+      "x": 207.12414912028356,
+      "z": -235.4589711014024,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.597853540957374,
+        "distance": 455.4021464590426
+      }
+    },
+    {
+      "label": "inside -0.6,-0.6",
+      "u": -5.489999999999999,
+      "v": -2.97,
+      "x": 206.55571041757418,
+      "z": -233.66591827416553,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.49534078689021,
+        "distance": 455.5046592131098
+      }
+    },
+    {
+      "label": "inside -0.6,0",
+      "u": -5.489999999999999,
+      "v": 0,
+      "x": 205.65817562382253,
+      "z": -230.83478223115998,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.305972351123444,
+        "distance": 455.69402764887656
+      }
+    },
+    {
+      "label": "inside -0.6,0.6",
+      "u": -5.489999999999999,
+      "v": 2.97,
+      "x": 204.76064083007088,
+      "z": -228.00364618815442,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.450330584437324,
+        "distance": 455.5496694155627
+      }
+    },
+    {
+      "label": "inside -0.6,0.98",
+      "u": -5.489999999999999,
+      "v": 4.851,
+      "x": 204.1922021273615,
+      "z": -226.21059336091756,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.659615523143145,
+        "distance": 455.34038447685685
+      }
+    },
+    {
+      "label": "inside 0,-0.98",
+      "u": 0,
+      "v": -4.851,
+      "x": 212.35746119977867,
+      "z": -233.79989163416448,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.39155116058021,
+        "distance": 455.6084488394198
+      }
+    },
+    {
+      "label": "inside 0,-0.6",
+      "u": 0,
+      "v": -2.97,
+      "x": 211.78902249706928,
+      "z": -232.00683880692762,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.24462550622991,
+        "distance": 455.7553744937701
+      }
+    },
+    {
+      "label": "inside 0,0",
+      "u": 0,
+      "v": 0,
+      "x": 210.89148770331764,
+      "z": -229.17570276392206,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.14347528208555,
+        "distance": 455.85652471791445
+      }
+    },
+    {
+      "label": "inside 0,0.6",
+      "u": 0,
+      "v": 2.97,
+      "x": 209.993952909566,
+      "z": -226.3445667209165,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.402124627253784,
+        "distance": 455.5978753727462
+      }
+    },
+    {
+      "label": "inside 0,0.98",
+      "u": 0,
+      "v": 4.851,
+      "x": 209.4255142068566,
+      "z": -224.55151389367964,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.57869697943556,
+        "distance": 455.42130302056444
+      }
+    },
+    {
+      "label": "inside 0.6,-0.98",
+      "u": 5.489999999999999,
+      "v": -4.851,
+      "x": 217.59077327927378,
+      "z": -232.14081216692657,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.54447807318968,
+        "distance": 455.4555219268103
+      }
+    },
+    {
+      "label": "inside 0.6,-0.6",
+      "u": 5.489999999999999,
+      "v": -2.97,
+      "x": 217.0223345765644,
+      "z": -230.3477593396897,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.41426232471133,
+        "distance": 455.58573767528867
+      }
+    },
+    {
+      "label": "inside 0.6,0",
+      "u": 5.489999999999999,
+      "v": 0,
+      "x": 216.12479978281274,
+      "z": -227.51662329668414,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.439740079619526,
+        "distance": 455.5602599203805
+      }
+    },
+    {
+      "label": "inside 0.6,0.6",
+      "u": 5.489999999999999,
+      "v": 2.97,
+      "x": 215.2272649890611,
+      "z": -224.6854872536786,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.620949041091365,
+        "distance": 455.37905095890864
+      }
+    },
+    {
+      "label": "inside 0.6,0.98",
+      "u": 5.489999999999999,
+      "v": 4.851,
+      "x": 214.6588262863517,
+      "z": -222.89243442644172,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.75209555675326,
+        "distance": 455.24790444324674
+      }
+    },
+    {
+      "label": "inside 0.98,-0.98",
+      "u": 8.966999999999999,
+      "v": -4.851,
+      "x": 220.90520426295404,
+      "z": -231.09006183767588,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.77507767607915,
+        "distance": 455.22492232392085
+      }
+    },
+    {
+      "label": "inside 0.98,-0.6",
+      "u": 8.966999999999999,
+      "v": -2.97,
+      "x": 220.33676556024466,
+      "z": -229.297009010439,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.71515182260271,
+        "distance": 455.2848481773973
+      }
+    },
+    {
+      "label": "inside 0.98,0",
+      "u": 8.966999999999999,
+      "v": 0,
+      "x": 219.439230766493,
+      "z": -226.46587296743346,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.70986490340829,
+        "distance": 455.2901350965917
+      }
+    },
+    {
+      "label": "inside 0.98,0.6",
+      "u": 8.966999999999999,
+      "v": 2.97,
+      "x": 218.54169597274137,
+      "z": -223.6347369244279,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.75604980341615,
+        "distance": 455.24395019658385
+      }
+    },
+    {
+      "label": "inside 0.98,0.98",
+      "u": 8.966999999999999,
+      "v": 4.851,
+      "x": 217.97325727003198,
+      "z": -221.84168409719103,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.87256653624422,
+        "distance": 455.1274334637558
+      }
+    }
+  ],
+  "afterInner": [
+    {
+      "label": "inside -0.98,-0.98",
+      "u": -8.966999999999999,
+      "v": -4.851,
+      "x": 203.8097181366033,
+      "z": -236.5097214306531,
+      "hit": null
+    },
+    {
+      "label": "inside -0.98,-0.6",
+      "u": -8.966999999999999,
+      "v": -2.97,
+      "x": 203.2412794338939,
+      "z": -234.71666860341622,
+      "hit": null
+    },
+    {
+      "label": "inside -0.98,0",
+      "u": -8.966999999999999,
+      "v": 0,
+      "x": 202.34374464014226,
+      "z": -231.88553256041067,
+      "hit": null
+    },
+    {
+      "label": "inside -0.98,0.6",
+      "u": -8.966999999999999,
+      "v": 2.97,
+      "x": 201.44620984639062,
+      "z": -229.0543965174051,
+      "hit": null
+    },
+    {
+      "label": "inside -0.98,0.98",
+      "u": -8.966999999999999,
+      "v": 4.851,
+      "x": 200.87777114368123,
+      "z": -227.26134369016825,
+      "hit": null
+    },
+    {
+      "label": "inside -0.6,-0.98",
+      "u": -5.489999999999999,
+      "v": -4.851,
+      "x": 207.12414912028356,
+      "z": -235.4589711014024,
+      "hit": null
+    },
+    {
+      "label": "inside -0.6,-0.6",
+      "u": -5.489999999999999,
+      "v": -2.97,
+      "x": 206.55571041757418,
+      "z": -233.66591827416553,
+      "hit": null
+    },
+    {
+      "label": "inside -0.6,0",
+      "u": -5.489999999999999,
+      "v": 0,
+      "x": 205.65817562382253,
+      "z": -230.83478223115998,
+      "hit": null
+    },
+    {
+      "label": "inside -0.6,0.6",
+      "u": -5.489999999999999,
+      "v": 2.97,
+      "x": 204.76064083007088,
+      "z": -228.00364618815442,
+      "hit": null
+    },
+    {
+      "label": "inside -0.6,0.98",
+      "u": -5.489999999999999,
+      "v": 4.851,
+      "x": 204.1922021273615,
+      "z": -226.21059336091756,
+      "hit": null
+    },
+    {
+      "label": "inside 0,-0.98",
+      "u": 0,
+      "v": -4.851,
+      "x": 212.35746119977867,
+      "z": -233.79989163416448,
+      "hit": null
+    },
+    {
+      "label": "inside 0,-0.6",
+      "u": 0,
+      "v": -2.97,
+      "x": 211.78902249706928,
+      "z": -232.00683880692762,
+      "hit": null
+    },
+    {
+      "label": "inside 0,0",
+      "u": 0,
+      "v": 0,
+      "x": 210.89148770331764,
+      "z": -229.17570276392206,
+      "hit": null
+    },
+    {
+      "label": "inside 0,0.6",
+      "u": 0,
+      "v": 2.97,
+      "x": 209.993952909566,
+      "z": -226.3445667209165,
+      "hit": null
+    },
+    {
+      "label": "inside 0,0.98",
+      "u": 0,
+      "v": 4.851,
+      "x": 209.4255142068566,
+      "z": -224.55151389367964,
+      "hit": null
+    },
+    {
+      "label": "inside 0.6,-0.98",
+      "u": 5.489999999999999,
+      "v": -4.851,
+      "x": 217.59077327927378,
+      "z": -232.14081216692657,
+      "hit": null
+    },
+    {
+      "label": "inside 0.6,-0.6",
+      "u": 5.489999999999999,
+      "v": -2.97,
+      "x": 217.0223345765644,
+      "z": -230.3477593396897,
+      "hit": null
+    },
+    {
+      "label": "inside 0.6,0",
+      "u": 5.489999999999999,
+      "v": 0,
+      "x": 216.12479978281274,
+      "z": -227.51662329668414,
+      "hit": null
+    },
+    {
+      "label": "inside 0.6,0.6",
+      "u": 5.489999999999999,
+      "v": 2.97,
+      "x": 215.2272649890611,
+      "z": -224.6854872536786,
+      "hit": null
+    },
+    {
+      "label": "inside 0.6,0.98",
+      "u": 5.489999999999999,
+      "v": 4.851,
+      "x": 214.6588262863517,
+      "z": -222.89243442644172,
+      "hit": null
+    },
+    {
+      "label": "inside 0.98,-0.98",
+      "u": 8.966999999999999,
+      "v": -4.851,
+      "x": 220.90520426295404,
+      "z": -231.09006183767588,
+      "hit": null
+    },
+    {
+      "label": "inside 0.98,-0.6",
+      "u": 8.966999999999999,
+      "v": -2.97,
+      "x": 220.33676556024466,
+      "z": -229.297009010439,
+      "hit": null
+    },
+    {
+      "label": "inside 0.98,0",
+      "u": 8.966999999999999,
+      "v": 0,
+      "x": 219.439230766493,
+      "z": -226.46587296743346,
+      "hit": null
+    },
+    {
+      "label": "inside 0.98,0.6",
+      "u": 8.966999999999999,
+      "v": 2.97,
+      "x": 218.54169597274137,
+      "z": -223.6347369244279,
+      "hit": null
+    },
+    {
+      "label": "inside 0.98,0.98",
+      "u": 8.966999999999999,
+      "v": 4.851,
+      "x": 217.97325727003198,
+      "z": -221.84168409719103,
+      "hit": null
+    }
+  ],
+  "beforeOuter": [
+    {
+      "label": "outside U -1,-0.8,margin0.025",
+      "x": 203.34218285102153,
+      "z": -235.72323827334074,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 45.030983293593806,
+        "distance": 454.9690167064062
+      }
+    },
+    {
+      "label": "outside V -1,-0.8,margin0.025",
+      "x": 205.41718459359166,
+      "z": -236.13019990338833,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.80410329704887,
+        "distance": 455.19589670295113
+      }
+    },
+    {
+      "label": "outside U 1,-0.8,margin0.025",
+      "x": 220.83421867228483,
+      "z": -230.17786336918485,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.750376565071804,
+        "distance": 455.2496234349282
+      }
+    },
+    {
+      "label": "outside V 1,-0.8,margin0.025",
+      "x": 202.41029193438996,
+      "z": -226.64541753709025,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.769720637949604,
+        "distance": 455.2302793620504
+      }
+    },
+    {
+      "label": "outside U -1,0,margin0.025",
+      "x": 202.145469792686,
+      "z": -231.948390216,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.872043985893185,
+        "distance": 455.1279560141068
+      }
+    },
+    {
+      "label": "outside V -1,0,margin0.025",
+      "x": 212.39493403291848,
+      "z": -233.9180939470711,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.40109960261617,
+        "distance": 455.59890039738383
+      }
+    },
+    {
+      "label": "outside U 1,0,margin0.025",
+      "x": 219.6375056139493,
+      "z": -226.40301531184411,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.73109652069962,
+        "distance": 455.2689034793004
+      }
+    },
+    {
+      "label": "outside V 1,0,margin0.025",
+      "x": 209.3880413737168,
+      "z": -224.43331158077302,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.59033704943579,
+        "distance": 455.4096629505642
+      }
+    },
+    {
+      "label": "outside U -1,0.8,margin0.025",
+      "x": 200.94875673435044,
+      "z": -228.17354215865927,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.90848238411155,
+        "distance": 455.09151761588845
+      }
+    },
+    {
+      "label": "outside V -1,0.8,margin0.025",
+      "x": 219.3726834722453,
+      "z": -231.70598799075387,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.70232335233118,
+        "distance": 455.2976766476688
+      }
+    },
+    {
+      "label": "outside U 1,0.8,margin0.025",
+      "x": 218.44079255561374,
+      "z": -222.62816725450338,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.81477839271821,
+        "distance": 455.1852216072818
+      }
+    },
+    {
+      "label": "outside V 1,0.8,margin0.025",
+      "x": 216.36579081304362,
+      "z": -222.2212056244558,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.814699556175185,
+        "distance": 455.1853004438248
+      }
+    },
+    {
+      "label": "outside U -1,-0.8,margin0.2",
+      "x": 203.17536507070977,
+      "z": -235.7761233201106,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 45.061919033296135,
+        "distance": 454.93808096670386
+      }
+    },
+    {
+      "label": "outside V -1,-0.8,margin0.2",
+      "x": 205.47006964036154,
+      "z": -236.29701768370012,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.81526136986338,
+        "distance": 455.1847386301366
+      }
+    },
+    {
+      "label": "outside U 1,-0.8,margin0.2",
+      "x": 221.0010364525966,
+      "z": -230.124978322415,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.76138526150794,
+        "distance": 455.23861473849206
+      }
+    },
+    {
+      "label": "outside V 1,-0.8,margin0.2",
+      "x": 202.35740688762007,
+      "z": -226.47859975677846,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.780257540889295,
+        "distance": 455.2197424591107
+      }
+    },
+    {
+      "label": "outside U -1,0,margin0.2",
+      "x": 201.97865201237423,
+      "z": -232.00127526276987,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.89147020138387,
+        "distance": 455.10852979861613
+      }
+    },
+    {
+      "label": "outside V -1,0,margin0.2",
+      "x": 212.44781907968837,
+      "z": -234.0849117273829,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.41457522645726,
+        "distance": 455.58542477354274
+      }
+    },
+    {
+      "label": "outside U 1,0,margin0.2",
+      "x": 219.80432339426105,
+      "z": -226.35013026507426,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.74895966024769,
+        "distance": 455.2510403397523
+      }
+    },
+    {
+      "label": "outside V 1,0,margin0.2",
+      "x": 209.3351563269469,
+      "z": -224.26649380046123,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.606764567581365,
+        "distance": 455.39323543241863
+      }
+    },
+    {
+      "label": "outside U -1,0.8,margin0.2",
+      "x": 200.78193895403868,
+      "z": -228.22642720542913,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.92733859007495,
+        "distance": 455.07266140992505
+      }
+    },
+    {
+      "label": "outside V -1,0.8,margin0.2",
+      "x": 219.4255685190152,
+      "z": -231.87280577106566,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.715345458269894,
+        "distance": 455.2846545417301
+      }
+    },
+    {
+      "label": "outside U 1,0.8,margin0.2",
+      "x": 218.6076103359255,
+      "z": -222.57528220773352,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.812594252277904,
+        "distance": 455.1874057477221
+      }
+    },
+    {
+      "label": "outside V 1,0.8,margin0.2",
+      "x": 216.31290576627373,
+      "z": -222.054387844144,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.828394587727075,
+        "distance": 455.1716054122729
+      }
+    },
+    {
+      "label": "outside U -1,-0.8,margin1",
+      "x": 202.41276950357022,
+      "z": -236.01788353391578,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 45.19692438394901,
+        "distance": 454.803075616051
+      }
+    },
+    {
+      "label": "outside V -1,-0.8,margin1",
+      "x": 205.7118298541667,
+      "z": -237.05961325083965,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.866269702729824,
+        "distance": 455.1337302972702
+      }
+    },
+    {
+      "label": "outside U 1,-0.8,margin1",
+      "x": 221.76363201973615,
+      "z": -229.8832181086098,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.815007249790085,
+        "distance": 455.1849927502099
+      }
+    },
+    {
+      "label": "outside V 1,-0.8,margin1",
+      "x": 202.11564667381492,
+      "z": -225.71600418963894,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.82842624004195,
+        "distance": 455.17157375995805
+      }
+    },
+    {
+      "label": "outside U -1,0,margin1",
+      "x": 201.21605644523467,
+      "z": -232.24303547657505,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 45.002140677781654,
+        "distance": 454.99785932221835
+      }
+    },
+    {
+      "label": "outside V -1,0,margin1",
+      "x": 212.68957929349352,
+      "z": -234.84750729452242,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.483963048313285,
+        "distance": 455.5160369516867
+      }
+    },
+    {
+      "label": "outside U 1,0,margin1",
+      "x": 220.5669189614006,
+      "z": -226.10837005126908,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.779339581440865,
+        "distance": 455.22066041855913
+      }
+    },
+    {
+      "label": "outside V 1,0,margin1",
+      "x": 209.09339611314175,
+      "z": -223.5038982333217,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.681148265010336,
+        "distance": 455.31885173498966
+      }
+    },
+    {
+      "label": "outside U -1,0.8,margin1",
+      "x": 200.01934338689912,
+      "z": -228.4681874192343,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.96673117799719,
+        "distance": 455.0332688220028
+      }
+    },
+    {
+      "label": "outside V -1,0.8,margin1",
+      "x": 219.66732873282035,
+      "z": -232.63540133820518,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.742289032106044,
+        "distance": 455.25771096789396
+      }
+    },
+    {
+      "label": "outside U 1,0.8,margin1",
+      "x": 219.37020590306506,
+      "z": -222.33352199392834,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.80260961026528,
+        "distance": 455.1973903897347
+      }
+    },
+    {
+      "label": "outside V 1,0.8,margin1",
+      "x": 216.07114555246858,
+      "z": -221.29179227700448,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.89100044624979,
+        "distance": 455.1089995537502
+      }
+    },
+    {
+      "label": "outside U -1,-0.8,margin4",
+      "x": 199.55303612679694,
+      "z": -236.92448433568512,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 45.5316664834985,
+        "distance": 454.4683335165015
+      }
+    },
+    {
+      "label": "outside V -1,-0.8,margin4",
+      "x": 206.61843065593604,
+      "z": -239.91934662761295,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 45.02939543931103,
+        "distance": 454.97060456068897
+      }
+    },
+    {
+      "label": "outside U 1,-0.8,margin4",
+      "x": 224.62336539650943,
+      "z": -228.97661730684047,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.97265371384469,
+        "distance": 455.0273462861553
+      }
+    },
+    {
+      "label": "outside V 1,-0.8,margin4",
+      "x": 201.20904587204558,
+      "z": -222.85627081286563,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.93479670619939,
+        "distance": 455.0652032938006
+      }
+    },
+    {
+      "label": "outside U -1,0,margin4",
+      "x": 198.3563230684614,
+      "z": -233.1496362783444,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 45.35415890190467,
+        "distance": 454.64584109809533
+      }
+    },
+    {
+      "label": "outside V -1,0,margin4",
+      "x": 213.59618009526287,
+      "z": -237.70724067129572,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.732099093789884,
+        "distance": 455.2679009062101
+      }
+    },
+    {
+      "label": "outside U 1,0,margin4",
+      "x": 223.42665233817388,
+      "z": -225.20176924949973,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.89732879495773,
+        "distance": 455.10267120504227
+      }
+    },
+    {
+      "label": "outside V 1,0,margin4",
+      "x": 208.1867953113724,
+      "z": -220.6441648565484,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.924988261866986,
+        "distance": 455.075011738133
+      }
+    },
+    {
+      "label": "outside U -1,0.8,margin4",
+      "x": 197.15961001012585,
+      "z": -229.37478822100366,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 45.238973422411505,
+        "distance": 454.7610265775885
+      }
+    },
+    {
+      "label": "outside V -1,0.8,margin4",
+      "x": 220.5739295345897,
+      "z": -235.4951347149785,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.84530145126075,
+        "distance": 455.15469854873925
+      }
+    },
+    {
+      "label": "outside U 1,0.8,margin4",
+      "x": 222.22993927983833,
+      "z": -221.426921192159,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.906558899912625,
+        "distance": 455.0934411000874
+      }
+    },
+    {
+      "label": "outside V 1,0.8,margin4",
+      "x": 215.16454475069924,
+      "z": -218.43205890023117,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.993418310402205,
+        "distance": 455.0065816895978
+      }
+    }
+  ],
+  "afterOuter": [
+    {
+      "label": "outside U -1,-0.8,margin0.025",
+      "x": 203.34218285102153,
+      "z": -235.72323827334074,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 45.03098188876834,
+        "distance": 454.96901811123166
+      }
+    },
+    {
+      "label": "outside V -1,-0.8,margin0.025",
+      "x": 205.41718459359166,
+      "z": -236.13019990338833,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.80410403767905,
+        "distance": 455.19589596232095
+      }
+    },
+    {
+      "label": "outside U 1,-0.8,margin0.025",
+      "x": 220.83421867228483,
+      "z": -230.17786336918485,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.75037654770864,
+        "distance": 455.24962345229136
+      }
+    },
+    {
+      "label": "outside V 1,-0.8,margin0.025",
+      "x": 202.41029193438996,
+      "z": -226.64541753709025,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.769721657024604,
+        "distance": 455.2302783429754
+      }
+    },
+    {
+      "label": "outside U -1,0,margin0.025",
+      "x": 202.145469792686,
+      "z": -231.948390216,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.87204325811922,
+        "distance": 455.1279567418808
+      }
+    },
+    {
+      "label": "outside V -1,0,margin0.025",
+      "x": 212.39493403291848,
+      "z": -233.9180939470711,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.401098883117754,
+        "distance": 455.59890111688225
+      }
+    },
+    {
+      "label": "outside U 1,0,margin0.025",
+      "x": 219.6375056139493,
+      "z": -226.40301531184411,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.7310981538414,
+        "distance": 455.2689018461586
+      }
+    },
+    {
+      "label": "outside V 1,0,margin0.025",
+      "x": 209.3880413737168,
+      "z": -224.43331158077302,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.59033647476792,
+        "distance": 455.4096635252321
+      }
+    },
+    {
+      "label": "outside U -1,0.8,margin0.025",
+      "x": 200.94875673435044,
+      "z": -228.17354215865927,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.90848181509176,
+        "distance": 455.09151818490824
+      }
+    },
+    {
+      "label": "outside V -1,0.8,margin0.025",
+      "x": 219.3726834722453,
+      "z": -231.70598799075387,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.70232293169016,
+        "distance": 455.29767706830984
+      }
+    },
+    {
+      "label": "outside U 1,0.8,margin0.025",
+      "x": 218.44079255561374,
+      "z": -222.62816725450338,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.81477913058836,
+        "distance": 455.18522086941164
+      }
+    },
+    {
+      "label": "outside V 1,0.8,margin0.025",
+      "x": 216.36579081304362,
+      "z": -222.2212056244558,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.81470091368362,
+        "distance": 455.1852990863164
+      }
+    },
+    {
+      "label": "outside U -1,-0.8,margin0.2",
+      "x": 203.17536507070977,
+      "z": -235.7761233201106,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 45.06191769118885,
+        "distance": 454.93808230881115
+      }
+    },
+    {
+      "label": "outside V -1,-0.8,margin0.2",
+      "x": 205.47006964036154,
+      "z": -236.29701768370012,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.81526231241048,
+        "distance": 455.1847376875895
+      }
+    },
+    {
+      "label": "outside U 1,-0.8,margin0.2",
+      "x": 221.0010364525966,
+      "z": -230.124978322415,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.76138527211498,
+        "distance": 455.238614727885
+      }
+    },
+    {
+      "label": "outside V 1,-0.8,margin0.2",
+      "x": 202.35740688762007,
+      "z": -226.47859975677846,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.78025855956821,
+        "distance": 455.2197414404318
+      }
+    },
+    {
+      "label": "outside U -1,0,margin0.2",
+      "x": 201.97865201237423,
+      "z": -232.00127526276987,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.89146974377593,
+        "distance": 455.10853025622407
+      }
+    },
+    {
+      "label": "outside V -1,0,margin0.2",
+      "x": 212.44781907968837,
+      "z": -234.0849117273829,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.4145742685472,
+        "distance": 455.5854257314528
+      }
+    },
+    {
+      "label": "outside U 1,0,margin0.2",
+      "x": 219.80432339426105,
+      "z": -226.35013026507426,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.74896111390717,
+        "distance": 455.25103888609283
+      }
+    },
+    {
+      "label": "outside V 1,0,margin0.2",
+      "x": 209.3351563269469,
+      "z": -224.26649380046123,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.60676407609168,
+        "distance": 455.3932359239083
+      }
+    },
+    {
+      "label": "outside U -1,0.8,margin0.2",
+      "x": 200.78193895403868,
+      "z": -228.22642720542913,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.92733808832219,
+        "distance": 455.0726619116778
+      }
+    },
+    {
+      "label": "outside V -1,0.8,margin0.2",
+      "x": 219.4255685190152,
+      "z": -231.87280577106566,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.71534511663191,
+        "distance": 455.2846548833681
+      }
+    },
+    {
+      "label": "outside U 1,0.8,margin0.2",
+      "x": 218.6076103359255,
+      "z": -222.57528220773352,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.812594950364314,
+        "distance": 455.1874050496357
+      }
+    },
+    {
+      "label": "outside V 1,0.8,margin0.2",
+      "x": 216.31290576627373,
+      "z": -222.054387844144,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.82839574650558,
+        "distance": 455.1716042534944
+      }
+    },
+    {
+      "label": "outside U -1,-0.8,margin1",
+      "x": 202.41276950357022,
+      "z": -236.01788353391578,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 45.19692330326268,
+        "distance": 454.8030766967373
+      }
+    },
+    {
+      "label": "outside V -1,-0.8,margin1",
+      "x": 205.7118298541667,
+      "z": -237.05961325083965,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.86627156832566,
+        "distance": 455.13372843167434
+      }
+    },
+    {
+      "label": "outside U 1,-0.8,margin1",
+      "x": 221.76363201973615,
+      "z": -229.8832181086098,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.81500736474828,
+        "distance": 455.1849926352517
+      }
+    },
+    {
+      "label": "outside V 1,-0.8,margin1",
+      "x": 202.11564667381492,
+      "z": -225.71600418963894,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.8284272569104,
+        "distance": 455.1715727430896
+      }
+    },
+    {
+      "label": "outside U -1,0,margin1",
+      "x": 201.21605644523467,
+      "z": -232.24303547657505,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 45.00214023833814,
+        "distance": 454.99785976166186
+      }
+    },
+    {
+      "label": "outside V -1,0,margin1",
+      "x": 212.68957929349352,
+      "z": -234.84750729452242,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.483962387179076,
+        "distance": 455.5160376128209
+      }
+    },
+    {
+      "label": "outside U 1,0,margin1",
+      "x": 220.5669189614006,
+      "z": -226.10837005126908,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.77934065442753,
+        "distance": 455.22065934557247
+      }
+    },
+    {
+      "label": "outside V 1,0,margin1",
+      "x": 209.09339611314175,
+      "z": -223.5038982333217,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.68114804567557,
+        "distance": 455.31885195432443
+      }
+    },
+    {
+      "label": "outside U -1,0.8,margin1",
+      "x": 200.01934338689912,
+      "z": -228.4681874192343,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.96673113989044,
+        "distance": 455.03326886010956
+      }
+    },
+    {
+      "label": "outside V -1,0.8,margin1",
+      "x": 219.66732873282035,
+      "z": -232.63540133820518,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.74228781760968,
+        "distance": 455.2577121823903
+      }
+    },
+    {
+      "label": "outside U 1,0.8,margin1",
+      "x": 219.37020590306506,
+      "z": -222.33352199392834,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.80261012648259,
+        "distance": 455.1973898735174
+      }
+    },
+    {
+      "label": "outside V 1,0.8,margin1",
+      "x": 216.07114555246858,
+      "z": -221.29179227700448,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.89100085357063,
+        "distance": 455.10899914642937
+      }
+    },
+    {
+      "label": "outside U -1,-0.8,margin4",
+      "x": 199.55303612679694,
+      "z": -236.92448433568512,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 45.5316664834985,
+        "distance": 454.4683335165015
+      }
+    },
+    {
+      "label": "outside V -1,-0.8,margin4",
+      "x": 206.61843065593604,
+      "z": -239.91934662761295,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 45.02939541754529,
+        "distance": 454.9706045824547
+      }
+    },
+    {
+      "label": "outside U 1,-0.8,margin4",
+      "x": 224.62336539650943,
+      "z": -228.97661730684047,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.97265371384469,
+        "distance": 455.0273462861553
+      }
+    },
+    {
+      "label": "outside V 1,-0.8,margin4",
+      "x": 201.20904587204558,
+      "z": -222.85627081286563,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.93479678214442,
+        "distance": 455.0652032178556
+      }
+    },
+    {
+      "label": "outside U -1,0,margin4",
+      "x": 198.3563230684614,
+      "z": -233.1496362783444,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 45.35415890190467,
+        "distance": 454.64584109809533
+      }
+    },
+    {
+      "label": "outside V -1,0,margin4",
+      "x": 213.59618009526287,
+      "z": -237.70724067129572,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.73209859300334,
+        "distance": 455.26790140699666
+      }
+    },
+    {
+      "label": "outside U 1,0,margin4",
+      "x": 223.42665233817388,
+      "z": -225.20176924949973,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.89732879495773,
+        "distance": 455.10267120504227
+      }
+    },
+    {
+      "label": "outside V 1,0,margin4",
+      "x": 208.1867953113724,
+      "z": -220.6441648565484,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.92498814211683,
+        "distance": 455.07501185788317
+      }
+    },
+    {
+      "label": "outside U -1,0.8,margin4",
+      "x": 197.15961001012585,
+      "z": -229.37478822100366,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 45.238973422411505,
+        "distance": 454.7610265775885
+      }
+    },
+    {
+      "label": "outside V -1,0.8,margin4",
+      "x": 220.5739295345897,
+      "z": -235.4951347149785,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.84530045260351,
+        "distance": 455.1546995473965
+      }
+    },
+    {
+      "label": "outside U 1,0.8,margin4",
+      "x": 222.22993927983833,
+      "z": -221.426921192159,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.90655900888595,
+        "distance": 455.09344099111405
+      }
+    },
+    {
+      "label": "outside V 1,0.8,margin4",
+      "x": 215.16454475069924,
+      "z": -218.43205890023117,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.993418310402205,
+        "distance": 455.0065816895978
+      }
+    }
+  ],
+  "beforeContext": [
+    {
+      "label": "inside -0.98,-0.98",
+      "u": -8.966999999999999,
+      "v": -4.851,
+      "x": 203.8097181366033,
+      "z": -236.5097214306531,
+      "hit": {
+        "mesh": "Azoteas",
+        "y": 63.868778228759766,
+        "distance": 436.13122177124023
+      }
+    },
+    {
+      "label": "inside -0.98,-0.6",
+      "u": -8.966999999999999,
+      "v": -2.97,
+      "x": 203.2412794338939,
+      "z": -234.71666860341622,
+      "hit": {
+        "mesh": "Azoteas",
+        "y": 63.868778228759766,
+        "distance": 436.13122177124023
+      }
+    },
+    {
+      "label": "inside -0.98,0",
+      "u": -8.966999999999999,
+      "v": 0,
+      "x": 202.34374464014226,
+      "z": -231.88553256041067,
+      "hit": {
+        "mesh": "Azoteas",
+        "y": 63.868778228759766,
+        "distance": 436.13122177124023
+      }
+    },
+    {
+      "label": "inside -0.98,0.6",
+      "u": -8.966999999999999,
+      "v": 2.97,
+      "x": 201.44620984639062,
+      "z": -229.0543965174051,
+      "hit": {
+        "mesh": "Azoteas",
+        "y": 63.868778228759766,
+        "distance": 436.13122177124023
+      }
+    },
+    {
+      "label": "inside -0.98,0.98",
+      "u": -8.966999999999999,
+      "v": 4.851,
+      "x": 200.87777114368123,
+      "z": -227.26134369016825,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.939718325133526,
+        "distance": 455.0602816748665
+      }
+    },
+    {
+      "label": "inside -0.6,-0.98",
+      "u": -5.489999999999999,
+      "v": -4.851,
+      "x": 207.12414912028356,
+      "z": -235.4589711014024,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.597853540957374,
+        "distance": 455.4021464590426
+      }
+    },
+    {
+      "label": "inside -0.6,-0.6",
+      "u": -5.489999999999999,
+      "v": -2.97,
+      "x": 206.55571041757418,
+      "z": -233.66591827416553,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.49534078689021,
+        "distance": 455.5046592131098
+      }
+    },
+    {
+      "label": "inside -0.6,0",
+      "u": -5.489999999999999,
+      "v": 0,
+      "x": 205.65817562382253,
+      "z": -230.83478223115998,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.305972351123444,
+        "distance": 455.69402764887656
+      }
+    },
+    {
+      "label": "inside -0.6,0.6",
+      "u": -5.489999999999999,
+      "v": 2.97,
+      "x": 204.76064083007088,
+      "z": -228.00364618815442,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.450330584437324,
+        "distance": 455.5496694155627
+      }
+    },
+    {
+      "label": "inside -0.6,0.98",
+      "u": -5.489999999999999,
+      "v": 4.851,
+      "x": 204.1922021273615,
+      "z": -226.21059336091756,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.659615523143145,
+        "distance": 455.34038447685685
+      }
+    },
+    {
+      "label": "inside 0,-0.98",
+      "u": 0,
+      "v": -4.851,
+      "x": 212.35746119977867,
+      "z": -233.79989163416448,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.39155116058021,
+        "distance": 455.6084488394198
+      }
+    },
+    {
+      "label": "inside 0,-0.6",
+      "u": 0,
+      "v": -2.97,
+      "x": 211.78902249706928,
+      "z": -232.00683880692762,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.24462550622991,
+        "distance": 455.7553744937701
+      }
+    },
+    {
+      "label": "inside 0,0",
+      "u": 0,
+      "v": 0,
+      "x": 210.89148770331764,
+      "z": -229.17570276392206,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.14347528208555,
+        "distance": 455.85652471791445
+      }
+    },
+    {
+      "label": "inside 0,0.6",
+      "u": 0,
+      "v": 2.97,
+      "x": 209.993952909566,
+      "z": -226.3445667209165,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.402124627253784,
+        "distance": 455.5978753727462
+      }
+    },
+    {
+      "label": "inside 0,0.98",
+      "u": 0,
+      "v": 4.851,
+      "x": 209.4255142068566,
+      "z": -224.55151389367964,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.57869697943556,
+        "distance": 455.42130302056444
+      }
+    },
+    {
+      "label": "inside 0.6,-0.98",
+      "u": 5.489999999999999,
+      "v": -4.851,
+      "x": 217.59077327927378,
+      "z": -232.14081216692657,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.54447807318968,
+        "distance": 455.4555219268103
+      }
+    },
+    {
+      "label": "inside 0.6,-0.6",
+      "u": 5.489999999999999,
+      "v": -2.97,
+      "x": 217.0223345765644,
+      "z": -230.3477593396897,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.41426232471133,
+        "distance": 455.58573767528867
+      }
+    },
+    {
+      "label": "inside 0.6,0",
+      "u": 5.489999999999999,
+      "v": 0,
+      "x": 216.12479978281274,
+      "z": -227.51662329668414,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.439740079619526,
+        "distance": 455.5602599203805
+      }
+    },
+    {
+      "label": "inside 0.6,0.6",
+      "u": 5.489999999999999,
+      "v": 2.97,
+      "x": 215.2272649890611,
+      "z": -224.6854872536786,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.620949041091365,
+        "distance": 455.37905095890864
+      }
+    },
+    {
+      "label": "inside 0.6,0.98",
+      "u": 5.489999999999999,
+      "v": 4.851,
+      "x": 214.6588262863517,
+      "z": -222.89243442644172,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.75209555675326,
+        "distance": 455.24790444324674
+      }
+    },
+    {
+      "label": "inside 0.98,-0.98",
+      "u": 8.966999999999999,
+      "v": -4.851,
+      "x": 220.90520426295404,
+      "z": -231.09006183767588,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.77507767607915,
+        "distance": 455.22492232392085
+      }
+    },
+    {
+      "label": "inside 0.98,-0.6",
+      "u": 8.966999999999999,
+      "v": -2.97,
+      "x": 220.33676556024466,
+      "z": -229.297009010439,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.71515182260271,
+        "distance": 455.2848481773973
+      }
+    },
+    {
+      "label": "inside 0.98,0",
+      "u": 8.966999999999999,
+      "v": 0,
+      "x": 219.439230766493,
+      "z": -226.46587296743346,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.70986490340829,
+        "distance": 455.2901350965917
+      }
+    },
+    {
+      "label": "inside 0.98,0.6",
+      "u": 8.966999999999999,
+      "v": 2.97,
+      "x": 218.54169597274137,
+      "z": -223.6347369244279,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.75604980341615,
+        "distance": 455.24395019658385
+      }
+    },
+    {
+      "label": "inside 0.98,0.98",
+      "u": 8.966999999999999,
+      "v": 4.851,
+      "x": 217.97325727003198,
+      "z": -221.84168409719103,
+      "hit": {
+        "mesh": "Terrain IGN",
+        "y": 44.87256653624422,
+        "distance": 455.1274334637558
+      }
+    }
+  ],
+  "afterContext": [
+    {
+      "label": "inside -0.98,-0.98",
+      "u": -8.966999999999999,
+      "v": -4.851,
+      "x": 203.8097181366033,
+      "z": -236.5097214306531,
+      "hit": null
+    },
+    {
+      "label": "inside -0.98,-0.6",
+      "u": -8.966999999999999,
+      "v": -2.97,
+      "x": 203.2412794338939,
+      "z": -234.71666860341622,
+      "hit": null
+    },
+    {
+      "label": "inside -0.98,0",
+      "u": -8.966999999999999,
+      "v": 0,
+      "x": 202.34374464014226,
+      "z": -231.88553256041067,
+      "hit": null
+    },
+    {
+      "label": "inside -0.98,0.6",
+      "u": -8.966999999999999,
+      "v": 2.97,
+      "x": 201.44620984639062,
+      "z": -229.0543965174051,
+      "hit": null
+    },
+    {
+      "label": "inside -0.98,0.98",
+      "u": -8.966999999999999,
+      "v": 4.851,
+      "x": 200.87777114368123,
+      "z": -227.26134369016825,
+      "hit": null
+    },
+    {
+      "label": "inside -0.6,-0.98",
+      "u": -5.489999999999999,
+      "v": -4.851,
+      "x": 207.12414912028356,
+      "z": -235.4589711014024,
+      "hit": null
+    },
+    {
+      "label": "inside -0.6,-0.6",
+      "u": -5.489999999999999,
+      "v": -2.97,
+      "x": 206.55571041757418,
+      "z": -233.66591827416553,
+      "hit": null
+    },
+    {
+      "label": "inside -0.6,0",
+      "u": -5.489999999999999,
+      "v": 0,
+      "x": 205.65817562382253,
+      "z": -230.83478223115998,
+      "hit": null
+    },
+    {
+      "label": "inside -0.6,0.6",
+      "u": -5.489999999999999,
+      "v": 2.97,
+      "x": 204.76064083007088,
+      "z": -228.00364618815442,
+      "hit": null
+    },
+    {
+      "label": "inside -0.6,0.98",
+      "u": -5.489999999999999,
+      "v": 4.851,
+      "x": 204.1922021273615,
+      "z": -226.21059336091756,
+      "hit": null
+    },
+    {
+      "label": "inside 0,-0.98",
+      "u": 0,
+      "v": -4.851,
+      "x": 212.35746119977867,
+      "z": -233.79989163416448,
+      "hit": null
+    },
+    {
+      "label": "inside 0,-0.6",
+      "u": 0,
+      "v": -2.97,
+      "x": 211.78902249706928,
+      "z": -232.00683880692762,
+      "hit": null
+    },
+    {
+      "label": "inside 0,0",
+      "u": 0,
+      "v": 0,
+      "x": 210.89148770331764,
+      "z": -229.17570276392206,
+      "hit": null
+    },
+    {
+      "label": "inside 0,0.6",
+      "u": 0,
+      "v": 2.97,
+      "x": 209.993952909566,
+      "z": -226.3445667209165,
+      "hit": null
+    },
+    {
+      "label": "inside 0,0.98",
+      "u": 0,
+      "v": 4.851,
+      "x": 209.4255142068566,
+      "z": -224.55151389367964,
+      "hit": null
+    },
+    {
+      "label": "inside 0.6,-0.98",
+      "u": 5.489999999999999,
+      "v": -4.851,
+      "x": 217.59077327927378,
+      "z": -232.14081216692657,
+      "hit": null
+    },
+    {
+      "label": "inside 0.6,-0.6",
+      "u": 5.489999999999999,
+      "v": -2.97,
+      "x": 217.0223345765644,
+      "z": -230.3477593396897,
+      "hit": null
+    },
+    {
+      "label": "inside 0.6,0",
+      "u": 5.489999999999999,
+      "v": 0,
+      "x": 216.12479978281274,
+      "z": -227.51662329668414,
+      "hit": null
+    },
+    {
+      "label": "inside 0.6,0.6",
+      "u": 5.489999999999999,
+      "v": 2.97,
+      "x": 215.2272649890611,
+      "z": -224.6854872536786,
+      "hit": null
+    },
+    {
+      "label": "inside 0.6,0.98",
+      "u": 5.489999999999999,
+      "v": 4.851,
+      "x": 214.6588262863517,
+      "z": -222.89243442644172,
+      "hit": null
+    },
+    {
+      "label": "inside 0.98,-0.98",
+      "u": 8.966999999999999,
+      "v": -4.851,
+      "x": 220.90520426295404,
+      "z": -231.09006183767588,
+      "hit": null
+    },
+    {
+      "label": "inside 0.98,-0.6",
+      "u": 8.966999999999999,
+      "v": -2.97,
+      "x": 220.33676556024466,
+      "z": -229.297009010439,
+      "hit": null
+    },
+    {
+      "label": "inside 0.98,0",
+      "u": 8.966999999999999,
+      "v": 0,
+      "x": 219.439230766493,
+      "z": -226.46587296743346,
+      "hit": null
+    },
+    {
+      "label": "inside 0.98,0.6",
+      "u": 8.966999999999999,
+      "v": 2.97,
+      "x": 218.54169597274137,
+      "z": -223.6347369244279,
+      "hit": null
+    },
+    {
+      "label": "inside 0.98,0.98",
+      "u": 8.966999999999999,
+      "v": 4.851,
+      "x": 217.97325727003198,
+      "z": -221.84168409719103,
+      "hit": null
+    }
+  ],
+  "restoration": [
+    {
+      "id": "portic",
+      "materialsRestored": true,
+      "geometryUnchanged": true
+    },
+    {
+      "id": "domus",
+      "materialsRestored": true,
+      "geometryUnchanged": true
+    },
+    {
+      "id": "circo",
+      "materialsRestored": true,
+      "geometryUnchanged": true
+    },
+    {
+      "id": "diana",
+      "materialsRestored": true,
+      "geometryUnchanged": true
+    },
+    {
+      "id": "necropolis",
+      "materialsRestored": true,
+      "geometryUnchanged": true
+    }
+  ],
+  "layerVisibility": {
+    "liftedHiddenSources": 5,
+    "wrongVisibility": 0
+  }
+}

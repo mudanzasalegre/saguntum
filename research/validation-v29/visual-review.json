@@ -1,0 +1,75 @@
+{
+  "pass": true,
+  "reviewedAtUTC": "2026-11-21T13:32:09.042600+00:00",
+  "method": "Inspección visual humana del asistente sobre siete renders CPU de las mallas exactas exportadas desde la escena de producción. Iluminación de inspección; no es una captura de Three.js ni una prueba del navegador.",
+  "modelSourceSha256": "1323dcc38d63e9a672c50f00cad9c8f75ce072232fc7e4bb22db3352f3b2ce6a",
+  "images": [
+    {
+      "scene": "barrio-conjunto",
+      "image": "barrio-conjunto.png",
+      "sha256": "7364b4289eee0052e566af9e8bedda0748ab01938b5d49048136baeb5ba5c526",
+      "geometrySha256": "54207fa65c035488592524a1f95cfd26b4913b6cdb7e45bdd7a3d27113256ae9",
+      "pass": true,
+      "observation": "Las siete manzanas y sus filas de viviendas se distinguen en el contexto urbano; los límites de intervención y las cubiertas son legibles."
+    },
+    {
+      "scene": "barrio-hileras",
+      "image": "barrio-hileras.png",
+      "sha256": "6c46f80fb1beda1ae483bc73a3ec3f7901120a7ba68569d363627717dfbc3fe8",
+      "geometrySha256": "e6b36b5c979e495654886da4f13bb65784a2f137a4bc0600777b1ebf5b770433",
+      "pass": true,
+      "observation": "Los jardines y cancelas enlazan con las aceras; las fachadas, cubiertas y hastiales visibles están cerrados. Segunda revisión independiente aprobada."
+    },
+    {
+      "scene": "barrio-sala",
+      "image": "barrio-sala.png",
+      "sha256": "da37d14d0ab2fd2b30ba13a3841e1cd35dfe42d7a17391fb7ac67ae2f677b8eb",
+      "geometrySha256": "af2dc19b4b8c4880649b263df41b2aa6d015133bbb6265f92ecdd3eede3585e9",
+      "pass": true,
+      "observation": "La cámara permite leer las comunicaciones entre sala y estancias; huecos y pavimentos son continuos."
+    },
+    {
+      "scene": "barrio-cocina",
+      "image": "barrio-cocina.png",
+      "sha256": "e241629eb25e9e66eda3013609e5429035ec6c1e58b203ed431bb5752e7f677f",
+      "geometrySha256": "cba27fe7269cb00e05487a8af11a8f243af91b52fb47d20dc12e3dd943763b1f",
+      "pass": true,
+      "observation": "La ventana al corral está despejada; se ven encimera y distribuidor sin las franjas negras de umbrales anteriores."
+    },
+    {
+      "scene": "barrio-planta-alta",
+      "image": "barrio-planta-alta.png",
+      "sha256": "545087f911ecf8bd55f9477f484947875c0cb5c99e9819a77d97048c008533f9",
+      "geometrySha256": "942b36d75037aa14d11fcbad321acfb4708121748b154792afddbb5dd2d4ca49",
+      "pass": true,
+      "observation": "Desde el rellano se ven peldaños, pasamanos y acceso inferior; el pavimento del desembarco es continuo."
+    },
+    {
+      "scene": "barrio-calles",
+      "image": "barrio-calles.png",
+      "sha256": "18a1cbf646ddafc77afabd60f542af83a78ffb7974b314d3b03a9f17240af819",
+      "geometrySha256": "7b0a7496470e7d9a5d53cd24f8876967960bc1815781515f0edfe73e536909b3",
+      "pass": true,
+      "observation": "Los tramos viarios, aceras y cabeceras públicas C/D se integran con las viviendas y el contexto sin invadir los patios representados."
+    },
+    {
+      "scene": "barrio-seccion",
+      "image": "barrio-seccion.png",
+      "sha256": "130267ae4c0e3807fa23b6069215e1d6b6356528ccbb9d6d9894c08b6138085d",
+      "geometrySha256": "e90d409b2c2862ee6e5c4b97e9d51f75329ff8387d45400fada1e3ca94fa6049",
+      "pass": true,
+      "observation": "La cubierta retirada permite leer habitaciones, puertas, ventanas y corral; las cubiertas de las casas contiguas permanecen."
+    }
+  ],
+  "independentReview": {
+    "maps": "Aprobados por barrio_research: variantes generales, móvil, minimapa, respaldo y plantas, en ambos temas.",
+    "hileras": "Aprobadas por barrio_research: aceras, cancelas, fachadas y hastiales."
+  },
+  "blockingVisualIssues": [],
+  "browserQA": "unverified",
+  "webglQA": "unverified",
+  "limitations": [
+    "Las imágenes CPU no certifican la composición final del navegador, el rendimiento GPU ni los controles táctiles reales.",
+    "Los usos domésticos, mobiliario y ajustes de huecos a ampliaciones actuales son interpretativos y se identifican como tales en la guía."
+  ]
+}

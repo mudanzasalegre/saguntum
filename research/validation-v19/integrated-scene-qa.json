@@ -1,0 +1,4216 @@
+{
+  "pass": true,
+  "generatedAt": "2026-11-20T17:38:09.658Z",
+  "checks": 1011,
+  "buildMs": 37106.370717,
+  "meshes": 105,
+  "triangles": 50757,
+  "stats": {
+    "modelVersion": "v19",
+    "atrium": [
+      7.31,
+      3.5
+    ],
+    "impluviumOuter": [
+      4.22,
+      2.46
+    ],
+    "impluviumInner": [
+      3.06,
+      1.56
+    ],
+    "impluviumHeight": 0.75,
+    "kitchen": [
+      3.44,
+      3.7
+    ],
+    "balneum": [
+      1.94,
+      1.36
+    ],
+    "tablinum": [
+      4.26,
+      5.5
+    ],
+    "bench": [
+      0.58,
+      1.12
+    ],
+    "documentedArchitecturalElements": 5,
+    "restitutedSupports": 6,
+    "wallSegments": 25,
+    "stops": 20,
+    "selectableRooms": 8,
+    "interiorViews": 6,
+    "hostBuildings": 10,
+    "interiorLights": 4,
+    "meshes": 95,
+    "triangles": 32362,
+    "paint": "Pintura mural exterior del impluvium; columnas azules y rojas; sala con paneles verdes e interpaneles rojos",
+    "hypocaust": false,
+    "phase": "Casa de época imperial; reformas y ocupaciones sucesivas",
+    "verticalPlacement": "interpretativa",
+    "survey": false,
+    "context": {
+      "buildingParts": 54,
+      "parentParcels": 19,
+      "footprintsPreserved": true,
+      "courtyards": 2,
+      "sourceHeight": 0,
+      "ignHeight": 26,
+      "storeyHeight": 28,
+      "fallbackHeight": 0,
+      "streetSamples": 1200,
+      "roofCorrections": 0,
+      "maximumRoofCorrectionM": 0,
+      "preservedSantaMaria": true,
+      "preservedPlazaMayor": true,
+      "heightConflictsReviewed": 1,
+      "hostBuildingPartsExcluded": 10,
+      "reusedBuildingParts": 19,
+      "reusedStreetFragments": 3,
+      "preservedPreviousContexts": true
+    }
+  },
+  "errors": [],
+  "cameras": [
+    {
+      "place": "domus",
+      "id": "domus-conjunto",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 50,
+      "interiorView": false,
+      "position": [
+        546.4365702384821,
+        101.01558441550334,
+        222.63111407208402
+      ],
+      "target": [
+        478.12370197962656,
+        49.20605684119072,
+        173.23445621097704
+      ],
+      "clearance": 58.01558441550334,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Domus dels Peixos · edificio · plaster",
+        "intended": true,
+        "point": [
+          486.59667374145897,
+          55.632088646320234,
+          179.36121531001106
+        ],
+        "distanceToTarget": 12.272828210927651
+      }
+    },
+    {
+      "place": "domus",
+      "id": "domus-conjunto",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 50,
+      "interiorView": false,
+      "position": [
+        500.75960871476315,
+        66.20605684119073,
+        189.12834580031918
+      ],
+      "target": [
+        478.12370197962656,
+        49.20605684119072,
+        173.23445621097704
+      ],
+      "clearance": 22.20605684119073,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Domus dels Peixos · edificio · plaster",
+        "intended": true,
+        "point": [
+          486.67009060412204,
+          55.6245585745849,
+          179.23533608624575
+        ],
+        "distanceToTarget": 12.25758876369634
+      }
+    },
+    {
+      "place": "domus",
+      "id": "domus-conjunto",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 50,
+      "interiorView": false,
+      "position": [
+        668.0901917966949,
+        193.27955782607933,
+        310.59817613284935
+      ],
+      "target": [
+        478.12370197962656,
+        49.20605684119072,
+        173.23445621097704
+      ],
+      "clearance": 152.27955782607933,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Domus dels Peixos · edificio · plaster",
+        "intended": true,
+        "point": [
+          486.59667374145897,
+          55.63208864632023,
+          179.36121531001106
+        ],
+        "distanceToTarget": 12.272828210927647
+      }
+    },
+    {
+      "place": "domus",
+      "id": "domus-conjunto",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 50,
+      "interiorView": false,
+      "position": [
+        500.75960871476315,
+        66.20605684119073,
+        189.12834580031918
+      ],
+      "target": [
+        478.12370197962656,
+        49.20605684119072,
+        173.23445621097704
+      ],
+      "clearance": 22.20605684119073,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Domus dels Peixos · edificio · plaster",
+        "intended": true,
+        "point": [
+          486.67009060412204,
+          55.6245585745849,
+          179.23533608624575
+        ],
+        "distanceToTarget": 12.25758876369634
+      }
+    },
+    {
+      "place": "domus",
+      "id": "domus-conjunto",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 50,
+      "interiorView": false,
+      "position": [
+        568.5285381650117,
+        117.77047190058556,
+        238.60569410304137
+      ],
+      "target": [
+        478.12370197962656,
+        49.20605684119072,
+        173.23445621097704
+      ],
+      "clearance": 74.86283982129328,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Domus dels Peixos · edificio · plaster",
+        "intended": true,
+        "point": [
+          486.5966737414589,
+          55.63208864632023,
+          179.36121531001106
+        ],
+        "distanceToTarget": 12.272828210927608
+      }
+    },
+    {
+      "place": "domus",
+      "id": "domus-conjunto",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 50,
+      "interiorView": false,
+      "position": [
+        500.75960871476315,
+        66.20605684119073,
+        189.12834580031918
+      ],
+      "target": [
+        478.12370197962656,
+        49.20605684119072,
+        173.23445621097704
+      ],
+      "clearance": 22.20605684119073,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Domus dels Peixos · edificio · plaster",
+        "intended": true,
+        "point": [
+          486.67009060412204,
+          55.6245585745849,
+          179.23533608624575
+        ],
+        "distanceToTarget": 12.25758876369634
+      }
+    },
+    {
+      "place": "domus",
+      "id": "domus-acceso",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        492.0937080922271,
+        46.15,
+        177.7969200001791
+      ],
+      "target": [
+        488.6937080922271,
+        45.7,
+        175.9969200001791
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Domus dels Peixos · edificio · black",
+        "intended": true,
+        "point": [
+          489.15048518576754,
+          45.76045579179212,
+          176.23874316734756
+        ],
+        "distanceToTarget": 0.5203639688947035
+      }
+    },
+    {
+      "place": "domus",
+      "id": "domus-acceso",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        492.0937080922271,
+        46.15,
+        177.7969200001791
+      ],
+      "target": [
+        488.6937080922271,
+        45.7,
+        175.9969200001791
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Domus dels Peixos · edificio · black",
+        "intended": true,
+        "point": [
+          489.15048518576754,
+          45.76045579179212,
+          176.23874316734756
+        ],
+        "distanceToTarget": 0.5203639688947035
+      }
+    },
+    {
+      "place": "domus",
+      "id": "domus-acceso",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        492.0937080922271,
+        46.15,
+        177.7969200001791
+      ],
+      "target": [
+        488.6937080922271,
+        45.7,
+        175.9969200001791
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Domus dels Peixos · edificio · black",
+        "intended": true,
+        "point": [
+          489.15048518576754,
+          45.76045579179212,
+          176.23874316734756
+        ],
+        "distanceToTarget": 0.5203639688947035
+      }
+    },
+    {
+      "place": "domus",
+      "id": "domus-acceso",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        492.0937080922271,
+        46.15,
+        177.7969200001791
+      ],
+      "target": [
+        488.6937080922271,
+        45.7,
+        175.9969200001791
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Domus dels Peixos · edificio · black",
+        "intended": true,
+        "point": [
+          489.15048518576754,
+          45.76045579179212,
+          176.23874316734756
+        ],
+        "distanceToTarget": 0.5203639688947035
+      }
+    },
+    {
+      "place": "domus",
+      "id": "domus-acceso",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        492.0937080922271,
+        46.15,
+        177.7969200001791
+      ],
+      "target": [
+        488.6937080922271,
+        45.7,
+        175.9969200001791
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Domus dels Peixos · edificio · black",
+        "intended": true,
+        "point": [
+          489.15048518576754,
+          45.76045579179212,
+          176.23874316734756
+        ],
+        "distanceToTarget": 0.5203639688947035
+      }
+    },
+    {
+      "place": "domus",
+      "id": "domus-acceso",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        492.0937080922271,
+        46.15,
+        177.7969200001791
+      ],
+      "target": [
+        488.6937080922271,
+        45.7,
+        175.9969200001791
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Domus dels Peixos · edificio · black",
+        "intended": true,
+        "point": [
+          489.15048518576754,
+          45.76045579179212,
+          176.23874316734756
+        ],
+        "distanceToTarget": 0.5203639688947035
+      }
+    },
+    {
+      "place": "domus",
+      "id": "domus-museo",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 72,
+      "interiorView": true,
+      "position": [
+        473.09777943591564,
+        45.156056841190725,
+        176.99478898675883
+      ],
+      "target": [
+        477.9072494408897,
+        43.556056841190724,
+        173.5993511252666
+      ],
+      "clearance": 2.8900000000000006,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-museo",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 72,
+      "interiorView": true,
+      "position": [
+        474.7201901568983,
+        45.056056841190724,
+        176.47731101385506
+      ],
+      "target": [
+        477.9072494408897,
+        43.556056841190724,
+        173.5993511252666
+      ],
+      "clearance": 2.789999999999999,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-museo",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 72,
+      "interiorView": true,
+      "position": [
+        473.09777943591564,
+        45.156056841190725,
+        176.99478898675883
+      ],
+      "target": [
+        477.9072494408897,
+        43.556056841190724,
+        173.5993511252666
+      ],
+      "clearance": 2.8900000000000006,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-museo",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 72,
+      "interiorView": true,
+      "position": [
+        474.7201901568983,
+        45.056056841190724,
+        176.47731101385506
+      ],
+      "target": [
+        477.9072494408897,
+        43.556056841190724,
+        173.5993511252666
+      ],
+      "clearance": 2.789999999999999,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-museo",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 72,
+      "interiorView": true,
+      "position": [
+        473.09777943591564,
+        45.156056841190725,
+        176.99478898675883
+      ],
+      "target": [
+        477.9072494408897,
+        43.556056841190724,
+        173.5993511252666
+      ],
+      "clearance": 2.8900000000000006,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-museo",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 72,
+      "interiorView": true,
+      "position": [
+        474.7201901568983,
+        45.056056841190724,
+        176.47731101385506
+      ],
+      "target": [
+        477.9072494408897,
+        43.556056841190724,
+        173.5993511252666
+      ],
+      "clearance": 2.789999999999999,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-vestibulo",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 62,
+      "interiorView": false,
+      "position": [
+        469.95197142887395,
+        48.60605684119072,
+        180.84269646782332
+      ],
+      "target": [
+        472.541120527593,
+        43.20605684119072,
+        174.81473603790988
+      ],
+      "clearance": 6.339999999999996,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-vestibulo",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 62,
+      "interiorView": false,
+      "position": [
+        470.5250375157774,
+        46.70605684119072,
+        179.04503263383177
+      ],
+      "target": [
+        472.541120527593,
+        43.20605684119072,
+        174.81473603790988
+      ],
+      "clearance": 4.439999999999998,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-vestibulo",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 62,
+      "interiorView": false,
+      "position": [
+        469.95197142887395,
+        48.60605684119072,
+        180.84269646782332
+      ],
+      "target": [
+        472.541120527593,
+        43.20605684119072,
+        174.81473603790988
+      ],
+      "clearance": 6.339999999999996,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-vestibulo",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 62,
+      "interiorView": false,
+      "position": [
+        470.5250375157774,
+        46.70605684119072,
+        179.04503263383177
+      ],
+      "target": [
+        472.541120527593,
+        43.20605684119072,
+        174.81473603790988
+      ],
+      "clearance": 4.439999999999998,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-vestibulo",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 62,
+      "interiorView": false,
+      "position": [
+        469.95197142887395,
+        48.60605684119072,
+        180.84269646782332
+      ],
+      "target": [
+        472.541120527593,
+        43.20605684119072,
+        174.81473603790988
+      ],
+      "clearance": 6.339999999999996,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-vestibulo",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 62,
+      "interiorView": false,
+      "position": [
+        470.5250375157774,
+        46.70605684119072,
+        179.04503263383177
+      ],
+      "target": [
+        472.541120527593,
+        43.20605684119072,
+        174.81473603790988
+      ],
+      "clearance": 4.439999999999998,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-atrio",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 58,
+      "interiorView": false,
+      "position": [
+        485.13506722196587,
+        50.75605684119073,
+        178.46233890270955
+      ],
+      "target": [
+        478.12370197962656,
+        43.25605684119073,
+        173.23445621097704
+      ],
+      "clearance": 8.490000000000002,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-atrio",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 58,
+      "interiorView": false,
+      "position": [
+        482.99310818654874,
+        48.75605684119073,
+        176.94510079002094
+      ],
+      "target": [
+        478.12370197962656,
+        43.25605684119073,
+        173.23445621097704
+      ],
+      "clearance": 6.490000000000002,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-atrio",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 58,
+      "interiorView": false,
+      "position": [
+        485.13506722196587,
+        50.75605684119073,
+        178.46233890270955
+      ],
+      "target": [
+        478.12370197962656,
+        43.25605684119073,
+        173.23445621097704
+      ],
+      "clearance": 8.490000000000002,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-atrio",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 58,
+      "interiorView": false,
+      "position": [
+        482.99310818654874,
+        48.75605684119073,
+        176.94510079002094
+      ],
+      "target": [
+        478.12370197962656,
+        43.25605684119073,
+        173.23445621097704
+      ],
+      "clearance": 6.490000000000002,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-atrio",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 58,
+      "interiorView": false,
+      "position": [
+        485.13506722196587,
+        50.75605684119073,
+        178.46233890270955
+      ],
+      "target": [
+        478.12370197962656,
+        43.25605684119073,
+        173.23445621097704
+      ],
+      "clearance": 8.490000000000002,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-atrio",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 58,
+      "interiorView": false,
+      "position": [
+        482.99310818654874,
+        48.75605684119073,
+        176.94510079002094
+      ],
+      "target": [
+        478.12370197962656,
+        43.25605684119073,
+        173.23445621097704
+      ],
+      "clearance": 6.490000000000002,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-impluvium",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        482.844665810996,
+        47.406056841190725,
+        176.36375333699456
+      ],
+      "target": [
+        478.12370197962656,
+        43.406056841190725,
+        173.23445621097704
+      ],
+      "clearance": 5.140000000000001,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-impluvium",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        481.6036090341054,
+        46.306056841190724,
+        175.54535363236738
+      ],
+      "target": [
+        478.12370197962656,
+        43.406056841190725,
+        173.23445621097704
+      ],
+      "clearance": 4.039999999999999,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-impluvium",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        482.844665810996,
+        47.406056841190725,
+        176.36375333699456
+      ],
+      "target": [
+        478.12370197962656,
+        43.406056841190725,
+        173.23445621097704
+      ],
+      "clearance": 5.140000000000001,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-impluvium",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        481.6036090341054,
+        46.306056841190724,
+        175.54535363236738
+      ],
+      "target": [
+        478.12370197962656,
+        43.406056841190725,
+        173.23445621097704
+      ],
+      "clearance": 4.039999999999999,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-impluvium",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        482.844665810996,
+        47.406056841190725,
+        176.36375333699456
+      ],
+      "target": [
+        478.12370197962656,
+        43.406056841190725,
+        173.23445621097704
+      ],
+      "clearance": 5.140000000000001,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-impluvium",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        481.6036090341054,
+        46.306056841190724,
+        175.54535363236738
+      ],
+      "target": [
+        478.12370197962656,
+        43.406056841190725,
+        173.23445621097704
+      ],
+      "clearance": 4.039999999999999,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-peces",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 55,
+      "interiorView": true,
+      "position": [
+        480.36421890068374,
+        44.85605684119072,
+        175.54187553274252
+      ],
+      "target": [
+        478.6242653734443,
+        43.45605684119072,
+        174.38642682204735
+      ],
+      "clearance": 2.5899999999999963,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-peces",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 55,
+      "interiorView": true,
+      "position": [
+        479.47775718165065,
+        44.156056841190725,
+        175.30378811037636
+      ],
+      "target": [
+        478.6242653734443,
+        43.45605684119072,
+        174.38642682204735
+      ],
+      "clearance": 1.8900000000000006,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-peces",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 55,
+      "interiorView": true,
+      "position": [
+        480.36421890068374,
+        44.85605684119072,
+        175.54187553274252
+      ],
+      "target": [
+        478.6242653734443,
+        43.45605684119072,
+        174.38642682204735
+      ],
+      "clearance": 2.5899999999999963,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-peces",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 55,
+      "interiorView": true,
+      "position": [
+        479.47775718165065,
+        44.156056841190725,
+        175.30378811037636
+      ],
+      "target": [
+        478.6242653734443,
+        43.45605684119072,
+        174.38642682204735
+      ],
+      "clearance": 1.8900000000000006,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-peces",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 55,
+      "interiorView": true,
+      "position": [
+        480.36421890068374,
+        44.85605684119072,
+        175.54187553274252
+      ],
+      "target": [
+        478.6242653734443,
+        43.45605684119072,
+        174.38642682204735
+      ],
+      "clearance": 2.5899999999999963,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-peces",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 55,
+      "interiorView": true,
+      "position": [
+        479.47775718165065,
+        44.156056841190725,
+        175.30378811037636
+      ],
+      "target": [
+        478.6242653734443,
+        43.45605684119072,
+        174.38642682204735
+      ],
+      "clearance": 1.8900000000000006,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-columnas",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 60,
+      "interiorView": true,
+      "position": [
+        481.9736798022218,
+        46.75605684119073,
+        176.7925695826285
+      ],
+      "target": [
+        478.737036023936,
+        43.556056841190724,
+        174.6259738537294
+      ],
+      "clearance": 4.490000000000002,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-columnas",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 60,
+      "interiorView": true,
+      "position": [
+        481.1469987314716,
+        45.75605684119073,
+        176.38440490108027
+      ],
+      "target": [
+        478.737036023936,
+        43.556056841190724,
+        174.6259738537294
+      ],
+      "clearance": 3.490000000000002,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-columnas",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 60,
+      "interiorView": true,
+      "position": [
+        481.9736798022218,
+        46.75605684119073,
+        176.7925695826285
+      ],
+      "target": [
+        478.737036023936,
+        43.556056841190724,
+        174.6259738537294
+      ],
+      "clearance": 4.490000000000002,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-columnas",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 60,
+      "interiorView": true,
+      "position": [
+        481.1469987314716,
+        45.75605684119073,
+        176.38440490108027
+      ],
+      "target": [
+        478.737036023936,
+        43.556056841190724,
+        174.6259738537294
+      ],
+      "clearance": 3.490000000000002,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-columnas",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 60,
+      "interiorView": true,
+      "position": [
+        481.9736798022218,
+        46.75605684119073,
+        176.7925695826285
+      ],
+      "target": [
+        478.737036023936,
+        43.556056841190724,
+        174.6259738537294
+      ],
+      "clearance": 4.490000000000002,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-columnas",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 60,
+      "interiorView": true,
+      "position": [
+        481.1469987314716,
+        45.75605684119073,
+        176.38440490108027
+      ],
+      "target": [
+        478.737036023936,
+        43.556056841190724,
+        174.6259738537294
+      ],
+      "clearance": 3.490000000000002,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-compluvium",
+      "mode": "historical",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        484.40320705185604,
+        51.45605684119072,
+        177.61712846062616
+      ],
+      "target": [
+        478.12370197962656,
+        45.45605684119072,
+        173.23445621097704
+      ],
+      "clearance": 9.189999999999998,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-compluvium",
+      "mode": "historical",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        482.91888699877234,
+        50.25605684119072,
+        176.65442706350777
+      ],
+      "target": [
+        478.12370197962656,
+        45.45605684119072,
+        173.23445621097704
+      ],
+      "clearance": 7.989999999999995,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-compluvium",
+      "mode": "historical",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        484.40320705185604,
+        51.45605684119072,
+        177.61712846062616
+      ],
+      "target": [
+        478.12370197962656,
+        45.45605684119072,
+        173.23445621097704
+      ],
+      "clearance": 9.189999999999998,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-compluvium",
+      "mode": "historical",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        482.91888699877234,
+        50.25605684119072,
+        176.65442706350777
+      ],
+      "target": [
+        478.12370197962656,
+        45.45605684119072,
+        173.23445621097704
+      ],
+      "clearance": 7.989999999999995,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-compluvium",
+      "mode": "historical",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        484.40320705185604,
+        51.45605684119072,
+        177.61712846062616
+      ],
+      "target": [
+        478.12370197962656,
+        45.45605684119072,
+        173.23445621097704
+      ],
+      "clearance": 9.189999999999998,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-compluvium",
+      "mode": "historical",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        482.91888699877234,
+        50.25605684119072,
+        176.65442706350777
+      ],
+      "target": [
+        478.12370197962656,
+        45.45605684119072,
+        173.23445621097704
+      ],
+      "clearance": 7.989999999999995,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-taberna",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        468.18268127336404,
+        49.556056841190724,
+        176.74297545955753
+      ],
+      "target": [
+        471.1078442073857,
+        43.25605684119073,
+        170.00996559699044
+      ],
+      "clearance": 7.289999999999999,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-taberna",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        468.99694029492974,
+        47.75605684119073,
+        174.6773079534475
+      ],
+      "target": [
+        471.1078442073857,
+        43.25605684119073,
+        170.00996559699044
+      ],
+      "clearance": 5.490000000000002,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-taberna",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        468.18268127336404,
+        49.556056841190724,
+        176.74297545955753
+      ],
+      "target": [
+        471.1078442073857,
+        43.25605684119073,
+        170.00996559699044
+      ],
+      "clearance": 7.289999999999999,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-taberna",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        468.99694029492974,
+        47.75605684119073,
+        174.6773079534475
+      ],
+      "target": [
+        471.1078442073857,
+        43.25605684119073,
+        170.00996559699044
+      ],
+      "clearance": 5.490000000000002,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-taberna",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        468.18268127336404,
+        49.556056841190724,
+        176.74297545955753
+      ],
+      "target": [
+        471.1078442073857,
+        43.25605684119073,
+        170.00996559699044
+      ],
+      "clearance": 7.289999999999999,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-taberna",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        468.99694029492974,
+        47.75605684119073,
+        174.6773079534475
+      ],
+      "target": [
+        471.1078442073857,
+        43.25605684119073,
+        170.00996559699044
+      ],
+      "clearance": 5.490000000000002,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-cocina",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        480.0503780895149,
+        48.71605684119072,
+        171.9684312635192
+      ],
+      "target": [
+        475.01192979417607,
+        43.21605684119072,
+        168.40415871849726
+      ],
+      "clearance": 6.449999999999996,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-cocina",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        478.5413176405058,
+        47.01605684119072,
+        170.90883862422973
+      ],
+      "target": [
+        475.01192979417607,
+        43.21605684119072,
+        168.40415871849726
+      ],
+      "clearance": 4.749999999999993,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-cocina",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        480.0503780895149,
+        48.71605684119072,
+        171.9684312635192
+      ],
+      "target": [
+        475.01192979417607,
+        43.21605684119072,
+        168.40415871849726
+      ],
+      "clearance": 6.449999999999996,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-cocina",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        478.5413176405058,
+        47.01605684119072,
+        170.90883862422973
+      ],
+      "target": [
+        475.01192979417607,
+        43.21605684119072,
+        168.40415871849726
+      ],
+      "clearance": 4.749999999999993,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-cocina",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        480.0503780895149,
+        48.71605684119072,
+        171.9684312635192
+      ],
+      "target": [
+        475.01192979417607,
+        43.21605684119072,
+        168.40415871849726
+      ],
+      "clearance": 6.449999999999996,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-cocina",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        478.5413176405058,
+        47.01605684119072,
+        170.90883862422973
+      ],
+      "target": [
+        475.01192979417607,
+        43.21605684119072,
+        168.40415871849726
+      ],
+      "clearance": 4.749999999999993,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-balneum",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 59,
+      "interiorView": false,
+      "position": [
+        478.101445993538,
+        46.806056841190724,
+        173.6323314063376
+      ],
+      "target": [
+        475.27710757986193,
+        43.20605684119072,
+        171.46366533590776
+      ],
+      "clearance": 4.539999999999999,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-balneum",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 59,
+      "interiorView": false,
+      "position": [
+        477.2252841309369,
+        45.806056841190724,
+        173.03038424044726
+      ],
+      "target": [
+        475.27710757986193,
+        43.20605684119072,
+        171.46366533590776
+      ],
+      "clearance": 3.539999999999999,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-balneum",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 59,
+      "interiorView": false,
+      "position": [
+        478.101445993538,
+        46.806056841190724,
+        173.6323314063376
+      ],
+      "target": [
+        475.27710757986193,
+        43.20605684119072,
+        171.46366533590776
+      ],
+      "clearance": 4.539999999999999,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-balneum",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 59,
+      "interiorView": false,
+      "position": [
+        477.2252841309369,
+        45.806056841190724,
+        173.03038424044726
+      ],
+      "target": [
+        475.27710757986193,
+        43.20605684119072,
+        171.46366533590776
+      ],
+      "clearance": 3.539999999999999,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-balneum",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 59,
+      "interiorView": false,
+      "position": [
+        478.101445993538,
+        46.806056841190724,
+        173.6323314063376
+      ],
+      "target": [
+        475.27710757986193,
+        43.20605684119072,
+        171.46366533590776
+      ],
+      "clearance": 4.539999999999999,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-balneum",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 59,
+      "interiorView": false,
+      "position": [
+        477.2252841309369,
+        45.806056841190724,
+        173.03038424044726
+      ],
+      "target": [
+        475.27710757986193,
+        43.20605684119072,
+        171.46366533590776
+      ],
+      "clearance": 3.539999999999999,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-tablinum",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        481.942169500711,
+        49.82605684119073,
+        178.24553451713265
+      ],
+      "target": [
+        484.9642236769037,
+        43.32605684119073,
+        171.48778425864012
+      ],
+      "clearance": 7.560000000000002,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-tablinum",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        482.7564285222767,
+        47.82605684119073,
+        176.17986701102262
+      ],
+      "target": [
+        484.9642236769037,
+        43.32605684119073,
+        171.48778425864012
+      ],
+      "clearance": 5.560000000000002,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-tablinum",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        481.942169500711,
+        49.82605684119073,
+        178.24553451713265
+      ],
+      "target": [
+        484.9642236769037,
+        43.32605684119073,
+        171.48778425864012
+      ],
+      "clearance": 7.560000000000002,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-tablinum",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        482.7564285222767,
+        47.82605684119073,
+        176.17986701102262
+      ],
+      "target": [
+        484.9642236769037,
+        43.32605684119073,
+        171.48778425864012
+      ],
+      "clearance": 5.560000000000002,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-tablinum",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        481.942169500711,
+        49.82605684119073,
+        178.24553451713265
+      ],
+      "target": [
+        484.9642236769037,
+        43.32605684119073,
+        171.48778425864012
+      ],
+      "clearance": 7.560000000000002,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-tablinum",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        482.7564285222767,
+        47.82605684119073,
+        176.17986701102262
+      ],
+      "target": [
+        484.9642236769037,
+        43.32605684119073,
+        171.48778425864012
+      ],
+      "clearance": 5.560000000000002,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-pinturas",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 58,
+      "interiorView": true,
+      "position": [
+        483.48407541761463,
+        44.63605684119072,
+        172.80492553068476
+      ],
+      "target": [
+        484.3869443152284,
+        43.53605684119072,
+        169.06529617021042
+      ],
+      "clearance": 2.3699999999999974,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-pinturas",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 58,
+      "interiorView": true,
+      "position": [
+        483.9149101535575,
+        44.33605684119072,
+        171.66283033749593
+      ],
+      "target": [
+        484.3869443152284,
+        43.53605684119072,
+        169.06529617021042
+      ],
+      "clearance": 2.069999999999993,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-pinturas",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 58,
+      "interiorView": true,
+      "position": [
+        483.48407541761463,
+        44.63605684119072,
+        172.80492553068476
+      ],
+      "target": [
+        484.3869443152284,
+        43.53605684119072,
+        169.06529617021042
+      ],
+      "clearance": 2.3699999999999974,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-pinturas",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 58,
+      "interiorView": true,
+      "position": [
+        483.9149101535575,
+        44.33605684119072,
+        171.66283033749593
+      ],
+      "target": [
+        484.3869443152284,
+        43.53605684119072,
+        169.06529617021042
+      ],
+      "clearance": 2.069999999999993,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-pinturas",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 58,
+      "interiorView": true,
+      "position": [
+        483.48407541761463,
+        44.63605684119072,
+        172.80492553068476
+      ],
+      "target": [
+        484.3869443152284,
+        43.53605684119072,
+        169.06529617021042
+      ],
+      "clearance": 2.3699999999999974,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-pinturas",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 58,
+      "interiorView": true,
+      "position": [
+        483.9149101535575,
+        44.33605684119072,
+        171.66283033749593
+      ],
+      "target": [
+        484.3869443152284,
+        43.53605684119072,
+        169.06529617021042
+      ],
+      "clearance": 2.069999999999993,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-umbrales",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 59,
+      "interiorView": true,
+      "position": [
+        481.58112527337505,
+        46.09605684119072,
+        174.93184366463788
+      ],
+      "target": [
+        482.90044021866004,
+        43.296056841190726,
+        172.01475469185223
+      ],
+      "clearance": 3.8299999999999983,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-umbrales",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 59,
+      "interiorView": true,
+      "position": [
+        481.98928995492327,
+        45.296056841190726,
+        174.1051625938877
+      ],
+      "target": [
+        482.90044021866004,
+        43.296056841190726,
+        172.01475469185223
+      ],
+      "clearance": 3.030000000000001,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-umbrales",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 59,
+      "interiorView": true,
+      "position": [
+        481.58112527337505,
+        46.09605684119072,
+        174.93184366463788
+      ],
+      "target": [
+        482.90044021866004,
+        43.296056841190726,
+        172.01475469185223
+      ],
+      "clearance": 3.8299999999999983,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-umbrales",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 59,
+      "interiorView": true,
+      "position": [
+        481.98928995492327,
+        45.296056841190726,
+        174.1051625938877
+      ],
+      "target": [
+        482.90044021866004,
+        43.296056841190726,
+        172.01475469185223
+      ],
+      "clearance": 3.030000000000001,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-umbrales",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 59,
+      "interiorView": true,
+      "position": [
+        481.58112527337505,
+        46.09605684119072,
+        174.93184366463788
+      ],
+      "target": [
+        482.90044021866004,
+        43.296056841190726,
+        172.01475469185223
+      ],
+      "clearance": 3.8299999999999983,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-umbrales",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 59,
+      "interiorView": true,
+      "position": [
+        481.98928995492327,
+        45.296056841190726,
+        174.1051625938877
+      ],
+      "target": [
+        482.90044021866004,
+        43.296056841190726,
+        172.01475469185223
+      ],
+      "clearance": 3.030000000000001,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-pavimentos",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 53,
+      "interiorView": true,
+      "position": [
+        477.43809301687327,
+        45.92605684119072,
+        175.80395817637663
+      ],
+      "target": [
+        475.7713255066448,
+        43.126056841190724,
+        174.7330305098898
+      ],
+      "clearance": 3.6599999999999966,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-pavimentos",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 53,
+      "interiorView": true,
+      "position": [
+        476.78148920530515,
+        44.92605684119072,
+        175.4555741431113
+      ],
+      "target": [
+        475.7713255066448,
+        43.126056841190724,
+        174.7330305098898
+      ],
+      "clearance": 2.6599999999999966,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-pavimentos",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 53,
+      "interiorView": true,
+      "position": [
+        477.43809301687327,
+        45.92605684119072,
+        175.80395817637663
+      ],
+      "target": [
+        475.7713255066448,
+        43.126056841190724,
+        174.7330305098898
+      ],
+      "clearance": 3.6599999999999966,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-pavimentos",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 53,
+      "interiorView": true,
+      "position": [
+        476.78148920530515,
+        44.92605684119072,
+        175.4555741431113
+      ],
+      "target": [
+        475.7713255066448,
+        43.126056841190724,
+        174.7330305098898
+      ],
+      "clearance": 2.6599999999999966,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-pavimentos",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 53,
+      "interiorView": true,
+      "position": [
+        477.43809301687327,
+        45.92605684119072,
+        175.80395817637663
+      ],
+      "target": [
+        475.7713255066448,
+        43.126056841190724,
+        174.7330305098898
+      ],
+      "clearance": 3.6599999999999966,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-pavimentos",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 53,
+      "interiorView": true,
+      "position": [
+        476.78148920530515,
+        44.92605684119072,
+        175.4555741431113
+      ],
+      "target": [
+        475.7713255066448,
+        43.126056841190724,
+        174.7330305098898
+      ],
+      "clearance": 2.6599999999999966,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-limites",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 61,
+      "interiorView": false,
+      "position": [
+        492.3533406915119,
+        50.07605684119072,
+        180.45856737631874
+      ],
+      "target": [
+        485.49041782472534,
+        43.27605684119072,
+        175.81203213761262
+      ],
+      "clearance": 6.07605684119072,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-limites",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 61,
+      "interiorView": false,
+      "position": [
+        490.2361220520202,
+        47.876056841190724,
+        179.0382205058012
+      ],
+      "target": [
+        485.49041782472534,
+        43.27605684119072,
+        175.81203213761262
+      ],
+      "clearance": 3.8760568411907244,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-limites",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 61,
+      "interiorView": false,
+      "position": [
+        492.3533406915119,
+        50.07605684119072,
+        180.45856737631874
+      ],
+      "target": [
+        485.49041782472534,
+        43.27605684119072,
+        175.81203213761262
+      ],
+      "clearance": 6.07605684119072,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-limites",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 61,
+      "interiorView": false,
+      "position": [
+        490.2361220520202,
+        47.876056841190724,
+        179.0382205058012
+      ],
+      "target": [
+        485.49041782472534,
+        43.27605684119072,
+        175.81203213761262
+      ],
+      "clearance": 3.8760568411907244,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-limites",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 61,
+      "interiorView": false,
+      "position": [
+        492.3533406915119,
+        50.07605684119072,
+        180.45856737631874
+      ],
+      "target": [
+        485.49041782472534,
+        43.27605684119072,
+        175.81203213761262
+      ],
+      "clearance": 6.07605684119072,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-limites",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 61,
+      "interiorView": false,
+      "position": [
+        490.2361220520202,
+        47.876056841190724,
+        179.0382205058012
+      ],
+      "target": [
+        485.49041782472534,
+        43.27605684119072,
+        175.81203213761262
+      ],
+      "clearance": 3.8760568411907244,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-fases",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 61,
+      "interiorView": false,
+      "position": [
+        470.97557123626154,
+        47.65605684119072,
+        173.61475461454887
+      ],
+      "target": [
+        473.3565491623667,
+        43.35605684119072,
+        169.60091055736382
+      ],
+      "clearance": 5.3899999999999935,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-fases",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 61,
+      "interiorView": false,
+      "position": [
+        471.7939709408887,
+        46.556056841190724,
+        172.37369783765826
+      ],
+      "target": [
+        473.3565491623667,
+        43.35605684119072,
+        169.60091055736382
+      ],
+      "clearance": 4.289999999999999,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-fases",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 61,
+      "interiorView": false,
+      "position": [
+        470.97557123626154,
+        47.65605684119072,
+        173.61475461454887
+      ],
+      "target": [
+        473.3565491623667,
+        43.35605684119072,
+        169.60091055736382
+      ],
+      "clearance": 5.3899999999999935,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-fases",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 61,
+      "interiorView": false,
+      "position": [
+        471.7939709408887,
+        46.556056841190724,
+        172.37369783765826
+      ],
+      "target": [
+        473.3565491623667,
+        43.35605684119072,
+        169.60091055736382
+      ],
+      "clearance": 4.289999999999999,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-fases",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 61,
+      "interiorView": false,
+      "position": [
+        470.97557123626154,
+        47.65605684119072,
+        173.61475461454887
+      ],
+      "target": [
+        473.3565491623667,
+        43.35605684119072,
+        169.60091055736382
+      ],
+      "clearance": 5.3899999999999935,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-fases",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 61,
+      "interiorView": false,
+      "position": [
+        471.7939709408887,
+        46.556056841190724,
+        172.37369783765826
+      ],
+      "target": [
+        473.3565491623667,
+        43.35605684119072,
+        169.60091055736382
+      ],
+      "clearance": 4.289999999999999,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-historica",
+      "mode": "historical",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 53,
+      "interiorView": false,
+      "position": [
+        483.14203141179263,
+        84.06388994914875,
+        176.35757228534615
+      ],
+      "target": [
+        478.2185228802669,
+        44.056056841190724,
+        172.7974104504419
+      ],
+      "clearance": 41.79783310795802,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-historica",
+      "mode": "historical",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 53,
+      "interiorView": false,
+      "position": [
+        480.79959801774993,
+        70.05605684119072,
+        174.82177482838054
+      ],
+      "target": [
+        478.2185228802669,
+        44.056056841190724,
+        172.7974104504419
+      ],
+      "clearance": 27.79,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-historica",
+      "mode": "historical",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 53,
+      "interiorView": false,
+      "position": [
+        489.73756836402583,
+        137.65842318753104,
+        181.12676863946814
+      ],
+      "target": [
+        478.2185228802669,
+        44.056056841190724,
+        172.7974104504419
+      ],
+      "clearance": 93.65842318753104,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-historica",
+      "mode": "historical",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 53,
+      "interiorView": false,
+      "position": [
+        480.79959801774993,
+        70.05605684119072,
+        174.82177482838054
+      ],
+      "target": [
+        478.2185228802669,
+        44.056056841190724,
+        172.7974104504419
+      ],
+      "clearance": 27.79,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-historica",
+      "mode": "historical",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 53,
+      "interiorView": false,
+      "position": [
+        484.3397630447737,
+        93.7965119144809,
+        177.22364541610096
+      ],
+      "target": [
+        478.2185228802669,
+        44.056056841190724,
+        172.7974104504419
+      ],
+      "clearance": 51.53045507329018,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-historica",
+      "mode": "historical",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 53,
+      "interiorView": false,
+      "position": [
+        480.79959801774993,
+        70.05605684119072,
+        174.82177482838054
+      ],
+      "target": [
+        478.2185228802669,
+        44.056056841190724,
+        172.7974104504419
+      ],
+      "clearance": 27.79,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-entorno",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        432.9618558670631,
+        50.47766401489769,
+        160.09320000035967
+      ],
+      "target": [
+        432.6618558670631,
+        50.01550603110345,
+        168.09320000035967
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-entorno",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        432.9618558670631,
+        50.47766401489769,
+        160.09320000035967
+      ],
+      "target": [
+        432.6618558670631,
+        50.01550603110345,
+        168.09320000035967
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-entorno",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        432.9618558670631,
+        50.47766401489769,
+        160.09320000035967
+      ],
+      "target": [
+        432.6618558670631,
+        50.01550603110345,
+        168.09320000035967
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-entorno",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        432.9618558670631,
+        50.47766401489769,
+        160.09320000035967
+      ],
+      "target": [
+        432.6618558670631,
+        50.01550603110345,
+        168.09320000035967
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-entorno",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        432.9618558670631,
+        50.47766401489769,
+        160.09320000035967
+      ],
+      "target": [
+        432.6618558670631,
+        50.01550603110345,
+        168.09320000035967
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-entorno",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 60,
+      "interiorView": false,
+      "position": [
+        432.9618558670631,
+        50.47766401489769,
+        160.09320000035967
+      ],
+      "target": [
+        432.6618558670631,
+        50.01550603110345,
+        168.09320000035967
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-conjunto",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 50,
+      "interiorView": false,
+      "position": [
+        483.35049150336096,
+        86.73246432916562,
+        176.69791246292985
+      ],
+      "target": [
+        478.02474039592477,
+        43.45605684119072,
+        172.8468912422928
+      ],
+      "clearance": 44.4664074879749,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-conjunto",
+      "mode": "cut",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 50,
+      "interiorView": false,
+      "position": [
+        480.6058155334078,
+        69.45605684119073,
+        174.87125562023144
+      ],
+      "target": [
+        478.02474039592477,
+        43.45605684119072,
+        172.8468912422928
+      ],
+      "clearance": 27.190000000000005,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-conjunto",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 50,
+      "interiorView": false,
+      "position": [
+        490.38309272789763,
+        143.8785288286001,
+        181.78314757918497
+      ],
+      "target": [
+        478.02474039592477,
+        43.45605684119072,
+        172.8468912422928
+      ],
+      "clearance": 99.87852882860011,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-conjunto",
+      "mode": "cut",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 50,
+      "interiorView": false,
+      "position": [
+        480.6058155334078,
+        69.45605684119073,
+        174.87125562023144
+      ],
+      "target": [
+        478.02474039592477,
+        43.45605684119072,
+        172.8468912422928
+      ],
+      "clearance": 27.190000000000005,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-conjunto",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 50,
+      "interiorView": false,
+      "position": [
+        484.627592823507,
+        97.11003474489544,
+        177.62137737624863
+      ],
+      "target": [
+        478.02474039592477,
+        43.45605684119072,
+        172.8468912422928
+      ],
+      "clearance": 54.84397790370472,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-conjunto",
+      "mode": "cut",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 50,
+      "interiorView": false,
+      "position": [
+        480.6058155334078,
+        69.45605684119073,
+        174.87125562023144
+      ],
+      "target": [
+        478.02474039592477,
+        43.45605684119072,
+        172.8468912422928
+      ],
+      "clearance": 27.190000000000005,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-conjunto",
+      "mode": "historical",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 50,
+      "interiorView": false,
+      "position": [
+        483.35049150336096,
+        86.73246432916562,
+        176.69791246292985
+      ],
+      "target": [
+        478.02474039592477,
+        43.45605684119072,
+        172.8468912422928
+      ],
+      "clearance": 44.4664074879749,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-conjunto",
+      "mode": "historical",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 50,
+      "interiorView": false,
+      "position": [
+        480.6058155334078,
+        69.45605684119073,
+        174.87125562023144
+      ],
+      "target": [
+        478.02474039592477,
+        43.45605684119072,
+        172.8468912422928
+      ],
+      "clearance": 27.190000000000005,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-conjunto",
+      "mode": "historical",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 50,
+      "interiorView": false,
+      "position": [
+        490.38309272789763,
+        143.8785288286001,
+        181.78314757918497
+      ],
+      "target": [
+        478.02474039592477,
+        43.45605684119072,
+        172.8468912422928
+      ],
+      "clearance": 99.87852882860011,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-conjunto",
+      "mode": "historical",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 50,
+      "interiorView": false,
+      "position": [
+        480.6058155334078,
+        69.45605684119073,
+        174.87125562023144
+      ],
+      "target": [
+        478.02474039592477,
+        43.45605684119072,
+        172.8468912422928
+      ],
+      "clearance": 27.190000000000005,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-conjunto",
+      "mode": "historical",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 50,
+      "interiorView": false,
+      "position": [
+        484.627592823507,
+        97.11003474489544,
+        177.62137737624863
+      ],
+      "target": [
+        478.02474039592477,
+        43.45605684119072,
+        172.8468912422928
+      ],
+      "clearance": 54.84397790370472,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "domus",
+      "id": "domus-conjunto",
+      "mode": "historical",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 50,
+      "interiorView": false,
+      "position": [
+        480.6058155334078,
+        69.45605684119073,
+        174.87125562023144
+      ],
+      "target": [
+        478.02474039592477,
+        43.45605684119072,
+        172.8468912422928
+      ],
+      "clearance": 27.190000000000005,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-conjunto",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 44,
+      "interiorView": false,
+      "position": [
+        -29.893011081451995,
+        90.60565350345396,
+        18.103807497298362
+      ],
+      "target": [
+        8.240194667472343,
+        63.72,
+        54.43089172430358
+      ],
+      "clearance": 35.11463576850263,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Mestre Penya · techo-alto · grey",
+        "intended": true,
+        "point": [
+          2.268950270542284,
+          67.93000030517578,
+          48.74246627233565
+        ],
+        "distanceToTarget": 9.259484129261487
+      }
+    },
+    {
+      "place": "museo",
+      "id": "museo-conjunto",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 44,
+      "interiorView": false,
+      "position": [
+        -11.112505139708057,
+        75.72,
+        37.65373433179039
+      ],
+      "target": [
+        8.240194667472343,
+        63.72,
+        54.43089172430358
+      ],
+      "clearance": 18.5215510383335,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Mestre Penya · fachada · lime",
+        "intended": true,
+        "point": [
+          1.5151324688063674,
+          67.88999938964844,
+          48.6008303837356
+        ],
+        "distanceToTarget": 9.828782819880583
+      }
+    },
+    {
+      "place": "museo",
+      "id": "museo-conjunto",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 44,
+      "interiorView": false,
+      "position": [
+        -71.74350849521062,
+        120.11216758521982,
+        -21.76450450619896
+      ],
+      "target": [
+        8.240194667472343,
+        63.72,
+        54.43089172430358
+      ],
+      "clearance": 66.29980051899764,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Mestre Penya · techo-alto · grey",
+        "intended": true,
+        "point": [
+          2.268950270542277,
+          67.93000030517578,
+          48.74246627233565
+        ],
+        "distanceToTarget": 9.259484129261491
+      }
+    },
+    {
+      "place": "museo",
+      "id": "museo-conjunto",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 44,
+      "interiorView": false,
+      "position": [
+        -11.112505139708057,
+        75.72,
+        37.65373433179039
+      ],
+      "target": [
+        8.240194667472343,
+        63.72,
+        54.43089172430358
+      ],
+      "clearance": 18.5215510383335,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Mestre Penya · fachada · lime",
+        "intended": true,
+        "point": [
+          1.5151324688063674,
+          67.88999938964844,
+          48.6008303837356
+        ],
+        "distanceToTarget": 9.828782819880583
+      }
+    },
+    {
+      "place": "museo",
+      "id": "museo-conjunto",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 44,
+      "interiorView": false,
+      "position": [
+        -35.83411922105043,
+        94.79440636938104,
+        12.44409094448725
+      ],
+      "target": [
+        8.240194667472343,
+        63.72,
+        54.43089172430358
+      ],
+      "clearance": 39.666154866422275,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Mestre Penya · techo-alto · grey",
+        "intended": true,
+        "point": [
+          2.268950270542298,
+          67.93000030517578,
+          48.74246627233565
+        ],
+        "distanceToTarget": 9.259484129261478
+      }
+    },
+    {
+      "place": "museo",
+      "id": "museo-conjunto",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 44,
+      "interiorView": false,
+      "position": [
+        -11.112505139708057,
+        75.72,
+        37.65373433179039
+      ],
+      "target": [
+        8.240194667472343,
+        63.72,
+        54.43089172430358
+      ],
+      "clearance": 18.5215510383335,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": {
+        "name": "Mestre Penya · fachada · lime",
+        "intended": true,
+        "point": [
+          1.5151324688063674,
+          67.88999938964844,
+          48.6008303837356
+        ],
+        "distanceToTarget": 9.828782819880583
+      }
+    },
+    {
+      "place": "museo",
+      "id": "museo-planta-baja",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 74,
+      "interiorView": true,
+      "position": [
+        8.705342135586898,
+        60.37,
+        61.65488908261612
+      ],
+      "target": [
+        9.081782752021173,
+        60.769999999999996,
+        50.861335800110005
+      ],
+      "clearance": 1.9399996948242162,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-planta-baja",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 74,
+      "interiorView": true,
+      "position": [
+        8.807994380147845,
+        60.37,
+        59.05691631203391
+      ],
+      "target": [
+        9.081782752021173,
+        60.769999999999996,
+        50.861335800110005
+      ],
+      "clearance": 1.9399996948242162,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-planta-baja",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 74,
+      "interiorView": true,
+      "position": [
+        8.705342135586898,
+        60.37,
+        61.65488908261612
+      ],
+      "target": [
+        9.081782752021173,
+        60.769999999999996,
+        50.861335800110005
+      ],
+      "clearance": 1.9399996948242162,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-planta-baja",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 74,
+      "interiorView": true,
+      "position": [
+        8.807994380147845,
+        60.37,
+        59.05691631203391
+      ],
+      "target": [
+        9.081782752021173,
+        60.769999999999996,
+        50.861335800110005
+      ],
+      "clearance": 1.9399996948242162,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-planta-baja",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 74,
+      "interiorView": true,
+      "position": [
+        8.705342135586898,
+        60.37,
+        61.65488908261612
+      ],
+      "target": [
+        9.081782752021173,
+        60.769999999999996,
+        50.861335800110005
+      ],
+      "clearance": 1.9399996948242162,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-planta-baja",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 74,
+      "interiorView": true,
+      "position": [
+        8.807994380147845,
+        60.37,
+        59.05691631203391
+      ],
+      "target": [
+        9.081782752021173,
+        60.769999999999996,
+        50.861335800110005
+      ],
+      "clearance": 1.9399996948242162,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-planta-alta",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 74,
+      "interiorView": true,
+      "position": [
+        9.558627550760349,
+        65.21000000000001,
+        61.58852644062326
+      ],
+      "target": [
+        9.977132855508824,
+        65.18,
+        50.996791299018874
+      ],
+      "clearance": 6.779999694824227,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-planta-alta",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 74,
+      "interiorView": true,
+      "position": [
+        9.68496877483536,
+        65.21000000000001,
+        58.39102149221439
+      ],
+      "target": [
+        9.977132855508824,
+        65.18,
+        50.996791299018874
+      ],
+      "clearance": 6.779999694824227,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-planta-alta",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 74,
+      "interiorView": true,
+      "position": [
+        9.558627550760349,
+        65.21000000000001,
+        61.58852644062326
+      ],
+      "target": [
+        9.977132855508824,
+        65.18,
+        50.996791299018874
+      ],
+      "clearance": 6.779999694824227,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-planta-alta",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 74,
+      "interiorView": true,
+      "position": [
+        9.68496877483536,
+        65.21000000000001,
+        58.39102149221439
+      ],
+      "target": [
+        9.977132855508824,
+        65.18,
+        50.996791299018874
+      ],
+      "clearance": 6.779999694824227,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-planta-alta",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 74,
+      "interiorView": true,
+      "position": [
+        9.558627550760349,
+        65.21000000000001,
+        61.58852644062326
+      ],
+      "target": [
+        9.977132855508824,
+        65.18,
+        50.996791299018874
+      ],
+      "clearance": 6.779999694824227,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-planta-alta",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 74,
+      "interiorView": true,
+      "position": [
+        9.68496877483536,
+        65.21000000000001,
+        58.39102149221439
+      ],
+      "target": [
+        9.977132855508824,
+        65.18,
+        50.996791299018874
+      ],
+      "clearance": 6.779999694824227,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-arco",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 57,
+      "interiorView": false,
+      "position": [
+        -7.340346436588764,
+        61.911492568953484,
+        43.71316776811823
+      ],
+      "target": [
+        -15.532346436588764,
+        60.911492568953484,
+        49.44916776811823
+      ],
+      "clearance": 4.287260699836402,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-arco",
+      "mode": "current",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 57,
+      "interiorView": false,
+      "position": [
+        -9.532346436588764,
+        60.09864750867227,
+        48.24916776811823
+      ],
+      "target": [
+        -15.532346436588764,
+        60.911492568953484,
+        49.44916776811823
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-arco",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 57,
+      "interiorView": false,
+      "position": [
+        -7.340346436588764,
+        61.911492568953484,
+        43.71316776811823
+      ],
+      "target": [
+        -15.532346436588764,
+        60.911492568953484,
+        49.44916776811823
+      ],
+      "clearance": 4.287260699836402,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-arco",
+      "mode": "current",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 57,
+      "interiorView": false,
+      "position": [
+        -9.532346436588764,
+        60.09864750867227,
+        48.24916776811823
+      ],
+      "target": [
+        -15.532346436588764,
+        60.911492568953484,
+        49.44916776811823
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-arco",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 57,
+      "interiorView": false,
+      "position": [
+        -7.340346436588764,
+        61.911492568953484,
+        43.71316776811823
+      ],
+      "target": [
+        -15.532346436588764,
+        60.911492568953484,
+        49.44916776811823
+      ],
+      "clearance": 4.287260699836402,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-arco",
+      "mode": "current",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 57,
+      "interiorView": false,
+      "position": [
+        -9.532346436588764,
+        60.09864750867227,
+        48.24916776811823
+      ],
+      "target": [
+        -15.532346436588764,
+        60.911492568953484,
+        49.44916776811823
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "immediate": [],
+      "ground": null,
+      "occlusion": null
+    }
+  ],
+  "inputHashes": {
+    "dist/js/app.js": "0c729370b6ee176787391bb712cb5397602b41fbc6261734ab8fbad4a7a91c5e",
+    "dist/js/castle-panel.js": "60a927639c38ed0a88d16e66354aa5c7d14057da44b396f8a2d0acdaae25a8ab",
+    "dist/js/theatre.js": "34831ff762ddd15d0e9fa1fd564183145a04219d47f833f529af35f545d83371",
+    "dist/js/monuments.js": "22546453225b2db827cc2e84a5fd30e1083b56eb8b79d4a1ac025709f4b34dac",
+    "dist/js/castle.js": "61463c846f79a617562ca2e31bfc42321da0c737a3d310846db44410066c54d8",
+    "dist/js/terrain.js": "ec10570603e52e850b6b5eadf81963215d18d533c551d555848ef58152fec3f8",
+    "dist/js/city.js": "b2578a5fdb0d70435fa4bc8cf92147f2a3c4922f6bcbe6bbe145f46ebb53af54",
+    "dist/js/urban-surface.js": "d2acfae90ff47abddd51be09a21555e8ce9b6269e1500549a6eb94938f3e6111",
+    "dist/js/santa-maria.js": "ab23645cee3bfb285ea19420b98d8c4eb56fa7e5b99d756aa861abba2578ff42",
+    "dist/js/santa-maria-context.js": "c58325ab7d3a33af291c50efda2625dcd757d33da9306e70f5d95b67b4d4072f",
+    "dist/js/heritage-sacred.js": "306c46bd0c5b45d01df73e51e12dd77235f018bfb68ebd20679885daf35c99e2",
+    "dist/js/heritage-civic.js": "b28e6572d494b657b1eda2a96342ce7181c8437763d4c110daae373547d51a31",
+    "dist/js/plaza-mayor.js": "07f51ea9722f9a09932e9dd85dcdeb2a39e753fdb5c8d7fa5e5a302bad3d28b1",
+    "dist/js/plaza-mayor-context.js": "655b94895ef5407affe3ea502e5eb0eeff91cf01d365fe63387ec9fa31bd8d8b",
+    "dist/js/juderia.js": "e83aa1df8be0538e6ce520ebf0676f847ce3d488690e1deacaa7472e0869d30d",
+    "dist/js/juderia-context.js": "fc58285789fd8a785e87d2efd1e29e42bba257222eb51e66592393d19600cf2f",
+    "dist/js/calvario.js": "990a076c049599574eb566b7823bc8166667d7c385a2e5fd964e6e4342d96910",
+    "dist/js/calvario-context.js": "0ef2e7a8cc33c2296cbd1b7ff8023d5eef71a48e4eb86849efd06e59b124d148",
+    "dist/js/berenguer.js": "e6d96396f1462827849e656d8a456c49d0da59f8a8c1c87cbf1e14e605909cdd",
+    "dist/js/berenguer-context.js": "4a942cd7436001937dcfd3d20ff3c1ec6272a42e4f0fbd68bf80e097b7618695",
+    "dist/js/berenguer-map.js": "1c10607f476c7a5d6358d13747385a6e946bc7df909de5c5963ec1ca2062f92e",
+    "dist/js/berenguer-visit.js": "500f8d3d6995bd33f62cc7a44cb2e2f5079537f3d3a916d6253e6a27fb3387ce",
+    "dist/js/sangre.js": "83c383bed697ee3170fb976d652b39ca5e46986d603f8c83c8a6b8edfbee8247",
+    "dist/js/sangre-context.js": "93c9fd805f9dbef41763eb67a35ded526b80e408f35c2b7c333309d7ee853aab",
+    "dist/js/sangre-map.js": "229a7ebd9cffa70b1589824533f9da5bb2187f2d7249e0abb1812903b5ad2918",
+    "dist/js/museo.js": "d548c527bf4a3b1067b5c786640155eb538daa2197f2b746a913787990d7939c",
+    "dist/js/museo-context.js": "ad983c68d8412e82634f47710a9e4c462a8e76c290345d41479d880882f74857",
+    "dist/js/museo-map.js": "6b7deb28a5c62602527e14e8ef644e20d677264373fb602aaf129304bebe94de",
+    "dist/js/salvador.js": "d3cdf9fa5b4d62bb53fdd2104c55a1fa44496130bbf21284f401dbc42484b17f",
+    "dist/js/salvador-context.js": "a5155c08c0a5107e67dac7e8a7604504ae9be78086acbdcc22bb88266c3f1498",
+    "dist/js/salvador-map.js": "2442ee3ddc10adbcfaabd37f20d86fb36aa72e70842295f10fe52fc72ec1ddd1",
+    "dist/js/archaeology-public.js": "2caa932b03f1910718d538227c99410e17180b201f7a05b849ded888342af73b",
+    "dist/js/archaeology.js": "896ca0c1053f4bdc089a1b2155ebbfafae60644934a187092925bccfe7274082",
+    "dist/js/archaeology-domestic.js": "2b9db5cc954c1567667edf9c027b7a68bef680f00c55851f81dfcc73a0a892ab",
+    "dist/js/portic.js": "ca004362ac6e7d265d6571a0c73ed03443089e207a9148212770d1f56c37cac6",
+    "dist/js/portic-map.js": "17aa6147234395e6a35f4e1eadaec064cfefffb43ef24a3c265ce5931405352d",
+    "dist/js/portic-context.js": "fd503594959153c47d63ade81381a5b7786c515b4600187faac5bcb4dca7f3a4",
+    "dist/js/excavation.js": "13ba9e9377777b11f0eb0233dabf809f386052117afc88b52d76ef5b4898d39b",
+    "dist/js/archaeology-panel.js": "0253785d9374408cf0ebe5db788198a05ecd9ec8aba131f9b9c9370905683cb5",
+    "dist/assets/data/plaza-mayor-visit.json": "c80a4560b964c27003e769add5a1c0c32b1a0109b55243c95a641282f2b36e55",
+    "dist/assets/data/plaza-mayor-plan.json": "136742e1a25c77699aa619113a40213926260fd7bbec9402f02de6a4bb29b4ef",
+    "dist/assets/data/plaza-mayor-context.json": "1a0c282b1f15f1cf4ede43aee8a600a5a44675cc4ad8110c36656ad9d23d9fc7",
+    "dist/assets/data/juderia-visit.json": "f657d04c1923c9982b8916d50622e0b6e5b50ca68edcb8a6a514124299563b82",
+    "dist/assets/data/juderia-plan.json": "cb31a29ed4c590a10bb6b8430171122bada9c4637ab3446ad31097fabd194d34",
+    "dist/assets/data/juderia-context.json": "9118ca2de239a2b4a49e2b2651d8dc261177e3b50c6a4360686e7e8a2380d045",
+    "dist/assets/data/calvario-visit.json": "b054fed27f08b1d4c1f387315b3d3d6b8ae3a6a7378e4e2fb6186a437c829088",
+    "dist/assets/data/calvario-plan.json": "3a9a08fb423930cb5902b83db6c5b2998ff8461935bc26656714a3039a167eef",
+    "dist/assets/data/calvario-context.json": "3c4da56852c9f4afb1ca501e37e4823b7c2eb3aa81d9b42a7da07f53bbe81766",
+    "dist/assets/data/berenguer-visit.json": "36da2cecfbfe9c2447434e2405a5ca94615527dca5c0c4e549ae49e6d726206e",
+    "dist/assets/data/berenguer-plan.json": "68af4ffba39bad39785ba588a6ffbde2d074b47179e591a8847c5a4e61ae4154",
+    "dist/assets/data/berenguer-context.json": "b222d0b510d39b340dc4d69bdaef0dc383d88faa5fb800eb247d9676871487ae",
+    "dist/assets/data/sangre-visit.json": "490aa9c55411448c18d0da0070d16a6f345bbb7abdb46638d55b4c19b3723f48",
+    "dist/assets/data/sangre-plan.json": "a8d915826156b202298fac54b9112ec08166db8b9796654bfd38d0c6dd98e3ad",
+    "dist/assets/data/sangre-context.json": "1f2384b5e0d8140cfc086857cc6c6b4c41a9c5ea651fdddd9e821fa81edbe506",
+    "dist/assets/data/museo-visit.json": "747a36c42334eb1f3548df513b09f51db9fe1be73648c050023eeb9e11aea55a",
+    "dist/assets/data/museo-plan.json": "b51b26c15cdbd715026b3b363ce9bb67ab46b24c8570712782bbeb24acf1fbe5",
+    "dist/assets/data/museo-context.json": "325612d1f799e61a32d37136938dbe3adf0723b0432cb4f926b2fce43d8d17cb",
+    "dist/assets/data/portic-visit.json": "020c89e0eeb9318ad9cc59e13b57cac2fc25171c1a4021f9f861eb0d4b1b8b35",
+    "dist/assets/data/portic-plan.json": "84cac8f3d7f2bcb9cc4a45580d58d8b05a5190de82b1ad8f2488a6e83c8f3ac4",
+    "dist/assets/data/portic-context.json": "4681606ed8324f7b144ff590db35364481b5e218f4dafe63ad39e5fc6f687af2",
+    "dist/assets/data/archaeology-domestic.json": "fbdc79ee5c30b8fb1b670d6aecfec60fa4e28ce4e5be9ab86ccbbbc8842b09f1",
+    "dist/assets/data/salvador-visit.json": "3c08cd0c5809f8305588f78e45582ace46da47b0d7a339f9d108b2ab79a54a00",
+    "dist/assets/data/salvador-plan.json": "071cb01e59c5a58a2d926f2bd70059daf35dd6d40eeeb3cba99b46381d6c3053",
+    "dist/assets/data/salvador-context.json": "427a35c79f0c714468c4b63d8652218adc0e80e7892a5f17df672187deafcd38",
+    "dist/js/domus.js": "e5efe0fb47cb0ded332795949c1807dc963d8b51fa45d90a32fe38f1bf7a3144",
+    "dist/js/domus-map.js": "ae61e737ab319976094a273dc9a65a72ca4ec163955068284275dfefe56ef4b9",
+    "dist/js/domus-context.js": "6cdb2562ff72b9f71ef14b01774450aae3433ae7eeb21a93e325208c5306167b",
+    "dist/assets/data/domus-visit.json": "ab7e165d85958ee6661867ebd528d2609c39c329d23433a00c4723011b347d55",
+    "dist/assets/data/domus-plan.json": "a63f5729845fc892ffd0d923c2a8c029719bfb1e92d932993908c74bc6d82788",
+    "dist/assets/data/domus-context.json": "b02b74552c4426a75866918e72c2825643a981115796556517204384c01d7e0d"
+  },
+  "limitations": [
+    "Geometry and camera validation does not measure browser GPU performance.",
+    "Terrain cut is explanatory; excavation heights and unmeasured details are approximate."
+  ]
+}

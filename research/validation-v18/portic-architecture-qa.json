@@ -1,0 +1,715 @@
+{
+  "pass": true,
+  "checks": 156,
+  "errors": [],
+  "stats": {
+    "modelVersion": "v18",
+    "roadLength": 60,
+    "roadWidth": [
+      4.1,
+      5.4
+    ],
+    "sewerClearWidth": 0.68,
+    "sewerClearDepth": 1.25,
+    "preservedPierLocations": 14,
+    "westPiers": 9,
+    "eastPiers": 5,
+    "slabCount": 165,
+    "pavingCourses": 49,
+    "interiorLights": 8,
+    "hostBuildings": 27,
+    "sourceHostParcels": 2,
+    "surfaceApronTriangles": 1053,
+    "stops": 20,
+    "interiorViews": 10,
+    "meshes": 93,
+    "triangles": 170290,
+    "phase": "Siglo II d. C.",
+    "verticalPlacement": "interpretativa",
+    "survey": false
+  },
+  "cameras": [
+    {
+      "id": "portic-pasarela",
+      "key": "offset",
+      "aspect": 1.4561965811965811,
+      "position": [
+        455.6148759746955,
+        42.203743210162045,
+        -70.51006142099118
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-pasarela",
+      "key": "offset",
+      "aspect": 0.46208530805687204,
+      "position": [
+        455.6148759746955,
+        42.203743210162045,
+        -70.51006142099118
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-pasarela",
+      "key": "offset",
+      "aspect": 2.164102564102564,
+      "position": [
+        455.6148759746955,
+        42.203743210162045,
+        -70.51006142099118
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-pasarela",
+      "key": "closeOffset",
+      "aspect": 1.4561965811965811,
+      "position": [
+        457.42498958475653,
+        42.203743210162045,
+        -72.90244281171296
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-pasarela",
+      "key": "closeOffset",
+      "aspect": 0.46208530805687204,
+      "position": [
+        457.42498958475653,
+        42.203743210162045,
+        -72.90244281171296
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-pasarela",
+      "key": "closeOffset",
+      "aspect": 2.164102564102564,
+      "position": [
+        457.42498958475653,
+        42.203743210162045,
+        -72.90244281171296
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-calzada",
+      "key": "offset",
+      "aspect": 1.4561965811965811,
+      "position": [
+        457.15262529491196,
+        42.46374321016204,
+        -69.97356628757996
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-calzada",
+      "key": "offset",
+      "aspect": 0.46208530805687204,
+      "position": [
+        457.15262529491196,
+        42.46374321016204,
+        -69.97356628757996
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-calzada",
+      "key": "offset",
+      "aspect": 2.164102564102564,
+      "position": [
+        457.15262529491196,
+        42.46374321016204,
+        -69.97356628757996
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-calzada",
+      "key": "closeOffset",
+      "aspect": 1.4561965811965811,
+      "position": [
+        459.13278270903425,
+        42.21374321016204,
+        -74.74525116980935
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-calzada",
+      "key": "closeOffset",
+      "aspect": 0.46208530805687204,
+      "position": [
+        459.13278270903425,
+        42.21374321016204,
+        -74.74525116980935
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-calzada",
+      "key": "closeOffset",
+      "aspect": 2.164102564102564,
+      "position": [
+        459.13278270903425,
+        42.21374321016204,
+        -74.74525116980935
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-losado",
+      "key": "offset",
+      "aspect": 1.4561965811965811,
+      "position": [
+        464.7850630945368,
+        42.37374321016205,
+        -82.381462694097
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-losado",
+      "key": "offset",
+      "aspect": 0.46208530805687204,
+      "position": [
+        464.7850630945368,
+        42.37374321016205,
+        -82.381462694097
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-losado",
+      "key": "offset",
+      "aspect": 2.164102564102564,
+      "position": [
+        464.7850630945368,
+        42.37374321016205,
+        -82.381462694097
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-losado",
+      "key": "closeOffset",
+      "aspect": 1.4561965811965811,
+      "position": [
+        464.72894665873997,
+        42.21374321016205,
+        -83.30170774061095
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-losado",
+      "key": "closeOffset",
+      "aspect": 0.46208530805687204,
+      "position": [
+        464.72894665873997,
+        42.21374321016205,
+        -83.30170774061095
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-losado",
+      "key": "closeOffset",
+      "aspect": 2.164102564102564,
+      "position": [
+        464.72894665873997,
+        42.21374321016205,
+        -83.30170774061095
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-porticos",
+      "key": "offset",
+      "aspect": 1.4561965811965811,
+      "position": [
+        461.6322552036391,
+        42.44374321016205,
+        -75.56270896609853
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-porticos",
+      "key": "offset",
+      "aspect": 0.46208530805687204,
+      "position": [
+        461.6322552036391,
+        42.44374321016205,
+        -75.56270896609853
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-porticos",
+      "key": "offset",
+      "aspect": 2.164102564102564,
+      "position": [
+        461.6322552036391,
+        42.44374321016205,
+        -75.56270896609853
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-porticos",
+      "key": "closeOffset",
+      "aspect": 1.4561965811965811,
+      "position": [
+        462.1191728508606,
+        42.29374321016205,
+        -77.20066842982901
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-porticos",
+      "key": "closeOffset",
+      "aspect": 0.46208530805687204,
+      "position": [
+        462.1191728508606,
+        42.29374321016205,
+        -77.20066842982901
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-porticos",
+      "key": "closeOffset",
+      "aspect": 2.164102564102564,
+      "position": [
+        462.1191728508606,
+        42.29374321016205,
+        -77.20066842982901
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-desagues",
+      "key": "offset",
+      "aspect": 1.4561965811965811,
+      "position": [
+        457.0425027655877,
+        42.32374321016205,
+        -72.31405192704352
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-desagues",
+      "key": "offset",
+      "aspect": 0.46208530805687204,
+      "position": [
+        457.0425027655877,
+        42.32374321016205,
+        -72.31405192704352
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-desagues",
+      "key": "offset",
+      "aspect": 2.164102564102564,
+      "position": [
+        457.0425027655877,
+        42.32374321016205,
+        -72.31405192704352
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-desagues",
+      "key": "closeOffset",
+      "aspect": 1.4561965811965811,
+      "position": [
+        457.8053660616561,
+        42.07374321016205,
+        -72.99083814994671
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-desagues",
+      "key": "closeOffset",
+      "aspect": 0.46208530805687204,
+      "position": [
+        457.8053660616561,
+        42.07374321016205,
+        -72.99083814994671
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-desagues",
+      "key": "closeOffset",
+      "aspect": 2.164102564102564,
+      "position": [
+        457.8053660616561,
+        42.07374321016205,
+        -72.99083814994671
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-podio",
+      "key": "offset",
+      "aspect": 1.4561965811965811,
+      "position": [
+        466.13399901020614,
+        42.343743210162046,
+        -84.49578809370254
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-podio",
+      "key": "offset",
+      "aspect": 0.46208530805687204,
+      "position": [
+        466.13399901020614,
+        42.343743210162046,
+        -84.49578809370254
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-podio",
+      "key": "offset",
+      "aspect": 2.164102564102564,
+      "position": [
+        466.13399901020614,
+        42.343743210162046,
+        -84.49578809370254
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-podio",
+      "key": "closeOffset",
+      "aspect": 1.4561965811965811,
+      "position": [
+        468.0820854446906,
+        42.29374321016205,
+        -86.40758286401066
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-podio",
+      "key": "closeOffset",
+      "aspect": 0.46208530805687204,
+      "position": [
+        468.0820854446906,
+        42.29374321016205,
+        -86.40758286401066
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-podio",
+      "key": "closeOffset",
+      "aspect": 2.164102564102564,
+      "position": [
+        468.0820854446906,
+        42.29374321016205,
+        -86.40758286401066
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-depositos",
+      "key": "offset",
+      "aspect": 1.4561965811965811,
+      "position": [
+        486.5161153211414,
+        42.34374321016205,
+        -99.16989231465952
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-depositos",
+      "key": "offset",
+      "aspect": 0.46208530805687204,
+      "position": [
+        486.5161153211414,
+        42.34374321016205,
+        -99.16989231465952
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-depositos",
+      "key": "offset",
+      "aspect": 2.164102564102564,
+      "position": [
+        486.5161153211414,
+        42.34374321016205,
+        -99.16989231465952
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-depositos",
+      "key": "closeOffset",
+      "aspect": 1.4561965811965811,
+      "position": [
+        485.67772666325413,
+        42.14374321016205,
+        -99.55343430496305
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-depositos",
+      "key": "closeOffset",
+      "aspect": 0.46208530805687204,
+      "position": [
+        485.67772666325413,
+        42.14374321016205,
+        -99.55343430496305
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-depositos",
+      "key": "closeOffset",
+      "aspect": 2.164102564102564,
+      "position": [
+        485.67772666325413,
+        42.14374321016205,
+        -99.55343430496305
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-domestico",
+      "key": "offset",
+      "aspect": 1.4561965811965811,
+      "position": [
+        452.6594122493971,
+        42.343743210162046,
+        -66.8525029226968
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-domestico",
+      "key": "offset",
+      "aspect": 0.46208530805687204,
+      "position": [
+        452.6594122493971,
+        42.343743210162046,
+        -66.8525029226968
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-domestico",
+      "key": "offset",
+      "aspect": 2.164102564102564,
+      "position": [
+        452.6594122493971,
+        42.343743210162046,
+        -66.8525029226968
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-domestico",
+      "key": "closeOffset",
+      "aspect": 1.4561965811965811,
+      "position": [
+        453.8640443138352,
+        42.343743210162046,
+        -67.94742830340897
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-domestico",
+      "key": "closeOffset",
+      "aspect": 0.46208530805687204,
+      "position": [
+        453.8640443138352,
+        42.343743210162046,
+        -67.94742830340897
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-domestico",
+      "key": "closeOffset",
+      "aspect": 2.164102564102564,
+      "position": [
+        453.8640443138352,
+        42.343743210162046,
+        -67.94742830340897
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-letrinas",
+      "key": "offset",
+      "aspect": 1.4561965811965811,
+      "position": [
+        450.8482434682015,
+        42.843743210162046,
+        -64.21012375875718
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-letrinas",
+      "key": "offset",
+      "aspect": 0.46208530805687204,
+      "position": [
+        450.8482434682015,
+        42.843743210162046,
+        -64.21012375875718
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-letrinas",
+      "key": "offset",
+      "aspect": 2.164102564102564,
+      "position": [
+        450.8482434682015,
+        42.843743210162046,
+        -64.21012375875718
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-letrinas",
+      "key": "closeOffset",
+      "aspect": 1.4561965811965811,
+      "position": [
+        451.45161467155515,
+        42.843743210162046,
+        -65.0075842223311
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-letrinas",
+      "key": "closeOffset",
+      "aspect": 0.46208530805687204,
+      "position": [
+        451.45161467155515,
+        42.843743210162046,
+        -65.0075842223311
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-letrinas",
+      "key": "closeOffset",
+      "aspect": 2.164102564102564,
+      "position": [
+        451.45161467155515,
+        42.843743210162046,
+        -65.0075842223311
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-musealizacion",
+      "key": "offset",
+      "aspect": 1.4561965811965811,
+      "position": [
+        464.4036314465025,
+        42.14374321016204,
+        -82.0430695826454
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-musealizacion",
+      "key": "offset",
+      "aspect": 0.46208530805687204,
+      "position": [
+        464.4036314465025,
+        42.14374321016204,
+        -82.0430695826454
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-musealizacion",
+      "key": "offset",
+      "aspect": 2.164102564102564,
+      "position": [
+        464.4036314465025,
+        42.14374321016204,
+        -82.0430695826454
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-musealizacion",
+      "key": "closeOffset",
+      "aspect": 1.4561965811965811,
+      "position": [
+        466.8171162599172,
+        42.14374321016204,
+        -85.2329114369411
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-musealizacion",
+      "key": "closeOffset",
+      "aspect": 0.46208530805687204,
+      "position": [
+        466.8171162599172,
+        42.14374321016204,
+        -85.2329114369411
+      ],
+      "blockers": []
+    },
+    {
+      "id": "portic-musealizacion",
+      "key": "closeOffset",
+      "aspect": 2.164102564102564,
+      "position": [
+        466.8171162599172,
+        42.14374321016204,
+        -85.2329114369411
+      ],
+      "blockers": []
+    }
+  ],
+  "map": [
+    {
+      "selected": "portic-conjunto",
+      "floor": null,
+      "markers": 20
+    },
+    {
+      "selected": "portic-plaza",
+      "floor": 0,
+      "markers": 3
+    },
+    {
+      "selected": "portic-calzada",
+      "floor": -1,
+      "markers": 16
+    }
+  ],
+  "limits": [
+    "Published plans are proportionally registered, with approximate vertical levels and details.",
+    "Separate complete regional camera/render tests must check neighbouring buildings and terrain.",
+    "No browser GPU performance measurement."
+  ]
+}

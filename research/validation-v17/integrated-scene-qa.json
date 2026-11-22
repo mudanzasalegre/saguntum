@@ -1,0 +1,6380 @@
+{
+  "pass": true,
+  "generatedAt": "2026-11-20T09:45:23.894Z",
+  "checks": 1037,
+  "buildMs": 27159.417644999994,
+  "meshes": 249,
+  "triangles": 177208,
+  "stats": {
+    "museo": {
+      "modelVersion": "v17",
+      "sourceBuildings": 2,
+      "storeys": 2,
+      "structuralBays": 4,
+      "diaphragmLines": 3,
+      "pointedInteriorOpenings": 6,
+      "glazedDolorsArches": 2,
+      "principalBalconies": 3,
+      "currentModernRoof": true,
+      "stairFlights": 2,
+      "stops": 20,
+      "sharedArchDuplicated": false,
+      "undergroundExcavation": false,
+      "archaeologicalObjects": "schematic-documented-types",
+      "meshes": 113,
+      "triangles": 41179,
+      "survey": false,
+      "context": {
+        "buildingParts": 44,
+        "parentParcels": 21,
+        "footprintsPreserved": true,
+        "courtyards": 0,
+        "sourceHeight": 0,
+        "ignHeight": 25,
+        "storeyHeight": 19,
+        "fallbackHeight": 0,
+        "streetSamples": 563,
+        "roofCorrections": 0,
+        "maximumRoofCorrectionM": 0,
+        "preservedSantaMaria": true,
+        "preservedPlazaMayor": true,
+        "heightConflictsReviewed": 0,
+        "interpretivePlanters": 4,
+        "reusedBuildingParts": 178,
+        "reusedStreetFragments": 15,
+        "protectedArcOwner": "juderia",
+        "preservedJuderia": true,
+        "preservedCalvario": true,
+        "preservedBerenguer": true,
+        "preservedSangre": true,
+        "preservedSalvador": true
+      }
+    },
+    "berenguer": {
+      "sourceBuildings": 6,
+      "interiorCourtyards": 2,
+      "levelsAtDifferentHeights": true,
+      "segmentalArcades": 2,
+      "retainedAnnexArches": 2,
+      "ancientBlocks": 70,
+      "ancientWallHeight": 4,
+      "subterraneanChambers": 1,
+      "stops": 18,
+      "meshes": 115,
+      "triangles": 105801,
+      "modelVersion": "v14",
+      "sourceKeys": [
+        "bg-turismo",
+        "bg-skrq",
+        "bg-conservacion2022",
+        "bg-anexo2025",
+        "bg-aranegui1992",
+        "bg-martinez2012",
+        "bg-osm",
+        "bg-catastro",
+        "bg-terreno"
+      ],
+      "survey": false,
+      "context": {
+        "buildingParts": 23,
+        "parentParcels": 9,
+        "footprintsPreserved": true,
+        "courtyards": 0,
+        "sourceHeight": 0,
+        "ignHeight": 12,
+        "storeyHeight": 11,
+        "fallbackHeight": 0,
+        "streetSamples": 396,
+        "roofCorrections": 0,
+        "maximumRoofCorrectionM": 0,
+        "preservedSantaMaria": true,
+        "preservedPlazaMayor": true,
+        "preservedJuderia": true,
+        "preservedCalvario": true
+      }
+    }
+  },
+  "errors": [],
+  "cameras": [
+    {
+      "place": "berenguer",
+      "id": "berenguer-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -14.669863540265126,
+        134.62678796420877,
+        -47.872399114471136
+      ],
+      "target": [
+        -84,
+        73,
+        42
+      ],
+      "clearance": 82.07931433113365,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -66,
+        88,
+        20
+      ],
+      "target": [
+        -84,
+        73,
+        42
+      ],
+      "clearance": 28.5293212890625,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        65.98370890089845,
+        206.31885235635417,
+        -152.4233263530165
+      ],
+      "target": [
+        -84,
+        73,
+        42
+      ],
+      "clearance": 160.25201615073206,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -48.94153846153846,
+        102.21538461538462,
+        -0.8492307692307719
+      ],
+      "target": [
+        -84,
+        73,
+        42
+      ],
+      "clearance": 47.50894550734301,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -0.023393400635058015,
+        147.6458725327688,
+        -66.85856411028789
+      ],
+      "target": [
+        -84,
+        73,
+        42
+      ],
+      "clearance": 96.5712371710454,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -66,
+        88,
+        20
+      ],
+      "target": [
+        -84,
+        73,
+        42
+      ],
+      "clearance": 28.5293212890625,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-portada",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -81.35599773842331,
+        63.020763666892805,
+        15.902409503848858
+      ],
+      "target": [
+        -86.9984,
+        62.033470709433374,
+        25.6753
+      ],
+      "clearance": 5.420929499529521,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-portada",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -86.9984,
+        62.033470709433374,
+        21.4753
+      ],
+      "target": [
+        -86.9984,
+        62.033470709433374,
+        25.6753
+      ],
+      "clearance": 3.4014238058994337,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-portada",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -74.54029234423068,
+        64.21335817253947,
+        4.097306041966586
+      ],
+      "target": [
+        -86.9984,
+        62.033470709433374,
+        25.6753
+      ],
+      "clearance": 7.179086689056703,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-portada",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -86.9984,
+        62.033470709433374,
+        21.4753
+      ],
+      "target": [
+        -86.9984,
+        62.033470709433374,
+        25.6753
+      ],
+      "clearance": 3.4014238058994337,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-portada",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -80.1182841131604,
+        63.237335596529064,
+        13.758634713515368
+      ],
+      "target": [
+        -86.9984,
+        62.033470709433374,
+        25.6753
+      ],
+      "clearance": 5.9413835283786085,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-portada",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -86.9984,
+        62.033470709433374,
+        21.4753
+      ],
+      "target": [
+        -86.9984,
+        62.033470709433374,
+        25.6753
+      ],
+      "clearance": 3.4014238058994337,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-escudo",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -86.9984,
+        64.06937991281352,
+        23.07316347537003
+      ],
+      "target": [
+        -86.9984,
+        63.843470709433376,
+        25.6553
+      ],
+      "clearance": 5.090961934227046,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-escudo",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -86.9984,
+        63.843470709433376,
+        22.255300000000002
+      ],
+      "target": [
+        -86.9984,
+        63.843470709433376,
+        25.6553
+      ],
+      "clearance": 5.093601387686547,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-escudo",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -86.9984,
+        64.34318452916267,
+        19.943583582612295
+      ],
+      "target": [
+        -86.9984,
+        63.843470709433376,
+        25.6553
+      ],
+      "clearance": 5.844499677932944,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-escudo",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -86.9984,
+        63.843470709433376,
+        22.255300000000002
+      ],
+      "target": [
+        -86.9984,
+        63.843470709433376,
+        25.6553
+      ],
+      "clearance": 5.093601387686547,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-escudo",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -86.9984,
+        64.11812911721226,
+        22.5159612926293
+      ],
+      "target": [
+        -86.9984,
+        63.843470709433376,
+        25.6553
+      ],
+      "clearance": 5.32569226428064,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-escudo",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -86.9984,
+        63.843470709433376,
+        22.255300000000002
+      ],
+      "target": [
+        -86.9984,
+        63.843470709433376,
+        25.6553
+      ],
+      "clearance": 5.093601387686547,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-patio-arcos",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 74,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -83.1,
+        70.5,
+        36.2
+      ],
+      "target": [
+        -85.75,
+        64.8,
+        40.2
+      ],
+      "clearance": 8.888765258789064,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-patio-arcos",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 74,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -83.45,
+        65.39999999999999,
+        40.2
+      ],
+      "target": [
+        -85.75,
+        64.8,
+        40.2
+      ],
+      "clearance": 3.3999999999999915,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-patio-arcos",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 74,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -83.1,
+        70.5,
+        36.2
+      ],
+      "target": [
+        -85.75,
+        64.8,
+        40.2
+      ],
+      "clearance": 8.888765258789064,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-patio-arcos",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 74,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -83.45,
+        65.39999999999999,
+        40.2
+      ],
+      "target": [
+        -85.75,
+        64.8,
+        40.2
+      ],
+      "clearance": 3.3999999999999915,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-patio-arcos",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 74,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -83.1,
+        70.5,
+        36.2
+      ],
+      "target": [
+        -85.75,
+        64.8,
+        40.2
+      ],
+      "clearance": 8.888765258789064,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-patio-arcos",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 74,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -83.45,
+        65.39999999999999,
+        40.2
+      ],
+      "target": [
+        -85.75,
+        64.8,
+        40.2
+      ],
+      "clearance": 3.3999999999999915,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-logia",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 58,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -84,
+        69.10000000000001,
+        41.1
+      ],
+      "target": [
+        -86.2,
+        66.7,
+        40
+      ],
+      "clearance": 7.1000000000000085,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-logia",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 58,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -84.4,
+        68.2,
+        40.8
+      ],
+      "target": [
+        -86.2,
+        66.7,
+        40
+      ],
+      "clearance": 6.200000000000003,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-logia",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 58,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -84,
+        69.10000000000001,
+        41.1
+      ],
+      "target": [
+        -86.2,
+        66.7,
+        40
+      ],
+      "clearance": 7.1000000000000085,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-logia",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 58,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -84.4,
+        68.2,
+        40.8
+      ],
+      "target": [
+        -86.2,
+        66.7,
+        40
+      ],
+      "clearance": 6.200000000000003,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-logia",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 58,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -84,
+        69.10000000000001,
+        41.1
+      ],
+      "target": [
+        -86.2,
+        66.7,
+        40
+      ],
+      "clearance": 7.1000000000000085,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-logia",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 58,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -84.4,
+        68.2,
+        40.8
+      ],
+      "target": [
+        -86.2,
+        66.7,
+        40
+      ],
+      "clearance": 6.200000000000003,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-escalera",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -83.39999999999999,
+        66.5,
+        41.800000000000004
+      ],
+      "target": [
+        -82.3,
+        63.4,
+        47.2
+      ],
+      "clearance": 4.5,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-escalera",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -82.6,
+        65.2,
+        43.800000000000004
+      ],
+      "target": [
+        -82.3,
+        63.4,
+        47.2
+      ],
+      "clearance": 3.200000000000003,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-escalera",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -83.39999999999999,
+        66.5,
+        41.800000000000004
+      ],
+      "target": [
+        -82.3,
+        63.4,
+        47.2
+      ],
+      "clearance": 4.5,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-escalera",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -82.6,
+        65.2,
+        43.800000000000004
+      ],
+      "target": [
+        -82.3,
+        63.4,
+        47.2
+      ],
+      "clearance": 3.200000000000003,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-escalera",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -83.39999999999999,
+        66.5,
+        41.800000000000004
+      ],
+      "target": [
+        -82.3,
+        63.4,
+        47.2
+      ],
+      "clearance": 4.5,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-escalera",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -82.6,
+        65.2,
+        43.800000000000004
+      ],
+      "target": [
+        -82.3,
+        63.4,
+        47.2
+      ],
+      "clearance": 3.200000000000003,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-patio-superior",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -89,
+        72.8,
+        61.3
+      ],
+      "target": [
+        -89,
+        65.8,
+        54.8
+      ],
+      "clearance": 7.188704223632811,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-patio-superior",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -88,
+        68.5,
+        59.3
+      ],
+      "target": [
+        -89,
+        65.8,
+        54.8
+      ],
+      "clearance": 3.4499969482421875,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-patio-superior",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -89,
+        72.8,
+        61.3
+      ],
+      "target": [
+        -89,
+        65.8,
+        54.8
+      ],
+      "clearance": 7.188704223632811,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-patio-superior",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -88,
+        68.5,
+        59.3
+      ],
+      "target": [
+        -89,
+        65.8,
+        54.8
+      ],
+      "clearance": 3.4499969482421875,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-patio-superior",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -89,
+        72.8,
+        61.3
+      ],
+      "target": [
+        -89,
+        65.8,
+        54.8
+      ],
+      "clearance": 7.188704223632811,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-patio-superior",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -88,
+        68.5,
+        59.3
+      ],
+      "target": [
+        -89,
+        65.8,
+        54.8
+      ],
+      "clearance": 3.4499969482421875,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-aljibe",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 58,
+      "requiresSection": true,
+      "interiorView": false,
+      "position": [
+        -92.5,
+        64.35,
+        36.6
+      ],
+      "target": [
+        -89.5,
+        60.15,
+        40.5
+      ],
+      "clearance": 5.299999999999997,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-aljibe",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 58,
+      "requiresSection": true,
+      "interiorView": false,
+      "position": [
+        -91.6,
+        63.449999999999996,
+        42.5
+      ],
+      "target": [
+        -89.5,
+        60.15,
+        40.5
+      ],
+      "clearance": 4.399999999999999,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-aljibe",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 58,
+      "requiresSection": true,
+      "interiorView": false,
+      "position": [
+        -92.5,
+        64.35,
+        36.6
+      ],
+      "target": [
+        -89.5,
+        60.15,
+        40.5
+      ],
+      "clearance": 5.299999999999997,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-aljibe",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 58,
+      "requiresSection": true,
+      "interiorView": false,
+      "position": [
+        -91.6,
+        63.449999999999996,
+        42.5
+      ],
+      "target": [
+        -89.5,
+        60.15,
+        40.5
+      ],
+      "clearance": 4.399999999999999,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-aljibe",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 58,
+      "requiresSection": true,
+      "interiorView": false,
+      "position": [
+        -92.5,
+        64.35,
+        36.6
+      ],
+      "target": [
+        -89.5,
+        60.15,
+        40.5
+      ],
+      "clearance": 5.299999999999997,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-aljibe",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 58,
+      "requiresSection": true,
+      "interiorView": false,
+      "position": [
+        -91.6,
+        63.449999999999996,
+        42.5
+      ],
+      "target": [
+        -89.5,
+        60.15,
+        40.5
+      ],
+      "clearance": 4.399999999999999,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-boveda",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": true,
+      "interiorView": false,
+      "position": [
+        -92.1,
+        67.15,
+        43.5
+      ],
+      "target": [
+        -89.5,
+        61.15,
+        40.5
+      ],
+      "clearance": 8.100000000000009,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-boveda",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": true,
+      "interiorView": false,
+      "position": [
+        -91.4,
+        63.949999999999996,
+        41.9
+      ],
+      "target": [
+        -89.5,
+        61.15,
+        40.5
+      ],
+      "clearance": 4.899999999999999,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-boveda",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": true,
+      "interiorView": false,
+      "position": [
+        -92.1,
+        67.15,
+        43.5
+      ],
+      "target": [
+        -89.5,
+        61.15,
+        40.5
+      ],
+      "clearance": 8.100000000000009,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-boveda",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": true,
+      "interiorView": false,
+      "position": [
+        -91.4,
+        63.949999999999996,
+        41.9
+      ],
+      "target": [
+        -89.5,
+        61.15,
+        40.5
+      ],
+      "clearance": 4.899999999999999,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-boveda",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": true,
+      "interiorView": false,
+      "position": [
+        -92.1,
+        67.15,
+        43.5
+      ],
+      "target": [
+        -89.5,
+        61.15,
+        40.5
+      ],
+      "clearance": 8.100000000000009,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-boveda",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": true,
+      "interiorView": false,
+      "position": [
+        -91.4,
+        63.949999999999996,
+        41.9
+      ],
+      "target": [
+        -89.5,
+        61.15,
+        40.5
+      ],
+      "clearance": 4.899999999999999,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -54.81792117723194,
+        82.06032815557062,
+        10.945235942260076
+      ],
+      "target": [
+        -71.47824933280255,
+        65.4,
+        44.2658922534013
+      ],
+      "clearance": 25.11893256402209,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -68.47824933280255,
+        69.4,
+        33.2658922534013
+      ],
+      "target": [
+        -71.47824933280255,
+        65.4,
+        44.2658922534013
+      ],
+      "clearance": 9.4999984741211,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -30.426299736862838,
+        106.45194959593971,
+        -37.838006938478124
+      ],
+      "target": [
+        -71.47824933280255,
+        65.4,
+        44.2658922534013
+      ],
+      "clearance": 54.42560072027173,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -65.63517240972563,
+        73.19076923076923,
+        22.84127686878591
+      ],
+      "target": [
+        -71.47824933280255,
+        65.4,
+        44.2658922534013
+      ],
+      "clearance": 13.436089532686175,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -51.32431660347218,
+        85.55393272933037,
+        3.9580267947405545
+      ],
+      "target": [
+        -71.47824933280255,
+        65.4,
+        44.2658922534013
+      ],
+      "clearance": 30.256452997705324,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -68.47824933280255,
+        69.4,
+        33.2658922534013
+      ],
+      "target": [
+        -71.47824933280255,
+        65.4,
+        44.2658922534013
+      ],
+      "clearance": 9.4999984741211,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-aparejo",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -62.14518893253061,
+        72.84107464985314,
+        15.332884505284756
+      ],
+      "target": [
+        -70.88626358238376,
+        64.1,
+        44.46980000479526
+      ],
+      "clearance": 14.458696305036497,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-aparejo",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -69.88626358238376,
+        65.3,
+        39.76980000479526
+      ],
+      "target": [
+        -70.88626358238376,
+        64.1,
+        44.46980000479526
+      ],
+      "clearance": 4.435944918760583,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-aparejo",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -52.22338410406198,
+        82.76287947832178,
+        -17.739798256277332
+      ],
+      "target": [
+        -70.88626358238376,
+        64.1,
+        44.46980000479526
+      ],
+      "clearance": 29.347245952463858,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-aparejo",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -68.93857127469145,
+        66.43723076923077,
+        35.315646158641414
+      ],
+      "target": [
+        -70.88626358238376,
+        64.1,
+        44.46980000479526
+      ],
+      "clearance": 6.476812022110714,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-aparejo",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -63.19188470973535,
+        71.79437887264841,
+        18.821870429300564
+      ],
+      "target": [
+        -70.88626358238376,
+        64.1,
+        44.46980000479526
+      ],
+      "clearance": 12.54594820385703,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-aparejo",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -69.88626358238376,
+        65.3,
+        39.76980000479526
+      ],
+      "target": [
+        -70.88626358238376,
+        64.1,
+        44.46980000479526
+      ],
+      "clearance": 4.435944918760583,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-retorno",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -83.09407589332055,
+        69.5,
+        48.80675573811355
+      ],
+      "target": [
+        -81.39407589332055,
+        64.1,
+        48.10675573811355
+      ],
+      "clearance": 6.932539486289258,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-retorno",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -82.89407589332055,
+        66.8,
+        48.60675573811355
+      ],
+      "target": [
+        -81.39407589332055,
+        64.1,
+        48.10675573811355
+      ],
+      "clearance": 4.319389767050971,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-retorno",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -83.09407589332055,
+        69.5,
+        48.80675573811355
+      ],
+      "target": [
+        -81.39407589332055,
+        64.1,
+        48.10675573811355
+      ],
+      "clearance": 6.932539486289258,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-retorno",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -82.89407589332055,
+        66.8,
+        48.60675573811355
+      ],
+      "target": [
+        -81.39407589332055,
+        64.1,
+        48.10675573811355
+      ],
+      "clearance": 4.319389767050971,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-retorno",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -83.09407589332055,
+        69.5,
+        48.80675573811355
+      ],
+      "target": [
+        -81.39407589332055,
+        64.1,
+        48.10675573811355
+      ],
+      "clearance": 6.932539486289258,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-retorno",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -82.89407589332055,
+        66.8,
+        48.60675573811355
+      ],
+      "target": [
+        -81.39407589332055,
+        64.1,
+        48.10675573811355
+      ],
+      "clearance": 4.319389767050971,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-fabricas",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -61.88176799279204,
+        82.01580298729411,
+        11.393589735152261
+      ],
+      "target": [
+        -71.71862023326263,
+        68.9,
+        44.18309720338753
+      ],
+      "clearance": 24.923477977865453,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-fabricas",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -70.71862023326263,
+        69.9,
+        38.783097203387534
+      ],
+      "target": [
+        -71.71862023326263,
+        68.9,
+        44.18309720338753
+      ],
+      "clearance": 9.301900295720046,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-fabricas",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -49.221828666050214,
+        98.89572208961656,
+        -30.80620802065384
+      ],
+      "target": [
+        -71.71862023326263,
+        68.9,
+        44.18309720338753
+      ],
+      "clearance": 46.25936771654161,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-fabricas",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -69.77092792557032,
+        70.84769230769231,
+        33.66555874184907
+      ],
+      "target": [
+        -71.71862023326263,
+        68.9,
+        44.18309720338753
+      ],
+      "clearance": 10.935816080570959,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-fabricas",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -59.582757326476944,
+        85.08115054238093,
+        3.7302208474352554
+      ],
+      "target": [
+        -71.71862023326263,
+        68.9,
+        44.18309720338753
+      ],
+      "clearance": 29.551250625022718,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-fabricas",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -70.71862023326263,
+        69.9,
+        38.783097203387534
+      ],
+      "target": [
+        -71.71862023326263,
+        68.9,
+        44.18309720338753
+      ],
+      "clearance": 9.301900295720046,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-interpretaciones",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -57.732745221695666,
+        92.04072159508317,
+        7.512971990907495
+      ],
+      "target": [
+        -73.50649948549419,
+        65,
+        43.567267451018395
+      ],
+      "clearance": 36.01838921265913,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-interpretaciones",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -69.50649948549419,
+        72,
+        33.567267451018395
+      ],
+      "target": [
+        -73.50649948549419,
+        65,
+        43.567267451018395
+      ],
+      "clearance": 12.092723078548552,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-interpretaciones",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -36.92490512830609,
+        127.71130461232246,
+        -40.04780536541155
+      ],
+      "target": [
+        -73.50649948549419,
+        65,
+        43.567267451018395
+      ],
+      "clearance": 75.8413056804377,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-interpretaciones",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -65.71573025472496,
+        78.63384615384615,
+        24.090344374095316
+      ],
+      "target": [
+        -73.50649948549419,
+        65,
+        43.567267451018395
+      ],
+      "clearance": 18.866575804921375,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-interpretaciones",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -59.927857777831676,
+        88.27767149885003,
+        12.530372119218374
+      ],
+      "target": [
+        -73.50649948549419,
+        65,
+        43.567267451018395
+      ],
+      "clearance": 30.867970208856406,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-interpretaciones",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -69.50649948549419,
+        72,
+        33.567267451018395
+      ],
+      "target": [
+        -73.50649948549419,
+        65,
+        43.567267451018395
+      ],
+      "clearance": 12.092723078548552,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-desvan",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -72.38340289639576,
+        74.3496295519068,
+        4.998834841269105
+      ],
+      "target": [
+        -84.4773,
+        72.23347070943339,
+        25.946
+      ],
+      "clearance": 18.39028570939594,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-desvan",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -84.4773,
+        72.23347070943339,
+        15.946000000000002
+      ],
+      "target": [
+        -84.4773,
+        72.23347070943339,
+        25.946
+      ],
+      "clearance": 14.440475824332076,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-desvan",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -60.08206363985151,
+        76.50208608589232,
+        -16.307629309448618
+      ],
+      "target": [
+        -84.4773,
+        72.23347070943339,
+        25.946
+      ],
+      "clearance": 22.63369616372222,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-desvan",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -84.4773,
+        72.23347070943339,
+        15.946000000000002
+      ],
+      "target": [
+        -84.4773,
+        72.23347070943339,
+        25.946
+      ],
+      "clearance": 14.440475824332076,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-desvan",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -73.68112645338847,
+        74.12255723959171,
+        7.246549489891407
+      ],
+      "target": [
+        -84.4773,
+        72.23347070943339,
+        25.946
+      ],
+      "clearance": 17.819726803823137,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-desvan",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -84.4773,
+        72.23347070943339,
+        15.946000000000002
+      ],
+      "target": [
+        -84.4773,
+        72.23347070943339,
+        25.946
+      ],
+      "clearance": 14.440475824332076,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-anexo",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -95.4807668158486,
+        77.5403234006287,
+        32.83608440324163
+      ],
+      "target": [
+        -96.425,
+        63.924970709433374,
+        36.36
+      ],
+      "clearance": 17.332839390867917,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-anexo",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -96.425,
+        69.09327070943337,
+        34.478899999999996
+      ],
+      "target": [
+        -96.425,
+        63.924970709433374,
+        36.36
+      ],
+      "clearance": 7.948273626456071,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-anexo",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -94.52607214343413,
+        91.30652532564356,
+        29.27312611843306
+      ],
+      "target": [
+        -96.425,
+        63.924970709433374,
+        36.36
+      ],
+      "clearance": 31.40605793103257,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-anexo",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -96.425,
+        69.09327070943337,
+        34.478899999999996
+      ],
+      "target": [
+        -96.425,
+        63.924970709433374,
+        36.36
+      ],
+      "clearance": 7.948273626456071,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-anexo",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -95.4250818806794,
+        78.3432712790135,
+        32.628266022315366
+      ],
+      "target": [
+        -96.425,
+        63.924970709433374,
+        36.36
+      ],
+      "clearance": 18.275274505014828,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-anexo",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -96.425,
+        69.09327070943337,
+        34.478899999999996
+      ],
+      "target": [
+        -96.425,
+        63.924970709433374,
+        36.36
+      ],
+      "clearance": 7.948273626456071,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-sorolla",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -66.45230950414916,
+        76.59303125274263,
+        -5.274317350417519
+      ],
+      "target": [
+        -84.4773,
+        66.93347070943338,
+        25.946
+      ],
+      "clearance": 21.86468947823031,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-sorolla",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -84.4773,
+        66.93347070943338,
+        12.946000000000002
+      ],
+      "target": [
+        -84.4773,
+        66.93347070943338,
+        25.946
+      ],
+      "clearance": 8.968684314474885,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-sorolla",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -43.6281432219372,
+        88.82446161628897,
+        -44.80708241641766
+      ],
+      "target": [
+        -84.4773,
+        66.93347070943338,
+        25.946
+      ],
+      "clearance": 36.954462684404206,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-sorolla",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -84.4773,
+        66.93347070943338,
+        12.946000000000002
+      ],
+      "target": [
+        -84.4773,
+        66.93347070943338,
+        25.946
+      ],
+      "clearance": 8.968684314474885,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-sorolla",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -62.307502773384265,
+        78.81422585283717,
+        -12.453360330795991
+      ],
+      "target": [
+        -84.4773,
+        66.93347070943338,
+        25.946
+      ],
+      "clearance": 24.73539015512487,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-sorolla",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -84.4773,
+        66.93347070943338,
+        12.946000000000002
+      ],
+      "target": [
+        -84.4773,
+        66.93347070943338,
+        25.946
+      ],
+      "clearance": 8.968684314474885,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-mirador",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -84.7,
+        72.2,
+        59
+      ],
+      "target": [
+        -87.7,
+        66.2,
+        54
+      ],
+      "clearance": 7.14999694824219,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-mirador",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -84.7,
+        68.9,
+        58
+      ],
+      "target": [
+        -87.7,
+        66.2,
+        54
+      ],
+      "clearance": 3.849996948242193,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-mirador",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -84.7,
+        72.2,
+        59
+      ],
+      "target": [
+        -87.7,
+        66.2,
+        54
+      ],
+      "clearance": 7.14999694824219,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-mirador",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -84.7,
+        68.9,
+        58
+      ],
+      "target": [
+        -87.7,
+        66.2,
+        54
+      ],
+      "clearance": 3.849996948242193,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-mirador",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -84.7,
+        72.2,
+        59
+      ],
+      "target": [
+        -87.7,
+        66.2,
+        54
+      ],
+      "clearance": 7.14999694824219,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-mirador",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -84.7,
+        68.9,
+        58
+      ],
+      "target": [
+        -87.7,
+        66.2,
+        54
+      ],
+      "clearance": 3.849996948242193,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": true,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 44,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -29.893011081451995,
+        90.60565350345396,
+        18.103807497298362
+      ],
+      "target": [
+        8.240194667472343,
+        63.72,
+        54.43089172430358
+      ],
+      "clearance": 35.11463576850263,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": {
+        "name": "Mestre Penya · techo-alto · grey",
+        "component": "techo-alto",
+        "siteId": "museo",
+        "museoFabric": true,
+        "point": [
+          2.268950270542284,
+          67.93000030517578,
+          48.74246627233565
+        ],
+        "distanceToTarget": 9.259484129261487
+      }
+    },
+    {
+      "place": "museo",
+      "id": "museo-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": true,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 44,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -11.112505139708057,
+        75.72,
+        37.65373433179039
+      ],
+      "target": [
+        8.240194667472343,
+        63.72,
+        54.43089172430358
+      ],
+      "clearance": 18.5215510383335,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": {
+        "name": "Mestre Penya · fachada · lime",
+        "component": "fachada",
+        "siteId": "museo",
+        "museoFabric": true,
+        "point": [
+          1.5151324688063674,
+          67.88999938964844,
+          48.6008303837356
+        ],
+        "distanceToTarget": 9.828782819880583
+      }
+    },
+    {
+      "place": "museo",
+      "id": "museo-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": true,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 44,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -71.74350849521062,
+        120.11216758521982,
+        -21.76450450619896
+      ],
+      "target": [
+        8.240194667472343,
+        63.72,
+        54.43089172430358
+      ],
+      "clearance": 66.29980051899764,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": {
+        "name": "Mestre Penya · techo-alto · grey",
+        "component": "techo-alto",
+        "siteId": "museo",
+        "museoFabric": true,
+        "point": [
+          2.268950270542277,
+          67.93000030517578,
+          48.74246627233565
+        ],
+        "distanceToTarget": 9.259484129261491
+      }
+    },
+    {
+      "place": "museo",
+      "id": "museo-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": true,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 44,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -11.112505139708057,
+        75.72,
+        37.65373433179039
+      ],
+      "target": [
+        8.240194667472343,
+        63.72,
+        54.43089172430358
+      ],
+      "clearance": 18.5215510383335,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": {
+        "name": "Mestre Penya · fachada · lime",
+        "component": "fachada",
+        "siteId": "museo",
+        "museoFabric": true,
+        "point": [
+          1.5151324688063674,
+          67.88999938964844,
+          48.6008303837356
+        ],
+        "distanceToTarget": 9.828782819880583
+      }
+    },
+    {
+      "place": "museo",
+      "id": "museo-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": true,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 44,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -35.83411922105043,
+        94.79440636938104,
+        12.44409094448725
+      ],
+      "target": [
+        8.240194667472343,
+        63.72,
+        54.43089172430358
+      ],
+      "clearance": 39.666154866422275,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": {
+        "name": "Mestre Penya · techo-alto · grey",
+        "component": "techo-alto",
+        "siteId": "museo",
+        "museoFabric": true,
+        "point": [
+          2.268950270542298,
+          67.93000030517578,
+          48.74246627233565
+        ],
+        "distanceToTarget": 9.259484129261478
+      }
+    },
+    {
+      "place": "museo",
+      "id": "museo-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": true,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 44,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -11.112505139708057,
+        75.72,
+        37.65373433179039
+      ],
+      "target": [
+        8.240194667472343,
+        63.72,
+        54.43089172430358
+      ],
+      "clearance": 18.5215510383335,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": {
+        "name": "Mestre Penya · fachada · lime",
+        "component": "fachada",
+        "siteId": "museo",
+        "museoFabric": true,
+        "point": [
+          1.5151324688063674,
+          67.88999938964844,
+          48.6008303837356
+        ],
+        "distanceToTarget": 9.828782819880583
+      }
+    },
+    {
+      "place": "museo",
+      "id": "museo-plaza",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 58,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -16.99999422144788,
+        80.2598891135854,
+        60.00000860046396
+      ],
+      "target": [
+        1.0000057785521186,
+        63.2598891135854,
+        53.00000860046396
+      ],
+      "clearance": 19.80622998086813,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-plaza",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 58,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -4.999994221447881,
+        60.348770087349976,
+        56.00000860046396
+      ],
+      "target": [
+        1.0000057785521186,
+        63.2598891135854,
+        53.00000860046396
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-plaza",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 58,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -16.99999422144788,
+        80.2598891135854,
+        60.00000860046396
+      ],
+      "target": [
+        1.0000057785521186,
+        63.2598891135854,
+        53.00000860046396
+      ],
+      "clearance": 19.80622998086813,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-plaza",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 58,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -4.999994221447881,
+        60.348770087349976,
+        56.00000860046396
+      ],
+      "target": [
+        1.0000057785521186,
+        63.2598891135854,
+        53.00000860046396
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-plaza",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 58,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -16.99999422144788,
+        80.2598891135854,
+        60.00000860046396
+      ],
+      "target": [
+        1.0000057785521186,
+        63.2598891135854,
+        53.00000860046396
+      ],
+      "clearance": 19.80622998086813,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-plaza",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 58,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -4.999994221447881,
+        60.348770087349976,
+        56.00000860046396
+      ],
+      "target": [
+        1.0000057785521186,
+        63.2598891135854,
+        53.00000860046396
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-fachada",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 80,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -6,
+        64.25678024,
+        60
+      ],
+      "target": [
+        1.2851342253513758,
+        64.02,
+        53.15530000026172
+      ],
+      "clearance": 5.499999997080074,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-fachada",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 80,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -5,
+        60.34876938,
+        56
+      ],
+      "target": [
+        1.2851342253513758,
+        64.02,
+        53.15530000026172
+      ],
+      "clearance": 2.1500000013378937,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-fachada",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 80,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -6,
+        64.25678024,
+        60
+      ],
+      "target": [
+        1.2851342253513758,
+        64.02,
+        53.15530000026172
+      ],
+      "clearance": 5.499999997080074,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-fachada",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 80,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -5,
+        60.34876938,
+        56
+      ],
+      "target": [
+        1.2851342253513758,
+        64.02,
+        53.15530000026172
+      ],
+      "clearance": 2.1500000013378937,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-fachada",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 80,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -6,
+        64.25678024,
+        60
+      ],
+      "target": [
+        1.2851342253513758,
+        64.02,
+        53.15530000026172
+      ],
+      "clearance": 5.499999997080074,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-fachada",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 80,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -5,
+        60.34876938,
+        56
+      ],
+      "target": [
+        1.2851342253513758,
+        64.02,
+        53.15530000026172
+      ],
+      "clearance": 2.1500000013378937,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-acceso",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 55,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -5.52384417643286,
+        60.82,
+        48.1825931796221
+      ],
+      "target": [
+        1.3917346331646667,
+        60.62,
+        50.457405200041734
+      ],
+      "clearance": 2.9103816571475605,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-acceso",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 55,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -3.5648852162007563,
+        60.72,
+        49.260776741046755
+      ],
+      "target": [
+        1.3917346331646667,
+        60.62,
+        50.457405200041734
+      ],
+      "clearance": 2.7731188703612943,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-acceso",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 55,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -5.52384417643286,
+        60.82,
+        48.1825931796221
+      ],
+      "target": [
+        1.3917346331646667,
+        60.62,
+        50.457405200041734
+      ],
+      "clearance": 2.9103816571475605,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-acceso",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 55,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -3.5648852162007563,
+        60.72,
+        49.260776741046755
+      ],
+      "target": [
+        1.3917346331646667,
+        60.62,
+        50.457405200041734
+      ],
+      "clearance": 2.7731188703612943,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-acceso",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 55,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -5.52384417643286,
+        60.82,
+        48.1825931796221
+      ],
+      "target": [
+        1.3917346331646667,
+        60.62,
+        50.457405200041734
+      ],
+      "clearance": 2.9103816571475605,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-acceso",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 55,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -3.5648852162007563,
+        60.72,
+        49.260776741046755
+      ],
+      "target": [
+        1.3917346331646667,
+        60.62,
+        50.457405200041734
+      ],
+      "clearance": 2.7731188703612943,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-balcones",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 68,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -6,
+        65.0992424,
+        59
+      ],
+      "target": [
+        0.7985865152486962,
+        64.82,
+        55.33779199928344
+      ],
+      "clearance": 6.499999998876945,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-balcones",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 68,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -6.5,
+        60.31373444,
+        55
+      ],
+      "target": [
+        0.7985865152486962,
+        64.82,
+        55.33779199928344
+      ],
+      "clearance": 2.1500000039648413,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-balcones",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 68,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -6,
+        65.0992424,
+        59
+      ],
+      "target": [
+        0.7985865152486962,
+        64.82,
+        55.33779199928344
+      ],
+      "clearance": 6.499999998876945,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-balcones",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 68,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -6.5,
+        60.31373444,
+        55
+      ],
+      "target": [
+        0.7985865152486962,
+        64.82,
+        55.33779199928344
+      ],
+      "clearance": 2.1500000039648413,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-balcones",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 68,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -6,
+        65.0992424,
+        59
+      ],
+      "target": [
+        0.7985865152486962,
+        64.82,
+        55.33779199928344
+      ],
+      "clearance": 6.499999998876945,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-balcones",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 68,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -6.5,
+        60.31373444,
+        55
+      ],
+      "target": [
+        0.7985865152486962,
+        64.82,
+        55.33779199928344
+      ],
+      "clearance": 2.1500000039648413,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-cubierta",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 48,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -8.975878833120465,
+        78.27,
+        34.235426559515076
+      ],
+      "target": [
+        6.261494890978519,
+        69.27,
+        53.85231831106781
+      ],
+      "clearance": 21.280322229703472,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-cubierta",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 48,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -3.2569284825179166,
+        75.27,
+        41.46685842930013
+      ],
+      "target": [
+        6.261494890978519,
+        69.27,
+        53.85231831106781
+      ],
+      "clearance": 17.691801230919282,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-cubierta",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 48,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -8.975878833120465,
+        78.27,
+        34.235426559515076
+      ],
+      "target": [
+        6.261494890978519,
+        69.27,
+        53.85231831106781
+      ],
+      "clearance": 21.280322229703472,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-cubierta",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 48,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -3.2569284825179166,
+        75.27,
+        41.46685842930013
+      ],
+      "target": [
+        6.261494890978519,
+        69.27,
+        53.85231831106781
+      ],
+      "clearance": 17.691801230919282,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-cubierta",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 48,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -8.975878833120465,
+        78.27,
+        34.235426559515076
+      ],
+      "target": [
+        6.261494890978519,
+        69.27,
+        53.85231831106781
+      ],
+      "clearance": 21.280322229703472,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-cubierta",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 48,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -3.2569284825179166,
+        75.27,
+        41.46685842930013
+      ],
+      "target": [
+        6.261494890978519,
+        69.27,
+        53.85231831106781
+      ],
+      "clearance": 17.691801230919282,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-planta-baja",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 74,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        8.705342135586898,
+        60.37,
+        61.65488908261612
+      ],
+      "target": [
+        9.081782752021173,
+        60.769999999999996,
+        50.861335800110005
+      ],
+      "clearance": 1.9399996948242162,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-planta-baja",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 74,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        8.807994380147845,
+        60.37,
+        59.05691631203391
+      ],
+      "target": [
+        9.081782752021173,
+        60.769999999999996,
+        50.861335800110005
+      ],
+      "clearance": 1.9399996948242162,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-planta-baja",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 74,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        8.705342135586898,
+        60.37,
+        61.65488908261612
+      ],
+      "target": [
+        9.081782752021173,
+        60.769999999999996,
+        50.861335800110005
+      ],
+      "clearance": 1.9399996948242162,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-planta-baja",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 74,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        8.807994380147845,
+        60.37,
+        59.05691631203391
+      ],
+      "target": [
+        9.081782752021173,
+        60.769999999999996,
+        50.861335800110005
+      ],
+      "clearance": 1.9399996948242162,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-planta-baja",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 74,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        8.705342135586898,
+        60.37,
+        61.65488908261612
+      ],
+      "target": [
+        9.081782752021173,
+        60.769999999999996,
+        50.861335800110005
+      ],
+      "clearance": 1.9399996948242162,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-planta-baja",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 74,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        8.807994380147845,
+        60.37,
+        59.05691631203391
+      ],
+      "target": [
+        9.081782752021173,
+        60.769999999999996,
+        50.861335800110005
+      ],
+      "clearance": 1.9399996948242162,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-arcos",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 72,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        8.878914159557628,
+        60.48,
+        61.061279149667975
+      ],
+      "target": [
+        9.17897456673578,
+        61.099999999999994,
+        53.4672048971969
+      ],
+      "clearance": 2.0499996948242156,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-arcos",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 72,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        8.953929261352165,
+        60.48,
+        59.162760586550206
+      ],
+      "target": [
+        9.17897456673578,
+        61.099999999999994,
+        53.4672048971969
+      ],
+      "clearance": 2.0499996948242156,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-arcos",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 72,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        8.878914159557628,
+        60.48,
+        61.061279149667975
+      ],
+      "target": [
+        9.17897456673578,
+        61.099999999999994,
+        53.4672048971969
+      ],
+      "clearance": 2.0499996948242156,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-arcos",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 72,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        8.953929261352165,
+        60.48,
+        59.162760586550206
+      ],
+      "target": [
+        9.17897456673578,
+        61.099999999999994,
+        53.4672048971969
+      ],
+      "clearance": 2.0499996948242156,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-arcos",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 72,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        8.878914159557628,
+        60.48,
+        61.061279149667975
+      ],
+      "target": [
+        9.17897456673578,
+        61.099999999999994,
+        53.4672048971969
+      ],
+      "clearance": 2.0499996948242156,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-arcos",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 72,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        8.953929261352165,
+        60.48,
+        59.162760586550206
+      ],
+      "target": [
+        9.17897456673578,
+        61.099999999999994,
+        53.4672048971969
+      ],
+      "clearance": 2.0499996948242156,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-canteria",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 67,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        9.358174517320206,
+        60.339999999999996,
+        60.32963066202019
+      ],
+      "target": [
+        9.103203331644245,
+        60.989999999999995,
+        57.917683379330335
+      ],
+      "clearance": 1.909999694824215,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-canteria",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 67,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        9.137980667618345,
+        60.339999999999996,
+        59.570345031606
+      ],
+      "target": [
+        9.103203331644245,
+        60.989999999999995,
+        57.917683379330335
+      ],
+      "clearance": 1.909999694824215,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-canteria",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 67,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        9.358174517320206,
+        60.339999999999996,
+        60.32963066202019
+      ],
+      "target": [
+        9.103203331644245,
+        60.989999999999995,
+        57.917683379330335
+      ],
+      "clearance": 1.909999694824215,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-canteria",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 67,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        9.137980667618345,
+        60.339999999999996,
+        59.570345031606
+      ],
+      "target": [
+        9.103203331644245,
+        60.989999999999995,
+        57.917683379330335
+      ],
+      "clearance": 1.909999694824215,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-canteria",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 67,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        9.358174517320206,
+        60.339999999999996,
+        60.32963066202019
+      ],
+      "target": [
+        9.103203331644245,
+        60.989999999999995,
+        57.917683379330335
+      ],
+      "clearance": 1.909999694824215,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-canteria",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 67,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        9.137980667618345,
+        60.339999999999996,
+        59.570345031606
+      ],
+      "target": [
+        9.103203331644245,
+        60.989999999999995,
+        57.917683379330335
+      ],
+      "clearance": 1.909999694824215,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-epigrafia",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 68,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        2.643195900295232,
+        60.3,
+        55.51075504908959
+      ],
+      "target": [
+        4.391831418956334,
+        60.019999999999996,
+        55.57984790600561
+      ],
+      "clearance": 1.869999694824216,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-epigrafia",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 68,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        3.192767063303007,
+        60.169999999999995,
+        55.53246994697748
+      ],
+      "target": [
+        4.391831418956334,
+        60.019999999999996,
+        55.57984790600561
+      ],
+      "clearance": 1.7399996948242133,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-epigrafia",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 68,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        2.643195900295232,
+        60.3,
+        55.51075504908959
+      ],
+      "target": [
+        4.391831418956334,
+        60.019999999999996,
+        55.57984790600561
+      ],
+      "clearance": 1.869999694824216,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-epigrafia",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 68,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        3.192767063303007,
+        60.169999999999995,
+        55.53246994697748
+      ],
+      "target": [
+        4.391831418956334,
+        60.019999999999996,
+        55.57984790600561
+      ],
+      "clearance": 1.7399996948242133,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-epigrafia",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 68,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        2.643195900295232,
+        60.3,
+        55.51075504908959
+      ],
+      "target": [
+        4.391831418956334,
+        60.019999999999996,
+        55.57984790600561
+      ],
+      "clearance": 1.869999694824216,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-epigrafia",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 68,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        3.192767063303007,
+        60.169999999999995,
+        55.53246994697748
+      ],
+      "target": [
+        4.391831418956334,
+        60.019999999999996,
+        55.57984790600561
+      ],
+      "clearance": 1.7399996948242133,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-escultura",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 70,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        9.875992877541874,
+        60.32,
+        48.49084423156977
+      ],
+      "target": [
+        7.909137590805081,
+        59.87,
+        47.612504729420664
+      ],
+      "clearance": 1.889999694824219,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-escultura",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 70,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        9.340240285917302,
+        60.22,
+        48.11940222994965
+      ],
+      "target": [
+        7.909137590805081,
+        59.87,
+        47.612504729420664
+      ],
+      "clearance": 1.7899996948242176,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-escultura",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 70,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        9.875992877541874,
+        60.32,
+        48.49084423156977
+      ],
+      "target": [
+        7.909137590805081,
+        59.87,
+        47.612504729420664
+      ],
+      "clearance": 1.889999694824219,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-escultura",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 70,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        9.340240285917302,
+        60.22,
+        48.11940222994965
+      ],
+      "target": [
+        7.909137590805081,
+        59.87,
+        47.612504729420664
+      ],
+      "clearance": 1.7899996948242176,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-escultura",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 70,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        9.875992877541874,
+        60.32,
+        48.49084423156977
+      ],
+      "target": [
+        7.909137590805081,
+        59.87,
+        47.612504729420664
+      ],
+      "clearance": 1.889999694824219,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-escultura",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 70,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        9.340240285917302,
+        60.22,
+        48.11940222994965
+      ],
+      "target": [
+        7.909137590805081,
+        59.87,
+        47.612504729420664
+      ],
+      "clearance": 1.7899996948242176,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-planta-alta",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 74,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        9.558627550760349,
+        65.21000000000001,
+        61.58852644062326
+      ],
+      "target": [
+        9.977132855508824,
+        65.18,
+        50.996791299018874
+      ],
+      "clearance": 6.779999694824227,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-planta-alta",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 74,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        9.68496877483536,
+        65.21000000000001,
+        58.39102149221439
+      ],
+      "target": [
+        9.977132855508824,
+        65.18,
+        50.996791299018874
+      ],
+      "clearance": 6.779999694824227,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-planta-alta",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 74,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        9.558627550760349,
+        65.21000000000001,
+        61.58852644062326
+      ],
+      "target": [
+        9.977132855508824,
+        65.18,
+        50.996791299018874
+      ],
+      "clearance": 6.779999694824227,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-planta-alta",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 74,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        9.68496877483536,
+        65.21000000000001,
+        58.39102149221439
+      ],
+      "target": [
+        9.977132855508824,
+        65.18,
+        50.996791299018874
+      ],
+      "clearance": 6.779999694824227,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-planta-alta",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 74,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        9.558627550760349,
+        65.21000000000001,
+        61.58852644062326
+      ],
+      "target": [
+        9.977132855508824,
+        65.18,
+        50.996791299018874
+      ],
+      "clearance": 6.779999694824227,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-planta-alta",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 74,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        9.68496877483536,
+        65.21000000000001,
+        58.39102149221439
+      ],
+      "target": [
+        9.977132855508824,
+        65.18,
+        50.996791299018874
+      ],
+      "clearance": 6.779999694824227,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-comercio",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 69,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        10.669152551500755,
+        65.18,
+        56.27823132427329
+      ],
+      "target": [
+        7.561699224598799,
+        64.68,
+        56.405643337545065
+      ],
+      "clearance": 6.749999694824226,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-comercio",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 69,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        9.865828151146193,
+        65.13000000000001,
+        56.34656804789231
+      ],
+      "target": [
+        7.561699224598799,
+        64.68,
+        56.405643337545065
+      ],
+      "clearance": 6.699999694824228,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-comercio",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 69,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        10.669152551500755,
+        65.18,
+        56.27823132427329
+      ],
+      "target": [
+        7.561699224598799,
+        64.68,
+        56.405643337545065
+      ],
+      "clearance": 6.749999694824226,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-comercio",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 69,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        9.865828151146193,
+        65.13000000000001,
+        56.34656804789231
+      ],
+      "target": [
+        7.561699224598799,
+        64.68,
+        56.405643337545065
+      ],
+      "clearance": 6.699999694824228,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-comercio",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 69,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        10.669152551500755,
+        65.18,
+        56.27823132427329
+      ],
+      "target": [
+        7.561699224598799,
+        64.68,
+        56.405643337545065
+      ],
+      "clearance": 6.749999694824226,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-comercio",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 69,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        9.865828151146193,
+        65.13000000000001,
+        56.34656804789231
+      ],
+      "target": [
+        7.561699224598799,
+        64.68,
+        56.405643337545065
+      ],
+      "clearance": 6.699999694824228,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-vida-privada",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 69,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        4.854395831280128,
+        65.22,
+        61.602806827038656
+      ],
+      "target": [
+        7.552290631500115,
+        65,
+        61.709407234851945
+      ],
+      "clearance": 6.789999694824218,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-vida-privada",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 69,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        5.453928009106791,
+        65.2,
+        61.62649580655272
+      ],
+      "target": [
+        7.552290631500115,
+        65,
+        61.709407234851945
+      ],
+      "clearance": 6.769999694824222,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-vida-privada",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 69,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        4.854395831280128,
+        65.22,
+        61.602806827038656
+      ],
+      "target": [
+        7.552290631500115,
+        65,
+        61.709407234851945
+      ],
+      "clearance": 6.789999694824218,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-vida-privada",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 69,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        5.453928009106791,
+        65.2,
+        61.62649580655272
+      ],
+      "target": [
+        7.552290631500115,
+        65,
+        61.709407234851945
+      ],
+      "clearance": 6.769999694824222,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-vida-privada",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 69,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        4.854395831280128,
+        65.22,
+        61.602806827038656
+      ],
+      "target": [
+        7.552290631500115,
+        65,
+        61.709407234851945
+      ],
+      "clearance": 6.789999694824218,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-vida-privada",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 69,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        5.453928009106791,
+        65.2,
+        61.62649580655272
+      ],
+      "target": [
+        7.552290631500115,
+        65,
+        61.709407234851945
+      ],
+      "clearance": 6.769999694824222,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-dolors",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 62,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        3,
+        61.86106873,
+        40
+      ],
+      "target": [
+        14.1,
+        62.7,
+        48.65
+      ],
+      "clearance": 4.000000004414062,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-dolors",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 62,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        6,
+        60.07809601,
+        42
+      ],
+      "target": [
+        14.1,
+        62.7,
+        48.65
+      ],
+      "clearance": 2.150000001699226,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-dolors",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 62,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        3,
+        61.86106873,
+        40
+      ],
+      "target": [
+        14.1,
+        62.7,
+        48.65
+      ],
+      "clearance": 4.000000004414062,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-dolors",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 62,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        6,
+        60.07809601,
+        42
+      ],
+      "target": [
+        14.1,
+        62.7,
+        48.65
+      ],
+      "clearance": 2.150000001699226,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-dolors",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 62,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        3,
+        61.86106873,
+        40
+      ],
+      "target": [
+        14.1,
+        62.7,
+        48.65
+      ],
+      "clearance": 4.000000004414062,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-dolors",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 62,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        6,
+        60.07809601,
+        42
+      ],
+      "target": [
+        14.1,
+        62.7,
+        48.65
+      ],
+      "clearance": 2.150000001699226,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-patio",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 74,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        17.10166999921577,
+        60.47,
+        55.58165449086442
+      ],
+      "target": [
+        14.524803152356865,
+        60.37,
+        53.67843163119731
+      ],
+      "clearance": 2.0399996948242176,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-patio",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 74,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        16.613904340783915,
+        60.47,
+        55.26214758568937
+      ],
+      "target": [
+        14.524803152356865,
+        60.37,
+        53.67843163119731
+      ],
+      "clearance": 2.0399996948242176,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-patio",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 74,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        17.10166999921577,
+        60.47,
+        55.58165449086442
+      ],
+      "target": [
+        14.524803152356865,
+        60.37,
+        53.67843163119731
+      ],
+      "clearance": 2.0399996948242176,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-patio",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 74,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        16.613904340783915,
+        60.47,
+        55.26214758568937
+      ],
+      "target": [
+        14.524803152356865,
+        60.37,
+        53.67843163119731
+      ],
+      "clearance": 2.0399996948242176,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-patio",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 74,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        17.10166999921577,
+        60.47,
+        55.58165449086442
+      ],
+      "target": [
+        14.524803152356865,
+        60.37,
+        53.67843163119731
+      ],
+      "clearance": 2.0399996948242176,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-patio",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 74,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        16.613904340783915,
+        60.47,
+        55.26214758568937
+      ],
+      "target": [
+        14.524803152356865,
+        60.37,
+        53.67843163119731
+      ],
+      "clearance": 2.0399996948242176,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-rehabilitacion",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 46,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -9.015360465643905,
+        80.24,
+        35.23464685589285
+      ],
+      "target": [
+        6.261494890978519,
+        69.24,
+        53.85231831106781
+      ],
+      "clearance": 23.19584140342385,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-rehabilitacion",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 46,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -4.256148778895688,
+        77.24,
+        41.427376796776684
+      ],
+      "target": [
+        6.261494890978519,
+        69.24,
+        53.85231831106781
+      ],
+      "clearance": 19.733406100878625,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-rehabilitacion",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 46,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -9.015360465643905,
+        80.24,
+        35.23464685589285
+      ],
+      "target": [
+        6.261494890978519,
+        69.24,
+        53.85231831106781
+      ],
+      "clearance": 23.19584140342385,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-rehabilitacion",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 46,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -4.256148778895688,
+        77.24,
+        41.427376796776684
+      ],
+      "target": [
+        6.261494890978519,
+        69.24,
+        53.85231831106781
+      ],
+      "clearance": 19.733406100878625,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-rehabilitacion",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 46,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -9.015360465643905,
+        80.24,
+        35.23464685589285
+      ],
+      "target": [
+        6.261494890978519,
+        69.24,
+        53.85231831106781
+      ],
+      "clearance": 23.19584140342385,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-rehabilitacion",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 46,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -4.256148778895688,
+        77.24,
+        41.427376796776684
+      ],
+      "target": [
+        6.261494890978519,
+        69.24,
+        53.85231831106781
+      ],
+      "clearance": 19.733406100878625,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-arco",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 57,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -7.340346436588764,
+        61.911492568953484,
+        43.71316776811823
+      ],
+      "target": [
+        -15.532346436588764,
+        60.911492568953484,
+        49.44916776811823
+      ],
+      "clearance": 4.287260699836402,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-arco",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 57,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -9.532346436588764,
+        60.09864750867227,
+        48.24916776811823
+      ],
+      "target": [
+        -15.532346436588764,
+        60.911492568953484,
+        49.44916776811823
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-arco",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 57,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -7.340346436588764,
+        61.911492568953484,
+        43.71316776811823
+      ],
+      "target": [
+        -15.532346436588764,
+        60.911492568953484,
+        49.44916776811823
+      ],
+      "clearance": 4.287260699836402,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-arco",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 57,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -9.532346436588764,
+        60.09864750867227,
+        48.24916776811823
+      ],
+      "target": [
+        -15.532346436588764,
+        60.911492568953484,
+        49.44916776811823
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-arco",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 57,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -7.340346436588764,
+        61.911492568953484,
+        43.71316776811823
+      ],
+      "target": [
+        -15.532346436588764,
+        60.911492568953484,
+        49.44916776811823
+      ],
+      "clearance": 4.287260699836402,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-arco",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 57,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -9.532346436588764,
+        60.09864750867227,
+        48.24916776811823
+      ],
+      "target": [
+        -15.532346436588764,
+        60.911492568953484,
+        49.44916776811823
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-juderia",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 58,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -17.9999904481818,
+        88.4761897822317,
+        60.000021040381625
+      ],
+      "target": [
+        -27.9999904481818,
+        63.47618978223171,
+        52.000021040381625
+      ],
+      "clearance": 27.857391733436828,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-juderia",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 58,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -18.9999904481818,
+        61.058474963110136,
+        50.20002104038163
+      ],
+      "target": [
+        -27.9999904481818,
+        63.47618978223171,
+        52.000021040381625
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-juderia",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 58,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -17.9999904481818,
+        88.4761897822317,
+        60.000021040381625
+      ],
+      "target": [
+        -27.9999904481818,
+        63.47618978223171,
+        52.000021040381625
+      ],
+      "clearance": 27.857391733436828,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-juderia",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 58,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -18.9999904481818,
+        61.058474963110136,
+        50.20002104038163
+      ],
+      "target": [
+        -27.9999904481818,
+        63.47618978223171,
+        52.000021040381625
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-juderia",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 58,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -17.9999904481818,
+        88.4761897822317,
+        60.000021040381625
+      ],
+      "target": [
+        -27.9999904481818,
+        63.47618978223171,
+        52.000021040381625
+      ],
+      "clearance": 27.857391733436828,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-juderia",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 58,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -18.9999904481818,
+        61.058474963110136,
+        50.20002104038163
+      ],
+      "target": [
+        -27.9999904481818,
+        63.47618978223171,
+        52.000021040381625
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-entorno",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 60,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        3.000001002645398,
+        83.61905277281981,
+        39.99998436027391
+      ],
+      "target": [
+        15.000001002645398,
+        61.61905277281981,
+        45.99998436027391
+      ],
+      "clearance": 25.75798454028135,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-entorno",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 60,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        3.000001002645398,
+        60.01106823253846,
+        39.99998436027391
+      ],
+      "target": [
+        15.000001002645398,
+        61.61905277281981,
+        45.99998436027391
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-entorno",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 60,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        3.000001002645398,
+        83.61905277281981,
+        39.99998436027391
+      ],
+      "target": [
+        15.000001002645398,
+        61.61905277281981,
+        45.99998436027391
+      ],
+      "clearance": 25.75798454028135,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-entorno",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 60,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        3.000001002645398,
+        60.01106823253846,
+        39.99998436027391
+      ],
+      "target": [
+        15.000001002645398,
+        61.61905277281981,
+        45.99998436027391
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-entorno",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 60,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        3.000001002645398,
+        83.61905277281981,
+        39.99998436027391
+      ],
+      "target": [
+        15.000001002645398,
+        61.61905277281981,
+        45.99998436027391
+      ],
+      "clearance": 25.75798454028135,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "museo",
+      "id": "museo-entorno",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 60,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        3.000001002645398,
+        60.01106823253846,
+        39.99998436027391
+      ],
+      "target": [
+        15.000001002645398,
+        61.61905277281981,
+        45.99998436027391
+      ],
+      "clearance": 2.1499999999999986,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    }
+  ],
+  "cameraOcclusions": [],
+  "intendedExteriorHits": [
+    {
+      "place": "museo",
+      "id": "museo-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": true,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 44,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -29.893011081451995,
+        90.60565350345396,
+        18.103807497298362
+      ],
+      "target": [
+        8.240194667472343,
+        63.72,
+        54.43089172430358
+      ],
+      "clearance": 35.11463576850263,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": {
+        "name": "Mestre Penya · techo-alto · grey",
+        "component": "techo-alto",
+        "siteId": "museo",
+        "museoFabric": true,
+        "point": [
+          2.268950270542284,
+          67.93000030517578,
+          48.74246627233565
+        ],
+        "distanceToTarget": 9.259484129261487
+      }
+    },
+    {
+      "place": "museo",
+      "id": "museo-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": true,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 44,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -11.112505139708057,
+        75.72,
+        37.65373433179039
+      ],
+      "target": [
+        8.240194667472343,
+        63.72,
+        54.43089172430358
+      ],
+      "clearance": 18.5215510383335,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": {
+        "name": "Mestre Penya · fachada · lime",
+        "component": "fachada",
+        "siteId": "museo",
+        "museoFabric": true,
+        "point": [
+          1.5151324688063674,
+          67.88999938964844,
+          48.6008303837356
+        ],
+        "distanceToTarget": 9.828782819880583
+      }
+    },
+    {
+      "place": "museo",
+      "id": "museo-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": true,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 44,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -71.74350849521062,
+        120.11216758521982,
+        -21.76450450619896
+      ],
+      "target": [
+        8.240194667472343,
+        63.72,
+        54.43089172430358
+      ],
+      "clearance": 66.29980051899764,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": {
+        "name": "Mestre Penya · techo-alto · grey",
+        "component": "techo-alto",
+        "siteId": "museo",
+        "museoFabric": true,
+        "point": [
+          2.268950270542277,
+          67.93000030517578,
+          48.74246627233565
+        ],
+        "distanceToTarget": 9.259484129261491
+      }
+    },
+    {
+      "place": "museo",
+      "id": "museo-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": true,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 44,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -11.112505139708057,
+        75.72,
+        37.65373433179039
+      ],
+      "target": [
+        8.240194667472343,
+        63.72,
+        54.43089172430358
+      ],
+      "clearance": 18.5215510383335,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": {
+        "name": "Mestre Penya · fachada · lime",
+        "component": "fachada",
+        "siteId": "museo",
+        "museoFabric": true,
+        "point": [
+          1.5151324688063674,
+          67.88999938964844,
+          48.6008303837356
+        ],
+        "distanceToTarget": 9.828782819880583
+      }
+    },
+    {
+      "place": "museo",
+      "id": "museo-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": true,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 44,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -35.83411922105043,
+        94.79440636938104,
+        12.44409094448725
+      ],
+      "target": [
+        8.240194667472343,
+        63.72,
+        54.43089172430358
+      ],
+      "clearance": 39.666154866422275,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": {
+        "name": "Mestre Penya · techo-alto · grey",
+        "component": "techo-alto",
+        "siteId": "museo",
+        "museoFabric": true,
+        "point": [
+          2.268950270542298,
+          67.93000030517578,
+          48.74246627233565
+        ],
+        "distanceToTarget": 9.259484129261478
+      }
+    },
+    {
+      "place": "museo",
+      "id": "museo-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": true,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 44,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -11.112505139708057,
+        75.72,
+        37.65373433179039
+      ],
+      "target": [
+        8.240194667472343,
+        63.72,
+        54.43089172430358
+      ],
+      "clearance": 18.5215510383335,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": {
+        "name": "Mestre Penya · fachada · lime",
+        "component": "fachada",
+        "siteId": "museo",
+        "museoFabric": true,
+        "point": [
+          1.5151324688063674,
+          67.88999938964844,
+          48.6008303837356
+        ],
+        "distanceToTarget": 9.828782819880583
+      }
+    }
+  ],
+  "inputHashes": {
+    "dist/js/app.js": "2d529b339ea5a6ec565c1a2337a238df108126e4b6bef764f71f54cb4a65e5b9",
+    "dist/js/castle-panel.js": "60a927639c38ed0a88d16e66354aa5c7d14057da44b396f8a2d0acdaae25a8ab",
+    "dist/js/theatre.js": "34831ff762ddd15d0e9fa1fd564183145a04219d47f833f529af35f545d83371",
+    "dist/js/monuments.js": "22546453225b2db827cc2e84a5fd30e1083b56eb8b79d4a1ac025709f4b34dac",
+    "dist/js/castle.js": "61463c846f79a617562ca2e31bfc42321da0c737a3d310846db44410066c54d8",
+    "dist/js/terrain.js": "ec10570603e52e850b6b5eadf81963215d18d533c551d555848ef58152fec3f8",
+    "dist/js/city.js": "b2578a5fdb0d70435fa4bc8cf92147f2a3c4922f6bcbe6bbe145f46ebb53af54",
+    "dist/js/urban-surface.js": "d2acfae90ff47abddd51be09a21555e8ce9b6269e1500549a6eb94938f3e6111",
+    "dist/js/santa-maria.js": "ab23645cee3bfb285ea19420b98d8c4eb56fa7e5b99d756aa861abba2578ff42",
+    "dist/js/santa-maria-context.js": "c58325ab7d3a33af291c50efda2625dcd757d33da9306e70f5d95b67b4d4072f",
+    "dist/js/heritage-sacred.js": "306c46bd0c5b45d01df73e51e12dd77235f018bfb68ebd20679885daf35c99e2",
+    "dist/js/heritage-civic.js": "b28e6572d494b657b1eda2a96342ce7181c8437763d4c110daae373547d51a31",
+    "dist/js/plaza-mayor.js": "07f51ea9722f9a09932e9dd85dcdeb2a39e753fdb5c8d7fa5e5a302bad3d28b1",
+    "dist/js/plaza-mayor-context.js": "655b94895ef5407affe3ea502e5eb0eeff91cf01d365fe63387ec9fa31bd8d8b",
+    "dist/js/juderia.js": "e83aa1df8be0538e6ce520ebf0676f847ce3d488690e1deacaa7472e0869d30d",
+    "dist/js/juderia-context.js": "fc58285789fd8a785e87d2efd1e29e42bba257222eb51e66592393d19600cf2f",
+    "dist/js/calvario.js": "990a076c049599574eb566b7823bc8166667d7c385a2e5fd964e6e4342d96910",
+    "dist/js/calvario-context.js": "0ef2e7a8cc33c2296cbd1b7ff8023d5eef71a48e4eb86849efd06e59b124d148",
+    "dist/js/berenguer.js": "e6d96396f1462827849e656d8a456c49d0da59f8a8c1c87cbf1e14e605909cdd",
+    "dist/js/berenguer-context.js": "4a942cd7436001937dcfd3d20ff3c1ec6272a42e4f0fbd68bf80e097b7618695",
+    "dist/js/berenguer-map.js": "1c10607f476c7a5d6358d13747385a6e946bc7df909de5c5963ec1ca2062f92e",
+    "dist/js/berenguer-visit.js": "500f8d3d6995bd33f62cc7a44cb2e2f5079537f3d3a916d6253e6a27fb3387ce",
+    "dist/js/sangre.js": "83c383bed697ee3170fb976d652b39ca5e46986d603f8c83c8a6b8edfbee8247",
+    "dist/js/sangre-context.js": "93c9fd805f9dbef41763eb67a35ded526b80e408f35c2b7c333309d7ee853aab",
+    "dist/js/sangre-map.js": "229a7ebd9cffa70b1589824533f9da5bb2187f2d7249e0abb1812903b5ad2918",
+    "dist/js/museo.js": "d548c527bf4a3b1067b5c786640155eb538daa2197f2b746a913787990d7939c",
+    "dist/js/museo-context.js": "ad983c68d8412e82634f47710a9e4c462a8e76c290345d41479d880882f74857",
+    "dist/js/museo-map.js": "6b7deb28a5c62602527e14e8ef644e20d677264373fb602aaf129304bebe94de",
+    "dist/js/salvador.js": "d3cdf9fa5b4d62bb53fdd2104c55a1fa44496130bbf21284f401dbc42484b17f",
+    "dist/js/salvador-context.js": "a5155c08c0a5107e67dac7e8a7604504ae9be78086acbdcc22bb88266c3f1498",
+    "dist/js/salvador-map.js": "2442ee3ddc10adbcfaabd37f20d86fb36aa72e70842295f10fe52fc72ec1ddd1",
+    "dist/js/archaeology-public.js": "2caa932b03f1910718d538227c99410e17180b201f7a05b849ded888342af73b",
+    "dist/js/excavation.js": "2d7af18c65c4870ed7d33897fbee5caaaa531663ed39c592ea6fcdfed00b1d35",
+    "dist/assets/data/plaza-mayor-visit.json": "c80a4560b964c27003e769add5a1c0c32b1a0109b55243c95a641282f2b36e55",
+    "dist/assets/data/plaza-mayor-plan.json": "136742e1a25c77699aa619113a40213926260fd7bbec9402f02de6a4bb29b4ef",
+    "dist/assets/data/plaza-mayor-context.json": "1a0c282b1f15f1cf4ede43aee8a600a5a44675cc4ad8110c36656ad9d23d9fc7",
+    "dist/assets/data/juderia-visit.json": "f657d04c1923c9982b8916d50622e0b6e5b50ca68edcb8a6a514124299563b82",
+    "dist/assets/data/juderia-plan.json": "cb31a29ed4c590a10bb6b8430171122bada9c4637ab3446ad31097fabd194d34",
+    "dist/assets/data/juderia-context.json": "9118ca2de239a2b4a49e2b2651d8dc261177e3b50c6a4360686e7e8a2380d045",
+    "dist/assets/data/calvario-visit.json": "b054fed27f08b1d4c1f387315b3d3d6b8ae3a6a7378e4e2fb6186a437c829088",
+    "dist/assets/data/calvario-plan.json": "3a9a08fb423930cb5902b83db6c5b2998ff8461935bc26656714a3039a167eef",
+    "dist/assets/data/calvario-context.json": "3c4da56852c9f4afb1ca501e37e4823b7c2eb3aa81d9b42a7da07f53bbe81766",
+    "dist/assets/data/berenguer-visit.json": "36da2cecfbfe9c2447434e2405a5ca94615527dca5c0c4e549ae49e6d726206e",
+    "dist/assets/data/berenguer-plan.json": "68af4ffba39bad39785ba588a6ffbde2d074b47179e591a8847c5a4e61ae4154",
+    "dist/assets/data/berenguer-context.json": "b222d0b510d39b340dc4d69bdaef0dc383d88faa5fb800eb247d9676871487ae",
+    "dist/assets/data/sangre-visit.json": "490aa9c55411448c18d0da0070d16a6f345bbb7abdb46638d55b4c19b3723f48",
+    "dist/assets/data/sangre-plan.json": "a8d915826156b202298fac54b9112ec08166db8b9796654bfd38d0c6dd98e3ad",
+    "dist/assets/data/sangre-context.json": "1f2384b5e0d8140cfc086857cc6c6b4c41a9c5ea651fdddd9e821fa81edbe506",
+    "dist/assets/data/museo-visit.json": "747a36c42334eb1f3548df513b09f51db9fe1be73648c050023eeb9e11aea55a",
+    "dist/assets/data/museo-plan.json": "b51b26c15cdbd715026b3b363ce9bb67ab46b24c8570712782bbeb24acf1fbe5",
+    "dist/assets/data/museo-context.json": "325612d1f799e61a32d37136938dbe3adf0723b0432cb4f926b2fce43d8d17cb",
+    "dist/assets/data/salvador-visit.json": "3c08cd0c5809f8305588f78e45582ace46da47b0d7a339f9d108b2ab79a54a00",
+    "dist/assets/data/salvador-plan.json": "071cb01e59c5a58a2d926f2bd70059daf35dd6d40eeeb3cba99b46381d6c3053",
+    "dist/assets/data/salvador-context.json": "427a35c79f0c714468c4b63d8652218adc0e80e7892a5f17df672187deafcd38"
+  },
+  "limitations": [
+    "Exterior overview rays intentionally meet the subject roof; tower observations meet its own wall within 3m of the volumetric target. Interior near-field rays cover nine points; full visual inspection remains necessary.",
+    "Architecture is an interpretation from source plans and photographs, not a measured survey.",
+    "CPU geometry and renders do not measure browser WebGL performance."
+  ]
+}

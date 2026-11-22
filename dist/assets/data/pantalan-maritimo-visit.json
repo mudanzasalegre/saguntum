@@ -1,0 +1,1067 @@
+{
+  "schemaVersion": 1,
+  "id": "pantalan-maritimo",
+  "title": "Pantalán histórico · tramo marítimo",
+  "subtitle": "Trípodes, plataforma y memoria del mineral",
+  "introduction": "Explora los apoyos y la plataforma conservada, observa su estructura bajo el tablero y recupera la lectura de cintas, cargador y tolvas en la fase histórica.",
+  "researchDate": "2026-11-21",
+  "regionsLabel": "Ámbitos de la visita",
+  "mapButtonLabel": "Plano del conjunto",
+  "overviewButtonLabel": "Ver el conjunto",
+  "readingModeLabel": "Leer el conjunto",
+  "readingModeNote": "Colores para relacionar espacio, estructura, memoria y entorno. No representan fases constructivas exactas.",
+  "timelineIntroduction": "La vida industrial del pantalán y su transformación contemporánea.",
+  "visitAriaLabel": "Visita a Pantalán histórico · tramo marítimo",
+  "sectionOnOverview": false,
+  "mapInstructions": "Elige una parada y compara el estado actual con la recreación histórica.",
+  "mapNote": "Eje registrado sobre cartografía del atlas. Los puntos indican encuadres de observación aproximados.",
+  "visitNote": "Investigación revisada el 21 de noviembre de 2026. La obra terrestre de 2024, los restos marítimos y la recreación de hacia 1984–1987 se distinguen en toda la visita.",
+  "methodology": [
+    "Las fuentes de la obra terminada se contrastan con planos de ejecución, fotografías y documentación institucional posterior a los desmontajes.",
+    "La reconstrucción de maquinaria, detalles menores, alturas sin medición y materiales es interpretativa. No equivale a un levantamiento industrial completo.",
+    "La geolocalización reutiliza el eje, los apoyos y las huellas cartográficas ya registrados en el atlas. El inventario de puntos visibles no es un censo submarino.",
+    "La costa contemporánea permanece como contexto en ambas épocas; la vista histórica no restaura la línea de costa original.",
+    "Los anuncios de proyecto de 2026 no se convierten en una pasarela futura terminada. El estado actual sigue la documentación conservada disponible."
+  ],
+  "readingLegend": [
+    {
+      "id": "edificio",
+      "label": "La infraestructura",
+      "color": "#d4b17c",
+      "note": "El eje completo y la plataforma del extremo."
+    },
+    {
+      "id": "espacios",
+      "label": "Vanos y continuidad",
+      "color": "#95bfc5",
+      "note": "Los huecos actuales y los enlaces históricos."
+    },
+    {
+      "id": "construccion",
+      "label": "Apoyos y tablero",
+      "color": "#c79379",
+      "note": "Trípodes, transición y estructura inferior."
+    },
+    {
+      "id": "memoria",
+      "label": "El movimiento del mineral",
+      "color": "#b7a1ca",
+      "note": "Cintas, cargador y tolvas de la fase histórica."
+    },
+    {
+      "id": "entorno",
+      "label": "El paisaje marítimo",
+      "color": "#91ae87",
+      "note": "El mar contemporáneo como contexto de ambas épocas."
+    }
+  ],
+  "confidenceLegend": [
+    {
+      "id": "documented",
+      "label": "Documentado",
+      "note": "La fuente acredita el rasgo o la función, no cada medida de la maqueta."
+    },
+    {
+      "id": "interpretive",
+      "label": "Interpretación",
+      "note": "Aproximación visual de detalles, alturas o mecanismos sin levantamiento completo."
+    },
+    {
+      "id": "disputed",
+      "label": "Fuentes diferentes",
+      "note": "Una diferencia entre documentación, propuesta y obra terminada se mantiene explícita."
+    }
+  ],
+  "materialEvidenceLegend": [
+    {
+      "id": "conserved",
+      "label": "Elemento conservado",
+      "note": "Parte identificable en la documentación del estado actual."
+    },
+    {
+      "id": "rehabilitated",
+      "label": "Espacio recuperado",
+      "note": "Transformación contemporánea documentada."
+    },
+    {
+      "id": "mixed",
+      "label": "Lectura interpretativa",
+      "note": "Información histórica y detalles reconstruidos para explicar el conjunto."
+    }
+  ],
+  "presentationModes": [
+    {
+      "id": "current",
+      "label": "Estado actual",
+      "note": "Paseo abierto en 2024 y restos marítimos documentados después del desmontaje."
+    },
+    {
+      "id": "historical",
+      "label": "Hacia 1984–1987",
+      "note": "Recreación de la instalación industrial con la costa contemporánea como referencia."
+    }
+  ],
+  "relatedVisits": [
+    {
+      "id": "pantalan-paseo",
+      "label": "Volver al paseo y al mirador",
+      "description": "El acceso desde la ciudad y la tolva recuperada en el espacio público."
+    }
+  ],
+  "regions": [
+    {
+      "id": "edificio",
+      "name": "La infraestructura",
+      "aliases": [],
+      "summary": "El eje completo y la plataforma del extremo.",
+      "sourceIds": [
+        "p-ache",
+        "p-estado2025",
+        "p-gaudium2026",
+        "p-historia"
+      ],
+      "stopIds": [
+        "pantalan-maritimo-conjunto",
+        "pantalan-maritimo-plataforma"
+      ],
+      "coordinate": [
+        -0.1998082965,
+        39.6492990775
+      ]
+    },
+    {
+      "id": "espacios",
+      "name": "Vanos y continuidad",
+      "aliases": [],
+      "summary": "Los huecos actuales y los enlaces históricos.",
+      "sourceIds": [
+        "p-ache",
+        "p-estado2025",
+        "p-osm"
+      ],
+      "stopIds": [
+        "pantalan-maritimo-vanos"
+      ],
+      "coordinate": [
+        -0.1998082965,
+        39.6492990775
+      ]
+    },
+    {
+      "id": "construccion",
+      "name": "Apoyos y tablero",
+      "aliases": [],
+      "summary": "Trípodes, transición y estructura inferior.",
+      "sourceIds": [
+        "p-ache",
+        "p-archivo",
+        "p-estado2025",
+        "p-foto-restos",
+        "p-osm"
+      ],
+      "stopIds": [
+        "pantalan-maritimo-tripodes",
+        "pantalan-maritimo-transicion",
+        "pantalan-maritimo-pilotes",
+        "pantalan-maritimo-pasarela"
+      ],
+      "coordinate": [
+        -0.1998082965,
+        39.6492990775
+      ]
+    },
+    {
+      "id": "memoria",
+      "name": "El movimiento del mineral",
+      "aliases": [],
+      "summary": "Cintas, cargador y tolvas de la fase histórica.",
+      "sourceIds": [
+        "p-archivo",
+        "p-estado2025",
+        "p-historia",
+        "p-tolva"
+      ],
+      "stopIds": [
+        "pantalan-maritimo-cinta",
+        "pantalan-maritimo-cargador",
+        "pantalan-maritimo-tolvas"
+      ],
+      "coordinate": [
+        -0.1998082965,
+        39.6492990775
+      ]
+    }
+  ],
+  "stops": [
+    {
+      "id": "pantalan-maritimo-conjunto",
+      "label": "El eje marítimo",
+      "title": "La huella de un cargadero",
+      "regionId": "edificio",
+      "period": "mixed",
+      "intro": "Lee la línea completa desde el paseo hasta la plataforma del extremo.",
+      "narrative": "Alterna las dos épocas para relacionar los apoyos que permanecen con la continuidad que tuvo la instalación industrial.",
+      "facts": [
+        {
+          "text": "El pantalán se inauguró en 1977 y alcanzaba 1.652 m en total, incluidos sus tramos terrestres y finales.",
+          "sourceIds": [
+            "p-historia"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "En 2026 se adjudicó la redacción de una nueva actuación marítima a Gaudium y Sener.",
+          "sourceIds": [
+            "p-gaudium2026"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Los huecos del eje, el ensanchamiento de transición y la plataforma larga del extremo.",
+      "modelNote": "La vista actual conserva una estructura discontinua. La recreación histórica y las actuaciones futuras son estados diferentes; aquí no se construye virtualmente una propuesta pendiente.",
+      "sourceIds": [
+        "p-historia",
+        "p-estado2025",
+        "p-gaudium2026"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de observación registrado sobre el eje del modelo. Posición de cámara y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.20006411118793313,
+        39.649407487492965
+      ],
+      "coordinates": [
+        -0.20006411118793313,
+        39.649407487492965
+      ],
+      "coordinateSourceIds": [
+        "p-osm",
+        "p-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "edificio",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "elevation": 5,
+      "localTarget": [
+        1085,
+        5,
+        1
+      ],
+      "order": 1,
+      "cameraOffset": [
+        -74.04715667204903,
+        490,
+        -786.5379956421591
+      ]
+    },
+    {
+      "id": "pantalan-maritimo-tripodes",
+      "label": "Trípodes",
+      "title": "Tres patas para un apoyo",
+      "regionId": "construccion",
+      "period": "mixed",
+      "intro": "Acércate a uno de los apoyos aislados y gira a su alrededor.",
+      "narrative": "La inclinación de los tubos y el encepado permiten entender cómo se recogían las cargas del tablero.",
+      "facts": [
+        {
+          "text": "Los trípodes del tramo estrecho emplean tubos de acero de 762 mm y una inclinación 1:4.",
+          "sourceIds": [
+            "p-ache"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La fotografía de 2024 muestra encepados aislados después de retirar las vigas.",
+          "sourceIds": [
+            "p-foto-restos"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La disposición triangular, el encuentro superior y la franja de contacto con el agua.",
+      "modelNote": "Se conservan los apoyos cartografiados y sus huecos. La corrosión visible se interpreta como material, sin reproducir un diagnóstico estructural de cada tubo.",
+      "sourceIds": [
+        "p-ache",
+        "p-foto-restos",
+        "p-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de observación registrado sobre el eje del modelo. Posición de cámara y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.20470641107873985,
+        39.65157155429804
+      ],
+      "coordinates": [
+        -0.20470641107873985,
+        39.65157155429804
+      ],
+      "coordinateSourceIds": [
+        "p-osm",
+        "p-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "construccion",
+      "floor": null,
+      "fabricStatus": "conserved",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "elevation": 2.6,
+      "localTarget": [
+        620,
+        2.6,
+        0.4
+      ],
+      "order": 2,
+      "cameraOffset": [
+        -6.5691313800458,
+        13,
+        -41.35029036066975
+      ]
+    },
+    {
+      "id": "pantalan-maritimo-vanos",
+      "label": "Vanos desaparecidos",
+      "title": "Leer un espacio que falta",
+      "regionId": "espacios",
+      "period": "mixed",
+      "intro": "Observa la separación entre apoyos y compárala con el modo histórico.",
+      "narrative": "En la escena actual el agua atraviesa los huecos. La restitución permite reconocer la repetición del tablero que enlazaba esos puntos.",
+      "facts": [
+        {
+          "text": "Los tableros de los tramos 1 y 2 fueron retirados entre diciembre de 2022 y julio de 2023.",
+          "sourceIds": [
+            "p-estado2025"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Las vigas originales eran piezas en T de 30 m y 1,50 m de canto.",
+          "sourceIds": [
+            "p-ache"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La diferencia entre una alineación de apoyos y un tablero continuo.",
+      "modelNote": "El modelo no rellena los huecos actuales con apoyos supuestos. La inspección de la estructura es una vista virtual, no un recorrido peatonal continuo.",
+      "sourceIds": [
+        "p-estado2025",
+        "p-ache",
+        "p-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de observación registrado sobre el eje del modelo. Posición de cámara y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.20308541878429673,
+        39.65082230455119
+      ],
+      "coordinates": [
+        -0.20308541878429673,
+        39.65082230455119
+      ],
+      "coordinateSourceIds": [
+        "p-osm",
+        "p-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "espacios",
+      "floor": null,
+      "fabricStatus": "conserved",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "elevation": 2.7,
+      "localTarget": [
+        782,
+        2.7,
+        0
+      ],
+      "order": 3,
+      "cameraOffset": [
+        -16.04531222936373,
+        34,
+        -85.62445886230307
+      ]
+    },
+    {
+      "id": "pantalan-maritimo-transicion",
+      "label": "La transición",
+      "title": "Cuando el tablero se ensancha",
+      "regionId": "construccion",
+      "period": "mixed",
+      "intro": "Acércate al cambio de sección anterior a la plataforma.",
+      "narrative": "Compara el ancho de los apoyos con el del viaducto estrecho y observa cómo preparaban la llegada a la zona de trabajo.",
+      "facts": [
+        {
+          "text": "El tramo de transición tiene 150 m y usaba ocho vigas por vano.",
+          "sourceIds": [
+            "p-ache"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La documentación de ejecución diferencia sus apoyos de los del tramo estrecho.",
+          "sourceIds": [
+            "p-archivo"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Los encepados más anchos, las piezas laterales y el cambio de proporción.",
+      "modelNote": "El archivo no conserva el mismo nivel de detalle para todos los encepados metálicos. Esos encuentros se simplifican sin atribuirles medidas inéditas.",
+      "sourceIds": [
+        "p-ache",
+        "p-archivo"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de observación registrado sobre el eje del modelo. Posición de cámara y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.19851124727254832,
+        39.64869305251672
+      ],
+      "coordinates": [
+        -0.19851124727254832,
+        39.64869305251672
+      ],
+      "coordinateSourceIds": [
+        "p-osm",
+        "p-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "construccion",
+      "floor": null,
+      "fabricStatus": "conserved",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "elevation": 4.1,
+      "localTarget": [
+        1240,
+        4.1,
+        0.3
+      ],
+      "order": 4,
+      "cameraOffset": [
+        -9.425694834243636,
+        26,
+        -61.76695133234045
+      ]
+    },
+    {
+      "id": "pantalan-maritimo-plataforma",
+      "label": "La plataforma",
+      "title": "El espacio de carga conservado",
+      "regionId": "edificio",
+      "period": "mixed",
+      "intro": "Toma distancia para leer la pieza ancha del extremo.",
+      "narrative": "La plataforma reúne la escala del trabajo industrial: una superficie larga y una estructura inferior mucho más densa.",
+      "facts": [
+        {
+          "text": "El tramo 3 mide 272 m de largo y 20 m de ancho; su losa tiene 40 cm de espesor.",
+          "sourceIds": [
+            "p-ache"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La memoria de la APV identifica su superestructura como conservada tras el desmontaje.",
+          "sourceIds": [
+            "p-estado2025"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El canto de la losa, los tres nervios longitudinales y las alineaciones de pilotes.",
+      "modelNote": "La superficie y los detalles de borde se interpretan desde planos y fotografías. El modo histórico añade la maquinaria de la fase elegida.",
+      "sourceIds": [
+        "p-ache",
+        "p-estado2025"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de observación registrado sobre el eje del modelo. Posición de cámara y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.1963597797801061,
+        39.64768149320067
+      ],
+      "coordinates": [
+        -0.1963597797801061,
+        39.64768149320067
+      ],
+      "coordinateSourceIds": [
+        "p-osm",
+        "p-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "edificio",
+      "floor": null,
+      "fabricStatus": "conserved",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "elevation": 5.1,
+      "localTarget": [
+        1456,
+        5.1,
+        1.4
+      ],
+      "order": 5,
+      "cameraOffset": [
+        -40.51603980169726,
+        115,
+        -223.06602277977544
+      ]
+    },
+    {
+      "id": "pantalan-maritimo-pilotes",
+      "label": "Bajo el tablero",
+      "title": "La estructura sobre el agua",
+      "regionId": "construccion",
+      "period": "mixed",
+      "intro": "Mira desde una posición baja y utiliza la inspección del agua para leer los apoyos.",
+      "narrative": "La vista inferior permite distinguir el ritmo de las líneas exteriores y la geometría inclinada del centro.",
+      "facts": [
+        {
+          "text": "La plataforma tiene pilotes exteriores verticales cada 6 m y una alineación central de elementos inclinados.",
+          "sourceIds": [
+            "p-ache"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Los tres nervios, los pares inclinados y la profundidad parcial visible bajo el mar.",
+      "modelNote": "Los pilotes terminan en el límite expositivo del modelo, no en una cimentación medida. La retirada del agua descubre geometría simplificada; el fondo no representa una batimetría levantada.",
+      "sourceIds": [
+        "p-ache",
+        "p-archivo"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de observación registrado sobre el eje del modelo. Posición de cámara y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.19677941129135443,
+        39.647876540573364
+      ],
+      "coordinates": [
+        -0.19677941129135443,
+        39.647876540573364
+      ],
+      "coordinateSourceIds": [
+        "p-osm",
+        "p-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "construccion",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "elevation": 2,
+      "localTarget": [
+        1414,
+        2,
+        1.4
+      ],
+      "order": 6,
+      "cameraOffset": [
+        -19.755417534718603,
+        1.6,
+        11.433436842390517
+      ]
+    },
+    {
+      "id": "pantalan-maritimo-cinta",
+      "label": "Transferencia de cintas",
+      "title": "Del viaducto a la plataforma",
+      "regionId": "memoria",
+      "period": "industrial",
+      "intro": "Activa la fase histórica y sigue la línea del material.",
+      "narrative": "La transición permite explicar el cambio entre el transporte longitudinal y las operaciones de la plataforma.",
+      "facts": [
+        {
+          "text": "El plano de uso documenta la cinta principal hasta el tercer vano de transición y la conexión con otras dos cintas.",
+          "sourceIds": [
+            "p-archivo"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La subida de la cinta, los recintos de transferencia y las líneas que continúan hacia la plataforma.",
+      "modelNote": "Carcasas, pasarelas y detalles mecánicos se completan de manera interpretativa sobre el esquema funcional documentado.",
+      "sourceIds": [
+        "p-archivo",
+        "p-historia"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de observación registrado sobre el eje del modelo. Posición de cámara y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.19823813035426519,
+        39.64855456239271
+      ],
+      "coordinates": [
+        -0.19823813035426519,
+        39.64855456239271
+      ],
+      "coordinateSourceIds": [
+        "p-osm",
+        "p-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "memoria",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "elevation": 7.8,
+      "localTarget": [
+        1268,
+        7.8,
+        1.4
+      ],
+      "mode": "historical",
+      "recommendedMode": "historical",
+      "order": 7,
+      "cameraOffset": [
+        -6.001676947643137,
+        25,
+        -59.699077663027
+      ]
+    },
+    {
+      "id": "pantalan-maritimo-cargador",
+      "label": "Cargador",
+      "title": "Un brazo hacia los buques",
+      "regionId": "memoria",
+      "period": "industrial",
+      "intro": "Observa la máquina desde el lateral de la plataforma.",
+      "narrative": "La silueta del brazo explica por qué el cargadero debía alcanzar la bodega de un buque y mantener libre la línea de atraque.",
+      "facts": [
+        {
+          "text": "La APV publica un alcance de hasta 27,2 m y una capacidad media de carga de 2.000 t/h.",
+          "sourceIds": [
+            "p-tolva"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El brazo, la estructura de soporte y su relación con la cinta que lo alimenta.",
+      "modelNote": "La posición de trabajo, el bastidor y las carcasas son una recreación aproximada. No se interpreta como estado operativo actual.",
+      "sourceIds": [
+        "p-tolva",
+        "p-historia"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de observación registrado sobre el eje del modelo. Posición de cámara y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.19661941129748306,
+        39.647732909618824
+      ],
+      "coordinates": [
+        -0.19661941129748306,
+        39.647732909618824
+      ],
+      "coordinateSourceIds": [
+        "p-osm",
+        "p-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "memoria",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "elevation": 18,
+      "localTarget": [
+        1434,
+        18,
+        8
+      ],
+      "mode": "historical",
+      "recommendedMode": "historical",
+      "order": 8,
+      "cameraOffset": [
+        -66.79236048600032,
+        26,
+        27.418617410587686
+      ]
+    },
+    {
+      "id": "pantalan-maritimo-tolvas",
+      "label": "Cinco tolvas",
+      "title": "Recepción y descarga de graneles",
+      "regionId": "memoria",
+      "period": "industrial",
+      "intro": "Recorre visualmente el lado de trabajo de la plataforma histórica.",
+      "narrative": "Compara las máquinas repetidas con la pieza que se conserva en el paseo terrestre.",
+      "facts": [
+        {
+          "text": "El conjunto tuvo cinco tolvas; cuatro se fabricaron en 1984 y permanecieron en servicio hasta 1993.",
+          "sourceIds": [
+            "p-tolva"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La APV documenta su retirada del tramo marítimo durante las operaciones de 2022–2023.",
+          "sourceIds": [
+            "p-estado2025"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La repetición de embudos, ruedas y soportes junto al borde de trabajo.",
+      "modelNote": "La fase elegida, hacia 1984–1987, permite incluir las cinco. Distribución puntual, orientaciones y mecanismos de cada máquina son interpretativos.",
+      "sourceIds": [
+        "p-tolva",
+        "p-estado2025"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de observación registrado sobre el eje del modelo. Posición de cámara y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.19576030619260854,
+        39.64740285409683
+      ],
+      "coordinates": [
+        -0.19576030619260854,
+        39.64740285409683
+      ],
+      "coordinateSourceIds": [
+        "p-osm",
+        "p-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "memoria",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "elevation": 9.5,
+      "localTarget": [
+        1516,
+        9.5,
+        1.4
+      ],
+      "mode": "historical",
+      "recommendedMode": "historical",
+      "order": 9,
+      "cameraOffset": [
+        -74.85226545686464,
+        32,
+        27.22385637588966
+      ]
+    },
+    {
+      "id": "pantalan-maritimo-pasarela",
+      "label": "Pasarela final",
+      "title": "Hasta los duques de alba",
+      "regionId": "construccion",
+      "period": "industrial",
+      "intro": "Llega al extremo de la restitución histórica.",
+      "narrative": "La pasarela ligera prolonga la lectura del conjunto más allá de la gran plataforma, hasta sus apoyos de amarre.",
+      "facts": [
+        {
+          "text": "La pasarela final sumaba 60 m en dos celosías de 30 m, desplazadas unos 6 m al sur del eje.",
+          "sourceIds": [
+            "p-ache"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Las pasarelas metálicas se retiraron en los trabajos de 2022–2023.",
+          "sourceIds": [
+            "p-estado2025"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La celosía, la separación lateral respecto al eje y los dos puntos finales de amarre.",
+      "modelNote": "Se restituyen su tipología y relación espacial. Las uniones, barandillas y detalles de los duques de alba se simplifican; no aparecen como paso existente en la vista actual.",
+      "sourceIds": [
+        "p-ache",
+        "p-estado2025"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de observación registrado sobre el eje del modelo. Posición de cámara y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.19475742276394106,
+        39.64687374214721
+      ],
+      "coordinates": [
+        -0.19475742276394106,
+        39.64687374214721
+      ],
+      "coordinateSourceIds": [
+        "p-osm",
+        "p-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "construccion",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "elevation": 5.7,
+      "localTarget": [
+        1620,
+        5.7,
+        7.4
+      ],
+      "mode": "historical",
+      "recommendedMode": "historical",
+      "order": 10,
+      "cameraOffset": [
+        -50.65572187258026,
+        22,
+        21.977211869748047
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "p-tolva",
+      "title": "Tolva del Pantalán de la Compañía Minera de Sierra Menera",
+      "author": "Autoridad Portuaria de Valencia",
+      "url": "https://www.valenciaport.com/el-origen-del-puerto-de-sagunto/tolva-del-pantalan-de-la-compania-minera-de-sierra-menera/",
+      "type": "ficha patrimonial institucional",
+      "locator": "Sistema de carga, cinco tolvas, fabricación, traslado y pieza recuperada para el paseo.",
+      "year": null,
+      "note": "La ficha acredita función y capacidad; las dimensiones exteriores y pequeños mecanismos se aproximan desde fotografías.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "p-historia",
+      "title": "El pantalán de minerales",
+      "author": "Autoridad Portuaria de Valencia",
+      "url": "https://www.valenciaport.com/puertos/sagunto/el-pantalan-de-minerales/",
+      "type": "historia institucional y fotografías de archivo",
+      "locator": "Concesión de 1974, construcción, inauguración, longitud y sistema de transporte de mineral.",
+      "year": null,
+      "note": "El fin de actividad de Sierra Menera en 1987 no equivale a la desaparición física del pantalán ni al cese simultáneo de todos sus equipos.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "p-ache",
+      "title": "Rehabilitación de estructuras portuarias: pantalán de Sierra Menera",
+      "author": "F. Rodríguez García, P. Alonso Medina y J. Martínez González · FHECOR / Congreso ACHE",
+      "url": "https://www.congresoache.com/descargas2022/2362.pdf",
+      "type": "estudio técnico de inspección y diagnóstico",
+      "locator": "Páginas 2–3: cinco secciones, pilotes, vigas y losa; fotografías de la cara inferior de la estructura.",
+      "year": 2020,
+      "note": "Describe la inspección de 2018, anterior a los colapsos y desmontajes posteriores. Sus propuestas de reparación no son obra ejecutada.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "p-archivo",
+      "title": "Información previa del pantalán · Archivo de Sierra Menera",
+      "author": "Fundació de Patrimoni Industrial de Port de Sagunt / estudio de diagnóstico",
+      "url": "https://fundacioportdesagunt.com/wp-content/uploads/2011/05/resumen-informacic3b3n-previa-del-pantalc3a1n.pdf",
+      "type": "síntesis de planos, certificaciones y fotografías de ejecución",
+      "locator": "Páginas 5–14: tablero, vigas, encepados, pilotes y cintas; 15–20: construcción.",
+      "year": null,
+      "note": "El propio documento advierte que el proyecto EPTISA de noviembre de 1974 no es la solución finalmente construida. Se usan los detalles de ejecución identificados.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "p-estado2025",
+      "title": "Memoria de Sostenibilidad 2025",
+      "author": "Autoridad Portuaria de Valencia",
+      "url": "https://www.valenciaport.com/wp-content/uploads/SOSTENIBILIDAD-2025.pdf",
+      "type": "memoria institucional",
+      "locator": "Página impresa/PDF 17: actuación en el tramo marítimo del pantalán del puerto de Sagunto.",
+      "year": 2025,
+      "note": "Distingue los elementos retirados en 2022–2023 de la plataforma y los apoyos conservados.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "p-gaudium2026",
+      "title": "Proyecto de actuación en el tramo marítimo del Pantalán",
+      "author": "Gaudium Ingenieros",
+      "url": "https://gaudium-ingenieros.com/gaudium-proyectara-la-actuacion-en-el-tramo-maritimo-del-pantalan-del-puerto-de-sagunto/",
+      "type": "anuncio de la ingeniería adjudicataria",
+      "locator": "20 de abril de 2026: adjudicación de la redacción en UTE con Sener.",
+      "year": 2026,
+      "note": "Acredita la redacción de un proyecto. No acredita que la nueva intervención marítima esté construida.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "p-municipio2026",
+      "title": "Petición municipal sobre el muelle norte y el tramo marítimo del pantalán",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/es/actualidad/2026-07-03-el-ayuntamiento-de-sagunto-instara-a-la-apv-que-se-finalice-la-apertura-del-muelle-norte-y-el-tramo-maritimo-del-pantalan/",
+      "type": "acuerdo municipal publicado",
+      "locator": "3 de julio de 2026: petición de culminación de los proyectos de integración puerto-ciudad.",
+      "year": 2026,
+      "note": "La petición permite distinguir actuaciones pendientes de los espacios ya abiertos. No se infiere una fecha futura de apertura.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "p-foto-restos",
+      "title": "Apoyos marítimos después del desmontaje",
+      "author": "Ayuntamiento de Sagunto · galería de apertura",
+      "url": "https://aytosagunto.es/media/lgkppy0v/img_4483-c.jpg",
+      "type": "fotografía del estado conservado",
+      "locator": "Vista desde el paseo, 19 de julio de 2024: encepados y trípodes aislados sobre el mar.",
+      "year": 2024,
+      "note": "Documenta la discontinuidad física. No constituye un censo submarino ni una inspección estructural de 2026.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "p-osm",
+      "title": "Paseo, mirador, tolva y apoyos cartografiados",
+      "author": "OpenStreetMap y sus colaboradores",
+      "url": "https://www.openstreetmap.org/way/1303784876",
+      "type": "cartografía colaborativa",
+      "locator": "Eje del conjunto, mirador 12074274305, tolva 12074274325 y apoyos registrados en coast-pier.json.",
+      "year": null,
+      "note": "Los puntos son referencias de geolocalización aproximada. El inventario conserva los huecos presentes en la cartografía.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "p-pnoa",
+      "title": "PNOA Máxima Actualidad",
+      "author": "Instituto Geográfico Nacional / CNIG",
+      "url": "https://pnoa.ign.es/",
+      "type": "ortofotografía de contraste",
+      "locator": "Contraste previo del atlas sobre costa, apoyos, plataforma y entorno portuario.",
+      "year": null,
+      "note": "Se reutiliza el registro cartográfico existente del atlas, consultado el 19 de noviembre de 2026. La fecha de consulta no equivale a la fecha del vuelo.",
+      "accessed": "2026-11-21"
+    }
+  ],
+  "timeline": [
+    {
+      "id": "m-t-obras",
+      "date": "1975–1977",
+      "title": "Construcción del pantalán",
+      "text": "Se ejecuta e inaugura el cargadero de Sierra Menera.",
+      "sourceIds": [
+        "p-historia"
+      ],
+      "period": "industrial",
+      "confidence": "documented",
+      "stopId": "pantalan-maritimo-conjunto"
+    },
+    {
+      "id": "m-t-fase",
+      "date": "Hacia 1984–1987",
+      "title": "La fase representada",
+      "text": "La recreación incorpora las cinco tolvas de esta etapa.",
+      "sourceIds": [
+        "p-tolva"
+      ],
+      "period": "industrial",
+      "confidence": "documented",
+      "stopId": "pantalan-maritimo-tolvas"
+    },
+    {
+      "id": "m-t-cese",
+      "date": "1987",
+      "title": "Cesa Sierra Menera",
+      "text": "La compañía termina su actividad tras perder a su principal cliente.",
+      "sourceIds": [
+        "p-historia"
+      ],
+      "period": "industrial",
+      "confidence": "documented",
+      "stopId": "pantalan-maritimo-cargador"
+    },
+    {
+      "id": "m-t-colapsos",
+      "date": "Desde 2019",
+      "title": "Pérdida de vanos",
+      "text": "La APV documenta colapsos anteriores a la retirada de tableros.",
+      "sourceIds": [
+        "p-estado2025"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "pantalan-maritimo-vanos"
+    },
+    {
+      "id": "m-t-desmontaje",
+      "date": "Diciembre de 2022–julio de 2023",
+      "title": "Desmontaje parcial",
+      "text": "Se retiran tableros, pasarelas y tolvas; quedan apoyos y plataforma.",
+      "sourceIds": [
+        "p-estado2025"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "pantalan-maritimo-plataforma"
+    },
+    {
+      "id": "m-t-proyecto",
+      "date": "20 de abril de 2026",
+      "title": "Un nuevo proyecto",
+      "text": "Gaudium comunica la adjudicación de la redacción junto con Sener.",
+      "sourceIds": [
+        "p-gaudium2026"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "pantalan-maritimo-conjunto"
+    },
+    {
+      "id": "m-t-acuerdo",
+      "date": "3 de julio de 2026",
+      "title": "Integración pendiente",
+      "text": "El Ayuntamiento pide culminar la actuación marítima y la apertura del muelle norte.",
+      "sourceIds": [
+        "p-municipio2026"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "pantalan-maritimo-conjunto"
+    }
+  ],
+  "modelRegistration": {
+    "status": "registered",
+    "precision": "approximate",
+    "provisionalCoordinates": false,
+    "note": "Focos sincronizados con los planos finales V31; posiciones de observación y cotas sin levantamiento son aproximadas.",
+    "coordinates": "Registered from pantalan-paseo-plan.json / pantalan-maritimo-plan.json model focus coordinates."
+  },
+  "materialsModeLabel": "Materiales",
+  "sectionOpenLabel": "Ver los apoyos bajo el agua",
+  "sectionCloseLabel": "Restituir el agua",
+  "sectionInstructions": "Retira temporalmente la superficie del mar para leer los apoyos.",
+  "sectionNote": "Inspección virtual. Los pilotes se representan parcialmente y terminan en un límite expositivo; su longitud visible no equivale a la hinca real. El fondo no es una batimetría medida."
+}

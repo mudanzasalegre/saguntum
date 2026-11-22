@@ -1,0 +1,14 @@
+{
+  "source": "IGN / CNIG · MDSnE2.5, normalized building surface model",
+  "source_url": "https://wcs-mds.idee.es/mds?service=WCS&version=2.0.1&request=GetCoverage&coverageId=mdsn_e025&subset=x%28737971.459%2C743629.474%29&subset=y%284397300.629%2C4404680.008%29&format=image%2Ftiff",
+  "coverage_id": "mdsn_e025",
+  "source_grid_spacing_m": 2.5,
+  "service_pixel_spacing_m": 2.502439186200798,
+  "retrieved": "2026-11-19",
+  "source_period": "First PNOA-LiDAR coverage; individual flight date not verified",
+  "documentation_url": "https://datos.gob.es/es/catalogo/e00125901-spaignmds-normalizado",
+  "license_url": "https://www.ign.es/resources/licencia/Condiciones_licenciaUso_IGN.pdf",
+  "method": "60th percentile of positive height-above-ground raster cells centered inside each mapped footprint; require at least3 valid samples and45% positive coverage. OSM height/levels untouched. Small/unmatched buildings retain renderer fallback.",
+  "estimated_buildings": 4499,
+  "caution": "Raster-derived roof-height estimates; not measured facade/eaves heights and not verified current as-built condition."
+}

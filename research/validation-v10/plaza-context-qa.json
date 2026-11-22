@@ -1,0 +1,1573 @@
+{
+  "pass": true,
+  "visitSource": "plaza-mayor-visit.json",
+  "stats": {
+    "buildingParts": 94,
+    "parentParcels": 36,
+    "footprintsPreserved": true,
+    "courtyards": 3,
+    "sourceHeight": 0,
+    "ignHeight": 51,
+    "storeyHeight": 43,
+    "fallbackHeight": 0,
+    "streetSamples": 119,
+    "roofCorrections": 0,
+    "maximumRoofCorrectionM": 0,
+    "preservedSantaMaria": true
+  },
+  "geometry": {
+    "meshes": 28,
+    "triangles": 36152,
+    "pavingSamples": 5720,
+    "buriedPaving": 0,
+    "floatingPaving": 0,
+    "minClearance": 0.05499980956859929,
+    "maxClearance": 0.22742080688476562
+  },
+  "scenarios": [
+    {
+      "id": "desktop-minimap/dark",
+      "targets": 16,
+      "components": 133,
+      "minimumDistance": 17.566448928934612,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 992
+    },
+    {
+      "id": "desktop-minimap/light",
+      "targets": 16,
+      "components": 133,
+      "minimumDistance": 17.566448928934612,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 992
+    },
+    {
+      "id": "desktop-plan/dark",
+      "targets": 16,
+      "components": 133,
+      "minimumDistance": 35.05761049221071,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 11021
+    },
+    {
+      "id": "desktop-plan/light",
+      "targets": 16,
+      "components": 133,
+      "minimumDistance": 35.05761049221071,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 11021
+    },
+    {
+      "id": "mobile-plan/dark",
+      "targets": 16,
+      "components": 133,
+      "minimumDistance": 32.57853296633802,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 1806
+    },
+    {
+      "id": "mobile-plan/light",
+      "targets": 16,
+      "components": 133,
+      "minimumDistance": 32.57853296633802,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 1806
+    }
+  ],
+  "cameraChecks": [
+    {
+      "id": "plaza-peixateria",
+      "near": false,
+      "factor": 1,
+      "position": [
+        -46.247552525746315,
+        77.15540115134806,
+        -96.933399999431
+      ],
+      "target": [
+        -21.24755252574632,
+        52.155401151348066,
+        -82.933399999431
+      ],
+      "hit": null
+    },
+    {
+      "id": "plaza-peixateria",
+      "near": false,
+      "factor": 1.95,
+      "position": [
+        -69.99755252574631,
+        100.90540115134806,
+        -110.233399999431
+      ],
+      "target": [
+        -21.24755252574632,
+        52.155401151348066,
+        -82.933399999431
+      ],
+      "hit": null
+    },
+    {
+      "id": "plaza-peixateria",
+      "near": false,
+      "factor": 3.6,
+      "position": [
+        -111.24755252574631,
+        142.15540115134806,
+        -133.333399999431
+      ],
+      "target": [
+        -21.24755252574632,
+        52.155401151348066,
+        -82.933399999431
+      ],
+      "hit": null
+    },
+    {
+      "id": "plaza-peixateria",
+      "near": true,
+      "factor": 1,
+      "position": [
+        -34.247552525746315,
+        63.155401151348066,
+        -86.933399999431
+      ],
+      "target": [
+        -21.24755252574632,
+        52.155401151348066,
+        -82.933399999431
+      ],
+      "hit": null
+    },
+    {
+      "id": "plaza-peixateria",
+      "near": true,
+      "factor": 1.95,
+      "position": [
+        -46.597552525746316,
+        73.60540115134806,
+        -90.733399999431
+      ],
+      "target": [
+        -21.24755252574632,
+        52.155401151348066,
+        -82.933399999431
+      ],
+      "hit": null
+    },
+    {
+      "id": "plaza-peixateria",
+      "near": true,
+      "factor": 3.6,
+      "position": [
+        -68.04755252574633,
+        91.75540115134807,
+        -97.33339999943101
+      ],
+      "target": [
+        -21.24755252574632,
+        52.155401151348066,
+        -82.933399999431
+      ],
+      "hit": null
+    },
+    {
+      "id": "plaza-cavallers",
+      "near": false,
+      "factor": 1,
+      "position": [
+        -47.36778731430729,
+        79.32955840631384,
+        -39.714919999936114
+      ],
+      "target": [
+        -71.3677873143073,
+        55.329558406313836,
+        -25.714919999936114
+      ],
+      "hit": null
+    },
+    {
+      "id": "plaza-cavallers",
+      "near": false,
+      "factor": 1.95,
+      "position": [
+        -24.567787314307296,
+        102.12955840631383,
+        -53.01491999993611
+      ],
+      "target": [
+        -71.3677873143073,
+        55.329558406313836,
+        -25.714919999936114
+      ],
+      "hit": null
+    },
+    {
+      "id": "plaza-cavallers",
+      "near": false,
+      "factor": 3.6,
+      "position": [
+        15.032212685692713,
+        141.72955840631386,
+        -76.11491999993612
+      ],
+      "target": [
+        -71.3677873143073,
+        55.329558406313836,
+        -25.714919999936114
+      ],
+      "hit": null
+    },
+    {
+      "id": "plaza-cavallers",
+      "near": true,
+      "factor": 1,
+      "position": [
+        -57.36778731430729,
+        66.32955840631384,
+        -32.714919999936114
+      ],
+      "target": [
+        -71.3677873143073,
+        55.329558406313836,
+        -25.714919999936114
+      ],
+      "hit": null
+    },
+    {
+      "id": "plaza-cavallers",
+      "near": true,
+      "factor": 1.95,
+      "position": [
+        -44.067787314307296,
+        76.77955840631384,
+        -39.36491999993611
+      ],
+      "target": [
+        -71.3677873143073,
+        55.329558406313836,
+        -25.714919999936114
+      ],
+      "hit": null
+    },
+    {
+      "id": "plaza-cavallers",
+      "near": true,
+      "factor": 3.6,
+      "position": [
+        -20.967787314307294,
+        94.92955840631384,
+        -50.91491999993612
+      ],
+      "target": [
+        -71.3677873143073,
+        55.329558406313836,
+        -25.714919999936114
+      ],
+      "hit": null
+    },
+    {
+      "id": "plaza-carrer-major",
+      "near": false,
+      "factor": 1,
+      "position": [
+        -60.98511178392194,
+        78.9000015258789,
+        -62.905199999406705
+      ],
+      "target": [
+        -32.98511178392194,
+        52.900001525878906,
+        -67.9051999994067
+      ],
+      "hit": null
+    },
+    {
+      "id": "plaza-carrer-major",
+      "near": false,
+      "factor": 1.95,
+      "position": [
+        -87.58511178392195,
+        103.6000015258789,
+        -58.155199999406705
+      ],
+      "target": [
+        -32.98511178392194,
+        52.900001525878906,
+        -67.9051999994067
+      ],
+      "hit": null
+    },
+    {
+      "id": "plaza-carrer-major",
+      "near": false,
+      "factor": 3.6,
+      "position": [
+        -133.78511178392193,
+        146.50000152587893,
+        -49.905199999406705
+      ],
+      "target": [
+        -32.98511178392194,
+        52.900001525878906,
+        -67.9051999994067
+      ],
+      "hit": null
+    },
+    {
+      "id": "plaza-carrer-major",
+      "near": true,
+      "factor": 1,
+      "position": [
+        -47.98511178392194,
+        64.9000015258789,
+        -63.905199999406705
+      ],
+      "target": [
+        -32.98511178392194,
+        52.900001525878906,
+        -67.9051999994067
+      ],
+      "hit": null
+    },
+    {
+      "id": "plaza-carrer-major",
+      "near": true,
+      "factor": 1.95,
+      "position": [
+        -62.23511178392194,
+        76.30000152587891,
+        -60.10519999940671
+      ],
+      "target": [
+        -32.98511178392194,
+        52.900001525878906,
+        -67.9051999994067
+      ],
+      "hit": null
+    },
+    {
+      "id": "plaza-carrer-major",
+      "near": true,
+      "factor": 3.6,
+      "position": [
+        -86.98511178392194,
+        96.10000152587891,
+        -53.505199999406706
+      ],
+      "target": [
+        -32.98511178392194,
+        52.900001525878906,
+        -67.9051999994067
+      ],
+      "hit": null
+    },
+    {
+      "id": "plaza-carrer-castell",
+      "near": false,
+      "factor": 1,
+      "position": [
+        -62.63970237545277,
+        83,
+        -35.36968000013678
+      ],
+      "target": [
+        -38.63970237545277,
+        55,
+        -19.369680000136782
+      ],
+      "hit": null
+    },
+    {
+      "id": "plaza-carrer-castell",
+      "near": false,
+      "factor": 1.95,
+      "position": [
+        -85.43970237545277,
+        109.6,
+        -50.569680000136785
+      ],
+      "target": [
+        -38.63970237545277,
+        55,
+        -19.369680000136782
+      ],
+      "hit": null
+    },
+    {
+      "id": "plaza-carrer-castell",
+      "near": false,
+      "factor": 3.6,
+      "position": [
+        -125.03970237545278,
+        155.8,
+        -76.96968000013678
+      ],
+      "target": [
+        -38.63970237545277,
+        55,
+        -19.369680000136782
+      ],
+      "hit": null
+    },
+    {
+      "id": "plaza-carrer-castell",
+      "near": true,
+      "factor": 1,
+      "position": [
+        -50.63970237545277,
+        69,
+        -25.369680000136782
+      ],
+      "target": [
+        -38.63970237545277,
+        55,
+        -19.369680000136782
+      ],
+      "hit": null
+    },
+    {
+      "id": "plaza-carrer-castell",
+      "near": true,
+      "factor": 1.95,
+      "position": [
+        -62.03970237545277,
+        82.3,
+        -31.06968000013678
+      ],
+      "target": [
+        -38.63970237545277,
+        55,
+        -19.369680000136782
+      ],
+      "hit": null
+    },
+    {
+      "id": "plaza-carrer-castell",
+      "near": true,
+      "factor": 3.6,
+      "position": [
+        -81.83970237545277,
+        105.4,
+        -40.96968000013678
+      ],
+      "target": [
+        -38.63970237545277,
+        55,
+        -19.369680000136782
+      ],
+      "hit": null
+    }
+  ],
+  "checks": [
+    {
+      "pass": true,
+      "label": "94 source building parts in 36 immediate parcels"
+    },
+    {
+      "pass": true,
+      "label": "every context height has source or storey derivation"
+    },
+    {
+      "pass": true,
+      "label": "44 Santa Maria parts remain present in the assembled scene"
+    },
+    {
+      "pass": true,
+      "label": "all context geometry attributes are finite"
+    },
+    {
+      "pass": true,
+      "label": "pavement triangles clear the final rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "pavement triangles closely follow the final terrain"
+    },
+    {
+      "pass": true,
+      "label": "all four context visit focuses resolve"
+    },
+    {
+      "pass": true,
+      "label": "context focuses retain their source geographic positions"
+    },
+    {
+      "pass": true,
+      "label": "plaza-peixateria/full/1 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-peixateria/full/1.95 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-peixateria/full/3.6 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-peixateria/near/1 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-peixateria/near/1.95 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-peixateria/near/3.6 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-cavallers/full/1 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-cavallers/full/1.95 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-cavallers/full/3.6 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-cavallers/near/1 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-cavallers/near/1.95 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-cavallers/near/3.6 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-major/full/1 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-major/full/1.95 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-major/full/3.6 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-major/near/1 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-major/near/1.95 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-major/near/3.6 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-castell/full/1 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-castell/full/1.95 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-castell/full/3.6 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-castell/near/1 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-castell/near/1.95 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-castell/near/3.6 sightline clears retained geometry"
+    },
+    {
+      "pass": true,
+      "label": "instances share no disposable materials or textures"
+    },
+    {
+      "pass": true,
+      "label": "period and focus changes restore every original material"
+    },
+    {
+      "pass": true,
+      "label": "disposing another instance preserves this context"
+    },
+    {
+      "pass": true,
+      "label": "rebinding terrain replaces and disposes owned geometry without resource growth"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark returns a map"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark contains all 16 unique stops"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark uses real core/context geometry and ignores malformed components"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark markers have readable separation"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark bounds include every surrounding parcel and approach"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit plaza-conjunto"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite plaza-conjunto"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit plaza-mercado"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite plaza-mercado"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit plaza-soportales"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite plaza-soportales"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit plaza-columnas"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite plaza-columnas"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit plaza-epigrafia"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite plaza-epigrafia"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit plaza-almudin"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite plaza-almudin"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit plaza-escudo"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite plaza-escudo"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit plaza-abasto"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite plaza-abasto"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit plaza-forn"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite plaza-forn"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit plaza-mustassaf"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite plaza-mustassaf"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit plaza-peixateria"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite plaza-peixateria"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit plaza-vila"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite plaza-vila"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit plaza-santa-maria"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite plaza-santa-maria"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit plaza-cavallers"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite plaza-cavallers"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit plaza-carrer-major"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite plaza-carrer-major"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit plaza-carrer-castell"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite plaza-carrer-castell"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark marker text meets 4.5:1 contrast"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark has the plaza-specific heading"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light returns a map"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light contains all 16 unique stops"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light uses real core/context geometry and ignores malformed components"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light markers have readable separation"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light bounds include every surrounding parcel and approach"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit plaza-conjunto"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite plaza-conjunto"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit plaza-mercado"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite plaza-mercado"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit plaza-soportales"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite plaza-soportales"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit plaza-columnas"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite plaza-columnas"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit plaza-epigrafia"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite plaza-epigrafia"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit plaza-almudin"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite plaza-almudin"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit plaza-escudo"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite plaza-escudo"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit plaza-abasto"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite plaza-abasto"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit plaza-forn"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite plaza-forn"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit plaza-mustassaf"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite plaza-mustassaf"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit plaza-peixateria"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite plaza-peixateria"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit plaza-vila"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite plaza-vila"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit plaza-santa-maria"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite plaza-santa-maria"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit plaza-cavallers"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite plaza-cavallers"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit plaza-carrer-major"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite plaza-carrer-major"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit plaza-carrer-castell"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite plaza-carrer-castell"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light marker text meets 4.5:1 contrast"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light has the plaza-specific heading"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark returns a map"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark contains all 16 unique stops"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark uses real core/context geometry and ignores malformed components"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark markers have readable separation"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark bounds include every surrounding parcel and approach"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit plaza-almudin"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite plaza-almudin"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit plaza-conjunto"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite plaza-conjunto"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit plaza-mercado"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite plaza-mercado"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit plaza-soportales"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite plaza-soportales"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit plaza-columnas"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite plaza-columnas"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit plaza-epigrafia"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite plaza-epigrafia"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit plaza-escudo"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite plaza-escudo"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit plaza-abasto"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite plaza-abasto"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit plaza-forn"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite plaza-forn"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit plaza-mustassaf"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite plaza-mustassaf"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit plaza-peixateria"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite plaza-peixateria"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit plaza-vila"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite plaza-vila"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit plaza-santa-maria"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite plaza-santa-maria"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit plaza-cavallers"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite plaza-cavallers"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit plaza-carrer-major"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite plaza-carrer-major"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit plaza-carrer-castell"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite plaza-carrer-castell"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark marker text meets 4.5:1 contrast"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark selected marker retains geographic position"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark has the plaza-specific heading"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light returns a map"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light contains all 16 unique stops"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light uses real core/context geometry and ignores malformed components"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light markers have readable separation"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light bounds include every surrounding parcel and approach"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit plaza-almudin"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite plaza-almudin"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit plaza-conjunto"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite plaza-conjunto"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit plaza-mercado"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite plaza-mercado"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit plaza-soportales"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite plaza-soportales"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit plaza-columnas"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite plaza-columnas"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit plaza-epigrafia"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite plaza-epigrafia"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit plaza-escudo"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite plaza-escudo"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit plaza-abasto"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite plaza-abasto"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit plaza-forn"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite plaza-forn"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit plaza-mustassaf"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite plaza-mustassaf"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit plaza-peixateria"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite plaza-peixateria"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit plaza-vila"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite plaza-vila"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit plaza-santa-maria"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite plaza-santa-maria"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit plaza-cavallers"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite plaza-cavallers"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit plaza-carrer-major"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite plaza-carrer-major"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit plaza-carrer-castell"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite plaza-carrer-castell"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light marker text meets 4.5:1 contrast"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light selected marker retains geographic position"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light has the plaza-specific heading"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark returns a map"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark contains all 16 unique stops"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark uses real core/context geometry and ignores malformed components"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark markers have readable separation"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark bounds include every surrounding parcel and approach"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit plaza-columnas"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite plaza-columnas"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit plaza-conjunto"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite plaza-conjunto"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit plaza-mercado"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite plaza-mercado"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit plaza-soportales"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite plaza-soportales"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit plaza-epigrafia"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite plaza-epigrafia"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit plaza-almudin"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite plaza-almudin"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit plaza-escudo"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite plaza-escudo"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit plaza-abasto"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite plaza-abasto"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit plaza-forn"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite plaza-forn"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit plaza-mustassaf"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite plaza-mustassaf"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit plaza-peixateria"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite plaza-peixateria"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit plaza-vila"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite plaza-vila"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit plaza-santa-maria"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite plaza-santa-maria"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit plaza-cavallers"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite plaza-cavallers"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit plaza-carrer-major"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite plaza-carrer-major"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit plaza-carrer-castell"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite plaza-carrer-castell"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark marker text meets 4.5:1 contrast"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark selected marker retains geographic position"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark has the plaza-specific heading"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light returns a map"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light contains all 16 unique stops"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light uses real core/context geometry and ignores malformed components"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light markers have readable separation"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light bounds include every surrounding parcel and approach"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit plaza-columnas"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite plaza-columnas"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit plaza-conjunto"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite plaza-conjunto"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit plaza-mercado"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite plaza-mercado"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit plaza-soportales"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite plaza-soportales"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit plaza-epigrafia"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite plaza-epigrafia"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit plaza-almudin"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite plaza-almudin"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit plaza-escudo"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite plaza-escudo"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit plaza-abasto"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite plaza-abasto"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit plaza-forn"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite plaza-forn"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit plaza-mustassaf"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite plaza-mustassaf"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit plaza-peixateria"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite plaza-peixateria"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit plaza-vila"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite plaza-vila"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit plaza-santa-maria"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite plaza-santa-maria"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit plaza-cavallers"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite plaza-cavallers"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit plaza-carrer-major"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite plaza-carrer-major"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit plaza-carrer-castell"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite plaza-carrer-castell"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light marker text meets 4.5:1 contrast"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light selected marker retains geographic position"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light has the plaza-specific heading"
+    }
+  ],
+  "failures": [],
+  "limitations": [
+    "Las huellas y subdivisiones proceden de cartografía. Las ventanas, balcones, revocos y puertas del caserío de contexto son interpretaciones visuales genéricas; las fachadas principales se estudian por separado.",
+    "Las alturas proceden del IGN MDSnE o del número de plantas catastrales. El color de cubierta procede de muestras PNOA; la forma exacta de cada faldón y cumbrera es aproximada.",
+    "Los pavimentos siguen el MDT final de la escena. Las áreas OSM se recortan contra el contexto retenido de Santa María; anchos sin etiqueta y despieces de pavimento son aproximados."
+  ],
+  "inputHashes": {
+    "dist/js/plaza-mayor-context.js": "655b94895ef5407affe3ea502e5eb0eeff91cf01d365fe63387ec9fa31bd8d8b",
+    "dist/js/plaza-mayor-map.js": "7694e4bd61b25ec2821946c1d5207e16ca31991109b2b20cef05a79250551ab8",
+    "dist/assets/data/plaza-mayor-context.json": "1a0c282b1f15f1cf4ede43aee8a600a5a44675cc4ad8110c36656ad9d23d9fc7",
+    "dist/assets/data/plaza-mayor-visit.json": "c80a4560b964c27003e769add5a1c0c32b1a0109b55243c95a641282f2b36e55"
+  }
+}

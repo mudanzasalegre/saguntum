@@ -1,0 +1,116 @@
+{
+  "observedAt": "2026-11-19T18:15:26.297002+00:00",
+  "previewURL": "http://127.0.0.1:4173/#juderia/juderia-portalet",
+  "mode": "2d",
+  "browserLimitation": "THREE.WebGLRenderer could not create a context: GL_VENDOR = Disabled, GL_RENDERER = Disabled. No GPU performance claim.",
+  "inputHashes": {
+    "dist/index.html": "0cc546988d78ec049fddd409c699f7252ff71c11ee64d51752111633c7af9a3f",
+    "dist/style.css": "5e9db3e426f2013ffb7477117b59ab3d6881523f80c6d7f759c42a3a7d385cdf",
+    "dist/js/app.js": "9d42d37bd9151dc82ef2728811a4acf500bd5f2212ae84a62164797eaf6440a8",
+    "dist/js/castle-panel.js": "42913afdaaa3d1b0858b4e9f49f63f5b3be435d8cb71ac9b0837c119af61b263",
+    "dist/js/juderia-map.js": "9d14981171b3ea7dcad942a14e66d4094b3cf7d5dce0cb0eee5c77ae3b70fbfb",
+    "dist/assets/data/juderia-visit.json": "c935eff4d0a2f4362b437bb045ac47a4d7222b62b7ab5f7e3380e7ac08e6f736"
+  },
+  "observations": [
+    {
+      "check": "Start tour and Next select stops 1 and 2 and update the URL and heading",
+      "pass": true
+    },
+    {
+      "check": "Chronology displays 16 dated entries with source and place links",
+      "pass": true
+    },
+    {
+      "check": "Sources panel displays 21 links and documentary interpretation notes",
+      "pass": true
+    },
+    {
+      "check": "A Portalet fact opens its municipal source dialog with original URL and locator",
+      "pass": true
+    },
+    {
+      "check": "Direct synagogue route shows En discusión on both proposed locations",
+      "pass": true
+    },
+    {
+      "check": "Desktop Canvas marker 11 opens El posible baño ritual",
+      "pass": true
+    },
+    {
+      "check": "Possible micve stop shows no invented section control",
+      "pass": true
+    },
+    {
+      "check": "Both Atlas oscuro and Lectura clara work",
+      "pass": true
+    },
+    {
+      "check": "Five detailed visits retain their panel, selected stop and separate progress",
+      "pass": true
+    },
+    {
+      "check": "Catalog exposes 31 of 31 places including industrial, coast and landscape groups",
+      "pass": true
+    },
+    {
+      "check": "Mobile portrait Next selects stop 3 and focuses its title",
+      "pass": true
+    },
+    {
+      "check": "Mobile Canvas marker 15 opens the 1391 refuge stop",
+      "pass": true
+    },
+    {
+      "check": "Mobile landscape layers show five categories and Next exposes the new heading",
+      "pass": true
+    }
+  ],
+  "viewports": [
+    {
+      "width": 1363,
+      "height": 936,
+      "screenshot": "saguntum-v11-desktop.jpg"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "scrollWidth": 390,
+      "screenshot": "saguntum-v11-mobile-portrait.jpg"
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "scrollWidth": 844,
+      "screenshot": "saguntum-v11-mobile-landscape.jpg"
+    }
+  ],
+  "fiveGuideObservation": [
+    {
+      "id": "castle",
+      "stop": "foro",
+      "progress": "18/18"
+    },
+    {
+      "id": "theatre",
+      "stop": "teatro-orchestra",
+      "progress": "16/16"
+    },
+    {
+      "id": "santa-maria",
+      "stop": "santa-maria-naves",
+      "progress": "4/16"
+    },
+    {
+      "id": "plaza-mayor",
+      "stop": "plaza-almudin",
+      "progress": "3/16"
+    },
+    {
+      "id": "juderia",
+      "stop": "juderia-portalet",
+      "progress": "4/16"
+    }
+  ],
+  "temporaryViewportHarnessRemoved": true,
+  "notes": "UI observations from the managed live preview through the supported browser API. Portrait and landscape use a same-origin iframe of the stated CSS dimensions. Geometry and GPU verification are separate."
+}

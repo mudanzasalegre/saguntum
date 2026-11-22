@@ -1,0 +1,580 @@
+{
+  "model": "Barrio Obrero V29",
+  "stats": {
+    "modelVersion": "v29",
+    "buildings": 95,
+    "cadastralReferences": 95,
+    "parts": 287,
+    "blocks": 7,
+    "meshes": 198,
+    "triangles": 414353,
+    "architecturalFocuses": 15,
+    "interiorFocuses": 4,
+    "representativeBuildings": 2,
+    "historicGabledParts": 68,
+    "realDoors": 234,
+    "realWindows": 822,
+    "gardens": 53,
+    "corrals": 55,
+    "currentPrivateInteriorsSurveyed": 0
+  },
+  "checks": [
+    {
+      "label": "All 95 cadastral references retained",
+      "pass": true
+    },
+    {
+      "label": "All 287 registered parts retained",
+      "pass": true
+    },
+    {
+      "label": "Seven historic blocks retained",
+      "pass": true
+    },
+    {
+      "label": "Fifteen architectural stops",
+      "pass": true
+    },
+    {
+      "label": "Two typological buildings and three floor records",
+      "pass": true
+    },
+    {
+      "label": "Historic form does not rely on cadastral date",
+      "pass": true
+    },
+    {
+      "label": "Registered footprint vertices unchanged",
+      "pass": true,
+      "maxCoordinateDrift": 0
+    },
+    {
+      "label": "All mesh positions finite",
+      "pass": true
+    },
+    {
+      "label": "No degenerate triangle after Float32 conversion",
+      "pass": true,
+      "degenerate": 0
+    },
+    {
+      "label": "Architecture batched below 200 draw calls",
+      "pass": true,
+      "meshes": 198,
+      "triangles": 414353
+    },
+    {
+      "label": "barrio-sala offset eye at 1.63m",
+      "pass": true
+    },
+    {
+      "label": "barrio-sala offset unobstructed look target",
+      "pass": true
+    },
+    {
+      "label": "barrio-sala offset near plane clear",
+      "pass": true
+    },
+    {
+      "label": "barrio-sala offset physical floor below camera",
+      "pass": true,
+      "distance": 1.6300000077486043
+    },
+    {
+      "label": "barrio-sala offset smooth ceiling above camera",
+      "pass": true,
+      "distance": 1.6700000190734858,
+      "material": "plaster"
+    },
+    {
+      "label": "barrio-sala closeOffset eye at 1.63m",
+      "pass": true
+    },
+    {
+      "label": "barrio-sala closeOffset unobstructed look target",
+      "pass": true
+    },
+    {
+      "label": "barrio-sala closeOffset near plane clear",
+      "pass": true
+    },
+    {
+      "label": "barrio-sala closeOffset physical floor below camera",
+      "pass": true,
+      "distance": 1.6300000077486043
+    },
+    {
+      "label": "barrio-sala closeOffset smooth ceiling above camera",
+      "pass": true,
+      "distance": 1.6700000190734858,
+      "material": "plaster"
+    },
+    {
+      "label": "barrio-cocina offset eye at 1.63m",
+      "pass": true
+    },
+    {
+      "label": "barrio-cocina offset unobstructed look target",
+      "pass": true
+    },
+    {
+      "label": "barrio-cocina offset near plane clear",
+      "pass": true
+    },
+    {
+      "label": "barrio-cocina offset physical floor below camera",
+      "pass": true,
+      "distance": 1.6300000077486043
+    },
+    {
+      "label": "barrio-cocina offset smooth ceiling above camera",
+      "pass": true,
+      "distance": 1.6700000190734858,
+      "material": "plaster"
+    },
+    {
+      "label": "barrio-cocina closeOffset eye at 1.63m",
+      "pass": true
+    },
+    {
+      "label": "barrio-cocina closeOffset unobstructed look target",
+      "pass": true
+    },
+    {
+      "label": "barrio-cocina closeOffset near plane clear",
+      "pass": true
+    },
+    {
+      "label": "barrio-cocina closeOffset physical floor below camera",
+      "pass": true,
+      "distance": 1.6300000077486043
+    },
+    {
+      "label": "barrio-cocina closeOffset smooth ceiling above camera",
+      "pass": true,
+      "distance": 1.6700000190734858,
+      "material": "plaster"
+    },
+    {
+      "label": "barrio-dormitorios offset eye at 1.63m",
+      "pass": true
+    },
+    {
+      "label": "barrio-dormitorios offset unobstructed look target",
+      "pass": true
+    },
+    {
+      "label": "barrio-dormitorios offset near plane clear",
+      "pass": true
+    },
+    {
+      "label": "barrio-dormitorios offset physical floor below camera",
+      "pass": true,
+      "distance": 1.6300000077486043
+    },
+    {
+      "label": "barrio-dormitorios offset smooth ceiling above camera",
+      "pass": true,
+      "distance": 1.6700000190734858,
+      "material": "plaster"
+    },
+    {
+      "label": "barrio-dormitorios closeOffset eye at 1.63m",
+      "pass": true
+    },
+    {
+      "label": "barrio-dormitorios closeOffset unobstructed look target",
+      "pass": true
+    },
+    {
+      "label": "barrio-dormitorios closeOffset near plane clear",
+      "pass": true
+    },
+    {
+      "label": "barrio-dormitorios closeOffset physical floor below camera",
+      "pass": true,
+      "distance": 1.6300000077486043
+    },
+    {
+      "label": "barrio-dormitorios closeOffset smooth ceiling above camera",
+      "pass": true,
+      "distance": 1.6700000190734858,
+      "material": "plaster"
+    },
+    {
+      "label": "barrio-planta-alta offset eye at 1.63m",
+      "pass": true
+    },
+    {
+      "label": "barrio-planta-alta offset unobstructed look target",
+      "pass": true
+    },
+    {
+      "label": "barrio-planta-alta offset near plane clear",
+      "pass": true
+    },
+    {
+      "label": "barrio-planta-alta offset physical floor below camera",
+      "pass": true,
+      "distance": 1.6300000286102296
+    },
+    {
+      "label": "barrio-planta-alta offset smooth ceiling above camera",
+      "pass": true,
+      "distance": 1.6699999237060545,
+      "material": "plaster"
+    },
+    {
+      "label": "barrio-planta-alta closeOffset eye at 1.63m",
+      "pass": true
+    },
+    {
+      "label": "barrio-planta-alta closeOffset unobstructed look target",
+      "pass": true
+    },
+    {
+      "label": "barrio-planta-alta closeOffset near plane clear",
+      "pass": true
+    },
+    {
+      "label": "barrio-planta-alta closeOffset physical floor below camera",
+      "pass": true,
+      "distance": 1.6300000286102296
+    },
+    {
+      "label": "barrio-planta-alta closeOffset smooth ceiling above camera",
+      "pass": true,
+      "distance": 1.6699999237060545,
+      "material": "plaster"
+    },
+    {
+      "label": "Representative doors and windows perforate wall solids",
+      "pass": true,
+      "tested": 54,
+      "misses": []
+    },
+    {
+      "label": "Rear domestic windows open into clear courtyard without annex obstruction",
+      "pass": true,
+      "tested": 30,
+      "blockedRearWindowRays": []
+    },
+    {
+      "label": "barrio-escalera-comun dimensions continuous",
+      "pass": true
+    },
+    {
+      "label": "barrio-escalera-comun headroom above every tread",
+      "pass": true,
+      "headroom": 3.299999923706055
+    },
+    {
+      "label": "Domestic gardens and corrals do not cover registered annexes",
+      "pass": true,
+      "maxOverlapSqm": 2.2737367544323206e-13,
+      "overlaps": []
+    },
+    {
+      "label": "Both representative domestic types retain a real garden and clear rear corral",
+      "pass": true
+    },
+    {
+      "label": "barrio-escalera-comun upper landing is a physical floor at upper-storey height",
+      "pass": true,
+      "distance": 0.30000002861022956
+    },
+    {
+      "label": "Doorways and landing have one visible walking surface without coplanar self-shadow",
+      "pass": true,
+      "tested": 83,
+      "coplanarContacts": []
+    },
+    {
+      "label": "Vegetation export controls only domestic trees",
+      "pass": true
+    },
+    {
+      "label": "barrio-casa-alta-medianera-1--1-puerta-0 landing doorway clear of furniture",
+      "pass": true,
+      "nearby": []
+    },
+    {
+      "label": "barrio-casa-alta-paso-1--1--5.853379285002999-puerta-0 landing doorway clear of furniture",
+      "pass": true,
+      "nearby": []
+    },
+    {
+      "label": "barrio-casa-alta-paso-1--1--5.853379285002999-puerta-1 landing doorway clear of furniture",
+      "pass": true,
+      "nearby": []
+    },
+    {
+      "label": "barrio-casa-alta-paso-1--1--4.753379285003-puerta-0 landing doorway clear of furniture",
+      "pass": true,
+      "nearby": []
+    },
+    {
+      "label": "barrio-casa-alta-paso-1--1--4.753379285003-puerta-1 landing doorway clear of furniture",
+      "pass": true,
+      "nearby": []
+    },
+    {
+      "label": "barrio-casa-alta-transversal-1--1-puerta-0 landing doorway clear of furniture",
+      "pass": true,
+      "nearby": []
+    },
+    {
+      "label": "barrio-casa-alta-transversal-2-1--1-puerta-0 landing doorway clear of furniture",
+      "pass": true,
+      "nearby": []
+    },
+    {
+      "label": "barrio-casa-alta-medianera-1-1-puerta-0 landing doorway clear of furniture",
+      "pass": true,
+      "nearby": []
+    },
+    {
+      "label": "barrio-casa-alta-paso-1-1-5.553379285003-puerta-0 landing doorway clear of furniture",
+      "pass": true,
+      "nearby": []
+    },
+    {
+      "label": "barrio-casa-alta-paso-1-1-5.553379285003-puerta-1 landing doorway clear of furniture",
+      "pass": true,
+      "nearby": []
+    },
+    {
+      "label": "barrio-casa-alta-paso-1-1-6.653379285003-puerta-0 landing doorway clear of furniture",
+      "pass": true,
+      "nearby": []
+    },
+    {
+      "label": "barrio-casa-alta-paso-1-1-6.653379285003-puerta-1 landing doorway clear of furniture",
+      "pass": true,
+      "nearby": []
+    },
+    {
+      "label": "barrio-casa-alta-transversal-1-1-puerta-0 landing doorway clear of furniture",
+      "pass": true,
+      "nearby": []
+    },
+    {
+      "label": "barrio-casa-alta-transversal-2-1-1-puerta-0 landing doorway clear of furniture",
+      "pass": true,
+      "nearby": []
+    },
+    {
+      "label": "cat-8140503YJ3984A_part2-0-hueco-0-1 physical threshold spans complete wall thickness",
+      "pass": true,
+      "levels": [
+        0.39399999558925636,
+        0.39399999558925636,
+        0.39399999558925636
+      ]
+    },
+    {
+      "label": "cat-8140503YJ3984A_part2-0-hueco-2-1 physical threshold spans complete wall thickness",
+      "pass": true,
+      "levels": [
+        0.39399999558925636,
+        0.39399999558925636,
+        0.39399999558925636
+      ]
+    },
+    {
+      "label": "cat-8140507YJ3984A_part5-0-hueco-2-1 physical threshold spans complete wall thickness",
+      "pass": true,
+      "levels": [
+        0.39399999558925636,
+        0.39399999558925636,
+        0.39399999558925636
+      ]
+    },
+    {
+      "label": "cat-8140507YJ3984A_part5-0-hueco-2-3 physical threshold spans complete wall thickness",
+      "pass": true,
+      "levels": [
+        0.39399999558925636,
+        0.39399999558925636,
+        0.39399999558925636
+      ]
+    },
+    {
+      "label": "cat-8140507YJ3984A_part5-0-hueco-2-5 physical threshold spans complete wall thickness",
+      "pass": true,
+      "levels": [
+        0.39399999558925636,
+        0.39399999558925636,
+        0.39399999558925636
+      ]
+    },
+    {
+      "label": "All historic roof gable ends are physically closed above the eave",
+      "pass": true,
+      "tested": 136,
+      "openGables": []
+    },
+    {
+      "label": "Section hides selected roofs and upper ceilings",
+      "pass": true
+    },
+    {
+      "label": "Section retains the intermediate slab",
+      "pass": true
+    },
+    {
+      "label": "Section exposes low-house plan",
+      "pass": true
+    },
+    {
+      "label": "Reading mode and focus selection reversible",
+      "pass": true
+    },
+    {
+      "label": "Terrain binding leaves interior camera heights fixed",
+      "pass": true
+    },
+    {
+      "label": "Every owned resource disposed once",
+      "pass": true,
+      "disposals": 403,
+      "resourceCount": 403
+    }
+  ],
+  "issues": [],
+  "cameras": [
+    {
+      "id": "barrio-sala",
+      "which": "offset",
+      "height": 1.6300000000000008,
+      "eye": [
+        4532.048271829419,
+        5.8100000000000005,
+        1937.1691106378266
+      ],
+      "visibleTarget": true,
+      "front": null,
+      "floorDistance": 1.6300000077486043,
+      "ceilingClearance": 1.6700000190734858,
+      "nearCollisions": []
+    },
+    {
+      "id": "barrio-sala",
+      "which": "closeOffset",
+      "height": 1.6300000000000008,
+      "eye": [
+        4532.195114436206,
+        5.8100000000000005,
+        1937.5733843679059
+      ],
+      "visibleTarget": true,
+      "front": null,
+      "floorDistance": 1.6300000077486043,
+      "ceilingClearance": 1.6700000190734858,
+      "nearCollisions": []
+    },
+    {
+      "id": "barrio-cocina",
+      "which": "offset",
+      "height": 1.6300000000000008,
+      "eye": [
+        4536.2518930482,
+        5.8100000000000005,
+        1943.9410799709683
+      ],
+      "visibleTarget": true,
+      "front": null,
+      "floorDistance": 1.6300000077486043,
+      "ceilingClearance": 1.6700000190734858,
+      "nearCollisions": []
+    },
+    {
+      "id": "barrio-cocina",
+      "which": "closeOffset",
+      "height": 1.6300000000000008,
+      "eye": [
+        4535.958352248829,
+        5.8100000000000005,
+        1944.1033568920163
+      ],
+      "visibleTarget": true,
+      "front": null,
+      "floorDistance": 1.6300000077486043,
+      "ceilingClearance": 1.6700000190734858,
+      "nearCollisions": []
+    },
+    {
+      "id": "barrio-dormitorios",
+      "which": "offset",
+      "height": 1.6300000000000008,
+      "eye": [
+        4530.063301683505,
+        5.8100000000000005,
+        1940.2338118499895
+      ],
+      "visibleTarget": true,
+      "front": null,
+      "floorDistance": 1.6300000077486043,
+      "ceilingClearance": 1.6700000190734858,
+      "nearCollisions": []
+    },
+    {
+      "id": "barrio-dormitorios",
+      "which": "closeOffset",
+      "height": 1.6300000000000008,
+      "eye": [
+        4530.223030287876,
+        5.8100000000000005,
+        1940.7076122013461
+      ],
+      "visibleTarget": true,
+      "front": null,
+      "floorDistance": 1.6300000077486043,
+      "ceilingClearance": 1.6700000190734858,
+      "nearCollisions": []
+    },
+    {
+      "id": "barrio-planta-alta",
+      "which": "offset",
+      "height": 1.63,
+      "eye": [
+        4569.22688693602,
+        9.41,
+        1970.0326221993778
+      ],
+      "visibleTarget": true,
+      "front": null,
+      "floorDistance": 1.6300000286102296,
+      "ceilingClearance": 1.6699999237060545,
+      "nearCollisions": []
+    },
+    {
+      "id": "barrio-planta-alta",
+      "which": "closeOffset",
+      "height": 1.63,
+      "eye": [
+        4569.416407076562,
+        9.41,
+        1969.9687307576291
+      ],
+      "visibleTarget": true,
+      "front": null,
+      "floorDistance": 1.6300000286102296,
+      "ceilingClearance": 1.6699999237060545,
+      "nearCollisions": []
+    }
+  ],
+  "stairs": [
+    {
+      "id": "barrio-escalera-comun",
+      "steps": 20,
+      "rise": 0.18,
+      "run": 0.2848474535034212,
+      "width": 1.3,
+      "minimumHeadroom": 3.299999923706055,
+      "maxRise": 0.18000000000000038,
+      "maxGap": 3.885780586188048e-16
+    }
+  ],
+  "pass": true
+}

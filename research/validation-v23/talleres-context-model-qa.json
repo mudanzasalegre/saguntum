@@ -1,0 +1,156 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "pass": true,
+      "label": "Every context coordinate is finite",
+      "detail": {
+        "finite": true,
+        "collapsed": 0,
+        "total": 77711
+      }
+    },
+    {
+      "pass": true,
+      "label": "No degenerate rendered triangles",
+      "detail": {
+        "finite": true,
+        "collapsed": 0,
+        "total": 77711
+      }
+    },
+    {
+      "pass": true,
+      "label": "Four actual northern parcels retain their 31 cadastral parts"
+    },
+    {
+      "pass": true,
+      "label": "Mapped courtyard holes survive the roof triangulation"
+    },
+    {
+      "pass": true,
+      "label": "Thirteen nave parts, its OSM envelope and 31 neighbours have explicit owners"
+    },
+    {
+      "pass": true,
+      "label": "No source building ID is claimed by both Horno and Talleres"
+    },
+    {
+      "pass": true,
+      "label": "Horno and Museo Industrial retain their separate detailed owners"
+    },
+    {
+      "pass": true,
+      "label": "The context provides the agreed tour stop without a twenty-first stop"
+    },
+    {
+      "pass": true,
+      "label": "The surroundings focus has consistent floor, elevation and nave-local target"
+    },
+    {
+      "pass": true,
+      "label": "Every one of the 49 rendered trees has a recorded reference-photo position"
+    },
+    {
+      "pass": true,
+      "label": "No invented external railway or machinery yard is added"
+    },
+    {
+      "pass": true,
+      "label": "Ground rebinding releases old geometry and does not accumulate meshes"
+    },
+    {
+      "pass": true,
+      "label": "Ground rebinding preserves the agreed nave datum"
+    },
+    {
+      "pass": true,
+      "label": "Every paving vertex and triangle interior follows the final regional terrain",
+      "detail": {
+        "samples": 15632,
+        "maximumVertexErrorM": 0.00003387646516803122,
+        "maximumInteriorErrorM": 0.00002394673491842858
+      }
+    },
+    {
+      "pass": true,
+      "label": "Rebound geometry stays finite and free of collapsed triangles",
+      "detail": {
+        "finite": true,
+        "collapsed": 0,
+        "total": 77711
+      }
+    },
+    {
+      "pass": true,
+      "label": "Both surroundings cameras stay above final terrain",
+      "detail": {
+        "id": "talleres-entorno",
+        "farY": 141,
+        "nearY": 90
+      }
+    },
+    {
+      "pass": true,
+      "label": "Layer reading matches the visit conjunto legend"
+    },
+    {
+      "pass": true,
+      "label": "Textured materials restore after thematic reading"
+    },
+    {
+      "pass": true,
+      "label": "Disposal is complete, locally owned and idempotent"
+    }
+  ],
+  "stats": {
+    "buildingParts": 31,
+    "parentParcels": 4,
+    "sourceCoreParts": 13,
+    "roadFragments": 60,
+    "pavingAreaM2": 57627.31,
+    "pavingVertices": 9970,
+    "pavingTriangles": 15633,
+    "trees": 49,
+    "streetLamps": 10,
+    "crossings": 6,
+    "railLengthM": 0,
+    "protectedHeritageOwners": 8,
+    "meshes": 17,
+    "triangles": 77711,
+    "fixedNaveDatumM": 4,
+    "skippedTinyTriangles": 1
+  },
+  "crossings": [
+    {
+      "id": "talleres-paso-0",
+      "stripes": 4,
+      "photoPosition": true
+    },
+    {
+      "id": "talleres-paso-1",
+      "stripes": 10,
+      "photoPosition": true
+    },
+    {
+      "id": "talleres-paso-2",
+      "stripes": 5,
+      "photoPosition": true
+    },
+    {
+      "id": "talleres-paso-3",
+      "stripes": 9,
+      "photoPosition": true
+    },
+    {
+      "id": "talleres-paso-4",
+      "stripes": 6,
+      "photoPosition": true
+    },
+    {
+      "id": "talleres-paso-5",
+      "stripes": 3,
+      "photoPosition": true
+    }
+  ]
+}

@@ -1,0 +1,2051 @@
+{
+  "pass": true,
+  "fullGuideValidation": false,
+  "checks": [
+    {
+      "pass": true,
+      "label": "Finite, non-degenerate Float32 geometry",
+      "detail": {
+        "finite": true,
+        "collapsed": 0,
+        "triangles": 184074
+      }
+    },
+    {
+      "pass": true,
+      "label": "No new mapped building part duplicates another detailed owner"
+    },
+    {
+      "pass": true,
+      "label": "All upgraded urban buildings retain their cadastral footprints"
+    },
+    {
+      "pass": true,
+      "label": "Road axes retain source geometry; documented widths are interpreted"
+    },
+    {
+      "pass": true,
+      "label": "Five real context focus specifications"
+    },
+    {
+      "pass": true,
+      "label": "Outdoor stops use correct layers and finite registration"
+    },
+    {
+      "pass": true,
+      "label": "All photo-registered tree centres remain represented"
+    },
+    {
+      "pass": true,
+      "label": "Complete tree crowns clear buildings and entrance steps"
+    },
+    {
+      "pass": true,
+      "label": "Plan tree radius equals actual crown envelope"
+    },
+    {
+      "pass": true,
+      "label": "Actual rendered foliage vertices do not enter architecture",
+      "detail": {
+        "foliageVertices": 196920,
+        "inside": 0
+      }
+    },
+    {
+      "pass": true,
+      "label": "Context source hashes match current terrain and cartography"
+    },
+    {
+      "pass": true,
+      "label": "Ground rebind disposes replaced resources and does not accumulate meshes"
+    },
+    {
+      "pass": true,
+      "label": "All paving follows the actual mixed 5m/12.5m Puerto terrain mesh",
+      "detail": {
+        "samples": 14599,
+        "maximumVertexErrorM": 0.00004507702216612758,
+        "maximumInteriorErrorM": 0.00004410353402802686
+      }
+    },
+    {
+      "pass": true,
+      "label": "Terrain-bound geometry remains finite and non-degenerate",
+      "detail": {
+        "finite": true,
+        "collapsed": 0,
+        "triangles": 184074
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears ground",
+      "detail": {
+        "id": "sanatorio-accesos-urbanos",
+        "kind": "offset"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears complete crown envelopes",
+      "detail": {
+        "id": "sanatorio-accesos-urbanos",
+        "kind": "offset",
+        "collisions": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears ground",
+      "detail": {
+        "id": "sanatorio-accesos-urbanos",
+        "kind": "closeOffset"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears complete crown envelopes",
+      "detail": {
+        "id": "sanatorio-accesos-urbanos",
+        "kind": "closeOffset",
+        "collisions": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears ground",
+      "detail": {
+        "id": "sanatorio-hispanidad",
+        "kind": "offset"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears complete crown envelopes",
+      "detail": {
+        "id": "sanatorio-hispanidad",
+        "kind": "offset",
+        "collisions": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears ground",
+      "detail": {
+        "id": "sanatorio-hispanidad",
+        "kind": "closeOffset"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears complete crown envelopes",
+      "detail": {
+        "id": "sanatorio-hispanidad",
+        "kind": "closeOffset",
+        "collisions": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears ground",
+      "detail": {
+        "id": "sanatorio-fleming",
+        "kind": "offset"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears complete crown envelopes",
+      "detail": {
+        "id": "sanatorio-fleming",
+        "kind": "offset",
+        "collisions": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears ground",
+      "detail": {
+        "id": "sanatorio-fleming",
+        "kind": "closeOffset"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears complete crown envelopes",
+      "detail": {
+        "id": "sanatorio-fleming",
+        "kind": "closeOffset",
+        "collisions": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears ground",
+      "detail": {
+        "id": "sanatorio-frente-urbano",
+        "kind": "offset"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears complete crown envelopes",
+      "detail": {
+        "id": "sanatorio-frente-urbano",
+        "kind": "offset",
+        "collisions": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears ground",
+      "detail": {
+        "id": "sanatorio-frente-urbano",
+        "kind": "closeOffset"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears complete crown envelopes",
+      "detail": {
+        "id": "sanatorio-frente-urbano",
+        "kind": "closeOffset",
+        "collisions": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears ground",
+      "detail": {
+        "id": "sanatorio-ciudad-factoria",
+        "kind": "offset"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears complete crown envelopes",
+      "detail": {
+        "id": "sanatorio-ciudad-factoria",
+        "kind": "offset",
+        "collisions": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears ground",
+      "detail": {
+        "id": "sanatorio-ciudad-factoria",
+        "kind": "closeOffset"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears complete crown envelopes",
+      "detail": {
+        "id": "sanatorio-ciudad-factoria",
+        "kind": "closeOffset",
+        "collisions": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Textured material mode restores reversibly"
+    },
+    {
+      "pass": true,
+      "label": "Context selection resolves its real tour id",
+      "detail": {
+        "id": "sanatorio-accesos-urbanos"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Context selection resolves its real tour id",
+      "detail": {
+        "id": "sanatorio-hispanidad"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Context selection resolves its real tour id",
+      "detail": {
+        "id": "sanatorio-fleming"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Context selection resolves its real tour id",
+      "detail": {
+        "id": "sanatorio-frente-urbano"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Context selection resolves its real tour id",
+      "detail": {
+        "id": "sanatorio-ciudad-factoria"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Named context groups retain an inspectable hierarchy"
+    },
+    {
+      "pass": true,
+      "label": "Complete disposal is idempotent"
+    }
+  ],
+  "stats": {
+    "buildingParts": 103,
+    "cadastralParcels": 24,
+    "reusedBuildingParts": 156,
+    "coreCadastralPartsPreserved": 14,
+    "roads": 65,
+    "paths": 43,
+    "pavingAreaM2": 51108.7,
+    "pavingTriangles": 14599,
+    "trees": 96,
+    "benches": 3,
+    "lamps": 5,
+    "crossings": 12,
+    "curbLines": 29,
+    "ownershipTransfers": 0,
+    "historicalPrecinctAreaM2": 26228.15,
+    "treeCrownsAdjusted": 0,
+    "treeTrunksSuppressed": 0,
+    "meshes": 20,
+    "triangles": 184074,
+    "fixedSanatorioDatumM": 11.721126125691658,
+    "skippedTinyTriangles": 0
+  },
+  "trees": [
+    {
+      "id": "sanatorio-context-tree-0",
+      "coordinate": [
+        -0.230631038,
+        39.665162429
+      ],
+      "baseM": 13,
+      "heightM": 9.2,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 29.072435253120165,
+      "sourceCrownRadiusM": 2.55,
+      "displayCrownParameterM": 2.55,
+      "maximumHorizontalRadiusM": 3.5375,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-1",
+      "coordinate": [
+        -0.230605231,
+        39.665084333
+      ],
+      "baseM": 13,
+      "heightM": 9.7,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 22.88350768576863,
+      "sourceCrownRadiusM": 2.55,
+      "displayCrownParameterM": 2.55,
+      "maximumHorizontalRadiusM": 3.5375,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-2",
+      "coordinate": [
+        -0.230490269,
+        39.665045286
+      ],
+      "baseM": 12.920645341265587,
+      "heightM": 6.1,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 12.123288673201378,
+      "sourceCrownRadiusM": 2.58,
+      "displayCrownParameterM": 2.58,
+      "maximumHorizontalRadiusM": 3.575,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-3",
+      "coordinate": [
+        -0.230753038,
+        39.664980857
+      ],
+      "baseM": 12.987779978187309,
+      "heightM": 6.65,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 33.42165734645082,
+      "sourceCrownRadiusM": 2.7700000000000005,
+      "displayCrownParameterM": 2.7700000000000005,
+      "maximumHorizontalRadiusM": 3.8125000000000004,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-4",
+      "coordinate": [
+        -0.230645115,
+        39.664855905
+      ],
+      "baseM": 12.365508553723044,
+      "heightM": 5,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 28.783481652495283,
+      "sourceCrownRadiusM": 2.2,
+      "displayCrownParameterM": 2.2,
+      "maximumHorizontalRadiusM": 3.1,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-5",
+      "coordinate": [
+        -0.230541885,
+        39.66476219
+      ],
+      "baseM": 12.781726893924688,
+      "heightM": 5.55,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 29.306852871411103,
+      "sourceCrownRadiusM": 2.39,
+      "displayCrownParameterM": 2.39,
+      "maximumHorizontalRadiusM": 3.3375000000000004,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-6",
+      "coordinate": [
+        -0.230417538,
+        39.664857857
+      ],
+      "baseM": 12.558180333906217,
+      "heightM": 6.1,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 14.357044000209912,
+      "sourceCrownRadiusM": 2.58,
+      "displayCrownParameterM": 2.58,
+      "maximumHorizontalRadiusM": 3.575,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-7",
+      "coordinate": [
+        -0.230304923,
+        39.664764143
+      ],
+      "baseM": 12.58773017722863,
+      "heightM": 6.65,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 22.249478215881712,
+      "sourceCrownRadiusM": 2.7700000000000005,
+      "displayCrownParameterM": 2.7700000000000005,
+      "maximumHorizontalRadiusM": 3.8125000000000004,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-8",
+      "coordinate": [
+        -0.230220462,
+        39.664678238
+      ],
+      "baseM": 12.44398236713031,
+      "heightM": 5,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 32.92709607486766,
+      "sourceCrownRadiusM": 2.2,
+      "displayCrownParameterM": 2.2,
+      "maximumHorizontalRadiusM": 3.1,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-9",
+      "coordinate": [
+        -0.230281462,
+        39.664553286
+      ],
+      "baseM": 12.894573647899126,
+      "heightM": 5.55,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 45.805422850537965,
+      "sourceCrownRadiusM": 2.39,
+      "displayCrownParameterM": 2.39,
+      "maximumHorizontalRadiusM": 3.3375000000000004,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-10",
+      "coordinate": [
+        -0.230372962,
+        39.664494714
+      ],
+      "baseM": 12.943805964696846,
+      "heightM": 6.1,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 52.38155422864936,
+      "sourceCrownRadiusM": 2.58,
+      "displayCrownParameterM": 2.58,
+      "maximumHorizontalRadiusM": 3.575,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-11",
+      "coordinate": [
+        -0.230462115,
+        39.664453714
+      ],
+      "baseM": 12.796356920411174,
+      "heightM": 6.65,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 58.02315017715476,
+      "sourceCrownRadiusM": 2.7700000000000005,
+      "displayCrownParameterM": 2.7700000000000005,
+      "maximumHorizontalRadiusM": 3.8125000000000004,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-12",
+      "coordinate": [
+        -0.230555962,
+        39.664420524
+      ],
+      "baseM": 12.32919615406573,
+      "heightM": 5,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 58.328554548779564,
+      "sourceCrownRadiusM": 2.2,
+      "displayCrownParameterM": 2.2,
+      "maximumHorizontalRadiusM": 3.1,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-13",
+      "coordinate": [
+        -0.230663885,
+        39.664391238
+      ],
+      "baseM": 12.073593828622583,
+      "heightM": 5.55,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 50.38313757253659,
+      "sourceCrownRadiusM": 2.39,
+      "displayCrownParameterM": 2.39,
+      "maximumHorizontalRadiusM": 3.3375000000000004,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-15",
+      "coordinate": [
+        -0.230694385,
+        39.664305333
+      ],
+      "baseM": 12.00463280971419,
+      "heightM": 6.65,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 41.036165004692045,
+      "sourceCrownRadiusM": 2.7700000000000005,
+      "displayCrownParameterM": 2.7700000000000005,
+      "maximumHorizontalRadiusM": 3.8125000000000004,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-24",
+      "coordinate": [
+        -0.229999923,
+        39.66418819
+      ],
+      "baseM": 12,
+      "heightM": 5,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 45.28027833550693,
+      "sourceCrownRadiusM": 2.2,
+      "displayCrownParameterM": 2.2,
+      "maximumHorizontalRadiusM": 3.1,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-25",
+      "coordinate": [
+        -0.2299835,
+        39.664340476
+      ],
+      "baseM": 12,
+      "heightM": 5.55,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 56.34408729876301,
+      "sourceCrownRadiusM": 2.39,
+      "displayCrownParameterM": 2.39,
+      "maximumHorizontalRadiusM": 3.3375000000000004,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-26",
+      "coordinate": [
+        -0.230075,
+        39.664406857
+      ],
+      "baseM": 12,
+      "heightM": 6.1,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 65.47884027454985,
+      "sourceCrownRadiusM": 2.58,
+      "displayCrownParameterM": 2.58,
+      "maximumHorizontalRadiusM": 3.575,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-27",
+      "coordinate": [
+        -0.230152423,
+        39.664473238
+      ],
+      "baseM": 12.145318109493287,
+      "heightM": 6.65,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 56.47864414766867,
+      "sourceCrownRadiusM": 2.7700000000000005,
+      "displayCrownParameterM": 2.7700000000000005,
+      "maximumHorizontalRadiusM": 3.8125000000000004,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-28",
+      "coordinate": [
+        -0.230173538,
+        39.664590381
+      ],
+      "baseM": 12.256602961681281,
+      "heightM": 5,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 43.44017078895239,
+      "sourceCrownRadiusM": 2.2,
+      "displayCrownParameterM": 2.2,
+      "maximumHorizontalRadiusM": 3.1,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-29",
+      "coordinate": [
+        -0.230126615,
+        39.664609905
+      ],
+      "baseM": 12.006473470370706,
+      "heightM": 5.55,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 42.77068268720812,
+      "sourceCrownRadiusM": 2.39,
+      "displayCrownParameterM": 2.39,
+      "maximumHorizontalRadiusM": 3.3375000000000004,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-30",
+      "coordinate": [
+        -0.230018692,
+        39.664500571
+      ],
+      "baseM": 12,
+      "heightM": 6.1,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 57.708936931595815,
+      "sourceCrownRadiusM": 2.58,
+      "displayCrownParameterM": 2.58,
+      "maximumHorizontalRadiusM": 3.575,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-31",
+      "coordinate": [
+        -0.229908423,
+        39.664414667
+      ],
+      "baseM": 12,
+      "heightM": 6.65,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 59.80493253794605,
+      "sourceCrownRadiusM": 2.7700000000000005,
+      "displayCrownParameterM": 2.7700000000000005,
+      "maximumHorizontalRadiusM": 3.8125000000000004,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-32",
+      "coordinate": [
+        -0.231182385,
+        39.66453181
+      ],
+      "baseM": 12.99401086915078,
+      "heightM": 5,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 37.945862367174435,
+      "sourceCrownRadiusM": 2.2,
+      "displayCrownParameterM": 2.2,
+      "maximumHorizontalRadiusM": 3.1,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-33",
+      "coordinate": [
+        -0.231165962,
+        39.664358048
+      ],
+      "baseM": 12.999140885776322,
+      "heightM": 5.55,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 22.82712212856603,
+      "sourceCrownRadiusM": 2.39,
+      "displayCrownParameterM": 2.39,
+      "maximumHorizontalRadiusM": 3.3375000000000004,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-34",
+      "coordinate": [
+        -0.231032231,
+        39.664276048
+      ],
+      "baseM": 12.908059686543368,
+      "heightM": 9.5,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 21.85828859769983,
+      "sourceCrownRadiusM": 3.54,
+      "displayCrownParameterM": 3.54,
+      "maximumHorizontalRadiusM": 4.7749999999999995,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-35",
+      "coordinate": [
+        -0.230940731,
+        39.664207714
+      ],
+      "baseM": 12.978890956950265,
+      "heightM": 7.5,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 20.07691765112371,
+      "sourceCrownRadiusM": 3.7600000000000002,
+      "displayCrownParameterM": 3.7600000000000002,
+      "maximumHorizontalRadiusM": 5.05,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-37",
+      "coordinate": [
+        -0.230668577,
+        39.664059333
+      ],
+      "baseM": 12.935672768773328,
+      "heightM": 8.5,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 19.771004905209423,
+      "sourceCrownRadiusM": 3.3200000000000003,
+      "displayCrownParameterM": 3.3200000000000003,
+      "maximumHorizontalRadiusM": 4.5,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-38",
+      "coordinate": [
+        -0.230523115,
+        39.663987095
+      ],
+      "baseM": 12.765622089810767,
+      "heightM": 9,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 20.246098530389524,
+      "sourceCrownRadiusM": 3.54,
+      "displayCrownParameterM": 3.54,
+      "maximumHorizontalRadiusM": 4.7749999999999995,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-39",
+      "coordinate": [
+        -0.230408154,
+        39.663940238
+      ],
+      "baseM": 12.842365528364368,
+      "heightM": 9.5,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 21.565445809259067,
+      "sourceCrownRadiusM": 3.7600000000000002,
+      "displayCrownParameterM": 3.7600000000000002,
+      "maximumHorizontalRadiusM": 5.05,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-40",
+      "coordinate": [
+        -0.230274423,
+        39.663868
+      ],
+      "baseM": 12.491252094885372,
+      "heightM": 7.5,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 22.021131876684443,
+      "sourceCrownRadiusM": 3.1,
+      "displayCrownParameterM": 3.1,
+      "maximumHorizontalRadiusM": 4.225,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-41",
+      "coordinate": [
+        -0.230152423,
+        39.663801619
+      ],
+      "baseM": 12.062324779338791,
+      "heightM": 8,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 22.21584052790471,
+      "sourceCrownRadiusM": 3.3200000000000003,
+      "displayCrownParameterM": 3.3200000000000003,
+      "maximumHorizontalRadiusM": 4.5,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-42",
+      "coordinate": [
+        -0.230053885,
+        39.663750857
+      ],
+      "baseM": 12,
+      "heightM": 8.5,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 22.488288827463286,
+      "sourceCrownRadiusM": 3.54,
+      "displayCrownParameterM": 3.54,
+      "maximumHorizontalRadiusM": 4.7749999999999995,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-43",
+      "coordinate": [
+        -0.229945962,
+        39.663686429
+      ],
+      "baseM": 12,
+      "heightM": 9,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 21.99673544899544,
+      "sourceCrownRadiusM": 3.7600000000000002,
+      "displayCrownParameterM": 3.7600000000000002,
+      "maximumHorizontalRadiusM": 5.05,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-44",
+      "coordinate": [
+        -0.229831,
+        39.663643476
+      ],
+      "baseM": 12,
+      "heightM": 9.5,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 24.13337702018713,
+      "sourceCrownRadiusM": 3.1,
+      "displayCrownParameterM": 3.1,
+      "maximumHorizontalRadiusM": 4.225,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-45",
+      "coordinate": [
+        -0.229713692,
+        39.663577095
+      ],
+      "baseM": 11.998372983821351,
+      "heightM": 7.5,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 23.74611232681902,
+      "sourceCrownRadiusM": 3.3200000000000003,
+      "displayCrownParameterM": 3.3200000000000003,
+      "maximumHorizontalRadiusM": 4.5,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-46",
+      "coordinate": [
+        -0.229596385,
+        39.663522429
+      ],
+      "baseM": 11.919074076299657,
+      "heightM": 8,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 24.71910003320623,
+      "sourceCrownRadiusM": 3.54,
+      "displayCrownParameterM": 3.54,
+      "maximumHorizontalRadiusM": 4.7749999999999995,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-47",
+      "coordinate": [
+        -0.229474385,
+        39.663461905
+      ],
+      "baseM": 11.89401436078661,
+      "heightM": 8.5,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 24.447454353914672,
+      "sourceCrownRadiusM": 3.7600000000000002,
+      "displayCrownParameterM": 3.7600000000000002,
+      "maximumHorizontalRadiusM": 5.05,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-48",
+      "coordinate": [
+        -0.229366462,
+        39.663411143
+      ],
+      "baseM": 11.858802984330607,
+      "heightM": 9,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 25.226767181409755,
+      "sourceCrownRadiusM": 3.1,
+      "displayCrownParameterM": 3.1,
+      "maximumHorizontalRadiusM": 4.225,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-49",
+      "coordinate": [
+        -0.229244462,
+        39.663344762
+      ],
+      "baseM": 11.590356147426048,
+      "heightM": 9.5,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 25.69269373289832,
+      "sourceCrownRadiusM": 3.3200000000000003,
+      "displayCrownParameterM": 3.3200000000000003,
+      "maximumHorizontalRadiusM": 4.5,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-50",
+      "coordinate": [
+        -0.229120115,
+        39.66328619
+      ],
+      "baseM": 11.216374138240148,
+      "heightM": 7.5,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 25.946102039518575,
+      "sourceCrownRadiusM": 3.54,
+      "displayCrownParameterM": 3.54,
+      "maximumHorizontalRadiusM": 4.7749999999999995,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-51",
+      "coordinate": [
+        -0.229012192,
+        39.663227619
+      ],
+      "baseM": 11.279279364508561,
+      "heightM": 10.7,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 25.788769571689816,
+      "sourceCrownRadiusM": 2.55,
+      "displayCrownParameterM": 2.55,
+      "maximumHorizontalRadiusM": 3.5375,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-52",
+      "coordinate": [
+        -0.228899577,
+        39.663180762
+      ],
+      "baseM": 11.065821482621336,
+      "heightM": 8.5,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 26.781715749307118,
+      "sourceCrownRadiusM": 3.1,
+      "displayCrownParameterM": 3.1,
+      "maximumHorizontalRadiusM": 4.225,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-53",
+      "coordinate": [
+        -0.228801038,
+        39.663116333
+      ],
+      "baseM": 11,
+      "heightM": 9,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 25.661953101492017,
+      "sourceCrownRadiusM": 3.3200000000000003,
+      "displayCrownParameterM": 3.3200000000000003,
+      "maximumHorizontalRadiusM": 4.5,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-54",
+      "coordinate": [
+        -0.228695462,
+        39.66305581
+      ],
+      "baseM": 11,
+      "heightM": 6.1,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 25.324908405123978,
+      "sourceCrownRadiusM": 2.58,
+      "displayCrownParameterM": 2.58,
+      "maximumHorizontalRadiusM": 3.575,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-55",
+      "coordinate": [
+        -0.228596923,
+        39.663012857
+      ],
+      "baseM": 11,
+      "heightM": 6.65,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 26.24512187725825,
+      "sourceCrownRadiusM": 2.7700000000000005,
+      "displayCrownParameterM": 2.7700000000000005,
+      "maximumHorizontalRadiusM": 3.8125000000000004,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-56",
+      "coordinate": [
+        -0.228489,
+        39.662962095
+      ],
+      "baseM": 10.954302876576467,
+      "heightM": 5,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 26.913751974906617,
+      "sourceCrownRadiusM": 2.2,
+      "displayCrownParameterM": 2.2,
+      "maximumHorizontalRadiusM": 3.1,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-74",
+      "coordinate": [
+        -0.229127154,
+        39.663799667
+      ],
+      "baseM": 11.137245009997462,
+      "heightM": 6.1,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 14.313959113114986,
+      "sourceCrownRadiusM": 2.58,
+      "displayCrownParameterM": 2.58,
+      "maximumHorizontalRadiusM": 3.575,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-75",
+      "coordinate": [
+        -0.229047385,
+        39.663707905
+      ],
+      "baseM": 11.085703461983334,
+      "heightM": 6.65,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 22.83834506768835,
+      "sourceCrownRadiusM": 2.7700000000000005,
+      "displayCrownParameterM": 2.7700000000000005,
+      "maximumHorizontalRadiusM": 3.8125000000000004,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-76",
+      "coordinate": [
+        -0.228969962,
+        39.66361419
+      ],
+      "baseM": 11,
+      "heightM": 5,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 33.72723532117345,
+      "sourceCrownRadiusM": 2.2,
+      "displayCrownParameterM": 2.2,
+      "maximumHorizontalRadiusM": 3.1,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-77",
+      "coordinate": [
+        -0.228887846,
+        39.663520476
+      ],
+      "baseM": 11,
+      "heightM": 5.55,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 45.44956412853298,
+      "sourceCrownRadiusM": 2.39,
+      "displayCrownParameterM": 2.39,
+      "maximumHorizontalRadiusM": 3.3375000000000004,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-78",
+      "coordinate": [
+        -0.228805731,
+        39.663430667
+      ],
+      "baseM": 11,
+      "heightM": 6.1,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 54.43235346206518,
+      "sourceCrownRadiusM": 2.58,
+      "displayCrownParameterM": 2.58,
+      "maximumHorizontalRadiusM": 3.575,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-79",
+      "coordinate": [
+        -0.228730654,
+        39.663340857
+      ],
+      "baseM": 11,
+      "heightM": 6.65,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 46.316076457284915,
+      "sourceCrownRadiusM": 2.7700000000000005,
+      "displayCrownParameterM": 2.7700000000000005,
+      "maximumHorizontalRadiusM": 3.8125000000000004,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-80",
+      "coordinate": [
+        -0.228646192,
+        39.663247143
+      ],
+      "baseM": 11,
+      "heightM": 5,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 35.6049186728028,
+      "sourceCrownRadiusM": 2.2,
+      "displayCrownParameterM": 2.2,
+      "maximumHorizontalRadiusM": 3.1,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-81",
+      "coordinate": [
+        -0.228564077,
+        39.663155381
+      ],
+      "baseM": 10.990937820158404,
+      "heightM": 5.55,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 26.493602356124367,
+      "sourceCrownRadiusM": 2.39,
+      "displayCrownParameterM": 2.39,
+      "maximumHorizontalRadiusM": 3.3375000000000004,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-85",
+      "coordinate": [
+        -0.229533038,
+        39.663663
+      ],
+      "baseM": 11,
+      "heightM": 9.7,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 15.757870273009141,
+      "sourceCrownRadiusM": 2.55,
+      "displayCrownParameterM": 2.55,
+      "maximumHorizontalRadiusM": 3.5375,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-86",
+      "coordinate": [
+        -0.229711346,
+        39.663782095
+      ],
+      "baseM": 11.086439495154599,
+      "heightM": 8,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 13.556835273712341,
+      "sourceCrownRadiusM": 3.54,
+      "displayCrownParameterM": 3.54,
+      "maximumHorizontalRadiusM": 4.7749999999999995,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-87",
+      "coordinate": [
+        -0.229821615,
+        39.663871905
+      ],
+      "baseM": 11.076417048372413,
+      "heightM": 8.5,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 16.55661612617671,
+      "sourceCrownRadiusM": 3.7600000000000002,
+      "displayCrownParameterM": 3.7600000000000002,
+      "maximumHorizontalRadiusM": 5.05,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-88",
+      "coordinate": [
+        -0.229859154,
+        39.663733286
+      ],
+      "baseM": 11.989812010734108,
+      "heightM": 9,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 26.052050774709052,
+      "sourceCrownRadiusM": 3.1,
+      "displayCrownParameterM": 3.1,
+      "maximumHorizontalRadiusM": 4.225,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-89",
+      "coordinate": [
+        -0.229753577,
+        39.663676667
+      ],
+      "baseM": 11.945029117643568,
+      "heightM": 9.5,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 25.26510153319178,
+      "sourceCrownRadiusM": 3.3200000000000003,
+      "displayCrownParameterM": 3.3200000000000003,
+      "maximumHorizontalRadiusM": 4.5,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-90",
+      "coordinate": [
+        -0.229655038,
+        39.663643476
+      ],
+      "baseM": 11.741251560139684,
+      "heightM": 7.5,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 23.495805352556573,
+      "sourceCrownRadiusM": 3.54,
+      "displayCrownParameterM": 3.54,
+      "maximumHorizontalRadiusM": 4.7749999999999995,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-91",
+      "coordinate": [
+        -0.229474385,
+        39.66358881
+      ],
+      "baseM": 11.062235463350719,
+      "heightM": 8,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 19.686242226417335,
+      "sourceCrownRadiusM": 3.7600000000000002,
+      "displayCrownParameterM": 3.7600000000000002,
+      "maximumHorizontalRadiusM": 5.05,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-92",
+      "coordinate": [
+        -0.229361769,
+        39.66350681
+      ],
+      "baseM": 11.145869402860058,
+      "heightM": 8.5,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 25.260321762567354,
+      "sourceCrownRadiusM": 3.1,
+      "displayCrownParameterM": 3.1,
+      "maximumHorizontalRadiusM": 4.225,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-93",
+      "coordinate": [
+        -0.229270269,
+        39.663442381
+      ],
+      "baseM": 11.116475025314198,
+      "heightM": 9,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 32.848071006480986,
+      "sourceCrownRadiusM": 3.3200000000000003,
+      "displayCrownParameterM": 3.3200000000000003,
+      "maximumHorizontalRadiusM": 4.5,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-94",
+      "coordinate": [
+        -0.229157654,
+        39.663381857
+      ],
+      "baseM": 11,
+      "heightM": 9.5,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 32.92315481548806,
+      "sourceCrownRadiusM": 3.54,
+      "displayCrownParameterM": 3.54,
+      "maximumHorizontalRadiusM": 4.7749999999999995,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-95",
+      "coordinate": [
+        -0.229035654,
+        39.663311571
+      ],
+      "baseM": 11.02770927614732,
+      "heightM": 7.5,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 32.36509458982817,
+      "sourceCrownRadiusM": 3.7600000000000002,
+      "displayCrownParameterM": 3.7600000000000002,
+      "maximumHorizontalRadiusM": 5.05,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-96",
+      "coordinate": [
+        -0.228941808,
+        39.663227619
+      ],
+      "baseM": 11.086434238062276,
+      "heightM": 8,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 29.300347868159275,
+      "sourceCrownRadiusM": 3.1,
+      "displayCrownParameterM": 3.1,
+      "maximumHorizontalRadiusM": 4.225,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-97",
+      "coordinate": [
+        -0.228833885,
+        39.663149524
+      ],
+      "baseM": 11,
+      "heightM": 8.5,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 27.076870640290824,
+      "sourceCrownRadiusM": 3.3200000000000003,
+      "displayCrownParameterM": 3.3200000000000003,
+      "maximumHorizontalRadiusM": 4.5,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-98",
+      "coordinate": [
+        -0.228742385,
+        39.663092905
+      ],
+      "baseM": 11,
+      "heightM": 10.2,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 26.404792499909927,
+      "sourceCrownRadiusM": 2.55,
+      "displayCrownParameterM": 2.55,
+      "maximumHorizontalRadiusM": 3.5375,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-99",
+      "coordinate": [
+        -0.228561731,
+        39.662993333
+      ],
+      "baseM": 11,
+      "heightM": 6.65,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 26.192099210206408,
+      "sourceCrownRadiusM": 2.7700000000000005,
+      "displayCrownParameterM": 2.7700000000000005,
+      "maximumHorizontalRadiusM": 3.8125000000000004,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-112",
+      "coordinate": [
+        -0.230014,
+        39.664879333
+      ],
+      "baseM": 12.65711263983799,
+      "heightM": 3.9000000000000004,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 27.504994521897626,
+      "sourceCrownRadiusM": 1.17,
+      "displayCrownParameterM": 1.17,
+      "maximumHorizontalRadiusM": 1.8125,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-113",
+      "coordinate": [
+        -0.229927192,
+        39.664783667
+      ],
+      "baseM": 12.02665227584419,
+      "heightM": 4.1000000000000005,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 39.281652867981364,
+      "sourceCrownRadiusM": 1.29,
+      "displayCrownParameterM": 1.29,
+      "maximumHorizontalRadiusM": 1.9625,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-114",
+      "coordinate": [
+        -0.229845077,
+        39.664689952
+      ],
+      "baseM": 12,
+      "heightM": 3.7,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 50.938773543591566,
+      "sourceCrownRadiusM": 1.05,
+      "displayCrownParameterM": 1.05,
+      "maximumHorizontalRadiusM": 1.6625,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-115",
+      "coordinate": [
+        -0.229767654,
+        39.664602095
+      ],
+      "baseM": 12,
+      "heightM": 3.9000000000000004,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 62.22457375347954,
+      "sourceCrownRadiusM": 1.17,
+      "displayCrownParameterM": 1.17,
+      "maximumHorizontalRadiusM": 1.8125,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-116",
+      "coordinate": [
+        -0.229690231,
+        39.664506429
+      ],
+      "baseM": 12,
+      "heightM": 4.1000000000000005,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 60.96861867161634,
+      "sourceCrownRadiusM": 1.29,
+      "displayCrownParameterM": 1.29,
+      "maximumHorizontalRadiusM": 1.9625,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-117",
+      "coordinate": [
+        -0.229610462,
+        39.664416619
+      ],
+      "baseM": 12,
+      "heightM": 3.7,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 49.86749435686471,
+      "sourceCrownRadiusM": 1.05,
+      "displayCrownParameterM": 1.05,
+      "maximumHorizontalRadiusM": 1.6625,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-118",
+      "coordinate": [
+        -0.229537731,
+        39.664324857
+      ],
+      "baseM": 12,
+      "heightM": 3.9000000000000004,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 39.84860887474681,
+      "sourceCrownRadiusM": 1.17,
+      "displayCrownParameterM": 1.17,
+      "maximumHorizontalRadiusM": 1.8125,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-119",
+      "coordinate": [
+        -0.229457962,
+        39.664235048
+      ],
+      "baseM": 12,
+      "heightM": 4.1000000000000005,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 30.6635029652241,
+      "sourceCrownRadiusM": 1.29,
+      "displayCrownParameterM": 1.29,
+      "maximumHorizontalRadiusM": 1.9625,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-120",
+      "coordinate": [
+        -0.229385231,
+        39.664139381
+      ],
+      "baseM": 11.983677413645593,
+      "heightM": 3.7,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 24.949813076289903,
+      "sourceCrownRadiusM": 1.05,
+      "displayCrownParameterM": 1.05,
+      "maximumHorizontalRadiusM": 1.6625,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-121",
+      "coordinate": [
+        -0.229300769,
+        39.664049571
+      ],
+      "baseM": 11.985598711298955,
+      "heightM": 3.9000000000000004,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 23.50570710460391,
+      "sourceCrownRadiusM": 1.17,
+      "displayCrownParameterM": 1.17,
+      "maximumHorizontalRadiusM": 1.8125,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-122",
+      "coordinate": [
+        -0.229232731,
+        39.66395781
+      ],
+      "baseM": 11.648152808537475,
+      "heightM": 4.1000000000000005,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 18.600251272507926,
+      "sourceCrownRadiusM": 1.29,
+      "displayCrownParameterM": 1.29,
+      "maximumHorizontalRadiusM": 1.9625,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-123",
+      "coordinate": [
+        -0.229150615,
+        39.663866048
+      ],
+      "baseM": 11,
+      "heightM": 3.7,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 15.075822148064377,
+      "sourceCrownRadiusM": 1.05,
+      "displayCrownParameterM": 1.05,
+      "maximumHorizontalRadiusM": 1.6625,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-124",
+      "coordinate": [
+        -0.229070846,
+        39.663776238
+      ],
+      "baseM": 11.053476690529298,
+      "heightM": 3.9000000000000004,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 19.10435547158519,
+      "sourceCrownRadiusM": 1.17,
+      "displayCrownParameterM": 1.17,
+      "maximumHorizontalRadiusM": 1.8125,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-125",
+      "coordinate": [
+        -0.228993423,
+        39.663682524
+      ],
+      "baseM": 11.022344153696057,
+      "heightM": 4.1000000000000005,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 28.20515958592135,
+      "sourceCrownRadiusM": 1.29,
+      "displayCrownParameterM": 1.29,
+      "maximumHorizontalRadiusM": 1.9625,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-126",
+      "coordinate": [
+        -0.228913654,
+        39.663590762
+      ],
+      "baseM": 11,
+      "heightM": 3.7,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 39.18228622075103,
+      "sourceCrownRadiusM": 1.05,
+      "displayCrownParameterM": 1.05,
+      "maximumHorizontalRadiusM": 1.6625,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-127",
+      "coordinate": [
+        -0.228838577,
+        39.663500952
+      ],
+      "baseM": 11,
+      "heightM": 3.9000000000000004,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 50.15731790652808,
+      "sourceCrownRadiusM": 1.17,
+      "displayCrownParameterM": 1.17,
+      "maximumHorizontalRadiusM": 1.8125,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-128",
+      "coordinate": [
+        -0.228761154,
+        39.663413095
+      ],
+      "baseM": 11,
+      "heightM": 4.1000000000000005,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 52.143097098879664,
+      "sourceCrownRadiusM": 1.29,
+      "displayCrownParameterM": 1.29,
+      "maximumHorizontalRadiusM": 1.9625,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-129",
+      "coordinate": [
+        -0.228674346,
+        39.663319381
+      ],
+      "baseM": 11,
+      "heightM": 3.7,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 40.95058348617501,
+      "sourceCrownRadiusM": 1.05,
+      "displayCrownParameterM": 1.05,
+      "maximumHorizontalRadiusM": 1.6625,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-130",
+      "coordinate": [
+        -0.228599269,
+        39.663231524
+      ],
+      "baseM": 11,
+      "heightM": 3.9000000000000004,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 31.23355763153891,
+      "sourceCrownRadiusM": 1.17,
+      "displayCrownParameterM": 1.17,
+      "maximumHorizontalRadiusM": 1.8125,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-131",
+      "coordinate": [
+        -0.228524192,
+        39.663135857
+      ],
+      "baseM": 10.942522172567877,
+      "heightM": 4.1000000000000005,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 23.004132120850176,
+      "sourceCrownRadiusM": 1.29,
+      "displayCrownParameterM": 1.29,
+      "maximumHorizontalRadiusM": 1.9625,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-132",
+      "coordinate": [
+        -0.228446769,
+        39.663046048
+      ],
+      "baseM": 10.890673932104407,
+      "heightM": 3.7,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 19.289128989138156,
+      "sourceCrownRadiusM": 1.05,
+      "displayCrownParameterM": 1.05,
+      "maximumHorizontalRadiusM": 1.6625,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-133",
+      "coordinate": [
+        -0.228371692,
+        39.66295819
+      ],
+      "baseM": 10.498674314101923,
+      "heightM": 3.9000000000000004,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 20.399202984851602,
+      "sourceCrownRadiusM": 1.17,
+      "displayCrownParameterM": 1.17,
+      "maximumHorizontalRadiusM": 1.8125,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-134",
+      "coordinate": [
+        -0.228294269,
+        39.662866429
+      ],
+      "baseM": 10.216574561660082,
+      "heightM": 4.1000000000000005,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 22.0790631042063,
+      "sourceCrownRadiusM": 1.29,
+      "displayCrownParameterM": 1.29,
+      "maximumHorizontalRadiusM": 1.9625,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-135",
+      "coordinate": [
+        -0.2282145,
+        39.662776619
+      ],
+      "baseM": 10,
+      "heightM": 3.7,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 18.682826906275135,
+      "sourceCrownRadiusM": 1.05,
+      "displayCrownParameterM": 1.05,
+      "maximumHorizontalRadiusM": 1.6625,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-136",
+      "coordinate": [
+        -0.230096115,
+        39.66517219
+      ],
+      "baseM": 13,
+      "heightM": 8,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 24.98326106256652,
+      "sourceCrownRadiusM": 3.1,
+      "displayCrownParameterM": 3.1,
+      "maximumHorizontalRadiusM": 4.225,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "sanatorio-context-tree-137",
+      "coordinate": [
+        -0.230067962,
+        39.665287381
+      ],
+      "baseM": 13,
+      "heightM": 8.5,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 33.13123566360523,
+      "sourceCrownRadiusM": 3.3200000000000003,
+      "displayCrownParameterM": 3.3200000000000003,
+      "maximumHorizontalRadiusM": 4.5,
+      "requiredFacadeGapM": 0.45
+    }
+  ]
+}

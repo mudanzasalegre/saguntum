@@ -1,0 +1,3671 @@
+{
+  "generatedAt": "2026-11-19T21:37:48.253Z",
+  "buildMs": 18999.58149,
+  "sourceHashes": {
+    "dist/js/app.js": "93afa08e0b962e4403a58bfc9dfbd6e547a4ac597eb55fb8d6a0911ea1ab8f3b",
+    "dist/js/castle-panel.js": "60a927639c38ed0a88d16e66354aa5c7d14057da44b396f8a2d0acdaae25a8ab",
+    "dist/js/theatre.js": "34831ff762ddd15d0e9fa1fd564183145a04219d47f833f529af35f545d83371",
+    "dist/js/monuments.js": "22546453225b2db827cc2e84a5fd30e1083b56eb8b79d4a1ac025709f4b34dac",
+    "dist/js/castle.js": "61463c846f79a617562ca2e31bfc42321da0c737a3d310846db44410066c54d8",
+    "dist/js/terrain.js": "ec10570603e52e850b6b5eadf81963215d18d533c551d555848ef58152fec3f8",
+    "dist/js/city.js": "b2578a5fdb0d70435fa4bc8cf92147f2a3c4922f6bcbe6bbe145f46ebb53af54",
+    "dist/js/urban-surface.js": "d2acfae90ff47abddd51be09a21555e8ce9b6269e1500549a6eb94938f3e6111",
+    "dist/js/santa-maria.js": "ab23645cee3bfb285ea19420b98d8c4eb56fa7e5b99d756aa861abba2578ff42",
+    "dist/js/santa-maria-context.js": "c58325ab7d3a33af291c50efda2625dcd757d33da9306e70f5d95b67b4d4072f",
+    "dist/js/heritage-sacred.js": "09d8044f1b658f77e083971f6301ea0dcb14831388bdbbe07c34eab7b414d9d4",
+    "dist/js/heritage-civic.js": "fb57a08bfe1a0ebfbd8c3f7d906b2eb8d90fb3bf0de540711bac7c79cb87663c",
+    "dist/js/plaza-mayor.js": "07f51ea9722f9a09932e9dd85dcdeb2a39e753fdb5c8d7fa5e5a302bad3d28b1",
+    "dist/js/plaza-mayor-context.js": "655b94895ef5407affe3ea502e5eb0eeff91cf01d365fe63387ec9fa31bd8d8b",
+    "dist/js/juderia.js": "e83aa1df8be0538e6ce520ebf0676f847ce3d488690e1deacaa7472e0869d30d",
+    "dist/js/juderia-context.js": "fc58285789fd8a785e87d2efd1e29e42bba257222eb51e66592393d19600cf2f",
+    "dist/js/calvario.js": "990a076c049599574eb566b7823bc8166667d7c385a2e5fd964e6e4342d96910",
+    "dist/js/calvario-context.js": "0ef2e7a8cc33c2296cbd1b7ff8023d5eef71a48e4eb86849efd06e59b124d148",
+    "dist/js/berenguer.js": "b03e258c52ea3d570638184be346650b37a2ef0a059e0c17fc74e6833c806ebc",
+    "dist/js/berenguer-context.js": "4a942cd7436001937dcfd3d20ff3c1ec6272a42e4f0fbd68bf80e097b7618695",
+    "dist/js/berenguer-map.js": "1c10607f476c7a5d6358d13747385a6e946bc7df909de5c5963ec1ca2062f92e",
+    "dist/js/berenguer-visit.js": "afb8a76f7ec7315ed0561cb4fddcac87ea1dd295c5a47dc1631d56c91da8d3df",
+    "dist/js/archaeology-public.js": "2caa932b03f1910718d538227c99410e17180b201f7a05b849ded888342af73b",
+    "dist/js/excavation.js": "2d7af18c65c4870ed7d33897fbee5caaaa531663ed39c592ea6fcdfed00b1d35",
+    "dist/assets/data/plaza-mayor-visit.json": "c80a4560b964c27003e769add5a1c0c32b1a0109b55243c95a641282f2b36e55",
+    "dist/assets/data/plaza-mayor-plan.json": "136742e1a25c77699aa619113a40213926260fd7bbec9402f02de6a4bb29b4ef",
+    "dist/assets/data/plaza-mayor-context.json": "1a0c282b1f15f1cf4ede43aee8a600a5a44675cc4ad8110c36656ad9d23d9fc7",
+    "dist/assets/data/juderia-visit.json": "c935eff4d0a2f4362b437bb045ac47a4d7222b62b7ab5f7e3380e7ac08e6f736",
+    "dist/assets/data/juderia-plan.json": "cb31a29ed4c590a10bb6b8430171122bada9c4637ab3446ad31097fabd194d34",
+    "dist/assets/data/juderia-context.json": "9118ca2de239a2b4a49e2b2651d8dc261177e3b50c6a4360686e7e8a2380d045",
+    "dist/assets/data/calvario-visit.json": "b054fed27f08b1d4c1f387315b3d3d6b8ae3a6a7378e4e2fb6186a437c829088",
+    "dist/assets/data/calvario-plan.json": "3a9a08fb423930cb5902b83db6c5b2998ff8461935bc26656714a3039a167eef",
+    "dist/assets/data/calvario-context.json": "3c4da56852c9f4afb1ca501e37e4823b7c2eb3aa81d9b42a7da07f53bbe81766",
+    "dist/assets/data/berenguer-visit.json": "36da2cecfbfe9c2447434e2405a5ca94615527dca5c0c4e549ae49e6d726206e",
+    "dist/assets/data/berenguer-plan.json": "68af4ffba39bad39785ba588a6ffbde2d074b47179e591a8847c5a4e61ae4154",
+    "dist/assets/data/berenguer-context.json": "b222d0b510d39b340dc4d69bdaef0dc383d88faa5fb800eb247d9676871487ae"
+  },
+  "scope": "Raycast search over final production terrain, city and all heritage objects. Proposed targets are on exterior surfaces; source footprints unchanged.",
+  "focuses": [
+    {
+      "id": "berenguer-portada",
+      "target": [
+        -86.9984,
+        62.0335,
+        25.6753
+      ],
+      "bounds": [
+        [
+          -89.1795,
+          59.8335,
+          25.3672
+        ],
+        [
+          -84.8159,
+          64.2335,
+          26.3633
+        ]
+      ],
+      "fullCandidates": [
+        {
+          "azimuth": 15,
+          "elevation": 5,
+          "offset": [
+            4.1253,
+            1.3945,
+            -15.396
+          ],
+          "maxDistance": 24.0338,
+          "score": 5.4,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -84.2637,
+                62.9579,
+                15.4694
+              ],
+              "clearance": 5.2279
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -80.8016,
+                64.1282,
+                2.5488
+              ],
+              "clearance": 4.9651
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -83.635,
+                63.1704,
+                13.1231
+              ],
+              "clearance": 5.4143
+            }
+          ]
+        },
+        {
+          "azimuth": 30,
+          "elevation": 5,
+          "offset": [
+            7.9696,
+            1.3945,
+            -13.8037
+          ],
+          "maxDistance": 25.0113,
+          "score": 7.8,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -81.356,
+                63.0208,
+                15.9024
+              ],
+              "clearance": 5.4209
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -74.5403,
+                64.2133,
+                4.0973
+              ],
+              "clearance": 7.1791
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -80.1183,
+                63.2373,
+                13.7587
+              ],
+              "clearance": 5.9414
+            }
+          ]
+        },
+        {
+          "azimuth": 15,
+          "elevation": 15,
+          "offset": [
+            4,
+            4.1411,
+            -14.9282
+          ],
+          "maxDistance": 24.4596,
+          "score": 11.4,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -84.367,
+                64.7576,
+                15.8549
+              ],
+              "clearance": 6.9828
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -80.8835,
+                68.3641,
+                2.8542
+              ],
+              "clearance": 9.201
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -83.7355,
+                65.4114,
+                13.4981
+              ],
+              "clearance": 7.6084
+            }
+          ]
+        },
+        {
+          "azimuth": 30,
+          "elevation": 15,
+          "offset": [
+            7.7274,
+            4.1411,
+            -13.3843
+          ],
+          "maxDistance": 26.2717,
+          "score": 13.8,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -81.3951,
+                65.0362,
+                15.9702
+              ],
+              "clearance": 7.425
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -74.3101,
+                68.8331,
+                3.6986
+              ],
+              "clearance": 11.4242
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -80.1085,
+                65.7257,
+                13.7417
+              ],
+              "clearance": 8.4322
+            }
+          ]
+        },
+        {
+          "azimuth": -75,
+          "elevation": 5,
+          "offset": [
+            -15.396,
+            1.3945,
+            -4.1253
+          ],
+          "maxDistance": 26.6452,
+          "score": 15,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -99.0592,
+                63.1259,
+                22.4436
+              ],
+              "clearance": 3.9169
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -112.6377,
+                64.3558,
+                18.8052
+              ],
+              "clearance": 4.6658
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -101.5251,
+                63.3492,
+                21.7829
+              ],
+              "clearance": 4.056
+            }
+          ]
+        },
+        {
+          "azimuth": 45,
+          "elevation": 15,
+          "offset": [
+            10.9282,
+            4.1411,
+            -10.9282
+          ],
+          "maxDistance": 27.765,
+          "score": 16.2,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -78.4763,
+                65.2628,
+                17.1532
+              ],
+              "clearance": 7.5754
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -68.0345,
+                69.2196,
+                6.7114
+              ],
+              "clearance": 13.261
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -76.5801,
+                65.9813,
+                15.257
+              ],
+              "clearance": 8.5293
+            }
+          ]
+        },
+        {
+          "azimuth": 15,
+          "elevation": 25,
+          "offset": [
+            3.7531,
+            6.7619,
+            -14.0068
+          ],
+          "maxDistance": 25.6495,
+          "score": 17.4,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -84.474,
+                66.5815,
+                16.2543
+              ],
+              "clearance": 8.7571
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -80.9818,
+                72.8734,
+                3.221
+              ],
+              "clearance": 13.7104
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -83.8398,
+                67.7241,
+                13.8875
+              ],
+              "clearance": 9.9158
+            }
+          ]
+        },
+        {
+          "azimuth": 30,
+          "elevation": 25,
+          "offset": [
+            7.2505,
+            6.7619,
+            -12.5582
+          ],
+          "maxDistance": 27.1896,
+          "score": 19.8,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -81.7765,
+                66.9034,
+                16.6308
+              ],
+              "clearance": 9.2135
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -74.6773,
+                73.5243,
+                4.3346
+              ],
+              "clearance": 16.7129
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -80.5248,
+                68.0708,
+                14.4628
+              ],
+              "clearance": 10.6744
+            }
+          ]
+        },
+        {
+          "azimuth": -75,
+          "elevation": 15,
+          "offset": [
+            -14.9282,
+            4.1411,
+            -4
+          ],
+          "maxDistance": 29.3412,
+          "score": 21,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -99.5018,
+                65.5019,
+                22.325
+              ],
+              "clearance": 6.2771
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -114.3741,
+                69.6275,
+                18.34
+              ],
+              "clearance": 9.9726
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -102.2026,
+                66.2511,
+                21.6013
+              ],
+              "clearance": 6.927
+            }
+          ]
+        },
+        {
+          "azimuth": 45,
+          "elevation": 25,
+          "offset": [
+            10.2537,
+            6.7619,
+            -10.2537
+          ],
+          "maxDistance": 28.8802,
+          "score": 22.2,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -78.8847,
+                67.3841,
+                17.5616
+              ],
+              "clearance": 9.6445
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -68.4903,
+                74.2388,
+                7.1672
+              ],
+              "clearance": 18.2355
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -76.9971,
+                68.6289,
+                15.674
+              ],
+              "clearance": 11.1316
+            }
+          ]
+        },
+        {
+          "azimuth": 15,
+          "elevation": 35,
+          "offset": [
+            3.3922,
+            9.1772,
+            -12.6598
+          ],
+          "maxDistance": 26.0601,
+          "score": 23.4,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -84.6219,
+                68.4627,
+                16.8063
+              ],
+              "clearance": 10.5698
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -81.4733,
+                76.9809,
+                5.0554
+              ],
+              "clearance": 17.8179
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -84.0501,
+                70.0096,
+                14.6724
+              ],
+              "clearance": 12.2929
+            }
+          ]
+        },
+        {
+          "azimuth": 60,
+          "elevation": 25,
+          "offset": [
+            12.5582,
+            6.7619,
+            -7.2505
+          ],
+          "maxDistance": 30.3875,
+          "score": 24.6,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -76.4343,
+                67.7216,
+                19.5761
+              ],
+              "clearance": 9.4445
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -63.1476,
+                74.8758,
+                11.9051
+              ],
+              "clearance": 17.6249
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -74.0215,
+                69.0208,
+                18.1831
+              ],
+              "clearance": 10.8817
+            }
+          ]
+        }
+      ],
+      "nearCandidates": [
+        {
+          "azimuth": 0,
+          "elevation": 0,
+          "closeOffset": [
+            0,
+            0,
+            -4.2
+          ],
+          "position": [
+            -86.9984,
+            62.0335,
+            21.4753
+          ],
+          "clearance": 3.4014,
+          "closeScale": false,
+          "score": 0
+        },
+        {
+          "azimuth": 0,
+          "elevation": 0,
+          "closeOffset": [
+            0,
+            0,
+            -3.3
+          ],
+          "position": [
+            -86.9984,
+            62.0335,
+            22.3753
+          ],
+          "clearance": 3.2655,
+          "closeScale": false,
+          "score": 0.36000000000000015
+        },
+        {
+          "azimuth": 0,
+          "elevation": 0,
+          "closeOffset": [
+            0,
+            0,
+            -5.7
+          ],
+          "position": [
+            -86.9984,
+            62.0335,
+            19.9753
+          ],
+          "clearance": 3.5432,
+          "closeScale": false,
+          "score": 0.6000000000000001
+        },
+        {
+          "azimuth": 0,
+          "elevation": 0,
+          "closeOffset": [
+            0,
+            0,
+            -7
+          ],
+          "position": [
+            -86.9984,
+            62.0335,
+            18.6753
+          ],
+          "clearance": 3.1993,
+          "closeScale": false,
+          "score": 1.1199999999999999
+        },
+        {
+          "azimuth": -15,
+          "elevation": 0,
+          "closeOffset": [
+            -1.087,
+            0,
+            -4.0569
+          ],
+          "position": [
+            -88.0854,
+            62.0335,
+            21.6184
+          ],
+          "clearance": 3.1451,
+          "closeScale": false,
+          "score": 2.4
+        },
+        {
+          "azimuth": 15,
+          "elevation": 0,
+          "closeOffset": [
+            1.087,
+            0,
+            -4.0569
+          ],
+          "position": [
+            -85.9113,
+            62.0335,
+            21.6184
+          ],
+          "clearance": 3.5587,
+          "closeScale": false,
+          "score": 2.4
+        },
+        {
+          "azimuth": -15,
+          "elevation": 0,
+          "closeOffset": [
+            -0.8541,
+            0,
+            -3.1876
+          ],
+          "position": [
+            -87.8525,
+            62.0335,
+            22.4877
+          ],
+          "clearance": 3.1468,
+          "closeScale": false,
+          "score": 2.7600000000000002
+        },
+        {
+          "azimuth": 15,
+          "elevation": 0,
+          "closeOffset": [
+            0.8541,
+            0,
+            -3.1876
+          ],
+          "position": [
+            -86.1443,
+            62.0335,
+            22.4877
+          ],
+          "clearance": 3.3891,
+          "closeScale": false,
+          "score": 2.7600000000000002
+        },
+        {
+          "azimuth": -15,
+          "elevation": 0,
+          "closeOffset": [
+            -1.4753,
+            0,
+            -5.5058
+          ],
+          "position": [
+            -88.4736,
+            62.0335,
+            20.1695
+          ],
+          "clearance": 3.263,
+          "closeScale": false,
+          "score": 3
+        },
+        {
+          "azimuth": 15,
+          "elevation": 0,
+          "closeOffset": [
+            1.4753,
+            0,
+            -5.5058
+          ],
+          "position": [
+            -85.5231,
+            62.0335,
+            20.1695
+          ],
+          "clearance": 3.5728,
+          "closeScale": false,
+          "score": 3
+        }
+      ],
+      "fullClearCount": 62,
+      "nearClearCount": 285,
+      "attempts": 544,
+      "rejects": {
+        "balcones": 1,
+        "muro-sur": 2,
+        "nervios": 2,
+        "cubiertas": 2,
+        "cornisas": 4,
+        "capillas": 4,
+        "bovedas-capillas": 1,
+        "sacristia": 10,
+        "cabecera-lateral": 4,
+        "bovedas-laterales": 1,
+        "abside": 1,
+        "santa-maria-sagrario": 5
+      }
+    },
+    {
+      "id": "berenguer-escudo",
+      "target": [
+        -86.9984,
+        63.8435,
+        25.6553
+      ],
+      "bounds": [
+        [
+          -87.5495,
+          63.3335,
+          25.3732
+        ],
+        [
+          -86.4458,
+          64.2835,
+          26.3573
+        ]
+      ],
+      "fullCandidates": [
+        {
+          "azimuth": 0,
+          "elevation": 5,
+          "offset": [
+            0,
+            1.3945,
+            -15.9391
+          ],
+          "maxDistance": 5.7334,
+          "score": 3,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -86.9984,
+                64.0694,
+                23.0731
+              ],
+              "clearance": 5.091
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -86.9984,
+                64.3432,
+                19.9437
+              ],
+              "clearance": 5.8445
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -86.9984,
+                64.1181,
+                22.516
+              ],
+              "clearance": 5.3256
+            }
+          ]
+        },
+        {
+          "azimuth": 15,
+          "elevation": 5,
+          "offset": [
+            4.1253,
+            1.3945,
+            -15.396
+          ],
+          "maxDistance": 5.9965,
+          "score": 5.4,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -86.2836,
+                64.0851,
+                22.9874
+              ],
+              "clearance": 5.2448
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -85.4523,
+                64.3661,
+                19.8851
+              ],
+              "clearance": 5.8766
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -86.1326,
+                64.1361,
+                22.4241
+              ],
+              "clearance": 5.5033
+            }
+          ]
+        },
+        {
+          "azimuth": 30,
+          "elevation": 5,
+          "offset": [
+            7.9696,
+            1.3945,
+            -13.8037
+          ],
+          "maxDistance": 6.4255,
+          "score": 7.8,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -85.5412,
+                64.0984,
+                23.1313
+              ],
+              "clearance": 5.3297
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -83.7979,
+                64.4035,
+                20.1118
+              ],
+              "clearance": 5.9959
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -85.2447,
+                64.1503,
+                22.6177
+              ],
+              "clearance": 5.6108
+            }
+          ]
+        },
+        {
+          "azimuth": 0,
+          "elevation": 15,
+          "offset": [
+            0,
+            4.1411,
+            -15.4548
+          ],
+          "maxDistance": 5.9688,
+          "score": 9,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -86.9984,
+                64.5211,
+                23.1262
+              ],
+              "clearance": 5.5313
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -86.9984,
+                65.3883,
+                19.8899
+              ],
+              "clearance": 6.8754
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -86.9984,
+                64.6786,
+                22.5385
+              ],
+              "clearance": 5.8783
+            }
+          ]
+        },
+        {
+          "azimuth": 45,
+          "elevation": 5,
+          "offset": [
+            11.2707,
+            1.3945,
+            -11.2707
+          ],
+          "maxDistance": 7.1366,
+          "score": 10.2,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -84.7023,
+                64.1276,
+                23.3592
+              ],
+              "clearance": 5.3808
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -81.9713,
+                64.4655,
+                20.6282
+              ],
+              "clearance": 6.1096
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -84.4423,
+                64.1597,
+                23.0991
+              ],
+              "clearance": 5.5155
+            }
+          ]
+        },
+        {
+          "azimuth": 15,
+          "elevation": 15,
+          "offset": [
+            4,
+            4.1411,
+            -14.9282
+          ],
+          "maxDistance": 6.4631,
+          "score": 11.4,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -86.2714,
+                64.5961,
+                22.942
+              ],
+              "clearance": 5.7737
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -85.3827,
+                65.5162,
+                19.6251
+              ],
+              "clearance": 6.959
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -86.11,
+                64.7632,
+                22.3397
+              ],
+              "clearance": 6.1468
+            }
+          ]
+        },
+        {
+          "azimuth": -60,
+          "elevation": 5,
+          "offset": [
+            -13.8037,
+            1.3945,
+            -7.9696
+          ],
+          "maxDistance": 7.3563,
+          "score": 12.6,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -90.014,
+                64.1481,
+                23.9143
+              ],
+              "clearance": 4.8866
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -93.3449,
+                64.4846,
+                21.9911
+              ],
+              "clearance": 5.4237
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -90.1666,
+                64.1635,
+                23.8261
+              ],
+              "clearance": 4.9162
+            }
+          ]
+        },
+        {
+          "azimuth": 60,
+          "elevation": 5,
+          "offset": [
+            13.8037,
+            1.3945,
+            -7.9696
+          ],
+          "maxDistance": 7.3641,
+          "score": 12.6,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -83.9791,
+                64.1485,
+                23.9121
+              ],
+              "clearance": 5.2389
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -80.6452,
+                64.4853,
+                21.9873
+              ],
+              "clearance": 6.1387
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -83.8285,
+                64.1637,
+                23.8251
+              ],
+              "clearance": 5.2911
+            }
+          ]
+        },
+        {
+          "azimuth": 30,
+          "elevation": 15,
+          "offset": [
+            7.7274,
+            4.1411,
+            -13.3843
+          ],
+          "maxDistance": 6.8525,
+          "score": 13.8,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -85.4837,
+                64.6552,
+                23.0317
+              ],
+              "clearance": 5.931
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -83.6889,
+                65.617,
+                19.9231
+              ],
+              "clearance": 7.2276
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -85.1578,
+                64.8299,
+                22.4672
+              ],
+              "clearance": 6.3509
+            }
+          ]
+        },
+        {
+          "azimuth": -75,
+          "elevation": 5,
+          "offset": [
+            -15.396,
+            1.3945,
+            -4.1253
+          ],
+          "maxDistance": 7.0876,
+          "score": 15,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -90.3673,
+                64.1486,
+                24.7526
+              ],
+              "clearance": 4.7213
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -93.8185,
+                64.4612,
+                23.8278
+              ],
+              "clearance": 5.2119
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -90.5127,
+                64.1618,
+                24.7136
+              ],
+              "clearance": 4.7425
+            }
+          ]
+        },
+        {
+          "azimuth": 0,
+          "elevation": 25,
+          "offset": [
+            0,
+            6.7619,
+            -14.5009
+          ],
+          "maxDistance": 6.6662,
+          "score": 15,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -86.9984,
+                64.9389,
+                23.3061
+              ],
+              "clearance": 5.9102
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -86.9984,
+                66.6607,
+                19.6136
+              ],
+              "clearance": 8.0748
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -86.9984,
+                65.2359,
+                22.6693
+              ],
+              "clearance": 6.3896
+            }
+          ]
+        },
+        {
+          "azimuth": 75,
+          "elevation": 5,
+          "offset": [
+            15.396,
+            1.3945,
+            -4.1253
+          ],
+          "maxDistance": 7.0926,
+          "score": 15,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -83.6266,
+                64.1489,
+                24.7518
+              ],
+              "clearance": 4.9596
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -80.1736,
+                64.4616,
+                23.8266
+              ],
+              "clearance": 5.6807
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -83.4819,
+                64.162,
+                24.713
+              ],
+              "clearance": 4.9926
+            }
+          ]
+        }
+      ],
+      "nearCandidates": [
+        {
+          "azimuth": 0,
+          "elevation": 0,
+          "closeOffset": [
+            0,
+            0,
+            -3.4
+          ],
+          "position": [
+            -86.9984,
+            63.8435,
+            22.2553
+          ],
+          "clearance": 5.0936,
+          "closeScale": false,
+          "score": 0
+        },
+        {
+          "azimuth": 0,
+          "elevation": 0,
+          "closeOffset": [
+            0,
+            0,
+            -4.1
+          ],
+          "position": [
+            -86.9984,
+            63.8435,
+            21.5553
+          ],
+          "clearance": 5.1993,
+          "closeScale": false,
+          "score": 0.2799999999999999
+        },
+        {
+          "azimuth": 0,
+          "elevation": 0,
+          "closeOffset": [
+            0,
+            0,
+            -2.6
+          ],
+          "position": [
+            -86.9984,
+            63.8435,
+            23.0553
+          ],
+          "clearance": 4.8689,
+          "closeScale": false,
+          "score": 0.31999999999999995
+        },
+        {
+          "azimuth": 0,
+          "elevation": 0,
+          "closeOffset": [
+            0,
+            0,
+            -5
+          ],
+          "position": [
+            -86.9984,
+            63.8435,
+            20.6553
+          ],
+          "clearance": 5.3353,
+          "closeScale": false,
+          "score": 0.6400000000000001
+        },
+        {
+          "azimuth": -15,
+          "elevation": 0,
+          "closeOffset": [
+            -0.88,
+            0,
+            -3.2841
+          ],
+          "position": [
+            -87.8784,
+            63.8435,
+            22.3711
+          ],
+          "clearance": 4.9483,
+          "closeScale": false,
+          "score": 2.4
+        },
+        {
+          "azimuth": 15,
+          "elevation": 0,
+          "closeOffset": [
+            0.88,
+            0,
+            -3.2841
+          ],
+          "position": [
+            -86.1184,
+            63.8435,
+            22.3711
+          ],
+          "clearance": 5.2209,
+          "closeScale": false,
+          "score": 2.4
+        },
+        {
+          "azimuth": -15,
+          "elevation": 0,
+          "closeOffset": [
+            -1.0612,
+            0,
+            -3.9603
+          ],
+          "position": [
+            -88.0596,
+            63.8435,
+            21.695
+          ],
+          "clearance": 4.9502,
+          "closeScale": false,
+          "score": 2.6799999999999997
+        },
+        {
+          "azimuth": 15,
+          "elevation": 0,
+          "closeOffset": [
+            1.0612,
+            0,
+            -3.9603
+          ],
+          "position": [
+            -85.9373,
+            63.8435,
+            21.695
+          ],
+          "clearance": 5.3529,
+          "closeScale": false,
+          "score": 2.6799999999999997
+        },
+        {
+          "azimuth": -15,
+          "elevation": 0,
+          "closeOffset": [
+            -0.6729,
+            0,
+            -2.5114
+          ],
+          "position": [
+            -87.6714,
+            63.8435,
+            23.1439
+          ],
+          "clearance": 4.827,
+          "closeScale": false,
+          "score": 2.7199999999999998
+        },
+        {
+          "azimuth": 15,
+          "elevation": 0,
+          "closeOffset": [
+            0.6729,
+            0,
+            -2.5114
+          ],
+          "position": [
+            -86.3255,
+            63.8435,
+            23.1439
+          ],
+          "clearance": 4.9413,
+          "closeScale": false,
+          "score": 2.7199999999999998
+        }
+      ],
+      "fullClearCount": 76,
+      "nearClearCount": 273,
+      "attempts": 576,
+      "rejects": {
+        "balcones": 6,
+        "muro-sur": 6,
+        "sacristia": 6,
+        "bovedas-capillas": 1,
+        "capillas": 4
+      }
+    },
+    {
+      "id": "berenguer-sorolla",
+      "target": [
+        -84.4773,
+        66.9335,
+        25.946
+      ],
+      "bounds": [
+        [
+          -92.0794,
+          59.8335,
+          25.3379
+        ],
+        [
+          -76.8759,
+          74.0335,
+          26.374
+        ]
+      ],
+      "fullCandidates": [
+        {
+          "azimuth": 30,
+          "elevation": 5,
+          "offset": [
+            7.9696,
+            1.3945,
+            -13.8037
+          ],
+          "maxDistance": 80.6088,
+          "score": 7.8,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -66.3081,
+                70.1127,
+                -5.5241
+              ],
+              "clearance": 15.4116
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -44.3263,
+                73.959,
+                -43.5977
+              ],
+              "clearance": 22.089
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -62.3163,
+                70.8112,
+                -12.4381
+              ],
+              "clearance": 16.7309
+            }
+          ]
+        },
+        {
+          "azimuth": 45,
+          "elevation": 5,
+          "offset": [
+            11.2707,
+            1.3945,
+            -11.2707
+          ],
+          "maxDistance": 83.5232,
+          "score": 10.2,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -57.2666,
+                70.3002,
+                -1.2647
+              ],
+              "clearance": 15.1934
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -25.6423,
+                74.213,
+                -32.8891
+              ],
+              "clearance": 21.4458
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -51.5238,
+                71.0107,
+                -7.0076
+              ],
+              "clearance": 16.813
+            }
+          ]
+        },
+        {
+          "azimuth": 30,
+          "elevation": 15,
+          "offset": [
+            7.7274,
+            4.1411,
+            -13.3843
+          ],
+          "maxDistance": 84.5806,
+          "score": 13.8,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -66.4523,
+                76.5931,
+                -5.2743
+              ],
+              "clearance": 21.8647
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -43.6281,
+                88.8245,
+                -44.8071
+              ],
+              "clearance": 36.9545
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -62.3075,
+                78.8143,
+                -12.4534
+              ],
+              "clearance": 24.7354
+            }
+          ]
+        },
+        {
+          "azimuth": -75,
+          "elevation": 5,
+          "offset": [
+            -15.396,
+            1.3945,
+            -4.1253
+          ],
+          "maxDistance": 86.867,
+          "score": 15,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -124.0232,
+                70.5153,
+                15.3497
+              ],
+              "clearance": 10.9978
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -168.0651,
+                74.5044,
+                3.5487
+              ],
+              "clearance": 16.2051
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -132.0211,
+                71.2397,
+                13.2067
+              ],
+              "clearance": 11.7213
+            }
+          ]
+        },
+        {
+          "azimuth": 75,
+          "elevation": 5,
+          "offset": [
+            15.396,
+            1.3945,
+            -4.1253
+          ],
+          "maxDistance": 86.8657,
+          "score": 15,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -44.9324,
+                70.5152,
+                15.3499
+              ],
+              "clearance": 13.1509
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -0.8908,
+                74.5043,
+                3.549
+              ],
+              "clearance": 18.5695
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -36.9346,
+                71.2397,
+                13.2069
+              ],
+              "clearance": 15.9996
+            }
+          ]
+        },
+        {
+          "azimuth": 45,
+          "elevation": 15,
+          "offset": [
+            10.9282,
+            4.1411,
+            -10.9282
+          ],
+          "maxDistance": 90.0554,
+          "score": 16.2,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -56.794,
+                77.4237,
+                -1.7373
+              ],
+              "clearance": 22.4057
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -22.9683,
+                90.2415,
+                -35.563
+              ],
+              "clearance": 37.3878
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -50.6514,
+                79.7514,
+                -7.88
+              ],
+              "clearance": 25.7086
+            }
+          ]
+        },
+        {
+          "azimuth": 60,
+          "elevation": 15,
+          "offset": [
+            13.3843,
+            4.1411,
+            -7.7274
+          ],
+          "maxDistance": 94.0646,
+          "score": 18.6,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -48.6064,
+                78.032,
+                5.2359
+              ],
+              "clearance": 22.7313
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -5.7908,
+                91.2792,
+                -19.4837
+              ],
+              "clearance": 37.2967
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -40.8312,
+                80.4376,
+                0.7469
+              ],
+              "clearance": 25.7334
+            }
+          ]
+        },
+        {
+          "azimuth": 30,
+          "elevation": 25,
+          "offset": [
+            7.2505,
+            6.7619,
+            -12.5582
+          ],
+          "maxDistance": 85.9824,
+          "score": 19.8,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -67.696,
+                82.584,
+                -3.1202
+              ],
+              "clearance": 27.5515
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -45.5141,
+                103.2712,
+                -41.5404
+              ],
+              "clearance": 51.3745
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -63.6678,
+                86.3408,
+                -10.0972
+              ],
+              "clearance": 32.1247
+            }
+          ]
+        },
+        {
+          "azimuth": -75,
+          "elevation": 15,
+          "offset": [
+            -14.9282,
+            4.1411,
+            -4
+          ],
+          "maxDistance": 96.3371,
+          "score": 21,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -125.7291,
+                78.3768,
+                14.8926
+              ],
+              "clearance": 18.863
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -174.3611,
+                91.8673,
+                1.8617
+              ],
+              "clearance": 34.0349
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -134.5605,
+                80.8266,
+                12.5262
+              ],
+              "clearance": 21.3432
+            }
+          ]
+        },
+        {
+          "azimuth": 75,
+          "elevation": 15,
+          "offset": [
+            14.9282,
+            4.1411,
+            -4
+          ],
+          "maxDistance": 96.3347,
+          "score": 21,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -43.2269,
+                78.3764,
+                14.8929
+              ],
+              "clearance": 21.6482
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                5.4042,
+                91.8667,
+                1.8623
+              ],
+              "clearance": 35.7717
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -34.3956,
+                80.8262,
+                12.5266
+              ],
+              "clearance": 25.7599
+            }
+          ]
+        },
+        {
+          "azimuth": 45,
+          "elevation": 25,
+          "offset": [
+            10.2537,
+            6.7619,
+            -10.2537
+          ],
+          "maxDistance": 93.8514,
+          "score": 22.2,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -58.0727,
+                84.3462,
+                -0.4587
+              ],
+              "clearance": 29.0947
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -24.3321,
+                106.5968,
+                -34.1993
+              ],
+              "clearance": 53.7585
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -51.9455,
+                88.3869,
+                -6.5859
+              ],
+              "clearance": 34.1194
+            }
+          ]
+        },
+        {
+          "azimuth": 60,
+          "elevation": 25,
+          "offset": [
+            12.5582,
+            6.7619,
+            -7.2505
+          ],
+          "maxDistance": 99.6137,
+          "score": 24.6,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -49.7418,
+                85.6367,
+                5.8914
+              ],
+              "clearance": 30.0512
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -6.292,
+                109.032,
+                -19.1944
+              ],
+              "clearance": 55.0546
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -41.8514,
+                89.8852,
+                1.3359
+              ],
+              "clearance": 35.0766
+            }
+          ]
+        }
+      ],
+      "nearCandidates": [
+        {
+          "azimuth": 0,
+          "elevation": 0,
+          "closeOffset": [
+            0,
+            0,
+            -13
+          ],
+          "position": [
+            -84.4773,
+            66.9335,
+            12.946
+          ],
+          "clearance": 8.9687,
+          "closeScale": false,
+          "score": 0
+        },
+        {
+          "azimuth": 0,
+          "elevation": 0,
+          "closeOffset": [
+            0,
+            0,
+            -10
+          ],
+          "position": [
+            -84.4773,
+            66.9335,
+            15.946
+          ],
+          "clearance": 9.1405,
+          "closeScale": false,
+          "score": 1.2000000000000002
+        },
+        {
+          "azimuth": 15,
+          "elevation": 0,
+          "closeOffset": [
+            3.3646,
+            0,
+            -12.557
+          ],
+          "position": [
+            -81.1127,
+            66.9335,
+            13.3889
+          ],
+          "clearance": 9.5696,
+          "closeScale": false,
+          "score": 2.4
+        },
+        {
+          "azimuth": 15,
+          "elevation": 0,
+          "closeOffset": [
+            2.5882,
+            0,
+            -9.6593
+          ],
+          "position": [
+            -81.8891,
+            66.9335,
+            16.2867
+          ],
+          "clearance": 9.2711,
+          "closeScale": false,
+          "score": 3.6
+        },
+        {
+          "azimuth": 15,
+          "elevation": 0,
+          "closeOffset": [
+            4.1411,
+            0,
+            -15.4548
+          ],
+          "position": [
+            -80.3362,
+            66.9335,
+            10.4911
+          ],
+          "clearance": 9.185,
+          "closeScale": false,
+          "score": 3.6
+        },
+        {
+          "azimuth": 0,
+          "elevation": 8,
+          "closeOffset": [
+            0,
+            1.8093,
+            -12.8735
+          ],
+          "position": [
+            -84.4773,
+            68.7427,
+            13.0725
+          ],
+          "clearance": 10.7804,
+          "closeScale": false,
+          "score": 4.8
+        },
+        {
+          "azimuth": 30,
+          "elevation": 0,
+          "closeOffset": [
+            6.5,
+            0,
+            -11.2583
+          ],
+          "position": [
+            -77.9773,
+            66.9335,
+            14.6876
+          ],
+          "clearance": 9.589,
+          "closeScale": false,
+          "score": 4.8
+        },
+        {
+          "azimuth": 0,
+          "elevation": 8,
+          "closeOffset": [
+            0,
+            1.3917,
+            -9.9027
+          ],
+          "position": [
+            -84.4773,
+            68.3252,
+            16.0433
+          ],
+          "clearance": 10.5222,
+          "closeScale": false,
+          "score": 6
+        },
+        {
+          "azimuth": 30,
+          "elevation": 0,
+          "closeOffset": [
+            5,
+            0,
+            -8.6603
+          ],
+          "position": [
+            -79.4773,
+            66.9335,
+            17.2857
+          ],
+          "clearance": 9.2453,
+          "closeScale": false,
+          "score": 6
+        },
+        {
+          "azimuth": 30,
+          "elevation": 0,
+          "closeOffset": [
+            8,
+            0,
+            -13.8564
+          ],
+          "position": [
+            -76.4773,
+            66.9335,
+            12.0895
+          ],
+          "clearance": 9.8823,
+          "closeScale": false,
+          "score": 6
+        }
+      ],
+      "fullClearCount": 54,
+      "nearClearCount": 215,
+      "attempts": 515,
+      "rejects": {
+        "fachada": 17,
+        "capillas": 2,
+        "cubiertas": 8,
+        "pilares-capillas": 1,
+        "arcadas": 3,
+        "puentes-agua": 1,
+        "sacristia": 2,
+        "pilares": 3,
+        "abside": 5,
+        "nervios": 1,
+        "contrafuertes-abside": 1,
+        "santa-maria-sagrario": 1
+      }
+    },
+    {
+      "id": "berenguer-desvan",
+      "target": [
+        -84.4773,
+        72.2335,
+        25.946
+      ],
+      "bounds": [
+        [
+          -90.6294,
+          71.4335,
+          25.3428
+        ],
+        [
+          -78.1959,
+          72.9835,
+          26.3687
+        ]
+      ],
+      "fullCandidates": [
+        {
+          "azimuth": 30,
+          "elevation": 5,
+          "offset": [
+            7.9696,
+            1.3945,
+            -13.8037
+          ],
+          "maxDistance": 48.977,
+          "score": 7.8,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -72.3834,
+                74.3496,
+                4.9986
+              ],
+              "clearance": 18.3903
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -60.082,
+                76.5021,
+                -16.308
+              ],
+              "clearance": 22.6337
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -73.6811,
+                74.1226,
+                7.2464
+              ],
+              "clearance": 17.8198
+            }
+          ]
+        },
+        {
+          "azimuth": 45,
+          "elevation": 5,
+          "offset": [
+            11.2707,
+            1.3945,
+            -11.2707
+          ],
+          "maxDistance": 43.0489,
+          "score": 10.2,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -68.7464,
+                74.1798,
+                10.215
+              ],
+              "clearance": 17.5182
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -54.153,
+                75.9854,
+                -4.3784
+              ],
+              "clearance": 21.4028
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -70.2859,
+                73.9893,
+                11.7545
+              ],
+              "clearance": 16.9175
+            }
+          ]
+        },
+        {
+          "azimuth": -60,
+          "elevation": 5,
+          "offset": [
+            -13.8037,
+            1.3945,
+            -7.9696
+          ],
+          "maxDistance": 33.5458,
+          "score": 12.6,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -100.4405,
+                73.8461,
+                16.7296
+              ],
+              "clearance": 14.6831
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -113.4183,
+                75.1572,
+                9.2369
+              ],
+              "clearance": 15.9942
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -99.0715,
+                73.7078,
+                17.52
+              ],
+              "clearance": 14.546
+            }
+          ]
+        },
+        {
+          "azimuth": 60,
+          "elevation": 5,
+          "offset": [
+            13.8037,
+            1.3945,
+            -7.9696
+          ],
+          "maxDistance": 34.1918,
+          "score": 12.6,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -68.2006,
+                73.8778,
+                16.5486
+              ],
+              "clearance": 15.3904
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -54.9791,
+                75.2135,
+                8.9151
+              ],
+              "clearance": 18.8255
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -69.5955,
+                73.7369,
+                17.3539
+              ],
+              "clearance": 15.1758
+            }
+          ]
+        },
+        {
+          "azimuth": 30,
+          "elevation": 15,
+          "offset": [
+            7.7274,
+            4.1411,
+            -13.3843
+          ],
+          "maxDistance": 49.0254,
+          "score": 13.8,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -72.7275,
+                78.5302,
+                5.5947
+              ],
+              "clearance": 22.4836
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -60.7999,
+                84.9222,
+                -15.0646
+              ],
+              "clearance": 30.9945
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -73.9858,
+                77.8559,
+                7.7741
+              ],
+              "clearance": 21.4515
+            }
+          ]
+        },
+        {
+          "azimuth": -75,
+          "elevation": 5,
+          "offset": [
+            -15.396,
+            1.3945,
+            -4.1253
+          ],
+          "maxDistance": 22.6029,
+          "score": 15,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -97.8142,
+                73.4415,
+                22.3724
+              ],
+              "clearance": 14.2984
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -106.227,
+                74.2034,
+                20.1181
+              ],
+              "clearance": 14.4754
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -97.6685,
+                73.4283,
+                22.4114
+              ],
+              "clearance": 14.2905
+            }
+          ]
+        },
+        {
+          "azimuth": 75,
+          "elevation": 5,
+          "offset": [
+            15.396,
+            1.3945,
+            -4.1253
+          ],
+          "maxDistance": 23.0093,
+          "score": 15,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -70.8902,
+                73.4641,
+                22.3053
+              ],
+              "clearance": 14.2962
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -62.3366,
+                74.2389,
+                20.0134
+              ],
+              "clearance": 14.7324
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -71.0999,
+                73.4451,
+                22.3615
+              ],
+              "clearance": 14.2959
+            }
+          ]
+        },
+        {
+          "azimuth": 45,
+          "elevation": 15,
+          "offset": [
+            10.9282,
+            4.1411,
+            -10.9282
+          ],
+          "maxDistance": 43.0525,
+          "score": 16.2,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -69.2219,
+                78.0143,
+                10.6905
+              ],
+              "clearance": 21.2279
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -55.0719,
+                83.3763,
+                -3.4594
+              ],
+              "clearance": 28.6605
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -70.7146,
+                77.4487,
+                12.1832
+              ],
+              "clearance": 20.2835
+            }
+          ]
+        },
+        {
+          "azimuth": -60,
+          "elevation": 15,
+          "offset": [
+            -13.3843,
+            4.1411,
+            -7.7274
+          ],
+          "maxDistance": 33.5176,
+          "score": 18.6,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -99.9319,
+                77.0151,
+                17.0233
+              ],
+              "clearance": 17.8521
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -112.5153,
+                80.9085,
+                9.7582
+              ],
+              "clearance": 21.7454
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -99.3435,
+                76.8331,
+                17.363
+              ],
+              "clearance": 17.6701
+            }
+          ]
+        },
+        {
+          "azimuth": 60,
+          "elevation": 15,
+          "offset": [
+            13.3843,
+            4.1411,
+            -7.7274
+          ],
+          "maxDistance": 34.1599,
+          "score": 18.6,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -68.7219,
+                77.1082,
+                16.8495
+              ],
+              "clearance": 18.5899
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -55.902,
+                81.0747,
+                9.448
+              ],
+              "clearance": 24.5499
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -69.3816,
+                76.9041,
+                17.2304
+              ],
+              "clearance": 18.3535
+            }
+          ]
+        },
+        {
+          "azimuth": 30,
+          "elevation": 25,
+          "offset": [
+            7.2505,
+            6.7619,
+            -12.5582
+          ],
+          "maxDistance": 48.9795,
+          "score": 19.8,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -73.4736,
+                82.4958,
+                6.8869
+              ],
+              "clearance": 26.2497
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -62.2821,
+                92.9331,
+                -12.4973
+              ],
+              "clearance": 38.8583
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -74.6542,
+                81.3947,
+                8.9318
+              ],
+              "clearance": 24.7757
+            }
+          ]
+        },
+        {
+          "azimuth": -75,
+          "elevation": 15,
+          "offset": [
+            -14.9282,
+            4.1411,
+            -4
+          ],
+          "maxDistance": 30.3193,
+          "score": 21,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -99.7711,
+                76.476,
+                21.848
+              ],
+              "clearance": 17.2628
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -112.7656,
+                80.0807,
+                18.3662
+              ],
+              "clearance": 20.4232
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -102.1309,
+                77.1306,
+                21.2157
+              ],
+              "clearance": 17.8562
+            }
+          ]
+        }
+      ],
+      "nearCandidates": [
+        {
+          "azimuth": 0,
+          "elevation": 0,
+          "closeOffset": [
+            0,
+            0,
+            -10
+          ],
+          "position": [
+            -84.4773,
+            72.2335,
+            15.946
+          ],
+          "clearance": 14.4405,
+          "closeScale": false,
+          "score": 0
+        },
+        {
+          "azimuth": 0,
+          "elevation": 0,
+          "closeOffset": [
+            0,
+            0,
+            -8
+          ],
+          "position": [
+            -84.4773,
+            72.2335,
+            17.946
+          ],
+          "clearance": 14.1803,
+          "closeScale": false,
+          "score": 0.8
+        },
+        {
+          "azimuth": 0,
+          "elevation": 0,
+          "closeOffset": [
+            0,
+            0,
+            -13
+          ],
+          "position": [
+            -84.4773,
+            72.2335,
+            12.946
+          ],
+          "clearance": 14.2687,
+          "closeScale": false,
+          "score": 1.2000000000000002
+        },
+        {
+          "azimuth": 15,
+          "elevation": 0,
+          "closeOffset": [
+            2.5882,
+            0,
+            -9.6593
+          ],
+          "position": [
+            -81.8891,
+            72.2335,
+            16.2867
+          ],
+          "clearance": 14.5711,
+          "closeScale": false,
+          "score": 2.4
+        },
+        {
+          "azimuth": -15,
+          "elevation": 0,
+          "closeOffset": [
+            -2.0706,
+            0,
+            -7.7274
+          ],
+          "position": [
+            -86.5479,
+            72.2335,
+            18.2185
+          ],
+          "clearance": 13.3902,
+          "closeScale": false,
+          "score": 3.2
+        },
+        {
+          "azimuth": 15,
+          "elevation": 0,
+          "closeOffset": [
+            2.0706,
+            0,
+            -7.7274
+          ],
+          "position": [
+            -82.4068,
+            72.2335,
+            18.2185
+          ],
+          "clearance": 14.2769,
+          "closeScale": false,
+          "score": 3.2
+        },
+        {
+          "azimuth": 15,
+          "elevation": 0,
+          "closeOffset": [
+            3.3646,
+            0,
+            -12.557
+          ],
+          "position": [
+            -81.1127,
+            72.2335,
+            13.3889
+          ],
+          "clearance": 14.8696,
+          "closeScale": false,
+          "score": 3.6
+        },
+        {
+          "azimuth": 0,
+          "elevation": 8,
+          "closeOffset": [
+            0,
+            1.3917,
+            -9.9027
+          ],
+          "position": [
+            -84.4773,
+            73.6252,
+            16.0433
+          ],
+          "clearance": 15.8222,
+          "closeScale": false,
+          "score": 4.8
+        },
+        {
+          "azimuth": 30,
+          "elevation": 0,
+          "closeOffset": [
+            5,
+            0,
+            -8.6603
+          ],
+          "position": [
+            -79.4773,
+            72.2335,
+            17.2857
+          ],
+          "clearance": 14.5453,
+          "closeScale": false,
+          "score": 4.8
+        },
+        {
+          "azimuth": 15,
+          "elevation": 0,
+          "closeOffset": [
+            4.1411,
+            0,
+            -15.4548
+          ],
+          "position": [
+            -80.3362,
+            72.2335,
+            10.4911
+          ],
+          "clearance": 14.485,
+          "closeScale": false,
+          "score": 4.800000000000001
+        }
+      ],
+      "fullClearCount": 68,
+      "nearClearCount": 270,
+      "attempts": 544,
+      "rejects": {
+        "cornisa": 15,
+        "capillas": 2,
+        "arcadas": 1,
+        "bovedas-laterales": 1,
+        "puentes-agua": 1,
+        "pilares": 1,
+        "abside": 6,
+        "nervios": 2,
+        "cubiertas": 1,
+        "contrafuertes-abside": 1
+      }
+    },
+    {
+      "id": "berenguer-anexo",
+      "target": [
+        -96.425,
+        63.925,
+        36.36
+      ],
+      "bounds": [
+        [
+          -99.4457,
+          62.02,
+          35.7132
+        ],
+        [
+          -93.4043,
+          65.83,
+          37.6868
+        ]
+      ],
+      "fullCandidates": [
+        {
+          "azimuth": 0,
+          "elevation": 75,
+          "offset": [
+            0,
+            15.4548,
+            -4.1411
+          ],
+          "maxDistance": 26.7143,
+          "score": 45,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -96.425,
+                76.9777,
+                32.8625
+              ],
+              "clearance": 16.3725
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -96.425,
+                89.729,
+                29.4458
+              ],
+              "clearance": 29.6134
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -96.425,
+                75.6325,
+                33.223
+              ],
+              "clearance": 14.8245
+            }
+          ]
+        },
+        {
+          "azimuth": 45,
+          "elevation": 65,
+          "offset": [
+            4.7814,
+            14.5009,
+            -4.7814
+          ],
+          "maxDistance": 37.3959,
+          "score": 46.2,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -91.6069,
+                78.5373,
+                31.5419
+              ],
+              "clearance": 18.7138
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -85.2497,
+                97.8172,
+                25.1847
+              ],
+              "clearance": 38.438
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -90.4525,
+                82.0384,
+                30.3875
+              ],
+              "clearance": 22.215
+            }
+          ]
+        },
+        {
+          "azimuth": 15,
+          "elevation": 75,
+          "offset": [
+            1.0718,
+            15.4548,
+            -4
+          ],
+          "maxDistance": 28.3478,
+          "score": 47.4,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -95.4808,
+                77.5405,
+                32.836
+              ],
+              "clearance": 17.3331
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -94.5261,
+                91.3069,
+                29.273
+              ],
+              "clearance": 31.4064
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -95.4251,
+                78.3434,
+                32.6282
+              ],
+              "clearance": 18.2754
+            }
+          ]
+        },
+        {
+          "azimuth": 0,
+          "elevation": 83,
+          "offset": [
+            0,
+            15.8807,
+            -1.9499
+          ],
+          "maxDistance": 26.6733,
+          "score": 49.8,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -96.425,
+                77.2968,
+                34.7181
+              ],
+              "clearance": 16.1151
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -96.425,
+                90.3995,
+                33.1093
+              ],
+              "clearance": 29.6555
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -96.425,
+                75.9146,
+                34.8879
+              ],
+              "clearance": 14.7067
+            }
+          ]
+        },
+        {
+          "azimuth": 30,
+          "elevation": 75,
+          "offset": [
+            2.0706,
+            15.4548,
+            -3.5863
+          ],
+          "maxDistance": 32.7338,
+          "score": 49.8,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -94.5361,
+                78.0242,
+                33.0883
+              ],
+              "clearance": 17.8467
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -92.1889,
+                95.5434,
+                29.0229
+              ],
+              "clearance": 35.72
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -94.1098,
+                81.2057,
+                32.35
+              ],
+              "clearance": 21.3822
+            }
+          ]
+        },
+        {
+          "azimuth": 15,
+          "elevation": 83,
+          "offset": [
+            0.5047,
+            15.8807,
+            -1.8835
+          ],
+          "maxDistance": 28.4766,
+          "score": 52.199999999999996,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -95.9763,
+                78.0435,
+                34.6855
+              ],
+              "clearance": 16.8652
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -95.5268,
+                92.1893,
+                33.0078
+              ],
+              "clearance": 31.8665
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -95.9781,
+                77.9867,
+                34.6923
+              ],
+              "clearance": 16.8074
+            }
+          ]
+        },
+        {
+          "azimuth": 45,
+          "elevation": 75,
+          "offset": [
+            2.9282,
+            15.4548,
+            -2.9282
+          ],
+          "maxDistance": 36.7381,
+          "score": 52.2,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -93.4551,
+                79.5999,
+                33.3901
+              ],
+              "clearance": 19.2312
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -89.7014,
+                99.4113,
+                29.6364
+              ],
+              "clearance": 39.5879
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -92.7735,
+                83.1976,
+                32.7084
+              ],
+              "clearance": 23.2464
+            }
+          ]
+        },
+        {
+          "azimuth": 30,
+          "elevation": 83,
+          "offset": [
+            0.975,
+            15.8807,
+            -1.6887
+          ],
+          "maxDistance": 31.2269,
+          "score": 54.599999999999994,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -95.5472,
+                78.2239,
+                34.8395
+              ],
+              "clearance": 17.0206
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -94.5222,
+                94.9191,
+                33.0643
+              ],
+              "clearance": 34.7544
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -95.3705,
+                81.1009,
+                34.5336
+              ],
+              "clearance": 19.9832
+            }
+          ]
+        },
+        {
+          "azimuth": 60,
+          "elevation": 75,
+          "offset": [
+            3.5863,
+            15.4548,
+            -2.0706
+          ],
+          "maxDistance": 38.7198,
+          "score": 54.6,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -92.6067,
+                80.3796,
+                34.1555
+              ],
+              "clearance": 19.5422
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -87.7462,
+                101.3255,
+                31.3493
+              ],
+              "clearance": 41.502
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -91.724,
+                84.1833,
+                33.6459
+              ],
+              "clearance": 23.6145
+            }
+          ]
+        },
+        {
+          "azimuth": 45,
+          "elevation": 83,
+          "offset": [
+            1.3788,
+            15.8807,
+            -1.3788
+          ],
+          "maxDistance": 35.4061,
+          "score": 57,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -95.05,
+                79.7625,
+                34.985
+              ],
+              "clearance": 18.5351
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -93.3739,
+                99.0672,
+                33.3089
+              ],
+              "clearance": 38.7483
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -94.7456,
+                83.2682,
+                34.6806
+              ],
+              "clearance": 22.2053
+            }
+          ]
+        },
+        {
+          "azimuth": 75,
+          "elevation": 75,
+          "offset": [
+            4,
+            15.4548,
+            -1.0718
+          ],
+          "maxDistance": 38.5439,
+          "score": 57,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -92.1842,
+                80.3104,
+                35.2237
+              ],
+              "clearance": 18.9137
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -86.789,
+                101.1555,
+                33.778
+              ],
+              "clearance": 40.4564
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -91.2044,
+                84.0958,
+                34.9611
+              ],
+              "clearance": 22.6923
+            }
+          ]
+        },
+        {
+          "azimuth": 60,
+          "elevation": 83,
+          "offset": [
+            1.6887,
+            15.8807,
+            -0.975
+          ],
+          "maxDistance": 37.4744,
+          "score": 59.4,
+          "trials": [
+            {
+              "width": 1363,
+              "height": 936,
+              "position": [
+                -94.65,
+                80.6175,
+                35.3352
+              ],
+              "clearance": 19.3225
+            },
+            {
+              "width": 390,
+              "height": 844,
+              "position": [
+                -92.4699,
+                101.1201,
+                34.0765
+              ],
+              "clearance": 40.3293
+            },
+            {
+              "width": 844,
+              "height": 390,
+              "position": [
+                -94.2541,
+                84.3407,
+                35.1066
+              ],
+              "clearance": 23.0585
+            }
+          ]
+        }
+      ],
+      "nearCandidates": [
+        {
+          "azimuth": 0,
+          "elevation": 70,
+          "closeOffset": [
+            0,
+            5.1683,
+            -1.8811
+          ],
+          "position": [
+            -96.425,
+            69.0933,
+            34.4789
+          ],
+          "clearance": 7.9483,
+          "closeScale": false,
+          "score": 42
+        },
+        {
+          "azimuth": 0,
+          "elevation": 70,
+          "closeOffset": [
+            0,
+            3.7588,
+            -1.3681
+          ],
+          "position": [
+            -96.425,
+            67.6838,
+            34.9919
+          ],
+          "clearance": 6.4599,
+          "closeScale": false,
+          "score": 42.6
+        },
+        {
+          "azimuth": 0,
+          "elevation": 70,
+          "closeOffset": [
+            0,
+            7.0477,
+            -2.5652
+          ],
+          "position": [
+            -96.425,
+            70.9727,
+            33.7948
+          ],
+          "clearance": 9.9329,
+          "closeScale": false,
+          "score": 42.8
+        },
+        {
+          "azimuth": 0,
+          "elevation": 70,
+          "closeOffset": [
+            0,
+            9.3969,
+            -3.4202
+          ],
+          "position": [
+            -96.425,
+            73.3219,
+            32.9398
+          ],
+          "clearance": 12.6732,
+          "closeScale": false,
+          "score": 43.8
+        },
+        {
+          "azimuth": 15,
+          "elevation": 70,
+          "closeOffset": [
+            0.4869,
+            5.1683,
+            -1.817
+          ],
+          "position": [
+            -95.9381,
+            69.0933,
+            34.543
+          ],
+          "clearance": 7.9368,
+          "closeScale": false,
+          "score": 44.4
+        },
+        {
+          "azimuth": 15,
+          "elevation": 70,
+          "closeOffset": [
+            0.3541,
+            3.7588,
+            -1.3215
+          ],
+          "position": [
+            -96.0709,
+            67.6838,
+            35.0385
+          ],
+          "clearance": 6.4514,
+          "closeScale": false,
+          "score": 45
+        },
+        {
+          "azimuth": 75,
+          "elevation": 55,
+          "closeOffset": [
+            3.0472,
+            4.5053,
+            -0.8165
+          ],
+          "position": [
+            -93.3778,
+            68.4303,
+            35.5435
+          ],
+          "clearance": 7.0422,
+          "closeScale": false,
+          "score": 45
+        },
+        {
+          "azimuth": 15,
+          "elevation": 70,
+          "closeOffset": [
+            0.6639,
+            7.0477,
+            -2.4777
+          ],
+          "position": [
+            -95.7611,
+            70.9727,
+            33.8823
+          ],
+          "clearance": 10.063,
+          "closeScale": false,
+          "score": 45.199999999999996
+        },
+        {
+          "azimuth": 75,
+          "elevation": 55,
+          "closeOffset": [
+            2.2161,
+            3.2766,
+            -0.5938
+          ],
+          "position": [
+            -94.2089,
+            67.2016,
+            35.7662
+          ],
+          "clearance": 5.8233,
+          "closeScale": false,
+          "score": 45.6
+        },
+        {
+          "azimuth": 15,
+          "elevation": 70,
+          "closeOffset": [
+            0.8852,
+            9.3969,
+            -3.3037
+          ],
+          "position": [
+            -95.5398,
+            73.3219,
+            33.0563
+          ],
+          "clearance": 12.9666,
+          "closeScale": false,
+          "score": 46.199999999999996
+        }
+      ],
+      "fullClearCount": 37,
+      "nearClearCount": 67,
+      "attempts": 947,
+      "rejects": {
+        "anexo": 45,
+        "fachada": 5,
+        "casa": 21,
+        "tejado-norte": 4,
+        "tejado-fachada": 2,
+        "tejado-oeste": 18,
+        "arcos-anexo": 41,
+        "tejado-sur": 1,
+        "cuerpo-sur": 3,
+        "ground": 1,
+        "santa-maria-sagrario": 36,
+        "juderia-caserio-norte": 2
+      }
+    }
+  ]
+}

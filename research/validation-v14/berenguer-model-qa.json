@@ -1,0 +1,328 @@
+{
+  "pass": true,
+  "stats": {
+    "sourceBuildings": 6,
+    "interiorCourtyards": 2,
+    "levelsAtDifferentHeights": true,
+    "segmentalArcades": 2,
+    "retainedAnnexArches": 2,
+    "ancientBlocks": 70,
+    "ancientWallHeight": 4,
+    "subterraneanChambers": 1,
+    "stops": 18,
+    "meshes": 115,
+    "triangles": 105801,
+    "modelVersion": "v14",
+    "sourceKeys": [
+      "bg-turismo",
+      "bg-skrq",
+      "bg-conservacion2022",
+      "bg-anexo2025",
+      "bg-aranegui1992",
+      "bg-martinez2012",
+      "bg-osm",
+      "bg-catastro",
+      "bg-terreno"
+    ],
+    "survey": false
+  },
+  "checks": [
+    {
+      "pass": true,
+      "label": "all attributes are finite, including generated block faces, roof tiles and true apertures"
+    },
+    {
+      "pass": true,
+      "label": "all geometries have complete triangles"
+    },
+    {
+      "pass": true,
+      "label": "Diana and house remain separate roots without duplicated parenting"
+    },
+    {
+      "pass": true,
+      "label": "all six replaced cadastral parts are excluded by exact identifiers"
+    },
+    {
+      "pass": true,
+      "label": "eighteen documentary stops resolve to physical model focuses"
+    },
+    {
+      "pass": true,
+      "label": "model/documentary coordinates remain synchronized"
+    },
+    {
+      "pass": true,
+      "label": "both segmental arcades remain genuinely open at nine rays each"
+    },
+    {
+      "pass": true,
+      "label": "portal has an actual arched void behind its recessed timber leaves"
+    },
+    {
+      "pass": true,
+      "label": "continuous backing closes joints across all ancient wall sections"
+    },
+    {
+      "pass": true,
+      "label": "wall mesh arrays participate in shared highlighting"
+    },
+    {
+      "pass": true,
+      "label": "thematic reading restores every original material and geometry"
+    },
+    {
+      "pass": true,
+      "label": "closed house conceals the underground chamber with real upper geometry"
+    },
+    {
+      "pass": true,
+      "label": "section rays reach the dry chamber floor through the removed half vault"
+    },
+    {
+      "pass": true,
+      "label": "house section does not toggle archaeological reading mode"
+    },
+    {
+      "pass": true,
+      "label": "closing the section restores all original mesh visibility"
+    },
+    {
+      "pass": true,
+      "label": "two stair flights meet their landing and upper courtyard exactly"
+    },
+    {
+      "pass": true,
+      "label": "map has18 selectable targets at 1340×850"
+    },
+    {
+      "pass": true,
+      "label": "map hit targets remain distinct at 1340×850"
+    },
+    {
+      "pass": true,
+      "label": "map has18 selectable targets at 390×420"
+    },
+    {
+      "pass": true,
+      "label": "map hit targets remain distinct at 390×420"
+    },
+    {
+      "pass": true,
+      "label": "map has18 selectable targets at 320×220"
+    },
+    {
+      "pass": true,
+      "label": "map hit targets remain distinct at 320×220"
+    },
+    {
+      "pass": true,
+      "label": "malformed cartographic outline fails closed rather than emitting nonfinite canvas calls"
+    }
+  ],
+  "errors": [],
+  "openings": [
+    {
+      "id": "arcade-0",
+      "u": -1,
+      "dy": -0.5,
+      "clear": true
+    },
+    {
+      "id": "arcade-0",
+      "u": -1,
+      "dy": 0,
+      "clear": true
+    },
+    {
+      "id": "arcade-0",
+      "u": -1,
+      "dy": 0.5,
+      "clear": true
+    },
+    {
+      "id": "arcade-0",
+      "u": 0,
+      "dy": -0.5,
+      "clear": true
+    },
+    {
+      "id": "arcade-0",
+      "u": 0,
+      "dy": 0,
+      "clear": true
+    },
+    {
+      "id": "arcade-0",
+      "u": 0,
+      "dy": 0.5,
+      "clear": true
+    },
+    {
+      "id": "arcade-0",
+      "u": 1,
+      "dy": -0.5,
+      "clear": true
+    },
+    {
+      "id": "arcade-0",
+      "u": 1,
+      "dy": 0,
+      "clear": true
+    },
+    {
+      "id": "arcade-0",
+      "u": 1,
+      "dy": 0.5,
+      "clear": true
+    },
+    {
+      "id": "arcade-1",
+      "u": -1,
+      "dy": -0.5,
+      "clear": true
+    },
+    {
+      "id": "arcade-1",
+      "u": -1,
+      "dy": 0,
+      "clear": true
+    },
+    {
+      "id": "arcade-1",
+      "u": -1,
+      "dy": 0.5,
+      "clear": true
+    },
+    {
+      "id": "arcade-1",
+      "u": 0,
+      "dy": -0.5,
+      "clear": true
+    },
+    {
+      "id": "arcade-1",
+      "u": 0,
+      "dy": 0,
+      "clear": true
+    },
+    {
+      "id": "arcade-1",
+      "u": 0,
+      "dy": 0.5,
+      "clear": true
+    },
+    {
+      "id": "arcade-1",
+      "u": 1,
+      "dy": -0.5,
+      "clear": true
+    },
+    {
+      "id": "arcade-1",
+      "u": 1,
+      "dy": 0,
+      "clear": true
+    },
+    {
+      "id": "arcade-1",
+      "u": 1,
+      "dy": 0.5,
+      "clear": true
+    }
+  ],
+  "portal": [
+    {
+      "u": -0.6,
+      "dy": -1.1,
+      "clear": true
+    },
+    {
+      "u": -0.6,
+      "dy": -0.4,
+      "clear": true
+    },
+    {
+      "u": -0.6,
+      "dy": 0.1,
+      "clear": true
+    },
+    {
+      "u": 0,
+      "dy": -1.1,
+      "clear": true
+    },
+    {
+      "u": 0,
+      "dy": -0.4,
+      "clear": true
+    },
+    {
+      "u": 0,
+      "dy": 0.1,
+      "clear": true
+    },
+    {
+      "u": 0.6,
+      "dy": -1.1,
+      "clear": true
+    },
+    {
+      "u": 0.6,
+      "dy": -0.4,
+      "clear": true
+    },
+    {
+      "u": 0.6,
+      "dy": 0.1,
+      "clear": true
+    }
+  ],
+  "wallSamples": 225,
+  "section": {
+    "closed": [
+      {
+        "component": "forjado-sobre-aljibe",
+        "y": 62.150001525878906
+      },
+      {
+        "component": "forjado-sobre-aljibe",
+        "y": 62.150001525878906
+      }
+    ],
+    "open": [
+      {
+        "component": "aljibe",
+        "y": 59.150001525878906
+      },
+      {
+        "component": "aljibe",
+        "y": 59.150001525878906
+      }
+    ]
+  },
+  "maps": [
+    {
+      "w": 1340,
+      "h": 850,
+      "targets": 18,
+      "scale": 20
+    },
+    {
+      "w": 390,
+      "h": 420,
+      "targets": 18,
+      "scale": 20
+    },
+    {
+      "w": 320,
+      "h": 220,
+      "targets": 18,
+      "scale": 20
+    }
+  ],
+  "limitations": [
+    "Geometry is a documented interpretation, not a measured interior survey.",
+    "These checks do not substitute integrated context/camera checks or browser WebGL validation."
+  ]
+}

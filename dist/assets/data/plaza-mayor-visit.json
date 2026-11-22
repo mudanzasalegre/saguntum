@@ -1,0 +1,1533 @@
+{
+  "schemaVersion": 1,
+  "id": "plaza-mayor",
+  "title": "Plaça Major y Puerta del Almudín",
+  "subtitle": "Dieciséis paradas entre soportales, mercado y ciudad",
+  "introduction": "Explora la plaza como un conjunto vivo: galerías que atraviesan varias fincas, columnas reutilizadas, fachadas transformadas y calles que enlazan con Santa María y la ladera. El portal del Almudín se sitúa bajo el soportal del número 17. Cada parada distingue lo que se conserva, lo que cuentan las fuentes y lo que la maqueta interpreta.",
+  "researchDate": "2026-11-19",
+  "regionsLabel": "ámbitos",
+  "mapButtonLabel": "Plano de la plaza",
+  "overviewButtonLabel": "Ver conjunto",
+  "readingModeLabel": "Leer las capas",
+  "readingModeNote": "Los colores distinguen elementos medievales, transformaciones modernas, arquitectura contemporánea, encuentros de etapas e interpretaciones. Una fachada puede contener materiales de varias épocas; el color no fecha cada piedra.",
+  "timelineIntroduction": "La plaza acumula cambios de uso, propietarios y edificios. Las fechas documentales no equivalen siempre a una fecha de construcción; el traslado del almudín a Abril permanece sin datación precisa.",
+  "visitAriaLabel": "Visita documentada a la Plaça Major, el Almudín y su entorno",
+  "regions": [
+    {
+      "id": "conjunto",
+      "name": "La plaza y el mercado",
+      "aliases": [],
+      "summary": "Lee el espacio abierto y la vida que lo organizó.",
+      "coordinate": [
+        -0.27864,
+        39.67941
+      ],
+      "sourceIds": [
+        "pm-pep",
+        "pm-pnoa",
+        "pm-terreno",
+        "pm-rutas",
+        "pm-turismo",
+        "pm-catastro",
+        "pm-osm",
+        "pm-chabret"
+      ],
+      "stopIds": [
+        "plaza-conjunto",
+        "plaza-mercado"
+      ]
+    },
+    {
+      "id": "soportales",
+      "name": "Galerías, columnas y piedras",
+      "aliases": [],
+      "summary": "Compara los apoyos y sigue la reutilización de materiales.",
+      "coordinate": [
+        -0.27866,
+        39.67942
+      ],
+      "sourceIds": [
+        "pm-pep",
+        "pm-rutas",
+        "pm-romano",
+        "pm-turismo",
+        "pm-lapidas",
+        "pm-catastro"
+      ],
+      "stopIds": [
+        "plaza-soportales",
+        "plaza-columnas",
+        "plaza-epigrafia"
+      ]
+    },
+    {
+      "id": "almudin",
+      "name": "Almudín, escudo y abastecimiento",
+      "aliases": [],
+      "summary": "Acércate al portal y distingue las diferentes historias del grano y del pan.",
+      "coordinate": [
+        -0.27857,
+        39.67964
+      ],
+      "sourceIds": [
+        "pm-pep",
+        "pm-rutas",
+        "pm-catastro",
+        "pm-forns",
+        "pm-chabret",
+        "pm-rosado",
+        "pm-rosario-2024"
+      ],
+      "stopIds": [
+        "plaza-almudin",
+        "plaza-escudo",
+        "plaza-abasto",
+        "plaza-forn"
+      ]
+    },
+    {
+      "id": "memoria",
+      "name": "Gobierno, medidas y Pescadería",
+      "aliases": [],
+      "summary": "Relaciona el mercado con las instituciones y la plaza vecina.",
+      "coordinate": [
+        -0.27832,
+        39.67967
+      ],
+      "sourceIds": [
+        "pm-chabret",
+        "pm-turismo",
+        "pm-osm",
+        "pm-ayuntamiento"
+      ],
+      "stopIds": [
+        "plaza-mustassaf",
+        "plaza-peixateria",
+        "plaza-vila"
+      ]
+    },
+    {
+      "id": "entorno",
+      "name": "La plaza en su entorno",
+      "aliases": [],
+      "summary": "Continúa hacia la iglesia, el agua, las calles y la ladera.",
+      "coordinate": [
+        -0.27867,
+        39.67925
+      ],
+      "sourceIds": [
+        "pm-santa-maria",
+        "pm-lapidas",
+        "pm-regantes",
+        "pm-turismo",
+        "pm-catastro",
+        "pm-rutas",
+        "pm-caja",
+        "pm-osm",
+        "pm-museo",
+        "pm-terreno"
+      ],
+      "stopIds": [
+        "plaza-santa-maria",
+        "plaza-cavallers",
+        "plaza-carrer-major",
+        "plaza-carrer-castell"
+      ]
+    }
+  ],
+  "stops": [
+    {
+      "id": "plaza-conjunto",
+      "title": "La plaza como una habitación de la ciudad",
+      "label": "El conjunto",
+      "regionId": "conjunto",
+      "period": "mixed",
+      "coordinate": [
+        -0.27863,
+        39.67943
+      ],
+      "coordinates": [
+        -0.27863,
+        39.67943
+      ],
+      "intro": "Empieza en el espacio abierto y gira lentamente. Mira dónde se estrechan las salidas, cómo cambian las alturas y qué pasos continúan por debajo de las viviendas. La visita sigue esas relaciones antes de acercarse a cada pieza.",
+      "narrative": "Empieza en el espacio abierto y gira lentamente. Mira dónde se estrechan las salidas, cómo cambian las alturas y qué pasos continúan por debajo de las viviendas. La visita sigue esas relaciones antes de acercarse a cada pieza.",
+      "facts": [
+        {
+          "text": "La Plaça Major es un recinto alargado con soportales y un antiguo papel comercial.",
+          "sourceIds": [
+            "pm-rutas"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La síntesis municipal vincula su apertura y la de la Pescadería a la transformación urbana medieval.",
+          "sourceIds": [
+            "pm-turismo"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La cartografía conserva parcelas diferentes: la plaza no es un edificio único ni una fachada simétrica.",
+          "sourceIds": [
+            "pm-catastro",
+            "pm-osm"
+          ],
+          "confidence": "interpretive"
+        }
+      ],
+      "lookFor": "Compara el espacio central, las galerías y los cuatro arranques de calle.",
+      "modelNote": "La maqueta representa un conjunto transformado. Huellas, alturas y fachadas proceden de evidencias de distinta precisión; no es un levantamiento fotogramétrico.",
+      "sourceIds": [
+        "pm-pep",
+        "pm-pnoa",
+        "pm-terreno",
+        "pm-rutas",
+        "pm-turismo",
+        "pm-catastro",
+        "pm-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Punto de observación registrado sobre el conjunto cartográfico y el modelo; no representa un acceso legal ni una posición arqueológica medida.",
+      "osmIds": [],
+      "order": 1,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "pm-catastro",
+        "pm-osm"
+      ]
+    },
+    {
+      "id": "plaza-mercado",
+      "title": "El mercado y la vida cotidiana",
+      "label": "El mercado",
+      "regionId": "conjunto",
+      "period": "medieval",
+      "coordinate": [
+        -0.278628,
+        39.679427
+      ],
+      "coordinates": [
+        -0.278628,
+        39.679427
+      ],
+      "intro": "Imagina la plaza ocupada por actividad, mientras mantienes a la vista su forma actual. El espacio libre ayuda a entender cómo podían convivir el paso, la venta y la conversación bajo los porches.",
+      "narrative": "Imagina la plaza ocupada por actividad, mientras mantienes a la vista su forma actual. El espacio libre ayuda a entender cómo podían convivir el paso, la venta y la conversación bajo los porches.",
+      "facts": [
+        {
+          "text": "Aquí se celebraba tradicionalmente el mercado semanal.",
+          "sourceIds": [
+            "pm-rutas"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La proximidad de las plazas Mayor y Pescadería organizaba distintas actividades de abastecimiento.",
+          "sourceIds": [
+            "pm-turismo",
+            "pm-chabret"
+          ],
+          "confidence": "interpretive"
+        },
+        {
+          "text": "Los porches daban continuidad al recorrido junto a las plantas bajas de las casas.",
+          "sourceIds": [
+            "pm-pep",
+            "pm-rutas"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Mira la relación entre huecos de planta baja y zona resguardada.",
+      "modelNote": "No se añaden puestos medievales permanentes ni un pavimento antiguo inventado. Los usos históricos se explican en el relato.",
+      "sourceIds": [
+        "pm-pep",
+        "pm-rutas",
+        "pm-turismo",
+        "pm-chabret"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco sectorial de lectura en el espacio público cartografiado. No identifica la planta de un establecimiento desaparecido ni la posición medida de sus restos.",
+      "osmIds": [],
+      "order": 2,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "pm-catastro",
+        "pm-osm"
+      ]
+    },
+    {
+      "id": "plaza-soportales",
+      "title": "Arcos distintos dentro de una misma galería",
+      "label": "Los soportales",
+      "regionId": "soportales",
+      "period": "mixed",
+      "coordinate": [
+        -0.2786982450477005,
+        39.67963097407303
+      ],
+      "coordinates": [
+        -0.2786982450477005,
+        39.67963097407303
+      ],
+      "intro": "Acércate a la sombra y sigue la sucesión de pasos. La diversidad de arcos y apoyos es parte de la lectura del lugar. La galería permite observar cómo el paso cubierto atraviesa varias fincas.",
+      "narrative": "Acércate a la sombra y sigue la sucesión de pasos. La diversidad de arcos y apoyos es parte de la lectura del lugar. La galería permite observar cómo el paso cubierto atraviesa varias fincas.",
+      "facts": [
+        {
+          "text": "El catálogo registra un arco rebajado en el número 16 y otro apuntado en el encuentro con el 15.",
+          "sourceIds": [
+            "pm-pep"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Las fotografías muestran arcos transversales dentro del paso cubierto, además de sus apoyos hacia la plaza.",
+          "sourceIds": [
+            "pm-rutas"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Las plantas altas actuales no permiten atribuir la misma fecha a todos los elementos que sostienen.",
+          "sourceIds": [
+            "pm-pep"
+          ],
+          "confidence": "interpretive"
+        }
+      ],
+      "lookFor": "Distingue el arco que cruza la galería del vano abierto hacia la plaza.",
+      "modelNote": "La galería conserva pasos abiertos y arcos transversales. Las viviendas mantienen sus volúmenes; la maqueta no ofrece un corte de interiores privados.",
+      "sourceIds": [
+        "pm-pep",
+        "pm-rutas"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Punto de observación registrado sobre el conjunto cartográfico y el modelo; no representa un acceso legal ni una posición arqueológica medida.",
+      "osmIds": [],
+      "order": 3,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "pm-catastro",
+        "pm-osm"
+      ]
+    },
+    {
+      "id": "plaza-columnas",
+      "title": "Piedras romanas, pilares y hierro",
+      "label": "Los apoyos",
+      "regionId": "soportales",
+      "period": "mixed",
+      "coordinate": [
+        -0.2785203639976375,
+        39.67927703693633
+      ],
+      "coordinates": [
+        -0.2785203639976375,
+        39.67927703693633
+      ],
+      "intro": "Baja la mirada hasta los apoyos. Compara su grosor, su sección y el encuentro con las vigas. Ese cambio de escala ayuda a reconocer materiales reutilizados y soluciones posteriores.",
+      "narrative": "Baja la mirada hasta los apoyos. Compara su grosor, su sección y el encuentro con las vigas. Ese cambio de escala ayuda a reconocer materiales reutilizados y soluciones posteriores.",
+      "facts": [
+        {
+          "text": "La información patrimonial identifica fustes romanos reutilizados en los soportales.",
+          "sourceIds": [
+            "pm-romano"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El PEP distingue columna dórica, pilastras de piedra y columnas de fundición en distintas fincas del frente oriental.",
+          "sourceIds": [
+            "pm-pep"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La reutilización de una columna antigua no convierte toda la plaza en un foro romano.",
+          "sourceIds": [
+            "pm-romano",
+            "pm-turismo"
+          ],
+          "confidence": "interpretive"
+        }
+      ],
+      "lookFor": "Busca el contraste entre la piedra maciza y los elementos de hierro más esbeltos.",
+      "modelNote": "Los apoyos se diferencian por familias y referencias de fachada. No se atribuye un edificio romano de procedencia a cada fuste.",
+      "sourceIds": [
+        "pm-romano",
+        "pm-pep",
+        "pm-turismo"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Punto de observación registrado sobre el conjunto cartográfico y el modelo; no representa un acceso legal ni una posición arqueológica medida.",
+      "osmIds": [],
+      "order": 4,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "pm-catastro",
+        "pm-osm"
+      ]
+    },
+    {
+      "id": "plaza-epigrafia",
+      "title": "Dos inscripciones en el borde de la plaza",
+      "label": "Las lápidas",
+      "regionId": "soportales",
+      "period": "mixed",
+      "coordinate": [
+        -0.2790008135478966,
+        39.67922489705506
+      ],
+      "coordinates": [
+        -0.2790008135478966,
+        39.67922489705506
+      ],
+      "intro": "Continúa hacia el pretil de la escalera de Santa María. Las inscripciones permiten pasar de la arquitectura a personas concretas, pero también recuerdan que una piedra puede haber cambiado de lugar.",
+      "narrative": "Continúa hacia el pretil de la escalera de Santa María. Las inscripciones permiten pasar de la arquitectura a personas concretas, pero también recuerdan que una piedra puede haber cambiado de lugar.",
+      "facts": [
+        {
+          "text": "La escalera contiene dos lápidas: honorífica arriba y funeraria debajo, datadas a finales del siglo I d. C.",
+          "sourceIds": [
+            "pm-lapidas"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El estudio relaciona la primera con Voconio Plácido y la segunda con Popilia; la procedencia original sigue siendo incierta.",
+          "sourceIds": [
+            "pm-lapidas"
+          ],
+          "confidence": "interpretive"
+        },
+        {
+          "text": "El pretil se fecha en 1799 en la bibliografía revisada por el estudio de 2024.",
+          "sourceIds": [
+            "pm-lapidas"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Localiza los dos bloques superpuestos en la cara exterior del pretil.",
+      "modelNote": "La visita utiliza la escalera ya modelada en Santa María. No coloca inscripciones romanas inventadas en la puerta del Almudín.",
+      "sourceIds": [
+        "pm-lapidas",
+        "pm-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Punto de observación registrado sobre el conjunto cartográfico y el modelo; no representa un acceso legal ni una posición arqueológica medida.",
+      "osmIds": [],
+      "order": 5,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "pm-catastro",
+        "pm-osm"
+      ]
+    },
+    {
+      "id": "plaza-almudin",
+      "title": "La puerta del Almudín, detrás del soportal",
+      "label": "El Almudín",
+      "regionId": "almudin",
+      "period": "mixed",
+      "coordinate": [
+        -0.2786964766848324,
+        39.6796678818479
+      ],
+      "coordinates": [
+        -0.2786964766848324,
+        39.6796678818479
+      ],
+      "intro": "Entra visualmente en la galería del extremo noroeste. Busca el portón en la pared interior, dejando el espacio abierto de la plaza a tu espalda. Su posición es tan importante como el arco.",
+      "narrative": "Entra visualmente en la galería del extremo noroeste. Busca el portón en la pared interior, dejando el espacio abierto de la plaza a tu espalda. Su posición es tan importante como el arco.",
+      "facts": [
+        {
+          "text": "La fotografía de referencia permite leer el número 17 junto a la puerta.",
+          "sourceIds": [
+            "pm-rutas"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La ficha municipal corresponde a Plaça Major 17, manzana 34596, parcela 11.",
+          "sourceIds": [
+            "pm-pep"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El catálogo describe un arco carpanel de piedra, escudo en la clave y restos de una almazara.",
+          "sourceIds": [
+            "pm-pep"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Observa la curva rebajada, las dovelas y el portón de dos hojas.",
+      "modelNote": "El portal se coloca en el cerramiento interior del soportal. El perfil carpanel se apoya en la ficha y la fotografía; no se convierte en una puerta exenta de muralla.",
+      "sourceIds": [
+        "pm-pep",
+        "pm-rutas",
+        "pm-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Registro del portal del número 17 sobre parcela catastral 3459611, contrastado con PEP página PDF 133 y fotografía institucional 05. Las dimensiones del detalle se estiman visualmente.",
+      "osmIds": [],
+      "order": 6,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "pm-catastro",
+        "pm-pep",
+        "pm-rutas"
+      ]
+    },
+    {
+      "id": "plaza-escudo",
+      "title": "Las barras de la Corona en la clave",
+      "label": "El escudo",
+      "regionId": "almudin",
+      "period": "mixed",
+      "coordinate": [
+        -0.2786964766848324,
+        39.6796678818479
+      ],
+      "coordinates": [
+        -0.2786964766848324,
+        39.6796678818479
+      ],
+      "intro": "Acércate a la parte superior del arco. El relieve está integrado en la piedra: se lee por su forma y por la sombra, sin necesitar un gran cartel ni una policromía añadida.",
+      "narrative": "Acércate a la parte superior del arco. El relieve está integrado en la piedra: se lee por su forma y por la sombra, sin necesitar un gran cartel ni una policromía añadida.",
+      "facts": [
+        {
+          "text": "El escudo cuatribarrado es el rasgo que identifica la puerta en las descripciones patrimoniales.",
+          "sourceIds": [
+            "pm-rutas",
+            "pm-pep"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Se relaciona con la pertenencia del establecimiento al patrimonio real.",
+          "sourceIds": [
+            "pm-rutas"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Los escudos de Múzquiz en hornos y molinos pertenecen a otra historia de propiedad y tienen una composición heráldica diferente.",
+          "sourceIds": [
+            "pm-forns"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Busca la clave central y la relación del escudo con las juntas de las dovelas.",
+      "modelNote": "El relieve se simplifica a una escala legible. No se reconstruyen colores originales ni se asigna una fecha exacta de talla sin documentación.",
+      "sourceIds": [
+        "pm-rutas",
+        "pm-pep",
+        "pm-forns"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Mismo registro del portal número 17; el foco aproxima la clave del arco, sin medición de talla.",
+      "osmIds": [],
+      "order": 7,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "pm-catastro",
+        "pm-pep",
+        "pm-rutas"
+      ]
+    },
+    {
+      "id": "plaza-abasto",
+      "title": "Dos almudines, una historia de abastecimiento",
+      "label": "Grano y abasto",
+      "regionId": "almudin",
+      "period": "mixed",
+      "coordinate": [
+        -0.278617,
+        39.679603
+      ],
+      "coordinates": [
+        -0.278617,
+        39.679603
+      ],
+      "intro": "Desde el portal, piensa en la diferencia entre una función y un edificio. El nombre del establecimiento continuó aunque cambiasen su emplazamiento y sus propietarios. Esa distinción evita reunir edificios diferentes en una sola reconstrucción.",
+      "narrative": "Desde el portal, piensa en la diferencia entre una función y un edificio. El nombre del establecimiento continuó aunque cambiasen su emplazamiento y sus propietarios. Esa distinción evita reunir edificios diferentes en una sola reconstrucción.",
+      "facts": [
+        {
+          "text": "El almudín recibía trigo para el abastecimiento y la venta. Chabret recoge el gravamen para muros y valladores de 1371.",
+          "sourceIds": [
+            "pm-chabret"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Chabret distingue el antiguo local de los soportales de otro posterior en la calle Abril; desconoce cuándo se produjo el traslado.",
+          "sourceIds": [
+            "pm-chabret"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La venta de derechos de la bailía a Múzquiz fue aprobada el 28 de agosto de 1755, según la documentación estudiada por Rosado.",
+          "sourceIds": [
+            "pm-rosado"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Mira el espesor del frente urbano y la continuidad del barrio hacia Abril.",
+      "modelNote": "La descripción de dos naves y cuatro arcos de Chabret corresponde al edificio posterior de Abril. No se usa como planta del portal número 17.",
+      "sourceIds": [
+        "pm-chabret",
+        "pm-rosado"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco sectorial de lectura en el espacio público cartografiado. No identifica la planta de un establecimiento desaparecido ni la posición medida de sus restos.",
+      "osmIds": [],
+      "order": 8,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "pm-catastro",
+        "pm-osm"
+      ]
+    },
+    {
+      "id": "plaza-forn",
+      "title": "El Forn de la Plaça y la economía del pan",
+      "label": "El antiguo horno",
+      "regionId": "almudin",
+      "period": "modern",
+      "coordinate": [
+        -0.278609,
+        39.679346
+      ],
+      "coordinates": [
+        -0.278609,
+        39.679346
+      ],
+      "intro": "Observa la variedad de las casas alrededor de la plaza. Un establecimiento cotidiano podía ser también una fuente de rentas. Esta parada recuerda el horno documentado, sin asignarle un interior reconstruido ni una finca actual no verificada.",
+      "narrative": "Observa la variedad de las casas alrededor de la plaza. Un establecimiento cotidiano podía ser también una fuente de rentas. Esta parada recuerda el horno documentado, sin asignarle un interior reconstruido ni una finca actual no verificada.",
+      "facts": [
+        {
+          "text": "El estudio de 2024 identifica el Forn de la Plaça en la casa número 6 de la fotografía del catálogo de 1985.",
+          "sourceIds": [
+            "pm-rosario-2024"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La imagen documenta un cuerpo bajo con vivienda superior y escudo de Múzquiz sobre la entrada.",
+          "sourceIds": [
+            "pm-rosario-2024"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La investigación sobre sus propiedades cita el horno de la Plaça y a Francisco Pardines como arrendatario.",
+          "sourceIds": [
+            "pm-forns"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Compara los cuerpos bajos y las casas de varias alturas; la imagen histórica del horno no basta para identificar su interior actual.",
+      "modelNote": "Punto de lectura del entorno del horno. La imagen de 1985 informa de un estado anterior: no demuestra que sobrevivan hoy su maquinaria o su cámara de cocción.",
+      "sourceIds": [
+        "pm-rosario-2024",
+        "pm-forns",
+        "pm-catastro"
+      ],
+      "confidence": "interpretive",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco sectorial de lectura en el espacio público cartografiado. No identifica la planta de un establecimiento desaparecido ni la posición medida de sus restos.",
+      "osmIds": [],
+      "order": 9,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "pm-catastro",
+        "pm-osm"
+      ]
+    },
+    {
+      "id": "plaza-mustassaf",
+      "title": "El mustassaf: medir, pesar y resolver",
+      "label": "Pesos y medidas",
+      "regionId": "memoria",
+      "period": "medieval",
+      "coordinate": [
+        -0.278609,
+        39.679474
+      ],
+      "coordinates": [
+        -0.278609,
+        39.679474
+      ],
+      "intro": "Vuelve a mirar la plaza como un lugar de reglas compartidas. Comprar no dependía solo del precio: también importaba que vendedores y compradores entendieran del mismo modo una medida o un peso.",
+      "narrative": "Vuelve a mirar la plaza como un lugar de reglas compartidas. Comprar no dependía solo del precio: también importaba que vendedores y compradores entendieran del mismo modo una medida o un peso.",
+      "facts": [
+        {
+          "text": "El mustassaf resolvía cuestiones de pesos y medidas y conservaba los patrones de la villa.",
+          "sourceIds": [
+            "pm-chabret"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Chabret sitúa su local, llamado llotgeta del mustassaf, en la plaza del mercado.",
+          "sourceIds": [
+            "pm-chabret"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Su elección se celebraba por San Miguel; el relato histórico menciona alternancia entre caballero y prohombre.",
+          "sourceIds": [
+            "pm-chabret"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Relaciona la galería, las entradas de las tiendas y el espacio donde se reunían las personas.",
+      "modelNote": "El foco señala un ámbito de lectura. No se ha identificado una planta verificable de la llotgeta ni se reconstruye una sala judicial.",
+      "sourceIds": [
+        "pm-chabret"
+      ],
+      "confidence": "interpretive",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco sectorial de lectura en el espacio público cartografiado. No identifica la planta de un establecimiento desaparecido ni la posición medida de sus restos.",
+      "osmIds": [],
+      "order": 10,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "pm-catastro",
+        "pm-osm"
+      ]
+    },
+    {
+      "id": "plaza-peixateria",
+      "title": "Peixateria: otro espacio para el abasto",
+      "label": "La Pescadería",
+      "regionId": "memoria",
+      "period": "medieval",
+      "coordinate": [
+        -0.278248,
+        39.679745
+      ],
+      "coordinates": [
+        -0.278248,
+        39.679745
+      ],
+      "intro": "Sigue la salida hacia la plaza vecina. Observa cómo cambia la anchura y cómo se encadenan los espacios. La historia del abastecimiento se entiende mejor recorriendo ambos lugares que mirando una fachada aislada.",
+      "narrative": "Sigue la salida hacia la plaza vecina. Observa cómo cambia la anchura y cómo se encadenan los espacios. La historia del abastecimiento se entiende mejor recorriendo ambos lugares que mirando una fachada aislada.",
+      "facts": [
+        {
+          "text": "La concesión de tablas de carne y pescado del 27 de octubre de 1265 está recogida por Chabret.",
+          "sourceIds": [
+            "pm-chabret"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El autor relaciona la Pescadería con las antiguas carnicerías y el nombre Triador con la selección de reses.",
+          "sourceIds": [
+            "pm-chabret"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La historia municipal trata Mayor y Pescadería como parte de la misma reorganización urbana medieval.",
+          "sourceIds": [
+            "pm-turismo"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Mira el enlace de los espacios públicos y su relación con el Ayuntamiento.",
+      "modelNote": "El punto corresponde al espacio público cartografiado. No fija la ubicación exacta de cada tabla de venta ni del matadero desaparecido.",
+      "sourceIds": [
+        "pm-chabret",
+        "pm-turismo",
+        "pm-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Punto de observación registrado sobre el conjunto cartográfico y el modelo; no representa un acceso legal ni una posición arqueológica medida.",
+      "osmIds": [],
+      "order": 11,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "pm-catastro",
+        "pm-osm"
+      ]
+    },
+    {
+      "id": "plaza-vila",
+      "title": "La Puerta de la Vila y el gobierno municipal",
+      "label": "La Vila",
+      "regionId": "memoria",
+      "period": "mixed",
+      "coordinate": [
+        -0.278609,
+        39.67956
+      ],
+      "coordinates": [
+        -0.278609,
+        39.67956
+      ],
+      "intro": "Mira hacia el Ayuntamiento desde el borde de la plaza. El lugar reúne distintas etapas de gobierno urbano. Conviene reconocer qué edificio vemos y qué estructura conocemos únicamente por las fuentes.",
+      "narrative": "Mira hacia el Ayuntamiento desde el borde de la plaza. El lugar reúne distintas etapas de gobierno urbano. Conviene reconocer qué edificio vemos y qué estructura conocemos únicamente por las fuentes.",
+      "facts": [
+        {
+          "text": "Chabret recoge la donación de 1273 para la casa del consejo sobre el portal de la Vila y dos torres contiguas.",
+          "sourceIds": [
+            "pm-chabret"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La historia municipal sitúa el nuevo Ayuntamiento, de finales del siglo XVIII, en el entorno de la antigua puerta principal.",
+          "sourceIds": [
+            "pm-turismo"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El Palacio Municipal actual está en la calle Autonomía, número 2.",
+          "sourceIds": [
+            "pm-ayuntamiento"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Sigue la apertura hacia Autonomía y distingue el edificio municipal del portal del Almudín.",
+      "modelNote": "No se levantan torres medievales hipotéticas. El portal del Almudín y la Puerta de la Vila se explican como elementos diferentes.",
+      "sourceIds": [
+        "pm-chabret",
+        "pm-turismo",
+        "pm-ayuntamiento"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco sectorial de lectura en el espacio público cartografiado. No identifica la planta de un establecimiento desaparecido ni la posición medida de sus restos.",
+      "osmIds": [],
+      "order": 12,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "pm-catastro",
+        "pm-osm"
+      ]
+    },
+    {
+      "id": "plaza-santa-maria",
+      "title": "Santa María y el cierre monumental",
+      "label": "La iglesia",
+      "regionId": "entorno",
+      "period": "mixed",
+      "coordinate": [
+        -0.27900171786047345,
+        39.67922324071854
+      ],
+      "coordinates": [
+        -0.27900171786047345,
+        39.67922324071854
+      ],
+      "intro": "Gira hacia la iglesia para recuperar la escala del conjunto. Su presencia cambia la luz, el perfil urbano y la forma de aproximarse a la plaza. Desde aquí puedes continuar la visita completa del templo.",
+      "narrative": "Gira hacia la iglesia para recuperar la escala del conjunto. Su presencia cambia la luz, el perfil urbano y la forma de aproximarse a la plaza. Desde aquí puedes continuar la visita completa del templo.",
+      "facts": [
+        {
+          "text": "Santa María comenzó a construirse en 1334, en el lugar de una antigua mezquita.",
+          "sourceIds": [
+            "pm-santa-maria"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La construcción se transformó durante los siglos siguientes y combina fases distintas.",
+          "sourceIds": [
+            "pm-santa-maria"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El desnivel entre la portada norte y Cavallers se salva mediante la escalera que contiene las lápidas.",
+          "sourceIds": [
+            "pm-lapidas"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Observa la portada norte, la escalinata y la torre en relación con los tejados de la plaza.",
+      "modelNote": "Se conserva el modelo de Santa María de la iteración anterior. La visita de la plaza añade relaciones urbanas, sin sustituir sus paradas interiores.",
+      "sourceIds": [
+        "pm-santa-maria",
+        "pm-lapidas"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Punto de observación registrado sobre el conjunto cartográfico y el modelo; no representa un acceso legal ni una posición arqueológica medida.",
+      "osmIds": [],
+      "order": 13,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "pm-catastro",
+        "pm-osm"
+      ]
+    },
+    {
+      "id": "plaza-cavallers",
+      "title": "Cavallers: la calle y la gestión del agua",
+      "label": "Cavallers y el agua",
+      "regionId": "entorno",
+      "period": "mixed",
+      "coordinate": [
+        -0.278833,
+        39.679231
+      ],
+      "coordinates": [
+        -0.278833,
+        39.679231
+      ],
+      "intro": "Sigue el inicio de Cavallers y vuelve la vista hacia la esquina. Este frente permite reconocer una institución moderna que mantiene la relación entre la ciudad y sus campos de cultivo.",
+      "narrative": "Sigue el inicio de Cavallers y vuelve la vista hacia la esquina. Este frente permite reconocer una institución moderna que mantiene la relación entre la ciudad y sus campos de cultivo.",
+      "facts": [
+        {
+          "text": "La calle Cavallers fue una de las vías principales del casco histórico; la síntesis municipal destaca sus casas señoriales.",
+          "sourceIds": [
+            "pm-turismo"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La Comunidad de Regantes se constituyó formalmente el 12 de octubre de 1900.",
+          "sourceIds": [
+            "pm-regantes"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "En 1971 levantó su sede de planta baja y dos pisos en la esquina de Plaça Major y Cavallers.",
+          "sourceIds": [
+            "pm-regantes"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Distingue el edificio de la comunidad y el paso que continúa hacia el oeste.",
+      "modelNote": "La sede de 1971 se mantiene como arquitectura contemporánea dentro del conjunto; no se disfraza de edificio medieval.",
+      "sourceIds": [
+        "pm-regantes",
+        "pm-turismo",
+        "pm-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Punto de observación registrado sobre el conjunto cartográfico y el modelo; no representa un acceso legal ni una posición arqueológica medida.",
+      "osmIds": [],
+      "order": 14,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "pm-catastro",
+        "pm-osm"
+      ]
+    },
+    {
+      "id": "plaza-carrer-major",
+      "title": "Carrer Major y la ciudad del comercio",
+      "label": "Carrer Major",
+      "regionId": "entorno",
+      "period": "mixed",
+      "coordinate": [
+        -0.278385,
+        39.67961
+      ],
+      "coordinates": [
+        -0.278385,
+        39.67961
+      ],
+      "intro": "Acércate a la salida hacia Major. El recorrido se comprime y las casas vuelven a enmarcar la vista. La plaza fue un punto de intercambio durante siglos, también cuando aparecieron nuevas instituciones económicas.",
+      "narrative": "Acércate a la salida hacia Major. El recorrido se comprime y las casas vuelven a enmarcar la vista. La plaza fue un punto de intercambio durante siglos, también cuando aparecieron nuevas instituciones económicas.",
+      "facts": [
+        {
+          "text": "Major y Cavallers fueron arterias principales hasta la expansión urbana del siglo XIX.",
+          "sourceIds": [
+            "pm-rutas"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El Palau del Delme se situaba en la calle Major, según la historia municipal del casco antiguo.",
+          "sourceIds": [
+            "pm-turismo"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La Caja de Ahorros y Socorros, fundada en 1841, tuvo su primera sede en la Plaza Mayor hasta el traslado de 1956.",
+          "sourceIds": [
+            "pm-caja"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Lee la transición entre la amplitud de la plaza y la estrechez de la calle.",
+      "modelNote": "El foco corresponde al arranque cartografiado de Major. El relato de la Caja es contextual; no identifica un interior bancario en ese punto.",
+      "sourceIds": [
+        "pm-rutas",
+        "pm-turismo",
+        "pm-caja",
+        "pm-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Punto de observación registrado sobre el conjunto cartográfico y el modelo; no representa un acceso legal ni una posición arqueológica medida.",
+      "osmIds": [],
+      "order": 15,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "pm-catastro",
+        "pm-osm"
+      ]
+    },
+    {
+      "id": "plaza-carrer-castell",
+      "title": "Del mercado a la ladera del castillo",
+      "label": "Hacia el castillo",
+      "regionId": "entorno",
+      "period": "mixed",
+      "coordinate": [
+        -0.278451,
+        39.679174
+      ],
+      "coordinates": [
+        -0.278451,
+        39.679174
+      ],
+      "intro": "Termina siguiendo la pendiente. La plaza se entiende ahora como una pieza de un recorrido mayor: detrás quedan el comercio y los servicios; por delante, las calles que enlazan con otros monumentos del atlas.",
+      "narrative": "Termina siguiendo la pendiente. La plaza se entiende ahora como una pieza de un recorrido mayor: detrás quedan el comercio y los servicios; por delante, las calles que enlazan con otros monumentos del atlas.",
+      "facts": [
+        {
+          "text": "La calle del Castillo conecta el entorno de la plaza con el itinerario monumental de la ladera.",
+          "sourceIds": [
+            "pm-rutas"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La Casa del Mestre Peña alberga el Museo Arqueológico en la calle Castillo, número 23.",
+          "sourceIds": [
+            "pm-museo"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La colección del museo tiene antecedentes en la reunión histórica de inscripciones ibéricas y romanas.",
+          "sourceIds": [
+            "pm-museo"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Busca los cambios de cota, las cubiertas escalonadas y las vistas que se abren al avanzar.",
+      "modelNote": "Las calles y el terreno se apoyan en cartografía. La cámara cercana es una forma de exploración del modelo, no una auditoría de accesibilidad del recorrido real.",
+      "sourceIds": [
+        "pm-rutas",
+        "pm-museo",
+        "pm-osm",
+        "pm-terreno"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Punto de observación registrado sobre el conjunto cartográfico y el modelo; no representa un acceso legal ni una posición arqueológica medida.",
+      "osmIds": [],
+      "order": 16,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "pm-catastro",
+        "pm-osm"
+      ]
+    }
+  ],
+  "timeline": [
+    {
+      "id": "plaza-t01",
+      "date": "Finales del siglo I d. C.",
+      "title": "Las piedras antes de la plaza",
+      "text": "Cronología propuesta para las dos lápidas que hoy vemos en la escalera de Santa María.",
+      "sourceIds": [
+        "pm-lapidas"
+      ],
+      "period": "mixed",
+      "confidence": "documented",
+      "stopId": "plaza-epigrafia"
+    },
+    {
+      "id": "plaza-t02",
+      "date": "Edad Media",
+      "title": "Un centro urbano en formación",
+      "text": "Mayor y Pescadería se integran en la reorganización medieval de la población. No se conoce una única fecha de obra para todos los porches.",
+      "sourceIds": [
+        "pm-turismo",
+        "pm-pep"
+      ],
+      "period": "medieval",
+      "confidence": "documented",
+      "stopId": "plaza-conjunto"
+    },
+    {
+      "id": "plaza-t03",
+      "date": "1265",
+      "title": "Carne y pescado",
+      "text": "La concesión de tablas de venta ayuda a situar el abastecimiento entre las funciones públicas de la villa.",
+      "sourceIds": [
+        "pm-chabret"
+      ],
+      "period": "medieval",
+      "confidence": "documented",
+      "stopId": "plaza-peixateria"
+    },
+    {
+      "id": "plaza-t04",
+      "date": "1273",
+      "title": "El consejo y el portal",
+      "text": "La documentación recogida por Chabret relaciona la casa del consejo con el portal de la Vila.",
+      "sourceIds": [
+        "pm-chabret"
+      ],
+      "period": "medieval",
+      "confidence": "documented",
+      "stopId": "plaza-vila"
+    },
+    {
+      "id": "plaza-t05",
+      "date": "1334",
+      "title": "Comienza Santa María",
+      "text": "La nueva iglesia inicia una construcción prolongada que transformará el frente monumental de este entorno.",
+      "sourceIds": [
+        "pm-santa-maria"
+      ],
+      "period": "medieval",
+      "confidence": "documented",
+      "stopId": "plaza-santa-maria"
+    },
+    {
+      "id": "plaza-t06",
+      "date": "1371",
+      "title": "El grano y las contribuciones",
+      "text": "Chabret cita la disposición sobre el gravamen para muros y valladores vinculado al almudín.",
+      "sourceIds": [
+        "pm-chabret"
+      ],
+      "period": "medieval",
+      "confidence": "documented",
+      "stopId": "plaza-abasto"
+    },
+    {
+      "id": "plaza-t07",
+      "date": "1755",
+      "title": "Derechos y propiedades de Múzquiz",
+      "text": "Rosado documenta la adquisición de la bailía, incluidos derechos de Almodín. Esta investigación corrige la fecha 1775 repetida por otras fuentes.",
+      "sourceIds": [
+        "pm-rosado"
+      ],
+      "period": "modern",
+      "confidence": "documented",
+      "stopId": "plaza-abasto"
+    },
+    {
+      "id": "plaza-t08",
+      "date": "Siglo XVIII",
+      "title": "Otro edificio en Abril",
+      "text": "Chabret atribuye a esta centuria el almudín posterior de la calle Abril. La fecha de traslado desde los soportales no queda establecida.",
+      "sourceIds": [
+        "pm-chabret"
+      ],
+      "period": "modern",
+      "confidence": "interpretive",
+      "stopId": "plaza-abasto"
+    },
+    {
+      "id": "plaza-t09",
+      "date": "Finales del siglo XVIII",
+      "title": "El nuevo Ayuntamiento",
+      "text": "La historia municipal sitúa en esta etapa la sustitución de la antigua puerta por el nuevo edificio consistorial.",
+      "sourceIds": [
+        "pm-turismo"
+      ],
+      "period": "modern",
+      "confidence": "documented",
+      "stopId": "plaza-vila"
+    },
+    {
+      "id": "plaza-t10",
+      "date": "1799",
+      "title": "El pretil de las lápidas",
+      "text": "El estudio epigráfico recoge esta fecha para la barandilla de la escalera de Santa María.",
+      "sourceIds": [
+        "pm-lapidas"
+      ],
+      "period": "modern",
+      "confidence": "documented",
+      "stopId": "plaza-epigrafia"
+    },
+    {
+      "id": "plaza-t11",
+      "date": "1841",
+      "title": "Una caja de ahorro en la plaza",
+      "text": "La Caja de Ahorros y Socorros se funda el 26 de septiembre; su primera sede se encuentra en la Plaza Mayor.",
+      "sourceIds": [
+        "pm-caja"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "plaza-carrer-major"
+    },
+    {
+      "id": "plaza-t12",
+      "date": "1900",
+      "title": "La Comunidad de Regantes",
+      "text": "La institución queda formalmente constituida; la historia del riego es anterior a esta organización moderna.",
+      "sourceIds": [
+        "pm-regantes"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "plaza-cavallers"
+    },
+    {
+      "id": "plaza-t13",
+      "date": "1956",
+      "title": "La Caja cambia de sede",
+      "text": "La descripción de su archivo registra el traslado desde la Plaza Mayor en agosto de este año.",
+      "sourceIds": [
+        "pm-caja"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "plaza-carrer-major"
+    },
+    {
+      "id": "plaza-t14",
+      "date": "1971",
+      "title": "Una nueva sede para el agua",
+      "text": "La Comunidad de Regantes construye su edificio en la esquina con Cavallers.",
+      "sourceIds": [
+        "pm-regantes"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "plaza-cavallers"
+    },
+    {
+      "id": "plaza-t15",
+      "date": "2000 · diligencia 2006",
+      "title": "Inventariar las diferencias",
+      "text": "Las fichas municipales documentan parcelas, soportales y elementos singulares, entre ellos el portal del número 17.",
+      "sourceIds": [
+        "pm-pep"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "plaza-almudin"
+    },
+    {
+      "id": "plaza-t16",
+      "date": "2024",
+      "title": "Conocer para conservar",
+      "text": "El estudio de las lápidas describe su deterioro y plantea una intervención. Publicar una propuesta no demuestra que las obras se hayan ejecutado.",
+      "sourceIds": [
+        "pm-lapidas"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "plaza-epigrafia"
+    }
+  ],
+  "sources": [
+    {
+      "id": "pm-rutas",
+      "title": "Plaza Mayor de Sagunto",
+      "author": "Rutas Jaume I",
+      "url": "https://www.rutasjaumei.com/es/que-ver-en-sagunto/220/plaza-mayor-de-sagunto.php",
+      "type": "ruta histórica con fotografías de referencia",
+      "year": null,
+      "locator": "Texto descriptivo y galería: imágenes 01, 03, 05, 07, 09, 11 y 13",
+      "note": "La fotografía 05 permite leer el número 17 junto al portal; 07 muestra el escudo. Se consultan como evidencia visual, sin incorporar fotografías ajenas a la aplicación. No consta fecha de toma.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "pm-pep",
+      "title": "Plan Especial de Protección del Conjunto Histórico-Artístico de Sagunt · fichas del casco histórico",
+      "author": "Ajuntament de Sagunt; Universitat Politècnica de València; Politecnico di Torino",
+      "url": "https://aytosagunto.es/media/y1zhyqmy/04-95pl_tomoi_opt.pdf",
+      "type": "inventario arquitectónico municipal",
+      "year": 2000,
+      "locator": "Tomo I, páginas PDF 133–140: Plaça Major 17–10, manzana 34596; 179–183: frente de la manzana 35591; 185: Palacio Municipal",
+      "note": "Documento con aprobación provisional de 9 de junio de 2000 y diligencia de 2 de junio de 2006. Se leyeron fichas, plantas, alzados y fotografías del escaneado. El catálogo no acredita por sí solo el estado de cada fachada en 2026.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "pm-turismo",
+      "title": "Historia de Sagunto",
+      "author": "Delegación de Turismo de Sagunto",
+      "url": "https://saguntoturismoblog.wordpress.com/2020/06/10/historia-de-sagunto/",
+      "type": "síntesis histórica municipal",
+      "year": 2020,
+      "locator": "Apartado de reforma urbana medieval: plazas Mayor y Pescadería, calles y casas señoriales",
+      "note": "Sustenta la relación urbana entre plazas, parroquia y calles. Sus referencias generales no se convierten en plantas de edificios desaparecidos.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "pm-chabret",
+      "title": "Sagunto: su historia y sus monumentos · tomo II",
+      "author": "Antonio Chabret y Fraga",
+      "url": "https://archive.org/details/saguntosuhistor01chabgoog",
+      "type": "testimonio histórico y transcripción documental",
+      "year": 1888,
+      "locator": "Páginas impresas 263–265: Almudín y carnicerías; 357–358: Consejo, jurados y mustassaf",
+      "note": "Ejemplar de la University of Michigan, digitalizado por Google. Sus números de casas y expresiones de actualidad corresponden a 1888. La fecha de venta de la bailía se corrige con Rosado 2018; no se adopta la atribución anacrónica a Fernando IV ni la fecha 1775 del texto antiguo.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "pm-rosado",
+      "title": "Los negocios en tierras valencianas de Miguel de Múzquiz y Goyeneche",
+      "author": "Luis Miguel Rosado Calatayud / Universitat de València",
+      "url": "https://revistahistoriamoderna.ua.es/article/view/2018-n36-negocios-tierras-valencianas-miguel-muzquiz-goyeneche-s",
+      "type": "investigación archivística",
+      "year": 2018,
+      "locator": "Revista de Historia Moderna 36, pp. 232–255; especialmente 236–239 y notas 20–21, 32, 38",
+      "note": "DOI 10.14198/RHM2018.36.08. Documenta la cédula de 28 de agosto de 1755 y los derechos de Almodín. Cita AHNOB, Villagonzalo, C.18, D.2, ff. 6r–6v. La edición del autor permite consultar el texto completo.",
+      "accessed": "2026-11-19",
+      "alternateUrl": "https://www.academia.edu/111231404/Los_negocios_en_tierras_valencianas_de_Miguel_de_M%C3%BAzquiz_y_Goyeneche_Secretario_de_Estado_de_Hacienda_en_el_reinado_de_Carlos_III"
+    },
+    {
+      "id": "pm-rosario-2024",
+      "title": "La plaça Major de Sagunt en la història",
+      "author": "Carme Rosario Torrejón",
+      "url": "https://lafinestramedia.es/wp-content/uploads/2024/05/llibret_vila24-114-121.pdf",
+      "type": "estudio histórico y arquitectónico",
+      "year": 2024,
+      "locator": "Unides, units, llibret de la Falla La Vila, pp. 112–119; Forn de la Plaça en pp. 116–117; viviendas y edificios cívicos en pp. 118–119",
+      "note": "Se utiliza para la lectura de viviendas y la localización histórica del horno. La descripción del Almudín y su cronología se contrastan con el PEP, fotografías y Rosado 2018; no se trasladan sin crítica todas las afirmaciones del artículo.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "pm-forns",
+      "title": "Els forns de Sagunt i altres propietats dels Múzquiz-Goyeneche",
+      "author": "Carme Rosario Torrejón",
+      "url": "https://carmerosariotorrejon.wordpress.com/2020/05/21/els-forns-de-sagunt-i-altres-propietats-dels-muzquiz-goyeneche/",
+      "type": "investigación sobre patrimonio y documentación de archivo",
+      "year": 2020,
+      "locator": "Publicación del 21 de mayo de 2020, inventario de hornos y arrendatarios; notas 2, 4 y 5",
+      "note": "La autora identifica el horno de la Plaça entre las propiedades de Múzquiz y el arrendamiento a Francisco Pardines. No prueba por sí sola la supervivencia de un horno completo en el interior actual.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "pm-lapidas",
+      "title": "Estudio preliminar sobre las lápidas romanas de la escalera de la iglesia de Santa María de Sagunto",
+      "author": "María Forner Palanca y José Manuel Palomar Abascal / Centro Arqueológico Saguntino",
+      "url": "https://centroarqueologicosaguntino.es/wp-content/uploads/2025/08/Arse_58-74-89.pdf",
+      "type": "estudio epigráfico y de conservación",
+      "year": 2024,
+      "locator": "ARSE 58, pp. 73–88; emplazamiento, cronología y atribución en pp. 74–76; diagnóstico y propuesta de intervención",
+      "note": "Las lápidas están en el pretil de Santa María, al inicio de Cavallers. La procedencia de la Arbesa y la identificación de Voconio Plácido son propuestas razonadas; la propuesta de conservación de 2024 no se presenta como obra ejecutada.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "pm-regantes",
+      "title": "Historia de la Comunidad de Regantes de Sagunto",
+      "author": "Comunidad de Regantes de Sagunto",
+      "url": "https://crsagunto.es/historia",
+      "type": "historia institucional",
+      "year": null,
+      "locator": "Constitución en 1900 y construcción de la sede de la Plaça Major en 1971",
+      "note": "La propia institución identifica el solar de la antigua farmacia de Jesús Persiva y la sede de planta baja y dos pisos en la esquina con Cavallers. Se distingue la constitución moderna de la comunidad de la historia anterior del riego.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "pm-caja",
+      "title": "06. Caja de Ahorros y Socorros de Sagunto · fondo ES.46250.AFB/1",
+      "author": "Archivo Fundación Bancaja / Censo-Guía de Archivos, Ministerio de Cultura",
+      "url": "https://censoarchivos.cultura.gob.es/CensoGuia/imprimirFondo.htm?id=1752141",
+      "type": "descripción archivística institucional",
+      "year": null,
+      "locator": "Historia institucional: fundación, primera sede y traslado de 1956",
+      "note": "La ficha fija la fundación el 26 de septiembre de 1841 y la primera sede en la Plaza Mayor. No se restituye un interior bancario ni se hace equivaler automáticamente esa sede con un local actual.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "pm-romano",
+      "title": "Sagunto romano: sigue las huellas del antiguo esplendor de la ciudad",
+      "author": "Turisme Comunitat Valenciana",
+      "url": "https://www.comunitatvalenciana.com/es/mediterraneo-en-accion/sagunto-romano",
+      "type": "ficha turística institucional",
+      "year": null,
+      "locator": "Último apartado: fustes romanos reutilizados en la plaza porticada",
+      "note": "Se usa únicamente para la presencia de fustes romanos. La frase divulgativa sobre el estilo romano de la plaza no se considera una datación del conjunto medieval; otras afirmaciones ajenas a esta visita no se incorporan.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "pm-santa-maria",
+      "title": "Iglesia Parroquial de la Natividad de Nuestra Señora",
+      "author": "Turisme Comunitat Valenciana",
+      "url": "https://www.comunitatvalenciana.com/es/valencia/sagunt-sagunto/monumentos/iglesia-parroquial-de-la-natividad-de-nuestra-senora-2",
+      "type": "ficha monumental institucional",
+      "year": null,
+      "locator": "Denominación, inicio de obras en 1334, organización espacial y fases del edificio",
+      "note": "La visita enlaza con el modelo detallado de Santa María ya existente; el campanario visible no se fecha como fábrica medieval.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "pm-ayuntamiento",
+      "title": "Edificios municipales · Palacio Municipal",
+      "author": "Ajuntament de Sagunt",
+      "url": "https://aytosagunto.es/es/ayuntamiento/edificios/",
+      "type": "directorio municipal",
+      "year": null,
+      "locator": "Palacio Municipal, C/ Autonomía 2",
+      "note": "Confirma la posición del Ayuntamiento actual en el entorno norte. No se confunde con la antigua casa consistorial mencionada en estudios de la esquina del Sagrari.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "pm-museo",
+      "title": "Museu Arqueològic de Sagunt",
+      "author": "Turisme Comunitat Valenciana",
+      "url": "https://www.comunitatvalenciana.com/es/valencia/sagunt-sagunto/museos/museu-arqueologic-de-sagunt",
+      "type": "ficha museística institucional",
+      "year": null,
+      "locator": "Sede de la Casa del Mestre Peña, calle Castillo 23; evolución de la colección",
+      "note": "Se emplea para conectar el recorrido de la plaza con el patrimonio ya presente en el atlas. La identificación histórica de lonja o almudín de otro edificio no lo convierte en el portal de Plaça Major 17.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "pm-catastro",
+      "title": "Cartografía catastral INSPIRE · edificios de Sagunto/Sagunt",
+      "author": "Dirección General del Catastro",
+      "url": "https://www.catastro.hacienda.gob.es/webinspire/index.html",
+      "type": "cartografía oficial",
+      "year": null,
+      "locator": "Buildings del municipio 46222; parcelas 34596 y 35591 y edificios del entorno",
+      "note": "Las huellas y las plantas sustentan los volúmenes. Las coordenadas de observación son aproximadas; no se utilizan como deslinde, medición arquitectónica o acceso acreditado.",
+      "accessed": "2026-11-19",
+      "downloadUrl": "https://www.catastro.hacienda.gob.es/INSPIRE/Buildings/46/46222-SAGUNTO%20SAGUNT/A.ES.SDGC.BU.46222.zip",
+      "licenseUrl": "https://www.catastro.hacienda.gob.es/webinspire/documentos/Licencia.pdf"
+    },
+    {
+      "id": "pm-osm",
+      "title": "OpenStreetMap · Plaça Major y calles del entorno",
+      "author": "Colaboradores de OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/733042234",
+      "type": "cartografía colaborativa",
+      "year": null,
+      "locator": "Área peatonal 733042234 y huellas del frente urbano",
+      "note": "Aporta relaciones espaciales y trazas de calles; se contrasta con Catastro. La geometría cartográfica no determina la antigüedad ni la accesibilidad de un edificio.",
+      "accessed": "2026-11-19",
+      "licenseUrl": "https://www.openstreetmap.org/copyright"
+    },
+    {
+      "id": "pm-terreno",
+      "title": "Modelos de terreno MDT05 y alturas MDSnE del entorno de Sagunto",
+      "author": "Instituto Geográfico Nacional / Centro Nacional de Información Geográfica",
+      "url": "https://datos.gob.es/es/catalogo/e00125901-spaignmds-normalizado",
+      "type": "modelos geográficos oficiales",
+      "year": null,
+      "locator": "Superficie MDT05 del atlas y datos MDSnE empleados por la cartografía de contexto",
+      "note": "Son bases de representación del relieve. Los escalones, umbrales y encuentros con soportales se adaptan gráficamente; no son una topografía de detalle.",
+      "accessed": "2026-11-19",
+      "terrainServiceUrl": "https://xyz-mdt.idee.es/1.0.0/raster-dem/{z}/{x}/{y}.png",
+      "licenseUrl": "https://www.ign.es/resources/licencia/Condiciones_licenciaUso_IGN.pdf"
+    },
+    {
+      "id": "pm-pnoa",
+      "title": "PNOA Máxima Actualidad · ortofotografía del casco histórico",
+      "author": "Instituto Geográfico Nacional / Centro Nacional de Información Geográfica",
+      "url": "https://datos.gob.es/es/catalogo/e00125901-spaignpnoama",
+      "type": "ortofotografía oficial",
+      "year": null,
+      "locator": "Cubiertas, ocupación del suelo y contraste del entorno",
+      "note": "La fecha de consulta no establece la fecha del vuelo. El color de una cubierta en la maqueta no equivale a una inspección actual de sus materiales.",
+      "accessed": "2026-11-19",
+      "serviceUrl": "https://www.ign.es/wms-inspire/pnoa-ma",
+      "licenseUrl": "https://www.ign.es/resources/licencia/Condiciones_licenciaUso_IGN.pdf"
+    }
+  ],
+  "methodology": [
+    "La posición del portal se contrasta entre la ficha de Plaça Major 17, manzana 34596 parcela 11, la placa visible en la fotografía de referencia y la cartografía catastral. Las coordenadas se registran sobre la maqueta y siguen siendo aproximadas.",
+    "El arco carpanel de la ficha y su perfil fotográfico prevalecen para la forma del portal sobre descripciones genéricas que lo llaman de medio punto. La galería reúne arcos diferentes; no se repite una arcada idéntica alrededor de toda la plaza.",
+    "Se separan el portal conservado, el almudín antiguo de los soportales, el almudín posterior de Abril y la Puerta de la Vila. No se combinan sus descripciones para producir un edificio inexistente.",
+    "Para la adquisición de la bailía se adopta 1755, documentado por Rosado a partir del archivo, frente a la fecha 1775 que aparece en Chabret y textos derivados. La investigación histórica se presenta con sus límites, sin ocultar la corrección.",
+    "Las huellas y plantas proceden de cartografía; las alturas, materiales, huecos y remates tienen distinto grado de apoyo. El PEP y las fotografías informan de estados documentados, sin asegurar que cada detalle se conserve idéntico en la fecha de consulta.",
+    "Los focos del mercado, la llotgeta, el abastecimiento y otros usos desaparecidos son ámbitos de lectura. No identifican excavaciones, accesos autorizados ni plantas interiores comprobadas.",
+    "La galería se puede observar abierta entre sus apoyos y arcos. Se conservan las plantas altas del modelo; no se incorporan cámaras del grano, hornos o salas municipales sin plantas suficientes.",
+    "Las fotografías consultadas sirven de referencia de investigación. Esta iteración no incorpora una galería histórica ni reutiliza esas imágenes como texturas."
+  ],
+  "readingLegend": [
+    {
+      "id": "medieval",
+      "label": "Fábrica y funciones medievales",
+      "color": "#d6bd8b",
+      "note": "Elementos conservados y usos documentados; no asigna una fecha única al conjunto."
+    },
+    {
+      "id": "modern",
+      "label": "Transformaciones de la Edad Moderna",
+      "color": "#d4a578",
+      "note": "Cambios de propiedad, edificios y elementos de los siglos modernos."
+    },
+    {
+      "id": "contemporary",
+      "label": "Ciudad contemporánea",
+      "color": "#77b8c7",
+      "note": "Viviendas transformadas e instituciones de los siglos XIX–XXI."
+    },
+    {
+      "id": "mixed",
+      "label": "Encuentro de épocas",
+      "color": "#be98d6",
+      "note": "Reutilización de materiales, porches bajo edificios posteriores y relaciones urbanas."
+    },
+    {
+      "id": "interpretation",
+      "label": "Lectura interpretativa",
+      "color": "#929ba0",
+      "note": "Ámbitos funcionales y partes de la maqueta cuya precisión no está acreditada por un levantamiento."
+    }
+  ],
+  "confidenceLegend": [
+    {
+      "id": "documented",
+      "label": "Documentado",
+      "note": "La fuente respalda el hecho o la descripción; no implica una medición exacta del modelo."
+    },
+    {
+      "id": "interpretive",
+      "label": "Interpretación",
+      "note": "Lectura razonada o localización aproximada que admite revisión."
+    },
+    {
+      "id": "disputed",
+      "label": "En debate",
+      "note": "La documentación no permite adoptar una única atribución como definitiva."
+    }
+  ],
+  "modelRegistration": {
+    "anchor": [
+      -0.27863,
+      39.67943
+    ],
+    "yawRadians": 0,
+    "axisX": "Este en el registro cartográfico del atlas",
+    "axisZ": "Sur en el registro cartográfico del atlas",
+    "method": "Registro por huellas OSM y Catastro, con comprobación de fichas municipales y fotografías; focos de observación aproximados",
+    "precision": "approximate"
+  }
+}

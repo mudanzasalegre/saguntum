@@ -1,0 +1,43 @@
+{
+  "version": "v19",
+  "reviewDate": "2026-11-20",
+  "pass": true,
+  "scope": "Interfaz documental, plano y navegación; no render WebGL ni rendimiento GPU.",
+  "method": "Observaciones verificadas por el agente principal en Chrome cloud cdp; captura final inspeccionada durante la redacción del informe.",
+  "environment": {
+    "browser": "Chrome cloud cdp",
+    "viewport": [1363, 936],
+    "webglAvailable": false,
+    "presentation": "Modo documental de respaldo"
+  },
+  "finalReload": {
+    "observedDate": "2026-11-20",
+    "url": "http://127.0.0.1:4173/#domus/domus-impluvium",
+    "documentTitle": "SAGUNTUM · Sagunto y Puerto de Sagunto",
+    "selectedStop": "domus-impluvium",
+    "stopPosition": [6, 20],
+    "mapStopButtons": 20,
+    "belowGradeMapStops": 17,
+    "dimensionsAndSourcesCorrect": true,
+    "screenshot": "domus-plan-interface.jpg",
+    "screenshotType": "Captura real de Chrome, no render CPU"
+  },
+  "earlierInteractions": {
+    "scopeNote": "Comprobadas antes de los últimos ajustes geométricos, con la misma interfaz; no se atribuyen al render 3D final.",
+    "checks": [
+      {"label": "Iniciar la visita y seleccionar el estanque", "pass": true},
+      {"label": "Abrir el plano de la casa", "pass": true},
+      {"label": "Seleccionar el área de la sala fuera de su marcador", "pass": true, "result": "#domus/domus-tablinum, parada 13 de 20"},
+      {"label": "Consultar la cronología", "pass": true, "events": 12},
+      {"label": "Consultar las fuentes", "pass": true, "sources": 9},
+      {"label": "Abrir la visita relacionada a la Vía del Pòrtic", "pass": true, "stops": 20, "themes": 6},
+      {"label": "Volver al inicio general del atlas", "pass": true, "route": "#atlas", "places": 31, "regions": 6}
+    ]
+  },
+  "limitations": [
+    "El navegador de prueba no dispone de WebGL; estas observaciones no validan el render GPU.",
+    "No se ha realizado un ensayo de rendimiento o fluidez gráfica.",
+    "Los renders Blender CPU y las pruebas de cámaras constituyen evidencias separadas.",
+    "La revisión visual de los renders CPU finales sigue pendiente al emitir este registro."
+  ]
+}

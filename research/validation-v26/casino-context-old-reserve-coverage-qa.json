@@ -1,0 +1,67 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "label": "Every former Casino reserve area is covered, apart from intentional 10cm facade seams",
+      "pass": true
+    },
+    {
+      "label": "Transferred ground has only one terrain-surface owner",
+      "pass": true
+    },
+    {
+      "label": "Current Gerencia ground outside transfer equals V25",
+      "pass": true
+    },
+    {
+      "label": "Gerencia buildings retained exactly",
+      "pass": true
+    },
+    {
+      "label": "Gerencia roads retained exactly",
+      "pass": true
+    },
+    {
+      "label": "Gerencia trees retained exactly",
+      "pass": true
+    },
+    {
+      "label": "Gerencia shrubs retained exactly",
+      "pass": true
+    },
+    {
+      "label": "Gerencia benches retained exactly",
+      "pass": true
+    },
+    {
+      "label": "Gerencia lamps retained exactly",
+      "pass": true
+    },
+    {
+      "label": "Gerencia gates retained exactly",
+      "pass": true
+    },
+    {
+      "label": "Gerencia excludedBuildingIds retained exactly",
+      "pass": true
+    },
+    {
+      "label": "Gerencia excludedRoadIds retained exactly",
+      "pass": true
+    },
+    {
+      "label": "Gerencia collisionPolygons retained exactly",
+      "pass": true
+    },
+    {
+      "label": "Gerencia foundationPatches retained exactly",
+      "pass": true
+    }
+  ],
+  "oldReservedAreaM2": 724.7851913252762,
+  "uncoveredAreaAfterIntentional10cmArchitectureClearanceM2": 4.11378242835379e-05,
+  "strictUncoveredBeforeEdgeClearanceM2": 2.751524644702138,
+  "overlappingOwnedGroundM2": 0.0,
+  "raisedStageAboveRetainedGerenciaGroundM2": 14.688561892495496,
+  "note": "The 10cm facade clearance is a deliberate seam above continuous regional terrain; no accidental landscape hole remains."
+}

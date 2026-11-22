@@ -1,0 +1,614 @@
+{
+  "pass": true,
+  "sourceSHA256": "53981e3dfec586e51e1e53467e323fd62a09d932446e5c7d7669fee856c3c62f",
+  "geometry": {
+    "meshes": 139,
+    "triangles": 348544,
+    "textureCount": 11,
+    "nans": 0,
+    "zeroNormals": 0,
+    "uvDegenerateFaces": 0
+  },
+  "checks": [
+    {
+      "label": "All geometry attributes finite",
+      "pass": true,
+      "nans": 0
+    },
+    {
+      "label": "Every visible surface has valid normals",
+      "pass": true,
+      "zeroNormals": 0
+    },
+    {
+      "label": "Dominant-axis UV projection avoids zero-area texture faces",
+      "pass": true,
+      "uvDegenerateFaces": 0
+    },
+    {
+      "label": "Separate metre-scaled material textures",
+      "pass": true,
+      "textureCount": 11
+    },
+    {
+      "label": "Combined detailed-model geometry stays bounded",
+      "pass": true,
+      "meshes": 139,
+      "triangles": 348544
+    },
+    {
+      "label": "pantalan-paseo starts in conserved present-day state",
+      "pass": true
+    },
+    {
+      "label": "pantalan-paseo has ten registered detailed stops",
+      "pass": true
+    },
+    {
+      "label": "pantalan-paseo-conjunto camera and bounds are finite",
+      "pass": true
+    },
+    {
+      "label": "pantalan-paseo-conjunto has explicit temporal scope",
+      "pass": true
+    },
+    {
+      "label": "pantalan-paseo-acceso camera and bounds are finite",
+      "pass": true
+    },
+    {
+      "label": "pantalan-paseo-acceso has explicit temporal scope",
+      "pass": true
+    },
+    {
+      "label": "pantalan-paseo-pergolas camera and bounds are finite",
+      "pass": true
+    },
+    {
+      "label": "pantalan-paseo-pergolas has explicit temporal scope",
+      "pass": true
+    },
+    {
+      "label": "pantalan-paseo-tolva camera and bounds are finite",
+      "pass": true
+    },
+    {
+      "label": "pantalan-paseo-tolva has explicit temporal scope",
+      "pass": true
+    },
+    {
+      "label": "pantalan-paseo-juegos camera and bounds are finite",
+      "pass": true
+    },
+    {
+      "label": "pantalan-paseo-juegos has explicit temporal scope",
+      "pass": true
+    },
+    {
+      "label": "pantalan-paseo-carril camera and bounds are finite",
+      "pass": true
+    },
+    {
+      "label": "pantalan-paseo-carril has explicit temporal scope",
+      "pass": true
+    },
+    {
+      "label": "pantalan-paseo-mirador camera and bounds are finite",
+      "pass": true
+    },
+    {
+      "label": "pantalan-paseo-mirador has explicit temporal scope",
+      "pass": true
+    },
+    {
+      "label": "pantalan-paseo-escollera camera and bounds are finite",
+      "pass": true
+    },
+    {
+      "label": "pantalan-paseo-escollera has explicit temporal scope",
+      "pass": true
+    },
+    {
+      "label": "pantalan-paseo-recorrido camera and bounds are finite",
+      "pass": true
+    },
+    {
+      "label": "pantalan-paseo-recorrido has explicit temporal scope",
+      "pass": true
+    },
+    {
+      "label": "pantalan-paseo-cinta camera and bounds are finite",
+      "pass": true
+    },
+    {
+      "label": "pantalan-paseo-cinta has explicit temporal scope",
+      "pass": true
+    },
+    {
+      "label": "pantalan-maritimo starts in conserved present-day state",
+      "pass": true
+    },
+    {
+      "label": "pantalan-maritimo has ten registered detailed stops",
+      "pass": true
+    },
+    {
+      "label": "pantalan-maritimo-conjunto camera and bounds are finite",
+      "pass": true
+    },
+    {
+      "label": "pantalan-maritimo-conjunto has explicit temporal scope",
+      "pass": true
+    },
+    {
+      "label": "pantalan-maritimo-tripodes camera and bounds are finite",
+      "pass": true
+    },
+    {
+      "label": "pantalan-maritimo-tripodes has explicit temporal scope",
+      "pass": true
+    },
+    {
+      "label": "pantalan-maritimo-vanos camera and bounds are finite",
+      "pass": true
+    },
+    {
+      "label": "pantalan-maritimo-vanos has explicit temporal scope",
+      "pass": true
+    },
+    {
+      "label": "pantalan-maritimo-transicion camera and bounds are finite",
+      "pass": true
+    },
+    {
+      "label": "pantalan-maritimo-transicion has explicit temporal scope",
+      "pass": true
+    },
+    {
+      "label": "pantalan-maritimo-plataforma camera and bounds are finite",
+      "pass": true
+    },
+    {
+      "label": "pantalan-maritimo-plataforma has explicit temporal scope",
+      "pass": true
+    },
+    {
+      "label": "pantalan-maritimo-pilotes camera and bounds are finite",
+      "pass": true
+    },
+    {
+      "label": "pantalan-maritimo-pilotes has explicit temporal scope",
+      "pass": true
+    },
+    {
+      "label": "pantalan-maritimo-cinta camera and bounds are finite",
+      "pass": true
+    },
+    {
+      "label": "pantalan-maritimo-cinta has explicit temporal scope",
+      "pass": true
+    },
+    {
+      "label": "pantalan-maritimo-cargador camera and bounds are finite",
+      "pass": true
+    },
+    {
+      "label": "pantalan-maritimo-cargador has explicit temporal scope",
+      "pass": true
+    },
+    {
+      "label": "pantalan-maritimo-tolvas camera and bounds are finite",
+      "pass": true
+    },
+    {
+      "label": "pantalan-maritimo-tolvas has explicit temporal scope",
+      "pass": true
+    },
+    {
+      "label": "pantalan-maritimo-pasarela camera and bounds are finite",
+      "pass": true
+    },
+    {
+      "label": "pantalan-maritimo-pasarela has explicit temporal scope",
+      "pass": true
+    },
+    {
+      "label": "Seven built pergolas and 600 timber slats preserved",
+      "pass": true
+    },
+    {
+      "label": "Only the 21 mapped main current supports are reconstructed",
+      "pass": true
+    },
+    {
+      "label": "Current maritime gap remains open at station 525",
+      "pass": true
+    },
+    {
+      "label": "Historical deck reconnects station 525",
+      "pass": true
+    },
+    {
+      "label": "Current maritime gap remains open at station 555",
+      "pass": true
+    },
+    {
+      "label": "Historical deck reconnects station 555",
+      "pass": true
+    },
+    {
+      "label": "Current maritime gap remains open at station 585",
+      "pass": true
+    },
+    {
+      "label": "Historical deck reconnects station 585",
+      "pass": true
+    },
+    {
+      "label": "Current maritime gap remains open at station 615",
+      "pass": true
+    },
+    {
+      "label": "Historical deck reconnects station 615",
+      "pass": true
+    },
+    {
+      "label": "Current maritime gap remains open at station 645",
+      "pass": true
+    },
+    {
+      "label": "Historical deck reconnects station 645",
+      "pass": true
+    },
+    {
+      "label": "Current maritime gap remains open at station 675",
+      "pass": true
+    },
+    {
+      "label": "Historical deck reconnects station 675",
+      "pass": true
+    },
+    {
+      "label": "Current maritime gap remains open at station 705",
+      "pass": true
+    },
+    {
+      "label": "Historical deck reconnects station 705",
+      "pass": true
+    },
+    {
+      "label": "Current maritime gap remains open at station 750",
+      "pass": true
+    },
+    {
+      "label": "Historical deck reconnects station 750",
+      "pass": true
+    },
+    {
+      "label": "Current maritime gap remains open at station 780",
+      "pass": true
+    },
+    {
+      "label": "Historical deck reconnects station 780",
+      "pass": true
+    },
+    {
+      "label": "Current maritime gap remains open at station 810",
+      "pass": true
+    },
+    {
+      "label": "Historical deck reconnects station 810",
+      "pass": true
+    },
+    {
+      "label": "Current maritime gap remains open at station 855",
+      "pass": true
+    },
+    {
+      "label": "Historical deck reconnects station 855",
+      "pass": true
+    },
+    {
+      "label": "Current maritime gap remains open at station 885",
+      "pass": true
+    },
+    {
+      "label": "Historical deck reconnects station 885",
+      "pass": true
+    },
+    {
+      "label": "Current maritime gap remains open at station 915",
+      "pass": true
+    },
+    {
+      "label": "Historical deck reconnects station 915",
+      "pass": true
+    },
+    {
+      "label": "Current maritime gap remains open at station 945",
+      "pass": true
+    },
+    {
+      "label": "Historical deck reconnects station 945",
+      "pass": true
+    },
+    {
+      "label": "Current maritime gap remains open at station 975",
+      "pass": true
+    },
+    {
+      "label": "Historical deck reconnects station 975",
+      "pass": true
+    },
+    {
+      "label": "Current maritime gap remains open at station 1005",
+      "pass": true
+    },
+    {
+      "label": "Historical deck reconnects station 1005",
+      "pass": true
+    },
+    {
+      "label": "Current maritime gap remains open at station 1050",
+      "pass": true
+    },
+    {
+      "label": "Historical deck reconnects station 1050",
+      "pass": true
+    },
+    {
+      "label": "Current maritime gap remains open at station 1080",
+      "pass": true
+    },
+    {
+      "label": "Historical deck reconnects station 1080",
+      "pass": true
+    },
+    {
+      "label": "Current maritime gap remains open at station 1110",
+      "pass": true
+    },
+    {
+      "label": "Historical deck reconnects station 1110",
+      "pass": true
+    },
+    {
+      "label": "Current maritime gap remains open at station 1140",
+      "pass": true
+    },
+    {
+      "label": "Historical deck reconnects station 1140",
+      "pass": true
+    },
+    {
+      "label": "Current maritime gap remains open at station 1185",
+      "pass": true
+    },
+    {
+      "label": "Historical deck reconnects station 1185",
+      "pass": true
+    },
+    {
+      "label": "Current maritime gap remains open at station 1215",
+      "pass": true
+    },
+    {
+      "label": "Historical deck reconnects station 1215",
+      "pass": true
+    },
+    {
+      "label": "Current maritime gap remains open at station 1245",
+      "pass": true
+    },
+    {
+      "label": "Historical deck reconnects station 1245",
+      "pass": true
+    },
+    {
+      "label": "Current maritime gap remains open at station 1275",
+      "pass": true
+    },
+    {
+      "label": "Historical deck reconnects station 1275",
+      "pass": true
+    },
+    {
+      "label": "Current maritime gap remains open at station 1305",
+      "pass": true
+    },
+    {
+      "label": "Historical deck reconnects station 1305",
+      "pass": true
+    },
+    {
+      "label": "Current cap exists at registered support 510",
+      "pass": true
+    },
+    {
+      "label": "Current cap exists at registered support 540",
+      "pass": true
+    },
+    {
+      "label": "Current cap exists at registered support 570",
+      "pass": true
+    },
+    {
+      "label": "Current cap exists at registered support 600",
+      "pass": true
+    },
+    {
+      "label": "Current cap exists at registered support 630",
+      "pass": true
+    },
+    {
+      "label": "Current cap exists at registered support 660",
+      "pass": true
+    },
+    {
+      "label": "Current cap exists at registered support 690",
+      "pass": true
+    },
+    {
+      "label": "Current cap exists at registered support 720",
+      "pass": true
+    },
+    {
+      "label": "Current cap exists at registered support 840",
+      "pass": true
+    },
+    {
+      "label": "Current cap exists at registered support 870",
+      "pass": true
+    },
+    {
+      "label": "Current cap exists at registered support 900",
+      "pass": true
+    },
+    {
+      "label": "Current cap exists at registered support 930",
+      "pass": true
+    },
+    {
+      "label": "Current cap exists at registered support 960",
+      "pass": true
+    },
+    {
+      "label": "Current cap exists at registered support 990",
+      "pass": true
+    },
+    {
+      "label": "Current cap exists at registered support 1020",
+      "pass": true
+    },
+    {
+      "label": "Current cap exists at registered support 1170",
+      "pass": true
+    },
+    {
+      "label": "Current cap exists at registered support 1200",
+      "pass": true
+    },
+    {
+      "label": "Current cap exists at registered support 1230",
+      "pass": true
+    },
+    {
+      "label": "Current cap exists at registered support 1260",
+      "pass": true
+    },
+    {
+      "label": "Current cap exists at registered support 1290",
+      "pass": true
+    },
+    {
+      "label": "Current cap exists at registered support 1320",
+      "pass": true
+    },
+    {
+      "label": "Conserved platform is continuous at 1335",
+      "pass": true
+    },
+    {
+      "label": "Conserved platform is continuous at 1410",
+      "pass": true
+    },
+    {
+      "label": "Conserved platform is continuous at 1485",
+      "pass": true
+    },
+    {
+      "label": "Conserved platform is continuous at 1560",
+      "pass": true
+    },
+    {
+      "label": "Current final footbridge is absent at 1605",
+      "pass": true
+    },
+    {
+      "label": "Historic final footbridge exists at 1605",
+      "pass": true
+    },
+    {
+      "label": "Current final footbridge is absent at 1635",
+      "pass": true
+    },
+    {
+      "label": "Historic final footbridge exists at 1635",
+      "pass": true
+    },
+    {
+      "label": "Planted slope physically connects high promenade and low cycleway",
+      "pass": true,
+      "height": 4.069999923868465
+    },
+    {
+      "label": "Public promenade camera remains at pedestrian eye height",
+      "pass": true,
+      "clearance": 1.6500000953674316
+    },
+    {
+      "label": "Cycle entry clears plaza paving at station 440",
+      "pass": true,
+      "height": 8.010615874681122,
+      "plaza": 7.9267199999999995
+    },
+    {
+      "label": "Cycle entry clears plaza paving at station 442",
+      "pass": true,
+      "height": 8.07461632052022,
+      "plaza": 7.99072
+    },
+    {
+      "label": "Cycle entry clears plaza paving at station 444",
+      "pass": true,
+      "height": 8.089720121484334,
+      "plaza": 8.05472
+    },
+    {
+      "label": "Cycle entry clears plaza paving at station 446",
+      "pass": true,
+      "height": 8.153720031717839,
+      "plaza": 8.11872
+    },
+    {
+      "label": "Cycle entry clears plaza paving at station 448",
+      "pass": true,
+      "height": 8.217720177037165,
+      "plaza": 8.18272
+    },
+    {
+      "label": "Cycle entry has an actual opening in the right-hand railing",
+      "pass": true
+    },
+    {
+      "label": "pantalan-paseo-cinta is exclusive to interpretation of 1984–1987",
+      "pass": true
+    },
+    {
+      "label": "pantalan-maritimo-cinta is exclusive to interpretation of 1984–1987",
+      "pass": true
+    },
+    {
+      "label": "pantalan-maritimo-cargador is exclusive to interpretation of 1984–1987",
+      "pass": true
+    },
+    {
+      "label": "pantalan-maritimo-tolvas is exclusive to interpretation of 1984–1987",
+      "pass": true
+    },
+    {
+      "label": "pantalan-maritimo-pasarela is exclusive to interpretation of 1984–1987",
+      "pass": true
+    },
+    {
+      "label": "Shared factory resources dispose exactly once",
+      "pass": true,
+      "resources": 289
+    },
+    {
+      "label": "Rebuilding the region owns fresh materials and textures",
+      "pass": true
+    }
+  ],
+  "failures": []
+}

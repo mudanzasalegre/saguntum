@@ -1,0 +1,720 @@
+{
+  "pass": true,
+  "buildMs": 273.02646000000004,
+  "stats": {
+    "stops": 16,
+    "components": 21,
+    "meshes": 46,
+    "triangles": 47744,
+    "seatingRows": 23,
+    "senatorialRows": 2,
+    "upperRestitutedRows": 4,
+    "trueOpenPassages": 9,
+    "cartographicOutline": true,
+    "undergroundReconstruction": "schematic",
+    "sourceKeys": [
+      "teatro-arqueologia-1993",
+      "teatro-estructura-1986",
+      "teatro-portaceli-1993",
+      "teatro-proyecto-1993",
+      "teatro-osm"
+    ],
+    "periods": [
+      "ancient",
+      "contemporary",
+      "mixed",
+      "interpretation"
+    ]
+  },
+  "checks": [
+    {
+      "pass": true,
+      "label": "all 16 documented stop IDs resolve to model focuses"
+    },
+    {
+      "pass": true,
+      "label": "model references resolve to the displayed bibliography"
+    },
+    {
+      "pass": true,
+      "label": "orchestra and principal cavea dimensions match archaeological measurements"
+    },
+    {
+      "pass": true,
+      "label": "the documented 6 / 8 / 9 seating orders are represented"
+    },
+    {
+      "pass": true,
+      "label": "the didactic curtain trench preserves documented structural counts and width"
+    },
+    {
+      "pass": true,
+      "label": "ancient stage elevation is not passed off as measured"
+    },
+    {
+      "pass": true,
+      "label": "both cadastral theatre duplicates are excluded from context"
+    },
+    {
+      "pass": true,
+      "label": "27 internal mapped paths are replaced by architectural circulation"
+    },
+    {
+      "pass": true,
+      "label": "all geometry attributes are finite"
+    },
+    {
+      "pass": true,
+      "label": "top surfaces remain above the final interpolated terrain"
+    },
+    {
+      "pass": true,
+      "label": "vomitorium-0 has an open 3D passage and terrain clearance"
+    },
+    {
+      "pass": true,
+      "label": "vomitorium-1 has an open 3D passage and terrain clearance"
+    },
+    {
+      "pass": true,
+      "label": "vomitorium-2 has an open 3D passage and terrain clearance"
+    },
+    {
+      "pass": true,
+      "label": "vomitorium-3 has an open 3D passage and terrain clearance"
+    },
+    {
+      "pass": true,
+      "label": "aditus-occidental has an open 3D passage and terrain clearance"
+    },
+    {
+      "pass": true,
+      "label": "aditus-oriental has an open 3D passage and terrain clearance"
+    },
+    {
+      "pass": true,
+      "label": "scene-door--15.9 has an open 3D passage and terrain clearance"
+    },
+    {
+      "pass": true,
+      "label": "scene-door-0 has an open 3D passage and terrain clearance"
+    },
+    {
+      "pass": true,
+      "label": "scene-door-15.9 has an open 3D passage and terrain clearance"
+    },
+    {
+      "pass": true,
+      "label": "cloaca-esquema has an open 3D passage and terrain clearance"
+    },
+    {
+      "pass": true,
+      "label": "focus selection teatro-conjunto"
+    },
+    {
+      "pass": true,
+      "label": "focus selection teatro-aditus-oriental"
+    },
+    {
+      "pass": true,
+      "label": "focus selection teatro-orchestra"
+    },
+    {
+      "pass": true,
+      "label": "focus selection teatro-ima-cavea"
+    },
+    {
+      "pass": true,
+      "label": "focus selection teatro-media-cavea"
+    },
+    {
+      "pass": true,
+      "label": "focus selection teatro-summa-cavea"
+    },
+    {
+      "pass": true,
+      "label": "focus selection teatro-vomitoria"
+    },
+    {
+      "pass": true,
+      "label": "focus selection teatro-portico"
+    },
+    {
+      "pass": true,
+      "label": "focus selection teatro-tribunalia"
+    },
+    {
+      "pass": true,
+      "label": "focus selection teatro-proscaenium"
+    },
+    {
+      "pass": true,
+      "label": "focus selection teatro-frons-scaenae"
+    },
+    {
+      "pass": true,
+      "label": "focus selection teatro-basilicas"
+    },
+    {
+      "pass": true,
+      "label": "focus selection teatro-hyposcaenium"
+    },
+    {
+      "pass": true,
+      "label": "focus selection teatro-cloaca"
+    },
+    {
+      "pass": true,
+      "label": "focus selection teatro-restauracion"
+    },
+    {
+      "pass": true,
+      "label": "focus selection teatro-vivo"
+    },
+    {
+      "pass": true,
+      "label": "section removes the contemporary roof and stage deck"
+    },
+    {
+      "pass": true,
+      "label": "documented schematic substructures remain present in section"
+    },
+    {
+      "pass": true,
+      "label": "selection, period reading and cutaway restore original resources and visibility"
+    },
+    {
+      "pass": true,
+      "label": "theatre instances never share disposable material caches"
+    },
+    {
+      "pass": true,
+      "label": "theatre instances never share disposable textures"
+    },
+    {
+      "pass": true,
+      "label": "teatro-conjunto full camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-conjunto full camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-conjunto near camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-conjunto near camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-aditus-oriental full camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-aditus-oriental full camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-aditus-oriental near camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-aditus-oriental near camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-orchestra full camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-orchestra full camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-orchestra near camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-orchestra near camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-ima-cavea full camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-ima-cavea full camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-ima-cavea near camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-ima-cavea near camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-media-cavea full camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-media-cavea full camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-media-cavea near camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-media-cavea near camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-summa-cavea full camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-summa-cavea full camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-summa-cavea near camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-summa-cavea near camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-vomitoria full camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-vomitoria full camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-vomitoria near camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-vomitoria near camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-portico full camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-portico full camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-portico near camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-portico near camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-tribunalia full camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-tribunalia full camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-tribunalia near camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-tribunalia near camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-proscaenium full camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-proscaenium full camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-proscaenium near camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-proscaenium near camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-frons-scaenae full camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-frons-scaenae full camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-frons-scaenae near camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-frons-scaenae near camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-basilicas full camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-basilicas full camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-basilicas near camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-basilicas near camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-hyposcaenium full camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-hyposcaenium full camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-hyposcaenium near camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-hyposcaenium near camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-cloaca full camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-cloaca full camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-cloaca near camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-cloaca near camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-restauracion full camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-restauracion full camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-restauracion near camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-restauracion near camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-vivo full camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-vivo full camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-vivo near camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-vivo near camera target is not hidden by terrain"
+    }
+  ],
+  "errors": [],
+  "openings": [
+    {
+      "id": "vomitorium-0",
+      "total": 9,
+      "clear": 9,
+      "hits": []
+    },
+    {
+      "id": "vomitorium-1",
+      "total": 9,
+      "clear": 9,
+      "hits": []
+    },
+    {
+      "id": "vomitorium-2",
+      "total": 9,
+      "clear": 9,
+      "hits": []
+    },
+    {
+      "id": "vomitorium-3",
+      "total": 9,
+      "clear": 9,
+      "hits": []
+    },
+    {
+      "id": "aditus-occidental",
+      "total": 9,
+      "clear": 9,
+      "hits": []
+    },
+    {
+      "id": "aditus-oriental",
+      "total": 9,
+      "clear": 9,
+      "hits": []
+    },
+    {
+      "id": "scene-door--15.9",
+      "total": 9,
+      "clear": 9,
+      "hits": []
+    },
+    {
+      "id": "scene-door-0",
+      "total": 9,
+      "clear": 9,
+      "hits": []
+    },
+    {
+      "id": "scene-door-15.9",
+      "total": 9,
+      "clear": 9,
+      "hits": []
+    },
+    {
+      "id": "cloaca-esquema",
+      "total": 9,
+      "clear": 9,
+      "hits": []
+    }
+  ],
+  "terrain": {
+    "topTriangles": 8194,
+    "buried": 0,
+    "minClearance": 0.47999654387824364,
+    "buriedSamples": []
+  },
+  "cameras": [
+    {
+      "id": "teatro-conjunto",
+      "near": false,
+      "clearance": 41.51434960493245,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-conjunto",
+      "near": true,
+      "clearance": 27.93299557568494,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-aditus-oriental",
+      "near": false,
+      "clearance": 6.386166704316793,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-aditus-oriental",
+      "near": true,
+      "clearance": 5.288520630646943,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-orchestra",
+      "near": false,
+      "clearance": 10.85884909978222,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-orchestra",
+      "near": true,
+      "clearance": 10.78004215401188,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-ima-cavea",
+      "near": false,
+      "clearance": 8.139267926773655,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-ima-cavea",
+      "near": true,
+      "clearance": 8.08121956494736,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-media-cavea",
+      "near": false,
+      "clearance": 6.805889718253923,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-media-cavea",
+      "near": true,
+      "clearance": 7.181739806153459,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-summa-cavea",
+      "near": false,
+      "clearance": 7.106296776001088,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-summa-cavea",
+      "near": true,
+      "clearance": 5.92165791210202,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-vomitoria",
+      "near": false,
+      "clearance": 25.54709319607052,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-vomitoria",
+      "near": true,
+      "clearance": 18.601424133368553,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-portico",
+      "near": false,
+      "clearance": 6.6927265489302386,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-portico",
+      "near": true,
+      "clearance": 5.700806895335489,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-tribunalia",
+      "near": false,
+      "clearance": 11.967813774067949,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-tribunalia",
+      "near": true,
+      "clearance": 10.58214448914066,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-proscaenium",
+      "near": false,
+      "clearance": 16.496239210561114,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-proscaenium",
+      "near": true,
+      "clearance": 17.28400506760245,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-frons-scaenae",
+      "near": false,
+      "clearance": 27.415202232013144,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-frons-scaenae",
+      "near": true,
+      "clearance": 28.258424417299437,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-basilicas",
+      "near": false,
+      "clearance": 27.205865463093588,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-basilicas",
+      "near": true,
+      "clearance": 24.292871879935504,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-hyposcaenium",
+      "near": false,
+      "clearance": 29.48877154175237,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-hyposcaenium",
+      "near": true,
+      "clearance": 22.44999654566638,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-cloaca",
+      "near": false,
+      "clearance": 26.844937074001834,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-cloaca",
+      "near": true,
+      "clearance": 21.44999654566638,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-restauracion",
+      "near": false,
+      "clearance": 30.244136970646295,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-restauracion",
+      "near": true,
+      "clearance": 32.50994781374078,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-vivo",
+      "near": false,
+      "clearance": 12.670988091731815,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-vivo",
+      "near": true,
+      "clearance": 13.269317602065968,
+      "terrainHit": null
+    }
+  ],
+  "limitations": [
+    "Metric schematic architecture registered to supplied OSM / PNOA, not photogrammetry.",
+    "Conserved and rehabilitated state; no fictitious fully restored Roman scaenae frons.",
+    "Cutaway removes contemporary roof and deck, exposing interpretive archaeological substructures.",
+    "Physical access and pedestrian collision are not certified by camera tours."
+  ]
+}

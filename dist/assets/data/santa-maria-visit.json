@@ -1,0 +1,1699 @@
+{
+  "schemaVersion": 1,
+  "id": "santa-maria",
+  "title": "Iglesia de Santa María de Sagunto",
+  "subtitle": "Dieciséis paradas entre la iglesia y la ciudad",
+  "introduction": "Recorre el templo de la Natividad de Nuestra Señora desde la Plaça Major hasta su cabecera. Las portadas, las naves, el campanario y el entorno permiten reconocer una construcción transformada durante siglos. Cada parada enlaza sus hechos con la documentación consultada.",
+  "researchDate": "2026-11-19",
+  "regionsLabel": "ámbitos",
+  "mapButtonLabel": "Plano de Santa María",
+  "overviewButtonLabel": "Ver conjunto",
+  "readingModeLabel": "Leer las capas",
+  "readingModeNote": "Los colores distinguen fábrica medieval, transformaciones de la Edad Moderna, reconstrucción contemporánea, encuentros de etapas y esquemas interpretativos. Clasifican componentes de la maqueta, no cada piedra del edificio.",
+  "timelineIntroduction": "Una construcción prolongada, pérdidas y conservación: las fechas distinguen campañas arquitectónicas, acontecimientos y anuncios documentados.",
+  "visitAriaLabel": "Visita documentada a Santa María y su entorno",
+  "sectionInstructions": "Retira las cubiertas y parte de los cerramientos para observar naves, pilares, arcos y capillas.",
+  "sectionNote": "Corte didáctico: conserva las nervaduras y la cabecera como referencias espaciales. No representa una ruina histórica ni reconstruye la cripta.",
+  "regions": [
+    {
+      "id": "ciudad",
+      "name": "La iglesia y la ciudad",
+      "aliases": [],
+      "summary": "Comienza por el conjunto, la plaza y la calle que acompaña el templo.",
+      "coordinate": [
+        -0.27863,
+        39.67943
+      ],
+      "sourceIds": [
+        "sm-turismo",
+        "sm-boe-1982",
+        "sm-parroquia",
+        "sm-plaza",
+        "sm-entorno",
+        "sm-lapidas-2024"
+      ],
+      "stopIds": [
+        "santa-maria-conjunto",
+        "santa-maria-plaza-mayor",
+        "santa-maria-cavallers"
+      ]
+    },
+    {
+      "id": "portadas",
+      "name": "Tres entradas y una escalinata",
+      "aliases": [],
+      "summary": "Compara las portadas góticas, el frente barroco y el acceso desde la calle.",
+      "coordinate": [
+        -0.27901791,
+        39.67919359
+      ],
+      "sourceIds": [
+        "sm-ruta-iglesia",
+        "sm-serrano-2018",
+        "sm-lapidas-2024",
+        "sm-cabrera-1987",
+        "sm-zaragoza-2000"
+      ],
+      "stopIds": [
+        "santa-maria-portada-norte",
+        "santa-maria-escalinata",
+        "santa-maria-portada-sur",
+        "santa-maria-portada-principal"
+      ]
+    },
+    {
+      "id": "arquitectura",
+      "name": "Naves, luz y construcción",
+      "aliases": [],
+      "summary": "Abre la sección para comprender pilares, bóvedas, capillas y cabecera.",
+      "coordinate": [
+        -0.27915104,
+        39.6790367
+      ],
+      "sourceIds": [
+        "sm-zaragoza-2000",
+        "sm-cabrera-1987",
+        "sm-navarro-2004",
+        "sm-turismo",
+        "sm-serrano-2018",
+        "sm-perales-2023"
+      ],
+      "stopIds": [
+        "santa-maria-naves",
+        "santa-maria-bovedas",
+        "santa-maria-capillas",
+        "santa-maria-abside",
+        "santa-maria-contrafuertes"
+      ]
+    },
+    {
+      "id": "torre",
+      "name": "Torre, campanas y reloj",
+      "aliases": [],
+      "summary": "Reconoce una reconstrucción del siglo XX y su función religiosa y cívica.",
+      "coordinate": [
+        -0.27891454,
+        39.67913132
+      ],
+      "sourceIds": [
+        "sm-campaners",
+        "sm-campanas",
+        "sm-reloj-2026"
+      ],
+      "stopIds": [
+        "santa-maria-campanario",
+        "santa-maria-reloj"
+      ]
+    },
+    {
+      "id": "entorno",
+      "name": "Alrededor del ábside",
+      "aliases": [],
+      "summary": "Termina en Sagrari y la Casa dels Berenguer, junto a otros testimonios del pasado.",
+      "coordinate": [
+        -0.2790276,
+        39.6787218
+      ],
+      "sourceIds": [
+        "sm-diana-2022",
+        "sm-diana-debate",
+        "sm-berenguer",
+        "sm-berenguer-2025"
+      ],
+      "stopIds": [
+        "santa-maria-sagrario",
+        "santa-maria-berenguer"
+      ]
+    }
+  ],
+  "stops": [
+    {
+      "id": "santa-maria-conjunto",
+      "title": "Santa María, una iglesia hecha durante siglos",
+      "label": "El conjunto",
+      "regionId": "ciudad",
+      "period": "mixed",
+      "coordinate": [
+        -0.27914628,
+        39.67903614
+      ],
+      "coordinates": [
+        -0.27914628,
+        39.67903614
+      ],
+      "intro": "Empieza con una vista de conjunto. Rodea la iglesia y compara sus tres frentes de entrada antes de acercarte al interior. El recorrido enlaza el volumen del templo, el campanario y los espacios públicos que lo rodean.",
+      "narrative": "Empieza con una vista de conjunto. Rodea la iglesia y compara sus tres frentes de entrada antes de acercarte al interior. El recorrido enlaza el volumen del templo, el campanario y los espacios públicos que lo rodean.",
+      "facts": [
+        {
+          "text": "La Natividad de Nuestra Señora, conocida como Santa María, se levantó desde 1334 en el lugar de la antigua mezquita mayor.",
+          "sourceIds": [
+            "sm-turismo"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El decreto de declaración monumental es del 15 de diciembre de 1982; se publicó el 26 de enero de 1983.",
+          "sourceIds": [
+            "sm-boe-1982"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La parroquia mantiene el edificio como lugar de culto y encuentro comunitario.",
+          "sourceIds": [
+            "sm-parroquia"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Relaciona el ábside, las naves y la torre con la pendiente y con la Plaça Major.",
+      "modelNote": "El conjunto representa el edificio conservado mediante una maqueta interpretativa. La forma general se apoya en plantas publicadas y cartografía; no es un levantamiento nuevo.",
+      "sourceIds": [
+        "sm-turismo",
+        "sm-boe-1982",
+        "sm-parroquia",
+        "sm-context-catastro",
+        "sm-context-mds",
+        "sm-context-pnoa"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura de la maqueta: posición local registrada con la huella cartográfica de Santa María; anclaje −0,27910948 / 39,67903398 y giro de 1,173 rad. No es una medición topográfica del elemento ni un punto de acceso certificado.",
+      "osmIds": [
+        "way/203070952"
+      ],
+      "order": 1,
+      "readingMinutes": 2,
+      "modelLocal": {
+        "x": -1,
+        "z": -3
+      },
+      "coordinateSourceIds": [
+        "sm-osm",
+        "sm-cabrera-1987"
+      ]
+    },
+    {
+      "id": "santa-maria-plaza-mayor",
+      "title": "Plaça Major: el centro de la vida urbana",
+      "label": "Plaça Major",
+      "regionId": "ciudad",
+      "period": "mixed",
+      "coordinate": [
+        -0.27863,
+        39.67943
+      ],
+      "coordinates": [
+        -0.27863,
+        39.67943
+      ],
+      "intro": "Aléjate un momento de la fachada. La plaza permite ver cómo el templo participa de un espacio compartido con otros edificios y accesos. Desde aquí comienza la aproximación al portal del Evangelio.",
+      "narrative": "Aléjate un momento de la fachada. La plaza permite ver cómo el templo participa de un espacio compartido con otros edificios y accesos. Desde aquí comienza la aproximación al portal del Evangelio.",
+      "facts": [
+        {
+          "text": "En época medieval la plaza concentraba el mercado y parte de la vida comercial y cultural de la población.",
+          "sourceIds": [
+            "sm-plaza"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El recinto porticado conserva la puerta del Almudín, antiguo almacén de grano, con el escudo de la Corona de Aragón.",
+          "sourceIds": [
+            "sm-plaza"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La apertura de las plazas Mayor y de la Pescadería forma parte de la transformación urbana medieval descrita por Turismo de Sagunto.",
+          "sourceIds": [
+            "sm-entorno"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Busca el borde porticado y la relación entre la plaza, la escalinata y la iglesia.",
+      "modelNote": "El foco comprende un espacio urbano. Las fachadas del contexto conservan sus huellas cartográficas y se expresan con detalle desigual.",
+      "sourceIds": [
+        "sm-plaza",
+        "sm-entorno",
+        "sm-context-catastro",
+        "sm-context-mds",
+        "sm-context-pnoa"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura de la maqueta: posición local registrada con la huella cartográfica de Santa María; anclaje −0,27910948 / 39,67903398 y giro de 1,173 rad. No es una medición topográfica del elemento ni un punto de acceso certificado.",
+      "osmIds": [],
+      "order": 2,
+      "readingMinutes": 2,
+      "modelLocal": {
+        "x": 56.556444,
+        "z": 20.794145
+      },
+      "coordinateSourceIds": [
+        "sm-osm",
+        "sm-cabrera-1987"
+      ]
+    },
+    {
+      "id": "santa-maria-cavallers",
+      "title": "Carrer dels Cavallers: acercarse por el costado",
+      "label": "Cavallers",
+      "regionId": "ciudad",
+      "period": "mixed",
+      "coordinate": [
+        -0.2791668,
+        39.67930001
+      ],
+      "coordinates": [
+        -0.2791668,
+        39.67930001
+      ],
+      "intro": "Sigue el borde de la iglesia desde la plaza. Observa cómo la calle acompaña el frente norte y cómo la escalinata resuelve el encuentro con una puerta situada a mayor altura.",
+      "narrative": "Sigue el borde de la iglesia desde la plaza. Observa cómo la calle acompaña el frente norte y cómo la escalinata resuelve el encuentro con una puerta situada a mayor altura.",
+      "facts": [
+        {
+          "text": "La calle Caballeros y la calle Mayor parten de la plaza y fueron ejes principales del núcleo histórico.",
+          "sourceIds": [
+            "sm-plaza"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Turismo de Sagunto sitúa en Caballeros las casas señoriales Casa Gran y Casa Canino.",
+          "sourceIds": [
+            "sm-entorno"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El estudio de las lápidas describe el acceso norte como una conexión entre la iglesia elevada y la calle Caballeros.",
+          "sourceIds": [
+            "sm-lapidas-2024"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Compara la cota de la calle con el rellano del acceso; después mira el trazado hacia la Plaça Major.",
+      "modelNote": "Se destaca el tramo inmediato a Santa María. El punto de cámara es una ayuda de lectura, no una ubicación topográfica de una portada civil concreta.",
+      "sourceIds": [
+        "sm-plaza",
+        "sm-entorno",
+        "sm-lapidas-2024",
+        "sm-context-catastro",
+        "sm-context-mds",
+        "sm-context-pnoa"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura de la maqueta: posición local registrada con la huella cartográfica de Santa María; anclaje −0,27910948 / 39,67903398 y giro de 1,173 rad. No es una medición topográfica del elemento ni un punto de acceso certificado.",
+      "osmIds": [],
+      "order": 3,
+      "readingMinutes": 2,
+      "modelLocal": {
+        "x": 25.4,
+        "z": -16
+      },
+      "coordinateSourceIds": [
+        "sm-osm",
+        "sm-cabrera-1987"
+      ]
+    },
+    {
+      "id": "santa-maria-portada-norte",
+      "title": "Portada del Evangelio: la entrada de la plaza",
+      "label": "Portada norte",
+      "regionId": "portadas",
+      "period": "medieval",
+      "coordinate": [
+        -0.27901791,
+        39.67919359
+      ],
+      "coordinates": [
+        -0.27901791,
+        39.67919359
+      ],
+      "intro": "Acércate al arco apuntado situado sobre la escalinata. Recorre sus molduras desde las jambas hasta la clave y observa los espacios donde la decoración figurativa ya no está.",
+      "narrative": "Acércate al arco apuntado situado sobre la escalinata. Recorre sus molduras desde las jambas hasta la clave y observa los espacios donde la decoración figurativa ya no está.",
+      "facts": [
+        {
+          "text": "La portada del Evangelio pertenece a la campaña del siglo XIV.",
+          "sourceIds": [
+            "sm-ruta-iglesia"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Serrano describe cuatro arquivoltas y las ménsulas y el doselete que permanecen tras la pérdida de las imágenes.",
+          "sourceIds": [
+            "sm-serrano-2018"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Sigue la sucesión de arquivoltas y compara la profundidad del marco con el plano del muro.",
+      "modelNote": "La maqueta simplifica la talla de la piedra y conserva vacíos los lugares de las esculturas desaparecidas.",
+      "sourceIds": [
+        "sm-ruta-iglesia",
+        "sm-serrano-2018"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura de la maqueta: posición local registrada con la huella cartográfica de Santa María; anclaje −0,27910948 / 39,67903398 y giro de 1,173 rad. No es una medición topográfica del elemento ni un punto de acceso certificado.",
+      "osmIds": [
+        "way/203070952"
+      ],
+      "order": 4,
+      "readingMinutes": 2,
+      "modelLocal": {
+        "x": 19.42,
+        "z": 0.35
+      },
+      "coordinateSourceIds": [
+        "sm-osm",
+        "sm-cabrera-1987"
+      ]
+    },
+    {
+      "id": "santa-maria-escalinata",
+      "title": "Escalinata: salvar el desnivel y reutilizar la Antigüedad",
+      "label": "Escalinata y lápidas",
+      "regionId": "portadas",
+      "period": "mixed",
+      "coordinate": [
+        -0.27900081,
+        39.6792249
+      ],
+      "coordinates": [
+        -0.27900081,
+        39.6792249
+      ],
+      "intro": "Mira el acceso desde la calle y después desde el rellano. Dos tramos laterales y el pretil componen una pieza urbana propia, que permite leer la diferencia de altura sin perder la relación con la plaza.",
+      "narrative": "Mira el acceso desde la calle y después desde el rellano. Dos tramos laterales y el pretil componen una pieza urbana propia, que permite leer la diferencia de altura sin perder la relación con la plaza.",
+      "facts": [
+        {
+          "text": "El pretil barroco se fecha en 1799; la antigüedad de todo el acceso no queda fijada por esa fecha.",
+          "sourceIds": [
+            "sm-lapidas-2024"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Dos inscripciones romanas se superponen en la cara exterior central: la honorífica arriba y la funeraria debajo.",
+          "sourceIds": [
+            "sm-lapidas-2024"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El estudio de 2024 las data a finales del siglo I d. C. y documenta problemas de conservación.",
+          "sourceIds": [
+            "sm-lapidas-2024"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Busca el frente macizo del pretil y la posición de los dos bloques inscritos, uno sobre otro.",
+      "modelNote": "Los bloques se señalan como volúmenes sin inventar letras legibles. Peldaños, alturas y curvatura del remate son una aproximación gráfica.",
+      "sourceIds": [
+        "sm-lapidas-2024",
+        "sm-osm",
+        "sm-context-mds"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura de la maqueta: posición local registrada con la huella cartográfica de Santa María; anclaje −0,27910948 / 39,67903398 y giro de 1,173 rad. No es una medición topográfica del elemento ni un punto de acceso certificado.",
+      "osmIds": [],
+      "order": 5,
+      "readingMinutes": 2,
+      "modelLocal": {
+        "x": 23.2,
+        "z": 0.35
+      },
+      "coordinateSourceIds": [
+        "sm-osm",
+        "sm-cabrera-1987"
+      ]
+    },
+    {
+      "id": "santa-maria-portada-sur",
+      "title": "Portada del Mediodía: otro frente gótico",
+      "label": "Portada sur",
+      "regionId": "portadas",
+      "period": "medieval",
+      "coordinate": [
+        -0.27920315,
+        39.67885429
+      ],
+      "coordinates": [
+        -0.27920315,
+        39.67885429
+      ],
+      "intro": "Rodea la iglesia hacia su costado meridional. La comparación con el portal de la plaza permite reconocer una solución emparentada, más contenida, en un entorno de calles y espacios más estrechos.",
+      "narrative": "Rodea la iglesia hacia su costado meridional. La comparación con el portal de la plaza permite reconocer una solución emparentada, más contenida, en un entorno de calles y espacios más estrechos.",
+      "facts": [
+        {
+          "text": "La portada meridional se atribuye a la campaña del siglo XV.",
+          "sourceIds": [
+            "sm-ruta-iglesia"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Su composición tiene tres arquivoltas y ménsulas con rostros, según el estudio de Serrano.",
+          "sourceIds": [
+            "sm-serrano-2018"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Las imágenes de esta entrada sufrieron pérdidas durante conflictos de épocas distintas.",
+          "sourceIds": [
+            "sm-serrano-2018"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Compara el número de molduras con la portada norte y sigue el muro hacia el ábside.",
+      "modelNote": "Se muestra el marco conservado con talla simplificada; la ornamentación figurativa perdida no se restituye.",
+      "sourceIds": [
+        "sm-ruta-iglesia",
+        "sm-serrano-2018"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura de la maqueta: posición local registrada con la huella cartográfica de Santa María; anclaje −0,27910948 / 39,67903398 y giro de 1,173 rad. No es una medición topográfica del elemento ni un punto de acceso certificado.",
+      "osmIds": [
+        "way/203070952"
+      ],
+      "order": 6,
+      "readingMinutes": 2,
+      "modelLocal": {
+        "x": -21.55,
+        "z": 0.35
+      },
+      "coordinateSourceIds": [
+        "sm-osm",
+        "sm-cabrera-1987"
+      ]
+    },
+    {
+      "id": "santa-maria-portada-principal",
+      "title": "La portada principal: concluir el templo en barroco",
+      "label": "Portada principal",
+      "regionId": "portadas",
+      "period": "modern",
+      "coordinate": [
+        -0.27941274,
+        39.67912133
+      ],
+      "coordinates": [
+        -0.27941274,
+        39.67912133
+      ],
+      "intro": "Sitúate a los pies de la iglesia. La composición cambia: las líneas horizontales y las pilastras organizan una fachada distinta de los accesos apuntados que acabas de recorrer.",
+      "narrative": "Sitúate a los pies de la iglesia. La composición cambia: las líneas horizontales y las pilastras organizan una fachada distinta de los accesos apuntados que acabas de recorrer.",
+      "facts": [
+        {
+          "text": "La portada de los pies comenzó a construirse en 1703.",
+          "sourceIds": [
+            "sm-cabrera-1987"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Cabrera describe dos cuerpos con pilastras, una hornacina y un frontón partido.",
+          "sourceIds": [
+            "sm-cabrera-1987"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La fachada y el tramo occidental corresponden a la culminación del conjunto a comienzos del siglo XVIII.",
+          "sourceIds": [
+            "sm-zaragoza-2000"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Reconoce la superposición de cuerpos, el nicho y el remate; compáralos con las portadas laterales.",
+      "modelNote": "Se conserva la lectura barroca. Los perfiles de las molduras se simplifican y no se añaden imágenes escultóricas sin documentación suficiente.",
+      "sourceIds": [
+        "sm-cabrera-1987",
+        "sm-zaragoza-2000"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura de la maqueta: posición local registrada con la huella cartográfica de Santa María; anclaje −0,27910948 / 39,67903398 y giro de 1,173 rad. No es una medición topográfica del elemento ni un punto de acceso certificado.",
+      "osmIds": [
+        "way/203070952"
+      ],
+      "order": 7,
+      "readingMinutes": 2,
+      "modelLocal": {
+        "x": -1.1,
+        "z": -27.72
+      },
+      "coordinateSourceIds": [
+        "sm-osm",
+        "sm-cabrera-1987"
+      ]
+    },
+    {
+      "id": "santa-maria-naves",
+      "title": "Tres naves, cuatro tramos y un espacio continuo",
+      "label": "Las naves",
+      "regionId": "arquitectura",
+      "period": "mixed",
+      "coordinate": [
+        -0.27915104,
+        39.6790367
+      ],
+      "coordinates": [
+        -0.27915104,
+        39.6790367
+      ],
+      "intro": "Activa el corte didáctico y sitúa la mirada entre los pilares. Recorre el eje hacia el ábside y después mira transversalmente para comprender la continuidad entre el espacio central y los laterales.",
+      "narrative": "Activa el corte didáctico y sitúa la mirada entre los pilares. Recorre el eje hacia el ábside y después mira transversalmente para comprender la continuidad entre el espacio central y los laterales.",
+      "facts": [
+        {
+          "text": "La planta reúne tres naves y cuatro tramos; el tramo junto a la cabecera es más corto.",
+          "sourceIds": [
+            "sm-zaragoza-2000"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Los pilares octogonales sostienen arcos apuntados y arcos de medio punto transformados en fases posteriores.",
+          "sourceIds": [
+            "sm-cabrera-1987"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Zaragozá publica una altura de 24 m para las bóvedas de la nave central.",
+          "sourceIds": [
+            "sm-zaragoza-2000"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Cuenta las alineaciones de pilares y compara la anchura de la nave central con las laterales.",
+      "modelNote": "La sección permite leer el orden espacial. Las dimensiones locales se ajustan a la cartografía y a la documentación gráfica, sin precisión de escáner.",
+      "sourceIds": [
+        "sm-zaragoza-2000",
+        "sm-cabrera-1987"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura de la maqueta: posición local registrada con la huella cartográfica de Santa María; anclaje −0,27910948 / 39,67903398 y giro de 1,173 rad. No es una medición topográfica del elemento ni un punto de acceso certificado.",
+      "osmIds": [
+        "way/203070952"
+      ],
+      "order": 8,
+      "readingMinutes": 2,
+      "modelLocal": {
+        "x": -1.1,
+        "z": -3.4
+      },
+      "coordinateSourceIds": [
+        "sm-osm",
+        "sm-cabrera-1987"
+      ],
+      "requiresSection": true,
+      "sectionRecommended": true
+    },
+    {
+      "id": "santa-maria-bovedas",
+      "title": "Bóvedas: seguir las nervaduras",
+      "label": "Bóvedas y sección",
+      "regionId": "arquitectura",
+      "period": "mixed",
+      "coordinate": [
+        -0.27908648,
+        39.67901582
+      ],
+      "coordinates": [
+        -0.27908648,
+        39.67901582
+      ],
+      "intro": "Con el corte abierto, eleva la mirada hacia las nervaduras que permanecen visibles. Sigue un arco hasta su apoyo y compara la altura de la nave central, las laterales y las capillas.",
+      "narrative": "Con el corte abierto, eleva la mirada hacia las nervaduras que permanecen visibles. Sigue un arco hasta su apoyo y compara la altura de la nave central, las laterales y las capillas.",
+      "facts": [
+        {
+          "text": "Navarro Fajardo analiza las crucerías de Santa María como bóvedas de rampante llano.",
+          "sourceIds": [
+            "sm-navarro-2004"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Zaragozá describe plementería de ladrillo colocada a rosca.",
+          "sourceIds": [
+            "sm-zaragoza-2000"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La arquitectura gótica recibió revestimientos posteriores; parte de la lectura del edificio exige distinguir estructura y acabado.",
+          "sourceIds": [
+            "sm-zaragoza-2000"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Sigue las diagonales hasta la clave y observa el escalonamiento de alturas.",
+      "modelNote": "La retirada de cubiertas y paños de bóveda es una apertura didáctica. Los nervios quedan como referencia; el corte no representa un estado histórico en ruina.",
+      "sourceIds": [
+        "sm-navarro-2004",
+        "sm-zaragoza-2000"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura de la maqueta: posición local registrada con la huella cartográfica de Santa María; anclaje −0,27910948 / 39,67903398 y giro de 1,173 rad. No es una medición topográfica del elemento ni un punto de acceso certificado.",
+      "osmIds": [
+        "way/203070952"
+      ],
+      "order": 9,
+      "readingMinutes": 2,
+      "modelLocal": {
+        "x": -1.1,
+        "z": 2.6
+      },
+      "coordinateSourceIds": [
+        "sm-osm",
+        "sm-cabrera-1987"
+      ],
+      "requiresSection": true,
+      "sectionRecommended": true
+    },
+    {
+      "id": "santa-maria-capillas",
+      "title": "Capillas laterales: una construcción por etapas",
+      "label": "Capillas laterales",
+      "regionId": "arquitectura",
+      "period": "mixed",
+      "coordinate": [
+        -0.2791034,
+        39.67918889
+      ],
+      "coordinates": [
+        -0.2791034,
+        39.67918889
+      ],
+      "intro": "Desplaza la mirada hacia el borde de las naves. Las capillas forman espacios más recogidos y permiten comparar el ritmo repetido de los tramos con las soluciones que cambian al acercarse a los pies.",
+      "narrative": "Desplaza la mirada hacia el borde de las naves. Las capillas forman espacios más recogidos y permiten comparar el ritmo repetido de los tramos con las soluciones que cambian al acercarse a los pies.",
+      "facts": [
+        {
+          "text": "Las capillas se sitúan entre los contrafuertes de los muros laterales.",
+          "sourceIds": [
+            "sm-turismo"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Los tramos laterales regulares corresponden a dos capillas por lado; la cabecera tiene un tramo más corto.",
+          "sourceIds": [
+            "sm-zaragoza-2000"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La antigua capilla de la Comunión, hoy de los Santos de la Piedra, conserva un altar barroco.",
+          "sourceIds": [
+            "sm-serrano-2018"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Los extremos occidentales de las naves laterales incorporan cúpulas con linterna.",
+          "sourceIds": [
+            "sm-serrano-2018"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Compara los espacios del borde con los tramos centrales y localiza el cambio hacia las cúpulas de los pies.",
+      "modelNote": "El foco señala una secuencia de capillas, no la localización de todas las advocaciones. Altares, imágenes y mobiliario se omiten cuando falta una documentación espacial suficiente.",
+      "sourceIds": [
+        "sm-turismo",
+        "sm-zaragoza-2000",
+        "sm-serrano-2018"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura de la maqueta: posición local registrada con la huella cartográfica de Santa María; anclaje −0,27910948 / 39,67903398 y giro de 1,173 rad. No es una medición topográfica del elemento ni un punto de acceso certificado.",
+      "osmIds": [
+        "way/203070952"
+      ],
+      "order": 10,
+      "readingMinutes": 2,
+      "modelLocal": {
+        "x": 16.1,
+        "z": -6.2
+      },
+      "coordinateSourceIds": [
+        "sm-osm",
+        "sm-cabrera-1987"
+      ],
+      "requiresSection": true,
+      "sectionRecommended": true
+    },
+    {
+      "id": "santa-maria-abside",
+      "title": "El ábside: geometría y luz en la cabecera",
+      "label": "Ábside y tracerías",
+      "regionId": "arquitectura",
+      "period": "medieval",
+      "coordinate": [
+        -0.27893152,
+        39.67896571
+      ],
+      "coordinates": [
+        -0.27893152,
+        39.67896571
+      ],
+      "intro": "Contempla la cabecera desde fuera y vuelve a observarla con la sección abierta. Relaciona sus caras, los grandes huecos y los apoyos con el eje longitudinal de la iglesia.",
+      "narrative": "Contempla la cabecera desde fuera y vuelve a observarla con la sección abierta. Relaciona sus caras, los grandes huecos y los apoyos con el eje longitudinal de la iglesia.",
+      "facts": [
+        {
+          "text": "La cabecera ochavada contiene tres grandes ventanales.",
+          "sourceIds": [
+            "sm-cabrera-1987"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Perales identifica una estrella de cinco puntas en el ventanal central y de ocho en los dos laterales.",
+          "sourceIds": [
+            "sm-perales-2023"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Cabrera describía en 1987 una cripta cegada bajo el ábside, de difícil reconocimiento.",
+          "sourceIds": [
+            "sm-cabrera-1987"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Mira cómo las tres ventanas se reparten entre los planos del ábside y cómo sus tracerías cambian.",
+      "modelNote": "La tracería es una síntesis de los motivos documentados. No se modela la cripta ni se reconstruye un retablo desaparecido.",
+      "sourceIds": [
+        "sm-cabrera-1987",
+        "sm-perales-2023"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura de la maqueta: posición local registrada con la huella cartográfica de Santa María; anclaje −0,27910948 / 39,67903398 y giro de 1,173 rad. No es una medición topográfica del elemento ni un punto de acceso certificado.",
+      "osmIds": [
+        "way/203070952"
+      ],
+      "order": 11,
+      "readingMinutes": 2,
+      "modelLocal": {
+        "x": -1.1,
+        "z": 17
+      },
+      "coordinateSourceIds": [
+        "sm-osm",
+        "sm-cabrera-1987"
+      ]
+    },
+    {
+      "id": "santa-maria-contrafuertes",
+      "title": "Contrafuertes, arcos altos y agua de lluvia",
+      "label": "Contrafuertes y agua",
+      "regionId": "arquitectura",
+      "period": "medieval",
+      "coordinate": [
+        -0.27920032,
+        39.67894643
+      ],
+      "coordinates": [
+        -0.27920032,
+        39.67894643
+      ],
+      "intro": "Sube la vista al exterior de las cubiertas. No todos los arcos cumplen la misma función: distingue los apoyos macizos del perímetro de los puentes altos que enlazan distintos niveles.",
+      "narrative": "Sube la vista al exterior de las cubiertas. No todos los arcos cumplen la misma función: distingue los apoyos macizos del perímetro de los puentes altos que enlazan distintos niveles.",
+      "facts": [
+        {
+          "text": "Zaragozá interpreta los arcos altos de medio punto como soportes de los desagües de la cubierta central, no como arbotantes de contrarresto.",
+          "sourceIds": [
+            "sm-zaragoza-2000"
+          ],
+          "confidence": "interpretive"
+        },
+        {
+          "text": "Cabrera documenta canales y gárgolas que llevan el agua fuera de los muros.",
+          "sourceIds": [
+            "sm-cabrera-1987"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La lectura de fuerzas y recorridos de agua que propone la maqueta es una explicación simplificada.",
+          "sourceIds": [
+            "sm-zaragoza-2000"
+          ],
+          "confidence": "interpretive"
+        }
+      ],
+      "lookFor": "Localiza la salida del agua sobre el borde exterior y compara los arcos semicirculares con los contrafuertes.",
+      "modelNote": "Se adopta la interpretación funcional del estudio arquitectónico de Zaragozá. La geometría no sustituye un cálculo estructural ni un levantamiento de las conducciones.",
+      "sourceIds": [
+        "sm-zaragoza-2000",
+        "sm-cabrera-1987"
+      ],
+      "confidence": "interpretive",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura de la maqueta: posición local registrada con la huella cartográfica de Santa María; anclaje −0,27910948 / 39,67903398 y giro de 1,173 rad. No es una medición topográfica del elemento ni un punto de acceso certificado.",
+      "osmIds": [
+        "way/203070952"
+      ],
+      "order": 12,
+      "readingMinutes": 2,
+      "modelLocal": {
+        "x": -12,
+        "z": -3.4
+      },
+      "coordinateSourceIds": [
+        "sm-osm",
+        "sm-cabrera-1987"
+      ]
+    },
+    {
+      "id": "santa-maria-campanario",
+      "title": "Campanar de la Vila: una silueta del siglo XX",
+      "label": "El campanario",
+      "regionId": "torre",
+      "period": "contemporary",
+      "coordinate": [
+        -0.27891454,
+        39.67913132
+      ],
+      "coordinates": [
+        -0.27891454,
+        39.67913132
+      ],
+      "intro": "Aleja la cámara lo suficiente para abarcar la torre completa. Empieza por la base de piedra y asciende visualmente por los cuerpos de ladrillo hasta el remate metálico.",
+      "narrative": "Aleja la cámara lo suficiente para abarcar la torre completa. Empieza por la base de piedra y asciende visualmente por los cuerpos de ladrillo hasta el remate metálico.",
+      "facts": [
+        {
+          "text": "La reconstrucción comenzó en 1905 sobre el primer cuerpo antiguo de sillería y concluyó en 1913.",
+          "sourceIds": [
+            "sm-campaners"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El inventario describe ladrillo visto, piedra clara y hierro con formas neogóticas; recoge una altura total de 58 m.",
+          "sourceIds": [
+            "sm-campaners"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Seis campanas principales del inventario fueron fundidas en 1948 por Roses Hermanos, de Silla.",
+          "sourceIds": [
+            "sm-campanas"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Compara la base, los huecos apuntados, el cuerpo del reloj, la sala de campanas y la ligereza del hierro superior.",
+      "modelNote": "La altura procede de bibliografía histórica y el detalle se simplifica. El foco exterior permite estudiar la torre sin suponer un acceso público a sus escaleras.",
+      "sourceIds": [
+        "sm-campaners",
+        "sm-campanas"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura de la maqueta: posición local registrada con la huella cartográfica de Santa María; anclaje −0,27910948 / 39,67903398 y giro de 1,173 rad. No es una medición topográfica del elemento ni un punto de acceso certificado.",
+      "osmIds": [
+        "way/1303693357"
+      ],
+      "order": 13,
+      "readingMinutes": 2,
+      "modelLocal": {
+        "x": 16.46,
+        "z": 11.2
+      },
+      "coordinateSourceIds": [
+        "sm-osm",
+        "sm-cabrera-1987"
+      ]
+    },
+    {
+      "id": "santa-maria-reloj",
+      "title": "El reloj municipal: medir el tiempo de la ciudad",
+      "label": "Reloj y memoria cívica",
+      "regionId": "torre",
+      "period": "contemporary",
+      "coordinate": [
+        -0.27890079,
+        39.6791565
+      ],
+      "coordinates": [
+        -0.27890079,
+        39.6791565
+      ],
+      "intro": "Observa el cuerpo del reloj y piensa en su relación con la plaza. Esta parada conecta la arquitectura visible con un mecanismo municipal cuya conservación se ha documentado recientemente.",
+      "narrative": "Observa el cuerpo del reloj y piensa en su relación con la plaza. Esta parada conecta la arquitectura visible con un mecanismo municipal cuya conservación se ha documentado recientemente.",
+      "facts": [
+        {
+          "text": "El Ayuntamiento anunció el 5 de marzo de 2026 la restauración y exposición del reloj mecánico en Santa María.",
+          "sourceIds": [
+            "sm-reloj-2026"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La noticia sitúa su instalación hacia 1960 y su servicio hasta el año 2000.",
+          "sourceIds": [
+            "sm-reloj-2026"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Los alguaciles municipales acudían a darle cuerda manualmente, según el relato institucional.",
+          "sourceIds": [
+            "sm-reloj-2026"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Busca las esferas de la torre y consulta la fuente para conocer la recuperación de su mecanismo.",
+      "modelNote": "La cámara enfoca el cuerpo del reloj. No identifica la posición exacta de la pieza expuesta ni convierte su mecanismo interior en una reconstrucción geométrica.",
+      "sourceIds": [
+        "sm-reloj-2026"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura de la maqueta: posición local registrada con la huella cartográfica de Santa María; anclaje −0,27910948 / 39,67903398 y giro de 1,173 rad. No es una medición topográfica del elemento ni un punto de acceso certificado.",
+      "osmIds": [
+        "way/1303693357"
+      ],
+      "order": 14,
+      "readingMinutes": 2,
+      "modelLocal": {
+        "x": 19.5,
+        "z": 11.2
+      },
+      "coordinateSourceIds": [
+        "sm-osm",
+        "sm-cabrera-1987"
+      ]
+    },
+    {
+      "id": "santa-maria-sagrario",
+      "title": "Carrer del Sagrari: rodear la cabecera",
+      "label": "Sagrari y restos antiguos",
+      "regionId": "entorno",
+      "period": "mixed",
+      "coordinate": [
+        -0.27884821,
+        39.67896527
+      ],
+      "coordinates": [
+        -0.27884821,
+        39.67896527
+      ],
+      "intro": "Continúa alrededor del ábside. El paso por Sagrari cambia la escala de la visita: el gran muro de la iglesia se encuentra con un tejido de parcelas y vestigios que pertenece a otras historias.",
+      "narrative": "Continúa alrededor del ábside. El paso por Sagrari cambia la escala de la visita: el gran muro de la iglesia se encuentra con un tejido de parcelas y vestigios que pertenece a otras historias.",
+      "facts": [
+        {
+          "text": "El muro tradicionalmente llamado Templo de Diana se encuentra detrás de Santa María y junto a la Casa dels Berenguer.",
+          "sourceIds": [
+            "sm-diana-2022"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La comunicación municipal de 2022 describe un paramento de grandes sillares de unos 15 m de longitud y 4 m de altura.",
+          "sourceIds": [
+            "sm-diana-2022"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La atribución del muro al santuario de Diana ha sido discutida en la bibliografía; el nombre tradicional no permite restituir un templo completo.",
+          "sourceIds": [
+            "sm-diana-debate"
+          ],
+          "confidence": "disputed"
+        }
+      ],
+      "lookFor": "Relaciona la cabecera con la calle y con el recinto de los restos, sin confundir las fábricas de cada edificio.",
+      "modelNote": "El recorrido señala el entorno arqueológico inmediato. Mantiene los restos como vestigio y no levanta un santuario hipotético sobre ellos.",
+      "sourceIds": [
+        "sm-diana-2022",
+        "sm-diana-debate",
+        "sm-context-catastro",
+        "sm-context-mds",
+        "sm-context-pnoa"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura de la maqueta: posición local registrada con la huella cartográfica de Santa María; anclaje −0,27910948 / 39,67903398 y giro de 1,173 rad. No es una medición topográfica del elemento ni un punto de acceso certificado.",
+      "osmIds": [],
+      "order": 15,
+      "readingMinutes": 2,
+      "modelLocal": {
+        "x": 1.62,
+        "z": 23.6
+      },
+      "coordinateSourceIds": [
+        "sm-osm",
+        "sm-cabrera-1987"
+      ]
+    },
+    {
+      "id": "santa-maria-berenguer",
+      "title": "Casa dels Berenguer: un palacio que explica la ciudad",
+      "label": "Casa dels Berenguer",
+      "regionId": "entorno",
+      "period": "mixed",
+      "coordinate": [
+        -0.2790276,
+        39.6787218
+      ],
+      "coordinates": [
+        -0.2790276,
+        39.6787218
+      ],
+      "intro": "Termina mirando hacia la Casa dels Berenguer y su pequeña plaza. La proximidad al templo permite comparar un edificio religioso con una casa histórica adaptada para recibir y orientar a quienes visitan Sagunto.",
+      "narrative": "Termina mirando hacia la Casa dels Berenguer y su pequeña plaza. La proximidad al templo permite comparar un edificio religioso con una casa histórica adaptada para recibir y orientar a quienes visitan Sagunto.",
+      "facts": [
+        {
+          "text": "La Casa dels Berenguer alberga el Centro de Interpretación y Recepción de Visitantes.",
+          "sourceIds": [
+            "sm-berenguer"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Su conjunto combina permanencias góticas y elementos renacentistas y posteriores.",
+          "sourceIds": [
+            "sm-berenguer"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El 4 de agosto de 2025 se anunció el fin de la primera fase de estabilización e investigación del inmueble anexo, en la plaza dels Berenguer 5.",
+          "sourceIds": [
+            "sm-berenguer-2025"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La noticia describe posibles restos de ocupación islámica y deja para una fase posterior la consolidación definitiva.",
+          "sourceIds": [
+            "sm-berenguer-2025"
+          ],
+          "confidence": "interpretive"
+        }
+      ],
+      "lookFor": "Compara la entrada y el tejido de la casa con el ábside cercano; reconoce el espacio que comparten.",
+      "modelNote": "El contexto refleja las huellas disponibles. El anuncio de 2025 acredita una primera fase de obras, sin demostrar por sí solo que la ampliación posterior esté concluida.",
+      "sourceIds": [
+        "sm-berenguer",
+        "sm-berenguer-2025",
+        "sm-context-catastro",
+        "sm-context-mds",
+        "sm-context-pnoa"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura de la maqueta: posición local registrada con la huella cartográfica de Santa María; anclaje −0,27910948 / 39,67903398 y giro de 1,173 rad. No es una medición topográfica del elemento ni un punto de acceso certificado.",
+      "osmIds": [
+        "way/733321157"
+      ],
+      "order": 16,
+      "readingMinutes": 2,
+      "modelLocal": {
+        "x": -29.320773,
+        "z": 19.929806
+      },
+      "coordinateSourceIds": [
+        "sm-osm",
+        "sm-cabrera-1987"
+      ]
+    }
+  ],
+  "timeline": [
+    {
+      "id": "inicio",
+      "date": "25 de abril de 1334",
+      "title": "Comienza la iglesia",
+      "text": "La fecha de inicio figura en la inscripción fundacional conservada al pie de la torre.",
+      "sourceIds": [
+        "sm-ruta-iglesia"
+      ],
+      "period": "medieval",
+      "confidence": "documented",
+      "stopId": "santa-maria-conjunto"
+    },
+    {
+      "id": "cabecera",
+      "date": "Siglo XIV",
+      "title": "Cabecera y lado del Evangelio",
+      "text": "La primera gran campaña incluye el ábside y el frente del Evangelio con su portada.",
+      "sourceIds": [
+        "sm-ruta-iglesia"
+      ],
+      "period": "medieval",
+      "confidence": "documented",
+      "stopId": "santa-maria-abside"
+    },
+    {
+      "id": "cortes",
+      "date": "1428 y 1448",
+      "title": "Un espacio de representación",
+      "text": "La ruta histórica institucional recoge reuniones de las Cortes del Reino en el templo.",
+      "sourceIds": [
+        "sm-ruta-iglesia"
+      ],
+      "period": "medieval",
+      "confidence": "documented",
+      "stopId": "santa-maria-naves"
+    },
+    {
+      "id": "mediodia",
+      "date": "Siglo XV",
+      "title": "La entrada meridional",
+      "text": "Se construye la portada del Mediodía en la nave de la Epístola.",
+      "sourceIds": [
+        "sm-ruta-iglesia"
+      ],
+      "period": "medieval",
+      "confidence": "documented",
+      "stopId": "santa-maria-portada-sur"
+    },
+    {
+      "id": "cambios",
+      "date": "Siglo XVI",
+      "title": "Cambiar la forma del interior",
+      "text": "Las transformaciones redondean parte de las arcadas antes apuntadas.",
+      "sourceIds": [
+        "sm-cabrera-1987"
+      ],
+      "period": "modern",
+      "confidence": "documented",
+      "stopId": "santa-maria-naves"
+    },
+    {
+      "id": "comunion",
+      "date": "Siglo XVII",
+      "title": "La capilla de la Comunión",
+      "text": "La nueva capilla incorpora otra etapa a la arquitectura del extremo occidental.",
+      "sourceIds": [
+        "sm-zaragoza-2000"
+      ],
+      "period": "modern",
+      "confidence": "documented",
+      "stopId": "santa-maria-capillas"
+    },
+    {
+      "id": "barroco",
+      "date": "1702–1703",
+      "title": "Torre y portada barrocas",
+      "text": "Comienza el campanario barroco en 1702 y la portada principal en 1703.",
+      "sourceIds": [
+        "sm-campaners",
+        "sm-cabrera-1987"
+      ],
+      "period": "modern",
+      "confidence": "documented",
+      "stopId": "santa-maria-portada-principal"
+    },
+    {
+      "id": "fin",
+      "date": "1730",
+      "title": "Culmina la larga construcción",
+      "text": "Cabrera sitúa en este año la terminación del templo.",
+      "sourceIds": [
+        "sm-cabrera-1987"
+      ],
+      "period": "modern",
+      "confidence": "documented",
+      "stopId": "santa-maria-conjunto"
+    },
+    {
+      "id": "pretil",
+      "date": "1799",
+      "title": "Un nuevo borde para la escalinata",
+      "text": "El pretil barroco se fecha en 1799; sus inscripciones romanas son elementos reutilizados.",
+      "sourceIds": [
+        "sm-lapidas-2024"
+      ],
+      "period": "mixed",
+      "confidence": "documented",
+      "stopId": "santa-maria-escalinata"
+    },
+    {
+      "id": "torre",
+      "date": "1904–1913",
+      "title": "Reconstruir el campanario",
+      "text": "Se desmonta la parte deteriorada y se levanta la torre actual sobre la base anterior.",
+      "sourceIds": [
+        "sm-campaners"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "santa-maria-campanario"
+    },
+    {
+      "id": "guerra",
+      "date": "1936",
+      "title": "Pérdidas durante la Guerra Civil",
+      "text": "El templo pierde buena parte de sus bienes artísticos y documentación; también desaparecen imágenes de las portadas.",
+      "sourceIds": [
+        "sm-serrano-2018"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "santa-maria-portada-norte"
+    },
+    {
+      "id": "campanas",
+      "date": "1948",
+      "title": "Un nuevo conjunto de campanas",
+      "text": "El inventario registra seis campanas principales de Roses Hermanos, de Silla.",
+      "sourceIds": [
+        "sm-campanas"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "santa-maria-campanario"
+    },
+    {
+      "id": "proteccion",
+      "date": "1982–1983",
+      "title": "Declaración monumental",
+      "text": "Real Decreto 3956/1982, de 15 de diciembre; publicación en el BOE del 26 de enero de 1983.",
+      "sourceIds": [
+        "sm-boe-1982"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "santa-maria-conjunto"
+    },
+    {
+      "id": "cubiertas",
+      "date": "1988",
+      "title": "Conservar las cubiertas",
+      "text": "La documentación municipal recuerda la restauración de cubiertas dirigida por Juan Gomis.",
+      "sourceIds": [
+        "sm-conservacion-2015"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "santa-maria-contrafuertes"
+    },
+    {
+      "id": "epigrafia",
+      "date": "2024",
+      "title": "Volver a estudiar las lápidas",
+      "text": "Un estudio registra las inscripciones de la escalinata y propone medidas de conservación.",
+      "sourceIds": [
+        "sm-lapidas-2024"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "santa-maria-escalinata"
+    },
+    {
+      "id": "anexo",
+      "date": "Agosto de 2025",
+      "title": "Investigar el entorno inmediato",
+      "text": "Finaliza la primera fase de obras y arqueología del anexo de la Casa dels Berenguer.",
+      "sourceIds": [
+        "sm-berenguer-2025"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "santa-maria-berenguer"
+    },
+    {
+      "id": "reloj",
+      "date": "Marzo de 2026",
+      "title": "Exponer el reloj municipal",
+      "text": "El Ayuntamiento comunica la restauración y exposición de la maquinaria en Santa María.",
+      "sourceIds": [
+        "sm-reloj-2026"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "santa-maria-reloj"
+    }
+  ],
+  "sources": [
+    {
+      "id": "sm-cabrera-1987",
+      "title": "La Iglesia Parroquial de Santa María de Sagunto",
+      "author": "Valentín Cabrera Fombuena / Centro Arqueológico Saguntino",
+      "url": "https://www.centroarqueologicosaguntino.es/uploads/descargas/295_23_La_Iglesia_parroquial_de_Santa_Maria_de_Sagunto_22.pdf",
+      "type": "estudio histórico y arquitectónico",
+      "year": 1987,
+      "locator": "ARSE 22, pp. 23–35; planta en p. 32 (p. 646 de la paginación acumulada), página 10 del PDF",
+      "note": "Registro de un estado del edificio y de su historiografía. Transcripción consultable también en la web parroquial; las observaciones de 1987 no acreditan por sí solas el estado de 2026.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "sm-zaragoza-2000",
+      "title": "Arquitectura gótica valenciana. Siglos XIII–XV",
+      "author": "Arturo Zaragozá Catalán / Generalitat Valenciana",
+      "url": "https://www.academia.edu/6925675/2000_Arquitectura_G%C3%B3tica_Valenciana",
+      "type": "catálogo monumental e investigación arquitectónica",
+      "year": 2000,
+      "locator": "Monumentos de la Comunidad Valenciana, tomo I, pp. 72–75; plantas, sección y axonometría según Juan Gomis y Eduardo Espín",
+      "note": "Copia publicada por el autor. Fuente para la sección, cuatro tramos, altura de bóvedas y lectura funcional de los arcos de desagüe.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "sm-navarro-2004",
+      "title": "Bóvedas valencianas de crucería de los siglos XIV al XVI. Traza y montea",
+      "author": "Juan Carlos Navarro Fajardo / Universitat de València",
+      "url": "https://www.academia.edu/78069190/B%C3%B3vedas_valencianas_de_cruceria_de_los_siglos_XIV_al_XVI_Traza_y_montea",
+      "type": "tesis doctoral",
+      "year": 2004,
+      "locator": "Tomo I, pp. 79, 93 y 136; referencia al levantamiento de Juan Gomis",
+      "note": "Se cita el texto de la tesis, cuya portada fecha la defensa en junio de 2004. El modelo sintetiza su descripción geométrica sin reproducir una montea exhaustiva.",
+      "accessed": "2026-11-19",
+      "repositoryUrl": "https://roderic.uv.es/items/773aaced-943d-4e07-aaf3-2202a72f6594"
+    },
+    {
+      "id": "sm-serrano-2018",
+      "title": "Un enfoque a la Iglesia de Santa María de Sagunto, tesoro arquitectónico del Murviedro",
+      "author": "Alberto Serrano Monferrer / Universitat Jaume I",
+      "url": "https://www.academia.edu/38386111/Un_enfoque_a_la_Iglesia_de_santa_Mar%C3%ADa_de_Sagunto_tesoro_arquitect%C3%B3nico_del_Murviedro",
+      "type": "estudio histórico-artístico",
+      "year": 2018,
+      "locator": "Braçal 55, pp. 125–138; portadas, organización espacial, capillas y pérdidas patrimoniales",
+      "note": "Se emplean sus observaciones sobre el templo. No se trasladan a otras partes del atlas las cronologías generales de teatro y castillo mencionadas en la introducción.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "sm-turismo",
+      "title": "Iglesia Parroquial de la Natividad de Nuestra Señora",
+      "author": "Turisme Comunitat Valenciana",
+      "url": "https://www.comunitatvalenciana.com/es/valencia/sagunt-sagunto/monumentos/iglesia-parroquial-de-la-natividad-de-nuestra-senora-2",
+      "type": "ficha turística institucional",
+      "year": null,
+      "locator": "Denominación, inicio de las obras y descripción general",
+      "note": "Referencia para identificación y contexto básico. Las fechas detalladas de la torre se contrastan con el inventario y los estudios.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "sm-ruta-iglesia",
+      "title": "Iglesia de Santa María",
+      "author": "Rutas Jaume I",
+      "url": "https://www.rutasjaumei.com/es/que-ver-en-sagunto/222/sagunto-iglesia-de-santa-maria.php",
+      "type": "ruta histórica institucional",
+      "year": null,
+      "locator": "Campañas medievales y reuniones de las Cortes",
+      "note": "La cronología del acceso norte se contrasta con el estudio epigráfico de 2024: la fecha de 1799 se asigna al pretil.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "sm-lapidas-2024",
+      "title": "Estudio preliminar sobre las lápidas romanas de la escalera de la iglesia de Santa María de Sagunto",
+      "author": "María Forner Palanca y José Manuel Palomar Abascal / Centro Arqueológico Saguntino",
+      "url": "https://centroarqueologicosaguntino.es/wp-content/uploads/2025/08/Arse_58-74-89.pdf",
+      "type": "estudio epigráfico y de conservación",
+      "year": 2024,
+      "locator": "ARSE 58, pp. 73–88; ubicación y pretil en pp. 74–76; diagnóstico y propuesta de conservación",
+      "note": "Distingue lo documentado de las hipótesis sobre procedencia y fecha inicial de la escalera. Una propuesta de intervención no equivale a obra ejecutada.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "sm-perales-2023",
+      "title": "Reseñas de hallazgos …–2022 (parte II)",
+      "author": "Pablo Perales Cabrejas / Centro Arqueológico Saguntino",
+      "url": "https://centroarqueologicosaguntino.es/wp-content/uploads/2024/05/arse_57-107-150.pdf",
+      "type": "observación e investigación patrimonial",
+      "year": 2023,
+      "locator": "ARSE 57, pp. 128–132: «Rehabilitación de Casa Abadía y un ventanal gótico»",
+      "note": "Compara los motivos de las tracerías conservadas. La futura exposición de un ventanal mencionada allí es una previsión, no una instalación comprobada en esta visita.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "sm-campaners",
+      "title": "Parròquia de Santa Maria – Campanar de la Vila",
+      "author": "Campaners de la Catedral de València; documentación de campo y fuentes históricas",
+      "url": "https://campaners.com/php/campanar.php?numer=376",
+      "type": "inventario campanológico",
+      "year": null,
+      "locator": "Ficha de torre 376; descripción material, reconstrucción y referencia a Sarthou Carreres",
+      "note": "La altura de 58 m es una medida histórica publicada; no procede de una medición nueva del proyecto.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "sm-campanas",
+      "title": "Inventario de las campanas de Santa Maria de Sagunt",
+      "author": "Campaners de la Catedral de València",
+      "url": "https://campaners.com/php/torrepdf.php?numer=376",
+      "type": "inventario de bienes muebles",
+      "year": null,
+      "locator": "Tabla de campanas actuales: seis campanas principales de 1948; localización y fundidor",
+      "note": "El conjunto incluye también otras piezas. Se evita equiparar la fecha de la torre con la de todas sus campanas.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "sm-reloj-2026",
+      "title": "El Ayuntamiento de Sagunto recupera y exhibe el reloj mecánico municipal",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/es/actualidad/2026-03-05-el-ayuntamiento-de-sagunto-recupera-y-exhibe-el-reloj-mecanico-municipal/",
+      "type": "comunicación institucional",
+      "year": 2026,
+      "locator": "5 de marzo de 2026; recuperación, uso histórico y exposición",
+      "note": "Acredita la exposición del mecanismo en la iglesia. No ofrece una planta de su emplazamiento; el foco de la maqueta mira al cuerpo del reloj.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "sm-boe-1982",
+      "title": "Real Decreto 3956/1982, de 15 de diciembre",
+      "author": "Ministerio de Cultura / Boletín Oficial del Estado",
+      "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-1983-2860",
+      "type": "declaración oficial",
+      "year": 1982,
+      "locator": "BOE 22, de 26 de enero de 1983, p. 2036; BOE-A-1983-2860",
+      "note": "Se distingue la fecha del decreto de la de publicación, evitando fechas de fichas secundarias que no coinciden.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "sm-conservacion-2015",
+      "title": "El Pleno aprueba solicitar la restauración de la torre de Santa María",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/es/actualidad/el-pleno-aprueba-solicitar-la-restauracion-de-la-torre-de-santa-maria/",
+      "type": "acuerdo y documentación municipal",
+      "year": 2015,
+      "locator": "29 de octubre de 2015; referencia a restauración de cubiertas de julio de 1988",
+      "note": "El texto documenta una solicitud de restauración de la torre. No se utiliza como prueba de que esa actuación estuviera ejecutada.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "sm-parroquia",
+      "title": "Parroquia la Natividad de Nuestra Señora de Sagunto",
+      "author": "Parroquia de Santa María",
+      "url": "https://santamariasagunto.wordpress.com/",
+      "type": "institución responsable del templo",
+      "year": null,
+      "locator": "Presentación parroquial y contacto",
+      "note": "Fuente para el uso religioso y comunitario. Esta visita digital no reproduce horarios de culto ni garantiza acceso físico al campanario.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "sm-plaza",
+      "title": "Plaza Mayor de Sagunto",
+      "author": "Rutas Jaume I",
+      "url": "https://www.rutasjaumei.com/es/que-ver-en-sagunto/220/plaza-mayor-de-sagunto.php",
+      "type": "ruta histórica institucional",
+      "year": null,
+      "locator": "Soportales, Almudín y calles principales",
+      "note": "La lectura urbana se contrasta con la cartografía actual; no implica que todos los frentes de la plaza sean medievales.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "sm-entorno",
+      "title": "Historia de Sagunto",
+      "author": "Delegación de Turismo de Sagunto",
+      "url": "https://saguntoturismoblog.wordpress.com/2020/06/10/historia-de-sagunto/",
+      "type": "síntesis histórica municipal",
+      "year": 2020,
+      "locator": "Transformación urbana medieval: plazas Mayor y Pescadería, calles y casas señoriales",
+      "note": "Se emplea para contexto urbano, sin transformar las menciones documentales en restituciones de edificios desaparecidos.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "sm-diana-2022",
+      "title": "El Ayuntamiento consolida y restaura el muro del Templo de Diana y la mikvé de la Casa dels Berenguer",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/es/actualidad/el-ayuntamiento-consolida-y-restaura-el-muro-del-templo-de-diana-y-la-mikve-de-la-casa-dels-berenguer/",
+      "type": "comunicación de conservación",
+      "year": 2022,
+      "locator": "9 de agosto de 2022; localización y descripción del muro",
+      "note": "El título tradicional identifica el lugar; su atribución arqueológica no se toma como demostración de la forma de un santuario.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "sm-diana-debate",
+      "title": "Els aqüeductes de la ciutat de Saguntum",
+      "author": "Manuel Civera i Gómez / Centro Arqueológico Saguntino",
+      "url": "https://www.centroarqueologicosaguntino.es/uploads/descargas/352_010_els_aqueductes.pdf",
+      "type": "estudio y debate arqueológico",
+      "year": 2008,
+      "locator": "ARSE 42, pp. 193–225; p. 199, nota 7: discusión del llamado muro del Templo de Diana y bibliografía de Olcina y Aranegui",
+      "note": "El autor defiende una identificación que otros investigadores discuten. Se cita para hacer visible la existencia del debate, sin resolverlo en la maqueta.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "sm-berenguer",
+      "title": "Descubre la Casa dels Berenguer en el corazón de Sagunto",
+      "author": "Turisme Comunitat Valenciana",
+      "url": "https://www.comunitatvalenciana.com/es/inspirate/casa-dels-berenguer",
+      "type": "ficha institucional",
+      "year": 2024,
+      "locator": "7 de febrero de 2024; uso del edificio y etapas arquitectónicas",
+      "note": "Describe un conjunto transformado, no un palacio de una sola fecha.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "sm-berenguer-2025",
+      "title": "Concluye la primera fase de las obras en el inmueble anexo a la Casa dels Berenguer",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/es/actualidad/2025-08-04-concluye-la-primera-fase-de-las-obras-en-el-inmueble-anexo-a-la-casa-dels-berenguer/",
+      "type": "comunicación de obra y arqueología",
+      "year": 2025,
+      "locator": "4 de agosto de 2025; plaza dels Berenguer 5; fase 1 y actuaciones posteriores previstas",
+      "note": "Las referencias a posible ocupación islámica son provisionales. No se da por finalizada una fase 2 sin una comunicación posterior que lo acredite.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "sm-osm",
+      "title": "Santa María y su entorno en OpenStreetMap",
+      "author": "Colaboradores de OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/203070952",
+      "type": "cartografía colaborativa",
+      "year": null,
+      "locator": "Huella de iglesia 203070952; torre 1303693357; plaza Cervantes 22922651; escalinata 733321159; calles de cartography.json y landmarks.json",
+      "note": "Base de localización y registro de la maqueta; no fuente para fechar fábricas ni certificar cotas arquitectónicas.",
+      "accessed": "2026-11-19",
+      "contextUrl": "https://www.openstreetmap.org/way/22922651"
+    },
+    {
+      "id": "sm-context-catastro",
+      "title": "Cartografía catastral INSPIRE · edificios de Sagunto/Sagunt",
+      "author": "Dirección General del Catastro",
+      "url": "https://www.catastro.hacienda.gob.es/webinspire/index.html",
+      "type": "cartografía oficial",
+      "year": null,
+      "locator": "Conjunto Buildings del municipio 46222; plantas, patios y número de plantas",
+      "note": "La selección del entorno contiene 44 partes de edificios de 16 parcelas. Las plantas sustentan la volumetría; los huecos, carpinterías y cornisas domésticas son interpretativos. El producto del atlas no equivale a información catastral oficial ni a un levantamiento de fachadas.",
+      "accessed": "2026-11-19",
+      "downloadUrl": "https://www.catastro.hacienda.gob.es/INSPIRE/Buildings/46/46222-SAGUNTO%20SAGUNT/A.ES.SDGC.BU.46222.zip",
+      "licenseUrl": "https://www.catastro.hacienda.gob.es/webinspire/documentos/Licencia.pdf"
+    },
+    {
+      "id": "sm-context-mds",
+      "title": "Alturas MDSnE2.5 y terreno MDT05 del entorno",
+      "author": "Instituto Geográfico Nacional / Centro Nacional de Información Geográfica",
+      "url": "https://datos.gob.es/es/catalogo/e00125901-spaignmds-normalizado",
+      "type": "modelos geográficos oficiales",
+      "year": null,
+      "locator": "MDSnE de edificación, primera cobertura, malla de 2,5 m; terreno del atlas derivado del MDT05",
+      "note": "El entorno usa estimaciones MDSnE para 28 partes de edificios; otras 16 se estiman a partir de las plantas catastrales a razón de 3 m por planta. Son alturas de representación, no aleros medidos. El terreno MDT05 se interpola para la presentación; la cota del templo y los peldaños se adaptan a esa superficie.",
+      "accessed": "2026-11-19",
+      "terrainServiceUrl": "https://xyz-mdt.idee.es/1.0.0/raster-dem/{z}/{x}/{y}.png",
+      "terrainDocumentationUrl": "https://blog-idee.blogspot.com/2024/03/nuevo-servicio-xyz-del-modelo-digital.html",
+      "licenseUrl": "https://www.ign.es/resources/licencia/Condiciones_licenciaUso_IGN.pdf"
+    },
+    {
+      "id": "sm-context-pnoa",
+      "title": "PNOA Máxima Actualidad · ortofotografía del entorno",
+      "author": "Instituto Geográfico Nacional / Centro Nacional de Información Geográfica",
+      "url": "https://datos.gob.es/es/catalogo/e00125901-spaignpnoama",
+      "type": "ortofotografía oficial",
+      "year": null,
+      "locator": "Servicio PNOA Máxima Actualidad; muestras de color de cubiertas incorporadas al atlas",
+      "note": "Apoya el color y la lectura de los tejados. Pendientes, remates y detalles domésticos son esquemáticos. La fecha de consulta o descarga no establece la fecha del vuelo ni acredita el estado actual de cada inmueble.",
+      "accessed": "2026-11-19",
+      "serviceUrl": "https://www.ign.es/wms-inspire/pnoa-ma",
+      "licenseUrl": "https://www.ign.es/resources/licencia/Condiciones_licenciaUso_IGN.pdf"
+    }
+  ],
+  "methodology": [
+    "La maqueta parte del edificio conservado y de su entorno inmediato. Combina huellas cartográficas con plantas, secciones y descripciones publicadas; sus superficies y detalles son una síntesis.",
+    "Cada hecho tiene referencias y grado de confianza. La geometría interpretativa puede representar un elemento bien documentado sin reproducir exactamente su talla, espesor o estado material.",
+    "El entorno combina plantas y patios del Catastro, alturas estimadas del IGN y colores de cubiertas del PNOA. Las fachadas domésticas y las formas de cubierta son interpretativas; la cota del suelo del templo se adapta al terreno MDT y los peldaños no reproducen un recuento documentado.",
+    "Las coordenadas son focos aproximados vinculados a la maqueta. No equivalen a una topografía, a una ruta accesible certificada ni a autorización para entrar en dependencias.",
+    "Se separan las fechas de la portada gótica, el pretil de la escalera, la fachada barroca y la torre actual. Un acabado uniforme no demuestra que todo el componente pertenezca a una misma campaña.",
+    "La sección retira superficies para explicar el espacio interior, conservando apoyos y nervaduras. No reproduce la cripta cegada, el antiguo órgano ni retablos o esculturas desaparecidos.",
+    "Los arcos altos del exterior se interpretan con el estudio arquitectónico de Zaragozá, que destaca su función de evacuación de aguas. No se atribuye a la maqueta capacidad de cálculo estructural.",
+    "Se distingue obra ejecutada, estudio, propuesta y anuncio. El comunicado del reloj de 2026 y el balance del anexo de 2025 se presentan con sus fechas y alcance.",
+    "Las fotografías y dibujos de las publicaciones sirven para contrastar formas. No se incorporan fotografías históricas a la experiencia; pueden consultarse en los enlaces de las fuentes."
+  ],
+  "readingLegend": [
+    {
+      "id": "medieval",
+      "label": "Fábrica medieval",
+      "color": "#d6bd8b",
+      "note": "Componentes identificados con las campañas góticas. Su forma digital simplifica el detalle conservado."
+    },
+    {
+      "id": "modern",
+      "label": "Transformación de la Edad Moderna",
+      "color": "#d4a578",
+      "note": "Fachada, capillas y otras modificaciones de los siglos XVI–XVIII; se distinguen de la campaña medieval."
+    },
+    {
+      "id": "contemporary",
+      "label": "Reconstrucción y conservación",
+      "color": "#77b8c7",
+      "note": "Torre actual, bienes y actuaciones de los siglos XX–XXI. La fecha puede variar dentro de un mismo conjunto."
+    },
+    {
+      "id": "mixed",
+      "label": "Encuentro de etapas",
+      "color": "#be98d6",
+      "note": "Sectores donde conviven fábricas, reutilizaciones o transformaciones de distinta época."
+    },
+    {
+      "id": "interpretation",
+      "label": "Esquema de lectura",
+      "color": "#929ba0",
+      "note": "Elementos o relaciones expresados de forma didáctica, sin restitución arqueológica completa."
+    }
+  ],
+  "confidenceLegend": [
+    {
+      "id": "documented",
+      "label": "Documentado",
+      "note": "La fuente citada respalda el hecho o la descripción."
+    },
+    {
+      "id": "interpretive",
+      "label": "Interpretación",
+      "note": "Propuesta razonada o lectura funcional que admite revisión."
+    },
+    {
+      "id": "disputed",
+      "label": "En debate",
+      "note": "La bibliografía no permite adoptar una atribución única como definitiva."
+    }
+  ],
+  "modelRegistration": {
+    "anchor": [
+      -0.27910948,
+      39.67903398
+    ],
+    "yawRadians": 1.173,
+    "axisX": "NNE, hacia el frente de la Plaça Major",
+    "axisZ": "ESE, hacia la cabecera",
+    "method": "Registro interpretativo sobre huella cartográfica y plantas publicadas",
+    "precision": "approximate"
+  }
+}

@@ -1,0 +1,5712 @@
+{
+  "pass": true,
+  "generatedAt": "2026-11-20T07:41:35.274Z",
+  "checks": 928,
+  "buildMs": 19205.290414,
+  "meshes": 277,
+  "triangles": 339428,
+  "stats": {
+    "sangre": {
+      "modelVersion": "v15",
+      "sourceBuildings": 9,
+      "stops": 16,
+      "chapelBays": 2,
+      "sideChapels": 4,
+      "entranceSteps": 7,
+      "presbyterySteps": 7,
+      "retabloColumns": 4,
+      "domeSides": 8,
+      "domeRestorationYear": 2024,
+      "hasLantern": false,
+      "obsoleteCentralChandelier": false,
+      "meshes": 145,
+      "triangles": 195247,
+      "survey": false,
+      "context": {
+        "buildingParts": 152,
+        "parentParcels": 62,
+        "footprintsPreserved": true,
+        "courtyards": 0,
+        "sourceHeight": 0,
+        "ignHeight": 76,
+        "storeyHeight": 76,
+        "fallbackHeight": 0,
+        "streetSamples": 1495,
+        "roofCorrections": 0,
+        "maximumRoofCorrectionM": 0,
+        "preservedSantaMaria": true,
+        "preservedPlazaMayor": true,
+        "preservedJuderia": true,
+        "preservedCalvario": true,
+        "preservedBerenguer": true,
+        "heightConflictsReviewed": 4
+      }
+    },
+    "berenguer": {
+      "sourceBuildings": 6,
+      "interiorCourtyards": 2,
+      "levelsAtDifferentHeights": true,
+      "segmentalArcades": 2,
+      "retainedAnnexArches": 2,
+      "ancientBlocks": 70,
+      "ancientWallHeight": 4,
+      "subterraneanChambers": 1,
+      "stops": 18,
+      "meshes": 115,
+      "triangles": 105801,
+      "modelVersion": "v14",
+      "sourceKeys": [
+        "bg-turismo",
+        "bg-skrq",
+        "bg-conservacion2022",
+        "bg-anexo2025",
+        "bg-aranegui1992",
+        "bg-martinez2012",
+        "bg-osm",
+        "bg-catastro",
+        "bg-terreno"
+      ],
+      "survey": false,
+      "context": {
+        "buildingParts": 23,
+        "parentParcels": 9,
+        "footprintsPreserved": true,
+        "courtyards": 0,
+        "sourceHeight": 0,
+        "ignHeight": 12,
+        "storeyHeight": 11,
+        "fallbackHeight": 0,
+        "streetSamples": 396,
+        "roofCorrections": 0,
+        "maximumRoofCorrectionM": 0,
+        "preservedSantaMaria": true,
+        "preservedPlazaMayor": true,
+        "preservedJuderia": true,
+        "preservedCalvario": true
+      }
+    }
+  },
+  "errors": [],
+  "cameras": [
+    {
+      "place": "berenguer",
+      "id": "berenguer-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -14.669863540265126,
+        134.62678796420877,
+        -47.872399114471136
+      ],
+      "target": [
+        -84,
+        73,
+        42
+      ],
+      "clearance": 82.07931433113365,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -66,
+        88,
+        20
+      ],
+      "target": [
+        -84,
+        73,
+        42
+      ],
+      "clearance": 28.5293212890625,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        65.98370890089845,
+        206.31885235635417,
+        -152.4233263530165
+      ],
+      "target": [
+        -84,
+        73,
+        42
+      ],
+      "clearance": 160.25201615073206,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -48.94153846153846,
+        102.21538461538462,
+        -0.8492307692307719
+      ],
+      "target": [
+        -84,
+        73,
+        42
+      ],
+      "clearance": 47.50894550734301,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -0.023393400635058015,
+        147.6458725327688,
+        -66.85856411028789
+      ],
+      "target": [
+        -84,
+        73,
+        42
+      ],
+      "clearance": 96.5712371710454,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -66,
+        88,
+        20
+      ],
+      "target": [
+        -84,
+        73,
+        42
+      ],
+      "clearance": 28.5293212890625,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-portada",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -81.35599773842331,
+        63.020763666892805,
+        15.902409503848858
+      ],
+      "target": [
+        -86.9984,
+        62.033470709433374,
+        25.6753
+      ],
+      "clearance": 5.420929499529521,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-portada",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -86.9984,
+        62.033470709433374,
+        21.4753
+      ],
+      "target": [
+        -86.9984,
+        62.033470709433374,
+        25.6753
+      ],
+      "clearance": 3.4014238058994337,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-portada",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -74.54029234423068,
+        64.21335817253947,
+        4.097306041966586
+      ],
+      "target": [
+        -86.9984,
+        62.033470709433374,
+        25.6753
+      ],
+      "clearance": 7.179086689056703,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-portada",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -86.9984,
+        62.033470709433374,
+        21.4753
+      ],
+      "target": [
+        -86.9984,
+        62.033470709433374,
+        25.6753
+      ],
+      "clearance": 3.4014238058994337,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-portada",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -80.1182841131604,
+        63.237335596529064,
+        13.758634713515368
+      ],
+      "target": [
+        -86.9984,
+        62.033470709433374,
+        25.6753
+      ],
+      "clearance": 5.9413835283786085,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-portada",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -86.9984,
+        62.033470709433374,
+        21.4753
+      ],
+      "target": [
+        -86.9984,
+        62.033470709433374,
+        25.6753
+      ],
+      "clearance": 3.4014238058994337,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-escudo",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -86.9984,
+        64.06937991281352,
+        23.07316347537003
+      ],
+      "target": [
+        -86.9984,
+        63.843470709433376,
+        25.6553
+      ],
+      "clearance": 5.090961934227046,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-escudo",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -86.9984,
+        63.843470709433376,
+        22.255300000000002
+      ],
+      "target": [
+        -86.9984,
+        63.843470709433376,
+        25.6553
+      ],
+      "clearance": 5.093601387686547,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-escudo",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -86.9984,
+        64.34318452916267,
+        19.943583582612295
+      ],
+      "target": [
+        -86.9984,
+        63.843470709433376,
+        25.6553
+      ],
+      "clearance": 5.844499677932944,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-escudo",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -86.9984,
+        63.843470709433376,
+        22.255300000000002
+      ],
+      "target": [
+        -86.9984,
+        63.843470709433376,
+        25.6553
+      ],
+      "clearance": 5.093601387686547,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-escudo",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -86.9984,
+        64.11812911721226,
+        22.5159612926293
+      ],
+      "target": [
+        -86.9984,
+        63.843470709433376,
+        25.6553
+      ],
+      "clearance": 5.32569226428064,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-escudo",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -86.9984,
+        63.843470709433376,
+        22.255300000000002
+      ],
+      "target": [
+        -86.9984,
+        63.843470709433376,
+        25.6553
+      ],
+      "clearance": 5.093601387686547,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-patio-arcos",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 74,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -83.1,
+        70.5,
+        36.2
+      ],
+      "target": [
+        -85.75,
+        64.8,
+        40.2
+      ],
+      "clearance": 8.888765258789064,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-patio-arcos",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 74,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -83.45,
+        65.39999999999999,
+        40.2
+      ],
+      "target": [
+        -85.75,
+        64.8,
+        40.2
+      ],
+      "clearance": 3.3999999999999915,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-patio-arcos",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 74,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -83.1,
+        70.5,
+        36.2
+      ],
+      "target": [
+        -85.75,
+        64.8,
+        40.2
+      ],
+      "clearance": 8.888765258789064,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-patio-arcos",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 74,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -83.45,
+        65.39999999999999,
+        40.2
+      ],
+      "target": [
+        -85.75,
+        64.8,
+        40.2
+      ],
+      "clearance": 3.3999999999999915,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-patio-arcos",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 74,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -83.1,
+        70.5,
+        36.2
+      ],
+      "target": [
+        -85.75,
+        64.8,
+        40.2
+      ],
+      "clearance": 8.888765258789064,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-patio-arcos",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 74,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -83.45,
+        65.39999999999999,
+        40.2
+      ],
+      "target": [
+        -85.75,
+        64.8,
+        40.2
+      ],
+      "clearance": 3.3999999999999915,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-logia",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 58,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -84,
+        69.10000000000001,
+        41.1
+      ],
+      "target": [
+        -86.2,
+        66.7,
+        40
+      ],
+      "clearance": 7.1000000000000085,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-logia",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 58,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -84.4,
+        68.2,
+        40.8
+      ],
+      "target": [
+        -86.2,
+        66.7,
+        40
+      ],
+      "clearance": 6.200000000000003,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-logia",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 58,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -84,
+        69.10000000000001,
+        41.1
+      ],
+      "target": [
+        -86.2,
+        66.7,
+        40
+      ],
+      "clearance": 7.1000000000000085,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-logia",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 58,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -84.4,
+        68.2,
+        40.8
+      ],
+      "target": [
+        -86.2,
+        66.7,
+        40
+      ],
+      "clearance": 6.200000000000003,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-logia",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 58,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -84,
+        69.10000000000001,
+        41.1
+      ],
+      "target": [
+        -86.2,
+        66.7,
+        40
+      ],
+      "clearance": 7.1000000000000085,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-logia",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 58,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -84.4,
+        68.2,
+        40.8
+      ],
+      "target": [
+        -86.2,
+        66.7,
+        40
+      ],
+      "clearance": 6.200000000000003,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-escalera",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -83.39999999999999,
+        66.5,
+        41.800000000000004
+      ],
+      "target": [
+        -82.3,
+        63.4,
+        47.2
+      ],
+      "clearance": 4.5,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-escalera",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -82.6,
+        65.2,
+        43.800000000000004
+      ],
+      "target": [
+        -82.3,
+        63.4,
+        47.2
+      ],
+      "clearance": 3.200000000000003,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-escalera",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -83.39999999999999,
+        66.5,
+        41.800000000000004
+      ],
+      "target": [
+        -82.3,
+        63.4,
+        47.2
+      ],
+      "clearance": 4.5,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-escalera",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -82.6,
+        65.2,
+        43.800000000000004
+      ],
+      "target": [
+        -82.3,
+        63.4,
+        47.2
+      ],
+      "clearance": 3.200000000000003,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-escalera",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -83.39999999999999,
+        66.5,
+        41.800000000000004
+      ],
+      "target": [
+        -82.3,
+        63.4,
+        47.2
+      ],
+      "clearance": 4.5,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-escalera",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -82.6,
+        65.2,
+        43.800000000000004
+      ],
+      "target": [
+        -82.3,
+        63.4,
+        47.2
+      ],
+      "clearance": 3.200000000000003,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-patio-superior",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -89,
+        72.8,
+        61.3
+      ],
+      "target": [
+        -89,
+        65.8,
+        54.8
+      ],
+      "clearance": 7.188704223632811,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-patio-superior",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -88,
+        68.5,
+        59.3
+      ],
+      "target": [
+        -89,
+        65.8,
+        54.8
+      ],
+      "clearance": 3.4499969482421875,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-patio-superior",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -89,
+        72.8,
+        61.3
+      ],
+      "target": [
+        -89,
+        65.8,
+        54.8
+      ],
+      "clearance": 7.188704223632811,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-patio-superior",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -88,
+        68.5,
+        59.3
+      ],
+      "target": [
+        -89,
+        65.8,
+        54.8
+      ],
+      "clearance": 3.4499969482421875,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-patio-superior",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -89,
+        72.8,
+        61.3
+      ],
+      "target": [
+        -89,
+        65.8,
+        54.8
+      ],
+      "clearance": 7.188704223632811,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-patio-superior",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -88,
+        68.5,
+        59.3
+      ],
+      "target": [
+        -89,
+        65.8,
+        54.8
+      ],
+      "clearance": 3.4499969482421875,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-aljibe",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 58,
+      "requiresSection": true,
+      "interiorView": false,
+      "position": [
+        -92.5,
+        64.35,
+        36.6
+      ],
+      "target": [
+        -89.5,
+        60.15,
+        40.5
+      ],
+      "clearance": 5.299999999999997,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-aljibe",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 58,
+      "requiresSection": true,
+      "interiorView": false,
+      "position": [
+        -91.6,
+        63.449999999999996,
+        42.5
+      ],
+      "target": [
+        -89.5,
+        60.15,
+        40.5
+      ],
+      "clearance": 4.399999999999999,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-aljibe",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 58,
+      "requiresSection": true,
+      "interiorView": false,
+      "position": [
+        -92.5,
+        64.35,
+        36.6
+      ],
+      "target": [
+        -89.5,
+        60.15,
+        40.5
+      ],
+      "clearance": 5.299999999999997,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-aljibe",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 58,
+      "requiresSection": true,
+      "interiorView": false,
+      "position": [
+        -91.6,
+        63.449999999999996,
+        42.5
+      ],
+      "target": [
+        -89.5,
+        60.15,
+        40.5
+      ],
+      "clearance": 4.399999999999999,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-aljibe",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 58,
+      "requiresSection": true,
+      "interiorView": false,
+      "position": [
+        -92.5,
+        64.35,
+        36.6
+      ],
+      "target": [
+        -89.5,
+        60.15,
+        40.5
+      ],
+      "clearance": 5.299999999999997,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-aljibe",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 58,
+      "requiresSection": true,
+      "interiorView": false,
+      "position": [
+        -91.6,
+        63.449999999999996,
+        42.5
+      ],
+      "target": [
+        -89.5,
+        60.15,
+        40.5
+      ],
+      "clearance": 4.399999999999999,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-boveda",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": true,
+      "interiorView": false,
+      "position": [
+        -92.1,
+        67.15,
+        43.5
+      ],
+      "target": [
+        -89.5,
+        61.15,
+        40.5
+      ],
+      "clearance": 8.100000000000009,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-boveda",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": true,
+      "interiorView": false,
+      "position": [
+        -91.4,
+        63.949999999999996,
+        41.9
+      ],
+      "target": [
+        -89.5,
+        61.15,
+        40.5
+      ],
+      "clearance": 4.899999999999999,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-boveda",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": true,
+      "interiorView": false,
+      "position": [
+        -92.1,
+        67.15,
+        43.5
+      ],
+      "target": [
+        -89.5,
+        61.15,
+        40.5
+      ],
+      "clearance": 8.100000000000009,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-boveda",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": true,
+      "interiorView": false,
+      "position": [
+        -91.4,
+        63.949999999999996,
+        41.9
+      ],
+      "target": [
+        -89.5,
+        61.15,
+        40.5
+      ],
+      "clearance": 4.899999999999999,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-boveda",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": true,
+      "interiorView": false,
+      "position": [
+        -92.1,
+        67.15,
+        43.5
+      ],
+      "target": [
+        -89.5,
+        61.15,
+        40.5
+      ],
+      "clearance": 8.100000000000009,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-boveda",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": true,
+      "interiorView": false,
+      "position": [
+        -91.4,
+        63.949999999999996,
+        41.9
+      ],
+      "target": [
+        -89.5,
+        61.15,
+        40.5
+      ],
+      "clearance": 4.899999999999999,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -54.81792117723194,
+        82.06032815557062,
+        10.945235942260076
+      ],
+      "target": [
+        -71.47824933280255,
+        65.4,
+        44.2658922534013
+      ],
+      "clearance": 25.11893256402209,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -68.47824933280255,
+        69.4,
+        33.2658922534013
+      ],
+      "target": [
+        -71.47824933280255,
+        65.4,
+        44.2658922534013
+      ],
+      "clearance": 9.4999984741211,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -30.426299736862838,
+        106.45194959593971,
+        -37.838006938478124
+      ],
+      "target": [
+        -71.47824933280255,
+        65.4,
+        44.2658922534013
+      ],
+      "clearance": 54.42560072027173,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -65.63517240972563,
+        73.19076923076923,
+        22.84127686878591
+      ],
+      "target": [
+        -71.47824933280255,
+        65.4,
+        44.2658922534013
+      ],
+      "clearance": 13.436089532686175,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -51.32431660347218,
+        85.55393272933037,
+        3.9580267947405545
+      ],
+      "target": [
+        -71.47824933280255,
+        65.4,
+        44.2658922534013
+      ],
+      "clearance": 30.256452997705324,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -68.47824933280255,
+        69.4,
+        33.2658922534013
+      ],
+      "target": [
+        -71.47824933280255,
+        65.4,
+        44.2658922534013
+      ],
+      "clearance": 9.4999984741211,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-aparejo",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -62.14518893253061,
+        72.84107464985314,
+        15.332884505284756
+      ],
+      "target": [
+        -70.88626358238376,
+        64.1,
+        44.46980000479526
+      ],
+      "clearance": 14.458696305036497,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-aparejo",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -69.88626358238376,
+        65.3,
+        39.76980000479526
+      ],
+      "target": [
+        -70.88626358238376,
+        64.1,
+        44.46980000479526
+      ],
+      "clearance": 4.435944918760583,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-aparejo",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -52.22338410406198,
+        82.76287947832178,
+        -17.739798256277332
+      ],
+      "target": [
+        -70.88626358238376,
+        64.1,
+        44.46980000479526
+      ],
+      "clearance": 29.347245952463858,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-aparejo",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -68.93857127469145,
+        66.43723076923077,
+        35.315646158641414
+      ],
+      "target": [
+        -70.88626358238376,
+        64.1,
+        44.46980000479526
+      ],
+      "clearance": 6.476812022110714,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-aparejo",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -63.19188470973535,
+        71.79437887264841,
+        18.821870429300564
+      ],
+      "target": [
+        -70.88626358238376,
+        64.1,
+        44.46980000479526
+      ],
+      "clearance": 12.54594820385703,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-aparejo",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -69.88626358238376,
+        65.3,
+        39.76980000479526
+      ],
+      "target": [
+        -70.88626358238376,
+        64.1,
+        44.46980000479526
+      ],
+      "clearance": 4.435944918760583,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-retorno",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -83.09407589332055,
+        69.5,
+        48.80675573811355
+      ],
+      "target": [
+        -81.39407589332055,
+        64.1,
+        48.10675573811355
+      ],
+      "clearance": 6.932539486289258,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-retorno",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -82.89407589332055,
+        66.8,
+        48.60675573811355
+      ],
+      "target": [
+        -81.39407589332055,
+        64.1,
+        48.10675573811355
+      ],
+      "clearance": 4.319389767050971,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-retorno",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -83.09407589332055,
+        69.5,
+        48.80675573811355
+      ],
+      "target": [
+        -81.39407589332055,
+        64.1,
+        48.10675573811355
+      ],
+      "clearance": 6.932539486289258,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-retorno",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -82.89407589332055,
+        66.8,
+        48.60675573811355
+      ],
+      "target": [
+        -81.39407589332055,
+        64.1,
+        48.10675573811355
+      ],
+      "clearance": 4.319389767050971,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-retorno",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -83.09407589332055,
+        69.5,
+        48.80675573811355
+      ],
+      "target": [
+        -81.39407589332055,
+        64.1,
+        48.10675573811355
+      ],
+      "clearance": 6.932539486289258,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-retorno",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -82.89407589332055,
+        66.8,
+        48.60675573811355
+      ],
+      "target": [
+        -81.39407589332055,
+        64.1,
+        48.10675573811355
+      ],
+      "clearance": 4.319389767050971,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-fabricas",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -61.88176799279204,
+        82.01580298729411,
+        11.393589735152261
+      ],
+      "target": [
+        -71.71862023326263,
+        68.9,
+        44.18309720338753
+      ],
+      "clearance": 24.923477977865453,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-fabricas",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -70.71862023326263,
+        69.9,
+        38.783097203387534
+      ],
+      "target": [
+        -71.71862023326263,
+        68.9,
+        44.18309720338753
+      ],
+      "clearance": 9.301900295720046,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-fabricas",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -49.221828666050214,
+        98.89572208961656,
+        -30.80620802065384
+      ],
+      "target": [
+        -71.71862023326263,
+        68.9,
+        44.18309720338753
+      ],
+      "clearance": 46.25936771654161,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-fabricas",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -69.77092792557032,
+        70.84769230769231,
+        33.66555874184907
+      ],
+      "target": [
+        -71.71862023326263,
+        68.9,
+        44.18309720338753
+      ],
+      "clearance": 10.935816080570959,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-fabricas",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -59.582757326476944,
+        85.08115054238093,
+        3.7302208474352554
+      ],
+      "target": [
+        -71.71862023326263,
+        68.9,
+        44.18309720338753
+      ],
+      "clearance": 29.551250625022718,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-fabricas",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -70.71862023326263,
+        69.9,
+        38.783097203387534
+      ],
+      "target": [
+        -71.71862023326263,
+        68.9,
+        44.18309720338753
+      ],
+      "clearance": 9.301900295720046,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-interpretaciones",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -57.732745221695666,
+        92.04072159508317,
+        7.512971990907495
+      ],
+      "target": [
+        -73.50649948549419,
+        65,
+        43.567267451018395
+      ],
+      "clearance": 36.01838921265913,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-interpretaciones",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -69.50649948549419,
+        72,
+        33.567267451018395
+      ],
+      "target": [
+        -73.50649948549419,
+        65,
+        43.567267451018395
+      ],
+      "clearance": 12.092723078548552,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-interpretaciones",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -36.92490512830609,
+        127.71130461232246,
+        -40.04780536541155
+      ],
+      "target": [
+        -73.50649948549419,
+        65,
+        43.567267451018395
+      ],
+      "clearance": 75.8413056804377,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-interpretaciones",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -65.71573025472496,
+        78.63384615384615,
+        24.090344374095316
+      ],
+      "target": [
+        -73.50649948549419,
+        65,
+        43.567267451018395
+      ],
+      "clearance": 18.866575804921375,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-interpretaciones",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -59.927857777831676,
+        88.27767149885003,
+        12.530372119218374
+      ],
+      "target": [
+        -73.50649948549419,
+        65,
+        43.567267451018395
+      ],
+      "clearance": 30.867970208856406,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "diana-interpretaciones",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -69.50649948549419,
+        72,
+        33.567267451018395
+      ],
+      "target": [
+        -73.50649948549419,
+        65,
+        43.567267451018395
+      ],
+      "clearance": 12.092723078548552,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-desvan",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -72.38340289639576,
+        74.3496295519068,
+        4.998834841269105
+      ],
+      "target": [
+        -84.4773,
+        72.23347070943339,
+        25.946
+      ],
+      "clearance": 18.39028570939594,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-desvan",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -84.4773,
+        72.23347070943339,
+        15.946000000000002
+      ],
+      "target": [
+        -84.4773,
+        72.23347070943339,
+        25.946
+      ],
+      "clearance": 14.440475824332076,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-desvan",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -60.08206363985151,
+        76.50208608589232,
+        -16.307629309448618
+      ],
+      "target": [
+        -84.4773,
+        72.23347070943339,
+        25.946
+      ],
+      "clearance": 22.63369616372222,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-desvan",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -84.4773,
+        72.23347070943339,
+        15.946000000000002
+      ],
+      "target": [
+        -84.4773,
+        72.23347070943339,
+        25.946
+      ],
+      "clearance": 14.440475824332076,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-desvan",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -73.68112645338847,
+        74.12255723959171,
+        7.246549489891407
+      ],
+      "target": [
+        -84.4773,
+        72.23347070943339,
+        25.946
+      ],
+      "clearance": 17.819726803823137,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-desvan",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -84.4773,
+        72.23347070943339,
+        15.946000000000002
+      ],
+      "target": [
+        -84.4773,
+        72.23347070943339,
+        25.946
+      ],
+      "clearance": 14.440475824332076,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-anexo",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -95.4807668158486,
+        77.5403234006287,
+        32.83608440324163
+      ],
+      "target": [
+        -96.425,
+        63.924970709433374,
+        36.36
+      ],
+      "clearance": 17.332839390867917,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-anexo",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -96.425,
+        69.09327070943337,
+        34.478899999999996
+      ],
+      "target": [
+        -96.425,
+        63.924970709433374,
+        36.36
+      ],
+      "clearance": 7.948273626456071,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-anexo",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -94.52607214343413,
+        91.30652532564356,
+        29.27312611843306
+      ],
+      "target": [
+        -96.425,
+        63.924970709433374,
+        36.36
+      ],
+      "clearance": 31.40605793103257,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-anexo",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -96.425,
+        69.09327070943337,
+        34.478899999999996
+      ],
+      "target": [
+        -96.425,
+        63.924970709433374,
+        36.36
+      ],
+      "clearance": 7.948273626456071,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-anexo",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -95.4250818806794,
+        78.3432712790135,
+        32.628266022315366
+      ],
+      "target": [
+        -96.425,
+        63.924970709433374,
+        36.36
+      ],
+      "clearance": 18.275274505014828,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-anexo",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -96.425,
+        69.09327070943337,
+        34.478899999999996
+      ],
+      "target": [
+        -96.425,
+        63.924970709433374,
+        36.36
+      ],
+      "clearance": 7.948273626456071,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-sorolla",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -66.45230950414916,
+        76.59303125274263,
+        -5.274317350417519
+      ],
+      "target": [
+        -84.4773,
+        66.93347070943338,
+        25.946
+      ],
+      "clearance": 21.86468947823031,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-sorolla",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -84.4773,
+        66.93347070943338,
+        12.946000000000002
+      ],
+      "target": [
+        -84.4773,
+        66.93347070943338,
+        25.946
+      ],
+      "clearance": 8.968684314474885,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-sorolla",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -43.6281432219372,
+        88.82446161628897,
+        -44.80708241641766
+      ],
+      "target": [
+        -84.4773,
+        66.93347070943338,
+        25.946
+      ],
+      "clearance": 36.954462684404206,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-sorolla",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -84.4773,
+        66.93347070943338,
+        12.946000000000002
+      ],
+      "target": [
+        -84.4773,
+        66.93347070943338,
+        25.946
+      ],
+      "clearance": 8.968684314474885,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-sorolla",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -62.307502773384265,
+        78.81422585283717,
+        -12.453360330795991
+      ],
+      "target": [
+        -84.4773,
+        66.93347070943338,
+        25.946
+      ],
+      "clearance": 24.73539015512487,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-sorolla",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -84.4773,
+        66.93347070943338,
+        12.946000000000002
+      ],
+      "target": [
+        -84.4773,
+        66.93347070943338,
+        25.946
+      ],
+      "clearance": 8.968684314474885,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-mirador",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -84.7,
+        72.2,
+        59
+      ],
+      "target": [
+        -87.7,
+        66.2,
+        54
+      ],
+      "clearance": 7.14999694824219,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-mirador",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -84.7,
+        68.9,
+        58
+      ],
+      "target": [
+        -87.7,
+        66.2,
+        54
+      ],
+      "clearance": 3.849996948242193,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-mirador",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -84.7,
+        72.2,
+        59
+      ],
+      "target": [
+        -87.7,
+        66.2,
+        54
+      ],
+      "clearance": 7.14999694824219,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-mirador",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -84.7,
+        68.9,
+        58
+      ],
+      "target": [
+        -87.7,
+        66.2,
+        54
+      ],
+      "clearance": 3.849996948242193,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-mirador",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -84.7,
+        72.2,
+        59
+      ],
+      "target": [
+        -87.7,
+        66.2,
+        54
+      ],
+      "clearance": 7.14999694824219,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "berenguer",
+      "id": "berenguer-mirador",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -84.7,
+        68.9,
+        58
+      ],
+      "target": [
+        -87.7,
+        66.2,
+        54
+      ],
+      "clearance": 3.849996948242193,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": true,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        22.47610260117137,
+        112.71491556016016,
+        32.353260822230375
+      ],
+      "target": [
+        60.82546543623345,
+        73.88,
+        89.3265237883134
+      ],
+      "clearance": 53.493817530318374,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": {
+        "name": "Sangre · tejado-nave · tiles",
+        "component": "tejado-nave",
+        "point": [
+          58.78508428286697,
+          75.94621502793478,
+          86.29525642406122
+        ],
+        "distanceToTarget": 4.197735297306991
+      }
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": true,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        44.43580224635464,
+        87.88,
+        69.72093936646228
+      ],
+      "target": [
+        60.82546543623345,
+        73.88,
+        89.3265237883134
+      ],
+      "clearance": 25.378550659850177,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": {
+        "name": "Sangre · tejado-nave · tiles",
+        "component": "tejado-nave",
+        "point": [
+          58.25062138546201,
+          76.07942388645672,
+          86.24645302507315
+        ],
+        "distanceToTarget": 4.577567391604063
+      }
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": true,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -41.02272210372491,
+        177.0177178306967,
+        -61.98299330300479
+      ],
+      "target": [
+        60.82546543623345,
+        73.88,
+        89.3265237883134
+      ],
+      "clearance": 126.04771660999359,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": {
+        "name": "Sangre · tejado-nave · tiles",
+        "component": "tejado-nave",
+        "point": [
+          58.78508428286697,
+          75.9462150279348,
+          86.29525642406124
+        ],
+        "distanceToTarget": 4.197735297306988
+      }
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": true,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        44.43580224635464,
+        87.88,
+        69.72093936646228
+      ],
+      "target": [
+        60.82546543623345,
+        73.88,
+        89.3265237883134
+      ],
+      "clearance": 25.378550659850177,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": {
+        "name": "Sangre · tejado-nave · tiles",
+        "component": "tejado-nave",
+        "point": [
+          58.25062138546201,
+          76.07942388645672,
+          86.24645302507315
+        ],
+        "distanceToTarget": 4.577567391604063
+      }
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": true,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        11.014094489619367,
+        124.32204757631513,
+        15.324868328006772
+      ],
+      "target": [
+        60.82546543623345,
+        73.88,
+        89.3265237883134
+      ],
+      "clearance": 65.99500849470807,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": {
+        "name": "Sangre · tejado-nave · tiles",
+        "component": "tejado-nave",
+        "point": [
+          58.78508428286697,
+          75.94621502793478,
+          86.29525642406124
+        ],
+        "distanceToTarget": 4.197735297306981
+      }
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": true,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        44.43580224635464,
+        87.88,
+        69.72093936646228
+      ],
+      "target": [
+        60.82546543623345,
+        73.88,
+        89.3265237883134
+      ],
+      "clearance": 25.378550659850177,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": {
+        "name": "Sangre · tejado-nave · tiles",
+        "component": "tejado-nave",
+        "point": [
+          58.25062138546201,
+          76.07942388645672,
+          86.24645302507315
+        ],
+        "distanceToTarget": 4.577567391604063
+      }
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-plaza",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 46,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        12.581261044489878,
+        106.58576761956257,
+        65.16541620377468
+      ],
+      "target": [
+        46.29995911468116,
+        70.88361672171298,
+        84.99994448035778
+      ],
+      "clearance": 47.62675272698445,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-plaza",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 46,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        26.299959114681158,
+        70.18361672171298,
+        81.49994448035778
+      ],
+      "target": [
+        46.29995911468116,
+        70.88361672171298,
+        84.99994448035778
+      ],
+      "clearance": 8.07286174324063,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-plaza",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 46,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -35.42297587231654,
+        157.4137831785341,
+        36.92762978212384
+      ],
+      "target": [
+        46.29995911468116,
+        70.88361672171298,
+        84.99994448035778
+      ],
+      "clearance": 98.4444994577908,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-plaza",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 46,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        26.299959114681158,
+        70.18361672171298,
+        81.49994448035778
+      ],
+      "target": [
+        46.29995911468116,
+        70.88361672171298,
+        84.99994448035778
+      ],
+      "clearance": 8.07286174324063,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-plaza",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 46,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        3.8638217383681805,
+        115.81599747310321,
+        60.03751072958544
+      ],
+      "target": [
+        46.29995911468116,
+        70.88361672171298,
+        84.99994448035778
+      ],
+      "clearance": 56.856982580525084,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-plaza",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 46,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        26.299959114681158,
+        70.18361672171298,
+        81.49994448035778
+      ],
+      "target": [
+        46.29995911468116,
+        70.88361672171298,
+        84.99994448035778
+      ],
+      "clearance": 8.07286174324063,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-escalinata",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 49,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        45.311408161315214,
+        67.88,
+        81.7026844097223
+      ],
+      "target": [
+        50.297865518656394,
+        64.88,
+        85.5930883763327
+      ],
+      "clearance": 4.550969562506296,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-escalinata",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 49,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        47.28190135247496,
+        66.67999999999999,
+        84.52352764953429
+      ],
+      "target": [
+        50.297865518656394,
+        64.88,
+        85.5930883763327
+      ],
+      "clearance": 2.8703485163408544,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-escalinata",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 49,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        45.311408161315214,
+        67.88,
+        81.7026844097223
+      ],
+      "target": [
+        50.297865518656394,
+        64.88,
+        85.5930883763327
+      ],
+      "clearance": 4.550969562506296,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-escalinata",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 49,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        47.28190135247496,
+        66.67999999999999,
+        84.52352764953429
+      ],
+      "target": [
+        50.297865518656394,
+        64.88,
+        85.5930883763327
+      ],
+      "clearance": 2.8703485163408544,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-escalinata",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 49,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        45.311408161315214,
+        67.88,
+        81.7026844097223
+      ],
+      "target": [
+        50.297865518656394,
+        64.88,
+        85.5930883763327
+      ],
+      "clearance": 4.550969562506296,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-escalinata",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 49,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        47.28190135247496,
+        66.67999999999999,
+        84.52352764953429
+      ],
+      "target": [
+        50.297865518656394,
+        64.88,
+        85.5930883763327
+      ],
+      "clearance": 2.8703485163408544,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-portada",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 43,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        40.13783623383269,
+        72.88,
+        81.99000567793055
+      ],
+      "target": [
+        51.44770185701306,
+        69.88,
+        86.00085840342459
+      ],
+      "clearance": 9.971357087246616,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-portada",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 43,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        44.473284722718496,
+        70.38,
+        83.52749922270327
+      ],
+      "target": [
+        51.44770185701306,
+        69.88,
+        86.00085840342459
+      ],
+      "clearance": 6.993782966136187,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-portada",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 43,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        40.13783623383269,
+        72.88,
+        81.99000567793055
+      ],
+      "target": [
+        51.44770185701306,
+        69.88,
+        86.00085840342459
+      ],
+      "clearance": 9.971357087246616,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-portada",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 43,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        44.473284722718496,
+        70.38,
+        83.52749922270327
+      ],
+      "target": [
+        51.44770185701306,
+        69.88,
+        86.00085840342459
+      ],
+      "clearance": 6.993782966136187,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-portada",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 43,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        40.13783623383269,
+        72.88,
+        81.99000567793055
+      ],
+      "target": [
+        51.44770185701306,
+        69.88,
+        86.00085840342459
+      ],
+      "clearance": 9.971357087246616,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-portada",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 43,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        44.473284722718496,
+        70.38,
+        83.52749922270327
+      ],
+      "target": [
+        51.44770185701306,
+        69.88,
+        86.00085840342459
+      ],
+      "clearance": 6.993782966136187,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-espadana",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 44,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        43.323448384361825,
+        80.73,
+        83.11972919561138
+      ],
+      "target": [
+        51.805847601747104,
+        78.73,
+        86.12786873973191
+      ],
+      "clearance": 17.35529687825982,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-espadana",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 44,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        46.71640807131594,
+        79.63000000000001,
+        84.3229850132596
+      ],
+      "target": [
+        51.805847601747104,
+        78.73,
+        86.12786873973191
+      ],
+      "clearance": 15.921528793204331,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-espadana",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 44,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        43.323448384361825,
+        80.73,
+        83.11972919561138
+      ],
+      "target": [
+        51.805847601747104,
+        78.73,
+        86.12786873973191
+      ],
+      "clearance": 17.35529687825982,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-espadana",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 44,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        46.71640807131594,
+        79.63000000000001,
+        84.3229850132596
+      ],
+      "target": [
+        51.805847601747104,
+        78.73,
+        86.12786873973191
+      ],
+      "clearance": 15.921528793204331,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-espadana",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 44,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        43.323448384361825,
+        80.73,
+        83.11972919561138
+      ],
+      "target": [
+        51.805847601747104,
+        78.73,
+        86.12786873973191
+      ],
+      "clearance": 17.35529687825982,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-espadana",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 44,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        46.71640807131594,
+        79.63000000000001,
+        84.3229850132596
+      ],
+      "target": [
+        51.805847601747104,
+        78.73,
+        86.12786873973191
+      ],
+      "clearance": 15.921528793204331,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-nave",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 64,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        54.03954606232523,
+        67.78,
+        86.92001215301698
+      ],
+      "target": [
+        61.01396319661979,
+        68.48,
+        89.3933713337383
+      ],
+      "clearance": 3.1263870789683352,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-nave",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 64,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        55.736025905802286,
+        67.48,
+        87.52164006184108
+      ],
+      "target": [
+        61.01396319661979,
+        68.48,
+        89.3933713337383
+      ],
+      "clearance": 2.3500027465820352,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-nave",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 64,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        54.03954606232523,
+        67.78,
+        86.92001215301698
+      ],
+      "target": [
+        61.01396319661979,
+        68.48,
+        89.3933713337383
+      ],
+      "clearance": 3.1263870789683352,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-nave",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 64,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        55.736025905802286,
+        67.48,
+        87.52164006184108
+      ],
+      "target": [
+        61.01396319661979,
+        68.48,
+        89.3933713337383
+      ],
+      "clearance": 2.3500027465820352,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-nave",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 64,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        54.03954606232523,
+        67.78,
+        86.92001215301698
+      ],
+      "target": [
+        61.01396319661979,
+        68.48,
+        89.3933713337383
+      ],
+      "clearance": 3.1263870789683352,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-nave",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 64,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        55.736025905802286,
+        67.48,
+        87.52164006184108
+      ],
+      "target": [
+        61.01396319661979,
+        68.48,
+        89.3933713337383
+      ],
+      "clearance": 2.3500027465820352,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-capillas",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 65,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        54.52081759510481,
+        67.53,
+        87.05885635252127
+      ],
+      "target": [
+        57.02217883863331,
+        67.83,
+        83.59573753715073
+      ],
+      "clearance": 2.637676809952424,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-capillas",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 65,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        56.1120587459572,
+        67.53,
+        85.71332612252496
+      ],
+      "target": [
+        57.02217883863331,
+        67.83,
+        83.59573753715073
+      ],
+      "clearance": 3.0884204226022973,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-capillas",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 65,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        54.52081759510481,
+        67.53,
+        87.05885635252127
+      ],
+      "target": [
+        57.02217883863331,
+        67.83,
+        83.59573753715073
+      ],
+      "clearance": 2.637676809952424,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-capillas",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 65,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        56.1120587459572,
+        67.53,
+        85.71332612252496
+      ],
+      "target": [
+        57.02217883863331,
+        67.83,
+        83.59573753715073
+      ],
+      "clearance": 3.0884204226022973,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-capillas",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 65,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        54.52081759510481,
+        67.53,
+        87.05885635252127
+      ],
+      "target": [
+        57.02217883863331,
+        67.83,
+        83.59573753715073
+      ],
+      "clearance": 2.637676809952424,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-capillas",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 65,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        56.1120587459572,
+        67.53,
+        85.71332612252496
+      ],
+      "target": [
+        57.02217883863331,
+        67.83,
+        83.59573753715073
+      ],
+      "clearance": 3.0884204226022973,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-crucero",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 65,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        55.971648106285215,
+        68.08,
+        87.60519949362221
+      ],
+      "target": [
+        62.569069719807096,
+        71.88,
+        89.94486358349373
+      ],
+      "clearance": 2.9500027465820295,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-crucero",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 65,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        58.79911451208031,
+        68.88,
+        88.60791267499572
+      ],
+      "target": [
+        62.569069719807096,
+        71.88,
+        89.94486358349373
+      ],
+      "clearance": 3.7500027465820267,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-crucero",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 65,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        55.971648106285215,
+        68.08,
+        87.60519949362221
+      ],
+      "target": [
+        62.569069719807096,
+        71.88,
+        89.94486358349373
+      ],
+      "clearance": 2.9500027465820295,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-crucero",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 65,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        58.79911451208031,
+        68.88,
+        88.60791267499572
+      ],
+      "target": [
+        62.569069719807096,
+        71.88,
+        89.94486358349373
+      ],
+      "clearance": 3.7500027465820267,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-crucero",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 65,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        55.971648106285215,
+        68.08,
+        87.60519949362221
+      ],
+      "target": [
+        62.569069719807096,
+        71.88,
+        89.94486358349373
+      ],
+      "clearance": 2.9500027465820295,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-crucero",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 65,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        58.79911451208031,
+        68.88,
+        88.60791267499572
+      ],
+      "target": [
+        62.569069719807096,
+        71.88,
+        89.94486358349373
+      ],
+      "clearance": 3.7500027465820267,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-cupula",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 66,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        60.87258987633004,
+        71.28,
+        89.34323567466963
+      ],
+      "target": [
+        62.569069719807096,
+        82.08,
+        89.94486358349373
+      ],
+      "clearance": 6.150002746582032,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-cupula",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 66,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        62.003576438648075,
+        73.88,
+        89.74432094721902
+      ],
+      "target": [
+        62.569069719807096,
+        82.08,
+        89.94486358349373
+      ],
+      "clearance": 8.750002746582027,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-cupula",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 66,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        60.87258987633004,
+        71.28,
+        89.34323567466963
+      ],
+      "target": [
+        62.569069719807096,
+        82.08,
+        89.94486358349373
+      ],
+      "clearance": 6.150002746582032,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-cupula",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 66,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        62.003576438648075,
+        73.88,
+        89.74432094721902
+      ],
+      "target": [
+        62.569069719807096,
+        82.08,
+        89.94486358349373
+      ],
+      "clearance": 8.750002746582027,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-cupula",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 66,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        60.87258987633004,
+        71.28,
+        89.34323567466963
+      ],
+      "target": [
+        62.569069719807096,
+        82.08,
+        89.94486358349373
+      ],
+      "clearance": 6.150002746582032,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-cupula",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 66,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        62.003576438648075,
+        73.88,
+        89.74432094721902
+      ],
+      "target": [
+        62.569069719807096,
+        82.08,
+        89.94486358349373
+      ],
+      "clearance": 8.750002746582027,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-pechinas",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 61,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        60.61122213257461,
+        71.48,
+        89.78105630292302
+      ],
+      "target": [
+        66.90993991859817,
+        76.78,
+        87.87680992914926
+      ],
+      "clearance": 6.350002746582035,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-pechinas",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 61,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        62.99153388918058,
+        73.38,
+        89.35196896756644
+      ],
+      "target": [
+        66.90993991859817,
+        76.78,
+        87.87680992914926
+      ],
+      "clearance": 8.250002746582027,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-pechinas",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 61,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        60.61122213257461,
+        71.48,
+        89.78105630292302
+      ],
+      "target": [
+        66.90993991859817,
+        76.78,
+        87.87680992914926
+      ],
+      "clearance": 6.350002746582035,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-pechinas",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 61,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        62.99153388918058,
+        73.38,
+        89.35196896756644
+      ],
+      "target": [
+        66.90993991859817,
+        76.78,
+        87.87680992914926
+      ],
+      "clearance": 8.250002746582027,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-pechinas",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 61,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        60.61122213257461,
+        71.48,
+        89.78105630292302
+      ],
+      "target": [
+        66.90993991859817,
+        76.78,
+        87.87680992914926
+      ],
+      "clearance": 6.350002746582035,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-pechinas",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 61,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        62.99153388918058,
+        73.38,
+        89.35196896756644
+      ],
+      "target": [
+        66.90993991859817,
+        76.78,
+        87.87680992914926
+      ],
+      "clearance": 8.250002746582027,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-presbiterio",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 58,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        63.08743856086952,
+        68.14,
+        90.1286943334122
+      ],
+      "target": [
+        70.72159785651627,
+        69.34,
+        92.83601992312067
+      ],
+      "clearance": 3.010002746582032,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-presbiterio",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 58,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        65.72640720627827,
+        68.69,
+        91.06455996936081
+      ],
+      "target": [
+        70.72159785651627,
+        69.34,
+        92.83601992312067
+      ],
+      "clearance": 3.560002746582029,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-presbiterio",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 58,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        63.08743856086952,
+        68.14,
+        90.1286943334122
+      ],
+      "target": [
+        70.72159785651627,
+        69.34,
+        92.83601992312067
+      ],
+      "clearance": 3.010002746582032,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-presbiterio",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 58,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        65.72640720627827,
+        68.69,
+        91.06455996936081
+      ],
+      "target": [
+        70.72159785651627,
+        69.34,
+        92.83601992312067
+      ],
+      "clearance": 3.560002746582029,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-presbiterio",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 58,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        63.08743856086952,
+        68.14,
+        90.1286943334122
+      ],
+      "target": [
+        70.72159785651627,
+        69.34,
+        92.83601992312067
+      ],
+      "clearance": 3.010002746582032,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-presbiterio",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 58,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        65.72640720627827,
+        68.69,
+        91.06455996936081
+      ],
+      "target": [
+        70.72159785651627,
+        69.34,
+        92.83601992312067
+      ],
+      "clearance": 3.560002746582029,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-veracruz",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 56,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        57.12009973864138,
+        67.78,
+        87.08939056762493
+      ],
+      "target": [
+        59.20471888672111,
+        68.18,
+        82.25830756197709
+      ],
+      "clearance": 2.8384329515941005,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-veracruz",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 56,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        58.21871759170383,
+        67.88000000000001,
+        85.0386495276756
+      ],
+      "target": [
+        59.20471888672111,
+        68.18,
+        82.25830756197709
+      ],
+      "clearance": 2.750002746582041,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-veracruz",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 56,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        57.12009973864138,
+        67.78,
+        87.08939056762493
+      ],
+      "target": [
+        59.20471888672111,
+        68.18,
+        82.25830756197709
+      ],
+      "clearance": 2.8384329515941005,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-veracruz",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 56,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        58.21871759170383,
+        67.88000000000001,
+        85.0386495276756
+      ],
+      "target": [
+        59.20471888672111,
+        68.18,
+        82.25830756197709
+      ],
+      "clearance": 2.750002746582041,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-veracruz",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 56,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        57.12009973864138,
+        67.78,
+        87.08939056762493
+      ],
+      "target": [
+        59.20471888672111,
+        68.18,
+        82.25830756197709
+      ],
+      "clearance": 2.8384329515941005,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-veracruz",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 56,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        58.21871759170383,
+        67.88000000000001,
+        85.0386495276756
+      ],
+      "target": [
+        59.20471888672111,
+        68.18,
+        82.25830756197709
+      ],
+      "clearance": 2.750002746582041,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-sacristia",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 70,
+      "requiresSection": true,
+      "interiorView": false,
+      "position": [
+        70.61744502162819,
+        68.24000000000001,
+        86.84675851732239
+      ],
+      "target": [
+        72.99492577767373,
+        68.74000000000001,
+        87.56256942435935
+      ],
+      "clearance": 3.1100027465820403,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-sacristia",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 70,
+      "requiresSection": true,
+      "interiorView": false,
+      "position": [
+        71.39269481438984,
+        68.39000000000001,
+        86.99436528824769
+      ],
+      "target": [
+        72.99492577767373,
+        68.74000000000001,
+        87.56256942435935
+      ],
+      "clearance": 3.260002746582046,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-sacristia",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 70,
+      "requiresSection": true,
+      "interiorView": false,
+      "position": [
+        70.61744502162819,
+        68.24000000000001,
+        86.84675851732239
+      ],
+      "target": [
+        72.99492577767373,
+        68.74000000000001,
+        87.56256942435935
+      ],
+      "clearance": 3.1100027465820403,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-sacristia",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 70,
+      "requiresSection": true,
+      "interiorView": false,
+      "position": [
+        71.39269481438984,
+        68.39000000000001,
+        86.99436528824769
+      ],
+      "target": [
+        72.99492577767373,
+        68.74000000000001,
+        87.56256942435935
+      ],
+      "clearance": 3.260002746582046,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-sacristia",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 70,
+      "requiresSection": true,
+      "interiorView": false,
+      "position": [
+        70.61744502162819,
+        68.24000000000001,
+        86.84675851732239
+      ],
+      "target": [
+        72.99492577767373,
+        68.74000000000001,
+        87.56256942435935
+      ],
+      "clearance": 3.1100027465820403,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-sacristia",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 70,
+      "requiresSection": true,
+      "interiorView": false,
+      "position": [
+        71.39269481438984,
+        68.39000000000001,
+        86.99436528824769
+      ],
+      "target": [
+        72.99492577767373,
+        68.74000000000001,
+        87.56256942435935
+      ],
+      "clearance": 3.260002746582046,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-museo",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 67,
+      "requiresSection": true,
+      "interiorView": false,
+      "position": [
+        57.28986180557482,
+        71.39,
+        101.09140402429003
+      ],
+      "target": [
+        61.883967183263415,
+        71.29,
+        103.99385054036793
+      ],
+      "clearance": 4.540001525878907,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-museo",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 67,
+      "requiresSection": true,
+      "interiorView": false,
+      "position": [
+        58.55785504173421,
+        71.39,
+        102.60209696233338
+      ],
+      "target": [
+        61.883967183263415,
+        71.29,
+        103.99385054036793
+      ],
+      "clearance": 4.540001525878907,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-museo",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 67,
+      "requiresSection": true,
+      "interiorView": false,
+      "position": [
+        57.28986180557482,
+        71.39,
+        101.09140402429003
+      ],
+      "target": [
+        61.883967183263415,
+        71.29,
+        103.99385054036793
+      ],
+      "clearance": 4.540001525878907,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-museo",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 67,
+      "requiresSection": true,
+      "interiorView": false,
+      "position": [
+        58.55785504173421,
+        71.39,
+        102.60209696233338
+      ],
+      "target": [
+        61.883967183263415,
+        71.29,
+        103.99385054036793
+      ],
+      "clearance": 4.540001525878907,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-museo",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 67,
+      "requiresSection": true,
+      "interiorView": false,
+      "position": [
+        57.28986180557482,
+        71.39,
+        101.09140402429003
+      ],
+      "target": [
+        61.883967183263415,
+        71.29,
+        103.99385054036793
+      ],
+      "clearance": 4.540001525878907,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-museo",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 67,
+      "requiresSection": true,
+      "interiorView": false,
+      "position": [
+        58.55785504173421,
+        71.39,
+        102.60209696233338
+      ],
+      "target": [
+        61.883967183263415,
+        71.29,
+        103.99385054036793
+      ],
+      "clearance": 4.540001525878907,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-conservacion",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 64,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        61.06108763671638,
+        71.48,
+        89.41008322009452
+      ],
+      "target": [
+        62.569069719807096,
+        81.68,
+        89.94486358349373
+      ],
+      "clearance": 6.350002746582035,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-conservacion",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 64,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        62.192074199034415,
+        73.68,
+        89.81116849264393
+      ],
+      "target": [
+        62.569069719807096,
+        81.68,
+        89.94486358349373
+      ],
+      "clearance": 8.550002746582038,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-conservacion",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 64,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        61.06108763671638,
+        71.48,
+        89.41008322009452
+      ],
+      "target": [
+        62.569069719807096,
+        81.68,
+        89.94486358349373
+      ],
+      "clearance": 6.350002746582035,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-conservacion",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 64,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        62.192074199034415,
+        73.68,
+        89.81116849264393
+      ],
+      "target": [
+        62.569069719807096,
+        81.68,
+        89.94486358349373
+      ],
+      "clearance": 8.550002746582038,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-conservacion",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 64,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        61.06108763671638,
+        71.48,
+        89.41008322009452
+      ],
+      "target": [
+        62.569069719807096,
+        81.68,
+        89.94486358349373
+      ],
+      "clearance": 6.350002746582035,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-conservacion",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 64,
+      "requiresSection": false,
+      "interiorView": true,
+      "position": [
+        62.192074199034415,
+        73.68,
+        89.81116849264393
+      ],
+      "target": [
+        62.569069719807096,
+        81.68,
+        89.94486358349373
+      ],
+      "clearance": 8.550002746582038,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-entorno",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        7.862482522323006,
+        137.3861827487566,
+        3.9263852651178013
+      ],
+      "target": [
+        56.80001978946175,
+        65.41921617943493,
+        61.49995852057515
+      ],
+      "clearance": 80.63969162308743,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-entorno",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        44.80001978946175,
+        71.41921617943493,
+        58.49995852057515
+      ],
+      "target": [
+        56.80001978946175,
+        65.41921617943493,
+        61.49995852057515
+      ],
+      "clearance": 10.360781454939719,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-entorno",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -56.71368749979036,
+        232.3511386636292,
+        -72.04557946678025
+      ],
+      "target": [
+        56.80001978946175,
+        65.41921617943493,
+        61.49995852057515
+      ],
+      "clearance": 181.37683703376618,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-entorno",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        44.80001978946175,
+        71.41921617943493,
+        58.49995852057515
+      ],
+      "target": [
+        56.80001978946175,
+        65.41921617943493,
+        61.49995852057515
+      ],
+      "clearance": 10.360781454939719,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-entorno",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -0.4663188008227337,
+        149.63441998867683,
+        -5.872204526818365
+      ],
+      "target": [
+        56.80001978946175,
+        65.41921617943493,
+        61.49995852057515
+      ],
+      "clearance": 94.7032259447709,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-entorno",
+      "nearObstructions": [],
+      "expectedSurface": false,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        44.80001978946175,
+        71.41921617943493,
+        58.49995852057515
+      ],
+      "target": [
+        56.80001978946175,
+        65.41921617943493,
+        61.49995852057515
+      ],
+      "clearance": 10.360781454939719,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": null
+    }
+  ],
+  "cameraOcclusions": [],
+  "intendedExteriorHits": [
+    {
+      "place": "sangre",
+      "id": "sangre-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": true,
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        22.47610260117137,
+        112.71491556016016,
+        32.353260822230375
+      ],
+      "target": [
+        60.82546543623345,
+        73.88,
+        89.3265237883134
+      ],
+      "clearance": 53.493817530318374,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": {
+        "name": "Sangre · tejado-nave · tiles",
+        "component": "tejado-nave",
+        "point": [
+          58.78508428286697,
+          75.94621502793478,
+          86.29525642406122
+        ],
+        "distanceToTarget": 4.197735297306991
+      }
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": true,
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        44.43580224635464,
+        87.88,
+        69.72093936646228
+      ],
+      "target": [
+        60.82546543623345,
+        73.88,
+        89.3265237883134
+      ],
+      "clearance": 25.378550659850177,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": {
+        "name": "Sangre · tejado-nave · tiles",
+        "component": "tejado-nave",
+        "point": [
+          58.25062138546201,
+          76.07942388645672,
+          86.24645302507315
+        ],
+        "distanceToTarget": 4.577567391604063
+      }
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": true,
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        -41.02272210372491,
+        177.0177178306967,
+        -61.98299330300479
+      ],
+      "target": [
+        60.82546543623345,
+        73.88,
+        89.3265237883134
+      ],
+      "clearance": 126.04771660999359,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": {
+        "name": "Sangre · tejado-nave · tiles",
+        "component": "tejado-nave",
+        "point": [
+          58.78508428286697,
+          75.9462150279348,
+          86.29525642406124
+        ],
+        "distanceToTarget": 4.197735297306988
+      }
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": true,
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        44.43580224635464,
+        87.88,
+        69.72093936646228
+      ],
+      "target": [
+        60.82546543623345,
+        73.88,
+        89.3265237883134
+      ],
+      "clearance": 25.378550659850177,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": {
+        "name": "Sangre · tejado-nave · tiles",
+        "component": "tejado-nave",
+        "point": [
+          58.25062138546201,
+          76.07942388645672,
+          86.24645302507315
+        ],
+        "distanceToTarget": 4.577567391604063
+      }
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": true,
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        11.014094489619367,
+        124.32204757631513,
+        15.324868328006772
+      ],
+      "target": [
+        60.82546543623345,
+        73.88,
+        89.3265237883134
+      ],
+      "clearance": 65.99500849470807,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": {
+        "name": "Sangre · tejado-nave · tiles",
+        "component": "tejado-nave",
+        "point": [
+          58.78508428286697,
+          75.94621502793478,
+          86.29525642406124
+        ],
+        "distanceToTarget": 4.197735297306981
+      }
+    },
+    {
+      "place": "sangre",
+      "id": "sangre-conjunto",
+      "nearObstructions": [],
+      "expectedSurface": true,
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "fov": 38,
+      "requiresSection": false,
+      "interiorView": false,
+      "position": [
+        44.43580224635464,
+        87.88,
+        69.72093936646228
+      ],
+      "target": [
+        60.82546543623345,
+        73.88,
+        89.3265237883134
+      ],
+      "clearance": 25.378550659850177,
+      "offFrameCorners": 0,
+      "ground": null,
+      "occlusion": {
+        "name": "Sangre · tejado-nave · tiles",
+        "component": "tejado-nave",
+        "point": [
+          58.25062138546201,
+          76.07942388645672,
+          86.24645302507315
+        ],
+        "distanceToTarget": 4.577567391604063
+      }
+    }
+  ],
+  "inputHashes": {
+    "dist/js/app.js": "92f81c6269b7390e4e16d7b2acd586746b3695def07316be373c86e826bba711",
+    "dist/js/castle-panel.js": "60a927639c38ed0a88d16e66354aa5c7d14057da44b396f8a2d0acdaae25a8ab",
+    "dist/js/theatre.js": "34831ff762ddd15d0e9fa1fd564183145a04219d47f833f529af35f545d83371",
+    "dist/js/monuments.js": "22546453225b2db827cc2e84a5fd30e1083b56eb8b79d4a1ac025709f4b34dac",
+    "dist/js/castle.js": "61463c846f79a617562ca2e31bfc42321da0c737a3d310846db44410066c54d8",
+    "dist/js/terrain.js": "ec10570603e52e850b6b5eadf81963215d18d533c551d555848ef58152fec3f8",
+    "dist/js/city.js": "b2578a5fdb0d70435fa4bc8cf92147f2a3c4922f6bcbe6bbe145f46ebb53af54",
+    "dist/js/urban-surface.js": "d2acfae90ff47abddd51be09a21555e8ce9b6269e1500549a6eb94938f3e6111",
+    "dist/js/santa-maria.js": "ab23645cee3bfb285ea19420b98d8c4eb56fa7e5b99d756aa861abba2578ff42",
+    "dist/js/santa-maria-context.js": "c58325ab7d3a33af291c50efda2625dcd757d33da9306e70f5d95b67b4d4072f",
+    "dist/js/heritage-sacred.js": "7ba758bf7bcf209bd8124ce34702fc5ca3510c7656bbaf24bd6a9748e3701e63",
+    "dist/js/heritage-civic.js": "fb57a08bfe1a0ebfbd8c3f7d906b2eb8d90fb3bf0de540711bac7c79cb87663c",
+    "dist/js/plaza-mayor.js": "07f51ea9722f9a09932e9dd85dcdeb2a39e753fdb5c8d7fa5e5a302bad3d28b1",
+    "dist/js/plaza-mayor-context.js": "655b94895ef5407affe3ea502e5eb0eeff91cf01d365fe63387ec9fa31bd8d8b",
+    "dist/js/juderia.js": "e83aa1df8be0538e6ce520ebf0676f847ce3d488690e1deacaa7472e0869d30d",
+    "dist/js/juderia-context.js": "fc58285789fd8a785e87d2efd1e29e42bba257222eb51e66592393d19600cf2f",
+    "dist/js/calvario.js": "990a076c049599574eb566b7823bc8166667d7c385a2e5fd964e6e4342d96910",
+    "dist/js/calvario-context.js": "0ef2e7a8cc33c2296cbd1b7ff8023d5eef71a48e4eb86849efd06e59b124d148",
+    "dist/js/berenguer.js": "e6d96396f1462827849e656d8a456c49d0da59f8a8c1c87cbf1e14e605909cdd",
+    "dist/js/berenguer-context.js": "4a942cd7436001937dcfd3d20ff3c1ec6272a42e4f0fbd68bf80e097b7618695",
+    "dist/js/berenguer-map.js": "1c10607f476c7a5d6358d13747385a6e946bc7df909de5c5963ec1ca2062f92e",
+    "dist/js/berenguer-visit.js": "500f8d3d6995bd33f62cc7a44cb2e2f5079537f3d3a916d6253e6a27fb3387ce",
+    "dist/js/sangre.js": "83c383bed697ee3170fb976d652b39ca5e46986d603f8c83c8a6b8edfbee8247",
+    "dist/js/sangre-context.js": "93c9fd805f9dbef41763eb67a35ded526b80e408f35c2b7c333309d7ee853aab",
+    "dist/js/sangre-map.js": "229a7ebd9cffa70b1589824533f9da5bb2187f2d7249e0abb1812903b5ad2918",
+    "dist/js/archaeology-public.js": "2caa932b03f1910718d538227c99410e17180b201f7a05b849ded888342af73b",
+    "dist/js/excavation.js": "2d7af18c65c4870ed7d33897fbee5caaaa531663ed39c592ea6fcdfed00b1d35",
+    "dist/assets/data/plaza-mayor-visit.json": "c80a4560b964c27003e769add5a1c0c32b1a0109b55243c95a641282f2b36e55",
+    "dist/assets/data/plaza-mayor-plan.json": "136742e1a25c77699aa619113a40213926260fd7bbec9402f02de6a4bb29b4ef",
+    "dist/assets/data/plaza-mayor-context.json": "1a0c282b1f15f1cf4ede43aee8a600a5a44675cc4ad8110c36656ad9d23d9fc7",
+    "dist/assets/data/juderia-visit.json": "c935eff4d0a2f4362b437bb045ac47a4d7222b62b7ab5f7e3380e7ac08e6f736",
+    "dist/assets/data/juderia-plan.json": "cb31a29ed4c590a10bb6b8430171122bada9c4637ab3446ad31097fabd194d34",
+    "dist/assets/data/juderia-context.json": "9118ca2de239a2b4a49e2b2651d8dc261177e3b50c6a4360686e7e8a2380d045",
+    "dist/assets/data/calvario-visit.json": "b054fed27f08b1d4c1f387315b3d3d6b8ae3a6a7378e4e2fb6186a437c829088",
+    "dist/assets/data/calvario-plan.json": "3a9a08fb423930cb5902b83db6c5b2998ff8461935bc26656714a3039a167eef",
+    "dist/assets/data/calvario-context.json": "3c4da56852c9f4afb1ca501e37e4823b7c2eb3aa81d9b42a7da07f53bbe81766",
+    "dist/assets/data/berenguer-visit.json": "36da2cecfbfe9c2447434e2405a5ca94615527dca5c0c4e549ae49e6d726206e",
+    "dist/assets/data/berenguer-plan.json": "68af4ffba39bad39785ba588a6ffbde2d074b47179e591a8847c5a4e61ae4154",
+    "dist/assets/data/berenguer-context.json": "b222d0b510d39b340dc4d69bdaef0dc383d88faa5fb800eb247d9676871487ae",
+    "dist/assets/data/sangre-visit.json": "490aa9c55411448c18d0da0070d16a6f345bbb7abdb46638d55b4c19b3723f48",
+    "dist/assets/data/sangre-plan.json": "a8d915826156b202298fac54b9112ec08166db8b9796654bfd38d0c6dd98e3ad",
+    "dist/assets/data/sangre-context.json": "1f2384b5e0d8140cfc086857cc6c6b4c41a9c5ea651fdddd9e821fa81edbe506"
+  },
+  "limitations": [
+    "Exterior overview rays intentionally meet the subject roof. Interior near-field rays cover nine points; full visual inspection remains necessary.",
+    "Architecture is an interpretation from source plans and photographs, not a measured survey.",
+    "CPU geometry and renders do not measure browser WebGL performance."
+  ]
+}

@@ -1,0 +1,1681 @@
+{
+  "schemaVersion": 1,
+  "id": "calvario",
+  "title": "Calvario y ermita de la Soledad",
+  "subtitle": "Dieciocho paradas entre terrazas, cerámica y memoria",
+  "introduction": "Recorre el Calvario desde el barrio hasta la ermita de la Soledad. La visita enlaza el relieve, los muros blancos, los cipreses y la fachada restaurada con una historia de devoción, cuidados y vida cotidiana. Cada parada distingue la documentación conservada de los detalles que el modelo interpreta.",
+  "researchDate": "2026-11-19",
+  "regionsLabel": "ámbitos",
+  "mapButtonLabel": "Plano del Calvario",
+  "overviewButtonLabel": "Ver conjunto",
+  "readingModeLabel": "Leer arquitectura y paisaje",
+  "readingModeNote": "Los colores identifican el camino, la ermita, las cerámicas, la conservación y el paisaje. La cronología se explica por separado en cada parada y en la línea del tiempo.",
+  "timelineIntroduction": "La fecha de inauguración del recorrido, las piezas fechadas y las restauraciones se presentan por separado. La datación del edificio requiere distinguir fases que las fuentes no resuelven de forma unánime.",
+  "visitAriaLabel": "Visita documentada al Calvario de Sagunto, la ermita de la Soledad y su entorno",
+  "regions": [
+    {
+      "id": "llegada",
+      "name": "La llegada y el desnivel",
+      "aliases": [],
+      "summary": "Reconoce el conjunto, el acceso y las escaleras.",
+      "coordinate": [
+        -0.280042,
+        39.6783213
+      ],
+      "sourceIds": [
+        "cv-turismo",
+        "cv-materia",
+        "cv-cofradia",
+        "cv-terreno",
+        "cv-pnoa",
+        "cv-osm",
+        "cv-catastro",
+        "cv-llueca2001",
+        "cv-acceso"
+      ],
+      "stopIds": [
+        "calvario-conjunto",
+        "calvario-acceso",
+        "calvario-escalinata"
+      ]
+    },
+    {
+      "id": "camino",
+      "name": "El camino y las terrazas",
+      "aliases": [],
+      "summary": "Lee las revueltas, los muros, los paneles y la vegetación.",
+      "coordinate": [
+        -0.280421,
+        39.6782473
+      ],
+      "sourceIds": [
+        "cv-civera2001",
+        "cv-osm",
+        "cv-materia",
+        "cv-terreno",
+        "cv-catastro",
+        "cv-cofradia",
+        "cv-ceramica2012",
+        "cv-brui",
+        "cv-pnoa"
+      ],
+      "stopIds": [
+        "calvario-zigzag",
+        "calvario-casalicios",
+        "calvario-ceramica",
+        "calvario-muros",
+        "calvario-cipreses"
+      ]
+    },
+    {
+      "id": "ermita",
+      "name": "La ermita de la Soledad",
+      "aliases": [],
+      "summary": "Acércate a la fachada, las cubiertas y la campana.",
+      "coordinate": [
+        -0.28051707,
+        39.67804019
+      ],
+      "sourceIds": [
+        "cv-civera2001",
+        "cv-turismo",
+        "cv-terreno",
+        "cv-osm",
+        "cv-catastro",
+        "cv-restauracion",
+        "cv-campanario",
+        "cv-pnoa",
+        "cv-llueca2001",
+        "cv-cofradia",
+        "cv-campana"
+      ],
+      "stopIds": [
+        "calvario-explanada",
+        "calvario-fachada",
+        "calvario-portada",
+        "calvario-hornacinas",
+        "calvario-laterales",
+        "calvario-campana"
+      ]
+    },
+    {
+      "id": "celebracion",
+      "name": "La celebración y la escena",
+      "aliases": [],
+      "summary": "Distingue el vía crucis del Viernes Santo y la Passió en Viu.",
+      "coordinate": [
+        -0.2806166,
+        39.6783142
+      ],
+      "sourceIds": [
+        "cv-cofradia",
+        "cv-ceramica2012",
+        "cv-semanasanta",
+        "cv-osm",
+        "cv-catastro",
+        "cv-passio2026"
+      ],
+      "stopIds": [
+        "calvario-viacrucis",
+        "calvario-passio"
+      ]
+    },
+    {
+      "id": "paisaje",
+      "name": "Paisaje, arte y memoria",
+      "aliases": [],
+      "summary": "Relaciona la ladera con la ciudad y sus representaciones.",
+      "coordinate": [
+        -0.2807324,
+        39.6780733
+      ],
+      "sourceIds": [
+        "cv-turismo",
+        "cv-osm",
+        "cv-catastro",
+        "cv-terreno",
+        "cv-pnoa",
+        "cv-mnba",
+        "cv-civera2001",
+        "cv-brui"
+      ],
+      "stopIds": [
+        "calvario-mirador",
+        "calvario-memoria"
+      ]
+    }
+  ],
+  "stops": [
+    {
+      "id": "calvario-conjunto",
+      "title": "Una ladera convertida en recorrido",
+      "label": "El conjunto",
+      "regionId": "llegada",
+      "period": "mixed",
+      "coordinate": [
+        -0.2806192,
+        39.6782234
+      ],
+      "coordinates": [
+        -0.2806192,
+        39.6782234
+      ],
+      "intro": "Empieza con una vista del recinto. El camino, las terrazas y la pequeña ermita se entienden juntos: una secuencia de ascenso que enlaza el barrio con la ladera del castillo.",
+      "narrative": "Empieza con una vista del recinto. El camino, las terrazas y la pequeña ermita se entienden juntos: una secuencia de ascenso que enlaza el barrio con la ladera del castillo.",
+      "facts": [
+        {
+          "text": "El Calvario ocupa la ladera del monte del Castillo, cerca del Teatro Romano.",
+          "sourceIds": [
+            "cv-turismo"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El catálogo del Centre Arqueològic Saguntí fecha en 1854 la inauguración del nuevo Calvari de Santa Maria.",
+          "sourceIds": [
+            "cv-materia"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La Cofradía describe un vía crucis de catorce estaciones; esta cifra corresponde al recorrido devocional.",
+          "sourceIds": [
+            "cv-cofradia"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Reconoce la continuidad entre el acceso bajo, las revueltas y la ermita.",
+      "modelNote": "La escena representa el conjunto conservado con referencias de distintas fechas. No restituye todo el recinto a un único año histórico.",
+      "sourceIds": [
+        "cv-turismo",
+        "cv-materia",
+        "cv-cofradia",
+        "cv-terreno",
+        "cv-pnoa",
+        "cv-osm",
+        "cv-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Punto de observación aproximado registrado sobre la cartografía y el modelo; no equivale a una medición arquitectónica ni acredita un acceso físico.",
+      "osmIds": [],
+      "order": 1,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "cv-osm",
+        "cv-catastro"
+      ],
+      "readingLayer": "route"
+    },
+    {
+      "id": "calvario-acceso",
+      "title": "El umbral entre el barrio y la ladera",
+      "label": "Acceso al Calvario",
+      "regionId": "llegada",
+      "period": "mixed",
+      "coordinate": [
+        -0.280042,
+        39.6783213
+      ],
+      "coordinates": [
+        -0.280042,
+        39.6783213
+      ],
+      "intro": "Acércate al comienzo del recorrido y mira hacia las casas. Este umbral permite leer la relación entre una calle cotidiana y el espacio de la subida ceremonial.",
+      "narrative": "Acércate al comienzo del recorrido y mira hacia las casas. Este umbral permite leer la relación entre una calle cotidiana y el espacio de la subida ceremonial.",
+      "facts": [
+        {
+          "text": "Una fotografía de Vicente Peydró documenta el arco y la escalera de entrada en 1919.",
+          "sourceIds": [
+            "cv-llueca2001"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La asociación patrimonial local relata en 2013 la llegada a esta puerta por el carrer Pare Torralba.",
+          "sourceIds": [
+            "cv-acceso"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "En el vía crucis, la comitiva llega desde la ermita de la Sangre atravesando calles de la judería.",
+          "sourceIds": [
+            "cv-cofradia"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Compara el paso entre viviendas con la apertura del camino dentro del recinto.",
+      "modelNote": "La posición del acceso procede del trazado cartográfico. Los detalles del arco se interpretan a partir de referencias, sin atribuirle una fecha de fábrica exacta.",
+      "sourceIds": [
+        "cv-llueca2001",
+        "cv-acceso",
+        "cv-cofradia",
+        "cv-osm",
+        "cv-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Punto de observación aproximado registrado sobre la cartografía y el modelo; no equivale a una medición arquitectónica ni acredita un acceso físico.",
+      "osmIds": [],
+      "order": 2,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "cv-osm",
+        "cv-catastro"
+      ],
+      "readingLayer": "route"
+    },
+    {
+      "id": "calvario-escalinata",
+      "title": "Escaleras y desnivel",
+      "label": "Escaleras",
+      "regionId": "llegada",
+      "period": "mixed",
+      "coordinate": [
+        -0.2800587,
+        39.6780025
+      ],
+      "coordinates": [
+        -0.2800587,
+        39.6780025
+      ],
+      "intro": "Baja la cámara para percibir el desnivel. Los peldaños y el camino de revueltas resuelven de formas diferentes el encuentro con la pendiente; míralos como parte de la misma red de paso.",
+      "narrative": "Baja la cámara para percibir el desnivel. Los peldaños y el camino de revueltas resuelven de formas diferentes el encuentro con la pendiente; míralos como parte de la misma red de paso.",
+      "facts": [
+        {
+          "text": "La cartografía registra tramos de escaleras además del camino que recorre las terrazas.",
+          "sourceIds": [
+            "cv-osm"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El archivo fotográfico de 1919 ya muestra escalones en la entrada inferior del recinto.",
+          "sourceIds": [
+            "cv-llueca2001"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El relieve permite comprender la necesidad de adaptar el recorrido a una ladera pronunciada.",
+          "sourceIds": [
+            "cv-terreno",
+            "cv-osm"
+          ],
+          "confidence": "interpretive"
+        }
+      ],
+      "lookFor": "Observa dónde cambian la inclinación y la anchura del paso.",
+      "modelNote": "Este foco se sitúa en un tramo lateral cartografiado. La fotografía de 1919 corresponde a la entrada y no fecha esta escalera. El número y la medida de los peldaños son aproximados.",
+      "sourceIds": [
+        "cv-osm",
+        "cv-llueca2001",
+        "cv-terreno",
+        "cv-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Punto de observación aproximado registrado sobre la cartografía y el modelo; no equivale a una medición arquitectónica ni acredita un acceso físico.",
+      "osmIds": [
+        "way/733321150",
+        "way/1419281599"
+      ],
+      "order": 3,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "cv-osm",
+        "cv-catastro"
+      ],
+      "readingLayer": "route"
+    },
+    {
+      "id": "calvario-zigzag",
+      "title": "Subir cambiando de dirección",
+      "label": "Camino en zigzag",
+      "regionId": "camino",
+      "period": "contemporary",
+      "coordinate": [
+        -0.280421,
+        39.6782473
+      ],
+      "coordinates": [
+        -0.280421,
+        39.6782473
+      ],
+      "intro": "Sigue una revuelta con la cámara. El cambio de dirección crea una sucesión de perspectivas: unas veces domina el barrio y otras la línea de muros y vegetación de la siguiente terraza.",
+      "narrative": "Sigue una revuelta con la cámara. El cambio de dirección crea una sucesión de perspectivas: unas veces domina el barrio y otras la línea de muros y vegetación de la siguiente terraza.",
+      "facts": [
+        {
+          "text": "Civera describió en 2001 ocho andanas, enlazadas por curvas.",
+          "sourceIds": [
+            "cv-civera2001"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Las revueltas del modelo siguen la geometría cartografiada del sendero.",
+          "sourceIds": [
+            "cv-osm"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El catálogo de 2010 sitúa antes de 1854 otros recorridos de la Pasión, distintos del Calvario nuevo.",
+          "sourceIds": [
+            "cv-materia"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Sigue la curva completa, no solo el tramo que queda frente a la cámara.",
+      "modelNote": "Se conserva el trazado geográfico. La anchura y la adaptación fina al terreno son aproximaciones; ocho andanas no significa ocho estaciones religiosas.",
+      "sourceIds": [
+        "cv-civera2001",
+        "cv-osm",
+        "cv-materia",
+        "cv-terreno",
+        "cv-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Punto de observación aproximado registrado sobre la cartografía y el modelo; no equivale a una medición arquitectónica ni acredita un acceso físico.",
+      "osmIds": [],
+      "order": 4,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "cv-osm",
+        "cv-catastro"
+      ],
+      "readingLayer": "route"
+    },
+    {
+      "id": "calvario-casalicios",
+      "title": "Pequeñas arquitecturas para hacer una pausa",
+      "label": "Casalicios",
+      "regionId": "camino",
+      "period": "mixed",
+      "coordinate": [
+        -0.28042369,
+        39.67823081
+      ],
+      "coordinates": [
+        -0.28042369,
+        39.67823081
+      ],
+      "intro": "Detente ante uno de los pequeños cuerpos del recorrido. Su escala permite separar el camino de la imagen que invita a detenerse, mirar y continuar la subida.",
+      "narrative": "Detente ante uno de los pequeños cuerpos del recorrido. Su escala permite separar el camino de la imagen que invita a detenerse, mirar y continuar la subida.",
+      "facts": [
+        {
+          "text": "Civera relaciona las estaciones con los muretes que delimitan las terrazas.",
+          "sourceIds": [
+            "cv-civera2001"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El relato de la Cofradía cuenta catorce estaciones de oración, sin inventariar catorce construcciones exentas.",
+          "sourceIds": [
+            "cv-cofradia"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Los paneles marianos documentados aconsejan distinguir cada imagen de una supuesta numeración única del vía crucis.",
+          "sourceIds": [
+            "cv-ceramica2012"
+          ],
+          "confidence": "interpretive"
+        }
+      ],
+      "lookFor": "Mira el pequeño tejado, el nicho y su relación con el borde del camino.",
+      "modelNote": "La distribución y las proporciones de los casalicios son interpretativas. Once cuerpos en el camino y tres nichos en la fachada componen la escena; no constituyen un censo verificado ni fijan qué estación ocupó cada punto.",
+      "sourceIds": [
+        "cv-civera2001",
+        "cv-cofradia",
+        "cv-ceramica2012",
+        "cv-osm",
+        "cv-catastro"
+      ],
+      "confidence": "interpretive",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Punto de observación aproximado registrado sobre la cartografía y el modelo; no equivale a una medición arquitectónica ni acredita un acceso físico.",
+      "osmIds": [],
+      "order": 5,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "cv-osm",
+        "cv-catastro"
+      ],
+      "readingLayer": "ceramic"
+    },
+    {
+      "id": "calvario-ceramica",
+      "title": "La cerámica también tiene una historia",
+      "label": "Paneles cerámicos",
+      "regionId": "camino",
+      "period": "contemporary",
+      "coordinate": [
+        -0.28042369,
+        39.67823081
+      ],
+      "coordinates": [
+        -0.28042369,
+        39.67823081
+      ],
+      "intro": "Acerca la vista a un panel para pensar en su conservación. Estas imágenes han requerido reparaciones y sustituciones; el aspecto de un retablo puede reunir materiales de momentos diferentes.",
+      "narrative": "Acerca la vista a un panel para pensar en su conservación. Estas imágenes han requerido reparaciones y sustituciones; el aspecto de un retablo puede reunir materiales de momentos diferentes.",
+      "facts": [
+        {
+          "text": "La memoria de 2012 registra la sustitución de la cerámica del tercer dolor de la Virgen, la pérdida del Niño.",
+          "sourceIds": [
+            "cv-ceramica2012"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La Cofradía atribuye el nuevo panel a Vicen Escrig y agradece su colaboración desinteresada.",
+          "sourceIds": [
+            "cv-ceramica2012"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La pieza anterior se destinaba a una futura incorporación a la colección tras restaurarla; la memoria no confirma ese ingreso.",
+          "sourceIds": [
+            "cv-ceramica2012"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Distingue el marco, la superficie cerámica y el pequeño refugio arquitectónico.",
+      "modelNote": "El foco permite leer un tipo de panel. No localiza con certeza la pieza de Vicen Escrig; la decoración del modelo es esquemática y no reproduce una escena histórica como si estuviera comprobada.",
+      "sourceIds": [
+        "cv-ceramica2012",
+        "cv-osm",
+        "cv-catastro"
+      ],
+      "confidence": "interpretive",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Punto de observación aproximado registrado sobre la cartografía y el modelo; no equivale a una medición arquitectónica ni acredita un acceso físico.",
+      "osmIds": [],
+      "order": 6,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "cv-osm",
+        "cv-catastro"
+      ],
+      "readingLayer": "ceramic"
+    },
+    {
+      "id": "calvario-muros",
+      "title": "Piedra, juntas y capas de blanco",
+      "label": "Muros de las terrazas",
+      "regionId": "camino",
+      "period": "mixed",
+      "coordinate": [
+        -0.2804208,
+        39.6781966
+      ],
+      "coordinates": [
+        -0.2804208,
+        39.6781966
+      ],
+      "intro": "Coloca la cámara casi paralela a un muro. La irregularidad del borde y sus cambios de altura ayudan a comprender cómo se construye una terraza sobre la pendiente.",
+      "narrative": "Coloca la cámara casi paralela a un muro. La irregularidad del borde y sus cambios de altura ayudan a comprender cómo se construye una terraza sobre la pendiente.",
+      "facts": [
+        {
+          "text": "En 2001, Civera describió muros antes de piedra seca y después rejuntados con mortero.",
+          "sourceIds": [
+            "cv-civera2001"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El mismo testimonio atribuye a las mayoralías el mantenimiento del acabado blanco.",
+          "sourceIds": [
+            "cv-civera2001"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Las trazas cartográficas muestran varios muros de contención que acompañan las curvas del recorrido.",
+          "sourceIds": [
+            "cv-osm"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Observa las juntas irregulares y cómo el muro contiene la tierra por el lado de arriba.",
+      "modelNote": "Se siguen los muros cartografiados. La textura, el rejuntado y su altura local son interpretaciones visuales; no se atribuye el mismo acabado a todas las épocas.",
+      "sourceIds": [
+        "cv-civera2001",
+        "cv-osm",
+        "cv-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Punto de observación aproximado registrado sobre la cartografía y el modelo; no equivale a una medición arquitectónica ni acredita un acceso físico.",
+      "osmIds": [
+        "way/1419281592",
+        "way/1419281593",
+        "way/1419281594",
+        "way/1419281595",
+        "way/1419281596",
+        "way/1419281597",
+        "way/1419281598",
+        "way/1419281601"
+      ],
+      "order": 7,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "cv-osm",
+        "cv-catastro"
+      ],
+      "readingLayer": "route"
+    },
+    {
+      "id": "calvario-cipreses",
+      "title": "Una silueta vertical entre las curvas",
+      "label": "Cipreses y ladera",
+      "regionId": "camino",
+      "period": "mixed",
+      "coordinate": [
+        -0.2805897,
+        39.6781615
+      ],
+      "coordinates": [
+        -0.2805897,
+        39.6781615
+      ],
+      "intro": "Alterna una vista cercana y otra desde el barrio. La vegetación cambia la escala del paseo y dibuja un perfil reconocible sobre los muros bajos.",
+      "narrative": "Alterna una vista cercana y otra desde el barrio. La vegetación cambia la escala del paseo y dibuja un perfil reconocible sobre los muros bajos.",
+      "facts": [
+        {
+          "text": "Los cipreses forman parte del paisaje descrito por Civera y del poema municipal dedicado al Calvari.",
+          "sourceIds": [
+            "cv-civera2001",
+            "cv-brui"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Las fotografías de la Cofradía permiten observar árboles esbeltos junto a los muros blancos.",
+          "sourceIds": [
+            "cv-cofradia"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La ortofotografía ayuda a situar masas vegetales, pero no identifica por sí sola la especie de cada árbol.",
+          "sourceIds": [
+            "cv-pnoa"
+          ],
+          "confidence": "interpretive"
+        }
+      ],
+      "lookFor": "Busca la alternancia entre sombra, paso abierto y verticales de los cipreses.",
+      "modelNote": "La vegetación recrea el carácter del lugar. No procede de un inventario arborícola ni asigna edad o posición exacta a cada ejemplar.",
+      "sourceIds": [
+        "cv-civera2001",
+        "cv-brui",
+        "cv-cofradia",
+        "cv-pnoa",
+        "cv-osm",
+        "cv-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Punto de observación aproximado registrado sobre la cartografía y el modelo; no equivale a una medición arquitectónica ni acredita un acceso físico.",
+      "osmIds": [],
+      "order": 8,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "cv-osm",
+        "cv-catastro"
+      ],
+      "readingLayer": "landscape"
+    },
+    {
+      "id": "calvario-explanada",
+      "title": "La llegada frente a la ermita",
+      "label": "Explanada superior",
+      "regionId": "ermita",
+      "period": "mixed",
+      "coordinate": [
+        -0.28051707,
+        39.67804019
+      ],
+      "coordinates": [
+        -0.28051707,
+        39.67804019
+      ],
+      "intro": "Haz una pausa ante el edificio y vuelve la mirada hacia el camino recorrido. El pequeño espacio abierto permite entender la ermita como final de una subida y punto de encuentro.",
+      "narrative": "Haz una pausa ante el edificio y vuelve la mirada hacia el camino recorrido. El pequeño espacio abierto permite entender la ermita como final de una subida y punto de encuentro.",
+      "facts": [
+        {
+          "text": "Civera sitúa en la terraza superior la ermita y el término del ascenso.",
+          "sourceIds": [
+            "cv-civera2001"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Su testimonio recuerda juegos infantiles y encuentros después de la subida, además del uso religioso.",
+          "sourceIds": [
+            "cv-civera2001"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La fachada reúne las tres últimas estaciones, según la descripción de Turismo Sagunto.",
+          "sourceIds": [
+            "cv-turismo"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Compara el espacio de estancia con la estrechez de los tramos de camino.",
+      "modelNote": "El encuentro del suelo con los escalones y la ermita se ajusta localmente para dar continuidad visual. Sus cotas no sustituyen un levantamiento topográfico.",
+      "sourceIds": [
+        "cv-civera2001",
+        "cv-turismo",
+        "cv-terreno",
+        "cv-osm",
+        "cv-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Punto de observación aproximado registrado sobre la cartografía y el modelo; no equivale a una medición arquitectónica ni acredita un acceso físico.",
+      "osmIds": [],
+      "order": 9,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "cv-osm",
+        "cv-catastro"
+      ],
+      "readingLayer": "route"
+    },
+    {
+      "id": "calvario-fachada",
+      "title": "El color recuperado bajo la cal",
+      "label": "Fachada restaurada",
+      "regionId": "ermita",
+      "period": "mixed",
+      "coordinate": [
+        -0.28052851,
+        39.6780215
+      ],
+      "coordinates": [
+        -0.28052851,
+        39.6780215
+      ],
+      "intro": "Mira el frente con luz lateral. El dibujo de las juntas y la silueta de la coronación explican mejor el edificio que una superficie uniformemente blanca.",
+      "narrative": "Mira el frente con luz lateral. El dibujo de las juntas y la silueta de la coronación explican mejor el edificio que una superficie uniformemente blanca.",
+      "facts": [
+        {
+          "text": "En 2012, las catas y análisis permitieron recuperar un esgrafiado ocre con juntas blancas, según el arquitecto Ribelles.",
+          "sourceIds": [
+            "cv-restauracion"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Ese dibujo imita un despiece de sillares: no acredita que la fachada esté construida con grandes bloques ocres.",
+          "sourceIds": [
+            "cv-restauracion"
+          ],
+          "confidence": "interpretive"
+        },
+        {
+          "text": "Las fuentes discrepan: Campaners propone el XVIII; Civera, la segunda mitad del XIX; Turismo adopta una horquilla XVIII–XIX.",
+          "sourceIds": [
+            "cv-campanario",
+            "cv-civera2001",
+            "cv-turismo"
+          ],
+          "confidence": "disputed"
+        }
+      ],
+      "lookFor": "Sigue el dibujo de las juntas hasta la cornisa y diferencia revoco, huecos y cubierta.",
+      "modelNote": "El acabado toma como referencia la restauración publicada en 2012. La geometría y el desgaste son interpretativos; no se presenta como un registro del estado exacto en noviembre de 2026.",
+      "sourceIds": [
+        "cv-restauracion",
+        "cv-campanario",
+        "cv-civera2001",
+        "cv-turismo",
+        "cv-pnoa",
+        "cv-osm",
+        "cv-catastro"
+      ],
+      "confidence": "disputed",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Punto de observación aproximado registrado sobre la cartografía y el modelo; no equivale a una medición arquitectónica ni acredita un acceso físico.",
+      "osmIds": [],
+      "order": 10,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "cv-osm",
+        "cv-catastro"
+      ],
+      "readingLayer": "restoration"
+    },
+    {
+      "id": "calvario-portada",
+      "title": "Un arco pequeño en un frente ancho",
+      "label": "Portada de la ermita",
+      "regionId": "ermita",
+      "period": "mixed",
+      "coordinate": [
+        -0.28052851,
+        39.6780215
+      ],
+      "coordinates": [
+        -0.28052851,
+        39.6780215
+      ],
+      "intro": "Sitúa la cámara frente a la puerta y observa cómo cambia la escala respecto a la fachada. La aproximación por los escalones concentra la atención en este acceso central.",
+      "narrative": "Sitúa la cámara frente a la puerta y observa cómo cambia la escala respecto a la fachada. La aproximación por los escalones concentra la atención en este acceso central.",
+      "facts": [
+        {
+          "text": "La puerta principal tiene arco de medio punto y está precedida por una escalinata amplia.",
+          "sourceIds": [
+            "cv-turismo"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El remate combina una cornisa de perfil barroco con la espadaña sobre el eje del frente.",
+          "sourceIds": [
+            "cv-turismo"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La puerta de la ermita y el arco de entrada al Calvario son dos umbrales distintos.",
+          "sourceIds": [
+            "cv-turismo",
+            "cv-llueca2001"
+          ],
+          "confidence": "interpretive"
+        }
+      ],
+      "lookFor": "Compara el arco de la puerta con los remates curvos de la parte superior.",
+      "modelNote": "El contorno del edificio se apoya en su huella cartográfica. Carpintería, molduras y peldaños se aproximan a las referencias visuales, sin medición directa.",
+      "sourceIds": [
+        "cv-turismo",
+        "cv-llueca2001",
+        "cv-osm",
+        "cv-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Punto de observación aproximado registrado sobre la cartografía y el modelo; no equivale a una medición arquitectónica ni acredita un acceso físico.",
+      "osmIds": [
+        "way/733104780"
+      ],
+      "order": 11,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "cv-osm",
+        "cv-catastro"
+      ],
+      "readingLayer": "hermitage"
+    },
+    {
+      "id": "calvario-hornacinas",
+      "title": "Las últimas estaciones en el muro",
+      "label": "Tres hornacinas",
+      "regionId": "ermita",
+      "period": "mixed",
+      "coordinate": [
+        -0.28052841,
+        39.67802166
+      ],
+      "coordinates": [
+        -0.28052841,
+        39.67802166
+      ],
+      "intro": "Recorre visualmente los nichos del frente. Aquí la secuencia del camino se integra en la propia arquitectura de la ermita, y las imágenes se leen al llegar a la parte alta.",
+      "narrative": "Recorre visualmente los nichos del frente. Aquí la secuencia del camino se integra en la propia arquitectura de la ermita, y las imágenes se leen al llegar a la parte alta.",
+      "facts": [
+        {
+          "text": "Turismo Sagunto identifica tres hornacinas con paneles cerámicos de las últimas estaciones.",
+          "sourceIds": [
+            "cv-turismo"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La fotografía de la restauración de 2012 permite reconocer sus recercados claros en la fachada ocre.",
+          "sourceIds": [
+            "cv-restauracion"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Relacionarlas con el vía crucis es seguro; asignar sin inventario cada panel a un número concreto exige más documentación.",
+          "sourceIds": [
+            "cv-turismo",
+            "cv-cofradia"
+          ],
+          "confidence": "interpretive"
+        }
+      ],
+      "lookFor": "Observa cómo los tres nichos se distribuyen alrededor del acceso.",
+      "modelNote": "Se representa su número y relación con la fachada. El contenido figurativo se simplifica; no se inventan inscripciones, autores ni fechas de cada retablo.",
+      "sourceIds": [
+        "cv-turismo",
+        "cv-restauracion",
+        "cv-cofradia",
+        "cv-osm",
+        "cv-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Punto de observación aproximado registrado sobre la cartografía y el modelo; no equivale a una medición arquitectónica ni acredita un acceso físico.",
+      "osmIds": [
+        "way/733104780"
+      ],
+      "order": 12,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "cv-osm",
+        "cv-catastro"
+      ],
+      "readingLayer": "ceramic"
+    },
+    {
+      "id": "calvario-laterales",
+      "title": "Leer la planta desde fuera",
+      "label": "Capillas y cubiertas",
+      "regionId": "ermita",
+      "period": "mixed",
+      "coordinate": [
+        -0.28048503,
+        39.67796502
+      ],
+      "coordinates": [
+        -0.28048503,
+        39.67796502
+      ],
+      "intro": "Rodea virtualmente el edificio. La fachada es solo una parte del conjunto: los volúmenes laterales, los tejados y el cierre posterior ayudan a imaginar su organización sin atravesar los muros.",
+      "narrative": "Rodea virtualmente el edificio. La fachada es solo una parte del conjunto: los volúmenes laterales, los tejados y el cierre posterior ayudan a imaginar su organización sin atravesar los muros.",
+      "facts": [
+        {
+          "text": "La descripción institucional recoge una planta casi cuadrada y dos capillas salientes por cada lado.",
+          "sourceIds": [
+            "cv-turismo"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Entre los contrafuertes cortos se abren ventanas rectangulares; la cubierta principal es de teja a dos aguas.",
+          "sourceIds": [
+            "cv-turismo"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El presbiterio tiene remate semicircular, reconocible como un cuerpo diferente de la nave.",
+          "sourceIds": [
+            "cv-turismo"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Distingue nave, cuerpos laterales y cabecera por sus cambios de volumen.",
+      "modelNote": "La huella y la lectura exterior guían la volumetría. No se genera un interior arqueológico ni una sección del retablo sin documentación de su configuración y medidas.",
+      "sourceIds": [
+        "cv-turismo",
+        "cv-pnoa",
+        "cv-osm",
+        "cv-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Punto de observación aproximado registrado sobre la cartografía y el modelo; no equivale a una medición arquitectónica ni acredita un acceso físico.",
+      "osmIds": [
+        "way/733104780"
+      ],
+      "order": 13,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "cv-osm",
+        "cv-catastro"
+      ],
+      "readingLayer": "hermitage"
+    },
+    {
+      "id": "calvario-campana",
+      "title": "Una pieza fechada en 1860",
+      "label": "Espadaña y campana",
+      "regionId": "ermita",
+      "period": "contemporary",
+      "coordinate": [
+        -0.28052926,
+        39.67802028
+      ],
+      "coordinates": [
+        -0.28052926,
+        39.67802028
+      ],
+      "intro": "Eleva la mirada hasta la espadaña. Esta pieza pequeña aporta una referencia cronológica concreta dentro de un edificio cuya secuencia constructiva sigue abierta.",
+      "narrative": "Eleva la mirada hasta la espadaña. Esta pieza pequeña aporta una referencia cronológica concreta dentro de un edificio cuya secuencia constructiva sigue abierta.",
+      "facts": [
+        {
+          "text": "El inventario atribuye la campana a Juan Traver, de Artana, y la fecha en 1860.",
+          "sourceIds": [
+            "cv-campana"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Mide 25 cm de diámetro y 20 cm de altura de bronce; su peso se estima en 9 kg.",
+          "sourceIds": [
+            "cv-campana"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La inscripción se dedica a Nuestra Señora de los Dolores; la ermita se conoce como de la Soledad o del Calvario.",
+          "sourceIds": [
+            "cv-campana",
+            "cv-campanario"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Busca la campana dentro del vano, diferenciando el bronce de su soporte.",
+      "modelNote": "Se conservan las dimensiones publicadas de la campana. El yugo, los herrajes y el pequeño relieve decorativo son aproximados; 1860 no se usa como fecha de toda la ermita.",
+      "sourceIds": [
+        "cv-campana",
+        "cv-campanario",
+        "cv-osm",
+        "cv-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Punto de observación aproximado registrado sobre la cartografía y el modelo; no equivale a una medición arquitectónica ni acredita un acceso físico.",
+      "osmIds": [
+        "way/733104780"
+      ],
+      "order": 14,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "cv-osm",
+        "cv-catastro"
+      ],
+      "readingLayer": "hermitage"
+    },
+    {
+      "id": "calvario-viacrucis",
+      "title": "La subida al amanecer",
+      "label": "Viernes Santo",
+      "regionId": "celebracion",
+      "period": "contemporary",
+      "coordinate": [
+        -0.2806166,
+        39.6783142
+      ],
+      "coordinates": [
+        -0.2806166,
+        39.6783142
+      ],
+      "intro": "Imagina el camino como espacio compartido por quienes portan la imagen, cantan y acompañan. La visita explica una práctica viva, sin convertir la escena en una reconstrucción de una procesión concreta.",
+      "narrative": "Imagina el camino como espacio compartido por quienes portan la imagen, cantan y acompañan. La visita explica una práctica viva, sin convertir la escena en una reconstrucción de una procesión concreta.",
+      "facts": [
+        {
+          "text": "La Cofradía describe la salida del Nazareno desde la ermita de la Sangre a las seis de la mañana del Viernes Santo.",
+          "sourceIds": [
+            "cv-cofradia"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Los mayorales salientes portan la imagen; el acompañamiento incluye sayones, tambor, oraciones y motetes.",
+          "sourceIds": [
+            "cv-cofradia"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El archivo publicado en 2012 identifica 1943 como primera subida de una nueva imagen del Nazareno, donada por aquella mayoralía.",
+          "sourceIds": [
+            "cv-ceramica2012"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Mira cómo las revueltas permiten observar diferentes tramos de una misma subida.",
+      "modelNote": "Se explica el uso ceremonial sin representar personas históricas, un aforo o una organización espacial exacta. La información describe la tradición, no un calendario de visita.",
+      "sourceIds": [
+        "cv-cofradia",
+        "cv-ceramica2012",
+        "cv-semanasanta",
+        "cv-osm",
+        "cv-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Punto de observación aproximado registrado sobre la cartografía y el modelo; no equivale a una medición arquitectónica ni acredita un acceso físico.",
+      "osmIds": [],
+      "order": 15,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "cv-osm",
+        "cv-catastro"
+      ],
+      "readingLayer": "route"
+    },
+    {
+      "id": "calvario-passio",
+      "title": "Un escenario contemporáneo al aire libre",
+      "label": "Passió en Viu",
+      "regionId": "celebracion",
+      "period": "contemporary",
+      "coordinate": [
+        -0.2803939,
+        39.6780748
+      ],
+      "coordinates": [
+        -0.2803939,
+        39.6780748
+      ],
+      "intro": "Contempla el Calvario como parte de un itinerario teatral por la ciudad. La pendiente, el cielo y la distancia al barrio aportan un marco escénico que complementa su función devocional.",
+      "narrative": "Contempla el Calvario como parte de un itinerario teatral por la ciudad. La pendiente, el cielo y la distancia al barrio aportan un marco escénico que complementa su función devocional.",
+      "facts": [
+        {
+          "text": "El Ayuntamiento sitúa en 2004 el inicio de la Passió en Viu, organizada por Passió per Sagunt.",
+          "sourceIds": [
+            "cv-passio2026"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La noticia municipal de marzo de 2026 anuncia la edición XXIII con más de sesenta actores.",
+          "sourceIds": [
+            "cv-passio2026"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La representación parte de la plaza Mayor y culmina en el Calvario; es una actividad distinta del vía crucis.",
+          "sourceIds": [
+            "cv-passio2026",
+            "cv-cofradia"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Relaciona la explanada y la ladera con el fondo urbano que se ve desde ellas.",
+      "modelNote": "El foco es narrativo. No identifica un montaje escénico permanente ni reconstruye la posición exacta de actores o espectadores de una edición determinada.",
+      "sourceIds": [
+        "cv-passio2026",
+        "cv-cofradia",
+        "cv-osm",
+        "cv-catastro"
+      ],
+      "confidence": "interpretive",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Punto de observación aproximado registrado sobre la cartografía y el modelo; no equivale a una medición arquitectónica ni acredita un acceso físico.",
+      "osmIds": [],
+      "order": 16,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "cv-osm",
+        "cv-catastro"
+      ],
+      "readingLayer": "route"
+    },
+    {
+      "id": "calvario-mirador",
+      "title": "La ciudad al otro lado del camino",
+      "label": "Mirador y entorno",
+      "regionId": "paisaje",
+      "period": "mixed",
+      "coordinate": [
+        -0.2807324,
+        39.6780733
+      ],
+      "coordinates": [
+        -0.2807324,
+        39.6780733
+      ],
+      "intro": "Gira la vista hacia el caserío y después hacia el monte. Este punto reúne la escala pequeña de las casas y la escala territorial de la ladera, el castillo y la ciudad.",
+      "narrative": "Gira la vista hacia el caserío y después hacia el monte. Este punto reúne la escala pequeña de las casas y la escala territorial de la ladera, el castillo y la ciudad.",
+      "facts": [
+        {
+          "text": "La descripción turística destaca las vistas sobre el Camp de Morvedre desde el Calvario.",
+          "sourceIds": [
+            "cv-turismo"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La huella de la ermita y las curvas del recorrido permiten situar el recinto dentro del casco histórico.",
+          "sourceIds": [
+            "cv-osm"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Catastro, terreno y ortofotografía sostienen la posición del caserío y su relación con la pendiente.",
+          "sourceIds": [
+            "cv-catastro",
+            "cv-terreno",
+            "cv-pnoa"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Sigue las cubiertas de las viviendas y los cambios de altura entre calle, terraza y monte.",
+      "modelNote": "Los edificios de contexto conservan sus huellas y una altura estimada. Ventanas, materiales y vegetación completan el paisaje con un detalle interpretativo, sin afirmar que cada fachada esté levantada.",
+      "sourceIds": [
+        "cv-turismo",
+        "cv-osm",
+        "cv-catastro",
+        "cv-terreno",
+        "cv-pnoa"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Punto de observación aproximado registrado sobre la cartografía y el modelo; no equivale a una medición arquitectónica ni acredita un acceso físico.",
+      "osmIds": [],
+      "order": 17,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "cv-osm",
+        "cv-catastro"
+      ],
+      "readingLayer": "landscape"
+    },
+    {
+      "id": "calvario-memoria",
+      "title": "Un lugar que también se pinta y se recuerda",
+      "label": "Arte y memoria",
+      "regionId": "paisaje",
+      "period": "contemporary",
+      "coordinate": [
+        -0.28051707,
+        39.67804019
+      ],
+      "coordinates": [
+        -0.28051707,
+        39.67804019
+      ],
+      "intro": "Termina mirando de nuevo el conjunto. Además de su uso religioso, el Calvario puede leerse a través de la pintura, la literatura y los recuerdos de quienes lo han recorrido.",
+      "narrative": "Termina mirando de nuevo el conjunto. Además de su uso religioso, el Calvario puede leerse a través de la pintura, la literatura y los recuerdos de quienes lo han recorrido.",
+      "facts": [
+        {
+          "text": "El Museo Nacional de Bellas Artes de Asunción incluye «Calvario de Sagunto», de Santiago Rusiñol, en su colección.",
+          "sourceIds": [
+            "cv-mnba"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Civera sitúa la escritura de Els sonets del meu poble, donde se integra el poema del Calvari, en 1956.",
+          "sourceIds": [
+            "cv-civera2001"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El Ayuntamiento dedica al Calvari una parada de la Ruta Bru i Vidal, que relaciona poesía y lugar.",
+          "sourceIds": [
+            "cv-brui"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Vuelve a reconocer los elementos que construyen su imagen: curvas, muros, cipreses y ermita.",
+      "modelNote": "Las obras se citan como patrimonio cultural. No se reproducen poemas, pinturas ni fotografías ajenas como texturas del modelo, ni se asigna una fecha no comprobada al cuadro de Rusiñol.",
+      "sourceIds": [
+        "cv-mnba",
+        "cv-civera2001",
+        "cv-brui",
+        "cv-osm",
+        "cv-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Punto de observación aproximado registrado sobre la cartografía y el modelo; no equivale a una medición arquitectónica ni acredita un acceso físico.",
+      "osmIds": [],
+      "order": 18,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "cv-osm",
+        "cv-catastro"
+      ],
+      "readingLayer": "landscape"
+    }
+  ],
+  "timeline": [
+    {
+      "id": "calvario-t01",
+      "date": "Siglos XVIII–XIX",
+      "title": "Una cronología constructiva abierta",
+      "text": "La atribución de la ermita al XVIII en Campaners y al XIX en Civera requiere distinguir fases aún no resueltas.",
+      "sourceIds": [
+        "cv-campanario",
+        "cv-civera2001"
+      ],
+      "period": "mixed",
+      "confidence": "disputed",
+      "stopId": "calvario-fachada"
+    },
+    {
+      "id": "calvario-t02",
+      "date": "Antes de 1854",
+      "title": "Otros caminos para la Pasión",
+      "text": "El catálogo del Centre Arqueològic Saguntí recuerda recorridos anteriores vinculados al castillo y, después, a Sant Francesc y Santa Anna.",
+      "sourceIds": [
+        "cv-materia"
+      ],
+      "period": "mixed",
+      "confidence": "documented",
+      "stopId": "calvario-zigzag"
+    },
+    {
+      "id": "calvario-t03",
+      "date": "1854",
+      "title": "Inauguración del nuevo Calvario",
+      "text": "Matèria i ànima d’un poble fecha la inauguración del Calvari de Santa Maria. La fecha no se extiende a todas las partes de la ermita.",
+      "sourceIds": [
+        "cv-materia"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "calvario-conjunto"
+    },
+    {
+      "id": "calvario-t04",
+      "date": "1860",
+      "title": "Una campana con autor y fecha",
+      "text": "El inventario identifica la fundición de Juan Traver y la dedicación a Nuestra Señora de los Dolores.",
+      "sourceIds": [
+        "cv-campana"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "calvario-campana"
+    },
+    {
+      "id": "calvario-t05",
+      "date": "1919",
+      "title": "El acceso queda fotografiado",
+      "text": "La imagen estereoscópica de Vicente Peydró conserva una vista del arco, las escaleras y el arbolado de entrada.",
+      "sourceIds": [
+        "cv-llueca2001"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "calvario-acceso"
+    },
+    {
+      "id": "calvario-t06",
+      "date": "1943",
+      "title": "Una nueva imagen del Nazareno",
+      "text": "El pie del archivo fotográfico publicado por la Cofradía identifica su primera subida y la donación de la mayoralía de aquel año.",
+      "sourceIds": [
+        "cv-ceramica2012"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "calvario-viacrucis"
+    },
+    {
+      "id": "calvario-t07",
+      "date": "1956",
+      "title": "El Calvari en los sonetos de Bru i Vidal",
+      "text": "Civera fecha en este año la escritura del poemario que integra el soneto dedicado al lugar.",
+      "sourceIds": [
+        "cv-civera2001",
+        "cv-brui"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "calvario-memoria"
+    },
+    {
+      "id": "calvario-t08",
+      "date": "2001",
+      "title": "Un testimonio del cuidado de los muros",
+      "text": "Civera registra el rejuntado y el blanqueado mantenido por las mayoralías, además de usos cotidianos del recinto.",
+      "sourceIds": [
+        "cv-civera2001"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "calvario-muros"
+    },
+    {
+      "id": "calvario-t09",
+      "date": "2004",
+      "title": "Comienza la Passió en Viu",
+      "text": "La información municipal sitúa aquí el inicio de esta representación que incorpora el Calvario a su recorrido urbano.",
+      "sourceIds": [
+        "cv-passio2026"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "calvario-passio"
+    },
+    {
+      "id": "calvario-t10",
+      "date": "Memoria de 2012",
+      "title": "Conservar los paneles cerámicos",
+      "text": "La Cofradía informa de un panel de sustitución realizado por Vicen Escrig para el tercer dolor de la Virgen.",
+      "sourceIds": [
+        "cv-ceramica2012"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "calvario-ceramica"
+    },
+    {
+      "id": "calvario-t11",
+      "date": "Abril de 2012",
+      "title": "Reaparece la policromía de la fachada",
+      "text": "La restauración difundida por el arquitecto Ribelles recupera el dibujo ocre y blanco a partir de catas y análisis.",
+      "sourceIds": [
+        "cv-restauracion"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "calvario-fachada"
+    },
+    {
+      "id": "calvario-t12",
+      "date": "Marzo de 2026",
+      "title": "Se anuncia la edición XXIII de la Passió",
+      "text": "La noticia municipal presenta más de sesenta participantes y un desenlace en el Calvario, expresión de su uso cultural contemporáneo.",
+      "sourceIds": [
+        "cv-passio2026"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "calvario-passio"
+    }
+  ],
+  "sources": [
+    {
+      "id": "cv-turismo",
+      "title": "Ruta de las ermitas de Sagunto · ermita de la Soledad",
+      "author": "Sagunto Turismo",
+      "url": "https://saguntoturismoblog.wordpress.com/2015/09/30/ruta-de-las-ermitas-de-sagunto/",
+      "type": "divulgación turística institucional",
+      "year": 2015,
+      "locator": "Apartado «Ermita de la Soledad en El Calvario»; publicación de 30-09-2015, actualizada el 25-10-2019",
+      "note": "Descripción arquitectónica y de la restauración. Se usa como referencia de formas; no es un levantamiento métrico.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "cv-cofradia",
+      "title": "Subida al Calvario",
+      "author": "Cofradía de la Purísima Sangre de Nuestro Señor Jesucristo de Sagunto",
+      "url": "https://semanasantasagunto.com/subida-al-calvario/",
+      "type": "documentación de la entidad organizadora",
+      "year": null,
+      "locator": "Descripción del Viernes Santo, las catorce estaciones y el acompañamiento; fotografías enlazadas en la página",
+      "note": "Fuente directa de la práctica. Las imágenes están alojadas en una carpeta de febrero de 2020; esto no acredita su fecha de toma. No se deduce de ellas un inventario completo de casalicios.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "cv-restauracion",
+      "title": "Las ermitas de Sagunto recuperan su imagen original",
+      "author": "Elperiodic.com; declaraciones del arquitecto Francisco Ribelles",
+      "url": "https://www.elperiodic.com/sagunto/ermitas-sagunto-recuperan-imagen-original_167408",
+      "type": "noticia con testimonio del responsable de la restauración",
+      "year": 2012,
+      "locator": "4 de abril de 2012; esgrafiado ocre, juntas blancas y catas de las policromías; fotografía de la fachada del Calvario",
+      "note": "Respalda la interpretación del acabado recuperado. El presupuesto mencionado corresponde al programa conjunto de ermitas, no exclusivamente al Calvario.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "cv-campana",
+      "title": "Mare de Déu dels Dolors (1) · campana del Calvario de Sagunt",
+      "author": "Campaners de la Catedral de València",
+      "url": "https://campaners.com/php/campana1.php?numer=2832",
+      "type": "inventario de campanas",
+      "year": null,
+      "locator": "Ficha 2832: diámetro, altura de bronce, peso aproximado, fundidor, año e inscripción",
+      "note": "La campana se titula Mare de Déu dels Dolors. No debe confundirse su inscripción con la denominación de la ermita de la Soledad.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "cv-campanario",
+      "title": "Ermita de la Mare de Déu de la Soletat o del Calvari · Sagunt",
+      "author": "Campaners de la Catedral de València",
+      "url": "https://campaners.com/php/campanar.php?numer=899",
+      "type": "inventario patrimonial de campanarios",
+      "year": 2024,
+      "locator": "Ficha 899, descripción del edificio y espadaña; inventario actualizado el 04-09-2024",
+      "note": "La atribución al siglo XVIII no coincide con la propuesta de Civera de una ermita de la segunda mitad del XIX. Se conserva la discrepancia.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "cv-civera2001",
+      "title": "Paleta de lluna de la Setmana Santa Saguntina",
+      "author": "Manuel Civera i Gómez",
+      "url": "https://semanasantasagunto.com/wp-content/libros/llibre_2001_opt.pdf",
+      "type": "estudio local publicado por la Cofradía",
+      "year": 2001,
+      "locator": "Llibre de la Setmana Santa Saguntina 2001, pp. 99–110; ocho andanas p. 106, muros p. 108, usos y ermita pp. 109–110, poemario p. 102",
+      "note": "Distingue observación local y comentario literario. Su mención a doce pasos no se adopta como inventario actual; para la práctica se sigue la cifra de catorce publicada por la Cofradía.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "cv-llueca2001",
+      "title": "La vinculación de la familia Ribelles a la Semana Santa Saguntina",
+      "author": "Emilio Llueca Úbeda",
+      "url": "https://semanasantasagunto.com/wp-content/libros/llibre_2001_opt.pdf",
+      "type": "estudio local con documentación fotográfica de archivo",
+      "year": 2001,
+      "locator": "Llibre de la Setmana Santa Saguntina 2001, pp. 84–85; fotografías de Vicente Peydró de 1919, Arxiu Llueca-Juesas d’Imatges de Sagunt",
+      "note": "El pie de la fotografía de p. 85 identifica arco y escalera de acceso en 1919. La imagen acredita su presencia entonces, no su fecha de construcción.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "cv-materia",
+      "title": "Matèria i ànima d’un poble · patrimoni del Centre Arqueològic Saguntí",
+      "author": "Manuel Civera i Gómez; edición del Centre Arqueològic Saguntí",
+      "url": "https://centroarqueologicosaguntino.es/wp-content/uploads/2023/10/materia-i-anima-dun-poble.pdf",
+      "type": "catálogo de exposición e investigación local",
+      "year": 2010,
+      "locator": "P. 18, «3. Edat contemporània» (página 20 del PDF); créditos y exposición de febrero de 2010 en páginas iniciales",
+      "note": "Documenta la inauguración del Calvari de Santa Maria en 1854 y los recorridos anteriores. La carpeta de publicación web de 2023 no es el año de edición del catálogo.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "cv-ceramica2012",
+      "title": "Memoria de conservación y archivo gráfico de la Semana Santa Saguntina",
+      "author": "Junta Directiva de la Cofradía y Mayoralía 2012",
+      "url": "https://semanasantasagunto.com/wp-content/libros/llibre_2012_opt.pdf",
+      "type": "memoria de la entidad y documentación fotográfica de archivo",
+      "year": 2012,
+      "locator": "«La Junta informa», pp. 158–159: cerámica del tercer dolor de la Virgen; «Reportatge gràfic», p. 315: nueva imagen del Nazareno en 1943",
+      "note": "La memoria identifica a Vicen Escrig como autora del panel de sustitución. El ingreso de la pieza anterior en la colección se anuncia como intención, sin acreditar aquí su realización.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "cv-brui",
+      "title": "Calvari · Ruta Bru i Vidal",
+      "author": "Ajuntament de Sagunt",
+      "url": "https://aytosagunto.es/es/el-municipio/ruta-bru-i-vidal/calvari/",
+      "type": "itinerario literario municipal",
+      "year": null,
+      "locator": "Parada dedicada al Calvari y poema de Santiago Bru i Vidal",
+      "note": "Se interpreta su relación con el paisaje y la memoria, sin reproducir el poema ni utilizar su lenguaje literario como medición del recinto.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "cv-passio2026",
+      "title": "La plaza Mayor albergará la XXIII representación de la Passió en Viu",
+      "author": "Ajuntament de Sagunt",
+      "url": "https://aytosagunto.es/es/actualidad/2026-03-26-la-plaza-mayor-albergara-la-xxiii-representacion-de-la-passio-en-viu/",
+      "type": "información municipal de una actividad cultural",
+      "year": 2026,
+      "locator": "26 de marzo de 2026; entidad Passió per Sagunt, inicio en 2004, edición XXIII, más de sesenta actores y desenlace en el Calvario",
+      "note": "Se distingue la representación teatral del vía crucis del Viernes Santo. La noticia anuncia la edición; no es una crónica posterior de su celebración.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "cv-mnba",
+      "title": "Museo Nacional de Bellas Artes",
+      "author": "Secretaría Nacional de Cultura de Paraguay",
+      "url": "https://cultura.gov.py/2011/05/museo-nacional-de-bellas-artes/",
+      "type": "información institucional de una colección museística",
+      "year": 2011,
+      "locator": "30 de mayo de 2011; relación de obras de la colección española, Santiago Rusiñol y «Calvario de Sagunto»",
+      "note": "Acredita autor, título y museo en Asunción. No permite fijar el año de ejecución del cuadro, por lo que no se asigna aquí una fecha precisa.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "cv-semanasanta",
+      "title": "Semana Santa · Sagunt",
+      "author": "Ajuntament de Sagunt",
+      "url": "https://aytosagunto.es/es/el-municipio/fiestas/semana-santa/",
+      "type": "información municipal de patrimonio festivo",
+      "year": null,
+      "locator": "Presentación de la fiesta y actos, entre ellos el vía crucis de la Sangre al Calvario",
+      "note": "Contextualiza el lugar en la Semana Santa saguntina, presentada por el Ayuntamiento como fiesta de Interés Turístico Nacional.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "cv-acceso",
+      "title": "Crònica de la visita de la ruta d’Úrsula",
+      "author": "Col·lectiu pel Patrimoni Saguntí",
+      "url": "https://pelpatrimonisagunti.blogspot.com/2013/02/cronica-de-la-visita-de-la-ruta-dursula.html",
+      "type": "crónica de recorrido de una asociación patrimonial local",
+      "year": 2013,
+      "locator": "24 de febrero de 2013; recorrido por Amalia Danés y Pare Torralba hasta la puerta del Calvario",
+      "note": "Testimonio de conexión peatonal del barrio. No se usa para certificar horarios, condiciones de acceso ni ausencia de escalones.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "cv-osm",
+      "title": "OpenStreetMap · ermita, trazado y muros del Calvario",
+      "author": "Colaboradores de OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/733104780",
+      "type": "cartografía colaborativa",
+      "year": null,
+      "locator": "Ermita 733104780; muros de contención 1419281592–1419281598 y 1419281601; escaleras 733321150 y 1419281599; camino del recinto",
+      "note": "Registra trazas y huellas. No proporciona por sí sola alturas de cada muro, inventario de estaciones ni datación arquitectónica.",
+      "licenseUrl": "https://www.openstreetmap.org/copyright",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "cv-catastro",
+      "title": "Cartografía catastral INSPIRE · edificios de Sagunto/Sagunt",
+      "author": "Dirección General del Catastro",
+      "url": "https://www.catastro.hacienda.gob.es/webinspire/index.html",
+      "type": "cartografía oficial",
+      "year": null,
+      "locator": "Municipio 46222; huellas, cuerpos, patios y plantas del entorno del Calvario",
+      "note": "Base del volumen del caserío. Los acabados, ventanas y balcones no proceden de un levantamiento individual de cada vivienda.",
+      "downloadUrl": "https://www.catastro.hacienda.gob.es/INSPIRE/Buildings/46/46222-SAGUNTO%20SAGUNT/A.ES.SDGC.BU.46222.zip",
+      "licenseUrl": "https://www.catastro.hacienda.gob.es/webinspire/documentos/Licencia.pdf",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "cv-terreno",
+      "title": "Modelos de terreno MDT05 y alturas MDSnE de Sagunto",
+      "author": "Instituto Geográfico Nacional / Centro Nacional de Información Geográfica",
+      "url": "https://datos.gob.es/es/catalogo/e00125901-spaignmds-normalizado",
+      "type": "modelos geográficos oficiales",
+      "year": null,
+      "locator": "Relieve y estimaciones de altura empleados en el atlas",
+      "note": "La resolución no permite medir cada peldaño, cornisa o plataforma. Los ajustes locales de contacto entre suelo y edificio son interpretativos.",
+      "licenseUrl": "https://www.ign.es/resources/licencia/Condiciones_licenciaUso_IGN.pdf",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "cv-pnoa",
+      "title": "PNOA Máxima Actualidad · ortofotografía del casco histórico",
+      "author": "Instituto Geográfico Nacional / Centro Nacional de Información Geográfica",
+      "url": "https://datos.gob.es/es/catalogo/e00125901-spaignpnoama",
+      "type": "ortofotografía oficial",
+      "year": null,
+      "locator": "Cubiertas, vegetación y ocupación del suelo del Calvario y su entorno",
+      "note": "La consulta en 2026 no fecha el vuelo. Sirve como apoyo espacial, sin certificar el estado de cada árbol o inmueble en la fecha de publicación.",
+      "licenseUrl": "https://www.ign.es/resources/licencia/Condiciones_licenciaUso_IGN.pdf",
+      "accessed": "2026-11-19"
+    }
+  ],
+  "methodology": [
+    "La visita se limita al Calvario del casco histórico de Sagunto y a la ermita de la Soledad. La dedicación de la campana a los Dolores se mantiene diferenciada.",
+    "La inauguración de 1854 corresponde al nuevo Calvari de Santa Maria. No se convierte en fecha de todos los muros, revestimientos o cuerpos de la ermita.",
+    "Las atribuciones al siglo XVIII y a la segunda mitad del XIX se presentan como discrepancia documental. No se resuelve mediante una fecha única inventada.",
+    "Se documentan catorce estaciones devocionales y tres hornacinas finales en la fachada. La composición de once casalicios en el camino es interpretativa; faltan un inventario y una localización individual comprobados.",
+    "Los paneles de los Dolores de la Virgen no se confunden automáticamente con las estaciones del vía crucis. El panel de Vicen Escrig se explica sin asignarle una posición exacta no documentada.",
+    "La policromía ocre y blanca se interpreta a partir de la restauración publicada en 2012. La escena no certifica un estado material observado in situ en noviembre de 2026.",
+    "OSM, Catastro, MDT05, MDSnE y PNOA sustentan el registro geográfico. Peldaños, cornisas, herrajes, acabados y arbolado tienen una precisión menor y se identifican como interpretación.",
+    "Las dieciocho paradas son focos de lectura virtual, no un itinerario de accesibilidad física ni una promesa de entrada al interior. No se genera un corte arqueológico o un interior sin documentación suficiente.",
+    "El vía crucis y la Passió en Viu se explican como prácticas diferentes. Las creencias y escenas religiosas se atribuyen a sus participantes y fuentes.",
+    "Las fotografías se consultan como referencias y archivo. No se incorporan galerías históricas, poemas íntegros ni imágenes ajenas como texturas del modelo."
+  ],
+  "readingLegend": [
+    {
+      "id": "route",
+      "label": "Camino y terrazas del Calvario",
+      "color": "#b6c593",
+      "note": "El trazado de subida, los accesos, los muros y las terrazas se leen como un conjunto."
+    },
+    {
+      "id": "hermitage",
+      "label": "Arquitectura de la ermita",
+      "color": "#d7b36b",
+      "note": "La ermita se reconoce por sus cuerpos, huecos, cubiertas y elementos constructivos."
+    },
+    {
+      "id": "ceramic",
+      "label": "Cerámicas y memoria devocional",
+      "color": "#7fb7c4",
+      "note": "Los paneles y sus pequeños soportes permiten seguir la memoria devocional del recinto."
+    },
+    {
+      "id": "restoration",
+      "label": "Conservación y color recuperado",
+      "color": "#c99bba",
+      "note": "Los acabados recuperados y las intervenciones de conservación forman una capa de lectura propia."
+    },
+    {
+      "id": "landscape",
+      "label": "Paisaje y vegetación interpretados",
+      "color": "#80aa85",
+      "note": "La vegetación y el entorno se representan con detalle interpretativo sobre la cartografía."
+    }
+  ],
+  "confidenceLegend": [
+    {
+      "id": "documented",
+      "label": "Documentado",
+      "note": "La fuente respalda el hecho o la descripción; no implica precisión métrica del modelo."
+    },
+    {
+      "id": "interpretive",
+      "label": "Interpretación",
+      "note": "Lectura razonada o detalle visual aproximado, abierto a revisión con nueva documentación."
+    },
+    {
+      "id": "disputed",
+      "label": "En debate",
+      "note": "Las fuentes difieren y no permiten fijar una atribución definitiva."
+    }
+  ],
+  "modelRegistration": {
+    "anchor": [
+      -0.28056366,
+      39.67796337
+    ],
+    "yawRadians": 0,
+    "axisX": "Este en el registro cartográfico del atlas",
+    "axisZ": "Sur en el registro cartográfico del atlas",
+    "method": "Huella de la ermita y trazas OSM, Catastro, relieve oficial y referencias visuales; focos compartidos con el modelo del recinto",
+    "precision": "approximate"
+  }
+}

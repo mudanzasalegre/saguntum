@@ -1,0 +1,1753 @@
+{
+  "schemaVersion": 1,
+  "id": "horno",
+  "title": "Alto Horno n.º 2",
+  "subtitle": "Veinte miradas a la máquina, su interior y la memoria industrial",
+  "introduction": "Rodea el horno, entra virtualmente en el vaso y sigue el recorrido del aire, el agua y la carga. El alzado y el plano del recinto conectan cada detalle con el Puerto de Sagunto y con la historia de su rehabilitación.",
+  "researchDate": "2026-11-20",
+  "regionsLabel": "ámbitos",
+  "mapButtonLabel": "Alzado y recinto",
+  "overviewButtonLabel": "Ver conjunto",
+  "readingModeLabel": "Leer la máquina y su historia",
+  "readingModeNote": "Los colores agrupan partes y procesos. En cada parada se explica qué permanece de la fábrica y qué se restituyó o añadió para su visita.",
+  "timelineIntroduction": "La cronología distingue la vida productiva del horno nº 2, el cierre de la siderurgia y la rehabilitación patrimonial. Las fechas que difieren entre fuentes se presentan como tales.",
+  "visitAriaLabel": "Visita documentada al Alto Horno número 2, su interior y el entorno industrial del Puerto de Sagunto",
+  "sectionOnOverview": true,
+  "sectionInstructions": "Abre el corte para reconocer el crisol, los etalajes, la cuba y el refractario. El alzado permite seleccionar niveles de la máquina y acercarse a sus componentes.",
+  "sectionNote": "Sección didáctica de la máquina conservada y rehabilitada. Retira parte de la envolvente para mostrar el vaso; formas secundarias, desgaste y alturas relativas del terreno conservan un margen de aproximación.",
+  "mapInstructions": "Selecciona una parada en el alzado; en pantalla ancha se muestra también la planta del recinto.",
+  "mapNote": "Alzado y planta de la maqueta, contrastados con planos y ortofoto. Las alturas del modelo se refieren a un origen exterior aproximado; las cotas del proyecto se conservan en la documentación con su referencia propia.",
+  "visitNote": "La exploración de niveles elevados es virtual. La información presencial de la Fundación indica que las plataformas superiores no son visitables.",
+  "methodology": [
+    "La descripción del BOE, el folleto de la Fundación y la documentación de los arquitectos definen las dimensiones principales y la lógica de la máquina. El modelo sigue sus datos, manteniendo explícitas las aproximaciones de detalle.",
+    "Los niveles rotulados en la sección de proyecto y las alturas redondeadas del BOE se registran con sus respectivas referencias. No se deriva una cota topográfica de calle a partir de un origen vertical no identificado.",
+    "Cimientos, vaso, refrigeración, tubo anular y tubos de gas contienen fábrica conservada. Las plataformas de los puentes y el plano de carga fueron restituidos; pabellón, accesos y pasarela interior pertenecen a la adaptación patrimonial.",
+    "La cimentación es parcialmente subterránea. Su altura total documentada no se representa como una elevación enteramente visible por encima del vial.",
+    "Las estufas, chimeneas y otros equipos auxiliares desaparecidos se explican mediante textos. El conjunto visible corresponde a la máquina rehabilitada y su contexto urbano, con la fecha de cada referencia reconocible.",
+    "Las fotografías se consultan como referencias de forma y material. Los acabados del modelo se elaboran sin incorporar imágenes de terceros como texturas.",
+    "La visita digital puede acercarse a alturas no abiertas al público. Sus focos de cámara y cortes son recursos de observación, independientes del recorrido físico autorizado."
+  ],
+  "readingLegend": [
+    {
+      "id": "conjunto",
+      "label": "El horno y su recinto",
+      "color": "#8ebbc2",
+      "note": "Cimentación, accesos, pabellón y relación con el Puerto."
+    },
+    {
+      "id": "interior",
+      "label": "El vaso y su revestimiento",
+      "color": "#d4ac79",
+      "note": "Crisol, refractario, etalajes y espacio interior."
+    },
+    {
+      "id": "proceso",
+      "label": "Aire, agua y materiales",
+      "color": "#93b18f",
+      "note": "Toberas, anillo, cuba, refrigeración y gases."
+    },
+    {
+      "id": "estructura",
+      "label": "La torre y la carga",
+      "color": "#c29272",
+      "note": "Pasarelas, escaleras, tragante, puentes y skip."
+    },
+    {
+      "id": "memoria",
+      "label": "El trabajo y la conservación",
+      "color": "#b59ac7",
+      "note": "Historia obrera, rehabilitación y reconocimiento patrimonial."
+    }
+  ],
+  "confidenceLegend": [
+    {
+      "id": "documented",
+      "label": "Documentado",
+      "note": "La fuente respalda el dato; no certifica exactitud métrica de cada pieza del modelo."
+    },
+    {
+      "id": "interpretive",
+      "label": "Interpretación",
+      "note": "Geometría, material o relación espacial aproximada para hacer legible la maqueta."
+    },
+    {
+      "id": "disputed",
+      "label": "Fuentes diferentes",
+      "note": "Las fuentes no coinciden en una fecha o detalle; la diferencia se mantiene visible."
+    }
+  ],
+  "materialEvidenceLegend": [
+    {
+      "id": "conserved",
+      "label": "Fábrica conservada",
+      "note": "Componente documentado como superviviente de la máquina industrial."
+    },
+    {
+      "id": "rehabilitated",
+      "label": "Restituido o añadido",
+      "note": "Elemento reconstruido o incorporado durante la rehabilitación."
+    },
+    {
+      "id": "mixed",
+      "label": "Lectura conjunta",
+      "note": "El foco incluye fábrica, intervención patrimonial y simplificaciones gráficas."
+    }
+  ],
+  "stops": [
+    {
+      "id": "horno-conjunto",
+      "title": "La máquina que dio forma al Puerto",
+      "label": "El conjunto",
+      "regionId": "conjunto",
+      "period": "mixed",
+      "intro": "Rodea el horno para distinguir sus tres escalas: el vaso donde se transformaba el mineral, la torre de servicio que crece sobre él y el recinto acondicionado para la visita.",
+      "narrative": "Rodea el horno para distinguir sus tres escalas: el vaso donde se transformaba el mineral, la torre de servicio que crece sobre él y el recinto acondicionado para la visita.",
+      "facts": [
+        {
+          "text": "El conjunto alcanza una altura exterior documentada de 64,20 m.",
+          "sourceIds": [
+            "ha-boe2024"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Es el único horno alto conservado de los tres que funcionaron en la siderúrgica.",
+          "sourceIds": [
+            "ha-fundacio"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La silueta de los tubos, los voladizos y el contraste con el pabellón bajo.",
+      "modelNote": "La escena reúne fábrica conservada y rehabilitación. Las uniones, pátinas y equipos menores se aproximan a partir de fotografías, sin atribuirles precisión de escáner.",
+      "sourceIds": [
+        "ha-boe2024",
+        "ha-fundacio"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual registrado en el modelo del atlas a partir de la localización cartográfica y de planos publicados. Las alturas de referencia del proyecto no equivalen automáticamente a cotas sobre la calle.",
+      "coordinate": [
+        -0.2203074,
+        39.6542918
+      ],
+      "coordinates": [
+        -0.2203074,
+        39.6542918
+      ],
+      "coordinateSourceIds": [
+        "ha-osm",
+        "ha-pnoa",
+        "ha-casa"
+      ],
+      "osmIds": [
+        733110249
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "conjunto",
+      "floor": 0,
+      "order": 1,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 29,
+      "localTarget": [
+        0,
+        29,
+        0
+      ],
+      "requiresSection": false
+    },
+    {
+      "id": "horno-cimentacion",
+      "title": "Una gran base, parcialmente bajo el suelo",
+      "label": "La cimentación",
+      "regionId": "conjunto",
+      "period": "industrial",
+      "intro": "Mira hacia el terreno antes de seguir la torre. El volumen enterrado distribuye la carga; el vaciado del recinto permite comprender la relación entre hormigón, máquina y calle.",
+      "narrative": "Mira hacia el terreno antes de seguir la torre. El volumen enterrado distribuye la carga; el vaciado del recinto permite comprender la relación entre hormigón, máquina y calle.",
+      "facts": [
+        {
+          "text": "La base documentada tiene 31 m de diámetro, cuatro escalones y 5,6 m de altura total.",
+          "sourceIds": [
+            "ha-boe2024"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La sección didáctica muestra una parte de la cimentación bajo el terreno.",
+          "sourceIds": [
+            "ha-folleto"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Los escalones de hormigón y el desnivel entre el recinto y el vial.",
+      "modelNote": "Los 5,6 m describen el conjunto de la cimentación, no un pedestal enteramente expuesto. El grado de enterramiento se aproxima con sección y ortofoto.",
+      "sourceIds": [
+        "ha-boe2024",
+        "ha-folleto"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual registrado en el modelo del atlas a partir de la localización cartográfica y de planos publicados. Las alturas de referencia del proyecto no equivalen automáticamente a cotas sobre la calle.",
+      "coordinate": [
+        -0.2203074,
+        39.6542918
+      ],
+      "coordinates": [
+        -0.2203074,
+        39.6542918
+      ],
+      "coordinateSourceIds": [
+        "ha-osm",
+        "ha-pnoa",
+        "ha-casa"
+      ],
+      "osmIds": [
+        733110249
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "conjunto",
+      "floor": 0,
+      "order": 2,
+      "fabricStatus": "conserved",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 0.9,
+      "localTarget": [
+        0,
+        0.9,
+        0
+      ],
+      "requiresSection": false
+    },
+    {
+      "id": "horno-crisol",
+      "title": "Donde se recogía el hierro fundido",
+      "label": "El crisol",
+      "regionId": "interior",
+      "period": "industrial",
+      "intro": "El extremo inferior del vaso acumulaba los productos de la transformación. Busca las salidas pequeñas de la operación industrial y compáralas con los huecos grandes abiertos después para visitantes.",
+      "narrative": "El extremo inferior del vaso acumulaba los productos de la transformación. Busca las salidas pequeñas de la operación industrial y compáralas con los huecos grandes abiertos después para visitantes.",
+      "facts": [
+        {
+          "text": "El crisol tiene un diámetro interior documentado de 5,5 m y un revestimiento de carbono de aproximadamente 1 m.",
+          "sourceIds": [
+            "ha-boe2024"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La piquera evacuaba arrabio y la bigotera, escoria.",
+          "sourceIds": [
+            "ha-folleto"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La envolvente inferior, las bocas de salida y el cambio de espesor en el corte.",
+      "modelNote": "El vaso se representa vacío, en su lectura patrimonial. El corte y la iluminación permiten ver el espesor sin simular un horno encendido.",
+      "sourceIds": [
+        "ha-boe2024",
+        "ha-folleto"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual registrado en el modelo del atlas a partir de la localización cartográfica y de planos publicados. Las alturas de referencia del proyecto no equivalen automáticamente a cotas sobre la calle.",
+      "coordinate": [
+        -0.2203074,
+        39.6542918
+      ],
+      "coordinates": [
+        -0.2203074,
+        39.6542918
+      ],
+      "coordinateSourceIds": [
+        "ha-osm",
+        "ha-pnoa",
+        "ha-casa"
+      ],
+      "osmIds": [
+        733110249
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "interior",
+      "floor": 0,
+      "order": 3,
+      "fabricStatus": "conserved",
+      "recommendedMode": "current",
+      "mapScope": "alzado",
+      "elevation": 5.3,
+      "localTarget": [
+        0,
+        5.3,
+        0
+      ],
+      "requiresSection": false
+    },
+    {
+      "id": "horno-acceso",
+      "title": "Entrar en una máquina que estuvo cerrada",
+      "label": "Las tres aperturas",
+      "regionId": "conjunto",
+      "period": "contemporary",
+      "intro": "La visita al interior es una transformación del monumento. Las aperturas atraviesan chapa y revestimiento y conectan con una pasarela metálica que permite observar el vaso desde dentro.",
+      "narrative": "La visita al interior es una transformación del monumento. Las aperturas atraviesan chapa y revestimiento y conectan con una pasarela metálica que permite observar el vaso desde dentro.",
+      "facts": [
+        {
+          "text": "Se abrieron tres puertas en la parte baja del crisol para hacer posible la visita.",
+          "sourceIds": [
+            "ha-boe2024"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Las fotografías de los autores muestran pasarelas metálicas y protección interior.",
+          "sourceIds": [
+            "ha-casa"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Los bordes irregulares del refractario junto a los accesos y la pieza metálica nueva.",
+      "modelNote": "La posición y el perfil de los huecos se aproximan a partir del reportaje. Se diferencian de las bocas industriales de pequeño diámetro.",
+      "sourceIds": [
+        "ha-boe2024",
+        "ha-casa"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual registrado en el modelo del atlas a partir de la localización cartográfica y de planos publicados. Las alturas de referencia del proyecto no equivalen automáticamente a cotas sobre la calle.",
+      "coordinate": [
+        -0.22025876,
+        39.65430301
+      ],
+      "coordinates": [
+        -0.22025876,
+        39.65430301
+      ],
+      "coordinateSourceIds": [
+        "ha-osm",
+        "ha-pnoa",
+        "ha-casa"
+      ],
+      "osmIds": [
+        733110249
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "conjunto",
+      "floor": 0,
+      "order": 4,
+      "fabricStatus": "rehabilitated",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 7,
+      "localTarget": [
+        -2.984564198270512,
+        7,
+        3.1646289745248013
+      ],
+      "requiresSection": false
+    },
+    {
+      "id": "horno-interior",
+      "title": "Dentro del vaso, sobre la pasarela",
+      "label": "Dentro del horno",
+      "regionId": "interior",
+      "period": "mixed",
+      "intro": "Desde la pasarela se perciben las dimensiones del vaso, los huecos abiertos para la visita y el revestimiento que asciende hasta el tragante. El espacio que hoy observamos formaba parte del proceso de reducción y fusión.",
+      "narrative": "Desde la pasarela se perciben las dimensiones del vaso, los huecos abiertos para la visita y el revestimiento que asciende hasta el tragante. El espacio que hoy observamos formaba parte del proceso de reducción y fusión.",
+      "facts": [
+        {
+          "text": "La fotografía del interior publicada en 2023 muestra ladrillo refractario, cajas de refrigeración y la boca superior.",
+          "sourceIds": [
+            "ha-beso2023"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La adaptación incluye pavimento, iluminación y malla protectora.",
+          "sourceIds": [
+            "ha-memoria2008"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La pasarela en Y, las tres salidas, el revestimiento y la red de protección.",
+      "modelNote": "La vista se sitúa dentro de la envolvente conservada. La malla, el despiece y la pasarela se simplifican para permitir una lectura clara; el corte puede abrirse de forma didáctica.",
+      "sourceIds": [
+        "ha-beso2023",
+        "ha-memoria2008"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual registrado en el modelo del atlas a partir de la localización cartográfica y de planos publicados. Las alturas de referencia del proyecto no equivalen automáticamente a cotas sobre la calle.",
+      "coordinate": [
+        -0.22030828,
+        39.65429063
+      ],
+      "coordinates": [
+        -0.22030828,
+        39.65429063
+      ],
+      "coordinateSourceIds": [
+        "ha-osm",
+        "ha-pnoa",
+        "ha-casa"
+      ],
+      "osmIds": [
+        733110249
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "interior",
+      "floor": 1,
+      "order": 5,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "alzado",
+      "elevation": 6.18,
+      "localTarget": [
+        0,
+        6.18,
+        -0.15
+      ],
+      "requiresSection": false
+    },
+    {
+      "id": "horno-revestimiento",
+      "title": "El material que separaba calor y acero",
+      "label": "El refractario",
+      "regionId": "interior",
+      "period": "industrial",
+      "intro": "Acércate a la cara interior y compara su textura con la chapa exterior. El revestimiento forma parte de la construcción de la máquina y conserva huellas del trabajo y de sus reparaciones.",
+      "narrative": "Acércate a la cara interior y compara su textura con la chapa exterior. El revestimiento forma parte de la construcción de la máquina y conserva huellas del trabajo y de sus reparaciones.",
+      "facts": [
+        {
+          "text": "La rehabilitación priorizó conservar el ladrillo refractario y reutilizar piezas cuando su estado lo permitía.",
+          "sourceIds": [
+            "ha-memoria2008"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El reportaje de 2022 permite reconocer hiladas, pérdidas y manchas en el interior.",
+          "sourceIds": [
+            "ha-beso2023"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El aparejo curvo, las pérdidas de material y los puntos donde asoman las cajas.",
+      "modelNote": "El desgaste es una elaboración gráfica basada en referencias. No se utiliza una fotografía de terceros como textura ni se reproduce cada lesión.",
+      "sourceIds": [
+        "ha-memoria2008",
+        "ha-beso2023"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual registrado en el modelo del atlas a partir de la localización cartográfica y de planos publicados. Las alturas de referencia del proyecto no equivalen automáticamente a cotas sobre la calle.",
+      "coordinate": [
+        -0.2203074,
+        39.6542918
+      ],
+      "coordinates": [
+        -0.2203074,
+        39.6542918
+      ],
+      "coordinateSourceIds": [
+        "ha-osm",
+        "ha-pnoa",
+        "ha-casa"
+      ],
+      "osmIds": [
+        733110249
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "interior",
+      "floor": 1,
+      "order": 6,
+      "fabricStatus": "conserved",
+      "recommendedMode": "current",
+      "mapScope": "alzado",
+      "elevation": 15.8,
+      "localTarget": [
+        0,
+        15.8,
+        0
+      ],
+      "requiresSection": false
+    },
+    {
+      "id": "horno-toberas",
+      "title": "Doce entradas de aire caliente",
+      "label": "Las toberas",
+      "regionId": "proceso",
+      "period": "industrial",
+      "intro": "Sigue cada ramal desde el anillo hasta la pared. Estas conexiones permiten leer el movimiento del aire hacia el interior, en sentido contrario al descenso de la carga sólida.",
+      "narrative": "Sigue cada ramal desde el anillo hasta la pared. Estas conexiones permiten leer el movimiento del aire hacia el interior, en sentido contrario al descenso de la carga sólida.",
+      "facts": [
+        {
+          "text": "El crisol dispone de doce toberas de entrada de aire caliente.",
+          "sourceIds": [
+            "ha-boe2024"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El folleto relaciona las toberas con el tubo anular y con las estufas de calentamiento.",
+          "sourceIds": [
+            "ha-folleto"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La repetición de doce entradas alrededor del vaso y sus conexiones curvas.",
+      "modelNote": "Se conserva el número documentado; el detalle de bridas, pernos y cierres se interpreta visualmente.",
+      "sourceIds": [
+        "ha-boe2024",
+        "ha-folleto"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual registrado en el modelo del atlas a partir de la localización cartográfica y de planos publicados. Las alturas de referencia del proyecto no equivalen automáticamente a cotas sobre la calle.",
+      "coordinate": [
+        -0.22035681,
+        39.65432205
+      ],
+      "coordinates": [
+        -0.22035681,
+        39.65432205
+      ],
+      "coordinateSourceIds": [
+        "ha-osm",
+        "ha-pnoa",
+        "ha-casa"
+      ],
+      "osmIds": [
+        733110249
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "proceso",
+      "floor": 0,
+      "order": 7,
+      "fabricStatus": "conserved",
+      "recommendedMode": "current",
+      "mapScope": "alzado",
+      "elevation": 7.25,
+      "localTarget": [
+        5.35,
+        7.25,
+        0.8
+      ],
+      "requiresSection": false
+    },
+    {
+      "id": "horno-anillo",
+      "title": "El aire se repartía alrededor del horno",
+      "label": "El tubo anular",
+      "regionId": "proceso",
+      "period": "industrial",
+      "intro": "El gran conducto circular distribuye el aire entre las toberas. Reconocer este circuito ayuda a distinguirlo del agua de refrigeración y de los conductos de gas situados mucho más arriba.",
+      "narrative": "El gran conducto circular distribuye el aire entre las toberas. Reconocer este circuito ayuda a distinguirlo del agua de refrigeración y de los conductos de gas situados mucho más arriba.",
+      "facts": [
+        {
+          "text": "La Fundación incluye el tubo anular de aire entre los componentes originales conservados.",
+          "sourceIds": [
+            "ha-fundacio"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Las cuatro estufas y sus chimeneas han desaparecido.",
+          "sourceIds": [
+            "ha-boe2024"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El volumen del anillo, sus ramales y el extremo de la conducción auxiliar.",
+      "modelNote": "La escena actual mantiene legible el circuito conservado. Las estufas ausentes se explican en el relato sin incorporarlas como edificios existentes.",
+      "sourceIds": [
+        "ha-fundacio",
+        "ha-boe2024"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual registrado en el modelo del atlas a partir de la localización cartográfica y de planos publicados. Las alturas de referencia del proyecto no equivalen automáticamente a cotas sobre la calle.",
+      "coordinate": [
+        -0.2203074,
+        39.6542918
+      ],
+      "coordinates": [
+        -0.2203074,
+        39.6542918
+      ],
+      "coordinateSourceIds": [
+        "ha-osm",
+        "ha-pnoa",
+        "ha-casa"
+      ],
+      "osmIds": [
+        733110249
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "proceso",
+      "floor": 0,
+      "order": 8,
+      "fabricStatus": "conserved",
+      "recommendedMode": "current",
+      "mapScope": "alzado",
+      "elevation": 9.2,
+      "localTarget": [
+        0,
+        9.2,
+        0
+      ],
+      "requiresSection": false
+    },
+    {
+      "id": "horno-etalajes",
+      "title": "El cambio de perfil del vaso",
+      "label": "Los etalajes",
+      "regionId": "interior",
+      "period": "industrial",
+      "intro": "En el corte aparece la zona donde el perfil deja de ensancharse y se recoge hacia el crisol. La forma del vaso ayuda a seguir el descenso y la transformación de los materiales.",
+      "narrative": "En el corte aparece la zona donde el perfil deja de ensancharse y se recoge hacia el crisol. La forma del vaso ayuda a seguir el descenso y la transformación de los materiales.",
+      "facts": [
+        {
+          "text": "El etalaje es la zona intermedia del horno, revestida de material refractario.",
+          "sourceIds": [
+            "ha-boe2024"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El esquema de la Fundación sitúa aquí la formación de arrabio y escoria que descienden hacia el crisol.",
+          "sourceIds": [
+            "ha-folleto"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La unión entre los dos perfiles troncocónicos y el espesor de la pared.",
+      "modelNote": "La forma general está documentada; el perfil entre cotas se interpola para la maqueta y no constituye un modelo termodinámico.",
+      "sourceIds": [
+        "ha-boe2024",
+        "ha-folleto"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual registrado en el modelo del atlas a partir de la localización cartográfica y de planos publicados. Las alturas de referencia del proyecto no equivalen automáticamente a cotas sobre la calle.",
+      "coordinate": [
+        -0.2203074,
+        39.6542918
+      ],
+      "coordinates": [
+        -0.2203074,
+        39.6542918
+      ],
+      "coordinateSourceIds": [
+        "ha-osm",
+        "ha-pnoa",
+        "ha-casa"
+      ],
+      "osmIds": [
+        733110249
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "interior",
+      "floor": 0,
+      "order": 9,
+      "fabricStatus": "conserved",
+      "recommendedMode": "section",
+      "mapScope": "alzado",
+      "elevation": 9.8,
+      "localTarget": [
+        0,
+        9.8,
+        0
+      ],
+      "requiresSection": true
+    },
+    {
+      "id": "horno-cuba",
+      "title": "Una pared que también era un intercambiador",
+      "label": "La cuba",
+      "regionId": "proceso",
+      "period": "industrial",
+      "intro": "La cuba concentra buena parte del relieve exterior del horno. Entre plataformas, la repetición de cajas y juntas hace visible el trabajo de refrigerar una pared sometida al calor del proceso.",
+      "narrative": "La cuba concentra buena parte del relieve exterior del horno. Entre plataformas, la repetición de cajas y juntas hace visible el trabajo de refrigerar una pared sometida al calor del proceso.",
+      "facts": [
+        {
+          "text": "La carga descendente se calentaba por los gases que ascendían desde la zona inferior.",
+          "sourceIds": [
+            "ha-boe2024"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La envolvente y su sistema de refrigeración son reconocibles en las fotografías de detalle publicadas por Besó.",
+          "sourceIds": [
+            "ha-beso2023"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El estrechamiento hacia arriba y el ritmo de las piezas entre pasarelas.",
+      "modelNote": "La escala general sigue las referencias publicadas. Las espesuras menores y el acabado de las juntas son aproximaciones.",
+      "sourceIds": [
+        "ha-boe2024",
+        "ha-beso2023"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual registrado en el modelo del atlas a partir de la localización cartográfica y de planos publicados. Las alturas de referencia del proyecto no equivalen automáticamente a cotas sobre la calle.",
+      "coordinate": [
+        -0.2203074,
+        39.6542918
+      ],
+      "coordinates": [
+        -0.2203074,
+        39.6542918
+      ],
+      "coordinateSourceIds": [
+        "ha-osm",
+        "ha-pnoa",
+        "ha-casa"
+      ],
+      "osmIds": [
+        733110249
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "proceso",
+      "floor": 0,
+      "order": 10,
+      "fabricStatus": "conserved",
+      "recommendedMode": "section",
+      "mapScope": "alzado",
+      "elevation": 18,
+      "localTarget": [
+        0,
+        18,
+        0
+      ],
+      "requiresSection": true
+    },
+    {
+      "id": "horno-refrigeracion",
+      "title": "Leer el agua en una máquina de fuego",
+      "label": "Las cajas de refrigeración",
+      "regionId": "proceso",
+      "period": "industrial",
+      "intro": "El agua pertenecía al funcionamiento del horno tanto como el combustible. Recorre visualmente las filas de cajas y busca la recogida inferior para entender este circuito independiente del aire caliente.",
+      "narrative": "El agua pertenecía al funcionamiento del horno tanto como el combustible. Recorre visualmente las filas de cajas y busca la recogida inferior para entender este circuito independiente del aire caliente.",
+      "facts": [
+        {
+          "text": "La documentación oficial identifica 315 cajas distribuidas en 21 filas.",
+          "sourceIds": [
+            "ha-boe2024"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El sistema utilizaba agua de mar y combinaba distintos modos de refrigerar cuba, etalaje y crisol.",
+          "sourceIds": [
+            "ha-boe2024"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Las veintiuna filas, los salientes y el canal de recogida inferior.",
+      "modelNote": "La repetición reproduce el recuento publicado; posición individual, tubería menor y pátina se resuelven de forma gráfica. El agua no se representa circulando hoy.",
+      "sourceIds": [
+        "ha-boe2024"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual registrado en el modelo del atlas a partir de la localización cartográfica y de planos publicados. Las alturas de referencia del proyecto no equivalen automáticamente a cotas sobre la calle.",
+      "coordinate": [
+        -0.22032403,
+        39.65431994
+      ],
+      "coordinates": [
+        -0.22032403,
+        39.65431994
+      ],
+      "coordinateSourceIds": [
+        "ha-osm",
+        "ha-pnoa",
+        "ha-casa"
+      ],
+      "osmIds": [
+        733110249
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "proceso",
+      "floor": 0,
+      "order": 11,
+      "fabricStatus": "conserved",
+      "recommendedMode": "current",
+      "mapScope": "alzado",
+      "elevation": 18.1,
+      "localTarget": [
+        2.8,
+        18.1,
+        2
+      ],
+      "requiresSection": false
+    },
+    {
+      "id": "horno-plataformas",
+      "title": "Una sección hecha de lugares de trabajo",
+      "label": "Las plataformas",
+      "regionId": "estructura",
+      "period": "mixed",
+      "intro": "Mira la torre por niveles: cada pasarela permitía acercarse a una zona distinta. El alzado ayuda a relacionar esos planos horizontales con el vaso y con los mecanismos que coronan la estructura.",
+      "narrative": "Mira la torre por niveles: cada pasarela permitía acercarse a una zona distinta. El alzado ayuda a relacionar esos planos horizontales con el vaso y con los mecanismos que coronan la estructura.",
+      "facts": [
+        {
+          "text": "La sección de los arquitectos identifica plataformas de la cuba y niveles de servicio del tragante, campanas y válvulas.",
+          "sourceIds": [
+            "ha-casa"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La restauración recuperó elementos desaparecidos que facilitaban la comprensión del horno.",
+          "sourceIds": [
+            "ha-coacv"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Los voladizos, las ménsulas y los cambios de anchura al ascender.",
+      "modelNote": "Las cotas del alzado pertenecen al sistema de referencia del proyecto. Los focos de cámara no son alturas topográficas ni niveles de acceso presencial.",
+      "sourceIds": [
+        "ha-casa",
+        "ha-coacv"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual registrado en el modelo del atlas a partir de la localización cartográfica y de planos publicados. Las alturas de referencia del proyecto no equivalen automáticamente a cotas sobre la calle.",
+      "coordinate": [
+        -0.2203074,
+        39.6542918
+      ],
+      "coordinates": [
+        -0.2203074,
+        39.6542918
+      ],
+      "coordinateSourceIds": [
+        "ha-osm",
+        "ha-pnoa",
+        "ha-casa"
+      ],
+      "osmIds": [
+        733110249
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "estructura",
+      "floor": 0,
+      "order": 12,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "alzado",
+      "elevation": 23.7,
+      "localTarget": [
+        0,
+        23.7,
+        0
+      ],
+      "requiresSection": false
+    },
+    {
+      "id": "horno-escaleras",
+      "title": "El recorrido de mantenimiento",
+      "label": "Escaleras y barandillas",
+      "regionId": "estructura",
+      "period": "mixed",
+      "intro": "Las escaleras unen plataformas que, desde lejos, parecen independientes. Acércate a los descansillos para reconocer la escala humana y distinguir la circulación del entramado portante.",
+      "narrative": "Las escaleras unen plataformas que, desde lejos, parecen independientes. Acércate a los descansillos para reconocer la escala humana y distinguir la circulación del entramado portante.",
+      "facts": [
+        {
+          "text": "Las fotografías de la rehabilitación muestran escaleras exteriores, pasarelas y barandillas de servicio.",
+          "sourceIds": [
+            "ha-casa"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La información vigente del organizador indica que las plataformas superiores no son visitables.",
+          "sourceIds": [
+            "ha-visitas"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Las zancas, los descansillos y las barandillas sobre la estructura oscura.",
+      "modelNote": "La navegación de la maqueta permite estudiar niveles elevados. No representa una ruta presencial autorizada ni una certificación de accesibilidad.",
+      "sourceIds": [
+        "ha-casa",
+        "ha-visitas"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual registrado en el modelo del atlas a partir de la localización cartográfica y de planos publicados. Las alturas de referencia del proyecto no equivalen automáticamente a cotas sobre la calle.",
+      "coordinate": [
+        -0.22037189,
+        39.65432046
+      ],
+      "coordinates": [
+        -0.22037189,
+        39.65432046
+      ],
+      "coordinateSourceIds": [
+        "ha-osm",
+        "ha-pnoa",
+        "ha-casa"
+      ],
+      "osmIds": [
+        733110249
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "estructura",
+      "floor": 0,
+      "order": 13,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "alzado",
+      "elevation": 18.8,
+      "localTarget": [
+        6.38,
+        18.8,
+        0
+      ],
+      "requiresSection": false
+    },
+    {
+      "id": "horno-tragante",
+      "title": "Recibir la carga y contener los gases",
+      "label": "El tragante",
+      "regionId": "estructura",
+      "period": "industrial",
+      "intro": "En la cabeza del vaso se cruzan la llegada de materia y la salida de gases. Observa el punto donde termina la rampa y cómo el sistema de cierre separaba el interior del ambiente exterior.",
+      "narrative": "En la cabeza del vaso se cruzan la llegada de materia y la salida de gases. Observa el punto donde termina la rampa y cómo el sistema de cierre separaba el interior del ambiente exterior.",
+      "facts": [
+        {
+          "text": "El cierre del tragante utilizaba dos campanas para limitar la pérdida de gas y presión durante la carga.",
+          "sourceIds": [
+            "ha-folleto"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La sección de los autores identifica el nivel del tragante y del skip en la cota de proyecto +36,50.",
+          "sourceIds": [
+            "ha-casa"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La llegada de las vías inclinadas y la superposición de los cierres.",
+      "modelNote": "El cierre se presenta como esquema constructivo estático. La geometría de los mecanismos menores se aproxima y no simula una secuencia de operación.",
+      "sourceIds": [
+        "ha-folleto",
+        "ha-casa"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual registrado en el modelo del atlas a partir de la localización cartográfica y de planos publicados. Las alturas de referencia del proyecto no equivalen automáticamente a cotas sobre la calle.",
+      "coordinate": [
+        -0.2203074,
+        39.6542918
+      ],
+      "coordinates": [
+        -0.2203074,
+        39.6542918
+      ],
+      "coordinateSourceIds": [
+        "ha-osm",
+        "ha-pnoa",
+        "ha-casa"
+      ],
+      "osmIds": [
+        733110249
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "estructura",
+      "floor": 0,
+      "order": 14,
+      "fabricStatus": "mixed",
+      "recommendedMode": "section",
+      "mapScope": "alzado",
+      "elevation": 29.4,
+      "localTarget": [
+        0,
+        29.4,
+        0
+      ],
+      "requiresSection": true
+    },
+    {
+      "id": "horno-gases",
+      "title": "Conducir el gas y controlar su salida",
+      "label": "Los tubos pantalón",
+      "regionId": "proceso",
+      "period": "industrial",
+      "intro": "Sigue las conducciones desde la cabeza del vaso y distingue sus recorridos: la red que llevaba el gas hacia la depuración y las dos purgas verticales que coronan la máquina.",
+      "narrative": "Sigue las conducciones desde la cabeza del vaso y distingue sus recorridos: la red que llevaba el gas hacia la depuración y las dos purgas verticales que coronan la máquina.",
+      "facts": [
+        {
+          "text": "La conducción hacia el colector de polvo reunía cuatro tubos de 1,22 m de diámetro exterior en dos y después en uno.",
+          "sourceIds": [
+            "ha-beso2023"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Las fotografías de la rehabilitación muestran dos remates verticales de purga, con plataformas de acceso y mecanismos de válvula.",
+          "sourceIds": [
+            "ha-casa",
+            "ha-patrif2014"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Las dos purgas superiores y los ramales laterales del circuito de gas.",
+      "modelNote": "Las purgas y el colector son partes diferentes del circuito. La reunión histórica hacia el depurador no implica un solo remate vertical; los equipos auxiliares desaparecidos se explican sin reconstruirlos como existentes.",
+      "sourceIds": [
+        "ha-beso2023",
+        "ha-casa",
+        "ha-patrif2014"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual registrado en el modelo del atlas a partir de la localización cartográfica y de planos publicados. Las alturas de referencia del proyecto no equivalen automáticamente a cotas sobre la calle.",
+      "coordinate": [
+        -0.2203074,
+        39.6542918
+      ],
+      "coordinates": [
+        -0.2203074,
+        39.6542918
+      ],
+      "coordinateSourceIds": [
+        "ha-osm",
+        "ha-pnoa",
+        "ha-casa"
+      ],
+      "osmIds": [
+        733110249
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "proceso",
+      "floor": 0,
+      "order": 15,
+      "fabricStatus": "conserved",
+      "recommendedMode": "current",
+      "mapScope": "alzado",
+      "elevation": 54.5,
+      "localTarget": [
+        0,
+        54.5,
+        0
+      ],
+      "requiresSection": false
+    },
+    {
+      "id": "horno-puente42",
+      "title": "El gran voladizo inferior",
+      "label": "Puente grúa inferior",
+      "regionId": "estructura",
+      "period": "mixed",
+      "intro": "Desde esta vista elevada se comprende el vuelo de la estructura de izado y su relación con la torre central. La restitución devuelve una parte esencial de la silueta perdida tras el cierre.",
+      "narrative": "Desde esta vista elevada se comprende el vuelo de la estructura de izado y su relación con la torre central. La restitución devuelve una parte esencial de la silueta perdida tras el cierre.",
+      "facts": [
+        {
+          "text": "La plataforma inferior del puente grúa figura a unos 42 m en la descripción oficial y en la cota +42,50 del alzado de proyecto.",
+          "sourceIds": [
+            "ha-boe2024",
+            "ha-casa"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Las plataformas de los puentes grúa fueron repuestas durante la rehabilitación.",
+          "sourceIds": [
+            "ha-fundacio"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La triangulación bajo el voladizo y el recorrido horizontal de la estructura.",
+      "modelNote": "Se muestra una vista virtual del puente restituido. Las cifras de altura de distintas fuentes se conservan con su referencia, sin equiparar automáticamente su origen vertical.",
+      "sourceIds": [
+        "ha-boe2024",
+        "ha-casa",
+        "ha-fundacio"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual registrado en el modelo del atlas a partir de la localización cartográfica y de planos publicados. Las alturas de referencia del proyecto no equivalen automáticamente a cotas sobre la calle.",
+      "coordinate": [
+        -0.22038827,
+        39.65432773
+      ],
+      "coordinates": [
+        -0.22038827,
+        39.65432773
+      ],
+      "coordinateSourceIds": [
+        "ha-osm",
+        "ha-pnoa",
+        "ha-casa"
+      ],
+      "osmIds": [
+        733110249
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "estructura",
+      "floor": 0,
+      "order": 16,
+      "fabricStatus": "rehabilitated",
+      "recommendedMode": "current",
+      "mapScope": "alzado",
+      "elevation": 42,
+      "localTarget": [
+        8,
+        42,
+        0
+      ],
+      "requiresSection": false
+    },
+    {
+      "id": "horno-puente51",
+      "title": "La estructura superior de izado",
+      "label": "Puente grúa superior",
+      "regionId": "estructura",
+      "period": "mixed",
+      "intro": "El segundo puente prolonga la lectura vertical. Cambia el punto de vista para separar su entramado de los tubos y comprender qué piezas sirven a la máquina y cuáles forman parte del vaso.",
+      "narrative": "El segundo puente prolonga la lectura vertical. Cambia el punto de vista para separar su entramado de los tubos y comprender qué piezas sirven a la máquina y cuáles forman parte del vaso.",
+      "facts": [
+        {
+          "text": "La descripción oficial sitúa este puente en torno a 51 m; el plano de los autores rotula +51,40 en su propio sistema de cotas.",
+          "sourceIds": [
+            "ha-boe2024",
+            "ha-casa"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El reportaje de arquitectura documenta el entramado reconstruido.",
+          "sourceIds": [
+            "ha-casa"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La plataforma superior, sus apoyos y la continuidad de los tubos.",
+      "modelNote": "El ensamblaje de pequeñas piezas y la estructura de izado se simplifican; la vista no implica que este nivel esté abierto al público.",
+      "sourceIds": [
+        "ha-boe2024",
+        "ha-casa"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual registrado en el modelo del atlas a partir de la localización cartográfica y de planos publicados. Las alturas de referencia del proyecto no equivalen automáticamente a cotas sobre la calle.",
+      "coordinate": [
+        -0.22035794,
+        39.65431426
+      ],
+      "coordinates": [
+        -0.22035794,
+        39.65431426
+      ],
+      "coordinateSourceIds": [
+        "ha-osm",
+        "ha-pnoa",
+        "ha-casa"
+      ],
+      "osmIds": [
+        733110249
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "estructura",
+      "floor": 0,
+      "order": 17,
+      "fabricStatus": "rehabilitated",
+      "recommendedMode": "current",
+      "mapScope": "alzado",
+      "elevation": 51,
+      "localTarget": [
+        5,
+        51,
+        0
+      ],
+      "requiresSection": false
+    },
+    {
+      "id": "horno-skip",
+      "title": "Subir mineral, coque y caliza",
+      "label": "La rampa de carga",
+      "regionId": "estructura",
+      "period": "mixed",
+      "intro": "La diagonal conecta el suelo con la cabeza del horno. Al seguir sus dos vías se entiende cómo la carga alcanzaba el tragante y por qué este elemento cambia tanto la composición del conjunto.",
+      "narrative": "La diagonal conecta el suelo con la cabeza del horno. Al seguir sus dos vías se entiende cómo la carga alcanzaba el tragante y por qué este elemento cambia tanto la composición del conjunto.",
+      "facts": [
+        {
+          "text": "La estructura de carga disponía de dos vías para las tolvas de materias primas.",
+          "sourceIds": [
+            "ha-folleto"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El plano inclinado visible es una reconstrucción patrimonial.",
+          "sourceIds": [
+            "ha-fundacio"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Las dos vías, la triangulación y el encuentro con el tragante.",
+      "modelNote": "El recorrido se aproxima combinando el alzado y la ortofoto. No se presenta como ascensor operativo ni se asigna una fecha de restitución unánime a partir de fuentes discrepantes.",
+      "sourceIds": [
+        "ha-folleto",
+        "ha-fundacio"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual registrado en el modelo del atlas a partir de la localización cartográfica y de planos publicados. Las alturas de referencia del proyecto no equivalen automáticamente a cotas sobre la calle.",
+      "coordinate": [
+        -0.22016331,
+        39.65422777
+      ],
+      "coordinates": [
+        -0.22016331,
+        39.65422777
+      ],
+      "coordinateSourceIds": [
+        "ha-osm",
+        "ha-pnoa",
+        "ha-casa"
+      ],
+      "osmIds": [
+        733110249
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "estructura",
+      "floor": 0,
+      "order": 18,
+      "fabricStatus": "rehabilitated",
+      "recommendedMode": "current",
+      "mapScope": "alzado",
+      "elevation": 14.897499999999999,
+      "localTarget": [
+        -14.254999999999999,
+        14.897499999999999,
+        0
+      ],
+      "requiresSection": false
+    },
+    {
+      "id": "horno-entorno",
+      "title": "El recinto conecta máquina y ciudad",
+      "label": "Pabellón y alrededores",
+      "regionId": "conjunto",
+      "period": "contemporary",
+      "intro": "Al bajar la mirada aparecen el pabellón, la plaza de acceso, el perímetro y las naves próximas. Sus escalas permiten situar la pieza industrial dentro del Puerto contemporáneo y recuperar la continuidad del paisaje fabril.",
+      "narrative": "Al bajar la mirada aparecen el pabellón, la plaza de acceso, el perímetro y las naves próximas. Sus escalas permiten situar la pieza industrial dentro del Puerto contemporáneo y recuperar la continuidad del paisaje fabril.",
+      "facts": [
+        {
+          "text": "El pabellón de recepción y la vía perimetral son incorporaciones posteriores a la etapa industrial del horno.",
+          "sourceIds": [
+            "ha-boe2024"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La rehabilitación incorporó un espacio de interpretación antes de entrar en la máquina.",
+          "sourceIds": [
+            "ha-europa2012",
+            "ha-casa"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El perfil inclinado del pabellón, el corredor de acceso y el límite del recinto.",
+      "modelNote": "Las huellas urbanas se contrastan con OSM y PNOA. Fachadas de contexto, alturas y mobiliario se aproximan y no reconstruyen la factoría desaparecida.",
+      "sourceIds": [
+        "ha-boe2024",
+        "ha-europa2012",
+        "ha-casa"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual registrado en el modelo del atlas a partir de la localización cartográfica y de planos publicados. Las alturas de referencia del proyecto no equivalen automáticamente a cotas sobre la calle.",
+      "coordinate": [
+        -0.22028406,
+        39.6543457
+      ],
+      "coordinates": [
+        -0.22028406,
+        39.6543457
+      ],
+      "coordinateSourceIds": [
+        "ha-osm",
+        "ha-pnoa",
+        "ha-casa"
+      ],
+      "osmIds": [
+        733110249
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "conjunto",
+      "floor": 0,
+      "order": 19,
+      "fabricStatus": "rehabilitated",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 13,
+      "requiresSection": false,
+      "localTarget": [
+        1.267957523348066,
+        13,
+        6.1961899664765365
+      ]
+    },
+    {
+      "id": "horno-memoria",
+      "title": "Conservar la máquina y recordar el trabajo",
+      "label": "La memoria obrera",
+      "regionId": "memoria",
+      "period": "mixed",
+      "intro": "Termina enlazando los detalles con la historia de la ciudad. El horno conserva una técnica, pero también la memoria de quienes trabajaron en la factoría y de una comunidad formada alrededor de ella.",
+      "narrative": "Termina enlazando los detalles con la historia de la ciudad. El horno conserva una técnica, pero también la memoria de quienes trabajaron en la factoría y de una comunidad formada alrededor de ella.",
+      "facts": [
+        {
+          "text": "El horno nº 2 realizó su última colada el 24 de marzo de 1984.",
+          "sourceIds": [
+            "ha-fundacio"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La restauración recibió un Grand Prix Europa Nostra en 2012 y el monumento fue declarado BIC en 2024.",
+          "sourceIds": [
+            "ha-europa2012",
+            "ha-boe2024"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La relación entre las partes conservadas, las restituidas y el paisaje que las rodea.",
+      "modelNote": "El atlas diferencia la máquina histórica, la intervención patrimonial y la interpretación virtual. La cronología registra las discrepancias de las fuentes en lugar de convertirlas en una fecha única.",
+      "sourceIds": [
+        "ha-fundacio",
+        "ha-europa2012",
+        "ha-boe2024"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco virtual registrado en el modelo del atlas a partir de la localización cartográfica y de planos publicados. Las alturas de referencia del proyecto no equivalen automáticamente a cotas sobre la calle.",
+      "coordinate": [
+        -0.2203074,
+        39.6542918
+      ],
+      "coordinates": [
+        -0.2203074,
+        39.6542918
+      ],
+      "coordinateSourceIds": [
+        "ha-osm",
+        "ha-pnoa",
+        "ha-casa"
+      ],
+      "osmIds": [
+        733110249
+      ],
+      "readingMinutes": 1,
+      "readingLayer": "memoria",
+      "floor": 0,
+      "order": 20,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "elevation": 30,
+      "localTarget": [
+        0,
+        30,
+        0
+      ],
+      "requiresSection": false
+    }
+  ],
+  "regions": [
+    {
+      "id": "conjunto",
+      "name": "El horno y su recinto",
+      "aliases": [],
+      "summary": "Cimentación, accesos, pabellón y relación con el Puerto.",
+      "sourceIds": [
+        "ha-boe2024",
+        "ha-fundacio",
+        "ha-folleto",
+        "ha-casa",
+        "ha-europa2012"
+      ],
+      "stopIds": [
+        "horno-conjunto",
+        "horno-cimentacion",
+        "horno-acceso",
+        "horno-entorno"
+      ],
+      "coordinate": [
+        -0.2203074,
+        39.6542918
+      ]
+    },
+    {
+      "id": "interior",
+      "name": "El vaso y su revestimiento",
+      "aliases": [],
+      "summary": "Crisol, refractario, etalajes y espacio interior.",
+      "sourceIds": [
+        "ha-boe2024",
+        "ha-folleto",
+        "ha-beso2023",
+        "ha-memoria2008"
+      ],
+      "stopIds": [
+        "horno-crisol",
+        "horno-interior",
+        "horno-revestimiento",
+        "horno-etalajes"
+      ],
+      "coordinate": [
+        -0.2203074,
+        39.6542918
+      ]
+    },
+    {
+      "id": "proceso",
+      "name": "Aire, agua y materiales",
+      "aliases": [],
+      "summary": "Toberas, anillo, cuba, refrigeración y gases.",
+      "sourceIds": [
+        "ha-boe2024",
+        "ha-folleto",
+        "ha-fundacio",
+        "ha-beso2023",
+        "ha-casa",
+        "ha-patrif2014"
+      ],
+      "stopIds": [
+        "horno-toberas",
+        "horno-anillo",
+        "horno-cuba",
+        "horno-refrigeracion",
+        "horno-gases"
+      ],
+      "coordinate": [
+        -0.2203074,
+        39.6542918
+      ]
+    },
+    {
+      "id": "estructura",
+      "name": "La torre y la carga",
+      "aliases": [],
+      "summary": "Pasarelas, escaleras, tragante, puentes y skip.",
+      "sourceIds": [
+        "ha-casa",
+        "ha-coacv",
+        "ha-visitas",
+        "ha-folleto",
+        "ha-boe2024",
+        "ha-fundacio"
+      ],
+      "stopIds": [
+        "horno-plataformas",
+        "horno-escaleras",
+        "horno-tragante",
+        "horno-puente42",
+        "horno-puente51",
+        "horno-skip"
+      ],
+      "coordinate": [
+        -0.2203074,
+        39.6542918
+      ]
+    },
+    {
+      "id": "memoria",
+      "name": "El trabajo y la conservación",
+      "aliases": [],
+      "summary": "Historia obrera, rehabilitación y reconocimiento patrimonial.",
+      "sourceIds": [
+        "ha-fundacio",
+        "ha-europa2012",
+        "ha-boe2024"
+      ],
+      "stopIds": [
+        "horno-memoria"
+      ],
+      "coordinate": [
+        -0.2203074,
+        39.6542918
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "ha-boe2024",
+      "title": "Declaración del Alto Horno número 2 como bien de interés cultural",
+      "author": "Generalitat Valenciana · Decreto 26/2024, publicado en el BOE",
+      "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2024-9526",
+      "type": "declaración patrimonial y descripción técnica oficial",
+      "year": 2024,
+      "locator": "Anexo I, apartados 3.1–3.4 y 4.2; BOE de 11 de mayo de 2024, pp. 54157–54166.",
+      "note": "Dimensiones generales, componentes, piezas desaparecidas, adaptación contemporánea y entorno. Las cotas de los puentes están redondeadas respecto al alzado de los arquitectos.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "ha-fundacio",
+      "title": "Horno Alto nº 2",
+      "author": "Fundació de Patrimoni Industrial i Memòria Obrera de Port de Sagunt",
+      "url": "https://www.fundacioportdesagunt.com/horno-alto-2/",
+      "type": "institución gestora · historia y funcionamiento",
+      "year": null,
+      "locator": "El nacimiento; Funcionamiento; Rehabilitación; Instalaciones complementarias.",
+      "note": "Identifica las partes conservadas y las restituidas durante la rehabilitación. La propia web emplea 1963 en su cronología gráfica; el atlas no presenta como unánime la fecha de reencendido de los años sesenta.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "ha-folleto",
+      "title": "Horno Alto nº 2 · folleto técnico",
+      "author": "Fundació de Patrimoni Industrial i Memòria Obrera de Port de Sagunt",
+      "url": "https://www.fundacioportdesagunt.com/wp-content/uploads/2025/12/hornoalto_no2-1.pdf",
+      "type": "material didáctico de la institución gestora",
+      "year": null,
+      "locator": "PDF, pp. 2–5: historia, instalaciones auxiliares, nomenclatura y sección del proceso; páginas posteriores: historia obrera e interpretación.",
+      "note": "La fecha del directorio de publicación no equivale a la fecha de redacción. El dibujo explica el funcionamiento histórico; no certifica la presencia actual de todas las instalaciones representadas.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "ha-memoria2008",
+      "title": "Rehabilitación del Horno Alto nº 2 de Sagunto · proyecto modificado, julio de 2008",
+      "author": "Carmel Gradolí, Arturo Sanz y Luis Francisco Herrero",
+      "url": "https://www.contrastapips.com/IHACM/IBP/Port/Memoria%20rehab%20AHn2.pdf",
+      "type": "memoria de los arquitectos de la rehabilitación",
+      "year": 2008,
+      "locator": "Memoria impresa pp. 3–10 (PDF pp. 5–12); anexo 10, reportaje fotográfico (PDF pp. 187–195).",
+      "note": "Distingue obras ya ejecutadas y propuestas pendientes en 2008. Documenta conservación del refractario, apertura y protección interior, plataforma de trabajo, pabellón y acondicionamiento del recinto. No es un levantamiento final de obra.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "ha-casa",
+      "title": "Restauración del Alto Horno número 2 · fotografías, planta y sección",
+      "author": "La Casa de la Arquitectura · documentación aportada por COACV; planos de Gradolí & Sanz y fotografías de Mariela Apollonio",
+      "url": "https://lacasadelaarquitectura.es/recurso/restauracion-del-alto-horno-numero-2/309b8639-4a25-47c3-8bb1-0a6c1b5f182e",
+      "type": "archivo público de arquitectura · documentación de los autores",
+      "year": 2011,
+      "locator": "Galería de imágenes; Planos y bocetos: sección por el eje del puente grúa y la boca de colada, y planta del recinto.",
+      "note": "La sección identifica niveles de referencia del proyecto: semisótano +3,70; tragante y skip +36,50; puentes +42,50 y +51,40; plataforma de válvulas +64,20. Su origen vertical no se confunde con una altura medida desde la calle. Fotografías usadas como referencia visual, sin redistribuirlas como texturas.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "ha-coacv",
+      "title": "Rehabilitación del Horno Alto número 2 de Sagunto",
+      "author": "Carmel Gradolí, Luis Francisco Herrero y Arturo Sanz · Premios COACV 2013",
+      "url": "https://www.coacv.org/es/cultura/premios-coacv/2013/arquitectura/rehabilitacion-del-horno-alto-numero-2-de-sagunto/",
+      "type": "relato de los autores de la intervención",
+      "year": 2013,
+      "locator": "Extracto del texto de los autores, tras la ficha de técnicos y promotores.",
+      "note": "Explica pérdidas tras el desmantelamiento, cambio del proyecto de conservación y objetivo de recuperar la memoria industrial mediante una intervención contemporánea reconocible.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "ha-beso2023",
+      "title": "El Alto Horno número 2 de la siderurgia de Puerto de Sagunto. Valoración patrimonial de un elemento industrial",
+      "author": "Adrià Besó Ros · Universitat de València",
+      "url": "https://dialnet.unirioja.es/descarga/articulo/9203735.pdf",
+      "type": "investigación patrimonial · Santander. Estudios de Patrimonio, 6",
+      "year": 2023,
+      "locator": "pp. 91–124, DOI 10.22429/Euc2023.sep.06.02; estructura pp. 101–102; restauración pp. 116–119; fig. 11, interior fotografiado en 2022.",
+      "note": "Aporta análisis patrimonial, fotografías propias y una imagen del interior facilitada por la Fundación. Las diferencias de cronología con otras fuentes se conservan en la documentación de la escena.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "ha-europa2012",
+      "title": "Number 2 Blast Furnace · Grand Prix 2012",
+      "author": "European Heritage Awards / Europa Nostra Awards",
+      "url": "https://www.europeanheritageawards.eu/winners/number-2-blast-furnace/",
+      "type": "institución que otorgó el premio",
+      "year": 2012,
+      "locator": "Ficha del premio de 20 de marzo de 2012; fases de la restauración y valoración del jurado.",
+      "note": "Confirma el Grand Prix y las fases 1998–2000, 2007 y 2009–2011.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "ha-visitas",
+      "title": "Visita Forn Alt Núm. 2 · información y condiciones de la visita",
+      "author": "FCV Patrimoni Industrial i Memòria Obrera · canal oficial de reservas",
+      "url": "https://www.eventbrite.es/e/entradas-visita-forn-alt-num-2-divendres-i-dissabtes-valencia-925675509367",
+      "type": "información del organizador de las visitas presenciales",
+      "year": null,
+      "locator": "Información y condiciones de la visita, consultadas el 20 de noviembre de 2026.",
+      "note": "Indica que las plataformas superiores no son visitables. Los puntos elevados del atlas son vistas virtuales; horarios y acceso presencial deben consultarse en el canal de la Fundación.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "ha-patrif2014",
+      "title": "10 imágenes sobre: Horno Alto Número 2 (Puerto de Sagunto)",
+      "author": "Lorenzo Sevilla Hurtado · PATRIF, Sociedad de Ingeniería de Fabricación",
+      "url": "https://sif-mes.org/patrif/2015/01/05/10-imagenes-sobre-horno-alto-numero-2-puerto-de-sagunto/",
+      "type": "reportaje de observación directa con fecha de toma",
+      "year": 2015,
+      "locator": "Fotografías tomadas el 26 de diciembre de 2014; fotos 4 y 10, montacargas y cimentación; ficha publicada el 5 de enero de 2015.",
+      "note": "Registro fotográfico fechado. Se usa para estudiar el estado visible y contrastar cronologías; no se emplean sus coordenadas generales para registrar el modelo.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "ha-osm",
+      "title": "OpenStreetMap · Alto Horno nº 2 y entorno",
+      "author": "Colaboradores de OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/733110249",
+      "type": "cartografía colaborativa",
+      "year": null,
+      "locator": "Elemento 733110249 y huellas del recinto en los datos cartográficos del atlas.",
+      "note": "Referencia horizontal del conjunto. No proporciona la posición medida de cada parada ni el alzado de los equipos.",
+      "accessed": "2026-11-20"
+    },
+    {
+      "id": "ha-pnoa",
+      "title": "PNOA · Plan Nacional de Ortofotografía Aérea",
+      "author": "Instituto Geográfico Nacional / Centro Nacional de Información Geográfica",
+      "url": "https://pnoa.ign.es/",
+      "type": "ortofotografía oficial",
+      "year": null,
+      "locator": "Ortofoto de máxima actualidad del entorno del Alto Horno nº 2 consultada en esta iteración.",
+      "note": "Contraste de recinto, calles, huellas próximas y orientación. La fecha de consulta no equivale a la fecha de vuelo.",
+      "accessed": "2026-11-20"
+    }
+  ],
+  "timeline": [
+    {
+      "id": "ha-t-origen",
+      "date": "1900–1917",
+      "title": "El origen de la ciudad industrial",
+      "text": "El ferrocarril minero, el puerto y la creación de la compañía siderúrgica articularon un nuevo núcleo urbano junto al mar.",
+      "sourceIds": [
+        "ha-boe2024",
+        "ha-beso2023"
+      ],
+      "period": "industrial",
+      "confidence": "documented",
+      "stopId": "horno-memoria"
+    },
+    {
+      "id": "ha-t-construccion",
+      "date": "1922–1926",
+      "title": "Se construye y entra en producción",
+      "text": "Las obras del horno nº 2 comenzaron en 1922. En 1926 se inició su etapa productiva; la Fundación fecha la primera colada el 26 de junio.",
+      "sourceIds": [
+        "ha-fundacio"
+      ],
+      "period": "industrial",
+      "confidence": "documented",
+      "stopId": "horno-conjunto"
+    },
+    {
+      "id": "ha-t-interrupciones",
+      "date": "Años treinta–1941",
+      "title": "Parada y reactivación",
+      "text": "La crisis de los años treinta interrumpió su actividad. El horno volvió a producir en 1941. Las fuentes no coinciden en el año exacto de la parada anterior.",
+      "sourceIds": [
+        "ha-fundacio",
+        "ha-beso2023"
+      ],
+      "period": "industrial",
+      "confidence": "disputed",
+      "stopId": "horno-memoria"
+    },
+    {
+      "id": "ha-t-reconstruccion",
+      "date": "Años sesenta",
+      "title": "La forma del horno conservado",
+      "text": "La sustitución iniciada en 1961 modificó tipo, dimensiones y capacidad. Las fuentes sitúan su reencendido en 1963, 1964 o 1965; se mantiene explícita esa discrepancia.",
+      "sourceIds": [
+        "ha-folleto",
+        "ha-beso2023",
+        "ha-boe2024"
+      ],
+      "period": "industrial",
+      "confidence": "disputed",
+      "stopId": "horno-cuba"
+    },
+    {
+      "id": "ha-t-cierre",
+      "date": "24 de marzo de 1984",
+      "title": "La última colada del nº 2",
+      "text": "Esta fecha corresponde al apagado de este horno. El cierre final de la cabecera siderúrgica, con el horno nº 3, ocurrió más tarde en 1984.",
+      "sourceIds": [
+        "ha-fundacio",
+        "ha-beso2023"
+      ],
+      "period": "industrial",
+      "confidence": "documented",
+      "stopId": "horno-crisol"
+    },
+    {
+      "id": "ha-t-rehabilitacion",
+      "date": "1998–2011",
+      "title": "Consolidar, restituir y explicar",
+      "text": "La intervención se desarrolló en varias fases. El proyecto conservó el vaso, repuso componentes de su silueta y adaptó el recinto para la interpretación.",
+      "sourceIds": [
+        "ha-europa2012",
+        "ha-coacv"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "horno-acceso"
+    },
+    {
+      "id": "ha-t-premio",
+      "date": "2012",
+      "title": "Reconocimiento europeo",
+      "text": "La restauración recibió uno de los Grand Prix de los premios de patrimonio de la Unión Europea / Europa Nostra.",
+      "sourceIds": [
+        "ha-europa2012"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "horno-entorno"
+    },
+    {
+      "id": "ha-t-bic",
+      "date": "2024",
+      "title": "Protección como monumento",
+      "text": "El Consell declaró el Alto Horno nº 2 bien de interés cultural, reconociendo el monumento, su entorno y el valor de la memoria industrial.",
+      "sourceIds": [
+        "ha-boe2024"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "horno-memoria"
+    }
+  ],
+  "modelRegistration": {
+    "status": "registered",
+    "coordinateOrder": "longitude,latitude",
+    "anchor": [
+      -0.2203074,
+      39.6542918
+    ],
+    "verticalReference": "Cotas del proyecto y altura exterior oficial conservadas como referencias distintas; geometría final registrada por el constructor del modelo.",
+    "precision": "approximate",
+    "coordinates": "Registered from the implemented industrial model and contemporary cartography; component positions and unmeasured heights are interpretive.",
+    "provisionalCoordinates": false
+  },
+  "materialsModeLabel": "Acero y materiales"
+}

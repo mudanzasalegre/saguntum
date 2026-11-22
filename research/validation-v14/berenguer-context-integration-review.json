@@ -1,0 +1,34 @@
+{
+  "scope": "Read-only constructor integration audit, plus execution of the source-claim helper in validate_berenguer_context.mjs",
+  "reviewedFiles": [
+    "dist/js/app.js",
+    "dist/js/heritage-sacred.js",
+    "dist/js/heritage-civic.js",
+    "dist/js/berenguer.js"
+  ],
+  "findings": [],
+  "verifiedBySourceInspection": [
+    "app passes berenguerContextData to sacred and civic constructors",
+    "Sacred applies withoutBerenguerClaims to the Santa Maria context before construction",
+    "Civic applies withoutBerenguerClaims to Juderia before construction",
+    "Civic passes identical Berenguer context data to the core and the new surroundings",
+    "Civic passes visitData to the new context for a matching legend colour",
+    "Context source JSONs remain immutable",
+    "Core returns all six cadastral parts, OSM 733321157 and the retained southern service part through excludedBuildingIds; internal paths 1419209842–1419209846 are returned through excludedRoadIds"
+  ],
+  "runtimeHelperVerification": {
+    "checks": 151,
+    "transferredParts": {
+      "santa-maria": [
+        "cat-3558201YJ3935G_part1-0",
+        "cat-3558201YJ3935G_part2-0"
+      ],
+      "juderia": [
+        "cat-3558202YJ3935G_part4-0"
+      ]
+    },
+    "retiredRoads": []
+  },
+  "fullSceneVerification": "Reserved for the parent integration and camera QA. This audit does not claim an executed full scene.",
+  "integrationExpectation": "Confirmed by final core source inspection: coreExcludedBuildingIds propagate through model.excludedBuildingIds and are collected by Civic."
+}

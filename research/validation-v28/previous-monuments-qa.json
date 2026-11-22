@@ -1,0 +1,66 @@
+{
+  "pass": true,
+  "baseline": "db144b1307c565d7d61ab8cbddf1641ade0b755c",
+  "checks": [
+    {
+      "label": "port-workers.json preserves every previous place except the requested Economato record",
+      "pass": true
+    },
+    {
+      "label": "port-garden.json preserves every previous place except the requested Economato record",
+      "pass": true
+    },
+    {
+      "label": "port-industrial.json preserves every previous place except the requested Economato record",
+      "pass": true
+    },
+    {
+      "label": "horno context unchanged",
+      "pass": true
+    },
+    {
+      "label": "talleres context unchanged",
+      "pass": true
+    },
+    {
+      "label": "museo-industrial context unchanged",
+      "pass": true
+    },
+    {
+      "label": "casino context unchanged",
+      "pass": true
+    },
+    {
+      "label": "begona context unchanged",
+      "pass": true
+    },
+    {
+      "label": "dist/js/port-garden.js preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "dist/js/begona.js preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "dist/js/casino.js preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "dist/js/gerencia.js preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "dist/js/museo-industrial.js preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "dist/js/horno.js preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "dist/js/talleres.js preserved exactly",
+      "pass": true
+    }
+  ]
+}

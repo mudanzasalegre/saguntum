@@ -1,0 +1,4737 @@
+{
+  "pass": true,
+  "buildMs": 1116.4834870000004,
+  "stats": {
+    "perimeterSource": "OpenStreetMap, polygon in cartography.json",
+    "elevationSource": "Supplied rendered terrain sampler; architectural heights are visual estimates",
+    "perimeterVertices": 272,
+    "perimeterLengthM": 2225.205128985826,
+    "wallWayCount": 61,
+    "wallLengthM": 4156.41193123995,
+    "duplicateSegmentsSkipped": 273,
+    "outsideSegmentsSkipped": 122,
+    "gates": [
+      {
+        "id": "acceso",
+        "coordinates": [
+          -0.277222,
+          39.6759601
+        ],
+        "width": 3.3,
+        "height": 4.65,
+        "depth": 3.7,
+        "opening": true,
+        "planConfidence": "OSM path / wall intersection",
+        "elevationConfidence": "interpretive"
+      },
+      {
+        "id": "puerta-almenara",
+        "coordinates": [
+          -0.2762665022,
+          39.676214945
+        ],
+        "width": 3.15,
+        "height": 5.2,
+        "depth": 6.4,
+        "opening": true,
+        "form": "pointed arch, two trefoil oculi, folded timber leaves",
+        "planConfidence": "OSM path / wall intersection",
+        "elevationConfidence": "photographic form; interpreted dimensions"
+      },
+      {
+        "id": "puerta-san-fernando",
+        "coordinates": [
+          -0.2780262,
+          39.6759438
+        ],
+        "width": 3.05,
+        "height": 4.35,
+        "depth": 3.5,
+        "opening": true,
+        "planConfidence": "OSM path / wall intersection",
+        "elevationConfidence": "interpretive"
+      }
+    ],
+    "routeSegments": 1919,
+    "routeLengthM": 2025.3509805935398,
+    "mappedBuildings": 10,
+    "romanWallWays": 24,
+    "periods": [
+      "ancient",
+      "medieval",
+      "modern",
+      "unknown"
+    ],
+    "interpretiveDimensions": true,
+    "undergroundReconstruction": false,
+    "sourceKeys": [
+      "plan-director-2000",
+      "cisterna-norte-1984",
+      "fortmed-2020",
+      "civera-cisternas-2007",
+      "osm-castillo",
+      "templo-aranegui-1991",
+      "seranco-2019"
+    ],
+    "detail": "full",
+    "triangles": 157516,
+    "meshes": 102
+  },
+  "errors": [],
+  "checks": [
+    {
+      "pass": true,
+      "label": "deferred construction preserves the point reference"
+    },
+    {
+      "pass": true,
+      "label": "deferred builder is idempotent"
+    },
+    {
+      "pass": true,
+      "label": "all 18 documented stops have model focuses"
+    },
+    {
+      "pass": true,
+      "label": "seven precincts have non-empty geometry bounds"
+    },
+    {
+      "pass": true,
+      "label": "model source identifiers resolve to published bibliography"
+    },
+    {
+      "pass": true,
+      "label": "mapped perimeter is not extruded twice"
+    },
+    {
+      "pass": true,
+      "label": "24 individually identified forum wall traces"
+    },
+    {
+      "pass": true,
+      "label": "all castle roads and building footprints can be excluded from context"
+    },
+    {
+      "pass": true,
+      "label": "all geometry attributes are finite"
+    },
+    {
+      "pass": true,
+      "label": "all mapped walking surfaces face upward"
+    },
+    {
+      "pass": true,
+      "label": "covered cisterns are not portrayed as excavated underground interiors"
+    },
+    {
+      "pass": true,
+      "label": "south cistern measurements are kept separate from northern cistern"
+    },
+    {
+      "pass": true,
+      "label": "northern and southern cistern focus locations remain distinct"
+    },
+    {
+      "pass": true,
+      "label": "forum/temple floor vertices follow final terrain sampler"
+    },
+    {
+      "pass": true,
+      "label": "floor and route triangle centers remain above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "mapped present roofs are supported above their maximum footprint ground"
+    },
+    {
+      "pass": true,
+      "label": "acceso open portal rays cross the full wall depth"
+    },
+    {
+      "pass": true,
+      "label": "puerta-almenara open portal rays cross the full wall depth"
+    },
+    {
+      "pass": true,
+      "label": "Almenara preserves two open trefoil oculi through the full wall depth"
+    },
+    {
+      "pass": true,
+      "label": "puerta-san-fernando open portal rays cross the full wall depth"
+    },
+    {
+      "pass": true,
+      "label": "select focus conjunto"
+    },
+    {
+      "pass": true,
+      "label": "select focus acceso"
+    },
+    {
+      "pass": true,
+      "label": "select focus foro"
+    },
+    {
+      "pass": true,
+      "label": "select focus templo"
+    },
+    {
+      "pass": true,
+      "label": "select focus curia"
+    },
+    {
+      "pass": true,
+      "label": "select focus basilica"
+    },
+    {
+      "pass": true,
+      "label": "select focus cisterna-foro"
+    },
+    {
+      "pass": true,
+      "label": "select focus cisterna-norte"
+    },
+    {
+      "pass": true,
+      "label": "select focus inscripcion"
+    },
+    {
+      "pass": true,
+      "label": "select focus puerta-almenara"
+    },
+    {
+      "pass": true,
+      "label": "select focus almenara"
+    },
+    {
+      "pass": true,
+      "label": "select focus conejera"
+    },
+    {
+      "pass": true,
+      "label": "select focus puerta-san-fernando"
+    },
+    {
+      "pass": true,
+      "label": "select focus san-fernando"
+    },
+    {
+      "pass": true,
+      "label": "select focus antiquarium"
+    },
+    {
+      "pass": true,
+      "label": "select focus estudiantes"
+    },
+    {
+      "pass": true,
+      "label": "select focus ciudadela"
+    },
+    {
+      "pass": true,
+      "label": "select focus dos-mayo"
+    },
+    {
+      "pass": true,
+      "label": "all 18 selections and period readings restore original materials"
+    },
+    {
+      "pass": true,
+      "label": "Palancia context retains compact castle road/building plans"
+    },
+    {
+      "pass": true,
+      "label": "castle instances never share disposable materials"
+    },
+    {
+      "pass": true,
+      "label": "castle instances never share disposable texture cache"
+    },
+    {
+      "pass": true,
+      "label": "Roman theatre function remains byte-for-byte unchanged"
+    },
+    {
+      "pass": true,
+      "label": "overview 1363 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "overview 1363 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "overview 1363 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "overview 1363 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "overview 1363 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "conjunto 1363 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "conjunto 1363 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "conjunto 1363 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "conjunto 1363 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "conjunto 1363 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "acceso 1363 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "acceso 1363 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "acceso 1363 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "acceso 1363 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "acceso 1363 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "foro 1363 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "foro 1363 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "foro 1363 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "foro 1363 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "foro 1363 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "templo 1363 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "templo 1363 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "templo 1363 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "templo 1363 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "templo 1363 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "curia 1363 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "curia 1363 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "curia 1363 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "curia 1363 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "curia 1363 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "basilica 1363 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "basilica 1363 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "basilica 1363 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "basilica 1363 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "basilica 1363 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "cisterna-foro 1363 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "cisterna-foro 1363 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "cisterna-foro 1363 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "cisterna-foro 1363 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "cisterna-foro 1363 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "cisterna-norte 1363 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "cisterna-norte 1363 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "cisterna-norte 1363 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "cisterna-norte 1363 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "cisterna-norte 1363 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "inscripcion 1363 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "inscripcion 1363 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "inscripcion 1363 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "inscripcion 1363 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "inscripcion 1363 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "puerta-almenara 1363 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "puerta-almenara 1363 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "puerta-almenara 1363 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "puerta-almenara 1363 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "puerta-almenara 1363 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "almenara 1363 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "almenara 1363 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "almenara 1363 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "almenara 1363 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "almenara 1363 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "conejera 1363 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "conejera 1363 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "conejera 1363 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "conejera 1363 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "conejera 1363 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "puerta-san-fernando 1363 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "puerta-san-fernando 1363 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "puerta-san-fernando 1363 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "puerta-san-fernando 1363 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "puerta-san-fernando 1363 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "san-fernando 1363 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "san-fernando 1363 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "san-fernando 1363 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "san-fernando 1363 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "san-fernando 1363 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "antiquarium 1363 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "antiquarium 1363 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "antiquarium 1363 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "antiquarium 1363 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "antiquarium 1363 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "estudiantes 1363 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "estudiantes 1363 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "estudiantes 1363 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "estudiantes 1363 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "estudiantes 1363 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "ciudadela 1363 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "ciudadela 1363 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "ciudadela 1363 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "ciudadela 1363 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "ciudadela 1363 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "dos-mayo 1363 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "dos-mayo 1363 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "dos-mayo 1363 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "dos-mayo 1363 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "dos-mayo 1363 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "overview 390 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "overview 390 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "overview 390 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "overview 390 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "overview 390 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "conjunto 390 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "conjunto 390 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "conjunto 390 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "conjunto 390 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "conjunto 390 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "acceso 390 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "acceso 390 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "acceso 390 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "acceso 390 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "acceso 390 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "foro 390 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "foro 390 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "foro 390 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "foro 390 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "foro 390 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "templo 390 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "templo 390 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "templo 390 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "templo 390 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "templo 390 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "curia 390 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "curia 390 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "curia 390 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "curia 390 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "curia 390 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "basilica 390 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "basilica 390 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "basilica 390 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "basilica 390 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "basilica 390 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "cisterna-foro 390 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "cisterna-foro 390 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "cisterna-foro 390 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "cisterna-foro 390 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "cisterna-foro 390 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "cisterna-norte 390 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "cisterna-norte 390 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "cisterna-norte 390 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "cisterna-norte 390 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "cisterna-norte 390 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "inscripcion 390 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "inscripcion 390 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "inscripcion 390 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "inscripcion 390 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "inscripcion 390 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "puerta-almenara 390 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "puerta-almenara 390 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "puerta-almenara 390 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "puerta-almenara 390 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "puerta-almenara 390 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "almenara 390 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "almenara 390 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "almenara 390 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "almenara 390 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "almenara 390 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "conejera 390 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "conejera 390 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "conejera 390 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "conejera 390 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "conejera 390 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "puerta-san-fernando 390 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "puerta-san-fernando 390 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "puerta-san-fernando 390 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "puerta-san-fernando 390 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "puerta-san-fernando 390 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "san-fernando 390 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "san-fernando 390 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "san-fernando 390 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "san-fernando 390 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "san-fernando 390 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "antiquarium 390 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "antiquarium 390 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "antiquarium 390 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "antiquarium 390 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "antiquarium 390 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "estudiantes 390 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "estudiantes 390 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "estudiantes 390 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "estudiantes 390 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "estudiantes 390 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "ciudadela 390 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "ciudadela 390 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "ciudadela 390 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "ciudadela 390 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "ciudadela 390 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "dos-mayo 390 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "dos-mayo 390 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "dos-mayo 390 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "dos-mayo 390 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "dos-mayo 390 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "overview 844 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "overview 844 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "overview 844 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "overview 844 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "overview 844 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "conjunto 844 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "conjunto 844 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "conjunto 844 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "conjunto 844 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "conjunto 844 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "acceso 844 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "acceso 844 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "acceso 844 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "acceso 844 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "acceso 844 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "foro 844 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "foro 844 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "foro 844 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "foro 844 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "foro 844 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "templo 844 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "templo 844 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "templo 844 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "templo 844 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "templo 844 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "curia 844 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "curia 844 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "curia 844 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "curia 844 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "curia 844 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "basilica 844 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "basilica 844 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "basilica 844 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "basilica 844 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "basilica 844 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "cisterna-foro 844 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "cisterna-foro 844 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "cisterna-foro 844 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "cisterna-foro 844 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "cisterna-foro 844 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "cisterna-norte 844 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "cisterna-norte 844 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "cisterna-norte 844 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "cisterna-norte 844 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "cisterna-norte 844 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "inscripcion 844 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "inscripcion 844 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "inscripcion 844 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "inscripcion 844 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "inscripcion 844 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "puerta-almenara 844 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "puerta-almenara 844 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "puerta-almenara 844 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "puerta-almenara 844 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "puerta-almenara 844 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "almenara 844 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "almenara 844 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "almenara 844 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "almenara 844 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "almenara 844 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "conejera 844 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "conejera 844 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "conejera 844 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "conejera 844 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "conejera 844 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "puerta-san-fernando 844 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "puerta-san-fernando 844 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "puerta-san-fernando 844 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "puerta-san-fernando 844 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "puerta-san-fernando 844 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "san-fernando 844 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "san-fernando 844 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "san-fernando 844 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "san-fernando 844 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "san-fernando 844 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "antiquarium 844 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "antiquarium 844 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "antiquarium 844 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "antiquarium 844 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "antiquarium 844 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "estudiantes 844 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "estudiantes 844 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "estudiantes 844 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "estudiantes 844 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "estudiantes 844 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "ciudadela 844 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "ciudadela 844 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "ciudadela 844 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "ciudadela 844 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "ciudadela 844 near target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "dos-mayo 844 full camera finite"
+    },
+    {
+      "pass": true,
+      "label": "dos-mayo 844 full view fits available UI frame"
+    },
+    {
+      "pass": true,
+      "label": "dos-mayo 844 full target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "dos-mayo 844 near camera finite"
+    },
+    {
+      "pass": true,
+      "label": "dos-mayo 844 near target is not hidden by terrain"
+    }
+  ],
+  "gateResults": [
+    {
+      "id": "acceso",
+      "total": 9,
+      "clear": 9,
+      "hits": [],
+      "openOculi": 0
+    },
+    {
+      "id": "puerta-almenara",
+      "total": 9,
+      "clear": 9,
+      "hits": [],
+      "openOculi": 2
+    },
+    {
+      "id": "puerta-san-fernando",
+      "total": 9,
+      "clear": 9,
+      "hits": [],
+      "openOculi": 0
+    }
+  ],
+  "terrainComparisons": {
+    "maximumVertexError": 1.3072876114961218e-14,
+    "minimumCentroidClearance": 0.036783078700921124,
+    "buriedCentroids": 0,
+    "triangles": 24752
+  },
+  "cameras": [
+    {
+      "id": "overview",
+      "near": false,
+      "width": 1363,
+      "height": 936,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        599.2727165769085,
+        989.7635651291066,
+        -776.9818764561098
+      ],
+      "target": [
+        -110.16581726074219,
+        138.43732452392578,
+        297.3107604980469
+      ],
+      "frame": {
+        "left": 424,
+        "right": 1283,
+        "top": 108,
+        "bottom": 856,
+        "width": 859,
+        "height": 748,
+        "offsetX": -172,
+        "offsetY": -14
+      }
+    },
+    {
+      "id": "overview",
+      "near": true,
+      "width": 1363,
+      "height": 936,
+      "escapedCorners": 8,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        109.83418273925781,
+        398.4373245239258,
+        -32.689239501953125
+      ],
+      "target": [
+        -110.16581726074219,
+        138.43732452392578,
+        297.3107604980469
+      ],
+      "frame": {
+        "left": 424,
+        "right": 1283,
+        "top": 108,
+        "bottom": 856,
+        "width": 859,
+        "height": 748,
+        "offsetX": -172,
+        "offsetY": -14
+      }
+    },
+    {
+      "id": "conjunto",
+      "near": false,
+      "width": 1363,
+      "height": 936,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        207.7970137075689,
+        1272.0439392805129,
+        1265.023724314646
+      ],
+      "target": [
+        -110.16581726074219,
+        138.43732452392578,
+        297.3107604980469
+      ],
+      "frame": {
+        "left": 424,
+        "right": 1283,
+        "top": 108,
+        "bottom": 856,
+        "width": 859,
+        "height": 748,
+        "offsetX": -172,
+        "offsetY": -14
+      }
+    },
+    {
+      "id": "conjunto",
+      "near": true,
+      "width": 1363,
+      "height": 936,
+      "escapedCorners": 8,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        38.486250875376896,
+        668.4142630961763,
+        749.7300983036266
+      ],
+      "target": [
+        -110.16581726074219,
+        138.43732452392578,
+        297.3107604980469
+      ],
+      "frame": {
+        "left": 424,
+        "right": 1283,
+        "top": 108,
+        "bottom": 856,
+        "width": 859,
+        "height": 748,
+        "offsetX": -172,
+        "offsetY": -14
+      }
+    },
+    {
+      "id": "acceso",
+      "near": false,
+      "width": 1363,
+      "height": 936,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        49.999873648503524,
+        145.04376345892072,
+        323.476629879878
+      ],
+      "target": [
+        67.2553577932,
+        130.6641933383403,
+        337.8562000004584
+      ],
+      "frame": {
+        "left": 424,
+        "right": 1283,
+        "top": 108,
+        "bottom": 856,
+        "width": 859,
+        "height": 748,
+        "offsetX": -172,
+        "offsetY": -14
+      }
+    },
+    {
+      "id": "acceso",
+      "near": true,
+      "width": 1363,
+      "height": 936,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        49.255357793200005,
+        145.6641933383403,
+        317.8562000004584
+      ],
+      "target": [
+        67.2553577932,
+        130.6641933383403,
+        337.8562000004584
+      ],
+      "frame": {
+        "left": 424,
+        "right": 1283,
+        "top": 108,
+        "bottom": 856,
+        "width": 859,
+        "height": 748,
+        "offsetX": -172,
+        "offsetY": -14
+      }
+    },
+    {
+      "id": "foro",
+      "near": false,
+      "width": 1363,
+      "height": 936,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        162.8175345584163,
+        279.22609958485566,
+        459.2239689471766
+      ],
+      "target": [
+        121.65937333291956,
+        132.4883073896064,
+        333.96000000001266
+      ],
+      "frame": {
+        "left": 424,
+        "right": 1283,
+        "top": 108,
+        "bottom": 856,
+        "width": 859,
+        "height": 748,
+        "offsetX": -172,
+        "offsetY": -14
+      }
+    },
+    {
+      "id": "foro",
+      "near": true,
+      "width": 1363,
+      "height": 936,
+      "escapedCorners": 7,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        138.64361900701272,
+        193.04083544506898,
+        385.65118248638316
+      ],
+      "target": [
+        121.65937333291956,
+        132.4883073896064,
+        333.96000000001266
+      ],
+      "frame": {
+        "left": 424,
+        "right": 1283,
+        "top": 108,
+        "bottom": 856,
+        "width": 859,
+        "height": 748,
+        "offsetX": -172,
+        "offsetY": -14
+      }
+    },
+    {
+      "id": "templo",
+      "near": false,
+      "width": 1363,
+      "height": 936,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        124.29872382443075,
+        170.78278708734996,
+        332.0946304612793
+      ],
+      "target": [
+        111.37829953013708,
+        124.71866569030296,
+        292.7716000003855
+      ],
+      "frame": {
+        "left": 424,
+        "right": 1283,
+        "top": 108,
+        "bottom": 856,
+        "width": 859,
+        "height": 748,
+        "offsetX": -172,
+        "offsetY": -14
+      }
+    },
+    {
+      "id": "templo",
+      "near": true,
+      "width": 1363,
+      "height": 936,
+      "escapedCorners": 7,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        116.37300901951069,
+        142.52589082633057,
+        307.972889750653
+      ],
+      "target": [
+        111.37829953013708,
+        124.71866569030296,
+        292.7716000003855
+      ],
+      "frame": {
+        "left": 424,
+        "right": 1283,
+        "top": 108,
+        "bottom": 856,
+        "width": 859,
+        "height": 748,
+        "offsetX": -172,
+        "offsetY": -14
+      }
+    },
+    {
+      "id": "curia",
+      "near": false,
+      "width": 1363,
+      "height": 936,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        147.65694245219885,
+        179.76065537834535,
+        333.8950556784805
+      ],
+      "target": [
+        134.51071558639526,
+        132.89149872634994,
+        293.88479999994786
+      ],
+      "frame": {
+        "left": 424,
+        "right": 1283,
+        "top": 108,
+        "bottom": 856,
+        "width": 859,
+        "height": 748,
+        "offsetX": -172,
+        "offsetY": -14
+      }
+    },
+    {
+      "id": "curia",
+      "near": true,
+      "width": 1363,
+      "height": 936,
+      "escapedCorners": 7,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        139.78895879903862,
+        151.7095832236002,
+        309.9490184732103
+      ],
+      "target": [
+        134.51071558639526,
+        132.89149872634994,
+        293.88479999994786
+      ],
+      "frame": {
+        "left": 424,
+        "right": 1283,
+        "top": 108,
+        "bottom": 856,
+        "width": 859,
+        "height": 748,
+        "offsetX": -172,
+        "offsetY": -14
+      }
+    },
+    {
+      "id": "basilica",
+      "near": false,
+      "width": 1363,
+      "height": 936,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        46.41864398711794,
+        206.39531119095952,
+        392.177232728288
+      ],
+      "target": [
+        89.95939577434423,
+        128.19967532818578,
+        340.6392000005508
+      ],
+      "frame": {
+        "left": 424,
+        "right": 1283,
+        "top": 108,
+        "bottom": 856,
+        "width": 859,
+        "height": 748,
+        "offsetX": -172,
+        "offsetY": -14
+      }
+    },
+    {
+      "id": "basilica",
+      "near": true,
+      "width": 1363,
+      "height": 936,
+      "escapedCorners": 7,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        75.98353247499821,
+        153.29918492701128,
+        357.18205859977667
+      ],
+      "target": [
+        89.95939577434423,
+        128.19967532818578,
+        340.6392000005508
+      ],
+      "frame": {
+        "left": 424,
+        "right": 1283,
+        "top": 108,
+        "bottom": 856,
+        "width": 859,
+        "height": 748,
+        "offsetX": -172,
+        "offsetY": -14
+      }
+    },
+    {
+      "id": "cisterna-foro",
+      "near": false,
+      "width": 1363,
+      "height": 936,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        146.4826449871895,
+        225.93678486012652,
+        458.1389250799756
+      ],
+      "target": [
+        119.94586103245423,
+        131.32738119541816,
+        377.3748000003465
+      ],
+      "frame": {
+        "left": 424,
+        "right": 1283,
+        "top": 108,
+        "bottom": 856,
+        "width": 859,
+        "height": 748,
+        "offsetX": -172,
+        "offsetY": -14
+      }
+    },
+    {
+      "id": "cisterna-foro",
+      "near": true,
+      "width": 1363,
+      "height": 936,
+      "escapedCorners": 5,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        130.63917921860366,
+        169.45138516342914,
+        409.91968143645346
+      ],
+      "target": [
+        119.94586103245423,
+        131.32738119541816,
+        377.3748000003465
+      ],
+      "frame": {
+        "left": 424,
+        "right": 1283,
+        "top": 108,
+        "bottom": 856,
+        "width": 859,
+        "height": 748,
+        "offsetX": -172,
+        "offsetY": -14
+      }
+    },
+    {
+      "id": "cisterna-norte",
+      "near": false,
+      "width": 1363,
+      "height": 936,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        134.46681083290775,
+        205.6559941870222,
+        356.36178222567116
+      ],
+      "target": [
+        111.37829953013708,
+        123.34043215105719,
+        286.0923999998474
+      ],
+      "frame": {
+        "left": 424,
+        "right": 1283,
+        "top": 108,
+        "bottom": 856,
+        "width": 859,
+        "height": 748,
+        "offsetX": -172,
+        "offsetY": -14
+      }
+    },
+    {
+      "id": "cisterna-norte",
+      "near": true,
+      "width": 1363,
+      "height": 936,
+      "escapedCorners": 7,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        120.17850196379534,
+        154.71506691453445,
+        312.8756247979377
+      ],
+      "target": [
+        111.37829953013708,
+        123.34043215105719,
+        286.0923999998474
+      ],
+      "frame": {
+        "left": 424,
+        "right": 1283,
+        "top": 108,
+        "bottom": 856,
+        "width": 859,
+        "height": 748,
+        "offsetX": -172,
+        "offsetY": -14
+      }
+    },
+    {
+      "id": "inscripcion",
+      "near": false,
+      "width": 1363,
+      "height": 936,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        142.28420967775958,
+        200.14394211747035,
+        390.4030036137645
+      ],
+      "target": [
+        123.3728856333849,
+        132.7209607418737,
+        332.8468000004503
+      ],
+      "frame": {
+        "left": 424,
+        "right": 1283,
+        "top": 108,
+        "bottom": 856,
+        "width": 859,
+        "height": 748,
+        "offsetX": -172,
+        "offsetY": -14
+      }
+    },
+    {
+      "id": "inscripcion",
+      "near": true,
+      "width": 1363,
+      "height": 936,
+      "escapedCorners": 7,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        130.41304758031148,
+        157.8206685526555,
+        354.27337983892255
+      ],
+      "target": [
+        123.3728856333849,
+        132.7209607418737,
+        332.8468000004503
+      ],
+      "frame": {
+        "left": 424,
+        "right": 1283,
+        "top": 108,
+        "bottom": 856,
+        "width": 859,
+        "height": 748,
+        "offsetX": -172,
+        "offsetY": -14
+      }
+    },
+    {
+      "id": "puerta-almenara",
+      "near": false,
+      "width": 1363,
+      "height": 936,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        113.93902664723153,
+        159.82241327653566,
+        319.19076929336944
+      ],
+      "target": [
+        148.51867864268388,
+        136.43029575020023,
+        310.0373320004556
+      ],
+      "frame": {
+        "left": 424,
+        "right": 1283,
+        "top": 108,
+        "bottom": 856,
+        "width": 859,
+        "height": 748,
+        "offsetX": -172,
+        "offsetY": -14
+      }
+    },
+    {
+      "id": "puerta-almenara",
+      "near": true,
+      "width": 1363,
+      "height": 936,
+      "escapedCorners": 4,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        130.51867864268388,
+        146.43029575020023,
+        315.0373320004556
+      ],
+      "target": [
+        148.51867864268388,
+        136.43029575020023,
+        310.0373320004556
+      ],
+      "frame": {
+        "left": 424,
+        "right": 1283,
+        "top": 108,
+        "bottom": 856,
+        "width": 859,
+        "height": 748,
+        "offsetX": -172,
+        "offsetY": -14
+      }
+    },
+    {
+      "id": "almenara",
+      "near": false,
+      "width": 1363,
+      "height": 936,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        284.3824057420071,
+        500.1839267545755,
+        587.9088320205933
+      ],
+      "target": [
+        182.8403300209726,
+        138.16435244480041,
+        278.86773200005365
+      ],
+      "frame": {
+        "left": 424,
+        "right": 1283,
+        "top": 108,
+        "bottom": 856,
+        "width": 859,
+        "height": 748,
+        "offsetX": -172,
+        "offsetY": -14
+      }
+    },
+    {
+      "id": "almenara",
+      "near": true,
+      "width": 1363,
+      "height": 936,
+      "escapedCorners": 6,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        211.80850676048277,
+        241.44219995088017,
+        367.03174816378026
+      ],
+      "target": [
+        182.8403300209726,
+        138.16435244480041,
+        278.86773200005365
+      ],
+      "frame": {
+        "left": 424,
+        "right": 1283,
+        "top": 108,
+        "bottom": 856,
+        "width": 859,
+        "height": 748,
+        "offsetX": -172,
+        "offsetY": -14
+      }
+    },
+    {
+      "id": "conejera",
+      "near": false,
+      "width": 1363,
+      "height": 936,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        205.089794844707,
+        423.86686889122075,
+        507.45249577144784
+      ],
+      "target": [
+        121.12818451977482,
+        124.52547555885391,
+        251.91715999991516
+      ],
+      "frame": {
+        "left": 424,
+        "right": 1283,
+        "top": 108,
+        "bottom": 856,
+        "width": 859,
+        "height": 748,
+        "offsetX": -172,
+        "offsetY": -14
+      }
+    },
+    {
+      "id": "conejera",
+      "near": true,
+      "width": 1363,
+      "height": 936,
+      "escapedCorners": 7,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        150.1736245417221,
+        228.07878346318762,
+        340.3163252841025
+      ],
+      "target": [
+        121.12818451977482,
+        124.52547555885391,
+        251.91715999991516
+      ],
+      "frame": {
+        "left": 424,
+        "right": 1283,
+        "top": 108,
+        "bottom": 856,
+        "width": 859,
+        "height": 748,
+        "offsetX": -172,
+        "offsetY": -14
+      }
+    },
+    {
+      "id": "puerta-san-fernando",
+      "near": false,
+      "width": 1363,
+      "height": 936,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        19.399325454464186,
+        154.00870346094823,
+        347.2186631841404
+      ],
+      "target": [
+        -2.2447011136053026,
+        138.730567059958,
+        340.2161840003532
+      ],
+      "frame": {
+        "left": 424,
+        "right": 1283,
+        "top": 108,
+        "bottom": 856,
+        "width": 859,
+        "height": 748,
+        "offsetX": -172,
+        "offsetY": -14
+      }
+    },
+    {
+      "id": "puerta-san-fernando",
+      "near": true,
+      "width": 1363,
+      "height": 936,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        16.755298886394698,
+        149.730567059958,
+        347.2161840003532
+      ],
+      "target": [
+        -2.2447011136053026,
+        138.730567059958,
+        340.2161840003532
+      ],
+      "frame": {
+        "left": 424,
+        "right": 1283,
+        "top": 108,
+        "bottom": 856,
+        "width": 859,
+        "height": 748,
+        "offsetX": -172,
+        "offsetY": -14
+      }
+    },
+    {
+      "id": "san-fernando",
+      "near": false,
+      "width": 1363,
+      "height": 936,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        -26.93462377255335,
+        600.625027813616,
+        769.6224605414038
+      ],
+      "target": [
+        -155.55264663608477,
+        142.07381586537363,
+        378.17630400022125
+      ],
+      "frame": {
+        "left": 424,
+        "right": 1283,
+        "top": 108,
+        "bottom": 856,
+        "width": 859,
+        "height": 748,
+        "offsetX": -172,
+        "offsetY": -14
+      }
+    },
+    {
+      "id": "san-fernando",
+      "near": true,
+      "width": 1363,
+      "height": 936,
+      "escapedCorners": 7,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        -92.50231007036311,
+        366.86197231707695,
+        570.0686326785046
+      ],
+      "target": [
+        -155.55264663608477,
+        142.07381586537363,
+        378.17630400022125
+      ],
+      "frame": {
+        "left": 424,
+        "right": 1283,
+        "top": 108,
+        "bottom": 856,
+        "width": 859,
+        "height": 748,
+        "offsetX": -172,
+        "offsetY": -14
+      }
+    },
+    {
+      "id": "antiquarium",
+      "near": false,
+      "width": 1363,
+      "height": 936,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        -64.67052269542188,
+        211.31668958046055,
+        442.589007533963
+      ],
+      "target": [
+        -84.56183202787606,
+        140.39984761258046,
+        382.0502400004068
+      ],
+      "frame": {
+        "left": 424,
+        "right": 1283,
+        "top": 108,
+        "bottom": 856,
+        "width": 859,
+        "height": 748,
+        "offsetX": -172,
+        "offsetY": -14
+      }
+    },
+    {
+      "id": "antiquarium",
+      "near": true,
+      "width": 1363,
+      "height": 936,
+      "escapedCorners": 8,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        -74.93354398668188,
+        174.72678758553363,
+        411.35372534317173
+      ],
+      "target": [
+        -84.56183202787606,
+        140.39984761258046,
+        382.0502400004068
+      ],
+      "frame": {
+        "left": 424,
+        "right": 1283,
+        "top": 108,
+        "bottom": 856,
+        "width": 859,
+        "height": 748,
+        "offsetX": -172,
+        "offsetY": -14
+      }
+    },
+    {
+      "id": "estudiantes",
+      "near": false,
+      "width": 1363,
+      "height": 936,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        -26.031597396596425,
+        747.9136342401478,
+        845.7011339317397
+      ],
+      "target": [
+        -197.62794117397078,
+        136.13536512081308,
+        323.4513920006003
+      ],
+      "frame": {
+        "left": 424,
+        "right": 1283,
+        "top": 108,
+        "bottom": 856,
+        "width": 859,
+        "height": 748,
+        "offsetX": -172,
+        "offsetY": -14
+      }
+    },
+    {
+      "id": "estudiantes",
+      "near": true,
+      "width": 1363,
+      "height": 936,
+      "escapedCorners": 7,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        -133.11604786007132,
+        366.1342891094981,
+        519.79193686899
+      ],
+      "target": [
+        -197.62794117397078,
+        136.13536512081308,
+        323.4513920006003
+      ],
+      "frame": {
+        "left": 424,
+        "right": 1283,
+        "top": 108,
+        "bottom": 856,
+        "width": 859,
+        "height": 748,
+        "offsetX": -172,
+        "offsetY": -14
+      }
+    },
+    {
+      "id": "ciudadela",
+      "near": false,
+      "width": 1363,
+      "height": 936,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        -270.79120391257624,
+        390.63552966436737,
+        483.45607533812836
+      ],
+      "target": [
+        -332.5156294664646,
+        170.57453421137407,
+        295.59912800020726
+      ],
+      "frame": {
+        "left": 424,
+        "right": 1283,
+        "top": 108,
+        "bottom": 856,
+        "width": 859,
+        "height": 748,
+        "offsetX": -172,
+        "offsetY": -14
+      }
+    },
+    {
+      "id": "ciudadela",
+      "near": true,
+      "width": 1363,
+      "height": 936,
+      "escapedCorners": 7,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        -312.1032446311384,
+        243.349123624276,
+        357.72377749902597
+      ],
+      "target": [
+        -332.5156294664646,
+        170.57453421137407,
+        295.59912800020726
+      ],
+      "frame": {
+        "left": 424,
+        "right": 1283,
+        "top": 108,
+        "bottom": 856,
+        "width": 859,
+        "height": 748,
+        "offsetX": -172,
+        "offsetY": -14
+      }
+    },
+    {
+      "id": "dos-mayo",
+      "near": false,
+      "width": 1363,
+      "height": 936,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        -379.4171760889202,
+        393.7567441709625,
+        436.10875497269365
+      ],
+      "target": [
+        -444.45082049424934,
+        161.89766411718034,
+        238.1802719999527
+      ],
+      "frame": {
+        "left": 424,
+        "right": 1283,
+        "top": 108,
+        "bottom": 856,
+        "width": 859,
+        "height": 748,
+        "offsetX": -172,
+        "offsetY": -14
+      }
+    },
+    {
+      "id": "dos-mayo",
+      "near": true,
+      "width": 1363,
+      "height": 936,
+      "escapedCorners": 6,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        -417.6331985956817,
+        257.508316103378,
+        319.7991212564629
+      ],
+      "target": [
+        -444.45082049424934,
+        161.89766411718034,
+        238.1802719999527
+      ],
+      "frame": {
+        "left": 424,
+        "right": 1283,
+        "top": 108,
+        "bottom": 856,
+        "width": 859,
+        "height": 748,
+        "offsetX": -172,
+        "offsetY": -14
+      }
+    },
+    {
+      "id": "overview",
+      "near": false,
+      "width": 390,
+      "height": 844,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        1355.5902226657543,
+        1897.3445724357216,
+        -1922.262671390648
+      ],
+      "target": [
+        -110.16581726074219,
+        138.43732452392578,
+        297.3107604980469
+      ],
+      "frame": {
+        "left": 16,
+        "right": 374,
+        "top": 124,
+        "bottom": 410,
+        "width": 358,
+        "height": 286,
+        "offsetX": 0,
+        "offsetY": 155
+      }
+    },
+    {
+      "id": "overview",
+      "near": true,
+      "width": 390,
+      "height": 844,
+      "escapedCorners": 8,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        318.32649043156556,
+        644.8373245239259,
+        -345.4277010404147
+      ],
+      "target": [
+        -110.16581726074219,
+        138.43732452392578,
+        297.3107604980469
+      ],
+      "frame": {
+        "left": 16,
+        "right": 374,
+        "top": 124,
+        "bottom": 410,
+        "width": 358,
+        "height": 286,
+        "offsetX": 0,
+        "offsetY": 155
+      }
+    },
+    {
+      "id": "conjunto",
+      "near": false,
+      "width": 390,
+      "height": 844,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        568.0109040988372,
+        2556.2847658928604,
+        2361.326868983723
+      ],
+      "target": [
+        -110.16581726074219,
+        138.43732452392578,
+        297.3107604980469
+      ],
+      "frame": {
+        "left": 16,
+        "right": 374,
+        "top": 124,
+        "bottom": 410,
+        "width": 358,
+        "height": 286,
+        "offsetX": 0,
+        "offsetY": 155
+      }
+    },
+    {
+      "id": "conjunto",
+      "near": true,
+      "width": 390,
+      "height": 844,
+      "escapedCorners": 8,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        179.36267237052976,
+        1170.669331035417,
+        1178.4844245932222
+      ],
+      "target": [
+        -110.16581726074219,
+        138.43732452392578,
+        297.3107604980469
+      ],
+      "frame": {
+        "left": 16,
+        "right": 374,
+        "top": 124,
+        "bottom": 410,
+        "width": 358,
+        "height": 286,
+        "offsetX": 0,
+        "offsetY": 155
+      }
+    },
+    {
+      "id": "acceso",
+      "near": false,
+      "width": 390,
+      "height": 844,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        26.106519824516525,
+        164.95489164557654,
+        303.56550169322213
+      ],
+      "target": [
+        67.2553577932,
+        130.6641933383403,
+        337.8562000004584
+      ],
+      "frame": {
+        "left": 16,
+        "right": 374,
+        "top": 124,
+        "bottom": 410,
+        "width": 358,
+        "height": 286,
+        "offsetX": 0,
+        "offsetY": 155
+      }
+    },
+    {
+      "id": "acceso",
+      "near": true,
+      "width": 390,
+      "height": 844,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        32.19689625473846,
+        159.87957795372492,
+        298.90235384661224
+      ],
+      "target": [
+        67.2553577932,
+        130.6641933383403,
+        337.8562000004584
+      ],
+      "frame": {
+        "left": 16,
+        "right": 374,
+        "top": 124,
+        "bottom": 410,
+        "width": 358,
+        "height": 286,
+        "offsetX": 0,
+        "offsetY": 155
+      }
+    },
+    {
+      "id": "foro",
+      "near": false,
+      "width": 390,
+      "height": 844,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        216.0674241557968,
+        469.073532062473,
+        621.2888503305086
+      ],
+      "target": [
+        121.65937333291956,
+        132.4883073896064,
+        333.96000000001266
+      ],
+      "frame": {
+        "left": 16,
+        "right": 374,
+        "top": 124,
+        "bottom": 410,
+        "width": 358,
+        "height": 286,
+        "offsetX": 0,
+        "offsetY": 155
+      }
+    },
+    {
+      "id": "foro",
+      "near": true,
+      "width": 390,
+      "height": 844,
+      "escapedCorners": 8,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        154.73945798430717,
+        250.42600049455353,
+        434.63851850423583
+      ],
+      "target": [
+        121.65937333291956,
+        132.4883073896064,
+        333.96000000001266
+      ],
+      "frame": {
+        "left": 16,
+        "right": 374,
+        "top": 124,
+        "bottom": 410,
+        "width": 358,
+        "height": 286,
+        "offsetX": 0,
+        "offsetY": 155
+      }
+    },
+    {
+      "id": "templo",
+      "near": false,
+      "width": 390,
+      "height": 844,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        140.8645348131017,
+        229.8435045252203,
+        382.51231607897347
+      ],
+      "target": [
+        111.37829953013708,
+        124.71866569030296,
+        292.7716000003855
+      ],
+      "frame": {
+        "left": 16,
+        "right": 374,
+        "top": 124,
+        "bottom": 410,
+        "width": 358,
+        "height": 286,
+        "offsetX": 0,
+        "offsetY": 155
+      }
+    },
+    {
+      "id": "templo",
+      "near": true,
+      "width": 390,
+      "height": 844,
+      "escapedCorners": 7,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        121.10645678174782,
+        159.40166110908905,
+        322.3790351139834
+      ],
+      "target": [
+        111.37829953013708,
+        124.71866569030296,
+        292.7716000003855
+      ],
+      "frame": {
+        "left": 16,
+        "right": 374,
+        "top": 124,
+        "bottom": 410,
+        "width": 358,
+        "height": 286,
+        "offsetX": 0,
+        "offsetY": 155
+      }
+    },
+    {
+      "id": "curia",
+      "near": false,
+      "width": 390,
+      "height": 844,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        163.82189401102818,
+        237.39222180547597,
+        383.09273433578716
+      ],
+      "target": [
+        134.51071558639526,
+        132.89149872634994,
+        293.88479999994786
+      ],
+      "frame": {
+        "left": 16,
+        "right": 374,
+        "top": 124,
+        "bottom": 410,
+        "width": 358,
+        "height": 286,
+        "offsetX": 0,
+        "offsetY": 155
+      }
+    },
+    {
+      "id": "curia",
+      "near": true,
+      "width": 390,
+      "height": 844,
+      "escapedCorners": 7,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        144.7911092897899,
+        169.54333714714812,
+        325.1729547494097
+      ],
+      "target": [
+        134.51071558639526,
+        132.89149872634994,
+        293.88479999994786
+      ],
+      "frame": {
+        "left": 16,
+        "right": 374,
+        "top": 124,
+        "bottom": 410,
+        "width": 358,
+        "height": 286,
+        "offsetX": 0,
+        "offsetY": 155
+      }
+    },
+    {
+      "id": "basilica",
+      "near": false,
+      "width": 390,
+      "height": 844,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        -7.262102738314994,
+        302.80155020806353,
+        455.71770844410656
+      ],
+      "target": [
+        89.95939577434423,
+        128.19967532818578,
+        340.6392000005508
+      ],
+      "frame": {
+        "left": 16,
+        "right": 374,
+        "top": 124,
+        "bottom": 410,
+        "width": 358,
+        "height": 286,
+        "offsetX": 0,
+        "offsetY": 155
+      }
+    },
+    {
+      "id": "basilica",
+      "near": true,
+      "width": 390,
+      "height": 844,
+      "escapedCorners": 8,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        62.738714332848744,
+        177.08579710066746,
+        372.8595984415046
+      ],
+      "target": [
+        89.95939577434423,
+        128.19967532818578,
+        340.6392000005508
+      ],
+      "frame": {
+        "left": 16,
+        "right": 374,
+        "top": 124,
+        "bottom": 410,
+        "width": 358,
+        "height": 286,
+        "offsetX": 0,
+        "offsetY": 155
+      }
+    },
+    {
+      "id": "cisterna-foro",
+      "near": false,
+      "width": 390,
+      "height": 844,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        176.19616207846786,
+        331.87193275077107,
+        548.5713684012576
+      ],
+      "target": [
+        119.94586103245423,
+        131.32738119541816,
+        377.3748000003465
+      ],
+      "frame": {
+        "left": 16,
+        "right": 374,
+        "top": 124,
+        "bottom": 410,
+        "width": 358,
+        "height": 286,
+        "offsetX": 0,
+        "offsetY": 155
+      }
+    },
+    {
+      "id": "cisterna-foro",
+      "near": true,
+      "width": 390,
+      "height": 844,
+      "escapedCorners": 6,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        140.77315460732373,
+        205.5812104623442,
+        440.7622152282102
+      ],
+      "target": [
+        119.94586103245423,
+        131.32738119541816,
+        377.3748000003465
+      ],
+      "frame": {
+        "left": 16,
+        "right": 374,
+        "top": 124,
+        "bottom": 410,
+        "width": 358,
+        "height": 286,
+        "offsetX": 0,
+        "offsetY": 155
+      }
+    },
+    {
+      "id": "cisterna-norte",
+      "near": false,
+      "width": 390,
+      "height": 844,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        161.80266486883863,
+        303.11425640208006,
+        439.5578597263303
+      ],
+      "target": [
+        111.37829953013708,
+        123.34043215105719,
+        286.0923999998474
+      ],
+      "frame": {
+        "left": 16,
+        "right": 374,
+        "top": 124,
+        "bottom": 410,
+        "width": 358,
+        "height": 286,
+        "offsetX": 0,
+        "offsetY": 155
+      }
+    },
+    {
+      "id": "cisterna-norte",
+      "near": true,
+      "width": 390,
+      "height": 844,
+      "escapedCorners": 8,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        128.5183861163084,
+        184.4485669365375,
+        338.25788091428177
+      ],
+      "target": [
+        111.37829953013708,
+        123.34043215105719,
+        286.0923999998474
+      ],
+      "frame": {
+        "left": 16,
+        "right": 374,
+        "top": 124,
+        "bottom": 410,
+        "width": 358,
+        "height": 286,
+        "offsetX": 0,
+        "offsetY": 155
+      }
+    },
+    {
+      "id": "inscripcion",
+      "near": false,
+      "width": 390,
+      "height": 844,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        164.97890994689092,
+        281.0554822074169,
+        459.47383051981643
+      ],
+      "target": [
+        123.3728856333849,
+        132.7209607418737,
+        332.8468000004503
+      ],
+      "frame": {
+        "left": 16,
+        "right": 374,
+        "top": 124,
+        "bottom": 410,
+        "width": 358,
+        "height": 286,
+        "offsetX": 0,
+        "offsetY": 155
+      }
+    },
+    {
+      "id": "inscripcion",
+      "near": true,
+      "width": 390,
+      "height": 844,
+      "escapedCorners": 8,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        137.08495490232195,
+        181.60746857025794,
+        374.5791847319978
+      ],
+      "target": [
+        123.3728856333849,
+        132.7209607418737,
+        332.8468000004503
+      ],
+      "frame": {
+        "left": 16,
+        "right": 374,
+        "top": 124,
+        "bottom": 410,
+        "width": 358,
+        "height": 286,
+        "offsetX": 0,
+        "offsetY": 155
+      }
+    },
+    {
+      "id": "puerta-almenara",
+      "near": false,
+      "width": 390,
+      "height": 844,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        62.76925433811772,
+        194.43725925034795,
+        332.73570902225254
+      ],
+      "target": [
+        148.51867864268388,
+        136.43029575020023,
+        310.0373320004556
+      ],
+      "frame": {
+        "left": 16,
+        "right": 374,
+        "top": 124,
+        "bottom": 410,
+        "width": 358,
+        "height": 286,
+        "offsetX": 0,
+        "offsetY": 155
+      }
+    },
+    {
+      "id": "puerta-almenara",
+      "near": true,
+      "width": 390,
+      "height": 844,
+      "escapedCorners": 5,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        113.46021710422234,
+        155.9072188271233,
+        319.7757935389171
+      ],
+      "target": [
+        148.51867864268388,
+        136.43029575020023,
+        310.0373320004556
+      ],
+      "frame": {
+        "left": 16,
+        "right": 374,
+        "top": 124,
+        "bottom": 410,
+        "width": 358,
+        "height": 286,
+        "offsetX": 0,
+        "offsetY": 155
+      }
+    },
+    {
+      "id": "almenara",
+      "near": false,
+      "width": 390,
+      "height": 844,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        403.60993801202346,
+        925.2559983259382,
+        950.7752345815127
+      ],
+      "target": [
+        182.8403300209726,
+        138.16435244480041,
+        278.86773200005365
+      ],
+      "frame": {
+        "left": 16,
+        "right": 374,
+        "top": 124,
+        "bottom": 410,
+        "width": 358,
+        "height": 286,
+        "offsetX": 0,
+        "offsetY": 155
+      }
+    },
+    {
+      "id": "almenara",
+      "near": true,
+      "width": 390,
+      "height": 844,
+      "escapedCorners": 7,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        239.26142502438782,
+        339.3178215874111,
+        450.5841080974043
+      ],
+      "target": [
+        182.8403300209726,
+        138.16435244480041,
+        278.86773200005365
+      ],
+      "frame": {
+        "left": 16,
+        "right": 374,
+        "top": 124,
+        "bottom": 410,
+        "width": 358,
+        "height": 286,
+        "offsetX": 0,
+        "offsetY": 155
+      }
+    },
+    {
+      "id": "conejera",
+      "near": false,
+      "width": 390,
+      "height": 844,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        304.3760806754028,
+        777.8440618528319,
+        809.6281482996525
+      ],
+      "target": [
+        121.12818451977482,
+        124.52547555885391,
+        251.91715999991516
+      ],
+      "frame": {
+        "left": 16,
+        "right": 374,
+        "top": 124,
+        "bottom": 410,
+        "width": 358,
+        "height": 286,
+        "offsetX": 0,
+        "offsetY": 155
+      }
+    },
+    {
+      "id": "conejera",
+      "near": true,
+      "width": 390,
+      "height": 844,
+      "escapedCorners": 7,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        177.6997646240598,
+        326.2154568002177,
+        424.0915342303477
+      ],
+      "target": [
+        121.12818451977482,
+        124.52547555885391,
+        251.91715999991516
+      ],
+      "frame": {
+        "left": 16,
+        "right": 374,
+        "top": 124,
+        "bottom": 410,
+        "width": 358,
+        "height": 286,
+        "offsetX": 0,
+        "offsetY": 155
+      }
+    },
+    {
+      "id": "puerta-san-fernando",
+      "near": false,
+      "width": 390,
+      "height": 844,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        47.930936093661686,
+        174.14866391214645,
+        356.4494783909396
+      ],
+      "target": [
+        -2.2447011136053026,
+        138.730567059958,
+        340.2161840003532
+      ],
+      "frame": {
+        "left": 16,
+        "right": 374,
+        "top": 124,
+        "bottom": 410,
+        "width": 358,
+        "height": 286,
+        "offsetX": 0,
+        "offsetY": 155
+      }
+    },
+    {
+      "id": "puerta-san-fernando",
+      "near": true,
+      "width": 390,
+      "height": 844,
+      "escapedCorners": 2,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        34.76145273254855,
+        160.15518244457337,
+        353.8500301541994
+      ],
+      "target": [
+        -2.2447011136053026,
+        138.730567059958,
+        340.2161840003532
+      ],
+      "frame": {
+        "left": 16,
+        "right": 374,
+        "top": 124,
+        "bottom": 410,
+        "width": 358,
+        "height": 286,
+        "offsetX": 0,
+        "offsetY": 155
+      }
+    },
+    {
+      "id": "san-fernando",
+      "near": false,
+      "width": 390,
+      "height": 844,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        119.7876215165993,
+        1123.7217284097253,
+        1216.1684244649118
+      ],
+      "target": [
+        -155.55264663608477,
+        142.07381586537363,
+        378.17630400022125
+      ],
+      "frame": {
+        "left": 16,
+        "right": 374,
+        "top": 124,
+        "bottom": 410,
+        "width": 358,
+        "height": 286,
+        "offsetX": 0,
+        "offsetY": 155
+      }
+    },
+    {
+      "id": "san-fernando",
+      "near": true,
+      "width": 390,
+      "height": 844,
+      "escapedCorners": 8,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        -32.74999110961765,
+        579.8919790466912,
+        751.9235164720777
+      ],
+      "target": [
+        -155.55264663608477,
+        142.07381586537363,
+        378.17630400022125
+      ],
+      "frame": {
+        "left": 16,
+        "right": 374,
+        "top": 124,
+        "bottom": 410,
+        "width": 358,
+        "height": 286,
+        "offsetX": 0,
+        "offsetY": 155
+      }
+    },
+    {
+      "id": "antiquarium",
+      "near": false,
+      "width": 390,
+      "height": 844,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        -43.02103001798275,
+        288.50183738698263,
+        508.47876785660384
+      ],
+      "target": [
+        -84.56183202787606,
+        140.39984761258046,
+        382.0502400004068
+      ],
+      "frame": {
+        "left": 16,
+        "right": 374,
+        "top": 124,
+        "bottom": 410,
+        "width": 358,
+        "height": 286,
+        "offsetX": 0,
+        "offsetY": 155
+      }
+    },
+    {
+      "id": "antiquarium",
+      "near": true,
+      "width": 390,
+      "height": 844,
+      "escapedCorners": 8,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        -65.80888947379631,
+        207.25816454451694,
+        439.12441299108434
+      ],
+      "target": [
+        -84.56183202787606,
+        140.39984761258046,
+        382.0502400004068
+      ],
+      "frame": {
+        "left": 16,
+        "right": 374,
+        "top": 124,
+        "bottom": 410,
+        "width": 358,
+        "height": 286,
+        "offsetX": 0,
+        "offsetY": 155
+      }
+    },
+    {
+      "id": "estudiantes",
+      "near": false,
+      "width": 390,
+      "height": 844,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        171.1198114769815,
+        1450.801265876382,
+        1445.7271609382815
+      ],
+      "target": [
+        -197.62794117397078,
+        136.13536512081308,
+        323.4513920006003
+      ],
+      "frame": {
+        "left": 16,
+        "right": 374,
+        "top": 124,
+        "bottom": 410,
+        "width": 358,
+        "height": 286,
+        "offsetX": 0,
+        "offsetY": 155
+      }
+    },
+    {
+      "id": "estudiantes",
+      "near": true,
+      "width": 390,
+      "height": 844,
+      "escapedCorners": 7,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        -71.97862281182195,
+        584.1025001510827,
+        705.8623609288794
+      ],
+      "target": [
+        -197.62794117397078,
+        136.13536512081308,
+        323.4513920006003
+      ],
+      "frame": {
+        "left": 16,
+        "right": 374,
+        "top": 124,
+        "bottom": 410,
+        "width": 358,
+        "height": 286,
+        "offsetX": 0,
+        "offsetY": 155
+      }
+    },
+    {
+      "id": "ciudadela",
+      "near": false,
+      "width": 390,
+      "height": 844,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        -193.21619366602405,
+        667.2073053259882,
+        719.5539326102437
+      ],
+      "target": [
+        -332.5156294664646,
+        170.57453421137407,
+        295.59912800020726
+      ],
+      "frame": {
+        "left": 16,
+        "right": 374,
+        "top": 124,
+        "bottom": 410,
+        "width": 358,
+        "height": 286,
+        "offsetX": 0,
+        "offsetY": 155
+      }
+    },
+    {
+      "id": "ciudadela",
+      "near": true,
+      "width": 390,
+      "height": 844,
+      "escapedCorners": 7,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        -292.7585845410447,
+        312.31704220634924,
+        416.5988299471373
+      ],
+      "target": [
+        -332.5156294664646,
+        170.57453421137407,
+        295.59912800020726
+      ],
+      "frame": {
+        "left": 16,
+        "right": 374,
+        "top": 124,
+        "bottom": 410,
+        "width": 358,
+        "height": 286,
+        "offsetX": 0,
+        "offsetY": 155
+      }
+    },
+    {
+      "id": "dos-mayo",
+      "near": false,
+      "width": 390,
+      "height": 844,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        -302.7254968580722,
+        667.1792527331162,
+        669.5182135013615
+      ],
+      "target": [
+        -444.45082049424934,
+        161.89766411718034,
+        238.1802719999527
+      ],
+      "frame": {
+        "left": 16,
+        "right": 374,
+        "top": 124,
+        "bottom": 410,
+        "width": 358,
+        "height": 286,
+        "offsetX": 0,
+        "offsetY": 155
+      }
+    },
+    {
+      "id": "dos-mayo",
+      "near": true,
+      "width": 390,
+      "height": 844,
+      "escapedCorners": 7,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        -392.21834461180833,
+        348.11779552414384,
+        397.14867685955574
+      ],
+      "target": [
+        -444.45082049424934,
+        161.89766411718034,
+        238.1802719999527
+      ],
+      "frame": {
+        "left": 16,
+        "right": 374,
+        "top": 124,
+        "bottom": 410,
+        "width": 358,
+        "height": 286,
+        "offsetX": 0,
+        "offsetY": 155
+      }
+    },
+    {
+      "id": "overview",
+      "near": false,
+      "width": 844,
+      "height": 390,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        519.485384177688,
+        894.0187662500421,
+        -656.1610588230046
+      ],
+      "target": [
+        -110.16581726074219,
+        138.43732452392578,
+        297.3107604980469
+      ],
+      "frame": {
+        "left": 372,
+        "right": 780,
+        "top": 78,
+        "bottom": 328,
+        "width": 408,
+        "height": 250,
+        "offsetX": -154,
+        "offsetY": -8
+      }
+    },
+    {
+      "id": "overview",
+      "near": true,
+      "width": 844,
+      "height": 390,
+      "escapedCorners": 7,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        109.83418273925781,
+        398.4373245239258,
+        -32.689239501953125
+      ],
+      "target": [
+        -110.16581726074219,
+        138.43732452392578,
+        297.3107604980469
+      ],
+      "frame": {
+        "left": 372,
+        "right": 780,
+        "top": 78,
+        "bottom": 328,
+        "width": 408,
+        "height": 250,
+        "offsetX": -154,
+        "offsetY": -8
+      }
+    },
+    {
+      "id": "conjunto",
+      "near": false,
+      "width": 844,
+      "height": 390,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        169.7964317084947,
+        1136.5636034577267,
+        1149.3697791000723
+      ],
+      "target": [
+        -110.16581726074219,
+        138.43732452392578,
+        297.3107604980469
+      ],
+      "frame": {
+        "left": 372,
+        "right": 780,
+        "top": 78,
+        "bottom": 328,
+        "width": 408,
+        "height": 250,
+        "offsetX": -154,
+        "offsetY": -8
+      }
+    },
+    {
+      "id": "conjunto",
+      "near": true,
+      "width": 844,
+      "height": 390,
+      "escapedCorners": 8,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        38.486250875376896,
+        668.4142630961763,
+        749.7300983036266
+      ],
+      "target": [
+        -110.16581726074219,
+        138.43732452392578,
+        297.3107604980469
+      ],
+      "frame": {
+        "left": 372,
+        "right": 780,
+        "top": 78,
+        "bottom": 328,
+        "width": 408,
+        "height": 250,
+        "offsetX": -154,
+        "offsetY": -8
+      }
+    },
+    {
+      "id": "acceso",
+      "near": false,
+      "width": 844,
+      "height": 390,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        45.660905358240484,
+        148.65957036747324,
+        319.86082297132543
+      ],
+      "target": [
+        67.2553577932,
+        130.6641933383403,
+        337.8562000004584
+      ],
+      "frame": {
+        "left": 372,
+        "right": 780,
+        "top": 78,
+        "bottom": 328,
+        "width": 408,
+        "height": 250,
+        "offsetX": -154,
+        "offsetY": -8
+      }
+    },
+    {
+      "id": "acceso",
+      "near": true,
+      "width": 844,
+      "height": 390,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        49.255357793200005,
+        145.6641933383403,
+        317.8562000004584
+      ],
+      "target": [
+        67.2553577932,
+        130.6641933383403,
+        337.8562000004584
+      ],
+      "frame": {
+        "left": 372,
+        "right": 780,
+        "top": 78,
+        "bottom": 328,
+        "width": 408,
+        "height": 250,
+        "offsetX": -154,
+        "offsetY": -8
+      }
+    },
+    {
+      "id": "foro",
+      "near": false,
+      "width": 844,
+      "height": 390,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        167.51395414089916,
+        295.9698563571858,
+        473.5174198503853
+      ],
+      "target": [
+        121.65937333291956,
+        132.4883073896064,
+        333.96000000001266
+      ],
+      "frame": {
+        "left": 372,
+        "right": 780,
+        "top": 78,
+        "bottom": 328,
+        "width": 408,
+        "height": 250,
+        "offsetX": -154,
+        "offsetY": -8
+      }
+    },
+    {
+      "id": "foro",
+      "near": true,
+      "width": 844,
+      "height": 390,
+      "escapedCorners": 8,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        138.64361900701272,
+        193.04083544506898,
+        385.65118248638316
+      ],
+      "target": [
+        121.65937333291956,
+        132.4883073896064,
+        333.96000000001266
+      ],
+      "frame": {
+        "left": 372,
+        "right": 780,
+        "top": 78,
+        "bottom": 328,
+        "width": 408,
+        "height": 250,
+        "offsetX": -154,
+        "offsetY": -8
+      }
+    },
+    {
+      "id": "templo",
+      "near": false,
+      "width": 844,
+      "height": 390,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        127.30703019748476,
+        181.5080532869338,
+        341.2503455097045
+      ],
+      "target": [
+        111.37829953013708,
+        124.71866569030296,
+        292.7716000003855
+      ],
+      "frame": {
+        "left": 372,
+        "right": 780,
+        "top": 78,
+        "bottom": 328,
+        "width": 408,
+        "height": 250,
+        "offsetX": -154,
+        "offsetY": -8
+      }
+    },
+    {
+      "id": "templo",
+      "near": true,
+      "width": 844,
+      "height": 390,
+      "escapedCorners": 6,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        116.37300901951069,
+        142.52589082633057,
+        307.972889750653
+      ],
+      "target": [
+        111.37829953013708,
+        124.71866569030296,
+        292.7716000003855
+      ],
+      "frame": {
+        "left": 372,
+        "right": 780,
+        "top": 78,
+        "bottom": 328,
+        "width": 408,
+        "height": 250,
+        "offsetX": -154,
+        "offsetY": -8
+      }
+    },
+    {
+      "id": "curia",
+      "near": false,
+      "width": 844,
+      "height": 390,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        150.59245383934388,
+        190.22639162816668,
+        342.82922076979145
+      ],
+      "target": [
+        134.51071558639526,
+        132.89149872634994,
+        293.88479999994786
+      ],
+      "frame": {
+        "left": 372,
+        "right": 780,
+        "top": 78,
+        "bottom": 328,
+        "width": 408,
+        "height": 250,
+        "offsetX": -154,
+        "offsetY": -8
+      }
+    },
+    {
+      "id": "curia",
+      "near": true,
+      "width": 844,
+      "height": 390,
+      "escapedCorners": 7,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        139.78895879903862,
+        151.7095832236002,
+        309.9490184732103
+      ],
+      "target": [
+        134.51071558639526,
+        132.89149872634994,
+        293.88479999994786
+      ],
+      "frame": {
+        "left": 372,
+        "right": 780,
+        "top": 78,
+        "bottom": 328,
+        "width": 408,
+        "height": 250,
+        "offsetX": -154,
+        "offsetY": -8
+      }
+    },
+    {
+      "id": "basilica",
+      "near": false,
+      "width": 844,
+      "height": 390,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        36.6703658862235,
+        223.90242288236178,
+        403.7160108885304
+      ],
+      "target": [
+        89.95939577434423,
+        128.19967532818578,
+        340.6392000005508
+      ],
+      "frame": {
+        "left": 372,
+        "right": 780,
+        "top": 78,
+        "bottom": 328,
+        "width": 408,
+        "height": 250,
+        "offsetX": -154,
+        "offsetY": -8
+      }
+    },
+    {
+      "id": "basilica",
+      "near": true,
+      "width": 844,
+      "height": 390,
+      "escapedCorners": 7,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        75.98353247499821,
+        153.29918492701128,
+        357.18205859977667
+      ],
+      "target": [
+        89.95939577434423,
+        128.19967532818578,
+        340.6392000005508
+      ],
+      "frame": {
+        "left": 372,
+        "right": 780,
+        "top": 78,
+        "bottom": 328,
+        "width": 408,
+        "height": 250,
+        "offsetX": -154,
+        "offsetY": -8
+      }
+    },
+    {
+      "id": "cisterna-foro",
+      "near": false,
+      "width": 844,
+      "height": 390,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        145.17079065091792,
+        221.25973896559302,
+        454.14632492610554
+      ],
+      "target": [
+        119.94586103245423,
+        131.32738119541816,
+        377.3748000003465
+      ],
+      "frame": {
+        "left": 372,
+        "right": 780,
+        "top": 78,
+        "bottom": 328,
+        "width": 408,
+        "height": 250,
+        "offsetX": -154,
+        "offsetY": -8
+      }
+    },
+    {
+      "id": "cisterna-foro",
+      "near": true,
+      "width": 844,
+      "height": 390,
+      "escapedCorners": 4,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        130.63917921860366,
+        169.45138516342914,
+        409.91968143645346
+      ],
+      "target": [
+        119.94586103245423,
+        131.32738119541816,
+        377.3748000003465
+      ],
+      "frame": {
+        "left": 372,
+        "right": 780,
+        "top": 78,
+        "bottom": 328,
+        "width": 408,
+        "height": 250,
+        "offsetX": -154,
+        "offsetY": -8
+      }
+    },
+    {
+      "id": "cisterna-norte",
+      "near": false,
+      "width": 844,
+      "height": 390,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        139.4309278305847,
+        223.3541504396095,
+        371.469964392514
+      ],
+      "target": [
+        111.37829953013708,
+        123.34043215105719,
+        286.0923999998474
+      ],
+      "frame": {
+        "left": 372,
+        "right": 780,
+        "top": 78,
+        "bottom": 328,
+        "width": 408,
+        "height": 250,
+        "offsetX": -154,
+        "offsetY": -8
+      }
+    },
+    {
+      "id": "cisterna-norte",
+      "near": true,
+      "width": 844,
+      "height": 390,
+      "escapedCorners": 8,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        120.17850196379534,
+        154.71506691453445,
+        312.8756247979377
+      ],
+      "target": [
+        111.37829953013708,
+        123.34043215105719,
+        286.0923999998474
+      ],
+      "frame": {
+        "left": 372,
+        "right": 780,
+        "top": 78,
+        "bottom": 328,
+        "width": 408,
+        "height": 250,
+        "offsetX": -154,
+        "offsetY": -8
+      }
+    },
+    {
+      "id": "inscripcion",
+      "near": false,
+      "width": 844,
+      "height": 390,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        146.40550573147337,
+        214.83725848288475,
+        402.94607855985
+      ],
+      "target": [
+        123.3728856333849,
+        132.7209607418737,
+        332.8468000004503
+      ],
+      "frame": {
+        "left": 372,
+        "right": 780,
+        "top": 78,
+        "bottom": 328,
+        "width": 408,
+        "height": 250,
+        "offsetX": -154,
+        "offsetY": -8
+      }
+    },
+    {
+      "id": "inscripcion",
+      "near": true,
+      "width": 844,
+      "height": 390,
+      "escapedCorners": 8,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        130.41304758031148,
+        157.8206685526555,
+        354.27337983892255
+      ],
+      "target": [
+        123.3728856333849,
+        132.7209607418737,
+        332.8468000004503
+      ],
+      "frame": {
+        "left": 372,
+        "right": 780,
+        "top": 78,
+        "bottom": 328,
+        "width": 408,
+        "height": 250,
+        "offsetX": -154,
+        "offsetY": -8
+      }
+    },
+    {
+      "id": "puerta-almenara",
+      "near": false,
+      "width": 844,
+      "height": 390,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        104.64673469421444,
+        166.10837548004721,
+        321.65049363387396
+      ],
+      "target": [
+        148.51867864268388,
+        136.43029575020023,
+        310.0373320004556
+      ],
+      "frame": {
+        "left": 372,
+        "right": 780,
+        "top": 78,
+        "bottom": 328,
+        "width": 408,
+        "height": 250,
+        "offsetX": -154,
+        "offsetY": -8
+      }
+    },
+    {
+      "id": "puerta-almenara",
+      "near": true,
+      "width": 844,
+      "height": 390,
+      "escapedCorners": 5,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        130.51867864268388,
+        146.43029575020023,
+        315.0373320004556
+      ],
+      "target": [
+        148.51867864268388,
+        136.43029575020023,
+        310.0373320004556
+      ],
+      "frame": {
+        "left": 372,
+        "right": 780,
+        "top": 78,
+        "bottom": 328,
+        "width": 408,
+        "height": 250,
+        "offsetX": -154,
+        "offsetY": -8
+      }
+    },
+    {
+      "id": "almenara",
+      "near": false,
+      "width": 844,
+      "height": 390,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        306.033802429841,
+        577.3758627720701,
+        653.804387157479
+      ],
+      "target": [
+        182.8403300209726,
+        138.16435244480041,
+        278.86773200005365
+      ],
+      "frame": {
+        "left": 372,
+        "right": 780,
+        "top": 78,
+        "bottom": 328,
+        "width": 408,
+        "height": 250,
+        "offsetX": -154,
+        "offsetY": -8
+      }
+    },
+    {
+      "id": "almenara",
+      "near": true,
+      "width": 844,
+      "height": 390,
+      "escapedCorners": 7,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        211.80850676048277,
+        241.44219995088017,
+        367.03174816378026
+      ],
+      "target": [
+        182.8403300209726,
+        138.16435244480041,
+        278.86773200005365
+      ],
+      "frame": {
+        "left": 372,
+        "right": 780,
+        "top": 78,
+        "bottom": 328,
+        "width": 408,
+        "height": 250,
+        "offsetX": -154,
+        "offsetY": -8
+      }
+    },
+    {
+      "id": "conejera",
+      "near": false,
+      "width": 844,
+      "height": 390,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        213.17809040880394,
+        452.70340090234913,
+        532.0690474882647
+      ],
+      "target": [
+        121.12818451977482,
+        124.52547555885391,
+        251.91715999991516
+      ],
+      "frame": {
+        "left": 372,
+        "right": 780,
+        "top": 78,
+        "bottom": 328,
+        "width": 408,
+        "height": 250,
+        "offsetX": -154,
+        "offsetY": -8
+      }
+    },
+    {
+      "id": "conejera",
+      "near": true,
+      "width": 844,
+      "height": 390,
+      "escapedCorners": 7,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        150.1736245417221,
+        228.07878346318762,
+        340.3163252841025
+      ],
+      "target": [
+        121.12818451977482,
+        124.52547555885391,
+        251.91715999991516
+      ],
+      "frame": {
+        "left": 372,
+        "right": 780,
+        "top": 78,
+        "bottom": 328,
+        "width": 408,
+        "height": 250,
+        "offsetX": -154,
+        "offsetY": -8
+      }
+    },
+    {
+      "id": "puerta-san-fernando",
+      "near": false,
+      "width": 844,
+      "height": 390,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        24.580588610134132,
+        157.66606568847993,
+        348.89495420509246
+      ],
+      "target": [
+        -2.2447011136053026,
+        138.730567059958,
+        340.2161840003532
+      ],
+      "frame": {
+        "left": 372,
+        "right": 780,
+        "top": 78,
+        "bottom": 328,
+        "width": 408,
+        "height": 250,
+        "offsetX": -154,
+        "offsetY": -8
+      }
+    },
+    {
+      "id": "puerta-san-fernando",
+      "near": true,
+      "width": 844,
+      "height": 390,
+      "escapedCorners": 3,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        16.755298886394698,
+        149.730567059958,
+        347.2161840003532
+      ],
+      "target": [
+        -2.2447011136053026,
+        138.730567059958,
+        340.2161840003532
+      ],
+      "frame": {
+        "left": 372,
+        "right": 780,
+        "top": 78,
+        "bottom": 328,
+        "width": 408,
+        "height": 250,
+        "offsetX": -154,
+        "offsetY": -8
+      }
+    },
+    {
+      "id": "san-fernando",
+      "near": false,
+      "width": 844,
+      "height": 390,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        -42.413012757338265,
+        545.4412062156872,
+        722.514320152928
+      ],
+      "target": [
+        -155.55264663608477,
+        142.07381586537363,
+        378.17630400022125
+      ],
+      "frame": {
+        "left": 372,
+        "right": 780,
+        "top": 78,
+        "bottom": 328,
+        "width": 408,
+        "height": 250,
+        "offsetX": -154,
+        "offsetY": -8
+      }
+    },
+    {
+      "id": "san-fernando",
+      "near": true,
+      "width": 844,
+      "height": 390,
+      "escapedCorners": 6,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        -92.50231007036311,
+        366.86197231707695,
+        570.0686326785046
+      ],
+      "target": [
+        -155.55264663608477,
+        142.07381586537363,
+        378.17630400022125
+      ],
+      "frame": {
+        "left": 372,
+        "right": 780,
+        "top": 78,
+        "bottom": 328,
+        "width": 408,
+        "height": 250,
+        "offsetX": -154,
+        "offsetY": -8
+      }
+    },
+    {
+      "id": "antiquarium",
+      "near": false,
+      "width": 844,
+      "height": 390,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        -66.95442496480345,
+        203.17408148962195,
+        435.63800062714955
+      ],
+      "target": [
+        -84.56183202787606,
+        140.39984761258046,
+        382.0502400004068
+      ],
+      "frame": {
+        "left": 372,
+        "right": 780,
+        "top": 78,
+        "bottom": 328,
+        "width": 408,
+        "height": 250,
+        "offsetX": -154,
+        "offsetY": -8
+      }
+    },
+    {
+      "id": "antiquarium",
+      "near": true,
+      "width": 844,
+      "height": 390,
+      "escapedCorners": 7,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        -74.93354398668188,
+        174.72678758553363,
+        411.35372534317173
+      ],
+      "target": [
+        -84.56183202787606,
+        140.39984761258046,
+        382.0502400004068
+      ],
+      "frame": {
+        "left": 372,
+        "right": 780,
+        "top": 78,
+        "bottom": 328,
+        "width": 408,
+        "height": 250,
+        "offsetX": -154,
+        "offsetY": -8
+      }
+    },
+    {
+      "id": "estudiantes",
+      "near": false,
+      "width": 844,
+      "height": 390,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        -46.82998546263033,
+        673.7628593960269,
+        782.4016919916364
+      ],
+      "target": [
+        -197.62794117397078,
+        136.13536512081308,
+        323.4513920006003
+      ],
+      "frame": {
+        "left": 372,
+        "right": 780,
+        "top": 78,
+        "bottom": 328,
+        "width": 408,
+        "height": 250,
+        "offsetX": -154,
+        "offsetY": -8
+      }
+    },
+    {
+      "id": "estudiantes",
+      "near": true,
+      "width": 844,
+      "height": 390,
+      "escapedCorners": 6,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        -133.11604786007132,
+        366.1342891094981,
+        519.79193686899
+      ],
+      "target": [
+        -197.62794117397078,
+        136.13536512081308,
+        323.4513920006003
+      ],
+      "frame": {
+        "left": 372,
+        "right": 780,
+        "top": 78,
+        "bottom": 328,
+        "width": 408,
+        "height": 250,
+        "offsetX": -154,
+        "offsetY": -8
+      }
+    },
+    {
+      "id": "ciudadela",
+      "near": false,
+      "width": 844,
+      "height": 390,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        -256.7037923228853,
+        440.8602144623959,
+        526.3308062632747
+      ],
+      "target": [
+        -332.5156294664646,
+        170.57453421137407,
+        295.59912800020726
+      ],
+      "frame": {
+        "left": 372,
+        "right": 780,
+        "top": 78,
+        "bottom": 328,
+        "width": 408,
+        "height": 250,
+        "offsetX": -154,
+        "offsetY": -8
+      }
+    },
+    {
+      "id": "ciudadela",
+      "near": true,
+      "width": 844,
+      "height": 390,
+      "escapedCorners": 7,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        -312.1032446311384,
+        243.349123624276,
+        357.72377749902597
+      ],
+      "target": [
+        -332.5156294664646,
+        170.57453421137407,
+        295.59912800020726
+      ],
+      "frame": {
+        "left": 372,
+        "right": 780,
+        "top": 78,
+        "bottom": 328,
+        "width": 408,
+        "height": 250,
+        "offsetX": -154,
+        "offsetY": -8
+      }
+    },
+    {
+      "id": "dos-mayo",
+      "near": false,
+      "width": 844,
+      "height": 390,
+      "escapedCorners": 0,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        -365.63046489094774,
+        442.9093667028642,
+        478.06831079260974
+      ],
+      "target": [
+        -444.45082049424934,
+        161.89766411718034,
+        238.1802719999527
+      ],
+      "frame": {
+        "left": 372,
+        "right": 780,
+        "top": 78,
+        "bottom": 328,
+        "width": 408,
+        "height": 250,
+        "offsetX": -154,
+        "offsetY": -8
+      }
+    },
+    {
+      "id": "dos-mayo",
+      "near": true,
+      "width": 844,
+      "height": 390,
+      "escapedCorners": 7,
+      "behind": 0,
+      "terrainOcclusion": null,
+      "position": [
+        -417.6331985956817,
+        257.508316103378,
+        319.7991212564629
+      ],
+      "target": [
+        -444.45082049424934,
+        161.89766411718034,
+        238.1802719999527
+      ],
+      "frame": {
+        "left": 372,
+        "right": 780,
+        "top": 78,
+        "bottom": 328,
+        "width": 408,
+        "height": 250,
+        "offsetX": -154,
+        "offsetY": -8
+      }
+    }
+  ],
+  "limitations": [
+    "Architecture elevations are interpreted, not a photogrammetric survey.",
+    "Virtual camera jumps do not certify pedestrian circulation or physical access.",
+    "Northern cistern and inscription markers identify their documented sector; no exact new footprint is claimed."
+  ]
+}

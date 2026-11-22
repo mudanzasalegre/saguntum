@@ -1,0 +1,182 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "pass": true,
+      "label": "156 source parts and60 complete cadastral parcels",
+      "detail": null
+    },
+    {
+      "pass": true,
+      "label": "No duplicate context building parts",
+      "detail": null
+    },
+    {
+      "pass": true,
+      "label": "Hulls, patios, source heights and roof colours preserved exactly",
+      "detail": null
+    },
+    {
+      "pass": true,
+      "label": "Every selected cadastral parent keeps all its parts",
+      "detail": null
+    },
+    {
+      "pass": true,
+      "label": "Three source courtyard holes retained",
+      "detail": null
+    },
+    {
+      "pass": true,
+      "label": "Every selected height has an attributed measurement estimate or storey count",
+      "detail": null
+    },
+    {
+      "pass": true,
+      "label": "No area overlap with earlier detail or monument footprints",
+      "detail": 0.0
+    },
+    {
+      "pass": true,
+      "label": "Preserves every santa-maria source owner",
+      "detail": null
+    },
+    {
+      "pass": true,
+      "label": "Preserves every plaza-mayor source owner",
+      "detail": null
+    },
+    {
+      "pass": true,
+      "label": "Preserves every juderia source owner",
+      "detail": null
+    },
+    {
+      "pass": true,
+      "label": "All new source parts are excluded from the generic city",
+      "detail": null
+    },
+    {
+      "pass": true,
+      "label": "Only recorded duplicate OSM buildings are additionally excluded",
+      "detail": null
+    },
+    {
+      "pass": true,
+      "label": "Road 87552055-fragment-0 remains on its source centreline",
+      "detail": null
+    },
+    {
+      "pass": true,
+      "label": "Road 87552080 remains on its source centreline",
+      "detail": null
+    },
+    {
+      "pass": true,
+      "label": "Road 87552083-fragment-0 remains on its source centreline",
+      "detail": null
+    },
+    {
+      "pass": true,
+      "label": "Road 87552084-fragment-0 remains on its source centreline",
+      "detail": null
+    },
+    {
+      "pass": true,
+      "label": "Road 87555762 remains on its source centreline",
+      "detail": null
+    },
+    {
+      "pass": true,
+      "label": "Road 163560100-fragment-0 remains on its source centreline",
+      "detail": null
+    },
+    {
+      "pass": true,
+      "label": "Road 163560121-fragment-0 remains on its source centreline",
+      "detail": null
+    },
+    {
+      "pass": true,
+      "label": "Road 163560124-fragment-0 remains on its source centreline",
+      "detail": null
+    },
+    {
+      "pass": true,
+      "label": "Road 163560126-fragment-0 remains on its source centreline",
+      "detail": null
+    },
+    {
+      "pass": true,
+      "label": "Road 1365045245-fragment-0 remains on its source centreline",
+      "detail": null
+    },
+    {
+      "pass": true,
+      "label": "Only completely replaced source streets are excluded globally",
+      "detail": null
+    },
+    {
+      "pass": true,
+      "label": "External pavement does not invade the core enclosure",
+      "detail": null
+    },
+    {
+      "pass": true,
+      "label": "Pavement union covers its target without doubled faces or courtyard filling",
+      "detail": {
+        "method": "Whole-polyline buffers, polygon union, cadastral and retained-owner clipping, exact 2.5 m terrain triangle intersections.",
+        "areaM2": 1052.4751230800186,
+        "triangles": 1133,
+        "vertices": 976,
+        "uncoveredAreaM2": 5.577920329209271e-05,
+        "excessAreaM2": 7.181449969251813e-05,
+        "buildingOverlapM2": 8.106748338119823e-06,
+        "privateCourtyardOverlapM2": 1.787113010963848e-18,
+        "protectedPavingOverlapM2": 0.0,
+        "triangleOverlapM2": 4.547473508864641e-13,
+        "boundaryEdges": 814,
+        "pass": true
+      }
+    },
+    {
+      "pass": true,
+      "label": "External pavement matches the existing terrain grid",
+      "detail": null
+    }
+  ],
+  "counts": {
+    "contextParts": 156,
+    "contextParcels": 60,
+    "mappedCourtyards": 3,
+    "roads": 10,
+    "fullyReplacedRoads": 2,
+    "OSMDuplicates": [
+      "845504613",
+      "1069999850",
+      "1418443790",
+      "1418443794"
+    ],
+    "protectedFootprints": 521,
+    "retainedOwners": [
+      "santa-maria",
+      "plaza-mayor",
+      "juderia"
+    ],
+    "rejectedParcels": [
+      {
+        "parentId": "46222A08300042",
+        "reason": "Retained monument or earlier detailed owner"
+      }
+    ]
+  },
+  "protectedOverlapM2": 0.0,
+  "inputHashes": {
+    "calvario-context": "3c4da56852c9f4afb1ca501e37e4823b7c2eb3aa81d9b42a7da07f53bbe81766",
+    "cartography": "a2b02f3311dfc3cc4b0a162400508364ce41f9ea875e77638e983e5065b23340",
+    "landmarks": "4f6276810156168352541013217153f4d389c6d8efa3e0624a8cc9d8a58b8a57",
+    "santa-maria-context": "c10e11fbfe394de3344fa7d606570ecaa67cc11d918bd9f1ee6880d0dbee752e",
+    "plaza-mayor-context": "1a0c282b1f15f1cf4ede43aee8a600a5a44675cc4ad8110c36656ad9d23d9fc7",
+    "juderia-context": "9118ca2de239a2b4a49e2b2651d8dc261177e3b50c6a4360686e7e8a2380d045"
+  }
+}

@@ -1,0 +1,1573 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "message": "24 unique catalogue places",
+      "pass": true
+    },
+    {
+      "message": "24 unique full-tour places",
+      "pass": true
+    },
+    {
+      "message": "Puerto numbering 14–22",
+      "pass": true
+    },
+    {
+      "message": "All integrated geometry and instance matrices are finite",
+      "pass": true
+    },
+    {
+      "message": "horno focus matches documented complex",
+      "pass": true
+    },
+    {
+      "message": "horno lies inside Puerto terrain",
+      "pass": true
+    },
+    {
+      "message": "horno has nonempty metric geometry",
+      "pass": true
+    },
+    {
+      "message": "horno has plausible metric extent",
+      "pass": true
+    },
+    {
+      "message": "talleres focus matches documented complex",
+      "pass": true
+    },
+    {
+      "message": "talleres lies inside Puerto terrain",
+      "pass": true
+    },
+    {
+      "message": "talleres has nonempty metric geometry",
+      "pass": true
+    },
+    {
+      "message": "talleres has plausible metric extent",
+      "pass": true
+    },
+    {
+      "message": "talleres roof opening leaves permanent structure",
+      "pass": true
+    },
+    {
+      "message": "museo-industrial focus matches documented complex",
+      "pass": true
+    },
+    {
+      "message": "museo-industrial lies inside Puerto terrain",
+      "pass": true
+    },
+    {
+      "message": "museo-industrial has nonempty metric geometry",
+      "pass": true
+    },
+    {
+      "message": "museo-industrial has plausible metric extent",
+      "pass": true
+    },
+    {
+      "message": "museo-industrial roof opening leaves permanent structure",
+      "pass": true
+    },
+    {
+      "message": "gerencia focus matches documented complex",
+      "pass": true
+    },
+    {
+      "message": "gerencia lies inside Puerto terrain",
+      "pass": true
+    },
+    {
+      "message": "gerencia has nonempty metric geometry",
+      "pass": true
+    },
+    {
+      "message": "gerencia has plausible metric extent",
+      "pass": true
+    },
+    {
+      "message": "casino focus matches documented complex",
+      "pass": true
+    },
+    {
+      "message": "casino lies inside Puerto terrain",
+      "pass": true
+    },
+    {
+      "message": "casino has nonempty metric geometry",
+      "pass": true
+    },
+    {
+      "message": "casino has plausible metric extent",
+      "pass": true
+    },
+    {
+      "message": "begona focus matches documented complex",
+      "pass": true
+    },
+    {
+      "message": "begona lies inside Puerto terrain",
+      "pass": true
+    },
+    {
+      "message": "begona has nonempty metric geometry",
+      "pass": true
+    },
+    {
+      "message": "begona has plausible metric extent",
+      "pass": true
+    },
+    {
+      "message": "begona roof opening leaves permanent structure",
+      "pass": true
+    },
+    {
+      "message": "economato focus matches documented complex",
+      "pass": true
+    },
+    {
+      "message": "economato lies inside Puerto terrain",
+      "pass": true
+    },
+    {
+      "message": "economato has nonempty metric geometry",
+      "pass": true
+    },
+    {
+      "message": "economato has plausible metric extent",
+      "pass": true
+    },
+    {
+      "message": "barrio-obrero focus matches documented complex",
+      "pass": true
+    },
+    {
+      "message": "barrio-obrero lies inside Puerto terrain",
+      "pass": true
+    },
+    {
+      "message": "barrio-obrero has nonempty metric geometry",
+      "pass": true
+    },
+    {
+      "message": "barrio-obrero has plausible metric extent",
+      "pass": true
+    },
+    {
+      "message": "sanatorio focus matches documented complex",
+      "pass": true
+    },
+    {
+      "message": "sanatorio lies inside Puerto terrain",
+      "pass": true
+    },
+    {
+      "message": "sanatorio has nonempty metric geometry",
+      "pass": true
+    },
+    {
+      "message": "sanatorio has plausible metric extent",
+      "pass": true
+    },
+    {
+      "message": "Alto Horno max height matches 64.20 m above ground",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "times": {
+    "models": 2688.860835,
+    "urban": 168.53026799999998,
+    "terrain": 806.5733300000002,
+    "city": 9534.942832
+  },
+  "geometry": {
+    "meshes": 133,
+    "triangles": 3542117,
+    "vertices": 7705328,
+    "bytes": 329834788,
+    "nonfinite": 0
+  },
+  "buildings": {
+    "footprintCount": 15966,
+    "empiricalHeightCount": 0,
+    "ignSurfaceHeightCount": 9358,
+    "osmLevelCount": 0,
+    "cadastralLevelCount": 6591,
+    "estimatedHeightCount": 17,
+    "sampledRoofColorCount": 15966,
+    "contextFacadeCount": 4622,
+    "terrainRoofCorrections": 0,
+    "maximumRoofCorrectionM": 0,
+    "terrainRoofNote": "Display roof raised only where source terrain would intersect it; original height estimates are retained in data.",
+    "otherHeights": "OSM height > IGN normalized surface estimate > attributed OSM / DGC storeys × 3 m > deterministic visual estimate.",
+    "facades": "Generic repeated facade bays outside detailed areas; not surveyed window positions. Roof colours sampled from PNOA where available."
+  },
+  "roads": {
+    "wayCount": 1154,
+    "stairTreads": 19,
+    "supportCount": 22845,
+    "taggedWidths": 0,
+    "profile": "Longitudinal DEM samples; pavement widths, treads and transverse grading are interpreted."
+  },
+  "heritage": {
+    "horno": {
+      "meshes": 10,
+      "triangles": 59832,
+      "coolingBoxes": 315,
+      "tuyeres": 12,
+      "documentedHeight": 64.2
+    },
+    "talleres": {
+      "meshes": 14,
+      "triangles": 64764,
+      "naves": 4,
+      "approximateFootprintMetres": [
+        78.7,
+        120.67
+      ]
+    },
+    "museo-industrial": {
+      "meshes": 14,
+      "triangles": 17680,
+      "documentedDimensions": [
+        18,
+        70
+      ],
+      "mappedDimensions": [
+        20.22,
+        60.67
+      ],
+      "interior": "Historic structural organisation only; current exhibits not reconstructed"
+    },
+    "gerencia": {
+      "buildings": 12,
+      "trees": 66,
+      "paths": 7,
+      "cartographicPathLines": 8
+    },
+    "casino": {
+      "buildings": 1,
+      "courtyard": true
+    },
+    "begona": {
+      "buildings": 2,
+      "naves": 3,
+      "openBelfry": true
+    },
+    "economato": {
+      "parts": 5,
+      "triangles": 15200
+    },
+    "barrio-obrero": {
+      "parts": 287,
+      "triangles": 419614
+    },
+    "sanatorio": {
+      "parts": 14,
+      "triangles": 89962
+    }
+  },
+  "terrain": {
+    "coreMeshSpacingM": 5,
+    "outerMeshSpacingM": 12.5,
+    "sourceSampleCount": 534261,
+    "foundationAdjustment": {
+      "method": "Downward caps on shared vertices of cells intersecting a model foundation polygon; visual accommodation, not altered survey measurements.",
+      "patchCount": 325,
+      "intersectingCells": 2039,
+      "adjustedVertices": 1927,
+      "maximumLoweringM": 1.4812572485691318,
+      "clearanceM": 0.03,
+      "groundQueryNote": "Analytical ground queries retain foundation levels. Future pedestrian collision must account for this rendered mesh accommodation and floor meshes."
+    }
+  },
+  "excludedContextParts": 412,
+  "cameras": [
+    {
+      "id": "horno",
+      "focus": null,
+      "viewport": [
+        1363,
+        936
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4802.818523890226,
+        149.12353165235538,
+        2912.7418593238644
+      ],
+      "target": [
+        4946.552881578159,
+        34.8287412017101,
+        2746.494891395653
+      ]
+    },
+    {
+      "id": "horno",
+      "focus": "crisol",
+      "viewport": [
+        1363,
+        936
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4923.848987286366,
+        18.828742751430863,
+        2774.516823999909
+      ],
+      "target": [
+        4942.848987286366,
+        9.828742751430863,
+        2750.516823999909
+      ]
+    },
+    {
+      "id": "horno",
+      "focus": "plano",
+      "viewport": [
+        1363,
+        936
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4995.1694953620545,
+        42.828742751430866,
+        2800.516823999909
+      ],
+      "target": [
+        4960.1694953620545,
+        20.828742751430863,
+        2760.516823999909
+      ]
+    },
+    {
+      "id": "horno",
+      "focus": "plataformas",
+      "viewport": [
+        1363,
+        936
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4903.3848856712275,
+        64.82874275143087,
+        2790.516823999909
+      ],
+      "target": [
+        4939.3848856712275,
+        48.82874275143086,
+        2748.516823999909
+      ]
+    },
+    {
+      "id": "horno",
+      "focus": null,
+      "viewport": [
+        390,
+        844
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4725.8865843025105,
+        210.29832698716532,
+        3001.723379810861
+      ],
+      "target": [
+        4946.552881578159,
+        34.8287412017101,
+        2746.494891395653
+      ]
+    },
+    {
+      "id": "horno",
+      "focus": "crisol",
+      "viewport": [
+        390,
+        844
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4901.731038568417,
+        29.305665828353938,
+        2802.4552855383704
+      ],
+      "target": [
+        4942.848987286366,
+        9.828742751430863,
+        2750.516823999909
+      ]
+    },
+    {
+      "id": "horno",
+      "focus": "plano",
+      "viewport": [
+        390,
+        844
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        5035.913085105644,
+        68.43899916168726,
+        2847.0809265640114
+      ],
+      "target": [
+        4960.1694953620545,
+        20.828742751430863,
+        2760.516823999909
+      ]
+    },
+    {
+      "id": "horno",
+      "focus": "plataformas",
+      "viewport": [
+        390,
+        844
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4861.477193363535,
+        83.45438377707188,
+        2839.4091316922168
+      ],
+      "target": [
+        4939.3848856712275,
+        48.82874275143086,
+        2748.516823999909
+      ]
+    },
+    {
+      "id": "talleres",
+      "focus": null,
+      "viewport": [
+        1363,
+        936
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        5350.5278965222715,
+        183.9458846111052,
+        2683.748699001442
+      ],
+      "target": [
+        5115.476783996572,
+        14.102500076405704,
+        2524.520526000161
+      ]
+    },
+    {
+      "id": "talleres",
+      "focus": "fachada",
+      "viewport": [
+        1363,
+        936
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        5209.728500608026,
+        30,
+        2604.68789804607
+      ],
+      "target": [
+        5167.728500608026,
+        10,
+        2554.68789804607
+      ]
+    },
+    {
+      "id": "talleres",
+      "focus": "estructura",
+      "viewport": [
+        1363,
+        936
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        5057.476783996572,
+        101,
+        2586.520526000161
+      ],
+      "target": [
+        5115.476783996572,
+        8,
+        2524.520526000161
+      ]
+    },
+    {
+      "id": "talleres",
+      "focus": null,
+      "viewport": [
+        390,
+        844
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        5641.59406257533,
+        394.26466266234735,
+        2880.9225534244815
+      ],
+      "target": [
+        5115.476783996572,
+        14.102500076405704,
+        2524.520526000161
+      ]
+    },
+    {
+      "id": "talleres",
+      "focus": "fachada",
+      "viewport": [
+        390,
+        844
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        5258.620808300333,
+        53.28205128205128,
+        2662.8930262511985
+      ],
+      "target": [
+        5167.728500608026,
+        10,
+        2554.68789804607
+      ]
+    },
+    {
+      "id": "talleres",
+      "focus": "estructura",
+      "viewport": [
+        390,
+        844
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4989.958835278623,
+        209.26153846153844,
+        2658.6948849745204
+      ],
+      "target": [
+        5115.476783996572,
+        8,
+        2524.520526000161
+      ]
+    },
+    {
+      "id": "museo-industrial",
+      "focus": null,
+      "viewport": [
+        1363,
+        936
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4926.022390136009,
+        89.45331564853815,
+        2493.179406145234
+      ],
+      "target": [
+        4830.874008477398,
+        11.975347726527001,
+        2388.516186320763
+      ]
+    },
+    {
+      "id": "museo-industrial",
+      "focus": "fachada",
+      "viewport": [
+        1363,
+        936
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4884.037569810999,
+        23.96284788000896,
+        2435.378082711512
+      ],
+      "target": [
+        4855.037569810999,
+        9.962847880008962,
+        2403.378082711512
+      ]
+    },
+    {
+      "id": "museo-industrial",
+      "focus": "andenes",
+      "viewport": [
+        1363,
+        936
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4791.806176129009,
+        55.962847880008965,
+        2429.142394000448
+      ],
+      "target": [
+        4828.806176129009,
+        7.962847880008963,
+        2388.142394000448
+      ]
+    },
+    {
+      "id": "museo-industrial",
+      "focus": null,
+      "viewport": [
+        390,
+        844
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        5043.605019562617,
+        185.19917103877646,
+        2622.520298514504
+      ],
+      "target": [
+        4830.874008477398,
+        11.975347726527001,
+        2388.516186320763
+      ]
+    },
+    {
+      "id": "museo-industrial",
+      "focus": "fachada",
+      "viewport": [
+        390,
+        844
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4917.7965441699735,
+        40.260283777444855,
+        2472.629364762794
+      ],
+      "target": [
+        4855.037569810999,
+        9.962847880008962,
+        2403.378082711512
+      ]
+    },
+    {
+      "id": "museo-industrial",
+      "focus": "andenes",
+      "viewport": [
+        390,
+        844
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4748.734381257214,
+        111.83977095693204,
+        2476.870599128653
+      ],
+      "target": [
+        4828.806176129009,
+        7.962847880008963,
+        2388.142394000448
+      ]
+    },
+    {
+      "id": "gerencia",
+      "focus": null,
+      "viewport": [
+        1363,
+        936
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4348.551847184137,
+        436.0877865362463,
+        1783.0507551478017
+      ],
+      "target": [
+        4691.953125,
+        11.354627132415771,
+        2225.857666015625
+      ]
+    },
+    {
+      "id": "gerencia",
+      "focus": "oficinas",
+      "viewport": [
+        1363,
+        936
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4722.755986388477,
+        66.69792895949203,
+        2080.663496459986
+      ],
+      "target": [
+        4677.755986388477,
+        10.697928959492028,
+        2148.663496459986
+      ]
+    },
+    {
+      "id": "gerencia",
+      "focus": "chales",
+      "viewport": [
+        1363,
+        936
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4680.723234830669,
+        33.07,
+        2138.6453200671317
+      ],
+      "target": [
+        4655.723234830669,
+        10.07,
+        2171.6453200671317
+      ]
+    },
+    {
+      "id": "gerencia",
+      "focus": "paseo",
+      "viewport": [
+        1363,
+        936
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4767.421858196906,
+        27.731562836061876,
+        2134.15346800055
+      ],
+      "target": [
+        4743.421858196906,
+        7.731562836061874,
+        2160.15346800055
+      ]
+    },
+    {
+      "id": "gerencia",
+      "focus": null,
+      "viewport": [
+        390,
+        844
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        3918.0637604076805,
+        968.5335780755477,
+        1227.9476958834239
+      ],
+      "target": [
+        4691.953125,
+        11.354627132415771,
+        2225.857666015625
+      ]
+    },
+    {
+      "id": "gerencia",
+      "focus": "oficinas",
+      "viewport": [
+        390,
+        844
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4775.140601773092,
+        131.88767254923562,
+        2001.5045221010118
+      ],
+      "target": [
+        4677.755986388477,
+        10.697928959492028,
+        2148.663496459986
+      ]
+    },
+    {
+      "id": "gerencia",
+      "focus": "chales",
+      "viewport": [
+        390,
+        844
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4709.825798933233,
+        59.84435897435897,
+        2100.229935451747
+      ],
+      "target": [
+        4655.723234830669,
+        10.07,
+        2171.6453200671317
+      ]
+    },
+    {
+      "id": "gerencia",
+      "focus": "paseo",
+      "viewport": [
+        390,
+        844
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4795.360319735368,
+        51.01361411811315,
+        2103.8868013338833
+      ],
+      "target": [
+        4743.421858196906,
+        7.731562836061874,
+        2160.15346800055
+      ]
+    },
+    {
+      "id": "casino",
+      "focus": null,
+      "viewport": [
+        1363,
+        936
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4837.606566027372,
+        91.83533263549577,
+        2113.281633492282
+      ],
+      "target": [
+        4754.2412109375,
+        11.15918254852295,
+        2207.40380859375
+      ]
+    },
+    {
+      "id": "casino",
+      "focus": "fachada",
+      "viewport": [
+        1363,
+        936
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4782.230306750405,
+        33.8313801797818,
+        2164.7029669037515
+      ],
+      "target": [
+        4747.230306750405,
+        10.831380179781805,
+        2199.7029669037515
+      ]
+    },
+    {
+      "id": "casino",
+      "focus": "patio",
+      "viewport": [
+        1363,
+        936
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4758.874014818788,
+        39.8313801797818,
+        2213.273863589576
+      ],
+      "target": [
+        4745.874014818788,
+        11.831380179781805,
+        2198.273863589576
+      ]
+    },
+    {
+      "id": "casino",
+      "focus": "jardin",
+      "viewport": [
+        1363,
+        936
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4800.504053192213,
+        34.0569856239612,
+        2240.7607453106298
+      ],
+      "target": [
+        4768.504053192213,
+        7.056985623961199,
+        2218.7607453106298
+      ]
+    },
+    {
+      "id": "casino",
+      "focus": null,
+      "viewport": [
+        390,
+        844
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4930.14147690209,
+        181.385246385223,
+        2008.8067341176
+      ],
+      "target": [
+        4754.2412109375,
+        11.15918254852295,
+        2207.40380859375
+      ]
+    },
+    {
+      "id": "casino",
+      "focus": "fachada",
+      "viewport": [
+        390,
+        844
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4822.973896493995,
+        60.60573915414077,
+        2123.9593771601617
+      ],
+      "target": [
+        4747.230306750405,
+        10.831380179781805,
+        2199.7029669037515
+      ]
+    },
+    {
+      "id": "casino",
+      "focus": "patio",
+      "viewport": [
+        390,
+        844
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4774.007348152121,
+        72.4262519746536,
+        2230.7354020511148
+      ],
+      "target": [
+        4745.874014818788,
+        11.831380179781805,
+        2198.273863589576
+      ]
+    },
+    {
+      "id": "casino",
+      "focus": "jardin",
+      "viewport": [
+        390,
+        844
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4837.755335243495,
+        65.48775485473043,
+        2266.3710017208864
+      ],
+      "target": [
+        4768.504053192213,
+        7.056985623961199,
+        2218.7607453106298
+      ]
+    },
+    {
+      "id": "begona",
+      "focus": null,
+      "viewport": [
+        1363,
+        936
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        5009.25100615059,
+        112.57195197459352,
+        2297.8413948675725
+      ],
+      "target": [
+        4876.770751953125,
+        20.85485291481018,
+        2281.5361328125
+      ]
+    },
+    {
+      "id": "begona",
+      "focus": "fachada",
+      "viewport": [
+        1363,
+        936
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4904.722668526494,
+        27.07,
+        2305.169440000489
+      ],
+      "target": [
+        4877.722668526494,
+        13.07,
+        2281.169440000489
+      ]
+    },
+    {
+      "id": "begona",
+      "focus": "naves",
+      "viewport": [
+        1363,
+        936
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4888.895982670646,
+        46.07,
+        2293.646970616784
+      ],
+      "target": [
+        4866.895982670646,
+        11.07,
+        2273.646970616784
+      ]
+    },
+    {
+      "id": "begona",
+      "focus": "alameda",
+      "viewport": [
+        1363,
+        936
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4928.504808732453,
+        36.07,
+        2326.4401912354942
+      ],
+      "target": [
+        4892.504808732453,
+        7.07,
+        2291.4401912354942
+      ]
+    },
+    {
+      "id": "begona",
+      "focus": null,
+      "viewport": [
+        390,
+        844
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        5127.842448029708,
+        194.67371942936754,
+        2312.4372646373104
+      ],
+      "target": [
+        4876.770751953125,
+        20.85485291481018,
+        2281.5361328125
+      ]
+    },
+    {
+      "id": "begona",
+      "focus": "fachada",
+      "viewport": [
+        390,
+        844
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4936.153437757263,
+        43.3674358974359,
+        2333.1079015389505
+      ],
+      "target": [
+        4877.722668526494,
+        13.07,
+        2281.169440000489
+      ]
+    },
+    {
+      "id": "begona",
+      "focus": "naves",
+      "viewport": [
+        390,
+        844
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4914.506239080903,
+        86.81358974358974,
+        2316.9290218988353
+      ],
+      "target": [
+        4866.895982670646,
+        11.07,
+        2273.646970616784
+      ]
+    },
+    {
+      "id": "begona",
+      "focus": "alameda",
+      "viewport": [
+        390,
+        844
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4970.412501040146,
+        69.82897435897436,
+        2367.183780979084
+      ],
+      "target": [
+        4892.504808732453,
+        7.07,
+        2291.4401912354942
+      ]
+    },
+    {
+      "id": "economato",
+      "focus": null,
+      "viewport": [
+        1363,
+        936
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4894.325048886733,
+        88.23440406479098,
+        2133.384622921445
+      ],
+      "target": [
+        4812.237548828125,
+        10.467298746109009,
+        2237.0740966796875
+      ]
+    },
+    {
+      "id": "economato",
+      "focus": "porticos",
+      "viewport": [
+        1363,
+        936
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4830.044259270726,
+        48.502451813868205,
+        2193.2214989754484
+      ],
+      "target": [
+        4812.044259270726,
+        8.502451813868209,
+        2225.2214989754484
+      ]
+    },
+    {
+      "id": "economato",
+      "focus": "cubiertas",
+      "viewport": [
+        1363,
+        936
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4854.909591372249,
+        73.8024518138682,
+        2274.4355720000244
+      ],
+      "target": [
+        4814.909591372249,
+        11.80245181386821,
+        2239.4355720000244
+      ]
+    },
+    {
+      "id": "economato",
+      "focus": null,
+      "viewport": [
+        390,
+        844
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        5000.350184687874,
+        188.67926956060847,
+        1999.4581355936882
+      ],
+      "target": [
+        4812.237548828125,
+        10.467298746109009,
+        2237.0740966796875
+      ]
+    },
+    {
+      "id": "economato",
+      "focus": "porticos",
+      "viewport": [
+        390,
+        844
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4850.998105424572,
+        95.06655437797076,
+        2155.9702169241664
+      ],
+      "target": [
+        4812.044259270726,
+        8.502451813868209,
+        2225.2214989754484
+      ]
+    },
+    {
+      "id": "economato",
+      "focus": "cubiertas",
+      "viewport": [
+        390,
+        844
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4901.473693936352,
+        145.97681078822717,
+        2315.1791617436143
+      ],
+      "target": [
+        4814.909591372249,
+        11.80245181386821,
+        2239.4355720000244
+      ]
+    },
+    {
+      "id": "barrio-obrero",
+      "focus": null,
+      "viewport": [
+        1363,
+        936
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4883.08060911075,
+        414.8470204985109,
+        2314.2852086833286
+      ],
+      "target": [
+        4559.708984375,
+        21.557206630706787,
+        1929.7351684570312
+      ]
+    },
+    {
+      "id": "barrio-obrero",
+      "focus": "calles",
+      "viewport": [
+        1363,
+        936
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4535.82383791885,
+        28.2,
+        1942.0436000005525
+      ],
+      "target": [
+        4504.82383791885,
+        10.2,
+        1918.0436000005525
+      ]
+    },
+    {
+      "id": "barrio-obrero",
+      "focus": "trazado",
+      "viewport": [
+        1363,
+        936
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4619.683301017459,
+        255,
+        2062.496400000384
+      ],
+      "target": [
+        4499.683301017459,
+        10,
+        1922.496400000384
+      ]
+    },
+    {
+      "id": "barrio-obrero",
+      "focus": null,
+      "viewport": [
+        390,
+        844
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        5251.262968036693,
+        862.6363759489813,
+        2752.123689568233
+      ],
+      "target": [
+        4559.708984375,
+        21.557206630706787,
+        1929.7351684570312
+      ]
+    },
+    {
+      "id": "barrio-obrero",
+      "focus": "calles",
+      "viewport": [
+        390,
+        844
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4571.911017406029,
+        49.153846153846146,
+        1969.982061539014
+      ],
+      "target": [
+        4504.82383791885,
+        10.2,
+        1918.0436000005525
+      ]
+    },
+    {
+      "id": "barrio-obrero",
+      "focus": "trazado",
+      "viewport": [
+        390,
+        844
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4759.375608709766,
+        540.2051282051282,
+        2225.470758974743
+      ],
+      "target": [
+        4499.683301017459,
+        10,
+        1922.496400000384
+      ]
+    },
+    {
+      "id": "sanatorio",
+      "focus": null,
+      "viewport": [
+        1363,
+        936
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        3860.3824068188933,
+        490.8407506203969,
+        2088.585719062854
+      ],
+      "target": [
+        4224.040771484375,
+        16.064552307128906,
+        1664.317626953125
+      ]
+    },
+    {
+      "id": "sanatorio",
+      "focus": "edificio",
+      "viewport": [
+        1363,
+        936
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4152.601147945178,
+        83.82112612569166,
+        1710.0626680001455
+      ],
+      "target": [
+        4219.601147945178,
+        15.821126125691658,
+        1638.0626680001455
+      ]
+    },
+    {
+      "id": "sanatorio",
+      "focus": "jardin",
+      "viewport": [
+        1363,
+        936
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4130.945966173515,
+        65.14984108484174,
+        1620.9704000001866
+      ],
+      "target": [
+        4170.945966173515,
+        13.149841084841743,
+        1582.9704000001866
+      ]
+    },
+    {
+      "id": "sanatorio",
+      "focus": "pabellones",
+      "viewport": [
+        1363,
+        936
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4339.49155651113,
+        82.0034484786535,
+        1825.4220000000405
+      ],
+      "target": [
+        4291.49155651113,
+        12.00344847865349,
+        1764.4220000000405
+      ]
+    },
+    {
+      "id": "sanatorio",
+      "focus": null,
+      "viewport": [
+        390,
+        844
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        3466.3490077591055,
+        1005.2732438373419,
+        2548.2913512992727
+      ],
+      "target": [
+        4224.040771484375,
+        16.064552307128906,
+        1664.317626953125
+      ]
+    },
+    {
+      "id": "sanatorio",
+      "focus": "edificio",
+      "viewport": [
+        390,
+        844
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4074.6062761503063,
+        162.980100484666,
+        1793.8780526155301
+      ],
+      "target": [
+        4219.601147945178,
+        15.821126125691658,
+        1638.0626680001455
+      ]
+    },
+    {
+      "id": "sanatorio",
+      "focus": "jardin",
+      "viewport": [
+        390,
+        844
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4084.381863609413,
+        125.68317441817507,
+        1665.206297436084
+      ],
+      "target": [
+        4170.945966173515,
+        13.149841084841743,
+        1582.9704000001866
+      ]
+    },
+    {
+      "id": "sanatorio",
+      "focus": "pabellones",
+      "viewport": [
+        390,
+        844
+      ],
+      "offscreenPercent": 0,
+      "contextOcclusion": null,
+      "position": [
+        4395.368479588053,
+        163.49062796583297,
+        1896.432256410297
+      ],
+      "target": [
+        4291.49155651113,
+        12.00344847865349,
+        1764.4220000000405
+      ]
+    }
+  ],
+  "memoryMb": 824.95703125
+}

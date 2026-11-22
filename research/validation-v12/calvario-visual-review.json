@@ -1,0 +1,193 @@
+{
+  "status": "final-inspected",
+  "reviewedAt": "2026-11-19T20:35:49.891840+00:00",
+  "modelSha256": "990a076c049599574eb566b7823bc8166667d7c385a2e5fd964e6e4342d96910",
+  "renderer": {
+    "engine": "Blender 4.3.2 / Cycles",
+    "device": "CPU",
+    "samples": 128,
+    "denoising": false,
+    "reason": "OpenImageDenoise unavailable in this build",
+    "normals": "Exact Three.js normals, including smooth foliage",
+    "textures": "39 actual Canvas maps, UVs, vertex colors and material colors exported from Three.js",
+    "lighting": "Inspection lighting with AgX; not an identical WebGL screenshot"
+  },
+  "scope": "Actual Calvario core, local context, terrain and established nearby heritage. Generic city layers beyond that context are outside this CPU export.",
+  "images": [
+    {
+      "path": "research/validation-v12/calvario-conjunto.png",
+      "sha256": "d7a7b4c1bad051d4f6b940bd68e69de0598621df9d12d7181fafd7b33e8016b9",
+      "dimensions": [
+        1440,
+        1080
+      ],
+      "camera": {
+        "name": "calvario-conjunto",
+        "position": [
+          -111.80214381615593,
+          191.3314689031106,
+          -33.71158999948054
+        ],
+        "target": [
+          -216.80214381615593,
+          84,
+          90
+        ],
+        "fov": 43
+      },
+      "inspected": true,
+      "findings": "Se distinguen la ermita, el zigzag, las terrazas y la relación con el caserío. La cubierta se mantiene continua; el entorno se presenta como volúmenes cartográficos."
+    },
+    {
+      "path": "research/validation-v12/calvario-ermita.png",
+      "sha256": "fec5f51f0fba5833585eb426b7716ce512d4272e4b53420e427b73c3f5a152e7",
+      "dimensions": [
+        1440,
+        1080
+      ],
+      "camera": {
+        "name": "calvario-ermita",
+        "position": [
+          -210.57268215277017,
+          93.83146890311058,
+          85.57762664115351
+        ],
+        "target": [
+          -216.80214381615593,
+          91.03146890311058,
+          109.28841000051946
+        ],
+        "fov": 38
+      },
+      "inspected": true,
+      "findings": "Fachada ocre y juntas blancas; puerta gris rectangular bajo tímpano blanco; tres hornacinas de fondo claro y cerámica pequeña. Ocho peldaños continuos. Ya no se ve la línea de aire bajo los extremos del paño frontal."
+    },
+    {
+      "path": "research/validation-v12/calvario-camino.png",
+      "sha256": "40cfe6bd623756d86c358776a0a6b6e8a899cdf8ef5f93081c05004dc784ec6e",
+      "dimensions": [
+        1440,
+        1080
+      ],
+      "camera": {
+        "name": "calvario-camino",
+        "position": [
+          -207.40352884811625,
+          80.96052513682467,
+          89.43448800026061
+        ],
+        "target": [
+          -224.40157086871423,
+          81.17597075165618,
+          86.45111200019954
+        ],
+        "fov": 53
+      },
+      "inspected": true,
+      "findings": "Cipreses con normales suavizadas, muros y casalicios legibles. El canto de la terraza superior izquierda está cerrado con material de pavimento/tierra; desaparece el hueco negro bajo la cinta. La superficie y las cotas superiores del camino se conservan."
+    }
+  ],
+  "qa": {
+    "pass": true,
+    "checks": 494,
+    "cameraVariants": 108,
+    "pavingSamples": 31784,
+    "wallSupportSamples": 344,
+    "minimumWallEmbeddingM": 0.41279476563983053,
+    "pavementEdgeSamples": 8062,
+    "minimumPavementEdgeEmbeddingM": 0.3072638404350272,
+    "upperPavingVerticesUnchanged": true,
+    "preservedAccessWays": [
+      {
+        "id": "733321151",
+        "vertices": 3,
+        "preserved": true
+      },
+      {
+        "id": "733321152",
+        "vertices": 4,
+        "preserved": true
+      },
+      {
+        "id": "733321153",
+        "vertices": 3,
+        "preserved": true
+      },
+      {
+        "id": "733321154",
+        "vertices": 29,
+        "preserved": true
+      },
+      {
+        "id": "1419281600",
+        "vertices": 2,
+        "preserved": true
+      }
+    ]
+  },
+  "inputHashes": {
+    "dist/js/calvario.js": "990a076c049599574eb566b7823bc8166667d7c385a2e5fd964e6e4342d96910",
+    "dist/js/heritage-sacred.js": "52290123d2aed4fbddacbe6ecfc7e0a7d328df8056e858239bad5be93afd11e6",
+    "dist/js/calvario-context.js": "0ef2e7a8cc33c2296cbd1b7ff8023d5eef71a48e4eb86849efd06e59b124d148",
+    "dist/assets/data/calvario-visit.json": "b054fed27f08b1d4c1f387315b3d3d6b8ae3a6a7378e4e2fb6186a437c829088",
+    "dist/assets/data/calvario-context.json": "3c4da56852c9f4afb1ca501e37e4823b7c2eb3aa81d9b42a7da07f53bbe81766",
+    "dist/assets/data/calvario-plan.json": "3a9a08fb423930cb5902b83db6c5b2998ff8461935bc26656714a3039a167eef",
+    "dist/assets/data/landmarks.json": "4f6276810156168352541013217153f4d389c6d8efa3e0624a8cc9d8a58b8a57",
+    "dist/assets/data/elevation.json": "3c70059cb1f8de706bc7e6912311076cb716ec2ff7f1c8aa2b6e51a520809d8c",
+    "dist/assets/data/cartography.json": "a2b02f3311dfc3cc4b0a162400508364ce41f9ea875e77638e983e5065b23340",
+    "dist/assets/data/orthophoto.jpg": "4af0699d220992253881bd8fcbfcb85f73e84f4a224efec4653a183f50e1cf71",
+    "research/validation-v12/validate_calvario_model.mjs": "fd11a0fd2e82b0a68c94107eb24f056d8a91450ea65240fd3bf67f3730618034",
+    "research/validation-v12/render_calvario.py": "2cb7bf6b90377bd5f64a6b1154bc7dcfbef963a4f64f60defd9350633c9cf693",
+    "research/validation-v12/calvario-model-qa.json": "9d9749e425716a60ff635b976a83fce26f43b3ae3c2b93303c92f7ee5c9e5af6",
+    "research/validation-v12/calvario-paving-surface-comparison.json": "162497be7f3456d7de7bd01b9da92155f5543feed1f62408b158810fe1c2d62c",
+    "research/validation-v12/calvario-geometry.json.gz": "946283ca8f3045bc85012c3bd0170a16e5216b9000bf0662c1581e5e9f31fb2b",
+    "research/calvario-model.md": "cd00641d75e1da639369fcc5fe4494993eb5e3396efad253911df5e2ccf967f9"
+  },
+  "textureHashes": {
+    "research/validation-v12/textures/material-00.png": "1e266b61f533abe1a6d934460b10654dad6d4342848d48618a072868f3b919ad",
+    "research/validation-v12/textures/material-01.png": "9147010e4c5b30fe13a02d5d46fa513fd91c59091319a94c4dc6faef0887a652",
+    "research/validation-v12/textures/material-02.png": "f28a910d357c73bba37fe1a2b71707daba11c6732659ab8017266d9413b6d032",
+    "research/validation-v12/textures/material-03.png": "8fd5723a215afaebbd9e3c7f8bc3e54317a25e82abb98f850d62a262cd04a712",
+    "research/validation-v12/textures/material-04.png": "2356552db07a2bc0ccf2c77e862a53d068ac836daa54b8907690507761f1b6a1",
+    "research/validation-v12/textures/material-05.png": "fae912e168b1951420d3855455bfedd66789e1adc40c663c0804cb4ff318fce6",
+    "research/validation-v12/textures/material-06.png": "9c0a7777e797d6188aa9d03f71f22dbbedeb0564dc9e2a5116718d4da6f6acb0",
+    "research/validation-v12/textures/material-07.png": "3baf0c267be4f35a326edc68918dcf0e358bdc0946566796cf133b953964a166",
+    "research/validation-v12/textures/material-08.png": "31ce75ccccff70d45aac828459a2a7771994e233d746815d1d864b36a458ec28",
+    "research/validation-v12/textures/material-09.png": "5701221bfe273752dad0af3d1ac4944c824277d4c5bbc028d5327e524adaed28",
+    "research/validation-v12/textures/material-10.png": "02a5feed4f56587d9a65736e1d3d8fb7ca8f833a2d65e054645b8c8833320438",
+    "research/validation-v12/textures/material-11.png": "8fd5723a215afaebbd9e3c7f8bc3e54317a25e82abb98f850d62a262cd04a712",
+    "research/validation-v12/textures/material-12.png": "2356552db07a2bc0ccf2c77e862a53d068ac836daa54b8907690507761f1b6a1",
+    "research/validation-v12/textures/material-13.png": "fae912e168b1951420d3855455bfedd66789e1adc40c663c0804cb4ff318fce6",
+    "research/validation-v12/textures/material-14.png": "4ba941bcf062d3f228e0fe37edcd06b2d9740a205b06d3b3bfe1711c3a3a7416",
+    "research/validation-v12/textures/material-15.png": "d36de0040e0ada51901ae14e61d8d1db01c0202d4c2c35275132627c574e4712",
+    "research/validation-v12/textures/material-16.png": "ecad8599b41afeeccf0da7862ed24c25421e02767e49fd00eff269ec24cafd39",
+    "research/validation-v12/textures/material-17.png": "043352fd2eabb47360bb8e076d1c1296b881cbc78f2f52c483e14b2eaf85aede",
+    "research/validation-v12/textures/material-18.png": "f2311cdc8c2750b679ca04f459ed1e8f0f31f75916076bedd1c49652d601a6c4",
+    "research/validation-v12/textures/material-19.png": "360dcce431df8f58fe2b16f9ce9f6a79c59bdc4d6fb341c14cc9bda0e04bd799",
+    "research/validation-v12/textures/material-20.png": "84ca42627a297f4bcfd21fbdcb0f59639aea184fe1030652f9f36849a624db85",
+    "research/validation-v12/textures/material-21.png": "04d8ebc27e8480da320c1f3f353085d417db1a6a30fa5e1c1b14630b0f62744c",
+    "research/validation-v12/textures/material-22.png": "529e495050c0a09f957c643145f1435553534777da25c8cb8a7b5ab76edd57d4",
+    "research/validation-v12/textures/material-23.png": "68cb6747d2fa2cb98fb1b384288cd588af0a8ed7499e66037a93c932fd27b8c5",
+    "research/validation-v12/textures/material-24.png": "8fd5723a215afaebbd9e3c7f8bc3e54317a25e82abb98f850d62a262cd04a712",
+    "research/validation-v12/textures/material-25.png": "2356552db07a2bc0ccf2c77e862a53d068ac836daa54b8907690507761f1b6a1",
+    "research/validation-v12/textures/material-26.png": "fae912e168b1951420d3855455bfedd66789e1adc40c663c0804cb4ff318fce6",
+    "research/validation-v12/textures/material-27.png": "360dcce431df8f58fe2b16f9ce9f6a79c59bdc4d6fb341c14cc9bda0e04bd799",
+    "research/validation-v12/textures/material-28.png": "84ca42627a297f4bcfd21fbdcb0f59639aea184fe1030652f9f36849a624db85",
+    "research/validation-v12/textures/material-29.png": "f2311cdc8c2750b679ca04f459ed1e8f0f31f75916076bedd1c49652d601a6c4",
+    "research/validation-v12/textures/material-30.png": "529e495050c0a09f957c643145f1435553534777da25c8cb8a7b5ab76edd57d4",
+    "research/validation-v12/textures/material-31.png": "8efcc7ebad1ee67b5466a537c0a271a224845d3f9e0ff7dd10ea393a6628c7ea",
+    "research/validation-v12/textures/material-32.png": "8fd5723a215afaebbd9e3c7f8bc3e54317a25e82abb98f850d62a262cd04a712",
+    "research/validation-v12/textures/material-33.png": "2356552db07a2bc0ccf2c77e862a53d068ac836daa54b8907690507761f1b6a1",
+    "research/validation-v12/textures/material-34.png": "fae912e168b1951420d3855455bfedd66789e1adc40c663c0804cb4ff318fce6",
+    "research/validation-v12/textures/material-35.png": "d3b6a11add31d9d73267d263989df82afdb23060605412ab13666b6993d2cdcb",
+    "research/validation-v12/textures/material-36.png": "fd02299154ac3dc562eb639c429aacf781765d1453114e7f67326e1ebf77522f",
+    "research/validation-v12/textures/material-37.png": "30516d45e01fd25931fd6b2e3ea5e3fd831d193c7e9fa3c043523c1dd44a719d",
+    "research/validation-v12/textures/material-38.png": "1f14b8779970a628e4049c6280f85d985c1c6f107e57ef4e8a1d14812a355f8c"
+  },
+  "limitations": [
+    "The model follows cartographic plans and IGN terrain. Architectural elevations, planting and small detail dimensions remain visual interpretations.",
+    "Fourteen stations and three final facade niches are documented. The eleven wayside representations are an interpretative composition, not a verified inventory of positions or ceramic paintings.",
+    "The inspected deliverable is an exterior visit. No undocumented interior or historic ceremony is reconstructed.",
+    "CPU views verify the selected geometry and visual joins. Browser interaction and device GPU performance are separate checks."
+  ]
+}

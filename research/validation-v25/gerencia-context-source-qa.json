@@ -1,0 +1,74 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "label": "No owned context building overlaps the Gerencia precinct",
+      "pass": true
+    },
+    {
+      "label": "No duplicate building ID with earlier three contexts",
+      "pass": true
+    },
+    {
+      "label": "All heritage parcels remain with original models",
+      "pass": true
+    },
+    {
+      "label": "No paving overlaps previous context surfaces",
+      "pass": true
+    },
+    {
+      "label": "No paving crosses architecture or Casino garden",
+      "pass": true
+    },
+    {
+      "label": "Surface areas equal triangulated area",
+      "pass": true
+    },
+    {
+      "label": "No two terrain paving triangles overlap materially",
+      "pass": true
+    },
+    {
+      "label": "All seven context focuses present",
+      "pass": true
+    },
+    {
+      "label": "All tree centres outside buildings and paths",
+      "pass": true
+    },
+    {
+      "label": "Prior Casino furnishing area remains excluded",
+      "pass": true
+    }
+  ],
+  "stats": {
+    "buildingParts": 143,
+    "parentParcels": 47,
+    "osmBuildingFootprints": 1,
+    "sourceCoreParts": 42,
+    "roadFragments": 24,
+    "gardenPathFragments": 20,
+    "pavingAreaM2": 43827.6,
+    "pavingVertices": 9363,
+    "pavingTriangles": 14164,
+    "trees": 105,
+    "shrubs": 11,
+    "lamps": 14,
+    "benches": 4,
+    "gates": 1,
+    "boundarySegments": 2
+  },
+  "sourceHashes": {
+    "port-cartography.json": "da82e6776616f733bfc0617abaae8333e74d5df1f57050150c75b8f1b1c75efd",
+    "port-garden.json": "5c3ec6397c907d7c22b92a812478cb4d1587ff1766f4df82c9f446a4873a4a5e",
+    "port-elevation.json": "0444001c6f0ca1d2d723768b90cb997fbcab59eb975f14f45a1742e80893e347",
+    "horno-context.json": "034c74144297d2df56140f6380c5958a233b8de32fe7e8f35da5c1c09bbe98fb",
+    "talleres-context.json": "6100214fcb3b21d8fd182b8f728ec71252a8247d0f9842d2687764eeff3fad58",
+    "museo-industrial-context.json": "e32f3593ffbfe96f055d6c49b64dd88f02e831261dfd35252c210e4aeea3914e"
+  },
+  "limits": [
+    "Pixel tracing is not a botanical inventory or topographic survey.",
+    "2026 landscape procurement is not represented as completed works."
+  ]
+}

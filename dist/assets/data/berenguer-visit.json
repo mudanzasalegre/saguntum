@@ -1,0 +1,1711 @@
+{
+  "schemaVersion": 1,
+  "id": "berenguer",
+  "title": "Casa dels Berenguer y muro de Diana",
+  "subtitle": "Dieciocho paradas entre patios, piedra y memoria",
+  "introduction": "Recorre el palacio y el muro vecino como un mismo lugar de la ciudad: una portada, patios a distintas alturas, una estancia vinculada al agua y fábricas antiguas que siguen planteando preguntas. La visita explica lo conservado, las transformaciones y los límites de cada interpretación.",
+  "researchDate": "2026-11-19",
+  "regionsLabel": "ámbitos",
+  "mapButtonLabel": "Plano de la casa y el muro",
+  "overviewButtonLabel": "Ver conjunto",
+  "readingModeLabel": "Leer casa, patios y arqueología",
+  "readingModeNote": "Los colores distinguen arquitectura doméstica, patios, agua, muro y entorno. Son temas de lectura, no fechas asignadas a cada piedra.",
+  "timelineIntroduction": "La casa, el muro y el entorno tienen historias distintas. La línea del tiempo separa las interpretaciones arqueológicas, las fases de uso y las intervenciones documentadas.",
+  "visitAriaLabel": "Visita documentada a la Casa dels Berenguer, el muro de Diana y su entorno",
+  "sectionInstructions": "Activa la sección para retirar visualmente cubiertas y descubrir la relación entre los patios, la estancia abovedada y el muro. Vuelve a la vista completa para recuperar la composición exterior.",
+  "sectionNote": "Sección didáctica: los interiores y las cotas menores son aproximados. La estancia se presenta como antiguo aljibe y posible baño ritual; su identificación como micvé no está confirmada. El corte virtual no describe obras reales ni garantiza acceso físico.",
+  "methodology": [
+    "Casa y muro comparten una visita, pero no una fecha de construcción ni una atribución funcional única.",
+    "El nombre tradicional templo de Diana identifica el lugar. La escena no presenta un templo completo como restitución demostrada ni convierte una hipótesis defensiva en certeza.",
+    "La cronología del muro sigue discutida: las fechas propuestas en divulgación se contrastan con estudios arqueológicos. Las fábricas superiores no se colorean como si todas fueran antiguas.",
+    "El antiguo aljibe se explica como posible micvé. El volumen de la sección es una aproximación didáctica y no una reconstrucción certificada del baño o de su instalación hidráulica.",
+    "La portada, los patios y la plaza se contrastan con fotografías institucionales y planos de SKRQ. No se ha localizado un levantamiento público completo, acotado y actualizado de los interiores.",
+    "OSM, Catastro, MDT05, MDSnE y PNOA registran la posición general, las huellas y el relieve; cornisas, huecos, vegetación y peldaños incorporan interpretación.",
+    "El anexo se referencia a la primera fase publicada en agosto de 2025. El expediente municipal de junio de 2026 no acredita que la segunda fase esté terminada.",
+    "Las paradas son puntos de lectura virtual. No constituyen una guía de accesibilidad física ni confirman horarios o apertura de espacios.",
+    "Las fotografías y pinturas se utilizan como referencias de investigación. No se incorporan galerías históricas ni imágenes ajenas como texturas.",
+    "La visita específica conserva la identidad general del atlas y sus enlaces a Sagunto y Puerto de Sagunto."
+  ],
+  "readingLegend": [
+    {
+      "id": "house",
+      "label": "La casa y sus fábricas",
+      "color": "#d7b36b",
+      "note": "Portada, cuerpos, huecos y cubiertas; su color no fija una fase cronológica."
+    },
+    {
+      "id": "courtyards",
+      "label": "Patios y recorrido",
+      "color": "#b6c593",
+      "note": "Vacíos, galerías y escaleras que relacionan las distintas cotas."
+    },
+    {
+      "id": "water",
+      "label": "Aljibe y estancia abovedada",
+      "color": "#7fb7c4",
+      "note": "Un espacio conservado y una identificación ritual que sigue siendo posible."
+    },
+    {
+      "id": "wall",
+      "label": "Muro antiguo y transformaciones",
+      "color": "#c99bba",
+      "note": "Grandes bloques, retorno y fábricas posteriores se leen juntos y se explican por separado."
+    },
+    {
+      "id": "context",
+      "label": "Entorno y memoria",
+      "color": "#80aa85",
+      "note": "La plaza, el anexo y la relación con las calles y monumentos vecinos."
+    }
+  ],
+  "confidenceLegend": [
+    {
+      "id": "documented",
+      "label": "Documentado",
+      "note": "La fuente respalda el hecho o la descripción; no certifica precisión métrica del modelo."
+    },
+    {
+      "id": "interpretive",
+      "label": "Interpretación",
+      "note": "Lectura razonada o detalle visual aproximado, revisable con nueva documentación."
+    },
+    {
+      "id": "disputed",
+      "label": "En debate",
+      "note": "Las fuentes no permiten establecer una función o cronología definitiva."
+    }
+  ],
+  "modelRegistration": {
+    "anchor": [
+      -0.2790276,
+      39.6787218
+    ],
+    "yawRadians": 0,
+    "axisX": "Este en el registro cartográfico del atlas",
+    "axisZ": "Sur en el registro cartográfico del atlas",
+    "method": "Huellas OSM y catastrales, relieve oficial, fotografías y alzados de la plaza; focos compartidos con el modelo",
+    "precision": "approximate"
+  },
+  "stops": [
+    {
+      "id": "berenguer-conjunto",
+      "title": "Un palacio junto a una pregunta antigua",
+      "label": "El conjunto",
+      "regionId": "llegada",
+      "period": "mixed",
+      "coordinate": [
+        -0.27898044,
+        39.67862271
+      ],
+      "coordinates": [
+        -0.27898044,
+        39.67862271
+      ],
+      "intro": "Empieza por reconocer llenos y vacíos. Sigue el recorrido desde la fachada hacia el muro vecino y compara la escala doméstica con la de los grandes bloques.",
+      "narrative": "Empieza por reconocer llenos y vacíos. Sigue el recorrido desde la fachada hacia el muro vecino y compara la escala doméstica con la de los grandes bloques.",
+      "facts": [
+        {
+          "text": "La casa conserva arquitectura gótica e intervenciones renacentistas.",
+          "sourceIds": [
+            "bg-gva"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "En 2018 se inauguró una nueva museografía para recibir e informar a visitantes.",
+          "sourceIds": [
+            "bg-2018"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El traspaso de bienes de 1987 registra los inmuebles de Sagrario 15 y 17 en este entorno.",
+          "sourceIds": [
+            "bg-boe1987"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Relaciona la casa principal, sus patios y el espacio abierto ante el muro.",
+      "modelNote": "La volumetría reúne evidencias de distintas fechas; no representa un único momento histórico.",
+      "sourceIds": [
+        "bg-gva",
+        "bg-2018",
+        "bg-boe1987",
+        "bg-pnoa",
+        "bg-terreno",
+        "bg-osm",
+        "bg-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura aproximado sobre la cartografía y el modelo; no equivale a una medición interior ni acredita acceso físico.",
+      "osmIds": [],
+      "order": 1,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "bg-osm",
+        "bg-catastro"
+      ],
+      "readingLayer": "house"
+    },
+    {
+      "id": "berenguer-portada",
+      "title": "Cruzar el arco de piedra",
+      "label": "La portada",
+      "regionId": "llegada",
+      "period": "mixed",
+      "coordinate": [
+        -0.27901546,
+        39.67876419
+      ],
+      "coordinates": [
+        -0.27901546,
+        39.67876419
+      ],
+      "intro": "Acércate al umbral y observa cómo cambia la escala entre la calle, la puerta y la fachada.",
+      "narrative": "Acércate al umbral y observa cómo cambia la escala entre la calle, la puerta y la fachada.",
+      "facts": [
+        {
+          "text": "La entrada se resuelve con un arco de medio punto de grandes dovelas.",
+          "sourceIds": [
+            "bg-turismo"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La identificación de Sagrario 17 con la Casa del Notari también aparece en el catálogo del Museo Sorolla.",
+          "sourceIds": [
+            "bg-sorolla"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Sigue las juntas radiales del arco, el espesor del umbral y el encuentro con el pavimento.",
+      "modelNote": "Dovelas y desgaste se aproximan visualmente; no son un levantamiento piedra a piedra.",
+      "sourceIds": [
+        "bg-turismo",
+        "bg-sorolla",
+        "bg-osm",
+        "bg-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura aproximado sobre la cartografía y el modelo; no equivale a una medición interior ni acredita acceso físico.",
+      "osmIds": [],
+      "order": 2,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "bg-osm",
+        "bg-catastro"
+      ],
+      "readingLayer": "house"
+    },
+    {
+      "id": "berenguer-escudo",
+      "title": "La fachada como representación familiar",
+      "label": "El escudo",
+      "regionId": "llegada",
+      "period": "mixed",
+      "coordinate": [
+        -0.27901546,
+        39.67876419
+      ],
+      "coordinates": [
+        -0.27901546,
+        39.67876419
+      ],
+      "intro": "Levanta la mirada hacia el centro de la portada. El pequeño relieve cambia la lectura de una entrada doméstica y ayuda a reconocer la casa.",
+      "narrative": "Levanta la mirada hacia el centro de la portada. El pequeño relieve cambia la lectura de una entrada doméstica y ayuda a reconocer la casa.",
+      "facts": [
+        {
+          "text": "El escudo de los Berenguer se sitúa sobre la dovela central.",
+          "sourceIds": [
+            "bg-gva"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Turismo municipal documenta la presencia del linaje en Morvedre entre los siglos XIV y XVIII.",
+          "sourceIds": [
+            "bg-turismo"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Busca el relieve sobre la clave y la relación entre cantería y paño de fachada.",
+      "modelNote": "La heráldica se representa de forma esquemática; no se inventan inscripciones ni detalles ilegibles.",
+      "sourceIds": [
+        "bg-gva",
+        "bg-turismo",
+        "bg-osm",
+        "bg-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura aproximado sobre la cartografía y el modelo; no equivale a una medición interior ni acredita acceso físico.",
+      "osmIds": [],
+      "order": 3,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "bg-osm",
+        "bg-catastro"
+      ],
+      "readingLayer": "house"
+    },
+    {
+      "id": "berenguer-patio-arcos",
+      "title": "La casa se abre hacia dentro",
+      "label": "Patio de los arcos",
+      "regionId": "patios",
+      "period": "mixed",
+      "coordinate": [
+        -0.27897694,
+        39.67864068
+      ],
+      "coordinates": [
+        -0.27897694,
+        39.67864068
+      ],
+      "intro": "Gira alrededor del vacío y busca las comunicaciones entre planta baja y galerías. Las sombras permiten leer soportes, arcos y profundidad.",
+      "narrative": "Gira alrededor del vacío y busca las comunicaciones entre planta baja y galerías. Las sombras permiten leer soportes, arcos y profundidad.",
+      "facts": [
+        {
+          "text": "El patio conserva arcadas de influencia renacentista.",
+          "sourceIds": [
+            "bg-gva"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Desde la pequeña recepción se asciende al patio de los arcos.",
+          "sourceIds": [
+            "bg-turismo"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La rehabilitación reseñada en 2010 reorganizó la conexión entre los patios inferior y superior.",
+          "sourceIds": [
+            "bg-2010"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Observa los arcos desde distintos ángulos y sigue los pasos entre el patio y las estancias.",
+      "modelNote": "La secuencia espacial está documentada; luces, espesores y detalles interiores se aproximan.",
+      "sourceIds": [
+        "bg-gva",
+        "bg-turismo",
+        "bg-2010",
+        "bg-osm",
+        "bg-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura aproximado sobre la cartografía y el modelo; no equivale a una medición interior ni acredita acceso físico.",
+      "osmIds": [],
+      "order": 4,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "bg-osm",
+        "bg-catastro"
+      ],
+      "readingLayer": "courtyards"
+    },
+    {
+      "id": "berenguer-logia",
+      "title": "Mirar el patio desde la galería",
+      "label": "La galería",
+      "regionId": "patios",
+      "period": "mixed",
+      "coordinate": [
+        -0.27900612,
+        39.67864068
+      ],
+      "coordinates": [
+        -0.27900612,
+        39.67864068
+      ],
+      "intro": "Compara la vista desde el suelo con la que permite la galería. El mismo patio cambia al ver los arcos desde arriba o desde abajo.",
+      "narrative": "Compara la vista desde el suelo con la que permite la galería. El mismo patio cambia al ver los arcos desde arriba o desde abajo.",
+      "facts": [
+        {
+          "text": "Las referencias institucionales permiten distinguir los elementos góticos de la casa y el lenguaje renacentista del patio.",
+          "sourceIds": [
+            "bg-dival"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La adaptación turística introduce chapa y perfiles de acero junto a la piedra.",
+          "sourceIds": [
+            "bg-gva"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Reconoce el ritmo de los vanos y la diferencia entre apoyos pétreos y elementos contemporáneos.",
+      "modelNote": "El número y proporciones de huecos se contrastan con fotografías, sin atribuir a cada pieza una fecha no demostrada.",
+      "sourceIds": [
+        "bg-dival",
+        "bg-gva",
+        "bg-turismo",
+        "bg-osm",
+        "bg-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura aproximado sobre la cartografía y el modelo; no equivale a una medición interior ni acredita acceso físico.",
+      "osmIds": [],
+      "order": 5,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "bg-osm",
+        "bg-catastro"
+      ],
+      "readingLayer": "courtyards"
+    },
+    {
+      "id": "berenguer-escalera",
+      "title": "Subir junto a las fábricas antiguas",
+      "label": "La escalera",
+      "regionId": "patios",
+      "period": "mixed",
+      "coordinate": [
+        -0.27894426,
+        39.67855713
+      ],
+      "coordinates": [
+        -0.27894426,
+        39.67855713
+      ],
+      "intro": "Sigue la subida y observa cómo el desnivel organiza el conjunto. La cámara muestra la continuidad del recorrido sin convertirlo en una ruta física garantizada.",
+      "narrative": "Sigue la subida y observa cómo el desnivel organiza el conjunto. La cámara muestra la continuidad del recorrido sin convertirlo en una ruta física garantizada.",
+      "facts": [
+        {
+          "text": "La descripción municipal sitúa una escalera paralela al muro de Diana hacia el patio superior.",
+          "sourceIds": [
+            "bg-turismo"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Las secciones de SKRQ documentan el desnivel y los tramos de escalera de la plaza exterior.",
+          "sourceIds": [
+            "bg-skrq"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Compara la escalera del recorrido interior con la conexión exterior de la plaza.",
+      "modelNote": "Se mantienen diferenciadas ambas circulaciones; las cotas menores son aproximadas.",
+      "sourceIds": [
+        "bg-turismo",
+        "bg-skrq",
+        "bg-osm",
+        "bg-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura aproximado sobre la cartografía y el modelo; no equivale a una medición interior ni acredita acceso físico.",
+      "osmIds": [],
+      "order": 6,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "bg-osm",
+        "bg-catastro"
+      ],
+      "readingLayer": "courtyards"
+    },
+    {
+      "id": "berenguer-patio-superior",
+      "title": "Un segundo patio, otra altura",
+      "label": "Patio superior",
+      "regionId": "patios",
+      "period": "mixed",
+      "coordinate": [
+        -0.2790388,
+        39.67850773
+      ],
+      "coordinates": [
+        -0.2790388,
+        39.67850773
+      ],
+      "intro": "Al cambiar de cota, vuelve a buscar el muro y las cubiertas. Los vacíos ayudan a orientarse en una casa que no se entiende desde una sola fachada.",
+      "narrative": "Al cambiar de cota, vuelve a buscar el muro y las cubiertas. Los vacíos ayudan a orientarse en una casa que no se entiende desde una sola fachada.",
+      "facts": [
+        {
+          "text": "El centro relaciona dos edificios mediante dos patios a diferente nivel.",
+          "sourceIds": [
+            "bg-turismo"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El convenio de 2016 propuso renovar la interpretación turística dentro del edificio rehabilitado.",
+          "sourceIds": [
+            "bg-2016"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La inauguración de 2018 incorporó recursos audiovisuales y murales informativos.",
+          "sourceIds": [
+            "bg-2018"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Lee la relación entre patio alto, salas y salida hacia la terraza.",
+      "modelNote": "La distribución interior se simplifica donde faltan planos públicos completos.",
+      "sourceIds": [
+        "bg-turismo",
+        "bg-2016",
+        "bg-2018",
+        "bg-osm",
+        "bg-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura aproximado sobre la cartografía y el modelo; no equivale a una medición interior ni acredita acceso físico.",
+      "osmIds": [],
+      "order": 7,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "bg-osm",
+        "bg-catastro"
+      ],
+      "readingLayer": "courtyards"
+    },
+    {
+      "id": "berenguer-aljibe",
+      "title": "Agua almacenada, uso ritual posible",
+      "label": "El aljibe",
+      "regionId": "agua",
+      "period": "interpretation",
+      "coordinate": [
+        -0.27904464,
+        39.67863618
+      ],
+      "coordinates": [
+        -0.27904464,
+        39.67863618
+      ],
+      "intro": "Abre la sección y observa el volumen bajo el recorrido. La estancia permite hablar de usos sucesivos sin dar por resuelta su primera función.",
+      "narrative": "Abre la sección y observa el volumen bajo el recorrido. La estancia permite hablar de usos sucesivos sin dar por resuelta su primera función.",
+      "facts": [
+        {
+          "text": "La divulgación municipal describe un antiguo aljibe reutilizado como despensa o bodega.",
+          "sourceIds": [
+            "bg-turismo"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "València Turisme identifica su posible utilización como micvé o baño ritual judío.",
+          "sourceIds": [
+            "bg-dival"
+          ],
+          "confidence": "interpretive"
+        },
+        {
+          "text": "La señalización municipal de 2020 mantiene expresamente esa identificación como posible.",
+          "sourceIds": [
+            "bg-sefarad2020"
+          ],
+          "confidence": "interpretive"
+        }
+      ],
+      "lookFor": "Observa el descenso y la separación entre espacio subterráneo y patio.",
+      "modelNote": "No se recrean ceremonias, instalación hidráulica ni una fecha de construcción no demostradas.",
+      "sourceIds": [
+        "bg-turismo",
+        "bg-dival",
+        "bg-sefarad2020",
+        "bg-osm",
+        "bg-catastro"
+      ],
+      "confidence": "disputed",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura aproximado sobre la cartografía y el modelo; no equivale a una medición interior ni acredita acceso físico.",
+      "osmIds": [],
+      "order": 8,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "bg-osm",
+        "bg-catastro"
+      ],
+      "readingLayer": "water"
+    },
+    {
+      "id": "berenguer-boveda",
+      "title": "Conservar una estancia abovedada",
+      "label": "La bóveda",
+      "regionId": "agua",
+      "period": "mixed",
+      "coordinate": [
+        -0.27904464,
+        39.67863618
+      ],
+      "coordinates": [
+        -0.27904464,
+        39.67863618
+      ],
+      "intro": "Mira el techo curvo y su encuentro con los muros. La sección facilita entender un recinto pequeño que desde fuera queda oculto.",
+      "narrative": "Mira el techo curvo y su encuentro con los muros. La sección facilita entender un recinto pequeño que desde fuera queda oculto.",
+      "facts": [
+        {
+          "text": "La intervención anunciada en 2022 describe una bóveda de cañón de mampostería irregular y acceso por dos tramos de escalera.",
+          "sourceIds": [
+            "bg-conservacion2022"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Entonces se documentaron desprendimientos y cierre del recinto; el anuncio preveía consolidarlo.",
+          "sourceIds": [
+            "bg-conservacion2022"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Distingue la forma de la bóveda de los muros y los tramos de descenso.",
+      "modelNote": "La sección es didáctica; la noticia de 2022 no confirma su estado de apertura en 2026.",
+      "sourceIds": [
+        "bg-conservacion2022",
+        "bg-osm",
+        "bg-catastro"
+      ],
+      "confidence": "interpretive",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura aproximado sobre la cartografía y el modelo; no equivale a una medición interior ni acredita acceso físico.",
+      "osmIds": [],
+      "order": 9,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "bg-osm",
+        "bg-catastro"
+      ],
+      "readingLayer": "water"
+    },
+    {
+      "id": "diana-conjunto",
+      "title": "El muro que dio nombre al lugar",
+      "label": "Muro de Diana",
+      "regionId": "muro",
+      "period": "ancient",
+      "coordinate": [
+        -0.27883804,
+        39.67859396
+      ],
+      "coordinates": [
+        -0.27883804,
+        39.67859396
+      ],
+      "intro": "Acércate a la piedra desde la plaza y después abre la vista. El fragmento se entiende mejor al reconocer la calle, las casas y su retorno.",
+      "narrative": "Acércate a la piedra desde la plaza y después abre la vista. El fragmento se entiende mejor al reconocer la calle, las casas y su retorno.",
+      "facts": [
+        {
+          "text": "La ficha municipal de conservación describe un lienzo visible de unos 15 m de longitud y 4 m de altura.",
+          "sourceIds": [
+            "bg-conservacion2022"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Los restos megalíticos fueron declarados monumento histórico-artístico en 1963.",
+          "sourceIds": [
+            "bg-boe1963"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La identificación con el santuario de Diana es una atribución discutida.",
+          "sourceIds": [
+            "bg-aranegui1992"
+          ],
+          "confidence": "disputed"
+        }
+      ],
+      "lookFor": "Separa los grandes bloques inferiores de las fábricas añadidas encima.",
+      "modelNote": "La altura publicada se refiere al lienzo de grandes bloques, no a toda la elevación posterior.",
+      "sourceIds": [
+        "bg-conservacion2022",
+        "bg-boe1963",
+        "bg-aranegui1992",
+        "bg-skrq",
+        "bg-terreno",
+        "bg-osm",
+        "bg-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura aproximado sobre la cartografía y el modelo; no equivale a una medición interior ni acredita acceso físico.",
+      "osmIds": [],
+      "order": 10,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "bg-osm",
+        "bg-catastro"
+      ],
+      "readingLayer": "wall"
+    },
+    {
+      "id": "diana-aparejo",
+      "title": "Juntas, tamaños y formas",
+      "label": "Los bloques",
+      "regionId": "muro",
+      "period": "ancient",
+      "coordinate": [
+        -0.27882871,
+        39.67859756
+      ],
+      "coordinates": [
+        -0.27882871,
+        39.67859756
+      ],
+      "intro": "Reduce la distancia y sigue una junta de piedra a piedra. La irregularidad de las piezas explica la apariencia del muro mejor que una cuadrícula uniforme.",
+      "narrative": "Reduce la distancia y sigue una junta de piedra a piedra. La irregularidad de las piezas explica la apariencia del muro mejor que una cuadrícula uniforme.",
+      "facts": [
+        {
+          "text": "El estudio de 2012 describe bloques trapezoidales o poligonales ajustados en seco, con pequeñas cuñas.",
+          "sourceIds": [
+            "bg-martinez2012"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "También distingue superficies almohadilladas y márgenes labrados en parte del aparejo.",
+          "sourceIds": [
+            "bg-martinez2012"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Busca cambios de tamaño, entrantes, calces y distintos acabados de las caras.",
+      "modelNote": "El modelo interpreta piezas y erosión; no registra cada bloque mediante fotogrametría.",
+      "sourceIds": [
+        "bg-martinez2012",
+        "bg-skrq",
+        "bg-osm",
+        "bg-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura aproximado sobre la cartografía y el modelo; no equivale a una medición interior ni acredita acceso físico.",
+      "osmIds": [],
+      "order": 11,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "bg-osm",
+        "bg-catastro"
+      ],
+      "readingLayer": "wall"
+    },
+    {
+      "id": "diana-retorno",
+      "title": "La esquina y la forma perdida",
+      "label": "El retorno",
+      "regionId": "muro",
+      "period": "ancient",
+      "coordinate": [
+        -0.27893842,
+        39.67856432
+      ],
+      "coordinates": [
+        -0.27893842,
+        39.67856432
+      ],
+      "intro": "Rodea la esquina y comprueba que el resto no es sólo una fachada plana. Después compara su forma con la lectura histórica disponible.",
+      "narrative": "Rodea la esquina y comprueba que el resto no es sólo una fachada plana. Después compara su forma con la lectura histórica disponible.",
+      "facts": [
+        {
+          "text": "Aranegui publica un ángulo de aproximadamente 15 m este-oeste y 7,5 m norte-sur.",
+          "sourceIds": [
+            "bg-aranegui2015"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La interpretación como torre o estructura defensiva se propone con reservas.",
+          "sourceIds": [
+            "bg-aranegui2015"
+          ],
+          "confidence": "interpretive"
+        },
+        {
+          "text": "El estudio del ara hallada en 2014 también considera probable una relación con defensas posteriores a la Segunda Guerra Púnica.",
+          "sourceIds": [
+            "bg-ara2014"
+          ],
+          "confidence": "interpretive"
+        }
+      ],
+      "lookFor": "Sigue la continuidad del aparejo al cambiar la orientación del paño.",
+      "modelNote": "El modo histórico ofrece una lectura hipotética; no completa una torre ni un templo como si estuvieran documentados.",
+      "sourceIds": [
+        "bg-aranegui2015",
+        "bg-ara2014",
+        "bg-osm",
+        "bg-catastro"
+      ],
+      "confidence": "interpretive",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura aproximado sobre la cartografía y el modelo; no equivale a una medición interior ni acredita acceso físico.",
+      "osmIds": [],
+      "order": 12,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "bg-osm",
+        "bg-catastro"
+      ],
+      "readingLayer": "wall"
+    },
+    {
+      "id": "diana-fabricas",
+      "title": "Una ruina dentro de casas vividas",
+      "label": "Fábricas superpuestas",
+      "regionId": "muro",
+      "period": "mixed",
+      "coordinate": [
+        -0.27884038,
+        39.67859576
+      ],
+      "coordinates": [
+        -0.27884038,
+        39.67859576
+      ],
+      "intro": "Eleva la cámara y compara texturas, huecos y materiales. Las transformaciones del entorno también forman parte de la historia del lugar.",
+      "narrative": "Eleva la cámara y compara texturas, huecos y materiales. Las transformaciones del entorno también forman parte de la historia del lugar.",
+      "facts": [
+        {
+          "text": "El proyecto de 2022 distingue mampostería y ladrillo en una esquina posterior del conjunto.",
+          "sourceIds": [
+            "bg-conservacion2022"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "En 1975 se describían partes del muro ocultas en solares privados y una vivienda sobre él.",
+          "sourceIds": [
+            "bg-boe1975"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Un altar romano dedicado a los dracones apareció reutilizado en una fábrica próxima en 2014.",
+          "sourceIds": [
+            "bg-ara2014"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Observa el cambio de escala entre los grandes bloques y las piezas menores superiores.",
+      "modelNote": "No se sitúa el altar como pieza visible actual ni se asigna la misma antigüedad a todos los paños.",
+      "sourceIds": [
+        "bg-conservacion2022",
+        "bg-boe1975",
+        "bg-ara2014",
+        "bg-osm",
+        "bg-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura aproximado sobre la cartografía y el modelo; no equivale a una medición interior ni acredita acceso físico.",
+      "osmIds": [],
+      "order": 13,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "bg-osm",
+        "bg-catastro"
+      ],
+      "readingLayer": "wall"
+    },
+    {
+      "id": "diana-interpretaciones",
+      "title": "¿Santuario, podio o defensa?",
+      "label": "Las interpretaciones",
+      "regionId": "muro",
+      "period": "interpretation",
+      "coordinate": [
+        -0.27886372,
+        39.67859576
+      ],
+      "coordinates": [
+        -0.27886372,
+        39.67859576
+      ],
+      "intro": "Compara las propuestas sin perder de vista el resto conservado. El modo histórico sirve para comprender una hipótesis y sus límites.",
+      "narrative": "Compara las propuestas sin perder de vista el resto conservado. El modo histórico sirve para comprender una hipótesis y sus límites.",
+      "facts": [
+        {
+          "text": "García y Bellido defendió la identificación del lienzo con el Artemision en 1963.",
+          "sourceIds": [
+            "bg-bellido1963"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Aranegui cuestionó que los textos, la inscripción y la escultura citados demostraran esa localización.",
+          "sourceIds": [
+            "bg-aranegui1992"
+          ],
+          "confidence": "disputed"
+        },
+        {
+          "text": "Martínez López recoge cronologías y funciones discrepantes y señala que falta una datación arqueológica concluyente.",
+          "sourceIds": [
+            "bg-martinez2012"
+          ],
+          "confidence": "disputed"
+        }
+      ],
+      "lookFor": "Compara lo que realmente se conserva con lo que sería necesario añadir para cada hipótesis.",
+      "modelNote": "El nombre tradicional permanece; la reconstrucción virtual no se presenta como prueba arqueológica.",
+      "sourceIds": [
+        "bg-bellido1963",
+        "bg-aranegui1992",
+        "bg-martinez2012",
+        "bg-osm",
+        "bg-catastro"
+      ],
+      "confidence": "disputed",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura aproximado sobre la cartografía y el modelo; no equivale a una medición interior ni acredita acceso físico.",
+      "osmIds": [],
+      "order": 14,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "bg-osm",
+        "bg-catastro"
+      ],
+      "readingLayer": "wall"
+    },
+    {
+      "id": "berenguer-desvan",
+      "title": "La parte alta también trabajaba",
+      "label": "El desván",
+      "regionId": "memoria",
+      "period": "modern",
+      "coordinate": [
+        -0.27898628,
+        39.67874129
+      ],
+      "coordinates": [
+        -0.27898628,
+        39.67874129
+      ],
+      "intro": "Mira bajo la cubierta y relaciona el último nivel con el resto de la vivienda. La vida del palacio también incluyó actividades productivas.",
+      "narrative": "Mira bajo la cubierta y relaciona el último nivel con el resto de la vivienda. La vida del palacio también incluyó actividades productivas.",
+      "facts": [
+        {
+          "text": "Las fuentes institucionales describen dos plantas y desván en la casa original.",
+          "sourceIds": [
+            "bg-gva"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "En el siglo XVIII se empleó el desván para criar gusanos de seda y almacenar productos agrícolas.",
+          "sourceIds": [
+            "bg-gva"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La rehabilitación inaugurada en 2010 adaptó el inmueble a funciones culturales y de recepción.",
+          "sourceIds": [
+            "bg-2010"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Compara la altura del desván con la de las salas y observa su relación con la cubierta.",
+      "modelNote": "Se explica el uso histórico sin llenar el espacio con mobiliario productivo inventado.",
+      "sourceIds": [
+        "bg-gva",
+        "bg-2010",
+        "bg-osm",
+        "bg-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura aproximado sobre la cartografía y el modelo; no equivale a una medición interior ni acredita acceso físico.",
+      "osmIds": [],
+      "order": 15,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "bg-osm",
+        "bg-catastro"
+      ],
+      "readingLayer": "house"
+    },
+    {
+      "id": "berenguer-anexo",
+      "title": "Un edificio que sigue revelando su historia",
+      "label": "El anexo occidental",
+      "regionId": "memoria",
+      "period": "contemporary",
+      "coordinate": [
+        -0.27913218,
+        39.67864966
+      ],
+      "coordinates": [
+        -0.27913218,
+        39.67864966
+      ],
+      "intro": "Desplaza la mirada al inmueble vecino. Su lectura recuerda que conservar un conjunto implica investigar y estabilizar antes de completar nuevos recorridos.",
+      "narrative": "Desplaza la mirada al inmueble vecino. Su lectura recuerda que conservar un conjunto implica investigar y estabilizar antes de completar nuevos recorridos.",
+      "facts": [
+        {
+          "text": "La primera fase terminada en 2025 incluyó derribo parcial, estabilización y arqueología en Plaça dels Berenguer 5.",
+          "sourceIds": [
+            "bg-anexo2025"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Se conservaron al menos dos arcos originales; la noticia plantea indicios de una ocupación islámica anterior.",
+          "sourceIds": [
+            "bg-anexo2025"
+          ],
+          "confidence": "interpretive"
+        },
+        {
+          "text": "El acta municipal de 12-06-2026 vuelve a incluir el contrato de consolidación, sin certificar terminación de la segunda fase.",
+          "sourceIds": [
+            "bg-jgl2026"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Distingue este volumen de la casa visitable y busca la relación entre parcelas contiguas.",
+      "modelNote": "El estado material se limita a evidencias publicadas: no se dibuja como acabado un proyecto aún no acreditado.",
+      "sourceIds": [
+        "bg-anexo2025",
+        "bg-jgl2026",
+        "bg-osm",
+        "bg-catastro"
+      ],
+      "confidence": "interpretive",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura aproximado sobre la cartografía y el modelo; no equivale a una medición interior ni acredita acceso físico.",
+      "osmIds": [],
+      "order": 16,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "bg-osm",
+        "bg-catastro"
+      ],
+      "readingLayer": "context"
+    },
+    {
+      "id": "berenguer-sorolla",
+      "title": "Reconocer la plaza en una pintura",
+      "label": "Sorolla y la plaza",
+      "regionId": "memoria",
+      "period": "modern",
+      "coordinate": [
+        -0.27898628,
+        39.67876644
+      ],
+      "coordinates": [
+        -0.27898628,
+        39.67876644
+      ],
+      "intro": "Vuelve al exterior y observa la fachada desde la plaza. Imagina cómo una pintura selecciona un encuadre y deja fuera otras partes del lugar.",
+      "narrative": "Vuelve al exterior y observa la fachada desde la plaza. Imagina cómo una pintura selecciona un encuadre y deja fuera otras partes del lugar.",
+      "facts": [
+        {
+          "text": "El Museo Sorolla conserva Plaza de Sagunto, un pequeño óleo fechado hacia 1882.",
+          "sourceIds": [
+            "bg-sorolla"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La identificación del lugar se revisó en 2022: representa la Casa dels Berenguer o Casa del Notari.",
+          "sourceIds": [
+            "bg-sorolla"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Compara el encuadre de la plaza con las vistas laterales del atlas.",
+      "modelNote": "La referencia pictórica aporta memoria, sin reproducirse como galería ni usarse como plano métrico.",
+      "sourceIds": [
+        "bg-sorolla",
+        "bg-osm",
+        "bg-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura aproximado sobre la cartografía y el modelo; no equivale a una medición interior ni acredita acceso físico.",
+      "osmIds": [],
+      "order": 17,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "bg-osm",
+        "bg-catastro"
+      ],
+      "readingLayer": "context"
+    },
+    {
+      "id": "berenguer-mirador",
+      "title": "La casa dentro de Sagunto",
+      "label": "Mirador y entorno",
+      "regionId": "memoria",
+      "period": "mixed",
+      "coordinate": [
+        -0.27902363,
+        39.67851491
+      ],
+      "coordinates": [
+        -0.27902363,
+        39.67851491
+      ],
+      "intro": "Abre la vista hacia las cubiertas y calles vecinas. Termina enlazando este lugar con las demás visitas del casco histórico.",
+      "narrative": "Abre la vista hacia las cubiertas y calles vecinas. Termina enlazando este lugar con las demás visitas del casco histórico.",
+      "facts": [
+        {
+          "text": "El recorrido descrito por Turismo asciende hasta un mirador desde el patio superior.",
+          "sourceIds": [
+            "bg-turismo"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La plaza contemporánea de SKRQ combina piedra de Ulldecona, dolomita blanca, bancos y vegetación.",
+          "sourceIds": [
+            "bg-skrq"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El proyecto interpretativo de 2016 relaciona la casa con la Vía del Pórtic y el patrimonio de Altos Hornos.",
+          "sourceIds": [
+            "bg-2016"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Relaciona los patios con Santa María, la calle del Sagrario y las medianeras contiguas.",
+      "modelNote": "Las viviendas mantienen huellas y alturas de referencia; sus acabados son aproximados.",
+      "sourceIds": [
+        "bg-turismo",
+        "bg-skrq",
+        "bg-2016",
+        "bg-terreno",
+        "bg-pnoa",
+        "bg-osm",
+        "bg-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura aproximado sobre la cartografía y el modelo; no equivale a una medición interior ni acredita acceso físico.",
+      "osmIds": [],
+      "order": 18,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "bg-osm",
+        "bg-catastro"
+      ],
+      "readingLayer": "context"
+    }
+  ],
+  "regions": [
+    {
+      "id": "llegada",
+      "name": "La casa y su fachada",
+      "aliases": [],
+      "summary": "Reconoce el conjunto, la puerta y la representación familiar.",
+      "coordinate": [
+        -0.27898044,
+        39.67862271
+      ],
+      "sourceIds": [
+        "bg-gva",
+        "bg-2018",
+        "bg-boe1987",
+        "bg-pnoa",
+        "bg-terreno",
+        "bg-osm",
+        "bg-catastro",
+        "bg-turismo",
+        "bg-sorolla"
+      ],
+      "stopIds": [
+        "berenguer-conjunto",
+        "berenguer-portada",
+        "berenguer-escudo"
+      ]
+    },
+    {
+      "id": "patios",
+      "name": "Patios y desniveles",
+      "aliases": [],
+      "summary": "Sigue galerías y escaleras entre las diferentes cotas.",
+      "coordinate": [
+        -0.27897694,
+        39.67864068
+      ],
+      "sourceIds": [
+        "bg-gva",
+        "bg-turismo",
+        "bg-2010",
+        "bg-osm",
+        "bg-catastro",
+        "bg-dival",
+        "bg-skrq",
+        "bg-2016",
+        "bg-2018"
+      ],
+      "stopIds": [
+        "berenguer-patio-arcos",
+        "berenguer-logia",
+        "berenguer-escalera",
+        "berenguer-patio-superior"
+      ]
+    },
+    {
+      "id": "agua",
+      "name": "La estancia del agua",
+      "aliases": [],
+      "summary": "Examina el aljibe y el posible baño ritual mediante la sección.",
+      "coordinate": [
+        -0.27904464,
+        39.67863618
+      ],
+      "sourceIds": [
+        "bg-turismo",
+        "bg-dival",
+        "bg-sefarad2020",
+        "bg-osm",
+        "bg-catastro",
+        "bg-conservacion2022"
+      ],
+      "stopIds": [
+        "berenguer-aljibe",
+        "berenguer-boveda"
+      ]
+    },
+    {
+      "id": "muro",
+      "name": "El muro y sus preguntas",
+      "aliases": [],
+      "summary": "Lee el aparejo, las transformaciones y las interpretaciones arqueológicas.",
+      "coordinate": [
+        -0.27883804,
+        39.67859396
+      ],
+      "sourceIds": [
+        "bg-conservacion2022",
+        "bg-boe1963",
+        "bg-aranegui1992",
+        "bg-skrq",
+        "bg-terreno",
+        "bg-osm",
+        "bg-catastro",
+        "bg-martinez2012",
+        "bg-aranegui2015",
+        "bg-ara2014",
+        "bg-boe1975",
+        "bg-bellido1963"
+      ],
+      "stopIds": [
+        "diana-conjunto",
+        "diana-aparejo",
+        "diana-retorno",
+        "diana-fabricas",
+        "diana-interpretaciones"
+      ]
+    },
+    {
+      "id": "memoria",
+      "name": "Usos, conservación y ciudad",
+      "aliases": [],
+      "summary": "Relaciona trabajo, restauración, arte y paisaje urbano.",
+      "coordinate": [
+        -0.27902363,
+        39.67851491
+      ],
+      "sourceIds": [
+        "bg-gva",
+        "bg-2010",
+        "bg-osm",
+        "bg-catastro",
+        "bg-anexo2025",
+        "bg-jgl2026",
+        "bg-sorolla",
+        "bg-turismo",
+        "bg-skrq",
+        "bg-2016",
+        "bg-terreno",
+        "bg-pnoa"
+      ],
+      "stopIds": [
+        "berenguer-desvan",
+        "berenguer-anexo",
+        "berenguer-sorolla",
+        "berenguer-mirador"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "bg-turismo",
+      "title": "Casa dels Berenguer de Sagunto",
+      "author": "Sagunto Turismo",
+      "url": "https://saguntoturismoblog.wordpress.com/2018/09/23/casa-dels-berenguer-de-sagunto/",
+      "type": "descripción municipal y fotografías",
+      "year": 2018,
+      "locator": "Publicación 23-09-2018; actualizada 29-06-2020; imágenes de acceso, patios y circulación",
+      "note": "Referencia de composición; no es un levantamiento arquitectónico ni un inventario del estado de 2026.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "bg-gva",
+      "title": "Casa dels Berenguer, un edificio lleno de historia",
+      "author": "Turisme Comunitat Valenciana",
+      "url": "https://www.comunitatvalenciana.com/es/inspirate/casa-dels-berenguer",
+      "type": "divulgación patrimonial institucional",
+      "year": 2024,
+      "locator": "Publicación 07-02-2024; arquitectura y usos",
+      "note": "La atribución del muro a Diana se contrasta con bibliografía arqueológica crítica.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "bg-dival",
+      "title": "Casa dels Berenguer",
+      "author": "València Turisme · Diputación de Valencia",
+      "url": "https://turisme.dival.es/lugar_interes/casa-dels-berenguer/",
+      "type": "ficha turística institucional",
+      "year": null,
+      "locator": "Descripción del palacio y del posible baño ritual",
+      "note": "La posibilidad de un micvé no equivale a identificación arqueológica definitiva.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "bg-skrq",
+      "title": "Urbanización y mejora del entorno del Templo de Diana",
+      "author": "SKRQ arquitectura & urbanismo",
+      "url": "https://skrq.es/es/diana.html",
+      "type": "proyecto de arquitectura: texto, fotografías, alzados y secciones",
+      "year": null,
+      "locator": "Imágenes diana-04, diana-06 y diana-09: alzados/secciones con escala gráfica; diana-02,03,07,08: espacio y detalles",
+      "note": "Los dibujos documentan el proyecto de la plaza; no proporcionan una planta acotada de todos los interiores de la casa.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "bg-conservacion2022",
+      "title": "El Ayuntamiento consolida y restaura el muro del templo de Diana y la mikvé de la Casa dels Berenguer",
+      "author": "Ajuntament de Sagunt",
+      "url": "https://aytosagunto.es/es/actualidad/el-ayuntamiento-consolida-y-restaura-el-muro-del-templo-de-diana-y-la-mikve-de-la-casa-dels-berenguer/",
+      "type": "noticia municipal de conservación",
+      "year": 2022,
+      "locator": "Descripción de la intervención adjudicada el 9 de agosto de 2022",
+      "note": "El anuncio describe lesiones y actuaciones previstas; no certifica la apertura actual del recinto abovedado.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "bg-anexo2025",
+      "title": "Concluye la primera fase de las obras en el inmueble anexo a la Casa dels Berenguer",
+      "author": "Ajuntament de Sagunt",
+      "url": "https://aytosagunto.es/es/actualidad/2025-08-04-concluye-la-primera-fase-de-las-obras-en-el-inmueble-anexo-a-la-casa-dels-berenguer/",
+      "type": "noticia municipal de obra y arqueología",
+      "year": 2025,
+      "locator": "04-08-2025; Plaça dels Berenguer 5, al oeste de Sagrario 17",
+      "note": "Documenta la primera fase; una segunda fase de consolidación y conexión seguía en estudio.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "bg-jgl2026",
+      "title": "Extracto de la Junta de Gobierno Local de 12 de junio de 2026",
+      "author": "Ajuntament de Sagunt",
+      "url": "https://aytosagunto.es/media/gehdg0d1/extracto-web-jgl260612.pdf",
+      "type": "documentación municipal",
+      "year": 2026,
+      "locator": "Página 2, punto 20; expediente 1083935Q, contrato 46/22-C",
+      "note": "Seguimiento del contrato de redacción y dirección para consolidar Plaza Berenguers 5; no acredita terminación física.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "bg-aranegui1992",
+      "title": "Un templo republicano en el centro cívico saguntino",
+      "author": "Carmen Aranegui Gascó",
+      "url": "https://revistas.um.es/car/article/view/68051",
+      "type": "estudio arqueológico",
+      "year": 1992,
+      "locator": "Cuadernos de Arquitectura Romana 1, pp.67–82; discusión del muro en pp.68–69. El PDF lleva 1991; el número editorial figura como 1992.",
+      "note": "El templo del foro estudiado en el resto del artículo es otro edificio; su planta no se traslada a este muro.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "bg-martinez2012",
+      "title": "Conjeturas sobre las defensas arsetanas",
+      "author": "Enrique Javier Martínez López · Centre Arqueològic Saguntí",
+      "url": "https://centroarqueologicosaguntino.es/wp-content/uploads/2018/09/589_109_CONJETURAS.pdf",
+      "type": "estudio arqueológico",
+      "year": 2012,
+      "locator": "ARSE 46, pp.109–170; muro de Diana, pp.160–162",
+      "note": "Compara la hipótesis del podio y la defensiva; advierte de la falta de datación arqueológica concluyente.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "bg-ara2014",
+      "title": "Un ara dedicada a los dracones hallada en Saguntum (Valencia)",
+      "author": "Carmen Aranegui Gascó y Emilia Hernández Hervás",
+      "url": "https://lucentum.ua.es/article/view/2689",
+      "type": "estudio arqueológico y epigráfico",
+      "year": 2014,
+      "locator": "Lucentum 33, pp.261–266; DOI 10.14198/LVCENTVM2014.33.16",
+      "note": "Un altar reutilizado en una fábrica posterior no permite localizar por sí solo el santuario al que perteneció.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "bg-aranegui2015",
+      "title": "Sagunto en la encrucijada. Topografía de las fortificaciones del oppidum",
+      "author": "Carmen Aranegui Gascó",
+      "url": "https://www.academia.edu/35403773/Sag_II_G_Pu_nica_pdf_Sagunto_en_la_encrucijada",
+      "type": "capítulo académico compartido por su autora",
+      "year": 2015,
+      "locator": "La Segunda Guerra Púnica en la península ibérica, pp.91–106; muro, pp.104–105",
+      "note": "Las dimensiones publicadas describen los restos; la función de torre se formula con reservas.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "bg-bellido1963",
+      "title": "El lienzo megalítico del Artemision de Saguntum",
+      "author": "Antonio García y Bellido",
+      "url": "https://www.cervantesvirtual.com/portales/hagiografia_hispanica/obra/el-lienzo-megaltico-del-artemision-de-saguntum-0/",
+      "type": "historia de la investigación arqueológica",
+      "year": 1963,
+      "locator": "Boletín de la Real Academia de la Historia 153, pp.301–305; edición digital 2005",
+      "note": "Testimonio de la propuesta de identificación con un templo; no constituye consenso actual.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "bg-boe1963",
+      "title": "Decreto 3481/1963: declaración monumental de los restos megalíticos",
+      "author": "Boletín Oficial del Estado",
+      "url": "https://boe.es/diario_boe/txt.php?id=BOE-A-1963-23896",
+      "type": "documento histórico oficial",
+      "year": 1963,
+      "locator": "Decreto de 28-11-1963; BOE de 18-12-1963",
+      "note": "La datación y atribución del preámbulo recogen la interpretación de entonces.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "bg-boe1975",
+      "title": "Decreto 505/1975: conservación del muro y ordenación de su entorno",
+      "author": "Boletín Oficial del Estado",
+      "url": "https://www.boe.es/boe/dias/1975/03/21/pdfs/A05830-05831.pdf",
+      "type": "documento histórico oficial",
+      "year": 1975,
+      "locator": "Decreto de 20-02-1975; BOE de 21-03-1975, pp.5830–5831",
+      "note": "La descripción del inmueble y los solares corresponde a 1975.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "bg-boe1987",
+      "title": "Real Decreto 1452/1987: traspaso de bienes de patrimonio arquitectónico",
+      "author": "Boletín Oficial del Estado",
+      "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-1987-26715",
+      "type": "documento histórico oficial",
+      "year": 1987,
+      "locator": "Relación de inmuebles, calle Sagrario 15 y 17",
+      "note": "Sus superficies administrativas no se convierten en medidas actuales del modelo.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "bg-2010",
+      "title": "Sagunto inaugura la Casa dels Berenguer convertida en centro de interpretación y recepción de visitantes",
+      "author": "El Periòdic",
+      "url": "https://www.elperiodic.com/sagunto/sagunto-inaugura-casa-dels-berenguer-convertida-centro-interpretacion-recepcion-visitantes_87665",
+      "type": "crónica de inauguración",
+      "year": 2010,
+      "locator": "23-09-2010; rehabilitación y reorganización de patios",
+      "note": "Contrastar la primera apertura con la renovación museográfica municipal de 2018.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "bg-2016",
+      "title": "La Casa dels Berenguer se convertirá en un centro de interpretación turística de la ciudad",
+      "author": "Ajuntament de Sagunt",
+      "url": "https://aytosagunto.es/es/actualidad/la-casa-dels-berenguer-de-sagunto-se-convertira-en-un-centro-de-interpretacion-turistica-de-la-ciudad/",
+      "type": "convenio municipal de museografía",
+      "year": 2016,
+      "locator": "24-10-2016; proyecto de interpretación turística",
+      "note": "Documenta una nueva intervención museográfica en el edificio rehabilitado.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "bg-2018",
+      "title": "Inaugurado el nuevo centro de recepción de visitantes de la Casa dels Berenguer",
+      "author": "Ajuntament de Sagunt",
+      "url": "https://aytosagunto.es/es/actualidad/hoy-se-ha-inaugurado-el-nuevo-centro-de-recepcion-de-visitantes-habilitado-en-la-casa-dels-berenguer/",
+      "type": "noticia municipal de inauguración",
+      "year": 2018,
+      "locator": "28-02-2018; nueva museografía y medios audiovisuales",
+      "note": "La fecha se refiere a la renovación del centro, no a la construcción del palacio.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "bg-sefarad2020",
+      "title": "El conjunto patrimonial judío cuenta con señalización de la Red de Juderías de España",
+      "author": "Ajuntament de Sagunt",
+      "url": "https://aytosagunto.es/es/actualidad/el-conjunto-patrimonial-judio-de-sagunto-ya-cuenta-con-la-senalizacion-de-la-red-de-juderias-de-espana/",
+      "type": "documentación municipal de interpretación",
+      "year": 2020,
+      "locator": "08-09-2020; señalización Caminos de Sefarad, Casa dels Berenguer",
+      "note": "La propia noticia emplea la fórmula posible micvé.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "bg-sorolla",
+      "title": "Plaza de Sagunto · inventario 00258",
+      "author": "Museo Sorolla · Ministerio de Cultura",
+      "url": "https://ceres.mcu.es/pages/Main?idt=5154&inventary=00258&museum=MSM&table=FMUS",
+      "type": "catálogo de colección pública",
+      "year": null,
+      "locator": "Óleo de Joaquín Sorolla, ca.1882; identificación de la plaza revisada en marzo de 2022",
+      "note": "La pintura aporta memoria visual; no se usa como medición ni como fotografía del estado actual.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "bg-osm",
+      "title": "OpenStreetMap · Casa dels Berenguer y entorno",
+      "author": "Colaboradores de OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/733321157",
+      "type": "cartografía colaborativa",
+      "year": null,
+      "locator": "Casa: vía 733321157, nodo 8585769354; traza cartográfica del muro y calles contiguas",
+      "note": "Las coordenadas de las paradas son focos interpretativos, no accesos comprobados ni mediciones interiores.",
+      "accessed": "2026-11-19",
+      "licenseUrl": "https://www.openstreetmap.org/copyright"
+    },
+    {
+      "id": "bg-catastro",
+      "title": "Cartografía catastral INSPIRE · Casa dels Berenguer y manzanas inmediatas",
+      "author": "Dirección General del Catastro",
+      "url": "https://www.catastro.hacienda.gob.es/webinspire/index.html",
+      "type": "cartografía oficial",
+      "year": null,
+      "locator": "Municipio 46222; parcela principal 3558202YJ3935G y anexo occidental 3558201YJ3935G",
+      "note": "Huellas, cuerpos y plantas; fachadas y cubiertas incorporan detalle interpretativo.",
+      "accessed": "2026-11-19",
+      "downloadUrl": "https://www.catastro.hacienda.gob.es/INSPIRE/Buildings/46/46222-SAGUNTO%20SAGUNT/A.ES.SDGC.BU.46222.zip",
+      "licenseUrl": "https://www.catastro.hacienda.gob.es/webinspire/documentos/Licencia.pdf"
+    },
+    {
+      "id": "bg-terreno",
+      "title": "Modelos MDT05 y MDSnE · ladera histórica de Sagunto",
+      "author": "Instituto Geográfico Nacional / Centro Nacional de Información Geográfica",
+      "url": "https://datos.gob.es/es/catalogo/e00125901-spaignmds-normalizado",
+      "type": "modelos geográficos oficiales",
+      "year": null,
+      "locator": "Relieve, cotas generales y alturas estimadas del entorno",
+      "note": "La resolución no permite medir umbrales, peldaños ni cada cambio de cota interior.",
+      "accessed": "2026-11-19",
+      "licenseUrl": "https://www.ign.es/resources/licencia/Condiciones_licenciaUso_IGN.pdf"
+    },
+    {
+      "id": "bg-pnoa",
+      "title": "PNOA Máxima Actualidad · cubiertas del casco histórico",
+      "author": "Instituto Geográfico Nacional / Centro Nacional de Información Geográfica",
+      "url": "https://datos.gob.es/es/catalogo/e00125901-spaignpnoama",
+      "type": "ortofotografía oficial",
+      "year": null,
+      "locator": "Apoyo de registro de cubiertas, patios y medianeras",
+      "note": "La consulta en 2026 no fecha el vuelo ni acredita el estado posterior a las obras de 2025.",
+      "accessed": "2026-11-19",
+      "licenseUrl": "https://www.ign.es/resources/licencia/Condiciones_licenciaUso_IGN.pdf"
+    }
+  ],
+  "timeline": [
+    {
+      "id": "bg-t-antiguo",
+      "date": "Antigüedad · datación discutida",
+      "title": "Un muro de grandes bloques",
+      "text": "Las propuestas de fecha y función siguen abiertas. La diferencia de aparejo no permite fechar por sí sola cada hilada.",
+      "sourceIds": [
+        "bg-martinez2012"
+      ],
+      "period": "ancient",
+      "confidence": "disputed",
+      "stopId": "diana-interpretaciones"
+    },
+    {
+      "id": "bg-t-linaje",
+      "date": "Siglos XIV–XVIII",
+      "title": "Los Berenguer en Morvedre",
+      "text": "La presencia del linaje está documentada durante estos siglos; ello no fecha cada fábrica del edificio.",
+      "sourceIds": [
+        "bg-turismo"
+      ],
+      "period": "mixed",
+      "confidence": "documented",
+      "stopId": "berenguer-escudo"
+    },
+    {
+      "id": "bg-t-patio",
+      "date": "Fases gótica y renacentista",
+      "title": "Una casa transformada",
+      "text": "La descripción institucional reconoce ambos lenguajes arquitectónicos en el conjunto.",
+      "sourceIds": [
+        "bg-dival"
+      ],
+      "period": "mixed",
+      "confidence": "documented",
+      "stopId": "berenguer-patio-arcos"
+    },
+    {
+      "id": "bg-t-seda",
+      "date": "Siglo XVIII",
+      "title": "Seda y almacenamiento",
+      "text": "El desván tuvo funciones productivas y agrícolas.",
+      "sourceIds": [
+        "bg-gva"
+      ],
+      "period": "modern",
+      "confidence": "documented",
+      "stopId": "berenguer-desvan"
+    },
+    {
+      "id": "bg-t-sorolla",
+      "date": "Hacia 1882",
+      "title": "Una mirada de Sorolla",
+      "text": "La plaza aparece en el óleo hoy catalogado como Plaza de Sagunto.",
+      "sourceIds": [
+        "bg-sorolla"
+      ],
+      "period": "modern",
+      "confidence": "documented",
+      "stopId": "berenguer-sorolla"
+    },
+    {
+      "id": "bg-t-proteccion",
+      "date": "1963",
+      "title": "Protección de los restos",
+      "text": "La declaración monumental coincide con la difusión de la interpretación del Artemision.",
+      "sourceIds": [
+        "bg-boe1963",
+        "bg-bellido1963"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "diana-conjunto"
+    },
+    {
+      "id": "bg-t-entorno",
+      "date": "1975",
+      "title": "Conservar y abrir el entorno",
+      "text": "El decreto de utilidad pública permitió actuar sobre los inmuebles que ocultaban parte del muro.",
+      "sourceIds": [
+        "bg-boe1975"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "diana-fabricas"
+    },
+    {
+      "id": "bg-t-traspaso",
+      "date": "1987",
+      "title": "Traspaso de los inmuebles",
+      "text": "Sagrario 15 y 17 figuran en la relación de bienes transferidos a la Generalitat.",
+      "sourceIds": [
+        "bg-boe1987"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "berenguer-conjunto"
+    },
+    {
+      "id": "bg-t-critica",
+      "date": "1991–1992",
+      "title": "Revisar la atribución a Diana",
+      "text": "Aranegui publica una revisión crítica de las pruebas utilizadas para identificar este lugar con el santuario.",
+      "sourceIds": [
+        "bg-aranegui1992"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "diana-interpretaciones"
+    },
+    {
+      "id": "bg-t-apertura",
+      "date": "2010",
+      "title": "Un nuevo uso público",
+      "text": "La rehabilitación del palacio se inaugura como centro de interpretación y recepción.",
+      "sourceIds": [
+        "bg-2010"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "berenguer-conjunto"
+    },
+    {
+      "id": "bg-t-ara",
+      "date": "2014",
+      "title": "Un altar reutilizado",
+      "text": "El hallazgo de un ara dedicada a los dracones amplía la historia arqueológica del entorno.",
+      "sourceIds": [
+        "bg-ara2014"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "diana-fabricas"
+    },
+    {
+      "id": "bg-t-centro",
+      "date": "2016–2018",
+      "title": "Renovación museográfica",
+      "text": "El convenio de 2016 precede a la inauguración de los nuevos contenidos en febrero de 2018.",
+      "sourceIds": [
+        "bg-2016",
+        "bg-2018"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "berenguer-patio-superior"
+    },
+    {
+      "id": "bg-t-senales",
+      "date": "2020",
+      "title": "La memoria sefardí señalizada",
+      "text": "La señalización de la Red de Juderías incluye la casa y mantiene la cautela sobre el posible micvé.",
+      "sourceIds": [
+        "bg-sefarad2020"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "berenguer-aljibe"
+    },
+    {
+      "id": "bg-t-conservar",
+      "date": "2022",
+      "title": "Consolidar el muro y la bóveda",
+      "text": "La intervención anunciada responde a lesiones de las fábricas y del recinto abovedado.",
+      "sourceIds": [
+        "bg-conservacion2022"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "diana-fabricas"
+    },
+    {
+      "id": "bg-t-anexo",
+      "date": "2025–2026",
+      "title": "El anexo, una intervención por fases",
+      "text": "La fase inicial se publica como terminada en 2025. La documentación municipal de 2026 no acredita la conclusión de la siguiente.",
+      "sourceIds": [
+        "bg-anexo2025",
+        "bg-jgl2026"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "berenguer-anexo"
+    }
+  ]
+}

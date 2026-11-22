@@ -1,0 +1,5356 @@
+{
+  "pass": true,
+  "inputHashes": {
+    "dist/js/plaza-mayor.js": "07f51ea9722f9a09932e9dd85dcdeb2a39e753fdb5c8d7fa5e5a302bad3d28b1",
+    "dist/js/heritage-civic.js": "66770e52060df61d6f964af2eec52d133a18b061d9bfa4a7a1cad8f61cc69a9d",
+    "dist/js/plaza-mayor-context.js": "655b94895ef5407affe3ea502e5eb0eeff91cf01d365fe63387ec9fa31bd8d8b",
+    "dist/assets/data/plaza-mayor-visit.json": "c80a4560b964c27003e769add5a1c0c32b1a0109b55243c95a641282f2b36e55",
+    "dist/assets/data/plaza-mayor-context.json": "1a0c282b1f15f1cf4ede43aee8a600a5a44675cc4ad8110c36656ad9d23d9fc7",
+    "dist/assets/data/plaza-mayor-plan.json": "136742e1a25c77699aa619113a40213926260fd7bbec9402f02de6a4bb29b4ef"
+  },
+  "buildMs": 11905.102587,
+  "stats": {
+    "stops": 16,
+    "coreBuildings": 13,
+    "buildingBodies": 14,
+    "documentedFacades": 13,
+    "meshes": 233,
+    "triangles": 180342,
+    "trueApertures": 27,
+    "sourceKeys": [
+      "pm-pep",
+      "pm-rutas"
+    ],
+    "portalAddress": 17,
+    "sourceBasedPortalPlacement": true,
+    "historicalInteriorInvented": false,
+    "periods": [
+      "medieval",
+      "modern",
+      "contemporary",
+      "mixed",
+      "interpretation"
+    ],
+    "context": {
+      "buildingParts": 94,
+      "parentParcels": 36,
+      "footprintsPreserved": true,
+      "courtyards": 3,
+      "sourceHeight": 0,
+      "ignHeight": 51,
+      "storeyHeight": 43,
+      "fallbackHeight": 0,
+      "streetSamples": 119,
+      "roofCorrections": 0,
+      "maximumRoofCorrectionM": 0,
+      "preservedSantaMaria": true
+    }
+  },
+  "meshCount": 261,
+  "triangles": 216494,
+  "checks": [
+    {
+      "pass": true,
+      "label": "all 16 documentary stops resolve to actual model targets"
+    },
+    {
+      "pass": true,
+      "label": "model source IDs resolve to visible documentary bibliography"
+    },
+    {
+      "pass": true,
+      "label": "Almudín is in present-day Plaça Major17 / parcel3459611 rather than legacy wrongly located parcel15"
+    },
+    {
+      "pass": true,
+      "label": "Almudín shield and stone header clear the gallery beams and soffit"
+    },
+    {
+      "pass": true,
+      "label": "13 distinct catalogued frontages retain individual addresses and support types"
+    },
+    {
+      "pass": true,
+      "label": "no undocumented Almudín/private/council/oven interior is invented"
+    },
+    {
+      "pass": true,
+      "label": "all model geometry and attributes are finite"
+    },
+    {
+      "pass": true,
+      "label": "all portico floor samples clear the final triangulated terrain"
+    },
+    {
+      "pass": true,
+      "label": "soportal-10-0 is structurally open"
+    },
+    {
+      "pass": true,
+      "label": "soportal-10-1 is structurally open"
+    },
+    {
+      "pass": true,
+      "label": "soportal-11-0 is structurally open"
+    },
+    {
+      "pass": true,
+      "label": "soportal-11-1 is structurally open"
+    },
+    {
+      "pass": true,
+      "label": "soportal-12-0 is structurally open"
+    },
+    {
+      "pass": true,
+      "label": "arco-transversal-13 is structurally open"
+    },
+    {
+      "pass": true,
+      "label": "soportal-13-0 is structurally open"
+    },
+    {
+      "pass": true,
+      "label": "arco-transversal-14 is structurally open"
+    },
+    {
+      "pass": true,
+      "label": "soportal-14-0 is structurally open"
+    },
+    {
+      "pass": true,
+      "label": "arco-transversal-15 is structurally open"
+    },
+    {
+      "pass": true,
+      "label": "soportal-15-0 is structurally open"
+    },
+    {
+      "pass": true,
+      "label": "soportal-15-1 is structurally open"
+    },
+    {
+      "pass": true,
+      "label": "soportal-1-0 is structurally open"
+    },
+    {
+      "pass": true,
+      "label": "soportal-1-1 is structurally open"
+    },
+    {
+      "pass": true,
+      "label": "soportal-2-0 is structurally open"
+    },
+    {
+      "pass": true,
+      "label": "soportal-2-1 is structurally open"
+    },
+    {
+      "pass": true,
+      "label": "soportal-3-0 is structurally open"
+    },
+    {
+      "pass": true,
+      "label": "soportal-3-1 is structurally open"
+    },
+    {
+      "pass": true,
+      "label": "soportal-4-0 is structurally open"
+    },
+    {
+      "pass": true,
+      "label": "soportal-4-1 is structurally open"
+    },
+    {
+      "pass": true,
+      "label": "soportal-5-0 is structurally open"
+    },
+    {
+      "pass": true,
+      "label": "soportal-5-1 is structurally open"
+    },
+    {
+      "pass": true,
+      "label": "arco-transversal-17 is structurally open"
+    },
+    {
+      "pass": true,
+      "label": "soportal-17-0 is structurally open"
+    },
+    {
+      "pass": true,
+      "label": "almudin-doorway is structurally open"
+    },
+    {
+      "pass": true,
+      "label": "arco-transversal-16 is structurally open"
+    },
+    {
+      "pass": true,
+      "label": "soportal-16-0 is structurally open"
+    },
+    {
+      "pass": true,
+      "label": "roof 10 covers every sampled point inside its actual nonconvex footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof 11 covers every sampled point inside its actual nonconvex footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof 12 covers every sampled point inside its actual nonconvex footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof 13 covers every sampled point inside its actual nonconvex footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof 14 covers every sampled point inside its actual nonconvex footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof 15 covers every sampled point inside its actual nonconvex footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof 1 covers every sampled point inside its actual nonconvex footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof 2 covers every sampled point inside its actual nonconvex footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof 3 covers every sampled point inside its actual nonconvex footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof 4 covers every sampled point inside its actual nonconvex footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof 5 covers every sampled point inside its actual nonconvex footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof 17 covers every sampled point inside its actual nonconvex footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof 16 covers every sampled point inside its actual nonconvex footprint"
+    },
+    {
+      "pass": true,
+      "label": "roof 12 gable crossing 3 closes below the ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof 12 gable crossing 13 closes below the ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof 13 gable crossing 3 closes below the ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof 13 gable crossing 9 closes below the ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof 14 gable crossing 3 closes below the ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof 14 gable crossing 11 closes below the ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof 3 gable crossing 3 closes below the ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof 3 gable crossing 5 closes below the ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof 4 gable crossing 1 closes below the ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof 4 gable crossing 4 closes below the ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof 5 gable crossing 1 closes below the ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof 5 gable crossing 3 closes below the ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof 17 gable crossing 2 closes below the ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof 17 gable crossing 6 closes below the ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof 16 gable crossing 2 closes below the ridge"
+    },
+    {
+      "pass": true,
+      "label": "roof 16 gable crossing 6 closes below the ridge"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves plaza-conjunto"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves plaza-mercado"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves plaza-soportales"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves plaza-columnas"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves plaza-epigrafia"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves plaza-almudin"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves plaza-escudo"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves plaza-abasto"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves plaza-forn"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves plaza-mustassaf"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves plaza-peixateria"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves plaza-vila"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves plaza-santa-maria"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves plaza-cavallers"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves plaza-carrer-major"
+    },
+    {
+      "pass": true,
+      "label": "selection resolves plaza-carrer-castell"
+    },
+    {
+      "pass": true,
+      "label": "reading and selection restore original materials, textures and geometry"
+    },
+    {
+      "pass": true,
+      "label": "legacy civic material palette is independent between regional assemblies"
+    },
+    {
+      "pass": true,
+      "label": "plaza materials have per-instance ownership"
+    },
+    {
+      "pass": true,
+      "label": "plaza textures have per-instance ownership"
+    },
+    {
+      "pass": true,
+      "label": "plaza-conjunto/1363x936/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-conjunto/1363x936/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-conjunto/1363x936/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-conjunto/1363x936/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-conjunto/1363x936/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-conjunto/1363x936/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-conjunto/1363x936/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-conjunto/1363x936/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-conjunto/390x844/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-conjunto/390x844/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-conjunto/390x844/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-conjunto/390x844/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-conjunto/390x844/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-conjunto/390x844/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-conjunto/390x844/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-conjunto/390x844/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-conjunto/844x390/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-conjunto/844x390/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-conjunto/844x390/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-conjunto/844x390/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-conjunto/844x390/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-conjunto/844x390/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-conjunto/844x390/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-conjunto/844x390/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mercado/1363x936/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mercado/1363x936/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mercado/1363x936/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mercado/1363x936/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mercado/1363x936/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mercado/1363x936/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mercado/1363x936/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mercado/1363x936/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mercado/390x844/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mercado/390x844/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mercado/390x844/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mercado/390x844/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mercado/390x844/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mercado/390x844/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mercado/390x844/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mercado/390x844/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mercado/844x390/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mercado/844x390/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mercado/844x390/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mercado/844x390/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mercado/844x390/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mercado/844x390/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mercado/844x390/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mercado/844x390/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-soportales/1363x936/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-soportales/1363x936/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-soportales/1363x936/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-soportales/1363x936/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-soportales/1363x936/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-soportales/1363x936/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-soportales/1363x936/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-soportales/1363x936/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-soportales/390x844/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-soportales/390x844/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-soportales/390x844/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-soportales/390x844/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-soportales/390x844/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-soportales/390x844/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-soportales/390x844/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-soportales/390x844/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-soportales/844x390/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-soportales/844x390/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-soportales/844x390/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-soportales/844x390/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-soportales/844x390/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-soportales/844x390/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-soportales/844x390/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-soportales/844x390/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-columnas/1363x936/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-columnas/1363x936/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-columnas/1363x936/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-columnas/1363x936/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-columnas/1363x936/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-columnas/1363x936/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-columnas/1363x936/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-columnas/1363x936/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-columnas/390x844/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-columnas/390x844/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-columnas/390x844/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-columnas/390x844/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-columnas/390x844/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-columnas/390x844/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-columnas/390x844/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-columnas/390x844/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-columnas/844x390/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-columnas/844x390/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-columnas/844x390/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-columnas/844x390/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-columnas/844x390/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-columnas/844x390/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-columnas/844x390/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-columnas/844x390/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-epigrafia/1363x936/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-epigrafia/1363x936/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-epigrafia/1363x936/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-epigrafia/1363x936/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-epigrafia/1363x936/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-epigrafia/1363x936/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-epigrafia/1363x936/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-epigrafia/1363x936/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-epigrafia/390x844/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-epigrafia/390x844/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-epigrafia/390x844/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-epigrafia/390x844/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-epigrafia/390x844/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-epigrafia/390x844/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-epigrafia/390x844/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-epigrafia/390x844/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-epigrafia/844x390/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-epigrafia/844x390/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-epigrafia/844x390/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-epigrafia/844x390/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-epigrafia/844x390/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-epigrafia/844x390/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-epigrafia/844x390/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-epigrafia/844x390/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-almudin/1363x936/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-almudin/1363x936/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-almudin/1363x936/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-almudin/1363x936/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-almudin/1363x936/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-almudin/1363x936/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-almudin/1363x936/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-almudin/1363x936/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-almudin/390x844/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-almudin/390x844/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-almudin/390x844/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-almudin/390x844/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-almudin/390x844/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-almudin/390x844/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-almudin/390x844/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-almudin/390x844/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-almudin/844x390/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-almudin/844x390/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-almudin/844x390/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-almudin/844x390/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-almudin/844x390/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-almudin/844x390/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-almudin/844x390/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-almudin/844x390/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-escudo/1363x936/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-escudo/1363x936/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-escudo/1363x936/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-escudo/1363x936/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-escudo/1363x936/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-escudo/1363x936/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-escudo/1363x936/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-escudo/1363x936/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-escudo/390x844/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-escudo/390x844/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-escudo/390x844/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-escudo/390x844/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-escudo/390x844/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-escudo/390x844/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-escudo/390x844/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-escudo/390x844/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-escudo/844x390/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-escudo/844x390/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-escudo/844x390/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-escudo/844x390/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-escudo/844x390/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-escudo/844x390/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-escudo/844x390/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-escudo/844x390/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-abasto/1363x936/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-abasto/1363x936/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-abasto/1363x936/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-abasto/1363x936/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-abasto/1363x936/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-abasto/1363x936/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-abasto/1363x936/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-abasto/1363x936/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-abasto/390x844/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-abasto/390x844/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-abasto/390x844/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-abasto/390x844/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-abasto/390x844/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-abasto/390x844/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-abasto/390x844/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-abasto/390x844/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-abasto/844x390/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-abasto/844x390/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-abasto/844x390/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-abasto/844x390/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-abasto/844x390/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-abasto/844x390/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-abasto/844x390/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-abasto/844x390/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-forn/1363x936/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-forn/1363x936/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-forn/1363x936/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-forn/1363x936/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-forn/1363x936/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-forn/1363x936/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-forn/1363x936/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-forn/1363x936/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-forn/390x844/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-forn/390x844/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-forn/390x844/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-forn/390x844/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-forn/390x844/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-forn/390x844/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-forn/390x844/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-forn/390x844/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-forn/844x390/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-forn/844x390/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-forn/844x390/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-forn/844x390/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-forn/844x390/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-forn/844x390/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-forn/844x390/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-forn/844x390/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mustassaf/1363x936/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mustassaf/1363x936/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mustassaf/1363x936/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mustassaf/1363x936/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mustassaf/1363x936/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mustassaf/1363x936/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mustassaf/1363x936/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mustassaf/1363x936/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mustassaf/390x844/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mustassaf/390x844/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mustassaf/390x844/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mustassaf/390x844/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mustassaf/390x844/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mustassaf/390x844/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mustassaf/390x844/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mustassaf/390x844/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mustassaf/844x390/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mustassaf/844x390/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mustassaf/844x390/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mustassaf/844x390/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mustassaf/844x390/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mustassaf/844x390/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mustassaf/844x390/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mustassaf/844x390/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-peixateria/1363x936/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-peixateria/1363x936/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-peixateria/1363x936/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-peixateria/1363x936/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-peixateria/1363x936/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-peixateria/1363x936/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-peixateria/1363x936/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-peixateria/1363x936/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-peixateria/390x844/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-peixateria/390x844/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-peixateria/390x844/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-peixateria/390x844/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-peixateria/390x844/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-peixateria/390x844/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-peixateria/390x844/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-peixateria/390x844/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-peixateria/844x390/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-peixateria/844x390/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-peixateria/844x390/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-peixateria/844x390/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-peixateria/844x390/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-peixateria/844x390/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-peixateria/844x390/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-peixateria/844x390/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-vila/1363x936/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-vila/1363x936/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-vila/1363x936/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-vila/1363x936/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-vila/1363x936/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-vila/1363x936/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-vila/1363x936/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-vila/1363x936/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-vila/390x844/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-vila/390x844/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-vila/390x844/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-vila/390x844/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-vila/390x844/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-vila/390x844/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-vila/390x844/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-vila/390x844/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-vila/844x390/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-vila/844x390/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-vila/844x390/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-vila/844x390/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-vila/844x390/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-vila/844x390/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-vila/844x390/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-vila/844x390/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-santa-maria/1363x936/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-santa-maria/1363x936/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-santa-maria/1363x936/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-santa-maria/1363x936/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-santa-maria/1363x936/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-santa-maria/1363x936/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-santa-maria/1363x936/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-santa-maria/1363x936/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-santa-maria/390x844/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-santa-maria/390x844/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-santa-maria/390x844/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-santa-maria/390x844/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-santa-maria/390x844/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-santa-maria/390x844/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-santa-maria/390x844/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-santa-maria/390x844/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-santa-maria/844x390/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-santa-maria/844x390/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-santa-maria/844x390/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-santa-maria/844x390/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-santa-maria/844x390/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-santa-maria/844x390/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-santa-maria/844x390/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-santa-maria/844x390/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-cavallers/1363x936/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-cavallers/1363x936/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-cavallers/1363x936/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-cavallers/1363x936/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-cavallers/1363x936/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-cavallers/1363x936/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-cavallers/1363x936/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-cavallers/1363x936/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-cavallers/390x844/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-cavallers/390x844/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-cavallers/390x844/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-cavallers/390x844/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-cavallers/390x844/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-cavallers/390x844/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-cavallers/390x844/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-cavallers/390x844/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-cavallers/844x390/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-cavallers/844x390/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-cavallers/844x390/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-cavallers/844x390/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-cavallers/844x390/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-cavallers/844x390/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-cavallers/844x390/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-cavallers/844x390/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-major/1363x936/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-major/1363x936/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-major/1363x936/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-major/1363x936/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-major/1363x936/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-major/1363x936/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-major/1363x936/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-major/1363x936/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-major/390x844/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-major/390x844/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-major/390x844/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-major/390x844/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-major/390x844/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-major/390x844/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-major/390x844/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-major/390x844/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-major/844x390/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-major/844x390/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-major/844x390/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-major/844x390/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-major/844x390/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-major/844x390/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-major/844x390/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-major/844x390/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-castell/1363x936/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-castell/1363x936/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-castell/1363x936/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-castell/1363x936/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-castell/1363x936/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-castell/1363x936/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-castell/1363x936/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-castell/1363x936/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-castell/390x844/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-castell/390x844/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-castell/390x844/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-castell/390x844/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-castell/390x844/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-castell/390x844/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-castell/390x844/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-castell/390x844/near sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-castell/844x390/full camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-castell/844x390/full sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-castell/844x390/full box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-castell/844x390/full sight line clears surrounding and own structural geometry"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-castell/844x390/near camera clears ground"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-castell/844x390/near sight line clears terrain"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-castell/844x390/near box fits usable viewport"
+    },
+    {
+      "pass": true,
+      "label": "plaza-carrer-castell/844x390/near sight line clears surrounding and own structural geometry"
+    }
+  ],
+  "errors": [],
+  "portal": {
+    "address": 17,
+    "parcel": "3459611YJ3935H",
+    "coordinate": [
+      -0.2786964766848324,
+      39.6796678818479
+    ],
+    "target": [
+      -59.67106832232028,
+      52.82,
+      -74.34860730805929
+    ],
+    "shieldTarget": [
+      -59.632983790912874,
+      54.16,
+      -74.33637748927575
+    ],
+    "widthM": 2.12,
+    "heightM": 2.76,
+    "shieldWidthM": 0.43,
+    "shieldHeightM": 0.4386,
+    "galleryHeightM": 3.7,
+    "stoneTopM": 54.589999999999996,
+    "shieldTopM": 54.396499999999996,
+    "beamBottomM": 54.485,
+    "soffitM": 54.61,
+    "arch": "lowered elliptical approximation of documented carpanel",
+    "normal": [
+      0.9521132851852241,
+      0,
+      0.30574546958834925
+    ]
+  },
+  "facades": [
+    {
+      "id": "844866514",
+      "address": 10,
+      "cataloguePage": 140,
+      "frontWidthM": 9.129400801429208,
+      "front": {
+        "midpoint": [
+          -73.2183805988089,
+          -32.633457999711766
+        ],
+        "normal": [
+          0.9132984936800863,
+          0.4072908806267156
+        ],
+        "yaw": 1.1513105357888573,
+        "galleryDepth": 2.85,
+        "baseM": 53.22450862355381
+      },
+      "heightM": 12.25,
+      "upperStoreys": 2,
+      "support": "pilaster",
+      "roof": "flat",
+      "cadastralParentIds": [
+        "3459618YJ3935G"
+      ],
+      "cadastralParts": [
+        {
+          "id": "cat-3459618YJ3935G_part1-0",
+          "levels": 1,
+          "height": 14
+        },
+        {
+          "id": "cat-3459618YJ3935G_part2-0",
+          "levels": 4,
+          "height": null
+        },
+        {
+          "id": "cat-3459618YJ3935G_part3-0",
+          "levels": 4,
+          "height": null
+        },
+        {
+          "id": "cat-3459618YJ3935G_part4-0",
+          "levels": 4,
+          "height": 12.6
+        },
+        {
+          "id": "cat-3459618YJ3935G_part5-0",
+          "levels": 3,
+          "height": 13
+        }
+      ],
+      "footprintSource": "OpenStreetMap",
+      "elevationStatus": "Visual estimate from municipal PEP photograph, institutional exterior photographs and IGN surface heights"
+    },
+    {
+      "id": "844866515",
+      "address": 11,
+      "cataloguePage": 139,
+      "frontWidthM": 9.023457896184079,
+      "front": {
+        "midpoint": [
+          -69.54289671431337,
+          -40.93236399979901
+        ],
+        "normal": [
+          0.9153856642385905,
+          0.4025780492109256
+        ],
+        "yaw": 1.1564648659792456,
+        "galleryDepth": 2.85,
+        "baseM": 52.72651751471577
+      },
+      "heightM": 12.65,
+      "upperStoreys": 3,
+      "support": "stone",
+      "roof": "flat",
+      "cadastralParentIds": [
+        "3459617YJ3935G"
+      ],
+      "cadastralParts": [
+        {
+          "id": "cat-3459617YJ3935G_part1-0",
+          "levels": 1,
+          "height": null
+        },
+        {
+          "id": "cat-3459617YJ3935G_part2-0",
+          "levels": 3,
+          "height": 12
+        },
+        {
+          "id": "cat-3459617YJ3935G_part3-0",
+          "levels": 4,
+          "height": null
+        },
+        {
+          "id": "cat-3459617YJ3935G_part4-0",
+          "levels": 5,
+          "height": 15.8
+        },
+        {
+          "id": "cat-3459617YJ3935G_part5-0",
+          "levels": 1,
+          "height": null
+        },
+        {
+          "id": "cat-3459617YJ3935G_part6-0",
+          "levels": 5,
+          "height": 16.2
+        },
+        {
+          "id": "cat-3459617YJ3935G_part7-0",
+          "levels": 2,
+          "height": null
+        },
+        {
+          "id": "cat-3459617YJ3935G_part8-0",
+          "levels": 4,
+          "height": 14
+        }
+      ],
+      "footprintSource": "OpenStreetMap",
+      "elevationStatus": "Visual estimate from municipal PEP photograph, institutional exterior photographs and IGN surface heights"
+    },
+    {
+      "id": "844866516",
+      "address": 12,
+      "cataloguePage": 138,
+      "frontWidthM": 4.406534212287024,
+      "front": {
+        "midpoint": [
+          -66.82269593732764,
+          -47.0716619999601
+        ],
+        "normal": [
+          0.9119756721936476,
+          0.410244284941234
+        ],
+        "yaw": 1.1480744173007038,
+        "galleryDepth": 2.85,
+        "baseM": 52.12
+      },
+      "heightM": 10.65,
+      "upperStoreys": 3,
+      "support": "pilaster",
+      "roof": "tiles",
+      "cadastralParentIds": [
+        "3459616YJ3935G"
+      ],
+      "cadastralParts": [
+        {
+          "id": "cat-3459616YJ3935G_part1-0",
+          "levels": 3,
+          "height": 11
+        },
+        {
+          "id": "cat-3459616YJ3935G_part2-0",
+          "levels": 4,
+          "height": null
+        },
+        {
+          "id": "cat-3459616YJ3935G_part3-0",
+          "levels": 4,
+          "height": 11
+        },
+        {
+          "id": "cat-3459616YJ3935G_part4-0",
+          "levels": 4,
+          "height": 10.2
+        }
+      ],
+      "footprintSource": "OpenStreetMap",
+      "elevationStatus": "Visual estimate from municipal PEP photograph, institutional exterior photographs and IGN surface heights"
+    },
+    {
+      "id": "844866517",
+      "address": 13,
+      "cataloguePage": 137,
+      "frontWidthM": 5.908309299759427,
+      "front": {
+        "midpoint": [
+          -64.70650824625605,
+          -51.77493199995013
+        ],
+        "normal": [
+          0.9119170521260072,
+          0.4103745728499916
+        ],
+        "yaw": 1.1479315493493174,
+        "galleryDepth": 2.85,
+        "baseM": 52.12
+      },
+      "heightM": 10.65,
+      "upperStoreys": 2,
+      "support": "pilaster",
+      "roof": "tiles",
+      "cadastralParentIds": [
+        "3459615YJ3935G"
+      ],
+      "cadastralParts": [
+        {
+          "id": "cat-3459615YJ3935G_part1-0",
+          "levels": 3,
+          "height": 11.6
+        },
+        {
+          "id": "cat-3459615YJ3935G_part3-0",
+          "levels": 4,
+          "height": null
+        },
+        {
+          "id": "cat-3459615YJ3935G_part4-0",
+          "levels": 4,
+          "height": null
+        },
+        {
+          "id": "cat-3459615YJ3935G_part5-0",
+          "levels": 4,
+          "height": 11
+        }
+      ],
+      "footprintSource": "OpenStreetMap",
+      "elevationStatus": "Visual estimate from municipal PEP photograph, institutional exterior photographs and IGN surface heights"
+    },
+    {
+      "id": "844866518",
+      "address": 14,
+      "cataloguePage": 136,
+      "frontWidthM": 5.442078003647316,
+      "front": {
+        "midpoint": [
+          -62.67171238945644,
+          -57.062631999651074
+        ],
+        "normal": [
+          0.9532226469815209,
+          0.3022690610723215
+        ],
+        "yaw": 1.2637241578960707,
+        "galleryDepth": 2.85,
+        "baseM": 52.03624760989616
+      },
+      "heightM": 9.15,
+      "upperStoreys": 2,
+      "support": "stone",
+      "roof": "tiles",
+      "cadastralParentIds": [
+        "3459614YJ3935G"
+      ],
+      "cadastralParts": [
+        {
+          "id": "cat-3459614YJ3935G_part1-0",
+          "levels": 1,
+          "height": null
+        },
+        {
+          "id": "cat-3459614YJ3935G_part2-0",
+          "levels": 3,
+          "height": 8.6
+        },
+        {
+          "id": "cat-3459614YJ3935G_part3-0",
+          "levels": 4,
+          "height": null
+        },
+        {
+          "id": "cat-3459614YJ3935G_part4-0",
+          "levels": 3,
+          "height": 12.4
+        },
+        {
+          "id": "cat-3459614YJ3935G_part5-0",
+          "levels": 3,
+          "height": null
+        },
+        {
+          "id": "cat-3459614YJ3935G_part6-0",
+          "levels": 1,
+          "height": null
+        }
+      ],
+      "footprintSource": "OpenStreetMap",
+      "elevationStatus": "Visual estimate from municipal PEP photograph, institutional exterior photographs and IGN surface heights"
+    },
+    {
+      "id": "844866519",
+      "address": 15,
+      "cataloguePage": 135,
+      "frontWidthM": 8.412140524576529,
+      "front": {
+        "midpoint": [
+          -60.589794944392736,
+          -63.6694739997391
+        ],
+        "normal": [
+          0.9541176799187483,
+          0.29943188351687744
+        ],
+        "yaw": 1.2666991649494563,
+        "galleryDepth": 2.85,
+        "baseM": 51.47979545423472
+      },
+      "heightM": 15.25,
+      "upperStoreys": 4,
+      "support": "pilaster",
+      "roof": "flat",
+      "cadastralParentIds": [
+        "3459613YJ3935G"
+      ],
+      "cadastralParts": [
+        {
+          "id": "cat-3459613YJ3935G_part1-0",
+          "levels": 4,
+          "height": 13.2
+        },
+        {
+          "id": "cat-3459613YJ3935G_part2-0",
+          "levels": 6,
+          "height": 17
+        },
+        {
+          "id": "cat-3459613YJ3935G_part3-0",
+          "levels": 5,
+          "height": null
+        },
+        {
+          "id": "cat-3459613YJ3935G_part4-0",
+          "levels": 5,
+          "height": 16
+        },
+        {
+          "id": "cat-3459613YJ3935G_part5-0",
+          "levels": 4,
+          "height": 18.8
+        }
+      ],
+      "footprintSource": "OpenStreetMap",
+      "elevationStatus": "Visual estimate from municipal PEP photograph, institutional exterior photographs and IGN surface heights"
+    },
+    {
+      "id": "844866520",
+      "address": 1,
+      "cataloguePage": 182,
+      "frontWidthM": 9.736083375269924,
+      "front": {
+        "midpoint": [
+          -40.35749845666701,
+          -59.82336799987877
+        ],
+        "normal": [
+          -0.9901632544382087,
+          -0.1399168666041927
+        ],
+        "yaw": -1.7111737817246997,
+        "galleryDepth": 2.85,
+        "baseM": 51.12
+      },
+      "heightM": 12.85,
+      "upperStoreys": 3,
+      "support": "iron",
+      "roof": "flat",
+      "cadastralParentIds": [
+        "3559104YJ3935H"
+      ],
+      "cadastralParts": [
+        {
+          "id": "cat-3559104YJ3935H_part1-0",
+          "levels": 3,
+          "height": 14.8
+        },
+        {
+          "id": "cat-3559104YJ3935H_part2-0",
+          "levels": 5,
+          "height": null
+        },
+        {
+          "id": "cat-3559104YJ3935H_part5-0",
+          "levels": 4,
+          "height": 13
+        },
+        {
+          "id": "cat-3559104YJ3935H_part6-0",
+          "levels": 4,
+          "height": null
+        },
+        {
+          "id": "cat-3559104YJ3935H_part7-0",
+          "levels": 4,
+          "height": 14
+        }
+      ],
+      "footprintSource": "OpenStreetMap",
+      "elevationStatus": "Visual estimate from municipal PEP photograph, institutional exterior photographs and IGN surface heights"
+    },
+    {
+      "id": "844866521",
+      "address": 2,
+      "cataloguePage": 181,
+      "frontWidthM": 5.778246655493363,
+      "front": {
+        "midpoint": [
+          -41.441294986710496,
+          -52.142287999892716
+        ],
+        "normal": [
+          -0.9902394862623861,
+          -0.13937632455623664
+        ],
+        "yaw": -1.710627890706248,
+        "galleryDepth": 2.85,
+        "baseM": 51.61551765006255
+      },
+      "heightM": 10.55,
+      "upperStoreys": 2,
+      "support": "iron",
+      "roof": "flat",
+      "cadastralParentIds": [
+        "3559103YJ3935H"
+      ],
+      "cadastralParts": [
+        {
+          "id": "cat-3559103YJ3935H_part1-0",
+          "levels": 3,
+          "height": 10
+        },
+        {
+          "id": "cat-3559103YJ3935H_part2-0",
+          "levels": 4,
+          "height": 12
+        }
+      ],
+      "footprintSource": "OpenStreetMap",
+      "elevationStatus": "Visual estimate from municipal PEP photograph, institutional exterior photographs and IGN surface heights"
+    },
+    {
+      "id": "844866522",
+      "address": 3,
+      "cataloguePage": 180,
+      "frontWidthM": 8.703351741782567,
+      "front": {
+        "midpoint": [
+          -42.41799699797669,
+          -44.96771399989342
+        ],
+        "normal": [
+          -0.991261786990411,
+          -0.13190932359987706
+        ],
+        "yaw": -1.7030912156484028,
+        "galleryDepth": 2.85,
+        "baseM": 52.019999999999996
+      },
+      "heightM": 9.85,
+      "upperStoreys": 2,
+      "support": "doric",
+      "roof": "tiles",
+      "cadastralParentIds": [
+        "3559102YJ3935H"
+      ],
+      "cadastralParts": [
+        {
+          "id": "cat-3559102YJ3935H_part1-0",
+          "levels": 3,
+          "height": 11
+        }
+      ],
+      "footprintSource": "OpenStreetMap",
+      "elevationStatus": "Visual estimate from municipal PEP photograph, institutional exterior photographs and IGN surface heights"
+    },
+    {
+      "id": "844866523",
+      "address": 4,
+      "cataloguePage": 183,
+      "frontWidthM": 6.917939927713127,
+      "front": {
+        "midpoint": [
+          -43.488942185766334,
+          -37.230973999652406
+        ],
+        "normal": [
+          -0.9896269802359622,
+          -0.14366085057889055
+        ],
+        "yaw": -1.7149559799050689,
+        "galleryDepth": 2.85,
+        "baseM": 52.2007939807362
+      },
+      "heightM": 10.4,
+      "upperStoreys": 2,
+      "support": "pilaster",
+      "roof": "tiles",
+      "cadastralParentIds": [
+        "3559105YJ3935H"
+      ],
+      "cadastralParts": [
+        {
+          "id": "cat-3559105YJ3935H_part2-0",
+          "levels": 3,
+          "height": 11.2
+        },
+        {
+          "id": "cat-3559105YJ3935H_part3-0",
+          "levels": 4,
+          "height": null
+        },
+        {
+          "id": "cat-3559105YJ3935H_part5-0",
+          "levels": 3,
+          "height": 11
+        }
+      ],
+      "footprintSource": "OpenStreetMap",
+      "elevationStatus": "Visual estimate from municipal PEP photograph, institutional exterior photographs and IGN surface heights"
+    },
+    {
+      "id": "844866524",
+      "address": 5,
+      "cataloguePage": 179,
+      "frontWidthM": 6.041785840509417,
+      "front": {
+        "midpoint": [
+          -44.38425236275816,
+          -30.813375999798467
+        ],
+        "normal": [
+          -0.9912658537870944,
+          -0.13187875915302844
+        ],
+        "yaw": -1.7030603818317969,
+        "galleryDepth": 2.85,
+        "baseM": 52.75560030525193
+      },
+      "heightM": 9.85,
+      "upperStoreys": 2,
+      "support": "doric",
+      "roof": "tiles",
+      "cadastralParentIds": [
+        "3559101YJ3935H"
+      ],
+      "cadastralParts": [
+        {
+          "id": "cat-3559101YJ3935H_part1-0",
+          "levels": 3,
+          "height": 10.4
+        },
+        {
+          "id": "cat-3559101YJ3935H_part2-0",
+          "levels": 3,
+          "height": 11
+        }
+      ],
+      "footprintSource": "OpenStreetMap",
+      "elevationStatus": "Visual estimate from municipal PEP photograph, institutional exterior photographs and IGN surface heights"
+    },
+    {
+      "id": "core-3459611YJ3935H",
+      "address": 17,
+      "cataloguePage": 133,
+      "frontWidthM": 3.3906469429539667,
+      "front": {
+        "midpoint": [
+          -57.42408096928315,
+          -73.62704799983078
+        ],
+        "normal": [
+          0.9521132851852241,
+          0.3057454695883493
+        ],
+        "yaw": 1.260075032721188,
+        "galleryDepth": 2.7,
+        "baseM": 51.12
+      },
+      "heightM": 11.05,
+      "upperStoreys": 3,
+      "support": "stone",
+      "roof": "tiles",
+      "cadastralParentIds": [
+        "3459611YJ3935H"
+      ],
+      "cadastralParts": [
+        {
+          "id": "cat-3459611YJ3935H_part1-0",
+          "levels": 1,
+          "height": 9.6
+        },
+        {
+          "id": "cat-3459611YJ3935H_part2-0",
+          "levels": 4,
+          "height": 13
+        },
+        {
+          "id": "cat-3459611YJ3935H_part3-0",
+          "levels": 4,
+          "height": null
+        },
+        {
+          "id": "cat-3459611YJ3935H_part4-0",
+          "levels": 2,
+          "height": 8
+        },
+        {
+          "id": "cat-3459611YJ3935H_part5-0",
+          "levels": 1,
+          "height": null
+        }
+      ],
+      "footprintSource": "Catastro INSPIRE Buildings; union of source parts, keeping disjoint components and holes.",
+      "elevationStatus": "Visual estimate from municipal PEP photograph, institutional exterior photographs and IGN surface heights"
+    },
+    {
+      "id": "core-3459612YJ3935G",
+      "address": 16,
+      "cataloguePage": 134,
+      "frontWidthM": 4.523524043517475,
+      "front": {
+        "midpoint": [
+          -58.63210714111145,
+          -69.85886599969461
+        ],
+        "normal": [
+          0.9523734060144933,
+          0.3049342478573913
+        ],
+        "yaw": 1.2609269385766029,
+        "galleryDepth": 2.85,
+        "baseM": 51.12
+      },
+      "heightM": 10.85,
+      "upperStoreys": 3,
+      "support": "stone",
+      "roof": "tiles",
+      "cadastralParentIds": [
+        "3459612YJ3935G"
+      ],
+      "cadastralParts": [
+        {
+          "id": "cat-3459612YJ3935G_part1-0",
+          "levels": 3,
+          "height": null
+        },
+        {
+          "id": "cat-3459612YJ3935G_part2-0",
+          "levels": 4,
+          "height": 13.2
+        },
+        {
+          "id": "cat-3459612YJ3935G_part3-0",
+          "levels": 4,
+          "height": null
+        }
+      ],
+      "footprintSource": "Catastro INSPIRE Buildings; union of source parts, keeping disjoint components and holes.",
+      "elevationStatus": "Visual estimate from municipal PEP photograph, institutional exterior photographs and IGN surface heights"
+    }
+  ],
+  "roofChecks": [
+    {
+      "address": 10,
+      "count": 172,
+      "gaps": []
+    },
+    {
+      "address": 11,
+      "count": 187,
+      "gaps": []
+    },
+    {
+      "address": 12,
+      "count": 144,
+      "gaps": []
+    },
+    {
+      "address": 13,
+      "count": 72,
+      "gaps": []
+    },
+    {
+      "address": 14,
+      "count": 134,
+      "gaps": []
+    },
+    {
+      "address": 15,
+      "count": 181,
+      "gaps": []
+    },
+    {
+      "address": 1,
+      "count": 104,
+      "gaps": []
+    },
+    {
+      "address": 2,
+      "count": 58,
+      "gaps": []
+    },
+    {
+      "address": 3,
+      "count": 67,
+      "gaps": []
+    },
+    {
+      "address": 4,
+      "count": 86,
+      "gaps": []
+    },
+    {
+      "address": 5,
+      "count": 63,
+      "gaps": []
+    },
+    {
+      "address": 17,
+      "count": 29,
+      "gaps": []
+    },
+    {
+      "address": 16,
+      "count": 43,
+      "gaps": []
+    }
+  ],
+  "gableChecks": [
+    {
+      "address": 12,
+      "edge": 3,
+      "point": [
+        -76.8170513872939,
+        63.567499999999995,
+        -54.31822847808143
+      ],
+      "closed": true
+    },
+    {
+      "address": 12,
+      "edge": 13,
+      "point": [
+        -79.53427235644354,
+        63.567499999999995,
+        -48.277828865460656
+      ],
+      "closed": true
+    },
+    {
+      "address": 13,
+      "edge": 3,
+      "point": [
+        -71.64138627283954,
+        63.567499999999995,
+        -56.76530554805081
+      ],
+      "closed": true
+    },
+    {
+      "address": 13,
+      "edge": 9,
+      "point": [
+        -73.22490877939033,
+        63.567499999999995,
+        -53.24646868123344
+      ],
+      "closed": true
+    },
+    {
+      "address": 14,
+      "edge": 3,
+      "point": [
+        -72.32728487279756,
+        61.983747609896156,
+        -65.06959961384939
+      ],
+      "closed": true
+    },
+    {
+      "address": 14,
+      "edge": 11,
+      "point": [
+        -74.62124275496203,
+        61.983747609896156,
+        -57.835473181115525
+      ],
+      "closed": true
+    },
+    {
+      "address": 3,
+      "edge": 3,
+      "point": [
+        -37.156227655154,
+        62.59885198717663,
+        -42.64934048681852
+      ],
+      "closed": true
+    },
+    {
+      "address": 3,
+      "edge": 5,
+      "point": [
+        -36.39071748109381,
+        62.59885198717663,
+        -48.401936000081776
+      ],
+      "closed": true
+    },
+    {
+      "address": 4,
+      "edge": 1,
+      "point": [
+        -38.50690517216778,
+        63.33245207185281,
+        -32.967417999659574
+      ],
+      "closed": true
+    },
+    {
+      "address": 4,
+      "edge": 4,
+      "point": [
+        -37.102531339842024,
+        63.33245207185281,
+        -42.64163494329196
+      ],
+      "closed": true
+    },
+    {
+      "address": 5,
+      "edge": 1,
+      "point": [
+        -38.80676982474803,
+        63.40310030525193,
+        -26.894911999883533
+      ],
+      "closed": true
+    },
+    {
+      "address": 5,
+      "edge": 3,
+      "point": [
+        -38.00903962739429,
+        63.40310030525193,
+        -32.89104595087121
+      ],
+      "closed": true
+    },
+    {
+      "address": 17,
+      "edge": 2,
+      "point": [
+        -62.935274031196315,
+        62.86674680610449,
+        -73.72878217533531
+      ],
+      "closed": true
+    },
+    {
+      "address": 17,
+      "edge": 6,
+      "point": [
+        -61.977914194499924,
+        62.86674680610449,
+        -76.71006925850497
+      ],
+      "closed": true
+    },
+    {
+      "address": 16,
+      "edge": 2,
+      "point": [
+        -64.3173937998513,
+        62.65934528021105,
+        -69.2285560498226
+      ],
+      "closed": true
+    },
+    {
+      "address": 16,
+      "edge": 6,
+      "point": [
+        -62.88375792910021,
+        62.65934528021105,
+        -73.7061005919834
+      ],
+      "closed": true
+    }
+  ],
+  "openings": [
+    {
+      "id": "soportal-10-0",
+      "kind": "portico",
+      "total": 6,
+      "clear": 6,
+      "hits": []
+    },
+    {
+      "id": "soportal-10-1",
+      "kind": "portico",
+      "total": 6,
+      "clear": 6,
+      "hits": []
+    },
+    {
+      "id": "soportal-11-0",
+      "kind": "portico",
+      "total": 6,
+      "clear": 6,
+      "hits": []
+    },
+    {
+      "id": "soportal-11-1",
+      "kind": "portico",
+      "total": 6,
+      "clear": 6,
+      "hits": []
+    },
+    {
+      "id": "soportal-12-0",
+      "kind": "portico",
+      "total": 6,
+      "clear": 6,
+      "hits": []
+    },
+    {
+      "id": "arco-transversal-13",
+      "kind": "gallery-cross-arch",
+      "total": 6,
+      "clear": 6,
+      "hits": []
+    },
+    {
+      "id": "soportal-13-0",
+      "kind": "portico",
+      "total": 6,
+      "clear": 6,
+      "hits": []
+    },
+    {
+      "id": "arco-transversal-14",
+      "kind": "gallery-cross-arch",
+      "total": 6,
+      "clear": 6,
+      "hits": []
+    },
+    {
+      "id": "soportal-14-0",
+      "kind": "portico",
+      "total": 6,
+      "clear": 6,
+      "hits": []
+    },
+    {
+      "id": "arco-transversal-15",
+      "kind": "gallery-cross-arch",
+      "total": 6,
+      "clear": 6,
+      "hits": []
+    },
+    {
+      "id": "soportal-15-0",
+      "kind": "portico",
+      "total": 6,
+      "clear": 6,
+      "hits": []
+    },
+    {
+      "id": "soportal-15-1",
+      "kind": "portico",
+      "total": 6,
+      "clear": 6,
+      "hits": []
+    },
+    {
+      "id": "soportal-1-0",
+      "kind": "portico",
+      "total": 6,
+      "clear": 6,
+      "hits": []
+    },
+    {
+      "id": "soportal-1-1",
+      "kind": "portico",
+      "total": 6,
+      "clear": 6,
+      "hits": []
+    },
+    {
+      "id": "soportal-2-0",
+      "kind": "portico",
+      "total": 6,
+      "clear": 6,
+      "hits": []
+    },
+    {
+      "id": "soportal-2-1",
+      "kind": "portico",
+      "total": 6,
+      "clear": 6,
+      "hits": []
+    },
+    {
+      "id": "soportal-3-0",
+      "kind": "portico",
+      "total": 6,
+      "clear": 6,
+      "hits": []
+    },
+    {
+      "id": "soportal-3-1",
+      "kind": "portico",
+      "total": 6,
+      "clear": 6,
+      "hits": []
+    },
+    {
+      "id": "soportal-4-0",
+      "kind": "portico",
+      "total": 6,
+      "clear": 6,
+      "hits": []
+    },
+    {
+      "id": "soportal-4-1",
+      "kind": "portico",
+      "total": 6,
+      "clear": 6,
+      "hits": []
+    },
+    {
+      "id": "soportal-5-0",
+      "kind": "portico",
+      "total": 6,
+      "clear": 6,
+      "hits": []
+    },
+    {
+      "id": "soportal-5-1",
+      "kind": "portico",
+      "total": 6,
+      "clear": 6,
+      "hits": []
+    },
+    {
+      "id": "arco-transversal-17",
+      "kind": "gallery-cross-arch",
+      "total": 6,
+      "clear": 6,
+      "hits": []
+    },
+    {
+      "id": "soportal-17-0",
+      "kind": "portico",
+      "total": 6,
+      "clear": 6,
+      "hits": []
+    },
+    {
+      "id": "almudin-doorway",
+      "kind": "door",
+      "total": 6,
+      "clear": 6,
+      "hits": []
+    },
+    {
+      "id": "arco-transversal-16",
+      "kind": "gallery-cross-arch",
+      "total": 6,
+      "clear": 6,
+      "hits": []
+    },
+    {
+      "id": "soportal-16-0",
+      "kind": "portico",
+      "total": 6,
+      "clear": 6,
+      "hits": []
+    }
+  ],
+  "floors": [
+    {
+      "point": [
+        -75.58326944576577,
+        53.34450862355381,
+        -30.689271524364994
+      ],
+      "building": 10,
+      "ground": 53.07450866699219,
+      "clearance": 0.26999995656161957
+    },
+    {
+      "point": [
+        -74.46777293816326,
+        53.34450862355381,
+        -33.19063192440911
+      ],
+      "building": 10,
+      "ground": 52.93551076123103,
+      "clearance": 0.4089978623227779
+    },
+    {
+      "point": [
+        -73.35227643056076,
+        53.34450862355381,
+        -35.69199232445323
+      ],
+      "building": 10,
+      "ground": 52.57651901245117,
+      "clearance": 0.7679896111026352
+    },
+    {
+      "point": [
+        -71.88493812608657,
+        52.84651751471577,
+        -39.00510757111133
+      ],
+      "building": 11,
+      "ground": 52.57651901245117,
+      "clearance": 0.269998502264599
+    },
+    {
+      "point": [
+        -70.79514430299176,
+        52.84651751471577,
+        -41.48309077111956
+      ],
+      "building": 11,
+      "ground": 52.57651901245117,
+      "clearance": 0.269998502264599
+    },
+    {
+      "point": [
+        -69.70535047989695,
+        52.84651751471577,
+        -43.96107397112778
+      ],
+      "building": 11,
+      "ground": 52.19459592753126,
+      "clearance": 0.6519215871845105
+    },
+    {
+      "point": [
+        -68.61260529998518,
+        52.239999999999995,
+        -46.427280581671276
+      ],
+      "building": 12,
+      "ground": 51.970001220703125,
+      "clearance": 0.2699987792968699
+    },
+    {
+      "point": [
+        -68.07027865688855,
+        52.239999999999995,
+        -47.632876181759706
+      ],
+      "building": 12,
+      "ground": 51.970001220703125,
+      "clearance": 0.2699987792968699
+    },
+    {
+      "point": [
+        -67.52795201379192,
+        52.239999999999995,
+        -48.838471781848135
+      ],
+      "building": 12,
+      "ground": 51.970001220703125,
+      "clearance": 0.2699987792968699
+    },
+    {
+      "point": [
+        -66.68139674511076,
+        52.239999999999995,
+        -50.71995801570333
+      ],
+      "building": 13,
+      "ground": 51.94588104523807,
+      "clearance": 0.2941189547619274
+    },
+    {
+      "point": [
+        -65.95401077356443,
+        52.239999999999995,
+        -52.336324415608914
+      ],
+      "building": 13,
+      "ground": 51.8917292192549,
+      "clearance": 0.34827078074509643
+    },
+    {
+      "point": [
+        -65.22662480201811,
+        52.239999999999995,
+        -53.9526908155145
+      ],
+      "building": 13,
+      "ground": 51.88624572753906,
+      "clearance": 0.3537542724609324
+    },
+    {
+      "point": [
+        -64.4692125130606,
+        52.156247609896155,
+        -55.91988247528303
+      ],
+      "building": 14,
+      "ground": 51.681498326615085,
+      "clearance": 0.4747492832810707
+    },
+    {
+      "point": [
+        -63.975720970527156,
+        52.156247609896155,
+        -57.47613607519801
+      ],
+      "building": 14,
+      "ground": 51.33510746873606,
+      "clearance": 0.8211401411600932
+    },
+    {
+      "point": [
+        -63.482229427993715,
+        52.156247609896155,
+        -59.032389675112995
+      ],
+      "building": 14,
+      "ground": 51.329795837402344,
+      "clearance": 0.8264517724938116
+    },
+    {
+      "point": [
+        -62.650686855026365,
+        51.599795454234716,
+        -61.67124521625235
+      ],
+      "building": 15,
+      "ground": 51.329795837402344,
+      "clearance": 0.26999961683237217
+    },
+    {
+      "point": [
+        -61.895027930521586,
+        51.599795454234716,
+        -64.07909681639019
+      ],
+      "building": 15,
+      "ground": 51.329795837402344,
+      "clearance": 0.26999961683237217
+    },
+    {
+      "point": [
+        -61.13936900601681,
+        51.599795454234716,
+        -66.48694841652802
+      ],
+      "building": 15,
+      "ground": 51.098444339254534,
+      "clearance": 0.5013511149801815
+    },
+    {
+      "point": [
+        -38.594282440936055,
+        51.239999999999995,
+        -62.524055326465934
+      ],
+      "building": 1,
+      "ground": 50.970001220703125,
+      "clearance": 0.2699987792968699
+    },
+    {
+      "point": [
+        -39.00295512459554,
+        51.239999999999995,
+        -59.63196172636423
+      ],
+      "building": 1,
+      "ground": 50.970001220703125,
+      "clearance": 0.2699987792968699
+    },
+    {
+      "point": [
+        -39.41162780825502,
+        51.239999999999995,
+        -56.73986812626253
+      ],
+      "building": 1,
+      "ground": 50.970001220703125,
+      "clearance": 0.2699987792968699
+    },
+    {
+      "point": [
+        -39.84504213513694,
+        51.73551765006255,
+        -53.66817558778971
+      ],
+      "building": 2,
+      "ground": 50.970001220703125,
+      "clearance": 0.7655164293594225
+    },
+    {
+      "point": [
+        -40.08664736950355,
+        51.73551765006255,
+        -51.95162118789978
+      ],
+      "building": 2,
+      "ground": 51.0786937905203,
+      "clearance": 0.65682385954225
+    },
+    {
+      "point": [
+        -40.32825260387016,
+        51.73551765006255,
+        -50.23506678800985
+      ],
+      "building": 2,
+      "ground": 51.41892704687177,
+      "clearance": 0.31659060319077525
+    },
+    {
+      "point": [
+        -40.717534900980695,
+        52.13999999999999,
+        -47.37545204531843
+      ],
+      "building": 3,
+      "ground": 51.485669813126826,
+      "clearance": 0.6543301868731675
+    },
+    {
+      "point": [
+        -41.0619508733738,
+        52.13999999999999,
+        -44.787262045208784
+      ],
+      "building": 3,
+      "ground": 51.869998931884766,
+      "clearance": 0.27000106811522784
+    },
+    {
+      "point": [
+        -41.40636684576691,
+        52.13999999999999,
+        -42.199072045099136
+      ],
+      "building": 3,
+      "ground": 51.869998931884766,
+      "clearance": 0.27000106811522784
+    },
+    {
+      "point": [
+        -41.836981336522854,
+        52.3207939807362,
+        -39.08829995609544
+      ],
+      "building": 4,
+      "ground": 51.935930804261496,
+      "clearance": 0.3848631764747026
+    },
+    {
+      "point": [
+        -42.135132476803534,
+        52.3207939807362,
+        -37.03444595606048
+      ],
+      "building": 4,
+      "ground": 52.0507926940918,
+      "clearance": 0.27000128664440126
+    },
+    {
+      "point": [
+        -42.433283617084214,
+        52.3207939807362,
+        -34.98059195602552
+      ],
+      "building": 4,
+      "ground": 52.0507926940918,
+      "clearance": 0.27000128664440126
+    },
+    {
+      "point": [
+        -42.789165708863,
+        52.87560030525193,
+        -32.429670657154524
+      ],
+      "building": 5,
+      "ground": 52.06640034377152,
+      "clearance": 0.8091999614804095
+    },
+    {
+      "point": [
+        -43.028200674777416,
+        52.87560030525193,
+        -30.632965857277124
+      ],
+      "building": 5,
+      "ground": 52.46512920941692,
+      "clearance": 0.41047109583500685
+    },
+    {
+      "point": [
+        -43.26723564069183,
+        52.87560030525193,
+        -28.83626105739972
+      ],
+      "building": 5,
+      "ground": 52.60559844970703,
+      "clearance": 0.27000185554489775
+    },
+    {
+      "point": [
+        -58.96902226941773,
+        51.239999999999995,
+        -73.05481012848954
+      ],
+      "building": 17,
+      "ground": 50.970001220703125,
+      "clearance": 0.2699987792968699
+    },
+    {
+      "point": [
+        -58.6580197868832,
+        51.239999999999995,
+        -74.02329412841728
+      ],
+      "building": 17,
+      "ground": 50.970001220703125,
+      "clearance": 0.2699987792968699
+    },
+    {
+      "point": [
+        -58.347017304348675,
+        51.239999999999995,
+        -74.99177812834502
+      ],
+      "building": 17,
+      "ground": 50.970001220703125,
+      "clearance": 0.2699987792968699
+    },
+    {
+      "point": [
+        -60.34876718110172,
+        51.239999999999995,
+        -68.98359085060957
+      ],
+      "building": 16,
+      "ground": 50.970001220703125,
+      "clearance": 0.2699987792968699
+    },
+    {
+      "point": [
+        -59.934953960539275,
+        51.239999999999995,
+        -70.27601605076353
+      ],
+      "building": 16,
+      "ground": 50.970001220703125,
+      "clearance": 0.2699987792968699
+    },
+    {
+      "point": [
+        -59.52114073997683,
+        51.239999999999995,
+        -71.56844125091749
+      ],
+      "building": 16,
+      "ground": 50.970001220703125,
+      "clearance": 0.2699987792968699
+    }
+  ],
+  "cameras": [
+    {
+      "id": "plaza-conjunto",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 178.19457281444977,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        84.01055240773654,
+        224.6479830381788,
+        -225.63767148112512
+      ],
+      "target": [
+        -78.33736325839199,
+        68.20362794172769,
+        -33.771952966609604
+      ]
+    },
+    {
+      "id": "plaza-conjunto",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 44.26652903304303,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -53.33736325839199,
+        95.20362794172769,
+        -69.7719529666096
+      ],
+      "target": [
+        -78.33736325839199,
+        68.20362794172769,
+        -33.771952966609604
+      ]
+    },
+    {
+      "id": "plaza-conjunto",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 356.46175797317323,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        261.30603638338863,
+        395.4963585056253,
+        -435.16869799780477
+      ],
+      "target": [
+        -78.33736325839199,
+        68.20362794172769,
+        -33.771952966609604
+      ]
+    },
+    {
+      "id": "plaza-conjunto",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 70.79132024942001,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -29.645055566084295,
+        120.79132024942001,
+        -103.88887604353269
+      ],
+      "target": [
+        -78.33736325839199,
+        68.20362794172769,
+        -33.771952966609604
+      ]
+    },
+    {
+      "id": "plaza-conjunto",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 208.63395954101168,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        116.1658110427518,
+        255.63395954101168,
+        -263.6393407770522
+      ],
+      "target": [
+        -78.33736325839199,
+        68.20362794172769,
+        -33.771952966609604
+      ]
+    },
+    {
+      "id": "plaza-conjunto",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 44.26652903304303,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -53.33736325839199,
+        95.20362794172769,
+        -69.7719529666096
+      ],
+      "target": [
+        -78.33736325839199,
+        68.20362794172769,
+        -33.771952966609604
+      ]
+    },
+    {
+      "id": "plaza-mercado",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 59.87032138813391,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -11.618312814483147,
+        109.14796456009486,
+        -107.79931631381386
+      ],
+      "target": [
+        -53.8042862345543,
+        52.9,
+        -47.5336399994265
+      ]
+    },
+    {
+      "id": "plaza-mercado",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 13.905596092292043,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -43.8042862345543,
+        64.9,
+        -64.5336399994265
+      ],
+      "target": [
+        -53.8042862345543,
+        52.9,
+        -47.5336399994265
+      ]
+    },
+    {
+      "id": "plaza-mercado",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 144.72488861984561,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        50.351717789985244,
+        191.7746720327194,
+        -196.32793146305443
+      ],
+      "target": [
+        -53.8042862345543,
+        52.9,
+        -47.5336399994265
+      ]
+    },
+    {
+      "id": "plaza-mercado",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 26.09214493176161,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -34.32736315763122,
+        76.27230769230769,
+        -80.64440923019573
+      ],
+      "target": [
+        -53.8042862345543,
+        52.9,
+        -47.5336399994265
+      ]
+    },
+    {
+      "id": "plaza-mercado",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 75.15275067315355,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -0.36472322968912607,
+        124.15275067315355,
+        -123.8758728635196
+      ],
+      "target": [
+        -53.8042862345543,
+        52.9,
+        -47.5336399994265
+      ]
+    },
+    {
+      "id": "plaza-mercado",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 13.905596092292043,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -43.8042862345543,
+        64.9,
+        -64.5336399994265
+      ],
+      "target": [
+        -53.8042862345543,
+        52.9,
+        -47.5336399994265
+      ]
+    },
+    {
+      "id": "plaza-soportales",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 14.580350745649056,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -43.36556144269912,
+        65.58,
+        -64.97077000654062
+      ],
+      "target": [
+        -59.822573898629564,
+        52.62,
+        -70.24003380951635
+      ]
+    },
+    {
+      "id": "plaza-soportales",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 2.9239409012112816,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -55.0607068685571,
+        53.919999999999995,
+        -68.71536257022939
+      ],
+      "target": [
+        -59.822573898629564,
+        52.62,
+        -70.24003380951635
+      ]
+    },
+    {
+      "id": "plaza-soportales",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 29.59865830542796,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -24.28491002101258,
+        80.60613205691206,
+        -58.8614603039002
+      ],
+      "target": [
+        -59.822573898629564,
+        52.62,
+        -70.24003380951635
+      ]
+    },
+    {
+      "id": "plaza-soportales",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 4.229056427336751,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -50.54792211390381,
+        55.152,
+        -67.27044336499745
+      ],
+      "target": [
+        -59.822573898629564,
+        52.62,
+        -70.24003380951635
+      ]
+    },
+    {
+      "id": "plaza-soportales",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 16.054182875756446,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -41.508702768036,
+        67.04228779300473,
+        -64.37623450212604
+      ],
+      "target": [
+        -59.822573898629564,
+        52.62,
+        -70.24003380951635
+      ]
+    },
+    {
+      "id": "plaza-soportales",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 2.9239409012112816,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -55.0607068685571,
+        53.919999999999995,
+        -68.71536257022939
+      ],
+      "target": [
+        -59.822573898629564,
+        52.62,
+        -70.24003380951635
+      ]
+    },
+    {
+      "id": "plaza-columnas",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 10.008772731271677,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -64.3468216336398,
+        62.863292612944235,
+        -33.46921131874176
+      ],
+      "target": [
+        -44.58250553351558,
+        54.55560030525193,
+        -30.839751751629073
+      ]
+    },
+    {
+      "id": "plaza-columnas",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 3.905873289595874,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -50.53010065623815,
+        56.45560030525193,
+        -31.631024306547243
+      ],
+      "target": [
+        -44.58250553351558,
+        54.55560030525193,
+        -30.839751751629073
+      ]
+    },
+    {
+      "id": "plaza-columnas",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 16.882481798725514,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -80.90451356188687,
+        69.82311905816957,
+        -35.67205917998196
+      ],
+      "target": [
+        -44.58250553351558,
+        54.55560030525193,
+        -30.839751751629073
+      ]
+    },
+    {
+      "id": "plaza-columnas",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 5.605520561840322,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -56.16659080331061,
+        58.25621568986731,
+        -32.380907220131235
+      ],
+      "target": [
+        -44.58250553351558,
+        54.55560030525193,
+        -30.839751751629073
+      ]
+    },
+    {
+      "id": "plaza-columnas",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 10.008772731271677,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -64.3468216336398,
+        62.863292612944235,
+        -33.46921131874176
+      ],
+      "target": [
+        -44.58250553351558,
+        54.55560030525193,
+        -30.839751751629073
+      ]
+    },
+    {
+      "id": "plaza-columnas",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 3.905873289595874,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -50.53010065623815,
+        56.45560030525193,
+        -31.631024306547243
+      ],
+      "target": [
+        -44.58250553351558,
+        54.55560030525193,
+        -30.839751751629073
+      ]
+    },
+    {
+      "id": "plaza-epigrafia",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 19.465294150934376,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -66.5856589688758,
+        72.50610497634064,
+        -27.052346197587614
+      ],
+      "target": [
+        -85.74531623956821,
+        57.3800597626361,
+        -25.035540169093675
+      ]
+    },
+    {
+      "id": "plaza-epigrafia",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 9.862105972957089,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -75.74531623956821,
+        63.3800597626361,
+        -26.035540169093675
+      ],
+      "target": [
+        -85.74531623956821,
+        57.3800597626361,
+        -25.035540169093675
+      ]
+    },
+    {
+      "id": "plaza-epigrafia",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 41.44902882402773,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -39.42696953224533,
+        93.9471755842068,
+        -29.911155611969768
+      ],
+      "target": [
+        -85.74531623956821,
+        57.3800597626361,
+        -25.035540169093675
+      ]
+    },
+    {
+      "id": "plaza-epigrafia",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 16.022826784544172,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -66.26839316264514,
+        69.06621360878995,
+        -26.983232476785982
+      ],
+      "target": [
+        -85.74531623956821,
+        57.3800597626361,
+        -25.035540169093675
+      ]
+    },
+    {
+      "id": "plaza-epigrafia",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 23.405847493943178,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -61.653714582218,
+        76.3997452815968,
+        -27.571498238288434
+      ],
+      "target": [
+        -85.74531623956821,
+        57.3800597626361,
+        -25.035540169093675
+      ]
+    },
+    {
+      "id": "plaza-epigrafia",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 9.862105972957089,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -75.74531623956821,
+        63.3800597626361,
+        -26.035540169093675
+      ],
+      "target": [
+        -85.74531623956821,
+        57.3800597626361,
+        -25.035540169093675
+      ]
+    },
+    {
+      "id": "plaza-almudin",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 3.738419236746921,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -49.777682230019145,
+        54.63842076262583,
+        -71.17161353675506
+      ],
+      "target": [
+        -59.67106832232028,
+        52.82,
+        -74.34860730805929
+      ]
+    },
+    {
+      "id": "plaza-almudin",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 2.5578365264248646,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -54.72007923935712,
+        53.52,
+        -72.75873086619987
+      ],
+      "target": [
+        -59.67106832232028,
+        52.82,
+        -74.34860730805929
+      ]
+    },
+    {
+      "id": "plaza-almudin",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 5.763351471242579,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -38.76074004680133,
+        56.663352997121486,
+        -67.63382006863816
+      ],
+      "target": [
+        -59.67106832232028,
+        52.82,
+        -74.34860730805929
+      ]
+    },
+    {
+      "id": "plaza-almudin",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 3.283383089505712,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -50.02806496996433,
+        54.18338461538462,
+        -71.25201719206848
+      ],
+      "target": [
+        -59.67106832232028,
+        52.82,
+        -74.34860730805929
+      ]
+    },
+    {
+      "id": "plaza-almudin",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 4.10614144184764,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -47.77703539153916,
+        55.00614296772655,
+        -70.52915983231746
+      ],
+      "target": [
+        -59.67106832232028,
+        52.82,
+        -74.34860730805929
+      ]
+    },
+    {
+      "id": "plaza-almudin",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 2.5578365264248646,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -54.72007923935712,
+        53.52,
+        -72.75873086619987
+      ],
+      "target": [
+        -59.67106832232028,
+        52.82,
+        -74.34860730805929
+      ]
+    },
+    {
+      "id": "plaza-escudo",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 3.231960117798195,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -53.501374234320025,
+        54.16,
+        -72.36737666512678
+      ],
+      "target": [
+        -59.67106832232028,
+        54.16,
+        -74.34860730805929
+      ]
+    },
+    {
+      "id": "plaza-escudo",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 3.1899987792968716,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -56.814728466764606,
+        54.16,
+        -73.43137089929424
+      ],
+      "target": [
+        -59.67106832232028,
+        54.16,
+        -74.34860730805929
+      ]
+    },
+    {
+      "id": "plaza-escudo",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 3.231960117798195,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -53.501374234320025,
+        54.16,
+        -72.36737666512678
+      ],
+      "target": [
+        -59.67106832232028,
+        54.16,
+        -74.34860730805929
+      ]
+    },
+    {
+      "id": "plaza-escudo",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 3.2149803499754057,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -54.10779715749954,
+        54.16,
+        -72.56211301037229
+      ],
+      "target": [
+        -59.67106832232028,
+        54.16,
+        -74.34860730805929
+      ]
+    },
+    {
+      "id": "plaza-escudo",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 3.231960117798195,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -53.501374234320025,
+        54.16,
+        -72.36737666512678
+      ],
+      "target": [
+        -59.67106832232028,
+        54.16,
+        -74.34860730805929
+      ]
+    },
+    {
+      "id": "plaza-escudo",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 3.1899987792968716,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -56.814728466764606,
+        54.16,
+        -73.43137089929424
+      ],
+      "target": [
+        -59.67106832232028,
+        54.16,
+        -74.34860730805929
+      ]
+    },
+    {
+      "id": "plaza-abasto",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 37.23416041063469,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -45.59251864653609,
+        89.13497056529062,
+        -40.9563510378394
+      ],
+      "target": [
+        -52.861854469300745,
+        52.788291451467366,
+        -67.12595999979214
+      ]
+    },
+    {
+      "id": "plaza-abasto",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 15.71389635581344,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -49.861854469300745,
+        66.78829145146736,
+        -57.125959999792144
+      ],
+      "target": [
+        -52.861854469300745,
+        52.788291451467366,
+        -67.12595999979214
+      ]
+    },
+    {
+      "id": "plaza-abasto",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 84.4304173950174,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -35.81635619614874,
+        138.0157828172274,
+        -5.762166216444918
+      ],
+      "target": [
+        -52.861854469300745,
+        52.788291451467366,
+        -67.12595999979214
+      ]
+    },
+    {
+      "id": "plaza-abasto",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 28.161332334976656,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -47.01877754622382,
+        80.05598375915967,
+        -47.649036922869065
+      ],
+      "target": [
+        -52.861854469300745,
+        52.788291451467366,
+        -67.12595999979214
+      ]
+    },
+    {
+      "id": "plaza-abasto",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 45.96080088217735,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -43.81719404434039,
+        98.01159357626915,
+        -34.56518246993486
+      ],
+      "target": [
+        -52.861854469300745,
+        52.788291451467366,
+        -67.12595999979214
+      ]
+    },
+    {
+      "id": "plaza-abasto",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 15.71389635581344,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -49.861854469300745,
+        66.78829145146736,
+        -57.125959999792144
+      ],
+      "target": [
+        -52.861854469300745,
+        52.788291451467366,
+        -67.12595999979214
+      ]
+    },
+    {
+      "id": "plaza-forn",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 28.685151374301213,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -29.92917589625375,
+        79.65515259500434,
+        -60.76399365290557
+      ],
+      "target": [
+        -52.176449549114615,
+        53.69999999999999,
+        -38.5167200000447
+      ]
+    },
+    {
+      "id": "plaza-forn",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 13.234481048583973,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -42.176449549114615,
+        64.69999999999999,
+        -49.5167200000447
+      ],
+      "target": [
+        -52.176449549114615,
+        53.69999999999999,
+        -38.5167200000447
+      ]
+    },
+    {
+      "id": "plaza-forn",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 67.72299477853116,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        2.4719594561083724,
+        117.45647717276015,
+        -93.16512900526769
+      ],
+      "target": [
+        -52.176449549114615,
+        53.69999999999999,
+        -38.5167200000447
+      ]
+    },
+    {
+      "id": "plaza-forn",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 24.154614163912242,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -32.699526472191536,
+        75.12461538461537,
+        -59.941335384660086
+      ],
+      "target": [
+        -52.176449549114615,
+        53.69999999999999,
+        -38.5167200000447
+      ]
+    },
+    {
+      "id": "plaza-forn",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 35.61782724694777,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -24.045217541220246,
+        86.51977067587674,
+        -66.64795200793907
+      ],
+      "target": [
+        -52.176449549114615,
+        53.69999999999999,
+        -38.5167200000447
+      ]
+    },
+    {
+      "id": "plaza-forn",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 13.234481048583973,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -42.176449549114615,
+        64.69999999999999,
+        -49.5167200000447
+      ],
+      "target": [
+        -52.176449549114615,
+        53.69999999999999,
+        -38.5167200000447
+      ]
+    },
+    {
+      "id": "plaza-mustassaf",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 33.248121275801985,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -23.125887776128256,
+        83.83392185741428,
+        -74.89944135051022
+      ],
+      "target": [
+        -52.176449549114615,
+        53.39999999999999,
+        -52.76567999966346
+      ]
+    },
+    {
+      "id": "plaza-mustassaf",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 12.429998779296866,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -42.176449549114615,
+        63.39999999999999,
+        -61.76567999966346
+      ],
+      "target": [
+        -52.176449549114615,
+        53.39999999999999,
+        -52.76567999966346
+      ]
+    },
+    {
+      "id": "plaza-mustassaf",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 79.23544442387251,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        19.072927676154514,
+        128.0422047121867,
+        -107.0509197903447
+      ],
+      "target": [
+        -52.176449549114615,
+        53.39999999999999,
+        -52.76567999966346
+      ]
+    },
+    {
+      "id": "plaza-mustassaf",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 21.984508046242787,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -32.699526472191536,
+        72.87692307692308,
+        -70.29491076889423
+      ],
+      "target": [
+        -52.176449549114615,
+        53.39999999999999,
+        -52.76567999966346
+      ]
+    },
+    {
+      "id": "plaza-mustassaf",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 41.48525753012351,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -15.462697272068503,
+        91.86202619500068,
+        -80.73806268693669
+      ],
+      "target": [
+        -52.176449549114615,
+        53.39999999999999,
+        -52.76567999966346
+      ]
+    },
+    {
+      "id": "plaza-mustassaf",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 12.429998779296866,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -42.176449549114615,
+        63.39999999999999,
+        -61.76567999966346
+      ],
+      "target": [
+        -52.176449549114615,
+        53.39999999999999,
+        -52.76567999966346
+      ]
+    },
+    {
+      "id": "plaza-peixateria",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 44.773520491185394,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -64.0556715606513,
+        94.96352018625305,
+        -106.9059466589778
+      ],
+      "target": [
+        -21.24755252574632,
+        52.155401151348066,
+        -82.933399999431
+      ]
+    },
+    {
+      "id": "plaza-peixateria",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 13.150444611731274,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -34.247552525746315,
+        63.155401151348066,
+        -86.933399999431
+      ],
+      "target": [
+        -21.24755252574632,
+        52.155401151348066,
+        -82.933399999431
+      ]
+    },
+    {
+      "id": "plaza-peixateria",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 105.55111911688569,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -124.76430209197734,
+        155.6721507175791,
+        -140.90277975652037
+      ],
+      "target": [
+        -21.24755252574632,
+        52.155401151348066,
+        -82.933399999431
+      ]
+    },
+    {
+      "id": "plaza-peixateria",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 23.433070434475518,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -46.56755252574632,
+        73.58001653596345,
+        -90.72416923020023
+      ],
+      "target": [
+        -21.24755252574632,
+        52.155401151348066,
+        -82.933399999431
+      ]
+    },
+    {
+      "id": "plaza-peixateria",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 55.988711777881036,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -75.08019431125291,
+        105.98804293685465,
+        -113.0796793993147
+      ],
+      "target": [
+        -21.24755252574632,
+        52.155401151348066,
+        -82.933399999431
+      ]
+    },
+    {
+      "id": "plaza-peixateria",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 13.150444611731274,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -34.247552525746315,
+        63.155401151348066,
+        -86.933399999431
+      ],
+      "target": [
+        -21.24755252574632,
+        52.155401151348066,
+        -82.933399999431
+      ]
+    },
+    {
+      "id": "plaza-vila",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 38.67345705318272,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -22.941490469033152,
+        88.98195089609774,
+        -81.34192340206586
+      ],
+      "target": [
+        -52.176449549114615,
+        53.89999999999999,
+        -62.33920000001291
+      ]
+    },
+    {
+      "id": "plaza-vila",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 13.999998474121085,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -41.176449549114615,
+        64.89999999999999,
+        -69.33920000001291
+      ],
+      "target": [
+        -52.176449549114615,
+        53.89999999999999,
+        -62.33920000001291
+      ]
+    },
+    {
+      "id": "plaza-vila",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 89.7232191328456,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        18.383169503042403,
+        138.57154286258842,
+        -108.20295238391498
+      ],
+      "target": [
+        -52.176449549114615,
+        53.89999999999999,
+        -62.33920000001291
+      ]
+    },
+    {
+      "id": "plaza-vila",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 24.610777283062284,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -30.75183416449923,
+        75.32461538461538,
+        -75.97304615385906
+      ],
+      "target": [
+        -52.176449549114615,
+        53.89999999999999,
+        -62.33920000001291
+      ]
+    },
+    {
+      "id": "plaza-vila",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 47.9828287012519,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -15.437044230735324,
+        97.98728638205515,
+        -86.21981345695944
+      ],
+      "target": [
+        -52.176449549114615,
+        53.89999999999999,
+        -62.33920000001291
+      ]
+    },
+    {
+      "id": "plaza-vila",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 13.999998474121085,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -41.176449549114615,
+        64.89999999999999,
+        -69.33920000001291
+      ],
+      "target": [
+        -52.176449549114615,
+        53.89999999999999,
+        -62.33920000001291
+      ]
+    },
+    {
+      "id": "plaza-santa-maria",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 92.85576544154875,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -9.813958583595962,
+        141.85576544154875,
+        -124.612752977282
+      ],
+      "target": [
+        -85.82279377576364,
+        70.59748244889155,
+        -24.851156787561916
+      ]
+    },
+    {
+      "id": "plaza-santa-maria",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 42.62828595900578,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -63.82279377576364,
+        94.59748244889155,
+        -49.85115678756192
+      ],
+      "target": [
+        -85.82279377576364,
+        70.59748244889155,
+        -24.851156787561916
+      ]
+    },
+    {
+      "id": "plaza-santa-maria",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 189.65819744814573,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        91.30863555677414,
+        236.65819744814573,
+        -257.3361577865178
+      ],
+      "target": [
+        -85.82279377576364,
+        70.59748244889155,
+        -24.851156787561916
+      ]
+    },
+    {
+      "id": "plaza-santa-maria",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 66.50421769716726,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -42.97356300653287,
+        117.34209783350694,
+        -73.54346447986961
+      ],
+      "target": [
+        -85.82279377576364,
+        70.59748244889155,
+        -24.851156787561916
+      ]
+    },
+    {
+      "id": "plaza-santa-maria",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 107.9640818818886,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        6.211944263443868,
+        156.88004936064857,
+        -145.64675046402178
+      ],
+      "target": [
+        -85.82279377576364,
+        70.59748244889155,
+        -24.851156787561916
+      ]
+    },
+    {
+      "id": "plaza-santa-maria",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 42.62828595900578,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -63.82279377576364,
+        94.59748244889155,
+        -49.85115678756192
+      ],
+      "target": [
+        -85.82279377576364,
+        70.59748244889155,
+        -24.851156787561916
+      ]
+    },
+    {
+      "id": "plaza-cavallers",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 44.59487757114101,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -30.636949198064094,
+        96.06039652255703,
+        -49.47457556774465
+      ],
+      "target": [
+        -71.3677873143073,
+        55.329558406313836,
+        -25.714919999936114
+      ]
+    },
+    {
+      "id": "plaza-cavallers",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 13.616687668633261,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -57.36778731430729,
+        66.32955840631384,
+        -32.714919999936114
+      ],
+      "target": [
+        -71.3677873143073,
+        55.329558406313836,
+        -25.714919999936114
+      ]
+    },
+    {
+      "id": "plaza-cavallers",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 103.06245147139747,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        26.36001264714045,
+        153.0573583677616,
+        -82.72280331078062
+      ],
+      "target": [
+        -71.3677873143073,
+        55.329558406313836,
+        -25.714919999936114
+      ]
+    },
+    {
+      "id": "plaza-cavallers",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 24.83707925219076,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -44.10009500661498,
+        76.75417379092923,
+        -39.34876615378227
+      ],
+      "target": [
+        -71.3677873143073,
+        55.329558406313836,
+        -25.714919999936114
+      ]
+    },
+    {
+      "id": "plaza-cavallers",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 55.20381125650843,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -20.28645542019197,
+        106.41089030042916,
+        -55.51236360483672
+      ],
+      "target": [
+        -71.3677873143073,
+        55.329558406313836,
+        -25.714919999936114
+      ]
+    },
+    {
+      "id": "plaza-cavallers",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 13.616687668633261,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -57.36778731430729,
+        66.32955840631384,
+        -32.714919999936114
+      ],
+      "target": [
+        -71.3677873143073,
+        55.329558406313836,
+        -25.714919999936114
+      ]
+    },
+    {
+      "id": "plaza-carrer-major",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 41.08147336613865,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -76.13496147232065,
+        92.96771909367772,
+        -60.199869697906934
+      ],
+      "target": [
+        -32.98511178392194,
+        52.900001525878906,
+        -67.9051999994067
+      ]
+    },
+    {
+      "id": "plaza-carrer-major",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 13.900001525878906,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -47.98511178392194,
+        64.9000015258789,
+        -63.905199999406705
+      ],
+      "target": [
+        -32.98511178392194,
+        52.900001525878906,
+        -67.9051999994067
+      ]
+    },
+    {
+      "id": "plaza-carrer-major",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 92.49511503210317,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -134.85677248293268,
+        147.49511503210317,
+        -49.7138320174405
+      ],
+      "target": [
+        -32.98511178392194,
+        52.900001525878906,
+        -67.9051999994067
+      ]
+    },
+    {
+      "id": "plaza-carrer-major",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 24.94251338078425,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -62.20049639930656,
+        76.27230921818659,
+        -60.114430768637476
+      ],
+      "target": [
+        -32.98511178392194,
+        52.900001525878906,
+        -67.9051999994067
+      ]
+    },
+    {
+      "id": "plaza-carrer-major",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 50.89974517606194,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -86.7986831833378,
+        102.86974639676507,
+        -58.295633678082446
+      ],
+      "target": [
+        -32.98511178392194,
+        52.900001525878906,
+        -67.9051999994067
+      ]
+    },
+    {
+      "id": "plaza-carrer-major",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 13.900001525878906,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -47.98511178392194,
+        64.9000015258789,
+        -63.905199999406705
+      ],
+      "target": [
+        -32.98511178392194,
+        52.900001525878906,
+        -67.9051999994067
+      ]
+    },
+    {
+      "id": "plaza-carrer-castell",
+      "width": 1363,
+      "height": 936,
+      "near": false,
+      "clearance": 47.50218179059944,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -76.79846479911373,
+        99.51855616093778,
+        -44.808854949244086
+      ],
+      "target": [
+        -38.63970237545277,
+        55,
+        -19.369680000136782
+      ]
+    },
+    {
+      "id": "plaza-carrer-castell",
+      "width": 1363,
+      "height": 936,
+      "near": true,
+      "clearance": 15.964832584167006,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -50.63970237545277,
+        69,
+        -25.369680000136782
+      ],
+      "target": [
+        -38.63970237545277,
+        55,
+        -19.369680000136782
+      ]
+    },
+    {
+      "id": "plaza-carrer-castell",
+      "width": 390,
+      "height": 844,
+      "near": false,
+      "clearance": 108.92903783084677,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -129.50163116240805,
+        161.0055835847812,
+        -79.94429919144031
+      ],
+      "target": [
+        -38.63970237545277,
+        55,
+        -19.369680000136782
+      ]
+    },
+    {
+      "id": "plaza-carrer-castell",
+      "width": 390,
+      "height": 844,
+      "near": true,
+      "clearance": 29.365725233921566,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -62.012010067760464,
+        82.26769230769231,
+        -31.05583384629063
+      ],
+      "target": [
+        -38.63970237545277,
+        55,
+        -19.369680000136782
+      ]
+    },
+    {
+      "id": "plaza-carrer-castell",
+      "width": 844,
+      "height": 390,
+      "near": false,
+      "clearance": 58.71443245663232,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -86.36921695602601,
+        110.68443367733545,
+        -51.18935638718561
+      ],
+      "target": [
+        -38.63970237545277,
+        55,
+        -19.369680000136782
+      ]
+    },
+    {
+      "id": "plaza-carrer-castell",
+      "width": 844,
+      "height": 390,
+      "near": true,
+      "clearance": 15.964832584167006,
+      "terrainOcclusion": null,
+      "obstruction": null,
+      "offFrameCorners": 0,
+      "position": [
+        -50.63970237545277,
+        69,
+        -25.369680000136782
+      ],
+      "target": [
+        -38.63970237545277,
+        55,
+        -19.369680000136782
+      ]
+    }
+  ],
+  "limitations": [
+    "Cartographic footprints are retained; façades and dimensions are visual interpretations, not a laser scan.",
+    "PEP catalogue and institutional photographs document differing capture dates; present-day paint or street furniture may have changed.",
+    "No undocumented historical interior is constructed.",
+    "CPU renders inspect actual Three.js mesh geometry; they do not measure browser GPU performance."
+  ]
+}

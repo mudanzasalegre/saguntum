@@ -1,0 +1,57 @@
+{
+  "date": "2026-11-19",
+  "scope": "Managed Sites preview of the V9 source, exercised in the cloud browser",
+  "renderer": {
+    "webgl": false,
+    "observedVendor": "Disabled",
+    "observedRenderer": "Disabled",
+    "modeVerified": "2D fallback and HTML interface",
+    "limitation": "These observations do not verify interactive GPU rendering or frame rate. Separate CPU images use the exported Three.js meshes."
+  },
+  "observations": [
+    "The initial route opens Santa María and its first stop.",
+    "The local plan exposes all 16 stops; selecting Naves changes both the route and the current heading.",
+    "The chronology contains 17 entries with stop links; the last link was exercised and opened the clock stop. All 17 targets are also validated against the visit data.",
+    "The source panel presents 24 references with HTTP(S) links; a fact source opens its correct document entry.",
+    "The five period categories and the reading toggle retain their visible selected state.",
+    "The catalogue still presents 31 places.",
+    "Switching to Teatro Romano retains its 16-stop visit and independent progress.",
+    "Switching to Castillo retains its 18-stop visit and independent progress.",
+    "Santa María has independent visit progress and state.",
+    "The theme selector changes between Atlas oscuro and Lectura clara.",
+    "Unavailable 3D controls are correctly disabled when WebGL is disabled."
+  ],
+  "viewports": [
+    {
+      "width": 1363,
+      "height": 936,
+      "result": "Desktop panel, current stop, local plan and navigation fit the viewport.",
+      "screenshot": "santa-maria-desktop.jpg"
+    },
+    {
+      "width": 390,
+      "height": 844,
+      "panelClientWidth": 378,
+      "panelScrollWidth": 378,
+      "planCanvasCssSize": [313, 300],
+      "planCanvasBackingSize": [313, 300],
+      "result": "No horizontal panel overflow. All 16 plan markers remain selectable; marker 14 opens the clock stop.",
+      "screenshot": "santa-maria-mobile-plan.jpg"
+    },
+    {
+      "width": 844,
+      "height": 390,
+      "panelClientWidth": 328,
+      "panelScrollWidth": 328,
+      "panelBounds": {"x": 16, "y": 78, "width": 340, "height": 300},
+      "currentHeadingVerticalBounds": [266, 348.7],
+      "result": "The compact landscape layout keeps the current stop heading visible and preserves 44-pixel touch controls.",
+      "screenshot": "santa-maria-mobile-landscape.jpg"
+    }
+  ],
+  "fixesConfirmed": [
+    "The full local plan uses a canvas backing size matching its displayed mobile size, preserving legible labels.",
+    "The short landscape panel compacts spacing so the current stop title is visible.",
+    "The initial data-load error describes a failed load without promising unavailable fact sheets."
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "date": "2026-11-20",
+  "pass": true,
+  "method": "Revisión visual de seis renders CPU de las mallas Three.js exportadas después del ensayo integrado final. No es una prueba WebGL.",
+  "integratedReport": "integrated-scene-qa.json",
+  "inputHashesChecked": 70,
+  "inputMismatches": [],
+  "images": [
+    {
+      "file": "domus-conjunto.png",
+      "width": 960,
+      "height": 720,
+      "samples": 12,
+      "camera": "--full: cámara de aplicación ajustada al viewport de escritorio",
+      "sha256": "566ebd4c98c09bd3bbbd2eeaa9dd458436a0ead1b0ab343ea3034fbf1ccc0ae0",
+      "observation": "Edificio anfitrión cerrado y barrio visibles.",
+      "review": "Inspección visual del archivo final mediante view_image; revisión adicional independiente para Corte e Histórica."
+    },
+    {
+      "file": "domus-corte.png",
+      "width": 1440,
+      "height": 1080,
+      "samples": 96,
+      "camera": "--full: cámara de aplicación ajustada al viewport de escritorio",
+      "sha256": "0aed509556936a14c941da96d25dfbe5c79f02377c66aecb366f962c34a6f0fd",
+      "observation": "Todas las estancias visibles, con cocina y recinto hidráulico separados; sin oclusión material de vecinos.",
+      "review": "Inspección visual del archivo final mediante view_image; revisión adicional independiente para Corte e Histórica."
+    },
+    {
+      "file": "domus-museo.png",
+      "width": 960,
+      "height": 720,
+      "samples": 12,
+      "camera": "--full: cámara de aplicación ajustada al viewport de escritorio",
+      "sha256": "dbf3bff1e717f36321248add1baa0f08757e4fd58758fe663fa21e842d84f6d9",
+      "observation": "Techo, instalaciones, pasarela y restos visibles en la observación interior.",
+      "review": "Inspección visual del archivo final mediante view_image; revisión adicional independiente para Corte e Histórica."
+    },
+    {
+      "file": "domus-impluvium.png",
+      "width": 960,
+      "height": 720,
+      "samples": 12,
+      "camera": "--full: cámara de aplicación ajustada al viewport de escritorio",
+      "sha256": "c293d873c855ccd723e81b15856c9dcd6c10bd940d43c5cae2006fbbb566cea6",
+      "observation": "Vaso hueco visible, diferenciado de los recintos contiguos.",
+      "review": "Inspección visual del archivo final mediante view_image; revisión adicional independiente para Corte e Histórica."
+    },
+    {
+      "file": "domus-historica.png",
+      "width": 1440,
+      "height": 1080,
+      "samples": 96,
+      "camera": "--full: cámara de aplicación ajustada al viewport de escritorio",
+      "sha256": "75b17acfa9fab2928d456f60c63efc195f0d48ab576b0c30f2580454f939208b",
+      "observation": "Restitución con estancias legibles; vecinos no ocultan la composición.",
+      "review": "Inspección visual del archivo final mediante view_image; revisión adicional independiente para Corte e Histórica."
+    },
+    {
+      "file": "domus-compluvium.png",
+      "width": 960,
+      "height": 720,
+      "samples": 12,
+      "camera": "--full: cámara de aplicación ajustada al viewport de escritorio",
+      "sha256": "a085010307ba1c58d8f09853fa71e12a9f3ab9e88b4500300ce35fede7ad9f57",
+      "observation": "Cubierta interpretativa con abertura central y pendientes visibles.",
+      "review": "Inspección visual del archivo final mediante view_image; revisión adicional independiente para Corte e Histórica."
+    }
+  ],
+  "limitations": [
+    "Las cuatro imágenes de 12 muestras conservan ruido de Cycles.",
+    "La iluminación y la transparencia CPU son aproximaciones a la aplicación WebGL.",
+    "Sin medición de rendimiento GPU ni validación visual en un dispositivo físico."
+  ]
+}

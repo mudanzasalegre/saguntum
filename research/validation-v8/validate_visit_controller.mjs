@@ -1,0 +1,56 @@
+// State and rendered-contract check with a minimal element adapter.
+// Browser layout, actual DOM focus and pointer integration are checked separately.
+import fs from 'node:fs';
+import {fileURLToPath} from 'node:url';
+import assert from 'node:assert/strict';
+import {createCastleVisit,createMonumentVisit,castlePeriodLabel,visitPeriodLabel} from '../../dist/js/castle-panel.js';
+const root=fileURLToPath(new URL('../../',import.meta.url));
+const read=name=>JSON.parse(fs.readFileSync(root+'dist/assets/data/'+name+'.json','utf8'));
+const castle=read('castle-visit'),theatre=read('theatre-visit'),checks=[];
+const storage=new Map();
+globalThis.localStorage={getItem:key=>storage.get(key)||null,setItem:(key,value)=>storage.set(key,value)};
+globalThis.requestAnimationFrame=callback=>callback();
+function element(){
+  const listeners=new Map();return {hidden:true,innerHTML:'',listeners,parentElement:{parentElement:{scrollTop:0}},addEventListener:(name,fn)=>listeners.set(name,fn),contains:()=>true,closest:()=>null,querySelector:()=>({focus(){}})};
+}
+function click(el,dataset={},attributes=[],disabled=false){
+  const button={dataset,disabled,hasAttribute:name=>attributes.includes(name)};
+  el.listeners.get('click')({target:{closest:()=>button}});
+}
+function key(el,value){el.listeners.get('keydown')({target:{matches:()=>true},key:value,preventDefault(){}});}
+function check(label,fn){fn();checks.push({label,pass:true});}
+function fixture(data,id){
+  const el=element();let guide,near=false,sectionOpen=false,readingMode='materials',source=null,maps=0,ready=true;
+  const state=stopId=>({active:true,stopId,ready,near,sectionOpen,readingMode});
+  const config={element:el,data,monumentId:id,monumentLabel:id==='castle'?'CASTILLO DE SAGUNTO':'TEATRO ROMANO',onSelect:stopId=>guide.setState(state(stopId)),onNear:()=>{near=!near;guide.setState(state(guide.getState().selected));},onMap:()=>{maps++;},onReading:mode=>{readingMode=mode;guide.setState(state(guide.getState().selected));},onSource:value=>{source=value;},onSection:value=>{sectionOpen=value;guide.setState(state(guide.getState().selected));}};
+  guide=id==='castle'?createCastleVisit(config):createMonumentVisit(config);guide.setState(state(null));
+  return {el,guide,state,setReady(value){ready=value;guide.setState(state(guide.getState().selected));},get maps(){return maps;},get source(){return source;}};
+}
+storage.set('saguntum.castle.visited.v1',JSON.stringify([castle.stops[1].id,'removed-stop']));
+storage.set('saguntum.theatre.visited.v1',JSON.stringify([theatre.stops[2].id]));
+const c=fixture(castle,'castle'),t=fixture(theatre,'theatre');
+check('Castle wrapper retains the 18-stop notebook and existing storage',()=>{assert.equal(c.guide.getState().total,18);assert.deepEqual(c.guide.getState().visited,[castle.stops[1].id]);});
+check('Theatre has 16 stops and independent existing progress',()=>{assert.equal(t.guide.getState().total,16);assert.deepEqual(t.guide.getState().visited,[theatre.stops[2].id]);});
+check('Tab IDs and aria-controls remain disjoint',()=>{
+  const ids=html=>[...html.matchAll(/\bid="([^"]+)"/g)].map(x=>x[1]);const a=ids(c.el.innerHTML),b=ids(t.el.innerHTML);
+  assert(a.length>=4&&b.length>=4);assert(a.every(id=>id.startsWith('castle-')));assert(b.every(id=>id.startsWith('theatre-')));assert(!a.some(id=>b.includes(id)));
+  assert.match(t.el.innerHTML,/aria-controls="theatre-tab-content"/);assert.match(t.el.innerHTML,/aria-labelledby="theatre-tab-visit"/);
+});
+check('Shared period export preserves Castle compatibility',()=>{assert.equal(castlePeriodLabel,visitPeriodLabel);assert.equal(visitPeriodLabel('roman'),'Época romana');});
+check('Dynamic overview reports each monument’s regions and stops',()=>{assert(c.el.innerHTML.includes('<strong>'+castle.regions.length+'</strong><span>recintos'));assert(t.el.innerHTML.includes('<strong>'+theatre.regions.length+'</strong><span>ámbitos'));assert.match(t.el.innerHTML,/<strong>16<\/strong><span>paradas/);});
+check('Section control is exclusive to Theatre and reflects actual state',()=>{assert(!c.el.innerHTML.includes('data-visit-section'));assert(!t.el.innerHTML.includes('data-visit-section'));t.guide.start();assert.match(t.el.innerHTML,/data-visit-section aria-pressed="false"/);click(t.el,{},['data-visit-section']);assert(t.guide.getState().sectionOpen);assert.match(t.el.innerHTML,/Cerrar sección/);assert.match(t.el.innerHTML,/role="status"/);click(t.el,{},['data-visit-section']);assert(!t.guide.getState().sectionOpen);});
+check('WebGL-independent notebook disables section and near controls',()=>{t.guide.start();t.setReady(false);assert.match(t.el.innerHTML,/data-visit-section aria-pressed="false" disabled/);assert.match(t.el.innerHTML,/data-castle-near aria-pressed="false" disabled/);assert.match(t.el.innerHTML,/Estás explorando la documentación y el plano/);t.setReady(true);});
+check('Selecting Theatre does not modify Castle progress or selected stop',()=>{const before=c.guide.getState();click(t.el,{castleStop:theatre.stops[5].id});assert.equal(t.guide.getState().selected,theatre.stops[5].id);assert.deepEqual(c.guide.getState(),before);assert(JSON.parse(storage.get('saguntum.theatre.visited.v1')).includes(theatre.stops[5].id));assert.deepEqual(JSON.parse(storage.get('saguntum.castle.visited.v1')),[castle.stops[1].id,'removed-stop']);});
+check('Theatre layer legend follows the supplied dataset',()=>{click(t.el,{castleReading:'periods'});assert.match(t.el.innerHTML,/Leer las capas/);for(const item of theatre.readingLegend){assert(t.el.innerHTML.includes('data-period="'+item.id+'"'));assert(t.el.innerHTML.includes(item.label));}});
+check('Arrow, Home and End keys switch and label the correct tab',()=>{key(t.el,'ArrowRight');assert.equal(t.guide.getState().tab,'timeline');assert(!t.el.innerHTML.includes('data-visit-section'));assert.match(t.el.innerHTML,/aria-labelledby="theatre-tab-timeline"/);key(t.el,'End');assert.equal(t.guide.getState().tab,'sources');assert(!t.el.innerHTML.includes('data-visit-section'));assert.match(t.el.innerHTML,/aria-labelledby="theatre-tab-sources"/);key(t.el,'Home');assert.equal(t.guide.getState().tab,'visit');});
+check('Map and source actions remain isolated and correctly named',()=>{click(t.el,{},['data-castle-map']);assert.equal(t.maps,1);assert.equal(c.maps,0);click(t.el,{castleSource:theatre.sources[0].id});assert.equal(t.source.id,theatre.sources[0].id);assert.match(t.guide.sourceContent(t.source),/CUADERNO · TEATRO ROMANO/);assert.match(c.guide.sourceContent(castle.sources[0]),/CUADERNO DEL CASTILLO/);});
+check('Source content escapes text and refuses non-HTTP URLs',()=>{const html=t.guide.sourceContent({title:'<script>x</script>',url:'javascript:alert(1)',note:'A & B'});assert(!html.includes('<script>'));assert.match(html,/&lt;script&gt;/);assert.match(html,/href="#"/);assert.match(html,/A &amp; B/);});
+for(const [label,fixture,data] of [['Castle',c,castle],['Theatre',t,theatre]])check(label+' can traverse every stop and finish without losing progress',()=>{
+  fixture.guide.start();for(let i=0;i<data.stops.length;i++){assert.equal(fixture.guide.getState().selected,data.stops[i].id);assert(fixture.el.innerHTML.includes('Parada '+(i+1)+' de '+data.stops.length));click(fixture.el,{},['data-castle-next']);}
+  assert.equal(fixture.guide.getState().selected,null);assert.equal(fixture.guide.getState().visited.length,data.stops.length);assert(fixture.guide.getState().complete);assert.match(fixture.el.innerHTML,/Has llegado al final/);
+});
+check('Each monument retains its own persisted completion after both tours',()=>{assert.equal(JSON.parse(storage.get('saguntum.castle.visited.v1')).length,18);assert.equal(JSON.parse(storage.get('saguntum.theatre.visited.v1')).length,16);});
+check('HTML contains both independent accessible visit sections',()=>{const html=fs.readFileSync(root+'dist/index.html','utf8');assert.match(html,/id="castle-panel" hidden aria-label="Visita al Castillo/);assert.match(html,/id="theatre-panel" hidden aria-label="Visita al Teatro/);});
+const report={generatedAt:new Date().toISOString(),pass:true,checksCount:checks.length,method:'Controller with minimal element adapter. Actual focus and browser layout are separate checks.',checks};
+fs.writeFileSync(root+'research/validation-v8/visit-controller-results.json',JSON.stringify(report,null,2)+'\n');
+console.log(JSON.stringify(report,null,2));

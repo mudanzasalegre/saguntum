@@ -1,0 +1,1588 @@
+{
+  "schemaVersion": 1,
+  "id": "juderia",
+  "title": "Judería y Portalet de la Sang",
+  "subtitle": "Dieciséis paradas entre umbrales, casas y memoria",
+  "introduction": "Cruza el Portalet de la Sang y recorre la judería como parte viva de Sagunto. La visita enlaza la trama de calles, las casas y los accesos con historias documentadas de sus vecinos. También explica los debates sobre la sinagoga, el posible baño ritual y los límites de lo que conocemos.",
+  "researchDate": "2026-11-19",
+  "regionsLabel": "ámbitos",
+  "mapButtonLabel": "Plano de la judería",
+  "overviewButtonLabel": "Ver conjunto",
+  "readingModeLabel": "Leer las capas",
+  "readingModeNote": "Los colores distinguen funciones medievales, transformaciones posteriores y ámbitos interpretativos. No asignan una fecha única a cada casa.",
+  "timelineIntroduction": "La cronología reúne documentos, episodios de violencia, transformaciones y memoria contemporánea. Una fecha histórica no equivale a la fecha de construcción de todas las fábricas visibles.",
+  "visitAriaLabel": "Visita documentada a la judería, el Portalet de la Sang y su entorno",
+  "regions": [
+    {
+      "id": "entrada",
+      "name": "El barrio y sus umbrales",
+      "aliases": [],
+      "summary": "Reconoce el conjunto y acércate al Portalet.",
+      "coordinate": [
+        -0.2780013,
+        39.67818318
+      ],
+      "sourceIds": [
+        "jd-cid",
+        "jd-rutas",
+        "jd-civera2003",
+        "jd-osm",
+        "jd-catastro",
+        "jd-xiuxiueig",
+        "jd-portal-placa"
+      ],
+      "stopIds": [
+        "juderia-conjunto",
+        "juderia-portalet",
+        "juderia-dovelas"
+      ]
+    },
+    {
+      "id": "calles",
+      "name": "Calles, casas y oficios",
+      "aliases": [],
+      "summary": "Sigue la trama urbana y conoce experiencias de sus vecinos.",
+      "coordinate": [
+        -0.27838,
+        39.67812
+      ],
+      "sourceIds": [
+        "jd-civera2003",
+        "jd-catastro",
+        "jd-pep",
+        "jd-osm",
+        "jd-hinojosa1995",
+        "jd-xiuxiueig",
+        "jd-hinojosa2001",
+        "jd-saporta2017",
+        "jd-rutas",
+        "jd-cid"
+      ],
+      "stopIds": [
+        "juderia-sang-vella",
+        "juderia-segovia",
+        "juderia-rams",
+        "juderia-antigons",
+        "juderia-casas"
+      ]
+    },
+    {
+      "id": "comunidad",
+      "name": "Espacios de la comunidad",
+      "aliases": [],
+      "summary": "Lee las evidencias y las dudas sobre sinagoga, casa y baño.",
+      "coordinate": [
+        -0.27892,
+        39.67863
+      ],
+      "sourceIds": [
+        "jd-lacave1990",
+        "jd-civera2003",
+        "jd-osm",
+        "jd-catastro",
+        "jd-berenguer",
+        "jd-placas",
+        "jd-dival"
+      ],
+      "stopIds": [
+        "juderia-sinagoga",
+        "juderia-berenguer",
+        "juderia-micve"
+      ]
+    },
+    {
+      "id": "bordes",
+      "name": "Los bordes y el entorno",
+      "aliases": [],
+      "summary": "Distingue los accesos y relaciona el barrio con museo y teatro.",
+      "coordinate": [
+        -0.27819,
+        39.67855
+      ],
+      "sourceIds": [
+        "jd-museo",
+        "jd-placas",
+        "jd-osm",
+        "jd-catastro",
+        "jd-xiuxiueig",
+        "jd-cid",
+        "jd-dival"
+      ],
+      "stopIds": [
+        "juderia-museo",
+        "juderia-arco-museo",
+        "juderia-teatro"
+      ]
+    },
+    {
+      "id": "memoria",
+      "name": "Refugio, expulsión y memoria",
+      "aliases": [],
+      "summary": "Relaciona el paisaje con los acontecimientos y su recuerdo.",
+      "coordinate": [
+        -0.27814,
+        39.6774
+      ],
+      "sourceIds": [
+        "jd-xiuxiueig",
+        "jd-red",
+        "jd-hinojosa1995",
+        "jd-osm",
+        "jd-catastro",
+        "jd-rutas",
+        "jd-civera2003",
+        "jd-ingreso",
+        "jd-placas"
+      ],
+      "stopIds": [
+        "juderia-refugio",
+        "juderia-memoria"
+      ]
+    }
+  ],
+  "stops": [
+    {
+      "id": "juderia-conjunto",
+      "title": "Un barrio que se lee caminando",
+      "label": "El conjunto",
+      "regionId": "entrada",
+      "period": "mixed",
+      "coordinate": [
+        -0.27855,
+        39.67835
+      ],
+      "coordinates": [
+        -0.27855,
+        39.67835
+      ],
+      "intro": "Observa la trama desde arriba y después acércate. La visita enlaza puertas, calles y fachadas para reconocer un barrio habitado y transformado, con una historia que continúa más allá de sus muros.",
+      "narrative": "Observa la trama desde arriba y después acércate. La visita enlaza puertas, calles y fachadas para reconocer un barrio habitado y transformado, con una historia que continúa más allá de sus muros.",
+      "facts": [
+        {
+          "text": "La judería histórica se sitúa al oeste del Carrer del Castell.",
+          "sourceIds": [
+            "jd-cid"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Sang Vella, Segovia, Rams y Antigons forman parte del recorrido conservado.",
+          "sourceIds": [
+            "jd-rutas"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El recinto residencial y la aljama, como comunidad organizada, son conceptos relacionados pero diferentes.",
+          "sourceIds": [
+            "jd-civera2003"
+          ],
+          "confidence": "interpretive"
+        }
+      ],
+      "lookFor": "Sigue los cambios de dirección y los pequeños espacios abiertos.",
+      "modelNote": "Las huellas proceden de cartografía. La imagen reúne etapas diferentes; no restituye todo el barrio a un único año medieval.",
+      "sourceIds": [
+        "jd-cid",
+        "jd-rutas",
+        "jd-civera2003",
+        "jd-osm",
+        "jd-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Punto de observación aproximado registrado sobre la cartografía y el modelo; no equivale a una medición arquitectónica ni acredita un acceso físico.",
+      "osmIds": [],
+      "order": 1,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "jd-osm",
+        "jd-catastro"
+      ]
+    },
+    {
+      "id": "juderia-portalet",
+      "title": "Portalet de la Sang, el umbral conservado",
+      "label": "El Portalet",
+      "regionId": "entrada",
+      "period": "medieval",
+      "coordinate": [
+        -0.2779954954772062,
+        39.67818350416467
+      ],
+      "coordinates": [
+        -0.2779954954772062,
+        39.67818350416467
+      ],
+      "intro": "Acércate desde el Carrer del Castell. El arco introduce un cambio de escala: la calle abierta da paso a un recorrido más recogido. Atraviésalo visualmente y compara sus dos caras.",
+      "narrative": "Acércate desde el Carrer del Castell. El arco introduce un cambio de escala: la calle abierta da paso a un recorrido más recogido. Atraviésalo visualmente y compara sus dos caras.",
+      "facts": [
+        {
+          "text": "Jaume II autorizó en 1321 el cierre del barrio a petición de la comunidad judía.",
+          "sourceIds": [
+            "jd-xiuxiueig"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El acceso conservado presenta un arco de medio punto.",
+          "sourceIds": [
+            "jd-rutas"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La licencia documenta una actuación urbana; no demuestra que todas las piedras visibles sean de 1321.",
+          "sourceIds": [
+            "jd-xiuxiueig"
+          ],
+          "confidence": "interpretive"
+        }
+      ],
+      "lookFor": "El arco, sus apoyos y el encuentro con las casas.",
+      "modelNote": "Se representa el paso abierto entre edificios. La altura y el aparejo son aproximaciones visuales; no se añaden almenas ni una puerta de madera medieval supuesta.",
+      "sourceIds": [
+        "jd-xiuxiueig",
+        "jd-rutas",
+        "jd-osm",
+        "jd-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Punto de observación aproximado registrado sobre la cartografía y el modelo; no equivale a una medición arquitectónica ni acredita un acceso físico.",
+      "osmIds": [],
+      "order": 2,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "jd-osm",
+        "jd-catastro"
+      ]
+    },
+    {
+      "id": "juderia-dovelas",
+      "title": "La piedra que dibuja el paso",
+      "label": "El arco de cerca",
+      "regionId": "entrada",
+      "period": "mixed",
+      "coordinate": [
+        -0.2779954954772062,
+        39.67818350416467
+      ],
+      "coordinates": [
+        -0.2779954954772062,
+        39.67818350416467
+      ],
+      "intro": "Mira el borde interior del arco y cómo la fábrica pétrea aparece entre los revestimientos. La luz rasante ayuda a distinguir las piezas y el espesor del muro.",
+      "narrative": "Mira el borde interior del arco y cómo la fábrica pétrea aparece entre los revestimientos. La luz rasante ayuda a distinguir las piezas y el espesor del muro.",
+      "facts": [
+        {
+          "text": "La fotografía publicada por Civera en 2003 muestra el arco pétreo entre fachadas revestidas.",
+          "sourceIds": [
+            "jd-civera2003"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Las imágenes municipales de 2020 permiten contrastar el portal y su entorno inmediato.",
+          "sourceIds": [
+            "jd-portal-placa"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Las diferencias de textura ayudan a leer encuentros de materiales, pero no bastan para fechar reparaciones.",
+          "sourceIds": [
+            "jd-portal-placa"
+          ],
+          "confidence": "interpretive"
+        }
+      ],
+      "lookFor": "Distingue dovelas, jambas y superficies revocadas.",
+      "modelNote": "La variación de las piedras evita una fábrica uniforme. El relieve de cada junta es una interpretación gráfica, no un registro de cantería.",
+      "sourceIds": [
+        "jd-civera2003",
+        "jd-portal-placa",
+        "jd-osm",
+        "jd-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Punto de observación aproximado registrado sobre la cartografía y el modelo; no equivale a una medición arquitectónica ni acredita un acceso físico.",
+      "osmIds": [],
+      "order": 3,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "jd-osm",
+        "jd-catastro"
+      ]
+    },
+    {
+      "id": "juderia-sang-vella",
+      "title": "Sang Vella: una calle, varios tiempos",
+      "label": "Sang Vella",
+      "regionId": "calles",
+      "period": "mixed",
+      "coordinate": [
+        -0.278218,
+        39.678207
+      ],
+      "coordinates": [
+        -0.278218,
+        39.678207
+      ],
+      "intro": "Sigue la calle al otro lado del Portalet. Los quiebros y los encuentros de viviendas permiten pensar en los cambios de uso que se superpusieron a la vida de la aljama.",
+      "narrative": "Sigue la calle al otro lado del Portalet. Los quiebros y los encuentros de viviendas permiten pensar en los cambios de uso que se superpusieron a la vida de la aljama.",
+      "facts": [
+        {
+          "text": "La tradición histórica relaciona Sang Vella con una antigua sede de la cofradía de la Sang.",
+          "sourceIds": [
+            "jd-civera2003"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La construcción de la Sang Nova se desarrolló entre 1601 y 1607.",
+          "sourceIds": [
+            "jd-civera2003"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El nombre actual de una calle no fecha las fachadas que la acompañan.",
+          "sourceIds": [
+            "jd-catastro",
+            "jd-pep"
+          ],
+          "confidence": "interpretive"
+        }
+      ],
+      "lookFor": "Las medianeras y los tramos donde la calle se estrecha.",
+      "modelNote": "Se mantiene el trazado cartográfico y la edificación actual interpretada; los usos desaparecidos se explican sin inventar sus interiores.",
+      "sourceIds": [
+        "jd-civera2003",
+        "jd-catastro",
+        "jd-pep",
+        "jd-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Punto de observación aproximado registrado sobre la cartografía y el modelo; no equivale a una medición arquitectónica ni acredita un acceso físico.",
+      "osmIds": [],
+      "order": 4,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "jd-osm",
+        "jd-catastro"
+      ]
+    },
+    {
+      "id": "juderia-segovia",
+      "title": "Vecinos con nombre en los registros",
+      "label": "Carrer de Segovia",
+      "regionId": "calles",
+      "period": "medieval",
+      "coordinate": [
+        -0.2783494,
+        39.6780384
+      ],
+      "coordinates": [
+        -0.2783494,
+        39.6780384
+      ],
+      "intro": "Las casas sirven aquí de marco para conocer a quienes vivían en Morvedre. Un documento fiscal permite acercarse a personas concretas, aunque no localizar su vivienda en esta calle.",
+      "narrative": "Las casas sirven aquí de marco para conocer a quienes vivían en Morvedre. Un documento fiscal permite acercarse a personas concretas, aunque no localizar su vivienda en esta calle.",
+      "facts": [
+        {
+          "text": "El registro de 1379 reúne 43 fuegos judíos, es decir, unidades domésticas fiscales.",
+          "sourceIds": [
+            "jd-hinojosa1995"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Entre los nombres figura Astruga, identificada en relación con Abrafim Cofe.",
+          "sourceIds": [
+            "jd-hinojosa1995"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La lista incluye mujeres y hombres al frente de hogares y no registra sus profesiones.",
+          "sourceIds": [
+            "jd-hinojosa1995"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La diversidad de tamaños de las parcelas.",
+      "modelNote": "El foco es temático: no atribuye estas casas a las familias del registro ni convierte el número de fuegos en una población exacta.",
+      "sourceIds": [
+        "jd-hinojosa1995",
+        "jd-osm",
+        "jd-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Punto de observación aproximado registrado sobre la cartografía y el modelo; no equivale a una medición arquitectónica ni acredita un acceso físico.",
+      "osmIds": [],
+      "order": 5,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "jd-osm",
+        "jd-catastro"
+      ]
+    },
+    {
+      "id": "juderia-rams",
+      "title": "Oficios y conexiones más allá del barrio",
+      "label": "Carrer dels Rams",
+      "regionId": "calles",
+      "period": "medieval",
+      "coordinate": [
+        -0.2786209,
+        39.67812815
+      ],
+      "coordinates": [
+        -0.2786209,
+        39.67812815
+      ],
+      "intro": "Mira las plantas bajas mientras lees cómo el trabajo vinculaba Morvedre con otras poblaciones. La actividad económica no se agotaba dentro del recinto de la judería.",
+      "narrative": "Mira las plantas bajas mientras lees cómo el trabajo vinculaba Morvedre con otras poblaciones. La actividad económica no se agotaba dentro del recinto de la judería.",
+      "facts": [
+        {
+          "text": "Vidal Astori destacó en el siglo XV como platero al servicio del rey.",
+          "sourceIds": [
+            "jd-xiuxiueig"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La documentación estudiada por Hinojosa registra comercio de judíos saguntinos en la Vall d’Uixó.",
+          "sourceIds": [
+            "jd-hinojosa2001"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "En 1492 Jacob Toledano concertó una venta de aceite que debía entregar en Sagunto.",
+          "sourceIds": [
+            "jd-hinojosa2001"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Los portones y su relación con el espacio de paso.",
+      "modelNote": "Estos negocios se explican como historia de la comunidad. No se localiza un taller de Astori ni una tienda de Toledano en una finca sin documentación.",
+      "sourceIds": [
+        "jd-xiuxiueig",
+        "jd-hinojosa2001",
+        "jd-osm",
+        "jd-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Punto de observación aproximado registrado sobre la cartografía y el modelo; no equivale a una medición arquitectónica ni acredita un acceso físico.",
+      "osmIds": [],
+      "order": 6,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "jd-osm",
+        "jd-catastro"
+      ]
+    },
+    {
+      "id": "juderia-antigons",
+      "title": "Antigons y una historia individual",
+      "label": "Carrer d’Antigons",
+      "regionId": "calles",
+      "period": "medieval",
+      "coordinate": [
+        -0.2781053,
+        39.6777525
+      ],
+      "coordinates": [
+        -0.2781053,
+        39.6777525
+      ],
+      "intro": "Desde esta calle próxima al teatro, la visita se detiene en una trayectoria concreta. Los documentos conservan acuerdos, conflictos y decisiones personales que la arquitectura no cuenta por sí sola.",
+      "narrative": "Desde esta calle próxima al teatro, la visita se detiene en una trayectoria concreta. Los documentos conservan acuerdos, conflictos y decisiones personales que la arquitectura no cuenta por sí sola.",
+      "facts": [
+        {
+          "text": "Salomó Saporta tuvo una tienda de paños en Sagunto y participó en intercambios de alcance mediterráneo.",
+          "sourceIds": [
+            "jd-saporta2017"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Su persecución inquisitorial durante la década de 1480 ha sido estudiada a partir de documentos de archivo.",
+          "sourceIds": [
+            "jd-saporta2017"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Antigons pertenece a la trama de calles asociada a la antigua judería.",
+          "sourceIds": [
+            "jd-rutas"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La pendiente y la proximidad del teatro.",
+      "modelNote": "La parada no identifica la casa o la tienda de Saporta. Su caso muestra una experiencia individual, sin atribuirla al conjunto de vecinos.",
+      "sourceIds": [
+        "jd-saporta2017",
+        "jd-rutas",
+        "jd-osm",
+        "jd-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Punto de observación aproximado registrado sobre la cartografía y el modelo; no equivale a una medición arquitectónica ni acredita un acceso físico.",
+      "osmIds": [],
+      "order": 7,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "jd-osm",
+        "jd-catastro"
+      ]
+    },
+    {
+      "id": "juderia-casas",
+      "title": "La casa y el recuerdo de la mezuzá",
+      "label": "Las viviendas",
+      "regionId": "calles",
+      "period": "mixed",
+      "coordinate": [
+        -0.278155,
+        39.678195
+      ],
+      "coordinates": [
+        -0.278155,
+        39.678195
+      ],
+      "intro": "Acércate a una fachada y mira el umbral, las carpinterías y los huecos de las plantas altas. Los pequeños detalles domésticos necesitan tanta prudencia histórica como los grandes monumentos.",
+      "narrative": "Acércate a una fachada y mira el umbral, las carpinterías y los huecos de las plantas altas. Los pequeños detalles domésticos necesitan tanta prudencia histórica como los grandes monumentos.",
+      "facts": [
+        {
+          "text": "Se documenta una jamba con un hueco identificado para la mezuzá en el Carrer del Castell.",
+          "sourceIds": [
+            "jd-cid",
+            "jd-xiuxiueig"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Las fuentes turísticas discrepan en su número de policía: 38 en Camino del Cid y 32 en Xiuxiueig.",
+          "sourceIds": [
+            "jd-cid",
+            "jd-xiuxiueig"
+          ],
+          "confidence": "disputed"
+        },
+        {
+          "text": "El estudio de 2003 incluye una fotografía de la portada con ese elemento.",
+          "sourceIds": [
+            "jd-civera2003"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Compara puertas, ventanas y alturas sin atribuir a todas una misma fecha.",
+      "modelNote": "La maqueta no coloca una mezuzá inventada en esta vivienda. Es un foco de lectura doméstica mientras la identificación catastral de la portada permanece abierta.",
+      "sourceIds": [
+        "jd-cid",
+        "jd-xiuxiueig",
+        "jd-civera2003",
+        "jd-osm",
+        "jd-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura registrado sobre el entorno cartografiado; no identifica una planta arqueológica confirmada, una vivienda histórica atribuida ni un acceso autorizado.",
+      "osmIds": [],
+      "order": 8,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "jd-osm",
+        "jd-catastro"
+      ]
+    },
+    {
+      "id": "juderia-sinagoga",
+      "title": "La sinagoga: un lugar todavía discutido",
+      "label": "La sinagoga",
+      "regionId": "comunidad",
+      "period": "interpretation",
+      "coordinate": [
+        -0.27864,
+        39.67844
+      ],
+      "coordinates": [
+        -0.27864,
+        39.67844
+      ],
+      "intro": "Contempla el sector de Sang Vella y sus casas. Las investigaciones han propuesto emplazamientos distintos para la sinagoga; leer sus argumentos forma parte de conocer el barrio.",
+      "narrative": "Contempla el sector de Sang Vella y sus casas. Las investigaciones han propuesto emplazamientos distintos para la sinagoga; leer sus argumentos forma parte de conocer el barrio.",
+      "facts": [
+        {
+          "text": "Lacave propuso en 1990 el encuentro de Segovia y Sang Vella a partir de arcos observados.",
+          "sourceIds": [
+            "jd-lacave1990"
+          ],
+          "confidence": "disputed"
+        },
+        {
+          "text": "Civera defendió después otra identificación, próxima a la Casa dels Berenguer.",
+          "sourceIds": [
+            "jd-civera2003"
+          ],
+          "confidence": "disputed"
+        },
+        {
+          "text": "Las propuestas no aportan una planta completa y consensuada que permita reconstruir el edificio con seguridad.",
+          "sourceIds": [
+            "jd-lacave1990",
+            "jd-civera2003"
+          ],
+          "confidence": "interpretive"
+        }
+      ],
+      "lookFor": "Observa las parcelas y consulta las dos interpretaciones.",
+      "modelNote": "El punto indica un ámbito de discusión, no una localización arqueológica confirmada. No se modelan una sala de oración, un arón ni una cubierta hipotética.",
+      "sourceIds": [
+        "jd-lacave1990",
+        "jd-civera2003",
+        "jd-osm",
+        "jd-catastro"
+      ],
+      "confidence": "disputed",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura registrado sobre el entorno cartografiado; no identifica una planta arqueológica confirmada, una vivienda histórica atribuida ni un acceso autorizado.",
+      "osmIds": [],
+      "order": 9,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "jd-osm",
+        "jd-catastro"
+      ]
+    },
+    {
+      "id": "juderia-berenguer",
+      "title": "Casa dels Berenguer, junto al barrio",
+      "label": "Casa dels Berenguer",
+      "regionId": "comunidad",
+      "period": "mixed",
+      "coordinate": [
+        -0.27901,
+        39.67879
+      ],
+      "coordinates": [
+        -0.27901,
+        39.67879
+      ],
+      "intro": "Desde su fachada, relaciona esta casa con las calles vecinas. El edificio conserva señales de distintos periodos y hoy ayuda a interpretar el patrimonio de Sagunto.",
+      "narrative": "Desde su fachada, relaciona esta casa con las calles vecinas. El edificio conserva señales de distintos periodos y hoy ayuda a interpretar el patrimonio de Sagunto.",
+      "facts": [
+        {
+          "text": "La descripción institucional identifica un palacio gótico con el escudo familiar sobre la entrada.",
+          "sourceIds": [
+            "jd-berenguer"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El conjunto incluye un patio de arcadas renacentistas y una buhardilla del siglo XVIII.",
+          "sourceIds": [
+            "jd-berenguer"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Alberga un centro de interpretación y recepción de visitantes.",
+          "sourceIds": [
+            "jd-berenguer"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El cambio entre fachada, patio y cuerpos añadidos.",
+      "modelNote": "La visita utiliza el edificio ya incorporado al atlas. Aquí se observa desde el entorno, sin ofrecer un recorrido interior nuevo.",
+      "sourceIds": [
+        "jd-berenguer",
+        "jd-osm",
+        "jd-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Punto de observación aproximado registrado sobre la cartografía y el modelo; no equivale a una medición arquitectónica ni acredita un acceso físico.",
+      "osmIds": [],
+      "order": 10,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "jd-osm",
+        "jd-catastro"
+      ]
+    },
+    {
+      "id": "juderia-micve",
+      "title": "El posible baño ritual",
+      "label": "Agua y ritual",
+      "regionId": "comunidad",
+      "period": "interpretation",
+      "coordinate": [
+        -0.2789003,
+        39.6786271
+      ],
+      "coordinates": [
+        -0.2789003,
+        39.6786271
+      ],
+      "intro": "El agua introduce otra dimensión de la vida comunitaria. Desde el entorno de Berenguer se explica la identificación propuesta para una estructura que también se describe como aljibe.",
+      "narrative": "El agua introduce otra dimensión de la vida comunitaria. Desde el entorno de Berenguer se explica la identificación propuesta para una estructura que también se describe como aljibe.",
+      "facts": [
+        {
+          "text": "La noticia municipal de 2020 denomina la estructura de Berenguer «posible micvé».",
+          "sourceIds": [
+            "jd-placas"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La Diputación mantiene la misma cautela en su descripción del conjunto.",
+          "sourceIds": [
+            "jd-dival"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La ficha de Turisme relaciona la interpretación como baño ritual con la arquitectura del aljibe.",
+          "sourceIds": [
+            "jd-berenguer"
+          ],
+          "confidence": "interpretive"
+        }
+      ],
+      "lookFor": "Sitúa el edificio y consulta las referencias del agua y su uso.",
+      "modelNote": "Esta cámara muestra el exterior. No reconstruye una piscina, escaleras rituales ni conducciones cuya geometría no ha sido documentada para el modelo.",
+      "sourceIds": [
+        "jd-placas",
+        "jd-dival",
+        "jd-berenguer",
+        "jd-osm",
+        "jd-catastro"
+      ],
+      "confidence": "disputed",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura registrado sobre el entorno cartografiado; no identifica una planta arqueológica confirmada, una vivienda histórica atribuida ni un acceso autorizado.",
+      "osmIds": [],
+      "order": 11,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "jd-osm",
+        "jd-catastro"
+      ]
+    },
+    {
+      "id": "juderia-museo",
+      "title": "Mestre Penya: el edificio y sus lecturas",
+      "label": "El museo",
+      "regionId": "bordes",
+      "period": "mixed",
+      "coordinate": [
+        -0.278008,
+        39.678512
+      ],
+      "coordinates": [
+        -0.278008,
+        39.678512
+      ],
+      "intro": "Mira el museo desde el Carrer del Castell. El edificio permite conectar el barrio con los objetos conservados y también comparar cómo distintas fuentes interpretan sus usos.",
+      "narrative": "Mira el museo desde el Carrer del Castell. El edificio permite conectar el barrio con los objetos conservados y también comparar cómo distintas fuentes interpretan sus usos.",
+      "facts": [
+        {
+          "text": "El museo ocupa la Casa del Mestre Penya, en el número 23 del Carrer del Castell.",
+          "sourceIds": [
+            "jd-museo"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Su ficha institucional propone una construcción del siglo XIV y recoge estructuras anteriores en el solar.",
+          "sourceIds": [
+            "jd-museo"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La señalización sefardí lo vincula a la antigua carnicería judía; la ficha turística también menciona lonja y almudín.",
+          "sourceIds": [
+            "jd-placas",
+            "jd-museo"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La fachada y el espacio que la separa del arco de enfrente.",
+      "modelNote": "El museo comparte el modelo detallado de la Casa del Mestre Penya. Su visita propia permite recorrer las dos plantas y conocer la rehabilitación; los posibles usos medievales se explican sin inventar una lonja o carnicería amueblada.",
+      "sourceIds": [
+        "jd-museo",
+        "jd-placas",
+        "jd-osm",
+        "jd-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Punto de observación aproximado registrado sobre la cartografía y el modelo; no equivale a una medición arquitectónica ni acredita un acceso físico.",
+      "osmIds": [],
+      "order": 12,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "jd-osm",
+        "jd-catastro"
+      ]
+    },
+    {
+      "id": "juderia-arco-museo",
+      "title": "Dos accesos que conviene distinguir",
+      "label": "El arco del museo",
+      "regionId": "bordes",
+      "period": "mixed",
+      "coordinate": [
+        -0.27818129250197615,
+        39.67855579258059
+      ],
+      "coordinates": [
+        -0.27818129250197615,
+        39.67855579258059
+      ],
+      "intro": "Vuelve la mirada al paso situado frente al museo. Compáralo con el Portalet recorrido antes: la proximidad de ambos explica que sus nombres y sus imágenes se confundan.",
+      "narrative": "Vuelve la mirada al paso situado frente al museo. Compáralo con el Portalet recorrido antes: la proximidad de ambos explica que sus nombres y sus imágenes se confundan.",
+      "facts": [
+        {
+          "text": "El itinerario municipal describe primero una entrada ante el museo y después el Portalet de la Sang.",
+          "sourceIds": [
+            "jd-xiuxiueig"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La cartografía registra ambos arcos como elementos separados.",
+          "sourceIds": [
+            "jd-osm"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Su semejanza funcional no acredita una fecha de construcción idéntica.",
+          "sourceIds": [
+            "jd-xiuxiueig"
+          ],
+          "confidence": "interpretive"
+        }
+      ],
+      "lookFor": "La posición de cada acceso respecto al Carrer del Castell.",
+      "modelNote": "El modelo diferencia los pasos y sus proporciones. No extiende automáticamente a este arco la fecha de la licencia de 1321.",
+      "sourceIds": [
+        "jd-xiuxiueig",
+        "jd-osm",
+        "jd-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Punto de observación aproximado registrado sobre la cartografía y el modelo; no equivale a una medición arquitectónica ni acredita un acceso físico.",
+      "osmIds": [],
+      "order": 13,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "jd-osm",
+        "jd-catastro"
+      ]
+    },
+    {
+      "id": "juderia-teatro",
+      "title": "El borde occidental y la ladera",
+      "label": "Hacia el teatro",
+      "regionId": "bordes",
+      "period": "mixed",
+      "coordinate": [
+        -0.2791353,
+        39.6781373
+      ],
+      "coordinates": [
+        -0.2791353,
+        39.6781373
+      ],
+      "intro": "Mira cómo el caserío se encuentra con la subida y con el entorno del teatro. Los bordes del barrio se leen mejor relacionando la topografía con las fuentes, sin imaginar una muralla continua donde no está documentada.",
+      "narrative": "Mira cómo el caserío se encuentra con la subida y con el entorno del teatro. Los bordes del barrio se leen mejor relacionando la topografía con las fuentes, sin imaginar una muralla continua donde no está documentada.",
+      "facts": [
+        {
+          "text": "La calle del Teatro Romano se utiliza como referencia del límite occidental de la judería.",
+          "sourceIds": [
+            "jd-cid"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La señalización de 2020 incluyó un arco junto al teatro, además del Portalet de la Sang.",
+          "sourceIds": [
+            "jd-placas"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El cementerio y los hipogeos pertenecen al paisaje de la ladera, fuera del núcleo residencial.",
+          "sourceIds": [
+            "jd-dival"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El cambio de pendiente y el encuentro de Rams con Teatre Romà.",
+      "modelNote": "La parada se mantiene dentro del barrio. La necrópolis conserva su propia localización y visita arqueológica en el atlas.",
+      "sourceIds": [
+        "jd-cid",
+        "jd-placas",
+        "jd-dival",
+        "jd-osm",
+        "jd-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Punto de observación aproximado registrado sobre la cartografía y el modelo; no equivale a una medición arquitectónica ni acredita un acceso físico.",
+      "osmIds": [],
+      "order": 14,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "jd-osm",
+        "jd-catastro"
+      ]
+    },
+    {
+      "id": "juderia-refugio",
+      "title": "1391: mirar al castillo como refugio",
+      "label": "El refugio",
+      "regionId": "memoria",
+      "period": "medieval",
+      "coordinate": [
+        -0.27813415409922804,
+        39.677399794112624
+      ],
+      "coordinates": [
+        -0.27813415409922804,
+        39.677399794112624
+      ],
+      "intro": "Desde el extremo alto, levanta la mirada hacia el castillo. En un momento de violencia contra las comunidades judías, la relación entre barrio y fortaleza tuvo consecuencias para sus habitantes.",
+      "narrative": "Desde el extremo alto, levanta la mirada hacia el castillo. En un momento de violencia contra las comunidades judías, la relación entre barrio y fortaleza tuvo consecuencias para sus habitantes.",
+      "facts": [
+        {
+          "text": "En 1391 la comunidad de Morvedre encontró protección local y buscó refugio en el castillo.",
+          "sourceIds": [
+            "jd-xiuxiueig"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Tras la destrucción de otras aljamas, Sagunto recibió población y ganó relevancia durante el siglo XV.",
+          "sourceIds": [
+            "jd-red"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La supervivencia del barrio no significa que sus vecinos quedaran libres de conversiones y dificultades.",
+          "sourceIds": [
+            "jd-hinojosa1995"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La dirección de la subida sin perder de vista el caserío.",
+      "modelNote": "El foco es un punto de lectura en el extremo del barrio. No reproduce una ruta individual de huida ni añade un episodio escenificado.",
+      "sourceIds": [
+        "jd-xiuxiueig",
+        "jd-red",
+        "jd-hinojosa1995",
+        "jd-osm",
+        "jd-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de lectura registrado sobre el entorno cartografiado; no identifica una planta arqueológica confirmada, una vivienda histórica atribuida ni un acceso autorizado.",
+      "osmIds": [],
+      "order": 15,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "jd-osm",
+        "jd-catastro"
+      ]
+    },
+    {
+      "id": "juderia-memoria",
+      "title": "1492 y la memoria que permanece",
+      "label": "Expulsión y memoria",
+      "regionId": "memoria",
+      "period": "mixed",
+      "coordinate": [
+        -0.2779602,
+        39.6782016
+      ],
+      "coordinates": [
+        -0.2779602,
+        39.6782016
+      ],
+      "intro": "Regresa al umbral. El recorrido termina enlazando la expulsión con las transformaciones posteriores y con el reconocimiento reciente de este patrimonio. Las calles conservan huellas, pero también ausencias.",
+      "narrative": "Regresa al umbral. El recorrido termina enlazando la expulsión con las transformaciones posteriores y con el reconocimiento reciente de este patrimonio. Las calles conservan huellas, pero también ausencias.",
+      "facts": [
+        {
+          "text": "El decreto de 1492 forzó la salida de quienes no se convirtieron; el Grao de Morvedre fue lugar de embarque.",
+          "sourceIds": [
+            "jd-rutas"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "En 1493 se autorizó una cofradía de oficios textiles para repoblar el barrio.",
+          "sourceIds": [
+            "jd-civera2003"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Sagunto se incorporó a la Red de Juderías en 2019 y señalizó seis lugares en 2020.",
+          "sourceIds": [
+            "jd-ingreso",
+            "jd-placas"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Relaciona el portal con las calles recorridas y con las fuentes de sus historias.",
+      "modelNote": "La escena mantiene el barrio actual interpretado. El recorrido explica la expulsión, las transformaciones posteriores y su memoria.",
+      "sourceIds": [
+        "jd-rutas",
+        "jd-civera2003",
+        "jd-ingreso",
+        "jd-placas",
+        "jd-osm",
+        "jd-catastro"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Punto de observación aproximado registrado sobre la cartografía y el modelo; no equivale a una medición arquitectónica ni acredita un acceso físico.",
+      "osmIds": [],
+      "order": 16,
+      "readingMinutes": 2,
+      "coordinateSourceIds": [
+        "jd-osm",
+        "jd-catastro"
+      ]
+    }
+  ],
+  "timeline": [
+    {
+      "id": "juderia-t01",
+      "date": "Siglo XIII",
+      "title": "Nuevas familias y donaciones",
+      "text": "Tras la conquista cristiana se documentan beneficiarios judíos en los repartos de bienes.",
+      "sourceIds": [
+        "jd-rutas"
+      ],
+      "period": "medieval",
+      "confidence": "documented",
+      "stopId": "juderia-conjunto"
+    },
+    {
+      "id": "juderia-t02",
+      "date": "1321",
+      "title": "Permiso para cerrar el barrio",
+      "text": "Jaume II autoriza el cierre solicitado por la comunidad. La licencia no fecha cada fábrica conservada.",
+      "sourceIds": [
+        "jd-xiuxiueig"
+      ],
+      "period": "medieval",
+      "confidence": "documented",
+      "stopId": "juderia-portalet"
+    },
+    {
+      "id": "juderia-t03",
+      "date": "1348–1349",
+      "title": "Violencia y crisis",
+      "text": "El asalto de los unionistas y sus consecuencias se conocen mediante documentación estudiada por Díaz Borrás.",
+      "sourceIds": [
+        "jd-diaz2004"
+      ],
+      "period": "medieval",
+      "confidence": "documented",
+      "stopId": "juderia-sang-vella"
+    },
+    {
+      "id": "juderia-t04",
+      "date": "1363",
+      "title": "La guerra alcanza el barrio",
+      "text": "La Guerra de los Dos Pedros provoca otra etapa de pillaje y destrucción.",
+      "sourceIds": [
+        "jd-xiuxiueig"
+      ],
+      "period": "medieval",
+      "confidence": "documented",
+      "stopId": "juderia-refugio"
+    },
+    {
+      "id": "juderia-t05",
+      "date": "1366",
+      "title": "Regreso y privilegios",
+      "text": "La síntesis de la Red de Juderías sitúa nuevos privilegios y el regreso de vecinos tras la guerra.",
+      "sourceIds": [
+        "jd-red"
+      ],
+      "period": "medieval",
+      "confidence": "documented",
+      "stopId": "juderia-conjunto"
+    },
+    {
+      "id": "juderia-t06",
+      "date": "1379",
+      "title": "Hogares en un registro fiscal",
+      "text": "Se anotan 43 fuegos judíos. El registro no es un recuento completo de todas las personas.",
+      "sourceIds": [
+        "jd-hinojosa1995"
+      ],
+      "period": "medieval",
+      "confidence": "documented",
+      "stopId": "juderia-segovia"
+    },
+    {
+      "id": "juderia-t07",
+      "date": "1391",
+      "title": "Protección y refugio",
+      "text": "Morvedre evita la destrucción de su judería; la población se refugia en el castillo.",
+      "sourceIds": [
+        "jd-xiuxiueig"
+      ],
+      "period": "medieval",
+      "confidence": "documented",
+      "stopId": "juderia-refugio"
+    },
+    {
+      "id": "juderia-t08",
+      "date": "1445",
+      "title": "Otra ventana a la población",
+      "text": "Una segunda lista fiscal permite estudiar los cambios de la comunidad respecto a 1379.",
+      "sourceIds": [
+        "jd-hinojosa1995"
+      ],
+      "period": "medieval",
+      "confidence": "documented",
+      "stopId": "juderia-segovia"
+    },
+    {
+      "id": "juderia-t09",
+      "date": "Siglo XV",
+      "title": "Oficios y comercio",
+      "text": "Plateros y comerciantes saguntinos participan en redes que superan los límites de la villa.",
+      "sourceIds": [
+        "jd-xiuxiueig",
+        "jd-hinojosa2001"
+      ],
+      "period": "medieval",
+      "confidence": "documented",
+      "stopId": "juderia-rams"
+    },
+    {
+      "id": "juderia-t10",
+      "date": "Década de 1480",
+      "title": "Salomó Saporta ante la Inquisición",
+      "text": "Su trayectoria documenta negocios y persecución en los años anteriores a la expulsión.",
+      "sourceIds": [
+        "jd-saporta2017"
+      ],
+      "period": "medieval",
+      "confidence": "documented",
+      "stopId": "juderia-antigons"
+    },
+    {
+      "id": "juderia-t11",
+      "date": "1492",
+      "title": "Expulsión y salida por el Grao",
+      "text": "El edicto abre una ruptura decisiva; el puerto de Morvedre concentra embarques de distintas comunidades.",
+      "sourceIds": [
+        "jd-rutas"
+      ],
+      "period": "medieval",
+      "confidence": "documented",
+      "stopId": "juderia-memoria"
+    },
+    {
+      "id": "juderia-t12",
+      "date": "1493",
+      "title": "Repoblación y oficios textiles",
+      "text": "La autorización real del 7 de diciembre permite establecer una cofradía bajo la advocación del Corpus Christi.",
+      "sourceIds": [
+        "jd-civera2003"
+      ],
+      "period": "modern",
+      "confidence": "documented",
+      "stopId": "juderia-sang-vella"
+    },
+    {
+      "id": "juderia-t13",
+      "date": "1601–1607",
+      "title": "La Sang Nova",
+      "text": "La construcción de la nueva ermita ayuda a entender la distinción entre Sang Vella y Sang Nova.",
+      "sourceIds": [
+        "jd-civera2003"
+      ],
+      "period": "modern",
+      "confidence": "documented",
+      "stopId": "juderia-sang-vella"
+    },
+    {
+      "id": "juderia-t14",
+      "date": "1990–2003",
+      "title": "Investigar la sinagoga",
+      "text": "Lacave y Civera presentan propuestas de localización distintas. La visita conserva visible ese debate.",
+      "sourceIds": [
+        "jd-lacave1990",
+        "jd-civera2003"
+      ],
+      "period": "contemporary",
+      "confidence": "disputed",
+      "stopId": "juderia-sinagoga"
+    },
+    {
+      "id": "juderia-t15",
+      "date": "2019",
+      "title": "Caminos de Sefarad",
+      "text": "La ciudad entra en la Red de Juderías de España.",
+      "sourceIds": [
+        "jd-ingreso"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "juderia-memoria"
+    },
+    {
+      "id": "juderia-t16",
+      "date": "2020",
+      "title": "Seis puntos de memoria",
+      "text": "La señalización conecta Portalet, museo, Berenguer, un arco próximo al teatro, hipogeos y cementerio.",
+      "sourceIds": [
+        "jd-placas"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "juderia-memoria"
+    }
+  ],
+  "sources": [
+    {
+      "id": "jd-xiuxiueig",
+      "title": "Barri de la Jueria",
+      "author": "Ajuntament de Sagunt · proyecto Xiuxiueig",
+      "url": "https://aytosagunto.es/es/ayuntamiento/areas-y-servicios/cultura-y-educacion/campus-abierto-a-la-ciudadania/proyecto-xiuxiueig/barri-de-la-jueria/",
+      "type": "itinerario municipal de divulgación",
+      "year": null,
+      "locator": "Apartados Portalet, cierre de 1321, oficios, refugio de 1391 y recorrido de calles",
+      "note": "Distingue el acceso ante el museo del Portalet conservado. Se contrastan sus atribuciones arqueológicas con los estudios especializados.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "jd-rutas",
+      "title": "Judería de Sagunto",
+      "author": "Rutas Jaume I",
+      "url": "https://www.rutasjaumei.com/es/que-ver/218/-juderia-de-sagunto.php",
+      "type": "ruta histórica con referencias visuales",
+      "year": null,
+      "locator": "Descripción del barrio, acontecimientos de 1321, 1348, 1391 y 1492; galería fotográfica",
+      "note": "Las fotografías informan sobre forma y entorno; no se incorporan a la aplicación. La fecha de consulta no acredita la fecha de toma.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "jd-placas",
+      "title": "El conjunto patrimonial judío de Sagunto ya cuenta con la señalización de la Red de Juderías de España",
+      "author": "Ajuntament de Sagunt",
+      "url": "https://aytosagunto.es/es/actualidad/el-conjunto-patrimonial-judio-de-sagunto-ya-cuenta-con-la-senalizacion-de-la-red-de-juderias-de-espana/",
+      "type": "documentación municipal de señalización",
+      "year": 2020,
+      "locator": "Noticia de 8 de septiembre de 2020; relación de seis emplazamientos y fotografías",
+      "note": "Emplea expresamente «posible micvé». La señalización identifica una ruta patrimonial, no fecha arqueológicamente cada elemento.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "jd-portal-placa",
+      "title": "Colocación de la primera placa de la Red de Juderías en Sagunto",
+      "author": "Ajuntament de Sagunt",
+      "url": "https://aytosagunto.es/es/actualidad/sagunto-da-un-paso-mas-en-el-camino-de-la-red-de-juderias-de-espana-con-la-colocacion-de-una-placa-de-senalizacion-de-la-red-en-la-ciudad/",
+      "type": "noticia municipal con fotografías del Portalet",
+      "year": 2020,
+      "locator": "28 de julio de 2020; Portalet de la Sang",
+      "note": "Referencia del estado visible del arco y de su reconocimiento contemporáneo.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "jd-red",
+      "title": "Sagunto · Caminos de Sefarad",
+      "author": "Red de Juderías de España",
+      "url": "https://redjuderias.org/ciudades/sagunto/",
+      "type": "síntesis de patrimonio sefardí",
+      "year": null,
+      "locator": "Historia medieval, protección real, 1366, 1391 y expulsión de 1492",
+      "note": "Se contrasta con bibliografía académica. No se adoptan la errata sobre el siglo del museo ni sus afirmaciones categóricas sobre el baño y los orígenes romanos.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "jd-ingreso",
+      "title": "Sagunto ya forma parte de la Red de Juderías de España-Caminos de Sefarad",
+      "author": "Ajuntament de Sagunt",
+      "url": "https://aytosagunto.es/es/actualidad/sagunto-ya-forma-parte-de-la-red-de-juderias-de-espana-caminos-de-sefarad/",
+      "type": "documentación municipal",
+      "year": 2019,
+      "locator": "Adhesión a la red y visita de su comisión evaluadora",
+      "note": "Fuente del hito contemporáneo, no prueba de las atribuciones antiguas enumeradas en la noticia.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "jd-civera2003",
+      "title": "La Jueria de Morvedre",
+      "author": "Manuel Civera i Gómez",
+      "url": "https://www.centroarqueologicosaguntino.es/uploads/descargas/409_06_la_juderia_de_morvedre.pdf",
+      "type": "estudio histórico y topográfico",
+      "year": 2003,
+      "locator": "ARSE 37, pp. 65–91; fotos pp. 73 y 75; discusión de sinagoga pp. 72–82",
+      "note": "Aporta observaciones y propuestas identificativas. Las inferencias sobre sinagoga y baño no se presentan como una excavación concluyente.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "jd-lacave1990",
+      "title": "De nuevo sobre la sinagoga de Sagunto",
+      "author": "José Luis Lacave",
+      "url": "https://sefarad.revistas.csic.es/index.php/sefarad/article/view/937",
+      "type": "artículo científico",
+      "year": 1990,
+      "locator": "Sefarad 50(1), pp. 211–213, especialmente p. 213",
+      "note": "Propone el encuentro de Segovia y Sang Vella a partir de arcos observados; su formulación es hipotética.",
+      "downloadUrl": "https://sefarad.revistas.csic.es/index.php/sefarad/article/download/937/1110/1609",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "jd-hinojosa1995",
+      "title": "Apuntes para la demografía de la aljama judía de Sagunto en los siglos bajomedievales",
+      "author": "José Hinojosa Montalvo",
+      "url": "https://sefarad.revistas.csic.es/index.php/sefarad/article/download/1123/1294/0",
+      "type": "investigación de documentación fiscal",
+      "year": 1995,
+      "locator": "Sefarad 55(2), pp. 273–284; p. 277: 43 fuegos y límites del registro de 1379",
+      "note": "Un fuego es una unidad doméstica fiscal. Las listas no equivalen a censos completos de habitantes y sus estimaciones se deben leer como tales.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "jd-hinojosa2001",
+      "title": "Las actividades mercantiles de los judíos saguntinos. De Valencia a Granada y Berbería",
+      "author": "José Hinojosa Montalvo",
+      "url": "https://www.centroarqueologicosaguntino.es/uploads/descargas/560_101%20Las%20actividades%20mercantiles%20de%20los%20judios%20saguntinos%20de%20Valencia%20a%20Granada%20y%20Berberia%2035.pdf",
+      "type": "estudio de documentación comercial",
+      "year": 2001,
+      "locator": "ARSE 35, pp. 101–132; p. 115: comercio comarcal y venta de aceite",
+      "note": "La cabecera del artículo corresponde a 2001; la fecha de carga del PDF no es la de publicación. Los negocios se explican sin asignar una tienda a una casa no identificada.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "jd-saporta2017",
+      "title": "Salomó Saporta: un mercader judío ante la Inquisición valenciana",
+      "author": "José Bordes García",
+      "url": "https://sefarad.revistas.csic.es/index.php/sefarad/article/view/757",
+      "type": "investigación histórica",
+      "year": 2017,
+      "locator": "Sefarad 77(2), pp. 353–374; pp. 360–362: actividades y tienda de paños",
+      "note": "Estudio de una trayectoria individual y su persecución en la década de 1480; no representa a todas las familias ni permite localizar su tienda en esta calle.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "jd-diaz2004",
+      "title": "Los judíos de Morvedre durante la crisis de 1348–1349",
+      "author": "Andrés Díaz Borrás",
+      "url": "https://centroarqueologicosaguntino.es/wp-content/uploads/2018/09/401_09_los_judios_de_morvedre.pdf",
+      "type": "estudio histórico documental",
+      "year": 2004,
+      "locator": "ARSE 38, pp. 247–318",
+      "note": "Sitúa la violencia de la Unión en su contexto y examina la comunidad mediante documentación archivística.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "jd-berenguer",
+      "title": "Descubre la Casa dels Berenguer en el corazón de Sagunto",
+      "author": "Turisme Comunitat Valenciana",
+      "url": "https://www.comunitatvalenciana.com/es/inspirate/casa-dels-berenguer",
+      "type": "descripción institucional del edificio",
+      "year": 2024,
+      "locator": "7 de febrero de 2024; fachada, patio, buhardilla y aljibe",
+      "note": "Sirve para reconocer las etapas del edificio. La identificación del aljibe como baño se mantiene como interpretación.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "jd-dival",
+      "title": "Qué ver en Sagunt",
+      "author": "València Turisme · Diputació de València",
+      "url": "https://turisme.dival.es/que-ver-en-sagunt/",
+      "type": "información patrimonial institucional",
+      "year": null,
+      "locator": "Apartados 4 y 5: Casa dels Berenguer, posible mikvé y judería",
+      "note": "La propia ficha emplea «posible Mikvé judía». No se infiere un interior reconstruido ni un acceso público desde el punto de lectura.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "jd-museo",
+      "title": "Museu Arqueològic de Sagunt",
+      "author": "Turisme Comunitat Valenciana",
+      "url": "https://www.comunitatvalenciana.com/es/valencia/sagunt-sagunto/museos/museu-arqueologic-de-sagunt",
+      "type": "ficha institucional del museo",
+      "year": null,
+      "locator": "Casa del Mestre Penya, Carrer del Castell 23; descripción del inmueble y antecedentes arqueológicos",
+      "note": "La fecha propuesta del edificio es el siglo XIV. Sus diversos usos históricos se distinguen de la atribución de carnicería presente en la señalización sefardí.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "jd-cid",
+      "title": "Judería de Sagunto",
+      "author": "Consorcio Camino del Cid",
+      "url": "https://www.caminodelcid.org/en/node/20906",
+      "type": "inventario turístico institucional",
+      "year": 2021,
+      "locator": "Revisión indicada: 27 de agosto de 2021; portal, cierre occidental y fachada con mezuzá",
+      "note": "La numeración de la casa con mezuzá difiere de Xiuxiueig. Se conserva la observación del elemento sin resolver esa discrepancia mediante una asignación arbitraria.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "jd-pep",
+      "title": "Plan Especial de Protección del Conjunto Histórico-Artístico de Sagunt · tomo I",
+      "author": "Ajuntament de Sagunt; Universitat Politècnica de València; Politecnico di Torino",
+      "url": "https://aytosagunto.es/media/y1zhyqmy/04-95pl_tomoi_opt.pdf",
+      "type": "inventario arquitectónico municipal",
+      "year": 2000,
+      "locator": "Fichas y planos del casco histórico; consulta de apoyo al contexto",
+      "note": "Catálogo histórico con diligencia de 2006. Sus fotografías y alzados no certifican el estado de las fachadas en 2026.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "jd-osm",
+      "title": "OpenStreetMap · judería y calles del entorno",
+      "author": "Colaboradores de OpenStreetMap",
+      "url": "https://www.openstreetmap.org/way/733421700",
+      "type": "cartografía colaborativa",
+      "year": null,
+      "locator": "Portalet 733421700; arco ante museo 1303697035; trazas de Sang Vella, Segovia, Rams, Antigons y Pere Cartagena",
+      "note": "Registro de posiciones y recorridos; no acredita fechas de fábricas ni accesibilidad.",
+      "licenseUrl": "https://www.openstreetmap.org/copyright",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "jd-catastro",
+      "title": "Cartografía catastral INSPIRE · edificios de Sagunto/Sagunt",
+      "author": "Dirección General del Catastro",
+      "url": "https://www.catastro.hacienda.gob.es/webinspire/index.html",
+      "type": "cartografía oficial",
+      "year": null,
+      "locator": "Municipio 46222; cuerpos, patios y plantas del entorno de la judería",
+      "note": "Base de la volumetría. Los huecos y acabados no proceden de un levantamiento de cada vivienda.",
+      "downloadUrl": "https://www.catastro.hacienda.gob.es/INSPIRE/Buildings/46/46222-SAGUNTO%20SAGUNT/A.ES.SDGC.BU.46222.zip",
+      "licenseUrl": "https://www.catastro.hacienda.gob.es/webinspire/documentos/Licencia.pdf",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "jd-terreno",
+      "title": "Modelos de terreno MDT05 y alturas MDSnE de Sagunto",
+      "author": "Instituto Geográfico Nacional / Centro Nacional de Información Geográfica",
+      "url": "https://datos.gob.es/es/catalogo/e00125901-spaignmds-normalizado",
+      "type": "modelos geográficos oficiales",
+      "year": null,
+      "locator": "Relieve y alturas del atlas",
+      "note": "Aportan relieve y estimaciones de altura; no son una medición de umbrales, escaleras o cornisas.",
+      "licenseUrl": "https://www.ign.es/resources/licencia/Condiciones_licenciaUso_IGN.pdf",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "jd-pnoa",
+      "title": "PNOA Máxima Actualidad · ortofotografía del casco histórico",
+      "author": "Instituto Geográfico Nacional / Centro Nacional de Información Geográfica",
+      "url": "https://datos.gob.es/es/catalogo/e00125901-spaignpnoama",
+      "type": "ortofotografía oficial",
+      "year": null,
+      "locator": "Cubiertas y ocupación del suelo del entorno",
+      "note": "La fecha de consulta no establece la fecha del vuelo. Apoya la lectura del conjunto, no el estado actual exacto de cada inmueble.",
+      "licenseUrl": "https://www.ign.es/resources/licencia/Condiciones_licenciaUso_IGN.pdf",
+      "accessed": "2026-11-19"
+    }
+  ],
+  "methodology": [
+    "El Portalet de la Sang se registra como acceso distinto del arco situado frente al Museo Histórico. Sus geometrías y sus nombres no se intercambian.",
+    "La licencia de 1321 documenta el cierre de un ámbito urbano. No se utiliza para atribuir una fecha exacta a cada piedra, vivienda o arco de la escena.",
+    "Las propuestas de localización de la sinagoga se muestran como debate historiográfico. El foco sectorial no afirma dónde estuvo su planta ni genera un interior hipotético.",
+    "El baño de Berenguer se presenta como posible micvé. El punto de lectura es exterior y no implica acceso al inmueble ni una sección reconstruida.",
+    "La portada con hueco para mezuzá está documentada, pero las fuentes consultadas discrepan en la numeración actual. No se inventa el detalle en una casa elegida por proximidad.",
+    "Las listas fiscales describen contribuyentes y hogares con lagunas. No se transforman automáticamente en censos exactos ni se atribuyen a viviendas concretas.",
+    "La trama conserva evidencias medievales y transformaciones posteriores. Catastro, OSM, terreno y ortofoto sustentan el registro; acabados y huecos tienen una precisión menor.",
+    "Las fotografías se consultan como referencias; no se incorporan galerías históricas ni se reutilizan imágenes ajenas como texturas."
+  ],
+  "readingLegend": [
+    {
+      "id": "medieval",
+      "label": "Funciones y elementos medievales",
+      "color": "#d6bd8b",
+      "note": "Contextos históricos y elementos conservados; no fecha por igual todo el caserío."
+    },
+    {
+      "id": "modern",
+      "label": "Transformaciones de la Edad Moderna",
+      "color": "#d4a578",
+      "note": "Cambios de uso tras la expulsión y etapas posteriores."
+    },
+    {
+      "id": "contemporary",
+      "label": "Ciudad y memoria contemporáneas",
+      "color": "#77b8c7",
+      "note": "Investigación, señalización y transformaciones recientes."
+    },
+    {
+      "id": "mixed",
+      "label": "Encuentro de épocas",
+      "color": "#be98d6",
+      "note": "Fábricas, casas y relaciones urbanas que reúnen etapas distintas."
+    },
+    {
+      "id": "interpretation",
+      "label": "Ámbitos interpretativos",
+      "color": "#929ba0",
+      "note": "Localizaciones debatidas y focos de lectura sin reconstrucción arqueológica."
+    }
+  ],
+  "confidenceLegend": [
+    {
+      "id": "documented",
+      "label": "Documentado",
+      "note": "La fuente respalda el hecho o la descripción; no supone precisión métrica del modelo."
+    },
+    {
+      "id": "interpretive",
+      "label": "Interpretación",
+      "note": "Lectura razonada del lugar o de sus fuentes que admite revisión."
+    },
+    {
+      "id": "disputed",
+      "label": "En debate",
+      "note": "Hay propuestas distintas o una atribución que no puede darse por definitiva."
+    }
+  ],
+  "modelRegistration": {
+    "anchor": [
+      -0.27861,
+      39.67823
+    ],
+    "yawRadians": 0,
+    "axisX": "Este en el registro cartográfico del atlas",
+    "axisZ": "Sur en el registro cartográfico del atlas",
+    "method": "Huellas OSM y Catastro, referencias visuales e investigación; focos de observación aproximados",
+    "precision": "approximate"
+  }
+}

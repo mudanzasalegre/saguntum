@@ -1,0 +1,115 @@
+{
+  "pass": true,
+  "checks": 49,
+  "heightReview": [
+    {
+      "id": "cat-3657309YJ3935H_part1-0",
+      "surfaceHeightEstimate": 2.8,
+      "cadastralLevels": 3,
+      "displayHeightM": 9,
+      "method": "Cadastral floor count × 3 m",
+      "reason": "Surface estimate below 1.75 m per mapped floor; source data remain unchanged and the displayed height is interpretive."
+    },
+    {
+      "id": "cat-3657327YJ3935H_part2-0",
+      "surfaceHeightEstimate": 3,
+      "cadastralLevels": 4,
+      "displayHeightM": 12,
+      "method": "Cadastral floor count × 3 m",
+      "reason": "Surface estimate below 1.75 m per mapped floor; source data remain unchanged and the displayed height is interpretive."
+    },
+    {
+      "id": "cat-3658211YJ3935H_part2-0",
+      "surfaceHeightEstimate": 5.2,
+      "cadastralLevels": 3,
+      "displayHeightM": 9,
+      "method": "Cadastral floor count × 3 m",
+      "reason": "Surface estimate below 1.75 m per mapped floor; source data remain unchanged and the displayed height is interpretive."
+    },
+    {
+      "id": "cat-3658917YJ3935H_part2-0",
+      "surfaceHeightEstimate": 3.6,
+      "cadastralLevels": 3,
+      "displayHeightM": 9,
+      "method": "Cadastral floor count × 3 m",
+      "reason": "Surface estimate below 1.75 m per mapped floor; source data remain unchanged and the displayed height is interpretive."
+    }
+  ],
+  "sourceResiduals": [
+    {
+      "id": "733403822-residual-0",
+      "sourceId": "733403822",
+      "parentId": "3558705YJ3935H",
+      "sourceCoordinates": [
+        [
+          -0.2775017,
+          39.6784596
+        ],
+        [
+          -0.2773756,
+          39.6784293
+        ],
+        [
+          -0.2774125,
+          39.678321
+        ],
+        [
+          -0.2775134,
+          39.6783095
+        ],
+        [
+          -0.2775104,
+          39.6783853
+        ],
+        [
+          -0.2774686,
+          39.6783782
+        ],
+        [
+          -0.2774616,
+          39.6784071
+        ],
+        [
+          -0.2775077,
+          39.6784164
+        ],
+        [
+          -0.2775017,
+          39.6784596
+        ]
+      ],
+      "areaM2": 52.10737968922694,
+      "method": "OSM footprint minus retained cadastral parts and other scene owners; fragments below 2 m² omitted as registration slivers."
+    }
+  ],
+  "stats": {
+    "buildingParts": 152,
+    "parentParcels": 62,
+    "footprintsPreserved": true,
+    "courtyards": 0,
+    "sourceHeight": 0,
+    "ignHeight": 76,
+    "storeyHeight": 76,
+    "fallbackHeight": 0,
+    "streetSamples": 1495,
+    "roofCorrections": 0,
+    "maximumRoofCorrectionM": 0,
+    "preservedSantaMaria": true,
+    "preservedPlazaMayor": true,
+    "preservedJuderia": true,
+    "preservedCalvario": true,
+    "preservedBerenguer": true,
+    "heightConflictsReviewed": 4
+  },
+  "geometry": {
+    "meshes": 9,
+    "triangles": 27745,
+    "finite": true
+  },
+  "paving": {
+    "samples": 5980,
+    "maximumDrapeError": 0.000004821676999430813,
+    "lowestPavingOffset": 0.10499607805395783
+  },
+  "failures": []
+}

@@ -1,0 +1,1061 @@
+{
+  "pass": true,
+  "stats": {
+    "buildingParts": 44,
+    "parentParcels": 16,
+    "footprintsPreserved": true,
+    "courtyards": 0,
+    "sourceHeight": 0,
+    "ignHeight": 28,
+    "storeyHeight": 16,
+    "fallbackHeight": 0,
+    "northStairTreads": 48,
+    "northApronSegments": 8,
+    "streetSamples": 139,
+    "roofCorrections": 0,
+    "maximumRoofCorrectionM": 0,
+    "inscriptionPanels": 2
+  },
+  "geometry": {
+    "meshes": 26,
+    "triangles": 22265,
+    "pavingSamples": 3185,
+    "buriedPaving": 0,
+    "minClearance": -0.0019091300152140889
+  },
+  "scenarioCount": 6,
+  "scenarios": [
+    {
+      "id": "desktop-minimap/dark",
+      "targets": 16,
+      "components": 77,
+      "minimumDistance": 17.157589229415866,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 930
+    },
+    {
+      "id": "desktop-minimap/light",
+      "targets": 16,
+      "components": 77,
+      "minimumDistance": 17.157589229415866,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 930
+    },
+    {
+      "id": "desktop-plan/dark",
+      "targets": 16,
+      "components": 77,
+      "minimumDistance": 32.800768804496656,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 10300
+    },
+    {
+      "id": "desktop-plan/light",
+      "targets": 16,
+      "components": 77,
+      "minimumDistance": 32.800768804496656,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 10300
+    },
+    {
+      "id": "mobile-plan/dark",
+      "targets": 16,
+      "components": 77,
+      "minimumDistance": 36.421783037452734,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 1806
+    },
+    {
+      "id": "mobile-plan/light",
+      "targets": 16,
+      "components": 77,
+      "minimumDistance": 36.421783037452734,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 1806
+    }
+  ],
+  "checks": [
+    {
+      "pass": true,
+      "label": "44 source building parts in 16 immediate parcels"
+    },
+    {
+      "pass": true,
+      "label": "source coordinates are copied unchanged"
+    },
+    {
+      "pass": true,
+      "label": "source courtyard rings are copied unchanged"
+    },
+    {
+      "pass": true,
+      "label": "every context height retains an attributed source or storey derivation"
+    },
+    {
+      "pass": true,
+      "label": "documented solid pretil and two exterior blocks are represented"
+    },
+    {
+      "pass": true,
+      "label": "every northern stair tread clears final rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "all context geometry attributes are finite"
+    },
+    {
+      "pass": true,
+      "label": "street and forecourt pavement remains above final terrain"
+    },
+    {
+      "pass": true,
+      "label": "all five context visit focuses resolve"
+    },
+    {
+      "pass": true,
+      "label": "independent context instances share no disposable materials or textures"
+    },
+    {
+      "pass": true,
+      "label": "period and focus selection restore material state"
+    },
+    {
+      "pass": true,
+      "label": "disposing one instance leaves the other intact"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark returns a map"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark has every unique stop"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark uses the real church/context geometry and ignores malformed components"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark stop markers are separated"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit centre santa-maria-conjunto"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite target santa-maria-conjunto"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit centre santa-maria-plaza-mayor"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite target santa-maria-plaza-mayor"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit centre santa-maria-cavallers"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite target santa-maria-cavallers"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit centre santa-maria-portada-norte"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite target santa-maria-portada-norte"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit centre santa-maria-escalinata"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite target santa-maria-escalinata"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit centre santa-maria-portada-sur"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite target santa-maria-portada-sur"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit centre santa-maria-portada-principal"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite target santa-maria-portada-principal"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit centre santa-maria-naves"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite target santa-maria-naves"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit centre santa-maria-bovedas"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite target santa-maria-bovedas"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit centre santa-maria-capillas"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite target santa-maria-capillas"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit centre santa-maria-abside"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite target santa-maria-abside"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit centre santa-maria-contrafuertes"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite target santa-maria-contrafuertes"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit centre santa-maria-campanario"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite target santa-maria-campanario"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit centre santa-maria-reloj"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite target santa-maria-reloj"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit centre santa-maria-sagrario"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite target santa-maria-sagrario"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark hit centre santa-maria-berenguer"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark finite target santa-maria-berenguer"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark all marker text meets 4.5:1 contrast"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/dark contains no theatre label"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light returns a map"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light has every unique stop"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light uses the real church/context geometry and ignores malformed components"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light stop markers are separated"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit centre santa-maria-conjunto"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite target santa-maria-conjunto"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit centre santa-maria-plaza-mayor"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite target santa-maria-plaza-mayor"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit centre santa-maria-cavallers"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite target santa-maria-cavallers"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit centre santa-maria-portada-norte"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite target santa-maria-portada-norte"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit centre santa-maria-escalinata"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite target santa-maria-escalinata"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit centre santa-maria-portada-sur"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite target santa-maria-portada-sur"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit centre santa-maria-portada-principal"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite target santa-maria-portada-principal"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit centre santa-maria-naves"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite target santa-maria-naves"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit centre santa-maria-bovedas"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite target santa-maria-bovedas"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit centre santa-maria-capillas"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite target santa-maria-capillas"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit centre santa-maria-abside"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite target santa-maria-abside"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit centre santa-maria-contrafuertes"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite target santa-maria-contrafuertes"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit centre santa-maria-campanario"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite target santa-maria-campanario"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit centre santa-maria-reloj"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite target santa-maria-reloj"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit centre santa-maria-sagrario"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite target santa-maria-sagrario"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light hit centre santa-maria-berenguer"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light finite target santa-maria-berenguer"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light all marker text meets 4.5:1 contrast"
+    },
+    {
+      "pass": true,
+      "label": "desktop-minimap/light contains no theatre label"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark returns a map"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark has every unique stop"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark uses the real church/context geometry and ignores malformed components"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark stop markers are separated"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit centre santa-maria-escalinata"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite target santa-maria-escalinata"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit centre santa-maria-conjunto"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite target santa-maria-conjunto"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit centre santa-maria-plaza-mayor"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite target santa-maria-plaza-mayor"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit centre santa-maria-cavallers"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite target santa-maria-cavallers"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit centre santa-maria-portada-norte"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite target santa-maria-portada-norte"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit centre santa-maria-portada-sur"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite target santa-maria-portada-sur"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit centre santa-maria-portada-principal"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite target santa-maria-portada-principal"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit centre santa-maria-naves"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite target santa-maria-naves"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit centre santa-maria-bovedas"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite target santa-maria-bovedas"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit centre santa-maria-capillas"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite target santa-maria-capillas"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit centre santa-maria-abside"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite target santa-maria-abside"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit centre santa-maria-contrafuertes"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite target santa-maria-contrafuertes"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit centre santa-maria-campanario"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite target santa-maria-campanario"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit centre santa-maria-reloj"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite target santa-maria-reloj"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit centre santa-maria-sagrario"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite target santa-maria-sagrario"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark hit centre santa-maria-berenguer"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark finite target santa-maria-berenguer"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark all marker text meets 4.5:1 contrast"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark selected marker preserves source position"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/dark contains no theatre label"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light returns a map"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light has every unique stop"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light uses the real church/context geometry and ignores malformed components"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light stop markers are separated"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit centre santa-maria-escalinata"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite target santa-maria-escalinata"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit centre santa-maria-conjunto"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite target santa-maria-conjunto"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit centre santa-maria-plaza-mayor"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite target santa-maria-plaza-mayor"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit centre santa-maria-cavallers"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite target santa-maria-cavallers"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit centre santa-maria-portada-norte"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite target santa-maria-portada-norte"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit centre santa-maria-portada-sur"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite target santa-maria-portada-sur"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit centre santa-maria-portada-principal"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite target santa-maria-portada-principal"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit centre santa-maria-naves"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite target santa-maria-naves"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit centre santa-maria-bovedas"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite target santa-maria-bovedas"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit centre santa-maria-capillas"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite target santa-maria-capillas"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit centre santa-maria-abside"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite target santa-maria-abside"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit centre santa-maria-contrafuertes"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite target santa-maria-contrafuertes"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit centre santa-maria-campanario"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite target santa-maria-campanario"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit centre santa-maria-reloj"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite target santa-maria-reloj"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit centre santa-maria-sagrario"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite target santa-maria-sagrario"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light hit centre santa-maria-berenguer"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light finite target santa-maria-berenguer"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light all marker text meets 4.5:1 contrast"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light selected marker preserves source position"
+    },
+    {
+      "pass": true,
+      "label": "desktop-plan/light contains no theatre label"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark returns a map"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark has every unique stop"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark uses the real church/context geometry and ignores malformed components"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark stop markers are separated"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit centre santa-maria-sagrario"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite target santa-maria-sagrario"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit centre santa-maria-conjunto"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite target santa-maria-conjunto"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit centre santa-maria-plaza-mayor"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite target santa-maria-plaza-mayor"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit centre santa-maria-cavallers"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite target santa-maria-cavallers"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit centre santa-maria-portada-norte"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite target santa-maria-portada-norte"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit centre santa-maria-escalinata"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite target santa-maria-escalinata"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit centre santa-maria-portada-sur"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite target santa-maria-portada-sur"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit centre santa-maria-portada-principal"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite target santa-maria-portada-principal"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit centre santa-maria-naves"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite target santa-maria-naves"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit centre santa-maria-bovedas"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite target santa-maria-bovedas"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit centre santa-maria-capillas"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite target santa-maria-capillas"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit centre santa-maria-abside"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite target santa-maria-abside"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit centre santa-maria-contrafuertes"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite target santa-maria-contrafuertes"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit centre santa-maria-campanario"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite target santa-maria-campanario"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit centre santa-maria-reloj"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite target santa-maria-reloj"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark hit centre santa-maria-berenguer"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark finite target santa-maria-berenguer"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark all marker text meets 4.5:1 contrast"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark selected marker preserves source position"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/dark contains no theatre label"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light returns a map"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light has every unique stop"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light uses the real church/context geometry and ignores malformed components"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light stop markers are separated"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit centre santa-maria-sagrario"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite target santa-maria-sagrario"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit centre santa-maria-conjunto"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite target santa-maria-conjunto"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit centre santa-maria-plaza-mayor"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite target santa-maria-plaza-mayor"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit centre santa-maria-cavallers"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite target santa-maria-cavallers"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit centre santa-maria-portada-norte"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite target santa-maria-portada-norte"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit centre santa-maria-escalinata"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite target santa-maria-escalinata"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit centre santa-maria-portada-sur"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite target santa-maria-portada-sur"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit centre santa-maria-portada-principal"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite target santa-maria-portada-principal"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit centre santa-maria-naves"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite target santa-maria-naves"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit centre santa-maria-bovedas"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite target santa-maria-bovedas"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit centre santa-maria-capillas"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite target santa-maria-capillas"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit centre santa-maria-abside"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite target santa-maria-abside"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit centre santa-maria-contrafuertes"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite target santa-maria-contrafuertes"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit centre santa-maria-campanario"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite target santa-maria-campanario"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit centre santa-maria-reloj"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite target santa-maria-reloj"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light hit centre santa-maria-berenguer"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light finite target santa-maria-berenguer"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light all marker text meets 4.5:1 contrast"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light selected marker preserves source position"
+    },
+    {
+      "pass": true,
+      "label": "mobile-plan/light contains no theatre label"
+    }
+  ],
+  "failures": [],
+  "limitations": [
+    "Huecos, carpinterías, revocos, cornisas y barandillas domésticas son una lectura volumétrica genérica. No representan una documentación de cada fachada ni una rehabilitación concluida.",
+    "Color de cubierta tomado de las muestras PNOA del atlas; pendiente y forma de la envolvente se interpretan conservando la planta y los patios. La fecha de descarga no equivale a la fecha de vuelo.",
+    "Dos tramos paralelos a la fachada norte y rellano central; trazado de la vía OSM 733321159 y plano publicado. Pretil macizo de piedra, no balaustres abiertos. El año 1799 se refiere al pretil; dimensiones de peldaños y cotas son una adaptación al MDT de presentación."
+  ]
+}

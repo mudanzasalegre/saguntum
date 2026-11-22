@@ -1,0 +1,731 @@
+{
+  "pass": true,
+  "inputHashes": {
+    "dist/js/app.js": "bd799785d5c6eb5f6d7116a0fdb7d9fb7db32c44228b104be198edf61ef5865a",
+    "dist/js/theatre.js": "34831ff762ddd15d0e9fa1fd564183145a04219d47f833f529af35f545d83371",
+    "dist/js/monuments.js": "22546453225b2db827cc2e84a5fd30e1083b56eb8b79d4a1ac025709f4b34dac",
+    "dist/js/castle.js": "61463c846f79a617562ca2e31bfc42321da0c737a3d310846db44410066c54d8",
+    "dist/js/terrain.js": "ec10570603e52e850b6b5eadf81963215d18d533c551d555848ef58152fec3f8",
+    "dist/js/city.js": "b2578a5fdb0d70435fa4bc8cf92147f2a3c4922f6bcbe6bbe145f46ebb53af54",
+    "dist/js/urban-surface.js": "d2acfae90ff47abddd51be09a21555e8ce9b6269e1500549a6eb94938f3e6111",
+    "dist/js/landscapes.js": "79bcdb305c8d20ad62fc642ab064ca6c61f0beba6a7091a2aa24ffae70b14ab8",
+    "dist/js/landscape-palancia.js": "be7889cdab3c1431dd1a541c735ef936c64dd13395163cbfd486dd6e60f80ee1",
+    "dist/js/landscape-environment.js": "2b2af8ddabbcd95e478e8262c7ad872e4d61f065a2da235343b2f620b2e4fa81"
+  },
+  "scope": "Actual Palancia app builder; Theatre/Castle context, final terrain, exclusion, rebinding and regional disposal. Orthophoto texture I/O is replaced for Node.",
+  "buildMs": 14849.210813999998,
+  "checks": [
+    {
+      "pass": true,
+      "message": "concurrent Palancia requests construct one real region"
+    },
+    {
+      "pass": true,
+      "message": "Palancia creates theatre accommodation before terrain and defers castle"
+    },
+    {
+      "pass": true,
+      "message": "Palancia context receives shared geographic and documented visit data"
+    },
+    {
+      "pass": true,
+      "message": "Palancia builds the complete castle after terrain"
+    },
+    {
+      "pass": true,
+      "message": "Palancia context retains all 16 theatre focuses"
+    },
+    {
+      "pass": true,
+      "message": "Palancia city receives final rendered ground"
+    },
+    {
+      "pass": true,
+      "message": "Palancia city excludes theatre and castle duplicate buildings"
+    },
+    {
+      "pass": true,
+      "message": "Palancia context exclusion uses the actual theatre and castle polygons"
+    },
+    {
+      "pass": true,
+      "message": "Palancia street mesh omits internal theatre and castle paths"
+    },
+    {
+      "pass": true,
+      "message": "Palancia context and terrain are visible in their active region"
+    },
+    {
+      "pass": true,
+      "message": "building Palancia preserves Sagunto catalogue references"
+    },
+    {
+      "pass": true,
+      "message": "theatre accommodation leaves distant river terrain unchanged"
+    },
+    {
+      "pass": true,
+      "message": "Palancia rendered mesh does not bury theatre floors, seating or exposed subsoil"
+    },
+    {
+      "pass": true,
+      "message": "Palancia castle floor samples use the final terrain mesh sampler"
+    },
+    {
+      "pass": true,
+      "message": "Palancia theatre has no overlapping contextual building or road in 25 sampled rays"
+    },
+    {
+      "pass": true,
+      "message": "teatro-conjunto/false Palancia context camera is rebound to final ground"
+    },
+    {
+      "pass": true,
+      "message": "teatro-conjunto/true Palancia context camera is rebound to final ground"
+    },
+    {
+      "pass": true,
+      "message": "teatro-aditus-oriental/false Palancia context camera is rebound to final ground"
+    },
+    {
+      "pass": true,
+      "message": "teatro-aditus-oriental/true Palancia context camera is rebound to final ground"
+    },
+    {
+      "pass": true,
+      "message": "teatro-orchestra/false Palancia context camera is rebound to final ground"
+    },
+    {
+      "pass": true,
+      "message": "teatro-orchestra/true Palancia context camera is rebound to final ground"
+    },
+    {
+      "pass": true,
+      "message": "teatro-ima-cavea/false Palancia context camera is rebound to final ground"
+    },
+    {
+      "pass": true,
+      "message": "teatro-ima-cavea/true Palancia context camera is rebound to final ground"
+    },
+    {
+      "pass": true,
+      "message": "teatro-media-cavea/false Palancia context camera is rebound to final ground"
+    },
+    {
+      "pass": true,
+      "message": "teatro-media-cavea/true Palancia context camera is rebound to final ground"
+    },
+    {
+      "pass": true,
+      "message": "teatro-summa-cavea/false Palancia context camera is rebound to final ground"
+    },
+    {
+      "pass": true,
+      "message": "teatro-summa-cavea/true Palancia context camera is rebound to final ground"
+    },
+    {
+      "pass": true,
+      "message": "teatro-vomitoria/false Palancia context camera is rebound to final ground"
+    },
+    {
+      "pass": true,
+      "message": "teatro-vomitoria/true Palancia context camera is rebound to final ground"
+    },
+    {
+      "pass": true,
+      "message": "teatro-portico/false Palancia context camera is rebound to final ground"
+    },
+    {
+      "pass": true,
+      "message": "teatro-portico/true Palancia context camera is rebound to final ground"
+    },
+    {
+      "pass": true,
+      "message": "teatro-tribunalia/false Palancia context camera is rebound to final ground"
+    },
+    {
+      "pass": true,
+      "message": "teatro-tribunalia/true Palancia context camera is rebound to final ground"
+    },
+    {
+      "pass": true,
+      "message": "teatro-proscaenium/false Palancia context camera is rebound to final ground"
+    },
+    {
+      "pass": true,
+      "message": "teatro-proscaenium/true Palancia context camera is rebound to final ground"
+    },
+    {
+      "pass": true,
+      "message": "teatro-frons-scaenae/false Palancia context camera is rebound to final ground"
+    },
+    {
+      "pass": true,
+      "message": "teatro-frons-scaenae/true Palancia context camera is rebound to final ground"
+    },
+    {
+      "pass": true,
+      "message": "teatro-basilicas/false Palancia context camera is rebound to final ground"
+    },
+    {
+      "pass": true,
+      "message": "teatro-basilicas/true Palancia context camera is rebound to final ground"
+    },
+    {
+      "pass": true,
+      "message": "teatro-hyposcaenium/false Palancia context camera is rebound to final ground"
+    },
+    {
+      "pass": true,
+      "message": "teatro-hyposcaenium/true Palancia context camera is rebound to final ground"
+    },
+    {
+      "pass": true,
+      "message": "teatro-cloaca/false Palancia context camera is rebound to final ground"
+    },
+    {
+      "pass": true,
+      "message": "teatro-cloaca/true Palancia context camera is rebound to final ground"
+    },
+    {
+      "pass": true,
+      "message": "teatro-restauracion/false Palancia context camera is rebound to final ground"
+    },
+    {
+      "pass": true,
+      "message": "teatro-restauracion/true Palancia context camera is rebound to final ground"
+    },
+    {
+      "pass": true,
+      "message": "teatro-vivo/false Palancia context camera is rebound to final ground"
+    },
+    {
+      "pass": true,
+      "message": "teatro-vivo/true Palancia context camera is rebound to final ground"
+    },
+    {
+      "pass": true,
+      "message": "Palancia monument layer hides context without hiding terrain or city"
+    },
+    {
+      "pass": true,
+      "message": "Palancia and Sagunto monument instances own separate disposable resources"
+    },
+    {
+      "pass": true,
+      "message": "Palancia period reading detaches all monument texture maps"
+    },
+    {
+      "pass": true,
+      "message": "disposing Palancia frees detached theatre and castle resources exactly once"
+    },
+    {
+      "pass": true,
+      "message": "Palancia disposal preserves Sagunto resources, roots and points"
+    },
+    {
+      "pass": true,
+      "message": "Palancia disposal removes its roots and readiness"
+    },
+    {
+      "pass": true,
+      "message": "Palancia disposal clears all regional object references"
+    },
+    {
+      "pass": true,
+      "message": "validated application and model files stayed unchanged during this run"
+    }
+  ],
+  "errors": [],
+  "theatreSurface": {
+    "samples": 8194,
+    "buried": 0,
+    "minimumClearance": 0.27719377868452,
+    "issues": []
+  },
+  "castleGround": {
+    "samples": 20000,
+    "maximumSamplerError": 0
+  },
+  "contextRays": [
+    {
+      "local": [
+        -20,
+        -18
+      ],
+      "hit": null
+    },
+    {
+      "local": [
+        -20,
+        -6
+      ],
+      "hit": null
+    },
+    {
+      "local": [
+        -20,
+        6
+      ],
+      "hit": null
+    },
+    {
+      "local": [
+        -20,
+        18
+      ],
+      "hit": null
+    },
+    {
+      "local": [
+        -20,
+        30
+      ],
+      "hit": null
+    },
+    {
+      "local": [
+        -10,
+        -18
+      ],
+      "hit": null
+    },
+    {
+      "local": [
+        -10,
+        -6
+      ],
+      "hit": null
+    },
+    {
+      "local": [
+        -10,
+        6
+      ],
+      "hit": null
+    },
+    {
+      "local": [
+        -10,
+        18
+      ],
+      "hit": null
+    },
+    {
+      "local": [
+        -10,
+        30
+      ],
+      "hit": null
+    },
+    {
+      "local": [
+        0,
+        -18
+      ],
+      "hit": null
+    },
+    {
+      "local": [
+        0,
+        -6
+      ],
+      "hit": null
+    },
+    {
+      "local": [
+        0,
+        6
+      ],
+      "hit": null
+    },
+    {
+      "local": [
+        0,
+        18
+      ],
+      "hit": null
+    },
+    {
+      "local": [
+        0,
+        30
+      ],
+      "hit": null
+    },
+    {
+      "local": [
+        10,
+        -18
+      ],
+      "hit": null
+    },
+    {
+      "local": [
+        10,
+        -6
+      ],
+      "hit": null
+    },
+    {
+      "local": [
+        10,
+        6
+      ],
+      "hit": null
+    },
+    {
+      "local": [
+        10,
+        18
+      ],
+      "hit": null
+    },
+    {
+      "local": [
+        10,
+        30
+      ],
+      "hit": null
+    },
+    {
+      "local": [
+        20,
+        -18
+      ],
+      "hit": null
+    },
+    {
+      "local": [
+        20,
+        -6
+      ],
+      "hit": null
+    },
+    {
+      "local": [
+        20,
+        6
+      ],
+      "hit": null
+    },
+    {
+      "local": [
+        20,
+        18
+      ],
+      "hit": null
+    },
+    {
+      "local": [
+        20,
+        30
+      ],
+      "hit": null
+    }
+  ],
+  "cameraChecks": [
+    {
+      "id": "teatro-conjunto",
+      "near": false,
+      "clearance": 42.53693279749265
+    },
+    {
+      "id": "teatro-conjunto",
+      "near": true,
+      "clearance": 28.267250669869583
+    },
+    {
+      "id": "teatro-aditus-oriental",
+      "near": false,
+      "clearance": 6.303236778807758
+    },
+    {
+      "id": "teatro-aditus-oriental",
+      "near": true,
+      "clearance": 5.713822987800654
+    },
+    {
+      "id": "teatro-orchestra",
+      "near": false,
+      "clearance": 10.641099736250652
+    },
+    {
+      "id": "teatro-orchestra",
+      "near": true,
+      "clearance": 10.730394958143322
+    },
+    {
+      "id": "teatro-ima-cavea",
+      "near": false,
+      "clearance": 7.390742793459509
+    },
+    {
+      "id": "teatro-ima-cavea",
+      "near": true,
+      "clearance": 7.932433646355349
+    },
+    {
+      "id": "teatro-media-cavea",
+      "near": false,
+      "clearance": 6.602039502670209
+    },
+    {
+      "id": "teatro-media-cavea",
+      "near": true,
+      "clearance": 6.125467494321967
+    },
+    {
+      "id": "teatro-summa-cavea",
+      "near": false,
+      "clearance": 7.118134411761616
+    },
+    {
+      "id": "teatro-summa-cavea",
+      "near": true,
+      "clearance": 5.843801282910675
+    },
+    {
+      "id": "teatro-vomitoria",
+      "near": false,
+      "clearance": 25.399071252428413
+    },
+    {
+      "id": "teatro-vomitoria",
+      "near": true,
+      "clearance": 18.874178654078037
+    },
+    {
+      "id": "teatro-portico",
+      "near": false,
+      "clearance": 6.275409546321768
+    },
+    {
+      "id": "teatro-portico",
+      "near": true,
+      "clearance": 5.947693274796691
+    },
+    {
+      "id": "teatro-tribunalia",
+      "near": false,
+      "clearance": 12.319784553352932
+    },
+    {
+      "id": "teatro-tribunalia",
+      "near": true,
+      "clearance": 11.013504772513642
+    },
+    {
+      "id": "teatro-proscaenium",
+      "near": false,
+      "clearance": 16.33811848590051
+    },
+    {
+      "id": "teatro-proscaenium",
+      "near": true,
+      "clearance": 17.207903348968173
+    },
+    {
+      "id": "teatro-frons-scaenae",
+      "near": false,
+      "clearance": 27.129632738433415
+    },
+    {
+      "id": "teatro-frons-scaenae",
+      "near": true,
+      "clearance": 28.306390485047004
+    },
+    {
+      "id": "teatro-basilicas",
+      "near": false,
+      "clearance": 26.265253799530598
+    },
+    {
+      "id": "teatro-basilicas",
+      "near": true,
+      "clearance": 24.49244129594939
+    },
+    {
+      "id": "teatro-hyposcaenium",
+      "near": false,
+      "clearance": 28.993681743808253
+    },
+    {
+      "id": "teatro-hyposcaenium",
+      "near": true,
+      "clearance": 22.39752871432154
+    },
+    {
+      "id": "teatro-cloaca",
+      "near": false,
+      "clearance": 26.29852644193653
+    },
+    {
+      "id": "teatro-cloaca",
+      "near": true,
+      "clearance": 20.925349407261947
+    },
+    {
+      "id": "teatro-restauracion",
+      "near": false,
+      "clearance": 30.0937587661586
+    },
+    {
+      "id": "teatro-restauracion",
+      "near": true,
+      "clearance": 32.48528491507582
+    },
+    {
+      "id": "teatro-vivo",
+      "near": false,
+      "clearance": 12.950990311182778
+    },
+    {
+      "id": "teatro-vivo",
+      "near": true,
+      "clearance": 13.101927265890254
+    }
+  ],
+  "resourceCounts": {
+    "palancia": 152,
+    "sagunto": 48,
+    "foreignDisposals": 0
+  },
+  "theatre": {
+    "stops": 16,
+    "components": 21,
+    "meshes": 46,
+    "triangles": 47744,
+    "seatingRows": 23,
+    "senatorialRows": 2,
+    "upperRestitutedRows": 4,
+    "trueOpenPassages": 9,
+    "cartographicOutline": true,
+    "undergroundReconstruction": "schematic",
+    "sourceKeys": [
+      "teatro-arqueologia-1993",
+      "teatro-estructura-1986",
+      "teatro-portaceli-1993",
+      "teatro-proyecto-1993",
+      "teatro-osm"
+    ],
+    "periods": [
+      "ancient",
+      "contemporary",
+      "mixed",
+      "interpretation"
+    ]
+  },
+  "castle": {
+    "perimeterSource": "OpenStreetMap, polygon in cartography.json",
+    "elevationSource": "Supplied rendered terrain sampler; architectural heights are visual estimates",
+    "perimeterVertices": 272,
+    "perimeterLengthM": 2225.205128985826,
+    "wallWayCount": 61,
+    "wallLengthM": 4156.41193123995,
+    "duplicateSegmentsSkipped": 273,
+    "outsideSegmentsSkipped": 122,
+    "gates": [
+      {
+        "id": "acceso",
+        "coordinates": [
+          -0.277222,
+          39.6759601
+        ],
+        "width": 3.3,
+        "height": 4.65,
+        "depth": 3.7,
+        "opening": true,
+        "planConfidence": "OSM path / wall intersection",
+        "elevationConfidence": "interpretive"
+      },
+      {
+        "id": "puerta-almenara",
+        "coordinates": [
+          -0.2762665022,
+          39.676214945
+        ],
+        "width": 3.15,
+        "height": 5.2,
+        "depth": 6.4,
+        "opening": true,
+        "form": "pointed arch, two trefoil oculi, folded timber leaves",
+        "planConfidence": "OSM path / wall intersection",
+        "elevationConfidence": "photographic form; interpreted dimensions"
+      },
+      {
+        "id": "puerta-san-fernando",
+        "coordinates": [
+          -0.2780262,
+          39.6759438
+        ],
+        "width": 3.05,
+        "height": 4.35,
+        "depth": 3.5,
+        "opening": true,
+        "planConfidence": "OSM path / wall intersection",
+        "elevationConfidence": "interpretive"
+      }
+    ],
+    "routeSegments": 1919,
+    "routeLengthM": 2025.3509805935398,
+    "mappedBuildings": 10,
+    "romanWallWays": 24,
+    "periods": [
+      "ancient",
+      "medieval",
+      "modern",
+      "unknown"
+    ],
+    "interpretiveDimensions": true,
+    "undergroundReconstruction": false,
+    "sourceKeys": [
+      "plan-director-2000",
+      "cisterna-norte-1984",
+      "fortmed-2020",
+      "civera-cisternas-2007",
+      "osm-castillo",
+      "templo-aranegui-1991",
+      "seranco-2019"
+    ],
+    "detail": "full",
+    "triangles": 158098,
+    "meshes": 103
+  },
+  "buildings": {
+    "footprintCount": 33364,
+    "empiricalHeightCount": 3,
+    "ignSurfaceHeightCount": 18688,
+    "osmLevelCount": 6,
+    "cadastralLevelCount": 14571,
+    "estimatedHeightCount": 96,
+    "sampledRoofColorCount": 24566,
+    "contextFacadeCount": 19294,
+    "terrainRoofCorrections": 14,
+    "maximumRoofCorrectionM": 3.674994014557413,
+    "terrainRoofNote": "Display roof raised only where source terrain would intersect it; original height estimates are retained in data.",
+    "otherHeights": "OSM height > IGN normalized surface estimate > attributed OSM / DGC storeys × 3 m > deterministic visual estimate.",
+    "facades": "Generic repeated facade bays outside detailed areas; not surveyed window positions. Roof colours sampled from PNOA where available."
+  },
+  "roads": {
+    "wayCount": 4819,
+    "stairTreads": 1515,
+    "supportCount": 177721,
+    "taggedWidths": 5,
+    "profile": "Longitudinal DEM samples; pavement widths, treads and transverse grading are interpreted."
+  },
+  "terrain": {
+    "coreMeshSpacingM": 7.5,
+    "outerMeshSpacingM": 20,
+    "sourceSampleCount": 1695561,
+    "foundationAdjustment": {
+      "method": "Downward caps on shared vertices of cells intersecting a model foundation polygon; visual accommodation, not altered survey measurements.",
+      "patchCount": 0,
+      "intersectingCells": 0,
+      "adjustedVertices": 0,
+      "maximumLoweringM": 0,
+      "clearanceM": 0.03,
+      "groundQueryNote": "Analytical ground queries retain foundation levels. Future pedestrian collision must account for this rendered mesh accommodation and floor meshes."
+    }
+  }
+}

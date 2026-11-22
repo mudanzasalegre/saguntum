@@ -1,0 +1,33 @@
+{
+  "reviewDate": "2026-11-19",
+  "target": "http://127.0.0.1:4173/",
+  "method": "User-facing UI interactions and screenshots through the browser control surface",
+  "pass": true,
+  "graphicsMode": "2D fallback: WebGL unavailable in the review browser",
+  "observed": [
+    "Global page title remains SAGUNTUM · Sagunto y Puerto de Sagunto",
+    "Brand navigation returns to #atlas and the general Sagunto y su puerto introduction",
+    "General introduction shows 31 places and 6 regions",
+    "Casa route shows 18 stops and its own visit controls",
+    "Start visit selects the Casa overview stop and updates the URL",
+    "Source detail opens with source description and original external URL",
+    "Casa plan opens with 18 numbered stops, cartographic attribution and 20 m scale",
+    "Related visit link opens Diana with 5 stops and independent progress",
+    "Diana timeline shows 6 events",
+    "Timeline exploration selects the matching Diana stop and updates the URL",
+    "Diana related link returns to Casa",
+    "Section and 3D detail controls are disabled in the 2D fallback"
+  ],
+  "screenshot": "berenguer-plan-browser.jpg",
+  "notVerifiedInBrowser": [
+    "WebGL rendering and frame rate",
+    "Physical mobile device layout and GPU performance",
+    "3D pointer interaction and section shader rendering"
+  ],
+  "complementaryEvidence": [
+    "integrated-scene-qa.json",
+    "berenguer-model-qa.json",
+    "berenguer-context-qa.json",
+    "CPU renders exported from the real production scene geometry"
+  ]
+}

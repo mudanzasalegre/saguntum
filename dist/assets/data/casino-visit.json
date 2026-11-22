@@ -1,0 +1,1815 @@
+{
+  "schemaVersion": 1,
+  "id": "casino",
+  "title": "Casino Recreativo y Cultural",
+  "subtitle": "Casa Gerencia, patio y jardín de la vida social",
+  "introduction": "Una casa organizada alrededor de un patio y un jardín preparado para encontrarse. Explora su arquitectura, sus salas y los cambios que vinculan este lugar con la ciudad industrial. Esta visita interpreta espacios históricos; las obras documentadas seguían en curso en octubre de 2026.",
+  "researchDate": "2026-11-21",
+  "regionsLabel": "Ámbitos del Casino",
+  "mapButtonLabel": "Plano del Casino",
+  "overviewButtonLabel": "Ver el conjunto",
+  "readingModeLabel": "Leer el conjunto",
+  "readingModeNote": "Cinco ámbitos de visita; sus colores no representan fases constructivas exactas.",
+  "timelineIntroduction": "Una secuencia de usos y transformaciones. Las fechas divergentes permanecen identificadas.",
+  "visitAriaLabel": "Visita al Casino Recreativo y Cultural",
+  "sectionOnOverview": true,
+  "sectionOpenLabel": "Abrir sección",
+  "sectionCloseLabel": "Cerrar sección",
+  "sectionInstructions": "Retira cubiertas y elementos superiores para reconocer el patio, las alas y los espacios de la planta baja.",
+  "sectionNote": "La sección es una herramienta digital. La lectura abierta del patio recupera su organización espacial; no representa una cubierta de vidrio ya finalizada.",
+  "mapInstructions": "Selecciona una parada para pasar del edificio al patio, las salas o el jardín.",
+  "mapNote": "Plano orientativo sobre cartografía contemporánea. Los detalles interiores y las cotas sin levantamiento son aproximados.",
+  "visitNote": "Reconstrucción histórica interpretativa, documentada el 21 de noviembre de 2026. El Ayuntamiento registró obras en curso el 6 de octubre; la entidad sitúa los bailes durante la reforma en el Casino Playa. Esta visita virtual no acredita acceso físico al interior.",
+  "methodology": [
+    "Se cruzan cartografía heredada del atlas, investigación patrimonial, historia de la entidad y fotografías de distintos momentos. No es un levantamiento arquitectónico.",
+    "Los dos niveles del patio, la diferenciación de fachadas, la terraza y el jardín se apoyan en fuentes. Las medidas no publicadas, comunicaciones secundarias y objetos se interpretan.",
+    "La descripción de CONTRAST contiene una repetición de orientación en la planta baja del patio. Se contrastan sus lados con la fotografía de 1958 y las imágenes municipales; no se presenta una planta métrica inequívoca.",
+    "La entidad fecha la terraza en 1968 y CONTRAST relaciona las mejoras con un crédito de 1969. La guía conserva esa diferencia.",
+    "La reforma iniciada en 2022 y reanudada posteriormente no se convierte en una inauguración. Las fotografías de obra de 2026 se distinguen de la documentación histórica.",
+    "La vegetación y los muebles de jardín ayudan a leer los usos, con posición y escala aproximadas. No certifican el inventario o estado de todos los elementos en 2026."
+  ],
+  "readingLegend": [
+    {
+      "id": "edificio",
+      "label": "Casa y accesos",
+      "color": "#d6b585",
+      "note": "Volumen, fachadas, basamento y lectura en sección."
+    },
+    {
+      "id": "patio",
+      "label": "El patio y sus galerías",
+      "color": "#8db9bf",
+      "note": "El espacio central y las comunicaciones entre plantas."
+    },
+    {
+      "id": "vida-social",
+      "label": "Lectura, encuentro y alojamiento",
+      "color": "#c89779",
+      "note": "Usos documentados de las salas y de la planta alta."
+    },
+    {
+      "id": "jardines",
+      "label": "Jardín y celebraciones",
+      "color": "#95b58f",
+      "note": "Isletas, sombra, pista y escenario."
+    },
+    {
+      "id": "memoria",
+      "label": "Recinto, ciudad y memoria",
+      "color": "#b39ac4",
+      "note": "Límites, transformación social y recuperación contemporánea."
+    }
+  ],
+  "confidenceLegend": [
+    {
+      "id": "documented",
+      "label": "Documentado",
+      "note": "La fuente respalda el dato; no certifica cada medida del modelo."
+    },
+    {
+      "id": "interpretive",
+      "label": "Interpretación",
+      "note": "Aproximación espacial o recurso visual para explicar el edificio."
+    },
+    {
+      "id": "disputed",
+      "label": "Fuentes diferentes",
+      "note": "Se conserva una diferencia documental sin resolverla con una fecha inventada."
+    }
+  ],
+  "materialEvidenceLegend": [
+    {
+      "id": "conserved",
+      "label": "Rasgo documentado",
+      "note": "Elemento identificado en documentación histórica o visual."
+    },
+    {
+      "id": "rehabilitated",
+      "label": "Intervención documentada",
+      "note": "Tratamiento asociado a una actuación acreditada; no implica finalización de todo el edificio."
+    },
+    {
+      "id": "mixed",
+      "label": "Lectura conjunta",
+      "note": "La escena reúne rasgos históricos y aproximaciones de representación."
+    }
+  ],
+  "stops": [
+    {
+      "id": "casino-conjunto",
+      "title": "De Casa Gerencia a espacio de encuentro",
+      "label": "El conjunto",
+      "regionId": "edificio",
+      "period": "mixed",
+      "intro": "Acércate a la casa y recorre después sus dos mundos: el patio y el jardín.",
+      "narrative": "Mira primero la relación entre el volumen compacto y el espacio libre. La visita propone una lectura histórica de su arquitectura.",
+      "facts": [
+        {
+          "text": "La historia de la entidad fecha la Casa Gerencia en 1921 y recuerda las estancias de Ramón de la Sota.",
+          "sourceIds": [
+            "c-history"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El Casino se constituyó el 26 de diciembre de 1941, con sede en la planta baja.",
+          "sourceIds": [
+            "c-history"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El edificio alrededor del patio y el jardín que prolonga sus espacios de reunión.",
+      "modelNote": "Maqueta interpretativa sobre cartografía contemporánea; no representa una rehabilitación ya concluida.",
+      "sourceIds": [
+        "c-history"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22250474,
+        39.65917704
+      ],
+      "coordinates": [
+        -0.22250474,
+        39.65917704
+      ],
+      "coordinateSourceIds": [
+        "c-catastro",
+        "c-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "edificio",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": "casino-main",
+      "order": 1,
+      "elevation": 3.783694690823479,
+      "localTarget": [
+        8.732933397521476,
+        3.783694690823479,
+        8.121846928015943
+      ]
+    },
+    {
+      "id": "casino-fachada",
+      "title": "Las fachadas hacia la población",
+      "label": "Fachadas",
+      "regionId": "edificio",
+      "period": "mixed",
+      "intro": "Observa cómo el ritmo de los huecos ordena los dos pisos.",
+      "narrative": "Acércate al encuentro entre una ventana y la esquina. El contraste de textura ayuda a reconocer las partes del edificio.",
+      "facts": [
+        {
+          "text": "Las fachadas principales combinan revoco claro, arcos escarzanos y machones de ladrillo rojo rematados con bolas.",
+          "sourceIds": [
+            "c-contrast",
+            "c-instalaciones"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "En la fachada sur, fotografías de CONTRAST muestran ladrillo revestido que imita la piedra en arcos y molduras.",
+          "sourceIds": [
+            "c-contrast"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Arcos bajos, bandas horizontales, esquinas rojizas y zócalo.",
+      "modelNote": "Los materiales conservan diferencias entre frentes; escala de juntas, desgaste y color son aproximados.",
+      "sourceIds": [
+        "c-contrast",
+        "c-instalaciones"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.2224853,
+        39.65932822
+      ],
+      "coordinates": [
+        -0.2224853,
+        39.65932822
+      ],
+      "coordinateSourceIds": [
+        "c-catastro",
+        "c-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "edificio",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": "casino-main",
+      "order": 2,
+      "elevation": 4.783694690823479,
+      "localTarget": [
+        10.398754207601137,
+        4.783694690823479,
+        -8.70774133280332
+      ]
+    },
+    {
+      "id": "casino-terraza",
+      "title": "La casa se abre al jardín",
+      "label": "Terraza",
+      "regionId": "edificio",
+      "period": "mixed",
+      "intro": "Recorre el borde elevado desde el que se contempla el espacio de reunión exterior.",
+      "narrative": "La terraza permite comparar la cota del edificio con la del jardín y reconocer el paso entre ambos.",
+      "facts": [
+        {
+          "text": "La entidad fecha terraza y escalera en 1968; CONTRAST las vincula a mejoras financiadas en 1969.",
+          "sourceIds": [
+            "c-history",
+            "c-contrast"
+          ],
+          "confidence": "disputed"
+        },
+        {
+          "text": "Las fotografías institucionales muestran el frente de cafetería abierto hacia la terraza.",
+          "sourceIds": [
+            "c-instalaciones"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El borde bajo, la secuencia de puertas y el descenso hacia el jardín.",
+      "modelNote": "Se representa la transformación de finales de los sesenta; no se atribuye íntegramente al edificio inicial.",
+      "sourceIds": [
+        "c-history",
+        "c-contrast",
+        "c-instalaciones"
+      ],
+      "confidence": "disputed",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22242487,
+        39.6591574
+      ],
+      "coordinates": [
+        -0.22242487,
+        39.6591574
+      ],
+      "coordinateSourceIds": [
+        "c-catastro",
+        "c-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "edificio",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": "casino-main",
+      "order": 3,
+      "elevation": 1.8836946908234793,
+      "localTarget": [
+        15.576091093727598,
+        1.8836946908234793,
+        10.308440796308567
+      ]
+    },
+    {
+      "id": "casino-escalinata",
+      "title": "Un acceso en la esquina",
+      "label": "Escalinata",
+      "regionId": "edificio",
+      "period": "mixed",
+      "intro": "Baja la mirada al punto donde el recorrido exterior alcanza la plataforma de la casa.",
+      "narrative": "La curvatura del acceso suaviza el cambio de nivel y orienta la aproximación al edificio.",
+      "facts": [
+        {
+          "text": "La ficha de UV identifica escalones concéntricos en la esquina nordeste.",
+          "sourceIds": [
+            "c-uv"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El basamento sobresale del volumen y prolonga una terraza por los lados norte y este.",
+          "sourceIds": [
+            "c-uv"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La sucesión de peldaños y la continuidad del basamento.",
+      "modelNote": "Número, alturas y radios de los peldaños interpretativos; el dibujo de CONTRAST sirve de contraste visual.",
+      "sourceIds": [
+        "c-uv",
+        "c-contrast"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22230457,
+        39.65927593
+      ],
+      "coordinates": [
+        -0.22230457,
+        39.65927593
+      ],
+      "coordinateSourceIds": [
+        "c-catastro",
+        "c-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "edificio",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": "casino-main",
+      "order": 4,
+      "elevation": 0.5336946908234792,
+      "localTarget": [
+        25.88293470809164,
+        0.5336946908234792,
+        -2.8862162552802744
+      ]
+    },
+    {
+      "id": "casino-vestibulo",
+      "title": "El umbral de los espacios comunes",
+      "label": "Vestíbulo",
+      "regionId": "edificio",
+      "period": "mixed",
+      "intro": "Entra y sitúa el patio como referencia antes de recorrer las salas.",
+      "narrative": "Este punto permite reconocer la transición entre exterior, espacio central y comunicación vertical.",
+      "facts": [
+        {
+          "text": "UV describe un vestíbulo que comunica con el salón central y con la escalera.",
+          "sourceIds": [
+            "c-uv"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El proyecto municipal de 2021 prevé un uso sociocultural para la totalidad del edificio.",
+          "sourceIds": [
+            "c-usos2021"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La dirección hacia el patio y la llegada a la escalera.",
+      "modelNote": "Posición relativa documentada; puertas secundarias, proporciones y mobiliario son interpretación.",
+      "sourceIds": [
+        "c-uv",
+        "c-usos2021"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22255139,
+        39.65931693
+      ],
+      "coordinates": [
+        -0.22255139,
+        39.65931693
+      ],
+      "coordinateSourceIds": [
+        "c-catastro",
+        "c-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "edificio",
+      "floor": 0,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": true,
+      "buildingId": "casino-main",
+      "order": 5,
+      "elevation": 2.3336946908234792,
+      "localTarget": [
+        4.736510138230866,
+        2.3336946908234792,
+        -7.451161809302642
+      ]
+    },
+    {
+      "id": "casino-patio",
+      "title": "El vacío que organiza la casa",
+      "label": "Patio central",
+      "regionId": "patio",
+      "period": "mixed",
+      "intro": "Mira hacia arriba y compara los dos niveles alrededor del espacio central.",
+      "narrative": "La vista abierta facilita entender la profundidad de las galerías y las relaciones entre las alas.",
+      "facts": [
+        {
+          "text": "Los arquitectos describen dos plantas organizadas alrededor de un patio con circulación claustral.",
+          "sourceIds": [
+            "c-dau2021"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La fotografía de 1958 distingue el acceso norte y el pórtico oriental de la planta baja.",
+          "sourceIds": [
+            "c-patio1958"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La diferencia entre los lados de la planta baja y las arcadas superiores.",
+      "modelNote": "Se muestra una lectura abierta del patio. No se afirma que su cubierta proyectada de vidrio esté terminada.",
+      "sourceIds": [
+        "c-dau2021",
+        "c-patio1958",
+        "c-obras2026"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.222608,
+        39.65925205
+      ],
+      "coordinates": [
+        -0.222608,
+        39.65925205
+      ],
+      "coordinateSourceIds": [
+        "c-catastro",
+        "c-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "patio",
+      "floor": 0,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": true,
+      "buildingId": "casino-main",
+      "order": 6,
+      "elevation": 4.283694690823479,
+      "localTarget": [
+        -0.1139485679809699,
+        4.283694690823479,
+        -0.22876259994472947
+      ]
+    },
+    {
+      "id": "casino-galeria",
+      "title": "Una segunda mirada al patio",
+      "label": "Galería alta",
+      "regionId": "patio",
+      "period": "mixed",
+      "intro": "Desde la planta alta se entiende mejor cómo se enlazan las distintas alas.",
+      "narrative": "Sigue visualmente los antepechos y compara los vanos superiores con los inferiores.",
+      "facts": [
+        {
+          "text": "CONTRAST documenta pórticos de arcos en los cuatro lados de la planta alta.",
+          "sourceIds": [
+            "c-contrast"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La imagen municipal de 2026 muestra pilares cuadrados, antepecho corrido y cubiertas de teja hacia el patio.",
+          "sourceIds": [
+            "c-patio2026"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La arcada, el antepecho y la profundidad de la galería.",
+      "modelNote": "Se conservan los rasgos reconocibles; anchuras, alturas y número exacto de módulos son aproximados.",
+      "sourceIds": [
+        "c-contrast",
+        "c-patio2026"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22258077,
+        39.65930421
+      ],
+      "coordinates": [
+        -0.22258077,
+        39.65930421
+      ],
+      "coordinateSourceIds": [
+        "c-catastro",
+        "c-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "patio",
+      "floor": 1,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": true,
+      "buildingId": "casino-main",
+      "order": 7,
+      "elevation": 6.683694690823479,
+      "localTarget": [
+        2.2188891687835297,
+        6.683694690823479,
+        -6.0341280573408
+      ]
+    },
+    {
+      "id": "casino-salon",
+      "title": "Café, conversación y juegos",
+      "label": "Salón y cafetería",
+      "regionId": "vida-social",
+      "period": "mixed",
+      "intro": "La sala longitudinal enlaza la vida interior con la terraza.",
+      "narrative": "Observa el ritmo de ventanas y el cambio de material en la parte baja de los muros.",
+      "facts": [
+        {
+          "text": "UV sitúa el salón de bar en el ala oriental y la cocina y el mostrador al sur.",
+          "sourceIds": [
+            "c-uv"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La fotografía histórica de la cafetería muestra zócalos cerámicos azules y claros y una celosía de madera.",
+          "sourceIds": [
+            "c-instalaciones"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El zócalo, los huecos altos y la secuencia de espacios.",
+      "modelNote": "El mobiliario expresa usos históricos; no reproduce un montaje actual ni cada objeto de la fotografía.",
+      "sourceIds": [
+        "c-uv",
+        "c-instalaciones"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.2225152,
+        39.65919002
+      ],
+      "coordinates": [
+        -0.2225152,
+        39.65919002
+      ],
+      "coordinateSourceIds": [
+        "c-catastro",
+        "c-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "vida-social",
+      "floor": 0,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": true,
+      "buildingId": "casino-main",
+      "order": 8,
+      "elevation": 2.233694690823479,
+      "localTarget": [
+        7.8364509055494675,
+        2.233694690823479,
+        6.676572164662048
+      ]
+    },
+    {
+      "id": "casino-biblioteca",
+      "title": "Un lugar para leer",
+      "label": "Biblioteca",
+      "regionId": "vida-social",
+      "period": "mixed",
+      "intro": "Detén el recorrido en el ámbito más recogido de la planta baja.",
+      "narrative": "Los libros ayudan a recordar que este edificio también organizaba el acceso cotidiano a la lectura.",
+      "facts": [
+        {
+          "text": "La biblioteca nació con el Casino y organizó el préstamo circulante a finales de 1942.",
+          "sourceIds": [
+            "c-biblioteca"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "UV localiza la biblioteca y la sala de lectura en el ala oeste.",
+          "sourceIds": [
+            "c-uv"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La escala de la sala y su relación con las circulaciones.",
+      "modelNote": "Estanterías, ejemplares y mesa son recursos interpretativos, sin inventario individual verificado.",
+      "sourceIds": [
+        "c-biblioteca",
+        "c-uv"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22273599,
+        39.65929873
+      ],
+      "coordinates": [
+        -0.22273599,
+        39.65929873
+      ],
+      "coordinateSourceIds": [
+        "c-catastro",
+        "c-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "vida-social",
+      "floor": 0,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": true,
+      "buildingId": "casino-main",
+      "order": 9,
+      "elevation": 2.1336946908234795,
+      "localTarget": [
+        -11.07942169251847,
+        2.1336946908234795,
+        -5.424760978990451
+      ]
+    },
+    {
+      "id": "casino-escalera",
+      "title": "De las salas a las habitaciones",
+      "label": "Escalera interior",
+      "regionId": "patio",
+      "period": "mixed",
+      "intro": "Reconoce el vínculo entre los espacios de reunión y el nivel superior.",
+      "narrative": "El recorrido vertical permite comprender dos usos superpuestos dentro de una misma casa.",
+      "facts": [
+        {
+          "text": "La escalera descrita por UV parte del vestíbulo y alcanza las dependencias superiores.",
+          "sourceIds": [
+            "c-uv"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La fotografía municipal de 2022 muestra un tramo junto al muro con barandilla oscura de barrotes verticales.",
+          "sourceIds": [
+            "c-escalera2022"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El arranque, el descanso y la relación con la galería.",
+      "modelNote": "Se interpreta el tramo fotografiado; desarrollo y cotas aproximados, sin plano métrico público completo.",
+      "sourceIds": [
+        "c-uv",
+        "c-escalera2022"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22265195,
+        39.65937973
+      ],
+      "coordinates": [
+        -0.22265195,
+        39.65937973
+      ],
+      "coordinateSourceIds": [
+        "c-catastro",
+        "c-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "patio",
+      "floor": 0,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": true,
+      "buildingId": "casino-main",
+      "order": 10,
+      "elevation": 2.233694690823479,
+      "localTarget": [
+        -3.879243029262595,
+        2.233694690823479,
+        -14.441962718842722
+      ]
+    },
+    {
+      "id": "casino-planta-alta",
+      "title": "La memoria de quienes se alojaron aquí",
+      "label": "Planta alta",
+      "regionId": "vida-social",
+      "period": "mixed",
+      "intro": "Recorre el nivel que permite leer la dimensión residencial de la antigua Casa Gerencia.",
+      "narrative": "La visita sugiere las habitaciones sin atribuir a cada recinto un ocupante o una función no documentados.",
+      "facts": [
+        {
+          "text": "CONTRAST documenta alojamiento de ingenieros solteros en la planta alta durante la etapa de AHV.",
+          "sourceIds": [
+            "c-contrast"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "En 2022 se anunció la conservación posible de suelos, baños y mobiliario empotrado de las antiguas habitaciones.",
+          "sourceIds": [
+            "c-obras2022",
+            "c-dau2022"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La relación entre galería, puertas y espacios de estancia.",
+      "modelNote": "Divisiones y objetos no levantados son orientativos. No se representan habitaciones hoteleras contemporáneas.",
+      "sourceIds": [
+        "c-contrast",
+        "c-obras2022",
+        "c-dau2022"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.2224423,
+        39.65927841
+      ],
+      "coordinates": [
+        -0.2224423,
+        39.65927841
+      ],
+      "coordinateSourceIds": [
+        "c-catastro",
+        "c-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "vida-social",
+      "floor": 1,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": true,
+      "buildingId": "casino-main",
+      "order": 11,
+      "elevation": 6.533694690823479,
+      "localTarget": [
+        14.082557131361021,
+        6.533694690823479,
+        -3.162058686014184
+      ]
+    },
+    {
+      "id": "casino-cubiertas",
+      "title": "Teja alrededor, luz en el centro",
+      "label": "Cubiertas",
+      "regionId": "edificio",
+      "period": "mixed",
+      "intro": "Vuelve a una vista alta para reconocer la forma del patio dentro del volumen.",
+      "narrative": "Compara el borde de las cubiertas con el espacio central y con las fachadas exteriores.",
+      "facts": [
+        {
+          "text": "Las fotos municipales de 2026 registran teja curva en las vertientes hacia el patio.",
+          "sourceIds": [
+            "c-patio2026"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El 6 de octubre de 2026 seguía en curso la rehabilitación, que incluía una cubierta de vidrio para el patio.",
+          "sourceIds": [
+            "c-obras2026"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Vertientes de teja, aleros y apertura central.",
+      "modelNote": "La lectura histórica abierta no equivale al estado final del proyecto; el vidrio no se da por ejecutado.",
+      "sourceIds": [
+        "c-patio2026",
+        "c-obras2026"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.222608,
+        39.65925205
+      ],
+      "coordinates": [
+        -0.222608,
+        39.65925205
+      ],
+      "coordinateSourceIds": [
+        "c-catastro",
+        "c-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "edificio",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": "casino-main",
+      "order": 12,
+      "elevation": 9.933694690823478,
+      "localTarget": [
+        -0.1139485679809699,
+        9.933694690823478,
+        -0.22876259994472947
+      ]
+    },
+    {
+      "id": "casino-seccion",
+      "title": "Leer la casa por dentro",
+      "label": "Sección abierta",
+      "regionId": "edificio",
+      "period": "mixed",
+      "intro": "Abre la sección para relacionar plantas, patio y habitaciones.",
+      "narrative": "La herramienta retira elementos superiores y mantiene las partes que permiten orientarse en el edificio.",
+      "facts": [
+        {
+          "text": "La documentación municipal de 2022 da 1.446,10 m² de superficie construida para el edificio.",
+          "sourceIds": [
+            "c-obras2022"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La intervención documentada incluye también la reforma del semisótano.",
+          "sourceIds": [
+            "c-obras2022",
+            "c-obras2026"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El espesor de las alas, las comunicaciones y la posición del patio.",
+      "modelNote": "La superficie publicada no es la huella de planta. El semisótano carece de levantamiento verificado y no se inventa como interior visitable.",
+      "sourceIds": [
+        "c-obras2022",
+        "c-obras2026"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.222608,
+        39.65925205
+      ],
+      "coordinates": [
+        -0.222608,
+        39.65925205
+      ],
+      "coordinateSourceIds": [
+        "c-catastro",
+        "c-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "edificio",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": true,
+      "interiorView": false,
+      "buildingId": "casino-main",
+      "order": 13,
+      "elevation": 2.283694690823479,
+      "localTarget": [
+        -0.1139485679809699,
+        2.283694690823479,
+        -0.22876259994472947
+      ]
+    },
+    {
+      "id": "casino-jardin",
+      "title": "El otro espacio de reunión",
+      "label": "Jardín",
+      "regionId": "jardines",
+      "period": "mixed",
+      "intro": "Amplía la visita hacia la explanada y las isletas que acompañan el edificio.",
+      "narrative": "Alterna la mirada entre el suelo libre y la sombra: ambos participan de la composición.",
+      "facts": [
+        {
+          "text": "UV describe un jardín casi cuadrangular con islas ajardinadas alrededor de la pista.",
+          "sourceIds": [
+            "c-uv"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La galería institucional muestra bordillos bajos ocres y recorridos entre isletas curvas y rectangulares.",
+          "sourceIds": [
+            "c-instalaciones"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El borde de las isletas y el espacio despejado junto a la terraza.",
+      "modelNote": "Trazado ajustado a las referencias disponibles; no se certifica la conservación de cada plantación o acabado.",
+      "sourceIds": [
+        "c-uv",
+        "c-instalaciones"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22228667,
+        39.65909979
+      ],
+      "coordinates": [
+        -0.22228667,
+        39.65909979
+      ],
+      "coordinateSourceIds": [
+        "c-catastro",
+        "c-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "jardines",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "order": 14,
+      "elevation": 0.15190484143475658,
+      "localTarget": [
+        32.08238670157546,
+        0.15190484143475658,
+        -1.4042680131672913
+      ]
+    },
+    {
+      "id": "casino-pista",
+      "title": "Bailar al aire libre",
+      "label": "Pista de baile",
+      "regionId": "jardines",
+      "period": "mixed",
+      "intro": "Sitúate en el espacio libre que permite reunir a muchas personas frente al escenario.",
+      "narrative": "La amplitud de la pista se entiende al compararla con los ámbitos más recogidos de sus bordes.",
+      "facts": [
+        {
+          "text": "En 1942 se autorizaron primero bailes al aire libre y después en el interior.",
+          "sourceIds": [
+            "c-history"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Las fotos de las instalaciones registran mesas y sillas desmontables sobre el espacio de reunión.",
+          "sourceIds": [
+            "c-instalaciones"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La continuidad del pavimento y la relación con escenario y terraza.",
+      "modelNote": "La escena evita fijar como arquitectura permanente un montaje concreto de fiesta.",
+      "sourceIds": [
+        "c-history",
+        "c-instalaciones"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.222348,
+        39.65900309
+      ],
+      "coordinates": [
+        -0.222348,
+        39.65900309
+      ],
+      "coordinateSourceIds": [
+        "c-catastro",
+        "c-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "jardines",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "order": 15,
+      "elevation": -0.819717766970931,
+      "localTarget": [
+        33.722149090544555,
+        -0.819717766970931,
+        10.462502077050479
+      ]
+    },
+    {
+      "id": "casino-escenario",
+      "title": "La música al fondo del jardín",
+      "label": "Escenario",
+      "regionId": "jardines",
+      "period": "mixed",
+      "intro": "Mira hacia el extremo que da una dirección al espacio de reunión.",
+      "narrative": "La estructura ligera deja que la vegetación siga formando parte del fondo de la escena.",
+      "facts": [
+        {
+          "text": "UV sitúa la pérgola que funciona como escenario al sur de la pista.",
+          "sourceIds": [
+            "c-uv"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Las fotos muestran un escenario elevado, estructura ligera y frente claro con motivos azules.",
+          "sourceIds": [
+            "c-instalaciones"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El nivel elevado y la estructura por encima del frente.",
+      "modelNote": "Posición y dimensiones aproximadas; se representan rasgos documentados sin reproducir equipos temporales.",
+      "sourceIds": [
+        "c-uv",
+        "c-instalaciones"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.222444,
+        39.65894959
+      ],
+      "coordinates": [
+        -0.222444,
+        39.65894959
+      ],
+      "coordinateSourceIds": [
+        "c-catastro",
+        "c-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "jardines",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "order": 16,
+      "elevation": 0.9879808199944238,
+      "localTarget": [
+        30.2144701859448,
+        0.9879808199944238,
+        19.991995908408608
+      ]
+    },
+    {
+      "id": "casino-arbolado",
+      "title": "Sombra y claros",
+      "label": "Arbolado",
+      "regionId": "jardines",
+      "period": "mixed",
+      "intro": "Recorre los bordes donde las copas enmarcan las vistas de la casa.",
+      "narrative": "Las diferencias de altura ayudan a separar el espacio abierto de la pista y las zonas de estancia.",
+      "facts": [
+        {
+          "text": "Las fotografías propias registran palmeras de distintas alturas y masas de arbolado denso en los bordes.",
+          "sourceIds": [
+            "c-instalaciones"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "UV describe zonas tranquilas con bancos y mesas alrededor del ámbito de baile.",
+          "sourceIds": [
+            "c-uv"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La alternancia de copas altas, sombra baja y espacios libres.",
+      "modelNote": "Los ejemplares son representación paisajística; no constituyen un inventario botánico ni una fotografía del estado actual.",
+      "sourceIds": [
+        "c-instalaciones",
+        "c-uv"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.222252,
+        39.65912654
+      ],
+      "coordinates": [
+        -0.222252,
+        39.65912654
+      ],
+      "coordinateSourceIds": [
+        "c-catastro",
+        "c-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "jardines",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "order": 17,
+      "elevation": 3.996435429345789,
+      "localTarget": [
+        32.887922667870384,
+        3.996435429345789,
+        -5.532148042028192
+      ]
+    },
+    {
+      "id": "casino-taquilla",
+      "title": "El límite del recinto",
+      "label": "Taquilla y cierre",
+      "regionId": "memoria",
+      "period": "mixed",
+      "intro": "Reconoce el pequeño elemento que relaciona la vida del Casino con la calle.",
+      "narrative": "El límite permite pensar cómo se entraba, quién podía participar y cómo cambió ese acceso.",
+      "facts": [
+        {
+          "text": "UV identifica una ventana de taquilla conservada en el cierre hacia la calle.",
+          "sourceIds": [
+            "c-uv"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Desde 1968 los no socios podían acceder a ciertos bailes y verbenas pagando entrada.",
+          "sourceIds": [
+            "c-history"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El hueco en el cerramiento y la relación entre dentro y fuera.",
+      "modelNote": "Ubicación puntual y forma simplificadas; la fuente acredita su existencia, no un levantamiento exacto.",
+      "sourceIds": [
+        "c-uv",
+        "c-history"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.2221904,
+        39.65925906
+      ],
+      "coordinates": [
+        -0.2221904,
+        39.65925906
+      ],
+      "coordinateSourceIds": [
+        "c-catastro",
+        "c-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "memoria",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "order": 18,
+      "elevation": 0.16354211824651355,
+      "localTarget": [
+        29.044431637717913,
+        0.16354211824651355,
+        -20.7207157902331
+      ]
+    },
+    {
+      "id": "casino-entorno",
+      "title": "Entre el recinto y la población",
+      "label": "Entorno urbano",
+      "regionId": "memoria",
+      "period": "mixed",
+      "intro": "Aléjate lo suficiente para ver la casa junto a los edificios que la rodean.",
+      "narrative": "El atlas conserva la continuidad con la Gerencia y con la trama de calles para orientar esta pieza dentro de la ciudad.",
+      "facts": [
+        {
+          "text": "CONTRAST sitúa Casa Gerencia y oficinas en el frente del recinto que mira hacia la población.",
+          "sourceIds": [
+            "c-contrast"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Las fotografías institucionales muestran edificaciones residenciales urbanas junto al jardín.",
+          "sourceIds": [
+            "c-instalaciones"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El contraste entre casa, arbolado, medianeras y edificios del entorno.",
+      "modelNote": "Los volúmenes de contexto proceden de cartografía y lectura aérea; sus interiores no se reconstruyen.",
+      "sourceIds": [
+        "c-contrast",
+        "c-instalaciones",
+        "c-catastro",
+        "c-pnoa",
+        "c-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22235333,
+        39.65910803
+      ],
+      "coordinates": [
+        -0.22235333,
+        39.65910803
+      ],
+      "coordinateSourceIds": [
+        "c-catastro",
+        "c-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "memoria",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "order": 19,
+      "elevation": 2.0872800139444045,
+      "localTarget": [
+        26.829952898245004,
+        2.0872800139444045,
+        1.019458640033367
+      ]
+    },
+    {
+      "id": "casino-memoria",
+      "title": "De la sociabilidad industrial a la recuperación",
+      "label": "Memoria y presente",
+      "regionId": "memoria",
+      "period": "mixed",
+      "intro": "Cierra la visita relacionando la arquitectura con sus cambios de uso y acceso.",
+      "narrative": "La escena permite imaginar la vida histórica del conjunto mientras las fuentes explican sus transformaciones.",
+      "facts": [
+        {
+          "text": "La afiliación se abrió a todos los trabajadores en 1968 y al público general en 1972.",
+          "sourceIds": [
+            "c-history"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La entidad anuncia los bailes en el Casino Playa mientras se reforma esta sede.",
+          "sourceIds": [
+            "c-bailes"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El edificio, el acceso y el jardín como una misma secuencia.",
+      "modelNote": "Documentación revisada el 21 de noviembre de 2026. Las obras municipales constan en curso el 6 de octubre; no se acredita reapertura de este interior.",
+      "sourceIds": [
+        "c-history",
+        "c-bailes",
+        "c-obras2026"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco registrado con el modelo tridimensional del edificio y la cartografía de contexto. Posición de observación y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.22235067,
+        39.65907922
+      ],
+      "coordinates": [
+        -0.22235067,
+        39.65907922
+      ],
+      "coordinateSourceIds": [
+        "c-catastro",
+        "c-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "memoria",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "recommendedMode": "current",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "order": 20,
+      "elevation": 1.381655957351338,
+      "localTarget": [
+        28.807436195513766,
+        1.381655957351338,
+        3.554269716149987
+      ]
+    }
+  ],
+  "regions": [
+    {
+      "id": "edificio",
+      "name": "Casa y accesos",
+      "aliases": [],
+      "summary": "Volumen, fachadas, basamento y lectura en sección.",
+      "sourceIds": [
+        "c-history",
+        "c-contrast",
+        "c-instalaciones",
+        "c-uv",
+        "c-usos2021",
+        "c-patio2026",
+        "c-obras2026",
+        "c-obras2022"
+      ],
+      "stopIds": [
+        "casino-conjunto",
+        "casino-fachada",
+        "casino-terraza",
+        "casino-escalinata",
+        "casino-vestibulo",
+        "casino-cubiertas",
+        "casino-seccion"
+      ],
+      "coordinate": [
+        -0.22260667,
+        39.65925
+      ]
+    },
+    {
+      "id": "patio",
+      "name": "El patio y sus galerías",
+      "aliases": [],
+      "summary": "El espacio central y las comunicaciones entre plantas.",
+      "sourceIds": [
+        "c-dau2021",
+        "c-patio1958",
+        "c-obras2026",
+        "c-contrast",
+        "c-patio2026",
+        "c-uv",
+        "c-escalera2022"
+      ],
+      "stopIds": [
+        "casino-patio",
+        "casino-galeria",
+        "casino-escalera"
+      ],
+      "coordinate": [
+        -0.22260667,
+        39.65925
+      ]
+    },
+    {
+      "id": "vida-social",
+      "name": "Lectura, encuentro y alojamiento",
+      "aliases": [],
+      "summary": "Usos documentados de las salas y de la planta alta.",
+      "sourceIds": [
+        "c-uv",
+        "c-instalaciones",
+        "c-biblioteca",
+        "c-contrast",
+        "c-obras2022",
+        "c-dau2022"
+      ],
+      "stopIds": [
+        "casino-salon",
+        "casino-biblioteca",
+        "casino-planta-alta"
+      ],
+      "coordinate": [
+        -0.22260667,
+        39.65925
+      ]
+    },
+    {
+      "id": "jardines",
+      "name": "Jardín y celebraciones",
+      "aliases": [],
+      "summary": "Isletas, sombra, pista y escenario.",
+      "sourceIds": [
+        "c-uv",
+        "c-instalaciones",
+        "c-history"
+      ],
+      "stopIds": [
+        "casino-jardin",
+        "casino-pista",
+        "casino-escenario",
+        "casino-arbolado"
+      ],
+      "coordinate": [
+        -0.22260667,
+        39.65925
+      ]
+    },
+    {
+      "id": "memoria",
+      "name": "Recinto, ciudad y memoria",
+      "aliases": [],
+      "summary": "Límites, transformación social y recuperación contemporánea.",
+      "sourceIds": [
+        "c-uv",
+        "c-history",
+        "c-contrast",
+        "c-instalaciones",
+        "c-catastro",
+        "c-pnoa",
+        "c-osm",
+        "c-bailes",
+        "c-obras2026"
+      ],
+      "stopIds": [
+        "casino-taquilla",
+        "casino-entorno",
+        "casino-memoria"
+      ],
+      "coordinate": [
+        -0.22260667,
+        39.65925
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "c-history",
+      "title": "Historia del Casino Recreativo y Cultural",
+      "author": "Casino Recreativo y Cultural de Puerto de Sagunto",
+      "url": "https://www.casinopuertosagunto.com/historia/",
+      "type": "historia de la propia entidad",
+      "year": null,
+      "locator": "Orígenes; constitución; apertura social; terraza y escalera.",
+      "note": "La entidad fecha la terraza en 1968; CONTRAST relaciona la intervención con un crédito de 1969.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "c-contrast",
+      "title": "Casino de productores de AHV",
+      "author": "CONTRAST · Joan Costa Sanz, Antonio Ortiz López y José María Prats Escriche",
+      "url": "https://contrastapips.com/IHACM/IBP/Port/Port_patri_casi.htm",
+      "type": "investigación patrimonial y documentación de campo",
+      "year": 2022,
+      "locator": "Materiales, patio, fachadas y evolución del conjunto.",
+      "note": "La descripción del patio repite este en dos lados incompatibles; la distribución se contrasta con fotografías. El presente del texto no describe 2026.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "c-uv",
+      "title": "El Casino dentro del conjunto de la Gerencia",
+      "author": "Universitat de València",
+      "url": "https://www.uv.es/patrimoni_industrial_sagunt/bicgerencia/gerencia.html",
+      "type": "ficha patrimonial universitaria",
+      "year": null,
+      "locator": "Apartado 4: alas, vestíbulo, terraza, jardín, escenario y taquilla.",
+      "note": "Descripción histórica sin fecha de actualización: no acredita apertura física actual.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "c-dau2021",
+      "title": "Licitación de las obras de rehabilitación del Casino Gerencia",
+      "author": "DAU Arquitectos",
+      "url": "https://www.dauarquitectosvalencia.es/noticias/licitacion-de-las-obras-de-rehabilitacion-del-casino-gerencia",
+      "type": "explicación de los autores del proyecto",
+      "year": 2021,
+      "locator": "23 de agosto de 2021: organización en dos plantas alrededor de un patio.",
+      "note": "Explica el edificio y la intención de rehabilitación; la intención no equivale a obra terminada.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "c-dau2022",
+      "title": "Avanzan las obras del Casino Gerencia",
+      "author": "DAU Arquitectos",
+      "url": "https://www.dauarquitectosvalencia.es/noticias/avanzan-las-obras-del-casino-gerencia",
+      "type": "seguimiento del proyecto por sus arquitectos",
+      "year": 2022,
+      "locator": "25 de abril de 2022: salas, biblioteca y antiguas habitaciones.",
+      "note": "Programa de intervención, no inventario de un centro reabierto.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "c-usos2021",
+      "title": "La rehabilitación del Casino tendrá uso sociocultural",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/es/actualidad/el-equipo-de-gobierno-aclara-que-las-obras-de-rehabilitacion-del-casino-de-la-gerencia-estaran-destinadas-exclusivamente-a-darle-un-uso-sociocultural/",
+      "type": "explicación municipal del proyecto",
+      "year": 2021,
+      "locator": "19 de agosto de 2021: uso cultural e interpretación de las antiguas habitaciones.",
+      "note": "Las habitaciones históricas no se presentan como un nuevo hotel.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "c-obras2022",
+      "title": "Avance de las obras del Casino de la antigua Gerencia",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/es/actualidad/avance-obras-casino-gerencia-ahm-2022-04-12/",
+      "type": "noticia y reportaje municipal de obra",
+      "year": 2022,
+      "locator": "12 de abril de 2022: vaciado, elementos a conservar, superficie y cubierta prevista.",
+      "note": "Distingue elementos históricos de actuaciones proyectadas, incluida la cubierta de vidrio.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "c-obras2026",
+      "title": "Avanzan las obras de rehabilitación del Casino de la Gerencia",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/es/actualidad/2026-10-06-avanzan-las-obras-de-rehabilitacion-del-casino-de-la-gerencia/",
+      "type": "estado municipal documentado de la intervención",
+      "year": 2026,
+      "locator": "6 de octubre de 2026: reanudación y obras en curso.",
+      "note": "Último estado municipal localizado. No es un anuncio de reapertura; la noticia presenta una referencia retrospectiva a 2015 que no se concilia con el inicio de 2022.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "c-biblioteca",
+      "title": "La biblioteca del Casino",
+      "author": "Casino Recreativo y Cultural de Puerto de Sagunto",
+      "url": "https://www.casinopuertosagunto.com/actividades/biblioteca/",
+      "type": "historia institucional de la biblioteca",
+      "year": null,
+      "locator": "Origen de la colección y préstamo desde finales de 1942.",
+      "note": "Los servicios descritos sin fecha no se convierten en horarios o acceso actual a esta sede.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "c-bailes",
+      "title": "Bailes familiares y talleres",
+      "author": "Casino Recreativo y Cultural de Puerto de Sagunto",
+      "url": "https://www.casinopuertosagunto.com/actividades/bailes/",
+      "type": "información de la entidad sobre sus sedes",
+      "year": null,
+      "locator": "Traslado de bailes al Casino Playa durante la reforma de Nou d’Octubre, 5.",
+      "note": "Distingue el edificio representado de la sede de la avenida Mediterráneo.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "c-instalaciones",
+      "title": "Galería institucional de instalaciones",
+      "author": "Casino Recreativo y Cultural de Puerto de Sagunto",
+      "url": "https://www.casinopuertosagunto.com/portfolio/instalaciones/",
+      "type": "fotografías del edificio, cafetería y jardines",
+      "year": null,
+      "locator": "fachada-2, casinofachada, casinobar, jardin, jardines y vista-entrada.",
+      "note": "Fotografías sin datación precisa. Mobiliario y vegetación representan un estado histórico, no una comprobación del estado de 2026.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "c-patio1958",
+      "title": "Patio del Casino: lados norte y este",
+      "author": "R. Velo · archivo reproducido por CONTRAST",
+      "url": "https://contrastapips.com/IHACM/IBP/Port/Port_patri_casi_archivos/image017.jpg",
+      "type": "fotografía histórica del patio",
+      "year": 1958,
+      "locator": "Agosto de 1958, según el pie publicado por CONTRAST.",
+      "note": "Contraste de las arcadas y de la diferencia entre lados; no proporciona cotas.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "c-patio2026",
+      "title": "Galería superior del patio durante las obras",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/media/acuib44s/img_7810_c.jpg",
+      "type": "fotografía documental interior",
+      "year": 2026,
+      "locator": "Reportaje municipal de 6 de octubre: galería, antepecho y teja hacia el patio.",
+      "note": "La imagen registra una fase de obra con andamios, no un interior restaurado y abierto.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "c-escalera2022",
+      "title": "Escalera interior durante las obras",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/media/wcrnmxo2/c2pa_visitaobrascasino_img_7274.jpg",
+      "type": "fotografía documental interior",
+      "year": 2022,
+      "locator": "Reportaje de 12 de abril: tramo junto al muro, barandilla oscura y zócalo rojizo.",
+      "note": "Permite reconocer materiales y disposición de un tramo, sin resolver el desarrollo métrico completo.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "c-catastro",
+      "title": "Cartografía INSPIRE de edificios",
+      "author": "Dirección General del Catastro",
+      "url": "https://www.catastro.hacienda.gob.es/webinspire/index.html",
+      "type": "cartografía oficial de contornos",
+      "year": null,
+      "locator": "Huella del Casino y patio en el registro cartográfico heredado del atlas.",
+      "note": "No define una distribución interior ni certifica las alturas aproximadas del modelo.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "c-pnoa",
+      "title": "PNOA Máxima Actualidad",
+      "author": "Instituto Geográfico Nacional",
+      "url": "https://www.ign.es/wms-inspire/pnoa-ma",
+      "type": "ortofotografía de referencia",
+      "year": null,
+      "locator": "Cubiertas, ocupación del jardín y relación con el tejido urbano.",
+      "note": "La fecha de consulta no equivale a la fecha del vuelo de cada imagen.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "c-osm",
+      "title": "Calles y elementos urbanos del entorno",
+      "author": "Colaboradores de OpenStreetMap",
+      "url": "https://www.openstreetmap.org/copyright",
+      "type": "cartografía colaborativa",
+      "year": null,
+      "locator": "Contexto viario heredado y contrastado con Catastro y PNOA.",
+      "note": "No acredita accesibilidad, permisos de paso ni deslindes jurídicos.",
+      "accessed": "2026-11-21"
+    }
+  ],
+  "timeline": [
+    {
+      "id": "c-t-1",
+      "date": "1921",
+      "title": "Casa Gerencia",
+      "text": "La entidad sitúa aquí el origen del edificio.",
+      "sourceIds": [
+        "c-history"
+      ],
+      "period": "industrial",
+      "confidence": "documented",
+      "stopId": "casino-conjunto"
+    },
+    {
+      "id": "c-t-2",
+      "date": "1941",
+      "title": "Nace el Casino",
+      "text": "Constitución de la sociedad el 26 de diciembre.",
+      "sourceIds": [
+        "c-history"
+      ],
+      "period": "industrial",
+      "confidence": "documented",
+      "stopId": "casino-conjunto"
+    },
+    {
+      "id": "c-t-3",
+      "date": "1942",
+      "title": "La lectura circula",
+      "text": "La biblioteca organiza el préstamo de libros.",
+      "sourceIds": [
+        "c-biblioteca"
+      ],
+      "period": "industrial",
+      "confidence": "documented",
+      "stopId": "casino-biblioteca"
+    },
+    {
+      "id": "c-t-4",
+      "date": "1942",
+      "title": "Bailes dentro y fuera",
+      "text": "Se autorizan bailes exteriores y, después, interiores.",
+      "sourceIds": [
+        "c-history"
+      ],
+      "period": "industrial",
+      "confidence": "documented",
+      "stopId": "casino-pista"
+    },
+    {
+      "id": "c-t-5",
+      "date": "1968",
+      "title": "Acceso para todos los trabajadores",
+      "text": "Cambian los estatutos y el nombre de la entidad.",
+      "sourceIds": [
+        "c-contrast"
+      ],
+      "period": "industrial",
+      "confidence": "documented",
+      "stopId": "casino-memoria"
+    },
+    {
+      "id": "c-t-6",
+      "date": "1968–1969",
+      "title": "Terraza y nuevas conexiones",
+      "text": "La cronología de terraza y escalera difiere entre las fuentes.",
+      "sourceIds": [
+        "c-history",
+        "c-contrast"
+      ],
+      "period": "industrial",
+      "confidence": "disputed",
+      "stopId": "casino-terraza"
+    },
+    {
+      "id": "c-t-7",
+      "date": "1972",
+      "title": "Una afiliación más abierta",
+      "text": "La entidad admite también socios ajenos a la siderúrgica.",
+      "sourceIds": [
+        "c-history"
+      ],
+      "period": "industrial",
+      "confidence": "documented",
+      "stopId": "casino-memoria"
+    },
+    {
+      "id": "c-t-8",
+      "date": "2021",
+      "title": "Proyecto sociocultural",
+      "text": "Se plantea recuperar el edificio completo para usos culturales.",
+      "sourceIds": [
+        "c-usos2021",
+        "c-dau2021"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "casino-vestibulo"
+    },
+    {
+      "id": "c-t-9",
+      "date": "2022",
+      "title": "Intervención interior",
+      "text": "Se documentan vaciado y trabajos de rehabilitación iniciados en enero.",
+      "sourceIds": [
+        "c-obras2022"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "casino-seccion"
+    },
+    {
+      "id": "c-t-10",
+      "date": "2026",
+      "title": "Obras reanudadas",
+      "text": "La noticia del 6 de octubre registra la intervención en curso.",
+      "sourceIds": [
+        "c-obras2026"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "casino-cubiertas"
+    }
+  ],
+  "modelRegistration": {
+    "status": "registered",
+    "note": "Focos registrados a partir de la geometría final y de la cartografía; las cotas no levantadas son interpretativas.",
+    "precision": "approximate",
+    "coordinates": "Registered from the implemented industrial model and contemporary cartography; component positions and unmeasured heights are interpretive.",
+    "provisionalCoordinates": false
+  },
+  "materialsModeLabel": "Materiales"
+}

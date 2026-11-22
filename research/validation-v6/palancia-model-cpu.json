@@ -1,0 +1,386 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "label": "Seven observation points",
+      "pass": true
+    },
+    {
+      "label": "Five mapped bridge decks replaced without context duplication",
+      "pass": true
+    },
+    {
+      "label": "All observation points available to 2D map",
+      "pass": true
+    },
+    {
+      "label": "One mapped water patch, not a continuous river",
+      "pass": true
+    },
+    {
+      "label": "Corridor and delta vegetation exclusions supplied",
+      "pass": true
+    },
+    {
+      "label": "All vertex and instance attributes finite",
+      "pass": true
+    },
+    {
+      "label": "Every index within geometry",
+      "pass": true
+    },
+    {
+      "label": "No degenerate triangles",
+      "pass": true
+    },
+    {
+      "label": "All geometry normals valid",
+      "pass": true
+    },
+    {
+      "label": "Camera finite: urbano",
+      "pass": true
+    },
+    {
+      "label": "Target inside terrain crop: urbano",
+      "pass": true
+    },
+    {
+      "label": "Camera finite: puentes",
+      "pass": true
+    },
+    {
+      "label": "Target inside terrain crop: puentes",
+      "pass": true
+    },
+    {
+      "label": "Camera finite: aluvial",
+      "pass": true
+    },
+    {
+      "label": "Target inside terrain crop: aluvial",
+      "pass": true
+    },
+    {
+      "label": "Camera finite: canet",
+      "pass": true
+    },
+    {
+      "label": "Target inside terrain crop: canet",
+      "pass": true
+    },
+    {
+      "label": "Camera finite: delta",
+      "pass": true
+    },
+    {
+      "label": "Target inside terrain crop: delta",
+      "pass": true
+    },
+    {
+      "label": "Camera finite: restinga",
+      "pass": true
+    },
+    {
+      "label": "Target inside terrain crop: restinga",
+      "pass": true
+    },
+    {
+      "label": "Camera finite: a-pie",
+      "pass": true
+    },
+    {
+      "label": "Target inside terrain crop: a-pie",
+      "pass": true
+    },
+    {
+      "label": "Low camera is 1.65 m above terrain",
+      "pass": true
+    },
+    {
+      "label": "Bridge deck clears middle of riverbed: 180732779",
+      "pass": true
+    },
+    {
+      "label": "Bridge girders clear every inner support: 180732779",
+      "pass": true
+    },
+    {
+      "label": "Bridge deck clears middle of riverbed: 87552066",
+      "pass": true
+    },
+    {
+      "label": "Bridge girders clear every inner support: 87552066",
+      "pass": true
+    },
+    {
+      "label": "Bridge deck clears middle of riverbed: 39303189",
+      "pass": true
+    },
+    {
+      "label": "Bridge girders clear every inner support: 39303189",
+      "pass": true
+    },
+    {
+      "label": "Bridge deck clears middle of riverbed: 180732782",
+      "pass": true
+    },
+    {
+      "label": "Bridge girders clear every inner support: 180732782",
+      "pass": true
+    },
+    {
+      "label": "Bridge deck clears middle of riverbed: 1124952339",
+      "pass": true
+    },
+    {
+      "label": "Bridge girders clear every inner support: 1124952339",
+      "pass": true
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "mainAxisM": 8375,
+    "southAxisM": 901,
+    "bridgeComplexes": 3,
+    "bridgeDecks": 5,
+    "trees": 192,
+    "shrubs": 1637,
+    "reedClumps": 1438,
+    "grassClumps": 3897,
+    "cobbles": 16680,
+    "shoreCobbles": 4449,
+    "bridgeRocks": 260,
+    "waterPolygons": 1,
+    "interpretation": "Individual plants, sediment and bridge sections are not measured inventories.",
+    "meshes": 15,
+    "triangles": 908737
+  },
+  "geometry": {
+    "meshes": 15,
+    "vertices": 41154,
+    "triangles": 908737,
+    "invalid": 0,
+    "degenerate": 0,
+    "indicesOutside": 0,
+    "zeroNormals": 0
+  },
+  "bridges": [
+    {
+      "start": {
+        "x": 71.37635487581461,
+        "z": -388.5067999999251
+      },
+      "end": {
+        "x": 107.68568052263645,
+        "z": -507.6525960001564
+      },
+      "width": 10.8,
+      "length": 124.55556123054356,
+      "deckStart": 46.71170714672569,
+      "deckEnd": 46.504814181121695,
+      "spans": 5,
+      "approachM": 18,
+      "deckCorrectionM": 0,
+      "minimumSupportClearance": 5.812262480877237,
+      "sectionInferred": true,
+      "id": "180732779",
+      "label": "Puente Cronista Santiago Bru i Vidal",
+      "midGround": 37.85115201279126,
+      "midDeck": 46.608260663923694
+    },
+    {
+      "start": {
+        "x": 449.3428981120805,
+        "z": -392.03564400003273
+      },
+      "end": {
+        "x": 413.07641027276674,
+        "z": -277.13113999953407
+      },
+      "width": 10.2,
+      "length": 120.49192163709442,
+      "deckStart": 45.36050155102678,
+      "deckEnd": 43.34796799002025,
+      "spans": 5,
+      "approachM": 18,
+      "deckCorrectionM": 0,
+      "minimumSupportClearance": 3.575228270240167,
+      "sectionInferred": true,
+      "id": "87552066",
+      "label": "Puente Cronista Emili Llueca",
+      "midGround": 39.03136954298915,
+      "midDeck": 44.35423477052352
+    },
+    {
+      "start": {
+        "x": 4828.609122214456,
+        "z": 428.61539600038014
+      },
+      "end": {
+        "x": 4821.85788375063,
+        "z": 572.0734799999758
+      },
+      "width": 8.9,
+      "length": 143.61685515854498,
+      "deckStart": 11.121249598834483,
+      "deckEnd": 12.109374286453024,
+      "spans": 6,
+      "approachM": 18,
+      "deckCorrectionM": 1.0039731305611568,
+      "minimumSupportClearance": 0.3999999999999986,
+      "sectionInferred": true,
+      "id": "39303189",
+      "label": "Puente de Canet · barrio San José",
+      "midGround": 6.88921012494233,
+      "midDeck": 11.615311942643753
+    },
+    {
+      "start": {
+        "x": 81.77737453962823,
+        "z": -384.07626399956285
+      },
+      "end": {
+        "x": 117.85537602589032,
+        "z": -501.4965999994047
+      },
+      "width": 2.8,
+      "length": 122.8379318352376,
+      "deckStart": 46.15392893537421,
+      "deckEnd": 46.912819822902414,
+      "spans": 5,
+      "approachM": 18,
+      "deckCorrectionM": 0,
+      "minimumSupportClearance": 6.702075861958377,
+      "sectionInferred": true,
+      "id": "180732782",
+      "label": "Paso peatonal junto a Bru i Vidal",
+      "midGround": 37.77497076164138,
+      "midDeck": 46.53337437913831
+    },
+    {
+      "start": {
+        "x": 454.3292189064256,
+        "z": -385.8573839998118
+      },
+      "end": {
+        "x": 419.0565682013855,
+        "z": -274.72662799990985
+      },
+      "width": 2.7,
+      "length": 116.59418860676337,
+      "deckStart": 45.15869458602996,
+      "deckEnd": 43.163569708116775,
+      "spans": 5,
+      "approachM": 18,
+      "deckCorrectionM": 0,
+      "minimumSupportClearance": 5.29044533503675,
+      "sectionInferred": true,
+      "id": "1124952339",
+      "label": "Paso ciclista junto a Emili Llueca",
+      "midGround": 38.01816127863383,
+      "midDeck": 44.16113214707337
+    }
+  ],
+  "cameras": [
+    {
+      "id": "urbano",
+      "position": [
+        345.6756150231809,
+        239.00944994301642,
+        -131.41200000012276
+      ],
+      "target": [
+        85.67561502318091,
+        39.00944994301643,
+        -456.41200000012276
+      ],
+      "groundClearance": 194.99143347367115
+    },
+    {
+      "id": "puentes",
+      "position": [
+        588.5186120172957,
+        154.12415443111374,
+        -153.41279999984408
+      ],
+      "target": [
+        433.51861201729577,
+        39.12415443111374,
+        -338.4127999998441
+      ],
+      "groundClearance": 112.14232130433847
+    },
+    {
+      "id": "aluvial",
+      "position": [
+        3058.7818732301985,
+        297.5,
+        410
+      ],
+      "target": [
+        2698.7818732301985,
+        27.5,
+        0
+      ],
+      "groundClearance": 274.5
+    },
+    {
+      "id": "canet",
+      "position": [
+        5000.250638105547,
+        132.3700866596219,
+        705.9400000000189
+      ],
+      "target": [
+        4825.250638105547,
+        7.370086659621895,
+        500.940000000019
+      ],
+      "groundClearance": 122.3700866596219
+    },
+    {
+      "id": "delta",
+      "position": [
+        6434.455244111071,
+        471.9410969648031,
+        1738.6719999998822
+      ],
+      "target": [
+        5954.455244111071,
+        1.94109696480308,
+        1068.6719999998822
+      ],
+      "groundClearance": 471.9410969648031
+    },
+    {
+      "id": "restinga",
+      "position": [
+        6200.960545800709,
+        68.41822033998689,
+        1422.4252000005076
+      ],
+      "target": [
+        6100.960545800709,
+        2.4182203399868913,
+        1292.4252000005076
+      ],
+      "groundClearance": 70.83822041628083
+    },
+    {
+      "id": "a-pie",
+      "position": [
+        6102.331355641079,
+        3.596808927126777,
+        1294.1061320003769
+      ],
+      "target": [
+        6118.952424955576,
+        2.995899152312602,
+        1262.702760000407
+      ],
+      "groundClearance": 1.65
+    }
+  ],
+  "elapsedMs": 3209.8050000000003
+}

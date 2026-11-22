@@ -1,0 +1,58 @@
+{
+  "reviewedAt": "2026-11-20T21:55:19.777212+00:00",
+  "result": "pass",
+  "method": "Revisión visual por el asistente de cuatro renders CPU de las mallas finales de la aplicación.",
+  "images": [
+    {
+      "file": "talleres-conjunto.png",
+      "width": 1440,
+      "height": 1080,
+      "sha256": "368325e730c0f9b6921b882d25ba9ace0037582f5c96661b4086afacd583b61e",
+      "review": "Cuatro naves y cubiertas longitudinales reconocibles; dos centrales más altas; entorno viario y frentes residenciales coherentes."
+    },
+    {
+      "file": "talleres-interior.png",
+      "width": 960,
+      "height": 720,
+      "sha256": "2e3bdefb65c10ce61624c26fb922fc243b20238805085950c1f06040ea3a5a76",
+      "review": "Continuidad interior, columnas, cerchas abiertas, carrileras y huecos superiores legibles bajo cubierta cerrada."
+    },
+    {
+      "file": "talleres-corte.png",
+      "width": 1440,
+      "height": 1080,
+      "sha256": "aeaf0589d22885c33b20052b7c6eb438bce98e8a9a12c450abd5680de0a2416d",
+      "review": "La sección retira la envolvente de cubierta y conserva la estructura, pilares y fachadas; no se observan piezas suspendidas por error."
+    },
+    {
+      "file": "talleres-fachada.png",
+      "width": 960,
+      "height": 720,
+      "sha256": "b56d97a5c8ffcb9b83604589a8b4254a127afd09cb2948bc29f5b904d349f8bf",
+      "review": "Ritmo de portones 1+3+3+1, vanos y remates visibles; acceso y relación con el espacio exterior legibles."
+    }
+  ],
+  "testedInputHashesUnchanged": true,
+  "verifiedInputs": [
+    "dist/js/app.js",
+    "dist/js/port.js",
+    "dist/js/port-industrial.js",
+    "dist/js/horno.js",
+    "dist/js/horno-context.js",
+    "dist/js/horno-map.js",
+    "dist/js/talleres.js",
+    "dist/js/talleres-context.js",
+    "dist/js/talleres-map.js",
+    "dist/assets/data/talleres-visit.json",
+    "dist/assets/data/talleres-context.json",
+    "dist/assets/data/talleres-plan.json",
+    "dist/assets/data/horno-visit.json",
+    "dist/assets/data/horno-context.json",
+    "dist/assets/data/horno-plan.json"
+  ],
+  "limitations": [
+    "Iluminación CPU aproximada; exposición interior compensada.",
+    "No son capturas de WebGL ni validan el rendimiento GPU o la interfaz en navegador.",
+    "La geometría no equivale a un levantamiento arquitectónico."
+  ]
+}

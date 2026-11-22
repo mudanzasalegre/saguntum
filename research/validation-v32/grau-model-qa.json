@@ -1,0 +1,297 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "pass": true,
+      "message": "All attributes are finite",
+      "detail": {
+        "nonfinite": 0
+      }
+    },
+    {
+      "pass": true,
+      "message": "All normals have usable length",
+      "detail": {
+        "zeroNormals": 0
+      }
+    },
+    {
+      "pass": true,
+      "message": "No zero-area triangles survive batching",
+      "detail": {
+        "degenerate": 0
+      }
+    },
+    {
+      "pass": true,
+      "message": "Twenty registered focuses"
+    },
+    {
+      "pass": true,
+      "message": "Only the documented upper tower room is modelled"
+    },
+    {
+      "pass": true,
+      "message": "Village geometry is delegated without duplicates"
+    },
+    {
+      "pass": true,
+      "message": "Doors are registered physical openings"
+    },
+    {
+      "pass": true,
+      "message": "Door centers pass through their structural walls",
+      "detail": [
+        {
+          "id": "torre-1-0",
+          "wallObstruction": 0
+        },
+        {
+          "id": "torre-2-0",
+          "wallObstruction": 0
+        },
+        {
+          "id": "torre-5-0",
+          "wallObstruction": 0
+        },
+        {
+          "id": "almacen-door-5-0",
+          "wallObstruction": 0
+        },
+        {
+          "id": "almacen-door-5-2",
+          "wallObstruction": 0
+        },
+        {
+          "id": "almacen-door-5-4",
+          "wallObstruction": 0
+        },
+        {
+          "id": "almacen-door-5-6",
+          "wallObstruction": 0
+        },
+        {
+          "id": "almacen-door-5-8",
+          "wallObstruction": 0
+        }
+      ]
+    },
+    {
+      "pass": true,
+      "message": "grau-conjunto focus is finite"
+    },
+    {
+      "pass": true,
+      "message": "grau-conjunto focus is finite"
+    },
+    {
+      "pass": true,
+      "message": "grau-almacen focus is finite"
+    },
+    {
+      "pass": true,
+      "message": "grau-almacen focus is finite"
+    },
+    {
+      "pass": true,
+      "message": "grau-cerchas focus is finite"
+    },
+    {
+      "pass": true,
+      "message": "grau-cerchas focus is finite"
+    },
+    {
+      "pass": true,
+      "message": "grau-sala-torre focus is finite"
+    },
+    {
+      "pass": true,
+      "message": "grau-sala-torre retains a visible ceiling for indoor camera"
+    },
+    {
+      "pass": true,
+      "message": "grau-sala-torre focus is finite"
+    },
+    {
+      "pass": true,
+      "message": "grau-sala-torre retains a visible ceiling for indoor camera"
+    },
+    {
+      "pass": true,
+      "message": "grau-boveda focus is finite"
+    },
+    {
+      "pass": true,
+      "message": "grau-boveda retains a visible ceiling for indoor camera"
+    },
+    {
+      "pass": true,
+      "message": "grau-boveda focus is finite"
+    },
+    {
+      "pass": true,
+      "message": "grau-boveda retains a visible ceiling for indoor camera"
+    },
+    {
+      "pass": true,
+      "message": "grau-terraza focus is finite"
+    },
+    {
+      "pass": true,
+      "message": "grau-terraza focus is finite"
+    },
+    {
+      "pass": true,
+      "message": "Closing section restores all components"
+    },
+    {
+      "pass": true,
+      "message": "Reading colors change the materials"
+    },
+    {
+      "pass": true,
+      "message": "Realistic materials are restored exactly"
+    },
+    {
+      "pass": true,
+      "message": "Room-wall highlighting stays continuous across the didactic section boundary"
+    },
+    {
+      "pass": true,
+      "message": "Instances do not share materials"
+    },
+    {
+      "pass": true,
+      "message": "Instances do not share textures"
+    },
+    {
+      "pass": true,
+      "message": "Disposal is idempotent and covers every owned material"
+    }
+  ],
+  "errors": [],
+  "geometry": {
+    "meshes": 107,
+    "vertices": 134184,
+    "triangles": 44728,
+    "nonfinite": 0,
+    "zeroNormals": 0,
+    "degenerate": 0
+  },
+  "stats": {
+    "modelVersion": "v32",
+    "meshes": 107,
+    "triangles": 44728,
+    "architecturalFocuses": 20,
+    "interiorFocuses": 5,
+    "physicalDoors": 8,
+    "physicalWindows": 13,
+    "semanticComponents": 49,
+    "roofComponents": 16,
+    "resourcesOwned": true,
+    "modelledTowerRooms": 1,
+    "solidTowerBasement": true,
+    "exhibitionStations": 5,
+    "interpretiveMuseumLayout": true,
+    "catastroReferences": 28,
+    "cadastralParts": 57,
+    "coreParts": 6,
+    "contextParts": 0,
+    "contextDelegated": true,
+    "ancillaryOsmBuildings": 0,
+    "documentedTowerHeight": 10.7,
+    "batteryHeightFromDitch": 6,
+    "replicaCannons": 1,
+    "trees": 8,
+    "roofCutaway": "Didactic section of documented fabric; current museum fittings are interpreted"
+  },
+  "sectionSnapshots": [
+    {
+      "selected": "grau-conjunto",
+      "open": false,
+      "hiddenComponents": []
+    },
+    {
+      "selected": "grau-conjunto",
+      "open": true,
+      "hiddenComponents": [
+        "torre-terraza",
+        "torre-muros-altos",
+        "torre-parapetos",
+        "torre-silleria-alta",
+        "torre-canecillos",
+        "torre-gariton",
+        "torre-boveda",
+        "almacen-muros-altos",
+        "almacen-carpinterias",
+        "almacen-hastiales",
+        "recepcion-muros-altos",
+        "recepcion-hastiales",
+        "gariton-cubierta",
+        "almacen-cubierta",
+        "recepcion-cubierta",
+        "anexo-cubierta"
+      ]
+    },
+    {
+      "selected": "grau-almacen",
+      "open": false,
+      "hiddenComponents": []
+    },
+    {
+      "selected": "grau-almacen",
+      "open": true,
+      "hiddenComponents": [
+        "almacen-muros-altos",
+        "almacen-carpinterias",
+        "almacen-hastiales",
+        "almacen-cubierta"
+      ]
+    },
+    {
+      "selected": "grau-cerchas",
+      "open": false,
+      "hiddenComponents": []
+    },
+    {
+      "selected": "grau-cerchas",
+      "open": true,
+      "hiddenComponents": [
+        "almacen-muros-altos",
+        "almacen-carpinterias",
+        "almacen-hastiales",
+        "almacen-cubierta"
+      ]
+    },
+    {
+      "selected": "grau-sala-torre",
+      "open": false,
+      "hiddenComponents": []
+    },
+    {
+      "selected": "grau-sala-torre",
+      "open": true,
+      "hiddenComponents": []
+    },
+    {
+      "selected": "grau-boveda",
+      "open": false,
+      "hiddenComponents": []
+    },
+    {
+      "selected": "grau-boveda",
+      "open": true,
+      "hiddenComponents": []
+    },
+    {
+      "selected": "grau-terraza",
+      "open": false,
+      "hiddenComponents": []
+    },
+    {
+      "selected": "grau-terraza",
+      "open": true,
+      "hiddenComponents": []
+    }
+  ]
+}

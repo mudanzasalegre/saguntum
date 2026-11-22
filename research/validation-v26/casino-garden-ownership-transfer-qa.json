@@ -1,0 +1,100 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "label": "buildings preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "roads preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "excludedBuildingIds preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "excludedRoadIds preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "collisionPolygons preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "foundationPatches preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "heightReview preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "coreBuildingParts preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "focusSpecs preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "districtOutline preserved exactly",
+      "pass": true
+    },
+    {
+      "label": "New Gerencia paving outside Casino handoff",
+      "pass": true
+    },
+    {
+      "label": "All retained Gerencia points outside handoff",
+      "pass": true
+    },
+    {
+      "label": "Polygon holes preserved in triangulated area",
+      "pass": true
+    },
+    {
+      "label": "New Gerencia paving and Casino paving are disjoint",
+      "pass": true
+    },
+    {
+      "label": "No original external ground removed",
+      "pass": true
+    }
+  ],
+  "apply": true,
+  "affectedLines": {
+    "paths": 0,
+    "fences": 1,
+    "curbLines": 0,
+    "pavingJoints": 0,
+    "crossings": 0,
+    "parkingRows": 0
+  },
+  "removedPointFeatures": {
+    "trees": [],
+    "shrubs": [],
+    "benches": [],
+    "lamps": [],
+    "gates": []
+  },
+  "transferAreaM2": 1450.36,
+  "newStats": {
+    "buildingParts": 143,
+    "parentParcels": 47,
+    "osmBuildingFootprints": 1,
+    "sourceCoreParts": 42,
+    "roadFragments": 24,
+    "gardenPathFragments": 20,
+    "pavingAreaM2": 43493.15,
+    "pavingVertices": 9531,
+    "pavingTriangles": 14075,
+    "trees": 105,
+    "shrubs": 11,
+    "lamps": 14,
+    "benches": 4,
+    "gates": 1,
+    "boundarySegments": 3
+  },
+  "beforeSHA256": "da7b9797285b53da8976076421ff3560f0d66e4ead7ce5f42cc88c549957102f"
+}

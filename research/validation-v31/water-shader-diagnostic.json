@@ -1,0 +1,54 @@
+{
+  "pass": true,
+  "method": "Standalone EGL/Mesa shader compilation and diagnostic patch, not browser/application QA",
+  "renderer": "llvmpipe (LLVM 19.1.7, 256 bits)",
+  "glVersion": "OpenGL ES 3.2 Mesa 25.0.7-2+deb13u1",
+  "glslVersion": "OpenGL ES GLSL ES 3.20",
+  "compiledVariants": [
+    "Native vertex + new fragment, fog/ACES/sRGB, no shadows",
+    "Native vertex + new fragment, directional PCF soft shadow path"
+  ],
+  "metrics": [
+    {
+      "label": "Cerca · luz de día",
+      "colourStdDev": [
+        32.26270073400904,
+        44.83099374391349,
+        50.67928888045971
+      ],
+      "frameDeltaMean8Bit": 0.030030833333333333,
+      "whiteClippingFraction": 0.0
+    },
+    {
+      "label": "Cerca · luz dorada",
+      "colourStdDev": [
+        31.925236065245734,
+        44.19772014176928,
+        48.56885703142905
+      ],
+      "frameDeltaMean8Bit": 0.029901666666666667,
+      "whiteClippingFraction": 0.0
+    },
+    {
+      "label": "Vista general · luz de día",
+      "colourStdDev": [
+        44.33521258646516,
+        35.93629384557996,
+        38.325493561346114
+      ],
+      "frameDeltaMean8Bit": 0.033365,
+      "whiteClippingFraction": 0.0
+    },
+    {
+      "label": "Vista general · luz dorada",
+      "colourStdDev": [
+        21.141237974717654,
+        23.96977206650845,
+        27.582342892026308
+      ],
+      "frameDeltaMean8Bit": 0.003735,
+      "whiteClippingFraction": 0.0
+    }
+  ],
+  "image": "water-shader-diagnostic.png"
+}

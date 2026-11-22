@@ -1,0 +1,2251 @@
+{
+  "generatedAt": "2026-11-19T14:46:39.795Z",
+  "pass": true,
+  "renderer": "@napi-rs/canvas",
+  "scenarioCount": 272,
+  "checksCount": 24464,
+  "elapsedMs": 14708,
+  "planComponents": 21,
+  "surfaces": [
+    {
+      "id": "minimap",
+      "width": 460,
+      "height": 230,
+      "large": false,
+      "insets": {},
+      "showLabels": true
+    },
+    {
+      "id": "modal",
+      "width": 1200,
+      "height": 650,
+      "large": true,
+      "insets": {},
+      "showLabels": true
+    },
+    {
+      "id": "desktop-fallback",
+      "width": 1363,
+      "height": 936,
+      "large": true,
+      "insets": {
+        "left": 424,
+        "right": 80,
+        "top": 108,
+        "bottom": 80
+      },
+      "showLabels": false
+    },
+    {
+      "id": "mobile-fallback",
+      "width": 390,
+      "height": 844,
+      "large": true,
+      "insets": {
+        "left": 16,
+        "right": 16,
+        "top": 124,
+        "bottom": 434
+      },
+      "showLabels": false
+    }
+  ],
+  "selections": [
+    null,
+    "teatro-conjunto",
+    "teatro-aditus-oriental",
+    "teatro-orchestra",
+    "teatro-ima-cavea",
+    "teatro-media-cavea",
+    "teatro-summa-cavea",
+    "teatro-vomitoria",
+    "teatro-portico",
+    "teatro-tribunalia",
+    "teatro-proscaenium",
+    "teatro-frons-scaenae",
+    "teatro-basilicas",
+    "teatro-hyposcaenium",
+    "teatro-cloaca",
+    "teatro-restauracion",
+    "teatro-vivo"
+  ],
+  "scenarios": [
+    {
+      "id": "minimap/dark/materials/none",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 11.387172189137766,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/dark/materials/teatro-conjunto",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/dark/materials/teatro-aditus-oriental",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/dark/materials/teatro-orchestra",
+      "pass": true,
+      "minimumDistance": 17.066356499563963,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/dark/materials/teatro-ima-cavea",
+      "pass": true,
+      "minimumDistance": 17.75574962189642,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/dark/materials/teatro-media-cavea",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/dark/materials/teatro-summa-cavea",
+      "pass": true,
+      "minimumDistance": 17.066356499563966,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/dark/materials/teatro-vomitoria",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/dark/materials/teatro-portico",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/dark/materials/teatro-tribunalia",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/dark/materials/teatro-proscaenium",
+      "pass": true,
+      "minimumDistance": 17.066356499563963,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/dark/materials/teatro-frons-scaenae",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/dark/materials/teatro-basilicas",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/dark/materials/teatro-hyposcaenium",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/dark/materials/teatro-cloaca",
+      "pass": true,
+      "minimumDistance": 17.15169715478159,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/dark/materials/teatro-restauracion",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/dark/materials/teatro-vivo",
+      "pass": true,
+      "minimumDistance": 17.75574962189642,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/dark/periods/none",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/dark/periods/teatro-conjunto",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/dark/periods/teatro-aditus-oriental",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/dark/periods/teatro-orchestra",
+      "pass": true,
+      "minimumDistance": 17.066356499563963,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/dark/periods/teatro-ima-cavea",
+      "pass": true,
+      "minimumDistance": 17.75574962189642,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/dark/periods/teatro-media-cavea",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/dark/periods/teatro-summa-cavea",
+      "pass": true,
+      "minimumDistance": 17.066356499563966,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/dark/periods/teatro-vomitoria",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/dark/periods/teatro-portico",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/dark/periods/teatro-tribunalia",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/dark/periods/teatro-proscaenium",
+      "pass": true,
+      "minimumDistance": 17.066356499563963,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/dark/periods/teatro-frons-scaenae",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/dark/periods/teatro-basilicas",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/dark/periods/teatro-hyposcaenium",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/dark/periods/teatro-cloaca",
+      "pass": true,
+      "minimumDistance": 17.15169715478159,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/dark/periods/teatro-restauracion",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/dark/periods/teatro-vivo",
+      "pass": true,
+      "minimumDistance": 17.75574962189642,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/light/materials/none",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 12.497000555550652,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/light/materials/teatro-conjunto",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/light/materials/teatro-aditus-oriental",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/light/materials/teatro-orchestra",
+      "pass": true,
+      "minimumDistance": 17.066356499563963,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/light/materials/teatro-ima-cavea",
+      "pass": true,
+      "minimumDistance": 17.75574962189642,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/light/materials/teatro-media-cavea",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/light/materials/teatro-summa-cavea",
+      "pass": true,
+      "minimumDistance": 17.066356499563966,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/light/materials/teatro-vomitoria",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/light/materials/teatro-portico",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/light/materials/teatro-tribunalia",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/light/materials/teatro-proscaenium",
+      "pass": true,
+      "minimumDistance": 17.066356499563963,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/light/materials/teatro-frons-scaenae",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/light/materials/teatro-basilicas",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/light/materials/teatro-hyposcaenium",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/light/materials/teatro-cloaca",
+      "pass": true,
+      "minimumDistance": 17.15169715478159,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/light/materials/teatro-restauracion",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/light/materials/teatro-vivo",
+      "pass": true,
+      "minimumDistance": 17.75574962189642,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/light/periods/none",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/light/periods/teatro-conjunto",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/light/periods/teatro-aditus-oriental",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/light/periods/teatro-orchestra",
+      "pass": true,
+      "minimumDistance": 17.066356499563963,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/light/periods/teatro-ima-cavea",
+      "pass": true,
+      "minimumDistance": 17.75574962189642,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/light/periods/teatro-media-cavea",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/light/periods/teatro-summa-cavea",
+      "pass": true,
+      "minimumDistance": 17.066356499563966,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/light/periods/teatro-vomitoria",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/light/periods/teatro-portico",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/light/periods/teatro-tribunalia",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/light/periods/teatro-proscaenium",
+      "pass": true,
+      "minimumDistance": 17.066356499563963,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/light/periods/teatro-frons-scaenae",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/light/periods/teatro-basilicas",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/light/periods/teatro-hyposcaenium",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/light/periods/teatro-cloaca",
+      "pass": true,
+      "minimumDistance": 17.15169715478159,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/light/periods/teatro-restauracion",
+      "pass": true,
+      "minimumDistance": 17.948907064237012,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "minimap/light/periods/teatro-vivo",
+      "pass": true,
+      "minimumDistance": 17.75574962189642,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 783,
+      "components": 21
+    },
+    {
+      "id": "modal/dark/materials/none",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 11.387172189137766,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/dark/materials/teatro-conjunto",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/dark/materials/teatro-aditus-oriental",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/dark/materials/teatro-orchestra",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/dark/materials/teatro-ima-cavea",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/dark/materials/teatro-media-cavea",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/dark/materials/teatro-summa-cavea",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/dark/materials/teatro-vomitoria",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/dark/materials/teatro-portico",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/dark/materials/teatro-tribunalia",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/dark/materials/teatro-proscaenium",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/dark/materials/teatro-frons-scaenae",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/dark/materials/teatro-basilicas",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/dark/materials/teatro-hyposcaenium",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/dark/materials/teatro-cloaca",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/dark/materials/teatro-restauracion",
+      "pass": true,
+      "minimumDistance": 32.02215036656584,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/dark/materials/teatro-vivo",
+      "pass": true,
+      "minimumDistance": 32.10460176391737,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/dark/periods/none",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/dark/periods/teatro-conjunto",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/dark/periods/teatro-aditus-oriental",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/dark/periods/teatro-orchestra",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/dark/periods/teatro-ima-cavea",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/dark/periods/teatro-media-cavea",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/dark/periods/teatro-summa-cavea",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/dark/periods/teatro-vomitoria",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/dark/periods/teatro-portico",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/dark/periods/teatro-tribunalia",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/dark/periods/teatro-proscaenium",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/dark/periods/teatro-frons-scaenae",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/dark/periods/teatro-basilicas",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/dark/periods/teatro-hyposcaenium",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/dark/periods/teatro-cloaca",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/dark/periods/teatro-restauracion",
+      "pass": true,
+      "minimumDistance": 32.02215036656584,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/dark/periods/teatro-vivo",
+      "pass": true,
+      "minimumDistance": 32.10460176391737,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/light/materials/none",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 12.497000555550652,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/light/materials/teatro-conjunto",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/light/materials/teatro-aditus-oriental",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/light/materials/teatro-orchestra",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/light/materials/teatro-ima-cavea",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/light/materials/teatro-media-cavea",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/light/materials/teatro-summa-cavea",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/light/materials/teatro-vomitoria",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/light/materials/teatro-portico",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/light/materials/teatro-tribunalia",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/light/materials/teatro-proscaenium",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/light/materials/teatro-frons-scaenae",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/light/materials/teatro-basilicas",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/light/materials/teatro-hyposcaenium",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/light/materials/teatro-cloaca",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/light/materials/teatro-restauracion",
+      "pass": true,
+      "minimumDistance": 32.02215036656584,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/light/materials/teatro-vivo",
+      "pass": true,
+      "minimumDistance": 32.10460176391737,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/light/periods/none",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/light/periods/teatro-conjunto",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/light/periods/teatro-aditus-oriental",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/light/periods/teatro-orchestra",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/light/periods/teatro-ima-cavea",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/light/periods/teatro-media-cavea",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/light/periods/teatro-summa-cavea",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/light/periods/teatro-vomitoria",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/light/periods/teatro-portico",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/light/periods/teatro-tribunalia",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/light/periods/teatro-proscaenium",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/light/periods/teatro-frons-scaenae",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/light/periods/teatro-basilicas",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/light/periods/teatro-hyposcaenium",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/light/periods/teatro-cloaca",
+      "pass": true,
+      "minimumDistance": 33.06347132726911,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/light/periods/teatro-restauracion",
+      "pass": true,
+      "minimumDistance": 32.02215036656584,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "modal/light/periods/teatro-vivo",
+      "pass": true,
+      "minimumDistance": 32.10460176391737,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 11865,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/dark/materials/none",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 11.387172189137766,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/dark/materials/teatro-conjunto",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/dark/materials/teatro-aditus-oriental",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/dark/materials/teatro-orchestra",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/dark/materials/teatro-ima-cavea",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/dark/materials/teatro-media-cavea",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/dark/materials/teatro-summa-cavea",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/dark/materials/teatro-vomitoria",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/dark/materials/teatro-portico",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/dark/materials/teatro-tribunalia",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/dark/materials/teatro-proscaenium",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/dark/materials/teatro-frons-scaenae",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/dark/materials/teatro-basilicas",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/dark/materials/teatro-hyposcaenium",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/dark/materials/teatro-cloaca",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/dark/materials/teatro-restauracion",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/dark/materials/teatro-vivo",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/dark/periods/none",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/dark/periods/teatro-conjunto",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/dark/periods/teatro-aditus-oriental",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/dark/periods/teatro-orchestra",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/dark/periods/teatro-ima-cavea",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/dark/periods/teatro-media-cavea",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/dark/periods/teatro-summa-cavea",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/dark/periods/teatro-vomitoria",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/dark/periods/teatro-portico",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/dark/periods/teatro-tribunalia",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/dark/periods/teatro-proscaenium",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/dark/periods/teatro-frons-scaenae",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/dark/periods/teatro-basilicas",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/dark/periods/teatro-hyposcaenium",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/dark/periods/teatro-cloaca",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/dark/periods/teatro-restauracion",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/dark/periods/teatro-vivo",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/light/materials/none",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 12.497000555550652,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/light/materials/teatro-conjunto",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/light/materials/teatro-aditus-oriental",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/light/materials/teatro-orchestra",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/light/materials/teatro-ima-cavea",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/light/materials/teatro-media-cavea",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/light/materials/teatro-summa-cavea",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/light/materials/teatro-vomitoria",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/light/materials/teatro-portico",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/light/materials/teatro-tribunalia",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/light/materials/teatro-proscaenium",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/light/materials/teatro-frons-scaenae",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/light/materials/teatro-basilicas",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/light/materials/teatro-hyposcaenium",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/light/materials/teatro-cloaca",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/light/materials/teatro-restauracion",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/light/materials/teatro-vivo",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/light/periods/none",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/light/periods/teatro-conjunto",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/light/periods/teatro-aditus-oriental",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/light/periods/teatro-orchestra",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/light/periods/teatro-ima-cavea",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/light/periods/teatro-media-cavea",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/light/periods/teatro-summa-cavea",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/light/periods/teatro-vomitoria",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/light/periods/teatro-portico",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/light/periods/teatro-tribunalia",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/light/periods/teatro-proscaenium",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/light/periods/teatro-frons-scaenae",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/light/periods/teatro-basilicas",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/light/periods/teatro-hyposcaenium",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/light/periods/teatro-cloaca",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/light/periods/teatro-restauracion",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "desktop-fallback/light/periods/teatro-vivo",
+      "pass": true,
+      "minimumDistance": 33.45442852919295,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 18340,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/dark/materials/none",
+      "pass": true,
+      "minimumDistance": 32.80317706082788,
+      "minimumContrast": 11.387172189137766,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/dark/materials/teatro-conjunto",
+      "pass": true,
+      "minimumDistance": 32.80317706082788,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/dark/materials/teatro-aditus-oriental",
+      "pass": true,
+      "minimumDistance": 32.80317706082788,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/dark/materials/teatro-orchestra",
+      "pass": true,
+      "minimumDistance": 32.17237396794276,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/dark/materials/teatro-ima-cavea",
+      "pass": true,
+      "minimumDistance": 32.17237396794276,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/dark/materials/teatro-media-cavea",
+      "pass": true,
+      "minimumDistance": 32.17237396794276,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/dark/materials/teatro-summa-cavea",
+      "pass": true,
+      "minimumDistance": 32.68319094833744,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/dark/materials/teatro-vomitoria",
+      "pass": true,
+      "minimumDistance": 32.19802319153438,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/dark/materials/teatro-portico",
+      "pass": true,
+      "minimumDistance": 33.39149609245317,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/dark/materials/teatro-tribunalia",
+      "pass": true,
+      "minimumDistance": 33.62953842645177,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/dark/materials/teatro-proscaenium",
+      "pass": true,
+      "minimumDistance": 33.39149609245317,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/dark/materials/teatro-frons-scaenae",
+      "pass": true,
+      "minimumDistance": 35.458399197750175,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/dark/materials/teatro-basilicas",
+      "pass": true,
+      "minimumDistance": 32.80317706082788,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/dark/materials/teatro-hyposcaenium",
+      "pass": true,
+      "minimumDistance": 33.6915140578983,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/dark/materials/teatro-cloaca",
+      "pass": true,
+      "minimumDistance": 33.39149609245317,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/dark/materials/teatro-restauracion",
+      "pass": true,
+      "minimumDistance": 33.120784303129284,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/dark/materials/teatro-vivo",
+      "pass": true,
+      "minimumDistance": 33.39149609245317,
+      "minimumContrast": 8.17778634186912,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/dark/periods/none",
+      "pass": true,
+      "minimumDistance": 32.80317706082788,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/dark/periods/teatro-conjunto",
+      "pass": true,
+      "minimumDistance": 32.80317706082788,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/dark/periods/teatro-aditus-oriental",
+      "pass": true,
+      "minimumDistance": 32.80317706082788,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/dark/periods/teatro-orchestra",
+      "pass": true,
+      "minimumDistance": 32.17237396794276,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/dark/periods/teatro-ima-cavea",
+      "pass": true,
+      "minimumDistance": 32.17237396794276,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/dark/periods/teatro-media-cavea",
+      "pass": true,
+      "minimumDistance": 32.17237396794276,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/dark/periods/teatro-summa-cavea",
+      "pass": true,
+      "minimumDistance": 32.68319094833744,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/dark/periods/teatro-vomitoria",
+      "pass": true,
+      "minimumDistance": 32.19802319153438,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/dark/periods/teatro-portico",
+      "pass": true,
+      "minimumDistance": 33.39149609245317,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/dark/periods/teatro-tribunalia",
+      "pass": true,
+      "minimumDistance": 33.62953842645177,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/dark/periods/teatro-proscaenium",
+      "pass": true,
+      "minimumDistance": 33.39149609245317,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/dark/periods/teatro-frons-scaenae",
+      "pass": true,
+      "minimumDistance": 35.458399197750175,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/dark/periods/teatro-basilicas",
+      "pass": true,
+      "minimumDistance": 32.80317706082788,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/dark/periods/teatro-hyposcaenium",
+      "pass": true,
+      "minimumDistance": 33.6915140578983,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/dark/periods/teatro-cloaca",
+      "pass": true,
+      "minimumDistance": 33.39149609245317,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/dark/periods/teatro-restauracion",
+      "pass": true,
+      "minimumDistance": 33.120784303129284,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/dark/periods/teatro-vivo",
+      "pass": true,
+      "minimumDistance": 33.39149609245317,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/light/materials/none",
+      "pass": true,
+      "minimumDistance": 32.80317706082788,
+      "minimumContrast": 12.497000555550652,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/light/materials/teatro-conjunto",
+      "pass": true,
+      "minimumDistance": 32.80317706082788,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/light/materials/teatro-aditus-oriental",
+      "pass": true,
+      "minimumDistance": 32.80317706082788,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/light/materials/teatro-orchestra",
+      "pass": true,
+      "minimumDistance": 32.17237396794276,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/light/materials/teatro-ima-cavea",
+      "pass": true,
+      "minimumDistance": 32.17237396794276,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/light/materials/teatro-media-cavea",
+      "pass": true,
+      "minimumDistance": 32.17237396794276,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/light/materials/teatro-summa-cavea",
+      "pass": true,
+      "minimumDistance": 32.68319094833744,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/light/materials/teatro-vomitoria",
+      "pass": true,
+      "minimumDistance": 32.19802319153438,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/light/materials/teatro-portico",
+      "pass": true,
+      "minimumDistance": 33.39149609245317,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/light/materials/teatro-tribunalia",
+      "pass": true,
+      "minimumDistance": 33.62953842645177,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/light/materials/teatro-proscaenium",
+      "pass": true,
+      "minimumDistance": 33.39149609245317,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/light/materials/teatro-frons-scaenae",
+      "pass": true,
+      "minimumDistance": 35.458399197750175,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/light/materials/teatro-basilicas",
+      "pass": true,
+      "minimumDistance": 32.80317706082788,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/light/materials/teatro-hyposcaenium",
+      "pass": true,
+      "minimumDistance": 33.6915140578983,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/light/materials/teatro-cloaca",
+      "pass": true,
+      "minimumDistance": 33.39149609245317,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/light/materials/teatro-restauracion",
+      "pass": true,
+      "minimumDistance": 33.120784303129284,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/light/materials/teatro-vivo",
+      "pass": true,
+      "minimumDistance": 33.39149609245317,
+      "minimumContrast": 6.788885385138357,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/light/periods/none",
+      "pass": true,
+      "minimumDistance": 32.80317706082788,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/light/periods/teatro-conjunto",
+      "pass": true,
+      "minimumDistance": 32.80317706082788,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/light/periods/teatro-aditus-oriental",
+      "pass": true,
+      "minimumDistance": 32.80317706082788,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/light/periods/teatro-orchestra",
+      "pass": true,
+      "minimumDistance": 32.17237396794276,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/light/periods/teatro-ima-cavea",
+      "pass": true,
+      "minimumDistance": 32.17237396794276,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/light/periods/teatro-media-cavea",
+      "pass": true,
+      "minimumDistance": 32.17237396794276,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/light/periods/teatro-summa-cavea",
+      "pass": true,
+      "minimumDistance": 32.68319094833744,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/light/periods/teatro-vomitoria",
+      "pass": true,
+      "minimumDistance": 32.19802319153438,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/light/periods/teatro-portico",
+      "pass": true,
+      "minimumDistance": 33.39149609245317,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/light/periods/teatro-tribunalia",
+      "pass": true,
+      "minimumDistance": 33.62953842645177,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/light/periods/teatro-proscaenium",
+      "pass": true,
+      "minimumDistance": 33.39149609245317,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/light/periods/teatro-frons-scaenae",
+      "pass": true,
+      "minimumDistance": 35.458399197750175,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/light/periods/teatro-basilicas",
+      "pass": true,
+      "minimumDistance": 32.80317706082788,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/light/periods/teatro-hyposcaenium",
+      "pass": true,
+      "minimumDistance": 33.6915140578983,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/light/periods/teatro-cloaca",
+      "pass": true,
+      "minimumDistance": 33.39149609245317,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/light/periods/teatro-restauracion",
+      "pass": true,
+      "minimumDistance": 33.120784303129284,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 2160,
+      "components": 21
+    },
+    {
+      "id": "mobile-fallback/light/periods/teatro-vivo",
+      "pass": true,
+      "minimumDistance": 33.39149609245317,
+      "minimumContrast": 5.515681945312483,
+      "shadeCells": 2160,
+      "components": 21
+    }
+  ],
+  "failures": []
+}

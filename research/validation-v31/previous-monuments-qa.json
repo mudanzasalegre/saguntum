@@ -1,0 +1,291 @@
+{
+  "pass": true,
+  "baselineCommit": "8f1f5325e46876ec4688331017e3b466412418cb",
+  "preservedAssets": 232,
+  "unchangedDataFiles": 117,
+  "allowedIntegrationFiles": {
+    "dist/js/app.js": "Two coastal visits and their region, light and inspection integration.",
+    "dist/js/coast.js": "Coastal model, context and retained road segments.",
+    "dist/js/coast-pier.js": "Requested terrestrial and maritime Pantalán geometry.",
+    "dist/js/coast-environment.js": "Requested coastal water, light and inspection rendering.",
+    "dist/js/city.js": "Additional coastal detail area alongside existing detail regions.",
+    "dist/js/castle-panel.js": "Shared guide presentation-mode and related-visit controls.",
+    "dist/index.html": "Two additional guide panels; existing brand and home preserved.",
+    "dist/style.css": "Coastal guide and shared presentation controls.",
+    "dist/assets/data/coast-pier.json": "V31 coastal metadata and mapped promenade kiosk."
+  },
+  "changedAllowedFiles": [
+    "dist/assets/data/coast-pier.json",
+    "dist/index.html",
+    "dist/js/app.js",
+    "dist/js/castle-panel.js",
+    "dist/js/city.js",
+    "dist/js/coast-environment.js",
+    "dist/js/coast-pier.js",
+    "dist/js/coast.js",
+    "dist/style.css"
+  ],
+  "atlasPlaceIds": [
+    "barrio-obrero",
+    "begona",
+    "berenguer",
+    "calvario",
+    "casino",
+    "castle",
+    "circo",
+    "diana",
+    "domus",
+    "dunas-almarda",
+    "economato",
+    "gerencia",
+    "grau-vell",
+    "horno",
+    "juderia",
+    "marjal-moros",
+    "museo",
+    "museo-industrial",
+    "necropolis",
+    "pantalan-maritimo",
+    "pantalan-paseo",
+    "plaza-mayor",
+    "portic",
+    "puerto-antiguo",
+    "rio-palancia",
+    "salvador",
+    "sanatorio",
+    "sangre",
+    "santa-maria",
+    "talleres",
+    "theatre"
+  ],
+  "guidedVisitIds": [
+    "castle",
+    "theatre",
+    "santa-maria",
+    "plaza-mayor",
+    "juderia",
+    "calvario",
+    "berenguer",
+    "diana",
+    "sangre",
+    "salvador",
+    "museo",
+    "portic",
+    "domus",
+    "circo",
+    "necropolis",
+    "horno",
+    "talleres",
+    "museo-industrial",
+    "gerencia",
+    "casino",
+    "begona",
+    "economato",
+    "barrio-obrero",
+    "sanatorio",
+    "pantalan-paseo",
+    "pantalan-maritimo"
+  ],
+  "checks": [
+    {
+      "pass": true,
+      "label": "All V30 distribution assets outside the nine declared coastal/shared integrations remain byte-identical"
+    },
+    {
+      "pass": true,
+      "label": "The two coastal place IDs and order are unchanged"
+    },
+    {
+      "pass": true,
+      "label": "Registered coastal title is unchanged"
+    },
+    {
+      "pass": true,
+      "label": "Registered coastal historicalDate is unchanged"
+    },
+    {
+      "pass": true,
+      "label": "Registered coastal axis is unchanged"
+    },
+    {
+      "pass": true,
+      "label": "Registered coastal preservedSupports is unchanged"
+    },
+    {
+      "pass": true,
+      "label": "Registered coastal sideSupports is unchanged"
+    },
+    {
+      "pass": true,
+      "label": "Registered coastal sources is unchanged"
+    },
+    {
+      "pass": true,
+      "label": "pantalan-paseo preserves registered location, dimensions, historical content and sources"
+    },
+    {
+      "pass": true,
+      "label": "pantalan-paseo original atlas coordinate is unchanged"
+    },
+    {
+      "pass": true,
+      "label": "pantalan-maritimo preserves registered location, dimensions, historical content and sources"
+    },
+    {
+      "pass": true,
+      "label": "pantalan-maritimo original atlas coordinate is unchanged"
+    },
+    {
+      "pass": true,
+      "label": "The added promenade envelope identifies its mapped kiosk"
+    },
+    {
+      "pass": true,
+      "label": "V30 has84 initial requests and V31 has89"
+    },
+    {
+      "pass": true,
+      "label": "The84 existing dataset slots remain unchanged; exactly five coastal datasets are appended"
+    },
+    {
+      "pass": true,
+      "label": "Detailed visits grow from24 to26"
+    },
+    {
+      "pass": true,
+      "label": "All previous detailed visit IDs and order are preserved"
+    },
+    {
+      "pass": true,
+      "label": "The original historic-centre catalog is byte-identical"
+    },
+    {
+      "pass": true,
+      "label": "All31 atlas place IDs are preserved"
+    },
+    {
+      "pass": true,
+      "label": "Every pre-existing HTML ID is retained"
+    },
+    {
+      "pass": true,
+      "label": "The global SAGUNTUM title is intact"
+    },
+    {
+      "pass": true,
+      "label": "The brand and home link are intact"
+    },
+    {
+      "pass": true,
+      "label": "The welcome screen retains the complete atlas count"
+    },
+    {
+      "pass": true,
+      "label": "Empty and general home hashes resolve to the atlas"
+    },
+    {
+      "pass": true,
+      "label": "castle guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "theatre guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "santa-maria guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "plaza-mayor guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "juderia guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "calvario guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "berenguer guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "diana guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "sangre guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "salvador guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "museo guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "portic guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "domus guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "circo guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "necropolis guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "horno guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "talleres guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "museo-industrial guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "gerencia guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "casino guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "begona guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "economato guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "barrio-obrero guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "sanatorio guided panel remains available"
+    },
+    {
+      "pass": true,
+      "label": "Every original non-Pantalán JSON dataset remains byte-identical"
+    }
+  ],
+  "failures": [],
+  "limitations": [
+    "Shared controller semantics are validated separately; this report verifies source preservation, identity, request order and registry integrity."
+  ]
+}

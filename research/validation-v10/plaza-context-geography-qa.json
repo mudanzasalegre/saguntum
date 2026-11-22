@@ -1,0 +1,205 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "pass": true,
+      "label": "94 source parts, 36 neighbouring parcels"
+    },
+    {
+      "pass": true,
+      "label": "all source outlines and courtyard rings are unchanged"
+    },
+    {
+      "pass": true,
+      "label": "context source IDs are unique"
+    },
+    {
+      "pass": true,
+      "label": "no Santa Maria source part is replaced"
+    },
+    {
+      "pass": true,
+      "label": "Santa Maria retains 44 parts in 16 parcels"
+    },
+    {
+      "pass": true,
+      "label": "no new part substantially overlaps retained monuments or Santa Maria",
+      "detail": 0.01262856241877638
+    },
+    {
+      "pass": true,
+      "label": "only sub-metre source boundary discrepancies occur against the core",
+      "detail": 0.6268418211022063
+    },
+    {
+      "pass": true,
+      "label": "core source parts are not rendered again as context"
+    },
+    {
+      "pass": true,
+      "label": "every selected part suppresses its generic city duplicate"
+    },
+    {
+      "pass": true,
+      "label": "all mapped courtyard openings remain in topology"
+    },
+    {
+      "pass": true,
+      "label": "Almudin is assigned to documented parcel 17 with all five source parts"
+    },
+    {
+      "pass": true,
+      "label": "Almudin detached rear body and mapped gap are retained",
+      "detail": {
+        "gapM": 1.2915770603125156,
+        "frontM2": 32.883175726613004,
+        "rearM2": 154.91547431283306
+      }
+    },
+    {
+      "pass": true,
+      "label": "core includes the two missing addresses 16 and 17"
+    },
+    {
+      "pass": true,
+      "label": "partial approach roads retain the generic continuation outside the detail area"
+    },
+    {
+      "pass": true,
+      "label": "fully replaced approach roads suppress duplicate ribbons"
+    },
+    {
+      "pass": true,
+      "label": "public surfaces do not intrude into protected building footprints"
+    }
+  ],
+  "stats": {
+    "coreBuildings": 13,
+    "coreCadastralParts": 53,
+    "contextParts": 94,
+    "contextParcels": 36,
+    "OSMDuplicates": [
+      "945460231",
+      "945460238"
+    ],
+    "protectedFootprints": 63,
+    "coreMatches": [
+      {
+        "osmId": "844866514",
+        "partCount": 5,
+        "parents": [
+          "3459618YJ3935G"
+        ],
+        "areaM2": 190.962
+      },
+      {
+        "osmId": "844866515",
+        "partCount": 8,
+        "parents": [
+          "3459617YJ3935G"
+        ],
+        "areaM2": 207.176
+      },
+      {
+        "osmId": "844866516",
+        "partCount": 4,
+        "parents": [
+          "3459616YJ3935G"
+        ],
+        "areaM2": 160.766
+      },
+      {
+        "osmId": "844866517",
+        "partCount": 4,
+        "parents": [
+          "3459615YJ3935G"
+        ],
+        "areaM2": 79.506
+      },
+      {
+        "osmId": "844866518",
+        "partCount": 6,
+        "parents": [
+          "3459614YJ3935G"
+        ],
+        "areaM2": 144.317
+      },
+      {
+        "osmId": "844866519",
+        "partCount": 5,
+        "parents": [
+          "3459613YJ3935G"
+        ],
+        "areaM2": 198.944
+      },
+      {
+        "osmId": "844866520",
+        "partCount": 5,
+        "parents": [
+          "3559104YJ3935H"
+        ],
+        "areaM2": 112.122
+      },
+      {
+        "osmId": "844866521",
+        "partCount": 2,
+        "parents": [
+          "3559103YJ3935H"
+        ],
+        "areaM2": 64.471
+      },
+      {
+        "osmId": "844866522",
+        "partCount": 1,
+        "parents": [
+          "3559102YJ3935H"
+        ],
+        "areaM2": 73.843
+      },
+      {
+        "osmId": "844866523",
+        "partCount": 3,
+        "parents": [
+          "3559105YJ3935H"
+        ],
+        "areaM2": 95.196
+      },
+      {
+        "osmId": "844866524",
+        "partCount": 2,
+        "parents": [
+          "3559101YJ3935H"
+        ],
+        "areaM2": 70.089
+      },
+      {
+        "osmId": "core-3459611YJ3935H",
+        "partCount": 5,
+        "parents": [
+          "3459611YJ3935H"
+        ],
+        "areaM2": 187.799
+      },
+      {
+        "osmId": "core-3459612YJ3935G",
+        "partCount": 3,
+        "parents": [
+          "3459612YJ3935G"
+        ],
+        "areaM2": 48.331
+      }
+    ]
+  },
+  "sourceBoundaryOverlapM2": {
+    "protectedTotal": 0.01262856241877638,
+    "coreTotal": 0.7658826136162731
+  },
+  "sourceHashes": {
+    "cartography": "a2b02f3311dfc3cc4b0a162400508364ce41f9ea875e77638e983e5065b23340",
+    "plaza-mayor-context": "1a0c282b1f15f1cf4ede43aee8a600a5a44675cc4ad8110c36656ad9d23d9fc7",
+    "santa-maria-context": "c10e11fbfe394de3344fa7d606570ecaa67cc11d918bd9f1ee6880d0dbee752e"
+  },
+  "limitations": [
+    "Sub-metre discrepancies where OSM and cadastral boundaries meet are retained and measured; no complete parcel is moved or removed to disguise them."
+  ]
+}

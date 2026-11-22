@@ -1,0 +1,469 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "pass": true,
+      "label": "Finite, non-degenerate Float32 geometry",
+      "detail": {
+        "finite": true,
+        "collapsed": 0,
+        "triangles": 10036
+      }
+    },
+    {
+      "pass": true,
+      "label": "No new mapped building part duplicates another detailed owner"
+    },
+    {
+      "pass": true,
+      "label": "All upgraded urban buildings retain their cadastral footprints"
+    },
+    {
+      "pass": true,
+      "label": "Existing mapped roads retain ownership"
+    },
+    {
+      "pass": true,
+      "label": "All five context focuses match actual guide stops"
+    },
+    {
+      "pass": true,
+      "label": "Outdoor stops use correct layers and finite registration"
+    },
+    {
+      "pass": true,
+      "label": "All photo-registered tree centres remain represented"
+    },
+    {
+      "pass": true,
+      "label": "Complete tree crowns clear buildings and entrance steps"
+    },
+    {
+      "pass": true,
+      "label": "Plan tree radius equals actual crown envelope"
+    },
+    {
+      "pass": true,
+      "label": "Actual rendered foliage vertices do not enter architecture",
+      "detail": {
+        "foliageVertices": 17280,
+        "inside": 0
+      }
+    },
+    {
+      "pass": true,
+      "label": "Context source hashes match current terrain and cartography"
+    },
+    {
+      "pass": true,
+      "label": "Ground rebind disposes replaced resources and does not accumulate meshes"
+    },
+    {
+      "pass": true,
+      "label": "All paving follows the final 5m atlas terrain mesh",
+      "detail": {
+        "samples": 986,
+        "maximumVertexErrorM": 0.000020979289896784492,
+        "maximumInteriorErrorM": 0.00001238489896734224
+      }
+    },
+    {
+      "pass": true,
+      "label": "Terrain-bound geometry remains finite and non-degenerate",
+      "detail": {
+        "finite": true,
+        "collapsed": 0,
+        "triangles": 10036
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears ground",
+      "detail": {
+        "id": "economato-acceso",
+        "kind": "offset"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears complete crown envelopes",
+      "detail": {
+        "id": "economato-acceso",
+        "kind": "offset",
+        "collisions": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears ground",
+      "detail": {
+        "id": "economato-acceso",
+        "kind": "closeOffset"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears complete crown envelopes",
+      "detail": {
+        "id": "economato-acceso",
+        "kind": "closeOffset",
+        "collisions": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears ground",
+      "detail": {
+        "id": "economato-entorno",
+        "kind": "offset"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears complete crown envelopes",
+      "detail": {
+        "id": "economato-entorno",
+        "kind": "offset",
+        "collisions": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears ground",
+      "detail": {
+        "id": "economato-entorno",
+        "kind": "closeOffset"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears complete crown envelopes",
+      "detail": {
+        "id": "economato-entorno",
+        "kind": "closeOffset",
+        "collisions": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears ground",
+      "detail": {
+        "id": "economato-arbolado",
+        "kind": "offset"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears complete crown envelopes",
+      "detail": {
+        "id": "economato-arbolado",
+        "kind": "offset",
+        "collisions": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears ground",
+      "detail": {
+        "id": "economato-arbolado",
+        "kind": "closeOffset"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears complete crown envelopes",
+      "detail": {
+        "id": "economato-arbolado",
+        "kind": "closeOffset",
+        "collisions": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears ground",
+      "detail": {
+        "id": "economato-frente-urbano",
+        "kind": "offset"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears complete crown envelopes",
+      "detail": {
+        "id": "economato-frente-urbano",
+        "kind": "offset",
+        "collisions": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears ground",
+      "detail": {
+        "id": "economato-frente-urbano",
+        "kind": "closeOffset"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears complete crown envelopes",
+      "detail": {
+        "id": "economato-frente-urbano",
+        "kind": "closeOffset",
+        "collisions": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears ground",
+      "detail": {
+        "id": "economato-ciudad-factoria",
+        "kind": "offset"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears complete crown envelopes",
+      "detail": {
+        "id": "economato-ciudad-factoria",
+        "kind": "offset",
+        "collisions": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears ground",
+      "detail": {
+        "id": "economato-ciudad-factoria",
+        "kind": "closeOffset"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Tour camera clears complete crown envelopes",
+      "detail": {
+        "id": "economato-ciudad-factoria",
+        "kind": "closeOffset",
+        "collisions": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "All surfaces and objects map to a documented guide reading layer"
+    },
+    {
+      "pass": true,
+      "label": "Textured material mode restores reversibly"
+    },
+    {
+      "pass": true,
+      "label": "Context selection resolves its real tour id",
+      "detail": {
+        "id": "economato-acceso"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Context selection resolves its real tour id",
+      "detail": {
+        "id": "economato-entorno"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Context selection resolves its real tour id",
+      "detail": {
+        "id": "economato-arbolado"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Context selection resolves its real tour id",
+      "detail": {
+        "id": "economato-frente-urbano"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Context selection resolves its real tour id",
+      "detail": {
+        "id": "economato-ciudad-factoria"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Named context groups retain an inspectable hierarchy"
+    },
+    {
+      "pass": true,
+      "label": "Complete disposal is idempotent"
+    }
+  ],
+  "stats": {
+    "ownedBuildings": 7,
+    "parentParcels": 6,
+    "reusedBuildingParts": 77,
+    "ownedRoads": 0,
+    "pavingAreaM2": 1885.71,
+    "transferredGroundAreaM2": 759.15,
+    "newGroundCoverageM2": 1126.57,
+    "pavingVertices": 819,
+    "pavingTriangles": 986,
+    "trees": 8,
+    "benches": 0,
+    "lamps": 0,
+    "paths": 0,
+    "contextFocuses": 5,
+    "treeCrownsAdjusted": 3,
+    "treeTrunksSuppressed": 0,
+    "meshes": 12,
+    "triangles": 10036,
+    "fixedEconomatoDatumM": 5.702451813868209,
+    "skippedTinyTriangles": 0
+  },
+  "trees": [
+    {
+      "id": "economato-tree-0",
+      "coordinate": [
+        -0.222065333,
+        39.658815844
+      ],
+      "baseM": 5,
+      "heightM": 7.6,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 4.11875758879044,
+      "sourceCrownRadiusM": 3.1,
+      "displayCrownParameterM": 2.6550060710323518,
+      "maximumHorizontalRadiusM": 3.66875758879044,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "economato-tree-1",
+      "coordinate": [
+        -0.221966667,
+        39.658733539
+      ],
+      "baseM": 5,
+      "heightM": 8.049999999999999,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 8.834973410393294,
+      "sourceCrownRadiusM": 3.4,
+      "displayCrownParameterM": 3.4,
+      "maximumHorizontalRadiusM": 4.6,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "economato-tree-2",
+      "coordinate": [
+        -0.221817333,
+        39.658675926
+      ],
+      "baseM": 5,
+      "heightM": 8.5,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 6.746804853376941,
+      "sourceCrownRadiusM": 3.7,
+      "displayCrownParameterM": 3.7,
+      "maximumHorizontalRadiusM": 4.975,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "economato-tree-3",
+      "coordinate": [
+        -0.221684,
+        39.658622428
+      ],
+      "baseM": 5,
+      "heightM": 7.6,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 5.070032437015778,
+      "sourceCrownRadiusM": 3.1,
+      "displayCrownParameterM": 3.1,
+      "maximumHorizontalRadiusM": 4.225,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "economato-tree-4",
+      "coordinate": [
+        -0.22158,
+        39.658657407
+      ],
+      "baseM": 5,
+      "heightM": 8.049999999999999,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 3.2038532582631842,
+      "sourceCrownRadiusM": 3.4,
+      "displayCrownParameterM": 1.923082606610547,
+      "maximumHorizontalRadiusM": 2.753853258263184,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "economato-tree-6",
+      "coordinate": [
+        -0.222012,
+        39.658828189
+      ],
+      "baseM": 5,
+      "heightM": 7.6,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 2.433900930834135,
+      "sourceCrownRadiusM": 3.1,
+      "displayCrownParameterM": 1.307120744667308,
+      "maximumHorizontalRadiusM": 1.9839009308341353,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "economato-tree-7",
+      "coordinate": [
+        -0.221772,
+        39.658614198
+      ],
+      "baseM": 5,
+      "heightM": 8.049999999999999,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 10.146273493900205,
+      "sourceCrownRadiusM": 3.4,
+      "displayCrownParameterM": 3.4,
+      "maximumHorizontalRadiusM": 4.6,
+      "requiredFacadeGapM": 0.45
+    },
+    {
+      "id": "economato-tree-8",
+      "coordinate": [
+        -0.221652,
+        39.658542181
+      ],
+      "baseM": 5,
+      "heightM": 8.5,
+      "photoPosition": true,
+      "dimensionsInterpretive": true,
+      "rendered": true,
+      "trunkInsideBuilding": false,
+      "nearestBuildingDistanceM": 12.124108055335885,
+      "sourceCrownRadiusM": 3.7,
+      "displayCrownParameterM": 3.7,
+      "maximumHorizontalRadiusM": 4.975,
+      "requiredFacadeGapM": 0.45
+    }
+  ]
+}

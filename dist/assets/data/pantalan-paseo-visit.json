@@ -1,0 +1,1139 @@
+{
+  "schemaVersion": 1,
+  "id": "pantalan-paseo",
+  "title": "Paseo del Pantalán y mirador",
+  "subtitle": "Sombras de madera, memoria industrial y horizonte",
+  "introduction": "Recorre el paseo desde la ciudad hasta el mirador, descubre la tolva recuperada y compara este espacio público con el eje industrial que lo precedió.",
+  "researchDate": "2026-11-21",
+  "regionsLabel": "Ámbitos de la visita",
+  "mapButtonLabel": "Plano del conjunto",
+  "overviewButtonLabel": "Ver el conjunto",
+  "readingModeLabel": "Leer el conjunto",
+  "readingModeNote": "Colores para relacionar espacio, estructura, memoria y entorno. No representan fases constructivas exactas.",
+  "timelineIntroduction": "La vida industrial del pantalán y su transformación contemporánea.",
+  "visitAriaLabel": "Visita a Paseo del Pantalán y mirador",
+  "mapInstructions": "Elige una parada y compara el estado actual con la recreación histórica.",
+  "mapNote": "Eje registrado sobre cartografía del atlas. Los puntos indican encuadres de observación aproximados.",
+  "visitNote": "Investigación revisada el 21 de noviembre de 2026. La obra terrestre de 2024, los restos marítimos y la recreación de hacia 1984–1987 se distinguen en toda la visita.",
+  "methodology": [
+    "Las fuentes de la obra terminada se contrastan con planos de ejecución, fotografías y documentación institucional posterior a los desmontajes.",
+    "La reconstrucción de maquinaria, detalles menores, alturas sin medición y materiales es interpretativa. No equivale a un levantamiento industrial completo.",
+    "La geolocalización reutiliza el eje, los apoyos y las huellas cartográficas ya registrados en el atlas. El inventario de puntos visibles no es un censo submarino.",
+    "La costa contemporánea permanece como contexto en ambas épocas; la vista histórica no restaura la línea de costa original.",
+    "Los anuncios de proyecto de 2026 no se convierten en una pasarela futura terminada. El estado actual sigue la documentación conservada disponible."
+  ],
+  "readingLegend": [
+    {
+      "id": "edificio",
+      "label": "El paseo en conjunto",
+      "color": "#d4b17c",
+      "note": "Una nueva relación entre la playa y el puerto."
+    },
+    {
+      "id": "espacios",
+      "label": "Espacios para quedarse",
+      "color": "#95bfc5",
+      "note": "Pavimentos, actividades y escala peatonal."
+    },
+    {
+      "id": "construccion",
+      "label": "Sombra y estructura",
+      "color": "#c79379",
+      "note": "Hormigón y madera a lo largo del eje."
+    },
+    {
+      "id": "memoria",
+      "label": "Memoria industrial",
+      "color": "#b7a1ca",
+      "note": "La tolva conservada y el transporte histórico."
+    },
+    {
+      "id": "entorno",
+      "label": "Ciudad, orilla y horizonte",
+      "color": "#91ae87",
+      "note": "Accesos, carril bici, mirador y escollera."
+    }
+  ],
+  "confidenceLegend": [
+    {
+      "id": "documented",
+      "label": "Documentado",
+      "note": "La fuente acredita el rasgo o la función, no cada medida de la maqueta."
+    },
+    {
+      "id": "interpretive",
+      "label": "Interpretación",
+      "note": "Aproximación visual de detalles, alturas o mecanismos sin levantamiento completo."
+    },
+    {
+      "id": "disputed",
+      "label": "Fuentes diferentes",
+      "note": "Una diferencia entre documentación, propuesta y obra terminada se mantiene explícita."
+    }
+  ],
+  "materialEvidenceLegend": [
+    {
+      "id": "conserved",
+      "label": "Elemento conservado",
+      "note": "Parte identificable en la documentación del estado actual."
+    },
+    {
+      "id": "rehabilitated",
+      "label": "Espacio recuperado",
+      "note": "Transformación contemporánea documentada."
+    },
+    {
+      "id": "mixed",
+      "label": "Lectura interpretativa",
+      "note": "Información histórica y detalles reconstruidos para explicar el conjunto."
+    }
+  ],
+  "presentationModes": [
+    {
+      "id": "current",
+      "label": "Estado actual",
+      "note": "Paseo abierto en 2024 y restos marítimos documentados después del desmontaje."
+    },
+    {
+      "id": "historical",
+      "label": "Hacia 1984–1987",
+      "note": "Recreación de la instalación industrial con la costa contemporánea como referencia."
+    }
+  ],
+  "relatedVisits": [
+    {
+      "id": "pantalan-maritimo",
+      "label": "Continuar por el pantalán marítimo",
+      "description": "Apoyos conservados, plataforma y funcionamiento histórico del cargadero."
+    }
+  ],
+  "regions": [
+    {
+      "id": "edificio",
+      "name": "El paseo en conjunto",
+      "aliases": [],
+      "summary": "Una nueva relación entre la playa y el puerto.",
+      "sourceIds": [
+        "p-apertura",
+        "p-historia"
+      ],
+      "stopIds": [
+        "pantalan-paseo-conjunto"
+      ],
+      "coordinate": [
+        -0.2090502,
+        39.6535893
+      ]
+    },
+    {
+      "id": "espacios",
+      "name": "Espacios para quedarse",
+      "aliases": [],
+      "summary": "Pavimentos, actividades y escala peatonal.",
+      "sourceIds": [
+        "p-accesible",
+        "p-apertura",
+        "p-foto-juegos",
+        "p-foto-paseo",
+        "p-osm"
+      ],
+      "stopIds": [
+        "pantalan-paseo-juegos",
+        "pantalan-paseo-recorrido"
+      ],
+      "coordinate": [
+        -0.2090502,
+        39.6535893
+      ]
+    },
+    {
+      "id": "construccion",
+      "name": "Sombra y estructura",
+      "aliases": [],
+      "summary": "Hormigón y madera a lo largo del eje.",
+      "sourceIds": [
+        "p-accesible",
+        "p-foto-pergola"
+      ],
+      "stopIds": [
+        "pantalan-paseo-pergolas"
+      ],
+      "coordinate": [
+        -0.2090502,
+        39.6535893
+      ]
+    },
+    {
+      "id": "memoria",
+      "name": "Memoria industrial",
+      "aliases": [],
+      "summary": "La tolva conservada y el transporte histórico.",
+      "sourceIds": [
+        "p-archivo",
+        "p-historia",
+        "p-tolva"
+      ],
+      "stopIds": [
+        "pantalan-paseo-tolva",
+        "pantalan-paseo-cinta"
+      ],
+      "coordinate": [
+        -0.2090502,
+        39.6535893
+      ]
+    },
+    {
+      "id": "entorno",
+      "name": "Ciudad, orilla y horizonte",
+      "aliases": [],
+      "summary": "Accesos, carril bici, mirador y escollera.",
+      "sourceIds": [
+        "p-accesible",
+        "p-apertura",
+        "p-foto-carril",
+        "p-foto-juegos",
+        "p-foto-rampa",
+        "p-foto-restos",
+        "p-pnoa"
+      ],
+      "stopIds": [
+        "pantalan-paseo-acceso",
+        "pantalan-paseo-carril",
+        "pantalan-paseo-mirador",
+        "pantalan-paseo-escollera"
+      ],
+      "coordinate": [
+        -0.2090502,
+        39.6535893
+      ]
+    }
+  ],
+  "stops": [
+    {
+      "id": "pantalan-paseo-conjunto",
+      "label": "El conjunto",
+      "title": "Del mineral al paseo",
+      "regionId": "edificio",
+      "period": "mixed",
+      "intro": "Sitúa el paseo entre la playa, el puerto y la antigua línea de carga.",
+      "narrative": "Empieza por la vista amplia y cambia de época para reconocer la transformación del mismo eje.",
+      "facts": [
+        {
+          "text": "El paseo abrió al público el 19 de julio de 2024.",
+          "sourceIds": [
+            "p-apertura"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La banda peatonal, las sombras de madera y el arranque del pantalán marítimo.",
+      "modelNote": "La escena histórica conserva el litoral contemporáneo como referencia. La frontera entre las dos visitas es una división del atlas.",
+      "sourceIds": [
+        "p-apertura",
+        "p-historia"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de observación registrado sobre el eje del modelo. Posición de cámara y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.2090820350506916,
+        39.65364105231122
+      ],
+      "coordinates": [
+        -0.2090820350506916,
+        39.65364105231122
+      ],
+      "coordinateSourceIds": [
+        "p-osm",
+        "p-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "edificio",
+      "floor": null,
+      "fabricStatus": "rehabilitated",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "elevation": 7,
+      "localTarget": [
+        180,
+        7,
+        -3
+      ],
+      "order": 1,
+      "cameraOffset": [
+        -1.3226917097842943,
+        260,
+        -433.0395484094275
+      ]
+    },
+    {
+      "id": "pantalan-paseo-acceso",
+      "label": "Accesos",
+      "title": "Subir desde la ciudad",
+      "regionId": "entorno",
+      "period": "contemporary",
+      "intro": "Acércate al encuentro con la Travesía del Mediterráneo.",
+      "narrative": "Los descansillos abren progresivamente la perspectiva; la rampa ofrece otra manera de alcanzar el paseo elevado.",
+      "facts": [
+        {
+          "text": "El acceso principal tiene tres tramos cortos de escaleras y una alternativa con pendiente próxima al 4 %.",
+          "sourceIds": [
+            "p-apertura"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Los muros laterales, el despiece del pavimento y los paneles de memoria industrial.",
+      "modelNote": "El trazado se interpreta sobre cartografía contemporánea. Los textos históricos de los paneles no se transcriben ni se inventan.",
+      "sourceIds": [
+        "p-apertura",
+        "p-foto-rampa"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de observación registrado sobre el eje del modelo. Posición de cámara y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.21161377255059882,
+        39.654828314101316
+      ],
+      "coordinates": [
+        -0.21161377255059882,
+        39.654828314101316
+      ],
+      "coordinateSourceIds": [
+        "p-osm",
+        "p-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "entorno",
+      "floor": null,
+      "fabricStatus": "rehabilitated",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "elevation": 3.7,
+      "localTarget": [
+        -74,
+        3.7,
+        -4
+      ],
+      "mode": "current",
+      "recommendedMode": "current",
+      "order": 2,
+      "cameraOffset": [
+        -12.49384799483094,
+        30,
+        -68.29277972291112
+      ]
+    },
+    {
+      "id": "pantalan-paseo-pergolas",
+      "label": "Siete pérgolas",
+      "title": "Una cubierta que acompaña el mar",
+      "regionId": "construccion",
+      "period": "contemporary",
+      "intro": "Mira la madera desde debajo y después gira hacia el eje del paseo.",
+      "narrative": "La repetición y la variación de las cubiertas permiten reconocer la profundidad del recorrido y la escala de las personas.",
+      "facts": [
+        {
+          "text": "Son siete pérgolas con unas 600 lamas de 7,5 m, transversales al paseo.",
+          "sourceIds": [
+            "p-accesible"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La descripción oficial publica alturas entre 7 y 11 m y vigas de hormigón sinuosas sobre pilares triangulares.",
+          "sourceIds": [
+            "p-accesible"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Las aristas achaflanadas de los pilares, el canto variable y las franjas de sombra.",
+      "modelNote": "Se respeta la cifra construida de siete. Distribución exacta, curva y altura individual de los módulos son aproximadas; el rango publicado no aporta un datum vertical completo.",
+      "sourceIds": [
+        "p-accesible",
+        "p-foto-pergola"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de observación registrado sobre el eje del modelo. Posición de cámara y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.20918455487944373,
+        39.65373629871467
+      ],
+      "coordinates": [
+        -0.20918455487944373,
+        39.65373629871467
+      ],
+      "coordinateSourceIds": [
+        "p-osm",
+        "p-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "construccion",
+      "floor": null,
+      "fabricStatus": "rehabilitated",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "elevation": 11.1,
+      "localTarget": [
+        167,
+        11.1,
+        -7.535303651927266
+      ],
+      "mode": "current",
+      "recommendedMode": "current",
+      "order": 3,
+      "cameraOffset": [
+        -2.25545167841231,
+        19,
+        -50.427303494499355
+      ]
+    },
+    {
+      "id": "pantalan-paseo-tolva",
+      "label": "Tolva recuperada",
+      "title": "Una máquina como memoria del trabajo",
+      "regionId": "memoria",
+      "period": "mixed",
+      "intro": "Acércate al bastidor y observa el embudo desde una vista baja.",
+      "narrative": "La forma deja leer un proceso: recibir un granel, concentrarlo y conducirlo hacia el punto de descarga.",
+      "facts": [
+        {
+          "text": "Una de las cinco tolvas de 50 m³ fue recuperada para el paseo.",
+          "sourceIds": [
+            "p-tolva"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Eran equipos desplazables con motor eléctrico y ruedas neumáticas; las cinco se trasladaron a tierra en 2022.",
+          "sourceIds": [
+            "p-tolva"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El recipiente, las costillas exteriores, las ruedas y el espacio libre bajo el bastidor.",
+      "modelNote": "Los pequeños mecanismos y espesores se interpretan; la maqueta no simula el funcionamiento de una máquina restaurada.",
+      "sourceIds": [
+        "p-tolva"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de observación registrado sobre el eje del modelo. Posición de cámara y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.2079099,
+        39.6531477
+      ],
+      "coordinates": [
+        -0.2079099,
+        39.6531477
+      ],
+      "coordinateSourceIds": [
+        "p-osm",
+        "p-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "memoria",
+      "floor": null,
+      "fabricStatus": "conserved",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "elevation": 9.1,
+      "localTarget": [
+        294.3547668318752,
+        9.1,
+        -7.903973841840539
+      ],
+      "mode": "current",
+      "recommendedMode": "current",
+      "order": 4,
+      "cameraOffset": [
+        -6.263752669106903,
+        5.2,
+        -28.31546225121985
+      ]
+    },
+    {
+      "id": "pantalan-paseo-juegos",
+      "label": "Actividades junto a la playa",
+      "title": "Una escala para quedarse",
+      "regionId": "espacios",
+      "period": "contemporary",
+      "intro": "Desplázate hacia las áreas abiertas al mar.",
+      "narrative": "Las piezas de juego, los bancos y las zonas de descanso introducen escalas más próximas dentro de una infraestructura muy larga.",
+      "facts": [
+        {
+          "text": "La obra incluye juegos infantiles, áreas deportivas y espacios de ocio.",
+          "sourceIds": [
+            "p-apertura"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La fotografía municipal muestra una torre de redes con un tobogán tubular junto a la escollera.",
+          "sourceIds": [
+            "p-foto-juegos"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La relación entre los juegos, el pavimento, el borde rocoso y la playa.",
+      "modelNote": "El equipo infantil es una aproximación visual. Las posiciones menores y el mobiliario no proceden de planos de fabricación.",
+      "sourceIds": [
+        "p-apertura",
+        "p-foto-juegos"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de observación registrado sobre el eje del modelo. Posición de cámara y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.2087403,
+        39.6535287
+      ],
+      "coordinates": [
+        -0.2087403,
+        39.6535287
+      ],
+      "coordinateSourceIds": [
+        "p-osm",
+        "p-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "espacios",
+      "floor": null,
+      "fabricStatus": "rehabilitated",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "elevation": 8.2,
+      "localTarget": [
+        211.5281622770094,
+        8.2,
+        -7.429889088359843
+      ],
+      "mode": "current",
+      "recommendedMode": "current",
+      "order": 5,
+      "cameraOffset": [
+        -7.264032160380758,
+        14,
+        -38.26530852839102
+      ]
+    },
+    {
+      "id": "pantalan-paseo-carril",
+      "label": "Carril bici",
+      "title": "Dos recorridos junto al puerto",
+      "regionId": "entorno",
+      "period": "contemporary",
+      "intro": "Observa la banda que discurre por el lado sur del paseo.",
+      "narrative": "Desde este encuadre se comprenden el desnivel, el límite portuario y la continuidad longitudinal de ambos recorridos.",
+      "facts": [
+        {
+          "text": "El carril bici discurre a la derecha al avanzar hacia el mar, inicialmente a otro nivel.",
+          "sourceIds": [
+            "p-accesible"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La imagen del extremo muestra pavimento rojo y dos sentidos de circulación.",
+          "sourceIds": [
+            "p-foto-carril"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "El talud vegetal, las barandillas y la incorporación hacia la plaza final.",
+      "modelNote": "Se representan el carácter y la posición de la banda; marcas, señales y pequeños encuentros se simplifican.",
+      "sourceIds": [
+        "p-accesible",
+        "p-foto-carril"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de observación registrado sobre el eje del modelo. Posición de cámara y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.20758374392818954,
+        39.652839694802964
+      ],
+      "coordinates": [
+        -0.20758374392818954,
+        39.652839694802964
+      ],
+      "coordinateSourceIds": [
+        "p-osm",
+        "p-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "entorno",
+      "floor": null,
+      "fabricStatus": "rehabilitated",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "elevation": 5,
+      "localTarget": [
+        336,
+        5,
+        7
+      ],
+      "mode": "current",
+      "recommendedMode": "current",
+      "order": 6,
+      "cameraOffset": [
+        10.83232506660499,
+        23,
+        49.766060057547264
+      ]
+    },
+    {
+      "id": "pantalan-paseo-mirador",
+      "label": "El mirador",
+      "title": "Llegar a la altura del horizonte",
+      "regionId": "entorno",
+      "period": "contemporary",
+      "intro": "Sube visualmente al extremo del paseo y mira hacia los apoyos aislados.",
+      "narrative": "El mirador sirve de bisagra entre la vida pública del paseo y la memoria industrial que continúa sobre el agua.",
+      "facts": [
+        {
+          "text": "La plaza final asciende durante unos 100 m hasta el mirador a +8,80 m sobre el nivel del mar.",
+          "sourceIds": [
+            "p-accesible"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Parte de su pavimento es de madera.",
+          "sourceIds": [
+            "p-accesible"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La inclinación, los bancos, la barandilla y el eje del pantalán prolongándose hacia el mar.",
+      "modelNote": "La cota publicada orienta el modelo; las pendientes de detalle, las piezas de mobiliario y su emplazamiento son aproximados.",
+      "sourceIds": [
+        "p-accesible",
+        "p-foto-carril",
+        "p-foto-restos"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de observación registrado sobre el eje del modelo. Posición de cámara y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.20633029414558096,
+        39.65240400272405
+      ],
+      "coordinates": [
+        -0.20633029414558096,
+        39.65240400272405
+      ],
+      "coordinateSourceIds": [
+        "p-osm",
+        "p-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "entorno",
+      "floor": null,
+      "fabricStatus": "rehabilitated",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "elevation": 8.35,
+      "localTarget": [
+        453,
+        8.35,
+        -7
+      ],
+      "mode": "current",
+      "recommendedMode": "current",
+      "order": 7,
+      "cameraOffset": [
+        59.215766589081504,
+        26,
+        -16.807527696464433
+      ]
+    },
+    {
+      "id": "pantalan-paseo-escollera",
+      "label": "Escollera y orilla",
+      "title": "El borde entre tierra y agua",
+      "regionId": "entorno",
+      "period": "contemporary",
+      "intro": "Baja la mirada para reconocer el contacto de las rocas con el mar.",
+      "narrative": "El cambio entre superficie seca, banda húmeda y agua hace legible el espesor del borde costero.",
+      "facts": [
+        {
+          "text": "El paseo se adosa al dique de escollera norte del puerto.",
+          "sourceIds": [
+            "p-accesible"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "Las fotografías municipales muestran rocas entre las áreas de actividad y el agua.",
+          "sourceIds": [
+            "p-foto-juegos"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Los tamaños de roca, las sombras entre bloques y la continuidad de la orilla.",
+      "modelNote": "El agua y la banda de contacto son recursos de representación. No expresan oleaje medido, batimetría ni un nivel instantáneo de marea.",
+      "sourceIds": [
+        "p-accesible",
+        "p-foto-juegos",
+        "p-pnoa"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de observación registrado sobre el eje del modelo. Posición de cámara y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.20923734819870232,
+        39.65386016212634
+      ],
+      "coordinates": [
+        -0.20923734819870232,
+        39.65386016212634
+      ],
+      "coordinateSourceIds": [
+        "p-osm",
+        "p-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "entorno",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "mapScope": "entorno",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "elevation": 4.4,
+      "localTarget": [
+        156,
+        4.4,
+        -17
+      ],
+      "mode": "current",
+      "recommendedMode": "current",
+      "order": 8,
+      "cameraOffset": [
+        -4.501257710732354,
+        18,
+        -44.774308247270255
+      ]
+    },
+    {
+      "id": "pantalan-paseo-recorrido",
+      "label": "Pavimentos y entorno",
+      "title": "Caminar entre playa y naves",
+      "regionId": "espacios",
+      "period": "contemporary",
+      "intro": "Sigue el eje desde una cámara próxima al suelo.",
+      "narrative": "La sucesión de bancos, farolas, palmeras y juntas del pavimento da profundidad al paseo. Las naves portuarias mantienen su presencia al otro lado.",
+      "facts": [
+        {
+          "text": "La galería de apertura muestra losas rosadas, bancos claros, palmeras y fachadas industriales contiguas.",
+          "sourceIds": [
+            "p-foto-paseo"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "La banda de tránsito tiene unos 400 m dentro de un recorrido total de aproximadamente 600 m.",
+          "sourceIds": [
+            "p-accesible"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "La diferencia de materiales entre la franja de paso y los espacios de estancia.",
+      "modelNote": "El contexto mantiene las huellas cartográficas. Revestimientos, ventanas, arbolado y alturas no verificadas son una interpretación visual.",
+      "sourceIds": [
+        "p-foto-paseo",
+        "p-accesible",
+        "p-osm"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de observación registrado sobre el eje del modelo. Posición de cámara y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.2098285118391963,
+        39.653975625995585
+      ],
+      "coordinates": [
+        -0.2098285118391963,
+        39.653975625995585
+      ],
+      "coordinateSourceIds": [
+        "p-osm",
+        "p-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "espacios",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "elevation": 6.7,
+      "localTarget": [
+        106,
+        6.7,
+        -1.8190244643671174
+      ],
+      "mode": "current",
+      "recommendedMode": "current",
+      "order": 9,
+      "cameraOffset": [
+        -24.772432836120778,
+        0.55,
+        -15.077684549687495
+      ]
+    },
+    {
+      "id": "pantalan-paseo-cinta",
+      "label": "La cinta histórica",
+      "title": "El eje de transporte del mineral",
+      "regionId": "memoria",
+      "period": "industrial",
+      "intro": "Cambia a la recreación de hacia 1984–1987 y reconoce el antiguo tablero.",
+      "narrative": "Relaciona la cinta con el espacio de servicio y sigue su dirección hasta la plataforma de carga, en la visita marítima.",
+      "facts": [
+        {
+          "text": "Las instalaciones terrestres incluían un tolvín receptor y una cinta anclada al tablero.",
+          "sourceIds": [
+            "p-historia"
+          ],
+          "confidence": "documented"
+        },
+        {
+          "text": "El plano de uso sitúa la cinta y una vía lateral de servicio sobre el pantalán.",
+          "sourceIds": [
+            "p-archivo"
+          ],
+          "confidence": "documented"
+        }
+      ],
+      "lookFor": "Los apoyos de la cinta, el tramo de circulación lateral y la repetición de los vanos.",
+      "modelNote": "Restitución histórica aproximada. Se mantienen como contexto la costa y la trama actual; no se recrea una paleocosta de los años setenta.",
+      "sourceIds": [
+        "p-historia",
+        "p-archivo"
+      ],
+      "confidence": "documented",
+      "coordinateConfidence": "approximate",
+      "coordinateMethod": "Foco de observación registrado sobre el eje del modelo. Posición de cámara y cotas no levantadas interpretativas.",
+      "coordinate": [
+        -0.20818094427802614,
+        39.65319073693385
+      ],
+      "coordinates": [
+        -0.20818094427802614,
+        39.65319073693385
+      ],
+      "coordinateSourceIds": [
+        "p-osm",
+        "p-pnoa"
+      ],
+      "osmIds": [],
+      "readingMinutes": 1,
+      "readingLayer": "memoria",
+      "floor": null,
+      "fabricStatus": "mixed",
+      "mapScope": "recinto",
+      "requiresSection": false,
+      "interiorView": false,
+      "buildingId": null,
+      "elevation": 7.1,
+      "localTarget": [
+        272,
+        7.1,
+        0
+      ],
+      "mode": "historical",
+      "recommendedMode": "historical",
+      "order": 10,
+      "cameraOffset": [
+        -8.425415342969778,
+        20,
+        -51.81710505516928
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "p-apertura",
+      "title": "Apertura del nuevo paseo del puerto de Sagunto",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/es/actualidad/el-nuevo-paseo-del-puerto-de-sagunto-se-ha-abierto-a-la-ciudadania/",
+      "type": "noticia institucional y galería de la obra terminada",
+      "locator": "19 de julio de 2024; accesos, áreas de actividad y fotografías del recorrido.",
+      "year": 2024,
+      "note": "Documenta la obra abierta al público. Se distingue de las propuestas previas del paseo.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "p-accesible",
+      "title": "Maqueta tiflológica del nuevo paseo marítimo del puerto de Sagunto",
+      "author": "Autoridad Portuaria de Valencia",
+      "url": "https://www.valenciaport.com/maqueta-tiflologica-del-nuevo-paseo-maritimo-del-puerto-de-sagunto/",
+      "type": "descripción accesible del espacio construido",
+      "locator": "Apartado Descripción: itinerarios, niveles, mirador, pérgolas y disposición de las actividades.",
+      "year": null,
+      "note": "La altura publicada de las pérgolas no se convierte en un datum vertical medido. El plano táctil omite sus cubiertas para facilitar su lectura.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "p-tolva",
+      "title": "Tolva del Pantalán de la Compañía Minera de Sierra Menera",
+      "author": "Autoridad Portuaria de Valencia",
+      "url": "https://www.valenciaport.com/el-origen-del-puerto-de-sagunto/tolva-del-pantalan-de-la-compania-minera-de-sierra-menera/",
+      "type": "ficha patrimonial institucional",
+      "locator": "Sistema de carga, cinco tolvas, fabricación, traslado y pieza recuperada para el paseo.",
+      "year": null,
+      "note": "La ficha acredita función y capacidad; las dimensiones exteriores y pequeños mecanismos se aproximan desde fotografías.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "p-historia",
+      "title": "El pantalán de minerales",
+      "author": "Autoridad Portuaria de Valencia",
+      "url": "https://www.valenciaport.com/puertos/sagunto/el-pantalan-de-minerales/",
+      "type": "historia institucional y fotografías de archivo",
+      "locator": "Concesión de 1974, construcción, inauguración, longitud y sistema de transporte de mineral.",
+      "year": null,
+      "note": "El fin de actividad de Sierra Menera en 1987 no equivale a la desaparición física del pantalán ni al cese simultáneo de todos sus equipos.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "p-archivo",
+      "title": "Información previa del pantalán · Archivo de Sierra Menera",
+      "author": "Fundació de Patrimoni Industrial de Port de Sagunt / estudio de diagnóstico",
+      "url": "https://fundacioportdesagunt.com/wp-content/uploads/2011/05/resumen-informacic3b3n-previa-del-pantalc3a1n.pdf",
+      "type": "síntesis de planos, certificaciones y fotografías de ejecución",
+      "locator": "Páginas 5–14: tablero, vigas, encepados, pilotes y cintas; 15–20: construcción.",
+      "year": null,
+      "note": "El propio documento advierte que el proyecto EPTISA de noviembre de 1974 no es la solución finalmente construida. Se usan los detalles de ejecución identificados.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "p-gaudium2026",
+      "title": "Proyecto de actuación en el tramo marítimo del Pantalán",
+      "author": "Gaudium Ingenieros",
+      "url": "https://gaudium-ingenieros.com/gaudium-proyectara-la-actuacion-en-el-tramo-maritimo-del-pantalan-del-puerto-de-sagunto/",
+      "type": "anuncio de la ingeniería adjudicataria",
+      "locator": "20 de abril de 2026: adjudicación de la redacción en UTE con Sener.",
+      "year": 2026,
+      "note": "Acredita la redacción de un proyecto. No acredita que la nueva intervención marítima esté construida.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "p-municipio2026",
+      "title": "Petición municipal sobre el muelle norte y el tramo marítimo del pantalán",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/es/actualidad/2026-07-03-el-ayuntamiento-de-sagunto-instara-a-la-apv-que-se-finalice-la-apertura-del-muelle-norte-y-el-tramo-maritimo-del-pantalan/",
+      "type": "acuerdo municipal publicado",
+      "locator": "3 de julio de 2026: petición de culminación de los proyectos de integración puerto-ciudad.",
+      "year": 2026,
+      "note": "La petición permite distinguir actuaciones pendientes de los espacios ya abiertos. No se infiere una fecha futura de apertura.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "p-foto-paseo",
+      "title": "El paseo terminado hacia el mar",
+      "author": "Ayuntamiento de Sagunto · galería de apertura",
+      "url": "https://aytosagunto.es/media/smdh2dus/img_4449-c.jpg",
+      "type": "fotografía de la obra terminada",
+      "locator": "Pavimento, palmeras, bancos, barandilla y naves del borde portuario.",
+      "year": 2024,
+      "note": "Referencia visual para materiales y escala; no es un levantamiento de las fachadas vecinas.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "p-foto-carril",
+      "title": "Carril bici y paseo vistos hacia tierra",
+      "author": "Ayuntamiento de Sagunto · galería de apertura",
+      "url": "https://aytosagunto.es/media/yb3hbcnh/img_4494-c.jpg",
+      "type": "fotografía de la obra terminada",
+      "locator": "Carril rojo, separación del puerto, pérgolas y relación con la playa.",
+      "year": 2024,
+      "note": "La perspectiva permite reconocer bandas de uso y materiales. Distancias y alturas se aproximan.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "p-foto-pergola",
+      "title": "Pilares y cubierta de una pérgola",
+      "author": "Ayuntamiento de Sagunto · galería de apertura",
+      "url": "https://aytosagunto.es/media/ncth5cdr/img_4461-c.jpg",
+      "type": "fotografía de detalle arquitectónico",
+      "locator": "Pilares de hormigón, madera y escala del espacio peatonal.",
+      "year": 2024,
+      "note": "El encuadre no proporciona una cota métrica de cada módulo. El canto y la curvatura se interpretan visualmente.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "p-foto-juegos",
+      "title": "Torre de juego junto a la escollera",
+      "author": "Ayuntamiento de Sagunto · galería de apertura",
+      "url": "https://aytosagunto.es/media/tdejlqvr/img_4509-c.jpg",
+      "type": "fotografía del área infantil",
+      "locator": "Estructura de tubos, redes, plataforma y tobogán cerrado, con playa y escollera al fondo.",
+      "year": 2024,
+      "note": "Se representa una aproximación visual del conjunto; no se reproduce un diseño certificado de equipamiento infantil.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "p-foto-rampa",
+      "title": "Rampa de acceso al paseo",
+      "author": "Ayuntamiento de Sagunto · galería de apertura",
+      "url": "https://aytosagunto.es/media/cdcds3yu/img_4522-c.jpg",
+      "type": "fotografía del acceso",
+      "locator": "Muros de hormigón y pavimento de piezas pequeñas y losas.",
+      "year": 2024,
+      "note": "La imagen guía el tratamiento material del acceso; no aporta una sección topográfica.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "p-foto-restos",
+      "title": "Apoyos marítimos después del desmontaje",
+      "author": "Ayuntamiento de Sagunto · galería de apertura",
+      "url": "https://aytosagunto.es/media/lgkppy0v/img_4483-c.jpg",
+      "type": "fotografía del estado conservado",
+      "locator": "Vista desde el paseo, 19 de julio de 2024: encepados y trípodes aislados sobre el mar.",
+      "year": 2024,
+      "note": "Documenta la discontinuidad física. No constituye un censo submarino ni una inspección estructural de 2026.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "p-osm",
+      "title": "Paseo, mirador, tolva y apoyos cartografiados",
+      "author": "OpenStreetMap y sus colaboradores",
+      "url": "https://www.openstreetmap.org/way/1303784876",
+      "type": "cartografía colaborativa",
+      "locator": "Eje del conjunto, mirador 12074274305, tolva 12074274325 y apoyos registrados en coast-pier.json.",
+      "year": null,
+      "note": "Los puntos son referencias de geolocalización aproximada. El inventario conserva los huecos presentes en la cartografía.",
+      "accessed": "2026-11-21"
+    },
+    {
+      "id": "p-pnoa",
+      "title": "PNOA Máxima Actualidad",
+      "author": "Instituto Geográfico Nacional / CNIG",
+      "url": "https://pnoa.ign.es/",
+      "type": "ortofotografía de contraste",
+      "locator": "Contraste previo del atlas sobre costa, apoyos, plataforma y entorno portuario.",
+      "year": null,
+      "note": "Se reutiliza el registro cartográfico existente del atlas, consultado el 19 de noviembre de 2026. La fecha de consulta no equivale a la fecha del vuelo.",
+      "accessed": "2026-11-21"
+    }
+  ],
+  "timeline": [
+    {
+      "id": "p-t-concesion",
+      "date": "1974",
+      "title": "Autorización del cargadero",
+      "text": "La concesión permite construir el nuevo pantalán de Sierra Menera.",
+      "sourceIds": [
+        "p-historia"
+      ],
+      "period": "industrial",
+      "confidence": "documented",
+      "stopId": "pantalan-paseo-cinta"
+    },
+    {
+      "id": "p-t-inauguracion",
+      "date": "1977",
+      "title": "Una salida para el mineral",
+      "text": "Entra en servicio la infraestructura que enlaza tierra y mar.",
+      "sourceIds": [
+        "p-historia"
+      ],
+      "period": "industrial",
+      "confidence": "documented",
+      "stopId": "pantalan-paseo-cinta"
+    },
+    {
+      "id": "p-t-tolvas",
+      "date": "1984",
+      "title": "Nuevas tolvas",
+      "text": "Se fabrican cuatro de las cinco tolvas de la instalación.",
+      "sourceIds": [
+        "p-tolva"
+      ],
+      "period": "industrial",
+      "confidence": "documented",
+      "stopId": "pantalan-paseo-tolva"
+    },
+    {
+      "id": "p-t-traslado",
+      "date": "2022",
+      "title": "Las tolvas regresan a tierra",
+      "text": "Las máquinas se trasladan durante las operaciones de emergencia.",
+      "sourceIds": [
+        "p-tolva"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "pantalan-paseo-tolva"
+    },
+    {
+      "id": "p-t-apertura",
+      "date": "19 de julio de 2024",
+      "title": "Se abre el paseo",
+      "text": "El tramo terrestre recuperado se incorpora al espacio público.",
+      "sourceIds": [
+        "p-apertura"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "pantalan-paseo-conjunto"
+    },
+    {
+      "id": "p-t-proyecto",
+      "date": "2026",
+      "title": "El tramo marítimo sigue en proyecto",
+      "text": "La nueva redacción y la petición municipal se refieren a la parte marítima.",
+      "sourceIds": [
+        "p-gaudium2026",
+        "p-municipio2026"
+      ],
+      "period": "contemporary",
+      "confidence": "documented",
+      "stopId": "pantalan-paseo-mirador"
+    }
+  ],
+  "modelRegistration": {
+    "status": "registered",
+    "precision": "approximate",
+    "provisionalCoordinates": false,
+    "note": "Focos sincronizados con los planos finales V31; posiciones de observación y cotas sin levantamiento son aproximadas.",
+    "coordinates": "Registered from pantalan-paseo-plan.json / pantalan-maritimo-plan.json model focus coordinates."
+  },
+  "materialsModeLabel": "Materiales"
+}

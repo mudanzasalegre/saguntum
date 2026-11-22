@@ -1,0 +1,127 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "pass": true,
+      "label": "Every paving, reception, ramp, industrial building and planting coordinate is finite"
+    },
+    {
+      "pass": true,
+      "label": "No collapsed triangles in surrounding geometry",
+      "detail": {
+        "collapsed": 0,
+        "total": 61029
+      }
+    },
+    {
+      "pass": true,
+      "label": "The five mapped surrounding parts retain their two industrial parcels"
+    },
+    {
+      "pass": true,
+      "label": "All five former core duplicates and five newly detailed neighbours replace their generic blocks"
+    },
+    {
+      "pass": true,
+      "label": "Talleres and Museo remain separately owned"
+    },
+    {
+      "pass": true,
+      "label": "Context adds the agreed surroundings stop without inventing an extra tour stop"
+    },
+    {
+      "pass": true,
+      "label": "The surroundings focus has coherent floor, elevation and local coordinates"
+    },
+    {
+      "pass": true,
+      "label": "The reception has the two documented inclined volumes and open undercroft"
+    },
+    {
+      "pass": true,
+      "label": "The visitor bridge meets the agreed +5.70 m raised platform with an open two-metre passage",
+      "detail": {
+        "bridge": {
+          "id": "horno-crisol-connection",
+          "start": [
+            4950.248987286365,
+            9.558742751430861,
+            2747.316823999909
+          ],
+          "end": [
+            4946.678987286366,
+            9.558742751430861,
+            2749.366823999909
+          ],
+          "widthM": 2,
+          "floorOffsetM": 5.7,
+          "surfaceLiftM": 0.03,
+          "openPortal": true
+        }
+      }
+    },
+    {
+      "pass": true,
+      "label": "The enclosure retains openings instead of closing a circle across the skip"
+    },
+    {
+      "pass": true,
+      "label": "The industrial lots receive only photo-guided planting"
+    },
+    {
+      "pass": true,
+      "label": "Binding the final terrain releases all old geometry without accumulating meshes"
+    },
+    {
+      "pass": true,
+      "label": "Final ground binding preserves the common furnace and bridge datum"
+    },
+    {
+      "pass": true,
+      "label": "Paving follows the final regional terrain at every vertex and triangle centre",
+      "detail": {
+        "samples": 7307,
+        "maximumVertexErrorM": 0.00005690577440034539,
+        "maximumInteriorErrorM": 0.00003373432136002941
+      }
+    },
+    {
+      "pass": true,
+      "label": "Both surroundings cameras stay above the final surface",
+      "detail": {
+        "id": "horno-entorno",
+        "farY": 75.82874275143087,
+        "nearY": 46.828742751430866
+      }
+    },
+    {
+      "pass": true,
+      "label": "Layer reading uses the same conjunto legend as the furnace"
+    },
+    {
+      "pass": true,
+      "label": "Textured materials restore after layer reading"
+    },
+    {
+      "pass": true,
+      "label": "Disposal is complete, local and idempotent"
+    }
+  ],
+  "stats": {
+    "buildingParts": 5,
+    "parentParcels": 2,
+    "sourceCoreParts": 5,
+    "roadFragments": 14,
+    "pavingAreaM2": 20075.92,
+    "pavingVertices": 4610,
+    "pavingTriangles": 7307,
+    "trees": 13,
+    "streetLamps": 6,
+    "railLengthM": 153.38,
+    "fenceLengthM": 99.91,
+    "protectedHeritageOwners": 8,
+    "meshes": 26,
+    "triangles": 61029,
+    "fixedFurnaceDatumM": 3.828742751430862
+  }
+}

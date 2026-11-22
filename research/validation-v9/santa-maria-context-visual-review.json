@@ -1,0 +1,46 @@
+{
+  "reviewedAt": "2026-11-19T15:46:55.871645+00:00",
+  "pass": true,
+  "method": "Visual inspection of final CPU renders exported from the application mesh; these are not browser screenshots.",
+  "contextCodeSHA256": "c58325ab7d3a33af291c50efda2625dcd757d33da9306e70f5d95b67b4d4072f",
+  "images": [
+    {
+      "file": "santa-maria-portada-norte.png",
+      "sha256": "051de8509ce45e05bad661362bfd14f6ecca8b037dd9f0aaaca989dc0d719bd1"
+    },
+    {
+      "file": "santa-maria-portada-barroca.png",
+      "sha256": "83b820a1839cbe6e0de244f3b043f74146c0b0791b92234fa48c95cd7e5f1040"
+    },
+    {
+      "file": "santa-maria-conjunto.png",
+      "sha256": "17b6ef328b8af2b51917ff99f8f021779deecf22b1249e26d5b4b0ff3dfec88d"
+    }
+  ],
+  "findings": [
+    {
+      "view": "north",
+      "pass": true,
+      "detail": "Portal visible through Cavallers corridor; adjacent roof no longer obscures it. Artificial angular earth bank removed. Paved transition remains supported and joins the mapped street."
+    },
+    {
+      "view": "north-threshold",
+      "pass": true,
+      "detail": "Church threshold ends at local x20.35, y+0.12; context landing begins at x20.35, y+0.12. The dark strip in the image is shade across continuous geometry."
+    },
+    {
+      "view": "west",
+      "pass": true,
+      "detail": "West facade is unobstructed; the earlier protruding internal piers are absent and roof ends are closed."
+    },
+    {
+      "view": "overall",
+      "pass": true,
+      "detail": "Immediate street fronts, source parcel volumes, ordinary roofs and existing civic Plaza Mayor read as one connected setting. No second Plaza Mayor or Almudin was introduced."
+    }
+  ],
+  "remainingLimitations": [
+    "Domestic facade openings and secondary roof envelopes are schematic, while source footprints are preserved.",
+    "Church floor registration and derived stair tread count accommodate the display MDT; they are not a measured levelling survey."
+  ]
+}

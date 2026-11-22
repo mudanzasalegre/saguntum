@@ -1,0 +1,42 @@
+{
+  "pass": true,
+  "reviewedAtUTC": "2026-11-21T15:29:34.488267+00:00",
+  "reviewers": [
+    "root: cuatro vistas terrestres, trípodes regenerados, mapas y shader",
+    "pantalan_model: cuatro vistas marítimas; escenas no alteradas verificadas por hash"
+  ],
+  "method": "Visual inspection of exact exported Three.js geometry in Blender CPU and a separate actual-GLSL diagnostic. Not browser screenshots.",
+  "observations": {
+    "pantalan-paseo-conjunto-current": "Paseo completo, mirador, costa y naves reconocibles; el recorte exterior pertenece a la exportación de inspección. La unión del carril corregida conserva la composición general.",
+    "pantalan-paseo-pergolas-current": "Lamas, columnas, pavimentos, bancos, palmáceas y escollera visibles; la escalera de bajada mantiene continuidad con el paseo. Escena exportada idéntica tras la corrección localizada del mirador.",
+    "pantalan-paseo-tolva-current": "Nuevo encuadre lateral: tolva, abertura y bastidor legibles; la palmácea deja libre el embudo principal. No se ha desplazado la vegetación para favorecer el render.",
+    "pantalan-paseo-mirador-current": "Tarima, asientos, barandillas, plaza inclinada y carril legibles. La llegada del carril es continua y la abertura en la barandilla elimina el cruce anterior.",
+    "pantalan-maritimo-tripodes-current": "Apoyos aislados correctamente visibles, con huecos entre vanos y sin tablero actual ficticio. Revisada de nuevo tras la regeneración.",
+    "pantalan-maritimo-pilotes-current": "Losa, nervios y apoyos bajo la plataforma legibles; no se observan piezas flotantes ni oclusión accidental. Escena exportada idéntica.",
+    "pantalan-maritimo-conjunto-historical": "Eje industrial continuo, plataforma ensanchada y enlace terminal coherentes; la fase histórica no se mezcla con el paseo actual. Escena exportada idéntica.",
+    "pantalan-maritimo-cargador-historical": "Brazo, cables, bastidor y cinco tolvas distinguibles; maquinaria separada sin intersecciones visuales bloqueantes. Escena exportada idéntica.",
+    "water-shader-diagnostic": "Ondulación irregular y gradiente costero legibles con luz de día y dorada; sin recorte blanco en la prueba. Se revisa el GLSL real con un reflejo de ensayo, separado de los renders geométricos."
+  },
+  "imageHashes": {
+    "pantalan-paseo-conjunto-current.png": "5cb8cf9885ba36cc613de0af830557f9652e90d3d7844b9f3e37cead6b66bdc6",
+    "pantalan-paseo-pergolas-current.png": "aadfedaf9512e1752665ed7f3ffc9df88323f5e0f3d3bec2daa936f9ff0579fd",
+    "pantalan-paseo-tolva-current.png": "d4044fec9e346848ddac507e20d0c06223dd36ef810240ca6716d00fd285ad22",
+    "pantalan-paseo-mirador-current.png": "f6a3a4f2bc862e05b8d4472421a472a9350866ecb2e00f3ff1dd0dd8abc51e00",
+    "pantalan-maritimo-tripodes-current.png": "74b5f1e0d240c3a1ad1d020e004b8b3a7547af19c44d283c8f4758667908a331",
+    "pantalan-maritimo-pilotes-current.png": "01e1feb99da4bb8a25a63749d41da53d53dffd6f6e03df43086ed973e85dcb52",
+    "pantalan-maritimo-conjunto-historical.png": "40e8b951f51c3aaba97ce4b58f1b39020abb3edac3f02d3fce4aac3528ccc788",
+    "pantalan-maritimo-cargador-historical.png": "c8d08b3f761507e6129be3fdd483ca796bf3a9d7ca7855b0f1222be240644257",
+    "water-shader-diagnostic.png": "67cc0e220732005eb01fed183762e292a183f14afe3d0b75a8ffcce4ba409cf9"
+  },
+  "resolvedFindings": [
+    "Escollera camera target raised above final terrain, then all camera cases passed.",
+    "Tolva camera moved laterally to avoid the foreground palm.",
+    "Cycleway arrival surface and railing opening repaired and verified by rays plus a new render."
+  ],
+  "openBlockingFindings": [],
+  "limitations": [
+    "Geometry images use a flat water placeholder and approximate lighting.",
+    "The water diagnostic uses a deterministic test reflection; browser scene integration and device GPU performance remain unverified.",
+    "Surroundings and minor industrial details remain interpreted where no measured survey is available."
+  ]
+}

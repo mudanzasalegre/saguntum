@@ -1,0 +1,66 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "pass": true,
+      "label": "All 31 nearby cadastral parts retain their original coordinates and courtyard rings"
+    },
+    {
+      "pass": true,
+      "label": "All 13 cadastral nave parts are assigned to the detailed building owner"
+    },
+    {
+      "pass": true,
+      "label": "Terrain triangles cover the paving exactly once",
+      "differenceAreaM2": 0.0
+    },
+    {
+      "pass": true,
+      "label": "Paving triangles do not overlap"
+    },
+    {
+      "pass": true,
+      "label": "No paved surface crosses the nave or neighbouring buildings"
+    },
+    {
+      "pass": true,
+      "label": "The entire Alto Horno context keeps its separate ownership"
+    },
+    {
+      "pass": true,
+      "label": "No detailed building ID is claimed by both Horno and Talleres"
+    },
+    {
+      "pass": true,
+      "label": "All paving lies on the 5 m Puerto core mesh"
+    },
+    {
+      "pass": true,
+      "label": "Photo-guided planting remains outside the building"
+    },
+    {
+      "pass": true,
+      "label": "Other regional building owners remain uncovered"
+    }
+  ],
+  "stats": {
+    "buildingParts": 31,
+    "parentParcels": 4,
+    "sourceCoreParts": 13,
+    "roadFragments": 60,
+    "pavingAreaM2": 57627.31,
+    "pavingVertices": 9970,
+    "pavingTriangles": 15633,
+    "trees": 49,
+    "streetLamps": 10,
+    "crossings": 6,
+    "railLengthM": 0,
+    "protectedHeritageOwners": 8
+  },
+  "sourceHashes": {
+    "port-cartography.json": "da82e6776616f733bfc0617abaae8333e74d5df1f57050150c75b8f1b1c75efd",
+    "port-industrial.json": "0d4d51e3973f36ffe02699b3865cab56a5bc2050e3ac91e58b08d88e84a4d829",
+    "port-elevation.json": "0444001c6f0ca1d2d723768b90cb997fbcab59eb975f14f45a1742e80893e347",
+    "horno-context.json": "034c74144297d2df56140f6380c5958a233b8de32fe7e8f35da5c1c09bbe98fb"
+  }
+}
