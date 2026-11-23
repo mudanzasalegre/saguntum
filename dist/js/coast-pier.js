@@ -162,6 +162,13 @@ function promenade({heightAt,project,site,data,f,resources}){
  current.tag('carril','entorno');for(const x of[-100,80,260,410]){const y=x<340?2.65:2.65+(x-340)/103*(floor(443)-2.65),z=10.2-(x+136)/570*1.5;for(const sign of[-1,1]){const c=z+sign*.75;current.box('white',x,y+.022,c,1.2,.018,.08);current.raw('white',[x+sign*.9,y+.032,c,x+sign*.3,y+.032,c-.30,x+sign*.3,y+.032,c+.30]);}}
  current.tag('drenaje','construccion');for(let x=0;x<360;x+=18){const z=cc(x)+2.1;current.box('dark',x,5.608,z,1.1,.018,.22);for(let j=0;j<10;j++)current.box('steel',x-.5+j*.11,5.626,z,.035,.022,.22);}
  const currentGroup=current.finish('Paseo construido · 2024'),historicalGroup=historic.finish('Tramo terrestre · hacia 1984–1987');historicalGroup.visible=false;const group=new THREE.Group();group.name='23 · Paseo del pantalán';group.add(currentGroup,historicalGroup);place(group,f);group.userData={id:site.id,region:'coast',historicalDate:'1984–1987',currentAsOf:site.stateAsOf};
+ currentGroup.traverse(mesh=>{
+  if(!mesh.isMesh)return;
+  const {component,materialKind}=mesh.userData;
+  mesh.userData.publicWalkingSurface=['paving','grey','cycle'].includes(materialKind)||
+   (materialKind==='edge'&&['acceso','escalera-mar'].includes(component))||
+   (materialKind==='wood'&&component==='mirador');
+ });
  const point=f.point(185,8,-3),mir=f.point(452,8.31,-3.05),walk=f.point(77,7.25,cc(77));const pedestrianViews={paseo:{label:'Paseo · a baja altura',position:walk,target:f.point(107,6.2,cc(107)),modes:['current']},mirador:{label:'Mirador · a baja altura',position:f.point(459,10.185,cc(459)-1),target:f.point(500,6,cc(459)-1),modes:['current']}};
  const focuses={conjunto:{label:'El paseo y el paisaje',point,offset:[180,235,360]},pergolas:{label:'Siete pérgolas',point:f.point(150,10,cc(150)-5.5),offset:[42,30,63],modes:['current']},tolva:{label:'Tolva recuperada',point:f.point(hp.s,9.2,hp.c),offset:[7,2.5,19],modes:['current']},mirador:{label:'Mirador a +8,80 m',point:mir,offset:[40,32,45],modes:['current']},cinta:{label:'Cinta y tablero originales',point:f.point(280,6,0),offset:[37,20,53],modes:['historical']},'paseo-bajo':{...pedestrianViews.paseo,point:pedestrianViews.paseo.target},'mirador-bajo':{...pedestrianViews.mirador,point:pedestrianViews.mirador.target}};
  return {id:site.id,group,currentGroup,historicalGroup,point,views:{offset:[180,235,360],closeOffset:[48,28,69]},focuses,pedestrianViews,cyclePath:cycle,patches:[],exclusions:[f.polygon(-130,480,-24,15)],stats:{...statsFor(group),current:statsFor(currentGroup),historical:statsFor(historicalGroup),pergolas:7,timberSlats:600,preservedHoppers:1,nominalPromenadeLength:600,chainage:[-125,480],historicSpansInSite:16,originalLandSpans:12}};

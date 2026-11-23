@@ -4,14 +4,25 @@ The original IDs remain available for heritage replacement.
 """
 from collections import defaultdict
 from pathlib import Path
+import argparse
 import gzip
 import json
 from shapely.geometry import Polygon
 from shapely import get_parts, set_precision
 
 root=Path(__file__).resolve().parents[1]/'dist/assets/territory'
-out=root/'aerial-buildings'
-out.mkdir(exist_ok=True)
+parser=argparse.ArgumentParser(description=__doc__)
+parser.add_argument('--sector',action='append',help='Rebuild this normalized 500 m sector. Include adjoining sectors when a shared property changes.')
+parser.add_argument('--out',type=Path,default=root/'aerial-buildings')
+args=parser.parse_args()
+out=args.out
+out.mkdir(parents=True,exist_ok=True)
+sectors=set(args.sector or [])
+if sectors:
+    known={t['id'] for t in json.loads((root/'world.json').read_bytes())['sectors']}
+    if sectors-known: parser.error('Unknown building sectors: '+', '.join(sorted(sectors-known)))
+    for name in ('skyline','sagunto','puerto','municipio'):
+        if not (out/(name+'.bin')).exists(): parser.error('Incremental output needs the four existing aerial packages.')
 previous={b['id'] for b in json.loads((root/'overview.json').read_bytes())['buildings']}
 groups=defaultdict(list)
 for path in sorted((root/'b').glob('*.json')):
@@ -30,6 +41,8 @@ photographed=0
 for members in groups.values():
     largest=max(members,key=lambda pair:pair[0])[1]['id']
     for area,b,geom,sector in members:
+        if sectors and sector not in sectors:
+            continue
         if b['id'] not in previous and (area<14 or area<75 and b['id']!=largest):
             continue
         simple=geom.simplify(.65,preserve_topology=True)
@@ -66,8 +79,19 @@ for members in groups.values():
              round(b['height']*10),int(color[1:],16) if color else -1,
              1 if use=='industrial' else 2 if use=='agriculture' else 0,loops])
         parts+=1
-for name,collection in sorted(packages.items()):
+for name in (('municipio','puerto','sagunto','skyline') if sectors else sorted(packages)):
+    collection=packages[name]
+    if sectors:
+        path=out/(name+'.bin')
+        baseline=json.loads(gzip.decompress(path.read_bytes()))
+        updated={k:collection.get(k,v) for k,v in baseline.items() if k not in sectors or k in collection}
+        updated.update(collection)
+        if updated==baseline: continue
+        collection=updated
     data=gzip.compress(json.dumps(collection,separators=(',',':')).encode(),compresslevel=9,mtime=0)
-    (out/(name+'.bin')).write_bytes(data)
+    path=out/(name+'.bin')
+    pending=path.with_suffix('.tmp')
+    pending.write_bytes(data)
+    pending.replace(path)
     print(name,sum(map(len,collection.values())),len(data))
 print('Cadastral / OSM parts',parts,'with roof colour',photographed,'sub-metre repairs',repairs)

@@ -30,7 +30,7 @@
 .sim-heading,.sim-panel label,.sim-map-head,.sim-map-foot {display:flex;justify-content:space-between;align-items:center;gap:8px}
 .sim-heading {margin-bottom:15px}.sim-heading button,#sim-clear {font:26px var(--sans);padding:0 7px;color:#d8dfd4}
 .sim-panel label {font-size:14px;margin:10px 0;color:var(--paper)}
-.sim-panel select,.sim-panel input[type=search] {color:var(--paper);background:#223c39;border:1px solid var(--rule);border-radius:3px;padding:8px}
+.sim-panel select,.sim-panel input[type=search],.sim-panel input[type=date] {color:var(--paper);background:#223c39;border:1px solid var(--rule);border-radius:3px;padding:8px}
 .sim-panel input[type=search],.sim-panel input[type=range] {width:100%}
 .sim-panel input[type=range],.sim-panel input[type=checkbox] {accent-color:var(--accent)}
 .sim-panel input[type=checkbox] {width:18px;height:18px}
@@ -95,3 +95,29 @@
 @media(max-height:550px){#sim-location{max-height:51dvh;overflow:auto}}
 @media(max-width:800px){.map-only .sim-map #sim-map{height:min(54dvh,450px)}}
 @media(max-width:420px){.sim-top{gap:8px}.sim-atlas{padding:6px}.sim-top h1{font-size:19px}#sim-brand .brand{font-size:14px;gap:5px}}
+
+#sim-navigation{margin:12px 0 2px;border-top:1px solid var(--rule);padding-top:10px}
+#sim-navigation details{margin-top:12px}#sim-navigation input[type=range]{width:44%;min-width:55px}
+#sim-navigation output{min-width:3ch;font-variant-numeric:tabular-nums}
+#sim-navigation button,#sim-walk-actions button,#sim-nearby,#sim-show-ui{border:1px solid var(--rule);border-radius:4px;padding:8px;background:var(--panel);color:var(--paper)}
+#sim-key-list button{min-width:86px}
+#sim-nearby,#sim-show-ui,#sim-instructions,#sim-walk-actions{position:absolute;z-index:3}
+#sim-nearby{left:50%;bottom:104px;transform:translateX(-50%);max-width:min(340px,78vw);padding:10px 16px;background:#24423e}
+#sim-show-ui{top:max(12px,env(safe-area-inset-top));right:max(12px,env(safe-area-inset-right))}
+#sim-instructions{top:152px;left:clamp(12px,3.5vw,58px);max-width:min(320px,80vw);padding:12px 36px 12px 14px;background:var(--panel);border:1px solid var(--rule);border-radius:4px}
+#sim-dismiss-help{position:absolute;right:3px;top:3px;color:var(--paper);font-size:20px}
+#sim-walk-actions{right:max(14px,env(safe-area-inset-right));bottom:max(120px,env(safe-area-inset-bottom));display:grid;gap:6px}
+#sim-walk-actions button{min-height:42px;touch-action:none}
+#sim-walk-actions button:active,#sim-walk-actions button[aria-pressed=true]{background:var(--accent);color:#18342d}
+.sim-clean>body>:not(#sim-world):not(#sim-show-ui){visibility:hidden!important}
+.sim-clean #sim-markers,.sim-clean .sim-foot{visibility:hidden!important}
+.sim-locked #sim-instructions{display:none}
+.map-only #sim-north{visibility:hidden}
+@media(min-width:801px) and (pointer:fine){#sim-walk-actions{display:none}}
+@media(max-width:800px){
+ #sim-instructions{top:115px;font-size:13px;max-width:calc(100vw - 169px)}
+ #sim-nearby{bottom:max(98px,env(safe-area-inset-bottom));font-size:12px;max-width:50vw}
+ .sim-foot{padding-bottom:max(4px,env(safe-area-inset-bottom))}
+ #sim-location:has(~#sim-nearby:not([hidden])){max-height:28dvh;overflow:auto}
+ #sim-stop-note{max-height:10dvh}
+}

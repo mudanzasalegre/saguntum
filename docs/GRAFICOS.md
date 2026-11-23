@@ -1,5 +1,13 @@
 # Gráficos y texturas del Simulador 3D
 
+## Revisión 41
+
+En **Capas y luz** se puede elegir la fecha de Sagunto, mover la hora solar aparente y saltar al amanecer, mediodía, atardecer o noche. La luz diurna y la dorada del Atlas siguen disponibles para comparar una visita con su escenario territorial. El reloj solar señala su mediodía a las 12 durante todo el año. [Cálculo de la declinación, NOAA](https://gml.noaa.gov/grad/solcalc/solareqns.PDF)
+
+La rugosidad y el reflejo del cinc, las barandillas pintadas, el vidrio y los remates de hormigón responden al cielo y a la luz. Las laderas cercanas proyectan sombras que respetan las excavaciones. El arbolado conserva sus centros medidos y ajusta su radio al espacio disponible frente a edificios y calzadas. [Fuentes, capturas con la misma cámara y rendimiento](../research/graficos-v41/README.md)
+
+El perfil automático considera las capacidades WebGL 2, la carga de píxeles y el coste de los fotogramas recientes. **Ultra** utiliza una sombra de hasta 4096 × 4096 y un mapa de entorno de mayor resolución en equipos compatibles. Los detalles de **Cartografía y rendimiento** muestran el motor utilizado, el perfil efectivo y el tiempo observado.
+
 ## Revisión 38
 
 Los tramos urbanos de 44 sectores incorporan aceras, bordillos y márgenes entre la calzada y las fachadas. Las alineaciones proceden de los límites de parcela de Catastro y de la red de OpenStreetMap. La separación entre acera y margen, el acabado y las juntas se estiman. Las zonas verdes, parcelas y superficies identificadas en el viario se excluyen del cálculo.

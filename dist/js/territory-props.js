@@ -202,7 +202,7 @@ export async function streetFurniture(){
   };
   prototypes.treeContact=prototypes.treePit=floor;
   const projected=new Set(['crossing','treeContact','treePit']);
-  function build(group,objects,roads,areas,heightAt,heritage){
+  function build(group,objects,roads,areas,heightAt,heritage,onSolid){
     const pooled=new Map();
     const add=(kind,x,y,z,yaw,sx=1,sy=sx,sz=sx)=>{
       if(!pooled.has(kind))pooled.set(kind,[]);
@@ -226,6 +226,7 @@ export async function streetFurniture(){
       const y=heightAt(o.x,o.z);
       if(o.kind==='tree'){
         const noise=Math.abs(Math.sin(o.x*.13+o.z*1.71)),scale=1.14+noise*.48;
+        onSolid?.(o,y,0,scale);
         for(const k of ['trunk','crown','treeView'])add(k,o.x,y,o.z,noise*14.19,scale,scale*(.91+noise*.14),scale);
         const square=areas.some(a=>a.kind==='square'&&a.rings.length&&insideRing(o.x,o.z,a.rings[0])&&!a.rings.slice(1).some(r=>insideRing(o.x,o.z,r)));
         add('treeContact',o.x,y+(square?.140:.055),o.z,noise*6,scale*2.2,1,scale*1.80);
@@ -239,12 +240,14 @@ export async function streetFurniture(){
       }else if(prototypes[o.kind]){
         const yaw=direction(o)+(o.kind==='bench'?Math.PI/2:0);
         add(o.kind,o.x,y,o.z,yaw);
+        if(!projected.has(o.kind))onSolid?.(o,y,yaw,1);
       }
     }
     const batches=[];
     for(const [kind,items] of pooled){
       const material=tree.material[kind]||(kind==='treeContact'?contact:kind==='treePit'?pit:solid);
       const mesh=new T.InstancedMesh(prototypes[kind],material,items.length);
+        if(kind==='crown')mesh.customDepthMaterial=tree.crownDepth;
       mesh.castShadow=!projected.has(kind)&&kind!=='treeView';mesh.receiveShadow=true;group.add(mesh);
       let previous='';
       const apply=(x,z,budget,heritageKey)=>{

@@ -1,13 +1,62 @@
 import * as T from 'three';
 import {insideRing} from './territory-coordinates.js';
 import {baysOn,balconyBay,edgeSeed,joineryTone,openingBounds} from './territory-building-style.js';
+import {architectureScans} from './territory-building-material.js';
+
+function detailMaterial(){
+  const mat=new T.MeshStandardMaterial({roughness:.78});
+  mat.onBeforeCompile=shader=>{
+    const scans=architectureScans();
+    Object.assign(shader.uniforms,{uSamples:scans.uArchSurface,uPores:scans.uArchRelief,uLoaded:scans.uArchReady});
+    const vars='varying vec2 vPartMetres; varying float vFinish;\n';
+    shader.vertexShader=vars+'attribute float facadeFinish;\n'+shader.vertexShader
+      .replace('#include <begin_vertex>',`#include <begin_vertex>
+        vec3 at=(instanceMatrix*vec4(position,1.)).xyz;
+        vec3 dir=normalize(mat3(instanceMatrix)*normal);
+        // Horizontal surfaces use the cadastral grid. Vertical trim follows its wall.
+        vPartMetres=abs(dir.y)>.5?at.xz:vec2(dot(at.xz,vec2(dir.z,-dir.x)),at.y);
+        vFinish=facadeFinish;`);
+    shader.fragmentShader=vars+'uniform sampler2D uSamples,uPores; uniform float uLoaded;\n'+shader.fragmentShader
+      .replace('#include <color_fragment>',`#include <color_fragment>
+        float scanRough=.78, metal=0.;
+        if(uLoaded>.5){
+          float slot=vFinish<.5?3.:vFinish<1.5?4.:2.;
+          float metres=vFinish<.5?3.:vFinish<1.5?2.:2.7;
+          vec2 tile=vPartMetres/metres,grid=vec2(4.,2.);
+          vec2 stepUV=vec2(504./512.)/grid;
+          vec2 uv=(vec2(mod(slot,4.),floor(slot/4.))+.0078125)/grid+fract(tile)*stepUV;
+          vec2 dx=dFdx(tile)*stepUV,dy=dFdy(tile)*stepUV;
+          vec3 albedo=textureGrad(uSamples,uv,dx,dy).rgb;
+          vec3 pores=textureGrad(uPores,uv,dx,dy).rgb;
+          float grain=clamp(dot(albedo,vec3(.2126,.7152,.0722))*2.6,.37,1.6);
+          if(vFinish<1.5){
+            diffuseColor.rgb*=mix(1.,grain,vFinish<.5?.27:.32);
+            scanRough=mix(.88,pores.b,.6);
+          }else if(vFinish<3.5){
+            // Painted railings and exposed zinc respond differently to the sky.
+            metal=vFinish<2.5?.14:.62;scanRough=mix(vFinish<2.5?.59:.40,pores.b,.26);
+            diffuseColor.rgb*=mix(1.,grain,.15);
+          }else{
+            float slats=vPartMetres.y*32.;
+            float resolved=1.-smoothstep(.08,.45,fwidth(slats));
+            diffuseColor.rgb*=1.-resolved*(.04+.08*(.5+.5*cos(6.283185*slats)));
+            scanRough=.94;
+          }
+        }`)
+      .replace('#include <roughnessmap_fragment>','#include <roughnessmap_fragment>\nroughnessFactor=scanRough;')
+      .replace('#include <metalnessmap_fragment>','#include <metalnessmap_fragment>\nmetalnessFactor=metal;');
+  };
+  return mat;
+}
 
 // Cast real balcony shadows only near the viewer. The return to the flat joinery
 // uses the same bay, floor and sill dimensions as the shader.
 export function nearFacades(group){
   const compact=matchMedia('(pointer: coarse)').matches||(navigator.deviceMemory||8)<=4;
   const max=compact?4500:11520,frame=new T.Object3D();
-  const parts=new T.InstancedMesh(new T.BoxGeometry(),new T.MeshStandardMaterial({roughness:.73}),max);
+  const parts=new T.InstancedMesh(new T.BoxGeometry(),detailMaterial(),max);
+  const finishes=new T.InstancedBufferAttribute(new Uint8Array(max),1);
+  finishes.setUsage(T.DynamicDrawUsage);parts.geometry.setAttribute('facadeFinish',finishes);
   parts.count=0;parts.frustumCulled=false;parts.receiveShadow=true;parts.castShadow=true;
   parts.instanceMatrix.setUsage(T.DynamicDrawUsage);group.add(parts);
   const lime=new T.Color('#cfc3ac'),concrete=new T.Color('#b9b8ac'),iron=new T.Color('#4a5550'),
@@ -16,11 +65,13 @@ export function nearFacades(group){
     bamboo=new T.Color('#b18c5e'),blindIvory=new T.Color('#d4cdb8'),blindSlate=new T.Color('#8b9996'),
     blindHem=new T.Color('#72746a'),apron=new T.Color('#bc896e');
   let lastKey='',count=0;
+  const finishCode=new Map([[lime,0],[edge,0],[concrete,1],[apron,1],[iron,2],[shutter,2],[louvre,2],
+    [zinc,3],[blindHem,3],[awning,4],[bamboo,4],[blindIvory,4],[blindSlate,4]]);
   function piece(x,y,z,yaw,w,h,d,color,tilt=0){
     if(count>=max)return;
     frame.position.set(x,y,z);frame.rotation.set(0,yaw,0,'YXZ');frame.rotation.x=tilt;
     frame.scale.set(w,h,d);frame.updateMatrix();
-    parts.setMatrixAt(count,frame.matrix);parts.setColorAt(count++,color);
+    finishes.setX(count,finishCode.get(color));parts.setMatrixAt(count,frame.matrix);parts.setColorAt(count++,color);
   }
   return function update(x,z,range,budget,live,visible,version){
     parts.visible=range<200;
@@ -128,6 +179,9 @@ export function nearFacades(group){
               continue;
             }
             const w=Math.min(bayWidth*.83,width+.30),depth=historic?.58:.83,h=historic?.83:.96;
+            if(y-.065-localGround<2.35)continue;
+            // Verify both outer corners as well as the bay centre on angled blocks.
+            if([-.5,0,.5].some(t=>occupied(px+tx*t*w+nx*depth,pz+tz*t*w+nz*depth)))continue;
             at(px,y,pz,0,depth*.50,w,.13,depth,stone);
             const rim=depth-.045;
             if(!historic&&r.seed%3===1){
@@ -157,7 +211,7 @@ export function nearFacades(group){
       }
     }
     parts.count=count;
-    for(const attribute of [parts.instanceMatrix,parts.instanceColor]){
+    for(const attribute of [parts.instanceMatrix,parts.instanceColor,finishes]){
       if(!attribute||!count)continue;
       attribute.clearUpdateRanges();
       attribute.addUpdateRange(0,count*attribute.itemSize);

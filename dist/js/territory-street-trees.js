@@ -42,9 +42,17 @@ async function buildTrees(){
     crown.setAttribute(name,new T.Float32BufferAttribute(list,width));
   crown.setIndex(indices);
   const leaves=cutout('tree-crown.webp');
-  leaves.onBeforeCompile=s=>{
-    s.vertexShader='attribute vec3 leafAxis;varying float vValidProjection;\n'+s.vertexShader.replace('#include <begin_vertex>',`#include <begin_vertex>
+  const wind={value:new T.Vector2()};
+  const crownDepth=new T.MeshDepthMaterial({depthPacking:T.RGBADepthPacking,map:leaves.map,alphaTest:leaves.alphaTest});
+  function projectCrown(s){
+    s.uniforms.crownWind=wind;
+    s.vertexShader='uniform vec2 crownWind;attribute vec3 leafAxis;varying float vValidProjection;\n'+s.vertexShader.replace('#include <begin_vertex>',`#include <begin_vertex>
       vec3 worldTree=(modelMatrix*instanceMatrix*vec4(position,1.)).xyz;
+      if(crownWind.y>.0){
+        float phase=dot(instanceMatrix[3].xz,vec2(.031,.019));
+        float sway=sin(phase+crownWind.x+position.y*.28)+.36*sin(phase*1.83+crownWind.x*2.1);
+        transformed.xz+=vec2(.012,.008)*sway*smoothstep(1.3,4.4,position.y)*crownWind.y;
+      }
       vec3 eyeTree=normalize(cameraPosition-worldTree);
       mat3 orient=mat3(modelMatrix*instanceMatrix);
       vec3 direction=abs(vec3(dot(eyeTree,normalize(orient[0])),dot(eyeTree,normalize(orient[1])),dot(eyeTree,normalize(orient[2]))));
@@ -52,7 +60,8 @@ async function buildTrees(){
     s.fragmentShader='varying float vValidProjection;\n'+s.fragmentShader
       .replace('#include <clipping_planes_fragment>','#include <clipping_planes_fragment>\n if(vValidProjection<0.)discard;')
       .replace('#include <normal_fragment_begin>','#include <normal_fragment_begin>\n if(!gl_FrontFacing)normal=-normal;');
-  };
+  }
+  leaves.onBeforeCompile=crownDepth.onBeforeCompile=projectCrown;
   const view=new T.PlaneGeometry(6.30,6.30),far=cutout('tree-views.webp');
   // Use the photographed model's azimuth and elevation closest to the live
   // camera. The trunk centre stays fixed during every change of view.
@@ -81,5 +90,5 @@ async function buildTrees(){
       vec3 crownNormal=normalize(treeRight*disk.x+treeUp*disk.y+treeEye*outward+vec3(0.,1.65,0.));
       normal=normalize(mat3(viewMatrix)*crownNormal);`);
   };
-  return {geometry:{trunk,crown,treeView:view},material:{trunk:woodMat,crown:leaves,treeView:far}};
+  return {geometry:{trunk,crown,treeView:view},material:{trunk:woodMat,crown:leaves,treeView:far},crownDepth,wind};
 }

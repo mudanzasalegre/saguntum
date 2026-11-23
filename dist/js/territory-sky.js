@@ -57,7 +57,7 @@ export function territorySky(renderer,scene,direction,horizon,zenith) {
   probeDome.scale.setScalar(10);probeScene.add(probeDome);
   const probesSupported=renderer.extensions.has('EXT_color_buffer_float');
   let generator;
-  let target=null,dirty=true,lastProbe=-Infinity;
+  let target=null,dirty=true,lastProbe=-Infinity,probeSize=0;
   new T.TextureLoader().load('./assets/materials/sky/clouds.webp',photo=>{
     photo.wrapS=T.RepeatWrapping;uniforms.cloudMap.value=photo;uniforms.hasClouds.value=1;dirty=true;
   },undefined,()=>{ /* The solar sky remains available without the cloud image. */ });
@@ -72,14 +72,15 @@ export function territorySky(renderer,scene,direction,horizon,zenith) {
     update(camera,quality){
       if(!dome.visible)return;
       dome.position.copy(camera.position);
-      if(!probesSupported||!dirty||performance.now()-lastProbe<220)return;
+      const size=[32,64,64,128][quality];
+      if(!probesSupported||(!dirty&&probeSize===size)||performance.now()-lastProbe<220)return;
       generator??=new T.PMREMGenerator(renderer);
       const previous=target;
       uniforms.probe.value=1;
-      try{target=generator.fromScene(probeScene,0,.1,25,{size:quality===0?32:64});}
+      try{target=generator.fromScene(probeScene,0,.1,25,{size});}
       finally{uniforms.probe.value=0;}
       scene.environment=target.texture;previous?.dispose();
-      lastProbe=performance.now();dirty=false;
+      lastProbe=performance.now();dirty=false;probeSize=size;
     }
   };
 }

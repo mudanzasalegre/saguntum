@@ -46,7 +46,7 @@ function unpack(data){
   m.castShadow=o.cast;m.receiveShadow=o.receive;m.renderOrder=o.order;group.add(m);
   registerPhase(m,o.visibility);
  }
- return {group,claims:data.claims,relief:data.relief,pavement:data.pavement,contextStats:data.contextStats,setDensity:landscapeDetail(group),setHistorical(on){for(const m of modern)m.visible=!on;for(const m of historical)m.visible=on;}};
+ return {group,claims:data.claims,relief:data.relief,pavement:data.pavement,publicDeck:data.publicDeck,walkBarriers:data.walkBarriers,contextStats:data.contextStats,setDensity:landscapeDetail(group),setHistorical(on){for(const m of modern)m.visible=!on;for(const m of historical)m.visible=on;}};
 }
 
 // A browser without worker canvas support can still use the source constructors.

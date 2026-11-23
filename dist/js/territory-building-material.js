@@ -38,8 +38,9 @@ export function skylineMaterial(photography){
   return material;
 }
 
-export function architecturalMaterial(night,photography){
-  const mat=new T.MeshStandardMaterial({vertexColors:true,roughness:.88,side:T.DoubleSide});
+let loadedScans;
+export function architectureScans(){
+  if(loadedScans)return loadedScans;
   const textures=new T.TextureLoader(),ready={value:0};
   const compact=matchMedia('(pointer: coarse)').matches||(navigator.deviceMemory||8)<=4;
   const slots={uArchSurface:{value:null},uArchRelief:{value:null},uArchBay:{value:null},uArchGlass:{value:null}};
@@ -49,10 +50,15 @@ export function architecturalMaterial(night,photography){
     if(name==='uArchSurface'||name==='uArchBay')tex.colorSpace=T.SRGBColorSpace;
     tex.anisotropy=4;slot.value=tex;
   })).then(()=>{ready.value=1;}).catch(e=>console.warn('Material arquitectónico',e));
+  return loadedScans={...slots,uArchReady:ready};
+}
+
+export function architecturalMaterial(night,photography){
+  const mat=new T.MeshStandardMaterial({vertexColors:true,roughness:.88,side:T.DoubleSide});
   mat.defines={USE_UV:''};
   mat.customProgramCacheKey=()=>'territorial-architecture-38';
   mat.onBeforeCompile=s=>{
-    Object.assign(s.uniforms,slots,{uArchReady:ready,uNight:night});
+    Object.assign(s.uniforms,architectureScans(),{uNight:night});
     const varyings=`
       varying vec2 vArchBay, vArchMetric, vArchXZ, vArchGrade;
       varying vec4 vArchData;
@@ -97,6 +103,11 @@ export function architecturalMaterial(night,photography){
         vec3 fabric=mix(vec3(.42,.37,.27),vec3(.57,.56,.48),tone);
         room=mix(room,fabric*(.68+.17*cos(pane.x*112.)),curtain);
         vec3 reflected=mix(vec3(.155,.122,.08),vec3(.30,.45,.54),smoothstep(-.17,.53,reflection.y));
+        #if defined(USE_ENVMAP) && defined(ENVMAP_TYPE_CUBE_UV)
+          // The probe is the same sky and clouds as those above this street.
+          vec3 skyRadiance=textureCubeUV(envMap,envMapRotation*reflection,.14).rgb;
+          reflected=mix(reflected,min(skyRadiance,vec3(2.4)),.56);
+        #endif
         // Reflect the measured street enclosure at the pane. A ray leaving
         // the roof line sees sky; one meeting the opposite block sees render.
         if(uUrbanReady*uUrbanEnabled>.5&&vArchRange<82.&&reflection.y<.93){
@@ -132,11 +143,11 @@ export function architecturalMaterial(night,photography){
         return normalize(n+(t*perturb.x+bTan*perturb.y)*inv*weight);
       }
     `;
-    s.fragmentShader=varyings+fragment+s.fragmentShader;
+    s.fragmentShader=varyings+s.fragmentShader.replace('void main() {',fragment+'\nvoid main() {');
     s.fragmentShader=s.fragmentShader.replace('#include <color_fragment>',`#include <color_fragment>
       float archDetail=(1.-smoothstep(220.,780.,vArchRange))*uArchReady;
       float archSides=step(-1.5,vArchData.y);
-      float glassAmt=0.,litWindow=0.,archRough=.88,reliefWeight=0.;
+      float glassAmt=0.,litWindow=0.,archRough=.88,archMetal=0.,reliefWeight=0.;
       vec2 microNormal=vec2(0.);
       if(archDetail>.001){
         float index=floor(vArchData.x+.5);
@@ -146,6 +157,7 @@ export function architecturalMaterial(night,photography){
         vec3 nr=textureGrad(uArchRelief,coord,dx,dy).rgb;
         diffuseColor.rgb*=mix(vec3(1.),clamp(scan*2.32,vec3(.25),vec3(1.95)),archDetail*(index==0.?.49:.86));
         archRough=mix(.88,nr.b,archDetail*.74);
+        if(index==2.||index==6.)archMetal=archDetail*clamp(.72*(1.-nr.b)+.10,.1,.58);
         microNormal=nr.rg*2.-1.;
         reliefWeight=(1.-smoothstep(34.,170.,vArchRange))*(index==0.?.43:.81);
         if(archSides>.5){
@@ -223,6 +235,8 @@ export function architecturalMaterial(night,photography){
       }
     `).replace('#include <roughnessmap_fragment>',`#include <roughnessmap_fragment>
       roughnessFactor=mix(archRough,.24,glassAmt);`)
+      .replace('#include <metalnessmap_fragment>',`#include <metalnessmap_fragment>
+      metalnessFactor=mix(archMetal,0.,glassAmt);`)
       .replace('#include <normal_fragment_maps>',`#include <normal_fragment_maps>
       if(reliefWeight>.001)normal=archNormal(normal,-vViewPosition,vArchMetric,microNormal,reliefWeight);`)
       .replace('#include <aomap_fragment>',`#include <aomap_fragment>

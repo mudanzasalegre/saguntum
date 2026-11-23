@@ -115,7 +115,12 @@ export async function buildGround(scene,grids,heightAt,renderer) {
     }
     for(const {p,want} of changes.sort((a,b)=>a.d-b.d).slice(0,2)){
       if(p.mesh){p.mesh.removeFromParent();p.mesh.geometry.dispose();p.mesh=null;}
-      if(want!==coarseDiv){p.mesh=new T.Mesh(patch(p.x,p.z,p.w,p.h,want),mat);p.mesh.receiveShadow=true;group.add(p.mesh);}
+      if(want!==coarseDiv){
+        p.mesh=new T.Mesh(patch(p.x,p.z,p.w,p.h,want),mat);p.mesh.receiveShadow=true;
+        // Cast the measured hills close to the camera. The depth pass observes
+        // the same excavation and pavement masks as the visible ground.
+        p.mesh.castShadow=want>=60;p.mesh.customDepthMaterial=heritageGround.depth;group.add(p.mesh);
+      }
       p.div=want;p.block.dirty=true;
     }
     for(const block of blocks.values())if(block.dirty){

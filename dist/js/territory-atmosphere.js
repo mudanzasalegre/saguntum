@@ -2,6 +2,7 @@ import * as T from 'three';
 import {territorySky} from './territory-sky.js';
 import {urbanSun} from './territory-urban-sky.js';
 import {atlasLights,atlasRim,applyAtlasLighting} from './atlas-appearance.js';
+import {solarDirection} from './territory-solar.js';
 
 export function createAtmosphere(scene,renderer,sea,buildings,network,registration) {
   const ambient=new T.HemisphereLight('#bfd8f1','#827366',1);
@@ -26,15 +27,14 @@ export function createAtmosphere(scene,renderer,sea,buildings,network,registrati
     atlasMode=true;
     scene.background=horizon;applyAtlasLighting(mode,scene,renderer,sun,ambient);
     atlasDirection(atlasLights[mode].direction,direction);rim.visible=true;
-    sky.show(false);sea.setAtlasLight(mode);
+    sky.show(false);sea.setAtlasLight(mode,direction);
     buildings.night.value=0;network.setNight(0);invalid=true;
   }
-  function setHour(hour){
-    atlasMode=false;rim.visible=false;sky.show(true);renderer.toneMappingExposure=1.05;
-    // Equinox and local solar time, N = -Z and E = +X in the territorial CRS.
-    const angle=(hour-12)*Math.PI/12,phi=39.679*Math.PI/180;
-    direction.set(-Math.sin(angle),Math.cos(phi)*Math.cos(angle),Math.sin(phi)*Math.cos(angle));
+  function setHour(hour,date){
+    atlasMode=false;rim.visible=false;sky.show(true);
+    atlasDirection(solarDirection(hour,date),direction);
     light=T.MathUtils.smoothstep(direction.y,-.17,.21);
+    renderer.toneMappingExposure=T.MathUtils.lerp(1.24,1.05,light);
     const warmth=1-T.MathUtils.smoothstep(direction.y,-.01,.44);
     const dusk=warmth*T.MathUtils.smoothstep(direction.y,-.18,.015);
     horizon.set('#152031').lerp(tint.set('#b8cfdf'),light).lerp(tint.set('#f3bea4'),dusk*.72);
@@ -53,10 +53,10 @@ export function createAtmosphere(scene,renderer,sea,buildings,network,registrati
   function update(camera,p,range,quality){
     sky.update(camera,quality);
     if(atlasMode)scene.fog.density=T.MathUtils.lerp(.000115,.000022,T.MathUtils.smoothstep(range,350,4900));
-    const shadowRange=quality===2?1800:quality===1?950:85;
+    const shadowRange=[85,950,1800,2400][quality];
     const enabled=direction.y>.035&&(atlasMode||range<shadowRange);
     if(renderer.shadowMap.enabled!==enabled){renderer.shadowMap.enabled=enabled;invalid=true;}
-    const desiredSize=quality===2?2048:quality===1?1536:atlasMode?1024:512;
+    const desiredSize=[atlasMode?1024:512,1536,2048,4096][quality];
     if(enabled&&sun.shadow.mapSize.x!==desiredSize){
       sun.shadow.mapSize.setScalar(desiredSize);sun.shadow.map?.dispose();sun.shadow.map=null;span=0;invalid=true;
     }
@@ -83,5 +83,6 @@ export function createAtmosphere(scene,renderer,sea,buildings,network,registrati
       renderer.shadowMap.needsUpdate=true;lastPopulation=population;lastRefresh=now;invalid=false;
     }
   }
-  return {atlas,setHour,update};
+  return {atlas,setHour,update,get daylight(){return atlasMode?1:light;},
+    get shadowSize(){return renderer.shadowMap.enabled?sun.shadow.mapSize.x:0;}};
 }

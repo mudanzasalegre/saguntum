@@ -19,13 +19,16 @@ function joinRectangles(rows){
 
 export function conservationGround({group,material,heightAt,bounds}){
  const original=material.onBeforeCompile,overlay=material.clone();
+ const depth=new T.MeshDepthMaterial({depthPacking:T.RGBADepthPacking});
+ const gradedDepth=depth.clone();
+ material.shadowSide=overlay.shadowSide=T.FrontSide;
  const maxCuts=2*maxLocalHeritage+1;
  const cuts=Array.from({length:maxCuts},()=>new T.Vector4()),cross=Array.from({length:maxCuts},()=>new T.Vector2());
  const rectangles=Array.from({length:maxLocalHeritage},()=>new T.Vector4(1,1,-1,-1)),nCuts={value:0};
- function hook(target,coarse){
+ function hook(target,coarse,appearance){
   target.customProgramCacheKey=()=>coarse?'territory-ground-with-cut':'territory-ground-graded';
   target.onBeforeCompile=function(shader,renderer){
-   original.call(this,shader,renderer);
+   if(appearance)original.call(this,shader,renderer);
    Object.assign(shader.uniforms,{uSiteRects:{value:rectangles},uExc:{value:cuts},uExcCross:{value:cross},uExcCount:nCuts});
    shader.vertexShader='varying vec2 vSiteMetric;\n'+shader.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\nvSiteMetric=position.xz;');
    shader.fragmentShader=`varying vec2 vSiteMetric; uniform vec4 uSiteRects[${maxLocalHeritage}],uExc[${maxCuts}]; uniform vec2 uExcCross[${maxCuts}]; uniform int uExcCount;\n`+shader.fragmentShader.replace('#include <clipping_planes_fragment>',`#include <clipping_planes_fragment>
@@ -33,7 +36,8 @@ export function conservationGround({group,material,heightAt,bounds}){
     for(int i=0;i<${maxCuts};i++){if(i>=uExcCount)break;vec2 d=vSiteMetric-uExc[i].xy;if(abs(dot(d,uExc[i].zw))<=1.&&abs(dot(d,uExcCross[i]))<=1.)discard;}`);
   };
  }
- hook(material,true);hook(overlay,false);
+ hook(material,true,true);hook(overlay,false,true);
+ hook(depth,true,false);hook(gradedDepth,false,false);
  let source=null,active=[],meshes=[],cutsNow=[];
  function grade(x,z){
   let delta=0;
@@ -52,7 +56,8 @@ export function conservationGround({group,material,heightAt,bounds}){
   }
   const g=new T.BufferGeometry();g.setAttribute('position',new T.BufferAttribute(pos,3));g.setAttribute('uv',new T.BufferAttribute(uv,2));
   g.setIndex(index);g.computeVertexNormals();g.computeBoundingSphere();
-  const mesh=new T.Mesh(g,overlay);mesh.receiveShadow=true;group.add(mesh);return mesh;
+  const mesh=new T.Mesh(g,overlay);mesh.castShadow=mesh.receiveShadow=true;
+  mesh.customDepthMaterial=gradedDepth;group.add(mesh);return mesh;
  }
  function update(){
   const next=source?.relief||[];
@@ -68,8 +73,8 @@ export function conservationGround({group,material,heightAt,bounds}){
   holes.forEach((q,i)=>{cuts[i].set(q[0],q[1],q[2],q[3]);cross[i].set(q[4],q[5]);});
   nCuts.value=holes.length;cutsNow=holes;
  }
- return {setSource(value){
-   if(source!==value){value?.maskRoadMaterial?.(material,true);value?.maskRoadMaterial?.(overlay,true);}
+ return {depth,setSource(value){
+   if(source!==value)for(const mat of [material,overlay,depth,gradedDepth])value?.maskRoadMaterial?.(mat,true);
    source=value;update();
   },update,grade,
   canStand(x,z){return !cutsNow.some(([cx,cz,a,b,c,d])=>Math.abs((x-cx)*a+(z-cz)*b)<=1&&Math.abs((x-cx)*c+(z-cz)*d)<=1);}

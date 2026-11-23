@@ -1,7 +1,9 @@
 import * as THREE from 'three';
 import {atlasProject,documentData,registerFrame} from './territory-heritage-catalog.js';
 import {heritageRelief,reliefDelta} from './territory-heritage-relief.js';
-import {sampleAtlasPavement} from './territory-heritage-paving.js';
+import {heightOnPavement,sampleAtlasPavement,samplePublicDeck} from './territory-heritage-paving.js';
+import {sampleHeritageBarriers} from './territory-collision-heritage.js';
+import {instantiateAtlasVisit} from './territory-heritage-registry.js';
 
 // Each table entry addresses the original geometry constructor, including
 // sectional interiors and original texture generation. Only one site is built
@@ -20,7 +22,8 @@ const definitions={
  'marjal-moros':['landscape-marjal','createMarshLandscape',()=>import('./landscape-marjal.js')],'dunas-almarda':['landscape-dunes','createDunesLandscape',()=>import('./landscape-dunes.js')],'rio-palancia':['landscape-palancia','createPalanciaLandscape',()=>import('./landscape-palancia.js')]
 };
 const archiveOnly=new Set(['glorieta','pantalan','grau-vell','puerto-antiguo','marjal-moros','dunas-almarda','rio-palancia']);
-export const modelId=id=>id==='diana'?'berenguer':id.startsWith('pantalan-')?'pantalan':id;
+const sharedModels={'diana':'berenguer','pantalan-maritimo':'pantalan','pantalan-paseo':'pantalan'};
+export const modelId=id=>sharedModels[id]||id;
 
 export function maskRing(points){
  if(!points||points.length<3)return null;
@@ -122,6 +125,40 @@ export function inRing(x,z,ring){
  }
  return inside&&!ring.holes?.some(hole=>inRing(x,z,hole));
 }
+// Replacement requires overlapping interiors. Neighbours sharing only a
+// cadastral edge and buildings situated in an open courtyard stay visible.
+export function overlapsRegisteredFootprint(rings,claim){
+ const polygon=rings.map(r=>maskRing(r.map(([x,z])=>({x,z})))).filter(Boolean);
+ const outer=polygon[0];if(!outer)return false;outer.holes=polygon.slice(1);
+ if(outer.right<=claim.left||outer.left>=claim.right||outer.bottom<=claim.top||outer.top>=claim.bottom)return false;
+ const cross=(a,b,c)=>(b.x-a.x)*(c.z-a.z)-(b.z-a.z)*(c.x-a.x);
+ function strictlyInside(p,ring){
+  if(!inRing(p.x,p.z,ring))return false;
+  return [ring,...ring.holes||[]].every(({points})=>points.every((a,i)=>{
+   const b=points[(i+1)%points.length];
+   return Math.abs(cross(a,b,p))>1e-7||p.x<Math.min(a.x,b.x)||p.x>Math.max(a.x,b.x)||p.z<Math.min(a.z,b.z)||p.z>Math.max(a.z,b.z);
+  }));
+ }
+ if(outer.points.some(p=>strictlyInside(p,claim))||claim.points.some(p=>strictlyInside(p,outer)))return true;
+ for(const r of [claim,...claim.holes||[]])for(let i=0;i<r.points.length;i++){
+  const a=r.points[i],b=r.points[(i+1)%r.points.length];
+  for(const s of polygon)for(let j=0;j<s.points.length;j++){
+   const c=s.points[j],d=s.points[(j+1)%s.points.length];
+   if(cross(a,b,c)*cross(a,b,d)<0&&cross(c,d,a)*cross(c,d,b)<0)return true;
+  }
+ }
+ // Coincident edges can delimit a genuine overlap, even with no interior
+ // vertex. Probe the inward side of each edge, excluding courtyards.
+ for(const [ring,other] of [[claim,outer],[outer,claim]])for(let i=0;i<ring.points.length;i++){
+  const a=ring.points[i],b=ring.points[(i+1)%ring.points.length],dx=b.x-a.x,dz=b.z-a.z;
+  const length=Math.hypot(dx,dz);if(!length)continue;
+  for(const sign of [-1,1]){
+   const p={x:(a.x+b.x)/2+sign*dz/length*.0001,z:(a.z+b.z)/2-sign*dx/length*.0001};
+   if(strictlyInside(p,ring)&&strictlyInside(p,other))return true;
+  }
+ }
+ return false;
+}
 function claimsFor(model,record,frame,project) {
  const ids=new Set(),rings=[];
  const add=id=>ids.add(normalizeBuildingId(id));
@@ -171,13 +208,41 @@ export function releaseModel(group){
   for(const m of Array.isArray(o.material)?o.material:o.material?[o.material]:[])materials.add(m);
   if(o.isInstancedMesh)o.dispose();
  });
- for(const m of materials){for(const t of Object.values(m))if(t?.isTexture)textures.add(t);m.dispose();}
+ for(const m of materials){
+  for(const t of Object.values(m))if(t?.isTexture)textures.add(t);
+  for(const u of Object.values(m.uniforms||{}))if(u.value?.isTexture)textures.add(u.value);
+  m.dispose();
+ }
  for(const g of geometries)g.dispose();
  for(const t of textures)t.dispose();
  group.removeFromParent();
 }
 
 export async function buildHeritageModel(id,{places,records,area,heightAt,project,needed,bindVisit,renderer}){
+ if(records[id]?.scene){
+  const record=records[id],created=await instantiateAtlasVisit(record,{project,heightAt,renderer,needed});
+  if(!created)return null;
+  const {group,site}=created;
+  const toMask=ring=>maskRing(ring.map(ll=>project(...ll)));
+  const rings=(record.footprints||[record.footprint].filter(Boolean)).map(polygon=>{
+   const ring=toMask(polygon.coordinates||polygon);
+   if(ring){ring.holes=(polygon.holes||[]).map(toMask).filter(Boolean);ring.registered=true;}
+   return ring;
+  }).filter(Boolean);
+  const ids=(record.buildingIds||[]).map(normalizeBuildingId);
+  const model={group,claims:[{ids,rings}],relief:{cuts:[]},pavement:null,setDensity:landscapeDetail(group),
+   setHistorical(on){site.setHistorical?.(on);},
+   setVisitStop(place,stop,presentation={}){
+    const data=record.guide?.stops?.find(s=>s.id===stop);
+    const mode=presentation.mode||data?.mode||'current',section=!!(presentation.requiresSection||data?.requiresSection||mode==='cut');
+    site.setHistorical?.(mode==='historical');
+    site.setSection?.(section);site.selectFocus?.(stop||null);
+    return stop?{place,stop,mode,section,interior:!!data?.interiorView}:null;
+   },disposeVisit(){site.dispose?.();}};
+  model.publicDeck=samplePublicDeck(group);
+  model.walkBarriers=sampleHeritageBarriers(group,(x,z)=>heightOnPavement(model.publicDeck,x,z)??heightAt(x,z));
+  return model;
+ }
  const primary=id==='pantalan'?'pantalan-paseo':id,place=places.find(p=>p.id===primary);
  const [file,func,loadFactory]=definitions[id],frame=registerFrame(place,project);
  const sample=(x,z)=>{const p=frame.world(x,z);return heightAt(p.x,p.z);};
@@ -283,6 +348,8 @@ export async function buildHeritageModel(id,{places,records,area,heightAt,projec
   }
   if(sites.diana){sites.diana.remains.visible=!on;sites.diana.reconstruction.visible=on;}
  }};
+ model.publicDeck=samplePublicDeck(outer);
+ model.walkBarriers=sampleHeritageBarriers(outer,(x,z)=>heightOnPavement(model.publicDeck,x,z)??heightOnPavement(pavement,x,z)??(heightAt(x,z)+reliefDelta(relief,x,z)));
  bindVisit?.({model,sites,options,frame,heightAt:adjusted,renderer});
  return model;
 }

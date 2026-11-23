@@ -71,7 +71,9 @@ async function pack(model){
  }
  if(model.relief.delta)transfer.add(model.relief.delta.buffer);
  if(model.pavement)transfer.add(model.pavement.heights.buffer);
- return {payload:{name:model.group.name,objects,geometries,materials,textures,lights,claims:model.claims,relief:model.relief,pavement:model.pavement,contextStats:model.contextStats},transfer:[...transfer]};
+ if(model.walkBarriers)transfer.add(model.walkBarriers.buffer);
+ if(model.publicDeck)transfer.add(model.publicDeck.heights.buffer);
+ return {payload:{name:model.group.name,objects,geometries,materials,textures,lights,claims:model.claims,relief:model.relief,pavement:model.pavement,publicDeck:model.publicDeck,walkBarriers:model.walkBarriers,contextStats:model.contextStats},transfer:[...transfer]};
 }
 
 self.onmessage=async({data})=>{

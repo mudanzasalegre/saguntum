@@ -1,6 +1,5 @@
 // One entry per original Atlas destination. Keep anchors, evidence and visit links
 // in their source records; the simulator only adds the common projected position.
-const inventories=['glorieta-catalog','landmarks','archaeology-public','archaeology-domestic','archaeology-necropolis','port-industrial','port-garden','port-workers','coast-pier','coast-grau','coast-archaeology','landscape-marjal','landscape-dunes','landscape-palancia'];
 const cache=new Map();
 export function documentData(name,retain=true){
  if(cache.has(name))return cache.get(name);
@@ -10,6 +9,23 @@ export function documentData(name,retain=true){
  }).catch(error=>{cache.delete(name);throw error;});
  if(retain)cache.set(name,result);
  return result;
+}
+
+// The same static manifest is read by both entry points. Each new document
+// contains the editorial record, visit stops and a reference to its scene.
+export async function loadAtlasVisitRegistry(){
+ const {version,inventories,visits}=await documentData('atlas-visits');
+ if(version!==1)throw Error('Versión del registro de visitas desconocida');
+ const entries=await Promise.all(visits.map(async name=>{
+  const record=await documentData(name);
+  if(!/^[a-z0-9][a-z0-9-]*$/.test(record.id)||!record.name||record.coordinate?.length!==2||
+     !record.coordinate.every(Number.isFinite)||!record.scene?.module)throw Error('Ficha de visita incompleta · '+name);
+  const guide=typeof record.guide==='string'?await documentData(record.guide):record.guide;
+  for(const stop of guide?.stops||[])if(stop.coordinate?.length!==2||!stop.coordinate.every(Number.isFinite))
+   throw Error('Parada sin coordenadas · '+record.id+'/'+stop.id);
+  return {...record,guide};
+ }));
+ return {inventories,entries};
 }
 
 const historicStops={
@@ -25,7 +41,7 @@ function metadata(record,project){
   id:record.id,name:record.name,lon,lat,...project(lon,lat),href,region:record.region||'sagunto',
   period:record.stateAsOf||'Estado conservado descrito en el atlas',sources,
   precision:'Anclaje cartográfico del atlas. Alzados, materiales y detalles interpretativos.',
-  historical:null
+  category:record.category,guide:record.guide,scene:record.scene,historical:record.historical||null
  };
  if(Object.hasOwn(historicStops,record.id)){
   const stop=historicStops[record.id];
@@ -36,12 +52,17 @@ function metadata(record,project){
  return info;
 }
 export async function loadHeritageCatalog(project){
+ const {inventories,entries}=await loadAtlasVisitRegistry();
  const [lists,castle,theatrePlan,area]=await Promise.all([
-  Promise.all(inventories.map(name=>documentData(name))),documentData('castle-visit'),documentData('theatre-plan'),documentData('historic-context')
+  Promise.all(Object.values(inventories).flat().map(name=>documentData(name))),documentData('castle-visit'),documentData('theatre-plan'),documentData('historic-context')
  ]);
  const records=Object.fromEntries(lists.flatMap(list=>list.sites).map(record=>[record.id,record]));
  records.castle={id:'castle',name:'Castillo de Sagunto',coordinate:castle.stops.find(s=>s.id==='conjunto').coordinate,sources:castle.sources};
  records.theatre={id:'theatre',name:'Teatro Romano',coordinate:theatrePlan.center,sources:[{url:'https://manuelportaceli.com/rehabilitacion-del-teatro-romano-de-sagunto/'}]};
+ for(const entry of entries){
+  if(records[entry.id])throw Error('Identificador de visita duplicado · '+entry.id);
+  records[entry.id]=entry;
+ }
  return {places:Object.values(records).map(record=>metadata(record,project)),records,area};
 }
 

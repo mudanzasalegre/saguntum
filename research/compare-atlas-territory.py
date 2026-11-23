@@ -268,23 +268,26 @@ def atlas_regression(browser,base,cache):
 def main():
     import tempfile
     parser=argparse.ArgumentParser();parser.add_argument('--base')
-    parser.add_argument('--stage',required=True,choices=['atlas','v34','v35','comparar','regresion'])
+    parser.add_argument('--stage',required=True,choices=['atlas','v34','v35','simulador','comparar','regresion'])
+    parser.add_argument('--out',type=Path,help='Carpeta para las capturas y controles de esta ejecución')
+    parser.add_argument('--software',action='store_true',help='Ejecutar WebGL 2 con SwiftShader')
     parser.add_argument('--only',nargs='*');parser.add_argument('--native',action='store_true')
     parser.add_argument('--cache',type=Path,default=Path(tempfile.gettempdir())/'saguntum-parity-v35')
     args=parser.parse_args()
     if args.stage=='comparar':comparison();return
     if not args.base:parser.error('--base es necesario para capturar una versión')
     base=args.base.rstrip('/')+'/';label=args.stage;cache=args.cache
+    flags=['--enable-unsafe-swiftshader','--use-angle=swiftshader'] if args.software else []
     cache.mkdir(parents=True,exist_ok=True)
     if label=='regresion':
         with sync_playwright() as q:
-            browser=q.chromium.launch(channel='chrome')
+            browser=q.chromium.launch(channel='chrome',args=flags)
             atlas_regression(browser,base,cache);browser.close()
         return
-    folder=OUT/label;folder.mkdir(exist_ok=True,parents=True)
+    folder=args.out or OUT/label;folder.mkdir(exist_ok=True,parents=True)
     outfile=folder/'controles.json';report=json.loads(outfile.read_bytes()) if outfile.exists() else {}
     with sync_playwright() as q:
-        browser=q.chromium.launch(channel='chrome')
+        browser=q.chromium.launch(channel='chrome',args=flags)
         for stop,(id,_,name,prefix) in CASES.items():
             if args.only and stop not in args.only: continue
             report[stop]=reference(browser,base,id,stop,prefix,folder,cache) if label=='atlas' else simulator(browser,base,label,id,stop,prefix,folder,cache)

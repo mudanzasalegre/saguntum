@@ -1,0 +1,136 @@
+{
+  "graphics": {
+    "backend": "WebGL 2",
+    "three": "180",
+    "webgpuExposed": true,
+    "webgpuIncompatible": [
+      "reflexión costera Water",
+      "materiales GLSL del Atlas",
+      "cortes de terreno y ortofoto"
+    ],
+    "ultra": true,
+    "autoLimit": 2,
+    "initial": 2,
+    "profile": "Ultra",
+    "shadowSize": 0,
+    "contact": true
+  },
+  "profiles": {
+    "0": {
+      "waveTime": 1.0998000000000006,
+      "reflection": 768,
+      "normal": 128,
+      "shore": 1013,
+      "direction": [
+        0.008458639626773401,
+        0.9603382795344857,
+        0.27870923966816846
+      ],
+      "strength": 1,
+      "shadow": 512,
+      "enabled": true
+    },
+    "1": {
+      "waveTime": 1.2497000000000003,
+      "reflection": 768,
+      "normal": 128,
+      "shore": 1013,
+      "direction": [
+        0.008458639626773401,
+        0.9603382795344857,
+        0.27870923966816846
+      ],
+      "strength": 1,
+      "shadow": 1536,
+      "enabled": true
+    },
+    "2": {
+      "waveTime": 2.133300000000001,
+      "reflection": 768,
+      "normal": 128,
+      "shore": 1013,
+      "direction": [
+        0.008458639626773401,
+        0.9603382795344857,
+        0.27870923966816846
+      ],
+      "strength": 1,
+      "shadow": 2048,
+      "enabled": true
+    },
+    "3": {
+      "waveTime": 2.2665999999999986,
+      "reflection": 768,
+      "normal": 128,
+      "shore": 1013,
+      "direction": [
+        0.008458639626773401,
+        0.9603382795344857,
+        0.27870923966816846
+      ],
+      "strength": 1,
+      "shadow": 4096,
+      "enabled": true
+    },
+    "sunrise": {
+      "waveTime": 2.5832999999999986,
+      "reflection": 768,
+      "normal": 128,
+      "shore": 1013,
+      "direction": [
+        0.8407479945118286,
+        0.05855952455604051,
+        0.5382504916933274
+      ],
+      "strength": 0.7801427956328438,
+      "shadow": 4096,
+      "enabled": true,
+      "hour": 7.75
+    },
+    "sunset": {
+      "waveTime": 2.9001999999999972,
+      "reflection": 768,
+      "normal": 128,
+      "shore": 1013,
+      "direction": [
+        -0.8065595476468871,
+        0.05855952086593295,
+        0.5882452537977687
+      ],
+      "strength": 0.7801427956328438,
+      "shadow": 4096,
+      "enabled": true,
+      "hour": 16.25
+    },
+    "night": {
+      "waveTime": 2.916899999999998,
+      "reflection": 768,
+      "normal": 128,
+      "shore": 1013,
+      "direction": [
+        -0.24565936189734988,
+        -0.9360036626223572,
+        -0.2520885191152496
+      ],
+      "strength": 0,
+      "shadow": 4096,
+      "enabled": false,
+      "hour": 23
+    }
+  },
+  "winter": {
+    "waveTime": 2.2665999999999986,
+    "reflection": 768,
+    "normal": 128,
+    "shore": 1013,
+    "direction": [
+      0.02703969438378022,
+      0.4532985178308218,
+      0.8909485443391284
+    ],
+    "strength": 1.07363112405739,
+    "shadow": 4096,
+    "enabled": true
+  },
+  "errors": []
+}

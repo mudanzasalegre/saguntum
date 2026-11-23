@@ -3,8 +3,14 @@ export function terrainMap({world,network,zones,places,image,onPoint}){
   const canvas=document.getElementById('sim-map'),box=document.getElementById('sim-map-box');
   const ctx=canvas.getContext('2d'),base=document.createElement('canvas');let transform,municipal=false,dirty=true,last;
   const local=visitMap(redraw);
-  let visitPlace=null,useLocal=false;
-  function extent(){return useLocal&&local.bounds?local.bounds:municipal?world.bounds:[1700,-2650,11700,5500];}
+  let visitPlace=null,useLocal=false,streetView=null,streetKey='',tiles=null,wide=false;
+  function extent(){return useLocal&&local.bounds?local.bounds:municipal?world.bounds:streetView&&!wide?streetView:[1700,-2650,11700,5500];}
+  function follow(p,active,stream){
+    const cx=Math.round(p.x/60)*60,cz=Math.round(p.z/60)*60;
+    const key=active?[cx,cz,...stream.keys()].join('/'):'';
+    if(key===streetKey)return;
+    streetKey=key;tiles=stream;streetView=active?[cx-230,cz-230,cx+230,cz+230]:null;dirty=true;
+  }
   function background(){
     const r=canvas.getBoundingClientRect();if(!r.width||!r.height)return;
     const w=Math.max(1,Math.round(r.width*Math.min(2,devicePixelRatio))),h=Math.max(1,Math.round(r.height*Math.min(2,devicePixelRatio)));
@@ -30,6 +36,8 @@ export function terrainMap({world,network,zones,places,image,onPoint}){
     }
     world.municipality.forEach(p=>line(p.outer,'rgba(253,229,163,.8)',1.4,true));
     network.major.forEach(r=>line(r.points,'rgba(246,235,202,.48)',.8));
+    if(streetView&&!wide&&!municipal)for(const tile of tiles.values())for(const road of tile.roads)
+      line(road.points,road.car?'#e6d9bc':'#abba94',Math.max(1,Math.min(4,(road.width||2)*s)));
     line(network.route,'#f1c16f',2);
     const big=box.classList.contains('expanded')||document.body.classList.contains('map-only');
     if(big){c.fillStyle='#fae0a0';for(const p of places){c.beginPath();c.arc(x(p.x),z(p.z),2.5,0,2*Math.PI);c.fill();}}
@@ -43,6 +51,7 @@ export function terrainMap({world,network,zones,places,image,onPoint}){
   }
   function draw(p,target,direction){
     last=[p,target,direction];
+    if(box.hidden)return;
     background();if(!transform)return;ctx.drawImage(base,0,0);
     const {x,z}=transform;
     if(target&&Math.hypot(target.x-p.x,target.z-p.z)>80){
@@ -63,6 +72,7 @@ export function terrainMap({world,network,zones,places,image,onPoint}){
     }
     const {cx,cz,s}=transform,xx=(mx-canvas.width/2)/s+cx,zz=(mz-canvas.height/2)/s+cz;
     const candidates=places.map(p=>[p,Math.hypot(p.x-xx,p.z-zz)]).sort((a,b)=>a[1]-b[1]);
+    if(xx<world.bounds[0]||zz<world.bounds[1]||xx>world.bounds[2]||zz>world.bounds[3])return;
     onPoint(xx,zz,candidates[0]?.[1]<Math.min(150,6/s)?candidates[0][0]:null);
   };
   function redraw(){dirty=true;if(last)requestAnimationFrame(()=>draw(...last));}
@@ -72,10 +82,10 @@ export function terrainMap({world,network,zones,places,image,onPoint}){
     document.getElementById('sim-extent').textContent=useLocal?'Ver territorio':municipal?(visitPlace?'Ver paradas':'Ver corredor'):'Ver municipio';
   }
   document.getElementById('sim-extent').onclick=()=>{
-    if(useLocal){useLocal=false;municipal=false;}
-    else if(municipal){municipal=false;useLocal=!!visitPlace;}else municipal=true;
+    if(useLocal){useLocal=false;municipal=false;wide=true;}
+    else if(municipal){municipal=false;wide=false;useLocal=!!visitPlace;}else municipal=true;
     labels();redraw();
   };
-  return {draw,setVisit(p,stop){visitPlace=p;local.set(p,stop);useLocal=!!p;municipal=false;labels();redraw();},
+  return {draw,follow,setVisit(p,stop){visitPlace=p;local.set(p,stop);useLocal=!!p;municipal=false;wide=false;labels();redraw();},
     close(){box.classList.remove('expanded');document.getElementById('sim-expand').setAttribute('aria-expanded','false');labels();dirty=true;}};
 }

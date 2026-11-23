@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import {loadHeritageCatalog} from './territory-heritage-catalog.js';
-import {buildHeritageModel,inRing,modelId,normalizeBuildingId,releaseModel} from './territory-heritage-models.js';
+import {buildHeritageModel,inRing,maskRing,modelId,normalizeBuildingId,overlapsRegisteredFootprint,releaseModel} from './territory-heritage-models.js';
 import {overviewModels} from './territory-heritage-overview.js';
 import {heritageWorker} from './territory-heritage-loader.js';
 import {dressHeritageSurfaces} from './territory-heritage-surface.js';
@@ -8,6 +8,9 @@ import {heightOnPavement} from './territory-heritage-paving.js';
 import {atlasRoadMasks,maxLocalHeritage} from './territory-heritage-roadmask.js';
 import {bindHeritageVisit} from './territory-heritage-visit.js';
 import {sectionWindow} from './territory-heritage-section.js';
+import {preloadAtlasVisit} from './territory-heritage-registry.js';
+import {sampleHeritageBarriers} from './territory-collision-heritage.js';
+import {reliefDelta} from './territory-heritage-relief.js';
 
 export async function createHeritage({scene,renderer,heightAt,project,grids,mobile=false,onChange=()=>{},onError=console.warn}){
  const inventory=await loadHeritageCatalog(project);
@@ -16,16 +19,57 @@ export async function createHeritage({scene,renderer,heightAt,project,grids,mobi
  const atlasLighting={value:1};
  const options={...inventory,heightAt,project};
  const low=overviewModels(options),loaded=new Map(),failedUntil=new Map();
+ const extents=new Map();
+ for(const place of places){
+  const record=inventory.records[place.id],id=modelId(place.id);
+  const footprints=Array.isArray(record.footprints)?record.footprints:[record.footprint].filter(Boolean);
+  const rings=footprints.map(p=>maskRing((p.coordinates||p).map(ll=>project(...ll)))).filter(Boolean);
+  if(!extents.has(id))extents.set(id,[...low.get(id)?.userData.claims||[]]);
+  extents.get(id).push(...rings);
+ }
+ function distanceToSite(id,x,z,anchorDistance){
+  let best=anchorDistance;
+  for(const ring of extents.get(id)){
+   if(x<ring.left-best||x>ring.right+best||z<ring.top-best||z>ring.bottom+best)continue;
+   if(inRing(x,z,ring))return 0;
+   for(let i=0,j=ring.points.length-1;i<ring.points.length;j=i++){
+    const a=ring.points[j],b=ring.points[i],dx=b.x-a.x,dz=b.z-a.z;
+    const t=Math.max(0,Math.min(1,((x-a.x)*dx+(z-a.z)*dz)/(dx*dx+dz*dz||1)));
+    best=Math.min(best,Math.hypot(x-a.x-t*dx,z-a.z-t*dz));
+   }
+  }
+  return best;
+ }
  let background=null,workerRequest=null;
  for(const [id,group] of low){group.name='Silueta territorial · '+id;root.add(group);}
  scene.add(root);
  let desired=[],pending=false,disposed=false,historical=null,lastKey='',lastCheck=-Infinity;
- let requestedStop=null;
+ let requestedStop=null,nearNative=new Set();
+ const prefetched=new Set();
  let lastAltitude=0,lastQuality=0,focusX=0,focusZ=0;
  let status={requested:[],loaded:[],loading:false,failures:{}};
- const claimIds=new Set(),claimGrid=new Map(),propGrid=new Map(),greenGrid=new Map(),cell=64;
+ const claimIds=new Set(),claimGrid=new Map(),registeredGrid=new Map(),propGrid=new Map(),greenGrid=new Map(),cell=64;
  const roadMasks=atlasRoadMasks();
  const excavation=sectionWindow();
+ let activeBarriers=null;
+ const emptyBarriers=[];
+ function walkingBarriers(){
+  if(!root.visible)return emptyBarriers;
+  if(activeBarriers)return activeBarriers;
+  activeBarriers=[];
+  for(const [id,item] of loaded){
+   const phase=historical===id?'historic':requestedStop?.model===id&&item.setVisitStop?requestedStop.stop:null;
+   if(!phase){if(item.walkBarriers?.length)activeBarriers.push(item.walkBarriers);continue;}
+   // Only a walker entering this presentation incurs the extra section pass.
+   if(item.barrierPhase!==phase){
+    const deck=id===historical?null:item.publicDeck;
+    item.otherBarriers=sampleHeritageBarriers(item.group,(x,z)=>heightOnPavement(deck,x,z)??heightOnPavement(item.pavement,x,z)??(heightAt(x,z)+reliefDelta(item.relief,x,z)));
+    item.barrierPhase=phase;
+   }
+   if(item.otherBarriers.length)activeBarriers.push(item.otherBarriers);
+  }
+  return activeBarriers;
+ }
  function index(grid,value,left,top,right,bottom){
   for(let z=Math.floor(top/cell);z<=Math.floor(bottom/cell);z++)for(let x=Math.floor(left/cell);x<=Math.floor(right/cell);x++){
    const key=x+','+z;
@@ -53,12 +97,15 @@ export async function createHeritage({scene,renderer,heightAt,project,grids,mobi
   status.lights=enabled.length;
  }
  function indexClaims(){
-  claimGrid.clear();claimIds.clear();propGrid.clear();greenGrid.clear();
+  claimGrid.clear();registeredGrid.clear();claimIds.clear();propGrid.clear();greenGrid.clear();
   const claims=[...loaded.values()].flatMap(m=>m.claims);
   for(const [id,mesh] of low)if(!loaded.has(id))claims.push({ids:[],rings:mesh.userData.claims});
   for(const claim of claims){
    for(const id of claim.ids)claimIds.add(id);
-   for(const ring of claim.rings||[])index(claimGrid,ring,ring.left,ring.top,ring.right,ring.bottom);
+   for(const ring of claim.rings||[]){
+    index(claimGrid,ring,ring.left,ring.top,ring.right,ring.bottom);
+    if(ring.registered)index(registeredGrid,ring,ring.left,ring.top,ring.right,ring.bottom);
+   }
    for(const ring of claim.green||[])index(greenGrid,ring,ring.left,ring.top,ring.right,ring.bottom);
    for(const pt of claim.props||[])index(propGrid,pt,pt[0]-pt[2],pt[1]-pt[2],pt[0]+pt[2],pt[1]+pt[2]);
   }
@@ -66,26 +113,28 @@ export async function createHeritage({scene,renderer,heightAt,project,grids,mobi
  }
  indexClaims();
  function notify(){
+  activeBarriers=null;
   excavation.set(status.visit?.contextCut);
-  for(const [id,item] of loaded)item.sectionOccluder.value=needsNative(id)?0:1;
+  for(const [id,item] of loaded)item.sectionOccluder.value=requestedStop?.model===id?0:1;
   indexClaims();
   status.loaded=[...loaded.keys()];status.requested=desired.slice();status.loading=pending;
+  status.levels=Object.fromEntries([...loaded].map(([id,item])=>[id,item.setVisitStop?'patrimonial':'urbano']));
   status.contexts=[...loaded.values()].map(m=>m.contextStats).filter(Boolean);
   status.landscapes=Object.fromEntries([...loaded].filter(([,m])=>m.density.total).map(([id,m])=>[id,m.density]));
   chooseLights();
   onChange();
  }
- function needsNative(id){return requestedStop?.model===id;}
+ function needsNative(id){return requestedStop?.model===id||nearNative.has(id)||!!inventory.records[id]?.scene;}
  function missing(id){return !loaded.has(id)||(needsNative(id)&&!loaded.get(id).setVisitStop);}
  function showStop(id,item){
-  if(needsNative(id)){
+  if(requestedStop?.model===id){
    const {place,stop,presentation}=requestedStop;
    status.visit=item.setVisitStop(place,stop,presentation);
   }else item.setHistorical(historical===id);
  }
  async function schedule(){
   if(pending||disposed)return;
-  pending=true;
+  pending=true;status.loading=true;status.requested=desired.slice();
   try{
    let id;
    while(!disposed&&(id=desired.find(k=>missing(k)&&!(failedUntil.get(k)>performance.now())))){
@@ -94,10 +143,9 @@ export async function createHeritage({scene,renderer,heightAt,project,grids,mobi
     await new Promise(resolve=>setTimeout(resolve,16));
     const needed=()=>!disposed&&desired.includes(id);
     if(!needed())continue;
+    let item;
     try{
-     if(loaded.has(id)){remove(id);notify();}
      if(id!=='glorieta'&&!needsNative(id)&&!background&&grids)background=heritageWorker(grids);
-     let item;
      if(id!=='glorieta'&&!needsNative(id)&&background&&!background.closed){
       const worker=background;workerRequest=id;
       try{item=await worker.load(id);}
@@ -109,18 +157,23 @@ export async function createHeritage({scene,renderer,heightAt,project,grids,mobi
      if(item&&needsNative(id)){releaseModel(item.group);item=null;}
      if(!item&&needed())item=await buildHeritageModel(id,{...options,needed,renderer,bindVisit:bindHeritageVisit});
      if(!item)continue;
-     if(!needed()){releaseModel(item.group);continue;}
+     if(!needed()){item.disposeVisit?.();releaseModel(item.group);continue;}
      dressHeritageSurfaces(item.group,atlasLighting);
      item.sectionOccluder=excavation.model(item);
-     root.add(item.group);loaded.set(id,item);
      item.group.updateWorldMatrix(true,true);item.lamps=[];
      item.group.traverse(o=>{if(o.isPointLight)item.lamps.push(o);});
      item.density=item.setDensity(lastAltitude,lastQuality,focusX,focusZ);
-     if(low.has(id))low.get(id).visible=false;
      showStop(id,item);
+     const visit=status.visit;
+     // Keep the current representation and its parcel masks until the new
+     // model and materials are ready, then swap them in the same frame.
+     remove(id);
+     root.add(item.group);loaded.set(id,item);
+     if(low.has(id))low.get(id).visible=false;
+     status.visit=visit;
      delete status.failures[id];notify();
     }catch(error){
-     if(loaded.has(id))remove(id);
+     if(item&&loaded.get(id)!==item){item.disposeVisit?.();releaseModel(item.group);}
      failedUntil.set(id,performance.now()+30000);
      status.failures[id]=String(error.message||error);
      onError(new Error('Patrimonio · '+id+' · '+status.failures[id]));
@@ -131,16 +184,17 @@ export async function createHeritage({scene,renderer,heightAt,project,grids,mobi
  function remove(id){
   const item=loaded.get(id);
   if(!item)return;
-  if(needsNative(id))status.visit=null;
+  if(requestedStop?.model===id)status.visit=null;
   loaded.delete(id);item.disposeVisit?.();releaseModel(item.group);
   if(low.has(id))low.get(id).visible=true;
  }
  function clear(){
-  desired=[];historical=null;requestedStop=null;status.visit=null;lastKey='';
+  desired=[];nearNative.clear();historical=null;requestedStop=null;status.visit=null;lastKey='';
   for(const id of [...loaded.keys()])remove(id);
   notify();
  }
  return {places,group:root,get stats(){return status;},get relief(){return root.visible?[...loaded.values()].map(item=>item.relief):[];},
+  get walkBarriers(){return walkingBarriers();},
   animateGlorieta(time,water,night){loaded.get('glorieta')?.animate?.(time,water,night);},
   maskRoadMaterial(material,ground=false){roadMasks.apply(material,ground);if(!ground)excavation.material(material);},
   setAtlasLighting(enabled){atlasLighting.value=enabled?1:0;},
@@ -165,8 +219,15 @@ export async function createHeritage({scene,renderer,heightAt,project,grids,mobi
    notify();
    if(id&&desired.includes(id)&&missing(id))void schedule();
   },
-  walkSurface(x,z){
+  publicDeckAt(x,z){
    let height=null;
+   if(root.visible)for(const [id,item] of loaded)if(id!==historical){
+    const h=heightOnPavement(item.publicDeck,x,z);if(h!==null&&(height===null||h>height))height=h;
+   }
+   return height;
+  },
+  walkSurface(x,z){
+   let height=this.publicDeckAt(x,z);
    if(root.visible)for(const {pavement} of loaded.values()){
     const h=heightOnPavement(pavement,x,z);if(h!==null&&(height===null||h>height))height=h;
    }
@@ -185,20 +246,29 @@ export async function createHeritage({scene,renderer,heightAt,project,grids,mobi
    lastKey=key;lastCheck=now;
    for(const item of loaded.values())item.setDensity(altitude,quality,x,z);
    chooseLights();
-   const nearest=new Map();
+   const nearest=new Map(),native=new Set();
    for(const place of places){
-    const id=modelId(place.id),distance=Math.hypot(x-place.x,z-place.z);
+    const id=modelId(place.id),distance=distanceToSite(id,x,z,Math.hypot(x-place.x,z-place.z));
     // Longer structures need a window along their full extent.
-    const reach=id==='castle'?700:id==='pantalan'?950:place.region==='marjal'||place.region==='palancia'||place.region==='almarda'?430:260;
+    const reach=place.scene?.preloadDistance??(id==='castle'?700:id==='pantalan'?950:place.region==='marjal'||place.region==='palancia'||place.region==='almarda'?430:260);
     const selected=place.id===selectedId;
     const anchor=requestedStop?.anchor;
-    const stopDistance=needsNative(id)&&anchor?Math.hypot(x-anchor.x,z-anchor.z):Infinity;
+    const stopDistance=requestedStop?.model===id&&anchor?Math.hypot(x-anchor.x,z-anchor.z):Infinity;
     const stopInView=stopDistance<Math.max(350,reach*1.65,altitude*.9)&&altitude<Math.max(4200,reach*7);
     const inVisitView=stopInView||selected&&distance<reach*1.65&&altitude<Math.max(1600,reach*5);
     if(!inVisitView&&(distance>reach*(loaded.has(id)?1.18:1)||altitude>reach*(loaded.has(id)?1.32:1.14)))continue;
+    const close=place.scene?.nativeDistance??100;
+    if(distance<close*(nearNative.has(id)?1.28:1)&&altitude<close*(nearNative.has(id)?1.6:1.25))native.add(id);
+    if(place.scene&&!prefetched.has(id)){
+     prefetched.add(id);preloadAtlasVisit(inventory.records[id]).catch(()=>prefetched.delete(id));
+    }
+    // For newly authored visits the cadastral city is the middle level.
+    // Prefetch their original module before constructing any Three objects.
+    if(place.scene&&!inVisitView&&!native.has(id)&&!loaded.has(id))continue;
     const score=stopInView?-Infinity:distance/(loaded.has(id)?1.18:1)-(selectedId===place.id?reach:0);
     nearest.set(id,Math.min(nearest.get(id)??Infinity,score));
    }
+   nearNative=native;
    const limit=mobile?1:quality===2?maxLocalHeritage:2;
    desired=[...nearest].sort((a,b)=>a[1]-b[1]).slice(0,limit).map(([id])=>id);
    const expired=[...loaded.keys()].filter(id=>!desired.includes(id));
@@ -206,11 +276,18 @@ export async function createHeritage({scene,renderer,heightAt,project,grids,mobi
    if(expired.length)notify();
    if(desired.some(missing))void schedule();
   },
-  isReplaced(sourceId,x,z){
+  isReplaced(sourceId,x,z,rings){
    if(!root.visible)return false;
    if(excavation.contains(x,z))return true;
    if(claimIds.has(normalizeBuildingId(sourceId)))return true;
-   return claimGrid.get(Math.floor(x/cell)+','+Math.floor(z/cell))?.some(ring=>inRing(x,z,ring))||false;
+   if(nearby(claimGrid,x,z).some(ring=>(!ring.registered||!rings?.length)&&inRing(x,z,ring)))return true;
+   if(!registeredGrid.size||!rings?.[0]?.length)return false;
+   const xs=rings[0].map(p=>p[0]),zs=rings[0].map(p=>p[1]),candidates=new Set();
+   for(let iz=Math.floor(Math.min(...zs)/cell);iz<=Math.floor(Math.max(...zs)/cell);iz++){
+    for(let ix=Math.floor(Math.min(...xs)/cell);ix<=Math.floor(Math.max(...xs)/cell);ix++)
+     for(const ring of registeredGrid.get(ix+','+iz)||[])candidates.add(ring);
+   }
+   return [...candidates].some(claim=>overlapsRegisteredFootprint(rings,claim));
   },
   setHistorical(id,enabled=true){
    const place=byId.get(id);
@@ -218,6 +295,7 @@ export async function createHeritage({scene,renderer,heightAt,project,grids,mobi
    if(historical)loaded.get(historical)?.setHistorical(false);
    historical=enabled?modelId(id):null;
    if(historical)loaded.get(historical)?.setHistorical(true);
+   activeBarriers=null;
    chooseLights();
    return true;
   },

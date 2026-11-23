@@ -18,9 +18,11 @@
 <section class="sim-panel" id="sim-settings" aria-label="Ajustes del territorio" hidden>
   <div class="sim-heading"><h2>Capas y luz</h2><button data-close aria-label="Cerrar ajustes">×</button></div>
   <label>Luz <select id="sim-light"><option value="auto">Automática según el lugar</option><option value="golden">Dorada del Atlas</option><option value="day">Día del Atlas</option><option value="solar">Hora solar</option></select></label>
-  <label for="sim-time">Hora solar <output id="sim-hour">16:00</output></label><input id="sim-time" type="range" min="0" max="23.75" step=".25" value="16">
+  <label>Fecha solar <input id="sim-date" type="date" min="1900-01-01" max="2100-12-31"></label>
+  <label>Momento del día <select id="sim-sun-preset"><option value="">Hora elegida</option><option value="sunrise">Amanecer</option><option value="noon">Mediodía</option><option value="sunset">Atardecer</option><option value="night">Noche</option></select></label>
+  <label for="sim-time">Hora solar <output id="sim-hour">15:00</output></label><input id="sim-time" type="range" min="0" max="23.75" step=".25" value="15">
   <label>Terreno <select id="sim-terrain"><option value="auto">Automático según el lugar</option><option value="natural">Natural del Atlas</option><option value="photo">Ortofotografía PNOA</option></select></label>
-  <label>Calidad <select id="sim-quality"><option value="auto">Automática</option><option value="0">Ligera</option><option value="1">Media</option><option value="2">Alta</option></select></label>
+  <label>Calidad <select id="sim-quality"><option value="auto">Automática</option><option value="0">Baja</option><option value="1">Media</option><option value="2">Alta</option><option value="3" disabled>Ultra</option></select></label>
   <fieldset><legend>Capas visibles</legend>
     <label>Edificios <input type="checkbox" data-flag="buildings" checked></label>
     <label>Patrimonio <input type="checkbox" data-flag="heritage" checked></label>
@@ -32,9 +34,23 @@
     <label>Peatones <input type="checkbox" data-flag="people" checked></label>
   </fieldset>
   <details><summary>Cartografía y rendimiento</summary><p id="sim-credits"></p><p id="sim-stats"></p></details>
+  <details id="sim-navigation"><summary>Navegación y controles</summary>
+    <label>Campo de visión <input id="sim-fov" type="range" min="45" max="100" step="1"><output></output></label>
+    <label>Sensibilidad <input id="sim-sensitivity" type="range" min=".25" max="2.5" step=".05"><output></output></label>
+    <label>Suavizado al mirar <input id="sim-smoothing" type="range" min="0" max="1" step=".05"><output></output></label>
+    <label>Velocidad a pie × <input id="sim-pace" type="range" min=".65" max="1.5" step=".05"><output></output></label>
+    <label>Vuelo <select id="sim-flight"><option value="auto">Según altitud</option><option value="precision">Precisión · 4 m/s</option><option value="city">Urbano · 30 m/s</option><option value="territory">Territorial · 180 m/s</option></select></label>
+    <label>Altura mínima de vuelo (m) <input id="sim-clearance" type="range" min="1" max="20" step=".1"><output></output></label>
+    <label>Invertir mirada vertical <input type="checkbox" id="sim-invert"></label>
+    <label>Movimiento de cabeza a pie <input type="checkbox" id="sim-bob"></label>
+    <label>Movimiento cinematográfico <input type="checkbox" id="sim-cinema"></label>
+    <label>Mostrar minimapa <input type="checkbox" id="sim-show-map" checked></label>
+    <button id="sim-hide-ui" type="button">Ocultar interfaz</button>
+    <details><summary>Asignar teclas</summary><div id="sim-key-list"></div><button type="button" id="sim-reset-keys">Restablecer teclas</button></details>
+  </details>
 </section>
 <aside class="sim-map" id="sim-map-box">
-  <div class="sim-map-head"><button id="sim-expand" aria-expanded="false">Mapa general</button><span>N ↑</span></div>
+  <div class="sim-map-head"><button id="sim-expand" aria-expanded="false">Mapa general</button><button id="sim-north" title="Orientar la vista aérea al norte" aria-label="Orientar la vista aérea al norte">N ↑</button></div>
   <canvas id="sim-map" width="540" height="350" tabindex="0" aria-label="Mapa de Sagunto. Pulsa un punto para viajar. El buscador ofrece selección por teclado."></canvas>
   <div class="sim-map-foot"><span id="sim-grid"></span><button id="sim-extent">Ver municipio</button></div>
 </aside>
@@ -55,4 +71,8 @@
 </div>
 <div id="sim-stick" aria-label="Control táctil de desplazamiento" hidden><i></i></div>
 <div id="sim-altitude" hidden><button data-rise="1" aria-label="Ascender">＋</button><button data-rise="-1" aria-label="Descender">−</button></div>
+<div id="sim-walk-actions" hidden><button data-motion="run">Correr</button><button data-motion="up">Saltar</button></div>
+<button id="sim-nearby" hidden></button>
+<button id="sim-show-ui" hidden>Mostrar interfaz</button>
+<aside id="sim-instructions" hidden><span id="sim-how"></span><button type="button" id="sim-dismiss-help" aria-label="Cerrar ayuda">×</button></aside>
 <footer class="sim-foot"><span id="sim-help">Arrastra para girar · Rueda o pellizco para acercar</span><span id="sim-status" role="status">Cargando cartografía…</span></footer>

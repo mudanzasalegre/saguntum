@@ -1,5 +1,6 @@
 import * as T from 'three';
-import {insideRing} from './territory-coordinates.js';
+import {MetricGrid} from './urban-surface.js';
+import {footprintGrid,indexBounds,nearCell,touchesFootprint} from './territory-collision.js';
 import {territoryBase} from './territory-ground.js';
 import {nearFacades} from './territory-facades.js';
 import {architecturalMaterial,skylineMaterial} from './territory-building-material.js';
@@ -59,7 +60,13 @@ export function createBuildings({scene,world,grids,heritage,photography}) {
   }
   const overview=[];
   const aerialStats={parts:0,chunks:0,packages:[],complete:false,fallback:false,failures:[]};
-  const stream=new SectorStream(world.sectors,async s=>mesh(await read(s.id,s.url),s.id),v=>{
+  const sectorGrid=new MetricGrid(500);
+  for(const sector of world.sectors)indexBounds(sectorGrid,sector,sector.geometryBounds||sector.bounds);
+  const stream=new SectorStream(world.sectors,async s=>{
+    const tile=mesh(await read(s.id,s.url),s.id);
+    tile.footprints=footprintGrid(tile.rows);
+    return tile;
+  },v=>{
     group.remove(v.mesh);v.mesh.geometry.dispose();
   },2);
   let maskStamp=0,shell=null,shellIds=new Set(),shellRevision=0,shellSelection='',shellWanted='',shellBusy=false,openings=0;
@@ -69,7 +76,7 @@ export function createBuildings({scene,world,grids,heritage,photography}) {
     if(stamp===v.mask)return;
     const attr=v.mesh.geometry.index,idx=attr.array;let count=0;
     for(const r of v.rows){
-      if((far&&stream.live.has(r.sector))||(!far&&v!==shell&&shellIds.has(r.id))||heritage.isReplaced(r.id,r.x,r.z))continue;
+      if((far&&stream.live.has(r.sector))||(!far&&v!==shell&&shellIds.has(r.id))||heritage.isReplaced(r.id,r.x,r.z,r.rings))continue;
       idx.set(v.indices.subarray(r.start,r.end),count);count+=r.end-r.start;
     }
     v.mesh.geometry.setDrawRange(0,count);
@@ -87,7 +94,7 @@ export function createBuildings({scene,world,grids,heritage,photography}) {
     const candidates=[];
     if(alt<125)for(const [sector,tile] of stream.live)for(const r of tile.rows){
       const d=distanceTo(x,z,r.bounds);
-      if(d<=reach&&r.outerEdges.includes(true)&&!heritage.isReplaced(r.id,r.x,r.z))candidates.push({d,id:r.id,sector});
+      if(d<=reach&&r.outerEdges.includes(true)&&!heritage.isReplaced(r.id,r.x,r.z,r.rings))candidates.push({d,id:r.id,sector});
     }
     candidates.sort((a,b)=>a.d-b.d||a.id.localeCompare(b.id));
     const selection=candidates.slice(0,[28,49,72][budget]),key=selection.map(r=>r.id).sort().join('/');
@@ -158,16 +165,18 @@ export function createBuildings({scene,world,grids,heritage,photography}) {
       if(shell)mask(shell);
       for(const v of overview)mask(v,true);
       for(const v of stream.live.values())mask(v);
-      facades(x,z,alt,budget,stream.live,r=>!heritage.isReplaced(r.id,r.x,r.z),maskStamp);
+      facades(x,z,alt,budget,stream.live,r=>!heritage.isReplaced(r.id,r.x,r.z,r.rings),maskStamp);
     },
-    safeToWalk(x,z){
-      // An unloaded footprint sector cannot certify a clear pedestrian step.
-      if(world.sectors.some(s=>distanceTo(x,z,s.geometryBounds||s.bounds)===0&&!stream.live.has(s.id)))return false;
-      for(const tile of stream.live.values())for(const r of tile.rows){
-        const [l,t,k,b]=r.bounds;if(x<l||x>k||z<t||z>b)continue;
-        if(insideRing(x,z,r.rings[0])&&!r.rings.slice(1).some(h=>insideRing(x,z,h)))return false;
-      }
-      return true;
+    safeToWalk(x,z,radius=.32){
+      return !nearCell(sectorGrid,x,z,radius,sector=>{
+        if(distanceTo(x,z,sector.geometryBounds||sector.bounds)>radius)return false;
+        const tile=stream.live.get(sector.id);
+        // Surveyed footprints may straddle the tile edge. Wait for every
+        // overlapping sector before certifying the pedestrian's full width.
+        return !tile||nearCell(tile.footprints,x,z,radius,row=>
+          distanceTo(x,z,row.bounds)<=radius&&touchesFootprint(x,z,radius,row.rings)&&
+          !heritage.isReplaced(row.id,row.x,row.z,row.rings));
+      });
     }
   };
 }

@@ -24,6 +24,7 @@ Para reproducir la preparación se requieren Python, NumPy, SciPy, pyproj, Shape
 python research/prepare-atlas-relief.py
 node research/check-atlas-elevation.mjs
 python research/prepare-atlas-canopy.py
+python research/prepare-canopy-clearance.py
 python research/export-atlas-framing.py --base http://127.0.0.1:8317/
 python research/check-atlas-presentation.py --base http://127.0.0.1:8317/ --out recorrido.json
 ```
@@ -39,7 +40,7 @@ La versión 32 usa una proyección local centrada en 39,679° N y 0,278° O y ca
 ## Explorar
 
 - **Vista aérea** permite girar, desplazar y acercar con el ratón o con dos dedos. **Panorámica** encuadra los núcleos histórico, portuario y del Grau Vell.
-- **Vuelo libre** usa WASD, arrastre para mirar y E/Q para ganar o perder altura. Mayúsculas acelera. En pantalla táctil se usan la palanca, el arrastre sobre la escena y los botones de altura.
+- **Vuelo libre** usa WASD, ratón y Espacio/C para ganar o perder altura. Mayúsculas acelera y la rueda ajusta la velocidad de crucero. En pantalla táctil se usan la palanca, el arrastre sobre la escena y los botones de altura. [Todos los controles y pruebas](EXPLORACION.md)
 - **A pie** busca un camino público cercano, mantiene la cámara a altura humana y comprueba los sólidos catastrales, los patios, el mar y las ventanas arqueológicas. Los puentes utilizan una cota estimada entre estribos. El mapa y el buscador permiten salir de cualquier emplazamiento.
 - **Recorrido territorial** sigue una polilínea de 9,682 km formada por 172 aristas entre Plaça Major, Alto Horno y Fortín. El mapa muestra la ruta, la cámara y su orientación. **Ver municipio** amplía la cobertura al término completo.
 - **Visita patrimonial** abre la ficha original. **Volver al simulador** recupera posición, orientación, modo de cámara, hora, capas y calidad de la misma pestaña. Al entrar en el simulador se libera el contexto WebGL anterior.
@@ -55,7 +56,7 @@ La versión 32 usa una proyección local centrada en 39,679° N y 0,278° O y ca
 | Edificios | `territory-stream.js` activa celdas de 500 m. Un trabajador triangula cubiertas con patios y fachadas. El panorama emplea 1.990 partes simplificadas y ortofoto. Los sectores próximos conservan los anillos completos. Se ocultan los intervalos de índices de partes sustituidas por patrimonio. Los materiales usan color de cubierta PNOA cuando existe. Las cubiertas a dos aguas de plantas rectangulares industriales, agrícolas o bajas con teja son una interpretación tipológica. `territory-facades.js` instancia detalles sobre fachadas residenciales expuestas. |
 | Movilidad y paisaje | `territory-network.js` carga 196 celdas viarias de 1 km. Dibuja líneas, aceras etiquetadas, cruces orientados, recintos y objetos. Las aristas dirigidas conservan sus nodos y restricciones simples de giro. Coches y peatones comparten geometría instanciada. La semilla sólo afecta a la actividad. |
 | Patrimonio y mar | Los módulos `territory-heritage*` reutilizan los constructores del Atlas y los preparan por proximidad. Se conservan sus fuentes, fases y anclajes. `territory-sea.js` extiende el sistema de agua del pantalán al polígono marítimo continuo con huecos. |
-| Cámara y luz | `territory-camera.js` comparte OrbitControls con el Atlas y añade peatón, vuelo y recorrido. `territory-atmosphere.js` da una trayectoria solar equinoccial a la latitud de Sagunto, con cielo, bruma, luz rasante, noche y sombras próximas. |
+| Cámara y luz | `territory-camera.js` comparte OrbitControls con el Atlas y añade peatón, vuelo y recorrido. `territory-atmosphere.js` calcula la trayectoria solar para la fecha y la latitud de Sagunto y coordina cielo, bruma, iluminación nocturna y sombras próximas. |
 | Interfaz | `simulator.html`, `territory.css` y `territory-map.js` ofrecen controles en español y mapa ortorrectificado. Las descargas de la experiencia pública se sirven desde el propio sitio. |
 
 Los trabajadores, la caché espacial, la geometría agrupada y la liberación de sectores limitan el trabajo del hilo principal. La modalidad automática ajusta radio de detalle, número de sectores, píxeles, sombras y actores según el dispositivo y el tiempo de fotograma observado. Al optimizar la carga del Atlas original se indexaron geográficamente sus polígonos de exclusión de edificios, calles y arbolado. Los predicados finales y la geometría patrimonial de las visitas se conservan.

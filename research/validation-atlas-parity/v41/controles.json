@@ -1,0 +1,446 @@
+{
+  "horno-acceso": {
+    "atlas": {
+      "status": {
+        "region": "puerto",
+        "selected": "horno",
+        "light": "golden",
+        "hash": "#horno/horno-acceso"
+      },
+      "camera": {
+        "eye": [
+          4956.11640503242,
+          13.028742751430862,
+          2746.542138307719
+        ],
+        "direction": [
+          -0.9332388546620246,
+          -0.22560839562261786,
+          0.27958199508140913
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "fov": 56,
+        "aspect": 1.5789473684210527,
+        "zoom": 1,
+        "view": {
+          "enabled": true,
+          "fullWidth": 1200,
+          "fullHeight": 760,
+          "offsetX": -172,
+          "offsetY": -14,
+          "width": 1200,
+          "height": 760
+        },
+        "projection": [
+          1.1911267613860101,
+          0,
+          0,
+          0,
+          0,
+          1.8807264653463318,
+          0,
+          0,
+          -0.28666666666666674,
+          0.0368421052631579,
+          -1.00000960004608,
+          -1,
+          0,
+          0,
+          -0.24000115200552963,
+          0
+        ],
+        "width": 1200,
+        "height": 760
+      },
+      "samples": 145,
+      "namedCore": 114
+    },
+    "simulador": {
+      "status": {
+        "lighting": "golden",
+        "terrain": "natural",
+        "hour": 15,
+        "loaded": [
+          "horno"
+        ],
+        "stats": {
+          "requested": [
+            "horno"
+          ],
+          "loaded": [
+            "horno"
+          ],
+          "loading": false,
+          "failures": {},
+          "visit": null,
+          "levels": {
+            "horno": "patrimonial"
+          },
+          "contexts": [
+            {
+              "id": "horno",
+              "meshes": 26,
+              "triangles": 61029,
+              "buildings": 5,
+              "pavingAreaM2": 20070
+            }
+          ],
+          "landscapes": {},
+          "lights": 2
+        },
+        "drawCalls": 474,
+        "triangles": 1822459,
+        "frameMs": 6135.5
+      },
+      "errors": [],
+      "optics": {
+        "actual": {
+          "eye": [
+            8496.658131728436,
+            12.98194275143086,
+            1914.1801521887705
+          ],
+          "direction": [
+            -0.9245777047763142,
+            -0.22525280014441185,
+            0.30727389062148563
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "fov": 56,
+          "aspect": 1.5789473684210527,
+          "zoom": 1,
+          "view": {
+            "enabled": true,
+            "fullWidth": 1200,
+            "fullHeight": 760,
+            "offsetX": -172,
+            "offsetY": -14,
+            "width": 1200,
+            "height": 760
+          },
+          "projection": [
+            1.1911267613860101,
+            0,
+            0,
+            0,
+            0,
+            1.8807264653463318,
+            0,
+            0,
+            -0.28666666666666674,
+            0.0368421052631579,
+            -1.000003692314509,
+            -1,
+            0,
+            0,
+            -0.24000044307774107,
+            0
+          ],
+          "width": 1200,
+          "height": 760
+        },
+        "productionBeforeLensMatch": {
+          "eye": [
+            8496.658131728436,
+            13.028742751430862,
+            1914.1801521887705
+          ],
+          "direction": [
+            -0.9245777047763142,
+            -0.22525280014441185,
+            0.30727389062148563
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "fov": 68,
+          "aspect": 1.5789473684210527,
+          "zoom": 1,
+          "view": null,
+          "projection": [
+            0.9389552800580687,
+            0,
+            0,
+            0,
+            0,
+            1.48256096851274,
+            0,
+            0,
+            0,
+            0,
+            -1.000003692314509,
+            -1,
+            0,
+            0,
+            -0.24000044307774107,
+            0
+          ],
+          "width": 1200,
+          "height": 760
+        }
+      },
+      "registration": {
+        "horizontalFrame": {
+          "a": 1.0015396228991449,
+          "b": 0.030897556920535862,
+          "c": -0.031032152473926544,
+          "d": 0.9971978282555938,
+          "tx": 3448.0497343349884,
+          "tz": -670.8667433846667,
+          "atlas": [
+            4942.848987286366,
+            2750.516823999909
+          ],
+          "territory": [
+            8483.493095239624,
+            1918.555416659452
+          ]
+        },
+        "medianGroundOffsetMetres": -0.0468,
+        "eyeErrorMetres": 0.0,
+        "architectureSampledBatches": 114,
+        "architectureMatchedBatches": 114,
+        "siteContextSampledBatches": 26,
+        "siteContextMatchedBatches": 26,
+        "siteContextPresentByName": 26,
+        "otherAtlasBatchesMatched": 26,
+        "otherAtlasBatchesSampled": 31,
+        "visibleControlPoints": 145,
+        "medianReprojectionPx": 0.572,
+        "p95ReprojectionPx": 1.428
+      }
+    }
+  },
+  "grau-acceso": {
+    "atlas": {
+      "status": {
+        "region": "coast",
+        "selected": "grau-vell",
+        "light": "golden",
+        "hash": "#grau-vell/grau-acceso"
+      },
+      "camera": {
+        "eye": [
+          3255.875392171788,
+          11.44807777214865,
+          4862.865749832029
+        ],
+        "direction": [
+          0.9576403395929795,
+          -0.2873478855663458,
+          -0.01887253678743683
+        ],
+        "up": [
+          0,
+          1,
+          0
+        ],
+        "fov": 48,
+        "aspect": 1.5789473684210527,
+        "zoom": 1,
+        "view": {
+          "enabled": true,
+          "fullWidth": 1200,
+          "fullHeight": 760,
+          "offsetX": -172,
+          "offsetY": -14,
+          "width": 1200,
+          "height": 760
+        },
+        "projection": [
+          1.4224899568060034,
+          0,
+          0,
+          0,
+          0,
+          2.246036773904216,
+          0,
+          0,
+          -0.2866666666666668,
+          0.03684210526315794,
+          -1.00000960004608,
+          -1,
+          0,
+          0,
+          -0.24000115200552963,
+          0
+        ],
+        "width": 1200,
+        "height": 760
+      },
+      "samples": 124,
+      "namedCore": 99
+    },
+    "simulador": {
+      "status": {
+        "lighting": "golden",
+        "terrain": "natural",
+        "hour": 15,
+        "loaded": [
+          "grau-vell"
+        ],
+        "stats": {
+          "requested": [
+            "grau-vell"
+          ],
+          "loaded": [
+            "grau-vell"
+          ],
+          "loading": false,
+          "failures": {},
+          "visit": null,
+          "levels": {
+            "grau-vell": "patrimonial"
+          },
+          "contexts": [
+            {
+              "id": "grau-vell",
+              "meshes": 15,
+              "triangles": 45129,
+              "buildings": 57,
+              "pavingAreaM2": 4478
+            }
+          ],
+          "landscapes": {},
+          "lights": 0
+        },
+        "drawCalls": 446,
+        "triangles": 1503302,
+        "frameMs": 4118.2
+      },
+      "errors": [],
+      "optics": {
+        "actual": {
+          "eye": [
+            6858.714981091857,
+            11.43077777214865,
+            4077.1405578704434
+          ],
+          "direction": [
+            0.9567917049440435,
+            -0.28674728590104004,
+            -0.04822475897977818
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "fov": 48,
+          "aspect": 1.5789473684210527,
+          "zoom": 1,
+          "view": {
+            "enabled": true,
+            "fullWidth": 1200,
+            "fullHeight": 760,
+            "offsetX": -172,
+            "offsetY": -14,
+            "width": 1200,
+            "height": 760
+          },
+          "projection": [
+            1.4224899568060034,
+            0,
+            0,
+            0,
+            0,
+            2.246036773904216,
+            0,
+            0,
+            -0.2866666666666668,
+            0.03684210526315794,
+            -1.000003692314509,
+            -1,
+            0,
+            0,
+            -0.24000044307774107,
+            0
+          ],
+          "width": 1200,
+          "height": 760
+        },
+        "productionBeforeLensMatch": {
+          "eye": [
+            6858.714981091857,
+            11.44807777214865,
+            4077.1405578704434
+          ],
+          "direction": [
+            0.9567917049440435,
+            -0.28674728590104004,
+            -0.04822475897977818
+          ],
+          "up": [
+            0,
+            1,
+            0
+          ],
+          "fov": 68,
+          "aspect": 1.5789473684210527,
+          "zoom": 1,
+          "view": null,
+          "projection": [
+            0.9389552800580687,
+            0,
+            0,
+            0,
+            0,
+            1.48256096851274,
+            0,
+            0,
+            0,
+            0,
+            -1.000003692314509,
+            -1,
+            0,
+            0,
+            -0.24000044307774107,
+            0
+          ],
+          "width": 1200,
+          "height": 760
+        }
+      },
+      "registration": {
+        "horizontalFrame": {
+          "a": 1.0018109066877514,
+          "b": 0.030669262050651014,
+          "c": -0.030811378732323647,
+          "d": 0.9971922701224685,
+          "tx": 3447.802998399166,
+          "tz": -671.7535686918991,
+          "atlas": [
+            3281.5544320183053,
+            4861.364882879975
+          ],
+          "territory": [
+            6884.394492801512,
+            4074.8526983251795
+          ]
+        },
+        "medianGroundOffsetMetres": -0.0173,
+        "eyeErrorMetres": 0.0,
+        "architectureSampledBatches": 99,
+        "architectureMatchedBatches": 98,
+        "siteContextSampledBatches": 15,
+        "siteContextMatchedBatches": 11,
+        "siteContextPresentByName": 15,
+        "otherAtlasBatchesMatched": 19,
+        "otherAtlasBatchesSampled": 25,
+        "visibleControlPoints": 245,
+        "medianReprojectionPx": 2.327,
+        "p95ReprojectionPx": 3.971
+      }
+    }
+  }
+}

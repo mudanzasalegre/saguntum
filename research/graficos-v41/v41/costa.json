@@ -1,0 +1,82 @@
+{
+  "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.0.0 Safari/537.36",
+  "gpu": "ANGLE (NVIDIA, NVIDIA GeForce RTX 3090 (0x00002204) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+  "p50Ms": 16.7,
+  "p95Ms": 16.8,
+  "frames": 120,
+  "camera": {
+    "mode": "fly",
+    "eye": [
+      10335,
+      13,
+      2473
+    ],
+    "target": [
+      10262,
+      8,
+      2418
+    ],
+    "yaw": 0.925107037686612,
+    "pitch": -0.0546499928593268,
+    "fov": 38,
+    "targetLift": 0,
+    "visitPose": false
+  },
+  "range": 22,
+  "frameMs": 16.7,
+  "drawCalls": 192,
+  "triangles": 909986,
+  "textures": 39,
+  "geometries": 182,
+  "heapMiB": 334,
+  "loadMs": 589,
+  "quality": 2,
+  "pixelRatio": 1,
+  "sectors": 7,
+  "networkSectors": 4,
+  "fabric": {
+    "buildings": 0,
+    "openings": 0
+  },
+  "canopy": {
+    "source": 58628,
+    "visible": 5639,
+    "near": 0,
+    "excluded": 353,
+    "narrowed": 4336,
+    "ready": true
+  },
+  "lighting": "day",
+  "hour": 9,
+  "graphics": {
+    "backend": "WebGL 2",
+    "three": "180",
+    "webgpuExposed": true,
+    "webgpuIncompatible": [
+      "reflexión costera Water",
+      "materiales GLSL del Atlas",
+      "cortes de terreno y ortofoto"
+    ],
+    "ultra": true,
+    "autoLimit": 2,
+    "initial": 2,
+    "profile": "Alta",
+    "shadowSize": 2048,
+    "contact": false
+  },
+  "solarDate": "2026-03-20",
+  "water": {
+    "shader": true,
+    "geometry": 1833,
+    "reflection": 768,
+    "normal": 128,
+    "shore": 1013,
+    "sunStrength": 1
+  },
+  "shadow": {
+    "on": true,
+    "size": 2048
+  },
+  "glError": 0,
+  "errors": []
+}

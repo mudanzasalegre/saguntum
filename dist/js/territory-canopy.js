@@ -6,18 +6,23 @@ import {resource,territoryBase} from './territory-ground.js';
 // crown of a vegetation group and may include several adjacent orchard trees.
 export function createCanopy(scene,heightAt,heritage){
   const group=new T.Group();group.name='Copas · MDSnV / PNOA';scene.add(group);
-  const stats={source:0,visible:0,near:0,ready:false};
+  const stats={source:0,visible:0,near:0,excluded:0,narrowed:0,ready:false};
   const tiles=[],dummy=new T.Object3D(),color=new T.Color();
+  const reducedMotion=matchMedia('(prefers-reduced-motion:reduce)');
   let trees,dirty=0,lastStamp=-1,lastX=Infinity,lastZ=Infinity,lastRange=-1,lastBudget=-1;
   function batch(kind,capacity){
     const m=new T.InstancedMesh(trees.geometry[kind],trees.material[kind],capacity);
+    if(kind==='crown')m.customDepthMaterial=trees.crownDepth;
     m.count=0;m.receiveShadow=true;m.castShadow=kind!=='treeView';m.instanceMatrix.setUsage(T.DynamicDrawUsage);
     group.add(m);return m;
   }
   const ready=Promise.all([streetTrees(),resource(territoryBase+'canopy/index.json'),resource(territoryBase+'canopy/crowns.bin','arrayBuffer'),
-    resource(territoryBase+'landscape/canopy-chroma.bin','arrayBuffer').catch(()=>null)]).then(([prototype,index,bytes,chroma])=>{
+    resource(territoryBase+'landscape/canopy-chroma.bin','arrayBuffer').catch(()=>null),
+    resource(territoryBase+'canopy/clearance.bin','arrayBuffer')]).then(([prototype,index,bytes,chroma,clearance])=>{
     if(bytes.byteLength!==index.count*7)throw Error('Tamaño del inventario de copas');
+    if(clearance.byteLength!==index.count)throw Error('Tamaño del inventario de espacio libre');
     trees=prototype;
+    const radii=new Uint8Array(clearance);
     const tones=chroma?.byteLength===index.count*2?new Uint8Array(chroma):null;
     const input=new DataView(bytes),groups=new Map();let offset=0;
     // Four 500 m source tiles share one draw call. Instance positions stay metric.
@@ -27,7 +32,9 @@ export function createCanopy(scene,heightAt,heritage){
       const t=groups.get(key);
       for(let i=0;i<count;i++,offset+=7){
         const x=tx*500+input.getUint16(offset,true)*.25,z=tz*500+input.getUint16(offset+2,true)*.25;
-        const height=input.getUint8(offset+4),radius=input.getUint8(offset+5)*.1;
+        const height=input.getUint8(offset+4),width=radii[offset/7],radius=width*.1;
+        if(!width){stats.excluded++;continue;}
+        if(width<input.getUint8(offset+5))stats.narrowed++;
         const green=input.getUint8(offset+6),y=heightAt(x,z);
         const colourIndex=offset/7*2;
         const red=tones?.[colourIndex]??125,blue=tones?.[colourIndex+1]??123;
@@ -37,6 +44,7 @@ export function createCanopy(scene,heightAt,heritage){
       }
     }
     for(const t of groups.values()){
+      if(!t.rows.length)continue;
       t.sphere=new T.Sphere(new T.Vector3(t.x,(t.low+t.high)*.5,t.z),Math.hypot(726,(t.high-t.low)*.5));
       tiles.push(t);
     }
@@ -53,7 +61,9 @@ export function createCanopy(scene,heightAt,heritage){
     mesh.count=n;mesh.visible=n>0;mesh.instanceMatrix.needsUpdate=true;
     if(mesh.instanceColor)mesh.instanceColor.needsUpdate=true;
   }
-  return {stats,ready,changed(){dirty++;},update(p,range,budget,show){
+  return {stats,ready,changed(){dirty++;},animate(time,quality){
+    if(trees)trees.wind.value.set(time,quality>=2&&group.visible&&!reducedMotion.matches?1:0);
+  },update(p,range,budget,show){
     group.visible=show;if(!show||!stats.ready)return;
     if(lastStamp===dirty&&lastBudget===budget&&Math.abs(range-lastRange)<Math.max(8,range*.12)&&Math.hypot(p.x-lastX,p.z-lastZ)<(range<100?12:95))return;
     lastStamp=dirty;lastBudget=budget;lastX=p.x;lastZ=p.z;lastRange=range;
@@ -74,7 +84,13 @@ export function createCanopy(scene,heightAt,heritage){
     }
     for(const t of tiles){
       const distance=Math.hypot(p.x-t.x,p.z-t.z);
-      if(distance-708>farRadius){if(t.mesh)t.mesh.visible=false;continue;}
+      if(distance-708>farRadius){
+        if(t.mesh){
+          t.mesh.visible=false;
+          if(distance-708>farRadius+1000){t.mesh.removeFromParent();t.mesh.dispose();t.mesh=null;}
+        }
+        continue;
+      }
       const minHeight=Math.min(11,Math.max(2,(range*.45+distance)*[.0018,.0011,.0008][budget]));
       if(t.max<minHeight){if(t.mesh)t.mesh.visible=false;continue;}
       const masked=distance<1805;

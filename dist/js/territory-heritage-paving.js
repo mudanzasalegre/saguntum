@@ -13,17 +13,17 @@ function pavement(mesh,context){
  return ['asphalt','paving','gravel','garden','earth','grass','road-paint','planting','paving-inset'].includes(kind)||
         kind==='concrete'&&/aceras y suelo exterior|rotonda, plaza|pavimentos/i.test(group);
 }
-export function sampleAtlasPavement(context,arcade){
+export function sampleAtlasPavement(context,arcade,select=pavement,maxDimension=896){
  const bounds=new Box3(),surfaces=[];
  function add(mesh){
   mesh.geometry.computeBoundingBox();bounds.union(mesh.geometry.boundingBox.clone().applyMatrix4(mesh.matrixWorld));surfaces.push(mesh);
  }
- context.group.traverseVisible(mesh=>{if(pavement(mesh,context))add(mesh);});
+ context.group.traverseVisible(mesh=>{if(select(mesh,context))add(mesh);});
  arcade?.traverseVisible(mesh=>{if(mesh.isMesh&&mesh.userData.materialKind==='paving')add(mesh);});
  if(!surfaces.length||bounds.isEmpty())return null;
  const left=Math.floor(bounds.min.x)-1,top=Math.floor(bounds.min.z)-1;
  const w=Math.ceil(bounds.max.x)-left+1,h=Math.ceil(bounds.max.z)-top+1;
- const metres=Math.max(.32,Math.max(w,h)/896);
+ const metres=Math.max(.32,Math.max(w,h)/maxDimension);
  const width=Math.ceil(w/metres),height=Math.ceil(h/metres);
  const heights=new Int16Array(width*height);heights.fill(noSurface);
  const a=new Vector3(),b=new Vector3(),c=new Vector3();
@@ -58,6 +58,11 @@ export function sampleAtlasPavement(context,arcade){
   }
  }
  return coverage?{left,top,width,height,metres,heights,coverage,triangles}:null;
+}
+// Explicitly tagged public decks stand above the DEM, including over water.
+// Keep this sampler independent of the masks which suppress duplicate roads.
+export function samplePublicDeck(group){
+ return sampleAtlasPavement({group},null,m=>m.isMesh&&m.userData.publicWalkingSurface===true,2048);
 }
 export function heightOnPavement(grid,x,z){
  if(!grid)return null;

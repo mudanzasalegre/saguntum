@@ -14,6 +14,9 @@ import {createUrbanSurface} from './urban-surface.js';
 import {drawRegionalMap} from './map.js';
 import {drawHistoricMap} from './historic-map.js';
 import {catalog,byId,tourOrder,normalize} from './catalog.js';
+import {loadAtlasVisitRegistry} from './territory-heritage-catalog.js';
+import {atlasRegisteredScenes} from './territory-heritage-registry.js';
+const registeredScenes=atlasRegisteredScenes();
 import {registerCoastHeritage,createCoastHeritage,coastEvidence,coastShape,coastMeshOptions,inCoastBounds,coastalPeriods,applyCoastContextRoads} from './coast.js';
 import {createCoastEnvironment,createWaterMask} from './coast-environment.js';
 import {registerLandscapes,createLandscapeHeritage,landscapeEvidence,landscapeRegions,isLandscape,inLandscapeBounds,landscapeRoadExclusions} from './landscapes.js';
@@ -245,6 +248,7 @@ function castleMapDialog(){visitMapDialog('castle');}
 function theatreMapDialog(){visitMapDialog('theatre');}
 function applyRegionVisibility(){
  const visible=key=>document.querySelector(`[data-layer="${key}"]`).checked;
+ registeredScenes.visibility(activeRegion,visible('monuments'));
  for(const item of [monuments,sacred,civic,archaeology,glorietaSite])if(item)item.group.visible=activeRegion==='sagunto'&&visible('monuments');
  if(excavation)excavation.group.visible=activeRegion==='sagunto'&&visible('monuments');
  glorietaSite?.setVegetation(visible('vegetation'));
@@ -278,7 +282,7 @@ function historicDialog(){
  const copy=land?'Elige un punto para observar este paisaje. Las posiciones comparten la cartografía de la maqueta; los saltos entre vistas son un recorrido virtual, sin calcular un itinerario físico.':isCoast?'Los lugares 23–26 conectan el paseo del pantalán, sus estructuras marítimas, el fortín y el antiguo puerto de Arse/Saguntum.':isPort?'Los lugares 14–22 conectan la siderurgia con sus viviendas, jardines y equipamientos.':'Los lugares 1–13 reúnen el casco histórico y sus conjuntos arqueológicos, junto al teatro y el castillo.';
  const buttons=m.sites.map(c=>`<button data-map-place="${c.id}"><span>${c.number||({theatre:'T',castle:'C'}[c.id])}</span>${c.short}</button>${(c.observationPoints||c.secondaryLocations||[]).map((f,i)=>`<button data-map-place="${c.id}" data-map-focus="${f.id}"><span>${land?i+1:c.number+'h'}</span>${escapeHtml(f.label||'Hipogeos · ámbito del lugar 13')}</button>`).join('')}`).join('');
  dialog(`<p class="eyebrow">${info.caption}</p><h2>${title}</h2><p>${copy}</p><canvas class="big-map" id="historic-map" width="1100" height="860" aria-label="Mapa de ${escapeHtml(info.map)}"></canvas><div class="map-place-list">${buttons}</div><p class="map-credit">Relieve IGN · Calles © OpenStreetMap contributors · Volúmenes derivados de Catastro${land?' · Números pequeños: puntos de observación':''}</p>`);
- async function go(id,focusId){closeDialog();dismissMapNotice();await focus(id);if(selected===id&&focusId){if(byId[id]?.landscape)selectLandscapeFocus(focusId);else selectArchaeologyFocus(focusId);}}
+ async function go(id,focusId){closeDialog();dismissMapNotice();await focus(id);if(selected===id&&focusId){if(byId[id]?.landscape||byId[id]?.scene)selectLandscapeFocus(focusId);else selectArchaeologyFocus(focusId);}}
  if(m.data){const canvas=$('historic-map'),map=drawHistoricMap(canvas,m.data,m.sites,{...m.options,large:true});canvas.onclick=e=>{const rect=canvas.getBoundingClientRect(),target=map.hitTarget((e.clientX-rect.left)*canvas.width/rect.width,(e.clientY-rect.top)*canvas.height/rect.height);if(target)go(target.id,target.focusId);};}
  document.querySelectorAll('[data-map-place]').forEach(b=>b.onclick=()=>go(b.dataset.mapPlace,b.dataset.mapFocus));
 }
@@ -355,6 +359,13 @@ function preset(name,near=false){
   // Interior and narrow-street observations stay at their documented free-space camera.
   if(part?.fitBounds!==false&&!(near&&part?.closeScale===false))off.multiplyScalar(Math.max(1,(near?.9:1.25)/(innerWidth/innerHeight)));return{target,position:target.clone().add(off),fov};
  }
+ if(byId[name]?.scene){
+  const record=byId[name],stop=record.observationPoints.find(s=>s.id===landscapeFocus);
+  const p=project(...(stop?.coordinate||record.coordinate));
+  const y=(regionTerrain(activeRegion)?.meshHeightAt(p.x,p.z)||0)+(stop?.eyeHeight??2);
+  const target=new THREE.Vector3(p.x,y,p.z),offset=new THREE.Vector3(...(stop?.offset||record.angle));
+  return {target,position:target.clone().addScaledVector(offset,near?.6:1)};
+ }
  const c=byId[name],arch=c?.archaeological?excavation?.state:null,part=c?.landscape&&landscapeFocus?landscapeSite()?.focuses?.[landscapeFocus]:c?.coastal&&coastFocus?coastHeritage?.sites[name]?.focuses?.[coastFocus]:c?.industrial&&portFocus?portHeritage?.sites[name]?.focuses?.[portFocus]:null,t=(part?.point||arch?.focus?.point||points[name])?.clone()||new THREE.Vector3(),v=part?{offset:part.offset||views[name]?.offset,closeOffset:part.closeOffset||part.offset}:arch?.focus?.views||views[name],a=near?(v?.closeOffset||c.angle.map(n=>n*.6)):(v?.offset||c.angle),off=new THREE.Vector3(...a);
  if(c?.landscape&&!part&&!near)return preset('overview');
  if(part?.position){const position=part.position.isVector3?part.position.clone():new THREE.Vector3(...part.position),target=part.target?(part.target.isVector3?part.target.clone():new THREE.Vector3(...part.target)):t;return{target,position};}
@@ -422,11 +433,11 @@ function changeCoastMode(mode){
  const ids=selected.startsWith('pantalan-')?['pantalan-paseo','pantalan-maritimo']:[selected];for(const id of ids)coastModes[id]=mode;coastHeritage?.setMode(selected,mode);roofOpen=false;coastFocus=null;closeView=false;$('close-view').textContent='Vista cercana';$('close-view').setAttribute('aria-pressed','false');coastPanel();refreshMap();fly(selected);if(renderer)renderer.shadowMap.needsUpdate=true;coastEnvironment?.invalidate();updateStatus();
 }
 function selectLandscapeFocus(id){
- observationLink(id);
+ registeredScenes.select(selected,id);observationLink(id);
  landscapeFocus=id||null;mapFocus=landscapeFocus;closeView=false;$('close-view').textContent='Vista cercana';$('close-view').setAttribute('aria-pressed','false');landscapePanel();castlePanel();resize();fly(selected);refreshMap();updateStatus();
 }
 function landscapePanel(){
- const c=byId[selected],site=landscapeSite();$('landscape-panel').hidden=!c?.landscape;document.body.classList.toggle('landscape-mode',!!c?.landscape);if(!c?.landscape)return;
+ const c=byId[selected],site=landscapeSite(),observations=!!(c?.landscape||c?.scene&&c.observationPoints.length);$('landscape-panel').hidden=!observations;document.body.classList.toggle('landscape-mode',observations);if(!observations)return;
  const list=c.observationPoints||[];$('landscape-focuses').innerHTML=`<button data-landscape-focus="" aria-pressed="${!landscapeFocus}">Conjunto</button>${list.map((p,i)=>`<button data-landscape-focus="${p.id}" aria-pressed="${p.id===landscapeFocus}"><span>${i+1}</span> ${escapeHtml(p.label)}</button>`).join('')}`;
  $('landscape-focuses').querySelectorAll('button').forEach(b=>b.onclick=()=>selectLandscapeFocus(b.dataset.landscapeFocus));
  const note=site?.focuses[landscapeFocus]?.note||list.find(p=>p.id===landscapeFocus)?.note;
@@ -436,6 +447,7 @@ function landscapePanel(){
 async function focus(name,{instant=false,keepTour=false,castleFocus=null,theatreFocus=null,santaMariaFocus=null,plazaMayorFocus=null,juderiaFocus=null,calvarioFocus=null,visitFocus=null}={}){
  atlasHome=name==='atlas';if(atlasHome)name='overview';
  const serial=++focusSerial;if(name!=='overview'&&name!=='forum'&&!byId[name])name='overview';if(!keepTour)stopTour();closeCatalog();
+ registeredScenes.select(selected,null);
  const previous=portHeritage?.sites[selected]||coastHeritage?.sites[selected];if(previous?.roof)previous.roof.visible=true;if(civic)civic.roofs.forEach(r=>r.object.visible=true);roofOpen=false;portFocus=null;coastFocus=null;landscapeFocus=null;marineInspection=false;coastEnvironment?.setInspection(false);
  if(glorietaNight&&name!=='glorieta')setLight(lightMode);
  const c=byId[name],nextRegion=c?regionOf(c):atlasHome||name==='forum'?'sagunto':activeRegion,changed=nextRegion!==activeRegion;selected=name;castleStopId=name==='castle'&&castleData?.stops.some(s=>s.id===castleFocus)?castleFocus:null;theatreStopId=name==='theatre'&&theatreData?.stops.some(s=>s.id===theatreFocus)?theatreFocus:null;churchStopId=name==='santa-maria'&&churchData?.stops.some(s=>s.id===santaMariaFocus)?santaMariaFocus:null;plazaStopId=name==='plaza-mayor'&&plazaData?.stops.some(s=>s.id===plazaMayorFocus)?plazaMayorFocus:null;juderiaStopId=name==='juderia'&&juderiaData?.stops.some(s=>s.id===juderiaFocus)?juderiaFocus:null;calvarioStopId=name==='calvario'&&calvarioData?.stops.some(s=>s.id===calvarioFocus)?calvarioFocus:null;theatreSectionOpen=churchSectionOpen=plazaSectionOpen=false;for(const id of Object.keys(visitStates)){const state=visitStates[id],data=visitDataFor(id);state.stopId=name===id&&data?.stops.some(stop=>stop.id===visitFocus)?visitFocus:null;state.sectionOpen=false;}setRegion(nextRegion);closeView=false;mapFocus=guidedVisit()?.stopId||null;
@@ -456,7 +468,8 @@ async function focus(name,{instant=false,keepTour=false,castleFocus=null,theatre
  const observation=c?.observationPoints?.find(p=>p.id===visitFocus);
  if(observation){
   mapFocus=observation.id;
-  if(c.landscape)landscapeFocus=observation.id;
+  if(c.landscape||c.scene)landscapeFocus=observation.id;
+  if(c.scene)registeredScenes.select(name,observation.id);
   if(c.coastal){
    coastFocus=observation.id;
    if(observation.mode){coastModes[name]=observation.mode;coastHeritage?.setMode(name,observation.mode);}
@@ -524,7 +537,7 @@ function setupUI(){
 }
 const marker=new THREE.Vector3();
 function updateMarkers(){const occupied=[];const priority=['glorieta','marjal-moros','dunas-almarda','rio-palancia','pantalan-paseo','pantalan-maritimo','grau-vell','puerto-antiguo','horno','talleres','gerencia','sanatorio','barrio-obrero','museo-industrial','casino','begona','economato','castle','theatre','portic','circo','domus','necropolis','santa-maria','calvario','salvador','plaza-mayor','sangre','museo','juderia','berenguer','diana'];
- for(const id of priority){const el=$(`spot-${id}`),pt=points[id];if(!el)continue;if(!pt){el.style.display='none';continue;}marker.copy(pt);marker.y+=id==='castle'?25:id==='theatre'?18:8;marker.project(camera);const x=(marker.x*.5+.5)*innerWidth,y=(-marker.y*.5+.5)*innerHeight,width=byId[id].short.length*6.5+55;
+ for(const id of [...priority,...registeredScenes.ids()]){const el=$(`spot-${id}`),pt=points[id];if(!el)continue;if(!pt){el.style.display='none';continue;}marker.copy(pt);marker.y+=id==='castle'?25:id==='theatre'?18:8;marker.project(camera);const x=(marker.x*.5+.5)*innerWidth,y=(-marker.y*.5+.5)*innerHeight,width=byId[id].short.length*6.5+55;
  let show=!guidedVisit()&&showLabels&&document.querySelector('[data-layer=monuments]').checked&&regionOf(byId[id])===activeRegion&&marker.z>-1&&marker.z<1&&x>width/2+10&&x<innerWidth-width/2-30&&y>115&&y<innerHeight-(mobile()?170:190)&&id!==selected;
  if(!mobile()&&tourStep<0&&x-width/2<390)show=false;if(mobile()&&tourStep<0&&y<360)show=false;
  if(occupied.some(r=>Math.abs(r.x-x)<(r.w+width)/2+8&&Math.abs(r.y-y)<55))show=false;
@@ -558,6 +571,7 @@ async function ensureLandscapeData(region){
  const task=(async()=>{const [geo,elevation,water]=await Promise.all(['cartography','elevation','water'].map(async name=>{const r=await fetch(`./assets/data/${region}-${name}.json`);if(!r.ok)throw new Error(`No se pudo cargar ${region}-${name}`);return r.json();}));const land={geo,elevation,water,height:createHeightSampler(elevation)};landscapes[region]=land;return land;})();landscapeDataLoads.set(region,task);try{return await task;}finally{landscapeDataLoads.delete(region);}
 }
 function disposeRegion(region){
+ registeredScenes.dispose(region);
  if(region==='sagunto')excavation?.dispose();if(region==='coast')coastEnvironment?.dispose?.();
  const roots=regionRoots.get(region)||[],geometries=new Set(),materials=new Set(),textures=new Set(),surface=regionTerrain(region);if(surface?.photo)textures.add(surface.photo);if(surface?.natural)textures.add(surface.natural);
  for(const root of roots){scene.remove(root);root.traverse(o=>{for(const m of o.userData?.ownedResources?.materials||[])materials.add(m);for(const t of o.userData?.ownedResources?.textures||[])textures.add(t);if(o.isInstancedMesh)o.dispose();if(o.geometry)geometries.add(o.geometry);for(const m of Array.isArray(o.material)?o.material:o.material?[o.material]:[]){materials.add(m);for(const v of Object.values(m))if(v?.isTexture)textures.add(v);for(const u of Object.values(m.uniforms||{}))if(u.value?.isTexture)textures.add(u.value);}});}
@@ -576,6 +590,7 @@ async function ensureRegion(region){
 }
 
 async function buildRegion(region){
+ const regionCity=options=>createCity(registeredScenes.city(options,region));
  const added=[];const addToRegion=group=>{group.visible=false;scene.add(group);added.push(group);};
  const task=(async()=>{
  if(region==='sagunto'){
@@ -594,7 +609,7 @@ async function buildRegion(region){
  const excludedRoads=new Set([...(glorietaBuildings.excludedRoadIds||[]).map(String),'733321149','733321150','1419281599',...theatreRoadIds,...monuments.castleRoadIds,...(sacred.excludedRoadIds||[]),...(civic.excludedRoadIds||[]),...(archaeology.excludedRoadIds||[])].map(String));const urbanData={...geo,roads:geo.roads.filter(r=>!excludedRoads.has(String(r.osmId||r.id)))};
  urban=createUrbanSurface({data:urbanData,project,heightAt:(x,z)=>monuments.surfaceHeight(x,z,rawHeight(x,z)),patches:[...sacred.patches,...civic.patches,...archaeology.patches],exclusions:[...sacred.exclusions,...civic.exclusions,...archaeology.exclusions,...glorietaSite.exclusions],openPassageIds:new Set([...(landmarks.juderia.osmIds||[]).map(s=>s.split('/')[1]),...(landmarks.juderia.secondaryGates||[]).map(s=>String(s.id))]),collisionPolygons:landmarkData.sites.filter(s=>s.id!=='juderia'&&s.footprint.length>=3).map(s=>s.footprint.map(c=>project(...c)))});
  $('loading-status').textContent='Dibujando el relieve y la ortofoto…';await pause();terrain=await createTerrain({data:elevation,heightAt:urban.groundHeight,patches:[...sacred.patches,...civic.patches,...archaeology.patches],renderer});addToRegion(terrain.group);monuments.buildCastle(terrain.meshHeightAt);theatreVisit()?.bindGround?.(terrain.meshHeightAt);churchVisit()?.bindGround?.(terrain.meshHeightAt);plazaVisit()?.bindGround?.(terrain.meshHeightAt);juderiaVisit()?.bindGround?.(terrain.meshHeightAt);calvarioVisit()?.bindGround?.(terrain.meshHeightAt);berenguerVisit()?.bindGround?.(terrain.meshHeightAt);sangreVisit()?.bindGround?.(terrain.meshHeightAt);salvadorVisit()?.bindGround?.(terrain.meshHeightAt);museoVisit()?.bindGround?.(terrain.meshHeightAt);porticVisit()?.bindGround?.(terrain.meshHeightAt);domusVisit()?.bindGround?.(terrain.meshHeightAt);circoVisit()?.bindGround?.(terrain.meshHeightAt);necropolisVisit()?.bindGround?.(terrain.meshHeightAt);
- $('loading-status').textContent='Preparando las calles de Sagunto…';await pause();city=createCity({data:geo,project,heightAt:urban.groundHeight,urban,terrainHeightAt:terrain.meshHeightAt,inBounds,excludeBuildingIds,exclusions:[...sacred.exclusions,...civic.exclusions,...archaeology.exclusions,...glorietaSite.exclusions],vegetationExclusions:[...(archaeology.vegetationExclusions||[]),...glorietaSite.exclusions]});addToRegion(city.group);
+ $('loading-status').textContent='Preparando las calles de Sagunto…';await pause();city=regionCity({data:geo,project,heightAt:urban.groundHeight,urban,terrainHeightAt:terrain.meshHeightAt,inBounds,excludeBuildingIds,exclusions:[...sacred.exclusions,...civic.exclusions,...archaeology.exclusions,...glorietaSite.exclusions],vegetationExclusions:[...(archaeology.vegetationExclusions||[]),...glorietaSite.exclusions]});addToRegion(city.group);
  openPermanentExcavations([terrain.mesh,city.group,monuments.group,sacred.group,civic.group],Object.values(archaeology.sites).flatMap(s=>s.currentMasks||[s.currentMask]).filter(mask=>mask&&mask.permanent!==false));
  excavation=createExcavationController({scene,renderer,sites:{...archaeology.sites,...(berenguerVisit()?.sectionMask?{berenguer:{id:'berenguer',cut:berenguerVisit().sectionMask,point:civic.points.berenguer,views:civic.views.berenguer}}:{})},contextRoots:[city.group,monuments.group,sacred.group,civic.group],terrainMeshes:[terrain.mesh,...terrain.group.children.filter(o=>o.name==='Zócalos bajo las cimentaciones')],heightAt:urban.groundHeight});excavation.group.visible=false;added.push(excavation.group);
 
@@ -611,7 +626,7 @@ async function buildRegion(region){
  $('loading-status').textContent='Dibujando la llanura del Puerto…';await pause();
  portTerrain=await createTerrain({data:portElevation,heightAt:portUrban.groundHeight,renderer,patches:portHeritage.patches,shape:portShape,meshOptions:portMeshOptions,photoUrl:'./assets/data/port-orthophoto.jpg'});addToRegion(portTerrain.group);portHeritage.bindGround?.(portTerrain.meshHeightAt);
  $('loading-status').textContent='Levantando las manzanas de la ciudad factoría…';await pause();
- portCity=createCity({data:portUrbanData,project,heightAt:portUrban.groundHeight,urban:portUrban,terrainHeightAt:portTerrain.meshHeightAt,inBounds:inPortBounds,excludeBuildingIds:portHeritage.excludedIds,exclusions:portHeritage.exclusions,vegetationExclusions:portHeritage.vegetationExclusions,detailBounds:portMeshOptions.core,treeLimit:720});addToRegion(portCity.group);
+ portCity=regionCity({data:portUrbanData,project,heightAt:portUrban.groundHeight,urban:portUrban,terrainHeightAt:portTerrain.meshHeightAt,inBounds:inPortBounds,excludeBuildingIds:portHeritage.excludedIds,exclusions:portHeritage.exclusions,vegetationExclusions:portHeritage.vegetationExclusions,detailBounds:portMeshOptions.core,treeLimit:720});addToRegion(portCity.group);
 
  }else if(region==='coast'){
 
@@ -626,7 +641,7 @@ async function buildRegion(region){
  coastUrban=createUrbanSurface({data:coastalUrbanData,project,heightAt:ground,patches:coastHeritage.patches,collisionPolygons:Object.values(coastHeritage.sites).flatMap(s=>s.collisionPolygons||[])});
  $('loading-status').textContent='Dibujando la costa y sus reflejos…';await pause();
  coastTerrain=await createTerrain({data:coastElevation,heightAt:coastUrban.groundHeight,renderer,patches:coastHeritage.patches,shape:coastShape,meshOptions:coastMeshOptions,photoUrl:'./assets/data/coast-orthophoto.jpg'});addToRegion(coastTerrain.group);coastHeritage.bindGround(coastTerrain.meshHeightAt);
- coastCity=createCity({data:coastalUrbanData,project,heightAt:coastUrban.groundHeight,urban:coastUrban,terrainHeightAt:coastTerrain.meshHeightAt,inBounds:(x,z,m=0)=>inCoastBounds(x,z,m)&&!waterMask.isWater(x,z),excludeBuildingIds:coastHeritage.excludedIds,exclusions:coastHeritage.exclusions,vegetationExclusions:coastHeritage.vegetationExclusions,detailBounds:[{minX:3150,maxX:4100,minZ:4450,maxZ:5100},{minX:5250,maxX:6200,minZ:2350,maxZ:3050}],treeLimit:320});addToRegion(coastCity.group);
+ coastCity=regionCity({data:coastalUrbanData,project,heightAt:coastUrban.groundHeight,urban:coastUrban,terrainHeightAt:coastTerrain.meshHeightAt,inBounds:(x,z,m=0)=>inCoastBounds(x,z,m)&&!waterMask.isWater(x,z),excludeBuildingIds:coastHeritage.excludedIds,exclusions:coastHeritage.exclusions,vegetationExclusions:coastHeritage.vegetationExclusions,detailBounds:[{minX:3150,maxX:4100,minZ:4450,maxZ:5100},{minX:5250,maxX:6200,minZ:2350,maxZ:3050}],treeLimit:320});addToRegion(coastCity.group);
  coastEnvironment=createCoastEnvironment({data:coastWater,project,heightAt:coastHeight,mask:waterMask,mobile:mobile(),reduced});addToRegion(coastEnvironment.group);coastHeritage.grauContext?.applyCoastalVegetationMask?.(coastEnvironment.vegetation);coastEnvironment.setLight(lightMode);
 
  }else if(isLandscape(region)){
@@ -647,13 +662,15 @@ async function buildRegion(region){
  $('loading-status').textContent='Levantando los edificios del entorno…';await pause();
  // Natural landscapes keep fine architectural details concentrated near mapped settlements.
  const detailBounds=region==='marjal'?{minX:850,maxX:1110,minZ:5090,maxZ:5320}:region==='almarda'?{minX:6650,maxX:7200,minZ:-3500,maxZ:-2700}:{minX:-300,maxX:600,minZ:-800,maxZ:200};
- land.city=createCity({data:cityData,project,heightAt:land.urban.groundHeight,urban:land.urban,terrainHeightAt:land.terrain.meshHeightAt,inBounds:(x,z,m=0)=>inLandscapeBounds(cfg.shape)(x,z,m)&&!land.mask.isWater(x,z),excludeBuildingIds:land.heritage.excludedIds,exclusions:land.heritage.exclusions,vegetationExclusions:land.heritage.vegetationExclusions,detailBounds,treeLimit:region==='palancia'?850:240});addToRegion(land.city.group);
+ land.city=regionCity({data:cityData,project,heightAt:land.urban.groundHeight,urban:land.urban,terrainHeightAt:land.terrain.meshHeightAt,inBounds:(x,z,m=0)=>inLandscapeBounds(cfg.shape)(x,z,m)&&!land.mask.isWater(x,z),excludeBuildingIds:land.heritage.excludedIds,exclusions:land.heritage.exclusions,vegetationExclusions:land.heritage.vegetationExclusions,detailBounds,treeLimit:region==='palancia'?850:240});addToRegion(land.city.group);
  land.environment=createLandscapeEnvironment({data:land.water,project,mask:land.mask,mobile:mobile(),reduced});addToRegion(land.environment.group);land.environment.setLight(lightMode);
  }
+ await registeredScenes.build(region,{project,renderer,heightAt:regionTerrain(region).meshHeightAt},addToRegion,points);
  const surfaceMode=$('terrain-photo').classList.contains('active')?'photo':'art';regionTerrain(region)?.setMode(surfaceMode);
  regionsBuilt.add(region);regionRoots.set(region,added);regionUsed.set(region,performance.now());applyRegionVisibility();updateStatus();
  })();try{await task;}catch(error){
   // Retry owns only the partial roots built during this attempt.
+  registeredScenes.dispose(region);
   if(region==='sagunto')excavation?.dispose();if(region==='coast')coastEnvironment?.dispose?.();if(isLandscape(region))landscapes[region]?.environment?.dispose?.();
   const geometries=new Set(),materials=new Set(),textures=new Set();for(const root of added){scene.remove(root);root.traverse(o=>{for(const m of o.userData?.ownedResources?.materials||[])materials.add(m);for(const t of o.userData?.ownedResources?.textures||[])textures.add(t);if(o.isInstancedMesh)o.dispose();if(o.geometry)geometries.add(o.geometry);for(const m of Array.isArray(o.material)?o.material:o.material?[o.material]:[]){materials.add(m);for(const v of Object.values(m))if(v?.isTexture)textures.add(v);}});}for(const geometry of geometries)geometry.dispose();for(const m of materials)m.dispose();for(const t of textures)t.dispose();
   const ids=catalog.filter(c=>regionOf(c)===region).map(c=>c.id);if(region==='sagunto')ids.push('forum');for(const id of ids){delete points[id];delete views[id];delete modelBounds[id];}
@@ -666,18 +683,21 @@ function updateStatus(){
 }
 
 async function init(){
- setupUI();initTheme({onChange:()=>{refreshMap();redrawDialogMap?.();updateStatus();}});const regionFiles=['regional','landmarks','archaeology-domestic','archaeology-public','archaeology-necropolis','port-industrial','port-garden','port-workers','coast-pier','coast-grau','coast-archaeology','landscape-regions','landscape-marjal','landscape-dunes','landscape-palancia','landscape-territory','atlas-data-summary','historic-context'];
+ setupUI();initTheme({onChange:()=>{refreshMap();redrawDialogMap?.();updateStatus();}});const {inventories,entries}=await loadAtlasVisitRegistry();
+ const regionFiles=['regional',inventories.landmarks,...inventories.archaeology,...inventories.port,...inventories.coast,'landscape-regions',...inventories.landscapes,'landscape-territory','atlas-data-summary','historic-context'];
  const visitFiles=['castle-visit','theatre-visit','theatre-plan','santa-maria-visit','santa-maria-plan','santa-maria-context','plaza-mayor-visit','plaza-mayor-plan','plaza-mayor-context','juderia-visit','juderia-plan','juderia-context','calvario-visit','calvario-plan','calvario-context','berenguer-visit','berenguer-plan','berenguer-context','sangre-visit','sangre-plan','sangre-context','salvador-visit','salvador-plan','salvador-context','museo-visit','museo-plan','museo-context','portic-visit','portic-plan','portic-context','domus-visit','domus-plan','domus-context','circo-visit','circo-plan','circo-context','necropolis-visit','necropolis-plan','necropolis-context','horno-visit','horno-plan','horno-context','talleres-visit','talleres-plan','talleres-context','museo-industrial-visit','museo-industrial-plan','museo-industrial-context','gerencia-visit','gerencia-plan','gerencia-context','casino-visit','casino-plan','casino-context','begona-visit','begona-plan','begona-context','economato-visit','economato-plan','economato-context','barrio-visit','barrio-plan','barrio-context','sanatorio-visit','sanatorio-plan','sanatorio-context','pantalan-paseo-visit','pantalan-paseo-plan','pantalan-maritimo-visit','pantalan-maritimo-plan','pantalan-context','grau-visit','grau-plan','grau-context'];
  const files=[...regionFiles,...visitFiles];
  const loaded=await Promise.all(files.map(async name=>{const r=await fetch(`./assets/data/${name}.json`);if(!r.ok)throw new Error(`No se pudo cargar ${name}`);return r.json();}));
  $('glorieta-water').onclick=e=>{glorietaWater=!glorietaWater;e.currentTarget.setAttribute('aria-pressed',String(glorietaWater));};
  $('glorieta-night').onclick=e=>{if(!renderer)return;const night=!glorietaNight;setLight(lightMode);glorietaNight=night;e.currentTarget.setAttribute('aria-pressed',String(night));
  if(night){ambient.color.set('#abbfe5');ambient.groundColor.set('#716459');ambient.intensity=.62;sun.color.set('#c3d5f7');sun.intensity=.5;scene.background.set('#263342');scene.fog.color.copy(scene.background);renderer.shadowMap.needsUpdate=true;}};
- const [glorietaRecord,glorietaHistory,stops,layout,buildings]=await Promise.all(['glorieta-catalog','glorieta-history','glorieta-visit','glorieta-layout','glorieta-buildings'].map(n=>fetch('./assets/data/'+n+'.json').then(r=>{if(!r.ok)throw Error(n);return r.json();})));
+ const [glorietaRecord,glorietaHistory,stops,layout,buildings]=await Promise.all([inventories.glorieta,'glorieta-history','glorieta-visit','glorieta-layout','glorieta-buildings'].map(n=>fetch('./assets/data/'+n+'.json').then(r=>{if(!r.ok)throw Error(n);return r.json();})));
  glorietaLayout=layout;glorietaBuildings=buildings;
  glorietaData=prepareGlorietaVisit(stops,glorietaHistory,layout,buildings);
  const entry=glorietaRecord.sites[0];catalog.push(entry);byId.glorieta=entry;tourOrder.push('glorieta');
  regional=loaded[0];landmarkData=loaded[1];landmarks=Object.fromEntries(landmarkData.sites.map(s=>[s.id,s]));archaeologyRecords=registerArchaeology(loaded.slice(2,5),catalog,byId,tourOrder);portRecords=registerPortHeritage(loaded.slice(5,8),catalog,byId,tourOrder);coastRecords=registerCoastHeritage(loaded.slice(8,11),catalog,byId,tourOrder);landscapeConfig=loaded[11];landscapeRecords=registerLandscapes(loaded.slice(12,15),catalog,byId,tourOrder);regional={...regional,...loaded[15]};dataSummary=loaded[16];historicContext=loaded[17];
+ registeredScenes.register(entries,catalog,byId,tourOrder);
+ for(const entry of entries){const region=regionOf(entry);regionCounts[region]++;if(!isLandscape(region))regionInfo[region].count++;}
 
  castleData=loaded[18];theatreData=loaded[19];theatreData.plan=loaded[20];churchData=loaded[21];churchData.plan=loaded[22];churchContextData=loaded[23];plazaData=loaded[24];plazaData.plan=loaded[25];plazaContextData=loaded[26];juderiaData=loaded[27];juderiaData.plan=loaded[28];juderiaContextData=loaded[29];calvarioData=loaded[30];calvarioData.plan=loaded[31];calvarioContextData=loaded[32];berenguerData=loaded[33];berenguerData.plan=loaded[34];berenguerContextData=loaded[35];berenguerData.sectionOnOverview=true;berenguerData.relatedVisits=[{id:'diana',label:'Explorar el muro de Diana'}];dianaData=createDianaVisit(berenguerData);sangreData=loaded[36];sangreData.plan=loaded[37];sangreContextData=loaded[38];sangreData.sectionOnOverview=true;salvadorData=loaded[39];salvadorData.plan=loaded[40];salvadorContextData=loaded[41];salvadorData.sectionOnOverview=true;museoData=loaded[42];museoData.plan=loaded[43];museoContextData=loaded[44];museoData.sectionOnOverview=true;museoData.relatedVisits=[{id:'juderia',label:'Recorrer la Judería'}];juderiaData.relatedVisits=[...(juderiaData.relatedVisits||[]),{id:'museo',label:'Explorar el Museo Arqueológico'}];porticData=loaded[45];porticData.plan=loaded[46];porticContextData=loaded[47];domusData=loaded[48];domusData.plan=loaded[49];domusContextData=loaded[50];circoData=loaded[51];circoData.plan=loaded[52];circoContextData=loaded[53];necropolisData=loaded[54];necropolisData.plan=loaded[55];necropolisContextData=loaded[56];hornoData=loaded[57];hornoData.plan=loaded[58];hornoContextData=loaded[59];hornoData.sectionOnOverview=true;talleresData=loaded[60];talleresData.plan=loaded[61];talleresContextData=loaded[62];talleresData.sectionOnOverview=true;museoIndustrialData=loaded[63];museoIndustrialData.plan=loaded[64];museoIndustrialContextData=loaded[65];museoIndustrialData.sectionOnOverview=true;gerenciaData=loaded[66];gerenciaData.plan=loaded[67];gerenciaContextData=loaded[68];gerenciaData.sectionOnOverview=true;casinoData=loaded[69];casinoData.plan=loaded[70];casinoContextData=loaded[71];casinoData.sectionOnOverview=true;begonaData=loaded[72];begonaData.plan=loaded[73];begonaContextData=loaded[74];begonaData.sectionOnOverview=true;economatoData=loaded[75];economatoData.plan=loaded[76];economatoContextData=loaded[77];barrioData=loaded[78];barrioData.plan=loaded[79];barrioContextData=loaded[80];sanatorioData=loaded[81];sanatorioData.plan=loaded[82];sanatorioContextData=loaded[83];sanatorioData.sectionOnOverview=true;sanatorioData.relatedVisits=[{id:'barrio-obrero',label:'Recorrer el Barrio Obrero'},{id:'gerencia',label:'Explorar la ciudad jardín'},{id:'museo-industrial',label:'Conocer el Museo Industrial'}];barrioData.sectionOnOverview=true;barrioData.relatedVisits=[{id:'economato',label:'Conocer el antiguo Economato'},{id:'gerencia',label:'Recorrer la ciudad jardín'},{id:'sanatorio',label:'Conocer el antiguo Sanatorio'}];economatoData.sectionOnOverview=true;economatoData.relatedVisits=[{id:'begona',label:'Explorar Begoña y la Alameda'},{id:'gerencia',label:'Recorrer la ciudad jardín'},{id:'casino',label:'Explorar el Casino'},{id:'barrio-obrero',label:'Conocer el Barrio Obrero'}];begonaData.relatedVisits=[{id:'casino',label:'Explorar el Casino'},{id:'gerencia',label:'Recorrer la ciudad jardín'},{id:'economato',label:'Conocer el antiguo Economato'}];casinoData.relatedVisits=[{id:'gerencia',label:'Recorrer la ciudad jardín'},{id:'begona',label:'Explorar Begoña y la Alameda'},{id:'museo-industrial',label:'Visitar el Museo Industrial'}];gerenciaData.relatedVisits=[{id:'economato',label:'Conocer el antiguo Economato'},{id:'casino',label:'Explorar el Casino'},{id:'museo-industrial',label:'Visitar el Museo Industrial'},{id:'barrio-obrero',label:'Conocer el Barrio Obrero'}];museoIndustrialData.relatedVisits=[{id:'talleres',label:'Explorar Talleres Generales'},{id:'horno',label:'Explorar el Alto Horno n.º 2'},{id:'gerencia',label:'Recorrer la Gerencia'}];talleresData.relatedVisits=[{id:'horno',label:'Explorar el Alto Horno n.º 2'},{id:'museo-industrial',label:'Visitar el Museo Industrial'},{id:'gerencia',label:'Recorrer la Gerencia'}];hornoData.relatedVisits=[{id:'talleres',label:'Explorar Talleres Generales'},{id:'museo-industrial',label:'Visitar el Museo Industrial'},{id:'gerencia',label:'Recorrer la Gerencia'}];necropolisData.relatedVisits=[{id:'juderia',label:'Recorrer la Judería'},{id:'castle',label:'Explorar el Castillo'},{id:'theatre',label:'Visitar el Teatro Romano'}];circoData.relatedVisits=[{id:'portic',label:'Explorar la Vía del Pòrtic'},{id:'domus',label:'Explorar la Domus dels Peixos'}];domusData.relatedVisits=[{id:'portic',label:'Explorar la Vía del Pòrtic'},{id:'museo',label:'Explorar el Museo Arqueológico'}];porticData.relatedVisits=[{id:'domus',label:'Explorar la Domus dels Peixos'},{id:'museo',label:'Explorar el Museo Arqueológico'}];
  pantalanPaseoData=loaded[84];pantalanPaseoData.plan=loaded[85];pantalanMaritimoData=loaded[86];pantalanMaritimoData.plan=loaded[87];pantalanContextData=loaded[88];
@@ -719,7 +739,7 @@ async function init(){
  }
  for(const id of Object.keys(coastRecords))coastModes[id]='current';const pendingTour=window.history.state?.atlasTour;const request=selectionFromHash();activeRegion=request.region||(byId[request.name]?regionOf(byId[request.name]):'sagunto');buildPlaceUI();
  landmarks.glorieta=byId.glorieta;
- mapSites=catalog.map(c=>({...c,coordinate:landscapeRecords[c.id]?.coordinate||coastRecords[c.id]?.coordinate||portRecords[c.id]?.coordinate||archaeologyRecords[c.id]?.coordinate||landmarks[c.id]?.coordinate||({theatre:(theatreData?.stops[0]?.coordinate||[-.277956714,39.676869865]),castle:(castleData?.stops.find(s=>s.id==='conjunto')?.coordinate||[-.279,39.6765])}[c.id])}));setRegion(activeRegion);refreshMap();
+ mapSites=catalog.map(c=>({...c,coordinate:c.coordinate||landscapeRecords[c.id]?.coordinate||coastRecords[c.id]?.coordinate||portRecords[c.id]?.coordinate||archaeologyRecords[c.id]?.coordinate||landmarks[c.id]?.coordinate||({theatre:(theatreData?.stops[0]?.coordinate||[-.277956714,39.676869865]),castle:(castleData?.stops.find(s=>s.id==='conjunto')?.coordinate||[-.279,39.6765])}[c.id])}));setRegion(activeRegion);refreshMap();
 
  // The map view also serves devices that have already lost their GPU context.
  if(!wantsPlan()){

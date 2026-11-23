@@ -1,13 +1,28 @@
 import * as T from 'three';
+import {simulatorInput} from './territory-input.js';
+import {locomotion} from './territory-locomotion.js';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 const clamp=T.MathUtils.clamp;
 const modes=['orbit','fly','walk'];
-export function createNavigation({camera,element,heightAt,walkingHeight,bounds,core,safe,nearest,route,onMode,onRoute}){
+export function createNavigation({camera,element,heightAt,walkingHeight,bounds,core,safe,nearest,route,onMode,onRoute,onCommand=()=>{}}){
   const controls=new OrbitControls(camera,element);
   Object.assign(controls,{enableDamping:true,dampingFactor:.10,minDistance:4,maxDistance:29000,maxPolarAngle:Math.PI*.493,screenSpacePanning:false,zoomSpeed:.9});
-  const keys=new Set(),v=new T.Vector3(),move=new T.Vector3(),aim=new T.Vector3(),joystick={x:0,z:0};
-  const up=new T.Vector3(0,1,0),side=new T.Vector3(),euler=new T.Euler(0,0,0,'YXZ');
-  let mode='orbit',yaw=0,pitch=0,tween=null,lookId=null,lastX,lastY,ascend=0,walkingStart=false;
+  const v=new T.Vector3(),aim=new T.Vector3(),joystick={x:0,z:0};
+  const up=new T.Vector3(0,1,0),euler=new T.Euler(0,0,0,'YXZ');
+  let mode='orbit',yaw=0,pitch=0,tween=null,ascend=0,targetYaw=0,targetPitch=0;
+  const motion=locomotion({camera,heightAt,walkingHeight,bounds,safe,nearest,spawn:core.anchors[0]});
+  const input=simulatorInput(element,{mode:()=>mode,look(dx,dy){
+    const factor=.0024*input.prefs.sensitivity;
+    targetYaw-=dx*factor;targetPitch=clamp(targetPitch-dy*factor*(input.prefs.invert?-1:1),-1.48,1.48);
+    if(!input.prefs.smoothing&&!input.prefs.cinema){yaw=targetYaw;pitch=targetPitch;orientation();}
+  },settingsChanged(){
+    if(mode!=='orbit'){camera.fov=input.prefs.fov;camera.updateProjectionMatrix();}
+  },command(action){
+    if(action==='up'&&mode==='walk')motion.jump();
+    if(action==='reset'&&mode==='walk')motion.respawn();
+    if(action==='view')setMode(mode==='walk'?'orbit':'walk');
+    onCommand(action);
+  }});
   let targetLift=0,visitPose=false,authoredTarget=null,untouched=false;
   function setVisitPose(enabled,eye,target){
     visitPose=enabled;
@@ -24,23 +39,24 @@ export function createNavigation({camera,element,heightAt,walkingHeight,bounds,c
   function setMode(next,reset=true){
     if(!modes.includes(next))return;
     if(next===mode){onMode(mode);return;}
-    setVisitPose(false);
+    const initialOverview=mode==='orbit'&&camera.position.distanceTo(controls.target)>2500;
+    setVisitPose(false);input.release();motion.stop();
     stop();tween=null;
     const focus=controls.target.clone(),p=camera.position;
     if(next==='orbit'&&mode!=='orbit'){
-      targetLift=0;
+      targetLift=0;camera.fov=38;camera.updateProjectionMatrix();
       camera.getWorldDirection(v);controls.target.copy(p).addScaledVector(v,60);controls.target.y=heightAt(controls.target.x,controls.target.z);
       p.y=Math.max(p.y,controls.target.y+32);controls.update();
     }else if(next!=='orbit'){
       euler.setFromQuaternion(camera.quaternion,'YXZ');yaw=euler.y;pitch=clamp(euler.x,-1.35,1.25);
       if(next==='walk'&&reset){
-        if(mode==='orbit')p.set(focus.x,0,focus.z);
-        const near=nearest(p.x,p.z);if(near)p.set(near[0],0,near[1]);
-        walkingStart=true;p.y=heightAt(p.x,p.z)+1.7;pitch=-.035;
+        const where=initialOverview?core.anchors[0]:mode==='orbit'?focus:p;
+        motion.requestLanding(where.x,where.z);pitch=-.035;
       }
+      targetYaw=yaw;targetPitch=pitch;camera.fov=input.prefs.fov;camera.updateProjectionMatrix();
       orientation();
     }
-    controls.enabled=next==='orbit';mode=next;keys.clear();joystick.x=joystick.z=ascend=0;onMode(mode);
+    controls.enabled=next==='orbit';mode=next;joystick.x=joystick.z=ascend=0;onMode(mode);
   }
   function frame(end,dest,fov,instant=false,authored=false){
     stop();setMode('orbit');targetLift=end.y-heightAt(end.x,end.z);
@@ -65,22 +81,6 @@ export function createNavigation({camera,element,heightAt,walkingHeight,bounds,c
     }
     flyTo(core.x,core.z,range,instant);
   }
-  function key(e,down){
-    if(['INPUT','SELECT','TEXTAREA','BUTTON'].includes(e.target.tagName)&&e.key!=='Escape')return;
-    if(e.key==='Escape'){stop();if(mode!=='orbit')setMode('orbit');return;}
-    const k=e.key.toLowerCase();
-    if(mode==='orbit'||!['w','a','s','d','q','e','shift','arrowleft','arrowright','arrowup','arrowdown'].includes(k))return;
-    e.preventDefault();if(down)keys.add(k);else keys.delete(k);
-  }
-  window.addEventListener('keydown',e=>key(e,true));window.addEventListener('keyup',e=>key(e,false));
-  window.addEventListener('blur',()=>{keys.clear();joystick.x=joystick.z=ascend=0;});
-  element.addEventListener('pointerdown',e=>{if(mode==='orbit'||lookId!==null)return;lookId=e.pointerId;lastX=e.clientX;lastY=e.clientY;element.setPointerCapture(e.pointerId);element.focus({preventScroll:true});});
-  element.addEventListener('pointermove',e=>{
-    if(mode==='orbit'||lookId!==e.pointerId)return;
-    yaw-=(e.clientX-lastX)*.004;pitch=clamp(pitch-(e.clientY-lastY)*.004,-1.47,1.47);
-    lastX=e.clientX;lastY=e.clientY;orientation();
-  });
-  element.addEventListener('lostpointercapture',()=>lookId=null);
   const pad=document.getElementById('sim-stick'),nub=pad.firstElementChild;
   function padMove(e){
     const r=pad.getBoundingClientRect(),x=clamp((e.clientX-r.left-r.width/2)/(r.width*.39),-1,1),y=clamp((e.clientY-r.top-r.height/2)/(r.height*.39),-1,1);
@@ -90,6 +90,7 @@ export function createNavigation({camera,element,heightAt,walkingHeight,bounds,c
   pad.onpointermove=e=>{if(pad.hasPointerCapture(e.pointerId))padMove(e);};
   pad.onlostpointercapture=()=>{joystick.x=joystick.z=0;nub.style.transform='';};
   document.querySelectorAll('[data-rise]').forEach(b=>{b.onpointerdown=e=>{b.setPointerCapture(e.pointerId);ascend=Number(b.dataset.rise);};b.onlostpointercapture=()=>ascend=0;});
+  window.addEventListener('blur',()=>{joystick.x=joystick.z=ascend=0;motion.stop();});
   function startTour(){
     if(touring){stop();return;}
     if(route.length<2)return;
@@ -120,32 +121,31 @@ export function createNavigation({camera,element,heightAt,walkingHeight,bounds,c
       if(!visitPose)p.y=Math.max(p.y,heightAt(p.x,p.z)+1.7);
       controls.update();return;
     }
-    if(walkingStart){
-      const near=nearest(p.x,p.z);if(near&&safe(...near)){p.x=near[0];p.z=near[1];walkingStart=false;}
-    }
-    const f=(keys.has('w')||keys.has('arrowup')?1:0)-(keys.has('s')||keys.has('arrowdown')?1:0)+joystick.z;
-    const s=(keys.has('d')||keys.has('arrowright')?1:0)-(keys.has('a')||keys.has('arrowleft')?1:0)+joystick.x;
-    camera.getWorldDirection(v);if(mode==='walk'){v.y=0;v.normalize();}side.crossVectors(v,up).normalize();
-    move.copy(v).multiplyScalar(f).addScaledVector(side,s);
-    if(move.lengthSq()>1)move.normalize();
-    const speed=mode==='walk'?(keys.has('shift')?4.1:1.8):clamp((p.y-heightAt(p.x,p.z))*.42+16,16,1300)*(keys.has('shift')?2.5:1);
-    move.multiplyScalar(speed*dt);
-    // A panoramic orbit can place the eye offshore beyond the terrain extent.
-    // Permit continuous inward flight from there without snapping to the edge.
-    const x=clamp(p.x+move.x,Math.min(p.x,bounds[0]),Math.max(p.x,bounds[2]));
-    const z=clamp(p.z+move.z,Math.min(p.z,bounds[1]),Math.max(p.z,bounds[3]));
-    if(move.x&&(mode==='fly'||safe(x,p.z)))p.x=x;if(move.z&&(mode==='fly'||safe(p.x,z)))p.z=z;
-    p.y=mode==='walk'?walkingHeight(p.x,p.z)+1.7:Math.max(heightAt(p.x,p.z)+1.7,p.y+move.y+dt*speed*((keys.has('e')?1:0)-(keys.has('q')?1:0)+ascend));
+    const smooth=input.prefs.cinema?Math.max(.3,input.prefs.smoothing):input.prefs.smoothing;
+    const weight=smooth?1-Math.exp(-dt*10/smooth):1;
+    yaw+=(targetYaw-yaw)*weight;pitch+=(targetPitch-pitch)*weight;orientation();
+    motion.tick(dt,mode,input,joystick,ascend);
   }
-  function snapshot(){return {mode,eye:camera.position.toArray(),target:controls.target.toArray(),yaw,pitch,fov:camera.fov,targetLift,visitPose};}
+  function north(){
+    if(mode!=='orbit')return;
+    const offset=camera.position.clone().sub(controls.target);
+    const destination=controls.target.clone().add(new T.Vector3(0,offset.y,Math.hypot(offset.x,offset.z)));
+    frame(controls.target.clone(),destination,camera.fov);
+  }
+  function relocate(x,z){
+    if(mode==='walk'){motion.requestLanding(x,z);return;}
+    if(mode==='fly'){const h=Math.max(input.prefs.clearance,camera.position.y-heightAt(camera.position.x,camera.position.z));motion.stop();camera.position.set(x,heightAt(x,z)+h,z);return;}
+    flyTo(x,z,300);
+  }
+  function snapshot(){return {mode,eye:camera.position.toArray(),target:controls.target.toArray(),yaw,pitch,fov:camera.fov,targetLift,visitPose,...(mode==='walk'?{walk:motion.snapshot()}:{})};}
   function restore(s){
     if(!s||!modes.includes(s.mode)||![s.eye,s.target].every(a=>Array.isArray(a)&&a.length===3&&a.every(Number.isFinite)))return false;
     setMode(s.mode,false);camera.position.fromArray(s.eye);controls.target.fromArray(s.target);
     setVisitPose(!!s.visitPose&&s.mode==='orbit',camera.position,controls.target);
     targetLift=Number.isFinite(s.targetLift)?s.targetLift:0;
     if(Number.isFinite(s.fov)){camera.fov=clamp(s.fov,10,115);camera.updateProjectionMatrix();}
-    if(mode==='orbit')controls.update();else {yaw=s.yaw||0;pitch=s.pitch||0;orientation();}return true;
+    if(mode==='orbit')controls.update();else {yaw=targetYaw=s.yaw||0;pitch=targetPitch=s.pitch||0;orientation();if(mode==='walk')motion.restore(s.walk);}return true;
   }
-  return {controls,setMode,flyTo,frame,panorama,tick,startTour,snapshot,restore,get mode(){return mode;},get atVisitFrame(){return untouched;},leaveVisit(){if(visitPose){setVisitPose(false);targetLift=0;}},get touring(){return touring;},
+  return {controls,input,north,relocate,get speed(){return motion.speed;},get landing(){return mode==='walk'&&motion.landing;},setMode,flyTo,frame,panorama,tick,startTour,snapshot,restore,get mode(){return mode;},get atVisitFrame(){return untouched;},leaveVisit(){if(visitPose){setVisitPose(false);targetLift=0;}},get touring(){return touring;},
     focusPoint(){return mode==='orbit'?controls.target:camera.position;},get range(){return mode==='orbit'?camera.position.distanceTo(controls.target):Math.max(0,camera.position.y-heightAt(camera.position.x,camera.position.z));}};
 }

@@ -35,7 +35,15 @@ def grid(path, meta):
     assert a.size == meta['width']*meta['height']
     a = a.reshape(meta['height'], meta['width'])*meta['unit']
     with Image.open(path/meta['texture']) as im:
-        assert min(im.size) >= 2000
+        # The deployed basemaps are thumbnails of the full ortho acquisitions.
+        # Check the actual export recipe; near-camera photography streams separately.
+        side={'landscape/territory.jpg':1792,'landscape/core.jpg':2048}.get(meta['texture'])
+        if side:
+            assert max(im.size)==side
+            xmin,zmin,xmax,zmax=meta['bounds']
+            assert abs(im.width/im.height-(xmax-xmin)/(zmax-zmin))<.015
+        else:
+            assert min(im.size)>=2000
         im.verify()
     return a
 

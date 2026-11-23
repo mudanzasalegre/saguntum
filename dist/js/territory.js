@@ -8,8 +8,11 @@ import {createTerritorySea} from './territory-sea.js';
 import {createBuildings} from './territory-stream.js';
 import {createNetwork} from './territory-network.js';
 import {createNavigation} from './territory-camera.js';
+import {createHeritageCollision} from './territory-collision-heritage.js';
 import {createAtmosphere} from './territory-atmosphere.js';
 import {contactRenderer} from './territory-contact.js';
+import {createTerritoryRenderer,pixelRatioFor,qualityNames} from './territory-graphics.js';
+import {solarDateInSagunto,solarPreset,validSolarDate} from './territory-solar.js';
 import {surfacePhotoMetrics,setTerrainAppearance} from './territory-surface-photo.js';
 import {terrainMap} from './territory-map.js';
 import {createCanopy} from './territory-canopy.js';
@@ -28,7 +31,7 @@ export async function openSimulator(){
   const [world,index,mapImage,inventory,frames,guides]=await Promise.all([resource(territoryBase+'world.json'),resource(networkBase+'index.json'),imageAt(territoryBase+'map.jpg'),loadHeritageCatalog(project),resource(territoryBase+'atlas-frames.json').catch(()=>({})),resource(territoryBase+'visit-stops.json')]);
   const {places}=inventory,byId=new Map(places.map(p=>[p.id,p]));
   for(const p of places){
-    p.guide=guides[p.id];
+    p.guide??=guides[p.id];
     for(const [i,s] of (p.guide?.stops||[]).entries())Object.assign(s,project(...s.coordinate),{number:i+1});
   }
   let activeStop=null,cameras={},stopCamera;
@@ -36,15 +39,15 @@ export async function openSimulator(){
   const zones=[{...sag,name:'Sagunto histórico',short:'Sagunto'},{...port,name:'Puerto de Sagunto',short:'Puerto'},{...grau,name:'Grau Vell',short:'Grau Vell'}].map(p=>({...p,zone:true}));
   const core={x:(sag.x+port.x)/2,z:(sag.z+grau.z)/2,anchors:zones,range:Math.max(6100,Math.hypot(port.x-sag.x,grau.z-sag.z)*.94)};
   let nav,buildings,network,heritage,atmosphere,renderer,canopy,selected=null,historical=false;
-  let focus2D={...core},budget=mobile?0:2,lastBudget=-1,hour=15,markerButtons=[];
-  let pixelScale=1;
+  let focus2D={...core},budget=1,hour=15,markerButtons=[];
+  let tier=1,pixelScale=1,graphics,solarDate=solarDateInSagunto();
   let lighting='solar',lightPreference='auto',terrainPreference='auto',exterior=false;
   let presentationReady=false;
   const flags={buildings:true,heritage:true,streets:true,land:true,labels:true,cars:true,people:true};
   const status={ready:false,mode:'cargando',places:places.length,buildings:world.counts.buildingGeometries,routeMetres:index.routeLengthM};
   window.territoryStatus=status;
   const map=terrainMap({world,network:index,zones,places,image:mapImage,onPoint(x,z,p,stopId){
-    if(p)select(p,true,stopId);else{clear();nav?.flyTo(x,z,300);focus2D={x,z};}
+    if(p)select(p,true,stopId);else{clear();nav?.relocate(x,z);focus2D={x,z};}
     writeLink();
     map.close();update2D();
   }});
@@ -53,6 +56,7 @@ export async function openSimulator(){
   document.querySelector('.sim-foot').prepend(credits);
   $('credits').textContent='Huellas y límites de parcela de Catastro INSPIRE, modelos de elevación y ortofoto PNOA del IGN, límite municipal del ICV y red viaria de OpenStreetMap (ODbL). Las alturas derivan de LiDAR, plantas o estimación. Las fachadas, el reparto del espacio entre calzada y acera y la actividad urbana son interpretativos.';
   function panel(id,open){
+    if(open){nav?.input.release();$('instructions').hidden=true;}
     for(const name of ['places','settings']){
       const visible=name===id&&open;$(name).hidden=!visible;
       $(name==='places'?'search-open':'settings-open').setAttribute('aria-expanded',String(visible));
@@ -64,7 +68,7 @@ export async function openSimulator(){
   document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>panel(null,false));
   function save(){
     const previous=readVisit()||{};
-    const state=nav?{camera:nav.snapshot(),flags,quality:$('quality').value,hour,lighting,lightPreference,terrain:terrainPreference,jets:$('jets').checked}:previous;
+    const state=nav?{camera:nav.snapshot(),flags,quality:$('quality').value,hour,solarDate,lighting,lightPreference,terrain:terrainPreference,historical,jets:$('jets').checked,minimap:!$('map-box').hidden,torch:!!torch?.visible}:previous;
     if(!nav&&(previous.selected!==selected?.id||savedStop(previous)!==activeStop?.id))delete state.camera;
     try{sessionStorage.setItem(sessionKey,JSON.stringify({...state,selected:selected?.id,stop:activeStop?.id,exterior}));}catch{}
   }
@@ -113,7 +117,7 @@ export async function openSimulator(){
     const presentation=cameras[p.id]?.[stopId]?.presentation;
     if(activeStop&&move&&nav&&!flags.heritage){flags.heritage=true;applyFlags();}
     if(flags.heritage)heritage?.setVisitStop(p.zone?null:p.id,activeStop?.id||null,focus2D,presentation);
-    if(move&&p.zone)nav?.flyTo(p.x,p.z,680);
+    if(move&&p.zone){if(nav&&nav.mode!=='orbit')nav.relocate(p.x,p.z);else nav?.flyTo(p.x,p.z,680);}
     if(!p.zone){
       selected=p;status.selected=p.id;$('title').textContent=p.name;$('zone').textContent=regions[p.region]||p.region;
       const stops=p.guide?.stops||[];
@@ -193,8 +197,11 @@ export async function openSimulator(){
     map.draw(focus2D,focus2D,{x:0,z:-1});window.addEventListener('resize',()=>map.draw(focus2D,focus2D,{x:0,z:-1}));
   }
   if(wantsPlan()){fallback('Mapa 2D · Exploración en plano');return;}
-  try{renderer=new T.WebGLRenderer({antialias:!mobile,powerPreference:mobile?'default':'high-performance'});}
-  catch{fallback('Mapa 2D · WebGL no disponible');return;}
+  try{({renderer,info:graphics}=createTerritoryRenderer(mobile));}
+  catch{fallback('Mapa 2D · WebGL 2 no disponible');return;}
+  $('quality').querySelector('[value="3"]').disabled=!graphics.ultra;
+  tier=budget=graphics.initial;
+  status.graphics=graphics;
   const scene=new T.Scene(),camera=new T.PerspectiveCamera(38,innerWidth/innerHeight,.2,65000);
   renderer.info.autoReset=false;
   renderer.outputColorSpace=T.SRGBColorSpace;renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=1.05;
@@ -214,9 +221,10 @@ export async function openSimulator(){
   const render=contactRenderer(renderer);
   function setLight(h){
     hour=Number(h);$('time').value=hour;$('hour').textContent=String(Math.floor(hour)).padStart(2,'0')+':'+String(Math.round((hour%1)*60)).padStart(2,'0');
-    if(lighting==='solar')atmosphere.setHour(hour);else atmosphere.atlas(lighting);
+    if(lighting==='solar')atmosphere.setHour(hour,solarDate);else atmosphere.atlas(lighting);
     heritage.setAtlasLighting(lighting!=='solar');
-    $('light').value=lightPreference;status.lighting=lighting;status.hour=hour;
+    $('date').value=solarDate;
+    $('light').value=lightPreference;status.lighting=lighting;status.hour=hour;status.solarDate=solarDate;
   }
   function applyPresentation(){
     lighting=lightPreference==='auto'?(selected?'golden':'solar'):lightPreference;
@@ -224,17 +232,77 @@ export async function openSimulator(){
     const terrain=terrainPreference==='auto'?(selected?'natural':'photo'):terrainPreference;
     setTerrainAppearance(terrain==='natural');status.terrain=terrain;$('terrain').value=terrainPreference;
   }
+  const observationPoints=places.flatMap(place=>[place,...(place.guide?.stops||[])].map(pt=>({place,pt})));
+  let nearby=null,torch=null,helpTimer=0;
+  function updateNearby(){
+    nearby=null;
+    if(nav.mode!=='orbit'&&flags.heritage){
+      let best=40;
+      for(const {place,pt} of observationPoints){
+        const dx=camera.position.x-pt.x,dz=camera.position.z-pt.z,dist2=dx*dx+dz*dz;
+        if(dist2>=best*best)continue;
+        const dist=Math.hypot(dx,dz,Math.max(0,camera.position.y-heightAt(pt.x,pt.z)-8));
+        if(dist<best){best=dist;nearby=place;}
+      }
+    }
+    $('nearby').hidden=!nearby;
+    if(nearby)$('nearby').textContent=(mobile?'Explorar':nav.input.key('interact')+' · Explorar')+' '+nearby.name;
+  }
+  function command(action){
+    if(action==='interact'&&nearby){save();nav.input.release();location.hash=nearby.href;return;}
+    if(action==='light'&&nav.mode!=='orbit'){
+      if(!torch){
+        torch=new T.SpotLight(0xffeccb,45,32,.48,.48,1.4);
+        camera.add(torch,torch.target);torch.target.position.set(0,-.09,-1);scene.add(camera);
+      }else torch.visible=!torch.visible;
+    }
+    if(action==='map'){
+      nav.input.release();panel(null,false);$('map-box').hidden=false;$('show-map').checked=true;$('expand').click();
+    }
+    if(action==='escape'){
+      document.documentElement.classList.remove('sim-clean');$('show-ui').hidden=true;
+      $('instructions').hidden=true;panel(null,false);map.close();
+    }
+  }
   function onMode(mode){
     document.body.dataset.camera=mode;status.mode=mode;
     document.querySelectorAll('[data-mode]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.mode===mode)));
     $('stick').hidden=mode==='orbit';$('altitude').hidden=mode!=='fly';
-    $('help').textContent={orbit:'Arrastra para girar · Rueda o pellizco para acercar',fly:'WASD para volar · Arrastra para mirar · E / Q para subir y bajar',walk:'WASD para caminar · Arrastra para mirar'}[mode];
+    $('walk-actions').hidden=mode!=='walk';$('north').disabled=mode!=='orbit';
+    if(mode==='orbit'){nearby=null;$('nearby').hidden=true;if(torch)torch.visible=false;}
+    const key=a=>nav?.input.key(a)||'';
+    const move=['forward','left','back','right'].map(key).join(' ');
+    const help=mode==='orbit'?'Arrastra para girar · Rueda o pellizco para acercar':mobile
+      ?'Muévete con el joystick. Arrastra sobre la escena para mirar.'
+      :mode==='fly'?move+' para volar · '+key('up')+' / '+key('down')+' para cambiar la altura · Rueda para ajustar la velocidad'
+      :move+' para caminar · '+key('run')+' para correr · '+key('up')+' para saltar';
+    $('help').textContent=help;
+    if(mode!=='orbit'&&nav){
+      const id='saguntum-help-'+mode;
+      let seen;try{seen=sessionStorage.getItem(id);sessionStorage.setItem(id,'1');}catch{}
+      if(!seen){
+        $('how').textContent=help+(mobile?'':' · Clic en la escena para mirar con el ratón. Esc para liberarlo.');
+        $('instructions').hidden=false;clearTimeout(helpTimer);helpTimer=setTimeout(()=>$('instructions').hidden=true,9500);
+      }
+    }else $('instructions').hidden=true;
   }
   const walkingHeight=(x,z)=>heritage.walkSurface(x,z)??(ground.grade(x,z)+network.walkingHeight(x,z)-heightAt(x,z));
+  const heritageCollision=createHeritageCollision(heritage);
+  const safe=(x,z,radius=.32,feetY=walkingHeight(x,z))=>{
+    if(sea.mask.isWater(x,z)&&heritage.publicDeckAt(x,z)===null&&network.bridgeHeight(x,z,true)===null)return false;
+    return ground.canStand(x,z)&&buildings.safeToWalk(x,z,radius)&&network.safeToWalk(x,z,radius,feetY)&&heritageCollision.safeToWalk(x,z,radius,feetY);
+  };
   nav=createNavigation({camera,element:renderer.domElement,heightAt:ground.grade,walkingHeight,bounds:world.bounds,core,route:index.route,
-    safe:(x,z)=>!sea.mask.isWater(x,z)&&ground.canStand(x,z)&&buildings.safeToWalk(x,z),nearest:network.nearestPublic,onMode,onRoute:active=>{
+    safe,nearest:network.nearestPublic,onMode,onCommand:command,onRoute:active=>{
       $('tour').setAttribute('aria-pressed',String(active));$('tour').textContent=active?'Detener recorrido':'Recorrido territorial';status.touring=active;
     }});
+  $('nearby').onclick=()=>command('interact');
+  $('dismiss-help').onclick=()=>$('instructions').hidden=true;
+  $('show-map').onchange=e=>{map.close();$('map-box').hidden=!e.target.checked;};
+  $('north').onclick=()=>nav.north();
+  $('hide-ui').onclick=()=>{panel(null,false);document.documentElement.classList.add('sim-clean');$('show-ui').hidden=false;};
+  $('show-ui').onclick=()=>command('escape');
+  Object.defineProperty(status,'navigation',{get:()=>({...nav.snapshot(),speed:nav.speed,landing:nav.landing,locked:document.pointerLockElement===renderer.domElement})});
   function applyFlags(){
     ground.showBuildings?.(flags.buildings);
     if(heritage.group.visible!==flags.heritage)buildings.changed();
@@ -245,16 +313,22 @@ export async function openSimulator(){
   }
   function resize(){
     if(!renderer)return;
-    const cap=mobile?Math.min([1.65,2,2.25][budget],Math.sqrt([850000,1450000,2300000][budget]/(innerWidth*innerHeight))):[1,1.5,2][budget];
-    renderer.setPixelRatio(Math.min(devicePixelRatio,Math.max(mobile?.68:1,cap*pixelScale)));renderer.setSize(innerWidth,innerHeight);
+    renderer.setPixelRatio(pixelRatioFor(tier,pixelScale,mobile));renderer.setSize(innerWidth,innerHeight);
     camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();
   }
   document.querySelectorAll('[data-mode]').forEach(b=>b.onclick=()=>{nav.setMode(b.dataset.mode);renderer.domElement.focus({preventScroll:true});});
   document.querySelectorAll('[data-flag]').forEach(b=>b.onchange=()=>{flags[b.dataset.flag]=b.checked;applyFlags();});
-  $('time').oninput=e=>{lightPreference='solar';hour=Number(e.target.value);applyPresentation();};
-  $('light').onchange=e=>{lightPreference=e.target.value;applyPresentation();};
+  $('time').oninput=e=>{lightPreference='solar';$('sun-preset').value='';hour=Number(e.target.value);applyPresentation();};
+  $('light').onchange=e=>{lightPreference=e.target.value;$('sun-preset').value='';applyPresentation();};
+  $('date').onchange=e=>{
+    if(!e.target.validity.valid||!validSolarDate(e.target.value)){e.target.value=solarDate;return;}
+    solarDate=e.target.value;lightPreference='solar';
+    if($('sun-preset').value)hour=solarPreset($('sun-preset').value,solarDate);
+    applyPresentation();
+  };
+  $('sun-preset').onchange=e=>{if(e.target.value){hour=solarPreset(e.target.value,solarDate);lightPreference='solar';applyPresentation();}};
   $('terrain').onchange=e=>{terrainPreference=e.target.value;applyPresentation();};
-  $('quality').onchange=e=>{budget=e.target.value==='auto'?(mobile?0:2):Number(e.target.value);pixelScale=1;resize();};
+  $('quality').onchange=e=>{tier=e.target.value==='auto'?graphics.initial:Number(e.target.value);budget=Math.min(2,tier);pixelScale=1;slow=0;resize();};
   $('home').onclick=()=>{clear();nav.panorama();writeLink();};$('tour').onclick=()=>{clear();nav.startTour();writeLink();};
   window.addEventListener('resize',()=>{resize();if(selected&&activeStop&&nav.atVisitFrame)framePlace(selected,true);});
   for(const p of [...zones,...places]){
@@ -296,18 +370,22 @@ export async function openSimulator(){
   if(state){
     Object.assign(flags,state.flags);
     const quality=String(state.quality);
-    $('quality').value=['0','1','2'].includes(quality)?quality:'auto';
-    if($('quality').value!=='auto')budget=Number(quality);
+    $('quality').value=quality==='3'&&graphics.ultra?'3':['0','1','2'].includes(quality)?quality:'auto';
+    if($('quality').value!=='auto'){tier=Number(quality);budget=Math.min(2,tier);}
   }
   const oldLight=state?.lightPreference??state?.lighting;
   lightPreference=['golden','day','solar','auto'].includes(oldLight)?oldLight:(state?.hour!=null&&state.hour!==16?'solar':'auto');
   terrainPreference=['natural','photo','auto'].includes(state?.terrain)?state.terrain:'auto';
   hour=Number.isFinite(state?.hour)?state.hour:15;
+  if(validSolarDate(state?.solarDate))solarDate=state.solarDate;
   $('jets').checked=state?.jets!==false;
   applyFlags();resize();nav.panorama(true);
   if(state?.camera)nav.restore(state.camera);
   if(byId.has(state?.selected))select(byId.get(state.selected),!state.camera,savedStop(state));
   if(!openLinkedPlace(state)&&selected)writeLink(true);
+  if(state?.historical&&selected?.id===state.selected&&selected.historical?.inWorld&&!activeStop)$('history').click();
+  if(state?.torch&&nav.mode!=='orbit')command('light');
+  if(state?.minimap===false){$('map-box').hidden=true;$('show-map').checked=false;}
   presentationReady=true;applyPresentation();onMode(nav.mode);
   const direction=new T.Vector3(),foreground=new T.Vector3();
   // A low, near-horizontal orbit may look kilometres beyond a monument directly
@@ -323,46 +401,57 @@ export async function openSimulator(){
     foreground.y=heightAt(foreground.x,foreground.z);
     return {point:foreground,range:T.MathUtils.lerp(range,Math.max(130,Math.hypot(lead,above)),weight)};
   }
-  let last=performance.now(),lastUpdate=-Infinity,prevStats=last,samples=[],slow=0;
+  let last=performance.now(),lastUpdate=-Infinity,prevStats=last,samples=[],slow=0,speed=0,lastFov=camera.fov;
+  const previousEye=camera.position.clone();
   await buildings.ready;status.ready=true;status.loadMs=Math.round(performance.now()-start);
   function frame(now){
     if(lost)return;requestAnimationFrame(frame);
     if(document.hidden){last=now;return;}
     const ms=now-last,dt=Math.max(0,Math.min(.1,ms/1000));last=now;nav.tick(dt);
     const p=nav.focusPoint(),range=nav.range,detail=detailView(p,range),near=detail.point;
+    const measuredSpeed=camera.position.distanceTo(previousEye)/Math.max(.001,ms/1000);
+    speed=T.MathUtils.lerp(speed,measuredSpeed,1-Math.exp(-dt*7));previousEye.copy(camera.position);
     if(now-lastUpdate>180){
       ground.update(near.x,near.z,detail.range);
       if(flags.heritage)heritage.update(near.x,near.z,detail.range,selected?.id,budget);
       buildings.update(near.x,near.z,detail.range,budget);network.update(near.x,near.z,detail.range,budget,flags);
       canopy.update(near,detail.range,budget,flags.land);
-      map.draw(camera.position,p,camera.getWorldDirection(direction));markers(range);lastUpdate=now;
+      map.follow(camera.position,nav.mode!=='orbit'&&detail.range<700,network.stream.live);
+      map.draw(camera.position,p,camera.getWorldDirection(direction));updateNearby();markers(range);lastUpdate=now;
     }
     sea.setInspection(flags.heritage&&heritage.stats.visit?.waterCut);
-    heritage.animateGlorieta(now/1000,$('jets').checked,lighting==='solar'&&(hour<7||hour>=20));atmosphere.update(camera,near,detail.range,budget);sea.update(dt);network.animate(dt,flags);
-    camera.near=range>2600?3:range>450?.7:.12;camera.updateProjectionMatrix();
-    renderer.info.reset();render(scene,camera,lighting==='solar'&&budget===2&&!mobile&&detail.range<520);
+    canopy.animate(now/1000,budget);
+    heritage.animateGlorieta(now/1000,$('jets').checked,lighting==='solar'&&atmosphere.daylight<.45);
+    atmosphere.update(camera,near,detail.range,tier);sea.update(dt,tier,speed);network.animate(dt,flags,nav.mode==='walk'?camera.position:null);
+    const nearPlane=range>2600?3:range>450?.7:.12;
+    if(camera.near!==nearPlane||lastFov!==camera.fov){camera.near=nearPlane;lastFov=camera.fov;camera.updateProjectionMatrix();}
+    const contact=lighting==='solar'&&tier>=2&&(!mobile||tier===3)&&detail.range<520&&speed<65;
+    renderer.info.reset();render(scene,camera,contact);
     markRendered();if(ms>0)samples.push(ms);
     if(now-prevStats>900){
       const sorted=samples.sort((a,b)=>a-b),median=sorted[Math.floor(sorted.length/2)]||16;
       const pending=buildings.stream.pending.size+network.stream.pending.size;
       Object.assign(status,{mode:nav.mode,range:Math.round(range),detailRange:Math.round(detail.range),camera:nav.snapshot(),sectors:buildings.stream.live.size,networkSectors:network.stream.live.size,
-        traffic:network.traffic,photo:surfacePhotoMetrics(),aerial:buildings.aerialStats,fabric:buildings.fabricStats,canopy:canopy.stats,localTerrain:grids.regional.length,quality:budget,pixelRatio:renderer.getPixelRatio(),drawCalls:renderer.info.render.calls,triangles:renderer.info.render.triangles,
+        traffic:network.traffic,photo:surfacePhotoMetrics(),aerial:buildings.aerialStats,fabric:buildings.fabricStats,canopy:canopy.stats,localTerrain:grids.regional.length,quality:tier,pixelRatio:renderer.getPixelRatio(),drawCalls:renderer.info.render.calls,triangles:renderer.info.render.triangles,
         geometries:renderer.info.memory.geometries,textures:renderer.info.memory.textures,frameMs:Math.round(median*10)/10,
         frameP95Ms:Math.round((sorted[Math.floor(sorted.length*.95)]||median)*10)/10,
         heapMiB:performance.memory?Math.round(performance.memory.usedJSHeapSize/1048576):null,heritage:heritage.stats,pending});
-      $('stats').textContent=status.frameMs+' ms/fotograma · '+status.drawCalls+' llamadas · '+status.triangles.toLocaleString('es-ES')+' triángulos · '+status.geometries+' geometrías · '+status.textures+' texturas'+(status.heapMiB?' · JS '+status.heapMiB+' MiB':'')+' · carga inicial '+(status.loadMs/1000).toFixed(1)+' s';
+      Object.assign(graphics,{profile:qualityNames[tier],shadowSize:atmosphere.shadowSize,contact:contact&&renderer.extensions.has('EXT_color_buffer_float')});
+      $('stats').textContent=graphics.backend+' · '+graphics.profile+' · '+status.frameMs+' ms/fotograma · '+status.drawCalls+' llamadas · '+status.triangles.toLocaleString('es-ES')+' triángulos · '+status.geometries+' geometrías · '+status.textures+' texturas'+(status.heapMiB?' · JS '+status.heapMiB+' MiB':'')+' · carga inicial '+(status.loadMs/1000).toFixed(1)+' s';
       const visit=heritage.stats.visit;
       const reading=visit?.inspection?'Inspección marina':visit?.section?'Sección de la visita':visit?.mode==='historical'||historical?'Reconstrucción histórica':visit?.interior?'Interior de la visita':'Territorio actual';
       const loadingVisit=activeStop&&flags.heritage&&nav.atVisitFrame&&!visit&&heritage.stats.loading;
       const height=Math.round(camera.position.y-heightAt(camera.position.x,camera.position.z));
-      $('status').textContent=(loadingVisit?'Cargando la visita':pending?'Cargando sectores':reading)+' · '+(nav.mode==='orbit'?Math.abs(height).toLocaleString('es-ES')+(height<0?' m bajo el terreno':' m sobre terreno'):nav.mode==='walk'?'A pie':'Vuelo libre');
+      status.speedKmh=Math.round(nav.speed*36)/10;status.heightAGL=height;status.nearby=nearby?.id||null;
+      const movement=nav.mode==='orbit'?'':(nav.mode==='walk'?'A pie':'Vuelo libre')+' · '+status.speedKmh.toLocaleString('es-ES')+' km/h · ';
+      $('status').textContent=(nav.landing?'Buscando suelo transitable':loadingVisit?'Cargando la visita':pending?'Cargando sectores':reading)+' · '+movement+Math.abs(height).toLocaleString('es-ES')+(height<0?' m bajo el terreno':' m sobre terreno');
       if($('quality').value==='auto'){
-        slow=median>(mobile?36:29)?slow+1:median<18?Math.min(-1,slow-1):0;
-        if(slow>=3&&budget>0){budget--;slow=0;}
-        else if(slow>=3&&mobile&&renderer.getPixelRatio()>.69){pixelScale=Math.max(.45,pixelScale-.15);resize();slow=0;}
-        else if(slow < -12&&pixelScale<1){pixelScale=Math.min(1,pixelScale+.1);resize();slow=0;}
-        else if(slow < -12&&budget<(mobile?1:2)){budget++;slow=0;}
-        if(lastBudget!==budget){resize();lastBudget=budget;}
+        const target=mobile?33.4:16.7,heavy=status.frameP95Ms>target*2.5&&median>target*1.2;
+        slow=median>target*1.45||heavy?Math.max(0,slow)+1:median<target*1.08&&!pending?Math.min(0,slow)-1:0;
+        if(slow>=3&&tier>0){tier--;budget=tier;slow=0;resize();}
+        else if(slow>=3&&pixelScale>.58){pixelScale=Math.max(.58,pixelScale-.12);slow=0;resize();}
+        else if(slow< -12&&pixelScale<1){pixelScale=Math.min(1,pixelScale+.1);slow=0;resize();}
+        else if(slow< -12&&tier<graphics.autoLimit){tier++;budget=tier;slow=0;resize();}
       }
       samples=[];prevStats=now;
     }
