@@ -1,5 +1,18 @@
 # Sincronización de Sites a GitHub
 
+## Versión 41 · Exploración territorial a pie y patrimonio
+
+El 23 de noviembre de 2026, Sites publicó la versión 41 en la dirección original de SAGUNTUM. El despliegue `appgdep_6b043301be3c8191bf77e9874bea4841` alcanzó el estado `succeeded`. Se abrió primero la versión 40 del proyecto original y se verificó la igualdad de los árboles de distribución antes y después de la edición. [Simulador publicado](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador) · [Controles y alcance](EXPLORACION.md)
+
+| Referencia | Valor |
+| --- | --- |
+| Commit de Sites | `d2b18cd956c6c7dfc303e1b103335088718a7218` |
+| Commit de código en GitHub | `b70cf79b170a9ca2bc9c6479f1a031635119cff9` |
+| Árbol Git de `dist/` en ambos repositorios | `6ff44f745dab2b5f4cdaa707611f14083c8a613e` |
+| Contenido del archivo nativo de despliegue | 1.592 archivos, SHA-256 `7e68ee9036879f48b2f5e7d223d9a1f3e7a7bde90c1fd0c342442c787896214a` |
+
+En la URL pública se contrastaron nueve recursos servidos con el código y los datos publicados en GitHub. Chrome comprobó la entrada a pie en la Plaça Major, el regreso con 0 m de desviación y el vuelo con controles reasignados hasta Puerto y Grau Vell. WebKit recuperó la parada de José Romeu de la Glorieta tras perder el contexto WebGL y volvió del plano a 3D. [Recursos publicados](../research/navegacion-v41/produccion-recursos.json) · [Recorrido en Chrome](../research/navegacion-v41/produccion-chrome.json) · [Recuperación en WebKit](../research/navegacion-v41/produccion-webkit.json)
+
 ## Versión 38 · Todos los lugares del Atlas en el simulador
 
 El proyecto original de Sites publicó la versión 38 el 22 de noviembre de 2026. El despliegue `appgdep_6b03359912648191ad44f0f85bb8b267` alcanzó el estado `succeeded`. La revisión reúne 32 lugares y 529 paradas con enlaces compartibles entre el simulador y las visitas originales. [Simulador](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador) · [Documentación territorial](VISITAS_TERRITORIALES.md)
