@@ -466,7 +466,10 @@ export async function openSimulator(){
         (now-lastUpdate)/1000,nav.mode,budget,detail.range,detail.range-previousFocus.range,mobile):null;
       previousFocus={x:near.x,z:near.z,range:detail.range,mode:nav.mode};
       ground.update(near.x,near.z,detail.range);
-      const approach=flags.heritage&&heritage.update(near.x,near.z,detail.range,selected?.id,budget,lead);
+      // At territorial flight speed a neighbourhood can pass before a new
+      // exhibit is built. Keep streaming the road corridor and actual view.
+      const overflying=native&&nav.mode==='fly'&&nav.speed>180&&detail.range>120;
+      const approach=flags.heritage&&heritage.update(near.x,near.z,detail.range,selected?.id,budget,overflying?null:lead,nav.atVisitFrame);
       const corridor=approach?{...(lead||{x:near.x,z:near.z,length:0,range:detail.range}),site:approach.site}:lead;
       buildings.update(near.x,near.z,detail.range,budget,corridor,view,peripheral);network.update(near.x,near.z,detail.range,peripheral,flags,corridor);
       status.approach=approach?{...approach,buildings:buildings.stream.live.has(buildings.stream.approachSector),

@@ -277,10 +277,10 @@ export async function createHeritage({scene,renderer,heightAt,project,grids,mobi
    nearby(propGrid,x,z).some(([px,pz,r])=>r>2&&Math.hypot(px-x,pz-z)<r));},
   ownsFurniture(x,z){return root.visible&&(this.walkSurface(x,z)!==null||
    nearby(propGrid,x,z).some(([px,pz,r])=>r<=2&&Math.hypot(px-x,pz-z)<r));},
-  update(x,z,altitude,selectedId=null,quality=2,hint=null){
+  update(x,z,altitude,selectedId=null,quality=2,hint=null,visitCamera=false){
    if(disposed)return;
    lastAltitude=altitude;lastQuality=quality;focusX=x;focusZ=z;
-   const key=[Math.round(x/6),Math.round(z/6),Math.round(altitude/12),selectedId,quality,hint?Math.round(hint.x/20):'',
+   const key=[Math.round(x/6),Math.round(z/6),Math.round(altitude/12),selectedId,visitCamera,quality,hint?Math.round(hint.x/20):'',
     hint?Math.round(hint.z/20):'',hint?Math.round(hint.range/15):''].join('/');
    const now=performance.now();
    if(key===lastKey&&now-lastCheck<1500)return status.approach;
@@ -296,7 +296,7 @@ export async function createHeritage({scene,renderer,heightAt,project,grids,mobi
     const selected=place.id===selectedId;
     const anchor=requestedStop?.anchor;
     const stopDistance=requestedStop?.model===id&&anchor?Math.hypot(x-anchor.x,z-anchor.z):Infinity;
-    const picked=requestedStop?.model===id&&selected&&now<requestedStop.prepareUntil;
+    const picked=requestedStop?.model===id&&selected&&(visitCamera||now<requestedStop.prepareUntil);
     const stopInView=picked||stopDistance<Math.max(350,reach*1.65,altitude*.9)&&altitude<Math.max(4200,reach*7);
     const ahead=hint?distanceToSite(id,hint.x,hint.z,Math.hypot(hint.x-place.x,hint.z-place.z)):Infinity;
     const policy=heritageWindow({distance,ahead,range:altitude,predictedRange:hint?.range??altitude,reach,close:place.scene?.nativeDistance??100,loaded:loaded.has(id),native:nearNative.has(id),selected,stop:stopInView,quality,mobile});

@@ -13,3 +13,18 @@ Las luces de cada visita alimentan un conjunto reutilizable que mantiene posicio
 En dos comparaciones del primer traslado de Sagunto al Puerto, la mayor pausa entre imágenes de WebGL 2 pasó de 4,27 a 1,43 s y de 2,72 a 0,61 s. El segundo ensayo registró 11 programas enlazados frente a 44 con la iluminación anterior. En WebGPU, el mayor intervalo entre callbacks de animación pasó de 2,13 a 1,23 s y de 3,17 a 1,05 s. Las comparaciones independientes del salón del Casino, la Glorieta nocturna y los trípodes del Pantalán dieron una diferencia media inferior a 0,001 sobre 255 niveles por canal en cada motor. [Método, límites y mediciones](../render-v4/perfil-traslado/luces-estables.md)
 
 Se compararon los acabados del Carrer Major en la misma cámara y con la misma luz. La fachada muestra el retranqueo visual de la carpintería. La sección del bordillo mantiene el desnivel de 12 cm de la representación urbanística y añade su bisel y la junta con la acera. Esas dimensiones y los alzados sin documentación individual son aproximaciones. [Vista anterior](../render-v4/calle-proxima/antes.png) · [WebGL 2](../render-v4/calle-proxima/webgl2.png) · [WebGPU](../render-v4/calle-proxima/webgpu.png) · [Datos de la comparación](../render-v4/calle-proxima/calle.json)
+
+## Recorrido completo
+
+Se repitieron dos circuitos por los tres núcleos en Chrome 156 sobre Windows con una RTX 3090. Incluyeron caminar, correr, saltar, volar, cambiar de hora y calidad, visitar patrimonio y regresar al mismo punto. Ambos motores recuperaron la cámara del Fortín con 0 m de desviación y respetaron los límites de la caché de fachadas. WebGL 2 registró 127 reutilizaciones de programas. [Sesiones, muestras y parámetros](rendimiento.json)
+
+| Intervalo entre fotogramas | WebGL 2 | WebGPU |
+| --- | ---: | ---: |
+| Mediana del circuito | 16,7 ms | 16,7 ms |
+| Percentil 95 del circuito | 50,1 ms | 216,7 ms |
+| Máximo del circuito | 1,35 s | 1,35 s |
+| Percentil 95 en el vuelo rápido independiente | 33,3 ms | 150,1 ms |
+
+La prueba de la versión 42 recorrió tres vueltas. En aquel vuelo independiente el percentil 95 fue de 33,4 ms en WebGL y 66,7 ms en WebGPU. En esta ejecución el vuelo rápido de WebGPU tuvo más irregularidad. Los mayores beneficios se midieron al cambiar de zona en los ensayos controlados del Alto Horno. [Mediciones de la versión anterior](../render-v4/rendimiento.md)
+
+En la revisión posterior se repitió ese vuelo WebGPU cuatro veces con la misma cámara, ruta y hora, alternando el orden de las configuraciones. A más de 180 m/s y con un rango de detalle superior a 120 m, el simulador prepara las calles y la cartografía por delante de la cámara y reserva el constructor patrimonial para los lugares que entran efectivamente en la vista. El percentil 95 pasó de 200,0 y 183,4 ms a 100,0 y 100,1 ms. El intervalo máximo de esas cuatro ejecuciones estuvo entre 0,77 y 0,84 s. Las visitas elegidas conservan prioridad durante toda la transición a la cámara de autor, incluso cuando la primera carga dura más de 2,5 s. [Cuatro vuelos de comprobación](sobrevuelo.json)

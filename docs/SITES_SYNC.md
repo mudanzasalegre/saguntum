@@ -1,5 +1,9 @@
 # Sincronización de Sites a GitHub
 
+## Versión 43 · Aproximación a los monumentos y detalle de calle
+
+El 24 de noviembre de 2026 se publicó la nueva carga territorial en el proyecto original. El despliegue `appgdep_6b0582b619848191a7e6e7f15e4812d7` terminó con estado `succeeded`. El código de Sites `ee7dca5e47d4f5de44b4f4659e2822f89757c2fd` y el de GitHub `de37aea` tienen el mismo árbol de distribución `cadf2c1c5c62adfe7cdf226a0bc44e8ec168330a`. Sites registró 1618 archivos con huella `sha256:d081e884d5965d59cac725a0ad5ace82b819c42d07b9271ac81bebe64234e16e`. [Abrir el simulador](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador) · [Mediciones y comparaciones](../research/streaming-v43/README.md)
+
 ## Versión 42 · Simulador WebGL 2 y WebGPU
 
 El 24 de noviembre de 2026 se publicó el simulador de doble motor en el proyecto original. La versión integra V2 y V3 y conserva la portada regional, los 32 lugares y sus enlaces. El despliegue `appgdep_6b057bacd81081919940a476a7ff666c` figura como `succeeded`. [Simulador publicado](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador) · [Arquitectura y compatibilidad](SIMULADOR_RENDER_V4.md)
