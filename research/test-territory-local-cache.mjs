@@ -53,6 +53,17 @@ tick(4,3000);assert(b.fabricStats.cached===0&&b.fabricStats.bytes===0,"cache dra
 assert(first.geometry.disposed&&medium.geometry.disposed&&far.geometry.drawRange.count===6,"resources released, skyline restored");
 tick(4);await flush();worker.take("0_0");worker.reply("0_0",data(["a","b"]));await flush();tick(4);worker.take("close-elevations");worker.reply("close-elevations",data(["a"],true));await flush();tick(4);
 assert(b.fabricStats.refused===1&&b.fabricStats.bytes===0,"oversized chunk refused");
+tick(4,3000);tick(4);await flush();
+worker.take("0_0");worker.reply("0_0",data(["a","b"]));await flush();tick(4);
+worker.take("close-elevations");worker.reply("close-elevations",data(["a"]));await flush();tick(4);
+const predict=()=>b.update(4,4,10,0,{x:84,z:4,length:80,range:10},{x:4,z:4,dx:1,dz:0});
+predict();req=worker.take("close-elevations");
+assert(req.selected[0][1][0]==="b","forward batch prepared on the actual worker path");
+worker.reply("close-elevations",data(["b"]));await flush();predict();
+const prepared=b.group.children.at(-1);
+assert(b.approachStats.aheadBuilds===1&&!prepared.visible&&b.fabricStats.chunks===1,"predicted detail stays hidden while the present parcel is drawn");
+tick(84);
+assert(prepared.visible&&b.approachStats.aheadHits===1&&b.approachStats.preparedAhead===null,"warm frontage published without a second worker build");
 return checks;
 })();
 console.log('OK: '+checks+' mocked streaming integration checks');

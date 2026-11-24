@@ -6,7 +6,7 @@ import {indexBounds,nearCell,segmentFraction} from './territory-collision.js';
 // The source mesh is only read when the model loads; walking uses these lines.
 const levels=[.55,1.35,2.2];
 const decoration=/foliage|leaves|grass|planting|flower|canopy-leaf|copa|hojas|matorral|guijarros|tornillería/i;
-export function sampleHeritageBarriers(group,heightAt) {
+function* segments(group,heightAt) {
   const result=[],a=group.position.clone(),b=a.clone(),c=a.clone(),p=a.clone(),q=a.clone();
   const local=group.matrix.clone(),matrix=local.clone(),terrain=new Map();
   function ground(x,z){
@@ -18,7 +18,7 @@ export function sampleHeritageBarriers(group,heightAt) {
     if(height===undefined){height=heightAt(i,j);column.set(j,height);}
     return height;
   }
-  function section(geometry,transform){
+  function* section(geometry,transform){
     const pos=geometry.attributes.position,ids=geometry.index,box=geometry.boundingBox;
     if(!pos||pos.count<3)return;
     const min=box.min,max=box.max;
@@ -38,6 +38,7 @@ export function sampleHeritageBarriers(group,heightAt) {
     if(right-left<18&&bottom-top<18&&(low>4.2||high<-.8))return;
     const end=ids?.count??pos.count;
     for(let i=0;i+2<end;i+=3){
+      if(i>0&&i%6144===0)yield;
       a.fromBufferAttribute(pos,ids?ids.getX(i):i).applyMatrix4(transform);
       b.fromBufferAttribute(pos,ids?ids.getX(i+1):i+1).applyMatrix4(transform);
       c.fromBufferAttribute(pos,ids?ids.getX(i+2):i+2).applyMatrix4(transform);
@@ -59,17 +60,47 @@ export function sampleHeritageBarriers(group,heightAt) {
     }
   }
   group.updateWorldMatrix(true,true);
+  const meshes=[];
   group.traverseVisible(mesh=>{
-    if(!mesh.isMesh||mesh.userData.territoryInstances||decoration.test(mesh.userData.materialKind||mesh.name))return;
+    if(mesh.isMesh&&!mesh.userData.territoryInstances&&!decoration.test(mesh.userData.materialKind||mesh.name))meshes.push(mesh);
+  });
+  let count=0;
+  for(const mesh of meshes){
     const geometry=mesh.geometry;
     if(!geometry.boundingBox)geometry.computeBoundingBox();
-    if(geometry.boundingBox.isEmpty())return;
-    if(!mesh.isInstancedMesh){section(geometry,mesh.matrixWorld);return;}
-    for(let i=0;i<mesh.count;i++){
-      mesh.getMatrixAt(i,local);matrix.multiplyMatrices(mesh.matrixWorld,local);section(geometry,matrix);
+    if(geometry.boundingBox.isEmpty())continue;
+    const instances=mesh.isInstancedMesh?mesh.count:1;
+    for(let i=0;i<instances;i++){
+      if(++count%32===0)yield;
+      if(mesh.isInstancedMesh){
+        mesh.getMatrixAt(i,local);
+        matrix.multiplyMatrices(mesh.matrixWorld,local);
+        yield* section(geometry,matrix);
+      }else yield* section(geometry,mesh.matrixWorld);
     }
-  });
+  }
   return new Float32Array(result);
+}
+
+export function sampleHeritageBarriers(group,heightAt){
+  const work=segments(group,heightAt);
+  let step;
+  do{step=work.next();}while(!step.done);
+  return step.value;
+}
+
+// The live model stays off scene until its floors and walls are both ready.
+export async function prepareWalkingBarriers(group,heightAt,needed){
+  const work=segments(group,heightAt);
+  let start=performance.now();
+  let step;
+  while(!(step=work.next()).done){
+    if(performance.now()-start<7)continue;
+    await new Promise(resolve=>setTimeout(resolve,0));
+    if(!needed()){work.return();return null;}
+    start=performance.now();
+  }
+  return step.value;
 }
 
 export function createHeritageCollision(heritage){

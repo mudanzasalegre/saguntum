@@ -6580,6 +6580,7 @@ function WebGLProgram( renderer, cacheKey, parameters, bindingStates ) {
 
 		cachedUniforms = new WebGLUniforms( gl, program );
 		cachedAttributes = fetchAttributeLocations( gl, program );
+		self.initialized = true;
 
 	}
 
@@ -6789,6 +6790,7 @@ function WebGLPrograms( renderer, cubemaps, cubeuvmaps, extensions, capabilities
 	const _customShaders = new WebGLShaderCache();
 	const _activeChannels = new Set();
 	const programs = [];
+	const retiredPrograms = new Set();
 
 	const logarithmicDepthBuffer = capabilities.logarithmicDepthBuffer;
 	const SUPPORTS_VERTEX_TEXTURES = capabilities.vertexTextures;
@@ -7379,6 +7381,7 @@ function WebGLPrograms( renderer, cubemaps, cubeuvmaps, extensions, capabilities
 			if ( preexistingProgram.cacheKey === cacheKey ) {
 
 				program = preexistingProgram;
+				if ( retiredPrograms.delete( program ) ) renderer.streamPrograms.reused ++;
 				++ program.usedTimes;
 
 				break;
@@ -7398,18 +7401,26 @@ function WebGLPrograms( renderer, cubemaps, cubeuvmaps, extensions, capabilities
 
 	}
 
+	function destroyProgram( program ) {
+		const i = programs.indexOf( program );
+		programs[ i ] = programs[ programs.length - 1 ];
+		programs.pop();
+		program.destroy();
+	}
+
 	function releaseProgram( program ) {
-
-		if ( -- program.usedTimes === 0 ) {
-
-			// Remove from unordered set
-			const i = programs.indexOf( program );
-			programs[ i ] = programs[ programs.length - 1 ];
-			programs.pop();
-
-			// Free WebGL resources
-			program.destroy();
-
+		if ( -- program.usedTimes !== 0 ) return;
+		const limit = renderer.streamPrograms?.limit || 0;
+		if ( limit > 0 && program.initialized && program.diagnostics?.runnable !== false ) {
+			// Keep only linked programs. VAOs and geometry still unload with the sector.
+			bindingStates.releaseStatesOfProgram( program );
+			retiredPrograms.add( program );
+			if ( retiredPrograms.size <= limit ) return;
+			const oldest = retiredPrograms.values().next().value;
+			retiredPrograms.delete( oldest );
+			destroyProgram( oldest );
+		} else {
+			destroyProgram( program );
 		}
 
 	}
@@ -7423,6 +7434,8 @@ function WebGLPrograms( renderer, cubemaps, cubeuvmaps, extensions, capabilities
 	function dispose() {
 
 		_customShaders.dispose();
+		for ( const program of retiredPrograms ) destroyProgram( program );
+		retiredPrograms.clear();
 
 	}
 

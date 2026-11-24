@@ -20,6 +20,7 @@ export class SectorStream {
   }
   update(x,z,radius,max,hint=null){
     const candidates=selectSectors(this.index,x,z,radius,max,this.live,hint);
+    this.approachSector=hint?.site?candidates.find(([s])=>distanceTo(hint.site.x,hint.site.z,s.bounds||s.geometryBounds)===0)?.[0].id:null;
     this.wanted=new Set(candidates.map(([s])=>s.id));
     for(const [id,v] of this.live)if(!this.wanted.has(id)){this.drop(v);this.live.delete(id);}
     for(const [s] of candidates){
@@ -60,8 +61,10 @@ export function createBuildings({scene,world,grids,heritage,photography}) {
     const attributes=far?[['position',3],['color',3],['normal',3]]:[['position',3],['color',3],['uv',2],['archMetric',4],['archData',4]];
     for(const [name,n] of attributes)g.setAttribute(name,new T.BufferAttribute(data[name],n,far&&name!=='position'));
     g.setIndex(new T.BufferAttribute(data.index.slice(),1));
-    if(!far)g.computeVertexNormals();
-    g.computeBoundingSphere();
+    if(data.vertexNormals)g.setAttribute('normal',new T.BufferAttribute(data.vertexNormals,3));
+    else if(!far)g.computeVertexNormals();
+    if(data.sphere)g.boundingSphere=new T.Sphere(new T.Vector3().fromArray(data.sphere),data.sphere[3]);
+    else g.computeBoundingSphere();
     const m=new T.Mesh(g,far?aerialMat:(mat??=architecturalMaterial(night,photography)));
     m.receiveShadow=true;m.castShadow=true;m.visible=visible;group.add(m);
     return {id,mesh:m,rows:data.rows,indices:data.index,mask:null,
@@ -80,6 +83,7 @@ export function createBuildings({scene,world,grids,heritage,photography}) {
   },2);
   let maskStamp=0,detailRevision=0,detailIds=new Set(),active=new Set(),desired=new Map(),busy=false,incoming=null;
   let cacheBytes=0,byteLimit=9*1048576,sourceKey='',hits=0,builds=0,evictions=0,refused=0,peakBytes=0;
+  let preparedAhead=null,aheadBuilds=0,aheadHits=0;
   const cache=new Map(),retryDetail=new Map();
   function mask(v,far=false){
     if(!v)return;
@@ -97,6 +101,7 @@ export function createBuildings({scene,world,grids,heritage,photography}) {
   function evict(key){
     const item=cache.get(key);if(!item)return;
     cache.delete(key);cacheBytes-=item.bytes;group.remove(item.tile.mesh);item.tile.mesh.geometry.dispose();evictions++;
+    if(preparedAhead===key)preparedAhead=null;
   }
   function trim(reserve=0){
     const candidates=[...cache.entries()].filter(([k])=>!desired.has(k)).sort((a,b)=>a[1].used-b[1].used);
@@ -108,6 +113,7 @@ export function createBuildings({scene,world,grids,heritage,photography}) {
     for(const [key,g] of desired){
       const item=cache.get(key);
       if(!item||!stream.live.has(g.sector))continue;
+      if(preparedAhead===key){aheadHits++;preparedAhead=null;}
       item.used=performance.now();item.shown=true;next.add(key);
       for(const r of item.tile.rows)ids.add(r.id);
     }
@@ -118,7 +124,7 @@ export function createBuildings({scene,world,grids,heritage,photography}) {
     const changed=next.size!==active.size||[...next].some(k=>!active.has(k));
     active=next;detailIds=ids;if(changed){detailRevision++;shadowRevision++;}
   }
-  function updateDetail(x,z,range,budget,view){
+  function updateDetail(x,z,range,budget,view,hint){
     byteLimit=detailLimits(budget,range,compact).bytes;
     const groups=[];
     for(const tile of stream.live.values())groups.push(...tile.detailChunks);
@@ -130,12 +136,24 @@ export function createBuildings({scene,world,grids,heritage,photography}) {
       if(cacheBytes<=byteLimit)break;evict(g.key);
     }
     const now=performance.now();
+    const eligible=g=>!cache.has(g.key)&&!(retryDetail.get(g.key)>now);
+    const localRequest=selected.find(eligible);
+    let ahead=null;
+    if(hint&&hint.range<125&&(hint.length>2||range>=125)&&(!localRequest||incoming?.speculative)){
+      // Cache one real frontage batch just beyond the occupied neighbourhood.
+      // It stays hidden until the normal near-distance decision publishes it.
+      const scale=Math.min(1,(compact?45:90)/Math.max(1,hint.length));
+      const tx=x+(hint.x-x)*scale,tz=z+(hint.z-z)*scale;
+      ahead=planChunks(groups,tx,tz,hint.range,budget,compact,view,active).find(g=>!desired.has(g.key));
+    }
+    if(preparedAhead&&ahead&&preparedAhead!==ahead.key&&!desired.has(preparedAhead))evict(preparedAhead);
     // Commit worker replies only during this update, together with the base
     // mesh masks. Higher-priority desired detail may evict a lower-priority
     // batch without a rendered frame in which neither representation exists.
     if(incoming){
-      const {chunk,data,bytes}=incoming;incoming=null;
-      if(stream.live.has(chunk.sector)){
+      const {chunk,data,bytes,speculative}=incoming;incoming=null;
+      const stillWanted=!speculative||desired.has(chunk.key)||chunk.key===ahead?.key;
+      if(stillWanted&&stream.live.has(chunk.sector)){
         let fits=bytes<=byteLimit&&trim(bytes);
         const rank=selected.findIndex(g=>g.key===chunk.key);
         if(!fits&&bytes<=byteLimit&&rank>=0){
@@ -147,6 +165,7 @@ export function createBuildings({scene,world,grids,heritage,photography}) {
           const tile=mesh(data,chunk.key,false);tile.detail=true;
           cache.set(chunk.key,{tile,sector:chunk.sector,bytes,used:now,openings:data.openings||0,shown:false});
           cacheBytes+=bytes;peakBytes=Math.max(peakBytes,cacheBytes);builds++;
+          if(speculative){preparedAhead=chunk.key;aheadBuilds++;}
         }else if(rank>=0){refused++;retryDetail.set(chunk.key,now+12000);}
       }
     }
@@ -154,7 +173,7 @@ export function createBuildings({scene,world,grids,heritage,photography}) {
     for(const [key] of desired)if(cache.get(key)?.shown&&!active.has(key))hits++;
     publishDetails();
     if(busy||incoming)return;
-    const next=selected.find(g=>!cache.has(g.key)&&!(retryDetail.get(g.key)>now));
+    const next=selected.find(eligible)||(!preparedAhead&&ahead&&eligible(ahead)?ahead:null);
     if(!next)return;
     busy=true;
     const request='close-elevations';
@@ -168,7 +187,7 @@ export function createBuildings({scene,world,grids,heritage,photography}) {
       if(!data.rows.length){retryDetail.set(next.key,performance.now()+45000);return;}
       const bytes=detailBytes(data);
       if(bytes>byteLimit){refused++;retryDetail.set(next.key,performance.now()+12000);return;}
-      incoming={chunk:next,data,bytes};
+      incoming={chunk:next,data,bytes,speculative:next===ahead};
     }).catch(error=>{
       retryDetail.set(next.key,performance.now()+12000);
       console.warn('Detalle de fachadas',error);
@@ -211,6 +230,7 @@ export function createBuildings({scene,world,grids,heritage,photography}) {
   scene.add(group);
   return {group,stream,ready,night,get aerialStats(){return aerialStats;},get shadowRevision(){return shadowRevision;},get fabricStats(){return {buildings:detailIds.size,openings:[...active].reduce((n,k)=>n+(cache.get(k)?.openings||0),0),loading:busy||!!incoming,stagedBytes:incoming?.bytes||0,chunks:active.size,cached:cache.size,bytes:cacheBytes,byteLimit,peakBytes,hits,builds,evictions,refused};},changed(){maskStamp++;shadowRevision++;},
     get workerStats(){return {active:!closed,pending:requests.size};},
+    get approachStats(){return {preparedAhead,aheadBuilds,aheadHits};},
     dispose(){
       if(closed)return;
       closed=true;worker.terminate();
@@ -228,7 +248,7 @@ export function createBuildings({scene,world,grids,heritage,photography}) {
       stream.update(x,z,radius,alt>2200?0:[12,24,42][peripheral],hint);
       const retained=[...new Set([...stream.live.keys(),...stream.pending])].sort(),key=retained.join('/');
       if(key!==sourceKey){sourceKey=key;worker.postMessage({retain:retained});}
-      updateDetail(x,z,alt,budget,view);
+      updateDetail(x,z,alt,budget,view,hint);
       for(const v of overview)mask(v,true);
       for(const v of stream.live.values()){mask(v);if(!v.mesh.visible){v.mesh.visible=true;shadowRevision++;}}
       facades(x,z,alt,budget,stream.live,r=>!heritage.isReplaced(r.id,r.x,r.z,r.rings),maskStamp,view);

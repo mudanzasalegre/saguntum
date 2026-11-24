@@ -1,4 +1,4 @@
-import {Color} from '../assets/vendor/three.core.js';
+import {BufferAttribute,BufferGeometry,Color} from '../assets/vendor/three.core.js';
 import {terrainSampler,insideRing} from './territory-coordinates.js';
 import {buildingStyle,baysOn,edgeSeed} from './territory-building-style.js';
 import {aerialGeometry} from './territory-building-aerial.js';
@@ -164,7 +164,14 @@ function build(buildings,overview,profiles,fine=false){
     archMetric:new Float32Array(metrics),archData:new Int16Array(surfaces),index:new Uint32Array(indices),rows,openings};
 }
 function postGeometry(key,result){
-  self.postMessage({key,result},[result.position.buffer,result.color.buffer,result.uv.buffer,result.archMetric.buffer,result.archData.buffer,result.index.buffer]);
+  const geometry=new BufferGeometry();
+  geometry.setAttribute('position',new BufferAttribute(result.position,3));
+  geometry.setIndex(new BufferAttribute(result.index,1));
+  geometry.computeVertexNormals();
+  geometry.computeBoundingSphere();
+  result.vertexNormals=geometry.attributes.normal.array;
+  result.sphere=[...geometry.boundingSphere.center.toArray(),geometry.boundingSphere.radius];
+  self.postMessage({key,result},[result.position.buffer,result.vertexNormals.buffer,result.color.buffer,result.uv.buffer,result.archMetric.buffer,result.archData.buffer,result.index.buffer]);
 }
 self.onmessage=async ({data:m})=>{
   if(m.retain){retained=new Set(m.retain);trimSources();return;}

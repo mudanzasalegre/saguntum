@@ -18,7 +18,7 @@ const pavement=wgslFn(`fn streetPavement(profile:vec4f,ribbon:vec2f,metricXZ:vec
  let micro=textureSampleGrad(relief,rs,st,dx*span,dy*span).rgb;
  var bed=mix(broad,grain,detail);
  let lateral=ribbon.x;let along=ribbon.y;let ax=abs(lateral);
- let aa=max(.012,fwidth(lateral)*.58);let alongAA=max(.015,fwidth(along)*.58);
+ let acrossPixel=fwidth(lateral);let aa=max(.012,acrossPixel*.58);let alongAA=max(.015,fwidth(along)*.58);
  var paint=0.;var steel=0.;var polish=0.;
  let wear=sin(metricXZ.x*.39+sin(metricXZ.y*.17))*sin(metricXZ.y*.31);
  bed*=1.+.038*wear*detail;
@@ -39,6 +39,8 @@ const pavement=wgslFn(`fn streetPavement(profile:vec4f,ribbon:vec2f,metricXZ:vec
  }else if(mode==3.){
    let edge=streetBand(abs(lateral+halfW),.15,aa);bed=mix(bed,mix(vec3f(.34,.32,.28),grain,.26),edge);
    bed*=1.-streetBand(abs(fract(along/.84)-.5)*.84,.008,alongAA)*edge*.26*(1.-smoothstep(.025,.1,alongAA));
+   let bedding=streetBand(abs(lateral+halfW-.15),.005,max(.002,acrossPixel*.55));
+   bed*=1.-.31*bedding*(1.-smoothstep(.015,.06,aa));
  }else if(mode==4.){
    bed*=1.-.23*streetBand(abs(fract(along/.33)-.5)*.33,.018,alongAA)*(1.-smoothstep(.06,.16,alongAA));
  }else if(mode==5.){bed=mix(bed,vec3f(dot(bed,vec3f(.22,.70,.08)))*vec3f(1.10,1.035,.92),.63);}

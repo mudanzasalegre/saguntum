@@ -1,8 +1,9 @@
+import {loadAtlasContext,originalSurroundings,settleSourceClaims} from './territory-heritage-contexts.js';
 import * as THREE from 'three';
 import {atlasProject,documentData,prewarmDocument,registerFrame} from './territory-heritage-catalog.js';
 import {heritageRelief,reliefDelta} from './territory-heritage-relief.js';
 import {heightOnPavement,sampleAtlasPavement,samplePublicDeck} from './territory-heritage-paving.js';
-import {sampleHeritageBarriers} from './territory-collision-heritage.js';
+import {prepareWalkingBarriers,sampleHeritageBarriers} from './territory-collision-heritage.js';
 import {instantiateAtlasVisit,preloadAtlasVisit} from './territory-heritage-registry.js';
 
 // Each table entry addresses the original geometry constructor, including
@@ -42,7 +43,8 @@ export async function warmHeritageModel(id,records){
  if(id==='pantalan')names.push('pantalan-paseo-visit','pantalan-maritimo-visit','pantalan-context');
  if(id==='glorieta')names.push('glorieta-layout','glorieta-buildings','glorieta-visit');
  if(record?.landscape)names.push(record.region+'-cartography');
- const results=await Promise.allSettled([factory(),...names.map(prewarmDocument)]);
+ const sector=id==='glorieta'?import('./territory-heritage-glorieta.js').then(m=>m.prewarmGlorietaSurroundings()):null;
+ const results=await Promise.allSettled([factory(),loadAtlasContext(id),sector,...names.map(prewarmDocument)]);
  return results.every(result=>result.status==='fulfilled');
 }
 
@@ -261,7 +263,9 @@ export async function buildHeritageModel(id,{places,records,area,heightAt,projec
     return stop?{place,stop,mode,section,interior:!!data?.interiorView}:null;
    },disposeVisit(){site.dispose?.();}};
   model.publicDeck=samplePublicDeck(group);
-  model.walkBarriers=sampleHeritageBarriers(group,(x,z)=>heightOnPavement(model.publicDeck,x,z)??heightAt(x,z));
+  const floorAt=(x,z)=>heightOnPavement(model.publicDeck,x,z)??heightAt(x,z);
+  model.walkBarriers=bindVisit?await prepareWalkingBarriers(group,floorAt,needed):sampleHeritageBarriers(group,floorAt);
+  if(!model.walkBarriers){model.disposeVisit();releaseModel(group);return null;}
   return model;
  }
  const primary=id==='pantalan'?'pantalan-paseo':id,place=places.find(p=>p.id===primary);
@@ -270,7 +274,7 @@ export async function buildHeritageModel(id,{places,records,area,heightAt,projec
  const record=records[primary];
  const options={heightAt:sample,project:atlasProject,records,data:area,record,site:record};
  const get=async(name,key)=>{options[key]=await documentData(name,false);};
- const requests=[loadFactory()];
+ const requests=[loadFactory(),loadAtlasContext(id)];
  if(!archiveOnly.has(id)){
   requests.push(get(file+'-visit','visitData'));
   if(id!=='castle'&&id!=='theatre')requests.push(get(file+'-context','contextData'));
@@ -285,9 +289,8 @@ export async function buildHeritageModel(id,{places,records,area,heightAt,projec
  if(id==='glorieta')requests.push(import('./territory-heritage-glorieta.js').then(async m=>{
   sector={data:await m.loadGlorietaSurroundings(),build:m.createGlorietaSurroundings,resolve:m.resolveFrontageShells};
  }));
- const [module]=await Promise.all(requests);
+ const [module,contextFactory]=await Promise.all(requests);
  if(!needed())return null;
- const {hasAtlasContext,originalSurroundings,settleSourceClaims}=await import('./territory-heritage-contexts.js');
  await settleSourceClaims(id,options);
  if(options.visitData&&id!=='castle')options.visitData.plan=await documentData(file+'-plan',false);
  if(!needed())return null;
@@ -303,12 +306,20 @@ export async function buildHeritageModel(id,{places,records,area,heightAt,projec
  outer.matrixAutoUpdate=false;
  outer.matrix.set(frame.a,0,frame.b,frame.tx,0,1,0,0,frame.c,0,frame.d,frame.tz,0,0,0,1);
  outer.add(local);
+ // Let navigation and streaming paint between the independent Atlas builders.
+ async function continueBuilding(){
+  if(bindVisit)await new Promise(resolve=>setTimeout(resolve,0));
+  if(needed())return true;
+  releaseModel(outer);return false;
+ }
+ if(!await continueBuilding())return null;
  // Every context factory draws in the Atlas metre grid, including those whose
  // monument constructor has a rotated or translated local frame of its own.
- const surroundings=hasAtlasContext(id)?originalSurroundings(id,options,sites):null;
+ const surroundings=contextFactory?originalSurroundings(contextFactory,id,options,sites):null;
  if(surroundings)outer.add(surroundings.context.group);
  const streets=sector?.build(sector.data,options);
  if(streets)outer.add(streets.group);
+ if(!await continueBuilding())return null;
  outer.updateMatrixWorld(true);
  for(const [key,site] of Object.entries(sites)){
   site.setSection?.(false);
@@ -333,6 +344,7 @@ export async function buildHeritageModel(id,{places,records,area,heightAt,projec
   }
   outer.updateMatrixWorld(true);
  }
+ if(!await continueBuilding())return null;
  const claims=Object.entries(sites).map(([key,site])=>claimsFor(site,records[key],frame,project));
  let pavement=null,contextStats=null;
  if(id==='glorieta'){
@@ -370,7 +382,9 @@ export async function buildHeritageModel(id,{places,records,area,heightAt,projec
   if(sites.diana){sites.diana.remains.visible=!on;sites.diana.reconstruction.visible=on;}
  }};
  model.publicDeck=samplePublicDeck(outer);
- model.walkBarriers=sampleHeritageBarriers(outer,(x,z)=>heightOnPavement(model.publicDeck,x,z)??heightOnPavement(pavement,x,z)??(heightAt(x,z)+reliefDelta(relief,x,z)));
+ const floorAt=(x,z)=>heightOnPavement(model.publicDeck,x,z)??heightOnPavement(pavement,x,z)??(heightAt(x,z)+reliefDelta(relief,x,z));
+ model.walkBarriers=bindVisit?await prepareWalkingBarriers(outer,floorAt,needed):sampleHeritageBarriers(outer,floorAt);
+ if(!model.walkBarriers){releaseModel(outer);return null;}
  bindVisit?.({model,sites,options,frame,heightAt:adjusted,renderer});
  return model;
 }

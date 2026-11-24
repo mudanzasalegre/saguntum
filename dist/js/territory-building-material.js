@@ -154,6 +154,8 @@ export function architecturalMaterial(night,photography){
       float archSides=step(-1.5,vArchData.y);
       float glassAmt=0.,litWindow=0.,archRough=.88,archMetal=0.,reliefWeight=0.;
       vec2 microNormal=vec2(0.);
+      float reveal=0.;
+      vec3 revealNormal=vec3(0.);
       if(archDetail>.001){
         float index=floor(vArchData.x+.5);
         vec2 dx,dy;
@@ -220,11 +222,8 @@ export function architecturalMaterial(night,photography){
             vec2 pane=(f-opening.xz)/(opening.yw-opening.xz);
             variant+=tone>.64?4.:0.;
             vec2 grid=vec2(6.,8.);
-            vec2 bayUV=(vec2(style.x,variant)+.006+.988*f)/grid;
-            vec2 bx=dFdx(vArchBay)*.988/grid,by=dFdy(vArchBay)*.988/grid;
-            float inBay=step(0.,min(f.x,f.y))*step(max(f.x,f.y),1.);
-            vec4 trim=textureGrad(uArchBay,bayUV,bx,by)*inBay;
-            glassAmt=textureGrad(uArchGlass,bayUV,bx,by).r*archDetail*inBay;
+            vec2 bayDx=dFdx(vArchBay),bayDy=dFdy(vArchBay);
+            vec2 bx=bayDx*.988/grid,by=bayDy*.988/grid;
             vec3 V=normalize(vViewPosition),N=normalize(vNormal);
             vec3 dp=dFdx(-vViewPosition),dq=dFdy(-vViewPosition);
             vec2 du=dFdx(vArchMetric),dv=dFdy(vArchMetric);
@@ -232,9 +231,33 @@ export function architecturalMaterial(night,photography){
             vec3 tangent=dp*dv.y-dq*du.y,vertical=dq*du.x-dp*dv.x;
             vec3 ray=vec3(handed*dot(V,tangent)/max(length(tangent),.00001),
                           handed*dot(V,vertical)/max(length(vertical),.00001),abs(dot(V,N)));
+            vec2 sampleAt=f,innerPane=pane;
+            float frameContact=1.;
+            // Recess the existing upper-storey joinery inside its surveyed
+            // wall plane. The 9–14 cm construction depth is interpretative.
+            if(!yard&&floorBay.y>=1.&&vArchRange<65.&&all(greaterThanEqual(pane,vec2(0.)))&&all(lessThanEqual(pane,vec2(1.)))){
+              vec2 metres=clamp(sqrt(du*du+dv*dv)/max(sqrt(bayDx*bayDx+bayDy*bayDy),vec2(.00001)),vec2(.6),vec2(12.));
+              float near=1.-smoothstep(28.,65.,vArchRange);
+              float depth=(family<2.5?.14:.09)*near;
+              vec2 back=f-ray.xy*depth/(metres*max(.22,ray.z));
+              vec2 edge=min(back-opening.xz,opening.yw-back)*metres;
+              vec2 aa=abs(du)+abs(dv);
+              float rim=min(edge.x,edge.y),pixel=clamp(max(aa.x,aa.y)*.55,.004,.042);
+              reveal=(1.-smoothstep(-pixel,pixel,rim))*near;
+              revealNormal=edge.x<edge.y?tangent*handed*(back.x<(opening.x+opening.y)*.5?1.:-1.):
+                vertical*handed*(back.y<(opening.z+opening.w)*.5?1.:-1.);
+              revealNormal/=max(length(revealNormal),.00001);
+              sampleAt=clamp(back,opening.xz+.0005,opening.yw-.0005);
+              innerPane=(sampleAt-opening.xz)/(opening.yw-opening.xz);
+              frameContact=1.-.15*near*(1.-smoothstep(0.,.065,rim));
+            }
+            vec2 bayUV=(vec2(style.x,variant)+.006+.988*sampleAt)/grid;
+            float inBay=step(0.,min(f.x,f.y))*step(max(f.x,f.y),1.);
+            vec4 trim=textureGrad(uArchBay,bayUV,bx,by)*inBay;
+            glassAmt=textureGrad(uArchGlass,bayUV,bx,by).r*archDetail*inBay*(1.-reveal);
             if(glassAmt>.025&&vArchRange<145.){
               vec3 refl=inverseTransformDirection(reflect(-V,N),viewMatrix);
-              vec3 interior=behindGlass(pane,tone,ray,refl);
+              vec3 interior=behindGlass(innerPane,tone,ray,refl);
               trim.rgb=mix(trim.rgb,interior,glassAmt*(1.-smoothstep(70.,145.,vArchRange))*.91);
             }
             // Gentle contact at a projecting sill and water marks at its two
@@ -246,7 +269,7 @@ export function architecturalMaterial(night,photography){
             diffuseColor.rgb*=1.-archDetail*(.19*sillShade+.09*runoff)*(.47+.53*tone);
             trim.rgb*=mix(vec3(.95,.94,.92),vec3(1.03,1.04,1.05),tone);
             trim.rgb*=1.-glassAmt*(.035+.12*tone);
-            diffuseColor.rgb=mix(diffuseColor.rgb,trim.rgb,trim.a*archDetail);
+            diffuseColor.rgb=mix(diffuseColor.rgb,trim.rgb*frameContact,trim.a*archDetail*(1.-reveal));
             litWindow=glassAmt*step(.64,tone)*mix(.3,1.,tone);
             reliefWeight*=1.-trim.a;
           }
@@ -257,7 +280,8 @@ export function architecturalMaterial(night,photography){
       .replace('#include <metalnessmap_fragment>',`#include <metalnessmap_fragment>
       metalnessFactor=mix(archMetal,0.,glassAmt);`)
       .replace('#include <normal_fragment_maps>',`#include <normal_fragment_maps>
-      if(reliefWeight>.001)normal=archNormal(normal,-vViewPosition,vArchMetric,microNormal,reliefWeight);`)
+      if(reliefWeight>.001)normal=archNormal(normal,-vViewPosition,vArchMetric,microNormal,reliefWeight);
+      if(reveal>.001)normal=normalize(mix(normal,revealNormal,reveal));`)
       .replace('#include <aomap_fragment>',`#include <aomap_fragment>
       float exposureCode=floor((vArchData.z+.5)/1024.);
       if(exposureCode>.5){

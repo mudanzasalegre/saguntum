@@ -25,7 +25,7 @@ const facade=wgslFn(`fn cadastralFacade(metric:vec4f,data:vec4f,bayIn:vec2f,base
  let N=normalize(viewNormal); let V=normalize(-viewPoint); let range=-viewPoint.z;
  let archDetail=(1.-smoothstep(220.,780.,range))*ready;
  var color=base; var rough=.88; var metal=0.; var gl=0.; var lit=0.; var perturb=vec2f(0.); var reliefWeight=0.;
- var skyWeight=vec3f(0.);
+ var skyWeight=vec3f(0.);var reveal=0.;var revealNormal=vec3f(0.);
  if(archDetail>.001){
    let tile=metric.xy/scale; let span=vec2f(.25,.5)*(504./512.);
    let coords=(vec2f(f32(index%4u),f32(index/4u))+4./512.)*vec2f(.25,.5)+fract(tile)*span;
@@ -70,16 +70,32 @@ const facade=wgslFn(`fn cadastralFacade(metric:vec4f,data:vec4f,bayIn:vec2f,base
        if(yard){f.x=(f.x-.5)*1.48+.5;if(axis.y==0){f.y=(f.y-.61)*1.52+.61;variant=1u;}}
        let tone=f32(((axis.x+seed*3)*17+axis.y*37+(seed%7)*axis.x*5)%97)/97.;
        let bounds=openings[fam*4u+variant]; let pane=(f-bounds.xz)/(bounds.yw-bounds.xz);
-       let bayUV=(vec2f(f32(fam),f32(variant+select(0u,4u,tone>.64)))+.006+.988*f)/vec2f(6.,8.);
+       let hand=sign(dxy.x*dyy.y-dxy.y*dyy.x);
+       let t=dp*dyy.y-dq*dxy.y;let v=dq*dxy.x-dp*dyy.x;
+       let viewAlong=hand*vec2f(dot(V,t)/max(length(t),.00001),dot(V,v)/max(length(v),.00001));
+       var sampleAt=f;var innerPane=pane;var frameContact=1.;
+       if(!yard&&axis.y>=1&&range<65.&&all(pane>=vec2f(0.))&&all(pane<=vec2f(1.))){
+         let metres=clamp(sqrt(dxy*dxy+dyy*dyy)/max(sqrt(dbx*dbx+dby*dby),vec2f(.00001)),vec2f(.6),vec2f(12.));
+         let near=1.-smoothstep(28.,65.,range);let depth=select(.09,.14,fam<3u)*near;
+         let back=f-viewAlong*depth/(metres*max(.22,abs(dot(V,N))));
+         let edge=min(back-bounds.xz,bounds.yw-back)*metres;let rim=min(edge.x,edge.y);
+         let aa=abs(dxy)+abs(dyy);let pixel=clamp(max(aa.x,aa.y)*.55,.004,.042);
+         reveal=(1.-smoothstep(-pixel,pixel,rim))*near;
+         let jamb=t*hand*select(-1.,1.,back.x<(bounds.x+bounds.y)*.5);
+         let ledge=v*hand*select(-1.,1.,back.y<(bounds.z+bounds.w)*.5);
+         revealNormal=select(ledge,jamb,edge.x<edge.y);revealNormal/=max(length(revealNormal),.00001);
+         sampleAt=clamp(back,bounds.xz+.0005,bounds.yw-.0005);
+         innerPane=(sampleAt-bounds.xz)/(bounds.yw-bounds.xz);
+         frameContact=1.-.15*near*(1.-smoothstep(0.,.065,rim));
+       }
+       let bayUV=(vec2f(f32(fam),f32(variant+select(0u,4u,tone>.64)))+.006+.988*sampleAt)/vec2f(6.,8.);
        let spanBay=.988/vec2f(6.,8.); let valid=select(0.,1.,all(f>=vec2f(0.))&&all(f<=vec2f(1.)));
        let trim=textureSampleGrad(joinery,baySampler,bayUV,dbx*spanBay,dby*spanBay)*valid;
        var trimColor=trim.rgb;
-       gl=textureSampleGrad(glazing,glassSampler,bayUV,dbx*spanBay,dby*spanBay).r*archDetail*valid;
+       gl=textureSampleGrad(glazing,glassSampler,bayUV,dbx*spanBay,dby*spanBay).r*archDetail*valid*(1.-reveal);
        if(gl>.025&&range<145.){
-         let wall=clamp(abs(dot(V,N)),.055,1.);let hand=sign(dxy.x*dyy.y-dxy.y*dyy.x);
-         let t=dp*dyy.y-dq*dxy.y;let v=dq*dxy.x-dp*dyy.x;
-         let ray=-hand*vec2f(dot(V,t)/max(length(t),.00001),dot(V,v)/max(length(v),.00001))*vec2f(1.36,.9);
-         let p=clamp(pane,vec2f(.002),vec2f(.998)); let exitAt=select(p,1.-p,ray>=vec2f(0.))/max(abs(ray),vec2f(.0001));
+         let wall=clamp(abs(dot(V,N)),.055,1.);let ray=-viewAlong*vec2f(1.36,.9);
+         let p=clamp(innerPane,vec2f(.002),vec2f(.998)); let exitAt=select(p,1.-p,ray>=vec2f(0.))/max(abs(ray),vec2f(.0001));
          let back=1./wall; let hit=min(back,min(exitAt.x,exitAt.y)); let side=hit<back-.002&&exitAt.x<=exitAt.y;
          var value=.78;if(hit<back-.002){value=select(select(.95,.38,ray.y<0.),.54,side);}
          var room=mix(vec3f(.23,.175,.102),vec3f(.31,.315,.25),tone)*value*
@@ -111,14 +127,15 @@ const facade=wgslFn(`fn cadastralFacade(metric:vec4f,data:vec4f,bayIn:vec2f,base
        let runoff=(1.-smoothstep(.007,.07,min(abs(pane.x-.04),abs(.96-pane.x))))*(1.-smoothstep(.02,.54,below))*step(pane.y,0.);
        color*=1.-archDetail*(.19*sill+.09*runoff)*(.47+.53*tone);
        let tint=mix(vec3f(.95,.94,.92),vec3f(1.03,1.04,1.05),tone)*(1.-gl*(.035+.12*tone));
-       trimColor*=tint;skyWeight*=tint;
-       color=mix(color,trimColor,trim.a*archDetail);lit=gl*step(.64,tone)*mix(.3,1.,tone);reliefWeight*=1.-trim.a;
+       trimColor*=tint*frameContact;skyWeight*=tint*frameContact*(1.-reveal);
+       color=mix(color,trimColor,trim.a*archDetail*(1.-reveal));lit=gl*step(.64,tone)*mix(.3,1.,tone);reliefWeight*=1.-trim.a;
      }
    }
  }
  let tangent=cross(dq,N)*dxy.x+cross(N,dp)*dyy.x;let bitan=cross(dq,N)*dxy.y+cross(N,dp)*dyy.y;
  let inv=inverseSqrt(max(1.e-8,max(dot(tangent,tangent),dot(bitan,bitan))));
- let pn=normalize(N+(tangent*perturb.x+bitan*perturb.y)*inv*reliefWeight);
+ var pn=normalize(N+(tangent*perturb.x+bitan*perturb.y)*inv*reliefWeight);
+ if(reveal>.001){pn=normalize(mix(pn,revealNormal,reveal));}
  let sky=pow(1.-clamp(dot(pn,V),0.,1.),2.);
  let emission=gl*(1.-night)*vec3f(.016,.032,.045)*(1.+1.8*sky)+lit*night*vec3f(.86,.48,.22);
  let code=u32(floor((data.z+.5)/1024.));

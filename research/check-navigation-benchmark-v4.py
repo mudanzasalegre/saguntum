@@ -23,6 +23,7 @@ METER = """() => {
       photoCells:p.cells?.length,photoSheets:p.sheetCount,facadeCount:f.cached,facadeBytes:f.bytes,
       facadeBudget:f.byteLimit,stagedFacadeBytes:f.stagedBytes,facadeEvictions:f.evictions,facadeBuilds:f.builds,
       contactBytes:s.graphics.contactStats?.estimatedTargetBytes??0,materialVariants:s.graphics.materials?.variants??null,
+      reusedPrograms:s.graphics.streamPrograms?.reused??null,
       gpuRenderMS:s.graphics.gpu?.lastMs??null};
   }
   function tick(now){

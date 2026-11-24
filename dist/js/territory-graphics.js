@@ -52,6 +52,8 @@ export async function createTerritoryRenderer(mobile,onFailure){
     try{renderer=new T.WebGLRenderer({antialias:!mobile,powerPreference:mobile?'default':'high-performance'});}
     catch(error){error.graphics=info;throw error;}
     const c=renderer.capabilities;
+    renderer.streamPrograms={limit:mobile?6:24,reused:0};
+    info.streamPrograms=renderer.streamPrograms;
     Object.assign(info,{backend:'WebGL 2',active:'webgl2',limits:{maxTextureDimension2D:c.maxTextureSize,maxSamples:c.maxSamples},
       ...profiles(mobile,c.maxTextureSize,c.maxSamples>=4,renderer.extensions.has('EXT_color_buffer_float'))});
     dispose=()=>{renderer.dispose();renderer.forceContextLoss();};

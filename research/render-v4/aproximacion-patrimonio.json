@@ -1,0 +1,171 @@
+{
+  "browser": "156.0.8078.47",
+  "base": "http://127.0.0.1:8492",
+  "quality": "Media",
+  "cases": {
+    "orbit": {
+      "place": "glorieta",
+      "first": {
+        "initial": {
+          "ms": 0,
+          "eyeToAnchorM": 350,
+          "orbitRangeM": 556,
+          "mode": "orbit",
+          "silhouette": null,
+          "requested": null
+        },
+        "cadastralSkyline": {
+          "ms": 0,
+          "eyeToAnchorM": 350,
+          "orbitRangeM": 556,
+          "parts": 15862
+        },
+        "approach": {
+          "ms": 2837,
+          "eyeToAnchorM": 337,
+          "orbitRangeM": 536,
+          "distanceM": 0,
+          "projectedM": 0,
+          "level": "urbano"
+        },
+        "citySectorsReady": {
+          "ms": 2837,
+          "eyeToAnchorM": 337,
+          "orbitRangeM": 536
+        },
+        "urbanModel": {
+          "ms": 3784,
+          "eyeToAnchorM": 313,
+          "orbitRangeM": 498
+        },
+        "atlasSurroundings": {
+          "ms": 3784,
+          "eyeToAnchorM": 313,
+          "orbitRangeM": 498,
+          "context": {
+            "id": "glorieta",
+            "buildings": 313,
+            "detailedFrontages": 45,
+            "adjacentParts": 141,
+            "reconciledParts": 34,
+            "streetWays": 18,
+            "pavingAreaM2": 16886
+          }
+        },
+        "nativeModel": {
+          "ms": 3784,
+          "eyeToAnchorM": 313,
+          "orbitRangeM": 498,
+          "lastPreparation": {
+            "id": "glorieta",
+            "ms": 361,
+            "level": "patrimonial",
+            "distanceM": 0,
+            "rangeM": 516,
+            "context": true
+          }
+        },
+        "nativeForecast": {
+          "ms": 12133,
+          "eyeToAnchorM": 201,
+          "orbitRangeM": 320,
+          "distanceM": 0,
+          "projectedM": 0,
+          "rangeM": 320,
+          "projectedRangeM": 162
+        }
+      },
+      "peakModels": 2,
+      "peakWarm": 2,
+      "gaps": 0,
+      "frames": 499,
+      "done": true,
+      "backend": "webgpu",
+      "selected": null,
+      "activeStop": null,
+      "failures": {},
+      "errors": []
+    },
+    "fly": {
+      "place": "horno",
+      "first": {
+        "initial": {
+          "ms": 0,
+          "eyeToAnchorM": 525,
+          "orbitRangeM": null,
+          "mode": "fly",
+          "silhouette": true,
+          "requested": null
+        },
+        "cadastralSkyline": {
+          "ms": 0,
+          "eyeToAnchorM": 525,
+          "orbitRangeM": null,
+          "parts": 1990
+        },
+        "approach": {
+          "ms": 3487,
+          "eyeToAnchorM": 465,
+          "orbitRangeM": null,
+          "distanceM": 456,
+          "projectedM": 321,
+          "level": "urbano"
+        },
+        "citySectorsReady": {
+          "ms": 3487,
+          "eyeToAnchorM": 465,
+          "orbitRangeM": null
+        },
+        "urbanModel": {
+          "ms": 4194,
+          "eyeToAnchorM": 446,
+          "orbitRangeM": null
+        },
+        "atlasSurroundings": {
+          "ms": 4194,
+          "eyeToAnchorM": 446,
+          "orbitRangeM": null,
+          "context": {
+            "id": "horno",
+            "meshes": 26,
+            "triangles": 61029,
+            "buildings": 5,
+            "pavingAreaM2": 20070
+          }
+        },
+        "nativeForecast": {
+          "ms": 9589,
+          "eyeToAnchorM": 296,
+          "orbitRangeM": null,
+          "distanceM": 287,
+          "projectedM": 152,
+          "rangeM": 43,
+          "projectedRangeM": 43
+        },
+        "nativeModel": {
+          "ms": 10290,
+          "eyeToAnchorM": 285,
+          "orbitRangeM": null,
+          "lastPreparation": {
+            "id": "horno",
+            "ms": 600,
+            "level": "patrimonial",
+            "distanceM": 277,
+            "rangeM": 43,
+            "context": true
+          }
+        }
+      },
+      "peakModels": 2,
+      "peakWarm": 2,
+      "gaps": 0,
+      "frames": 814,
+      "done": true,
+      "backend": "webgpu",
+      "selected": null,
+      "activeStop": null,
+      "failures": {},
+      "errors": []
+    }
+  }
+}

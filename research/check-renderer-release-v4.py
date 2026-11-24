@@ -15,6 +15,10 @@ files = ['js/render-session.js','simulator.html','js/territory.js','js/territory
          'js/territory-node-fog.js','js/territory-node-ground.js','js/territory-node-environment.js',
          'js/territory-node-urban.js','js/territory-webgpu-device.js','js/territory-heritage-worker.js',
          'assets/vendor/three.webgpu.js','assets/territory/visit-stops.json']
+files.extend(['assets/vendor/three.module.js','js/territory-atmosphere.js','js/territory-stream-policy.js',
+              'js/territory-stream.js','js/territory-building-worker.js','js/territory-heritage-models.js',
+              'js/territory-heritage-contexts.js','js/territory-heritage.js','js/territory-street-surfaces.js',
+              'js/territory-building-material.js','js/territory-node-urban-architecture.js','js/territory-node-urban-street.js'])
 result = {'url': base, 'assets': {}, 'visits': []}
 with sync_playwright() as pw:
     browser = pw.chromium.launch(channel='chrome')

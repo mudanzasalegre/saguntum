@@ -174,14 +174,20 @@ export async function openSimulator(){
     $('history').textContent=historical?'Territorio actual':'Reconstrucción histórica';
   };
   for(const [key,label] of Object.entries(regions))$('region').append(new Option(label,key));
+  let intentTimer;
   function results(){
+    clearTimeout(intentTimer);
     const q=normalize($('query').value.trim()),reg=$('region').value;
     const items=[...zones,...places].filter(p=>(!reg||reg===p.region)&&normalize(p.name).includes(q));
     const nodes=[];
     function result(p,s){
       const b=document.createElement('button');b.textContent=s?s.title:p.name;
       if(s){const sub=document.createElement('small');sub.textContent=p.name+' · '+s.number; b.append(sub);}
-      b.onclick=()=>{select(p,true,s?.id);writeLink();};nodes.push(b);
+      const prepare=()=>{if(flags.heritage)heritage?.prepareDestination(p.id);};
+      const anticipate=()=>{clearTimeout(intentTimer);intentTimer=setTimeout(prepare,140);};
+      b.onpointerenter=b.onfocus=anticipate;
+      b.onpointerleave=b.onblur=()=>clearTimeout(intentTimer);
+      b.onclick=()=>{clearTimeout(intentTimer);prepare();select(p,true,s?.id);writeLink();};nodes.push(b);
     }
     for(const p of items)result(p);
     if(q)for(const p of places)if(!reg||reg===p.region)for(const s of p.guide?.stops||[]){
@@ -440,25 +446,31 @@ export async function openSimulator(){
   }
   let last=performance.now(),lastUpdate=-Infinity,prevStats=last,samples=[],slow=0,speed=0,lastFov=camera.fov;
   const previousEye=camera.position.clone();
+  let previousFocus=null;
   await buildings.ready;status.ready=true;status.loadMs=Math.round(performance.now()-start);
   document.addEventListener('visibilitychange',()=>{
-    last=prevStats=performance.now();samples=[];previousEye.copy(camera.position);
+    last=prevStats=performance.now();samples=[];previousEye.copy(camera.position);previousFocus=null;
   });
   function frame(now){
     if(lost)return;requestAnimationFrame(frame);
     if(document.hidden){last=now;return;}
     const ms=now-last,dt=Math.max(0,Math.min(.1,ms/1000));last=now;nav.tick(dt);
     const p=nav.focusPoint(),range=nav.range,detail=detailView(p,range),near=detail.point;
-    const lead=movementLead(near.x,near.z,camera.position.x-previousEye.x,camera.position.z-previousEye.z,ms/1000,nav.mode,budget);
     camera.getWorldDirection(direction);
     const view={x:camera.position.x,z:camera.position.z,dx:direction.x,dz:direction.z};
     const peripheral=Math.max(0,budget-peripheralPenalty);
     const measuredSpeed=camera.position.distanceTo(previousEye)/Math.max(.001,ms/1000);
     speed=T.MathUtils.lerp(speed,measuredSpeed,1-Math.exp(-dt*7));previousEye.copy(camera.position);
     if(now-lastUpdate>180){
+      const lead=previousFocus?.mode===nav.mode?movementLead(near.x,near.z,near.x-previousFocus.x,near.z-previousFocus.z,
+        (now-lastUpdate)/1000,nav.mode,budget,detail.range,detail.range-previousFocus.range,mobile):null;
+      previousFocus={x:near.x,z:near.z,range:detail.range,mode:nav.mode};
       ground.update(near.x,near.z,detail.range);
-      if(flags.heritage)heritage.update(near.x,near.z,detail.range,selected?.id,budget,lead);
-      buildings.update(near.x,near.z,detail.range,budget,lead,view,peripheral);network.update(near.x,near.z,detail.range,peripheral,flags,lead);
+      const approach=flags.heritage&&heritage.update(near.x,near.z,detail.range,selected?.id,budget,lead);
+      const corridor=approach?{...(lead||{x:near.x,z:near.z,length:0,range:detail.range}),site:approach.site}:lead;
+      buildings.update(near.x,near.z,detail.range,budget,corridor,view,peripheral);network.update(near.x,near.z,detail.range,peripheral,flags,corridor);
+      status.approach=approach?{...approach,buildings:buildings.stream.live.has(buildings.stream.approachSector),
+        streets:network.stream.live.has(network.stream.approachSector),facades:buildings.approachStats}:null;
       canopy.update(near,detail.range,peripheral,flags.land);
       map.follow(camera.position,nav.mode!=='orbit'&&detail.range<700,network.stream.live);
       map.draw(camera.position,p,camera.getWorldDirection(direction));updateNearby();markers(range);lastUpdate=now;

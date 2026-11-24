@@ -6,6 +6,9 @@ import {registerUrbanMaterial} from './territory-urban-material-record.js';
 
 const folder=new URL('../assets/materials/streets/',import.meta.url);
 const metres=[4.04,2.24,2,1.8,2.5,2.25,2,2.48];
+// Metres from the road-facing edge, then height above the ground. The
+// existing mapped widths and 12 cm kerb rise stay fixed; only its lip is shaped.
+const kerbSection=[[0,.20],[0,.30],[.006,.314],[.020,.32],[.15,.32]];
 const surfaces={asphalt:0,paved:0,paving_stones:3,concrete:3,'concrete:plates':1,sett:4,
   unhewn_cobblestone:4,cobblestone:4,dirt:2,earth:2,ground:2,unpaved:2,compacted:2,
   gravel:5,fine_gravel:5,pebblestone:5,rock:5,wood:6,sand:7};
@@ -57,7 +60,8 @@ export function streetMaterial(){
         vec3 micro=textureGrad(streetDetail,uvStreet,dxStreet*span,dyStreet*span).rgb;
         vec3 bed=mix(broad,grain,detailWeight);
         float lateral=vStreetUV.x,along=vStreetUV.y,ax=abs(lateral);
-        float aa=max(.012,fwidth(lateral)*.58);
+        float acrossPixel=fwidth(lateral);
+        float aa=max(.012,acrossPixel*.58);
         float longitudinalAA=max(.015,fwidth(along)*.58);
         float paint=0.,steel=0.,trafficPolish=0.;
         // Low-frequency mineral and wear variation in world metres, not a
@@ -91,6 +95,9 @@ export function streetMaterial(){
           bed=mix(bed,mix(vec3(.34,.32,.28),grain,.26),edging);
           float joint=streetBand(abs(fract(along/.84)-.5)*.84,.008,longitudinalAA);
           bed*=1.-joint*edging*.26*(1.-smoothstep(.025,.1,longitudinalAA));
+          // Bedding joint between the separate edging stones and sidewalk.
+          float bedding=streetBand(abs(lateral+halfWidth-.15),.005,max(.002,acrossPixel*.55));
+          bed*=1.-.31*bedding*(1.-smoothstep(.015,.06,aa));
         }else if(mode==5.){
           // Pale precast slabs at the cadastral plot line. Keep a little
           // warm aggregate response in shade rather than the blue aerial cast.
@@ -153,7 +160,7 @@ export function streetGeometry(data,heightAt,fronts){
     const first=pos.length/3;
     // Wide carriageways need a centre sample: a single plane between two
     // edges can cut into crowned or irregular DEM surfaces.
-    const columns=sidewalk?3:width>=5?3:2;
+    const columns=sidewalk?kerbSection.length+1:width>=5?3:2;
     for(let i=0;i<line.length;i++){
       const [x,z,deck]=line[i],a=line[Math.max(0,i-1)],b=line[Math.min(i+1,line.length-1)];
       const lenA=Math.hypot(x-a[0],z-a[1]),lenB=Math.hypot(b[0]-x,b[1]-z);
@@ -162,9 +169,11 @@ export function streetGeometry(data,heightAt,fronts){
       length+=lenA;
       for(let k=0;k<columns;k++){
         const sign=sidewalk?Math.sign(f.offset):1;
-        const lateral=(sidewalk&&k<2?-.5:k/(columns-1)-.5)*width;
+        const profilePoint=sidewalk&&kerbSection[k];
+        const lateral=sidewalk?(profilePoint?profilePoint[0]:width)-width*.5:(k/(columns-1)-.5)*width;
         const offset=(f.offset||0)+sign*lateral,vx=x+nx/safe*offset,vz=z+nz/safe*offset;
-        pos.push(vx,(deck??heightAt(vx,vz))+(sidewalk&&k>0?.32:.20),vz);
+        const rise=profilePoint?profilePoint[1]:sidewalk?.32:.20;
+        pos.push(vx,(deck??heightAt(vx,vz))+rise,vz);
         uv.push(lateral,length);profiles.push(slot,metres[slot],width/2,style);
       }
       if(i)for(let k=0;k+1<columns;k++){

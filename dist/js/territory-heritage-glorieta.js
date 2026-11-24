@@ -3,7 +3,20 @@ import {createUrbanSurface} from './urban-surface.js';
 
 // First ring beyond the individually drawn façades. The preparation script
 // clips the Atlas sector against those façades and other native visits.
-export async function loadGlorietaSurroundings(){
+let prepared=null;
+export function prewarmGlorietaSurroundings(){
+ if(!prepared){
+  const request=fetchSurroundings().catch(error=>{if(prepared===request)prepared=null;throw error;});
+  prepared=request;
+ }
+ return prepared;
+}
+export function loadGlorietaSurroundings(){
+ const result=prewarmGlorietaSurroundings();
+ prepared=null;
+ return result;
+}
+async function fetchSurroundings(){
  const url=new URL('../assets/territory/glorieta-surroundings.json',import.meta.url);
  const response=await fetch(url);
  if(!response.ok)throw Error('No se pudo abrir el sector urbano de la Glorieta');

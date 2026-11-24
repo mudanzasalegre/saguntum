@@ -11,6 +11,7 @@ import {sectionWindow} from './territory-heritage-section.js';
 import {heritageWindow} from './territory-stream-policy.js';
 import {sampleHeritageBarriers} from './territory-collision-heritage.js';
 import {reliefDelta} from './territory-heritage-relief.js';
+import {heritageLights} from './territory-heritage-lights.js';
 
 export async function createHeritage({scene,renderer,heightAt,project,grids,mobile=false,onChange=()=>{},onError=console.warn}){
  const inventory=await loadHeritageCatalog(project);
@@ -27,15 +28,19 @@ export async function createHeritage({scene,renderer,heightAt,project,grids,mobi
   if(!extents.has(id))extents.set(id,[...low.get(id)?.userData.claims||[]]);
   extents.get(id).push(...rings);
  }
- function distanceToSite(id,x,z,anchorDistance){
+ function distanceToSite(id,x,z,anchorDistance,nearestPoint){
   let best=anchorDistance;
   for(const ring of extents.get(id)){
    if(x<ring.left-best||x>ring.right+best||z<ring.top-best||z>ring.bottom+best)continue;
-   if(inRing(x,z,ring))return 0;
+   if(inRing(x,z,ring)){
+    if(nearestPoint){nearestPoint.x=x;nearestPoint.z=z;}
+    return 0;
+   }
    for(let i=0,j=ring.points.length-1;i<ring.points.length;j=i++){
     const a=ring.points[j],b=ring.points[i],dx=b.x-a.x,dz=b.z-a.z;
     const t=Math.max(0,Math.min(1,((x-a.x)*dx+(z-a.z)*dz)/(dx*dx+dz*dz||1)));
-    best=Math.min(best,Math.hypot(x-a.x-t*dx,z-a.z-t*dz));
+    const px=a.x+t*dx,pz=a.z+t*dz,d=Math.hypot(x-px,z-pz);
+    if(d<best){best=d;if(nearestPoint){nearestPoint.x=px;nearestPoint.z=pz;}}
    }
   }
   return best;
@@ -44,7 +49,7 @@ export async function createHeritage({scene,renderer,heightAt,project,grids,mobi
  for(const [id,group] of low){group.name='Silueta territorial · '+id;root.add(group);}
  scene.add(root);
  let desired=[],pending=false,disposed=false,historical=null,lastKey='',lastCheck=-Infinity;
- let requestedStop=null,nearNative=new Set();
+ let requestedStop=null,nearNative=new Set(),lastApproach=null;
  const prefetched=new Map(),warmed=new Map();let warming=0;
  let lastAltitude=0,lastQuality=0,focusX=0,focusZ=0;
  let status={requested:[],loaded:[],loading:false,failures:{},lastPreparation:null};
@@ -85,6 +90,8 @@ export async function createHeritage({scene,renderer,heightAt,project,grids,mobi
  function nearby(grid,x,z){return grid.get(Math.floor(x/cell)+','+Math.floor(z/cell))||[];}
  // Local exhibit lamps have finite authored ranges. Bound their simultaneous
  // GPU cost while retaining the original lights at the occupied building.
+ const lamps=heritageLights(scene);
+ let lastLampNight;
  function chooseLights(){
   const near=[];
   for(const item of loaded.values())for(const light of item.lamps){
@@ -98,7 +105,9 @@ export async function createHeritage({scene,renderer,heightAt,project,grids,mobi
   }
   near.sort((a,b)=>a.distance-b.distance);
   const enabled=near.slice(0,lastQuality>=2?8:lastQuality===1?4:2);
-  for(const {light} of enabled)light.layers.enable(0);
+  // Authored point lights stay with their models. Their positions and
+  // photometry feed permanent scene lights across model loads and evictions.
+  lamps.select(enabled);
   status.lights=enabled.length;
  }
  function indexClaims(){
@@ -179,7 +188,10 @@ export async function createHeritage({scene,renderer,heightAt,project,grids,mobi
      // model and materials are ready, then swap them in the same frame.
      remove(id);
      root.add(item.group);loaded.set(id,item);
-     status.lastPreparation={id,ms:Math.round(performance.now()-started),level:item.setVisitStop?'patrimonial':'urbano'};
+     const place=places.find(p=>modelId(p.id)===id);
+     status.lastPreparation={id,ms:Math.round(performance.now()-started),level:item.setVisitStop?'patrimonial':'urbano',
+      distanceM:Math.round(distanceToSite(id,focusX,focusZ,Math.hypot(focusX-place.x,focusZ-place.z))),
+      rangeM:Math.round(lastAltitude),context:!!item.contextStats};
      if(low.has(id))low.get(id).visible=false;
      status.visit=visit;
      delete status.failures[id];notify();
@@ -200,20 +212,31 @@ export async function createHeritage({scene,renderer,heightAt,project,grids,mobi
   if(low.has(id))low.get(id).visible=true;
  }
  function clear(){
-  desired=[];nearNative.clear();historical=null;requestedStop=null;status.visit=null;lastKey='';
+  desired=[];nearNative.clear();historical=null;requestedStop=null;status.visit=null;lastApproach=status.approach=null;lastKey='';
   for(const id of [...loaded.keys()])remove(id);
   notify();
  }
  return {places,group:root,get stats(){return status;},get relief(){return root.visible?[...loaded.values()].map(item=>item.relief):[];},
   get walkBarriers(){return walkingBarriers();},
-  animateGlorieta(time,water,night){loaded.get('glorieta')?.animate?.(time,water,night);},
+  prepareDestination(place){
+   const id=modelId(place),now=performance.now();
+   if(!disposed&&byId.has(place)&&!loaded.has(id)&&warming<(mobile?1:2)&&!(prefetched.get(id)>now))warm(id,now);
+  },
+  animateGlorieta(time,water,night){
+   const plaza=loaded.get('glorieta');
+   if(!plaza){lastLampNight=undefined;return;}
+   plaza.animate?.(time,water,night);
+   if(lastLampNight!==night){lastLampNight=night;chooseLights();}
+  },
   maskRoadMaterial(material,ground=false){roadMasks.apply(material,ground);if(!ground)excavation.material(material);},
   setAtlasLighting(enabled){atlasLighting.value=enabled?1:0;},
   setVisitStop(place,stop,anchor,presentation={}){
    const record=byId.get(place);
    if(requestedStop?.place===place&&requestedStop.stop===stop)return;
    const previous=requestedStop?.model;
-   requestedStop=record&&stop?{place,stop,model:modelId(place),anchor:anchor||record,presentation}:null;
+   requestedStop=record&&stop?{place,stop,model:modelId(place),anchor:anchor||record,presentation,
+    prepareUntil:performance.now()+2500}:null;
+   lastApproach=status.approach=null;
    status.visit=null;lastKey='';
    if(previous)loaded.get(previous)?.setVisitStop?.(null,null);
    if(historical)loaded.get(historical)?.setHistorical(false);
@@ -257,13 +280,15 @@ export async function createHeritage({scene,renderer,heightAt,project,grids,mobi
   update(x,z,altitude,selectedId=null,quality=2,hint=null){
    if(disposed)return;
    lastAltitude=altitude;lastQuality=quality;focusX=x;focusZ=z;
-   const key=[Math.round(x/6),Math.round(z/6),Math.round(altitude/12),selectedId,quality,hint?Math.round(hint.x/45):'',hint?Math.round(hint.z/45):''].join('/');
+   const key=[Math.round(x/6),Math.round(z/6),Math.round(altitude/12),selectedId,quality,hint?Math.round(hint.x/20):'',
+    hint?Math.round(hint.z/20):'',hint?Math.round(hint.range/15):''].join('/');
    const now=performance.now();
-   if(key===lastKey&&now-lastCheck<2500)return;
+   if(key===lastKey&&now-lastCheck<1500)return status.approach;
    lastKey=key;lastCheck=now;
    for(const item of loaded.values())item.setDensity(altitude,quality,x,z);
    chooseLights();
    const nearest=new Map(),native=new Set(),warmQueue=new Map();
+   let approach=null;
    for(const place of places){
     const id=modelId(place.id),distance=distanceToSite(id,x,z,Math.hypot(x-place.x,z-place.z));
     // Longer structures need a window along their full extent.
@@ -271,15 +296,36 @@ export async function createHeritage({scene,renderer,heightAt,project,grids,mobi
     const selected=place.id===selectedId;
     const anchor=requestedStop?.anchor;
     const stopDistance=requestedStop?.model===id&&anchor?Math.hypot(x-anchor.x,z-anchor.z):Infinity;
-    const stopInView=stopDistance<Math.max(350,reach*1.65,altitude*.9)&&altitude<Math.max(4200,reach*7);
+    const picked=requestedStop?.model===id&&selected&&now<requestedStop.prepareUntil;
+    const stopInView=picked||stopDistance<Math.max(350,reach*1.65,altitude*.9)&&altitude<Math.max(4200,reach*7);
     const ahead=hint?distanceToSite(id,hint.x,hint.z,Math.hypot(hint.x-place.x,hint.z-place.z)):Infinity;
-    const policy=heritageWindow({distance,ahead,range:altitude,reach,close:place.scene?.nativeDistance??100,loaded:loaded.has(id),native:nearNative.has(id),selected,stop:stopInView,quality,mobile});
+    const policy=heritageWindow({distance,ahead,range:altitude,predictedRange:hint?.range??altitude,reach,close:place.scene?.nativeDistance??100,loaded:loaded.has(id),native:nearNative.has(id),selected,stop:stopInView,quality,mobile});
     if(policy.warm&&!loaded.has(id)&&!(prefetched.get(id)>now))warmQueue.set(id,Math.min(warmQueue.get(id)??Infinity,policy.score));
+    // Only one speculative constructor competes for the ordinary resident
+    // slots. A chosen stop also starts preparing during its camera transition.
+    const advance=policy.prepareFull||policy.prepareUrban&&!place.scene;
+    if(picked||advance&&(!approach||ahead<approach.ahead)){
+     const site={x:place.x,z:place.z};
+     if(picked){site.x=anchor.x;site.z=anchor.z;}
+     else distanceToSite(id,hint.x,hint.z,Math.hypot(hint.x-place.x,hint.z-place.z),site);
+     approach={id,site,ahead:picked?-Infinity:ahead,full:picked||policy.prepareFull,score:policy.score,
+      distanceM:Math.round(distance),projectedM:Number.isFinite(ahead)?Math.round(ahead):null,
+      rangeM:Math.round(altitude),projectedRangeM:Math.round(hint?.range??altitude),expires:now+900};
+    }
     if(!policy.visible)continue;
     if(policy.full)native.add(id);
     if(place.scene&&!policy.full&&!loaded.has(id))continue;
     nearest.set(id,Math.min(nearest.get(id)??Infinity,policy.score));
    }
+   // Brief stalls at a tile boundary should not cancel a constructor already
+   // preparing the same approach. A turn or teleport invalidates the forecast.
+   if(!approach&&!hint&&lastApproach?.expires>now&&Math.hypot(x-lastApproach.x,z-lastApproach.z)<35)approach=lastApproach;
+   if(approach){
+    nearest.set(approach.id,Math.min(nearest.get(approach.id)??Infinity,approach.score));
+    if(approach.full)native.add(approach.id);
+    approach.x=x;approach.z=z;
+   }
+   lastApproach=approach;
    // Bound speculative I/O independently from live mesh slots. The actual
    // requested visit remains first in the construction queue.
    for(const [id] of [...warmQueue].sort((a,b)=>a[1]-b[1])){
@@ -291,10 +337,14 @@ export async function createHeritage({scene,renderer,heightAt,project,grids,mobi
    nearNative=native;
    const limit=mobile?1:quality===2?maxLocalHeritage:2;
    desired=[...nearest].sort((a,b)=>a[1]-b[1]).slice(0,limit).map(([id])=>id);
+   status.approach=approach&&desired.includes(approach.id)?{id:approach.id,site:approach.site,
+    distanceM:approach.distanceM,projectedM:approach.projectedM,rangeM:approach.rangeM,
+    projectedRangeM:approach.projectedRangeM,level:approach.full?'patrimonial':'urbano'}:null;
    const expired=[...loaded.keys()].filter(id=>!desired.includes(id));
    for(const id of expired)remove(id);
    if(expired.length)notify();
    if(desired.some(missing))void schedule();
+   return status.approach;
   },
   isReplaced(sourceId,x,z,rings){
    if(!root.visible)return false;
@@ -319,6 +369,6 @@ export async function createHeritage({scene,renderer,heightAt,project,grids,mobi
    chooseLights();
    return true;
   },
-  clear,dispose(){if(disposed)return;disposed=true;background?.dispose();clear();roadMasks.dispose();for(const group of low.values())releaseModel(group);root.removeFromParent();}
+  clear,dispose(){if(disposed)return;disposed=true;background?.dispose();clear();lamps.dispose();roadMasks.dispose();for(const group of low.values())releaseModel(group);root.removeFromParent();}
  };
 }

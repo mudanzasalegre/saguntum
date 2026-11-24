@@ -1,11 +1,14 @@
 // One entry per original Atlas destination. Keep anchors, evidence and visit links
 // in their source records; the simulator only adds the common projected position.
-const cache=new Map(),warm=new Map();
+const cache=new Map(),warm=new Map(),pending=new Map();
 function requestDocument(name){
+ if(pending.has(name))return pending.get(name);
  const result=fetch(new URL('../assets/data/'+name+'.json',import.meta.url)).then(response=>{
   if(!response.ok)throw Error('No se pudo abrir '+name+' ('+response.status+')');
   return response.json();
- }).catch(error=>{if(cache.get(name)===result)cache.delete(name);if(warm.get(name)===result)warm.delete(name);throw error;});
+ }).catch(error=>{if(cache.get(name)===result)cache.delete(name);if(warm.get(name)===result)warm.delete(name);throw error;})
+ .finally(()=>pending.delete(name));
+ pending.set(name,result);
  return result;
 }
 // Simulator-only speculative data. The Atlas' persistent editorial cache is

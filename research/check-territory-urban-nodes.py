@@ -57,7 +57,14 @@ with sync_playwright() as pw:
       const night={value:0};
       put('architecture',geo,architecturalMaterial(night,null));
       put('skyline',geo,skylineMaterial(null));
-      const street=streetGeometry({roads:[{id:'test',kind:'primary',width:8,car:true,points:[[-2,-3],[2,3]]}],rail:[]},()=>0);
+      const street=streetGeometry({roads:[{id:'test',kind:'primary',width:8,car:true,sidewalk:'both',points:[[-2,-3],[2,3]]}],rail:[]},()=>0);
+      const crossSection=new Map();
+      const sa=street.attributes;
+      for(let i=0;i<sa.position.count;i++){
+        if(sa.streetProfile.getW(i)!==3)continue;
+        const across=Math.round((sa.uv.getX(i)+.6)*1000),rise=Math.round(sa.position.getY(i)*1000);
+        crossSection.set(across+','+rise,[across,rise]);
+      }
       put('street',street,streetMaterial());
       const details=new G.Group();nearFacades(details);const trim=details.children[0];trim.geometry.attributes.facadeFinish.setX(0,2);
       put('facade-details',trim.geometry,trim.material,true);
@@ -159,7 +166,7 @@ with sync_playwright() as pw:
       const validation=await device.popErrorScope();skyGL.dispose();skyGPU.dispose();glProbe.dispose();gpuProbe.dispose();
       glTarget.dispose();gpuTarget.dispose();target.dispose();gl.dispose();renderer.dispose();
       return {adapter:device.adapterInfo?.description||device.adapterInfo?.architecture||null,materials:kinds,calls,
-        uniqueColors:shades.size,comparison:results,slotChanges,leafShadows,uncaptured,validation:validation?.message||null};
+        uniqueColors:shades.size,kerbMillimetres:[...crossSection.values()],comparison:results,slotChanges,leafShadows,uncaptured,validation:validation?.message||null};
     }""")
     result['consoleErrors']=errors
     result['warnings']=warnings
@@ -172,3 +179,4 @@ with sync_playwright() as pw:
     assert all(row['pixels']>900 and row['mae']<3 and row['correlation']>.99 for row in result['comparison'].values()),result
     assert result['slotChanges']==dict(blank=[128,128],loaded=[220,75],replaced=[40,75],cleared=[40,128]),result
     assert min(result['leafShadows'].values())>150,result
+    assert result['kerbMillimetres']==[[0,200],[0,300],[6,314],[20,320],[150,320],[1200,320]],result

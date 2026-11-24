@@ -9,14 +9,12 @@ export function createAtmosphere(scene,renderer,sea,buildings,network,registrati
   const ambient=new T.HemisphereLight('#bfd8f1','#827366',1);
   const sun=new T.DirectionalLight('#fff2de',2.2);
   sun.castShadow=true;
-  // r180 stores the directional ShadowNode in compiled materials. Changing
-  // castShadow disposes that node while a cached draw may still refer to it.
-  // Retain one native shadow graph and schedule only the necessary depth passes.
-  if(nativeEnvironment){
-    renderer.shadowMap.enabled=true;
-    sun.shadow.autoUpdate=false;
-    sun.shadow.intensity=0;
-  }
+  // Keep one directional shadow layout. Toggling it recompiles the town's
+  // WebGL programs and in r180 can dispose native ShadowNodes still in use.
+  // At night or long range the intensity is zero and no new depth pass runs.
+  renderer.shadowMap.enabled=true;
+  sun.shadow.autoUpdate=false;
+  sun.shadow.intensity=0;
   Object.assign(sun.shadow.camera,{near:2,far:1250});
   sun.shadow.mapSize.setScalar(nativeEnvironment?128:1024);
   // The Atlas lights use its east/south plotting grid. Rotate both vectors into UTM.
@@ -41,12 +39,12 @@ export function createAtmosphere(scene,renderer,sea,buildings,network,registrati
       scene.background=nativeEnvironment.atlasBackdrop(horizon,renderer.toneMappingExposure);
       sea.setReflectionSky(horizon);
     }
-    atlasDirection(atlasLights[mode].direction,direction);rim.visible=true;
+    atlasDirection(atlasLights[mode].direction,direction);rim.intensity=atlasRim.intensity;
     sky.show(false);sea.setAtlasLight(mode,direction);
     buildings.night.value=0;network.setNight(0);invalid=true;
   }
   function setHour(hour,date){
-    atlasMode=false;rim.visible=false;sky.show(true);
+    atlasMode=false;rim.intensity=0;sky.show(true);
     if(nativeEnvironment)sea.setReflectionSky(null);
     atlasDirection(solarDirection(hour,date),direction);
     light=T.MathUtils.smoothstep(direction.y,-.17,.21);
@@ -73,12 +71,8 @@ export function createAtmosphere(scene,renderer,sea,buildings,network,registrati
     const {enabled,extent,size:desiredSize}=plan;
     if(shadowEnabled!==enabled){
       shadowEnabled=enabled;invalid=true;
-      if(nativeEnvironment){
-        sun.shadow.intensity=enabled?1:0;
-        sun.shadow.needsUpdate=enabled;
-      }else{
-        renderer.shadowMap.enabled=enabled;
-      }
+      sun.shadow.intensity=enabled?1:0;
+      sun.shadow.needsUpdate=enabled;
     }
     if(enabled&&sun.shadow.mapSize.x!==desiredSize){
       sun.shadow.mapSize.setScalar(desiredSize);
