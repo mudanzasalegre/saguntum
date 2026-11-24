@@ -82,7 +82,7 @@ def profiles(browser):
       const u=s.material.uniforms,lamps=parityQA.scene.children.filter(o=>o.isDirectionalLight&&o.castShadow);
       return {waveTime:u.time.value,reflection:u.mirrorSampler.value.image.width,normal:u.normalSampler.value.image.width,
         shore:u.shoreSampler.value.image.width,direction:u.sunDirection.value.toArray(),strength:u.sunStrength.value,
-        shadow:lamps[0].shadow.mapSize.x,enabled:parityQA.renderer.shadowMap.enabled};}"""
+        shadow:lamps[0].shadow.mapSize.x,enabled:parityQA.renderer.shadowMap.enabled&&(lamps[0].shadow.intensity??1)>0};}"""
     measurements={}
     for profile in ["0","1","2","3"]:
         if profile=="3" and page.locator("#sim-quality option[value='3']").is_disabled():continue

@@ -1,0 +1,105 @@
+--- a/js/territory-heritage.js
++++ b/js/territory-heritage.js
+@@ -11,7 +11,6 @@
+ import {heritageWindow} from './territory-stream-policy.js';
+ import {sampleHeritageBarriers} from './territory-collision-heritage.js';
+ import {reliefDelta} from './territory-heritage-relief.js';
+-import {heritageLights} from './territory-heritage-lights.js';
+ 
+ export async function createHeritage({scene,renderer,heightAt,project,grids,mobile=false,onChange=()=>{},onError=console.warn}){
+  const inventory=await loadHeritageCatalog(project);
+@@ -90,8 +89,6 @@
+  function nearby(grid,x,z){return grid.get(Math.floor(x/cell)+','+Math.floor(z/cell))||[];}
+  // Local exhibit lamps have finite authored ranges. Bound their simultaneous
+  // GPU cost while retaining the original lights at the occupied building.
+- const lamps=heritageLights(scene);
+- let lastLampNight;
+  function chooseLights(){
+   const near=[];
+   for(const item of loaded.values())for(const light of item.lamps){
+@@ -105,9 +102,7 @@
+   }
+   near.sort((a,b)=>a.distance-b.distance);
+   const enabled=near.slice(0,lastQuality>=2?8:lastQuality===1?4:2);
+-  // Authored point lights stay with their models. Their positions and
+-  // photometry feed permanent scene lights across model loads and evictions.
+-  lamps.select(enabled);
++  for(const {light} of enabled)light.layers.enable(0);
+   status.lights=enabled.length;
+  }
+  function indexClaims(){
+@@ -222,12 +217,7 @@
+    const id=modelId(place),now=performance.now();
+    if(!disposed&&byId.has(place)&&!loaded.has(id)&&warming<(mobile?1:2)&&!(prefetched.get(id)>now))warm(id,now);
+   },
+-  animateGlorieta(time,water,night){
+-   const plaza=loaded.get('glorieta');
+-   if(!plaza){lastLampNight=undefined;return;}
+-   plaza.animate?.(time,water,night);
+-   if(lastLampNight!==night){lastLampNight=night;chooseLights();}
+-  },
++  animateGlorieta(time,water,night){loaded.get('glorieta')?.animate?.(time,water,night);},
+   maskRoadMaterial(material,ground=false){roadMasks.apply(material,ground);if(!ground)excavation.material(material);},
+   setAtlasLighting(enabled){atlasLighting.value=enabled?1:0;},
+   setVisitStop(place,stop,anchor,presentation={}){
+@@ -369,6 +359,6 @@
+    chooseLights();
+    return true;
+   },
+-  clear,dispose(){if(disposed)return;disposed=true;background?.dispose();clear();lamps.dispose();roadMasks.dispose();for(const group of low.values())releaseModel(group);root.removeFromParent();}
++  clear,dispose(){if(disposed)return;disposed=true;background?.dispose();clear();roadMasks.dispose();for(const group of low.values())releaseModel(group);root.removeFromParent();}
+  };
+ }
+--- a/js/territory-atmosphere.js
++++ b/js/territory-atmosphere.js
+@@ -9,12 +9,14 @@
+   const ambient=new T.HemisphereLight('#bfd8f1','#827366',1);
+   const sun=new T.DirectionalLight('#fff2de',2.2);
+   sun.castShadow=true;
+-  // Keep one directional shadow layout. Toggling it recompiles the town's
+-  // WebGL programs and in r180 can dispose native ShadowNodes still in use.
+-  // At night or long range the intensity is zero and no new depth pass runs.
+-  renderer.shadowMap.enabled=true;
+-  sun.shadow.autoUpdate=false;
+-  sun.shadow.intensity=0;
++  // r180 stores the directional ShadowNode in compiled materials. Changing
++  // castShadow disposes that node while a cached draw may still refer to it.
++  // Retain one native shadow graph and schedule only the necessary depth passes.
++  if(nativeEnvironment){
++    renderer.shadowMap.enabled=true;
++    sun.shadow.autoUpdate=false;
++    sun.shadow.intensity=0;
++  }
+   Object.assign(sun.shadow.camera,{near:2,far:1250});
+   sun.shadow.mapSize.setScalar(nativeEnvironment?128:1024);
+   // The Atlas lights use its east/south plotting grid. Rotate both vectors into UTM.
+@@ -39,12 +41,12 @@
+       scene.background=nativeEnvironment.atlasBackdrop(horizon,renderer.toneMappingExposure);
+       sea.setReflectionSky(horizon);
+     }
+-    atlasDirection(atlasLights[mode].direction,direction);rim.intensity=atlasRim.intensity;
++    atlasDirection(atlasLights[mode].direction,direction);rim.visible=true;
+     sky.show(false);sea.setAtlasLight(mode,direction);
+     buildings.night.value=0;network.setNight(0);invalid=true;
+   }
+   function setHour(hour,date){
+-    atlasMode=false;rim.intensity=0;sky.show(true);
++    atlasMode=false;rim.visible=false;sky.show(true);
+     if(nativeEnvironment)sea.setReflectionSky(null);
+     atlasDirection(solarDirection(hour,date),direction);
+     light=T.MathUtils.smoothstep(direction.y,-.17,.21);
+@@ -71,8 +73,12 @@
+     const {enabled,extent,size:desiredSize}=plan;
+     if(shadowEnabled!==enabled){
+       shadowEnabled=enabled;invalid=true;
+-      sun.shadow.intensity=enabled?1:0;
+-      sun.shadow.needsUpdate=enabled;
++      if(nativeEnvironment){
++        sun.shadow.intensity=enabled?1:0;
++        sun.shadow.needsUpdate=enabled;
++      }else{
++        renderer.shadowMap.enabled=enabled;
++      }
+     }
+     if(enabled&&sun.shadow.mapSize.x!==desiredSize){
+       sun.shadow.mapSize.setScalar(desiredSize);

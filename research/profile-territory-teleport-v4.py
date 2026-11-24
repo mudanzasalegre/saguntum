@@ -62,7 +62,7 @@ def stacks_for_span(profile, nav_start, start_ms, stop_ms):
     return dict(exclusive=top(exclusive,8),inclusive=top(inclusive,7),stacks=top(stacks,7))
 
 
-def run(pw,base,engine,target,out,raw,study):
+def run(pw,base,engine,target,out,raw,study,light_reference=None):
     browser=pw.chromium.launch(channel='chrome')
     page=browser.new_page(viewport={'width':1000,'height':640},device_scale_factor=1)
     page.set_default_timeout(70000)
@@ -71,6 +71,18 @@ def run(pw,base,engine,target,out,raw,study):
     errors=[]
     page.on('pageerror',lambda e:errors.append(str(e)))
     page.on('console',lambda m:errors.append(m.text) if m.type=='error' else None)
+    if light_reference:
+        reference={name:(light_reference/name).read_bytes() for name in ('territory-atmosphere.js','territory-heritage.js')}
+        for module in ('territory-atmosphere.js','territory-heritage.js'):
+            page.route('**/js/'+module,lambda r:r.fulfill(body=reference[urlparse(r.request.url).path.rsplit('/',1)[-1]],content_type='text/javascript'))
+    if engine=='webgl2':
+        page.add_init_script("""(()=>{
+          window.coldProgramLinks=0;
+          const original=WebGL2RenderingContext.prototype.linkProgram;
+          WebGL2RenderingContext.prototype.linkProgram=function(program){
+            window.coldProgramLinks++;return original.call(this,program);
+          };
+        })()""")
     if study:
         prototype=study=='warm'
         root=Path(__file__).resolve().parents[1]
@@ -121,7 +133,7 @@ def run(pw,base,engine,target,out,raw,study):
     open_picker()
     dest=place(target)
     page.evaluate("""()=>{
-      const gaps=[],tasks=[],presented=[],seen=new Map();let last=performance.now(),display=last,start=0;
+      const gaps=[],tasks=[],presented=[],seen=new Map();let last=performance.now(),display=last,start=0,links=0,reused=0;
       window.coldPresented=now=>{presented.push([display,now]);display=now;};
       function tick(now){if(now>last)gaps.push([last,now]);last=now;
         const s=territoryStatus,h=s.heritage?.lastPreparation;
@@ -131,7 +143,9 @@ def run(pw,base,engine,target,out,raw,study):
       new PerformanceObserver(list=>{for(const e of list.getEntries())tasks.push([e.startTime,e.startTime+e.duration]);})
         .observe({type:'longtask',buffered:false});
       requestAnimationFrame(tick);
-      window.coldRoute={mark(){start=performance.now();},read(){return {start,end:performance.now(),gaps,tasks,presented,gate:window.coldWarmStats,
+      window.coldRoute={mark(){start=performance.now();links=window.coldProgramLinks||0;reused=territoryStatus.graphics.streamPrograms?.reused||0;},read(){return {start,end:performance.now(),gaps,tasks,presented,gate:window.coldWarmStats,
+        initialProgramLinks:links,programLinks:(window.coldProgramLinks||0)-links,
+        streamedPrograms:{initiallyReused:reused,atEnd:territoryStatus.graphics.streamPrograms?.reused??null},
         preparations:[...seen.values()],loaded:territoryStatus.heritage.loaded,
         engine:territoryStatus.graphics.active,pending:territoryStatus.pending};}};
     }""")
@@ -161,6 +175,10 @@ def run(pw,base,engine,target,out,raw,study):
                 longTasks=spans(data['tasks']),preparations=[dict(id=e['id'],ms=e['ms'],afterMs=round(e['at']-data['start'],1))
                     for e in data['preparations'] if e['at']>=data['start']])
     out.mkdir(parents=True,exist_ok=True)
+    report['streamedPrograms']=data['streamedPrograms']
+    if engine=='webgl2':
+        report['initialProgramLinks']=data['initialProgramLinks']
+        report['programLinksDuringTeleport']=data['programLinks']
     if study:
         gaps=[hi-max(data['start'],lo) for lo,hi in data['presented'] if data['start']<hi<=data['end']]
         report['presentedFrames']=len(gaps)
@@ -186,6 +204,7 @@ if __name__=='__main__':
     parser.add_argument('--out',type=Path,required=True)
     parser.add_argument('--raw',type=Path)
     parser.add_argument('--study',choices=['control','warm'])
+    parser.add_argument('--light-reference',type=Path,help='Directorio con las versiones de referencia de los dos módulos de luces para una comparación A/B.')
     args=parser.parse_args()
     with sync_playwright() as pw:
-        run(pw,args.base,args.engine,args.to,args.out,args.raw,args.study)
+        run(pw,args.base,args.engine,args.to,args.out,args.raw,args.study,args.light_reference)

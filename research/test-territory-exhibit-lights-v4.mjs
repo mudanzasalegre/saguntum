@@ -30,5 +30,10 @@ for(const count of [0,2,1,4,8,3,1,0]){
     assert.equal(slot.decay,source.decay);
   }
 }
+visits[0].light.castShadow=true;
+visits[0].light.layers.disable(0);
+lights.select(visits.slice(0,1));
+assert.ok(visits[0].light.layers.isEnabled(0));
+assert.equal(group.children[0].intensity,0);
 lights.dispose();assert.ok(!scene.getObjectByName('Iluminación patrimonial'));
 console.log('Luminarias patrimoniales verificadas en grupos de 2, 4 y 8.');

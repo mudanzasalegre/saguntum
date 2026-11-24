@@ -1,0 +1,197 @@
+{
+  "primera": {
+    "webgl2": {
+      "referencia": {
+        "msMaxRAF": 4251.5,
+        "msMayorIntervaloPresentado": 4266.1,
+        "programasEnlazadosAntes": null,
+        "programasEnlazadosDurante": null,
+        "reutilizacionProgramas": null,
+        "perfilCPUms": {
+          "other": 2000.8,
+          "idle": 355.3,
+          "sceneProbe": 3.1,
+          "webGLProgramInfoLog": 6421.3,
+          "garbageCollector": 98.4
+        },
+        "escenas": [
+          "horno",
+          "talleres",
+          "museo-industrial"
+        ],
+        "errores": []
+      },
+      "actual": {
+        "msMaxRAF": 1433.9,
+        "msMayorIntervaloPresentado": 1431.6,
+        "programasEnlazadosAntes": null,
+        "programasEnlazadosDurante": null,
+        "reutilizacionProgramas": null,
+        "perfilCPUms": {
+          "other": 2650.4,
+          "idle": 1644.9,
+          "sceneProbe": 1.2,
+          "webGLProgramInfoLog": 1655.5,
+          "garbageCollector": 121.1
+        },
+        "escenas": [
+          "horno",
+          "talleres",
+          "museo-industrial",
+          "pantalan"
+        ],
+        "errores": []
+      },
+      "comparacionAccesoHorno": {
+        "mediaRGB": 0.236,
+        "p95RGB": 0,
+        "fraccionPixelesConCambioSuperiorA10RGB": 0.00291,
+        "camaraIgual": true
+      }
+    },
+    "webgpu": {
+      "referencia": {
+        "msMaxRAF": 2134.1,
+        "msMayorIntervaloPresentado": null,
+        "programasEnlazadosAntes": null,
+        "programasEnlazadosDurante": null,
+        "reutilizacionProgramas": null,
+        "perfilCPUms": {
+          "other": 1524.2,
+          "idle": 1818.5,
+          "nativeRenderNodeBuild": 2960.2,
+          "sceneProbe": 1.1,
+          "garbageCollector": 286.3,
+          "packedMaskUpdate": 0.2
+        },
+        "escenas": [
+          "horno"
+        ],
+        "errores": []
+      },
+      "actual": {
+        "msMaxRAF": 1233.8,
+        "msMayorIntervaloPresentado": null,
+        "programasEnlazadosAntes": null,
+        "programasEnlazadosDurante": null,
+        "reutilizacionProgramas": null,
+        "perfilCPUms": {
+          "other": 1778.0,
+          "idle": 1830.0,
+          "nativeRenderNodeBuild": 2102.7,
+          "sceneProbe": 1.3,
+          "garbageCollector": 205.3,
+          "packedMaskUpdate": 0.3
+        },
+        "escenas": [
+          "horno",
+          "talleres"
+        ],
+        "errores": []
+      }
+    }
+  },
+  "segunda": {
+    "webgl2": {
+      "referencia": {
+        "msMaxRAF": 2717.6,
+        "msMayorIntervaloPresentado": 2720.5,
+        "programasEnlazadosAntes": 74,
+        "programasEnlazadosDurante": 44,
+        "reutilizacionProgramas": {
+          "initiallyReused": 2,
+          "atEnd": 3
+        },
+        "perfilCPUms": {
+          "other": 1540.1,
+          "idle": 254.5,
+          "sceneProbe": 1.8,
+          "webGLProgramInfoLog": 5946.7,
+          "garbageCollector": 46.6
+        },
+        "escenas": [
+          "horno"
+        ],
+        "errores": []
+      },
+      "actual": {
+        "msMaxRAF": 583.6,
+        "msMayorIntervaloPresentado": 605.6,
+        "programasEnlazadosAntes": 57,
+        "programasEnlazadosDurante": 11,
+        "reutilizacionProgramas": {
+          "initiallyReused": 2,
+          "atEnd": 5
+        },
+        "perfilCPUms": {
+          "other": 2550.5,
+          "idle": 1449.0,
+          "sceneProbe": 3.2,
+          "garbageCollector": 104.8,
+          "webGLProgramInfoLog": 1498.4
+        },
+        "escenas": [
+          "horno",
+          "talleres",
+          "museo-industrial",
+          "pantalan"
+        ],
+        "errores": []
+      },
+      "comparacionAccesoHorno": {
+        "mediaRGB": 0.147,
+        "p95RGB": 0,
+        "fraccionPixelesConCambioSuperiorA10RGB": 0.0023,
+        "camaraIgual": true
+      }
+    },
+    "webgpu": {
+      "referencia": {
+        "msMaxRAF": 3167.7,
+        "msMayorIntervaloPresentado": null,
+        "programasEnlazadosAntes": null,
+        "programasEnlazadosDurante": null,
+        "reutilizacionProgramas": {
+          "initiallyReused": 0,
+          "atEnd": null
+        },
+        "perfilCPUms": {
+          "other": 1463.5,
+          "idle": 1843.7,
+          "nativeRenderNodeBuild": 3268.6,
+          "sceneProbe": 3.1,
+          "garbageCollector": 292.8
+        },
+        "escenas": [
+          "horno"
+        ],
+        "errores": []
+      },
+      "actual": {
+        "msMaxRAF": 1050.5,
+        "msMayorIntervaloPresentado": null,
+        "programasEnlazadosAntes": null,
+        "programasEnlazadosDurante": null,
+        "reutilizacionProgramas": {
+          "initiallyReused": 0,
+          "atEnd": null
+        },
+        "perfilCPUms": {
+          "other": 2191.0,
+          "idle": 2142.4,
+          "nativeRenderNodeBuild": 2160.9,
+          "sceneProbe": 2.8,
+          "garbageCollector": 243.0,
+          "packedMaskUpdate": 0.2
+        },
+        "escenas": [
+          "horno",
+          "talleres",
+          "museo-industrial",
+          "pantalan"
+        ],
+        "errores": []
+      }
+    }
+  }
+}

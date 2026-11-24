@@ -18,6 +18,8 @@ export function heritageLights(scene){
       slot.visible=i<size;
       slot.intensity=source?.intensity??0;
       if(!source)continue;
+      // A future shadow-casting exhibit keeps its authored camera and maps.
+      if(source.castShadow){source.layers.enable(0);slot.intensity=0;continue;}
       slot.color.copy(source.color);slot.distance=source.distance;slot.decay=source.decay;
       slot.position.setFromMatrixPosition(source.matrixWorld);
     }
