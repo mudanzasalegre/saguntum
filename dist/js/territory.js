@@ -5,6 +5,7 @@ import {resource,territoryBase,networkBase,loadElevation,makeSampler,buildGround
 import {createHeritage} from './territory-heritage.js';
 import {movementLead} from './territory-stream-policy.js';
 import {qualityStep} from './territory-local-detail.js';
+import {inspectAdapter,rendererPlan,productionNative} from './territory-backend-policy.js';
 import {loadHeritageCatalog,registerFrame} from './territory-heritage-catalog.js';
 import {createTerritorySea} from './territory-sea.js';
 import {createBuildings} from './territory-stream.js';
@@ -204,6 +205,16 @@ export async function openSimulator(){
   $('quality').querySelector('[value="3"]').disabled=!graphics.ultra;
   tier=budget=graphics.initial;
   status.graphics=graphics;
+  $('engine-info').textContent=graphics.backend+' · Three.js r'+graphics.three+' · motor de producción';
+  $('gpu-probe').onclick=async()=>{
+    const button=$('gpu-probe');button.disabled=true;$('gpu-result').textContent='Comprobando adaptador…';
+    try{
+      const info=await inspectAdapter();graphics.adapter=info;
+      graphics.backendPlan=rendererPlan({secure:info.secure,adapter:info.available,software:info.software,candidate:productionNative});
+      $('gpu-result').textContent=info.reason+' · '+graphics.backendPlan.reason+'. El laboratorio realiza una prueba de render real.';
+    }finally{button.disabled=false;}
+  };
+  $('gpu-lab').onclick=()=>{save();nav?.input.release();const url=new URL('./graphics-lab.html',location.href);url.searchParams.set('return',location.hash);$('gpu-lab').href=url.href;};
   const scene=new T.Scene(),camera=new T.PerspectiveCamera(38,innerWidth/innerHeight,.2,65000);
   renderer.info.autoReset=false;
   renderer.outputColorSpace=T.SRGBColorSpace;renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=1.05;
@@ -432,7 +443,8 @@ export async function openSimulator(){
     const nearPlane=range>2600?3:range>450?.7:.12;
     if(camera.near!==nearPlane||lastFov!==camera.fov){camera.near=nearPlane;lastFov=camera.fov;camera.updateProjectionMatrix();}
     const contact=lighting==='solar'&&tier>=2&&peripheralPenalty<2&&(!mobile||tier===3)&&detail.range<520&&speed<65;
-    renderer.info.reset();render(scene,camera,contact);
+    renderer.info.reset();
+    try{render(scene,camera,contact,tier);}catch(error){console.error('Render territorial',error);lost=true;save();goToPlan();return;}
     markRendered();if(ms>0&&ms<1000)samples.push(ms);
     if(now-prevStats>900){
       const sorted=samples.sort((a,b)=>a-b),median=sorted[Math.floor(sorted.length/2)]||16;
@@ -442,7 +454,7 @@ export async function openSimulator(){
         geometries:renderer.info.memory.geometries,textures:renderer.info.memory.textures,frameMs:Math.round(median*10)/10,
         frameP95Ms:Math.round((sorted[Math.floor(sorted.length*.95)]||median)*10)/10,
         heapMiB:performance.memory?Math.round(performance.memory.usedJSHeapSize/1048576):null,heritage:heritage.stats,pending,localQuality:budget,peripheralQuality:peripheral,pixelScale});
-      Object.assign(graphics,{profile:qualityNames[tier],shadowSize:atmosphere.shadowSize,contact:contact&&renderer.extensions.has('EXT_color_buffer_float')});
+      Object.assign(graphics,{profile:qualityNames[tier],shadowSize:atmosphere.shadowSize,contact:render.stats?.active===true,contactStats:render.stats});
       $('stats').textContent=graphics.backend+' · '+graphics.profile+' · '+status.frameMs+' ms/fotograma · '+status.drawCalls+' llamadas · '+status.triangles.toLocaleString('es-ES')+' triángulos · '+status.geometries+' geometrías · '+status.textures+' texturas'+(status.heapMiB?' · JS '+status.heapMiB+' MiB':'')+' · carga inicial '+(status.loadMs/1000).toFixed(1)+' s';
       const visit=heritage.stats.visit;
       const reading=visit?.inspection?'Inspección marina':visit?.section?'Sección de la visita':visit?.mode==='historical'||historical?'Reconstrucción histórica':visit?.interior?'Interior de la visita':'Territorio actual';

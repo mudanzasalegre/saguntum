@@ -123,6 +123,7 @@ export async function buildGround(scene,grids,heightAt,renderer) {
       }
       p.div=want;p.block.dirty=true;
     }
+    if(changes.length)renderer.shadowMap.needsUpdate=true;
     for(const block of blocks.values())if(block.dirty){
       const g=block.mesh.geometry;let n=0;
       for(const p of block.parts)if(p.div===coarseDiv){g.index.array.set(block.source.subarray(p.start,p.end),n);n+=p.end-p.start;}

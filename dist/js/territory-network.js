@@ -23,6 +23,7 @@ export function createNetwork({scene,index,heightAt,heritage}){
   const sectors=new MetricGrid(index.tileSize||1000);
   for(const sector of index.tiles)indexBounds(sectors,sector,sector.bounds);
 
+  let shadowRevision=0;
   const stream=new SectorStream(index.tiles,async sector=>{
     const [data,prepared,fronts]=await Promise.all([resource(networkBase+sector.url),propsReady.catch(()=>null),loadStreetFronts(sector)]);
     const rg=new T.Group(),vg=new T.Group(),solids=new MetricGrid(12),decks=new MetricGrid(16),publicWays=new MetricGrid(48);
@@ -45,8 +46,9 @@ export function createNetwork({scene,index,heightAt,heritage}){
       const halfX=size[0]*scale,halfZ=size[1]*scale,reach=Math.hypot(halfX,halfZ);
       indexBounds(solids,{...o,y,halfX,halfZ,height:size[2]*scale,c:Math.cos(yaw),s:Math.sin(yaw)},[o.x-reach,o.z-reach,o.x+reach,o.z+reach]);
     });
-    streets.add(rg);green.add(vg);return {rg,vg,roads:data.roads,refresh,decks,publicWays,solids};
+    streets.add(rg);green.add(vg);shadowRevision++;return {rg,vg,roads:data.roads,refresh,decks,publicWays,solids};
   },tile=>{
+    shadowRevision++;
     for(const g of [tile.rg,tile.vg]){g.removeFromParent();g.traverse(m=>{if(m.isInstancedMesh)m.dispose();else if(m.geometry)m.geometry.dispose();});}
   },2);
 
@@ -167,7 +169,7 @@ export function createNetwork({scene,index,heightAt,heritage}){
     object.count=count;object.instanceMatrix.needsUpdate=true;if(!car)stride.needsUpdate=true;
   }
 
-  return {streets,green,stream,get traffic(){return {cars:cars.count,people:walkers.count};},
+  return {streets,green,stream,get shadowRevision(){return shadowRevision;},get traffic(){return {cars:cars.count,people:walkers.count};},
     update(x,z,alt,budget,flags,hint=null){
       observer=[x,z];
       stream.update(x,z,alt>1800?0:[620,1050,1500][budget],alt>1800?0:[6,12,20][budget],hint);graph(x,z);

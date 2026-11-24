@@ -33,7 +33,7 @@ export function createBuildings({scene,world,grids,heritage,photography}) {
   const group=new T.Group(), requests=new Map();
   const compact=matchMedia('(pointer: coarse)').matches||(navigator.deviceMemory||8)<=4;
   const night={value:0};
-  let mat;
+  let mat,shadowRevision=0;
   const aerialMat=skylineMaterial(photography);
   const worker=new Worker(new URL('./territory-building-worker.js',import.meta.url),{type:'module'});
   worker.postMessage({grids});
@@ -69,7 +69,7 @@ export function createBuildings({scene,world,grids,heritage,photography}) {
     tile.footprints=footprintGrid(tile.rows);tile.detailChunks=facadeChunks(s.id,tile.rows);
     return tile;
   },v=>{
-    group.remove(v.mesh);v.mesh.geometry.dispose();
+    group.remove(v.mesh);v.mesh.geometry.dispose();shadowRevision++;
   },2);
   let maskStamp=0,detailRevision=0,detailIds=new Set(),active=new Set(),desired=new Map(),busy=false,incoming=null;
   let cacheBytes=0,byteLimit=9*1048576,sourceKey='',hits=0,builds=0,evictions=0,refused=0,peakBytes=0;
@@ -109,7 +109,7 @@ export function createBuildings({scene,world,grids,heritage,photography}) {
       if(next.has(key))mask(item.tile);
     }
     const changed=next.size!==active.size||[...next].some(k=>!active.has(k));
-    active=next;detailIds=ids;if(changed)detailRevision++;
+    active=next;detailIds=ids;if(changed){detailRevision++;shadowRevision++;}
   }
   function updateDetail(x,z,range,budget,view){
     byteLimit=detailLimits(budget,range,compact).bytes;
@@ -202,7 +202,7 @@ export function createBuildings({scene,world,grids,heritage,photography}) {
   const ready=startAerial();
   const facades=nearFacades(group);
   scene.add(group);
-  return {group,stream,ready,night,get aerialStats(){return aerialStats;},get fabricStats(){return {buildings:detailIds.size,openings:[...active].reduce((n,k)=>n+(cache.get(k)?.openings||0),0),loading:busy||!!incoming,stagedBytes:incoming?.bytes||0,chunks:active.size,cached:cache.size,bytes:cacheBytes,byteLimit,peakBytes,hits,builds,evictions,refused};},changed(){maskStamp++;},
+  return {group,stream,ready,night,get aerialStats(){return aerialStats;},get shadowRevision(){return shadowRevision;},get fabricStats(){return {buildings:detailIds.size,openings:[...active].reduce((n,k)=>n+(cache.get(k)?.openings||0),0),loading:busy||!!incoming,stagedBytes:incoming?.bytes||0,chunks:active.size,cached:cache.size,bytes:cacheBytes,byteLimit,peakBytes,hits,builds,evictions,refused};},changed(){maskStamp++;shadowRevision++;},
     update(x,z,alt,budget,hint=null,view=null,peripheral=budget){
       const radius=alt>2200?0:(peripheral===0?650:peripheral===1?1050:1500);
       stream.update(x,z,radius,alt>2200?0:[12,24,42][peripheral],hint);
@@ -210,7 +210,7 @@ export function createBuildings({scene,world,grids,heritage,photography}) {
       if(key!==sourceKey){sourceKey=key;worker.postMessage({retain:retained});}
       updateDetail(x,z,alt,budget,view);
       for(const v of overview)mask(v,true);
-      for(const v of stream.live.values()){mask(v);v.mesh.visible=true;}
+      for(const v of stream.live.values()){mask(v);if(!v.mesh.visible){v.mesh.visible=true;shadowRevision++;}}
       facades(x,z,alt,budget,stream.live,r=>!heritage.isReplaced(r.id,r.x,r.z,r.rings),maskStamp,view);
     },
     safeToWalk(x,z,radius=.32){

@@ -1,4 +1,5 @@
 import * as T from 'three';
+import {rendererPlan,productionNative,parityFeatures} from './territory-backend-policy.js';
 
 // Water.onBeforeRender uses the WebGL render target API. The buildings, ground
 // and original Atlas materials also depend on GLSL chunks and onBeforeCompile.
@@ -9,9 +10,11 @@ const requirements=[
   {name:'cortes de terreno y ortofoto',backends:['webgl2']}
 ];
 export function createTerritoryRenderer(mobile){
-  const backend=['webgpu','webgl2'].find(id=>
-    (id!=='webgpu'||navigator.gpu)&&requirements.every(effect=>effect.backends.includes(id)));
-  if(backend!=='webgl2')throw Error('El motor disponible no cubre los materiales del territorio.');
+  // The complete simulator must stay on the original renderer until every
+  // authored effect has a verified native counterpart. The separate lab
+  // exercises the actual WebGPU/TSL renderer, without a second live context.
+  const plan=rendererPlan({secure:globalThis.isSecureContext,adapter:false,candidate:productionNative});
+  if(plan.preferred!=='webgl2')throw Error('Falta la entrada de producción WebGPU.');
   const renderer=new T.WebGLRenderer({antialias:!mobile,powerPreference:mobile?'default':'high-performance'});
   const caps=renderer.capabilities;
   const memory=navigator.deviceMemory,threads=navigator.hardwareConcurrency;
@@ -21,7 +24,7 @@ export function createTerritoryRenderer(mobile){
   const autoLimit=constrained?1:2;
   const initial=Math.min(autoLimit,mobile||innerWidth*innerHeight*devicePixelRatio**2>5500000?1:2);
   const info={backend:'WebGL 2',three:T.REVISION,webgpuExposed:!!navigator.gpu,
-    webgpuIncompatible:requirements.filter(r=>!r.backends.includes('webgpu')).map(r=>r.name),ultra,autoLimit,initial};
+    webgpuIncompatible:requirements.filter(r=>!r.backends.includes('webgpu')).map(r=>r.name),backendPlan:plan,webgpuParity:parityFeatures.map(key=>({key,verified:productionNative.verified[key]===true})),ultra,autoLimit,initial};
   return {renderer,info};
 }
 
