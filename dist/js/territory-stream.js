@@ -71,7 +71,7 @@ export function createBuildings({scene,world,grids,heritage,photography}) {
   },v=>{
     group.remove(v.mesh);v.mesh.geometry.dispose();
   },2);
-  let maskStamp=0,detailRevision=0,detailIds=new Set(),active=new Set(),desired=new Map(),busy=false;
+  let maskStamp=0,detailRevision=0,detailIds=new Set(),active=new Set(),desired=new Map(),busy=false,incoming=null;
   let cacheBytes=0,byteLimit=9*1048576,sourceKey='',hits=0,builds=0,evictions=0,refused=0,peakBytes=0;
   const cache=new Map(),retryDetail=new Map();
   function mask(v,far=false){
@@ -101,7 +101,7 @@ export function createBuildings({scene,world,grids,heritage,photography}) {
     for(const [key,g] of desired){
       const item=cache.get(key);
       if(!item||!stream.live.has(g.sector))continue;
-      item.used=performance.now();next.add(key);
+      item.used=performance.now();item.shown=true;next.add(key);
       for(const r of item.tile.rows)ids.add(r.id);
     }
     for(const [key,item] of cache){
@@ -123,10 +123,30 @@ export function createBuildings({scene,world,grids,heritage,photography}) {
       if(cacheBytes<=byteLimit)break;evict(g.key);
     }
     const now=performance.now();
+    // Commit worker replies only during this update, together with the base
+    // mesh masks. Higher-priority desired detail may evict a lower-priority
+    // batch without a rendered frame in which neither representation exists.
+    if(incoming){
+      const {chunk,data,bytes}=incoming;incoming=null;
+      if(stream.live.has(chunk.sector)){
+        let fits=bytes<=byteLimit&&trim(bytes);
+        const rank=selected.findIndex(g=>g.key===chunk.key);
+        if(!fits&&bytes<=byteLimit&&rank>=0){
+          for(const lower of selected.slice(rank+1).reverse()){
+            evict(lower.key);if(trim(bytes)){fits=true;break;}
+          }
+        }
+        if(fits){
+          const tile=mesh(data,chunk.key,false);tile.detail=true;
+          cache.set(chunk.key,{tile,sector:chunk.sector,bytes,used:now,openings:data.openings||0,shown:false});
+          cacheBytes+=bytes;peakBytes=Math.max(peakBytes,cacheBytes);builds++;
+        }else if(rank>=0){refused++;retryDetail.set(chunk.key,now+12000);}
+      }
+    }
     for(const [key,until] of retryDetail)if(until<=now||!stream.live.has(key.split('/')[0]))retryDetail.delete(key);
-    for(const [key] of desired)if(cache.has(key)&&!active.has(key))hits++;
+    for(const [key] of desired)if(cache.get(key)?.shown&&!active.has(key))hits++;
     publishDetails();
-    if(busy)return;
+    if(busy||incoming)return;
     const next=selected.find(g=>!cache.has(g.key)&&!(retryDetail.get(g.key)>now));
     if(!next)return;
     busy=true;
@@ -140,12 +160,8 @@ export function createBuildings({scene,world,grids,heritage,photography}) {
       if(!stream.live.has(next.sector))return;
       if(!data.rows.length){retryDetail.set(next.key,performance.now()+45000);return;}
       const bytes=detailBytes(data);
-      if(bytes>byteLimit||!trim(bytes)){
-        refused++;retryDetail.set(next.key,performance.now()+12000);return;
-      }
-      const tile=mesh(data,next.key,false);tile.detail=true;
-      cache.set(next.key,{tile,sector:next.sector,bytes,used:performance.now(),openings:data.openings||0});
-      cacheBytes+=bytes;peakBytes=Math.max(peakBytes,cacheBytes);builds++;
+      if(bytes>byteLimit){refused++;retryDetail.set(next.key,performance.now()+12000);return;}
+      incoming={chunk:next,data,bytes};
     }).catch(error=>{
       retryDetail.set(next.key,performance.now()+12000);
       console.warn('Detalle de fachadas',error);
@@ -186,7 +202,7 @@ export function createBuildings({scene,world,grids,heritage,photography}) {
   const ready=startAerial();
   const facades=nearFacades(group);
   scene.add(group);
-  return {group,stream,ready,night,get aerialStats(){return aerialStats;},get fabricStats(){return {buildings:detailIds.size,openings:[...active].reduce((n,k)=>n+(cache.get(k)?.openings||0),0),loading:busy,chunks:active.size,cached:cache.size,bytes:cacheBytes,byteLimit,peakBytes,hits,builds,evictions,refused};},changed(){maskStamp++;},
+  return {group,stream,ready,night,get aerialStats(){return aerialStats;},get fabricStats(){return {buildings:detailIds.size,openings:[...active].reduce((n,k)=>n+(cache.get(k)?.openings||0),0),loading:busy||!!incoming,stagedBytes:incoming?.bytes||0,chunks:active.size,cached:cache.size,bytes:cacheBytes,byteLimit,peakBytes,hits,builds,evictions,refused};},changed(){maskStamp++;},
     update(x,z,alt,budget,hint=null,view=null,peripheral=budget){
       const radius=alt>2200?0:(peripheral===0?650:peripheral===1?1050:1500);
       stream.update(x,z,radius,alt>2200?0:[12,24,42][peripheral],hint);
