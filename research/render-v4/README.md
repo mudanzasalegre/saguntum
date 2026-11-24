@@ -34,3 +34,7 @@ python research/compare-renderer-v4.py
 ```
 
 Los intervalos guardados junto a las capturas sirven para comprobar que cada vista dibujó varios fotogramas. Estas sesiones coincidieron con otras pruebas. Para medir fluidez y retención hay un recorrido independiente que ejecuta los motores de forma sucesiva. [Programa del recorrido](../check-navigation-benchmark-v4.py)
+
+## Primer traslado al Puerto
+
+En el primer salto desde Sagunto al Puerto, Chrome registró un fotograma WebGL 2 de 4,35 s. De ese tiempo, 3,71 s transcurrieron dentro de la consulta del estado de enlace de un programa gráfico. En la sesión WebGPU, Three.js dedicó 3,04 s de una ventana de 6,58 s a construir en CPU los nodos de los materiales para dibujarlos. Preparar el modelo del Alto Horno llevó 0,60 s en WebGL y 0,63 s en WebGPU. Son capturas independientes del recorrido de tres vueltas. Permiten distinguir la preparación de la geometría del coste de dibujar un material por primera vez. [Perfil WebGL 2](perfil-traslado/webgl2.json) · [Perfil WebGPU](perfil-traslado/webgpu.json) · [Programa de captura](../profile-territory-teleport-v4.py)

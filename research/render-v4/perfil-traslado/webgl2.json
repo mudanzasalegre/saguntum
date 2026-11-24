@@ -1,0 +1,830 @@
+{
+  "engine": "webgl2",
+  "chrome": "156.0.8078.47",
+  "fromPlace": "Sagunto histórico",
+  "toPlace": "Puerto de Sagunto",
+  "viewport": [
+    1000,
+    640
+  ],
+  "samplingIntervalUs": 1000,
+  "errors": [],
+  "loaded": [
+    "horno",
+    "talleres",
+    "museo-industrial"
+  ],
+  "elapsedMs": 8700.7,
+  "maxFrames": [
+    {
+      "afterMs": 789.8,
+      "durationMs": 4351.4,
+      "exclusive": [
+        {
+          "ms": 3705.2,
+          "frame": "getProgramInfoLog"
+        },
+        {
+          "ms": 47.4,
+          "frame": "three.core.js:18744 Float32BufferAttribute"
+        },
+        {
+          "ms": 40.9,
+          "frame": "horno.js:59 geom"
+        },
+        {
+          "ms": 31.2,
+          "frame": "(garbage collector)"
+        },
+        {
+          "ms": 30.8,
+          "frame": "three.core.js:19832 toNonIndexed"
+        },
+        {
+          "ms": 28.4,
+          "frame": "bufferData"
+        },
+        {
+          "ms": 25.7,
+          "frame": "horno.js:48 texture"
+        },
+        {
+          "ms": 23.4,
+          "frame": "three.core.js:30837 PolyhedronGeometry"
+        }
+      ],
+      "inclusive": [
+        {
+          "ms": 3795.5,
+          "frame": "territory.js:447 frame"
+        },
+        {
+          "ms": 3793.9,
+          "frame": "three.module.js:16363 WebGLRenderer.render"
+        },
+        {
+          "ms": 3793.9,
+          "frame": "territory-contact.js:62 render"
+        },
+        {
+          "ms": 3756.6,
+          "frame": "three.module.js:15935 WebGLRenderer.renderBufferDirect"
+        },
+        {
+          "ms": 3755.9,
+          "frame": "three.module.js:16663 renderScene"
+        },
+        {
+          "ms": 3755.8,
+          "frame": "three.module.js:16814 renderObjects"
+        },
+        {
+          "ms": 3755.8,
+          "frame": "three.module.js:16843 renderObject"
+        }
+      ],
+      "stacks": [
+        {
+          "ms": 3705.2,
+          "frame": "getProgramInfoLog ← three.module.js:6491 onFirstUse ← three.module.js:6590 WebGLProgram.getUniforms ← three.module.js:17021 setProgram ← three.module.js:15935 WebGLRenderer.renderBufferDirect ← three.module.js:16843 renderObject ← three.module.js:16814 renderObjects ← three.module.js:16663 renderScene"
+        },
+        {
+          "ms": 31.2,
+          "frame": "(garbage collector)"
+        },
+        {
+          "ms": 28.4,
+          "frame": "bufferData ← three.module.js:65 createBuffer ← three.module.js:241 update ← three.module.js:3878 update ← three.module.js:4326 update ← three.module.js:16549 projectObject ← three.module.js:16549 projectObject ← three.module.js:16549 projectObject"
+        },
+        {
+          "ms": 25.7,
+          "frame": "horno.js:48 texture ← horno.js:79 createHorno ← territory-heritage-models.js:242 buildHeritageModel"
+        },
+        {
+          "ms": 15.7,
+          "frame": "horno.js:59 geom ← horno.js:60 raw ← horno.js:69 annulus ← horno.js:79 createHorno ← territory-heritage-models.js:242 buildHeritageModel"
+        },
+        {
+          "ms": 15.5,
+          "frame": "three.core.js:18744 Float32BufferAttribute ← horno.js:64 finish ← horno.js:79 createHorno ← territory-heritage-models.js:242 buildHeritageModel"
+        },
+        {
+          "ms": 12.5,
+          "frame": "three.core.js:30456 CylinderGeometry ← horno.js:63 beam ← horno.js:79 createHorno ← territory-heritage-models.js:242 buildHeritageModel"
+        }
+      ]
+    },
+    {
+      "afterMs": 5141.2,
+      "durationMs": 1700.6,
+      "exclusive": [
+        {
+          "ms": 1639.3,
+          "frame": "getProgramInfoLog"
+        },
+        {
+          "ms": 8.7,
+          "frame": "territory-ground.js:68 patch"
+        },
+        {
+          "ms": 4.7,
+          "frame": "territory-stream.js:84 mask"
+        },
+        {
+          "ms": 4.4,
+          "frame": "territory-heritage.js:299 isReplaced"
+        },
+        {
+          "ms": 3.1,
+          "frame": "territory-heritage-ground.js:50 tile"
+        },
+        {
+          "ms": 3.1,
+          "frame": "three.module.js:1656 getBindingState"
+        },
+        {
+          "ms": 2.7,
+          "frame": "(program)"
+        },
+        {
+          "ms": 1.6,
+          "frame": "getShaderInfoLog"
+        }
+      ],
+      "inclusive": [
+        {
+          "ms": 1694.7,
+          "frame": "territory.js:447 frame"
+        },
+        {
+          "ms": 1662.0,
+          "frame": "territory-contact.js:62 render"
+        },
+        {
+          "ms": 1661.7,
+          "frame": "three.module.js:16363 WebGLRenderer.render"
+        },
+        {
+          "ms": 1659.7,
+          "frame": "three.module.js:15935 WebGLRenderer.renderBufferDirect"
+        },
+        {
+          "ms": 1655.1,
+          "frame": "three.module.js:17021 setProgram"
+        },
+        {
+          "ms": 1650.3,
+          "frame": "three.module.js:16663 renderScene"
+        },
+        {
+          "ms": 1650.3,
+          "frame": "three.module.js:16814 renderObjects"
+        }
+      ],
+      "stacks": [
+        {
+          "ms": 1631.4,
+          "frame": "getProgramInfoLog ← three.module.js:6491 onFirstUse ← three.module.js:6590 WebGLProgram.getUniforms ← three.module.js:17021 setProgram ← three.module.js:15935 WebGLRenderer.renderBufferDirect ← three.module.js:16843 renderObject ← three.module.js:16814 renderObjects ← three.module.js:16663 renderScene"
+        },
+        {
+          "ms": 8.7,
+          "frame": "territory-ground.js:68 patch ← territory-ground.js:108 update ← territory.js:447 frame"
+        },
+        {
+          "ms": 7.8,
+          "frame": "getProgramInfoLog ← three.module.js:6491 onFirstUse ← three.module.js:6590 WebGLProgram.getUniforms ← three.module.js:17021 setProgram ← three.module.js:15935 WebGLRenderer.renderBufferDirect ← three.module.js:8731 renderObject ← three.module.js:8731 renderObject ← three.module.js:8731 renderObject"
+        },
+        {
+          "ms": 4.7,
+          "frame": "territory-stream.js:84 mask ← territory-stream.js:226 update ← territory.js:447 frame"
+        },
+        {
+          "ms": 4.4,
+          "frame": "territory-heritage.js:299 isReplaced ← territory-stream.js:84 mask ← territory-stream.js:226 update ← territory.js:447 frame"
+        },
+        {
+          "ms": 3.1,
+          "frame": "territory-heritage-ground.js:50 tile ← territory-heritage-ground.js:65 update ← territory-ground.js:108 update ← territory.js:447 frame"
+        },
+        {
+          "ms": 2.7,
+          "frame": "(program)"
+        }
+      ]
+    },
+    {
+      "afterMs": 189.5,
+      "durationMs": 533.5,
+      "exclusive": [
+        {
+          "ms": 405.5,
+          "frame": "getProgramInfoLog"
+        },
+        {
+          "ms": 43.8,
+          "frame": "texSubImage2D"
+        },
+        {
+          "ms": 35.8,
+          "frame": "territory-ground.js:68 patch"
+        },
+        {
+          "ms": 3.2,
+          "frame": "territory-stream.js:84 mask"
+        },
+        {
+          "ms": 3.1,
+          "frame": "territory-heritage.js:299 isReplaced"
+        },
+        {
+          "ms": 3.1,
+          "frame": "three.core.js:5532 fromBufferAttribute"
+        },
+        {
+          "ms": 1.9,
+          "frame": "three.module.js:2116 releaseStatesOfProgram"
+        },
+        {
+          "ms": 1.6,
+          "frame": "territory-map.js:14 background"
+        }
+      ],
+      "inclusive": [
+        {
+          "ms": 529.2,
+          "frame": "territory.js:447 frame"
+        },
+        {
+          "ms": 463.9,
+          "frame": "three.module.js:16363 WebGLRenderer.render"
+        },
+        {
+          "ms": 463.9,
+          "frame": "territory-contact.js:62 render"
+        },
+        {
+          "ms": 458.9,
+          "frame": "three.module.js:17021 setProgram"
+        },
+        {
+          "ms": 458.9,
+          "frame": "three.module.js:15935 WebGLRenderer.renderBufferDirect"
+        },
+        {
+          "ms": 408.6,
+          "frame": "three.module.js:6590 WebGLProgram.getUniforms"
+        },
+        {
+          "ms": 408.6,
+          "frame": "three.module.js:6491 onFirstUse"
+        }
+      ],
+      "stacks": [
+        {
+          "ms": 390.8,
+          "frame": "getProgramInfoLog ← three.module.js:6491 onFirstUse ← three.module.js:6590 WebGLProgram.getUniforms ← three.module.js:17021 setProgram ← three.module.js:15935 WebGLRenderer.renderBufferDirect ← three.module.js:16843 renderObject ← three.module.js:16814 renderObjects ← three.module.js:16663 renderScene"
+        },
+        {
+          "ms": 43.8,
+          "frame": "texSubImage2D ← three.module.js:9825 texSubImage2D ← three.module.js:10998 uploadTexture ← three.module.js:10655 setTexture2D ← three.module.js:4964 setValueT1 ← three.module.js:5536 upload ← three.module.js:17021 setProgram ← three.module.js:15935 WebGLRenderer.renderBufferDirect"
+        },
+        {
+          "ms": 35.8,
+          "frame": "territory-ground.js:68 patch ← territory-ground.js:108 update ← territory.js:447 frame"
+        },
+        {
+          "ms": 14.7,
+          "frame": "getProgramInfoLog ← three.module.js:6491 onFirstUse ← three.module.js:6590 WebGLProgram.getUniforms ← three.module.js:17021 setProgram ← three.module.js:15935 WebGLRenderer.renderBufferDirect ← three.module.js:8731 renderObject ← three.module.js:8731 renderObject ← three.module.js:8731 renderObject"
+        },
+        {
+          "ms": 3.2,
+          "frame": "territory-stream.js:84 mask ← territory-stream.js:226 update ← territory.js:447 frame"
+        },
+        {
+          "ms": 3.1,
+          "frame": "territory-heritage.js:299 isReplaced ← territory-stream.js:84 mask ← territory-stream.js:226 update ← territory.js:447 frame"
+        },
+        {
+          "ms": 3.1,
+          "frame": "three.core.js:5532 fromBufferAttribute ← three.core.js:19714 computeVertexNormals ← territory-ground.js:68 patch ← territory-ground.js:108 update ← territory.js:447 frame"
+        }
+      ]
+    },
+    {
+      "afterMs": 7875.6,
+      "durationMs": 333.4,
+      "exclusive": [
+        {
+          "ms": 300.6,
+          "frame": "getProgramInfoLog"
+        },
+        {
+          "ms": 7.7,
+          "frame": "bufferData"
+        },
+        {
+          "ms": 3.6,
+          "frame": "three.core.js:4920 max"
+        },
+        {
+          "ms": 3.4,
+          "frame": "three.core.js:5296 distanceToSquared"
+        },
+        {
+          "ms": 3.1,
+          "frame": "three.module.js:16874 getProgram"
+        },
+        {
+          "ms": 2.7,
+          "frame": "three.module.js:16549 projectObject"
+        },
+        {
+          "ms": 1.7,
+          "frame": "three.core.js:4903 min"
+        },
+        {
+          "ms": 1.6,
+          "frame": "shaderSource"
+        }
+      ],
+      "inclusive": [
+        {
+          "ms": 332.2,
+          "frame": "territory.js:447 frame"
+        },
+        {
+          "ms": 332.2,
+          "frame": "three.module.js:16363 WebGLRenderer.render"
+        },
+        {
+          "ms": 332.2,
+          "frame": "territory-contact.js:62 render"
+        },
+        {
+          "ms": 311.6,
+          "frame": "coast-environment.js:22 water.onBeforeRender"
+        },
+        {
+          "ms": 311.6,
+          "frame": "three.module.js:16663 renderScene"
+        },
+        {
+          "ms": 311.6,
+          "frame": "three.module.js:16814 renderObjects"
+        },
+        {
+          "ms": 311.6,
+          "frame": "Water.js:237 Water.scope.onBeforeRender"
+        }
+      ],
+      "stacks": [
+        {
+          "ms": 300.6,
+          "frame": "getProgramInfoLog ← three.module.js:6491 onFirstUse ← three.module.js:6590 WebGLProgram.getUniforms ← three.module.js:17021 setProgram ← three.module.js:15935 WebGLRenderer.renderBufferDirect ← three.module.js:16843 renderObject ← three.module.js:16814 renderObjects ← three.module.js:16663 renderScene"
+        },
+        {
+          "ms": 7.7,
+          "frame": "bufferData ← three.module.js:65 createBuffer ← three.module.js:241 update ← three.module.js:3878 update ← three.module.js:4326 update ← three.module.js:16549 projectObject ← three.module.js:16549 projectObject ← three.module.js:16549 projectObject"
+        },
+        {
+          "ms": 3.6,
+          "frame": "three.core.js:4920 max ← three.core.js:9675 expandByPoint ← three.core.js:9518 setFromBufferAttribute ← three.core.js:19430 computeBoundingSphere ← three.core.js:26484 intersectsObject ← three.module.js:16549 projectObject ← three.module.js:16549 projectObject ← three.module.js:16549 projectObject"
+        },
+        {
+          "ms": 3.4,
+          "frame": "three.core.js:5296 distanceToSquared ← three.core.js:19430 computeBoundingSphere ← three.core.js:26484 intersectsObject ← three.module.js:16549 projectObject ← three.module.js:16549 projectObject ← three.module.js:16549 projectObject ← three.module.js:16549 projectObject ← three.module.js:16363 WebGLRenderer.render"
+        },
+        {
+          "ms": 3.1,
+          "frame": "three.module.js:16874 getProgram ← three.module.js:17021 setProgram ← three.module.js:15935 WebGLRenderer.renderBufferDirect ← three.module.js:16843 renderObject ← three.module.js:16814 renderObjects ← three.module.js:16663 renderScene ← three.module.js:16363 WebGLRenderer.render ← Water.js:237 Water.scope.onBeforeRender"
+        },
+        {
+          "ms": 1.6,
+          "frame": "shaderSource ← three.module.js:5571 WebGLShader ← three.module.js:6048 WebGLProgram ← three.module.js:7370 acquireProgram ← three.module.js:16874 getProgram ← three.module.js:17021 setProgram ← three.module.js:15935 WebGLRenderer.renderBufferDirect ← three.module.js:16843 renderObject"
+        },
+        {
+          "ms": 1.6,
+          "frame": "territory-heritage-section.js:23 m.onBeforeCompile ← three.module.js:16874 getProgram ← three.module.js:17021 setProgram ← three.module.js:15935 WebGLRenderer.renderBufferDirect ← three.module.js:16843 renderObject ← three.module.js:16814 renderObjects ← three.module.js:16663 renderScene ← three.module.js:16363 WebGLRenderer.render"
+        }
+      ]
+    }
+  ],
+  "longTasks": [
+    {
+      "afterMs": 1347.6,
+      "durationMs": 3800.0,
+      "exclusive": [
+        {
+          "ms": 3707.4,
+          "frame": "getProgramInfoLog"
+        },
+        {
+          "ms": 28.4,
+          "frame": "bufferData"
+        },
+        {
+          "ms": 10.4,
+          "frame": "shaderSource"
+        },
+        {
+          "ms": 6.3,
+          "frame": "getShaderInfoLog"
+        },
+        {
+          "ms": 5.2,
+          "frame": "three.module.js:5805 replaceLightNums"
+        },
+        {
+          "ms": 3.1,
+          "frame": "three.module.js:16874 getProgram"
+        },
+        {
+          "ms": 3.1,
+          "frame": "three.module.js:5836 resolveIncludes"
+        },
+        {
+          "ms": 2.5,
+          "frame": "three.module.js:15935 WebGLRenderer.renderBufferDirect"
+        }
+      ],
+      "inclusive": [
+        {
+          "ms": 3796.2,
+          "frame": "territory.js:447 frame"
+        },
+        {
+          "ms": 3794.6,
+          "frame": "three.module.js:16363 WebGLRenderer.render"
+        },
+        {
+          "ms": 3794.6,
+          "frame": "territory-contact.js:62 render"
+        },
+        {
+          "ms": 3760.4,
+          "frame": "three.module.js:15935 WebGLRenderer.renderBufferDirect"
+        },
+        {
+          "ms": 3759.7,
+          "frame": "three.module.js:16663 renderScene"
+        },
+        {
+          "ms": 3759.5,
+          "frame": "three.module.js:16814 renderObjects"
+        },
+        {
+          "ms": 3759.5,
+          "frame": "three.module.js:16843 renderObject"
+        }
+      ],
+      "stacks": [
+        {
+          "ms": 3707.4,
+          "frame": "getProgramInfoLog ← three.module.js:6491 onFirstUse ← three.module.js:6590 WebGLProgram.getUniforms ← three.module.js:17021 setProgram ← three.module.js:15935 WebGLRenderer.renderBufferDirect ← three.module.js:16843 renderObject ← three.module.js:16814 renderObjects ← three.module.js:16663 renderScene"
+        },
+        {
+          "ms": 28.4,
+          "frame": "bufferData ← three.module.js:65 createBuffer ← three.module.js:241 update ← three.module.js:3878 update ← three.module.js:4326 update ← three.module.js:16549 projectObject ← three.module.js:16549 projectObject ← three.module.js:16549 projectObject"
+        },
+        {
+          "ms": 10.4,
+          "frame": "shaderSource ← three.module.js:5571 WebGLShader ← three.module.js:6048 WebGLProgram ← three.module.js:7370 acquireProgram ← three.module.js:16874 getProgram ← three.module.js:17021 setProgram ← three.module.js:15935 WebGLRenderer.renderBufferDirect ← three.module.js:16843 renderObject"
+        },
+        {
+          "ms": 6.3,
+          "frame": "getShaderInfoLog ← three.module.js:6491 onFirstUse ← three.module.js:6590 WebGLProgram.getUniforms ← three.module.js:17021 setProgram ← three.module.js:15935 WebGLRenderer.renderBufferDirect ← three.module.js:16843 renderObject ← three.module.js:16814 renderObjects ← three.module.js:16663 renderScene"
+        },
+        {
+          "ms": 5.2,
+          "frame": "three.module.js:5805 replaceLightNums ← three.module.js:6048 WebGLProgram ← three.module.js:7370 acquireProgram ← three.module.js:16874 getProgram ← three.module.js:17021 setProgram ← three.module.js:15935 WebGLRenderer.renderBufferDirect ← three.module.js:16843 renderObject ← three.module.js:16814 renderObjects"
+        },
+        {
+          "ms": 3.1,
+          "frame": "three.module.js:5836 resolveIncludes ← three.module.js:6048 WebGLProgram ← three.module.js:7370 acquireProgram ← three.module.js:16874 getProgram ← three.module.js:17021 setProgram ← three.module.js:15935 WebGLRenderer.renderBufferDirect ← three.module.js:16843 renderObject ← three.module.js:16814 renderObjects"
+        },
+        {
+          "ms": 1.6,
+          "frame": "three.module.js:16814 renderObjects ← three.module.js:16663 renderScene ← three.module.js:16363 WebGLRenderer.render ← Water.js:237 Water.scope.onBeforeRender ← coast-environment.js:22 water.onBeforeRender ← territory-sea.js:51 env.water.onBeforeRender ← three.module.js:16843 renderObject ← three.module.js:16814 renderObjects"
+        }
+      ]
+    },
+    {
+      "afterMs": 5151.1,
+      "durationMs": 1702.0,
+      "exclusive": [
+        {
+          "ms": 1644.0,
+          "frame": "getProgramInfoLog"
+        },
+        {
+          "ms": 8.7,
+          "frame": "territory-ground.js:68 patch"
+        },
+        {
+          "ms": 4.7,
+          "frame": "territory-stream.js:84 mask"
+        },
+        {
+          "ms": 4.4,
+          "frame": "territory-heritage.js:299 isReplaced"
+        },
+        {
+          "ms": 2.8,
+          "frame": "territory-heritage-ground.js:50 tile"
+        },
+        {
+          "ms": 1.6,
+          "frame": "getShaderInfoLog"
+        },
+        {
+          "ms": 1.6,
+          "frame": "getUniformLocation"
+        },
+        {
+          "ms": 1.6,
+          "frame": "three.module.js:5873 unrollLoops"
+        }
+      ],
+      "inclusive": [
+        {
+          "ms": 1699.1,
+          "frame": "territory.js:447 frame"
+        },
+        {
+          "ms": 1665.2,
+          "frame": "territory-contact.js:62 render"
+        },
+        {
+          "ms": 1664.8,
+          "frame": "three.module.js:16363 WebGLRenderer.render"
+        },
+        {
+          "ms": 1662.8,
+          "frame": "three.module.js:15935 WebGLRenderer.renderBufferDirect"
+        },
+        {
+          "ms": 1659.8,
+          "frame": "three.module.js:17021 setProgram"
+        },
+        {
+          "ms": 1653.4,
+          "frame": "three.module.js:16663 renderScene"
+        },
+        {
+          "ms": 1653.4,
+          "frame": "three.module.js:16814 renderObjects"
+        }
+      ],
+      "stacks": [
+        {
+          "ms": 1636.1,
+          "frame": "getProgramInfoLog ← three.module.js:6491 onFirstUse ← three.module.js:6590 WebGLProgram.getUniforms ← three.module.js:17021 setProgram ← three.module.js:15935 WebGLRenderer.renderBufferDirect ← three.module.js:16843 renderObject ← three.module.js:16814 renderObjects ← three.module.js:16663 renderScene"
+        },
+        {
+          "ms": 8.7,
+          "frame": "territory-ground.js:68 patch ← territory-ground.js:108 update ← territory.js:447 frame"
+        },
+        {
+          "ms": 7.8,
+          "frame": "getProgramInfoLog ← three.module.js:6491 onFirstUse ← three.module.js:6590 WebGLProgram.getUniforms ← three.module.js:17021 setProgram ← three.module.js:15935 WebGLRenderer.renderBufferDirect ← three.module.js:8731 renderObject ← three.module.js:8731 renderObject ← three.module.js:8731 renderObject"
+        },
+        {
+          "ms": 4.7,
+          "frame": "territory-stream.js:84 mask ← territory-stream.js:226 update ← territory.js:447 frame"
+        },
+        {
+          "ms": 4.4,
+          "frame": "territory-heritage.js:299 isReplaced ← territory-stream.js:84 mask ← territory-stream.js:226 update ← territory.js:447 frame"
+        },
+        {
+          "ms": 2.8,
+          "frame": "territory-heritage-ground.js:50 tile ← territory-heritage-ground.js:65 update ← territory-ground.js:108 update ← territory.js:447 frame"
+        },
+        {
+          "ms": 1.6,
+          "frame": "getShaderInfoLog ← three.module.js:6491 onFirstUse ← three.module.js:6590 WebGLProgram.getUniforms ← three.module.js:17021 setProgram ← three.module.js:15935 WebGLRenderer.renderBufferDirect ← three.module.js:8731 renderObject ← three.module.js:8731 renderObject ← three.module.js:8731 renderObject"
+        }
+      ]
+    },
+    {
+      "afterMs": 805.6,
+      "durationMs": 542.0,
+      "exclusive": [
+        {
+          "ms": 47.4,
+          "frame": "three.core.js:18744 Float32BufferAttribute"
+        },
+        {
+          "ms": 40.9,
+          "frame": "horno.js:59 geom"
+        },
+        {
+          "ms": 30.8,
+          "frame": "three.core.js:19832 toNonIndexed"
+        },
+        {
+          "ms": 29.6,
+          "frame": "(garbage collector)"
+        },
+        {
+          "ms": 25.7,
+          "frame": "horno.js:48 texture"
+        },
+        {
+          "ms": 23.4,
+          "frame": "three.core.js:30837 PolyhedronGeometry"
+        },
+        {
+          "ms": 15.4,
+          "frame": "three.core.js:18298 setXYZ"
+        },
+        {
+          "ms": 15.2,
+          "frame": "horno-context.js:47 add"
+        }
+      ],
+      "inclusive": [
+        {
+          "ms": 506.4,
+          "frame": "territory-heritage-models.js:242 buildHeritageModel"
+        },
+        {
+          "ms": 263.8,
+          "frame": "horno.js:79 createHorno"
+        },
+        {
+          "ms": 212.8,
+          "frame": "horno-context.js:45 build"
+        },
+        {
+          "ms": 123.6,
+          "frame": "horno-context.js:22 createHornoContext"
+        },
+        {
+          "ms": 123.6,
+          "frame": "territory-heritage-contexts.js:42 originalSurroundings"
+        },
+        {
+          "ms": 100.2,
+          "frame": "horno-context.js:47 add"
+        },
+        {
+          "ms": 98.7,
+          "frame": "horno-context.js:133 bindGround"
+        }
+      ],
+      "stacks": [
+        {
+          "ms": 29.6,
+          "frame": "(garbage collector)"
+        },
+        {
+          "ms": 25.7,
+          "frame": "horno.js:48 texture ← horno.js:79 createHorno ← territory-heritage-models.js:242 buildHeritageModel"
+        },
+        {
+          "ms": 15.7,
+          "frame": "horno.js:59 geom ← horno.js:60 raw ← horno.js:69 annulus ← horno.js:79 createHorno ← territory-heritage-models.js:242 buildHeritageModel"
+        },
+        {
+          "ms": 15.5,
+          "frame": "three.core.js:18744 Float32BufferAttribute ← horno.js:64 finish ← horno.js:79 createHorno ← territory-heritage-models.js:242 buildHeritageModel"
+        },
+        {
+          "ms": 12.5,
+          "frame": "three.core.js:30456 CylinderGeometry ← horno.js:63 beam ← horno.js:79 createHorno ← territory-heritage-models.js:242 buildHeritageModel"
+        },
+        {
+          "ms": 11.0,
+          "frame": "horno.js:66 quad ← horno.js:69 annulus ← horno.js:79 createHorno ← territory-heritage-models.js:242 buildHeritageModel"
+        },
+        {
+          "ms": 10.9,
+          "frame": "horno.js:59 geom ← horno.js:63 beam ← horno.js:79 createHorno ← territory-heritage-models.js:242 buildHeritageModel"
+        }
+      ]
+    },
+    {
+      "afterMs": 202.2,
+      "durationMs": 526,
+      "exclusive": [
+        {
+          "ms": 400.8,
+          "frame": "getProgramInfoLog"
+        },
+        {
+          "ms": 43.8,
+          "frame": "texSubImage2D"
+        },
+        {
+          "ms": 35.8,
+          "frame": "territory-ground.js:68 patch"
+        },
+        {
+          "ms": 3.2,
+          "frame": "territory-stream.js:84 mask"
+        },
+        {
+          "ms": 3.1,
+          "frame": "territory-heritage.js:299 isReplaced"
+        },
+        {
+          "ms": 3.1,
+          "frame": "getProgramParameter"
+        },
+        {
+          "ms": 3.1,
+          "frame": "three.core.js:5532 fromBufferAttribute"
+        },
+        {
+          "ms": 1.9,
+          "frame": "(program)"
+        }
+      ],
+      "inclusive": [
+        {
+          "ms": 524.1,
+          "frame": "territory.js:447 frame"
+        },
+        {
+          "ms": 459.3,
+          "frame": "three.module.js:16363 WebGLRenderer.render"
+        },
+        {
+          "ms": 459.3,
+          "frame": "territory-contact.js:62 render"
+        },
+        {
+          "ms": 455.8,
+          "frame": "three.module.js:17021 setProgram"
+        },
+        {
+          "ms": 455.8,
+          "frame": "three.module.js:15935 WebGLRenderer.renderBufferDirect"
+        },
+        {
+          "ms": 405.5,
+          "frame": "three.module.js:6590 WebGLProgram.getUniforms"
+        },
+        {
+          "ms": 405.5,
+          "frame": "three.module.js:6491 onFirstUse"
+        }
+      ],
+      "stacks": [
+        {
+          "ms": 386.1,
+          "frame": "getProgramInfoLog ← three.module.js:6491 onFirstUse ← three.module.js:6590 WebGLProgram.getUniforms ← three.module.js:17021 setProgram ← three.module.js:15935 WebGLRenderer.renderBufferDirect ← three.module.js:16843 renderObject ← three.module.js:16814 renderObjects ← three.module.js:16663 renderScene"
+        },
+        {
+          "ms": 43.8,
+          "frame": "texSubImage2D ← three.module.js:9825 texSubImage2D ← three.module.js:10998 uploadTexture ← three.module.js:10655 setTexture2D ← three.module.js:4964 setValueT1 ← three.module.js:5536 upload ← three.module.js:17021 setProgram ← three.module.js:15935 WebGLRenderer.renderBufferDirect"
+        },
+        {
+          "ms": 35.8,
+          "frame": "territory-ground.js:68 patch ← territory-ground.js:108 update ← territory.js:447 frame"
+        },
+        {
+          "ms": 14.7,
+          "frame": "getProgramInfoLog ← three.module.js:6491 onFirstUse ← three.module.js:6590 WebGLProgram.getUniforms ← three.module.js:17021 setProgram ← three.module.js:15935 WebGLRenderer.renderBufferDirect ← three.module.js:8731 renderObject ← three.module.js:8731 renderObject ← three.module.js:8731 renderObject"
+        },
+        {
+          "ms": 3.2,
+          "frame": "territory-stream.js:84 mask ← territory-stream.js:226 update ← territory.js:447 frame"
+        },
+        {
+          "ms": 3.1,
+          "frame": "territory-heritage.js:299 isReplaced ← territory-stream.js:84 mask ← territory-stream.js:226 update ← territory.js:447 frame"
+        },
+        {
+          "ms": 3.1,
+          "frame": "three.core.js:5532 fromBufferAttribute ← three.core.js:19714 computeVertexNormals ← territory-ground.js:68 patch ← territory-ground.js:108 update ← territory.js:447 frame"
+        }
+      ]
+    }
+  ],
+  "preparations": [
+    {
+      "id": "horno",
+      "ms": 597,
+      "afterMs": 789.8
+    },
+    {
+      "id": "talleres",
+      "ms": 1013,
+      "afterMs": 7875.6
+    },
+    {
+      "id": "museo-industrial",
+      "ms": 384,
+      "afterMs": 8675.8
+    }
+  ],
+  "profileSampledMs": {
+    "other": 1836.1,
+    "idle": 393.4,
+    "sceneProbe": 4.0,
+    "webGLProgramInfoLog": 6615.0,
+    "garbageCollector": 59.1
+  }
+}

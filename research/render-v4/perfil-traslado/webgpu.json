@@ -1,0 +1,818 @@
+{
+  "engine": "webgpu",
+  "chrome": "156.0.8078.47",
+  "fromPlace": "Sagunto histórico",
+  "toPlace": "Puerto de Sagunto",
+  "viewport": [
+    1000,
+    640
+  ],
+  "samplingIntervalUs": 1000,
+  "errors": [],
+  "loaded": [
+    "horno"
+  ],
+  "elapsedMs": 6579.1,
+  "maxFrames": [
+    {
+      "afterMs": 2839.1,
+      "durationMs": 2750.9,
+      "exclusive": [
+        {
+          "ms": 1439.9,
+          "frame": "(idle)"
+        },
+        {
+          "ms": 331.1,
+          "frame": "three.webgpu.js:5 build"
+        },
+        {
+          "ms": 199.0,
+          "frame": "three.webgpu.js:5 getNodeType"
+        },
+        {
+          "ms": 82.0,
+          "frame": "three.webgpu.js:5 getNodeChildren"
+        },
+        {
+          "ms": 75.4,
+          "frame": "(garbage collector)"
+        },
+        {
+          "ms": 62.6,
+          "frame": "three.webgpu.js:8 build"
+        },
+        {
+          "ms": 39.2,
+          "frame": "three.webgpu.js:5 analyze"
+        },
+        {
+          "ms": 38.0,
+          "frame": "three.webgpu.js:5 generate"
+        }
+      ],
+      "inclusive": [
+        {
+          "ms": 1439.9,
+          "frame": "(idle)"
+        },
+        {
+          "ms": 1181.5,
+          "frame": "territory.js:447 frame"
+        },
+        {
+          "ms": 1167.6,
+          "frame": "territory-native-materials.js:63 draw"
+        },
+        {
+          "ms": 1166.0,
+          "frame": "territory-node-environment.js:105 render"
+        },
+        {
+          "ms": 1166.0,
+          "frame": "three.webgpu.js:14 _renderScene"
+        },
+        {
+          "ms": 1166.0,
+          "frame": "three.webgpu.js:14 _renderObjects"
+        },
+        {
+          "ms": 1166.0,
+          "frame": "three.webgpu.js:14 render"
+        }
+      ],
+      "stacks": [
+        {
+          "ms": 1439.9,
+          "frame": "(idle)"
+        },
+        {
+          "ms": 75.4,
+          "frame": "(garbage collector)"
+        },
+        {
+          "ms": 37.7,
+          "frame": "three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 build ← three.webgpu.js:5 build"
+        },
+        {
+          "ms": 30.9,
+          "frame": "three.webgpu.js:5 getNodeType ← three.webgpu.js:8 getNodeType ← three.webgpu.js:5 getNodeType ← three.webgpu.js:8 getNodeType ← three.webgpu.js:5 getNodeType ← three.webgpu.js:8 getNodeType ← three.webgpu.js:5 getNodeType ← three.webgpu.js:8 getNodeType"
+        },
+        {
+          "ms": 22.8,
+          "frame": "three.webgpu.js:5 getNodeChildren ← three.webgpu.js:5 getChildren ← three.webgpu.js:5 setup ← three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 build ← three.webgpu.js:5 build"
+        },
+        {
+          "ms": 14.1,
+          "frame": "three.webgpu.js:5 generate ← three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 generate ← three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build"
+        },
+        {
+          "ms": 11.3,
+          "frame": "three.webgpu.js:8 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:8 build"
+        }
+      ]
+    },
+    {
+      "afterMs": 805.1,
+      "durationMs": 2034.0,
+      "exclusive": [
+        {
+          "ms": 384.2,
+          "frame": "three.webgpu.js:5 build"
+        },
+        {
+          "ms": 208.6,
+          "frame": "three.webgpu.js:5 getNodeType"
+        },
+        {
+          "ms": 130.3,
+          "frame": "(garbage collector)"
+        },
+        {
+          "ms": 105.6,
+          "frame": "three.webgpu.js:5 getNodeChildren"
+        },
+        {
+          "ms": 59.9,
+          "frame": "three.webgpu.js:8 build"
+        },
+        {
+          "ms": 56.1,
+          "frame": "three.webgpu.js:5 analyze"
+        },
+        {
+          "ms": 50.7,
+          "frame": "three.core.js:18744 Float32BufferAttribute"
+        },
+        {
+          "ms": 45.6,
+          "frame": "three.webgpu.js:5 fn"
+        }
+      ],
+      "inclusive": [
+        {
+          "ms": 1405.2,
+          "frame": "territory.js:447 frame"
+        },
+        {
+          "ms": 1372.5,
+          "frame": "territory-native-materials.js:63 draw"
+        },
+        {
+          "ms": 1369.6,
+          "frame": "territory-node-environment.js:105 render"
+        },
+        {
+          "ms": 1369.6,
+          "frame": "three.webgpu.js:14 _renderScene"
+        },
+        {
+          "ms": 1369.6,
+          "frame": "three.webgpu.js:14 render"
+        },
+        {
+          "ms": 1368.0,
+          "frame": "three.webgpu.js:14 _renderObjects"
+        },
+        {
+          "ms": 1368.0,
+          "frame": "three.webgpu.js:14 renderObject"
+        }
+      ],
+      "stacks": [
+        {
+          "ms": 130.3,
+          "frame": "(garbage collector)"
+        },
+        {
+          "ms": 47.7,
+          "frame": "three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 build ← three.webgpu.js:5 build"
+        },
+        {
+          "ms": 33.2,
+          "frame": "three.webgpu.js:5 getNodeType ← three.webgpu.js:8 getNodeType ← three.webgpu.js:5 getNodeType ← three.webgpu.js:8 getNodeType ← three.webgpu.js:5 getNodeType ← three.webgpu.js:8 getNodeType ← three.webgpu.js:5 getNodeType ← three.webgpu.js:8 getNodeType"
+        },
+        {
+          "ms": 23.6,
+          "frame": "three.webgpu.js:5 getNodeChildren ← three.webgpu.js:5 getChildren ← three.webgpu.js:5 setup ← three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 build ← three.webgpu.js:5 build"
+        },
+        {
+          "ms": 23.4,
+          "frame": "three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 build"
+        },
+        {
+          "ms": 19.2,
+          "frame": "three.webgpu.js:5 getNodeChildren ← three.webgpu.js:5 getChildren ← three.webgpu.js:5 setup ← three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 build"
+        },
+        {
+          "ms": 17.5,
+          "frame": "three.webgpu.js:5 analyze ← three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 analyze ← three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build"
+        }
+      ]
+    },
+    {
+      "afterMs": 371.5,
+      "durationMs": 433.6,
+      "exclusive": [
+        {
+          "ms": 63.0,
+          "frame": "three.webgpu.js:5 build"
+        },
+        {
+          "ms": 44.2,
+          "frame": "(garbage collector)"
+        },
+        {
+          "ms": 31.8,
+          "frame": "territory-ground.js:68 patch"
+        },
+        {
+          "ms": 29.3,
+          "frame": "three.webgpu.js:5 getNodeType"
+        },
+        {
+          "ms": 20.1,
+          "frame": "horno.js:48 texture"
+        },
+        {
+          "ms": 20.0,
+          "frame": "(program)"
+        },
+        {
+          "ms": 13.8,
+          "frame": "three.webgpu.js:5 getNodeChildren"
+        },
+        {
+          "ms": 12.7,
+          "frame": "three.webgpu.js:8 build"
+        }
+      ],
+      "inclusive": [
+        {
+          "ms": 301.0,
+          "frame": "territory.js:447 frame"
+        },
+        {
+          "ms": 235.3,
+          "frame": "territory-node-environment.js:105 render"
+        },
+        {
+          "ms": 235.3,
+          "frame": "three.webgpu.js:14 _renderScene"
+        },
+        {
+          "ms": 235.3,
+          "frame": "three.webgpu.js:14 render"
+        },
+        {
+          "ms": 235.3,
+          "frame": "territory-native-materials.js:63 draw"
+        },
+        {
+          "ms": 232.1,
+          "frame": "three.webgpu.js:14 _renderObjects"
+        },
+        {
+          "ms": 232.1,
+          "frame": "three.webgpu.js:14 renderObject"
+        }
+      ],
+      "stacks": [
+        {
+          "ms": 44.2,
+          "frame": "(garbage collector)"
+        },
+        {
+          "ms": 31.8,
+          "frame": "territory-ground.js:68 patch ← territory-ground.js:108 update ← territory.js:447 frame"
+        },
+        {
+          "ms": 20.1,
+          "frame": "horno.js:48 texture ← horno.js:79 createHorno ← territory-heritage-models.js:242 buildHeritageModel"
+        },
+        {
+          "ms": 20.0,
+          "frame": "(program)"
+        },
+        {
+          "ms": 7.9,
+          "frame": "three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 build ← three.webgpu.js:5 build"
+        },
+        {
+          "ms": 6.2,
+          "frame": "three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 build"
+        },
+        {
+          "ms": 6.2,
+          "frame": "territory-stream.js:84 mask ← territory-stream.js:226 update ← territory.js:447 frame"
+        }
+      ]
+    },
+    {
+      "afterMs": 4.8,
+      "durationMs": 366.7,
+      "exclusive": [
+        {
+          "ms": 87.6,
+          "frame": "three.webgpu.js:5 build"
+        },
+        {
+          "ms": 50.7,
+          "frame": "three.webgpu.js:5 getNodeType"
+        },
+        {
+          "ms": 26.5,
+          "frame": "three.webgpu.js:5 getNodeChildren"
+        },
+        {
+          "ms": 21.9,
+          "frame": "three.webgpu.js:5 fn"
+        },
+        {
+          "ms": 18.7,
+          "frame": "three.webgpu.js:8 build"
+        },
+        {
+          "ms": 17.4,
+          "frame": "three.webgpu.js:5 analyze"
+        },
+        {
+          "ms": 17.2,
+          "frame": "(garbage collector)"
+        },
+        {
+          "ms": 14.6,
+          "frame": "three.webgpu.js:5 getChildren"
+        }
+      ],
+      "inclusive": [
+        {
+          "ms": 349.5,
+          "frame": "territory.js:447 frame"
+        },
+        {
+          "ms": 347.8,
+          "frame": "three.webgpu.js:14 _renderScene"
+        },
+        {
+          "ms": 347.8,
+          "frame": "three.webgpu.js:14 _renderObjects"
+        },
+        {
+          "ms": 347.8,
+          "frame": "three.webgpu.js:14 render"
+        },
+        {
+          "ms": 347.8,
+          "frame": "three.webgpu.js:14 renderObject"
+        },
+        {
+          "ms": 347.0,
+          "frame": "territory-native-materials.js:63 draw"
+        },
+        {
+          "ms": 345.3,
+          "frame": "territory-node-environment.js:105 render"
+        }
+      ],
+      "stacks": [
+        {
+          "ms": 17.2,
+          "frame": "(garbage collector)"
+        },
+        {
+          "ms": 9.4,
+          "frame": "three.webgpu.js:5 getNodeType ← three.webgpu.js:8 getNodeType ← three.webgpu.js:5 getNodeType ← three.webgpu.js:8 getNodeType ← three.webgpu.js:5 getNodeType ← three.webgpu.js:8 getNodeType ← three.webgpu.js:5 getNodeType ← three.webgpu.js:8 getNodeType"
+        },
+        {
+          "ms": 7.9,
+          "frame": "three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 build ← three.webgpu.js:5 build"
+        },
+        {
+          "ms": 7.8,
+          "frame": "three.webgpu.js:5 getNodeType ← three.webgpu.js:8 getNodeType ← three.webgpu.js:5 getNodeType ← three.webgpu.js:8 getNodeType ← three.webgpu.js:8 getNodeType ← three.webgpu.js:5 getNodeType ← three.webgpu.js:8 getNodeType ← three.webgpu.js:5 getNodeType"
+        },
+        {
+          "ms": 6.3,
+          "frame": "three.webgpu.js:5 getNodeChildren ← three.webgpu.js:5 getChildren ← three.webgpu.js:5 setup ← three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 build ← three.webgpu.js:5 build"
+        },
+        {
+          "ms": 6.3,
+          "frame": "three.webgpu.js:8 build ← three.webgpu.js:5 generate ← three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 generate ← three.webgpu.js:5 build ← three.webgpu.js:5 build"
+        },
+        {
+          "ms": 6.1,
+          "frame": "three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 generate ← three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 generate"
+        }
+      ]
+    }
+  ],
+  "longTasks": [
+    {
+      "afterMs": 1334.3,
+      "durationMs": 1509,
+      "exclusive": [
+        {
+          "ms": 384.2,
+          "frame": "three.webgpu.js:5 build"
+        },
+        {
+          "ms": 208.6,
+          "frame": "three.webgpu.js:5 getNodeType"
+        },
+        {
+          "ms": 105.6,
+          "frame": "three.webgpu.js:5 getNodeChildren"
+        },
+        {
+          "ms": 96.0,
+          "frame": "(garbage collector)"
+        },
+        {
+          "ms": 59.9,
+          "frame": "three.webgpu.js:8 build"
+        },
+        {
+          "ms": 56.1,
+          "frame": "three.webgpu.js:5 analyze"
+        },
+        {
+          "ms": 45.6,
+          "frame": "three.webgpu.js:5 fn"
+        },
+        {
+          "ms": 42.8,
+          "frame": "three.webgpu.js:5 generate"
+        }
+      ],
+      "inclusive": [
+        {
+          "ms": 1407.0,
+          "frame": "territory.js:447 frame"
+        },
+        {
+          "ms": 1374.3,
+          "frame": "territory-native-materials.js:63 draw"
+        },
+        {
+          "ms": 1371.4,
+          "frame": "territory-node-environment.js:105 render"
+        },
+        {
+          "ms": 1371.4,
+          "frame": "three.webgpu.js:14 _renderScene"
+        },
+        {
+          "ms": 1371.4,
+          "frame": "three.webgpu.js:14 render"
+        },
+        {
+          "ms": 1369.7,
+          "frame": "three.webgpu.js:14 _renderObjects"
+        },
+        {
+          "ms": 1369.7,
+          "frame": "three.webgpu.js:14 renderObject"
+        }
+      ],
+      "stacks": [
+        {
+          "ms": 96.0,
+          "frame": "(garbage collector)"
+        },
+        {
+          "ms": 47.7,
+          "frame": "three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 build ← three.webgpu.js:5 build"
+        },
+        {
+          "ms": 33.2,
+          "frame": "three.webgpu.js:5 getNodeType ← three.webgpu.js:8 getNodeType ← three.webgpu.js:5 getNodeType ← three.webgpu.js:8 getNodeType ← three.webgpu.js:5 getNodeType ← three.webgpu.js:8 getNodeType ← three.webgpu.js:5 getNodeType ← three.webgpu.js:8 getNodeType"
+        },
+        {
+          "ms": 23.6,
+          "frame": "three.webgpu.js:5 getNodeChildren ← three.webgpu.js:5 getChildren ← three.webgpu.js:5 setup ← three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 build ← three.webgpu.js:5 build"
+        },
+        {
+          "ms": 23.4,
+          "frame": "three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 build"
+        },
+        {
+          "ms": 19.2,
+          "frame": "three.webgpu.js:5 getNodeChildren ← three.webgpu.js:5 getChildren ← three.webgpu.js:5 setup ← three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 build"
+        },
+        {
+          "ms": 17.5,
+          "frame": "three.webgpu.js:5 analyze ← three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 analyze ← three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build"
+        }
+      ]
+    },
+    {
+      "afterMs": 2847.9,
+      "durationMs": 1253.0,
+      "exclusive": [
+        {
+          "ms": 331.1,
+          "frame": "three.webgpu.js:5 build"
+        },
+        {
+          "ms": 199.0,
+          "frame": "three.webgpu.js:5 getNodeType"
+        },
+        {
+          "ms": 82.0,
+          "frame": "three.webgpu.js:5 getNodeChildren"
+        },
+        {
+          "ms": 72.3,
+          "frame": "(garbage collector)"
+        },
+        {
+          "ms": 62.6,
+          "frame": "three.webgpu.js:8 build"
+        },
+        {
+          "ms": 39.2,
+          "frame": "three.webgpu.js:5 analyze"
+        },
+        {
+          "ms": 38.0,
+          "frame": "three.webgpu.js:5 generate"
+        },
+        {
+          "ms": 32.5,
+          "frame": "three.webgpu.js:8 getNodeType"
+        }
+      ],
+      "inclusive": [
+        {
+          "ms": 1178.5,
+          "frame": "territory.js:447 frame"
+        },
+        {
+          "ms": 1165.8,
+          "frame": "territory-native-materials.js:63 draw"
+        },
+        {
+          "ms": 1164.3,
+          "frame": "territory-node-environment.js:105 render"
+        },
+        {
+          "ms": 1164.3,
+          "frame": "three.webgpu.js:14 _renderScene"
+        },
+        {
+          "ms": 1164.3,
+          "frame": "three.webgpu.js:14 _renderObjects"
+        },
+        {
+          "ms": 1164.3,
+          "frame": "three.webgpu.js:14 render"
+        },
+        {
+          "ms": 1164.3,
+          "frame": "three.webgpu.js:14 renderObject"
+        }
+      ],
+      "stacks": [
+        {
+          "ms": 72.3,
+          "frame": "(garbage collector)"
+        },
+        {
+          "ms": 37.7,
+          "frame": "three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 build ← three.webgpu.js:5 build"
+        },
+        {
+          "ms": 30.9,
+          "frame": "three.webgpu.js:5 getNodeType ← three.webgpu.js:8 getNodeType ← three.webgpu.js:5 getNodeType ← three.webgpu.js:8 getNodeType ← three.webgpu.js:5 getNodeType ← three.webgpu.js:8 getNodeType ← three.webgpu.js:5 getNodeType ← three.webgpu.js:8 getNodeType"
+        },
+        {
+          "ms": 22.8,
+          "frame": "three.webgpu.js:5 getNodeChildren ← three.webgpu.js:5 getChildren ← three.webgpu.js:5 setup ← three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 build ← three.webgpu.js:5 build"
+        },
+        {
+          "ms": 14.1,
+          "frame": "three.webgpu.js:5 generate ← three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 generate ← three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build"
+        },
+        {
+          "ms": 11.3,
+          "frame": "three.webgpu.js:8 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:8 build"
+        },
+        {
+          "ms": 11.0,
+          "frame": "three.webgpu.js:5 getNodeChildren ← three.webgpu.js:5 getChildren ← three.webgpu.js:5 setup ← three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 build"
+        }
+      ]
+    },
+    {
+      "afterMs": 780.9,
+      "durationMs": 553.0,
+      "exclusive": [
+        {
+          "ms": 50.7,
+          "frame": "three.core.js:18744 Float32BufferAttribute"
+        },
+        {
+          "ms": 35.9,
+          "frame": "horno.js:59 geom"
+        },
+        {
+          "ms": 34.3,
+          "frame": "(garbage collector)"
+        },
+        {
+          "ms": 32.4,
+          "frame": "three.core.js:19834 convertBufferAttribute"
+        },
+        {
+          "ms": 26.0,
+          "frame": "horno.js:48 texture"
+        },
+        {
+          "ms": 20.3,
+          "frame": "three.core.js:17750 BufferAttribute"
+        },
+        {
+          "ms": 13.9,
+          "frame": "horno-context.js:47 add"
+        },
+        {
+          "ms": 13.3,
+          "frame": "three.core.js:9518 setFromBufferAttribute"
+        }
+      ],
+      "inclusive": [
+        {
+          "ms": 513.3,
+          "frame": "territory-heritage-models.js:242 buildHeritageModel"
+        },
+        {
+          "ms": 260.1,
+          "frame": "horno.js:79 createHorno"
+        },
+        {
+          "ms": 214.7,
+          "frame": "horno-context.js:45 build"
+        },
+        {
+          "ms": 123.4,
+          "frame": "territory-heritage-contexts.js:42 originalSurroundings"
+        },
+        {
+          "ms": 123.4,
+          "frame": "horno-context.js:22 createHornoContext"
+        },
+        {
+          "ms": 103.7,
+          "frame": "horno-context.js:133 bindGround"
+        },
+        {
+          "ms": 86.3,
+          "frame": "horno.js:59 geom"
+        }
+      ],
+      "stacks": [
+        {
+          "ms": 34.3,
+          "frame": "(garbage collector)"
+        },
+        {
+          "ms": 26.0,
+          "frame": "horno.js:48 texture ← horno.js:79 createHorno ← territory-heritage-models.js:242 buildHeritageModel"
+        },
+        {
+          "ms": 10.8,
+          "frame": "horno.js:59 geom ← horno.js:60 raw ← horno.js:69 annulus ← horno.js:79 createHorno ← territory-heritage-models.js:242 buildHeritageModel"
+        },
+        {
+          "ms": 10.8,
+          "frame": "three.core.js:19834 convertBufferAttribute ← three.core.js:19832 toNonIndexed ← horno.js:59 geom ← horno.js:63 beam ← horno.js:79 createHorno ← territory-heritage-models.js:242 buildHeritageModel"
+        },
+        {
+          "ms": 10.7,
+          "frame": "three.core.js:18744 Float32BufferAttribute ← horno.js:64 finish ← horno.js:79 createHorno ← territory-heritage-models.js:242 buildHeritageModel"
+        },
+        {
+          "ms": 8.8,
+          "frame": "territory-heritage-models.js:242 buildHeritageModel"
+        },
+        {
+          "ms": 8.6,
+          "frame": "horno-context.js:9 texture ← horno-context.js:22 createHornoContext ← territory-heritage-contexts.js:42 originalSurroundings ← territory-heritage-models.js:242 buildHeritageModel"
+        }
+      ]
+    },
+    {
+      "afterMs": 4.9,
+      "durationMs": 379.0,
+      "exclusive": [
+        {
+          "ms": 87.6,
+          "frame": "three.webgpu.js:5 build"
+        },
+        {
+          "ms": 53.9,
+          "frame": "three.webgpu.js:5 getNodeType"
+        },
+        {
+          "ms": 26.5,
+          "frame": "three.webgpu.js:5 getNodeChildren"
+        },
+        {
+          "ms": 21.9,
+          "frame": "three.webgpu.js:5 fn"
+        },
+        {
+          "ms": 18.7,
+          "frame": "three.webgpu.js:8 build"
+        },
+        {
+          "ms": 17.3,
+          "frame": "three.webgpu.js:5 analyze"
+        },
+        {
+          "ms": 17.2,
+          "frame": "(garbage collector)"
+        },
+        {
+          "ms": 14.6,
+          "frame": "three.webgpu.js:5 getChildren"
+        }
+      ],
+      "inclusive": [
+        {
+          "ms": 358.7,
+          "frame": "territory.js:447 frame"
+        },
+        {
+          "ms": 356.8,
+          "frame": "three.webgpu.js:14 _renderScene"
+        },
+        {
+          "ms": 356.8,
+          "frame": "three.webgpu.js:14 _renderObjects"
+        },
+        {
+          "ms": 356.8,
+          "frame": "three.webgpu.js:14 render"
+        },
+        {
+          "ms": 356.8,
+          "frame": "three.webgpu.js:14 renderObject"
+        },
+        {
+          "ms": 356.2,
+          "frame": "territory-native-materials.js:63 draw"
+        },
+        {
+          "ms": 354.5,
+          "frame": "territory-node-environment.js:105 render"
+        }
+      ],
+      "stacks": [
+        {
+          "ms": 17.2,
+          "frame": "(garbage collector)"
+        },
+        {
+          "ms": 11.0,
+          "frame": "three.webgpu.js:5 getNodeType ← three.webgpu.js:8 getNodeType ← three.webgpu.js:5 getNodeType ← three.webgpu.js:8 getNodeType ← three.webgpu.js:5 getNodeType ← three.webgpu.js:8 getNodeType ← three.webgpu.js:5 getNodeType ← three.webgpu.js:8 getNodeType"
+        },
+        {
+          "ms": 7.9,
+          "frame": "three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 build ← three.webgpu.js:5 build"
+        },
+        {
+          "ms": 7.8,
+          "frame": "three.webgpu.js:5 getNodeType ← three.webgpu.js:8 getNodeType ← three.webgpu.js:5 getNodeType ← three.webgpu.js:8 getNodeType ← three.webgpu.js:8 getNodeType ← three.webgpu.js:5 getNodeType ← three.webgpu.js:8 getNodeType ← three.webgpu.js:5 getNodeType"
+        },
+        {
+          "ms": 6.3,
+          "frame": "three.webgpu.js:5 getNodeChildren ← three.webgpu.js:5 getChildren ← three.webgpu.js:5 setup ← three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 build ← three.webgpu.js:5 build"
+        },
+        {
+          "ms": 6.3,
+          "frame": "three.webgpu.js:8 build ← three.webgpu.js:5 generate ← three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 generate ← three.webgpu.js:5 build ← three.webgpu.js:5 build"
+        },
+        {
+          "ms": 6.1,
+          "frame": "three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 generate ← three.webgpu.js:5 build ← three.webgpu.js:5 build ← three.webgpu.js:8 build ← three.webgpu.js:5 generate"
+        }
+      ]
+    }
+  ],
+  "preparations": [
+    {
+      "id": "horno",
+      "ms": 634,
+      "afterMs": 805.1
+    }
+  ],
+  "profileSampledMs": {
+    "other": 1502.9,
+    "idle": 1948.0,
+    "nativeRenderNodeBuild": 3039.1,
+    "sceneProbe": 1.1,
+    "garbageCollector": 281.4
+  }
+}
