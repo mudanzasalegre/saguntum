@@ -1,0 +1,56 @@
+{
+  "url": "https://saguntum-atlas-3d.monmode.chatgpt.site/",
+  "assets": {
+    "js/render-session.js": "f8e96ac0fc7b0cbf6ef746fe7dfd08c5a54a2067e01297dcc53c8ff25f56d59c",
+    "simulator.html": "aa0ec3342868129056c5f6d42c4bb76cb1d2c410cafc71c6cac03bf1c215b6cd",
+    "js/territory.js": "040af92bcadc39f52d14c557221c8afaea55b512239bb1bd68ea3473c650fffd",
+    "js/territory-graphics.js": "70d3352eacc1ae2288231da9237d52924d0ae6f1f52174a122b55ee0729377a6",
+    "js/territory-node-fog.js": "1201fce2d462599459fd88190dd6a7a170b7a6888a846455455b2b9b8ec16d2f",
+    "js/territory-node-ground.js": "10ca75cdf9415db3756acd5ec92177f8c09b8b02a4d881fef3d52b4ec894b454",
+    "js/territory-node-environment.js": "01c997b89b0db213c16bc7c8527d7af135f7cba01312818549c409735f5311ed",
+    "js/territory-node-urban.js": "b33cefc400ee4524c39407f3d503beaaad22c9b9c94f5d1cfe6c60dfe78d10cd",
+    "js/territory-webgpu-device.js": "09b72cc9471e292e8811c15ebdf03cd06c4d93897ecd16499712a7c9bf0e276a",
+    "js/territory-heritage-worker.js": "7af9b83cf76a3eaf7497b99ce6c54f2ff98860b3610893e2b878ff89ba932064",
+    "assets/vendor/three.webgpu.js": "649a7942e1faffc46ed71eb06379d270eeda3a1853abb4156b91d5add834dae8",
+    "assets/territory/visit-stops.json": "5df755a580791a166db00bf5480a5a83137ab45e44bda2a66c03dd06c602c02b",
+    "assets/vendor/three.module.js": "ce4564d8512f989b148ae26cc1075374bbe5446f0076608c32e692c40a59a355",
+    "js/territory-atmosphere.js": "d68e5764311bb730b99f5a3e6fa4ddb7a79c8d7dc77825ac90e2e637465e4cb4",
+    "js/territory-stream-policy.js": "37fba5771e1e434977bc837ed6375ce08df626172c5e9ceb1140d4f7b9bbcf1c",
+    "js/territory-stream.js": "f91f867a985b80ff29854c7a90ab339da4cd375f3c74853e75802ac0568fd25c",
+    "js/territory-building-worker.js": "29c3572ce3d0ace1a28bc0f9639084a61c1ce5d637d3b28268e84a1b902960ea",
+    "js/territory-heritage-models.js": "11b2440a8eb75be8475c3379c2b5b34d221cdff44d3b5ab2a605cf4035f13055",
+    "js/territory-heritage-contexts.js": "bd0f3c103af619a41b08fd55c63e542eeff1a94a6a68b196cd8c6f260b38ecdc",
+    "js/territory-heritage.js": "a106b2e53579b6270e86f9d74905fd0a44a541ebb5a78df5c8fdaf46b4ab817a",
+    "js/territory-street-surfaces.js": "d6a9be4919e128f0aff3b0a8940ad5ad0db415c7fccbce9bd71429f61d7eda0c",
+    "js/territory-building-material.js": "b02fd1bb369720af9028e24157fca9705f68b7532d55582ad64a9a475dce5bce",
+    "js/territory-node-urban-architecture.js": "e4e955199308a12a06bccf06326f2ac4cab1c46c60cd079677582f2a52cdb464",
+    "js/territory-node-urban-street.js": "b07808c04ac98b745cc81d1fa2f6e2e25f6e794b72a3d47301d6835eabc32b40"
+  },
+  "visits": [
+    {
+      "place": "glorieta",
+      "stop": "glorieta-romeu",
+      "engine": "webgl2",
+      "calls": 376,
+      "triangles": 1655823,
+      "places": 32,
+      "hardware": null
+    },
+    {
+      "place": "pantalan-maritimo",
+      "stop": "pantalan-maritimo-tripodes",
+      "engine": "webgpu",
+      "calls": 352,
+      "triangles": 1597011,
+      "places": 32,
+      "hardware": {
+        "vendor": "nvidia",
+        "architecture": "ampere",
+        "software": false
+      }
+    }
+  ],
+  "browser": "156.0.8078.47",
+  "title": "SAGUNTUM · Sagunto y Puerto de Sagunto",
+  "errors": []
+}

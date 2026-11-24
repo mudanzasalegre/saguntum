@@ -16,6 +16,10 @@ Se compararon los acabados del Carrer Major en la misma cámara y con la misma l
 
 ## Recorrido completo
 
+En la revisión final se abrió una parada de cada uno de los 32 lugares en una sesión WebGPU y se verificaron los 529 enlaces en el plano. También se comprobó la búsqueda, el historial y el paso del salón del Casino al Atlas y de vuelta con 0 m de desviación. [Validación de visitas](rutas.json)
+
+En la URL pública de la versión 44 se verificaron la portada, 24 recursos de distribución y el dibujo de la Glorieta con WebGL 2 y del Pantalán con WebGPU de hardware. WebKit en Windows con perfil táctil de iPhone recuperó la parada de Romeu tras perder WebGL. La prueba en un iPhone físico queda pendiente. [Prueba pública](produccion-v44.json) · [Recuperación en WebKit](webkit-v44.json)
+
 Se repitieron dos circuitos por los tres núcleos en Chrome 156 sobre Windows con una RTX 3090. Incluyeron caminar, correr, saltar, volar, cambiar de hora y calidad, visitar patrimonio y regresar al mismo punto. Ambos motores recuperaron la cámara del Fortín con 0 m de desviación y respetaron los límites de la caché de fachadas. WebGL 2 registró 127 reutilizaciones de programas. [Sesiones, muestras y parámetros](rendimiento.json)
 
 | Intervalo entre fotogramas | WebGL 2 | WebGPU |

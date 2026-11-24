@@ -1,5 +1,9 @@
 # Sincronización de Sites a GitHub
 
+## Versión 44 · Sobrevuelo y continuidad de las visitas
+
+El 24 de noviembre de 2026 se publicó la revisión que conserva el monumento elegido durante el traslado de la cámara y ajusta la preparación patrimonial durante el vuelo territorial rápido en WebGPU. El despliegue `appgdep_6b05846940248191a5e1b21189c9327e` alcanzó el estado `succeeded`. La fuente de Sites `cbb24d3574d6d3786209438dce2b0431e40b01f8` y el código de GitHub `325d5be7203d72983d4af88e6f0f052060ccc684` comparten el árbol de distribución `1cdcb7e012486db9d6c33175f24ba80b1012fd43`. Sites registró 1618 archivos con huella `sha256:756e06d51ee0282691c70c010849551716bb60010df2b46c226fc0b875b52da7`. [Simulador publicado](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador) · [Comparación de los cuatro sobrevuelos](../research/streaming-v43/sobrevuelo.json) · [Prueba de las 32 visitas y los 529 enlaces](../research/streaming-v43/rutas.json)
+
 ## Versión 43 · Aproximación a los monumentos y detalle de calle
 
 El 24 de noviembre de 2026 se publicó la nueva carga territorial en el proyecto original. El despliegue `appgdep_6b0582b619848191a7e6e7f15e4812d7` terminó con estado `succeeded`. El código de Sites `ee7dca5e47d4f5de44b4f4659e2822f89757c2fd` y el de GitHub `de37aea` tienen el mismo árbol de distribución `cadf2c1c5c62adfe7cdf226a0bc44e8ec168330a`. Sites registró 1618 archivos con huella `sha256:d081e884d5965d59cac725a0ad5ace82b819c42d07b9271ac81bebe64234e16e`. [Abrir el simulador](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador) · [Mediciones y comparaciones](../research/streaming-v43/README.md)
