@@ -18,6 +18,7 @@ En una sola sesión WebGPU se dibujó una parada de cada uno de los 32 lugares. 
 - Las pruebas de materiales comparan fachada, vidrio, pavimento, follaje y mobiliario sobre texturas de producción. La silueta de sombra de una copa presenta diferencias de filtrado entre motores. [Materiales urbanos](../dual-v4/materiales-urbanos.json)
 - El ensayo litoral usa los polígonos del pantalán, el campo de costa, el mismo cielo y sonda de entorno. El expediente distingue estos ensayos de las dos paradas completas dibujadas con ambos motores. [Óptica costera](../ambiente-v4/README.md)
 - Los 13 casos de recuperación incluyen pérdida de un dispositivo real, fallos de compilación y disponibilidad inducidos, recuperación mediante WebGL y plano, reintento explícito y conservación de la cámara al cambiar de motor. [Recuperación](recuperacion.json)
+- Al descargar sectores de prueba que compartían material, la revisión previa retenía 48 registros de dibujo después de 24 sectores. El módulo corregido vuelve a cero. Al cambiar la geometría de una malla se volvieron a comprobar los búferes y los píxeles tras reutilizarla. La prueba de samplers conservó dos escuchadores por textura después de retirar 96 instancias. [Registros y geometrías](../dual-v4/render-object-disposal.json) · [Ciclo de vida de texturas](retencion-nativa.json)
 - Se probaron Firefox con WebGL y los controles táctiles con emulación móvil. Queda pendiente el ensayo nativo de Safari en hardware Apple. [Matriz de navegadores](compatibilidad.md)
 
 ## Repetir la comparativa

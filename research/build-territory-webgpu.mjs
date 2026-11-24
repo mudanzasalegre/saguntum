@@ -75,5 +75,15 @@ patched=replaceOnce(patched,patched.slice(setter,updateComment),`set texture( va
 patched=replaceOnce(patched,
   'clonedSampler._texture = null;\n\t\tclonedSampler.texture = this.texture;',
   '// Object.assign already copied the shared lifetime handle.');
+// LOD can replace a mesh's geometry before disposing the old one. Release
+// buffers belonging to the old geometry, independent of the mesh's new state.
+patched=replaceOnce(patched,'geometryData.initialized = true;',
+  'geometryData.initialized = true;\n\t\tconst initialAttributes = renderObject.getAttributes().slice();');
+patched=replaceOnce(patched,
+  'const index = geometry.index;\n\t\t\tconst geometryAttributes = renderObject.getAttributes();',
+  'const index = geometry.index;\n\t\t\tconst geometryAttributes = new Set( [ ...initialAttributes, ...Object.values( geometry.attributes ) ] );');
+patched=replaceOnce(patched,
+  "geometry.removeEventListener( 'dispose', onDispose );\n\n\t\t};\n\n\t\tgeometry.addEventListener( 'dispose', onDispose );",
+  "this.delete( geometry );\n\t\t\tthis.wireframes.delete( geometry );\n\t\t\tgeometry.removeEventListener( 'dispose', onDispose );\n\n\t\t};\n\n\t\tgeometry.addEventListener( 'dispose', onDispose );");
 const {code:output}=await transform(patched,{format:'esm',minifyWhitespace:true,legalComments:'inline'});
 await writeFile(new URL('../dist/assets/vendor/three.webgpu.js',import.meta.url),output);

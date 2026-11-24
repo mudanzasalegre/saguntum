@@ -1,0 +1,351 @@
+{
+  "browser": "156.0.8078.47",
+  "baseline": "e19da57",
+  "before": {
+    "backend": "WebGPU",
+    "initial": {
+      "created": 0,
+      "disposed": 0,
+      "live": 0,
+      "materialListeners": 0
+    },
+    "checkpoints": [
+      {
+        "tiles": 8,
+        "created": 16,
+        "disposed": 0,
+        "live": 16,
+        "materialListeners": 16
+      },
+      {
+        "tiles": 16,
+        "created": 32,
+        "disposed": 0,
+        "live": 32,
+        "materialListeners": 32
+      },
+      {
+        "tiles": 24,
+        "created": 48,
+        "disposed": 0,
+        "live": 48,
+        "materialListeners": 48
+      }
+    ],
+    "swap": {
+      "oldBefore": 2,
+      "oldAfterSwap": 2,
+      "oldAfterRelease": 1,
+      "before": {
+        "created": 49,
+        "disposed": 0,
+        "live": 49,
+        "materialListeners": 49
+      },
+      "afterOld": {
+        "created": 49,
+        "disposed": 0,
+        "live": 49,
+        "materialListeners": 49
+      },
+      "bothBeforeRelease": {
+        "old": {
+          "registered": true,
+          "positionBuffer": true,
+          "indexBuffer": true,
+          "geometryCounter": 3
+        },
+        "replacement": {
+          "registered": true,
+          "positionBuffer": true,
+          "indexBuffer": true,
+          "geometryCounter": 3
+        }
+      },
+      "bothAfterRelease": {
+        "old": {
+          "registered": true,
+          "positionBuffer": true,
+          "indexBuffer": false,
+          "geometryCounter": 2
+        },
+        "replacement": {
+          "registered": true,
+          "positionBuffer": false,
+          "indexBuffer": true,
+          "geometryCounter": 2
+        }
+      },
+      "pixelAfterSwap": [
+        204,
+        31,
+        8,
+        255
+      ]
+    },
+    "reuseGeometry": {
+      "before": {
+        "created": 49,
+        "disposed": 0,
+        "live": 49,
+        "materialListeners": 49
+      },
+      "evicted": {
+        "created": 49,
+        "disposed": 0,
+        "live": 49,
+        "materialListeners": 49
+      },
+      "drawn": {
+        "created": 49,
+        "disposed": 0,
+        "live": 49,
+        "materialListeners": 49
+      },
+      "pixel": [
+        204,
+        31,
+        8,
+        255
+      ],
+      "firstRelease": {
+        "registered": true,
+        "positionBuffer": false,
+        "indexBuffer": false,
+        "geometryCounter": 1
+      },
+      "secondAllocation": {
+        "registered": true,
+        "positionBuffer": true,
+        "indexBuffer": true,
+        "geometryCounter": 1
+      },
+      "secondRelease": {
+        "registered": true,
+        "positionBuffer": true,
+        "indexBuffer": true,
+        "geometryCounter": 1
+      }
+    },
+    "reuseInstance": {
+      "firstPixel": [
+        204,
+        31,
+        8,
+        255
+      ],
+      "before": {
+        "created": 50,
+        "disposed": 0,
+        "live": 50,
+        "materialListeners": 50
+      },
+      "evicted": {
+        "created": 50,
+        "disposed": 0,
+        "live": 50,
+        "materialListeners": 50
+      },
+      "drawn": {
+        "created": 50,
+        "disposed": 0,
+        "live": 50,
+        "materialListeners": 50
+      },
+      "pixel": [
+        204,
+        31,
+        8,
+        255
+      ]
+    },
+    "final": {
+      "created": 50,
+      "disposed": 0,
+      "live": 50,
+      "materialListeners": 50
+    },
+    "released": {
+      "created": 50,
+      "disposed": 50,
+      "live": 0,
+      "materialListeners": 0
+    },
+    "validation": null,
+    "consoleErrors": []
+  },
+  "after": {
+    "backend": "WebGPU",
+    "initial": {
+      "created": 0,
+      "disposed": 0,
+      "live": 0,
+      "materialListeners": 0
+    },
+    "checkpoints": [
+      {
+        "tiles": 8,
+        "created": 16,
+        "disposed": 16,
+        "live": 0,
+        "materialListeners": 0
+      },
+      {
+        "tiles": 16,
+        "created": 32,
+        "disposed": 32,
+        "live": 0,
+        "materialListeners": 0
+      },
+      {
+        "tiles": 24,
+        "created": 48,
+        "disposed": 48,
+        "live": 0,
+        "materialListeners": 0
+      }
+    ],
+    "swap": {
+      "oldBefore": 2,
+      "oldAfterSwap": 1,
+      "oldAfterRelease": 0,
+      "before": {
+        "created": 49,
+        "disposed": 48,
+        "live": 1,
+        "materialListeners": 1
+      },
+      "afterOld": {
+        "created": 49,
+        "disposed": 48,
+        "live": 1,
+        "materialListeners": 1
+      },
+      "bothBeforeRelease": {
+        "old": {
+          "registered": true,
+          "positionBuffer": true,
+          "indexBuffer": true,
+          "geometryCounter": 3
+        },
+        "replacement": {
+          "registered": true,
+          "positionBuffer": true,
+          "indexBuffer": true,
+          "geometryCounter": 3
+        }
+      },
+      "bothAfterRelease": {
+        "old": {
+          "registered": false,
+          "positionBuffer": false,
+          "indexBuffer": false,
+          "geometryCounter": 2
+        },
+        "replacement": {
+          "registered": true,
+          "positionBuffer": true,
+          "indexBuffer": true,
+          "geometryCounter": 2
+        }
+      },
+      "pixelAfterSwap": [
+        204,
+        31,
+        8,
+        255
+      ]
+    },
+    "reuseGeometry": {
+      "before": {
+        "created": 49,
+        "disposed": 48,
+        "live": 1,
+        "materialListeners": 1
+      },
+      "evicted": {
+        "created": 49,
+        "disposed": 49,
+        "live": 0,
+        "materialListeners": 0
+      },
+      "drawn": {
+        "created": 50,
+        "disposed": 49,
+        "live": 1,
+        "materialListeners": 1
+      },
+      "pixel": [
+        204,
+        31,
+        8,
+        255
+      ],
+      "firstRelease": {
+        "registered": false,
+        "positionBuffer": false,
+        "indexBuffer": false,
+        "geometryCounter": 1
+      },
+      "secondAllocation": {
+        "registered": true,
+        "positionBuffer": true,
+        "indexBuffer": true,
+        "geometryCounter": 2
+      },
+      "secondRelease": {
+        "registered": false,
+        "positionBuffer": false,
+        "indexBuffer": false,
+        "geometryCounter": 1
+      }
+    },
+    "reuseInstance": {
+      "firstPixel": [
+        204,
+        31,
+        8,
+        255
+      ],
+      "before": {
+        "created": 51,
+        "disposed": 50,
+        "live": 1,
+        "materialListeners": 1
+      },
+      "evicted": {
+        "created": 51,
+        "disposed": 51,
+        "live": 0,
+        "materialListeners": 0
+      },
+      "drawn": {
+        "created": 52,
+        "disposed": 51,
+        "live": 1,
+        "materialListeners": 1
+      },
+      "pixel": [
+        204,
+        31,
+        8,
+        255
+      ]
+    },
+    "final": {
+      "created": 52,
+      "disposed": 52,
+      "live": 0,
+      "materialListeners": 0
+    },
+    "released": {
+      "created": 52,
+      "disposed": 52,
+      "live": 0,
+      "materialListeners": 0
+    },
+    "validation": null,
+    "consoleErrors": []
+  },
+  "passed": true
+}
