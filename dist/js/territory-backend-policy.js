@@ -8,9 +8,9 @@ export const parityFeatures=Object.freeze([
 // Browser evidence and comparison cameras are in research/render-v4 and dual-v4.
 // Keep automatic promotion closed until native mobile and extended use are validated.
 export const productionNative=Object.freeze({entry:true,verified:Object.freeze({
- 'terrain-orthophoto':true,'building-pbr':true,'street-pbr':true,
+ 'terrain-orthophoto':true,'building-pbr':true,'street-pbr':true,'heritage-originals':true,
  'heritage-masks-sections':true,'water-planar-reflection':true,'coastal-foam':true,
- 'sky-probe':true,'vegetation-instances':true,'contact-occlusion':true,'lighting-night':true
+ 'sky-probe':true,'vegetation-instances':true,'contact-occlusion':true,'lighting-night':true,'distance-atmosphere':true
 })});
 export function completeParity(candidate){
  return candidate?.entry===true&&parityFeatures.every(key=>candidate.verified?.[key]===true);

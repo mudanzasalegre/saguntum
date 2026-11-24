@@ -441,6 +441,9 @@ export async function openSimulator(){
   let last=performance.now(),lastUpdate=-Infinity,prevStats=last,samples=[],slow=0,speed=0,lastFov=camera.fov;
   const previousEye=camera.position.clone();
   await buildings.ready;status.ready=true;status.loadMs=Math.round(performance.now()-start);
+  document.addEventListener('visibilitychange',()=>{
+    last=prevStats=performance.now();samples=[];previousEye.copy(camera.position);
+  });
   function frame(now){
     if(lost)return;requestAnimationFrame(frame);
     if(document.hidden){last=now;return;}
@@ -473,7 +476,7 @@ export async function openSimulator(){
       else render(scene,camera,contact,tier);
     }catch(error){console.error('Render territorial',error);failRender(error.message);return;}
     finally{gpuTimer.end();}
-    markRendered();if(ms>0&&ms<1000)samples.push(ms);
+    markRendered();if(ms>0)samples.push(ms);
     if(now-prevStats>900){
       const sorted=samples.sort((a,b)=>a-b),median=sorted[Math.floor(sorted.length/2)]||16;
       const pending=buildings.stream.pending.size+network.stream.pending.size+Number(heritage.stats.loading)+Number(buildings.fabricStats.loading);
@@ -484,6 +487,8 @@ export async function openSimulator(){
         heapMiB:performance.memory?Math.round(performance.memory.usedJSHeapSize/1048576):null,heritage:heritage.stats,pending,localQuality:budget,peripheralQuality:peripheral,pixelScale});
       Object.assign(graphics,{profile:qualityNames[tier],shadowSize:atmosphere.shadowSize,contact:render.stats?.active===true,contactStats:render.stats,gpu:gpuTimer.stats,
         viewport:[renderer.domElement.width,renderer.domElement.height],workers:{edificios:buildings.workerStats,patrimonio:heritage.stats.worker}});
+      status.frameMaxMs=Math.round((sorted.at(-1)||0)*10)/10;
+      status.framesOver100Ms=sorted.filter(duration=>duration>100).length;
       if(native)graphics.materials=native.materials.stats;
       $('stats').textContent=graphics.backend+' · '+graphics.profile+' · '+status.frameMs+' ms/fotograma · '+status.drawCalls+' llamadas · '+status.triangles.toLocaleString('es-ES')+' triángulos · '+status.geometries+' geometrías · '+status.textures+' texturas'+(status.heapMiB?' · JS '+status.heapMiB+' MiB':'')+(gpuTimer.stats.p50Ms!==null?' · GPU '+gpuTimer.stats.p50Ms.toFixed(1)+' ms (render)':'')+' · carga inicial '+(status.loadMs/1000).toFixed(1)+' s';
       $('engine-detail').textContent=graphics.limits.maxTextureDimension2D+' px de textura máxima · '+graphics.initMs+' ms de arranque · '+graphics.viewport.join(' × ')+' px de render · p95 '+status.frameP95Ms+' ms · '+status.sectors+' sectores · '+(status.fabric.bytes/1048576).toFixed(1)+' MiB de geometría en caché';

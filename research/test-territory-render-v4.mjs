@@ -3,6 +3,10 @@ import {rendererPlan,completeParity,parityFeatures,inspectAdapter} from '../dist
 import {shadowPlan,contactPlan,estimateTargetBytes} from '../dist/js/territory-render-policy.js';
 const ready={entry:true,verified:Object.fromEntries(parityFeatures.map(k=>[k,true]))};
 assert.equal(rendererPlan({secure:true,adapter:true}).preferred,'webgl2');
+assert.equal(rendererPlan({request:'webgpu',secure:true,adapter:true}).preferred,'webgpu');
+assert.equal(rendererPlan({request:'webgpu',secure:true,adapter:true,software:true}).preferred,'webgl2');
+assert.equal(rendererPlan({request:'webgpu',secure:false,adapter:true}).preferred,'webgl2');
+assert.equal(rendererPlan({request:'webgpu',secure:true,adapter:true,candidate:{entry:false,verified:{}}}).preferred,'webgl2');
 assert.equal(rendererPlan({secure:true,adapter:true,scope:'lab'}).preferred,'webgpu');
 assert.equal(rendererPlan({secure:true,adapter:true,software:true,scope:'lab'}).preferred,'webgl2');
 assert.equal(rendererPlan({secure:false,adapter:true,scope:'lab'}).preferred,'webgl2');
