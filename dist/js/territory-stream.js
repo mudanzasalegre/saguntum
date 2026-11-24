@@ -69,14 +69,14 @@ export function createBuildings({scene,world,grids,heritage,photography}) {
   },v=>{
     group.remove(v.mesh);v.mesh.geometry.dispose();
   },2);
-  let maskStamp=0,shell=null,shellIds=new Set(),shellRevision=0,shellSelection='',shellWanted='',shellBusy=false,openings=0;
+  let maskStamp=0,shell=null,shellIds=new Set(),shellRevision=0,shellSelection='',shellWanted='',wantedIds=new Set(),shellBusy=false,openings=0;
   function mask(v,far=false){
     if(!v)return;
-    const stamp=String(maskStamp)+'|'+(far?v.sectors.filter(id=>stream.live.has(id)).join(','):shellRevision);
+    const stamp=String(maskStamp)+'|'+(far?v.sectors.filter(id=>stream.live.has(id)).join(','):shellRevision)+(v===shell?'|'+[...stream.live.keys()].join(','):'');
     if(stamp===v.mask)return;
     const attr=v.mesh.geometry.index,idx=attr.array;let count=0;
     for(const r of v.rows){
-      if((far&&stream.live.has(r.sector))||(!far&&v!==shell&&shellIds.has(r.id))||heritage.isReplaced(r.id,r.x,r.z,r.rings))continue;
+      if((far&&stream.live.has(r.sector))||(v===shell&&!stream.live.has(shell.sourceSectors.get(r.id)))||(!far&&v!==shell&&shellIds.has(r.id)&&stream.live.has(shell?.sourceSectors.get(r.id)))||heritage.isReplaced(r.id,r.x,r.z,r.rings))continue;
       idx.set(v.indices.subarray(r.start,r.end),count);count+=r.end-r.start;
     }
     v.mesh.geometry.setDrawRange(0,count);
@@ -100,11 +100,11 @@ export function createBuildings({scene,world,grids,heritage,photography}) {
     let cost=0;const selection=[];
     for(const row of candidates){if(selection.length>=limit)break;if(selection.length&&cost+row.cost>work)continue;selection.push(row);cost+=row.cost;}
     const key=selection.map(r=>r.id).sort().join('/');
-    shellWanted=key;
+    shellWanted=key;wantedIds=new Set(selection.map(r=>r.id));
     if(!key){removeShell();return;}
-    // Keep the previous finished shell until its replacement is ready. It
-    // remains covered by the same cadastral mask; never draw both versions.
-    if(shell&&!selection.some(r=>shellIds.has(r.id))&&!shellBusy)removeShell();
+    // Keep completed detail where the source sector remains resident. Its
+    // rows are masked as soon as a sector leaves, so the skyline cannot overlap.
+    if(shell&&![...shell.sourceSectors.values()].some(id=>stream.live.has(id)))removeShell();
     if(shellBusy||shell?.id===key)return;
     const bySector=new Map();
     for(const row of selection){
@@ -117,13 +117,17 @@ export function createBuildings({scene,world,grids,heritage,photography}) {
       requests.set(request,{resolve,reject});
       worker.postMessage({key:request,selected:[...bySector]});
     }).then(data=>{
-      if(shellWanted!==key)return;
+      const sourceSectors=new Map(selection.map(r=>[r.id,r.sector]));
+      // On a slow worker, a walking camera can change selection before every
+      // reply. Accept useful finished detail rather than discard it forever.
+      const useful=data.rows.filter(r=>wantedIds.has(r.id)&&stream.live.has(sourceSectors.get(r.id))).length;
+      const existing=[...shellIds].filter(id=>wantedIds.has(id)&&stream.live.has(shell?.sourceSectors.get(id))).length;
+      if(!shellWanted||!data.rows.length||!useful||(shellWanted!==key&&existing>=useful))return;
       removeShell();
-      if(!data.rows.length)return;
-      shell=mesh(data,key);shellIds=new Set(data.rows.map(r=>r.id));openings=data.openings;shellRevision++;
+      shell=mesh(data,key);shell.sourceSectors=sourceSectors;shellIds=new Set(data.rows.map(r=>r.id));openings=data.openings;shellRevision++;
       mask(shell);for(const tile of stream.live.values())mask(tile);
     }).catch(error=>console.warn('Detalle de fachadas',error)).finally(()=>{
-      shellBusy=false;if(shellWanted!==key)shellSelection='';
+      shellBusy=false;if(shellWanted!==key||shell?.id!==key)shellSelection='';
     });
   }
   async function aerial(name){
