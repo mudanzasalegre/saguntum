@@ -1,0 +1,44 @@
+{
+  "url": "https://saguntum-atlas-3d.monmode.chatgpt.site/",
+  "assets": {
+    "js/render-session.js": "f8e96ac0fc7b0cbf6ef746fe7dfd08c5a54a2067e01297dcc53c8ff25f56d59c",
+    "simulator.html": "aa0ec3342868129056c5f6d42c4bb76cb1d2c410cafc71c6cac03bf1c215b6cd",
+    "js/territory.js": "08d3b74f3ff7a7adfbf145e87954f1ad3c5003cf88e44fbe96da8c832055fa78",
+    "js/territory-graphics.js": "fbb1934e511768e92062de7ed6fd4ad699364e64f9c2f46c9b011fa5bff70ae9",
+    "js/territory-node-fog.js": "1201fce2d462599459fd88190dd6a7a170b7a6888a846455455b2b9b8ec16d2f",
+    "js/territory-node-ground.js": "10ca75cdf9415db3756acd5ec92177f8c09b8b02a4d881fef3d52b4ec894b454",
+    "js/territory-node-environment.js": "01c997b89b0db213c16bc7c8527d7af135f7cba01312818549c409735f5311ed",
+    "js/territory-node-urban.js": "b33cefc400ee4524c39407f3d503beaaad22c9b9c94f5d1cfe6c60dfe78d10cd",
+    "js/territory-webgpu-device.js": "09b72cc9471e292e8811c15ebdf03cd06c4d93897ecd16499712a7c9bf0e276a",
+    "js/territory-heritage-worker.js": "3f839eeacd0e2ec7ca37471e365afb2fab698f04e113d3353600c1cbd62012f0",
+    "assets/vendor/three.webgpu.js": "649a7942e1faffc46ed71eb06379d270eeda3a1853abb4156b91d5add834dae8",
+    "assets/territory/visit-stops.json": "5df755a580791a166db00bf5480a5a83137ab45e44bda2a66c03dd06c602c02b"
+  },
+  "visits": [
+    {
+      "place": "glorieta",
+      "stop": "glorieta-romeu",
+      "engine": "webgl2",
+      "calls": 114,
+      "triangles": 1640543,
+      "places": 32,
+      "hardware": null
+    },
+    {
+      "place": "pantalan-maritimo",
+      "stop": "pantalan-maritimo-tripodes",
+      "engine": "webgpu",
+      "calls": 367,
+      "triangles": 1634349,
+      "places": 32,
+      "hardware": {
+        "vendor": "nvidia",
+        "architecture": "ampere",
+        "software": false
+      }
+    }
+  ],
+  "browser": "156.0.8078.47",
+  "title": "SAGUNTUM · Sagunto y Puerto de Sagunto",
+  "errors": []
+}

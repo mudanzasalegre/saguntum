@@ -1,5 +1,22 @@
 # Sincronización de Sites a GitHub
 
+## Versión 42 · Simulador WebGL 2 y WebGPU
+
+El 24 de noviembre de 2026 se publicó el simulador de doble motor en el proyecto original. La versión integra V2 y V3 y conserva la portada regional, los 32 lugares y sus enlaces. El despliegue `appgdep_6b057bacd81081919940a476a7ff666c` figura como `succeeded`. [Simulador publicado](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador) · [Arquitectura y compatibilidad](SIMULADOR_RENDER_V4.md)
+
+| Referencia | Valor |
+| --- | --- |
+| Fuente de Sites | `548318f6178dbd5cfbaa00fc4bffb2affc084da7` |
+| Revisión equivalente de la aplicación en GitHub | `bdca7ac2ce862fa5fd8da25d5ad584ce17a38b86` |
+| Árbol Git de `dist/` en ambos repositorios | `7baa679785fbe159d983912e93e1652cc8eeda3f` |
+| Archivo registrado por Sites | 1617 archivos, 267755520 bytes, `sha256:8548c316683bdfc64344817551428c8b8c4d376833e3ffbf037472966146a148` |
+
+Sobre la URL pública, Chrome abrió la portada con el título **SAGUNTUM · Sagunto y Puerto de Sagunto**. Se compararon doce recursos servidos con la distribución local. El simulador dibujó la parada de José Romeu en WebGL 2 y la de los trípodes marítimos en WebGPU con un adaptador NVIDIA de hardware. Ambas declararon los 32 lugares y terminaron sin errores de consola o de página. [Comprobación en producción](../research/render-v4/produccion.json)
+
+WebKit 27.2 en Windows, con emulación táctil de iPhone 13, abrió la Glorieta publicada. Al provocar la pérdida del contexto WebGL, el plano mantuvo la parada de Romeu y permitió volver a dibujarla en 3D. También se recuperó un arranque interrumpido y se completó el paso del simulador al plano, a la visita y de vuelta a 3D. La validación en Safari sobre un dispositivo Apple físico queda pendiente. [Recuperación en producción](../research/render-v4/produccion-webkit.json)
+
+Las mediciones de dos motores, los perfiles de las pausas y las comparaciones de cámara se conservan en el repositorio. [Recorrido de tres vueltas](../research/render-v4/rendimiento.md) · [Comparativa de 60 capturas](../research/render-v4/README.md) · [Ensayo de compilación anticipada](../research/render-v4/perfil-traslado/precarga-webgl2.md)
+
 ## Versión 41 · Exploración territorial a pie y patrimonio
 
 El 23 de noviembre de 2026, Sites publicó la versión 41 en la dirección original de SAGUNTUM. El despliegue `appgdep_6b043301be3c8191bf77e9874bea4841` alcanzó el estado `succeeded`. Se abrió primero la versión 40 del proyecto original y se verificó la igualdad de los árboles de distribución antes y después de la edición. [Simulador publicado](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador) · [Controles y alcance](EXPLORACION.md)
