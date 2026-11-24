@@ -494,11 +494,13 @@ export async function openSimulator(){
       $('engine-detail').textContent=graphics.limits.maxTextureDimension2D+' px de textura máxima · '+graphics.initMs+' ms de arranque · '+graphics.viewport.join(' × ')+' px de render · p95 '+status.frameP95Ms+' ms · '+status.sectors+' sectores · '+(status.fabric.bytes/1048576).toFixed(1)+' MiB de geometría en caché';
       const visit=heritage.stats.visit;
       const reading=visit?.inspection?'Inspección marina':visit?.section?'Sección de la visita':visit?.mode==='historical'||historical?'Reconstrucción histórica':visit?.interior?'Interior de la visita':'Territorio actual';
+      const unavailable=selected&&heritage.stats.failures[selected.id];
       const loadingVisit=activeStop&&flags.heritage&&nav.atVisitFrame&&!visit&&heritage.stats.loading;
       const height=Math.round(camera.position.y-heightAt(camera.position.x,camera.position.z));
       status.speedKmh=Math.round(nav.speed*36)/10;status.heightAGL=height;status.nearby=nearby?.id||null;
       const movement=nav.mode==='orbit'?'':(nav.mode==='walk'?'A pie':'Vuelo libre')+' · '+status.speedKmh.toLocaleString('es-ES')+' km/h · ';
       $('status').textContent=(nav.landing?'Buscando suelo transitable':loadingVisit?'Cargando la visita':pending?'Cargando sectores':reading)+' · '+movement+Math.abs(height).toLocaleString('es-ES')+(height<0?' m bajo el terreno':' m sobre terreno');
+      if(unavailable)$('status').textContent='Visita 3D no disponible · '+unavailable;
       if($('quality').value==='auto'){
         const result=qualityStep({tier,scale:pixelScale,penalty:peripheralPenalty,slow},{median,p95:status.frameP95Ms,target:mobile?33.4:16.7,pending,maxTier:graphics.autoLimit});
         const resized=result.tier!==tier||result.scale!==pixelScale;
