@@ -3,6 +3,7 @@ import * as T from 'three';
 import {project} from './territory-coordinates.js';
 import {resource,territoryBase,networkBase,loadElevation,makeSampler,buildGround} from './territory-ground.js';
 import {createHeritage} from './territory-heritage.js';
+import {movementLead} from './territory-stream-policy.js';
 import {loadHeritageCatalog,registerFrame} from './territory-heritage-catalog.js';
 import {createTerritorySea} from './territory-sea.js';
 import {createBuildings} from './territory-stream.js';
@@ -409,12 +410,13 @@ export async function openSimulator(){
     if(document.hidden){last=now;return;}
     const ms=now-last,dt=Math.max(0,Math.min(.1,ms/1000));last=now;nav.tick(dt);
     const p=nav.focusPoint(),range=nav.range,detail=detailView(p,range),near=detail.point;
+    const lead=movementLead(near.x,near.z,camera.position.x-previousEye.x,camera.position.z-previousEye.z,ms/1000,nav.mode,budget);
     const measuredSpeed=camera.position.distanceTo(previousEye)/Math.max(.001,ms/1000);
     speed=T.MathUtils.lerp(speed,measuredSpeed,1-Math.exp(-dt*7));previousEye.copy(camera.position);
     if(now-lastUpdate>180){
       ground.update(near.x,near.z,detail.range);
-      if(flags.heritage)heritage.update(near.x,near.z,detail.range,selected?.id,budget);
-      buildings.update(near.x,near.z,detail.range,budget);network.update(near.x,near.z,detail.range,budget,flags);
+      if(flags.heritage)heritage.update(near.x,near.z,detail.range,selected?.id,budget,lead);
+      buildings.update(near.x,near.z,detail.range,budget,lead);network.update(near.x,near.z,detail.range,budget,flags,lead);
       canopy.update(near,detail.range,budget,flags.land);
       map.follow(camera.position,nav.mode!=='orbit'&&detail.range<700,network.stream.live);
       map.draw(camera.position,p,camera.getWorldDirection(direction));updateNearby();markers(range);lastUpdate=now;
@@ -430,7 +432,7 @@ export async function openSimulator(){
     markRendered();if(ms>0)samples.push(ms);
     if(now-prevStats>900){
       const sorted=samples.sort((a,b)=>a-b),median=sorted[Math.floor(sorted.length/2)]||16;
-      const pending=buildings.stream.pending.size+network.stream.pending.size;
+      const pending=buildings.stream.pending.size+network.stream.pending.size+Number(heritage.stats.loading)+Number(buildings.fabricStats.loading);
       Object.assign(status,{mode:nav.mode,range:Math.round(range),detailRange:Math.round(detail.range),camera:nav.snapshot(),sectors:buildings.stream.live.size,networkSectors:network.stream.live.size,
         traffic:network.traffic,photo:surfacePhotoMetrics(),aerial:buildings.aerialStats,fabric:buildings.fabricStats,canopy:canopy.stats,localTerrain:grids.regional.length,quality:tier,pixelRatio:renderer.getPixelRatio(),drawCalls:renderer.info.render.calls,triangles:renderer.info.render.triangles,
         geometries:renderer.info.memory.geometries,textures:renderer.info.memory.textures,frameMs:Math.round(median*10)/10,
@@ -448,8 +450,10 @@ export async function openSimulator(){
       if($('quality').value==='auto'){
         const target=mobile?33.4:16.7,heavy=status.frameP95Ms>target*2.5&&median>target*1.2;
         slow=median>target*1.45||heavy?Math.max(0,slow)+1:median<target*1.08&&!pending?Math.min(0,slow)-1:0;
-        if(slow>=3&&tier>0){tier--;budget=tier;slow=0;resize();}
-        else if(slow>=3&&pixelScale>.58){pixelScale=Math.max(.58,pixelScale-.12);slow=0;resize();}
+        // Protect authored geometry during transient streaming pressure. First
+        // reduce raster cost; lower the world detail only for sustained pressure.
+        if(slow>=3&&pixelScale>.68){pixelScale=Math.max(.68,pixelScale-.10);slow=0;resize();}
+        else if(slow>=3&&tier>0&&(!pending||slow>=6||median>target*2.1)){tier--;budget=tier;slow=0;resize();}
         else if(slow< -12&&pixelScale<1){pixelScale=Math.min(1,pixelScale+.1);slow=0;resize();}
         else if(slow< -12&&tier<graphics.autoLimit){tier++;budget=tier;slow=0;resize();}
       }

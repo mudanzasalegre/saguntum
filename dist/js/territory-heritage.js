@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 import {loadHeritageCatalog} from './territory-heritage-catalog.js';
-import {buildHeritageModel,inRing,maskRing,modelId,normalizeBuildingId,overlapsRegisteredFootprint,releaseModel} from './territory-heritage-models.js';
+import {buildHeritageModel,inRing,maskRing,modelId,normalizeBuildingId,overlapsRegisteredFootprint,releaseModel,warmHeritageModel} from './territory-heritage-models.js';
 import {overviewModels} from './territory-heritage-overview.js';
 import {heritageWorker} from './territory-heritage-loader.js';
 import {dressHeritageSurfaces} from './territory-heritage-surface.js';
@@ -8,7 +8,7 @@ import {heightOnPavement} from './territory-heritage-paving.js';
 import {atlasRoadMasks,maxLocalHeritage} from './territory-heritage-roadmask.js';
 import {bindHeritageVisit} from './territory-heritage-visit.js';
 import {sectionWindow} from './territory-heritage-section.js';
-import {preloadAtlasVisit} from './territory-heritage-registry.js';
+import {heritageWindow} from './territory-stream-policy.js';
 import {sampleHeritageBarriers} from './territory-collision-heritage.js';
 import {reliefDelta} from './territory-heritage-relief.js';
 
@@ -45,7 +45,7 @@ export async function createHeritage({scene,renderer,heightAt,project,grids,mobi
  scene.add(root);
  let desired=[],pending=false,disposed=false,historical=null,lastKey='',lastCheck=-Infinity;
  let requestedStop=null,nearNative=new Set();
- const prefetched=new Set();
+ const prefetched=new Map();let warming=0;
  let lastAltitude=0,lastQuality=0,focusX=0,focusZ=0;
  let status={requested:[],loaded:[],loading:false,failures:{}};
  const claimIds=new Set(),claimGrid=new Map(),registeredGrid=new Map(),propGrid=new Map(),greenGrid=new Map(),cell=64;
@@ -129,7 +129,8 @@ export async function createHeritage({scene,renderer,heightAt,project,grids,mobi
  function showStop(id,item){
   if(requestedStop?.model===id){
    const {place,stop,presentation}=requestedStop;
-   status.visit=item.setVisitStop(place,stop,presentation);
+   if(item.setVisitStop)status.visit=item.setVisitStop(place,stop,presentation);
+   else item.setHistorical(historical===id);
   }else item.setHistorical(historical===id);
  }
  async function schedule(){
@@ -154,7 +155,9 @@ export async function createHeritage({scene,renderer,heightAt,project,grids,mobi
        if(worker===background)onError(new Error('Patrimonio en primer plano · '+id+' · '+error.message));
       }finally{workerRequest=null;}
      }
-     if(item&&needsNative(id)){releaseModel(item.group);item=null;}
+     // A completed worker model is a useful bridge while the source
+     // constructor prepares the interactive version. Swap atomically below;
+     // missing(id) will request the native model on the next pass.
      if(!item&&needed())item=await buildHeritageModel(id,{...options,needed,renderer,bindVisit:bindHeritageVisit});
      if(!item)continue;
      if(!needed()){item.disposeVisit?.();releaseModel(item.group);continue;}
@@ -237,16 +240,16 @@ export async function createHeritage({scene,renderer,heightAt,project,grids,mobi
    nearby(propGrid,x,z).some(([px,pz,r])=>r>2&&Math.hypot(px-x,pz-z)<r));},
   ownsFurniture(x,z){return root.visible&&(this.walkSurface(x,z)!==null||
    nearby(propGrid,x,z).some(([px,pz,r])=>r<=2&&Math.hypot(px-x,pz-z)<r));},
-  update(x,z,altitude,selectedId=null,quality=2){
+  update(x,z,altitude,selectedId=null,quality=2,hint=null){
    if(disposed)return;
    lastAltitude=altitude;lastQuality=quality;focusX=x;focusZ=z;
-   const key=[Math.round(x/6),Math.round(z/6),Math.round(altitude/12),selectedId,quality].join('/');
+   const key=[Math.round(x/6),Math.round(z/6),Math.round(altitude/12),selectedId,quality,hint?Math.round(hint.x/45):'',hint?Math.round(hint.z/45):''].join('/');
    const now=performance.now();
    if(key===lastKey&&now-lastCheck<2500)return;
    lastKey=key;lastCheck=now;
    for(const item of loaded.values())item.setDensity(altitude,quality,x,z);
    chooseLights();
-   const nearest=new Map(),native=new Set();
+   const nearest=new Map(),native=new Set(),warmQueue=new Map();
    for(const place of places){
     const id=modelId(place.id),distance=distanceToSite(id,x,z,Math.hypot(x-place.x,z-place.z));
     // Longer structures need a window along their full extent.
@@ -255,19 +258,22 @@ export async function createHeritage({scene,renderer,heightAt,project,grids,mobi
     const anchor=requestedStop?.anchor;
     const stopDistance=requestedStop?.model===id&&anchor?Math.hypot(x-anchor.x,z-anchor.z):Infinity;
     const stopInView=stopDistance<Math.max(350,reach*1.65,altitude*.9)&&altitude<Math.max(4200,reach*7);
-    const inVisitView=stopInView||selected&&distance<reach*1.65&&altitude<Math.max(1600,reach*5);
-    if(!inVisitView&&(distance>reach*(loaded.has(id)?1.18:1)||altitude>reach*(loaded.has(id)?1.32:1.14)))continue;
-    const close=place.scene?.nativeDistance??100;
-    if(distance<close*(nearNative.has(id)?1.28:1)&&altitude<close*(nearNative.has(id)?1.6:1.25))native.add(id);
-    if(place.scene&&!prefetched.has(id)){
-     prefetched.add(id);preloadAtlasVisit(inventory.records[id]).catch(()=>prefetched.delete(id));
-    }
-    // For newly authored visits the cadastral city is the middle level.
-    // Prefetch their original module before constructing any Three objects.
-    if(place.scene&&!inVisitView&&!native.has(id)&&!loaded.has(id))continue;
-    const score=stopInView?-Infinity:distance/(loaded.has(id)?1.18:1)-(selectedId===place.id?reach:0);
-    nearest.set(id,Math.min(nearest.get(id)??Infinity,score));
+    const ahead=hint?distanceToSite(id,hint.x,hint.z,Math.hypot(hint.x-place.x,hint.z-place.z)):Infinity;
+    const policy=heritageWindow({distance,ahead,range:altitude,reach,close:place.scene?.nativeDistance??100,loaded:loaded.has(id),native:nearNative.has(id),selected,stop:stopInView,quality,mobile});
+    if(policy.warm&&!loaded.has(id)&&!(prefetched.get(id)>now))warmQueue.set(id,Math.min(warmQueue.get(id)??Infinity,policy.score));
+    if(!policy.visible)continue;
+    if(policy.full)native.add(id);
+    if(place.scene&&!policy.full&&!loaded.has(id))continue;
+    nearest.set(id,Math.min(nearest.get(id)??Infinity,policy.score));
    }
+   // Bound speculative I/O independently from live mesh slots. The actual
+   // requested visit remains first in the construction queue.
+   for(const [id] of [...warmQueue].sort((a,b)=>a[1]-b[1])){
+    if(warming>=(mobile?1:2))break;
+    prefetched.set(id,now+45000);warming++;
+    void warmHeritageModel(id,inventory.records).catch(()=>prefetched.delete(id)).finally(()=>warming--);
+   }
+   status.warming=warming;
    nearNative=native;
    const limit=mobile?1:quality===2?maxLocalHeritage:2;
    desired=[...nearest].sort((a,b)=>a[1]-b[1]).slice(0,limit).map(([id])=>id);

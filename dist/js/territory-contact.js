@@ -4,7 +4,7 @@ import * as T from 'three';
 // No second draw of the town or heritage models is required.
 export function contactRenderer(renderer) {
   const supported=renderer.extensions.has('EXT_color_buffer_float');
-  let target;
+  let target,lastUsed=-Infinity;
   const size=new T.Vector2();
   const uniforms={image:{value:null},depthMap:{value:null},clip:{value:new T.Vector2()},
     projectionScale:{value:new T.Vector2()}};
@@ -52,10 +52,12 @@ export function contactRenderer(renderer) {
   const screen=new T.Scene(),screenCamera=new T.Camera();screen.add(pass);
   return function render(scene,camera,enabled){
     if(!enabled||!supported){
-      if(target){target.dispose();target=null;}
+      // A short burst of movement should not repeatedly allocate a full-size
+      // multisampled depth target. Release it after sustained inactivity.
+      if(target&&performance.now()-lastUsed>3500){target.dispose();target=null;}
       renderer.render(scene,camera);return;
     }
-    renderer.getDrawingBufferSize(size);
+    lastUsed=performance.now();renderer.getDrawingBufferSize(size);
     if(!target){
       target=new T.WebGLRenderTarget(size.x,size.y,{type:T.HalfFloatType,
         samples:Math.min(4,renderer.capabilities.maxSamples),depthBuffer:true});

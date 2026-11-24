@@ -78,7 +78,7 @@ export function nearFacades(group){
     if(!parts.visible)return;
     const key=[Math.floor(x/13),Math.floor(z/13),budget,[...live.keys()].join('/'),version].join('|');
     if(key===lastKey)return;lastKey=key;count=0;
-    const reach=[32,60,92][budget],rows=[];
+    const reach=[38,72,116][budget],rows=[];
     for(const v of live.values())for(const r of v.rows){
       const [l,t,k,b]=r.bounds;
       if(k>=x-reach-8&&l<=x+reach+8&&b>=z-reach-8&&t<=z+reach+8)rows.push(r);
@@ -89,7 +89,8 @@ export function nearFacades(group){
         return l<=x&&x<=k&&t<=z&&z<=b&&insideRing(x,z,r.rings[0])&&!r.rings.slice(1).some(h=>insideRing(x,z,h));
       });
     }
-    rows.sort((a,b)=>Math.hypot(a.x-x,a.z-z)-Math.hypot(b.x-x,b.z-z));
+    const dist=r=>Math.hypot(Math.max(r.bounds[0]-x,0,x-r.bounds[2]),Math.max(r.bounds[1]-z,0,z-r.bounds[3]));
+    rows.sort((a,b)=>dist(a)-dist(b)||Math.hypot(a.x-x,a.z-z)-Math.hypot(b.x-x,b.z-z));
     for(const r of rows){
       if(!visible(r)||count>=max)continue;
       const loop=r.rings[0],sign=Math.sign(loop.reduce((s,a,i)=>{const b=loop[(i+1)%loop.length];return s+a[0]*b[1]-b[0]*a[1];},0));

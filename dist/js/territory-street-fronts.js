@@ -50,7 +50,7 @@ export function appendStreetFronts(front,heightAt,pos,uv,profiles,indices){
       const pointIndices=points.map(point);
       let lowest=Infinity,highest=-Infinity;
       for(const index of pointIndices){const y=pos[index*3+1];lowest=Math.min(lowest,y);highest=Math.max(highest,y);}
-      const span=highest-lowest<.5?42:16;
+      const span=highest-lowest<.5?24:9;
       // Subdivide long slivers along both edges. Steep streets below the
       // castle can otherwise sink into a 30–60 metre triangle.
       function triangle(a,b,c,ia,ib,ic,depth){
@@ -68,7 +68,7 @@ export function appendStreetFronts(front,heightAt,pos,uv,profiles,indices){
     const line=unpack(ring);
     let length=0;
     for(let i=1;i<line.length;i++){
-      const a=line[i-1],b=line[i],len=a.distanceTo(b),parts=Math.ceil(len/8);
+      const a=line[i-1],b=line[i],len=a.distanceTo(b),parts=Math.max(1,Math.ceil(len/4));
       for(let k=0;k<=parts;k++){
         const f=k/parts,p=a.clone().lerp(b,f),u=length+f*len;
         const v=vertex(p,.15,1,7,u,0);

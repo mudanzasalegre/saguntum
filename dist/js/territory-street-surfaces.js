@@ -58,6 +58,10 @@ export function streetMaterial(){
         float aa=max(.012,fwidth(lateral)*.58);
         float longitudinalAA=max(.015,fwidth(along)*.58);
         float paint=0.,steel=0.,trafficPolish=0.;
+        // Low-frequency mineral and wear variation in world metres, not a
+        // repeated image seam. Fade it as the camera leaves street scale.
+        float broadWear=sin(vStreetUV.z*.39+sin(vStreetUV.w*.17))*sin(vStreetUV.w*.31);
+        bed*=1.+.038*broadWear*detailWeight;
         if(kind==0.&&(mode==1.||mode==8.||mode==9.)){
           // Carriageway finish at driving scale. A narrow wheel path has
           // finer exposed aggregate than the unused margins of the asphalt.
@@ -65,7 +69,8 @@ export function streetMaterial(){
           float tracks=abs(abs(ax-lane)-.76);
           trafficPolish=(1.-smoothstep(.15,.52,tracks))*(1.-smoothstep(.15,.76,aa));
           float gutter=smoothstep(halfWidth-.49,halfWidth-.16,ax);
-          bed*=1.-.12*trafficPolish-.09*gutter;
+          float marginWear=.5+.5*sin(along*.19+sin(along*.071));
+          bed*=1.-.12*trafficPolish-(.065+.055*marginWear)*gutter;
         }
         if(mode==1.){
           float dash=streetBand(abs(mod(along,8.)-2.),1.9,longitudinalAA);
@@ -130,7 +135,10 @@ export function streetGeometry(data,heightAt,fronts){
     for(let i=0;i+1<points.length;i++){
       const [x,z]=points[i],dx=points[i+1][0]-x,dz=points[i+1][1]-z;
       if(Math.abs(dx)+Math.abs(dz)<.01)continue;
-      const n=Math.max(1,Math.ceil(Math.hypot(dx,dz)/10));
+      // Keep urban road and kerb segments on the terrain at pedestrian scale.
+      // Rural/rail surfaces retain a coarser mesh; no new routes are invented.
+      const fine=f.offset||['footway','pedestrian','residential','living_street','service','steps'].includes(f.kind);
+      const n=Math.max(1,Math.ceil(Math.hypot(dx,dz)/(fine?4:8)));
       for(let j=0;j<n;j++)line.push([x+dx*j/n,z+dz*j/n,f.deck?T.MathUtils.lerp(f.deck[i],f.deck[i+1],j/n):null]);
     }
     line.push([...points.at(-1),f.deck?.at(-1)]);if(line.length<2)return;

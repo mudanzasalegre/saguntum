@@ -1,9 +1,9 @@
 import * as THREE from 'three';
-import {atlasProject,documentData,registerFrame} from './territory-heritage-catalog.js';
+import {atlasProject,documentData,prewarmDocument,registerFrame} from './territory-heritage-catalog.js';
 import {heritageRelief,reliefDelta} from './territory-heritage-relief.js';
 import {heightOnPavement,sampleAtlasPavement,samplePublicDeck} from './territory-heritage-paving.js';
 import {sampleHeritageBarriers} from './territory-collision-heritage.js';
-import {instantiateAtlasVisit} from './territory-heritage-registry.js';
+import {instantiateAtlasVisit,preloadAtlasVisit} from './territory-heritage-registry.js';
 
 // Each table entry addresses the original geometry constructor, including
 // sectional interiors and original texture generation. Only one site is built
@@ -24,6 +24,25 @@ const definitions={
 const archiveOnly=new Set(['glorieta','pantalan','grau-vell','puerto-antiguo','marjal-moros','dunas-almarda','rio-palancia']);
 const sharedModels={'diana':'berenguer','pantalan-maritimo':'pantalan','pantalan-paseo':'pantalan'};
 export const modelId=id=>sharedModels[id]||id;
+// Prepare the original module and its authored data, without creating meshes,
+// textures, pavement rasters or collision structures on the rendering thread.
+export async function warmHeritageModel(id,records){
+ const record=records[id];
+ if(record?.scene){
+  await Promise.allSettled([preloadAtlasVisit(record),...Object.values(record.scene.resources||{}).map(prewarmDocument)]);return;
+ }
+ const definition=definitions[id];if(!definition)return;
+ const [file,,factory]=definition,names=[];
+ if(!archiveOnly.has(id)){
+  names.push(file+'-visit');if(id!=='castle'&&id!=='theatre')names.push(file+'-context');
+  if(id!=='castle')names.push(file+'-plan');
+ }
+ if(id==='grau-vell')names.push('grau-visit','grau-context');
+ if(id==='pantalan')names.push('pantalan-paseo-visit','pantalan-maritimo-visit','pantalan-context');
+ if(id==='glorieta')names.push('glorieta-layout','glorieta-buildings','glorieta-visit');
+ if(record?.landscape)names.push(record.region+'-cartography');
+ await Promise.allSettled([factory(),...names.map(prewarmDocument)]);
+}
 
 export function maskRing(points){
  if(!points||points.length<3)return null;

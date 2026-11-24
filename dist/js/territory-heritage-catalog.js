@@ -1,12 +1,25 @@
 // One entry per original Atlas destination. Keep anchors, evidence and visit links
 // in their source records; the simulator only adds the common projected position.
-const cache=new Map();
-export function documentData(name,retain=true){
- if(cache.has(name))return cache.get(name);
+const cache=new Map(),warm=new Map();
+function requestDocument(name){
  const result=fetch(new URL('../assets/data/'+name+'.json',import.meta.url)).then(response=>{
   if(!response.ok)throw Error('No se pudo abrir '+name+' ('+response.status+')');
   return response.json();
- }).catch(error=>{cache.delete(name);throw error;});
+ }).catch(error=>{if(cache.get(name)===result)cache.delete(name);if(warm.get(name)===result)warm.delete(name);throw error;});
+ return result;
+}
+// Simulator-only speculative data. The Atlas' persistent editorial cache is
+// unchanged. Bound the warm cache and consume it on the actual constructor.
+export function prewarmDocument(name){
+ if(cache.has(name))return cache.get(name);
+ if(warm.has(name))return warm.get(name);
+ const result=requestDocument(name);warm.set(name,result);
+ while(warm.size>20)warm.delete(warm.keys().next().value);
+ return result;
+}
+export function documentData(name,retain=true){
+ if(cache.has(name))return cache.get(name);
+ const result=warm.get(name)||requestDocument(name);warm.delete(name);
  if(retain)cache.set(name,result);
  return result;
 }

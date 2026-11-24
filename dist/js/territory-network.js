@@ -168,9 +168,9 @@ export function createNetwork({scene,index,heightAt,heritage}){
   }
 
   return {streets,green,stream,get traffic(){return {cars:cars.count,people:walkers.count};},
-    update(x,z,alt,budget,flags){
+    update(x,z,alt,budget,flags,hint=null){
       observer=[x,z];
-      stream.update(x,z,alt>1800?0:[620,1000,1400][budget],alt>1800?0:[6,12,20][budget]);graph(x,z);
+      stream.update(x,z,alt>1800?0:[620,1050,1500][budget],alt>1800?0:[6,12,20][budget],hint);graph(x,z);
       streets.visible=flags.streets;green.visible=flags.land;
       const key=(heritage?.group.visible?'on/':'off/')+(heritage?.stats.loaded||[]).join(',');
       for(const tile of stream.live.values())tile.refresh?.(x,z,budget,key);

@@ -4,6 +4,7 @@ import {footprintGrid,indexBounds,nearCell,touchesFootprint} from './territory-c
 import {territoryBase} from './territory-ground.js';
 import {nearFacades} from './territory-facades.js';
 import {architecturalMaterial,skylineMaterial} from './territory-building-material.js';
+import {selectSectors,closeFabricBudget} from './territory-stream-policy.js';
 
 export const distanceTo=(x,z,[l,t,r,b])=>Math.hypot(Math.max(l-x,0,x-r),Math.max(t-z,0,z-b));
 export class SectorStream {
@@ -11,9 +12,8 @@ export class SectorStream {
     this.index=index;this.load=load;this.drop=drop;this.limit=limit;
     this.live=new Map();this.pending=new Set();this.retry=new Map();this.wanted=new Set();
   }
-  update(x,z,radius,max){
-    const candidates=this.index.map(s=>[s,distanceTo(x,z,s.geometryBounds||s.bounds)])
-      .filter(([,d])=>d<=radius).sort((a,b)=>a[1]-b[1]).slice(0,max);
+  update(x,z,radius,max,hint=null){
+    const candidates=selectSectors(this.index,x,z,radius,max,this.live,hint);
     this.wanted=new Set(candidates.map(([s])=>s.id));
     for(const [id,v] of this.live)if(!this.wanted.has(id)){this.drop(v);this.live.delete(id);}
     for(const [s] of candidates){
@@ -88,19 +88,23 @@ export function createBuildings({scene,world,grids,heritage,photography}) {
     group.remove(shell.mesh);shell.mesh.geometry.dispose();shell=null;shellIds=new Set();openings=0;shellRevision++;
   }
   function updateShell(x,z,alt,budget){
-    const reach=[19,32,49][budget],movingKey=[Math.floor(x/7),Math.floor(z/7),budget,alt>125,[...stream.live.keys()].join(','),maskStamp].join('/');
+    const {reach,count:limit,work}=closeFabricBudget(budget,alt),movingKey=[Math.floor(x/9),Math.floor(z/9),budget,alt>125,alt<70,[...stream.live.keys()].join(','),maskStamp].join('/');
     if(movingKey===shellSelection&&!shellBusy)return;
     shellSelection=movingKey;
     const candidates=[];
     if(alt<125)for(const [sector,tile] of stream.live)for(const r of tile.rows){
       const d=distanceTo(x,z,r.bounds);
-      if(d<=reach&&r.outerEdges.includes(true)&&!heritage.isReplaced(r.id,r.x,r.z,r.rings))candidates.push({d,id:r.id,sector});
+      if(d<=reach&&r.outerEdges.includes(true)&&!heritage.isReplaced(r.id,r.x,r.z,r.rings))candidates.push({d,id:r.id,sector,cost:Math.max(1,Math.min(220,Math.ceil((r.eaves-r.floor)/Math.max(1,r.storey))*r.outerEdges.filter(Boolean).length*2))});
     }
     candidates.sort((a,b)=>a.d-b.d||a.id.localeCompare(b.id));
-    const selection=candidates.slice(0,[28,49,72][budget]),key=selection.map(r=>r.id).sort().join('/');
+    let cost=0;const selection=[];
+    for(const row of candidates){if(selection.length>=limit)break;if(selection.length&&cost+row.cost>work)continue;selection.push(row);cost+=row.cost;}
+    const key=selection.map(r=>r.id).sort().join('/');
     shellWanted=key;
     if(!key){removeShell();return;}
-    if(shell&&!selection.some(r=>shellIds.has(r.id)))removeShell();
+    // Keep the previous finished shell until its replacement is ready. It
+    // remains covered by the same cadastral mask; never draw both versions.
+    if(shell&&!selection.some(r=>shellIds.has(r.id))&&!shellBusy)removeShell();
     if(shellBusy||shell?.id===key)return;
     const bySector=new Map();
     for(const row of selection){
@@ -157,10 +161,10 @@ export function createBuildings({scene,world,grids,heritage,photography}) {
   const ready=startAerial();
   const facades=nearFacades(group);
   scene.add(group);
-  return {group,stream,ready,night,get aerialStats(){return aerialStats;},get fabricStats(){return {buildings:shellIds.size,openings};},changed(){maskStamp++;},
-    update(x,z,alt,budget){
-      const radius=alt>2200?0:(budget===0?650:budget===1?1000:1450);
-      stream.update(x,z,radius,alt>2200?0:[12,24,42][budget]);
+  return {group,stream,ready,night,get aerialStats(){return aerialStats;},get fabricStats(){return {buildings:shellIds.size,openings,loading:shellBusy};},changed(){maskStamp++;},
+    update(x,z,alt,budget,hint=null){
+      const radius=alt>2200?0:(budget===0?650:budget===1?1050:1500);
+      stream.update(x,z,radius,alt>2200?0:[12,24,42][budget],hint);
       updateShell(x,z,alt,budget);
       if(shell)mask(shell);
       for(const v of overview)mask(v,true);
