@@ -1,0 +1,35 @@
+import assert from 'node:assert/strict';
+import {facadeChunks,localScore,planChunks,detailLimits,detailBytes,qualityStep,viewBucket} from '../dist/js/territory-local-detail.js';
+const row=(id,x,z)=>({id,bounds:[x,z,x+8,z+9],outerEdges:[true,false,true],eaves:9,floor:0,storey:3});
+const rows=Array.from({length:38},(_,i)=>row('b'+i,(i%8)*10,Math.floor(i/8)*10));
+const groups=facadeChunks('0_0',rows),reversed=facadeChunks('0_0',[...rows].reverse());
+assert.deepEqual(groups.map(g=>[g.key,g.ids]).sort(),reversed.map(g=>[g.key,g.ids]).sort());
+assert.equal(groups.flatMap(g=>g.ids).length,rows.length);
+assert.ok(groups.every(g=>g.ids.length<=6));
+assert.equal(facadeChunks('x',[{...row('blind',0,0),outerEdges:[false]}]).length,0);
+const view={x:0,z:0,dx:1,dz:0};
+assert.ok(localScore([60,0,70,5],0,0,view)<localScore([-70,0,-60,5],0,0,view));
+assert.equal(localScore([-10,0,-5,5],0,0,view),5);
+assert.notEqual(viewBucket(view),viewBucket({...view,dx:-1}));
+assert.equal(viewBucket({...view,dx:0,dz:0}),'-');
+for(const compact of [false,true])for(const budget of [0,1,2]){
+ const limits=detailLimits(budget,30,compact),selected=planChunks(groups,0,0,30,budget,compact,view,new Set());
+ assert.ok(selected.length<=limits.chunks);
+ assert.ok(selected.reduce((n,g)=>n+g.work,0)<=limits.work);
+ assert.ok(selected.reduce((n,g)=>n+g.ids.length,0)<=limits.count);
+ assert.equal(planChunks(groups,0,0,140,budget,compact,view,new Set()).length,0);
+}
+assert.equal(detailBytes({position:new Float32Array(9),index:new Uint32Array(3)}),96);
+const pressure={median:40,p95:60,target:16.7,pending:1,maxTier:2};
+let s={tier:2,scale:1,penalty:0,slow:0};
+for(let i=0;i<3;i++)s=qualityStep(s,pressure);
+assert.equal(s.tier,2);assert.equal(s.scale,.9);
+for(let i=0;i<9;i++)s=qualityStep(s,pressure);
+assert.equal(s.tier,2);assert.equal(s.scale,.68);assert.equal(s.penalty,0);
+for(let i=0;i<6;i++)s=qualityStep(s,pressure);
+assert.equal(s.penalty,2);assert.equal(s.tier,2);
+for(let i=0;i<3;i++)s=qualityStep(s,pressure);
+assert.equal(s.tier,1);
+for(let i=0;i<12;i++)s=qualityStep(s,{median:12,p95:15,target:16.7,pending:0,maxTier:2});
+assert.equal(s.tier,1);assert.ok(s.scale>.68);
+console.log('OK: deterministic batches, view priority, local limits, byte estimate, adaptive quality');

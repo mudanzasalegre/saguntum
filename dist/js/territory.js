@@ -4,6 +4,7 @@ import {project} from './territory-coordinates.js';
 import {resource,territoryBase,networkBase,loadElevation,makeSampler,buildGround} from './territory-ground.js';
 import {createHeritage} from './territory-heritage.js';
 import {movementLead} from './territory-stream-policy.js';
+import {qualityStep} from './territory-local-detail.js';
 import {loadHeritageCatalog,registerFrame} from './territory-heritage-catalog.js';
 import {createTerritorySea} from './territory-sea.js';
 import {createBuildings} from './territory-stream.js';
@@ -41,7 +42,7 @@ export async function openSimulator(){
   const core={x:(sag.x+port.x)/2,z:(sag.z+grau.z)/2,anchors:zones,range:Math.max(6100,Math.hypot(port.x-sag.x,grau.z-sag.z)*.94)};
   let nav,buildings,network,heritage,atmosphere,renderer,canopy,selected=null,historical=false;
   let focus2D={...core},budget=1,hour=15,markerButtons=[];
-  let tier=1,pixelScale=1,graphics,solarDate=solarDateInSagunto();
+  let tier=1,pixelScale=1,peripheralPenalty=0,graphics,solarDate=solarDateInSagunto();
   let lighting='solar',lightPreference='auto',terrainPreference='auto',exterior=false;
   let presentationReady=false;
   const flags={buildings:true,heritage:true,streets:true,land:true,labels:true,cars:true,people:true};
@@ -329,7 +330,7 @@ export async function openSimulator(){
   };
   $('sun-preset').onchange=e=>{if(e.target.value){hour=solarPreset(e.target.value,solarDate);lightPreference='solar';applyPresentation();}};
   $('terrain').onchange=e=>{terrainPreference=e.target.value;applyPresentation();};
-  $('quality').onchange=e=>{tier=e.target.value==='auto'?graphics.initial:Number(e.target.value);budget=Math.min(2,tier);pixelScale=1;slow=0;resize();};
+  $('quality').onchange=e=>{tier=e.target.value==='auto'?graphics.initial:Number(e.target.value);budget=Math.min(2,tier);pixelScale=1;peripheralPenalty=0;slow=0;resize();};
   $('home').onclick=()=>{clear();nav.panorama();writeLink();};$('tour').onclick=()=>{clear();nav.startTour();writeLink();};
   window.addEventListener('resize',()=>{resize();if(selected&&activeStop&&nav.atVisitFrame)framePlace(selected,true);});
   for(const p of [...zones,...places]){
@@ -411,25 +412,28 @@ export async function openSimulator(){
     const ms=now-last,dt=Math.max(0,Math.min(.1,ms/1000));last=now;nav.tick(dt);
     const p=nav.focusPoint(),range=nav.range,detail=detailView(p,range),near=detail.point;
     const lead=movementLead(near.x,near.z,camera.position.x-previousEye.x,camera.position.z-previousEye.z,ms/1000,nav.mode,budget);
+    camera.getWorldDirection(direction);
+    const view={x:camera.position.x,z:camera.position.z,dx:direction.x,dz:direction.z};
+    const peripheral=Math.max(0,budget-peripheralPenalty);
     const measuredSpeed=camera.position.distanceTo(previousEye)/Math.max(.001,ms/1000);
     speed=T.MathUtils.lerp(speed,measuredSpeed,1-Math.exp(-dt*7));previousEye.copy(camera.position);
     if(now-lastUpdate>180){
       ground.update(near.x,near.z,detail.range);
       if(flags.heritage)heritage.update(near.x,near.z,detail.range,selected?.id,budget,lead);
-      buildings.update(near.x,near.z,detail.range,budget,lead);network.update(near.x,near.z,detail.range,budget,flags,lead);
-      canopy.update(near,detail.range,budget,flags.land);
+      buildings.update(near.x,near.z,detail.range,budget,lead,view,peripheral);network.update(near.x,near.z,detail.range,peripheral,flags,lead);
+      canopy.update(near,detail.range,peripheral,flags.land);
       map.follow(camera.position,nav.mode!=='orbit'&&detail.range<700,network.stream.live);
       map.draw(camera.position,p,camera.getWorldDirection(direction));updateNearby();markers(range);lastUpdate=now;
     }
     sea.setInspection(flags.heritage&&heritage.stats.visit?.waterCut);
-    canopy.animate(now/1000,budget);
+    canopy.animate(now/1000,peripheral);
     heritage.animateGlorieta(now/1000,$('jets').checked,lighting==='solar'&&atmosphere.daylight<.45);
     atmosphere.update(camera,near,detail.range,tier);sea.update(dt,tier,speed);network.animate(dt,flags,nav.mode==='walk'?camera.position:null);
     const nearPlane=range>2600?3:range>450?.7:.12;
     if(camera.near!==nearPlane||lastFov!==camera.fov){camera.near=nearPlane;lastFov=camera.fov;camera.updateProjectionMatrix();}
-    const contact=lighting==='solar'&&tier>=2&&(!mobile||tier===3)&&detail.range<520&&speed<65;
+    const contact=lighting==='solar'&&tier>=2&&peripheralPenalty<2&&(!mobile||tier===3)&&detail.range<520&&speed<65;
     renderer.info.reset();render(scene,camera,contact);
-    markRendered();if(ms>0)samples.push(ms);
+    markRendered();if(ms>0&&ms<1000)samples.push(ms);
     if(now-prevStats>900){
       const sorted=samples.sort((a,b)=>a-b),median=sorted[Math.floor(sorted.length/2)]||16;
       const pending=buildings.stream.pending.size+network.stream.pending.size+Number(heritage.stats.loading)+Number(buildings.fabricStats.loading);
@@ -437,7 +441,7 @@ export async function openSimulator(){
         traffic:network.traffic,photo:surfacePhotoMetrics(),aerial:buildings.aerialStats,fabric:buildings.fabricStats,canopy:canopy.stats,localTerrain:grids.regional.length,quality:tier,pixelRatio:renderer.getPixelRatio(),drawCalls:renderer.info.render.calls,triangles:renderer.info.render.triangles,
         geometries:renderer.info.memory.geometries,textures:renderer.info.memory.textures,frameMs:Math.round(median*10)/10,
         frameP95Ms:Math.round((sorted[Math.floor(sorted.length*.95)]||median)*10)/10,
-        heapMiB:performance.memory?Math.round(performance.memory.usedJSHeapSize/1048576):null,heritage:heritage.stats,pending});
+        heapMiB:performance.memory?Math.round(performance.memory.usedJSHeapSize/1048576):null,heritage:heritage.stats,pending,localQuality:budget,peripheralQuality:peripheral,pixelScale});
       Object.assign(graphics,{profile:qualityNames[tier],shadowSize:atmosphere.shadowSize,contact:contact&&renderer.extensions.has('EXT_color_buffer_float')});
       $('stats').textContent=graphics.backend+' · '+graphics.profile+' · '+status.frameMs+' ms/fotograma · '+status.drawCalls+' llamadas · '+status.triangles.toLocaleString('es-ES')+' triángulos · '+status.geometries+' geometrías · '+status.textures+' texturas'+(status.heapMiB?' · JS '+status.heapMiB+' MiB':'')+' · carga inicial '+(status.loadMs/1000).toFixed(1)+' s';
       const visit=heritage.stats.visit;
@@ -448,14 +452,10 @@ export async function openSimulator(){
       const movement=nav.mode==='orbit'?'':(nav.mode==='walk'?'A pie':'Vuelo libre')+' · '+status.speedKmh.toLocaleString('es-ES')+' km/h · ';
       $('status').textContent=(nav.landing?'Buscando suelo transitable':loadingVisit?'Cargando la visita':pending?'Cargando sectores':reading)+' · '+movement+Math.abs(height).toLocaleString('es-ES')+(height<0?' m bajo el terreno':' m sobre terreno');
       if($('quality').value==='auto'){
-        const target=mobile?33.4:16.7,heavy=status.frameP95Ms>target*2.5&&median>target*1.2;
-        slow=median>target*1.45||heavy?Math.max(0,slow)+1:median<target*1.08&&!pending?Math.min(0,slow)-1:0;
-        // Protect authored geometry during transient streaming pressure. First
-        // reduce raster cost; lower the world detail only for sustained pressure.
-        if(slow>=3&&pixelScale>.68){pixelScale=Math.max(.68,pixelScale-.10);slow=0;resize();}
-        else if(slow>=3&&tier>0&&(!pending||slow>=6||median>target*2.1)){tier--;budget=tier;slow=0;resize();}
-        else if(slow< -12&&pixelScale<1){pixelScale=Math.min(1,pixelScale+.1);slow=0;resize();}
-        else if(slow< -12&&tier<graphics.autoLimit){tier++;budget=tier;slow=0;resize();}
+        const result=qualityStep({tier,scale:pixelScale,penalty:peripheralPenalty,slow},{median,p95:status.frameP95Ms,target:mobile?33.4:16.7,pending,maxTier:graphics.autoLimit});
+        const resized=result.tier!==tier||result.scale!==pixelScale;
+        tier=result.tier;budget=Math.min(2,tier);pixelScale=result.scale;peripheralPenalty=result.penalty;slow=result.slow;
+        if(resized)resize();
       }
       samples=[];prevStats=now;
     }

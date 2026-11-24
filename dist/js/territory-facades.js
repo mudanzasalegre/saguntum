@@ -1,5 +1,6 @@
 import * as T from 'three';
 import {insideRing} from './territory-coordinates.js';
+import {localScore,viewBucket} from './territory-local-detail.js';
 import {baysOn,balconyBay,edgeSeed,joineryTone,openingBounds} from './territory-building-style.js';
 import {architectureScans} from './territory-building-material.js';
 
@@ -64,35 +65,41 @@ export function nearFacades(group){
     shutter=new T.Color('#526456'),louvre=new T.Color('#738170'),
     bamboo=new T.Color('#b18c5e'),blindIvory=new T.Color('#d4cdb8'),blindSlate=new T.Color('#8b9996'),
     blindHem=new T.Color('#72746a'),apron=new T.Color('#bc896e');
-  let lastKey='',count=0;
+  let lastKey='',count=0,limit=max;
   const finishCode=new Map([[lime,0],[edge,0],[concrete,1],[apron,1],[iron,2],[shutter,2],[louvre,2],
     [zinc,3],[blindHem,3],[awning,4],[bamboo,4],[blindIvory,4],[blindSlate,4]]);
   function piece(x,y,z,yaw,w,h,d,color,tilt=0){
-    if(count>=max)return;
+    if(count>=limit)return;
     frame.position.set(x,y,z);frame.rotation.set(0,yaw,0,'YXZ');frame.rotation.x=tilt;
     frame.scale.set(w,h,d);frame.updateMatrix();
     finishes.setX(count,finishCode.get(color));parts.setMatrixAt(count,frame.matrix);parts.setColorAt(count++,color);
   }
-  return function update(x,z,range,budget,live,visible,version){
+  return function update(x,z,range,budget,live,visible,version,view=null){
     parts.visible=range<200;
     if(!parts.visible)return;
-    const key=[Math.floor(x/13),Math.floor(z/13),budget,[...live.keys()].join('/'),version].join('|');
-    if(key===lastKey)return;lastKey=key;count=0;
+    const key=[Math.floor(x/9),Math.floor(z/9),budget,range<70,viewBucket(view),[...live.keys()].join('/'),version].join('|');
+    if(key===lastKey)return;lastKey=key;count=0;limit=Math.min(max,[2500,6500,11520][budget]);
     const reach=[38,72,116][budget],rows=[];
     for(const v of live.values())for(const r of v.rows){
       const [l,t,k,b]=r.bounds;
       if(k>=x-reach-8&&l<=x+reach+8&&b>=z-reach-8&&t<=z+reach+8)rows.push(r);
     }
+    const cells=new Map(),cell=16;
+    for(const r of rows){const [l,t,k,b]=r.bounds;
+      for(let iz=Math.floor(t/cell);iz<=Math.floor(b/cell);iz++)for(let ix=Math.floor(l/cell);ix<=Math.floor(k/cell);ix++){
+        const key=ix+','+iz;if(!cells.has(key))cells.set(key,[]);cells.get(key).push(r);
+      }
+    }
     function occupied(x,z){
-      return rows.some(r=>{
+      return (cells.get(Math.floor(x/cell)+','+Math.floor(z/cell))||[]).some(r=>{
         const [l,t,k,b]=r.bounds;
         return l<=x&&x<=k&&t<=z&&z<=b&&insideRing(x,z,r.rings[0])&&!r.rings.slice(1).some(h=>insideRing(x,z,h));
       });
     }
     const dist=r=>Math.hypot(Math.max(r.bounds[0]-x,0,x-r.bounds[2]),Math.max(r.bounds[1]-z,0,z-r.bounds[3]));
-    rows.sort((a,b)=>dist(a)-dist(b)||Math.hypot(a.x-x,a.z-z)-Math.hypot(b.x-x,b.z-z));
+    rows.sort((a,b)=>localScore(a.bounds,x,z,view)-localScore(b.bounds,x,z,view)||dist(a)-dist(b));
     for(const r of rows){
-      if(!visible(r)||count>=max)continue;
+      if(!visible(r)||count>=limit)continue;
       const loop=r.rings[0],sign=Math.sign(loop.reduce((s,a,i)=>{const b=loop[(i+1)%loop.length];return s+a[0]*b[1]-b[0]*a[1];},0));
       const floors=Math.round((r.eaves-r.floor)/r.storey),historic=r.style===0||r.style===4;
       const stone=historic?lime:concrete,rail=historic?iron:zinc;

@@ -52,9 +52,9 @@ function unpack(data){
 // A browser without worker canvas support can still use the source constructors.
 export function heritageWorker(grids){
  if(!grids||typeof Worker==='undefined'||typeof OffscreenCanvas==='undefined'||typeof createImageBitmap==='undefined')return null;
- let worker,request=null,closed=false;
+ let worker,request=null,closed=false,timer=null;
  function stop(error){
-  closed=true;worker?.terminate();if(request){request.reject(error);request=null;}
+  closed=true;clearTimeout(timer);worker?.terminate();if(request){request.reject(error);request=null;}
  }
  try{
   worker=new Worker(new URL('./territory-heritage-worker.js',import.meta.url),{type:'module'});
@@ -62,12 +62,14 @@ export function heritageWorker(grids){
  }catch{return null;}
  worker.onerror=e=>{e.preventDefault();stop(Error(e.message||'No se pudo iniciar el trabajador de patrimonio'));};
  worker.onmessage=({data})=>{
-  if(!request)return;
-  const {resolve,reject}=request;request=null;
+  if(!request||data.id!==request.id)return;
+  clearTimeout(timer);const {resolve,reject}=request;request=null;
   if(data.error){reject(Error(data.error));return;}
   try{resolve(unpack(data));}catch(error){reject(error);}
  };
  return {get closed(){return closed;},load:id=>new Promise((resolve,reject)=>{
-  request={resolve,reject};worker.postMessage({id});
+  if(closed||request){reject(Error('Trabajador patrimonial no disponible'));return;}
+  request={resolve,reject,id};timer=setTimeout(()=>stop(Error('Tiempo de preparación patrimonial agotado')),45000);
+  try{worker.postMessage({id});}catch(error){stop(error);}
  }),dispose:()=>stop(Error('Vista patrimonial cerrada'))};
 }

@@ -6,7 +6,13 @@ import {buildingFabric,roofFabric} from './territory-building-roof.js';
 import {recessedBay} from './territory-building-openings.js';
 
 let heightAt;
-const sourceTiles=new Map();
+const sourceTiles=new Map();let retained=new Set();
+function trimSources(){
+ for(const key of sourceTiles.keys()){
+  if(sourceTiles.size<=58)break;
+  if(!retained.has(key))sourceTiles.delete(key);
+ }
+}
 function ridge(outer,building,roofColor) {
   if(outer.length!==4)return null;
   const shed=['industrial','agriculture'].includes(building.usage);
@@ -161,6 +167,7 @@ function postGeometry(key,result){
   self.postMessage({key,result},[result.position.buffer,result.color.buffer,result.uv.buffer,result.archMetric.buffer,result.archData.buffer,result.index.buffer]);
 }
 self.onmessage=async ({data:m})=>{
+  if(m.retain){retained=new Set(m.retain);trimSources();return;}
   if(m.grids){
     heightAt=terrainSampler(m.grids);return;
   }
@@ -185,7 +192,7 @@ self.onmessage=async ({data:m})=>{
     const [tile,profiles]=await Promise.all([res.json(),m.key==='overview'?null:buildingFabric(m.key,m.url)]);
     if(m.key!=='overview'){
       sourceTiles.set(m.key,new Map(tile.buildings.map((b,i)=>[b.id,{b,profile:profiles?.[i]}])));
-      if(sourceTiles.size>58)sourceTiles.delete(sourceTiles.keys().next().value);
+      trimSources();
     }
     const result=build(tile.buildings,m.key==='overview',profiles);
     postGeometry(m.key,result);

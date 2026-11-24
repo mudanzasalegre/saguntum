@@ -146,6 +146,7 @@ export async function createHeritage({scene,renderer,heightAt,project,grids,mobi
     if(!needed())continue;
     let item;
     try{
+     if(background?.closed)background=null;
      if(id!=='glorieta'&&!needsNative(id)&&!background&&grids)background=heritageWorker(grids);
      if(id!=='glorieta'&&!needsNative(id)&&background&&!background.closed){
       const worker=background;workerRequest=id;
@@ -212,6 +213,13 @@ export async function createHeritage({scene,renderer,heightAt,project,grids,mobi
    historical=null;
    const id=requestedStop?.model;
    if(id){
+    // Clicking a stop is a strong signal even before its camera arrives.
+    // Warm its authored module and data immediately, within the same limit.
+    const now=performance.now();
+    if(!loaded.get(id)?.setVisitStop&&warming<(mobile?1:2)&&!(prefetched.get(id)>now)){
+     prefetched.set(id,now+45000);warming++;
+     void warmHeritageModel(id,inventory.records).catch(()=>prefetched.delete(id)).finally(()=>warming--);
+    }
     if(workerRequest&&!loaded.get(id)?.setVisitStop){
      background?.dispose();background=null;
     }

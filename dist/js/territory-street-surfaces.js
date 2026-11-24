@@ -138,13 +138,20 @@ export function streetGeometry(data,heightAt,fronts){
       // Keep urban road and kerb segments on the terrain at pedestrian scale.
       // Rural/rail surfaces retain a coarser mesh; no new routes are invented.
       const fine=f.offset||['footway','pedestrian','residential','living_street','service','steps'].includes(f.kind);
-      const n=Math.max(1,Math.ceil(Math.hypot(dx,dz)/(fine?4:8)));
+      const length=Math.hypot(dx,dz);
+      const aY=f.deck?.[i]??heightAt(x,z),bY=f.deck?.[i+1]??heightAt(x+dx,z+dz);
+      const midY=f.deck?(aY+bY)*.5:heightAt(x+dx*.5,z+dz*.5);
+      const slope=length>0?Math.abs(bY-aY)/length:0,bend=Math.abs(midY-(aY+bY)*.5);
+      const step=fine&&(slope>.09||bend>.18)?2:fine?4:8;
+      const n=Math.max(1,Math.ceil(length/step));
       for(let j=0;j<n;j++)line.push([x+dx*j/n,z+dz*j/n,f.deck?T.MathUtils.lerp(f.deck[i],f.deck[i+1],j/n):null]);
     }
     line.push([...points.at(-1),f.deck?.at(-1)]);if(line.length<2)return;
     let length=0;
     const first=pos.length/3;
-    const columns=sidewalk?3:2;
+    // Wide carriageways need a centre sample: a single plane between two
+    // edges can cut into crowned or irregular DEM surfaces.
+    const columns=sidewalk?3:width>=5?3:2;
     for(let i=0;i<line.length;i++){
       const [x,z,deck]=line[i],a=line[Math.max(0,i-1)],b=line[Math.min(i+1,line.length-1)];
       const lenA=Math.hypot(x-a[0],z-a[1]),lenB=Math.hypot(b[0]-x,b[1]-z);
@@ -153,7 +160,7 @@ export function streetGeometry(data,heightAt,fronts){
       length+=lenA;
       for(let k=0;k<columns;k++){
         const sign=sidewalk?Math.sign(f.offset):1;
-        const lateral=(sidewalk&&k<2?-.5:k===columns-1?.5:-.5)*width;
+        const lateral=(sidewalk&&k<2?-.5:k/(columns-1)-.5)*width;
         const offset=(f.offset||0)+sign*lateral,vx=x+nx/safe*offset,vz=z+nz/safe*offset;
         pos.push(vx,(deck??heightAt(vx,vz))+(sidewalk&&k>0?.32:.20),vz);
         uv.push(lateral,length);profiles.push(slot,metres[slot],width/2,style);

@@ -4,7 +4,8 @@ import {footprintGrid,indexBounds,nearCell,touchesFootprint} from './territory-c
 import {territoryBase} from './territory-ground.js';
 import {nearFacades} from './territory-facades.js';
 import {architecturalMaterial,skylineMaterial} from './territory-building-material.js';
-import {selectSectors,closeFabricBudget} from './territory-stream-policy.js';
+import {selectSectors} from './territory-stream-policy.js';
+import {facadeChunks,planChunks,detailLimits,detailBytes} from './territory-local-detail.js';
 
 export const distanceTo=(x,z,[l,t,r,b])=>Math.hypot(Math.max(l-x,0,x-r),Math.max(t-z,0,z-b));
 export class SectorStream {
@@ -30,6 +31,7 @@ export class SectorStream {
 }
 export function createBuildings({scene,world,grids,heritage,photography}) {
   const group=new T.Group(), requests=new Map();
+  const compact=matchMedia('(pointer: coarse)').matches||(navigator.deviceMemory||8)<=4;
   const night={value:0};
   let mat;
   const aerialMat=skylineMaterial(photography);
@@ -45,7 +47,7 @@ export function createBuildings({scene,world,grids,heritage,photography}) {
       requests.set(key,{resolve,reject});worker.postMessage({key,url:new URL(territoryBase+url,document.baseURI).href});
     });
   }
-  function mesh(data,id) {
+  function mesh(data,id,visible=true) {
     const g=new T.BufferGeometry();
     const far=Boolean(data.normal);
     const attributes=far?[['position',3],['color',3],['normal',3]]:[['position',3],['color',3],['uv',2],['archMetric',4],['archData',4]];
@@ -54,7 +56,7 @@ export function createBuildings({scene,world,grids,heritage,photography}) {
     if(!far)g.computeVertexNormals();
     g.computeBoundingSphere();
     const m=new T.Mesh(g,far?aerialMat:(mat??=architecturalMaterial(night,photography)));
-    m.receiveShadow=true;m.castShadow=true;group.add(m);
+    m.receiveShadow=true;m.castShadow=true;m.visible=visible;group.add(m);
     return {id,mesh:m,rows:data.rows,indices:data.index,mask:null,
       sectors:far||id==='overview'?[...new Set(data.rows.map(r=>r.sector))]:null};
   }
@@ -63,72 +65,91 @@ export function createBuildings({scene,world,grids,heritage,photography}) {
   const sectorGrid=new MetricGrid(500);
   for(const sector of world.sectors)indexBounds(sectorGrid,sector,sector.geometryBounds||sector.bounds);
   const stream=new SectorStream(world.sectors,async s=>{
-    const tile=mesh(await read(s.id,s.url),s.id);
-    tile.footprints=footprintGrid(tile.rows);
+    const tile=mesh(await read(s.id,s.url),s.id,false);
+    tile.footprints=footprintGrid(tile.rows);tile.detailChunks=facadeChunks(s.id,tile.rows);
     return tile;
   },v=>{
     group.remove(v.mesh);v.mesh.geometry.dispose();
   },2);
-  let maskStamp=0,shell=null,shellIds=new Set(),shellRevision=0,shellSelection='',shellWanted='',wantedIds=new Set(),shellBusy=false,openings=0;
+  let maskStamp=0,detailRevision=0,detailIds=new Set(),active=new Set(),desired=new Map(),busy=false;
+  let cacheBytes=0,byteLimit=9*1048576,sourceKey='',hits=0,builds=0,evictions=0,refused=0,peakBytes=0;
+  const cache=new Map(),retryDetail=new Map();
   function mask(v,far=false){
     if(!v)return;
-    const stamp=String(maskStamp)+'|'+(far?v.sectors.filter(id=>stream.live.has(id)).join(','):shellRevision)+(v===shell?'|'+[...stream.live.keys()].join(','):'');
+    const stamp=String(maskStamp)+'|'+(far?v.sectors.filter(id=>stream.live.has(id)).join(','):v.detail?'detail':detailRevision);
     if(stamp===v.mask)return;
     const attr=v.mesh.geometry.index,idx=attr.array;let count=0;
     for(const r of v.rows){
-      if((far&&stream.live.has(r.sector))||(v===shell&&!stream.live.has(shell.sourceSectors.get(r.id)))||(!far&&v!==shell&&shellIds.has(r.id)&&stream.live.has(shell?.sourceSectors.get(r.id)))||heritage.isReplaced(r.id,r.x,r.z,r.rings))continue;
+      if((far&&stream.live.has(r.sector))||(!far&&!v.detail&&detailIds.has(r.id))||heritage.isReplaced(r.id,r.x,r.z,r.rings))continue;
       idx.set(v.indices.subarray(r.start,r.end),count);count+=r.end-r.start;
     }
     v.mesh.geometry.setDrawRange(0,count);
     if(count!==v.indices.length||v.mask!==null)attr.needsUpdate=true;
     v.mask=stamp;
   }
-  function removeShell(){
-    if(!shell)return;
-    group.remove(shell.mesh);shell.mesh.geometry.dispose();shell=null;shellIds=new Set();openings=0;shellRevision++;
+  function evict(key){
+    const item=cache.get(key);if(!item)return;
+    cache.delete(key);cacheBytes-=item.bytes;group.remove(item.tile.mesh);item.tile.mesh.geometry.dispose();evictions++;
   }
-  function updateShell(x,z,alt,budget){
-    const {reach,count:limit,work}=closeFabricBudget(budget,alt),movingKey=[Math.floor(x/9),Math.floor(z/9),budget,alt>125,alt<70,[...stream.live.keys()].join(','),maskStamp].join('/');
-    if(movingKey===shellSelection&&!shellBusy)return;
-    shellSelection=movingKey;
-    const candidates=[];
-    if(alt<125)for(const [sector,tile] of stream.live)for(const r of tile.rows){
-      const d=distanceTo(x,z,r.bounds);
-      if(d<=reach&&r.outerEdges.includes(true)&&!heritage.isReplaced(r.id,r.x,r.z,r.rings))candidates.push({d,id:r.id,sector,cost:Math.max(1,Math.min(220,Math.ceil((r.eaves-r.floor)/Math.max(1,r.storey))*r.outerEdges.filter(Boolean).length*2))});
+  function trim(reserve=0){
+    const candidates=[...cache.entries()].filter(([k])=>!desired.has(k)).sort((a,b)=>a[1].used-b[1].used);
+    for(const [key] of candidates){if(cacheBytes+reserve<=byteLimit&&cache.size<48)break;evict(key);}
+    return cacheBytes+reserve<=byteLimit&&cache.size<48;
+  }
+  function publishDetails(){
+    const ids=new Set(),next=new Set();
+    for(const [key,g] of desired){
+      const item=cache.get(key);
+      if(!item||!stream.live.has(g.sector))continue;
+      item.used=performance.now();next.add(key);
+      for(const r of item.tile.rows)ids.add(r.id);
     }
-    candidates.sort((a,b)=>a.d-b.d||a.id.localeCompare(b.id));
-    let cost=0;const selection=[];
-    for(const row of candidates){if(selection.length>=limit)break;if(selection.length&&cost+row.cost>work)continue;selection.push(row);cost+=row.cost;}
-    const key=selection.map(r=>r.id).sort().join('/');
-    shellWanted=key;wantedIds=new Set(selection.map(r=>r.id));
-    if(!key){removeShell();return;}
-    // Keep completed detail where the source sector remains resident. Its
-    // rows are masked as soon as a sector leaves, so the skyline cannot overlap.
-    if(shell&&![...shell.sourceSectors.values()].some(id=>stream.live.has(id)))removeShell();
-    if(shellBusy||shell?.id===key)return;
-    const bySector=new Map();
-    for(const row of selection){
-      if(!bySector.has(row.sector))bySector.set(row.sector,[]);
-      bySector.get(row.sector).push(row.id);
+    for(const [key,item] of cache){
+      item.tile.mesh.visible=next.has(key);
+      if(next.has(key))mask(item.tile);
     }
-    shellBusy=true;
+    const changed=next.size!==active.size||[...next].some(k=>!active.has(k));
+    active=next;detailIds=ids;if(changed)detailRevision++;
+  }
+  function updateDetail(x,z,range,budget,view){
+    byteLimit=detailLimits(budget,range,compact).bytes;
+    const groups=[];
+    for(const tile of stream.live.values())groups.push(...tile.detailChunks);
+    for(const [key,item] of cache)if(!stream.live.has(item.sector))evict(key);
+    const selected=planChunks(groups,x,z,range,budget,compact,view,active);
+    desired=new Map(selected.map(g=>[g.key,g]));
+    trim();
+    if(cacheBytes>byteLimit)for(const g of [...selected].reverse()){
+      if(cacheBytes<=byteLimit)break;evict(g.key);
+    }
+    const now=performance.now();
+    for(const [key,until] of retryDetail)if(until<=now||!stream.live.has(key.split('/')[0]))retryDetail.delete(key);
+    for(const [key] of desired)if(cache.has(key)&&!active.has(key))hits++;
+    publishDetails();
+    if(busy)return;
+    const next=selected.find(g=>!cache.has(g.key)&&!(retryDetail.get(g.key)>now));
+    if(!next)return;
+    busy=true;
     const request='close-elevations';
     new Promise((resolve,reject)=>{
       requests.set(request,{resolve,reject});
-      worker.postMessage({key:request,selected:[...bySector]});
+      worker.postMessage({key:request,selected:[[next.sector,next.ids]]});
     }).then(data=>{
-      const sourceSectors=new Map(selection.map(r=>[r.id,r.sector]));
-      // On a slow worker, a walking camera can change selection before every
-      // reply. Accept useful finished detail rather than discard it forever.
-      const useful=data.rows.filter(r=>wantedIds.has(r.id)&&stream.live.has(sourceSectors.get(r.id))).length;
-      const existing=[...shellIds].filter(id=>wantedIds.has(id)&&stream.live.has(shell?.sourceSectors.get(id))).length;
-      if(!shellWanted||!data.rows.length||!useful||(shellWanted!==key&&existing>=useful))return;
-      removeShell();
-      shell=mesh(data,key);shell.sourceSectors=sourceSectors;shellIds=new Set(data.rows.map(r=>r.id));openings=data.openings;shellRevision++;
-      mask(shell);for(const tile of stream.live.values())mask(tile);
-    }).catch(error=>console.warn('Detalle de fachadas',error)).finally(()=>{
-      shellBusy=false;if(shellWanted!==key||shell?.id!==key)shellSelection='';
-    });
+      // Keep useful replies across turns, but never publish over an unloaded
+      // source tile or exceed the local typed-array budget.
+      if(!stream.live.has(next.sector))return;
+      if(!data.rows.length){retryDetail.set(next.key,performance.now()+45000);return;}
+      const bytes=detailBytes(data);
+      if(bytes>byteLimit||!trim(bytes)){
+        refused++;retryDetail.set(next.key,performance.now()+12000);return;
+      }
+      const tile=mesh(data,next.key,false);tile.detail=true;
+      cache.set(next.key,{tile,sector:next.sector,bytes,used:performance.now(),openings:data.openings||0});
+      cacheBytes+=bytes;peakBytes=Math.max(peakBytes,cacheBytes);builds++;
+    }).catch(error=>{
+      retryDetail.set(next.key,performance.now()+12000);
+      console.warn('Detalle de fachadas',error);
+    }).finally(()=>{busy=false;});
   }
   async function aerial(name){
     const chunks=await read('aerial-'+name,'aerial-buildings/'+name+'.bin');
@@ -165,15 +186,16 @@ export function createBuildings({scene,world,grids,heritage,photography}) {
   const ready=startAerial();
   const facades=nearFacades(group);
   scene.add(group);
-  return {group,stream,ready,night,get aerialStats(){return aerialStats;},get fabricStats(){return {buildings:shellIds.size,openings,loading:shellBusy};},changed(){maskStamp++;},
-    update(x,z,alt,budget,hint=null){
-      const radius=alt>2200?0:(budget===0?650:budget===1?1050:1500);
-      stream.update(x,z,radius,alt>2200?0:[12,24,42][budget],hint);
-      updateShell(x,z,alt,budget);
-      if(shell)mask(shell);
+  return {group,stream,ready,night,get aerialStats(){return aerialStats;},get fabricStats(){return {buildings:detailIds.size,openings:[...active].reduce((n,k)=>n+(cache.get(k)?.openings||0),0),loading:busy,chunks:active.size,cached:cache.size,bytes:cacheBytes,byteLimit,peakBytes,hits,builds,evictions,refused};},changed(){maskStamp++;},
+    update(x,z,alt,budget,hint=null,view=null,peripheral=budget){
+      const radius=alt>2200?0:(peripheral===0?650:peripheral===1?1050:1500);
+      stream.update(x,z,radius,alt>2200?0:[12,24,42][peripheral],hint);
+      const retained=[...new Set([...stream.live.keys(),...stream.pending])].sort(),key=retained.join('/');
+      if(key!==sourceKey){sourceKey=key;worker.postMessage({retain:retained});}
+      updateDetail(x,z,alt,budget,view);
       for(const v of overview)mask(v,true);
-      for(const v of stream.live.values())mask(v);
-      facades(x,z,alt,budget,stream.live,r=>!heritage.isReplaced(r.id,r.x,r.z,r.rings),maskStamp);
+      for(const v of stream.live.values()){mask(v);v.mesh.visible=true;}
+      facades(x,z,alt,budget,stream.live,r=>!heritage.isReplaced(r.id,r.x,r.z,r.rings),maskStamp,view);
     },
     safeToWalk(x,z,radius=.32){
       return !nearCell(sectorGrid,x,z,radius,sector=>{
