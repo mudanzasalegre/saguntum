@@ -45,10 +45,14 @@ export function architectureScans(){
   const compact=matchMedia('(pointer: coarse)').matches||(navigator.deviceMemory||8)<=4;
   const slots={uArchSurface:{value:null},uArchRelief:{value:null},uArchBay:{value:null},uArchGlass:{value:null}};
   Promise.all(Object.entries(slots).map(async([name,slot],i)=>{
-    const path=['surfaces','microrelief','joinery','glazing'][i]+(compact?'-compact':'')+'.webp';
-    const tex=await textures.loadAsync(new URL(path,dir).href);
+    const stem=['surfaces','microrelief','joinery','glazing'][i];
+    // Each atlas has the same logical cells in both resolutions. A failed
+    // high-resolution download must not disable every façade material.
+    const load=small=>textures.loadAsync(new URL(stem+(small?'-compact':'')+'.webp',dir).href);
+    let tex;
+    try{tex=await load(compact);}catch(error){tex=await load(!compact);}
     if(name==='uArchSurface'||name==='uArchBay')tex.colorSpace=T.SRGBColorSpace;
-    tex.anisotropy=4;slot.value=tex;
+    tex.anisotropy=compact?4:8;slot.value=tex;
   })).then(()=>{ready.value=1;}).catch(e=>console.warn('Material arquitectónico',e));
   return loadedScans={...slots,uArchReady:ready};
 }
@@ -156,6 +160,11 @@ export function architecturalMaterial(night,photography){
         vec3 scan=textureGrad(uArchSurface,coord,dx,dy).rgb;
         vec3 nr=textureGrad(uArchRelief,coord,dx,dy).rgb;
         diffuseColor.rgb*=mix(vec3(1.),clamp(scan*2.32,vec3(.25),vec3(1.95)),archDetail*(index==0.?.49:.86));
+        // Subtle building-scale material variation sits below the scanned
+        // fine grain. World coordinates keep it stable between facade LODs.
+        float weather=sin(vArchXZ.x*.21+sin(vArchXZ.y*.12))*sin(vArchXZ.y*.19+vArchMetric.y*.16);
+        float broadDetail=archDetail*(1.-smoothstep(95.,260.,vArchRange));
+        diffuseColor.rgb*=1.+weather*broadDetail*(index==0.?.035:.022);
         archRough=mix(.88,nr.b,archDetail*.74);
         if(index==2.||index==6.)archMetal=archDetail*clamp(.72*(1.-nr.b)+.10,.1,.58);
         microNormal=nr.rg*2.-1.;

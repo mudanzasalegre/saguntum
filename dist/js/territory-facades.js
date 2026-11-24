@@ -103,7 +103,7 @@ export function nearFacades(group){
       const loop=r.rings[0],sign=Math.sign(loop.reduce((s,a,i)=>{const b=loop[(i+1)%loop.length];return s+a[0]*b[1]-b[0]*a[1];},0));
       const floors=Math.round((r.eaves-r.floor)/r.storey),historic=r.style===0||r.style===4;
       const stone=historic?lime:concrete,rail=historic?iron:zinc;
-      for(let i=0;i<loop.length&&count<max;i++){
+      for(let i=0;i<loop.length&&count<limit;i++){
         if(!r.outerEdges[i])continue;
         const a=loop[i],b=loop[(i+1)%loop.length],dx=b[0]-a[0],dz=b[1]-a[1],length=Math.hypot(dx,dz);
         const tx=dx/length,tz=dz/length,nx=tz*sign,nz=-tx*sign,yaw=-Math.atan2(dz,dx),seed=edgeSeed(r.seed,i);
@@ -111,7 +111,7 @@ export function nearFacades(group){
         if(Math.hypot(a[0]+tx*along-x,a[1]+tz*along-z)>reach)continue;
         const bays=baysOn(length,r.spacing),bayWidth=length/bays;
         const at=(cx,cy,cz,u,v,w,h,d,color,tilt)=>piece(cx+tx*u+nx*v,cy,cz+tz*u+nz*v,yaw,w,h,d,color,tilt);
-        for(let j=0;j<bays&&count<max;j++){
+        for(let j=0;j<bays&&count<limit;j++){
           const px=a[0]+dx*(j+.5)/bays,pz=a[1]+dz*(j+.5)/bays;
           const distance=Math.hypot(px-x,pz-z);
           const kind=r.edgeKinds?.[i]?.[j];
@@ -151,7 +151,7 @@ export function nearFacades(group){
             }
             continue;
           }
-          for(let level=1;level<floors&&count<max;level++){
+          for(let level=1;level<floors&&count<limit;level++){
             if(r.floor+(level+.87)*r.storey>topAtBay-.05)continue;
             const balcony=balconyBay(j,level,seed);
             const y=r.floor+(level+(balcony?.112:.286))*r.storey;

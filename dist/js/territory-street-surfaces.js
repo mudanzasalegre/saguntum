@@ -24,7 +24,8 @@ export function streetMaterial(){
   const diffuse=loader.load(new URL('pavements.webp',folder).href);
   diffuse.colorSpace=T.SRGBColorSpace;
   const detail=loader.load(new URL('pavements-detail.webp',folder).href);
-  diffuse.anisotropy=detail.anisotropy=4;
+  const compact=matchMedia('(pointer: coarse)').matches||(navigator.deviceMemory||8)<=4;
+  diffuse.anisotropy=detail.anisotropy=compact?4:8;
   const mat=new T.MeshStandardMaterial({roughness:.93,side:T.DoubleSide,polygonOffset:true,polygonOffsetFactor:-2,polygonOffsetUnits:-2});
   mat.onBeforeCompile=s=>{
     s.uniforms.streetPhoto={value:diffuse};s.uniforms.streetDetail={value:detail};
