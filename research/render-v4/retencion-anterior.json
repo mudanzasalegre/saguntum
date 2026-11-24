@@ -1,0 +1,345 @@
+{
+  "dateUTC": "2026-11-24T11:31:14.686015+00:00",
+  "chrome": "156.0.8078.47",
+  "viewport": [
+    1000,
+    640
+  ],
+  "devicePixelRatio": 1,
+  "phase": "Antes de corregir la retención de objetos RenderObject y revisar los listeners de texturas.",
+  "method": "Tres circuitos en el mismo documento, referencias de memoria tras GC en el panorama y entrada al Atlas después de los circuitos.",
+  "engines": {
+    "webgl2": {
+      "sha256OfFullEngineRecord": "da14dcb6dc805b99de62ff10cb0df297ec112d85fed44d80cb6cf9c69ee7e107",
+      "durationSeconds": 150.17,
+      "rAF": {
+        "frames": 4615,
+        "seconds": 129.19,
+        "p50ms": 16.7,
+        "p95ms": 33.4,
+        "p99ms": 233.4,
+        "maxMs": 5685.3,
+        "over50ms": 171,
+        "over100ms": 84,
+        "over250ms": 45
+      },
+      "checkpoints": [
+        {
+          "cycle": 0,
+          "eye": [
+            7688.29,
+            5743.16,
+            8357.61
+          ],
+          "geometries": 75,
+          "textures": 12,
+          "usedHeapAfterGCMiB": 21.4,
+          "materialVariants": null,
+          "facadeCount": 0,
+          "buildingSectors": 0,
+          "roadSectors": 0,
+          "heritage": [],
+          "distanceFromReferenceM": 0.0
+        },
+        {
+          "cycle": 1,
+          "eye": [
+            7688.29,
+            5743.16,
+            8357.61
+          ],
+          "geometries": 179,
+          "textures": 27,
+          "usedHeapAfterGCMiB": 45.0,
+          "materialVariants": null,
+          "facadeCount": 0,
+          "buildingSectors": 0,
+          "roadSectors": 0,
+          "heritage": [],
+          "distanceFromReferenceM": 0.0
+        },
+        {
+          "cycle": 2,
+          "eye": [
+            7688.29,
+            5743.16,
+            8357.61
+          ],
+          "geometries": 177,
+          "textures": 27,
+          "usedHeapAfterGCMiB": 43.0,
+          "materialVariants": null,
+          "facadeCount": 0,
+          "buildingSectors": 0,
+          "roadSectors": 0,
+          "heritage": [],
+          "distanceFromReferenceM": 0.0
+        },
+        {
+          "cycle": 3,
+          "eye": [
+            7688.29,
+            5743.16,
+            8357.61
+          ],
+          "geometries": 170,
+          "textures": 27,
+          "usedHeapAfterGCMiB": 46.1,
+          "materialVariants": null,
+          "facadeCount": 0,
+          "buildingSectors": 0,
+          "roadSectors": 0,
+          "heritage": [],
+          "distanceFromReferenceM": 0.0
+        }
+      ],
+      "retentionAtPanorama": {
+        "geometries": {
+          "warm": [
+            179,
+            177,
+            170
+          ],
+          "lastMinusFirst": -9,
+          "growthTolerance": 48,
+          "withinGrowthTolerance": true
+        },
+        "textures": {
+          "warm": [
+            27,
+            27,
+            27
+          ],
+          "lastMinusFirst": 0,
+          "growthTolerance": 8,
+          "withinGrowthTolerance": true
+        },
+        "usedHeapAfterGCMiB": {
+          "warm": [
+            45.0,
+            43.0,
+            46.1
+          ],
+          "lastMinusFirst": 1.1,
+          "growthTolerance": 20,
+          "withinGrowthTolerance": true
+        }
+      },
+      "budgets": {
+        "largestFacadeBytes": 3712716,
+        "largestStagedFacadeBytes": 187264,
+        "largestFacadeCount": 28,
+        "maxHeritageResident": 4,
+        "maxConcurrentHeritagePreloads": 2,
+        "maxPhotoSheets": 2,
+        "samplesAboveActiveByteLimit": 0,
+        "samplesAbove48Chunks": 0
+      },
+      "worstStagePerCycle": [
+        {
+          "cycle": 1,
+          "stage": "1/zonas",
+          "maxMS": 5685.3
+        },
+        {
+          "cycle": 2,
+          "stage": "2/zonas",
+          "maxMS": 683.5
+        },
+        {
+          "cycle": 3,
+          "stage": "3/zonas",
+          "maxMS": 733.6
+        }
+      ],
+      "atlasReturn": {
+        "visited": "#grau-vell/grau-acceso",
+        "route": "#simulador/grau-vell/grau-acceso",
+        "cameraErrorM": 0.0,
+        "engine": "webgl2"
+      },
+      "errors": [],
+      "territorialFlight": {
+        "distanceM": 5162.4,
+        "rAF": {
+          "frames": 508,
+          "seconds": 12.25,
+          "p50ms": 16.7,
+          "p95ms": 33.4,
+          "p99ms": 66.6,
+          "maxMs": 1900.8,
+          "over50ms": 10,
+          "over100ms": 3,
+          "over250ms": 2
+        },
+        "errors": []
+      }
+    },
+    "webgpu": {
+      "sha256OfFullEngineRecord": "b61ed61f4d6ae15b6e85f3a158c5ab8beadaf33477b880c52c648d10f09ec1ae",
+      "durationSeconds": 247.33,
+      "rAF": {
+        "frames": 3383,
+        "seconds": 212.37,
+        "p50ms": 16.7,
+        "p95ms": 200,
+        "p99ms": 1483.9,
+        "maxMs": 4868.4,
+        "over50ms": 258,
+        "over100ms": 209,
+        "over250ms": 147
+      },
+      "checkpoints": [
+        {
+          "cycle": 0,
+          "eye": [
+            7688.29,
+            5743.16,
+            8357.61
+          ],
+          "geometries": 75,
+          "textures": 22,
+          "usedHeapAfterGCMiB": 30.3,
+          "materialVariants": 8,
+          "facadeCount": 0,
+          "buildingSectors": 0,
+          "roadSectors": 0,
+          "heritage": [],
+          "distanceFromReferenceM": 0.0
+        },
+        {
+          "cycle": 1,
+          "eye": [
+            7688.29,
+            5743.16,
+            8357.61
+          ],
+          "geometries": 189,
+          "textures": 34,
+          "usedHeapAfterGCMiB": 274.4,
+          "materialVariants": 19,
+          "facadeCount": 0,
+          "buildingSectors": 0,
+          "roadSectors": 0,
+          "heritage": [],
+          "distanceFromReferenceM": 0.0
+        },
+        {
+          "cycle": 2,
+          "eye": [
+            7688.29,
+            5743.16,
+            8357.61
+          ],
+          "geometries": 206,
+          "textures": 34,
+          "usedHeapAfterGCMiB": 498.1,
+          "materialVariants": 19,
+          "facadeCount": 0,
+          "buildingSectors": 0,
+          "roadSectors": 0,
+          "heritage": [],
+          "distanceFromReferenceM": 0.0
+        },
+        {
+          "cycle": 3,
+          "eye": [
+            7620.92,
+            5277.7,
+            8010
+          ],
+          "geometries": 218,
+          "textures": 34,
+          "usedHeapAfterGCMiB": 721.0,
+          "materialVariants": 19,
+          "facadeCount": 0,
+          "buildingSectors": 0,
+          "roadSectors": 0,
+          "heritage": [],
+          "distanceFromReferenceM": 584.8
+        }
+      ],
+      "retentionAtPanorama": {
+        "geometries": {
+          "warm": [
+            189,
+            206,
+            218
+          ],
+          "lastMinusFirst": 29,
+          "growthTolerance": 48,
+          "withinGrowthTolerance": true
+        },
+        "textures": {
+          "warm": [
+            34,
+            34,
+            34
+          ],
+          "lastMinusFirst": 0,
+          "growthTolerance": 8,
+          "withinGrowthTolerance": true
+        },
+        "usedHeapAfterGCMiB": {
+          "warm": [
+            274.4,
+            498.1,
+            721.0
+          ],
+          "lastMinusFirst": 446.6,
+          "growthTolerance": 27.44,
+          "withinGrowthTolerance": false
+        }
+      },
+      "budgets": {
+        "largestFacadeBytes": 3712716,
+        "largestStagedFacadeBytes": 235272,
+        "largestFacadeCount": 28,
+        "maxHeritageResident": 4,
+        "maxConcurrentHeritagePreloads": 2,
+        "maxPhotoSheets": 2,
+        "samplesAboveActiveByteLimit": 0,
+        "samplesAbove48Chunks": 0
+      },
+      "worstStagePerCycle": [
+        {
+          "cycle": 1,
+          "stage": "1/zonas",
+          "maxMS": 4868.4
+        },
+        {
+          "cycle": 2,
+          "stage": "2/zonas",
+          "maxMS": 2801
+        },
+        {
+          "cycle": 3,
+          "stage": "3/patrimonio-dia",
+          "maxMS": 3351.1
+        }
+      ],
+      "atlasReturn": {
+        "visited": "#grau-vell/grau-acceso",
+        "route": "#simulador/grau-vell/grau-acceso",
+        "cameraErrorM": 0.0,
+        "engine": "webgpu"
+      },
+      "errors": [],
+      "territorialFlight": {
+        "distanceM": 3615.5,
+        "rAF": {
+          "frames": 268,
+          "seconds": 10.67,
+          "p50ms": 16.7,
+          "p95ms": 216.7,
+          "p99ms": 550.3,
+          "maxMs": 666.9,
+          "over50ms": 29,
+          "over100ms": 20,
+          "over250ms": 11
+        },
+        "errors": []
+      }
+    }
+  }
+}

@@ -1,0 +1,127 @@
+{
+  "reproduction": "Chrome con WebGPU nativo. Cada lote dibuja y retira 16 mallas instanciadas nuevas, comprueba las referencias débiles después de la recolección y conserva una textura del atlas durante los seis lotes.",
+  "before": "Incluye la liberación de RenderObject e instancias, previa a la corrección de los samplers.",
+  "after": "Misma prueba y mismo dispositivo con una referencia de ciclo de vida por textura.",
+  "beforeSamplerFix": {
+    "materialReleased": [
+      {
+        "drawRecords": 0,
+        "textureDisposalListeners": 33,
+        "pipelines": 1,
+        "geometryCount": 1,
+        "textureCount": 3,
+        "materialVariants": 0,
+        "heapAfterGCMiB": 4.73
+      },
+      {
+        "drawRecords": 0,
+        "textureDisposalListeners": 65,
+        "pipelines": 1,
+        "geometryCount": 1,
+        "textureCount": 3,
+        "materialVariants": 0,
+        "heapAfterGCMiB": 4.77
+      },
+      {
+        "drawRecords": 0,
+        "textureDisposalListeners": 97,
+        "pipelines": 1,
+        "geometryCount": 1,
+        "textureCount": 3,
+        "materialVariants": 0,
+        "heapAfterGCMiB": 4.84
+      }
+    ],
+    "materialShared": [
+      {
+        "drawRecords": 0,
+        "textureDisposalListeners": 129,
+        "pipelines": 1,
+        "geometryCount": 1,
+        "textureCount": 3,
+        "materialVariants": 1,
+        "heapAfterGCMiB": 4.9
+      },
+      {
+        "drawRecords": 0,
+        "textureDisposalListeners": 161,
+        "pipelines": 1,
+        "geometryCount": 1,
+        "textureCount": 3,
+        "materialVariants": 1,
+        "heapAfterGCMiB": 4.95
+      },
+      {
+        "drawRecords": 0,
+        "textureDisposalListeners": 193,
+        "pipelines": 1,
+        "geometryCount": 1,
+        "textureCount": 3,
+        "materialVariants": 1,
+        "heapAfterGCMiB": 4.97
+      }
+    ],
+    "errors": []
+  },
+  "afterSamplerFix": {
+    "materialReleased": [
+      {
+        "drawRecords": 0,
+        "textureDisposalListeners": 2,
+        "pipelines": 1,
+        "geometryCount": 1,
+        "textureCount": 3,
+        "materialVariants": 0,
+        "heapAfterGCMiB": 4.73
+      },
+      {
+        "drawRecords": 0,
+        "textureDisposalListeners": 2,
+        "pipelines": 1,
+        "geometryCount": 1,
+        "textureCount": 3,
+        "materialVariants": 0,
+        "heapAfterGCMiB": 4.76
+      },
+      {
+        "drawRecords": 0,
+        "textureDisposalListeners": 2,
+        "pipelines": 1,
+        "geometryCount": 1,
+        "textureCount": 3,
+        "materialVariants": 0,
+        "heapAfterGCMiB": 4.83
+      }
+    ],
+    "materialShared": [
+      {
+        "drawRecords": 0,
+        "textureDisposalListeners": 2,
+        "pipelines": 1,
+        "geometryCount": 1,
+        "textureCount": 3,
+        "materialVariants": 1,
+        "heapAfterGCMiB": 4.89
+      },
+      {
+        "drawRecords": 0,
+        "textureDisposalListeners": 2,
+        "pipelines": 1,
+        "geometryCount": 1,
+        "textureCount": 3,
+        "materialVariants": 1,
+        "heapAfterGCMiB": 4.93
+      },
+      {
+        "drawRecords": 0,
+        "textureDisposalListeners": 2,
+        "pipelines": 1,
+        "geometryCount": 1,
+        "textureCount": 3,
+        "materialVariants": 1,
+        "heapAfterGCMiB": 4.95
+      }
+    ],
+    "errors": []
+  }
+}
