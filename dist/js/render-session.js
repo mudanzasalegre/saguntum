@@ -19,12 +19,18 @@ export function startRenderSession(){
   try{
     const previous=JSON.parse(sessionStorage.getItem(key)||'null'),now=Date.now();
     if(previous?.route===route()&&now>=previous.time&&now-previous.time<240000){
-      forget();history.replaceState(history.state,'',urlFor(true));return;
+      if(previous.backend==='webgpu'){
+        sessionStorage.setItem('saguntum-renderer-failure-v4','El arranque anterior de WebGPU se interrumpió.');
+      }else{forget();history.replaceState(history.state,'',urlFor(true));return;}
     }
     sessionStorage.setItem(key,JSON.stringify({route:route(),time:now}));
     armed=true;
   }catch{}
   window.addEventListener('pagehide',forget,{once:true});
+}
+export function startingBackend(backend){
+  if(!armed)return;
+  try{sessionStorage.setItem(key,JSON.stringify({route:route(),time:Date.now(),backend}));}catch{}
 }
 export function markRendered(){
   if(!armed)return;

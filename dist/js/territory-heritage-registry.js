@@ -9,6 +9,11 @@ export function preloadAtlasVisit(record){
 // mapped into its drawing frame. All matrices act on metres, with Y up.
 export async function instantiateAtlasVisit(record,{project,heightAt,renderer,needed=()=>true}){
  const descriptor=record.scene;
+ const engine=renderer?.backend?.isWebGPUBackend?'webgpu':'webgl2';
+ if(descriptor.backends&&!descriptor.backends.includes(engine)){
+  const error=new Error(record.name+' requiere '+(engine==='webgpu'?'WebGL 2':'WebGPU')+' para sus materiales.');
+  error.name='BackendCompatibilityError';throw error;
+ }
  const resources=Object.entries(descriptor.resources||{});
  const [module,...documents]=await Promise.all([preloadAtlasVisit(record),...resources.map(([,name])=>documentData(name,false))]);
  if(!needed())return null;
@@ -44,14 +49,16 @@ export async function instantiateAtlasVisit(record,{project,heightAt,renderer,ne
 }
 
 export function registerAtlasEntries(records,catalog,byId,tour){
+ const registered=[];
  for(const record of records){
-  if(byId[record.id])throw Error('Identificador de visita duplicado · '+record.id);
+  if(byId[record.id]){console.warn('Identificador de visita duplicado · '+record.id);continue;}
   const entry={short:record.name,title:record.name,category:'Patrimonio',era:'',description:'',facts:[],features:[],
    radius:30,angle:[45,35,-55],number:catalog.length+1,...record,
    sources:(record.sources||[]).map(s=>typeof s==='string'?s:s.url),
    observationPoints:(record.guide?.stops||[]).map(s=>({...s,label:s.label||s.title,note:s.note||s.intro}))};
-  catalog.push(entry);byId[entry.id]=entry;tour.push(entry.id);
+  catalog.push(entry);byId[entry.id]=entry;tour.push(entry.id);registered.push(record);
  }
+ return registered;
 }
 
 export function atlasRegisteredScenes(){
@@ -59,7 +66,7 @@ export function atlasRegisteredScenes(){
  let records=[];
  return {
   register(entries,catalog,byId,tour){
-   registerAtlasEntries(entries,catalog,byId,tour);records=entries;
+   records=registerAtlasEntries(entries,catalog,byId,tour);
   },
   ids(){return records.map(r=>r.id);},
   city(options,region){
@@ -78,8 +85,10 @@ export function atlasRegisteredScenes(){
   async build(region,options,attach,points){
    for(const record of records){
     if((record.region||'sagunto')!==region)continue;
-    const entry=await instantiateAtlasVisit(record,options);
-    active.set(record.id,{...entry,region});attach(entry.group);
+    try{
+     const entry=await instantiateAtlasVisit(record,options);
+     active.set(record.id,{...entry,region});attach(entry.group);
+    }catch(error){console.warn('Visita 3D · '+record.name,error);}
     const p=options.project(...record.coordinate);
     points[record.id]=new T.Vector3(p.x,options.heightAt(p.x,p.z),p.z);
    }

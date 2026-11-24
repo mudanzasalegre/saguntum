@@ -5,7 +5,7 @@ import {resource,territoryBase,networkBase,loadElevation,makeSampler,buildGround
 import {createHeritage} from './territory-heritage.js';
 import {movementLead} from './territory-stream-policy.js';
 import {qualityStep} from './territory-local-detail.js';
-import {inspectAdapter,rendererPlan,productionNative} from './territory-backend-policy.js';
+import {requestedBackend,chooseBackend,recoverWebGL} from './territory-backend-session.js';
 import {loadHeritageCatalog,registerFrame} from './territory-heritage-catalog.js';
 import {createTerritorySea} from './territory-sea.js';
 import {createBuildings} from './territory-stream.js';
@@ -48,7 +48,7 @@ export async function openSimulator(){
   let lighting='solar',lightPreference='auto',terrainPreference='auto',exterior=false;
   let presentationReady=false;
   const flags={buildings:true,heritage:true,streets:true,land:true,labels:true,cars:true,people:true};
-  const status={ready:false,mode:'cargando',places:places.length,buildings:world.counts.buildingGeometries,routeMetres:index.routeLengthM};
+  const status={ready:false,mode:'cargando',places:places.length,registryIssues:inventory.issues,buildings:world.counts.buildingGeometries,routeMetres:index.routeLengthM};
   window.territoryStatus=status;
   const map=terrainMap({world,network:index,zones,places,image:mapImage,onPoint(x,z,p,stopId){
     if(p)select(p,true,stopId);else{clear();nav?.relocate(x,z);focus2D={x,z};}
@@ -194,46 +194,67 @@ export async function openSimulator(){
   function fallback(message){
     document.body.classList.add('map-only');$('status').textContent=message;status.ready=true;status.mode='mapa 2D';
     $('expand').disabled=true;
-    $('retry').hidden=false;$('retry').onclick=()=>{save();retry3D();};
+    $('retry').hidden=false;$('retry').onclick=()=>{save();chooseBackend(requestedBackend());retry3D();};
     $('markers').hidden=true;$('stick').hidden=true;$('altitude').hidden=true;
     const previous=readVisit();if(previous?.selected&&byId.has(previous.selected))select(byId.get(previous.selected),false,savedStop(previous));
     if(!openLinkedPlace()&&selected)writeLink(true);
     map.draw(focus2D,focus2D,{x:0,z:-1});window.addEventListener('resize',()=>map.draw(focus2D,focus2D,{x:0,z:-1}));
   }
-  if(wantsPlan()){fallback('Mapa 2D · Exploración en plano');return;}
-  try{({renderer,info:graphics}=createTerritoryRenderer(mobile));}
-  catch{fallback('Mapa 2D · WebGL 2 no disponible');return;}
+  let lost=false,native=null,closeRenderer;
+  function failRender(reason){
+    if(lost)return;lost=true;
+    if(presentationReady)save();
+    if(native)recoverWebGL(reason);else goToPlan();
+  }
+  function changeEngine(){
+    if(nav)save();chooseBackend($('engine').value);
+    const url=new URL(location.href);url.searchParams.delete('recuperar');url.searchParams.delete('vista');
+    if(url.href===location.href)location.reload();else location.replace(url);
+  }
+  $('engine').value=requestedBackend();$('engine').onchange=changeEngine;$('engine-retry').onclick=changeEngine;
+  if(wantsPlan()){status.graphics={requested:requestedBackend(),active:'2d',backend:'Plano 2D'};$('engine-info').textContent='Motor activo · Plano 2D';fallback('Mapa 2D · Exploración en plano');return;}
+  try{({renderer,info:graphics,native,dispose:closeRenderer}=await createTerritoryRenderer(mobile,reason=>queueMicrotask(()=>failRender(reason))));}
+  catch(error){
+    status.graphics={...error.graphics,active:'2d',backend:'Plano 2D'};
+    $('engine-info').textContent='Motor activo · Plano 2D';$('gpu-result').textContent=error.graphics?.fallbackReason||'No se pudo crear el contexto 3D.';
+    const detail=error.graphics?.fallbackReason?.split('\n')[0].slice(0,130);
+    fallback('Mapa 2D · '+(detail||'El navegador no pudo abrir un contexto WebGL 2.'));return;
+  }
   $('quality').querySelector('[value="3"]').disabled=!graphics.ultra;
   tier=budget=graphics.initial;
   status.graphics=graphics;
-  $('engine-info').textContent=graphics.backend+' · Three.js r'+graphics.three+' · motor de producción';
-  $('gpu-probe').onclick=async()=>{
-    const button=$('gpu-probe');button.disabled=true;$('gpu-result').textContent='Comprobando adaptador…';
-    try{
-      const info=await inspectAdapter();graphics.adapter=info;
-      graphics.backendPlan=rendererPlan({secure:info.secure,adapter:info.available,software:info.software,candidate:productionNative});
-      $('gpu-result').textContent=info.reason+' · '+graphics.backendPlan.reason+'. El laboratorio realiza una prueba de render real.';
-    }finally{button.disabled=false;}
-  };
-  $('gpu-lab').onclick=()=>{save();nav?.input.release();const url=new URL('./graphics-lab.html',location.href);url.searchParams.set('return',location.hash);$('gpu-lab').href=url.href;};
+  $('engine-info').textContent='Motor activo · '+graphics.backend+' · Three.js r'+graphics.three;
+  $('gpu-result').textContent=graphics.fallbackReason||graphics.selectionReason||(native?'Adaptador, dispositivo y prueba de color TSL verificados.':'Se utiliza el motor elegido.');
+  $('engine-retry').hidden=!graphics.fallbackReason;
+  $('engine-detail').textContent='Textura máxima '+graphics.limits.maxTextureDimension2D+' px · Inicialización '+graphics.initMs+' ms';
   const scene=new T.Scene(),camera=new T.PerspectiveCamera(38,innerWidth/innerHeight,.2,65000);
   renderer.info.autoReset=false;
   renderer.outputColorSpace=T.SRGBColorSpace;renderer.toneMapping=T.ACESFilmicToneMapping;renderer.toneMappingExposure=1.05;
-  renderer.shadowMap.type=T.PCFSoftShadowMap;renderer.shadowMap.autoUpdate=false;
+  renderer.shadowMap.type=native?T.PCFShadowMap:T.PCFSoftShadowMap;renderer.shadowMap.autoUpdate=false;
   renderer.domElement.tabIndex=0;renderer.domElement.setAttribute('aria-label','Escena tridimensional de Sagunto');$('world').append(renderer.domElement);
-  let lost=false;renderer.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();lost=true;save();goToPlan();});
+  renderer.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();failRender('Contexto WebGL perdido');});
+  Object.defineProperty(status,'recover',{value:failRender});
   $('status').textContent='Preparando relieve, costa y edificios…';
   const [grids,stopModule,visitCameras]=await Promise.all([loadElevation(world.terrain),import('./territory-visit-frames.js'),resource(territoryBase+'visit-cameras.json')]);
   const heightAt=makeSampler(grids);stopCamera=stopModule.stopCamera;cameras=visitCameras;
-  const sea=createTerritorySea({polygons:world.water,bounds:world.bounds,shorelines:world.shorelines,project,heightAt,mobile,reduced:matchMedia('(prefers-reduced-motion:reduce)').matches});
+  const sea=createTerritorySea({polygons:world.water,bounds:world.bounds,shorelines:world.shorelines,project,heightAt,mobile,nativeEnvironment:native?.environment,reduced:matchMedia('(prefers-reduced-motion:reduce)').matches});
   scene.add(sea.group);
   const underSea=sea.mask.groundHeight(heightAt);
-  const [ground,heritageResult]=await Promise.all([buildGround(scene,grids,underSea,renderer),createHeritage({scene,renderer,project,heightAt,grids,mobile,onChange:()=>{buildings?.changed();canopy?.changed();if(renderer)renderer.shadowMap.needsUpdate=true;}})]);
+  const [ground,heritageResult]=await Promise.all([buildGround(scene,grids,underSea,renderer),createHeritage({scene,renderer,project,heightAt,grids,mobile,onError:error=>{
+    if(native&&error.cause?.name==='BackendCompatibilityError')failRender(error.message);else console.warn(error);
+  },onChange:()=>{buildings?.changed();canopy?.changed();if(renderer)renderer.shadowMap.needsUpdate=true;}})]);
   heritage=heritageResult;ground.setHeritage(heritage);buildings=createBuildings({scene,world,grids,heritage,photography:ground.photography});network=createNetwork({scene,index,heightAt,heritage});
-  atmosphere=createAtmosphere(scene,renderer,sea,buildings,network,registerFrame(sag,project));
+  atmosphere=createAtmosphere(scene,renderer,sea,buildings,network,registerFrame(sag,project),native?.environment);
   canopy=createCanopy(scene,heightAt,heritage);
-  const render=contactRenderer(renderer),gpuTimer=createGpuTimer(renderer);
-  window.addEventListener('pagehide',()=>gpuTimer.dispose(),{once:true});
+  const render=native?native.environment.contactRenderer(renderer):contactRenderer(renderer),gpuTimer=createGpuTimer(renderer);
+  window.addEventListener('pagehide',e=>{
+    if(e.persisted)return;
+    lost=true;gpuTimer.dispose();render.dispose?.();
+    try{
+      nav?.controls.dispose();heritage.dispose();buildings.dispose();network.stream.dispose();
+      atmosphere.dispose?.();sea.dispose?.();native?.materials.dispose();
+    }finally{closeRenderer();}
+  });
   function setLight(h){
     hour=Number(h);$('time').value=hour;$('hour').textContent=String(Math.floor(hour)).padStart(2,'0')+':'+String(Math.round((hour%1)*60)).padStart(2,'0');
     if(lighting==='solar')atmosphere.setHour(hour,solarDate);else atmosphere.atlas(lighting);
@@ -381,7 +402,7 @@ export async function openSimulator(){
       if(!b.hidden){b.style.left=x+'px';b.style.top=y+'px';used.push([x,y]);}
     }
   }
-  const state=readVisit();try{sessionStorage.removeItem(sessionKey);}catch{}
+  const state=readVisit();
   if(state){
     Object.assign(flags,state.flags);
     const quality=String(state.quality);
@@ -402,6 +423,7 @@ export async function openSimulator(){
   if(state?.torch&&nav.mode!=='orbit')command('light');
   if(state?.minimap===false){$('map-box').hidden=true;$('show-map').checked=false;}
   presentationReady=true;applyPresentation();onMode(nav.mode);
+  try{sessionStorage.removeItem(sessionKey);}catch{}
   const direction=new T.Vector3(),foreground=new T.Vector3();
   // A low, near-horizontal orbit may look kilometres beyond a monument directly
   // under the camera. Stream the visible foreground instead of the distant pivot.
@@ -446,19 +468,25 @@ export async function openSimulator(){
     if(camera.near!==nearPlane||lastFov!==camera.fov){camera.near=nearPlane;lastFov=camera.fov;camera.updateProjectionMatrix();}
     const contact=lighting==='solar'&&tier>=2&&peripheralPenalty<2&&(!mobile||tier===3)&&detail.range<520&&speed<65;
     renderer.info.reset();gpuTimer.begin();
-    try{render(scene,camera,contact,tier);}catch(error){console.error('Render territorial',error);lost=true;save();goToPlan();return;}
+    try{
+      if(native)native.materials.draw(scene,()=>render(scene,camera,contact,tier));
+      else render(scene,camera,contact,tier);
+    }catch(error){console.error('Render territorial',error);failRender(error.message);return;}
     finally{gpuTimer.end();}
     markRendered();if(ms>0&&ms<1000)samples.push(ms);
     if(now-prevStats>900){
       const sorted=samples.sort((a,b)=>a-b),median=sorted[Math.floor(sorted.length/2)]||16;
       const pending=buildings.stream.pending.size+network.stream.pending.size+Number(heritage.stats.loading)+Number(buildings.fabricStats.loading);
       Object.assign(status,{mode:nav.mode,range:Math.round(range),detailRange:Math.round(detail.range),camera:nav.snapshot(),sectors:buildings.stream.live.size,networkSectors:network.stream.live.size,
-        traffic:network.traffic,photo:surfacePhotoMetrics(),aerial:buildings.aerialStats,fabric:buildings.fabricStats,canopy:canopy.stats,localTerrain:grids.regional.length,quality:tier,pixelRatio:renderer.getPixelRatio(),drawCalls:renderer.info.render.calls,triangles:renderer.info.render.triangles,
+        traffic:network.traffic,photo:surfacePhotoMetrics(),aerial:buildings.aerialStats,fabric:buildings.fabricStats,canopy:canopy.stats,localTerrain:grids.regional.length,quality:tier,pixelRatio:renderer.getPixelRatio(),drawCalls:renderer.info.render.drawCalls??renderer.info.render.calls,triangles:renderer.info.render.triangles,
         geometries:renderer.info.memory.geometries,textures:renderer.info.memory.textures,frameMs:Math.round(median*10)/10,
         frameP95Ms:Math.round((sorted[Math.floor(sorted.length*.95)]||median)*10)/10,
         heapMiB:performance.memory?Math.round(performance.memory.usedJSHeapSize/1048576):null,heritage:heritage.stats,pending,localQuality:budget,peripheralQuality:peripheral,pixelScale});
-      Object.assign(graphics,{profile:qualityNames[tier],shadowSize:atmosphere.shadowSize,contact:render.stats?.active===true,contactStats:render.stats,gpu:gpuTimer.stats});
+      Object.assign(graphics,{profile:qualityNames[tier],shadowSize:atmosphere.shadowSize,contact:render.stats?.active===true,contactStats:render.stats,gpu:gpuTimer.stats,
+        viewport:[renderer.domElement.width,renderer.domElement.height],workers:{edificios:buildings.workerStats,patrimonio:heritage.stats.worker}});
+      if(native)graphics.materials=native.materials.stats;
       $('stats').textContent=graphics.backend+' · '+graphics.profile+' · '+status.frameMs+' ms/fotograma · '+status.drawCalls+' llamadas · '+status.triangles.toLocaleString('es-ES')+' triángulos · '+status.geometries+' geometrías · '+status.textures+' texturas'+(status.heapMiB?' · JS '+status.heapMiB+' MiB':'')+(gpuTimer.stats.p50Ms!==null?' · GPU '+gpuTimer.stats.p50Ms.toFixed(1)+' ms (render)':'')+' · carga inicial '+(status.loadMs/1000).toFixed(1)+' s';
+      $('engine-detail').textContent=graphics.limits.maxTextureDimension2D+' px de textura máxima · '+graphics.initMs+' ms de arranque · '+graphics.viewport.join(' × ')+' px de render · p95 '+status.frameP95Ms+' ms · '+status.sectors+' sectores · '+(status.fabric.bytes/1048576).toFixed(1)+' MiB de geometría en caché';
       const visit=heritage.stats.visit;
       const reading=visit?.inspection?'Inspección marina':visit?.section?'Sección de la visita':visit?.mode==='historical'||historical?'Reconstrucción histórica':visit?.interior?'Interior de la visita':'Territorio actual';
       const loadingVisit=activeStop&&flags.heritage&&nav.atVisitFrame&&!visit&&heritage.stats.loading;

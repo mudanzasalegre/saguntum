@@ -1,4 +1,5 @@
 import * as T from 'three';
+import {registerUrbanMaterial} from './territory-urban-material-record.js';
 import {mergeGeometries} from 'three/addons/utils/BufferGeometryUtils.js';
 
 import {streetTrees} from './territory-street-trees.js';
@@ -120,7 +121,7 @@ function modelMaterial(dynamic=false){
       .replace('#include <emissivemap_fragment>','#include <emissivemap_fragment>\n totalEmissiveRadiance+=diffuseColor.rgb*vPropGlow*propNight*2.4;');
   };
   m.customProgramCacheKey=()=>dynamic?'street-animated-person':'street-static-parts';
-  return m;
+  return registerUrbanMaterial(m,'street-prop',{dynamic,night});
 }
 
 export function streetActors(parent,maxCars,maxPeople){
@@ -201,6 +202,8 @@ export async function streetFurniture(){
       float rim=smoothstep(.88,.9,r);diffuseColor.rgb=mix(diffuseColor.rgb*(.80+.37*fleck),vec3(.116,.122,.115),rim);`);
   };
   prototypes.treeContact=prototypes.treePit=floor;
+  registerUrbanMaterial(contact,'tree-contact');
+  registerUrbanMaterial(pit,'tree-pit');
   const projected=new Set(['crossing','treeContact','treePit']);
   function build(group,objects,roads,areas,heightAt,heritage,onSolid){
     const pooled=new Map();

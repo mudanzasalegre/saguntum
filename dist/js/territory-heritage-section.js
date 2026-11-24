@@ -1,4 +1,5 @@
 import {Vector4,Vector2} from 'three';
+import {describeGroundEffect} from './territory-ground-effects.js';
 
 // The historical circus extends beneath modern streets and buildings. Keep
 // neighbouring streets visible right up to the documented section boundary.
@@ -16,6 +17,7 @@ export function sectionWindow(){
  }
  function material(m,participates={value:1}){
   if(!m||m.isShaderMaterial)return;
+  describeGroundEffect(m,{section:{rect,across,enabled,participates}});
   const previous=m.onBeforeCompile.bind(m),key=m.customProgramCacheKey();
   m.customProgramCacheKey=()=>key+'-territorial-excavation';
   m.onBeforeCompile=(shader,renderer)=>{

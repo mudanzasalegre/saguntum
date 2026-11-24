@@ -30,7 +30,8 @@ def prepare_distribution():
     manifest.write_bytes(json.dumps(world, ensure_ascii=False, separators=(',', ':')).encode())
     # Keep every source string and numeric token verbatim, including survey precision.
     pattern = re.compile(r'"(?:\\.|[^"\\])*"|\s+')
-    for name in ['barrio-plan','portic-context','juderia-context','sanatorio-plan','calvario-context','circo-context']:
+    for name in ['barrio-plan','portic-context','juderia-context','sanatorio-plan','calvario-context','circo-context',
+                 'sangre-context','talleres-plan','salvador-context','begona-plan','domus-context','museo-context']:
         path = ROOT / f'dist/assets/data/{name}.json'
         text = path.read_text(encoding='utf-8')
         compact = pattern.sub(lambda m: m[0] if m[0].startswith('"') else '', text)

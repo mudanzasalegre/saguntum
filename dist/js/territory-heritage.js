@@ -45,9 +45,14 @@ export async function createHeritage({scene,renderer,heightAt,project,grids,mobi
  scene.add(root);
  let desired=[],pending=false,disposed=false,historical=null,lastKey='',lastCheck=-Infinity;
  let requestedStop=null,nearNative=new Set();
- const prefetched=new Map();let warming=0;
+ const prefetched=new Map(),warmed=new Map();let warming=0;
  let lastAltitude=0,lastQuality=0,focusX=0,focusZ=0;
- let status={requested:[],loaded:[],loading:false,failures:{}};
+ let status={requested:[],loaded:[],loading:false,failures:{},lastPreparation:null};
+ function warm(id,now){
+  prefetched.set(id,now+45000);warming++;
+  void warmHeritageModel(id,inventory.records).then(ready=>{if(ready)warmed.set(id,performance.now()+45000);})
+   .catch(()=>prefetched.delete(id)).finally(()=>warming--);
+ }
  const claimIds=new Set(),claimGrid=new Map(),registeredGrid=new Map(),propGrid=new Map(),greenGrid=new Map(),cell=64;
  const roadMasks=atlasRoadMasks();
  const excavation=sectionWindow();
@@ -145,6 +150,7 @@ export async function createHeritage({scene,renderer,heightAt,project,grids,mobi
     const needed=()=>!disposed&&desired.includes(id);
     if(!needed())continue;
     let item;
+    const started=performance.now();
     try{
      if(background?.closed)background=null;
      if(id!=='glorieta'&&!needsNative(id)&&!background&&grids)background=heritageWorker(grids);
@@ -173,6 +179,7 @@ export async function createHeritage({scene,renderer,heightAt,project,grids,mobi
      // model and materials are ready, then swap them in the same frame.
      remove(id);
      root.add(item.group);loaded.set(id,item);
+     status.lastPreparation={id,ms:Math.round(performance.now()-started),level:item.setVisitStop?'patrimonial':'urbano'};
      if(low.has(id))low.get(id).visible=false;
      status.visit=visit;
      delete status.failures[id];notify();
@@ -180,7 +187,7 @@ export async function createHeritage({scene,renderer,heightAt,project,grids,mobi
      if(item&&loaded.get(id)!==item){item.disposeVisit?.();releaseModel(item.group);}
      failedUntil.set(id,performance.now()+30000);
      status.failures[id]=String(error.message||error);
-     onError(new Error('Patrimonio · '+id+' · '+status.failures[id]));
+      onError(new Error('Patrimonio · '+id+' · '+status.failures[id],{cause:error}));
     }
    }
   }finally{pending=false;if(!disposed)notify();}
@@ -217,8 +224,7 @@ export async function createHeritage({scene,renderer,heightAt,project,grids,mobi
     // Warm its authored module and data immediately, within the same limit.
     const now=performance.now();
     if(!loaded.get(id)?.setVisitStop&&warming<(mobile?1:2)&&!(prefetched.get(id)>now)){
-     prefetched.set(id,now+45000);warming++;
-     void warmHeritageModel(id,inventory.records).catch(()=>prefetched.delete(id)).finally(()=>warming--);
+     warm(id,now);
     }
     if(workerRequest&&!loaded.get(id)?.setVisitStop){
      background?.dispose();background=null;
@@ -278,10 +284,10 @@ export async function createHeritage({scene,renderer,heightAt,project,grids,mobi
    // requested visit remains first in the construction queue.
    for(const [id] of [...warmQueue].sort((a,b)=>a[1]-b[1])){
     if(warming>=(mobile?1:2))break;
-    prefetched.set(id,now+45000);warming++;
-    void warmHeritageModel(id,inventory.records).catch(()=>prefetched.delete(id)).finally(()=>warming--);
+    warm(id,now);
    }
-   status.warming=warming;
+   status.warming=warming;status.worker=background?.closed?'cerrado':workerRequest?'preparando '+workerRequest:background?'disponible':'sin iniciar';
+   status.warmed=[...warmed].filter(([,expiry])=>expiry>now).map(([id])=>id);
    nearNative=native;
    const limit=mobile?1:quality===2?maxLocalHeritage:2;
    desired=[...nearest].sort((a,b)=>a[1]-b[1]).slice(0,limit).map(([id])=>id);

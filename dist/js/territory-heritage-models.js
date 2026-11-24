@@ -29,9 +29,10 @@ export const modelId=id=>sharedModels[id]||id;
 export async function warmHeritageModel(id,records){
  const record=records[id];
  if(record?.scene){
-  await Promise.allSettled([preloadAtlasVisit(record),...Object.values(record.scene.resources||{}).map(prewarmDocument)]);return;
+  const results=await Promise.allSettled([preloadAtlasVisit(record),...Object.values(record.scene.resources||{}).map(prewarmDocument)]);
+  return results.every(result=>result.status==='fulfilled');
  }
- const definition=definitions[id];if(!definition)return;
+ const definition=definitions[id];if(!definition)return false;
  const [file,,factory]=definition,names=[];
  if(!archiveOnly.has(id)){
   names.push(file+'-visit');if(id!=='castle'&&id!=='theatre')names.push(file+'-context');
@@ -41,7 +42,8 @@ export async function warmHeritageModel(id,records){
  if(id==='pantalan')names.push('pantalan-paseo-visit','pantalan-maritimo-visit','pantalan-context');
  if(id==='glorieta')names.push('glorieta-layout','glorieta-buildings','glorieta-visit');
  if(record?.landscape)names.push(record.region+'-cartography');
- await Promise.allSettled([factory(),...names.map(prewarmDocument)]);
+ const results=await Promise.allSettled([factory(),...names.map(prewarmDocument)]);
+ return results.every(result=>result.status==='fulfilled');
 }
 
 export function maskRing(points){

@@ -1,5 +1,6 @@
 import * as T from 'three';
 import {addLandscapeGrade} from './territory-surface-photo.js';
+import {describeGroundEffect} from './territory-ground-effects.js';
 
 // The edge of the navigable municipal terrain is an internal boundary of this
 // larger, measured MDT25 landscape. Never extrude the sea floor into the sky.
@@ -32,6 +33,7 @@ export async function addHorizon(group,manifest,extent,heightAt,small){
   map.colorSpace=T.SRGBColorSpace;
   const material=new T.MeshLambertMaterial({map});
   material.onBeforeCompile=addLandscapeGrade;
+  describeGroundEffect(material,{horizon:true});
   const terrain=new T.Mesh(geo,material);terrain.name='Relieve de fondo · MDT25 / PNOA';
   group.add(terrain);
 }

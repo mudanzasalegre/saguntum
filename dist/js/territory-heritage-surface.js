@@ -1,4 +1,5 @@
 import * as T from 'three';
+import {describeGroundEffect} from './territory-ground-effects.js';
 
 const families=[
   new Set(['stone','ashlar','limestone','masonry','sandstone','rubble']),
@@ -12,6 +13,7 @@ let loading=false;
 // Some original double-sided roof sheets have downward winding. On nearly
 // level sheets the visible face is particularly sensitive to the shadow offset.
 function preserveAtlasRoofShadow(material,atlasLighting){
+  describeGroundEffect(material,{roofLighting:atlasLighting});
   const previous=material.onBeforeCompile.bind(material),key=material.customProgramCacheKey();
   material.customProgramCacheKey=()=>key+'-atlas-roof-shadow';
   material.onBeforeCompile=(shader,renderer)=>{
@@ -40,6 +42,7 @@ export function dressHeritageSurfaces(group,atlasLighting){
       const names=labels.filter(label=>typeof label==='string'&&label).map(label=>label.trim().toLowerCase().split(/[ ·|]+/).at(-1));
       const index=families.findIndex(family=>names.some(name=>family.has(name)));
       if(index<0)continue;
+      describeGroundEffect(m,{grain:{index,uniforms}});
       seen.add(m);
       if(!loading){
         loading=true;

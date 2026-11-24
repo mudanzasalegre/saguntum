@@ -381,7 +381,7 @@ export function createCastle({project,heightAt,data={},visitData=data.castleVisi
  }
  // Subtle ground ring marks the selected *visit point*; it does not pretend to
  // outline an excavation for which no georeferenced plan exists.
- const markerGeometry=new THREE.BufferGeometry(),markerMaterial=new THREE.LineBasicMaterial({color:'#91d5ca',transparent:true,opacity:.95,depthTest:true}),marker=new THREE.LineLoop(markerGeometry,markerMaterial);marker.name='Parada seleccionada del castillo';marker.visible=false;marker.renderOrder=3;marker.userData.selectionHelper=true;group.add(marker);
+ const markerGeometry=new THREE.BufferGeometry(),markerMaterial=new THREE.LineBasicMaterial({color:'#91d5ca',transparent:true,opacity:.95,depthTest:true}),marker=new THREE.Line(markerGeometry,markerMaterial);marker.name='Parada seleccionada del castillo';marker.visible=false;marker.renderOrder=3;marker.userData.selectionHelper=true;group.add(marker);
  let selected=null,readingMode='materials';
  function applyMaterials(){
   const focus=selected?focuses[selected]:null;
@@ -395,7 +395,7 @@ export function createCastle({project,heightAt,data={},visitData=data.castleVisi
  }
  function selectFocus(id){
   selected=id&&focuses[id]?id:null;applyMaterials();marker.visible=!!selected&&selected!=='conjunto';
-  if(marker.visible){const f=focuses[selected],p=f.target,r=f.kind==='precinct'?8.2:3.8,positions=[];for(let i=0;i<80;i++){const a=i*TAU/80,x=p.x+Math.cos(a)*r,z=p.z+Math.sin(a)*r;positions.push(x,heightAt(x,z)+.23,z);}markerGeometry.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));markerGeometry.computeBoundingSphere();}
+  if(marker.visible){const f=focuses[selected],p=f.target,r=f.kind==='precinct'?8.2:3.8,positions=[];for(let i=0;i<=80;i++){const a=i*TAU/80,x=p.x+Math.cos(a)*r,z=p.z+Math.sin(a)*r;positions.push(x,heightAt(x,z)+.23,z);}markerGeometry.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));markerGeometry.computeBoundingSphere();}
   return selected?focuses[selected]:null;
  }
  function setReadingMode(mode){readingMode=mode==='periods'?'periods':'materials';applyMaterials();return readingMode;}

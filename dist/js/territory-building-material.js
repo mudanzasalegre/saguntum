@@ -3,6 +3,7 @@ import {addRoofPhotography} from './territory-surface-photo.js';
 import {addRegionalRoofPhotography} from './territory-ortho.js';
 import {openingBounds} from './territory-building-style.js';
 import {urbanLighting} from './territory-urban-sky.js';
+import {registerUrbanMaterial} from './territory-urban-material-record.js';
 
 const dir=new URL('../assets/materials/architecture/',import.meta.url);
 const apertures=Array.from({length:24},(_,i)=>
@@ -35,7 +36,7 @@ export function skylineMaterial(photography){
     };
     material.customProgramCacheKey=()=>'territorial-skyline-38';
   }
-  return material;
+  return registerUrbanMaterial(material,'skyline',{photography});
 }
 
 let loadedScans;
@@ -173,6 +174,15 @@ export function architecturalMaterial(night,photography){
           float above=vArchMetric.y,eave=vArchData.w*.1-above;
           float localHeight=above-vArchGrade.x-vArchBay.x*vArchGrade.y;
           float base=1.-smoothstep(.35,.47,localHeight);
+          // Salt bloom and capillary staining follow the surveyed street grade.
+          // Only porous render and masonry receive this interpretative finish.
+          if(index<1.5){
+            float tide=.30+.08*sin(vArchMetric.x*2.1)+.035*sin(vArchMetric.x*7.3);
+            float salt=(1.-smoothstep(.018,.105,abs(localHeight-tide)))*(.62+.38*nr.b);
+            float damp=1.-smoothstep(.06,tide,localHeight);
+            diffuseColor.rgb=mix(diffuseColor.rgb*(1.-.065*damp*broadDetail),vec3(.49,.44,.34),salt*.12*broadDetail);
+            archRough=mix(archRough,.95,salt*.3*broadDetail);
+          }
           float coping=1.-smoothstep(.09,.17,eave);
           diffuseColor.rgb*=1.-archDetail*(.20*base+.12*(1.-smoothstep(.0,.13,abs(eave-.24))));
           diffuseColor.rgb=mix(diffuseColor.rgb,diffuseColor.rgb*.86+vec3(.125),coping*archDetail*.88);
@@ -265,5 +275,5 @@ export function architecturalMaterial(night,photography){
     addRoofPhotography(s,'vArchXZ',isRoof+' ? 0.84 : 0.0');
     urbanLighting(s,true);
   };
-  return mat;
+  return registerUrbanMaterial(mat,'architecture',{night,photography});
 }

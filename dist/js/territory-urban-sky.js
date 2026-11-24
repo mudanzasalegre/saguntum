@@ -6,6 +6,7 @@ const enabled={value:1},ready={value:0},heightField={value:null};
 const sun={value:new T.Vector3()},shadow={value:new T.Vector3()};
 let started=false;
 export function urbanBuildingsVisible(value){enabled.value=value?1:0;}
+export function urbanLightBindings(){load();return {enabled,ready,heightField,sun,shadow};}
 export function urbanSun(direction,target,span){
   sun.value.copy(direction);shadow.value.set(target.x,target.z,span);
 }

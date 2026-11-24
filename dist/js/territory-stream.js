@@ -13,6 +13,11 @@ export class SectorStream {
     this.index=index;this.load=load;this.drop=drop;this.limit=limit;
     this.live=new Map();this.pending=new Set();this.retry=new Map();this.wanted=new Set();
   }
+  dispose(){
+    this.wanted.clear();
+    for(const v of this.live.values())this.drop(v);
+    this.live.clear();this.retry.clear();
+  }
   update(x,z,radius,max,hint=null){
     const candidates=selectSectors(this.index,x,z,radius,max,this.live,hint);
     this.wanted=new Set(candidates.map(([s])=>s.id));
@@ -31,6 +36,7 @@ export class SectorStream {
 }
 export function createBuildings({scene,world,grids,heritage,photography}) {
   const group=new T.Group(), requests=new Map();
+  let closed=false;
   const compact=matchMedia('(pointer: coarse)').matches||(navigator.deviceMemory||8)<=4;
   const night={value:0};
   let mat,shadowRevision=0;
@@ -43,6 +49,7 @@ export function createBuildings({scene,world,grids,heritage,photography}) {
   };
   worker.onerror=e=>{for(const waiter of requests.values())waiter.reject(Error(e.message));requests.clear();};
   function read(key,url) {
+    if(closed)return Promise.reject(Error('Sesión territorial cerrada'));
     return new Promise((resolve,reject)=>{
       requests.set(key,{resolve,reject});worker.postMessage({key,url:new URL(territoryBase+url,document.baseURI).href});
     });
@@ -203,6 +210,19 @@ export function createBuildings({scene,world,grids,heritage,photography}) {
   const facades=nearFacades(group);
   scene.add(group);
   return {group,stream,ready,night,get aerialStats(){return aerialStats;},get shadowRevision(){return shadowRevision;},get fabricStats(){return {buildings:detailIds.size,openings:[...active].reduce((n,k)=>n+(cache.get(k)?.openings||0),0),loading:busy||!!incoming,stagedBytes:incoming?.bytes||0,chunks:active.size,cached:cache.size,bytes:cacheBytes,byteLimit,peakBytes,hits,builds,evictions,refused};},changed(){maskStamp++;shadowRevision++;},
+    get workerStats(){return {active:!closed,pending:requests.size};},
+    dispose(){
+      if(closed)return;
+      closed=true;worker.terminate();
+      for(const item of requests.values())item.reject(Error('Sesión territorial cerrada'));
+      requests.clear();stream.dispose();
+      for(const key of [...cache.keys()])evict(key);
+      incoming=null;
+      const materials=new Set();
+      group.traverse(o=>{o.geometry?.dispose();if(o.isInstancedMesh)o.dispose();if(o.material)materials.add(o.material);});
+      for(const material of materials)material.dispose();
+      group.removeFromParent();
+    },
     update(x,z,alt,budget,hint=null,view=null,peripheral=budget){
       const radius=alt>2200?0:(peripheral===0?650:peripheral===1?1050:1500);
       stream.update(x,z,radius,alt>2200?0:[12,24,42][peripheral],hint);

@@ -1,6 +1,6 @@
 import * as T from 'three';
 import {project} from './territory-coordinates.js';
-import {addSurfaceGround,openSurfacePhotography,isAtlasTerrain} from './territory-surface-photo.js';
+import {addSurfaceGround,openSurfacePhotography,isAtlasTerrain,terrainTextureLimits} from './territory-surface-photo.js';
 
 const dir='./assets/territory/landscape/';
 const missing=-99999;
@@ -56,7 +56,8 @@ export async function closeOrthophoto(material,renderer,baseTexture,baseBounds,c
   const medium={u:new T.Vector3(1/2048,0,0),v:new T.Vector3(0,1/2048,0)};
   const blocks=new Set(catalog.pnoaBlocks.map(pair=>pair.join('_')));
   const updateFine=await fine;
-  const small=matchMedia('(pointer:coarse), (max-width:760px)').matches||renderer.capabilities.maxTextureSize<2048;
+  const limits=terrainTextureLimits(renderer);
+  const small=matchMedia('(pointer:coarse), (max-width:760px)').matches||limits.size<2048;
   const pixels=small?512:1024;
   const uniforms={uRegionalBase:{value:baseTexture},uRegionalTiles:{value:null},
     uRegionalBaseBounds:{value:new T.Vector4(...baseBounds)},uRegionalLimits:{value:new T.Vector4()},
@@ -89,7 +90,7 @@ export async function closeOrthophoto(material,renderer,baseTexture,baseBounds,c
     const c=document.createElement('canvas');c.width=c.height=pixels*2;
     ctx=c.getContext('2d',{alpha:false});
     const texture=new T.CanvasTexture(c);texture.colorSpace=T.SRGBColorSpace;
-    texture.anisotropy=Math.min(6,renderer.capabilities.getMaxAnisotropy());
+    texture.anisotropy=Math.min(6,limits.anisotropy);
     uniforms.uRegionalTiles.value=texture;
   }
   async function load(file,cx,cz,slot,signal){

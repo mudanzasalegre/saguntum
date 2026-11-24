@@ -379,7 +379,7 @@ export function createTheatre({heightAt=()=>0,project=(lon,lat)=>({x:(lon+.278)*
  }
  let selected=null,readingMode='materials',sectionOpen=false,ground=heightAt;
  const selectionGeo=new THREE.BufferGeometry(),selectionMat=new THREE.LineBasicMaterial({color:'#85d5c8',transparent:true,opacity:.9});
- const marker=new THREE.LineLoop(selectionGeo,selectionMat);marker.name='Parada seleccionada del teatro';marker.visible=false;marker.userData.selectionHelper=true;group.add(marker);resources.materials.push(selectionMat);
+ const marker=new THREE.Line(selectionGeo,selectionMat);marker.name='Parada seleccionada del teatro';marker.visible=false;marker.userData.selectionHelper=true;group.add(marker);resources.materials.push(selectionMat);
  function applyMaterials(){
   const focus=selected?focuses[selected]:null;
   for(const mesh of meshes){
@@ -393,7 +393,7 @@ export function createTheatre({heightAt=()=>0,project=(lon,lat)=>({x:(lon+.278)*
  function selectFocus(id){
   selected=id&&focuses[id]?id:null;applyMaterials();marker.visible=!!selected&&selected!=='teatro-conjunto';
   if(marker.visible){const focus=focuses[selected],p=group.worldToLocal(focus.target.clone()),positions=[],r=selected==='teatro-orchestra'?7.6:2.15;
-   for(let i=0;i<64;i++){const a=i*TAU/64;positions.push(p.x+Math.cos(a)*r,p.y+.18,p.z+Math.sin(a)*r);}selectionGeo.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));selectionGeo.computeBoundingSphere();
+   for(let i=0;i<=64;i++){const a=i*TAU/64;positions.push(p.x+Math.cos(a)*r,p.y+.18,p.z+Math.sin(a)*r);}selectionGeo.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));selectionGeo.computeBoundingSphere();
   }
   return selected?focuses[selected]:null;
  }

@@ -20,6 +20,7 @@ if (simulator) {
   document.documentElement.classList.add('territorial');
   import('./territory.js').then(module => module.openSimulator()).catch(error => {
     console.error(error);
+    if(window.territoryStatus?.recover){window.territoryStatus.recover(error.message);return;}
     const status = document.getElementById('sim-status') || document.getElementById('loading-status');
     status.textContent = 'No se pudo abrir el territorio. Comprueba la conexión.';
     const link = document.createElement('a');

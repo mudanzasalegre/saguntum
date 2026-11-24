@@ -29,16 +29,24 @@ export function documentData(name,retain=true){
 export async function loadAtlasVisitRegistry(){
  const {version,inventories,visits}=await documentData('atlas-visits');
  if(version!==1)throw Error('Versión del registro de visitas desconocida');
- const entries=await Promise.all(visits.map(async name=>{
+ const results=await Promise.allSettled(visits.map(async name=>{
   const record=await documentData(name);
   if(!/^[a-z0-9][a-z0-9-]*$/.test(record.id)||!record.name||record.coordinate?.length!==2||
      !record.coordinate.every(Number.isFinite)||!record.scene?.module)throw Error('Ficha de visita incompleta · '+name);
   const guide=typeof record.guide==='string'?await documentData(record.guide):record.guide;
+  if(record.scene.backends&&(!Array.isArray(record.scene.backends)||!record.scene.backends.length||
+    record.scene.backends.some(id=>!['webgpu','webgl2'].includes(id))))throw Error('Motores incompatibles · '+name);
   for(const stop of guide?.stops||[])if(stop.coordinate?.length!==2||!stop.coordinate.every(Number.isFinite))
    throw Error('Parada sin coordenadas · '+record.id+'/'+stop.id);
   return {...record,guide};
  }));
- return {inventories,entries};
+ const entries=[],issues=[];
+ for(const result of results){
+  if(result.status==='fulfilled')entries.push(result.value);
+  else issues.push(result.reason.message);
+ }
+ for(const issue of issues)console.warn(issue);
+ return {inventories,entries,issues};
 }
 
 const historicStops={
@@ -65,7 +73,7 @@ function metadata(record,project){
  return info;
 }
 export async function loadHeritageCatalog(project){
- const {inventories,entries}=await loadAtlasVisitRegistry();
+ const {inventories,entries,issues}=await loadAtlasVisitRegistry();
  const [lists,castle,theatrePlan,area]=await Promise.all([
   Promise.all(Object.values(inventories).flat().map(name=>documentData(name))),documentData('castle-visit'),documentData('theatre-plan'),documentData('historic-context')
  ]);
@@ -73,10 +81,10 @@ export async function loadHeritageCatalog(project){
  records.castle={id:'castle',name:'Castillo de Sagunto',coordinate:castle.stops.find(s=>s.id==='conjunto').coordinate,sources:castle.sources};
  records.theatre={id:'theatre',name:'Teatro Romano',coordinate:theatrePlan.center,sources:[{url:'https://manuelportaceli.com/rehabilitacion-del-teatro-romano-de-sagunto/'}]};
  for(const entry of entries){
-  if(records[entry.id])throw Error('Identificador de visita duplicado · '+entry.id);
+  if(records[entry.id]){issues.push('Identificador de visita duplicado · '+entry.id);continue;}
   records[entry.id]=entry;
  }
- return {places:Object.values(records).map(record=>metadata(record,project)),records,area};
+ return {places:Object.values(records).map(record=>metadata(record,project)),records,area,issues};
 }
 
 // The v32 constructors contain both geographic coordinates and architectural

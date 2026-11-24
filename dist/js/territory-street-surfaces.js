@@ -2,6 +2,7 @@ import * as T from 'three';
 import {appendStreetFronts} from './territory-street-fronts.js';
 import {urbanLighting} from './territory-urban-sky.js';
 import {addStreetPhotography} from './territory-surface-photo.js';
+import {registerUrbanMaterial} from './territory-urban-material-record.js';
 
 const folder=new URL('../assets/materials/streets/',import.meta.url);
 const metres=[4.04,2.24,2,1.8,2.5,2.25,2,2.48];
@@ -117,7 +118,7 @@ export function streetMaterial(){
     urbanLighting(s);
     addStreetPhotography(s);
   };
-  return mat;
+  return registerUrbanMaterial(mat,'street',{diffuse,detail});
 }
 
 function geometry(pos,uv,profiles,idx){

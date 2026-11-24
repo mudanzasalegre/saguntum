@@ -6,6 +6,12 @@ import {urbanLighting,urbanBuildingsVisible} from './territory-urban-sky.js';
 // atlas carries ground colour under buildings (RGB) and mapped land use (A).
 // Roofs and terrain share the very same decoded image and GPU uniforms.
 const origin='./assets/territory/surface-photo/';
+// Both renderers expose the limits after initialization, on different objects.
+export function terrainTextureLimits(renderer){
+  const size=renderer.backend?.device?.limits.maxTextureDimension2D??renderer.capabilities.maxTextureSize;
+  const anisotropy=renderer.getMaxAnisotropy?.()??renderer.capabilities.getMaxAnisotropy();
+  return {size,anisotropy};
+}
 const cell=256;
 const absent=-100000;
 const uniforms={
@@ -19,6 +25,7 @@ export function setSurfaceBuildings(visible){
   grains.uSurfaceBuildingMask.value=visible?1:0;urbanBuildingsVisible(visible);
 }
 const atlasGround={value:1},groundTint=new T.Color(terrainTint);
+export const surfaceBindings={uniforms,grains,atlasGround,groundTint};
 export function setTerrainAppearance(natural){atlasGround.value=natural?1:0;}
 const terrainGrade=`if(uAtlasGround>.5){
       vec3 s=sRGBTransferOETF(vec4(max(diffuseColor.rgb,vec3(0.)),1.)).rgb;
@@ -205,8 +212,9 @@ export async function openSurfacePhotography(renderer){
     const index=await response.json();catalog=index.sheets;mobileSuffix=index.mobileNativeSuffix;
   }catch{return ()=>false;}
   const mobile=matchMedia('(max-width:760px), (pointer:coarse)').matches;
-  const slotPx=mobile||renderer.capabilities.maxTextureSize<2048?512:1024;
-  const anisotropy=Math.min(8,renderer.capabilities.getMaxAnisotropy());
+  const limits=terrainTextureLimits(renderer);
+  const slotPx=mobile||limits.size<2048?512:1024;
+  const anisotropy=Math.min(8,limits.anisotropy);
   const sheets=new Map();
   let photo,land,wanted=new Map(),visible=[],idleSince=0,generation=0;
   function close(entry){

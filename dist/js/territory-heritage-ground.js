@@ -1,6 +1,7 @@
 import * as T from 'three';
 import {maxLocalHeritage} from './territory-heritage-roadmask.js';
 import {reliefDelta} from './territory-heritage-relief.js';
+import {describeGroundEffect,groundEffectsOf} from './territory-ground-effects.js';
 
 function joinRectangles(rows){
  const result=[];
@@ -26,6 +27,8 @@ export function conservationGround({group,material,heightAt,bounds}){
  const cuts=Array.from({length:maxCuts},()=>new T.Vector4()),cross=Array.from({length:maxCuts},()=>new T.Vector2());
  const rectangles=Array.from({length:maxLocalHeritage},()=>new T.Vector4(1,1,-1,-1)),nCuts={value:0};
  function hook(target,coarse,appearance){
+  describeGroundEffect(target,{photo:appearance?groundEffectsOf(material)?.photo:null,
+    excavation:{coarse,rectangles,cuts,cross,nCuts}});
   target.customProgramCacheKey=()=>coarse?'territory-ground-with-cut':'territory-ground-graded';
   target.onBeforeCompile=function(shader,renderer){
    if(appearance)original.call(this,shader,renderer);

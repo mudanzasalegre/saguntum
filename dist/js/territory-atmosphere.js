@@ -5,12 +5,20 @@ import {atlasLights,atlasRim,applyAtlasLighting} from './atlas-appearance.js';
 import {solarDirection} from './territory-solar.js';
 import {shadowPlan} from './territory-render-policy.js';
 
-export function createAtmosphere(scene,renderer,sea,buildings,network,registration) {
+export function createAtmosphere(scene,renderer,sea,buildings,network,registration,nativeEnvironment=null) {
   const ambient=new T.HemisphereLight('#bfd8f1','#827366',1);
   const sun=new T.DirectionalLight('#fff2de',2.2);
   sun.castShadow=true;
+  // r180 stores the directional ShadowNode in compiled materials. Changing
+  // castShadow disposes that node while a cached draw may still refer to it.
+  // Retain one native shadow graph and schedule only the necessary depth passes.
+  if(nativeEnvironment){
+    renderer.shadowMap.enabled=true;
+    sun.shadow.autoUpdate=false;
+    sun.shadow.intensity=0;
+  }
   Object.assign(sun.shadow.camera,{near:2,far:1250});
-  sun.shadow.mapSize.setScalar(1024);
+  sun.shadow.mapSize.setScalar(nativeEnvironment?128:1024);
   // The Atlas lights use its east/south plotting grid. Rotate both vectors into UTM.
   function atlasDirection([x,y,z],out){
     return out.set(registration.a*x+registration.b*z,y,registration.c*x+registration.d*z).normalize();
@@ -19,20 +27,27 @@ export function createAtmosphere(scene,renderer,sea,buildings,network,registrati
   atlasDirection(atlasRim.direction,rim.position);
   scene.add(ambient,sun,sun.target,rim);
   const horizon=new T.Color(),zenith=new T.Color(),direction=new T.Vector3(),tint=new T.Color();
-  const sky=territorySky(renderer,scene,direction,horizon,zenith);
+  const sky=territorySky(renderer,scene,direction,horizon,zenith,nativeEnvironment);
+  const maxTextureSize=renderer.backend?.device?.limits.maxTextureDimension2D??renderer.capabilities.maxTextureSize;
   scene.fog=new T.FogExp2('#ced9df',.000035);
+  if(nativeEnvironment)scene.fogNode=nativeEnvironment.atlasDistanceFog(scene,renderer);
   const right=new T.Vector3(),upPlane=new T.Vector3(),worldUp=new T.Vector3(0,1,0);
   const snapped=new T.Vector3();
-  let light=1,span=0,lastPopulation='',lastRefresh=0,invalid=true,atlasMode=false;
+  let light=1,span=0,lastPopulation='',lastRefresh=0,invalid=true,atlasMode=false,shadowEnabled=null;
   function atlas(mode){
     atlasMode=true;
     scene.background=horizon;applyAtlasLighting(mode,scene,renderer,sun,ambient);
+    if(nativeEnvironment){
+      scene.background=nativeEnvironment.atlasBackdrop(horizon,renderer.toneMappingExposure);
+      sea.setReflectionSky(horizon);
+    }
     atlasDirection(atlasLights[mode].direction,direction);rim.visible=true;
     sky.show(false);sea.setAtlasLight(mode,direction);
     buildings.night.value=0;network.setNight(0);invalid=true;
   }
   function setHour(hour,date){
     atlasMode=false;rim.visible=false;sky.show(true);
+    if(nativeEnvironment)sea.setReflectionSky(null);
     atlasDirection(solarDirection(hour,date),direction);
     light=T.MathUtils.smoothstep(direction.y,-.17,.21);
     renderer.toneMappingExposure=T.MathUtils.lerp(1.24,1.05,light);
@@ -54,11 +69,21 @@ export function createAtmosphere(scene,renderer,sea,buildings,network,registrati
   function update(camera,p,range,quality){
     sky.update(camera,quality);
     if(atlasMode)scene.fog.density=T.MathUtils.lerp(.000115,.000022,T.MathUtils.smoothstep(range,350,4900));
-    const plan=shadowPlan({range,quality,atlasMode,aboveHorizon:direction.y>.035,previousExtent:span,maxTextureSize:renderer.capabilities.maxTextureSize});
+    const plan=shadowPlan({range,quality,atlasMode,aboveHorizon:direction.y>.035,previousExtent:span,maxTextureSize});
     const {enabled,extent,size:desiredSize}=plan;
-    if(renderer.shadowMap.enabled!==enabled){renderer.shadowMap.enabled=enabled;invalid=true;}
+    if(shadowEnabled!==enabled){
+      shadowEnabled=enabled;invalid=true;
+      if(nativeEnvironment){
+        sun.shadow.intensity=enabled?1:0;
+        sun.shadow.needsUpdate=enabled;
+      }else{
+        renderer.shadowMap.enabled=enabled;
+      }
+    }
     if(enabled&&sun.shadow.mapSize.x!==desiredSize){
-      sun.shadow.mapSize.setScalar(desiredSize);sun.shadow.map?.dispose();sun.shadow.map=null;span=0;invalid=true;
+      sun.shadow.mapSize.setScalar(desiredSize);
+      if(!nativeEnvironment){sun.shadow.map?.dispose();sun.shadow.map=null;}
+      span=0;invalid=true;
     }
     // Quantize the shadow footprint and snap its centre to whole shadow texels.
     // The smallest footprint resolves window reveals and pavilion columns.
@@ -80,9 +105,9 @@ export function createAtmosphere(scene,renderer,sea,buildings,network,registrati
     if(invalid||snapped.distanceToSquared(sun.target.position)>Math.max(texel,1)**2||
        (enabled&&(population!==lastPopulation||(range<500&&now-lastRefresh>850)))){
       sun.target.position.copy(snapped);sun.position.copy(snapped).addScaledVector(direction,distance);
-      renderer.shadowMap.needsUpdate=true;lastPopulation=population;lastRefresh=now;invalid=false;
+      renderer.shadowMap.needsUpdate=enabled;sun.shadow.needsUpdate=enabled;lastPopulation=population;lastRefresh=now;invalid=false;
     }
   }
-  return {atlas,setHour,update,get daylight(){return atlasMode?1:light;},
-    get shadowSize(){return renderer.shadowMap.enabled?sun.shadow.mapSize.x:0;}};
+  return {atlas,setHour,update,dispose(){sky.dispose();sun.shadow.dispose();},get daylight(){return atlasMode?1:light;},
+    get shadowSize(){return shadowEnabled?sun.shadow.mapSize.x:0;}};
 }

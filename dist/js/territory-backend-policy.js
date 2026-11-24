@@ -2,19 +2,25 @@
 export const parityFeatures=Object.freeze([
  'terrain-orthophoto','building-pbr','street-pbr','heritage-originals',
  'heritage-masks-sections','water-planar-reflection','coastal-foam','sky-probe',
- 'vegetation-instances','contact-occlusion','lighting-night','resource-lifecycle'
+ 'vegetation-instances','contact-occlusion','lighting-night','resource-lifecycle','distance-atmosphere','mobile-native'
 ]);
 // Promotion requires per-feature browser evidence plus a complete native entry.
-// The local pilot is deliberately NOT counted as production parity.
-export const productionNative=Object.freeze({entry:false,verified:Object.freeze({})});
+// Browser evidence and comparison cameras are in research/render-v4 and dual-v4.
+// Keep automatic promotion closed until native mobile and extended use are validated.
+export const productionNative=Object.freeze({entry:true,verified:Object.freeze({
+ 'terrain-orthophoto':true,'building-pbr':true,'street-pbr':true,
+ 'heritage-masks-sections':true,'water-planar-reflection':true,'coastal-foam':true,
+ 'sky-probe':true,'vegetation-instances':true,'contact-occlusion':true,'lighting-night':true
+})});
 export function completeParity(candidate){
  return candidate?.entry===true&&parityFeatures.every(key=>candidate.verified?.[key]===true);
 }
 export function rendererPlan({request='auto',secure=false,adapter=false,software=false,scope='production',candidate=productionNative}={}){
  const capable=secure&&adapter&&!software;
  const parity=scope==='lab'||completeParity(candidate);
- const native=capable&&parity&&request!=='webgl2';
- const reason=request==='webgl2'?'WebGL 2 seleccionado':!secure?'Se requiere HTTPS o localhost':!adapter?'Adaptador WebGPU no comprobado':software?'Adaptador de respaldo por software':!parity?'Paridad gráfica de producción pendiente':'WebGPU candidato';
+ const selected=request==='webgpu'&&candidate.entry===true;
+ const native=capable&&(parity||selected)&&request!=='webgl2';
+ const reason=request==='webgl2'?'WebGL 2 seleccionado':!secure?'Se requiere HTTPS o localhost':!adapter?'Adaptador WebGPU no comprobado':software?'Adaptador de respaldo por software':!parity&&!selected?'Selección automática en WebGL 2 hasta validar la paridad visual':'WebGPU candidato';
  return {preferred:native?'webgpu':'webgl2',candidates:native?['webgpu','webgl2']:['webgl2'],reason,parity,capable};
 }
 // Only inspect the adapter in the full simulator. Do not allocate a second

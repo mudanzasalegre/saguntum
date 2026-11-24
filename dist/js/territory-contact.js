@@ -44,8 +44,8 @@ export function contactRenderer(renderer) {
               vec3 delta=positionAt(uv)-p;
               float d=length(delta);
               // Suppress background/foreground halos across depth jumps.
-              float coherent=1.-smoothstep(.65,2.8,abs(delta.z));
-              if(depth<.999999&&d>.015)shade+=max(0.,dot(normal,delta)/max(.01,d)-.12)*(1.-smoothstep(.14,2.85,d))*coherent;
+              float depthAgreement=1.-smoothstep(.65,2.8,abs(delta.z));
+              if(depth<.999999&&d>.015)shade+=max(0.,dot(normal,delta)/max(.01,d)-.12)*(1.-smoothstep(.14,2.85,d))*depthAgreement;
             }
           }
           rgb*=1.-min(.27,shade*.073)*strength*(1.-smoothstep(90.,165.,-p.z));
@@ -88,5 +88,7 @@ export function contactRenderer(renderer) {
       renderer.render(scene,camera);
     }finally{renderer.setRenderTarget(previous);}
   }
-  render.stats=stats;return render;
+  render.stats=stats;
+  render.dispose=()=>{target?.dispose();target=null;triangle.dispose();material.dispose();};
+  return render;
 }

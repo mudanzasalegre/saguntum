@@ -1,4 +1,5 @@
 import * as T from 'three';
+import {registerUrbanMaterial} from './territory-urban-material-record.js';
 
 const base=new URL('../assets/materials/streets/',import.meta.url);
 function cutout(name){
@@ -62,6 +63,8 @@ async function buildTrees(){
       .replace('#include <normal_fragment_begin>','#include <normal_fragment_begin>\n if(!gl_FrontFacing)normal=-normal;');
   }
   leaves.onBeforeCompile=crownDepth.onBeforeCompile=projectCrown;
+  registerUrbanMaterial(leaves,'crown',{wind});
+  registerUrbanMaterial(crownDepth,'crown-depth',{wind});
   const view=new T.PlaneGeometry(6.30,6.30),far=cutout('tree-views.webp');
   // Use the photographed model's azimuth and elevation closest to the live
   // camera. The trunk centre stays fixed during every change of view.
@@ -90,5 +93,6 @@ async function buildTrees(){
       vec3 crownNormal=normalize(treeRight*disk.x+treeUp*disk.y+treeEye*outward+vec3(0.,1.65,0.));
       normal=normalize(mat3(viewMatrix)*crownNormal);`);
   };
+  registerUrbanMaterial(far,'tree-view');
   return {geometry:{trunk,crown,treeView:view},material:{trunk:woodMat,crown:leaves,treeView:far},crownDepth,wind};
 }

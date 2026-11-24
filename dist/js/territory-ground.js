@@ -4,7 +4,8 @@ import {addHorizon} from './territory-horizon.js';
 import {closeOrthophoto} from './territory-ortho.js';
 import {terrainSampler} from './territory-coordinates.js';
 import {conservationGround} from './territory-heritage-ground.js';
-import {setSurfaceBuildings} from './territory-surface-photo.js';
+import {setSurfaceBuildings,terrainTextureLimits} from './territory-surface-photo.js';
+import {describeGroundEffect} from './territory-ground-effects.js';
 
 export async function resource(url, type='json') {
   const response=await fetch(url);
@@ -38,11 +39,12 @@ export async function buildGround(scene,grids,heightAt,renderer) {
   const [left,top,right,bottom]=grids.base.bounds;
   const small=matchMedia('(pointer:coarse), (max-width:760px)').matches;
   const file=name=>territoryBase+'landscape/'+name+(small?'-mobile':'')+'.jpg';
+  const {anisotropy}=terrainTextureLimits(renderer);
   const manifestWork=resource(territoryBase+'landscape/index.json');
   const maps=await Promise.all([grids.base,grids.detail].map(async (g,i)=>{
     if(!g?.texture) return null;
     const tex=await loader.loadAsync(file(i?'core':'territory'));
-    tex.colorSpace=T.SRGBColorSpace; tex.anisotropy=Math.min(6,renderer.capabilities.getMaxAnisotropy());return tex;
+    tex.colorSpace=T.SRGBColorSpace; tex.anisotropy=Math.min(6,anisotropy);return tex;
   }));
   const mat=new T.MeshStandardMaterial({map:maps[0],roughness:1,metalness:0});
   if(maps[1]){
@@ -61,6 +63,7 @@ export async function buildGround(scene,grids,heightAt,renderer) {
   }
   const manifest=await manifestWork;
   const {update:updateOrtho,photography}=await closeOrthophoto(mat,renderer,maps[0],grids.base.bounds,manifest);
+  describeGroundEffect(mat,{photo:{detail:maps[1],detailBounds:grids.detail?.bounds,regional:photography}});
   addHorizon(group,manifest,grids.base.bounds,heightAt,small).catch(error=>console.warn('Horizonte MDT25',error));
   function patch(x,z,w,h,div) {
     const pos=[],uv=[],idx=[];

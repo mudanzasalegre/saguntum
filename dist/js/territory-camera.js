@@ -137,11 +137,18 @@ export function createNavigation({camera,element,heightAt,walkingHeight,bounds,c
     if(mode==='fly'){const h=Math.max(input.prefs.clearance,camera.position.y-heightAt(camera.position.x,camera.position.z));motion.stop();camera.position.set(x,heightAt(x,z)+h,z);return;}
     flyTo(x,z,300);
   }
-  function snapshot(){return {mode,eye:camera.position.toArray(),target:controls.target.toArray(),yaw,pitch,fov:camera.fov,targetLift,visitPose,...(mode==='walk'?{walk:motion.snapshot()}:{})};}
+  function snapshot(){
+    const target=controls.target;
+    // During an approach the destination and the visible pivot have different
+    // ground heights. Resume at the pivot actually on screen.
+    const lift=mode==='orbit'?target.y-heightAt(target.x,target.z):targetLift;
+    return {mode,eye:camera.position.toArray(),target:target.toArray(),yaw,pitch,fov:camera.fov,targetLift:lift,visitPose,untouched,...(mode==='walk'?{walk:motion.snapshot()}:{})};
+  }
   function restore(s){
     if(!s||!modes.includes(s.mode)||![s.eye,s.target].every(a=>Array.isArray(a)&&a.length===3&&a.every(Number.isFinite)))return false;
     setMode(s.mode,false);camera.position.fromArray(s.eye);controls.target.fromArray(s.target);
     setVisitPose(!!s.visitPose&&s.mode==='orbit',camera.position,controls.target);
+    if(s.untouched===false)untouched=false;
     targetLift=Number.isFinite(s.targetLift)?s.targetLift:0;
     if(Number.isFinite(s.fov)){camera.fov=clamp(s.fov,10,115);camera.updateProjectionMatrix();}
     if(mode==='orbit')controls.update();else {yaw=targetYaw=s.yaw||0;pitch=targetPitch=s.pitch||0;orientation();if(mode==='walk')motion.restore(s.walk);}return true;

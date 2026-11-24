@@ -2,12 +2,13 @@ import * as T from 'three';
 
 // Photograph-derived opacity and luminance of the upper hemisphere. The
 // geographic sun, sky colour and radiance are evaluated at the selected hour.
-export function territorySky(renderer,scene,direction,horizon,zenith) {
+export function territorySky(renderer,scene,direction,horizon,zenith,nativeEnvironment=null) {
   const uniforms={
     horizon:{value:horizon},zenith:{value:zenith},sunDir:{value:direction},
     daylight:{value:1},warmth:{value:0},cloudMap:{value:null},hasClouds:{value:0},probe:{value:0}
   };
-  const material=new T.ShaderMaterial({
+  const native=nativeEnvironment?.createSkyMaterial(uniforms);
+  const material=native?.material||new T.ShaderMaterial({
     side:T.BackSide,depthWrite:false,fog:false,uniforms,
     vertexShader:'varying vec3 skyDir; void main(){skyDir=position;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0);}',
     fragmentShader:`
@@ -55,11 +56,12 @@ export function territorySky(renderer,scene,direction,horizon,zenith) {
   dome.scale.setScalar(44000);dome.renderOrder=-100;dome.frustumCulled=false;scene.add(dome);
   const probeScene=new T.Scene(),probeDome=new T.Mesh(sphere,material);
   probeDome.scale.setScalar(10);probeScene.add(probeDome);
-  const probesSupported=renderer.extensions.has('EXT_color_buffer_float');
+  const probesSupported=!!nativeEnvironment||renderer.extensions.has('EXT_color_buffer_float');
   let generator;
-  let target=null,dirty=true,lastProbe=-Infinity,probeSize=0;
+  let target=null,dirty=true,lastProbe=-Infinity,probeSize=0,disposed=false,photoTexture=null;
   new T.TextureLoader().load('./assets/materials/sky/clouds.webp',photo=>{
-    photo.wrapS=T.RepeatWrapping;uniforms.cloudMap.value=photo;uniforms.hasClouds.value=1;dirty=true;
+    if(disposed){photo.dispose();return;}
+    photoTexture=photo;photo.wrapS=T.RepeatWrapping;uniforms.cloudMap.value=photo;uniforms.hasClouds.value=1;dirty=true;
   },undefined,()=>{ /* The solar sky remains available without the cloud image. */ });
   return {
     show(visible){
@@ -74,13 +76,17 @@ export function territorySky(renderer,scene,direction,horizon,zenith) {
       dome.position.copy(camera.position);
       const size=[32,64,64,128][quality];
       if(!probesSupported||(!dirty&&probeSize===size)||performance.now()-lastProbe<220)return;
-      generator??=new T.PMREMGenerator(renderer);
+      generator??=nativeEnvironment?nativeEnvironment.createProbe(renderer):new T.PMREMGenerator(renderer);
       const previous=target;
       uniforms.probe.value=1;
-      try{target=generator.fromScene(probeScene,0,.1,25,{size});}
+      try{target=generator.fromScene(probeScene,0,.1,25,{size,renderTarget:probeSize===size?target:null});}
       finally{uniforms.probe.value=0;}
-      scene.environment=target.texture;previous?.dispose();
+      scene.environment=target.texture;if(previous!==target)previous?.dispose();
       lastProbe=performance.now();dirty=false;probeSize=size;
+    },
+    dispose(){
+      disposed=true;scene.environment=null;dome.removeFromParent();probeDome.removeFromParent();
+      photoTexture?.dispose();target?.dispose();generator?.dispose();sphere.dispose();material.dispose();native?.dispose();
     }
   };
 }

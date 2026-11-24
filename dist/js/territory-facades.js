@@ -3,6 +3,7 @@ import {insideRing} from './territory-coordinates.js';
 import {localScore,viewBucket} from './territory-local-detail.js';
 import {baysOn,balconyBay,edgeSeed,joineryTone,openingBounds} from './territory-building-style.js';
 import {architectureScans} from './territory-building-material.js';
+import {registerUrbanMaterial} from './territory-urban-material-record.js';
 
 function detailMaterial(){
   const mat=new T.MeshStandardMaterial({roughness:.78});
@@ -47,7 +48,7 @@ function detailMaterial(){
       .replace('#include <roughnessmap_fragment>','#include <roughnessmap_fragment>\nroughnessFactor=scanRough;')
       .replace('#include <metalnessmap_fragment>','#include <metalnessmap_fragment>\nmetalnessFactor=metal;');
   };
-  return mat;
+  return registerUrbanMaterial(mat,'facade-details');
 }
 
 // Cast real balcony shadows only near the viewer. The return to the flat joinery
@@ -56,7 +57,9 @@ export function nearFacades(group){
   const compact=matchMedia('(pointer: coarse)').matches||(navigator.deviceMemory||8)<=4;
   const max=compact?4500:11520,frame=new T.Object3D();
   const parts=new T.InstancedMesh(new T.BoxGeometry(),detailMaterial(),max);
-  const finishes=new T.InstancedBufferAttribute(new Uint8Array(max),1);
+  // A single unpadded byte is not a WebGPU vertex format. Keep the live buffer
+  // shared with the tile updater on both backends.
+  const finishes=new T.InstancedBufferAttribute(new Float32Array(max),1);
   finishes.setUsage(T.DynamicDrawUsage);parts.geometry.setAttribute('facadeFinish',finishes);
   parts.count=0;parts.frustumCulled=false;parts.receiveShadow=true;parts.castShadow=true;
   parts.instanceMatrix.setUsage(T.DynamicDrawUsage);group.add(parts);
