@@ -34,7 +34,7 @@ async function within(promise,ms,label){let timer;try{return await Promise.race(
 const ownTextures=[],ownGeometries=[],ownMaterials=[];
 function failure(error){
  if(closed)return;
- closed=true;try{renderer?.setAnimationLoop(null);}catch{}
+ closed=true;labStatus.ready=false;try{renderer?.setAnimationLoop(null);}catch{}
  console.error('Laboratorio SAGUNTUM',error);labStatus.error=String(error?.message||error);
  if(attemptNative&&requested!=='webgl2'&&params.get('recovered')!=='1'){reopen('webgl2',zone,'fallback');return;}
  say('No se pudo iniciar la prueba: '+labStatus.error+'. Puedes regresar al Simulador o elegir otro motor.');
@@ -101,7 +101,7 @@ async function start(){
  const device=native?renderer.backend?.device:null;
  device?.pushErrorScope?.('validation');
  try{labStatus.smoke=await within(smokeTest(renderer),10000,'Tiempo de prueba TSL agotado');}
- finally{if(device?.popErrorScope){const error=await device.popErrorScope();if(error)throw Error(error.message);}}
+ finally{if(device?.popErrorScope){const error=await within(device.popErrorScope(),5000,'Validación WebGPU agotada');if(error)throw Error(error.message);}}
  device?.addEventListener?.('uncapturederror',e=>{e.preventDefault?.();failure(Error(e.error?.message||'Error de validación WebGPU'));});
  if(closed)return;
  $('lab-active').textContent=labStatus.backend+' · Three.js r'+G.REVISION+' · prueba TSL de píxeles superada';

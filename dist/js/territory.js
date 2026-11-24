@@ -14,6 +14,7 @@ import {createNavigation} from './territory-camera.js';
 import {createHeritageCollision} from './territory-collision-heritage.js';
 import {createAtmosphere} from './territory-atmosphere.js';
 import {contactRenderer} from './territory-contact.js';
+import {createGpuTimer} from './territory-gpu-timer.js';
 import {createTerritoryRenderer,pixelRatioFor,qualityNames} from './territory-graphics.js';
 import {solarDateInSagunto,solarPreset,validSolarDate} from './territory-solar.js';
 import {surfacePhotoMetrics,setTerrainAppearance} from './territory-surface-photo.js';
@@ -231,7 +232,8 @@ export async function openSimulator(){
   heritage=heritageResult;ground.setHeritage(heritage);buildings=createBuildings({scene,world,grids,heritage,photography:ground.photography});network=createNetwork({scene,index,heightAt,heritage});
   atmosphere=createAtmosphere(scene,renderer,sea,buildings,network,registerFrame(sag,project));
   canopy=createCanopy(scene,heightAt,heritage);
-  const render=contactRenderer(renderer);
+  const render=contactRenderer(renderer),gpuTimer=createGpuTimer(renderer);
+  window.addEventListener('pagehide',()=>gpuTimer.dispose(),{once:true});
   function setLight(h){
     hour=Number(h);$('time').value=hour;$('hour').textContent=String(Math.floor(hour)).padStart(2,'0')+':'+String(Math.round((hour%1)*60)).padStart(2,'0');
     if(lighting==='solar')atmosphere.setHour(hour,solarDate);else atmosphere.atlas(lighting);
@@ -443,8 +445,9 @@ export async function openSimulator(){
     const nearPlane=range>2600?3:range>450?.7:.12;
     if(camera.near!==nearPlane||lastFov!==camera.fov){camera.near=nearPlane;lastFov=camera.fov;camera.updateProjectionMatrix();}
     const contact=lighting==='solar'&&tier>=2&&peripheralPenalty<2&&(!mobile||tier===3)&&detail.range<520&&speed<65;
-    renderer.info.reset();
+    renderer.info.reset();gpuTimer.begin();
     try{render(scene,camera,contact,tier);}catch(error){console.error('Render territorial',error);lost=true;save();goToPlan();return;}
+    finally{gpuTimer.end();}
     markRendered();if(ms>0&&ms<1000)samples.push(ms);
     if(now-prevStats>900){
       const sorted=samples.sort((a,b)=>a-b),median=sorted[Math.floor(sorted.length/2)]||16;
@@ -454,8 +457,8 @@ export async function openSimulator(){
         geometries:renderer.info.memory.geometries,textures:renderer.info.memory.textures,frameMs:Math.round(median*10)/10,
         frameP95Ms:Math.round((sorted[Math.floor(sorted.length*.95)]||median)*10)/10,
         heapMiB:performance.memory?Math.round(performance.memory.usedJSHeapSize/1048576):null,heritage:heritage.stats,pending,localQuality:budget,peripheralQuality:peripheral,pixelScale});
-      Object.assign(graphics,{profile:qualityNames[tier],shadowSize:atmosphere.shadowSize,contact:render.stats?.active===true,contactStats:render.stats});
-      $('stats').textContent=graphics.backend+' · '+graphics.profile+' · '+status.frameMs+' ms/fotograma · '+status.drawCalls+' llamadas · '+status.triangles.toLocaleString('es-ES')+' triángulos · '+status.geometries+' geometrías · '+status.textures+' texturas'+(status.heapMiB?' · JS '+status.heapMiB+' MiB':'')+' · carga inicial '+(status.loadMs/1000).toFixed(1)+' s';
+      Object.assign(graphics,{profile:qualityNames[tier],shadowSize:atmosphere.shadowSize,contact:render.stats?.active===true,contactStats:render.stats,gpu:gpuTimer.stats});
+      $('stats').textContent=graphics.backend+' · '+graphics.profile+' · '+status.frameMs+' ms/fotograma · '+status.drawCalls+' llamadas · '+status.triangles.toLocaleString('es-ES')+' triángulos · '+status.geometries+' geometrías · '+status.textures+' texturas'+(status.heapMiB?' · JS '+status.heapMiB+' MiB':'')+(gpuTimer.stats.p50Ms!==null?' · GPU '+gpuTimer.stats.p50Ms.toFixed(1)+' ms (render)':'')+' · carga inicial '+(status.loadMs/1000).toFixed(1)+' s';
       const visit=heritage.stats.visit;
       const reading=visit?.inspection?'Inspección marina':visit?.section?'Sección de la visita':visit?.mode==='historical'||historical?'Reconstrucción histórica':visit?.interior?'Interior de la visita':'Territorio actual';
       const loadingVisit=activeStop&&flags.heritage&&nav.atVisitFrame&&!visit&&heritage.stats.loading;

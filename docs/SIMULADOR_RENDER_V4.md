@@ -14,3 +14,14 @@ No activar automáticamente WebGPU para el Simulador completo sólo porque exist
 
 ## Pruebas
 Ejecutar `node research/test-territory-render-v4.mjs` y los tres tests de V2/V3. Servir dist por localhost/HTTPS; abrir el laboratorio en navegador real, confirmar lectura de píxeles y los dos backends, alternar zonas y provocar fallos de dispositivo. Abrir simulador completo y comprobar todos los lugares, agua y cortes, comparar mismos encuadres y perf. No se ha publicado en Sites.
+
+## Diagnóstico y validación de nodos
+
+El render de producción incluye un temporizador GPU opcional y no bloqueante mediante EXT_disjoint_timer_query_webgl2. Muestra sólo medidas disponibles (no sustituye frameMs/p95 y no incluye el trabajo ejecutado antes del render). `graphics.gpu` contiene tiempos y número de muestras; si no hay extensión, no hay estimación inventada. Ejecutar también:
+
+```bash
+node research/test-territory-gpu-timer.mjs
+node --experimental-loader ./research/validate_loader.mjs research/test-territory-tsl-v4.mjs
+```
+
+En esta sesión se comprobaron 24 aserciones de política de render/backend, el ciclo de consultas con GL simulado y la construcción de seis nodos de material usando las fuentes exactas de Three.js r180 con texturas de prueba. No se ha validado la compilación WGSL/GLSL ni la lectura de píxeles del laboratorio en GPU real.
