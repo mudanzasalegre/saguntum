@@ -11,7 +11,8 @@ import {project} from './territory-coordinates.js';
 import {streetGeometry,streetAreas} from './territory-street-surfaces.js';
 import {loadStreetFronts} from './territory-street-fronts.js';
 import {boundsDistance} from './territory-stream-policy.js';
-import {createWaterMask,createWaterGeometry} from './coast-environment.js';
+import {createWaterMask} from './coast-environment.js';
+import {createNativeCoast} from './territory-webgpu-coast.js';
 const $=id=>document.getElementById(id);
 const params=new URLSearchParams(location.search),requested=['auto','webgpu','webgl2'].includes(params.get('engine'))?params.get('engine'):'auto';
 const zones={'sagunto':'plaza-mayor','puerto':'horno','grau':'grau-vell'},zone=Object.hasOwn(zones,params.get('zone'))?params.get('zone'):'sagunto';
@@ -28,12 +29,14 @@ function reopen(engine,selected,reason=''){
 }
 $('lab-engine').onchange=e=>reopen(e.target.value,zone);
 $('lab-zone').onchange=e=>reopen(requested,e.target.value);
-let renderer,worker,materials,controls,scene,closed=false,attemptNative=false;
+let renderer,worker,materials,controls,scene,coast,closed=false,attemptNative=false;
+async function within(promise,ms,label){let timer;try{return await Promise.race([promise,new Promise((_,reject)=>{timer=setTimeout(()=>reject(Error(label)),ms);})]);}finally{clearTimeout(timer);}}
 const ownTextures=[],ownGeometries=[],ownMaterials=[];
 function failure(error){
  if(closed)return;
+ closed=true;try{renderer?.setAnimationLoop(null);}catch{}
  console.error('Laboratorio SAGUNTUM',error);labStatus.error=String(error?.message||error);
- if(attemptNative&&requested!=='webgl2'&&params.get('recovered')!=='1'){closed=true;reopen('webgl2',zone,'fallback');return;}
+ if(attemptNative&&requested!=='webgl2'&&params.get('recovered')!=='1'){reopen('webgl2',zone,'fallback');return;}
  say('No se pudo iniciar la prueba: '+labStatus.error+'. Puedes regresar al Simulador o elegir otro motor.');
 }
 async function smokeTest(r){
@@ -68,6 +71,7 @@ function geometry(data){
  g.setIndex(new G.BufferAttribute(data.index,1));g.computeVertexNormals();g.computeBoundingSphere();return g;
 }
 function addMesh(geo,mat,shadow=true){
+ if(!geo.attributes.position?.count||geo.index&&geo.index.count===0){geo.dispose();return null;}
  ownGeometries.push(geo);const mesh=new G.Mesh(geo,mat);mesh.castShadow=shadow;mesh.receiveShadow=true;scene.add(mesh);return mesh;
 }
 function terrainMesh(bounds,heightAt,textureBounds){
@@ -86,7 +90,7 @@ async function start(){
  const plan=rendererPlan({request:requested,scope:'lab',secure:adapter.secure,adapter:adapter.available,software:adapter.software});
  labStatus.adapter=adapter;labStatus.plan=plan;attemptNative=plan.preferred==='webgpu';
  renderer=new G.WebGPURenderer({forceWebGL:!attemptNative,antialias:!compact,alpha:false,powerPreference:compact?'default':'high-performance'});
- await renderer.init();
+ await within(renderer.init(),12000,'Tiempo de inicialización gráfica agotado');
  const native=renderer.backend?.isWebGPUBackend===true;
  attemptNative=native||attemptNative;
  labStatus.backend=native?'WebGPU nativo':'WebGL 2 · renderer TSL';
@@ -94,7 +98,11 @@ async function start(){
  renderer.onDeviceLost=info=>{if(!closed&&info.reason!=='destroyed')failure(Error(info.message||'Dispositivo gráfico perdido'));};
  renderer.domElement.addEventListener('webglcontextlost',event=>{event.preventDefault();failure(Error('Contexto WebGL 2 perdido'));});
  renderer.outputColorSpace=G.SRGBColorSpace;renderer.toneMapping=G.ACESFilmicToneMapping;renderer.toneMappingExposure=1.05;
- labStatus.smoke=await smokeTest(renderer);
+ const device=native?renderer.backend?.device:null;
+ device?.pushErrorScope?.('validation');
+ try{labStatus.smoke=await within(smokeTest(renderer),10000,'Tiempo de prueba TSL agotado');}
+ finally{if(device?.popErrorScope){const error=await device.popErrorScope();if(error)throw Error(error.message);}}
+ device?.addEventListener?.('uncapturederror',e=>{e.preventDefault?.();failure(Error(e.error?.message||'Error de validación WebGPU'));});
  if(closed)return;
  $('lab-active').textContent=labStatus.backend+' · Three.js r'+G.REVISION+' · prueba TSL de píxeles superada';
  say('Preparando cartografía y materiales de la zona…');
@@ -127,8 +135,9 @@ async function start(){
  finally{worker?.terminate();worker=null;}
  const [roads,fronts]=await Promise.all([resource(networkBase+roadSector.url),loadStreetFronts(roadSector)]);
  addMesh(streetGeometry(roads,heightAt,fronts),materials.street,false);addMesh(streetAreas(roads.areas||[],heightAt),materials.street,false);
- if(world.water?.length){
-  const sea=addMesh(createWaterGeometry(mask),materials.water,false);sea.rotation.x=-Math.PI/2;sea.position.y=.08;
+ if(world.water?.length&&zone!=='sagunto'){
+  coast=createNativeCoast({mask,shorelines:world.shorelines,project,compact,reduced:matchMedia('(prefers-reduced-motion:reduce)').matches});
+  scene.add(coast.water);labStatus.water=coast.stats;
  }
  const y=heightAt(anchor.x,anchor.z);
  const ambient=new G.HemisphereLight('#c9dced','#8b7964',1.6),sun=new G.DirectionalLight('#fff0d6',3);
@@ -140,15 +149,15 @@ async function start(){
  controls.target.set(anchor.x,y,anchor.z);camera.position.set(anchor.x+170,y+125,anchor.z+190);controls.update();
  $('lab-night').onchange=e=>{
   const night=e.target.checked;materials.night.value=night?1:0;sun.intensity=night?.25:3;ambient.intensity=night?.48:1.6;
-  scene.background.set(night?'#18283f':'#b9cbd8');scene.fog.color.copy(scene.background);
+  scene.background.set(night?'#18283f':'#b9cbd8');scene.fog.color.copy(scene.background);coast?.setLight(night);
  };
- labStatus.ready=true;labStatus.buildings=buildings;labStatus.sectors=tiles.length;labStatus.streetWays=roads.roads.length;
+ labStatus.buildings=buildings;labStatus.sectors=tiles.length;labStatus.streetWays=roads.roads.length;
  say(buildings+' partes catastrales · '+roads.roads.length+' tramos viarios · '+tiles.length+' sectores. '+(materials.warnings.join(' ')||'Materiales TSL preparados.'));
  let last=0,frames=[],stamp=performance.now();
  renderer.setAnimationLoop(now=>{
   if(closed||document.hidden){last=0;return;}
   try{
-   if(last&&now-last<1000)frames.push(now-last);last=now;controls.update();renderer.render(scene,camera);
+   if(last&&now-last<1000)frames.push(now-last);last=now;controls.update();renderer.render(scene,camera);labStatus.ready=true;
    if(now-stamp>1000&&frames.length){
     frames.sort((a,b)=>a-b);labStatus.frameMs=frames[Math.floor(frames.length*.5)];labStatus.frameP95Ms=frames[Math.floor(frames.length*.95)];
     $('lab-stats').textContent=labStatus.frameMs.toFixed(1)+' ms/fotograma · p95 '+labStatus.frameP95Ms.toFixed(1)+' ms · prueba local';frames=[];stamp=now;
@@ -160,6 +169,6 @@ window.addEventListener('pagehide',()=>{
  closed=true;worker?.terminate();controls?.dispose();
  try{renderer?.setAnimationLoop(null);}catch{}
  for(const g of ownGeometries)g.dispose();for(const m of ownMaterials)m.dispose();for(const t of ownTextures)t.dispose();
- materials?.dispose();try{renderer?.dispose();}catch{}
+ materials?.dispose();coast?.dispose();try{renderer?.dispose();}catch{}
 },{once:true});
 start().catch(failure);

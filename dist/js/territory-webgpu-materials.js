@@ -69,11 +69,5 @@ export async function labMaterials(compact){
   street.colorNode=mix(grain.mul(weather),vec3(.59,.57,.49),mark.mul(.7));
   street.roughnessNode=clamp(pores,.55,.98);
  }else warnings.push('Faltan texturas de pavimento; material de respaldo.');
- // A native water *sample* with the original geographic polygon. Planar
- // reflections, shoreline distance field, contact foam and cuts are not yet ported.
- const water=new G.MeshStandardNodeMaterial({color:0x286e82,roughness:.26,metalness:.08,side:G.DoubleSide});
- const wave=sin(positionWorld.x.mul(.24).add(positionWorld.z.mul(.18)).add(time.mul(.65))).mul(.5).add(.5);
- water.colorNode=mix(vec3(.025,.13,.18),vec3(.075,.26,.28),wave.mul(.38).add(.15));
- water.roughnessNode=mix(float(.18),float(.34),wave);
- return {building,street,water,night,warnings,dispose(){for(const t of maps)t.dispose();for(const m of [building,street,water])m.dispose();}};
+ return {building,street,night,warnings,dispose(){for(const t of maps)t.dispose();for(const m of [building,street])m.dispose();}};
 }
