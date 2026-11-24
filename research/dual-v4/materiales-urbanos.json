@@ -1,0 +1,153 @@
+{
+  "adapter": "ampere",
+  "materials": [
+    "architecture",
+    "skyline",
+    "street",
+    "facade-details",
+    "pedestrian",
+    "car",
+    "crown",
+    "tree-view",
+    "tree-contact",
+    "tree-pit"
+  ],
+  "calls": 10,
+  "uniqueColors": 4478,
+  "comparison": {
+    "architecture-day": {
+      "pixels": 17678,
+      "mae": 0.64,
+      "correlation": 0.9995,
+      "maxima": [
+        152,
+        152
+      ]
+    },
+    "architecture-day-sky": {
+      "pixels": 17678,
+      "mae": 0.69,
+      "correlation": 0.9994,
+      "maxima": [
+        217,
+        217
+      ]
+    },
+    "architecture-night": {
+      "pixels": 17678,
+      "mae": 0.64,
+      "correlation": 0.9995,
+      "maxima": [
+        234,
+        234
+      ]
+    },
+    "skyline-day": {
+      "pixels": 17678,
+      "mae": 0,
+      "correlation": 1,
+      "maxima": [
+        127,
+        127
+      ]
+    },
+    "street-day": {
+      "pixels": 16341,
+      "mae": 0.21,
+      "correlation": 0.9995,
+      "maxima": [
+        158,
+        158
+      ]
+    },
+    "facade-details-day": {
+      "pixels": 5010,
+      "mae": 0.11,
+      "correlation": 0.9999,
+      "maxima": [
+        131,
+        131
+      ]
+    },
+    "pedestrian-day": {
+      "pixels": 1061,
+      "mae": 0.01,
+      "correlation": 1,
+      "maxima": [
+        142,
+        142
+      ]
+    },
+    "car-day": {
+      "pixels": 925,
+      "mae": 0.07,
+      "correlation": 1,
+      "maxima": [
+        255,
+        255
+      ]
+    },
+    "crown-day": {
+      "pixels": 1412,
+      "mae": 0.07,
+      "correlation": 0.9998,
+      "maxima": [
+        57,
+        57
+      ]
+    },
+    "tree-view-day": {
+      "pixels": 1684,
+      "mae": 0.1,
+      "correlation": 0.9998,
+      "maxima": [
+        85,
+        85
+      ]
+    },
+    "tree-contact-day": {
+      "pixels": 2388,
+      "mae": 0,
+      "correlation": 1,
+      "maxima": [
+        68,
+        68
+      ]
+    },
+    "tree-pit-day": {
+      "pixels": 2824,
+      "mae": 0,
+      "correlation": 1,
+      "maxima": [
+        42,
+        42
+      ]
+    }
+  },
+  "slotChanges": {
+    "blank": [
+      128,
+      128
+    ],
+    "loaded": [
+      220,
+      75
+    ],
+    "replaced": [
+      40,
+      75
+    ],
+    "cleared": [
+      40,
+      128
+    ]
+  },
+  "leafShadows": {
+    "webgl2": 2171,
+    "webgpu": 2881
+  },
+  "uncaptured": [],
+  "validation": null,
+  "consoleErrors": [],
+  "warnings": []
+}

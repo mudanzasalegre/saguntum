@@ -1,0 +1,557 @@
+{
+  "browser": "156.0.8078.47",
+  "cases": {
+    "selector": {
+      "ok": true,
+      "glorieta": {
+        "cameraDelta": {
+          "eye": 0.0,
+          "target": 0.0,
+          "fov": 0.0,
+          "yaw": 0,
+          "pitch": 0
+        },
+        "visit": "#glorieta/glorieta-romeu",
+        "state": {
+          "light": "day",
+          "terrain": "photo",
+          "date": "2025-06-21",
+          "hour": 14.25,
+          "quality": "0",
+          "jets": false,
+          "labels": false,
+          "minimap": true
+        }
+      },
+      "gerencia": {
+        "cameraDelta": {
+          "eye": 0.0,
+          "target": 0.0,
+          "fov": 0,
+          "yaw": 0.0,
+          "pitch": 0.0
+        },
+        "visit": "#gerencia/gerencia-oficinas",
+        "state": {
+          "light": "day",
+          "terrain": "photo",
+          "date": "2025-06-21",
+          "hour": 14.25,
+          "quality": "0",
+          "jets": false,
+          "labels": false,
+          "minimap": true
+        }
+      },
+      "modoGerencia": "fly",
+      "automático": "Motor activo · WebGL 2 · Three.js r180",
+      "documents": [
+        "/#simulador/glorieta/glorieta-romeu",
+        "/#simulador/glorieta/glorieta-romeu",
+        "/#simulador/gerencia/gerencia-oficinas",
+        "/#simulador/gerencia/gerencia-oficinas"
+      ],
+      "graphicsEvents": [
+        [
+          0,
+          "webgl2"
+        ],
+        [
+          1,
+          "requestAdapter"
+        ],
+        [
+          1,
+          "requestDevice"
+        ],
+        [
+          1,
+          "device"
+        ],
+        [
+          1,
+          "webgpu"
+        ],
+        [
+          2,
+          "webgl2"
+        ],
+        [
+          3,
+          "webgl2"
+        ]
+      ]
+    },
+    "dispositivoPerdido": {
+      "ok": true,
+      "fault": "GPUDevice.destroy()",
+      "fallbackReason": "Device was destroyed.",
+      "restoration": {
+        "cameraDelta": {
+          "eye": 0.0,
+          "target": 0.0,
+          "fov": 0.0,
+          "yaw": 0,
+          "pitch": 0
+        },
+        "visit": "#glorieta/glorieta-romeu",
+        "state": {
+          "light": "day",
+          "terrain": "photo",
+          "date": "2025-06-21",
+          "hour": 14.25,
+          "quality": "0",
+          "jets": false,
+          "labels": false,
+          "minimap": true
+        }
+      },
+      "newTab": {
+        "requested": "webgpu",
+        "active": "webgpu",
+        "stop": "horno-acceso"
+      },
+      "documents": [
+        "/#simulador/glorieta/glorieta-romeu",
+        "/?recuperar=webgl2#simulador/glorieta/glorieta-romeu",
+        "/#simulador/glorieta/glorieta-romeu",
+        "/#simulador/glorieta/glorieta-romeu"
+      ],
+      "graphicsEvents": [
+        [
+          0,
+          "requestAdapter"
+        ],
+        [
+          0,
+          "requestDevice"
+        ],
+        [
+          0,
+          "device"
+        ],
+        [
+          0,
+          "webgpu"
+        ],
+        [
+          0,
+          "device.lost:destroyed"
+        ],
+        [
+          1,
+          "webgl2"
+        ],
+        [
+          2,
+          "webgl2"
+        ],
+        [
+          3,
+          "requestAdapter"
+        ],
+        [
+          3,
+          "requestDevice"
+        ],
+        [
+          3,
+          "device"
+        ],
+        [
+          3,
+          "webgpu"
+        ]
+      ]
+    },
+    "apiAusente": {
+      "ok": true,
+      "fallbackReason": "WebGPU requiere un contexto seguro y soporte del navegador",
+      "place": "#horno/horno-acceso",
+      "documents": [
+        "/#simulador/horno/horno-acceso"
+      ],
+      "graphicsEvents": [
+        [
+          0,
+          "webgl2"
+        ]
+      ]
+    },
+    "sinAdaptador": {
+      "ok": true,
+      "fallbackReason": "No hay adaptador WebGPU disponible",
+      "place": "#horno/horno-acceso",
+      "documents": [
+        "/#simulador/horno/horno-acceso"
+      ],
+      "graphicsEvents": [
+        [
+          0,
+          "requestAdapter"
+        ],
+        [
+          0,
+          "webgl2"
+        ]
+      ]
+    },
+    "adaptadorRechazado": {
+      "ok": true,
+      "fallbackReason": "QA: adaptador rechazado",
+      "place": "#horno/horno-acceso",
+      "documents": [
+        "/#simulador/horno/horno-acceso"
+      ],
+      "graphicsEvents": [
+        [
+          0,
+          "requestAdapter"
+        ],
+        [
+          0,
+          "webgl2"
+        ]
+      ]
+    },
+    "dispositivoRechazado": {
+      "ok": true,
+      "fallbackReason": "QA: inicialización rechazada",
+      "place": "#horno/horno-acceso",
+      "documents": [
+        "/#simulador/horno/horno-acceso"
+      ],
+      "graphicsEvents": [
+        [
+          0,
+          "requestAdapter"
+        ],
+        [
+          0,
+          "requestDevice"
+        ],
+        [
+          0,
+          "webgl2"
+        ]
+      ]
+    },
+    "compilaciónRechazada": {
+      "ok": true,
+      "fault": "Fuente WGSL inválida en la sonda de producción",
+      "fallbackReason": "Error while parsing WGSL: :1:1 error: unexpected token\nQA_invalid_probe : ;\n^^^^^^^^^^^^^^^^\n\n\n - While calling [Device].CreateShaderModule([ShaderModuleDescriptor \"\"vertex\"\"]).\n",
+      "documents": [
+        "/#simulador/horno/horno-acceso"
+      ],
+      "graphicsEvents": [
+        [
+          0,
+          "requestAdapter"
+        ],
+        [
+          0,
+          "requestDevice"
+        ],
+        [
+          0,
+          "device"
+        ],
+        [
+          0,
+          "webgpu"
+        ],
+        [
+          0,
+          "WGSL:inválido"
+        ],
+        [
+          0,
+          "webgl2"
+        ],
+        [
+          0,
+          "device.lost:destroyed"
+        ]
+      ]
+    },
+    "pérdidaDuranteSonda": {
+      "ok": true,
+      "fault": "GPUDevice.destroy() durante la primera compilación",
+      "place": "#horno/horno-acceso",
+      "fallbackReason": "Failed to execute 'mapAsync' on 'GPUBuffer': The Device was lost before mapping was resolved.",
+      "documents": [
+        "/#simulador/horno/horno-acceso"
+      ],
+      "graphicsEvents": [
+        [
+          0,
+          "requestAdapter"
+        ],
+        [
+          0,
+          "requestDevice"
+        ],
+        [
+          0,
+          "device"
+        ],
+        [
+          0,
+          "webgpu"
+        ],
+        [
+          0,
+          "destroy:sonda"
+        ],
+        [
+          0,
+          "device.lost:destroyed"
+        ],
+        [
+          0,
+          "webgl2"
+        ]
+      ]
+    },
+    "materialIncompatible": {
+      "ok": true,
+      "fault": "ShaderMaterial de prueba sin variante TSL",
+      "fallbackReason": "Material pendiente de adaptación · QA GLSL sin equivalencia TSL",
+      "restoration": {
+        "cameraDelta": {
+          "eye": 0.0,
+          "target": 0.0,
+          "fov": 0,
+          "yaw": 0,
+          "pitch": 0
+        },
+        "visit": "#casino/casino-salon",
+        "state": {
+          "light": "day",
+          "terrain": "photo",
+          "date": "2025-06-21",
+          "hour": 14.25,
+          "quality": "0",
+          "jets": false,
+          "labels": false,
+          "minimap": true
+        }
+      },
+      "documents": [
+        "/#simulador/casino/casino-salon",
+        "/?recuperar=webgl2#simulador/casino/casino-salon"
+      ],
+      "graphicsEvents": [
+        [
+          0,
+          "requestAdapter"
+        ],
+        [
+          0,
+          "requestDevice"
+        ],
+        [
+          0,
+          "device"
+        ],
+        [
+          0,
+          "webgpu"
+        ],
+        [
+          1,
+          "webgl2"
+        ]
+      ]
+    },
+    "mapaYReintento": {
+      "ok": true,
+      "fallbackReason": "Device was destroyed.",
+      "mapStop": "#glorieta/glorieta-romeu",
+      "restoration": {
+        "cameraDelta": {
+          "eye": 0.0,
+          "target": 0.0,
+          "fov": 0.0,
+          "yaw": 0,
+          "pitch": 0
+        },
+        "visit": "#glorieta/glorieta-romeu",
+        "state": {
+          "light": "day",
+          "terrain": "photo",
+          "date": "2025-06-21",
+          "hour": 14.25,
+          "quality": "0",
+          "jets": false,
+          "labels": false,
+          "minimap": true
+        }
+      },
+      "documents": [
+        "/#simulador/glorieta/glorieta-romeu",
+        "/?recuperar=webgl2#simulador/glorieta/glorieta-romeu",
+        "/#simulador/glorieta/glorieta-romeu",
+        "/#simulador/glorieta/glorieta-romeu"
+      ],
+      "graphicsEvents": [
+        [
+          0,
+          "requestAdapter"
+        ],
+        [
+          0,
+          "requestDevice"
+        ],
+        [
+          0,
+          "device"
+        ],
+        [
+          0,
+          "webgpu"
+        ],
+        [
+          0,
+          "device.lost:destroyed"
+        ],
+        [
+          1,
+          "webgl2:denegado"
+        ],
+        [
+          1,
+          "webgl2:denegado"
+        ],
+        [
+          2,
+          "requestAdapter"
+        ],
+        [
+          2,
+          "requestDevice"
+        ],
+        [
+          2,
+          "webgl2"
+        ],
+        [
+          3,
+          "requestAdapter"
+        ],
+        [
+          3,
+          "requestDevice"
+        ],
+        [
+          3,
+          "device"
+        ],
+        [
+          3,
+          "webgpu"
+        ]
+      ]
+    },
+    "contextoWebGLPerdido": {
+      "ok": true,
+      "fault": "WEBGL_lose_context",
+      "mapStop": "#horno/horno-acceso",
+      "restoration": {
+        "cameraDelta": {
+          "eye": 0.0,
+          "target": 0.0,
+          "fov": 0,
+          "yaw": 0,
+          "pitch": 0
+        },
+        "visit": "#horno/horno-acceso",
+        "state": {
+          "light": "day",
+          "terrain": "photo",
+          "date": "2025-06-21",
+          "hour": 14.25,
+          "quality": "0",
+          "jets": false,
+          "labels": false,
+          "minimap": true
+        }
+      },
+      "documents": [
+        "/#simulador/horno/horno-acceso",
+        "/?vista=plano#simulador/horno/horno-acceso",
+        "/#simulador/horno/horno-acceso"
+      ],
+      "graphicsEvents": [
+        [
+          0,
+          "webgl2"
+        ],
+        [
+          2,
+          "webgl2"
+        ]
+      ]
+    },
+    "reintentoSoloWebGPU": {
+      "ok": true,
+      "initialReason": "No hay adaptador WebGPU disponible",
+      "mapStop": "#horno/horno-acceso",
+      "restored": "Motor activo · WebGPU · Three.js r180",
+      "documents": [
+        "/#simulador/horno/horno-acceso",
+        "/#simulador/horno/horno-acceso"
+      ],
+      "graphicsEvents": [
+        [
+          0,
+          "requestAdapter"
+        ],
+        [
+          0,
+          "webgl2:denegado"
+        ],
+        [
+          0,
+          "webgl2:denegado"
+        ],
+        [
+          1,
+          "requestAdapter"
+        ],
+        [
+          1,
+          "requestDevice"
+        ],
+        [
+          1,
+          "device"
+        ],
+        [
+          1,
+          "webgpu"
+        ]
+      ]
+    },
+    "arranqueInterrumpido": {
+      "ok": true,
+      "fault": "Interrupción simulada durante requestAdapter, conservando el marcador real de arranque",
+      "place": "#horno/horno-acceso",
+      "fallbackReason": "El arranque anterior de WebGPU se interrumpió.",
+      "documents": [
+        "/#simulador/horno/horno-acceso",
+        "/#simulador/horno/horno-acceso"
+      ],
+      "graphicsEvents": [
+        [
+          0,
+          "requestAdapter"
+        ],
+        [
+          1,
+          "webgl2"
+        ]
+      ]
+    }
+  }
+}

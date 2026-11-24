@@ -1,0 +1,131 @@
+{
+  "maritimo": {
+    "camera": {
+      "mode": "orbit",
+      "eye": [
+        9813.317386636403,
+        32.14682560571874,
+        2083.7341711324125
+      ],
+      "target": [
+        9831.571863485833,
+        1.9804878214621757,
+        2178.9418266638613
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "fov": 38,
+      "targetLift": 10.480487821462177,
+      "visitPose": true
+    },
+    "graphics": {
+      "requested": "webgl2",
+      "active": "webgl2",
+      "backend": "WebGL 2",
+      "three": "180",
+      "secure": true,
+      "webgpuExposed": true,
+      "fallbackReason": null,
+      "webgpuParity": [
+        {
+          "key": "terrain-orthophoto",
+          "verified": false
+        },
+        {
+          "key": "building-pbr",
+          "verified": false
+        },
+        {
+          "key": "street-pbr",
+          "verified": false
+        },
+        {
+          "key": "heritage-originals",
+          "verified": false
+        },
+        {
+          "key": "heritage-masks-sections",
+          "verified": false
+        },
+        {
+          "key": "water-planar-reflection",
+          "verified": false
+        },
+        {
+          "key": "coastal-foam",
+          "verified": false
+        },
+        {
+          "key": "sky-probe",
+          "verified": false
+        },
+        {
+          "key": "vegetation-instances",
+          "verified": false
+        },
+        {
+          "key": "contact-occlusion",
+          "verified": false
+        },
+        {
+          "key": "lighting-night",
+          "verified": false
+        },
+        {
+          "key": "resource-lifecycle",
+          "verified": false
+        }
+      ],
+      "limits": {
+        "maxTextureDimension2D": 16384,
+        "maxSamples": 8
+      },
+      "ultra": true,
+      "initial": 2,
+      "autoLimit": 2,
+      "initMs": 249,
+      "profile": "Alta",
+      "shadowSize": 2048,
+      "contact": false,
+      "contactStats": {
+        "active": false,
+        "samples": 0,
+        "estimatedTargetBytes": 0,
+        "failed": false
+      },
+      "gpu": {
+        "available": true,
+        "scope": "render (including reflections/postprocess)",
+        "samples": 1,
+        "lastMs": 0.594944,
+        "p50Ms": 0.594944,
+        "p95Ms": 0.594944,
+        "discarded": 0
+      }
+    },
+    "triangles": 810078,
+    "drawCalls": 85,
+    "sectors": 8,
+    "geometries": 178,
+    "textures": 37,
+    "quality": 2,
+    "range": 102,
+    "levels": {
+      "pantalan": "patrimonial"
+    },
+    "visit": {
+      "place": "pantalan-maritimo",
+      "stop": "pantalan-maritimo-tripodes",
+      "mode": "current",
+      "section": false,
+      "interior": false,
+      "archFocus": null,
+      "inspection": false,
+      "waterCut": null,
+      "contextCut": null
+    },
+    "p50ms": 16.7,
+    "p95ms": 83.4,
+    "errors": []
+  }
+}

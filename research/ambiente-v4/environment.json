@@ -1,0 +1,112 @@
+{
+  "backends": {
+    "webgl2": {
+      "adapter": "ANGLE (NVIDIA, NVIDIA GeForce RTX 3090 (0x00002204) Direct3D11 vs_5_0 ps_5_0, D3D11)",
+      "triangles": 611,
+      "contact": {
+        "active": true,
+        "samples": 4,
+        "estimatedTargetBytes": 9600000,
+        "failed": false
+      },
+      "shadowRange": [
+        0,
+        2048
+      ],
+      "error": null,
+      "stats": {
+        "reflectionSize": 384,
+        "reflectionIntervalMovingMs": 50,
+        "reflectionIntervalRestingMs": 220,
+        "shoreField": [
+          768,
+          1553
+        ],
+        "shoreSamplesMetres": [
+          12.055208333333333,
+          12.049323889246619
+        ],
+        "normalIncidenceReflectance": 0.02,
+        "wavelengthsMetres": [
+          25,
+          15.3,
+          10.5,
+          6.8,
+          4.7
+        ],
+        "vegetationClumps": 0,
+        "seabed": "Expository −8.5 m; original MDT retained",
+        "surface": "Mapped shore gradient, filtered multi-scale waves and camera-aware planar reflection"
+      },
+      "cutDifference": 39.735,
+      "nightDifference": 119.458,
+      "shadowPixels": 3260,
+      "contactPixels": 743,
+      "errors": []
+    },
+    "webgpu": {
+      "adapter": {
+        "vendor": "nvidia",
+        "architecture": "ampere",
+        "description": ""
+      },
+      "triangles": 611,
+      "contact": {
+        "active": true,
+        "samples": 0,
+        "estimatedTargetBytes": 1920000,
+        "failed": false
+      },
+      "shadowRange": [
+        0,
+        2048
+      ],
+      "error": null,
+      "stats": {
+        "shoreField": [
+          768,
+          1553
+        ],
+        "normalIncidenceReflectance": 0.02,
+        "normalSize": 128,
+        "resolutionScale": 0.768,
+        "reflection": "TSL ReflectorNode",
+        "wavelengthsMetres": [
+          25,
+          15.3,
+          10.5,
+          6.8,
+          4.7
+        ],
+        "reflectionUpdates": 12
+      },
+      "cutDifference": 39.788,
+      "nightDifference": 119.674,
+      "shadowPixels": 3231,
+      "contactPixels": 584,
+      "errors": []
+    }
+  },
+  "difference": {
+    "solar": {
+      "meanRGB": 0.376,
+      "p95RGB": 1.0
+    },
+    "night": {
+      "meanRGB": 0.299,
+      "p95RGB": 1.0
+    },
+    "atlas": {
+      "meanRGB": 0.189,
+      "p95RGB": 1.0
+    },
+    "cut": {
+      "meanRGB": 0.383,
+      "p95RGB": 1.0
+    },
+    "contact": {
+      "meanRGB": 0.815,
+      "p95RGB": 3.0
+    }
+  }
+}

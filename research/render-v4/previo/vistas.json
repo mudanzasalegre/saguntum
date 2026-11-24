@@ -1,0 +1,912 @@
+{
+  "panorama": {
+    "camera": {
+      "mode": "orbit",
+      "eye": [
+        7688.292441607686,
+        5743.161469720651,
+        8357.613146589929
+      ],
+      "target": [
+        5938.911591743587,
+        17.915051983604258,
+        1678.1589925633746
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "fov": 38,
+      "targetLift": 0,
+      "visitPose": false
+    },
+    "graphics": {
+      "backend": "WebGL 2",
+      "three": "180",
+      "webgpuExposed": true,
+      "webgpuIncompatible": [
+        "reflexión costera Water",
+        "materiales GLSL del Atlas",
+        "cortes de terreno y ortofoto"
+      ],
+      "ultra": true,
+      "autoLimit": 2,
+      "initial": 2,
+      "profile": "Alta",
+      "shadowSize": 0,
+      "contact": false
+    },
+    "triangles": 600342,
+    "drawCalls": 156,
+    "sectors": 0,
+    "geometries": 75,
+    "textures": 12,
+    "quality": 2,
+    "range": 8970,
+    "levels": null,
+    "visit": null,
+    "p50ms": 16.7,
+    "p95ms": 16.8,
+    "errors": []
+  },
+  "castillo": {
+    "camera": {
+      "mode": "orbit",
+      "eye": [
+        3622.329158481096,
+        264.90783066291806,
+        -231.55531970004807
+      ],
+      "target": [
+        3581.733629955156,
+        132.52915914271787,
+        -343.1159229440445
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "fov": 38,
+      "targetLift": 2.200000000000017,
+      "visitPose": true
+    },
+    "graphics": {
+      "backend": "WebGL 2",
+      "three": "180",
+      "webgpuExposed": true,
+      "webgpuIncompatible": [
+        "reflexión costera Water",
+        "materiales GLSL del Atlas",
+        "cortes de terreno y ortofoto"
+      ],
+      "ultra": true,
+      "autoLimit": 2,
+      "initial": 2,
+      "profile": "Alta",
+      "shadowSize": 2048,
+      "contact": false
+    },
+    "triangles": 2835421,
+    "drawCalls": 705,
+    "sectors": 12,
+    "geometries": 399,
+    "textures": 37,
+    "quality": 2,
+    "range": 178,
+    "levels": {
+      "castle": "patrimonial",
+      "theatre": "urbano",
+      "sangre": "urbano",
+      "necropolis": "urbano"
+    },
+    "visit": {
+      "place": "castle",
+      "stop": "foro",
+      "mode": "current",
+      "section": false,
+      "interior": false,
+      "archFocus": null,
+      "inspection": false,
+      "waterCut": null,
+      "contextCut": null
+    },
+    "p50ms": 16.7,
+    "p95ms": 33.4,
+    "errors": []
+  },
+  "teatro": {
+    "camera": {
+      "mode": "orbit",
+      "eye": [
+        3441.6180107262494,
+        131.9340856070612,
+        -375.20294856865985
+      ],
+      "target": [
+        3459.341063831359,
+        86.92157337049356,
+        -433.42826629506453
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "fov": 38,
+      "targetLift": -0.13560000000001082,
+      "visitPose": true
+    },
+    "graphics": {
+      "backend": "WebGL 2",
+      "three": "180",
+      "webgpuExposed": true,
+      "webgpuIncompatible": [
+        "reflexión costera Water",
+        "materiales GLSL del Atlas",
+        "cortes de terreno y ortofoto"
+      ],
+      "ultra": true,
+      "autoLimit": 2,
+      "initial": 2,
+      "profile": "Alta",
+      "shadowSize": 2048,
+      "contact": false
+    },
+    "triangles": 884356,
+    "drawCalls": 138,
+    "sectors": 17,
+    "geometries": 284,
+    "textures": 29,
+    "quality": 2,
+    "range": 76,
+    "levels": {
+      "theatre": "patrimonial",
+      "castle": "patrimonial",
+      "necropolis": "urbano"
+    },
+    "visit": {
+      "place": "theatre",
+      "stop": "teatro-orchestra",
+      "mode": "current",
+      "section": false,
+      "interior": false,
+      "archFocus": null,
+      "inspection": false,
+      "waterCut": null,
+      "contextCut": null
+    },
+    "p50ms": 16.7,
+    "p95ms": 33.5,
+    "errors": []
+  },
+  "glorieta": {
+    "camera": {
+      "mode": "orbit",
+      "eye": [
+        3407.192853107803,
+        53.899999999999636,
+        -843.7681910786723
+      ],
+      "target": [
+        3399.821616827614,
+        51.900000000000006,
+        -855.5217789299741
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "fov": 47.585977287767925,
+      "targetLift": 3,
+      "visitPose": true
+    },
+    "graphics": {
+      "backend": "WebGL 2",
+      "three": "180",
+      "webgpuExposed": true,
+      "webgpuIncompatible": [
+        "reflexión costera Water",
+        "materiales GLSL del Atlas",
+        "cortes de terreno y ortofoto"
+      ],
+      "ultra": true,
+      "autoLimit": 2,
+      "initial": 2,
+      "profile": "Alta",
+      "shadowSize": 2048,
+      "contact": false
+    },
+    "triangles": 1095191,
+    "drawCalls": 167,
+    "sectors": 33,
+    "geometries": 188,
+    "textures": 36,
+    "quality": 2,
+    "range": 14,
+    "levels": {
+      "glorieta": "patrimonial",
+      "plaza-mayor": "urbano",
+      "santa-maria": "urbano",
+      "berenguer": "urbano"
+    },
+    "visit": {
+      "place": "glorieta",
+      "stop": "glorieta-romeu",
+      "mode": "current",
+      "section": false,
+      "interior": false,
+      "archFocus": null,
+      "inspection": false,
+      "waterCut": null,
+      "contextCut": null
+    },
+    "p50ms": 16.7,
+    "p95ms": 16.8,
+    "errors": []
+  },
+  "horno": {
+    "camera": {
+      "mode": "orbit",
+      "eye": [
+        8496.658125504655,
+        13.025128377332294,
+        1914.180114144563
+      ],
+      "target": [
+        8487.62795341961,
+        10.82512837733228,
+        1917.1812793038935
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "fov": 56,
+      "targetLift": 6.8802,
+      "visitPose": true
+    },
+    "graphics": {
+      "backend": "WebGL 2",
+      "three": "180",
+      "webgpuExposed": true,
+      "webgpuIncompatible": [
+        "reflexión costera Water",
+        "materiales GLSL del Atlas",
+        "cortes de terreno y ortofoto"
+      ],
+      "ultra": true,
+      "autoLimit": 2,
+      "initial": 2,
+      "profile": "Alta",
+      "shadowSize": 2048,
+      "contact": false
+    },
+    "triangles": 890548,
+    "drawCalls": 183,
+    "sectors": 16,
+    "geometries": 257,
+    "textures": 36,
+    "quality": 2,
+    "range": 10,
+    "levels": {
+      "horno": "patrimonial",
+      "pantalan": "urbano",
+      "talleres": "urbano"
+    },
+    "visit": {
+      "place": "horno",
+      "stop": "horno-acceso",
+      "mode": "current",
+      "section": false,
+      "interior": false,
+      "archFocus": null,
+      "inspection": false,
+      "waterCut": null,
+      "contextCut": null
+    },
+    "p50ms": 16.7,
+    "p95ms": 183.3,
+    "errors": []
+  },
+  "gerencia": {
+    "camera": {
+      "mode": "orbit",
+      "eye": [
+        8251.592791832074,
+        29.36870730732971,
+        1322.7818441365694
+      ],
+      "target": [
+        8221.467233389278,
+        11.368707307329657,
+        1327.7758662519207
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "fov": 41.99999999999999,
+      "targetLift": 4.831500000000002,
+      "visitPose": true
+    },
+    "graphics": {
+      "backend": "WebGL 2",
+      "three": "180",
+      "webgpuExposed": true,
+      "webgpuIncompatible": [
+        "reflexión costera Water",
+        "materiales GLSL del Atlas",
+        "cortes de terreno y ortofoto"
+      ],
+      "ultra": true,
+      "autoLimit": 2,
+      "initial": 2,
+      "profile": "Alta",
+      "shadowSize": 2048,
+      "contact": false
+    },
+    "triangles": 1138655,
+    "drawCalls": 228,
+    "sectors": 20,
+    "geometries": 521,
+    "textures": 40,
+    "quality": 2,
+    "range": 35,
+    "levels": {
+      "gerencia": "patrimonial",
+      "casino": "patrimonial",
+      "economato": "urbano"
+    },
+    "visit": {
+      "place": "gerencia",
+      "stop": "gerencia-oficinas",
+      "mode": "current",
+      "section": false,
+      "interior": false,
+      "archFocus": null,
+      "inspection": false,
+      "waterCut": null,
+      "contextCut": null
+    },
+    "p50ms": 16.7,
+    "p95ms": 33.4,
+    "errors": []
+  },
+  "barrio": {
+    "camera": {
+      "mode": "orbit",
+      "eye": [
+        8047.92410836644,
+        14.987691323678515,
+        1099.1911875943233
+      ],
+      "target": [
+        8047.141384234334,
+        9.987691323678241,
+        1118.85324367779
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "fov": 59.99999999999999,
+      "targetLift": 1.5477000000000007,
+      "visitPose": true
+    },
+    "graphics": {
+      "backend": "WebGL 2",
+      "three": "180",
+      "webgpuExposed": true,
+      "webgpuIncompatible": [
+        "reflexión costera Water",
+        "materiales GLSL del Atlas",
+        "cortes de terreno y ortofoto"
+      ],
+      "ultra": true,
+      "autoLimit": 2,
+      "initial": 2,
+      "profile": "Alta",
+      "shadowSize": 2048,
+      "contact": false
+    },
+    "triangles": 1374055,
+    "drawCalls": 496,
+    "sectors": 18,
+    "geometries": 568,
+    "textures": 51,
+    "quality": 2,
+    "range": 20,
+    "levels": {
+      "barrio-obrero": "patrimonial",
+      "gerencia": "urbano"
+    },
+    "visit": {
+      "place": "barrio-obrero",
+      "stop": "barrio-hileras",
+      "mode": "current",
+      "section": false,
+      "interior": false,
+      "archFocus": null,
+      "inspection": false,
+      "waterCut": null,
+      "contextCut": null
+    },
+    "p50ms": 16.7,
+    "p95ms": 17.1,
+    "errors": []
+  },
+  "interior": {
+    "camera": {
+      "mode": "orbit",
+      "eye": [
+        8279.23633289295,
+        8.571104701348304,
+        1377.4692319861729
+      ],
+      "target": [
+        8277.212022722313,
+        8.371104701347926,
+        1380.680685552573
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "fov": 61,
+      "targetLift": 2.5698000000000008,
+      "visitPose": true
+    },
+    "graphics": {
+      "backend": "WebGL 2",
+      "three": "180",
+      "webgpuExposed": true,
+      "webgpuIncompatible": [
+        "reflexión costera Water",
+        "materiales GLSL del Atlas",
+        "cortes de terreno y ortofoto"
+      ],
+      "ultra": true,
+      "autoLimit": 2,
+      "initial": 2,
+      "profile": "Alta",
+      "shadowSize": 2048,
+      "contact": false
+    },
+    "triangles": 956599,
+    "drawCalls": 291,
+    "sectors": 18,
+    "geometries": 472,
+    "textures": 50,
+    "quality": 2,
+    "range": 4,
+    "levels": {
+      "casino": "patrimonial",
+      "gerencia": "patrimonial",
+      "economato": "patrimonial",
+      "begona": "urbano"
+    },
+    "visit": {
+      "place": "casino",
+      "stop": "casino-salon",
+      "mode": "current",
+      "section": false,
+      "interior": true,
+      "archFocus": null,
+      "inspection": false,
+      "waterCut": null,
+      "contextCut": null
+    },
+    "p50ms": 16.7,
+    "p95ms": 116.6,
+    "errors": []
+  },
+  "excavacion": {
+    "camera": {
+      "mode": "orbit",
+      "eye": [
+        3867.738738409631,
+        58.69999999999983,
+        -745.0742407847539
+      ],
+      "target": [
+        3886.5485233109594,
+        45.7,
+        -752.6331917649478
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "fov": 59.99999999999999,
+      "targetLift": 1.7000000000000028,
+      "visitPose": true
+    },
+    "graphics": {
+      "backend": "WebGL 2",
+      "three": "180",
+      "webgpuExposed": true,
+      "webgpuIncompatible": [
+        "reflexión costera Water",
+        "materiales GLSL del Atlas",
+        "cortes de terreno y ortofoto"
+      ],
+      "ultra": true,
+      "autoLimit": 2,
+      "initial": 2,
+      "profile": "Alta",
+      "shadowSize": 2048,
+      "contact": false
+    },
+    "triangles": 1108976,
+    "drawCalls": 194,
+    "sectors": 10,
+    "geometries": 191,
+    "textures": 37,
+    "quality": 2,
+    "range": 24,
+    "levels": {
+      "portic": "patrimonial",
+      "castle": "urbano",
+      "domus": "urbano"
+    },
+    "visit": {
+      "place": "portic",
+      "stop": "portic-acceso",
+      "mode": "current",
+      "section": false,
+      "interior": false,
+      "archFocus": null,
+      "inspection": false,
+      "waterCut": null,
+      "contextCut": null
+    },
+    "p50ms": 16.7,
+    "p95ms": 33.4,
+    "errors": []
+  },
+  "pantalan": {
+    "camera": {
+      "mode": "orbit",
+      "eye": [
+        9432.187570359607,
+        49.07197811431889,
+        1850.1338492163688
+      ],
+      "target": [
+        9439.836022646352,
+        11.063038305905648,
+        1950.5891073510677
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "fov": 38,
+      "targetLift": 6.9781,
+      "visitPose": true
+    },
+    "graphics": {
+      "backend": "WebGL 2",
+      "three": "180",
+      "webgpuExposed": true,
+      "webgpuIncompatible": [
+        "reflexión costera Water",
+        "materiales GLSL del Atlas",
+        "cortes de terreno y ortofoto"
+      ],
+      "ultra": true,
+      "autoLimit": 2,
+      "initial": 2,
+      "profile": "Alta",
+      "shadowSize": 2048,
+      "contact": false
+    },
+    "triangles": 581022,
+    "drawCalls": 95,
+    "sectors": 19,
+    "geometries": 187,
+    "textures": 39,
+    "quality": 2,
+    "range": 108,
+    "levels": {
+      "pantalan": "patrimonial"
+    },
+    "visit": {
+      "place": "pantalan-paseo",
+      "stop": "pantalan-paseo-pergolas",
+      "mode": "current",
+      "section": false,
+      "interior": false,
+      "archFocus": null,
+      "inspection": false,
+      "waterCut": null,
+      "contextCut": null
+    },
+    "p50ms": 16.7,
+    "p95ms": 16.8,
+    "errors": []
+  },
+  "grau": {
+    "camera": {
+      "mode": "orbit",
+      "eye": [
+        6858.714987405934,
+        11.470530135448826,
+        4077.140507937131
+      ],
+      "target": [
+        6878.735214787905,
+        5.470530135448697,
+        4076.131506772434
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "fov": 48,
+      "targetLift": 2.5479000000000003,
+      "visitPose": true
+    },
+    "graphics": {
+      "backend": "WebGL 2",
+      "three": "180",
+      "webgpuExposed": true,
+      "webgpuIncompatible": [
+        "reflexión costera Water",
+        "materiales GLSL del Atlas",
+        "cortes de terreno y ortofoto"
+      ],
+      "ultra": true,
+      "autoLimit": 2,
+      "initial": 2,
+      "profile": "Alta",
+      "shadowSize": 2048,
+      "contact": false
+    },
+    "triangles": 554532,
+    "drawCalls": 165,
+    "sectors": 18,
+    "geometries": 213,
+    "textures": 36,
+    "quality": 2,
+    "range": 21,
+    "levels": {
+      "grau-vell": "patrimonial"
+    },
+    "visit": {
+      "place": "grau-vell",
+      "stop": "grau-acceso",
+      "mode": "current",
+      "section": false,
+      "interior": false,
+      "archFocus": null,
+      "inspection": false,
+      "waterCut": null,
+      "contextCut": null
+    },
+    "p50ms": 16.7,
+    "p95ms": 16.8,
+    "errors": []
+  },
+  "maritimo": {
+    "camera": {
+      "mode": "orbit",
+      "eye": [
+        9813.317386636403,
+        32.14682560571874,
+        2083.7341711324125
+      ],
+      "target": [
+        9831.571863485833,
+        1.9804878214621757,
+        2178.9418266638613
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "fov": 38,
+      "targetLift": 10.480487821462177,
+      "visitPose": true
+    },
+    "graphics": {
+      "backend": "WebGL 2",
+      "three": "180",
+      "webgpuExposed": true,
+      "webgpuIncompatible": [
+        "reflexión costera Water",
+        "materiales GLSL del Atlas",
+        "cortes de terreno y ortofoto"
+      ],
+      "ultra": true,
+      "autoLimit": 2,
+      "initial": 2,
+      "profile": "Alta",
+      "shadowSize": 2048,
+      "contact": false
+    },
+    "triangles": 293357,
+    "drawCalls": 28,
+    "sectors": 8,
+    "geometries": 180,
+    "textures": 37,
+    "quality": 2,
+    "range": 102,
+    "levels": {
+      "pantalan": "patrimonial"
+    },
+    "visit": {
+      "place": "pantalan-maritimo",
+      "stop": "pantalan-maritimo-tripodes",
+      "mode": "current",
+      "section": false,
+      "interior": false,
+      "archFocus": null,
+      "inspection": false,
+      "waterCut": null,
+      "contextCut": null
+    },
+    "p50ms": 16.7,
+    "p95ms": 16.8,
+    "errors": []
+  },
+  "calle": {
+    "camera": {
+      "mode": "orbit",
+      "eye": [
+        3370.768894794596,
+        93.90284730528947,
+        -729.9491510754505
+      ],
+      "target": [
+        3414.738693708401,
+        52.900000000000006,
+        -739.1538425773014
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "fov": 38,
+      "targetLift": 2,
+      "visitPose": true
+    },
+    "graphics": {
+      "backend": "WebGL 2",
+      "three": "180",
+      "webgpuExposed": true,
+      "webgpuIncompatible": [
+        "reflexión costera Water",
+        "materiales GLSL del Atlas",
+        "cortes de terreno y ortofoto"
+      ],
+      "ultra": true,
+      "autoLimit": 2,
+      "initial": 2,
+      "profile": "Media",
+      "shadowSize": 1536,
+      "contact": false
+    },
+    "triangles": 986101,
+    "drawCalls": 180,
+    "sectors": 15,
+    "geometries": 457,
+    "textures": 33,
+    "quality": 1,
+    "range": 61,
+    "levels": {
+      "plaza-mayor": "patrimonial",
+      "santa-maria": "patrimonial"
+    },
+    "visit": {
+      "place": "plaza-mayor",
+      "stop": "plaza-carrer-major",
+      "mode": "current",
+      "section": false,
+      "interior": false,
+      "archFocus": null,
+      "inspection": false,
+      "waterCut": null,
+      "contextCut": null
+    },
+    "p50ms": 16.7,
+    "p95ms": 416.7,
+    "errors": []
+  },
+  "jardines": {
+    "camera": {
+      "mode": "orbit",
+      "eye": [
+        3414.616811455261,
+        52.160217755699705,
+        -833.6086897879468
+      ],
+      "target": [
+        3422.020599467714,
+        48.56021775569954,
+        -853.7956448860091
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "fov": 47.585977287767925,
+      "targetLift": 0.5499999999999972,
+      "visitPose": true
+    },
+    "graphics": {
+      "backend": "WebGL 2",
+      "three": "180",
+      "webgpuExposed": true,
+      "webgpuIncompatible": [
+        "reflexión costera Water",
+        "materiales GLSL del Atlas",
+        "cortes de terreno y ortofoto"
+      ],
+      "ultra": true,
+      "autoLimit": 2,
+      "initial": 2,
+      "profile": "Alta",
+      "shadowSize": 2048,
+      "contact": false
+    },
+    "triangles": 1056225,
+    "drawCalls": 150,
+    "sectors": 24,
+    "geometries": 196,
+    "textures": 36,
+    "quality": 2,
+    "range": 22,
+    "levels": {
+      "glorieta": "patrimonial",
+      "plaza-mayor": "urbano"
+    },
+    "visit": {
+      "place": "glorieta",
+      "stop": "glorieta-jardines",
+      "mode": "current",
+      "section": false,
+      "interior": false,
+      "archFocus": null,
+      "inspection": false,
+      "waterCut": null,
+      "contextCut": null
+    },
+    "p50ms": 16.7,
+    "p95ms": 33.3,
+    "errors": []
+  },
+  "seccion": {
+    "camera": {
+      "mode": "orbit",
+      "eye": [
+        3658.424328794629,
+        46.37905376491199,
+        -910.4433391376188
+      ],
+      "target": [
+        3661.82966616312,
+        42.57905376491154,
+        -905.9545908648888
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "fov": 59.99999999999999,
+      "targetLift": -2.0146999999999977,
+      "visitPose": true
+    },
+    "graphics": {
+      "backend": "WebGL 2",
+      "three": "180",
+      "webgpuExposed": true,
+      "webgpuIncompatible": [
+        "reflexión costera Water",
+        "materiales GLSL del Atlas",
+        "cortes de terreno y ortofoto"
+      ],
+      "ultra": true,
+      "autoLimit": 2,
+      "initial": 2,
+      "profile": "Alta",
+      "shadowSize": 2048,
+      "contact": false
+    },
+    "triangles": 891485,
+    "drawCalls": 162,
+    "sectors": 33,
+    "geometries": 220,
+    "textures": 36,
+    "quality": 2,
+    "range": 7,
+    "levels": {
+      "circo": "patrimonial",
+      "castle": "urbano",
+      "glorieta": "patrimonial"
+    },
+    "visit": {
+      "place": "circo",
+      "stop": "circo-estratos",
+      "mode": "cut",
+      "section": true,
+      "interior": true,
+      "archFocus": null,
+      "inspection": false,
+      "waterCut": null,
+      "contextCut": null
+    },
+    "p50ms": 16.7,
+    "p95ms": 16.8,
+    "errors": []
+  }
+}

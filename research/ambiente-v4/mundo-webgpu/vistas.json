@@ -1,0 +1,150 @@
+{
+  "pantalan": {
+    "camera": {
+      "mode": "orbit",
+      "eye": [
+        9432.187570359607,
+        49.07197811431889,
+        1850.1338492163688
+      ],
+      "target": [
+        9439.836022646352,
+        11.063038305905648,
+        1950.5891073510677
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "fov": 38,
+      "targetLift": 6.9781,
+      "visitPose": true
+    },
+    "graphics": {
+      "requested": "webgpu",
+      "active": "webgpu",
+      "backend": "WebGPU",
+      "three": "180",
+      "secure": true,
+      "webgpuExposed": true,
+      "fallbackReason": null,
+      "webgpuParity": [
+        {
+          "key": "terrain-orthophoto",
+          "verified": false
+        },
+        {
+          "key": "building-pbr",
+          "verified": false
+        },
+        {
+          "key": "street-pbr",
+          "verified": false
+        },
+        {
+          "key": "heritage-originals",
+          "verified": false
+        },
+        {
+          "key": "heritage-masks-sections",
+          "verified": false
+        },
+        {
+          "key": "water-planar-reflection",
+          "verified": false
+        },
+        {
+          "key": "coastal-foam",
+          "verified": false
+        },
+        {
+          "key": "sky-probe",
+          "verified": false
+        },
+        {
+          "key": "vegetation-instances",
+          "verified": false
+        },
+        {
+          "key": "contact-occlusion",
+          "verified": false
+        },
+        {
+          "key": "lighting-night",
+          "verified": false
+        },
+        {
+          "key": "resource-lifecycle",
+          "verified": false
+        }
+      ],
+      "adapter": {
+        "vendor": "nvidia",
+        "architecture": "ampere",
+        "software": false
+      },
+      "limits": {
+        "maxTextureDimension2D": 8192,
+        "maxBufferSize": 268435456,
+        "maxStorageBufferBindingSize": 134217728,
+        "maxColorAttachments": 8
+      },
+      "format": "bgra8unorm",
+      "probe": [
+        38,
+        166,
+        64,
+        255
+      ],
+      "ultra": true,
+      "initial": 2,
+      "autoLimit": 2,
+      "initMs": 513,
+      "profile": "Alta",
+      "shadowSize": 2048,
+      "contact": false,
+      "contactStats": {
+        "active": false,
+        "samples": 0,
+        "estimatedTargetBytes": 0,
+        "failed": false
+      },
+      "gpu": {
+        "available": false,
+        "scope": "render (including reflections/postprocess)",
+        "samples": 0,
+        "lastMs": null,
+        "p50Ms": null,
+        "p95Ms": null,
+        "discarded": 0
+      },
+      "materials": {
+        "variants": 123,
+        "prepared": 123,
+        "unsupported": null
+      }
+    },
+    "triangles": 1148337,
+    "drawCalls": 199,
+    "sectors": 14,
+    "geometries": 196,
+    "textures": 46,
+    "quality": 2,
+    "range": 108,
+    "levels": {
+      "pantalan": "patrimonial"
+    },
+    "visit": {
+      "place": "pantalan-paseo",
+      "stop": "pantalan-paseo-pergolas",
+      "mode": "current",
+      "section": false,
+      "interior": false,
+      "archFocus": null,
+      "inspection": false,
+      "waterCut": null,
+      "contextCut": null
+    },
+    "p50ms": 16.7,
+    "p95ms": 66.7,
+    "errors": []
+  }
+}

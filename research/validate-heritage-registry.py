@@ -1,5 +1,6 @@
 """Browser regression. The extra visit is injected only into this browser context."""
 import json
+import os
 import threading
 from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
@@ -34,15 +35,16 @@ class QuietFiles(SimpleHTTPRequestHandler):
 
 server = ThreadingHTTPServer(('127.0.0.1',0),partial(QuietFiles,directory=str(dist)))
 threading.Thread(target=server.serve_forever,daemon=True).start()
-base = 'http://127.0.0.1:'+str(server.server_port)
+base = os.environ.get('SAGUNTUM_TEST_BASE','http://127.0.0.1:'+str(server.server_port)).rstrip('/')
 registry = json.loads((dist/'assets/data/atlas-visits.json').read_text(encoding='utf8'))
-registry['visits'].append('ficha-prueba')
+registry['visits'].extend(['ficha-prueba','ficha-incompleta','ficha-prueba'])
 try:
     with sync_playwright() as playwright:
-        browser=playwright.chromium.launch(channel='chrome',args=['--enable-unsafe-swiftshader','--use-angle=swiftshader'])
+        browser=playwright.chromium.launch(channel='chrome')
         context=browser.new_context()
         context.route('**/assets/data/atlas-visits.json', lambda r:r.fulfill(json=registry))
         context.route('**/assets/data/ficha-prueba.json', lambda r:r.fulfill(json=fixture))
+        context.route('**/assets/data/ficha-incompleta.json', lambda r:r.fulfill(json={'id':'ficha-incompleta'}))
         context.route('**/js/prueba-registro.js', lambda r:r.fulfill(content_type='text/javascript',body=module))
         page=context.new_page()
         errors=[]
@@ -50,6 +52,7 @@ try:
         page.on('console',lambda message:print(message.text[:500],flush=True) if message.type=='error' else None)
         page.goto(base+'/?vista=plano#simulador/visita-de-prueba/interior',wait_until='domcontentloaded')
         page.wait_for_function("window.territoryStatus?.selected==='visita-de-prueba' && territoryStatus.stop==='interior'")
+        assert page.evaluate("territoryStatus.places===33 && territoryStatus.registryIssues.length===2")
         assert page.locator('#sim-visit').get_attribute('href')=='#visita-de-prueba/interior'
         page.locator('#sim-visit').click()
         page.wait_for_function("location.hash==='#visita-de-prueba/interior' && window.atlasStatus?.selected==='visita-de-prueba'")
@@ -100,7 +103,9 @@ try:
           heritage.setVisitStop(p.id,'interior',p);
           if(!window.section||window.focusId!=='interior')throw Error('El constructor perdió sus controles');
           heritage.setVisitStop(null,null);
-          heritage.update(horno.x-145,horno.z,40,'horno');
+          // An explicitly selected destination now prioritises its original model.
+          // Approach from outside the native radius without selecting the destination.
+          heritage.update(horno.x-225,horno.z,180);
           await wait(()=>heritage.stats.levels.horno==='urbano');
           if(window.released!==1||heritage.isReplaced('prueba',0,0))throw Error('La descarga retuvo la huella');
           heritage.update(horno.x,horno.z,12);

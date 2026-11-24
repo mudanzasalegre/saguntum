@@ -1,27 +1,58 @@
-# V4 — preparación de doble backend y revisión gráfica
+# Simulador territorial V4
 
-Rama acumulativa sobre V2 y V3. Three.js r180: el `three.core.js` ya incluido coincide con el blob original r180 `7dcd0fbcbc04b8d9a20ecb96c1ce344cb55150d5`. Se incorporan `three.webgpu.js` y `three.tsl.js` oficiales, con los blobs originales `81b64e4760cf020bd28d6b7bf286c57c725ec68d` y `ad19811ad80e14c70dd3e8d4e8b73f77a13598ee`. Licencia MIT incluida en vendor/LICENSE. No se usa CDN en tiempo de ejecución.
+El selector **Motor gráfico**, en **Capas y luz**, abre el mismo territorio con WebGL 2 o WebGPU. Ambos recorren las mismas huellas, caminos, paradas, edificios y escenas patrimoniales. **Automático** usa WebGL 2. La selección de WebGPU es voluntaria y se recuerda en el navegador. [Entrar en el simulador](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador)
 
-## Qué está implementado
-- Simulador completo: permanece en WebGL 2 con política explícita de promoción por compatibilidad, diagnóstico del adaptador y acceso al laboratorio. No se crea un segundo dispositivo mientras funciona el motor de producción.
-- Laboratorio independiente en `dist/graphics-lab.html`: utiliza Three.js WebGPURenderer y selecciona WebGPU nativo si un adaptador válido está disponible; usa su backend WebGL 2 como alternativa. Una lectura de píxeles de un pequeño render TSL comprueba que el pipeline produce imagen. Se identifica el backend efectivo; la prueba no demuestra compatibilidad integral ni rendimiento superior.
-- El piloto usa sectores reales de edificios de Sagunto, Puerto y Grau Vell, el worker original de geometría, MDT, ortofoto, red viaria, pavimentos, huellas y materiales de arquitectura. Incluye una primera traducción TSL de color, rugosidad, carpintería y luces de ventana; el primer port litoral TSL conserva el polígono y utiliza el campo de costa y las normales originales, oleaje de cinco escalas, Fresnel, espuma y ReflectorNode con resolución limitada. No incorpora aún la máscara de sombra directa, recortes de inspección ni la misma cadencia de reflejos; falta validación visual y funcional. No modifica ni sustituye las escenas del Atlas.
-- Render WebGL de producción: histeresis de huella de sombras, límites según capacidades, actualización cuando cambia geometría (no sólo cantidad de sectores), protección contra singularidad del sol cenital y revisión de oclusión de contacto: rechazo de fondo/halos, intensidad más moderada y MSAA en render target acotado por resolución. Si falla el efecto, se intenta render directo; si falla el render base, se conserva el plano.
-- `window.territoryStatus.graphics` registra diagnóstico y coste estimado del render target. `window.saguntumGraphicsLab` registra el backend real, prueba de píxeles y tiempos de fotograma del piloto.
+## Procedencia
 
-## No se ha completado la migración integral
-No activar automáticamente WebGPU para el Simulador completo sólo porque exista navigator.gpu. El piloto es una primera prueba y no ha sido ejecutado en GPU desde esta sesión. El registro `productionNative` está deliberadamente cerrado. Para abrirlo, portar y verificar todos los módulos de `parityFeatures`, aportar entrada nativa de producción y comparativas. Especialmente: máscaras/relieve/cortes, ortofotos regionales, material urbano y vegetación, materiales patrimoniales onBeforeCompile/ShaderMaterial, iluminación/PMREM, oclusión y agua original. Mantener el renderer WebGLRenderer original para fallback de producción (no confundirlo con WebGPURenderer forzado a WebGL).
+La base editable de Sites era la versión 41, commit `d2b18cd956c6c7dfc303e1b103335088718a7218`. Su árbol `dist` coincide con el de GitHub `37aeb0fae32cbe8a4fde37b0792b13084b58c754`. Se conservó el archivo de esa distribución y la rama local `codex/respaldo-previo-v4`. El historial de la rama acumulativa V4 incorpora V2 y V3. El piloto de esa rama precede a la integración en la entrada principal documentada aquí. [V2 y carga anticipada](SIMULADOR_STREAMING_V2.md) · [V3 y detalle local](SIMULADOR_LOCAL_V3.md) · [Piloto acumulativo](https://github.com/mudanzasalegre/saguntum/commit/115366eee321f9f1132c85175dd2f2f89246f7e0)
 
-## Pruebas
-Ejecutar `node research/test-territory-render-v4.mjs` y los tres tests de V2/V3. Servir dist por localhost/HTTPS; abrir el laboratorio en navegador real, confirmar lectura de píxeles y los dos backends, alternar zonas y provocar fallos de dispositivo. Abrir simulador completo y comprobar todos los lugares, agua y cortes, comparar mismos encuadres y perf. No se ha publicado en Sites.
+## Arranque, cambio de motor y recuperación
 
-## Diagnóstico y validación de nodos
+1. WebGPU requiere HTTPS o localhost. El gestor solicita un adaptador de hardware y un dispositivo, comprueba sus límites, inicializa Three.js r180 y dibuja un patrón TSL. Una lectura de píxeles verifica el resultado. Las etapas tienen plazos y se cancela y libera el dispositivo fallido.
+2. El mundo se crea después de elegir la ruta. La entrada habitual de WebGL 2 y las visitas del Atlas omiten la descarga del módulo WebGPU. En el simulador, un cambio de motor guarda la parada, la cámara, su pivote, orientación, óptica, capas, hora y ajustes antes de cerrar el documento. Se crea un solo dispositivo de presentación por sesión.
+3. Una pérdida del dispositivo o un material esencial incompatible lleva al visitante al mismo punto en WebGL 2. La pestaña recuerda el fallo. Si tampoco puede dibujar en WebGL, el plano conserva el recorrido y los enlaces. **Reintentar 3D** vuelve a comprobar el motor elegido. El marcador de arranque también cubre una interrupción del proceso del navegador.
 
-El render de producción incluye un temporizador GPU opcional y no bloqueante mediante EXT_disjoint_timer_query_webgl2. Muestra sólo medidas disponibles (no sustituye frameMs/p95 y no incluye el trabajo ejecutado antes del render). `graphics.gpu` contiene tiempos y número de muestras; si no hay extensión, no hay estimación inventada. Ejecutar también:
+La decisión se basa en la API y en el dibujo efectivo. Los datos de telemetría distinguen el motor solicitado del activo. La versión compartida es Three.js r180. Todos los módulos y recursos de producción se sirven desde el sitio estático. [WebGPURenderer r180](https://github.com/mrdoob/three.js/blob/r180/src/renderers/webgpu/WebGPURenderer.js) · [TSL de Three.js](https://github.com/mrdoob/three.js/wiki/Three.js-Shading-Language) · [Pérdida de GPUDevice](https://developer.mozilla.org/en-US/docs/Web/API/GPUDevice/lost)
 
-```bash
+## Qué dibuja cada motor
+
+| Sistema | WebGL 2 | WebGPU |
+| --- | --- | --- |
+| MDT y suelo | Material original con ortofotos regionales, detalle PNOA y corrección de color del Atlas | Material nodal sobre la misma malla, mismas texturas, coordenadas y ventanas de carga |
+| Calles y arquitectura | GLSL del Atlas y del simulador, cubiertas fotográficas, juntas, huecos y detalle por proximidad | Nodos de color, rugosidad, normales, oclusión y emisión. Conservan los lotes de fachada y las instancias de mobiliario |
+| Patrimonio | Constructores originales, interiores, focos, fases y secciones | Mismos grupos y cámaras. Las variantes de material se aplican durante el dibujo. Los anillos de selección se cierran explícitamente en los cuatro constructores que los utilizan |
+| Excavaciones | Máscaras de calzada y terreno, corte y profundidad | Las mismas ventanas se aplican al material visible y a las sombras. Los huecos permanecen vinculados a su parada |
+| Mar y cielo | Shader del litoral, reflejo plano, oleaje, espuma, cielo y sonda PMREM | Polígonos, campo costero y normales originales. Reflejo plano con presupuesto, sombra, espuma y corte de inspección. Cielo y sonda PMREM nativos |
+| Luz y posprocesado | Sol, entorno, sombras, oclusión de contacto y niebla originales | Sombra direccional, contacto por profundidad y niebla de distancia ajustada al orden de exposición y color del Atlas |
+
+Los dos motores usan filtros de sombra distintos. El cristal, las persianas, los zócalos, las juntas y el desgaste de fachadas sin alzado individual siguen siendo interpretaciones tipológicas. Las coordenadas y perímetros provienen de los datos territoriales descritos en la documentación del Atlas. [Fuentes cartográficas y precisiones](SIMULADOR.md) · [Pruebas de suelo](../research/dual-v4/suelo.json) · [Materiales urbanos](../research/dual-v4/materiales-urbanos.json) · [Agua, cielo y reflejos](../research/ambiente-v4/README.md)
+
+## Carga, presupuestos y diagnóstico
+
+La panorámica usa paquetes ligeros. Los sectores y sus fachadas utilizan distancia a la huella, dirección de marcha y de la cámara, selección e histéresis. La precarga de módulos y documentos se limita a una tarea móvil o dos de escritorio. Las geometrías de detalle se preparan por lotes en un trabajador y sustituyen a la malla anterior cuando están listas. El constructor patrimonial conserva la memoria de la visita, sus colisiones y su entorno. La prioridad explícita de una parada permite cancelar una construcción especulativa del trabajador.
+
+La caché de fachadas tiene un límite por perfil de 5–15 MiB en equipos compactos y 9–32 MiB en escritorio. La calidad adaptativa reduce primero la resolución y el detalle periférico. La compilación se hace al preparar el dibujo del lote. Las pruebas con compilación anticipada en un destino auxiliar de r180 produjeron iluminación incorrecta en el primer dibujo nativo. El simulador verifica el primer dibujo real y conserva la compilación progresiva.
+
+En **Capas y luz → Cartografía y rendimiento** aparecen tiempo de fotograma, llamadas, triángulos, geometrías y texturas. **Compatibilidad gráfica** muestra el motor, su inicialización, la resolución, p95 y la caché local. `window.territoryStatus` incluye los presupuestos local y periférico, sectores, caché, estado de trabajadores, módulos precalentados, última preparación patrimonial y estado de los materiales. Los bytes del destino de contacto son estimaciones. El heap corresponde a JavaScript cuando Chromium lo expone. El temporizador GPU usa consultas de WebGL cuando están disponibles. La comparativa de recorrido emplea intervalos reales entre fotogramas para ambos motores.
+
+## Nuevas visitas
+
+La ficha y la escena se registran en `dist/assets/data/atlas-visits.json`. Comparten anclaje, escala, orientación, máscaras, fuentes, paradas y constructor entre el Atlas y el simulador. Un constructor que requiera WebGL puede declarar `"backends": ["webgl2"]` dentro de `scene`. Durante una visita nativa esto activa la recuperación del motor. Las fichas incompletas se registran en `registryIssues` y los identificadores repetidos conservan el original. [Contrato del registro](VISITAS_TERRITORIALES.md)
+
+## Reproducción
+
+Servir `dist` con `python -m http.server 8000 --directory dist` y abrir el enlace local con la ruta `/#simulador`. Los recursos publicables ya están construidos. Para regenerar el módulo gráfico y el trabajador se necesita Node con esbuild 0.25.12.
+
+```sh
+npm install --no-save --package-lock=false esbuild@0.25.12
+node research/build-territory-webgpu.mjs
+node research/build-territory-heritage.mjs
+node research/test-territory-stream-policy.mjs
+node research/test-territory-local-detail.mjs
+node research/test-territory-local-cache.mjs
+node research/test-territory-render-v4.mjs
 node research/test-territory-gpu-timer.mjs
 node --experimental-loader ./research/validate_loader.mjs research/test-territory-tsl-v4.mjs
 ```
 
-En esta sesión se comprobaron 24 aserciones de política de render/backend, el ciclo de consultas con GL simulado y la construcción de seis nodos de material usando las fuentes exactas de Three.js r180 con texturas de prueba. No se ha validado la compilación WGSL/GLSL ni la lectura de píxeles del laboratorio en GPU real.
+La receta WebGPU comprueba el blob oficial r180, conserva la licencia y compacta el módulo. Aplica una corrección localizada en la inicialización de grupos de recursos. Cuando se libera una máscara de un sector, una instancia nueva toma la textura activa de su ranura TSL antes de crear el sampler. También acepta como argumento el archivo oficial de Three.js r180. La distribución compacta JSON cartográficos comprobando que números, geometrías y atributos sean idénticos. [Receta del módulo](../research/build-territory-webgpu.mjs) · [Resultados y capturas del mundo completo](../research/render-v4/README.md)

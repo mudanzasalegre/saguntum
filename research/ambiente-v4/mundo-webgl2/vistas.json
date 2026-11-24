@@ -1,0 +1,131 @@
+{
+  "pantalan": {
+    "camera": {
+      "mode": "orbit",
+      "eye": [
+        9432.187570359607,
+        49.07197811431889,
+        1850.1338492163688
+      ],
+      "target": [
+        9439.836022646352,
+        11.063038305905648,
+        1950.5891073510677
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "fov": 38,
+      "targetLift": 6.9781,
+      "visitPose": true
+    },
+    "graphics": {
+      "requested": "webgl2",
+      "active": "webgl2",
+      "backend": "WebGL 2",
+      "three": "180",
+      "secure": true,
+      "webgpuExposed": true,
+      "fallbackReason": null,
+      "webgpuParity": [
+        {
+          "key": "terrain-orthophoto",
+          "verified": false
+        },
+        {
+          "key": "building-pbr",
+          "verified": false
+        },
+        {
+          "key": "street-pbr",
+          "verified": false
+        },
+        {
+          "key": "heritage-originals",
+          "verified": false
+        },
+        {
+          "key": "heritage-masks-sections",
+          "verified": false
+        },
+        {
+          "key": "water-planar-reflection",
+          "verified": false
+        },
+        {
+          "key": "coastal-foam",
+          "verified": false
+        },
+        {
+          "key": "sky-probe",
+          "verified": false
+        },
+        {
+          "key": "vegetation-instances",
+          "verified": false
+        },
+        {
+          "key": "contact-occlusion",
+          "verified": false
+        },
+        {
+          "key": "lighting-night",
+          "verified": false
+        },
+        {
+          "key": "resource-lifecycle",
+          "verified": false
+        }
+      ],
+      "limits": {
+        "maxTextureDimension2D": 16384,
+        "maxSamples": 8
+      },
+      "ultra": true,
+      "initial": 2,
+      "autoLimit": 2,
+      "initMs": 220,
+      "profile": "Alta",
+      "shadowSize": 2048,
+      "contact": false,
+      "contactStats": {
+        "active": false,
+        "samples": 0,
+        "estimatedTargetBytes": 0,
+        "failed": false
+      },
+      "gpu": {
+        "available": true,
+        "scope": "render (including reflections/postprocess)",
+        "samples": 1,
+        "lastMs": 1.568768,
+        "p50Ms": 1.568768,
+        "p95Ms": 1.568768,
+        "discarded": 0
+      }
+    },
+    "triangles": 656638,
+    "drawCalls": 89,
+    "sectors": 7,
+    "geometries": 178,
+    "textures": 39,
+    "quality": 2,
+    "range": 108,
+    "levels": {
+      "pantalan": "patrimonial"
+    },
+    "visit": {
+      "place": "pantalan-paseo",
+      "stop": "pantalan-paseo-pergolas",
+      "mode": "current",
+      "section": false,
+      "interior": false,
+      "archFocus": null,
+      "inspection": false,
+      "waterCut": null,
+      "contextCut": null
+    },
+    "p50ms": 16.7,
+    "p95ms": 133.5,
+    "errors": []
+  }
+}

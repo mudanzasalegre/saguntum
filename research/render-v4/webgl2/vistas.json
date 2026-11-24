@@ -1,0 +1,2034 @@
+{
+  "panorama": {
+    "camera": {
+      "mode": "orbit",
+      "eye": [
+        7688.292441607686,
+        5743.161469720651,
+        8357.613146589929
+      ],
+      "target": [
+        5938.911591743587,
+        17.915051983604258,
+        1678.1589925633746
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "fov": 38,
+      "targetLift": 0,
+      "visitPose": false
+    },
+    "graphics": {
+      "requested": "webgl2",
+      "active": "webgl2",
+      "backend": "WebGL 2",
+      "three": "180",
+      "secure": true,
+      "webgpuExposed": true,
+      "fallbackReason": null,
+      "webgpuParity": [
+        {
+          "key": "terrain-orthophoto",
+          "verified": false
+        },
+        {
+          "key": "building-pbr",
+          "verified": false
+        },
+        {
+          "key": "street-pbr",
+          "verified": false
+        },
+        {
+          "key": "heritage-originals",
+          "verified": false
+        },
+        {
+          "key": "heritage-masks-sections",
+          "verified": false
+        },
+        {
+          "key": "water-planar-reflection",
+          "verified": false
+        },
+        {
+          "key": "coastal-foam",
+          "verified": false
+        },
+        {
+          "key": "sky-probe",
+          "verified": false
+        },
+        {
+          "key": "vegetation-instances",
+          "verified": false
+        },
+        {
+          "key": "contact-occlusion",
+          "verified": false
+        },
+        {
+          "key": "lighting-night",
+          "verified": false
+        },
+        {
+          "key": "resource-lifecycle",
+          "verified": false
+        }
+      ],
+      "limits": {
+        "maxTextureDimension2D": 16384,
+        "maxSamples": 8
+      },
+      "ultra": true,
+      "initial": 2,
+      "autoLimit": 2,
+      "initMs": 198,
+      "profile": "Alta",
+      "shadowSize": 0,
+      "contact": false,
+      "contactStats": {
+        "active": false,
+        "samples": 0,
+        "estimatedTargetBytes": 0,
+        "failed": false
+      },
+      "gpu": {
+        "available": true,
+        "scope": "render (including reflections/postprocess)",
+        "samples": 4,
+        "lastMs": 1.29024,
+        "p50Ms": 2.420736,
+        "p95Ms": 2.496512,
+        "discarded": 0
+      }
+    },
+    "triangles": 600342,
+    "drawCalls": 156,
+    "sectors": 0,
+    "geometries": 75,
+    "textures": 12,
+    "quality": 2,
+    "range": 8970,
+    "levels": null,
+    "visit": null,
+    "p50ms": 16.7,
+    "p95ms": 16.8,
+    "errors": []
+  },
+  "castillo": {
+    "camera": {
+      "mode": "orbit",
+      "eye": [
+        3622.3291584810954,
+        264.90783066291806,
+        -231.55531970004802
+      ],
+      "target": [
+        3581.7336299551557,
+        132.52915914271784,
+        -343.1159229440444
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "fov": 38,
+      "targetLift": 2.200000000000017,
+      "visitPose": true
+    },
+    "graphics": {
+      "requested": "webgl2",
+      "active": "webgl2",
+      "backend": "WebGL 2",
+      "three": "180",
+      "secure": true,
+      "webgpuExposed": true,
+      "fallbackReason": null,
+      "webgpuParity": [
+        {
+          "key": "terrain-orthophoto",
+          "verified": false
+        },
+        {
+          "key": "building-pbr",
+          "verified": false
+        },
+        {
+          "key": "street-pbr",
+          "verified": false
+        },
+        {
+          "key": "heritage-originals",
+          "verified": false
+        },
+        {
+          "key": "heritage-masks-sections",
+          "verified": false
+        },
+        {
+          "key": "water-planar-reflection",
+          "verified": false
+        },
+        {
+          "key": "coastal-foam",
+          "verified": false
+        },
+        {
+          "key": "sky-probe",
+          "verified": false
+        },
+        {
+          "key": "vegetation-instances",
+          "verified": false
+        },
+        {
+          "key": "contact-occlusion",
+          "verified": false
+        },
+        {
+          "key": "lighting-night",
+          "verified": false
+        },
+        {
+          "key": "resource-lifecycle",
+          "verified": false
+        }
+      ],
+      "limits": {
+        "maxTextureDimension2D": 16384,
+        "maxSamples": 8
+      },
+      "ultra": true,
+      "initial": 2,
+      "autoLimit": 2,
+      "initMs": 13,
+      "profile": "Alta",
+      "shadowSize": 2048,
+      "contact": false,
+      "contactStats": {
+        "active": false,
+        "samples": 0,
+        "estimatedTargetBytes": 0,
+        "failed": false
+      },
+      "gpu": {
+        "available": true,
+        "scope": "render (including reflections/postprocess)",
+        "samples": 2,
+        "lastMs": 13.198336,
+        "p50Ms": 13.198336,
+        "p95Ms": 13.198336,
+        "discarded": 0
+      }
+    },
+    "triangles": 959333,
+    "drawCalls": 165,
+    "sectors": 13,
+    "geometries": 243,
+    "textures": 25,
+    "quality": 2,
+    "range": 178,
+    "levels": {
+      "castle": "patrimonial",
+      "theatre": "patrimonial"
+    },
+    "visit": {
+      "place": "castle",
+      "stop": "foro",
+      "mode": "current",
+      "section": false,
+      "interior": false,
+      "archFocus": null,
+      "inspection": false,
+      "waterCut": null,
+      "contextCut": null
+    },
+    "p50ms": 16.7,
+    "p95ms": 50,
+    "errors": []
+  },
+  "teatro": {
+    "camera": {
+      "mode": "orbit",
+      "eye": [
+        3441.6180107262494,
+        131.9340856070612,
+        -375.20294856865985
+      ],
+      "target": [
+        3459.341063831359,
+        86.92157337049356,
+        -433.42826629506453
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "fov": 38,
+      "targetLift": -0.13560000000001082,
+      "visitPose": true
+    },
+    "graphics": {
+      "requested": "webgl2",
+      "active": "webgl2",
+      "backend": "WebGL 2",
+      "three": "180",
+      "secure": true,
+      "webgpuExposed": true,
+      "fallbackReason": null,
+      "webgpuParity": [
+        {
+          "key": "terrain-orthophoto",
+          "verified": false
+        },
+        {
+          "key": "building-pbr",
+          "verified": false
+        },
+        {
+          "key": "street-pbr",
+          "verified": false
+        },
+        {
+          "key": "heritage-originals",
+          "verified": false
+        },
+        {
+          "key": "heritage-masks-sections",
+          "verified": false
+        },
+        {
+          "key": "water-planar-reflection",
+          "verified": false
+        },
+        {
+          "key": "coastal-foam",
+          "verified": false
+        },
+        {
+          "key": "sky-probe",
+          "verified": false
+        },
+        {
+          "key": "vegetation-instances",
+          "verified": false
+        },
+        {
+          "key": "contact-occlusion",
+          "verified": false
+        },
+        {
+          "key": "lighting-night",
+          "verified": false
+        },
+        {
+          "key": "resource-lifecycle",
+          "verified": false
+        }
+      ],
+      "limits": {
+        "maxTextureDimension2D": 16384,
+        "maxSamples": 8
+      },
+      "ultra": true,
+      "initial": 2,
+      "autoLimit": 2,
+      "initMs": 11,
+      "profile": "Alta",
+      "shadowSize": 2048,
+      "contact": false,
+      "contactStats": {
+        "active": false,
+        "samples": 0,
+        "estimatedTargetBytes": 0,
+        "failed": false
+      },
+      "gpu": {
+        "available": true,
+        "scope": "render (including reflections/postprocess)",
+        "samples": 2,
+        "lastMs": 8.33024,
+        "p50Ms": 8.33024,
+        "p95Ms": 8.33024,
+        "discarded": 0
+      }
+    },
+    "triangles": 1186676,
+    "drawCalls": 539,
+    "sectors": 21,
+    "geometries": 713,
+    "textures": 38,
+    "quality": 2,
+    "range": 76,
+    "levels": {
+      "theatre": "patrimonial",
+      "castle": "patrimonial",
+      "necropolis": "patrimonial",
+      "juderia": "patrimonial"
+    },
+    "visit": {
+      "place": "theatre",
+      "stop": "teatro-orchestra",
+      "mode": "current",
+      "section": false,
+      "interior": false,
+      "archFocus": null,
+      "inspection": false,
+      "waterCut": null,
+      "contextCut": null
+    },
+    "p50ms": 16.7,
+    "p95ms": 100.1,
+    "errors": []
+  },
+  "glorieta": {
+    "camera": {
+      "mode": "orbit",
+      "eye": [
+        3407.192853107803,
+        53.899999999999636,
+        -843.7681910786723
+      ],
+      "target": [
+        3399.821616827614,
+        51.900000000000006,
+        -855.5217789299741
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "fov": 47.585977287767925,
+      "targetLift": 3,
+      "visitPose": true
+    },
+    "graphics": {
+      "requested": "webgl2",
+      "active": "webgl2",
+      "backend": "WebGL 2",
+      "three": "180",
+      "secure": true,
+      "webgpuExposed": true,
+      "fallbackReason": null,
+      "webgpuParity": [
+        {
+          "key": "terrain-orthophoto",
+          "verified": false
+        },
+        {
+          "key": "building-pbr",
+          "verified": false
+        },
+        {
+          "key": "street-pbr",
+          "verified": false
+        },
+        {
+          "key": "heritage-originals",
+          "verified": false
+        },
+        {
+          "key": "heritage-masks-sections",
+          "verified": false
+        },
+        {
+          "key": "water-planar-reflection",
+          "verified": false
+        },
+        {
+          "key": "coastal-foam",
+          "verified": false
+        },
+        {
+          "key": "sky-probe",
+          "verified": false
+        },
+        {
+          "key": "vegetation-instances",
+          "verified": false
+        },
+        {
+          "key": "contact-occlusion",
+          "verified": false
+        },
+        {
+          "key": "lighting-night",
+          "verified": false
+        },
+        {
+          "key": "resource-lifecycle",
+          "verified": false
+        }
+      ],
+      "limits": {
+        "maxTextureDimension2D": 16384,
+        "maxSamples": 8
+      },
+      "ultra": true,
+      "initial": 2,
+      "autoLimit": 2,
+      "initMs": 10,
+      "profile": "Alta",
+      "shadowSize": 2048,
+      "contact": false,
+      "contactStats": {
+        "active": false,
+        "samples": 0,
+        "estimatedTargetBytes": 0,
+        "failed": false
+      },
+      "gpu": {
+        "available": true,
+        "scope": "render (including reflections/postprocess)",
+        "samples": 8,
+        "lastMs": 3.28704,
+        "p50Ms": 4.301824,
+        "p95Ms": 7.016448,
+        "discarded": 0
+      }
+    },
+    "triangles": 1211933,
+    "drawCalls": 179,
+    "sectors": 33,
+    "geometries": 224,
+    "textures": 38,
+    "quality": 2,
+    "range": 14,
+    "levels": {
+      "glorieta": "patrimonial",
+      "plaza-mayor": "patrimonial",
+      "santa-maria": "patrimonial",
+      "berenguer": "urbano"
+    },
+    "visit": {
+      "place": "glorieta",
+      "stop": "glorieta-romeu",
+      "mode": "current",
+      "section": false,
+      "interior": false,
+      "archFocus": null,
+      "inspection": false,
+      "waterCut": null,
+      "contextCut": null
+    },
+    "p50ms": 16.7,
+    "p95ms": 17,
+    "errors": []
+  },
+  "horno": {
+    "camera": {
+      "mode": "orbit",
+      "eye": [
+        8496.658125504655,
+        13.025128377332294,
+        1914.180114144563
+      ],
+      "target": [
+        8487.62795341961,
+        10.82512837733228,
+        1917.1812793038935
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "fov": 56,
+      "targetLift": 6.8802,
+      "visitPose": true
+    },
+    "graphics": {
+      "requested": "webgl2",
+      "active": "webgl2",
+      "backend": "WebGL 2",
+      "three": "180",
+      "secure": true,
+      "webgpuExposed": true,
+      "fallbackReason": null,
+      "webgpuParity": [
+        {
+          "key": "terrain-orthophoto",
+          "verified": false
+        },
+        {
+          "key": "building-pbr",
+          "verified": false
+        },
+        {
+          "key": "street-pbr",
+          "verified": false
+        },
+        {
+          "key": "heritage-originals",
+          "verified": false
+        },
+        {
+          "key": "heritage-masks-sections",
+          "verified": false
+        },
+        {
+          "key": "water-planar-reflection",
+          "verified": false
+        },
+        {
+          "key": "coastal-foam",
+          "verified": false
+        },
+        {
+          "key": "sky-probe",
+          "verified": false
+        },
+        {
+          "key": "vegetation-instances",
+          "verified": false
+        },
+        {
+          "key": "contact-occlusion",
+          "verified": false
+        },
+        {
+          "key": "lighting-night",
+          "verified": false
+        },
+        {
+          "key": "resource-lifecycle",
+          "verified": false
+        }
+      ],
+      "limits": {
+        "maxTextureDimension2D": 16384,
+        "maxSamples": 8
+      },
+      "ultra": true,
+      "initial": 2,
+      "autoLimit": 2,
+      "initMs": 10,
+      "profile": "Alta",
+      "shadowSize": 2048,
+      "contact": false,
+      "contactStats": {
+        "active": false,
+        "samples": 0,
+        "estimatedTargetBytes": 0,
+        "failed": false
+      },
+      "gpu": {
+        "available": true,
+        "scope": "render (including reflections/postprocess)",
+        "samples": 7,
+        "lastMs": 6.347776,
+        "p50Ms": 5.741568,
+        "p95Ms": 384.503808,
+        "discarded": 0
+      }
+    },
+    "triangles": 980501,
+    "drawCalls": 203,
+    "sectors": 34,
+    "geometries": 274,
+    "textures": 37,
+    "quality": 2,
+    "range": 10,
+    "levels": {
+      "horno": "patrimonial",
+      "talleres": "urbano",
+      "museo-industrial": "urbano",
+      "pantalan": "urbano"
+    },
+    "visit": {
+      "place": "horno",
+      "stop": "horno-acceso",
+      "mode": "current",
+      "section": false,
+      "interior": false,
+      "archFocus": null,
+      "inspection": false,
+      "waterCut": null,
+      "contextCut": null
+    },
+    "p50ms": 16.7,
+    "p95ms": 16.8,
+    "errors": []
+  },
+  "gerencia": {
+    "camera": {
+      "mode": "orbit",
+      "eye": [
+        8251.592791832074,
+        29.36870730732971,
+        1322.7818441365694
+      ],
+      "target": [
+        8221.467233389278,
+        11.368707307329657,
+        1327.7758662519207
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "fov": 41.99999999999999,
+      "targetLift": 4.831500000000002,
+      "visitPose": true
+    },
+    "graphics": {
+      "requested": "webgl2",
+      "active": "webgl2",
+      "backend": "WebGL 2",
+      "three": "180",
+      "secure": true,
+      "webgpuExposed": true,
+      "fallbackReason": null,
+      "webgpuParity": [
+        {
+          "key": "terrain-orthophoto",
+          "verified": false
+        },
+        {
+          "key": "building-pbr",
+          "verified": false
+        },
+        {
+          "key": "street-pbr",
+          "verified": false
+        },
+        {
+          "key": "heritage-originals",
+          "verified": false
+        },
+        {
+          "key": "heritage-masks-sections",
+          "verified": false
+        },
+        {
+          "key": "water-planar-reflection",
+          "verified": false
+        },
+        {
+          "key": "coastal-foam",
+          "verified": false
+        },
+        {
+          "key": "sky-probe",
+          "verified": false
+        },
+        {
+          "key": "vegetation-instances",
+          "verified": false
+        },
+        {
+          "key": "contact-occlusion",
+          "verified": false
+        },
+        {
+          "key": "lighting-night",
+          "verified": false
+        },
+        {
+          "key": "resource-lifecycle",
+          "verified": false
+        }
+      ],
+      "limits": {
+        "maxTextureDimension2D": 16384,
+        "maxSamples": 8
+      },
+      "ultra": true,
+      "initial": 2,
+      "autoLimit": 2,
+      "initMs": 12,
+      "profile": "Alta",
+      "shadowSize": 2048,
+      "contact": false,
+      "contactStats": {
+        "active": false,
+        "samples": 0,
+        "estimatedTargetBytes": 0,
+        "failed": false
+      },
+      "gpu": {
+        "available": true,
+        "scope": "render (including reflections/postprocess)",
+        "samples": 8,
+        "lastMs": 2.881536,
+        "p50Ms": 5.216256,
+        "p95Ms": 31.26784,
+        "discarded": 0
+      }
+    },
+    "triangles": 1547134,
+    "drawCalls": 254,
+    "sectors": 37,
+    "geometries": 557,
+    "textures": 45,
+    "quality": 2,
+    "range": 35,
+    "levels": {
+      "gerencia": "patrimonial",
+      "casino": "patrimonial",
+      "economato": "patrimonial",
+      "barrio-obrero": "patrimonial"
+    },
+    "visit": {
+      "place": "gerencia",
+      "stop": "gerencia-oficinas",
+      "mode": "current",
+      "section": false,
+      "interior": false,
+      "archFocus": null,
+      "inspection": false,
+      "waterCut": null,
+      "contextCut": null
+    },
+    "p50ms": 16.7,
+    "p95ms": 16.7,
+    "errors": []
+  },
+  "barrio": {
+    "camera": {
+      "mode": "orbit",
+      "eye": [
+        8047.92410836644,
+        14.987691323678515,
+        1099.1911875943233
+      ],
+      "target": [
+        8047.141384234334,
+        9.987691323678241,
+        1118.85324367779
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "fov": 59.99999999999999,
+      "targetLift": 1.5477000000000007,
+      "visitPose": true
+    },
+    "graphics": {
+      "requested": "webgl2",
+      "active": "webgl2",
+      "backend": "WebGL 2",
+      "three": "180",
+      "secure": true,
+      "webgpuExposed": true,
+      "fallbackReason": null,
+      "webgpuParity": [
+        {
+          "key": "terrain-orthophoto",
+          "verified": false
+        },
+        {
+          "key": "building-pbr",
+          "verified": false
+        },
+        {
+          "key": "street-pbr",
+          "verified": false
+        },
+        {
+          "key": "heritage-originals",
+          "verified": false
+        },
+        {
+          "key": "heritage-masks-sections",
+          "verified": false
+        },
+        {
+          "key": "water-planar-reflection",
+          "verified": false
+        },
+        {
+          "key": "coastal-foam",
+          "verified": false
+        },
+        {
+          "key": "sky-probe",
+          "verified": false
+        },
+        {
+          "key": "vegetation-instances",
+          "verified": false
+        },
+        {
+          "key": "contact-occlusion",
+          "verified": false
+        },
+        {
+          "key": "lighting-night",
+          "verified": false
+        },
+        {
+          "key": "resource-lifecycle",
+          "verified": false
+        }
+      ],
+      "limits": {
+        "maxTextureDimension2D": 16384,
+        "maxSamples": 8
+      },
+      "ultra": true,
+      "initial": 2,
+      "autoLimit": 2,
+      "initMs": 8,
+      "profile": "Alta",
+      "shadowSize": 2048,
+      "contact": false,
+      "contactStats": {
+        "active": false,
+        "samples": 0,
+        "estimatedTargetBytes": 0,
+        "failed": false
+      },
+      "gpu": {
+        "available": true,
+        "scope": "render (including reflections/postprocess)",
+        "samples": 2,
+        "lastMs": 27.689984,
+        "p50Ms": 236.909568,
+        "p95Ms": 236.909568,
+        "discarded": 0
+      }
+    },
+    "triangles": 1479103,
+    "drawCalls": 505,
+    "sectors": 19,
+    "geometries": 579,
+    "textures": 51,
+    "quality": 2,
+    "range": 20,
+    "levels": {
+      "barrio-obrero": "patrimonial",
+      "gerencia": "urbano"
+    },
+    "visit": {
+      "place": "barrio-obrero",
+      "stop": "barrio-hileras",
+      "mode": "current",
+      "section": false,
+      "interior": false,
+      "archFocus": null,
+      "inspection": false,
+      "waterCut": null,
+      "contextCut": null
+    },
+    "p50ms": 16.7,
+    "p95ms": 33.3,
+    "errors": []
+  },
+  "interior": {
+    "camera": {
+      "mode": "orbit",
+      "eye": [
+        8279.23633289295,
+        8.571104701348304,
+        1377.4692319861729
+      ],
+      "target": [
+        8277.212022722313,
+        8.371104701347926,
+        1380.680685552573
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "fov": 61,
+      "targetLift": 2.5698000000000008,
+      "visitPose": true
+    },
+    "graphics": {
+      "requested": "webgl2",
+      "active": "webgl2",
+      "backend": "WebGL 2",
+      "three": "180",
+      "secure": true,
+      "webgpuExposed": true,
+      "fallbackReason": null,
+      "webgpuParity": [
+        {
+          "key": "terrain-orthophoto",
+          "verified": false
+        },
+        {
+          "key": "building-pbr",
+          "verified": false
+        },
+        {
+          "key": "street-pbr",
+          "verified": false
+        },
+        {
+          "key": "heritage-originals",
+          "verified": false
+        },
+        {
+          "key": "heritage-masks-sections",
+          "verified": false
+        },
+        {
+          "key": "water-planar-reflection",
+          "verified": false
+        },
+        {
+          "key": "coastal-foam",
+          "verified": false
+        },
+        {
+          "key": "sky-probe",
+          "verified": false
+        },
+        {
+          "key": "vegetation-instances",
+          "verified": false
+        },
+        {
+          "key": "contact-occlusion",
+          "verified": false
+        },
+        {
+          "key": "lighting-night",
+          "verified": false
+        },
+        {
+          "key": "resource-lifecycle",
+          "verified": false
+        }
+      ],
+      "limits": {
+        "maxTextureDimension2D": 16384,
+        "maxSamples": 8
+      },
+      "ultra": true,
+      "initial": 2,
+      "autoLimit": 2,
+      "initMs": 12,
+      "profile": "Alta",
+      "shadowSize": 2048,
+      "contact": false,
+      "contactStats": {
+        "active": false,
+        "samples": 0,
+        "estimatedTargetBytes": 0,
+        "failed": false
+      },
+      "gpu": {
+        "available": true,
+        "scope": "render (including reflections/postprocess)",
+        "samples": 2,
+        "lastMs": 11.835392,
+        "p50Ms": 94.698496,
+        "p95Ms": 94.698496,
+        "discarded": 0
+      }
+    },
+    "triangles": 1932702,
+    "drawCalls": 634,
+    "sectors": 18,
+    "geometries": 486,
+    "textures": 51,
+    "quality": 2,
+    "range": 4,
+    "levels": {
+      "casino": "patrimonial",
+      "gerencia": "patrimonial",
+      "economato": "patrimonial",
+      "begona": "patrimonial"
+    },
+    "visit": {
+      "place": "casino",
+      "stop": "casino-salon",
+      "mode": "current",
+      "section": false,
+      "interior": true,
+      "archFocus": null,
+      "inspection": false,
+      "waterCut": null,
+      "contextCut": null
+    },
+    "p50ms": 16.7,
+    "p95ms": 133.3,
+    "errors": []
+  },
+  "excavacion": {
+    "camera": {
+      "mode": "orbit",
+      "eye": [
+        3867.738738409631,
+        58.69999999999983,
+        -745.0742407847539
+      ],
+      "target": [
+        3886.5485233109594,
+        45.7,
+        -752.6331917649478
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "fov": 59.99999999999999,
+      "targetLift": 1.7000000000000028,
+      "visitPose": true
+    },
+    "graphics": {
+      "requested": "webgl2",
+      "active": "webgl2",
+      "backend": "WebGL 2",
+      "three": "180",
+      "secure": true,
+      "webgpuExposed": true,
+      "fallbackReason": null,
+      "webgpuParity": [
+        {
+          "key": "terrain-orthophoto",
+          "verified": false
+        },
+        {
+          "key": "building-pbr",
+          "verified": false
+        },
+        {
+          "key": "street-pbr",
+          "verified": false
+        },
+        {
+          "key": "heritage-originals",
+          "verified": false
+        },
+        {
+          "key": "heritage-masks-sections",
+          "verified": false
+        },
+        {
+          "key": "water-planar-reflection",
+          "verified": false
+        },
+        {
+          "key": "coastal-foam",
+          "verified": false
+        },
+        {
+          "key": "sky-probe",
+          "verified": false
+        },
+        {
+          "key": "vegetation-instances",
+          "verified": false
+        },
+        {
+          "key": "contact-occlusion",
+          "verified": false
+        },
+        {
+          "key": "lighting-night",
+          "verified": false
+        },
+        {
+          "key": "resource-lifecycle",
+          "verified": false
+        }
+      ],
+      "limits": {
+        "maxTextureDimension2D": 16384,
+        "maxSamples": 8
+      },
+      "ultra": true,
+      "initial": 2,
+      "autoLimit": 2,
+      "initMs": 11,
+      "profile": "Alta",
+      "shadowSize": 2048,
+      "contact": false,
+      "contactStats": {
+        "active": false,
+        "samples": 0,
+        "estimatedTargetBytes": 0,
+        "failed": false
+      },
+      "gpu": {
+        "available": true,
+        "scope": "render (including reflections/postprocess)",
+        "samples": 8,
+        "lastMs": 3.042304,
+        "p50Ms": 3.042304,
+        "p95Ms": 775.023616,
+        "discarded": 0
+      }
+    },
+    "triangles": 1288052,
+    "drawCalls": 230,
+    "sectors": 35,
+    "geometries": 225,
+    "textures": 39,
+    "quality": 2,
+    "range": 24,
+    "levels": {
+      "portic": "patrimonial",
+      "domus": "urbano",
+      "circo": "urbano",
+      "salvador": "urbano"
+    },
+    "visit": {
+      "place": "portic",
+      "stop": "portic-acceso",
+      "mode": "current",
+      "section": false,
+      "interior": false,
+      "archFocus": null,
+      "inspection": false,
+      "waterCut": null,
+      "contextCut": null
+    },
+    "p50ms": 16.7,
+    "p95ms": 16.8,
+    "errors": []
+  },
+  "pantalan": {
+    "camera": {
+      "mode": "orbit",
+      "eye": [
+        9432.187570359607,
+        49.07197811431889,
+        1850.1338492163688
+      ],
+      "target": [
+        9439.836022646352,
+        11.063038305905648,
+        1950.5891073510677
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "fov": 38,
+      "targetLift": 6.9781,
+      "visitPose": true
+    },
+    "graphics": {
+      "requested": "webgl2",
+      "active": "webgl2",
+      "backend": "WebGL 2",
+      "three": "180",
+      "secure": true,
+      "webgpuExposed": true,
+      "fallbackReason": null,
+      "webgpuParity": [
+        {
+          "key": "terrain-orthophoto",
+          "verified": false
+        },
+        {
+          "key": "building-pbr",
+          "verified": false
+        },
+        {
+          "key": "street-pbr",
+          "verified": false
+        },
+        {
+          "key": "heritage-originals",
+          "verified": false
+        },
+        {
+          "key": "heritage-masks-sections",
+          "verified": false
+        },
+        {
+          "key": "water-planar-reflection",
+          "verified": false
+        },
+        {
+          "key": "coastal-foam",
+          "verified": false
+        },
+        {
+          "key": "sky-probe",
+          "verified": false
+        },
+        {
+          "key": "vegetation-instances",
+          "verified": false
+        },
+        {
+          "key": "contact-occlusion",
+          "verified": false
+        },
+        {
+          "key": "lighting-night",
+          "verified": false
+        },
+        {
+          "key": "resource-lifecycle",
+          "verified": false
+        }
+      ],
+      "limits": {
+        "maxTextureDimension2D": 16384,
+        "maxSamples": 8
+      },
+      "ultra": true,
+      "initial": 2,
+      "autoLimit": 2,
+      "initMs": 10,
+      "profile": "Alta",
+      "shadowSize": 2048,
+      "contact": false,
+      "contactStats": {
+        "active": false,
+        "samples": 0,
+        "estimatedTargetBytes": 0,
+        "failed": false
+      },
+      "gpu": {
+        "available": true,
+        "scope": "render (including reflections/postprocess)",
+        "samples": 2,
+        "lastMs": 1.507328,
+        "p50Ms": 1.507328,
+        "p95Ms": 1.507328,
+        "discarded": 0
+      }
+    },
+    "triangles": 608567,
+    "drawCalls": 97,
+    "sectors": 18,
+    "geometries": 186,
+    "textures": 39,
+    "quality": 2,
+    "range": 108,
+    "levels": {
+      "pantalan": "patrimonial"
+    },
+    "visit": {
+      "place": "pantalan-paseo",
+      "stop": "pantalan-paseo-pergolas",
+      "mode": "current",
+      "section": false,
+      "interior": false,
+      "archFocus": null,
+      "inspection": false,
+      "waterCut": null,
+      "contextCut": null
+    },
+    "p50ms": 16.7,
+    "p95ms": 16.8,
+    "errors": []
+  },
+  "grau": {
+    "camera": {
+      "mode": "orbit",
+      "eye": [
+        6858.714987405934,
+        11.470530135448826,
+        4077.140507937131
+      ],
+      "target": [
+        6878.735214787905,
+        5.470530135448697,
+        4076.131506772434
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "fov": 48,
+      "targetLift": 2.5479000000000003,
+      "visitPose": true
+    },
+    "graphics": {
+      "requested": "webgl2",
+      "active": "webgl2",
+      "backend": "WebGL 2",
+      "three": "180",
+      "secure": true,
+      "webgpuExposed": true,
+      "fallbackReason": null,
+      "webgpuParity": [
+        {
+          "key": "terrain-orthophoto",
+          "verified": false
+        },
+        {
+          "key": "building-pbr",
+          "verified": false
+        },
+        {
+          "key": "street-pbr",
+          "verified": false
+        },
+        {
+          "key": "heritage-originals",
+          "verified": false
+        },
+        {
+          "key": "heritage-masks-sections",
+          "verified": false
+        },
+        {
+          "key": "water-planar-reflection",
+          "verified": false
+        },
+        {
+          "key": "coastal-foam",
+          "verified": false
+        },
+        {
+          "key": "sky-probe",
+          "verified": false
+        },
+        {
+          "key": "vegetation-instances",
+          "verified": false
+        },
+        {
+          "key": "contact-occlusion",
+          "verified": false
+        },
+        {
+          "key": "lighting-night",
+          "verified": false
+        },
+        {
+          "key": "resource-lifecycle",
+          "verified": false
+        }
+      ],
+      "limits": {
+        "maxTextureDimension2D": 16384,
+        "maxSamples": 8
+      },
+      "ultra": true,
+      "initial": 2,
+      "autoLimit": 2,
+      "initMs": 12,
+      "profile": "Alta",
+      "shadowSize": 2048,
+      "contact": false,
+      "contactStats": {
+        "active": false,
+        "samples": 0,
+        "estimatedTargetBytes": 0,
+        "failed": false
+      },
+      "gpu": {
+        "available": true,
+        "scope": "render (including reflections/postprocess)",
+        "samples": 7,
+        "lastMs": 0.369664,
+        "p50Ms": 1.427456,
+        "p95Ms": 3.700736,
+        "discarded": 0
+      }
+    },
+    "triangles": 570001,
+    "drawCalls": 168,
+    "sectors": 20,
+    "geometries": 234,
+    "textures": 39,
+    "quality": 2,
+    "range": 21,
+    "levels": {
+      "grau-vell": "patrimonial"
+    },
+    "visit": {
+      "place": "grau-vell",
+      "stop": "grau-acceso",
+      "mode": "current",
+      "section": false,
+      "interior": false,
+      "archFocus": null,
+      "inspection": false,
+      "waterCut": null,
+      "contextCut": null
+    },
+    "p50ms": 16.7,
+    "p95ms": 16.8,
+    "errors": []
+  },
+  "maritimo": {
+    "camera": {
+      "mode": "orbit",
+      "eye": [
+        9813.317386636403,
+        32.14682560571874,
+        2083.7341711324125
+      ],
+      "target": [
+        9831.571863485833,
+        1.9804878214621757,
+        2178.9418266638613
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "fov": 38,
+      "targetLift": 10.480487821462177,
+      "visitPose": true,
+      "untouched": true
+    },
+    "graphics": {
+      "requested": "webgl2",
+      "active": "webgl2",
+      "backend": "WebGL 2",
+      "three": "180",
+      "secure": true,
+      "webgpuExposed": true,
+      "fallbackReason": null,
+      "webgpuParity": [
+        {
+          "key": "terrain-orthophoto",
+          "verified": true
+        },
+        {
+          "key": "building-pbr",
+          "verified": true
+        },
+        {
+          "key": "street-pbr",
+          "verified": true
+        },
+        {
+          "key": "heritage-originals",
+          "verified": false
+        },
+        {
+          "key": "heritage-masks-sections",
+          "verified": true
+        },
+        {
+          "key": "water-planar-reflection",
+          "verified": true
+        },
+        {
+          "key": "coastal-foam",
+          "verified": true
+        },
+        {
+          "key": "sky-probe",
+          "verified": true
+        },
+        {
+          "key": "vegetation-instances",
+          "verified": true
+        },
+        {
+          "key": "contact-occlusion",
+          "verified": true
+        },
+        {
+          "key": "lighting-night",
+          "verified": true
+        },
+        {
+          "key": "resource-lifecycle",
+          "verified": false
+        },
+        {
+          "key": "distance-atmosphere",
+          "verified": false
+        },
+        {
+          "key": "mobile-native",
+          "verified": false
+        }
+      ],
+      "limits": {
+        "maxTextureDimension2D": 16384,
+        "maxSamples": 8
+      },
+      "ultra": true,
+      "initial": 2,
+      "autoLimit": 2,
+      "initMs": 230,
+      "profile": "Alta",
+      "shadowSize": 2048,
+      "contact": false,
+      "contactStats": {
+        "active": false,
+        "samples": 0,
+        "estimatedTargetBytes": 0,
+        "failed": false
+      },
+      "gpu": {
+        "available": true,
+        "scope": "render (including reflections/postprocess)",
+        "samples": 1,
+        "lastMs": 0.4352,
+        "p50Ms": 0.4352,
+        "p95Ms": 0.4352,
+        "discarded": 0
+      },
+      "viewport": [
+        1000,
+        640
+      ],
+      "workers": {
+        "edificios": {
+          "active": true,
+          "pending": 0
+        },
+        "patrimonio": "sin iniciar"
+      }
+    },
+    "triangles": 273465,
+    "drawCalls": 28,
+    "sectors": 12,
+    "geometries": 181,
+    "textures": 37,
+    "quality": 2,
+    "range": 102,
+    "levels": {
+      "pantalan": "patrimonial"
+    },
+    "visit": {
+      "place": "pantalan-maritimo",
+      "stop": "pantalan-maritimo-tripodes",
+      "mode": "current",
+      "section": false,
+      "interior": false,
+      "archFocus": null,
+      "inspection": false,
+      "waterCut": null,
+      "contextCut": null
+    },
+    "p50ms": 16.7,
+    "p95ms": 100.1,
+    "errors": []
+  },
+  "calle": {
+    "camera": {
+      "mode": "orbit",
+      "eye": [
+        3370.768894794596,
+        93.90284730528947,
+        -729.9491510754505
+      ],
+      "target": [
+        3414.738693708401,
+        52.900000000000006,
+        -739.1538425773014
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "fov": 38,
+      "targetLift": 2,
+      "visitPose": true,
+      "untouched": true
+    },
+    "graphics": {
+      "requested": "webgl2",
+      "active": "webgl2",
+      "backend": "WebGL 2",
+      "three": "180",
+      "secure": true,
+      "webgpuExposed": true,
+      "fallbackReason": null,
+      "webgpuParity": [
+        {
+          "key": "terrain-orthophoto",
+          "verified": true
+        },
+        {
+          "key": "building-pbr",
+          "verified": true
+        },
+        {
+          "key": "street-pbr",
+          "verified": true
+        },
+        {
+          "key": "heritage-originals",
+          "verified": false
+        },
+        {
+          "key": "heritage-masks-sections",
+          "verified": true
+        },
+        {
+          "key": "water-planar-reflection",
+          "verified": true
+        },
+        {
+          "key": "coastal-foam",
+          "verified": true
+        },
+        {
+          "key": "sky-probe",
+          "verified": true
+        },
+        {
+          "key": "vegetation-instances",
+          "verified": true
+        },
+        {
+          "key": "contact-occlusion",
+          "verified": true
+        },
+        {
+          "key": "lighting-night",
+          "verified": true
+        },
+        {
+          "key": "resource-lifecycle",
+          "verified": false
+        },
+        {
+          "key": "distance-atmosphere",
+          "verified": false
+        },
+        {
+          "key": "mobile-native",
+          "verified": false
+        }
+      ],
+      "limits": {
+        "maxTextureDimension2D": 16384,
+        "maxSamples": 8
+      },
+      "ultra": true,
+      "initial": 2,
+      "autoLimit": 2,
+      "initMs": 93,
+      "profile": "Alta",
+      "shadowSize": 2048,
+      "contact": false,
+      "contactStats": {
+        "active": false,
+        "samples": 0,
+        "estimatedTargetBytes": 0,
+        "failed": false
+      },
+      "gpu": {
+        "available": true,
+        "scope": "render (including reflections/postprocess)",
+        "samples": 7,
+        "lastMs": 5.300224,
+        "p50Ms": 4.329472,
+        "p95Ms": 19.549184,
+        "discarded": 0
+      },
+      "viewport": [
+        900,
+        576
+      ],
+      "workers": {
+        "edificios": {
+          "active": true,
+          "pending": 0
+        },
+        "patrimonio": "sin iniciar"
+      }
+    },
+    "triangles": 1153980,
+    "drawCalls": 196,
+    "sectors": 32,
+    "geometries": 495,
+    "textures": 37,
+    "quality": 2,
+    "range": 61,
+    "levels": {
+      "plaza-mayor": "patrimonial",
+      "santa-maria": "patrimonial",
+      "berenguer": "patrimonial",
+      "museo": "patrimonial"
+    },
+    "visit": {
+      "place": "plaza-mayor",
+      "stop": "plaza-carrer-major",
+      "mode": "current",
+      "section": false,
+      "interior": false,
+      "archFocus": null,
+      "inspection": false,
+      "waterCut": null,
+      "contextCut": null
+    },
+    "p50ms": 16.7,
+    "p95ms": 16.8,
+    "errors": []
+  },
+  "jardines": {
+    "camera": {
+      "mode": "orbit",
+      "eye": [
+        3414.616811455261,
+        52.160217755699705,
+        -833.6086897879468
+      ],
+      "target": [
+        3422.020599467714,
+        48.56021775569954,
+        -853.7956448860091
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "fov": 47.585977287767925,
+      "targetLift": 0.54999999999999,
+      "visitPose": true,
+      "untouched": true
+    },
+    "graphics": {
+      "requested": "webgl2",
+      "active": "webgl2",
+      "backend": "WebGL 2",
+      "three": "180",
+      "secure": true,
+      "webgpuExposed": true,
+      "fallbackReason": null,
+      "webgpuParity": [
+        {
+          "key": "terrain-orthophoto",
+          "verified": true
+        },
+        {
+          "key": "building-pbr",
+          "verified": true
+        },
+        {
+          "key": "street-pbr",
+          "verified": true
+        },
+        {
+          "key": "heritage-originals",
+          "verified": false
+        },
+        {
+          "key": "heritage-masks-sections",
+          "verified": true
+        },
+        {
+          "key": "water-planar-reflection",
+          "verified": true
+        },
+        {
+          "key": "coastal-foam",
+          "verified": true
+        },
+        {
+          "key": "sky-probe",
+          "verified": true
+        },
+        {
+          "key": "vegetation-instances",
+          "verified": true
+        },
+        {
+          "key": "contact-occlusion",
+          "verified": true
+        },
+        {
+          "key": "lighting-night",
+          "verified": true
+        },
+        {
+          "key": "resource-lifecycle",
+          "verified": false
+        },
+        {
+          "key": "distance-atmosphere",
+          "verified": false
+        },
+        {
+          "key": "mobile-native",
+          "verified": false
+        }
+      ],
+      "limits": {
+        "maxTextureDimension2D": 16384,
+        "maxSamples": 8
+      },
+      "ultra": true,
+      "initial": 2,
+      "autoLimit": 2,
+      "initMs": 21,
+      "profile": "Alta",
+      "shadowSize": 2048,
+      "contact": false,
+      "contactStats": {
+        "active": false,
+        "samples": 0,
+        "estimatedTargetBytes": 0,
+        "failed": false
+      },
+      "gpu": {
+        "available": true,
+        "scope": "render (including reflections/postprocess)",
+        "samples": 8,
+        "lastMs": 5.118976,
+        "p50Ms": 4.216832,
+        "p95Ms": 1711.291392,
+        "discarded": 0
+      },
+      "viewport": [
+        900,
+        576
+      ],
+      "workers": {
+        "edificios": {
+          "active": true,
+          "pending": 0
+        },
+        "patrimonio": "disponible"
+      }
+    },
+    "triangles": 1162948,
+    "drawCalls": 169,
+    "sectors": 33,
+    "geometries": 213,
+    "textures": 34,
+    "quality": 2,
+    "range": 22,
+    "levels": {
+      "glorieta": "patrimonial",
+      "plaza-mayor": "patrimonial",
+      "santa-maria": "patrimonial",
+      "berenguer": "urbano"
+    },
+    "visit": {
+      "place": "glorieta",
+      "stop": "glorieta-jardines",
+      "mode": "current",
+      "section": false,
+      "interior": false,
+      "archFocus": null,
+      "inspection": false,
+      "waterCut": null,
+      "contextCut": null
+    },
+    "p50ms": 16.7,
+    "p95ms": 16.8,
+    "errors": []
+  },
+  "seccion": {
+    "camera": {
+      "mode": "orbit",
+      "eye": [
+        3658.424328794629,
+        46.37905376491199,
+        -910.4433391376188
+      ],
+      "target": [
+        3661.82966616312,
+        42.57905376491154,
+        -905.9545908648888
+      ],
+      "yaw": 0,
+      "pitch": 0,
+      "fov": 59.99999999999999,
+      "targetLift": -2.014700000000012,
+      "visitPose": true,
+      "untouched": true
+    },
+    "graphics": {
+      "requested": "webgl2",
+      "active": "webgl2",
+      "backend": "WebGL 2",
+      "three": "180",
+      "secure": true,
+      "webgpuExposed": true,
+      "fallbackReason": null,
+      "webgpuParity": [
+        {
+          "key": "terrain-orthophoto",
+          "verified": true
+        },
+        {
+          "key": "building-pbr",
+          "verified": true
+        },
+        {
+          "key": "street-pbr",
+          "verified": true
+        },
+        {
+          "key": "heritage-originals",
+          "verified": false
+        },
+        {
+          "key": "heritage-masks-sections",
+          "verified": true
+        },
+        {
+          "key": "water-planar-reflection",
+          "verified": true
+        },
+        {
+          "key": "coastal-foam",
+          "verified": true
+        },
+        {
+          "key": "sky-probe",
+          "verified": true
+        },
+        {
+          "key": "vegetation-instances",
+          "verified": true
+        },
+        {
+          "key": "contact-occlusion",
+          "verified": true
+        },
+        {
+          "key": "lighting-night",
+          "verified": true
+        },
+        {
+          "key": "resource-lifecycle",
+          "verified": false
+        },
+        {
+          "key": "distance-atmosphere",
+          "verified": false
+        },
+        {
+          "key": "mobile-native",
+          "verified": false
+        }
+      ],
+      "limits": {
+        "maxTextureDimension2D": 16384,
+        "maxSamples": 8
+      },
+      "ultra": true,
+      "initial": 2,
+      "autoLimit": 2,
+      "initMs": 11,
+      "profile": "Alta",
+      "shadowSize": 2048,
+      "contact": false,
+      "contactStats": {
+        "active": false,
+        "samples": 0,
+        "estimatedTargetBytes": 0,
+        "failed": false
+      },
+      "gpu": {
+        "available": true,
+        "scope": "render (including reflections/postprocess)",
+        "samples": 8,
+        "lastMs": 5.230592,
+        "p50Ms": 6.493184,
+        "p95Ms": 65.118016,
+        "discarded": 0
+      },
+      "viewport": [
+        1000,
+        640
+      ],
+      "workers": {
+        "edificios": {
+          "active": true,
+          "pending": 0
+        },
+        "patrimonio": "disponible"
+      }
+    },
+    "triangles": 1301116,
+    "drawCalls": 239,
+    "sectors": 34,
+    "geometries": 288,
+    "textures": 50,
+    "quality": 2,
+    "range": 7,
+    "levels": {
+      "circo": "patrimonial",
+      "glorieta": "patrimonial",
+      "portic": "urbano",
+      "plaza-mayor": "urbano"
+    },
+    "visit": {
+      "place": "circo",
+      "stop": "circo-estratos",
+      "mode": "cut",
+      "section": true,
+      "interior": true,
+      "archFocus": null,
+      "inspection": false,
+      "waterCut": null,
+      "contextCut": null
+    },
+    "p50ms": 16.7,
+    "p95ms": 16.8,
+    "errors": []
+  }
+}

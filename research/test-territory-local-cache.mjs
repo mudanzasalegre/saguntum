@@ -1,7 +1,7 @@
 // Integration of the actual streaming controller with deterministic substitutes
 // for the worker and Three.js geometry API. No browser/GPU required.
 import {readFileSync} from 'node:fs';
-const read=name=>readFileSync(new URL('../dist/js/'+name,import.meta.url),'utf8');
+const read=name=>readFileSync(new URL('../dist/js/'+name,import.meta.url),'utf8').replace(/\r\n/g,'\n');
 const p=read('territory-stream-policy.js'),l=read('territory-local-detail.js'),s=read('territory-stream.js');
 const checks=await (async()=>{
 const p1=new Function(p.replace(/^export /gm,"")+"\nreturn {boundsDistance,closeFabricBudget,selectSectors};")();
