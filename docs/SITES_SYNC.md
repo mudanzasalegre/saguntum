@@ -1,5 +1,25 @@
 # Sincronización de Sites a GitHub
 
+## Versión 46 · Numeración territorial y recorrido guiado
+
+El 26 de noviembre de 2026 se publicó la numeración común de las 32 visitas y el recorrido territorial con pausa, desplazamientos suaves y fundidos entre ámbitos o encuadres opuestos. El despliegue `appgdep_6b0807ee1f7881918b533db44885b1dd` terminó con estado `succeeded` en el Site original. La sincronización con GitHub incorpora también las mejoras visuales ya publicadas en Sites 45.
+
+| Evidencia | Valor |
+| --- | --- |
+| Fuente publicada en Sites | `0ff907a4f1d5a3dfaa81e7d84a7052e672c14ec9` |
+| Árbol Git de la aplicación `dist/` | `90e02482213aa9ca3d97b0900489fa0dba157e31` |
+| Archivo registrado por Sites | 1624 archivos, 267479040 bytes |
+| Huella del contenido registrado | `sha256:d50fddda196a51ca8683a38e609efe391c534f1be3f8f62c288415d277771f66` |
+
+[Atlas publicado](https://saguntum-atlas-3d.monmode.chatgpt.site/#atlas) · [Simulador](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador) · [Comportamiento y validación](RECORRIDO_GUIADO.md)
+
+La validación cubrió los catálogos reales del Atlas y del Simulador, 18 pruebas del motor/panel, la navegación con Three.js y OrbitControls reales y un muestreo completo de las 32 vistas en horizontal y vertical sobre el MDT. Se verificaron en navegador los grupos del catálogo y la búsqueda con número estable. El navegador disponible carecía de WebGL 2: no se atribuyen a esta revisión mediciones de FPS ni validación visual del render en hardware real.
+
+
+## Base recuperada · versión 45
+
+El 26 de noviembre de 2026 se recuperó el proyecto original de Sites, que declaraba la versión 45 como la última publicada. La fuente abierta fue `756e37ae100aa80dd08d35dee86b93281a0c7e5f`, cuyo árbol `dist/` es `878427de53e6e02c5eff1ecd04462e15f859c1ba`. GitHub seguía en la revisión documentada de la versión 44; se comprobó que su árbol `dist/` coincidía con la base `cbb24d3` de Sites antes de integrar las mejoras visuales de la 45 y el nuevo recorrido. La numeración y el recorrido se describen en [RECORRIDO_GUIADO.md](RECORRIDO_GUIADO.md).
+
 ## Versión 44 · Sobrevuelo y continuidad de las visitas
 
 El 24 de noviembre de 2026 se publicó la revisión que conserva el monumento elegido durante el traslado de la cámara y ajusta la preparación patrimonial durante el vuelo territorial rápido en WebGPU. El despliegue `appgdep_6b05846940248191a5e1b21189c9327e` alcanzó el estado `succeeded`. La fuente de Sites `cbb24d3574d6d3786209438dce2b0431e40b01f8` y el código de GitHub `325d5be7203d72983d4af88e6f0f052060ccc684` comparten el árbol de distribución `1cdcb7e012486db9d6c33175f24ba80b1012fd43`. Sites registró 1618 archivos con huella `sha256:756e06d51ee0282691c70c010849551716bb60010df2b46c226fc0b875b52da7`. [Simulador publicado](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador) · [Comparación de los cuatro sobrevuelos](../research/streaming-v43/sobrevuelo.json) · [Prueba de las 32 visitas y los 529 enlaces](../research/streaming-v43/rutas.json)

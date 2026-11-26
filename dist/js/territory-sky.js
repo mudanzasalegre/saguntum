@@ -5,7 +5,8 @@ import * as T from 'three';
 export function territorySky(renderer,scene,direction,horizon,zenith,nativeEnvironment=null) {
   const uniforms={
     horizon:{value:horizon},zenith:{value:zenith},sunDir:{value:direction},
-    daylight:{value:1},warmth:{value:0},cloudMap:{value:null},hasClouds:{value:0},probe:{value:0}
+    daylight:{value:1},warmth:{value:0},cloudiness:{value:0},haze:{value:0},
+    cloudMap:{value:null},hasClouds:{value:0},probe:{value:0}
   };
   const native=nativeEnvironment?.createSkyMaterial(uniforms);
   const material=native?.material||new T.ShaderMaterial({
@@ -13,7 +14,7 @@ export function territorySky(renderer,scene,direction,horizon,zenith,nativeEnvir
     vertexShader:'varying vec3 skyDir; void main(){skyDir=position;gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0);}',
     fragmentShader:`
       uniform vec3 horizon,zenith,sunDir;
-      uniform float daylight,warmth,probe,hasClouds;
+      uniform float daylight,warmth,probe,hasClouds,cloudiness,haze;
       uniform sampler2D cloudMap;
       varying vec3 skyDir;
       const float pi=3.14159265359;
@@ -24,24 +25,32 @@ export function territorySky(renderer,scene,direction,horizon,zenith,nativeEnvir
         float azimuth=atan(d.z,d.x),sunAz=atan(sunDir.z,sunDir.x);
         float u=fract((azimuth-sunAz)/(2.*pi)+.595);
         vec2 clouds=texture2D(cloudMap,vec2(u,clamp(elevation/(.5*pi),.001,.999))).rg;
-        float cover=smoothstep(.06,.88,clouds.r)*hasClouds;
-        float bright=clouds.g*clouds.g;
+        float photoCover=smoothstep(.06,.88,clouds.r)*hasClouds;
+        // A sparse clear sky and a continuous high overcast use the same
+        // photographed cloud field. Missing photography still gives a safe
+        // uniform overcast instead of a black sampler or an invented storm.
+        float cover=mix(photoCover*.44,.78+.22*photoCover,cloudiness);
+        float bright=mix(clouds.g*clouds.g,.31+.37*clouds.g,cloudiness*.72);
         float facing=clamp(dot(d,sunDir),0.,1.);
         vec3 air=mix(horizon,zenith,pow(h,.48));
-        air+=vec3(.32,.20,.10)*pow(facing,10.)*daylight*(.3+warmth)*smoothstep(-.03,.09,d.y);
-        vec3 cloud=mix(vec3(.29,.36,.46),vec3(1.64,1.63,1.55),smoothstep(.13,.82,bright));
-        cloud=mix(cloud,cloud*vec3(1.30,.74,.53),warmth*(.35+.65*facing));
+        air=mix(air,horizon,haze*.22*(1.-pow(h,.35)));
+        air+=vec3(.32,.20,.10)*pow(facing,10.)*daylight*(.3+warmth)*smoothstep(-.03,.09,d.y)*(1.-.86*cloudiness);
+        vec3 cloud=mix(vec3(.30,.35,.41),vec3(1.45,1.44,1.39),smoothstep(.13,.82,bright));
+        cloud=mix(cloud,cloud*vec3(1.24,.80,.63),warmth*(.35+.65*facing)*(1.-.65*cloudiness));
         cloud=mix(vec3(.017,.023,.038),cloud,daylight);
         float aboveHorizon=smoothstep(-.012,.105,d.y);
         vec3 sky=mix(air,cloud,cover*aboveHorizon);
         float disc=smoothstep(.99991,.999988,facing);
         float halo=.10*pow(facing,32.)+.26*pow(facing,340.)+2.7*disc;
-        sky+=vec3(1.,.83,.63)*halo*daylight*(1.-.72*cover)*aboveHorizon;
+        sky+=vec3(1.,.83,.63)*halo*daylight*(1.-.93*cover)*(1.-.86*cloudiness)*aboveHorizon;
         if(daylight<.20 && d.y>.06){
           vec2 st=vec2(azimuth/(2.*pi),elevation/pi)*vec2(920.,730.);
           vec2 cell=floor(st);
           float star=step(.992,hash(cell))*exp(-18.*dot(fract(st)-.5,fract(st)-.5));
-          sky+=vec3(.33,.38,.45)*star*(1.-daylight*5.)*(1.-cover)*smoothstep(.06,.42,h);
+          // The broad cloud deck also hides stars between the photographic
+          // cloud patches. An overcast night should not remain star-filled.
+          float starVisibility=(1.-cover)*(1.-cover)*(1.-cloudiness);
+          sky+=vec3(.33,.38,.45)*star*(1.-daylight*5.)*starVisibility*smoothstep(.06,.42,h);
         }
         if(d.y<0. && probe>.5){
           vec3 ground=mix(vec3(.005,.007,.011),vec3(.16,.14,.115),daylight);
@@ -70,6 +79,11 @@ export function territorySky(renderer,scene,direction,horizon,zenith,nativeEnvir
     },
     setLight(daylight,warmth){
       uniforms.daylight.value=daylight;uniforms.warmth.value=warmth;dirty=true;
+    },
+    setWeather(cloudiness,haze){
+      const clouds=T.MathUtils.clamp(cloudiness,0,1),mist=T.MathUtils.clamp(haze,0,1);
+      if(uniforms.cloudiness.value===clouds&&uniforms.haze.value===mist)return;
+      uniforms.cloudiness.value=clouds;uniforms.haze.value=mist;dirty=true;
     },
     update(camera,quality){
       if(!dome.visible)return;

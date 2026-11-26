@@ -1,3 +1,5 @@
+import {orderAtlasPlaces} from './atlas-order.js';
+
 // One entry per original Atlas destination. Keep anchors, evidence and visit links
 // in their source records; the simulator only adds the common projected position.
 const cache=new Map(),warm=new Map(),pending=new Map();
@@ -87,7 +89,7 @@ export async function loadHeritageCatalog(project){
   if(records[entry.id]){issues.push('Identificador de visita duplicado · '+entry.id);continue;}
   records[entry.id]=entry;
  }
- return {places:Object.values(records).map(record=>metadata(record,project)),records,area,issues};
+ return {places:orderAtlasPlaces(Object.values(records).map(record=>metadata(record,project))),records,area,issues};
 }
 
 // The v32 constructors contain both geographic coordinates and architectural

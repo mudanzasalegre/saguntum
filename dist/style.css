@@ -177,6 +177,9 @@ body .text-button { max-width: none; }
 .catalog-filters button { font-size: 14px; min-height: 44px; color: var(--atlas-muted); }
 .catalog-filters button.active { background: var(--atlas-accent-soft); color: var(--atlas-accent); border-color: var(--atlas-accent); }
 .catalog-results { scrollbar-color: var(--atlas-border-strong) transparent; }
+.catalog-group + .catalog-group { margin-top: 22px; }
+.catalog-group-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin: 6px 0 4px; padding: 10px 4px; border-bottom: 1px solid var(--atlas-border-strong); color: var(--atlas-accent); font-family: Manrope, sans-serif; font-size: 14px; font-weight: 600; line-height: 1.45; }
+.catalog-group-heading small { flex-shrink: 0; color: var(--atlas-muted); font-size: 11px; font-weight: 400; }
 .catalog-item strong { color: var(--atlas-text); font-size: 15px; }
 .catalog-item small { color: var(--atlas-muted); font-size: 13px; }
 .catalog-item>svg, .catalog-number { color: var(--atlas-accent); }

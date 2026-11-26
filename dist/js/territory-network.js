@@ -7,15 +7,17 @@ import {streetActors,streetFurniture} from './territory-props.js';
 import {MetricGrid} from './urban-surface.js';
 import {indexBounds,nearCell,segmentFraction} from './territory-collision.js';
 import {carsOverlap,drivingSpeed,nearestOnPaths,routePose,touchesCar,turnChoices} from './territory-traffic.js';
+import {territoryStreetLights} from './territory-light-pool.js';
 
 const propSize={bench:[.84,.25,.90],bicycle_parking:[.38,.05,.79],bollard:[.09,.09,.87],
   street_lamp:[.085,.085,5],lamp:[.085,.085,5],tree:[.17,.17,3],
   stop:[.05,.05,2.4],give_way:[.05,.05,2.4],traffic_signals:[.07,.07,2.55]};
 
-export function createNetwork({scene,index,heightAt,heritage}){
+export function createNetwork({scene,index,heightAt,heritage,mobile=false}){
   const root=new T.Group(),streets=new T.Group(),green=new T.Group(),life=new T.Group();
   root.add(streets,green,life);scene.add(root);
   const surface=streetMaterial(),propsReady=streetFurniture(),dummy=new T.Object3D();
+  const localLights=territoryStreetLights(scene,{compact:mobile});
   heritage?.maskRoadMaterial(surface);
   dummy.rotation.order='YXZ';
   let props=null,night=0;
@@ -26,7 +28,7 @@ export function createNetwork({scene,index,heightAt,heritage}){
   let shadowRevision=0;
   const stream=new SectorStream(index.tiles,async sector=>{
     const [data,prepared,fronts]=await Promise.all([resource(networkBase+sector.url),propsReady.catch(()=>null),loadStreetFronts(sector)]);
-    const rg=new T.Group(),vg=new T.Group(),solids=new MetricGrid(12),decks=new MetricGrid(16),publicWays=new MetricGrid(48);
+    const rg=new T.Group(),vg=new T.Group(),solids=new MetricGrid(12),decks=new MetricGrid(16),publicWays=new MetricGrid(48),lamps=[];
     const draw=(geometry,parent)=>{
       if(!geometry.index.count){geometry.dispose();return;}
       const mesh=new T.Mesh(geometry,surface);mesh.receiveShadow=true;parent.add(mesh);
@@ -42,11 +44,16 @@ export function createNetwork({scene,index,heightAt,heritage}){
       }
     }
     const refresh=prepared?.build(vg,data.objects||[],data.roads,data.areas||[],heightAt,heritage,(o,y,yaw,scale)=>{
+      if(o.kind==='lamp'||o.kind==='street_lamp'){
+        // Use the same orientation and bulb offset as the actual furniture.
+        const x=o.x+.66*scale*Math.cos(yaw),z=o.z-.66*scale*Math.sin(yaw);
+        lamps.push({key:`${o.x.toFixed(2)}/${o.z.toFixed(2)}`,baseX:o.x,baseZ:o.z,x,z,y:y+5.125*scale,ground:y+.2});
+      }
       const size=propSize[o.kind];if(!size)return;
       const halfX=size[0]*scale,halfZ=size[1]*scale,reach=Math.hypot(halfX,halfZ);
       indexBounds(solids,{...o,y,halfX,halfZ,height:size[2]*scale,c:Math.cos(yaw),s:Math.sin(yaw)},[o.x-reach,o.z-reach,o.x+reach,o.z+reach]);
     });
-    streets.add(rg);green.add(vg);shadowRevision++;return {rg,vg,roads:data.roads,refresh,decks,publicWays,solids};
+    streets.add(rg);green.add(vg);shadowRevision++;return {rg,vg,roads:data.roads,refresh,decks,publicWays,solids,lamps};
   },tile=>{
     shadowRevision++;
     for(const g of [tile.rg,tile.vg]){g.removeFromParent();g.traverse(m=>{if(m.isInstancedMesh)m.dispose();else if(m.geometry)m.geometry.dispose();});}
@@ -169,22 +176,27 @@ export function createNetwork({scene,index,heightAt,heritage}){
     object.count=count;object.instanceMatrix.needsUpdate=true;if(!car)stride.needsUpdate=true;
   }
 
-  return {streets,green,stream,get shadowRevision(){return shadowRevision;},get traffic(){return {cars:cars.count,people:walkers.count};},
+  return {streets,green,stream,lightStats:localLights.stats,get shadowRevision(){return shadowRevision;},get traffic(){return {cars:cars.count,people:walkers.count};},
     update(x,z,alt,budget,flags,hint=null){
       observer=[x,z];
       stream.update(x,z,alt>1800?0:[620,1050,1500][budget],alt>1800?0:[6,12,20][budget],hint);graph(x,z);
       streets.visible=flags.streets;green.visible=flags.land;
       const key=(heritage?.group.visible?'on/':'off/')+(heritage?.stats.loaded||[]).join(',');
       for(const tile of stream.live.values())tile.refresh?.(x,z,budget,key);
+      const sources=night>.025&&flags.land&&alt<=125?Array.from(stream.live.values()).flatMap(tile=>tile.lamps||[]):[];
+      localLights.update(sources,{x,z,range:alt,budget,night,enabled:flags.land,
+        blocked:(px,pz)=>heritage?.isReplaced('',px,pz)||heritage?.ownsFurniture(px,pz)});
       populate(vehicles,true,flags.cars?[9,18,maxCars][budget]:0);
       populate(people,false,flags.people?[8,20,maxPeople][budget]:0);
     },
     animate(delta,flags,eye=null){
       viewer=eye;
+      localLights.animate(delta);
       if(flags.cars)step(vehicles,true,delta);else{cars.count=0;vehicles.length=0;reservations.clear();}
       if(flags.people)step(people,false,delta);else{walkers.count=0;people.length=0;}
     },
     setNight(n){night=n;props?.setNight(n);actors.setNight(n);},
+    dispose(){stream.dispose();localLights.dispose();},
     bridgeHeight,
     walkingHeight(x,z){return Math.max(heightAt(x,z),bridgeHeight(x,z)??-Infinity)+.2;},
     safeToWalk(x,z,radius=.32,feetY){

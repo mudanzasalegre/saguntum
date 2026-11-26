@@ -88,7 +88,7 @@ export function createNativeCoast({mask,shorelines,project,compact=false,reduced
  const stats={shoreField:[shore.width,shore.height],normalIncidenceReflectance:.020,normalSize:waves.image.width,
   resolutionScale:compact?.26:.42,reflection:'TSL ReflectorNode',wavelengthsMetres:[25,15.3,10.5,6.8,4.7],reflectionUpdates:0};
  const base=reflection.reflector,reflect=base.updateBefore.bind(base),lastView=new G.Matrix4(),lastLens=new G.Matrix4(),drawing=new G.Vector2();
- let last=-Infinity,period=0,reflectionSky=null;
+ let last=-Infinity,period=0,reflectionSky=null,sunVisibility=1,solarStrength=strength.value;
  base.updateBefore=frame=>{
   const now=performance.now(),camera=frame.camera;
   const moving=!lastView.equals(camera.matrixWorld)||!lastLens.equals(camera.projectionMatrix);
@@ -106,9 +106,15 @@ export function createNativeCoast({mask,shorelines,project,compact=false,reduced
  };
  function setSun(direction,light){
   sunDirection.value.copy(direction).normalize();
-  solarWater(optics,sunDirection.value.y,G.MathUtils.clamp(light,0,1));last=-Infinity;
+  solarWater(optics,sunDirection.value.y,G.MathUtils.clamp(light,0,1));
+  solarStrength=strength.value;strength.value=solarStrength*sunVisibility;last=-Infinity;
  }
  return {group,water,mask,stats,setSun,
+  setSunVisibility(value){
+   const next=Number.isFinite(value)?G.MathUtils.clamp(value,0,1):1;
+   if(next===sunVisibility)return;
+   sunVisibility=next;strength.value=solarStrength*sunVisibility;last=-Infinity;
+  },
   setReflectionSky(colour){reflectionSky=colour;last=-Infinity;},
   update(dt,tier=2,speed=0){
    if(manualClock&&!reduced&&water.visible)clock.value+=G.MathUtils.clamp(dt,0,.1);
@@ -117,6 +123,7 @@ export function createNativeCoast({mask,shorelines,project,compact=false,reduced
   setInspection(cut){inspection.value=cut?1:0;if(cut){cutOrigin.value.set(cut[0],cut[1]);cutU.value.set(cut[2],cut[3]);cutV.value.set(cut[4],cut[5]);}},
   setAtlasLight(mode,direction){
    solarWater(optics,mode==='day'?1:0,1);
+   sunVisibility=1;solarStrength=strength.value;
    if(direction)sunDirection.value.copy(direction);last=-Infinity;
   },
   setLight(night){setSun(sunDirection.value,night?0:1);},

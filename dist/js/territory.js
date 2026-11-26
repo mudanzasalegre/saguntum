@@ -20,6 +20,9 @@ import {solarDateInSagunto,solarPreset,validSolarDate} from './territory-solar.j
 import {surfacePhotoMetrics,setTerrainAppearance} from './territory-surface-photo.js';
 import {terrainMap} from './territory-map.js';
 import {createCanopy} from './territory-canopy.js';
+import {setTerritoryWeather,weatherState} from './territory-realism.js';
+import {guidedTourPanel} from './territory-tour-panel.js';
+import {modelId} from './territory-heritage-models.js';
 
 const $=id=>document.getElementById('sim-'+id);
 const mobile=matchMedia('(max-width:760px), (pointer:coarse)').matches;
@@ -42,25 +45,30 @@ export async function openSimulator(){
   const [sag,port,grau]=['plaza-mayor','horno','grau-vell'].map(id=>byId.get(id));
   const zones=[{...sag,name:'Sagunto histórico',short:'Sagunto'},{...port,name:'Puerto de Sagunto',short:'Puerto'},{...grau,name:'Grau Vell',short:'Grau Vell'}].map(p=>({...p,zone:true}));
   const core={x:(sag.x+port.x)/2,z:(sag.z+grau.z)/2,anchors:zones,range:Math.max(6100,Math.hypot(port.x-sag.x,grau.z-sag.z)*.94)};
-  let nav,buildings,network,heritage,atmosphere,renderer,canopy,selected=null,historical=false;
+  let nav,buildings,network,heritage,atmosphere,renderer,canopy,tourPanel,selected=null,historical=false;
   let focus2D={...core},budget=1,hour=15,markerButtons=[];
   let tier=1,pixelScale=1,peripheralPenalty=0,graphics,solarDate=solarDateInSagunto();
   let lighting='solar',lightPreference='auto',terrainPreference='auto',exterior=false;
+  let weather=weatherState();
   let presentationReady=false;
   const flags={buildings:true,heritage:true,streets:true,land:true,labels:true,cars:true,people:true};
   const status={ready:false,mode:'cargando',places:places.length,registryIssues:inventory.issues,buildings:world.counts.buildingGeometries,routeMetres:index.routeLengthM};
   window.territoryStatus=status;
   const map=terrainMap({world,network:index,zones,places,image:mapImage,onPoint(x,z,p,stopId){
+    tourPanel?.close('map-selection',false);
     if(p)select(p,true,stopId);else{clear();nav?.relocate(x,z);focus2D={x,z};}
     writeLink();
     map.close();update2D();
   }});
+  // Every way of opening or inspecting the map pauses the same camera clock,
+  // including the keyboard command and taps on the local minimap.
+  for(const id of ['expand','extent'])$(id).addEventListener('click',()=>nav?.pauseTour('map'));
   const credits=document.createElement('span');credits.className='sim-attribution';
   credits.innerHTML='<a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">© OpenStreetMap</a> · <a href="https://www.ign.es/" target="_blank" rel="noopener">PNOA / IGN</a> · <a href="https://www.catastro.hacienda.gob.es/webinspire/" target="_blank" rel="noopener">Catastro</a> · <a href="https://icv.gva.es/" target="_blank" rel="noopener">ICV</a> · <a href="https://polyhaven.com/license" target="_blank" rel="noopener">Materiales CC0</a>';
   document.querySelector('.sim-foot').prepend(credits);
   $('credits').textContent='Huellas y límites de parcela de Catastro INSPIRE, modelos de elevación y ortofoto PNOA del IGN, límite municipal del ICV y red viaria de OpenStreetMap (ODbL). Las alturas derivan de LiDAR, plantas o estimación. Las fachadas, el reparto del espacio entre calzada y acera y la actividad urbana son interpretativos.';
   function panel(id,open){
-    if(open){nav?.input.release();$('instructions').hidden=true;}
+    if(open){nav?.input.release();nav?.pauseTour('panel');$('instructions').hidden=true;}
     for(const name of ['places','settings']){
       const visible=name===id&&open;$(name).hidden=!visible;
       $(name==='places'?'search-open':'settings-open').setAttribute('aria-expanded',String(visible));
@@ -72,7 +80,7 @@ export async function openSimulator(){
   document.querySelectorAll('[data-close]').forEach(b=>b.onclick=()=>panel(null,false));
   function save(){
     const previous=readVisit()||{};
-    const state=nav?{camera:nav.snapshot(),flags,quality:$('quality').value,hour,solarDate,lighting,lightPreference,terrain:terrainPreference,historical,jets:$('jets').checked,minimap:!$('map-box').hidden,torch:!!torch?.visible}:previous;
+    const state=nav?{camera:nav.snapshot(),flags,quality:$('quality').value,hour,solarDate,lighting,lightPreference,terrain:terrainPreference,weather:weather.preset,wetness:weather.wetness,historical,jets:$('jets').checked,minimap:!$('map-box').hidden,torch:!!torch?.visible}:previous;
     if(!nav&&(previous.selected!==selected?.id||savedStop(previous)!==activeStop?.id))delete state.camera;
     try{sessionStorage.setItem(sessionKey,JSON.stringify({...state,selected:selected?.id,stop:activeStop?.id,exterior}));}catch{}
   }
@@ -90,6 +98,17 @@ export async function openSimulator(){
     if(refresh){heritage?.setVisitStop(null,null);map.setVisit(null);nav?.leaveVisit();}
     $('location').hidden=true;status.selected=null;if(refresh&&presentationReady)applyPresentation();
   }
+  function placePose(p,sample){
+    if(!sample){
+      const range=p.region==='sagunto'?180:p.region==='puerto'?230:650;
+      const target=new T.Vector3(p.x,heightAt(p.x,p.z),p.z);
+      return {target,eye:target.clone().add(new T.Vector3(range*.22,range*.72,range*.84)),fov:38};
+    }
+    const local=registerFrame(p,project),target=local.world(sample.target[0],sample.target[2]);
+    const dy=heightAt(target.x,target.z)-sample.ground;
+    const vector=([x,y,z])=>{const v=local.world(x,z);return new T.Vector3(v.x,y+dy,v.z);};
+    return {target:vector(sample.target),eye:vector(sample.eye),fov:sample.fov};
+  }
   function framePlace(p,move){
     const views=frames[p.id],which=exterior?views?.exterior:views;
     const sample=which?.[innerWidth/innerHeight<.85?'portrait':'wide'];
@@ -106,13 +125,10 @@ export async function openSimulator(){
       return;
     }
     if(!sample){nav.flyTo(p.x,p.z,100);return;}
-    const local=registerFrame(p,project);
-    const target=local.world(sample.target[0],sample.target[2]);
-    const dy=heightAt(target.x,target.z)-sample.ground;
-    const vector=([x,y,z])=>{const v=local.world(x,z);return new T.Vector3(v.x,y+dy,v.z);};
-    nav.frame(vector(sample.target),vector(sample.eye),sample.fov);
+    const pose=placePose(p,sample);nav.frame(pose.target,pose.eye,pose.fov);
   }
   function select(p,move=true,stopId=null){
+    if(move)tourPanel?.close('selection',false);
     const previous=selected;clear(false);panel(null,false);map.close();
     activeStop=p.guide?.stops.find(s=>s.id===stopId)||null;
     focus2D=activeStop||p;
@@ -163,7 +179,7 @@ export async function openSimulator(){
     return true;
   }
   window.addEventListener('hashchange',()=>{if(!openLinkedPlace()&&location.hash==='#simulador'){clear();nav?.panorama();focus2D=core;update2D();}});
-  $('visit').onclick=save;$('clear').onclick=()=>{clear();writeLink();};
+  $('visit').onclick=save;$('clear').onclick=()=>{tourPanel?.close('selection',false);clear();writeLink();};
   $('frame').onclick=()=>chooseStop(activeStop?null:frames[selected.id]?.exterior?.stop);
   $('history').onclick=()=>{
     const h=selected?.historical;if(!h)return;
@@ -181,7 +197,7 @@ export async function openSimulator(){
     const items=[...zones,...places].filter(p=>(!reg||reg===p.region)&&normalize(p.name).includes(q));
     const nodes=[];
     function result(p,s){
-      const b=document.createElement('button');b.textContent=s?s.title:p.name;
+      const b=document.createElement('button');b.textContent=s?s.title:p.zone?p.name:String(p.number).padStart(2,'0')+' · '+p.name;
       if(s){const sub=document.createElement('small');sub.textContent=p.name+' · '+s.number; b.append(sub);}
       const prepare=()=>{if(flags.heritage)heritage?.prepareDestination(p.id);};
       const anticipate=()=>{clearTimeout(intentTimer);intentTimer=setTimeout(prepare,140);};
@@ -249,15 +265,16 @@ export async function openSimulator(){
   const [ground,heritageResult]=await Promise.all([buildGround(scene,grids,underSea,renderer),createHeritage({scene,renderer,project,heightAt,grids,mobile,onError:error=>{
     if(native&&error.cause?.name==='BackendCompatibilityError')failRender(error.message);else console.warn(error);
   },onChange:()=>{buildings?.changed();canopy?.changed();if(renderer)renderer.shadowMap.needsUpdate=true;}})]);
-  heritage=heritageResult;ground.setHeritage(heritage);buildings=createBuildings({scene,world,grids,heritage,photography:ground.photography});network=createNetwork({scene,index,heightAt,heritage});
+  heritage=heritageResult;ground.setHeritage(heritage);buildings=createBuildings({scene,world,grids,heritage,photography:ground.photography});network=createNetwork({scene,index,heightAt,heritage,mobile});
   atmosphere=createAtmosphere(scene,renderer,sea,buildings,network,registerFrame(sag,project),native?.environment);
   canopy=createCanopy(scene,heightAt,heritage);
   const render=native?native.environment.contactRenderer(renderer):contactRenderer(renderer),gpuTimer=createGpuTimer(renderer);
   window.addEventListener('pagehide',e=>{
+    if(presentationReady)save();
     if(e.persisted)return;
     lost=true;gpuTimer.dispose();render.dispose?.();
     try{
-      nav?.controls.dispose();heritage.dispose();buildings.dispose();network.stream.dispose();
+      nav?.controls.dispose();heritage.dispose();buildings.dispose();network.dispose();
       atmosphere.dispose?.();sea.dispose?.();native?.materials.dispose();
     }finally{closeRenderer();}
   });
@@ -269,10 +286,21 @@ export async function openSimulator(){
     $('light').value=lightPreference;status.lighting=lighting;status.hour=hour;status.solarDate=solarDate;
   }
   function applyPresentation(){
-    lighting=lightPreference==='auto'?(selected?'golden':'solar'):lightPreference;
+    // A continuous world keeps one solar sky and environment while moving
+    // between landmarks. The original Atlas looks remain explicit choices.
+    lighting=lightPreference==='auto'?'solar':lightPreference;
     setLight(hour);
-    const terrain=terrainPreference==='auto'?(selected?'natural':'photo'):terrainPreference;
+    const terrain=terrainPreference==='auto'?'photo':terrainPreference;
     setTerrainAppearance(terrain==='natural');status.terrain=terrain;$('terrain').value=terrainPreference;
+  }
+  function applyWeather(preset,wetness){
+    const before=weather;
+    weather=setTerritoryWeather(preset,wetness);
+    $('weather').value=weather.preset;
+    $('wetness').value=String(Math.round(weather.wetness*100));
+    $('wetness-value').textContent=Math.round(weather.wetness*100)+' %';
+    status.weather={...weather};
+    if(weather.cloudiness!==before.cloudiness||weather.haze!==before.haze)atmosphere.refreshWeather();
   }
   const observationPoints=places.flatMap(place=>[place,...(place.guide?.stops||[])].map(pt=>({place,pt})));
   let nearby=null,torch=null,helpTimer=0;
@@ -303,7 +331,7 @@ export async function openSimulator(){
     }
     if(action==='escape'){
       document.documentElement.classList.remove('sim-clean');$('show-ui').hidden=true;
-      $('instructions').hidden=true;panel(null,false);map.close();
+      $('instructions').hidden=true;panel(null,false);map.close();tourPanel?.close('escape',false);
     }
   }
   function onMode(mode){
@@ -334,10 +362,27 @@ export async function openSimulator(){
     if(sea.mask.isWater(x,z)&&heritage.publicDeckAt(x,z)===null&&network.bridgeHeight(x,z,true)===null)return false;
     return ground.canStand(x,z)&&buildings.safeToWalk(x,z,radius)&&network.safeToWalk(x,z,radius,feetY)&&heritageCollision.safeToWalk(x,z,radius,feetY);
   };
-  nav=createNavigation({camera,element:renderer.domElement,heightAt:ground.grade,walkingHeight,bounds:world.bounds,core,route:index.route,
-    safe,nearest:network.nearestPublic,onMode,onCommand:command,onRoute:active=>{
-      $('tour').setAttribute('aria-pressed',String(active));$('tour').textContent=active?'Detener recorrido':'Recorrido territorial';status.touring=active;
+  nav=createNavigation({camera,element:renderer.domElement,heightAt:ground.grade,walkingHeight,bounds:world.bounds,core,
+    safe,nearest:network.nearestPublic,onMode,onCommand:command,
+    tourReady:stop=>!flags.heritage||nav.range>1200||heritage.stats.loaded.includes(modelId(stop.id))||!!heritage.stats.failures[modelId(stop.id)],
+    onRoute:(active,state)=>{
+      status.touring=active;status.tour=state;
+      const veil=active?Math.max(0,Math.min(1,state.veil||0)):0;
+      $('tour-transfer').style.opacity=String(veil);
+      if(veil>0)$('tour-transfer-label').textContent='Traslado a '+state.name;
+      tourPanel?.update(active,state);
     }});
+  tourPanel=guidedTourPanel({places,nav,
+    makeStops:list=>list.map(p=>{
+      const sample=frames[p.id]?.[innerWidth/innerHeight<.85?'portrait':'wide'];
+      const pose=placePose(p,sample);
+      return {id:p.id,name:p.name,region:p.region,number:p.number,eye:pose.eye.toArray(),target:pose.target.toArray(),fov:pose.fov,dwell:14};
+    }),
+    onOpen(){panel(null,false);map.close();nav.input.release();$('instructions').hidden=true;},
+    onBegin(){clear();if(!flags.heritage){flags.heritage=true;applyFlags();}},
+    onDestination(p){heritage.prepareDestination(p.id);select(p,false);writeLink(true);},
+    onClose(){if(presentationReady)save();}
+  });
   $('nearby').onclick=()=>command('interact');
   $('dismiss-help').onclick=()=>$('instructions').hidden=true;
   $('show-map').onchange=e=>{map.close();$('map-box').hidden=!e.target.checked;};
@@ -369,9 +414,18 @@ export async function openSimulator(){
     applyPresentation();
   };
   $('sun-preset').onchange=e=>{if(e.target.value){hour=solarPreset(e.target.value,solarDate);lightPreference='solar';applyPresentation();}};
+  $('weather').onchange=e=>{lightPreference='solar';applyWeather(e.target.value);applyPresentation();};
+  $('wetness').oninput=e=>{
+    applyWeather(weather.preset,Number(e.target.value)/100);
+    if(lighting!=='solar'){lightPreference='solar';applyPresentation();}
+  };
+  $('rain-sunset').onclick=()=>{
+    hour=solarPreset('blue',solarDate);lightPreference='solar';$('sun-preset').value='blue';
+    applyWeather('after-rain');applyPresentation();
+  };
   $('terrain').onchange=e=>{terrainPreference=e.target.value;applyPresentation();};
   $('quality').onchange=e=>{tier=e.target.value==='auto'?graphics.initial:Number(e.target.value);budget=Math.min(2,tier);pixelScale=1;peripheralPenalty=0;slow=0;resize();};
-  $('home').onclick=()=>{clear();nav.panorama();writeLink();};$('tour').onclick=()=>{clear();nav.startTour();writeLink();};
+  $('home').onclick=()=>{tourPanel.close('panorama',false);clear();nav.panorama();writeLink();};
   window.addEventListener('resize',()=>{resize();if(selected&&activeStop&&nav.atVisitFrame)framePlace(selected,true);});
   for(const p of [...zones,...places]){
     const b=document.createElement('button');b.className='sim-marker'+(p.zone?' zone':'');b.textContent=p.name;b.hidden=true;b.onclick=()=>{select(p);writeLink();};
@@ -420,6 +474,7 @@ export async function openSimulator(){
   terrainPreference=['natural','photo','auto'].includes(state?.terrain)?state.terrain:'auto';
   hour=Number.isFinite(state?.hour)?state.hour:15;
   if(validSolarDate(state?.solarDate))solarDate=state.solarDate;
+  applyWeather(state?.weather,state?.wetness);
   $('jets').checked=state?.jets!==false;
   applyFlags();resize();nav.panorama(true);
   if(state?.camera)nav.restore(state.camera);
@@ -449,6 +504,7 @@ export async function openSimulator(){
   let previousFocus=null;
   await buildings.ready;status.ready=true;status.loadMs=Math.round(performance.now()-start);
   document.addEventListener('visibilitychange',()=>{
+    if(document.hidden)nav.pauseTour('hidden');
     last=prevStats=performance.now();samples=[];previousEye.copy(camera.position);previousFocus=null;
   });
   function frame(now){
@@ -496,7 +552,7 @@ export async function openSimulator(){
       const sorted=samples.sort((a,b)=>a-b),median=sorted[Math.floor(sorted.length/2)]||16;
       const pending=buildings.stream.pending.size+network.stream.pending.size+Number(heritage.stats.loading)+Number(buildings.fabricStats.loading);
       Object.assign(status,{mode:nav.mode,range:Math.round(range),detailRange:Math.round(detail.range),camera:nav.snapshot(),sectors:buildings.stream.live.size,networkSectors:network.stream.live.size,
-        traffic:network.traffic,photo:surfacePhotoMetrics(),aerial:buildings.aerialStats,fabric:buildings.fabricStats,canopy:canopy.stats,localTerrain:grids.regional.length,quality:tier,pixelRatio:renderer.getPixelRatio(),drawCalls:renderer.info.render.drawCalls??renderer.info.render.calls,triangles:renderer.info.render.triangles,
+        traffic:network.traffic,localLights:network.lightStats,photo:surfacePhotoMetrics(),aerial:buildings.aerialStats,fabric:buildings.fabricStats,canopy:canopy.stats,localTerrain:grids.regional.length,quality:tier,pixelRatio:renderer.getPixelRatio(),drawCalls:renderer.info.render.drawCalls??renderer.info.render.calls,triangles:renderer.info.render.triangles,
         geometries:renderer.info.memory.geometries,textures:renderer.info.memory.textures,frameMs:Math.round(median*10)/10,
         frameP95Ms:Math.round((sorted[Math.floor(sorted.length*.95)]||median)*10)/10,
         heapMiB:performance.memory?Math.round(performance.memory.usedJSHeapSize/1048576):null,heritage:heritage.stats,pending,localQuality:budget,peripheralQuality:peripheral,pixelScale});

@@ -31,26 +31,34 @@ export function createSkyMaterial(uniforms){
   empty.needsUpdate=true;
   // Use the same mutable uniforms as the WebGL controller, including the
   // ground hemisphere switch made while rendering the radiance probe.
-  for(const key of ['horizon','zenith','sunDir','daylight','warmth','hasClouds','probe']){
+  for(const key of ['horizon','zenith','sunDir','daylight','warmth','cloudiness','haze','hasClouds','probe']){
     uniforms[key]=uniform(uniforms[key].value);
   }
-  const {horizon,zenith,sunDir,daylight,warmth,hasClouds,probe}=uniforms;
+  const {horizon,zenith,sunDir,daylight,warmth,cloudiness,haze,hasClouds,probe}=uniforms;
   const d=normalize(positionLocal),h=max(0,d.y),angle=asin(clamp(h,0,1));
   const azimuth=atan(d.z,d.x),sunAzimuth=atan(sunDir.z,sunDir.x);
   const coordinates=vec2(fract(azimuth.sub(sunAzimuth).div(2*Math.PI).add(.595)),clamp(angle.div(.5*Math.PI),.001,.999));
   const clouds=texture(empty,coordinates);
   uniforms.cloudMap=clouds;
-  const cover=smoothstep(.06,.88,clouds.r).mul(hasClouds),bright=clouds.g.mul(clouds.g);
+  const photoCover=smoothstep(.06,.88,clouds.r).mul(hasClouds);
+  const cover=mix(photoCover.mul(.44),photoCover.mul(.22).add(.78),cloudiness);
+  const bright=mix(clouds.g.mul(clouds.g),clouds.g.mul(.37).add(.31),cloudiness.mul(.72));
   const facing=clamp(dot(d,sunDir),0,1),above=smoothstep(-.012,.105,d.y);
-  const air=mix(horizon,zenith,pow(h,.48)).add(vec3(.32,.20,.10).mul(pow(facing,10)).mul(daylight).mul(warmth.add(.3)).mul(smoothstep(-.03,.09,d.y)));
-  const litCloud=mix(vec3(.29,.36,.46),vec3(1.64,1.63,1.55),smoothstep(.13,.82,bright));
-  const cloud=mix(vec3(.017,.023,.038),mix(litCloud,litCloud.mul(vec3(1.30,.74,.53)),warmth.mul(facing.mul(.65).add(.35))),daylight);
+  const clearAir=mix(horizon,zenith,pow(h,.48));
+  const air=mix(clearAir,horizon,haze.mul(.22).mul(pow(h,.35).oneMinus()))
+    .add(vec3(.32,.20,.10).mul(pow(facing,10)).mul(daylight).mul(warmth.add(.3))
+      .mul(smoothstep(-.03,.09,d.y)).mul(cloudiness.mul(.86).oneMinus()));
+  const litCloud=mix(vec3(.30,.35,.41),vec3(1.45,1.44,1.39),smoothstep(.13,.82,bright));
+  const cloud=mix(vec3(.017,.023,.038),mix(litCloud,litCloud.mul(vec3(1.24,.80,.63)),
+    warmth.mul(facing.mul(.65).add(.35)).mul(cloudiness.mul(.65).oneMinus())),daylight);
   const halo=pow(facing,32).mul(.10).add(pow(facing,340).mul(.26)).add(smoothstep(.99991,.999988,facing).mul(2.7));
-  let sky=mix(air,cloud,cover.mul(above)).add(vec3(1,.83,.63).mul(halo).mul(daylight).mul(cover.mul(.72).oneMinus()).mul(above));
+  let sky=mix(air,cloud,cover.mul(above)).add(vec3(1,.83,.63).mul(halo).mul(daylight)
+    .mul(cover.mul(.93).oneMinus()).mul(cloudiness.mul(.86).oneMinus()).mul(above));
   const st=vec2(azimuth.div(2*Math.PI),angle.div(Math.PI)).mul(vec2(920,730));
   const fraction=fract(st).sub(.5),hash=fract(sin(dot(floor(st),vec2(127.1,311.7))).mul(43758.5453));
   const stars=step(.992,hash).mul(exp(dot(fraction,fraction).mul(-18)));
-  sky=sky.add(vec3(.33,.38,.45).mul(stars).mul(max(0,daylight.mul(5).oneMinus())).mul(cover.oneMinus()).mul(smoothstep(.06,.42,h)));
+  const starVisibility=cover.oneMinus().pow(2).mul(cloudiness.oneMinus());
+  sky=sky.add(vec3(.33,.38,.45).mul(stars).mul(max(0,daylight.mul(5).oneMinus())).mul(starVisibility).mul(smoothstep(.06,.42,h)));
   const ground=mix(vec3(.005,.007,.011),vec3(.16,.14,.115),daylight);
   material.colorNode=d.y.lessThan(0).and(probe.greaterThan(.5)).select(mix(horizon,ground,smoothstep(0,.25,d.y.negate())),sky);
   return {material,dispose(){empty.dispose();}};

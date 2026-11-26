@@ -38,7 +38,8 @@ export function terrainMap({world,network,zones,places,image,onPoint}){
     network.major.forEach(r=>line(r.points,'rgba(246,235,202,.48)',.8));
     if(streetView&&!wide&&!municipal)for(const tile of tiles.values())for(const road of tile.roads)
       line(road.points,road.car?'#e6d9bc':'#abba94',Math.max(1,Math.min(4,(road.width||2)*s)));
-    line(network.route,'#f1c16f',2);
+    // Guided visits use authored views and transfers between areas. The former
+    // road circuit is not their itinerary, so only draw actual map features.
     const big=box.classList.contains('expanded')||document.body.classList.contains('map-only');
     if(big){c.fillStyle='#fae0a0';for(const p of places){c.beginPath();c.arc(x(p.x),z(p.z),2.5,0,2*Math.PI);c.fill();}}
     for(const p of zones){

@@ -6,6 +6,7 @@ import {architectureScans} from './territory-building-material.js';
 import {openingBounds} from './territory-building-style.js';
 import {liveTexture,liveUniform,urbanField,applyUrbanLightNodes} from './territory-node-urban-light.js';
 import {photoRoofColor} from './territory-node-photography.js';
+import {realismUniforms} from './territory-realism.js';
 
 const apertures=Array.from({length:24},(_,i)=>
   'vec4f('+openingBounds(Math.floor(i/4),i%4).map(n=>n.toFixed(6)).join(',')+')').join(',\n');
@@ -13,19 +14,21 @@ const apertures=Array.from({length:24},(_,i)=>
 // Each result column carries a physical material input, evaluated once. The
 // depth ray and the opening share the dimensions used by the balcony geometry.
 const facade=wgslFn(`fn cadastralFacade(metric:vec4f,data:vec4f,bayIn:vec2f,base:vec3f,
- point:vec3f,viewPoint:vec3f,viewNormal:vec3f,refl:vec3f,ready:f32,urban:f32,night:f32,
+ point:vec3f,viewPoint:vec3f,viewNormal:vec3f,refl:vec3f,ready:f32,urban:f32,night:f32,wetness:f32,
  surfaces:texture_2d<f32>,surfSampler:sampler,relief:texture_2d<f32>,relSampler:sampler,
  joinery:texture_2d<f32>,baySampler:sampler,glazing:texture_2d<f32>,glassSampler:sampler,
  heights:texture_2d<f32>,fieldSampler:sampler)->mat4x4f{
  let sizes=array<f32,8>(1.,1.9,2.7,3.,2.,2.6,1.12,2.5);
  let openings=array<vec4f,24>(${apertures});
  let index=u32(clamp(floor(data.x+.5),0.,7.)); let scale=sizes[index];
- let dxy=dpdx(metric.xy); let dyy=dpdy(metric.xy); let dbx=dpdx(bayIn); let dby=dpdy(bayIn);
- let dp=dpdx(viewPoint); let dq=dpdy(viewPoint);
+ // Match r180 TSL dFdy: the WebGPU framebuffer Y axis points down. Negate
+ // raw dpdy so scanned relief keeps the same tangent basis as WebGL.
+ let dxy=dpdx(metric.xy); let dyy=-dpdy(metric.xy); let dbx=dpdx(bayIn); let dby=-dpdy(bayIn);
+ let dp=dpdx(viewPoint); let dq=-dpdy(viewPoint);
  let N=normalize(viewNormal); let V=normalize(-viewPoint); let range=-viewPoint.z;
  let archDetail=(1.-smoothstep(220.,780.,range))*ready;
  var color=base; var rough=.88; var metal=0.; var gl=0.; var lit=0.; var perturb=vec2f(0.); var reliefWeight=0.;
- var skyWeight=vec3f(0.);var reveal=0.;var revealNormal=vec3f(0.);
+ var skyWeight=vec3f(0.);var reveal=0.;var revealNormal=vec3f(0.);var joineryCover=0.;
  if(archDetail>.001){
    let tile=metric.xy/scale; let span=vec2f(.25,.5)*(504./512.);
    let coords=(vec2f(f32(index%4u),f32(index/4u))+4./512.)*vec2f(.25,.5)+fract(tile)*span;
@@ -34,7 +37,7 @@ const facade=wgslFn(`fn cadastralFacade(metric:vec4f,data:vec4f,bayIn:vec2f,base
    color*=mix(vec3f(1.),clamp(grain*2.32,vec3f(.25),vec3f(1.95)),archDetail*select(.86,.49,index==0u));
    let weather=sin(point.x*.21+sin(point.z*.12))*sin(point.z*.19+metric.y*.16);
    let broad=archDetail*(1.-smoothstep(95.,260.,range));
-   color*=1.+weather*broad*select(.022,.035,index==0u);
+   color*=1.+weather*broad*select(.035,.065,index==0u);
    rough=mix(.88,nr.b,archDetail*.74);
    if(index==2u||index==6u){metal=archDetail*clamp(.72*(1.-nr.b)+.1,.1,.58);}
    perturb=nr.rg*2.-1.; reliefWeight=(1.-smoothstep(34.,170.,range))*select(.81,.43,index==0u);
@@ -91,6 +94,7 @@ const facade=wgslFn(`fn cadastralFacade(metric:vec4f,data:vec4f,bayIn:vec2f,base
        let bayUV=(vec2f(f32(fam),f32(variant+select(0u,4u,tone>.64)))+.006+.988*sampleAt)/vec2f(6.,8.);
        let spanBay=.988/vec2f(6.,8.); let valid=select(0.,1.,all(f>=vec2f(0.))&&all(f<=vec2f(1.)));
        let trim=textureSampleGrad(joinery,baySampler,bayUV,dbx*spanBay,dby*spanBay)*valid;
+       joineryCover=clamp(trim.a*archDetail*(1.-reveal),0.,1.);
        var trimColor=trim.rgb;
        gl=textureSampleGrad(glazing,glassSampler,bayUV,dbx*spanBay,dby*spanBay).r*archDetail*valid*(1.-reveal);
        if(gl>.025&&range<145.){
@@ -130,6 +134,16 @@ const facade=wgslFn(`fn cadastralFacade(metric:vec4f,data:vec4f,bayIn:vec2f,base
        trimColor*=tint*frameContact;skyWeight*=tint*frameContact*(1.-reveal);
        color=mix(color,trimColor,trim.a*archDetail*(1.-reveal));lit=gl*step(.64,tone)*mix(.3,1.,tone);reliefWeight*=1.-trim.a;
      }
+     let porous=index<2u||index==3u||index==4u||index==7u;
+     if(porous&&wetness>.001){
+       let run=.5+.5*sin(point.x*.67+point.z*.49+sin(above*.19));
+       let splash=1.-smoothstep(.16,1.05,localHeight);
+       let shelter=smoothstep(.14,.70,eave);
+       let dampWall=clamp(wetness,0.,1.)*archDetail*(1.-joineryCover)*(.28+.28*run+.36*splash)*shelter;
+       color*=1.-.22*dampWall;
+       rough=mix(rough,max(.46,rough*.71),dampWall);
+       reliefWeight*=1.-.18*dampWall;
+     }
    }
  }
  let tangent=cross(dq,N)*dxy.x+cross(N,dp)*dyy.x;let bitan=cross(dq,N)*dxy.y+cross(N,dp)*dyy.y;
@@ -149,7 +163,7 @@ export function buildingNodes(source,record){
   const reflection=reflect(normalize(positionWorld.sub(cameraPosition)),normalWorldGeometry);
   const result=facade(attribute('archMetric','vec4'),data,uv(),attribute('color','vec3'),positionWorld,positionView,
     normalViewGeometry,reflection,
-    liveUniform(a.uArchReady),field.active,liveUniform(record.night),
+    liveUniform(a.uArchReady),field.active,liveUniform(record.night),liveUniform(realismUniforms.wetness),
     surface,sampler(surface),relief,sampler(relief),joinery,sampler(joinery),glass,sampler(glass),field.map,sampler(field.map)).toVar('facadeFinishData');
   const node=new MeshStandardNodeMaterial({side:source.side});
   const roof=abs(data.y.add(2)).lessThan(.1).and(data.x.greaterThanEqual(3.9)).and(data.x.lessThanEqual(6.1)).select(1,0);
@@ -182,6 +196,15 @@ export function skylineNodes(source,record){
   applyUrbanLightNodes(node,true);return node;
 }
 
+const detailRelief=wgslFn(`fn facadeDetailRelief(viewPoint:vec3f,n:vec3f,metres:vec2f,micro:vec2f,weight:f32)->vec3f{
+  let dp=dpdx(viewPoint);let dq=-dpdy(viewPoint);
+  let du=dpdx(metres);let dv=-dpdy(metres);
+  let t=cross(dq,n)*du.x+cross(n,dp)*dv.x;
+  let b=cross(dq,n)*du.y+cross(n,dp)*dv.y;
+  let inv=inverseSqrt(max(1.e-8,max(dot(t,t),dot(b,b))));
+  return normalize(n+(t*micro.x+b*micro.y)*inv*weight);
+}`);
+
 export function detailNodes(source){
   const node=new MeshStandardNodeMaterial({side:source.side}),f=attribute('facadeFinish','float');
   const a=architectureScans(),ready=liveUniform(a.uArchReady),normal=normalWorldGeometry;
@@ -190,10 +213,16 @@ export function detailNodes(source){
   const tile=local.div(size),span=vec2(.25,.5).mul(504/512);
   const coord=vec2(mod(slot,4),floor(slot.div(4))).add(4/512).mul(vec2(.25,.5)).add(fract(tile).mul(span));
   const sample=slot=>liveTexture(slot,slot===a.uArchSurface).sample(coord).grad(dFdx(tile).mul(span),dFdy(tile).mul(span));
-  const grain=clamp(dot(sample(a.uArchSurface).rgb,vec3(.2126,.7152,.0722)).mul(2.6),.37,1.6),r=sample(a.uArchRelief).b;
+  const pores=sample(a.uArchRelief),grain=clamp(dot(sample(a.uArchSurface).rgb,vec3(.2126,.7152,.0722)).mul(2.6),.37,1.6),r=pores.b;
   const woven=local.y.mul(32),thread=float(1).sub(smoothstep(.08,.45,fwidth(woven))).mul(cos(woven.mul(6.283185)).mul(.04).add(.08));
-  node.colorNode=vec3(mix(1,f.lessThan(3.5).select(mix(1,grain,f.lessThan(.5).select(.27,f.lessThan(1.5).select(.32,.15))),thread.oneMinus()),ready));
-  node.roughnessNode=mix(.78,f.lessThan(1.5).select(mix(.88,r,.6),f.lessThan(3.5).select(mix(f.lessThan(2.5).select(.59,.40),r,.26),.94)),ready);
+  const solid=f.lessThan(3.5).select(1,0),porous=f.lessThan(1.5);
+  const wet=clamp(liveUniform(realismUniforms.wetness),0,1).mul(clamp(normal.y,0,1).mul(.68).add(.32)).mul(solid).mul(ready);
+  node.colorNode=vec3(mix(1,f.lessThan(3.5).select(mix(1,grain,f.lessThan(.5).select(.27,f.lessThan(1.5).select(.32,.15))),thread.oneMinus()),ready))
+    .mul(wet.mul(porous.select(-.14,-.04)).add(1));
+  const rough=mix(.78,porous.select(mix(.88,r,.6),f.lessThan(3.5).select(mix(f.lessThan(2.5).select(.59,.40),r,.26),.94)),ready);
+  node.roughnessNode=mix(rough,porous.select(.48,.26),wet.mul(.65));
   node.metalnessNode=f.greaterThanEqual(1.5).and(f.lessThan(3.5)).select(f.lessThan(2.5).select(.14,.62),0).mul(ready);
+  const reliefWeight=porous.select(.21,.065).mul(wet.mul(-.38).add(1)).mul(solid).mul(ready);
+  node.normalNode=detailRelief(positionView,normalViewGeometry,local,pores.rg.mul(2).sub(1),reliefWeight);
   return node;
 }

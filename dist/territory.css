@@ -8,6 +8,9 @@
 #sim-world,#sim-markers {position:absolute;inset:0;overflow:hidden}
 #sim-world canvas {display:block;width:100%;height:100%;outline:0;touch-action:none}
 #sim-markers {pointer-events:none}
+#sim-tour-transfer {position:absolute;inset:0;z-index:1;display:grid;place-items:center;pointer-events:none;opacity:0;background:#193330;color:#e9d4ab}
+#sim-tour-transfer-label {max-width:min(620px,76vw);text-align:center;font:500 clamp(21px,3vw,36px)/1.3 var(--serif);padding:24px}
+.sim-top {z-index:2}
 .territorial button,.territorial input,.territorial select,.territorial a {font:inherit}
 .territorial button,.territorial a,.territorial select {color:inherit}
 .territorial button {background:transparent;cursor:pointer;line-height:1.2}
@@ -36,6 +39,11 @@
 .sim-panel input[type=checkbox] {width:18px;height:18px}
 .sim-panel fieldset {border:0;border-block:1px solid var(--rule);margin:14px 0;padding:8px 0}
 .sim-panel legend,.sim-kicker {color:#e1cba4;font-size:12px;font-weight:650}
+.sim-panel .sim-atmosphere{margin:2px 0 16px;padding:5px 0 13px;border-top:0}
+#sim-weather{max-width:79%;min-width:0}
+#sim-wetness-value{font-variant-numeric:tabular-nums;color:#e1cba4}
+#sim-rain-sunset{width:100%;min-height:40px;margin-top:8px;padding:9px 10px;border:1px solid #b59b6e85;border-radius:4px;background:#4b5340;color:#f6e5c1;text-align:center}
+#sim-rain-sunset:hover{background:#626348}
 #sim-results button {display:block;padding:9px 1px;text-align:left;width:100%;border-bottom:1px solid #58706977}
 #sim-results button:hover {color:var(--accent)}
 .sim-panel summary {cursor:pointer}.sim-panel p {line-height:1.5;font-size:13px}
@@ -51,6 +59,15 @@
 .sim-bottom {bottom:51px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:7px;padding:5px;white-space:nowrap}
 .sim-bottom button {padding:9px 12px;border-radius:3px}.sim-nav,.sim-actions {display:flex}
 .sim-actions {border-left:1px solid #627871;padding-left:7px}.sim-actions button[aria-pressed=true]{background:#567469;color:white}
+.sim-tour-panel{position:absolute;z-index:4;left:clamp(14px,3.5vw,58px);bottom:116px;width:min(370px,calc(100vw - 28px));max-height:calc(100dvh - 264px);overflow:auto;box-sizing:border-box;padding:16px 18px;background:var(--panel);color:var(--paper);border:1px solid #ced6bd50;box-shadow:0 3px 16px #08252532;border-radius:5px;scrollbar-width:thin}
+.sim-tour-panel .sim-heading{margin-bottom:5px}.sim-tour-panel h2{font-size:25px;line-height:1.12;margin:5px 0 10px}.sim-tour-panel p{font-size:13px;line-height:1.5;margin:8px 0}
+.sim-tour-counter{color:#e1cba4;font-variant-numeric:tabular-nums}.sim-tour-panel label{display:block;font-size:12px;margin:12px 0 5px}.sim-tour-panel select{width:100%;min-height:40px;background:#223c39;border:1px solid var(--rule);border-radius:4px;padding:8px;color:var(--paper)}
+.sim-tour-summary,.sim-tour-up-next{color:#d3d9cb}.sim-tour-controls{display:grid;grid-template-columns:1fr 1.65fr 1fr;gap:6px;margin-top:13px}.sim-tour-controls button,.sim-tour-explore{min-height:42px;padding:9px 6px;border:1px solid #718477;border-radius:4px;font-size:13px}.sim-tour-controls button:disabled{opacity:.4;cursor:default}#sim-tour-play{background:var(--accent);border-color:var(--accent);color:#23362f;font-weight:650}
+.sim-tour-explore{width:100%;margin-top:8px;color:#efd6a4!important}.sim-tour-panel .sim-tour-hint{font-size:11px;color:#c3cdbf;margin-bottom:0}#sim-tour-stage{color:#ece1c8;min-height:20px}#sim-tour-progress{display:block;width:100%;height:4px;accent-color:var(--accent);border:0;border-radius:4px;background:#45605a}#sim-tour-progress::-webkit-progress-bar{background:#45605a;border-radius:4px}#sim-tour-progress::-webkit-progress-value{background:var(--accent);border-radius:4px}
+.sim-tour-open #sim-location{display:none!important}.map-only .sim-tour-panel{display:none}
+.sim-tour-open .sim-map.expanded{z-index:6}
+@media(max-width:800px){.sim-tour-panel{left:10px;bottom:100px;width:min(370px,calc(100vw - 20px));max-height:calc(100dvh - 228px);padding:12px 14px}.sim-tour-panel h2{font-size:23px}}
+@media(max-height:550px){.sim-tour-panel{bottom:74px;max-height:calc(100dvh - 174px);width:min(370px,calc(100vw - 28px))}.sim-tour-panel .sim-tour-hint{display:none}}
 .sim-foot {position:absolute;bottom:0;left:0;right:0;display:flex;align-items:center;gap:8px;padding:7px clamp(12px,3.5vw,58px);min-height:32px;background:#152e2e;color:#dce1d7;font-size:12px}
 .sim-foot a {text-decoration:underline}.sim-foot #sim-status {margin-left:auto}
 #sim-location {left:clamp(14px,3.5vw,58px);bottom:116px;max-width:min(398px,83vw);padding:14px 40px 14px 17px}

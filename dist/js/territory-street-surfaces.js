@@ -3,6 +3,8 @@ import {appendStreetFronts} from './territory-street-fronts.js';
 import {urbanLighting} from './territory-urban-sky.js';
 import {addStreetPhotography} from './territory-surface-photo.js';
 import {registerUrbanMaterial} from './territory-urban-material-record.js';
+import {realismUniforms} from './territory-realism.js';
+import {streetWeatherGLSL} from './territory-street-weather.js';
 
 const folder=new URL('../assets/materials/streets/',import.meta.url);
 const metres=[4.04,2.24,2,1.8,2.5,2.25,2,2.48];
@@ -32,11 +34,12 @@ export function streetMaterial(){
   diffuse.anisotropy=detail.anisotropy=compact?4:8;
   const mat=new T.MeshStandardMaterial({roughness:.93,side:T.DoubleSide,polygonOffset:true,polygonOffsetFactor:-2,polygonOffsetUnits:-2});
   mat.onBeforeCompile=s=>{
-    s.uniforms.streetPhoto={value:diffuse};s.uniforms.streetDetail={value:detail};
-    s.vertexShader='attribute vec4 streetProfile; flat varying vec4 vProfile; varying vec4 vStreetUV;\n'+
-      s.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\nvProfile=streetProfile;vStreetUV=vec4(uv,position.xz);');
-    s.fragmentShader=`flat varying vec4 vProfile; varying vec4 vStreetUV;
-      uniform sampler2D streetPhoto; uniform sampler2D streetDetail;
+    s.uniforms.streetPhoto={value:diffuse};s.uniforms.streetDetail={value:detail};s.uniforms.streetWetness=realismUniforms.wetness;
+    s.vertexShader='attribute vec4 streetProfile; flat varying vec4 vProfile; varying vec4 vStreetUV; varying float vStreetUp;\n'+
+      s.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\nvProfile=streetProfile;vStreetUV=vec4(uv,position.xz);vStreetUp=normalize(mat3(modelMatrix)*normal).y;');
+    s.fragmentShader=`flat varying vec4 vProfile; varying vec4 vStreetUV; varying float vStreetUp;
+      uniform sampler2D streetPhoto; uniform sampler2D streetDetail; uniform float streetWetness;
+      ${streetWeatherGLSL}
       float streetBand(float d,float halfWidth,float aa){return 1.-smoothstep(halfWidth-aa,halfWidth+aa,d);}
       `+s.fragmentShader
       .replace('#include <color_fragment>',`#include <color_fragment>
@@ -66,8 +69,8 @@ export function streetMaterial(){
         float paint=0.,steel=0.,trafficPolish=0.;
         // Low-frequency mineral and wear variation in world metres, not a
         // repeated image seam. Fade it as the camera leaves street scale.
-        float broadWear=sin(vStreetUV.z*.39+sin(vStreetUV.w*.17))*sin(vStreetUV.w*.31);
-        bed*=1.+.038*broadWear*detailWeight;
+        vec4 finish=streetWeather(vStreetUV.zw,kind,mode,vStreetUp,streetWetness,length(vViewPosition),halfWidth,lateral);
+        bed*=mix(1.,finish.x,detailWeight);
         if(kind==0.&&(mode==1.||mode==8.||mode==9.)){
           // Carriageway finish at driving scale. A narrow wheel path has
           // finer exposed aggregate than the unused margins of the asphalt.
@@ -111,20 +114,27 @@ export function streetMaterial(){
           float nosing=streetBand(abs(fract(along/.33)-.5)*.33,.018,longitudinalAA);
           bed*=1.-.23*nosing*(1.-smoothstep(.06,.16,longitudinalAA));
         }
+        // Water fills the aggregate relief. Its Fresnel/environment response
+        // comes from the same PBR lights as the scene, without an extra pass.
+        bed*=1.-finish.y*(kind==0.?.29:.19)-finish.z*.055;
         diffuseColor.rgb*=bed;
       `)
       .replace('#include <roughnessmap_fragment>',`#include <roughnessmap_fragment>
-        roughnessFactor=mix(mix(.93,clamp(micro.b,.48,1.),detailWeight)-trafficPolish*.09,.35,steel);`)
+        roughnessFactor=mix(mix(.93,clamp(micro.b,.48,1.),detailWeight)-trafficPolish*.09,.35,steel);
+        roughnessFactor=mix(roughnessFactor,finish.w,finish.y*.72);
+        roughnessFactor=mix(roughnessFactor,.105+.025*micro.b,finish.z);
+        roughnessFactor=clamp(roughnessFactor,.105,1.);`)
       .replace('#include <normal_fragment_maps>',`#include <normal_fragment_maps>
         vec3 pdx=dFdx(-vViewPosition),pdy=dFdy(-vViewPosition);
         vec3 tx=cross(pdy,normal)*dxStreet.x+cross(normal,pdx)*dyStreet.x;
         vec3 ty=cross(pdy,normal)*dxStreet.y+cross(normal,pdx)*dyStreet.y;
         float invT=inversesqrt(max(max(dot(tx,tx),dot(ty,ty)),1.e-10));
-        vec2 xy=(micro.rg*2.-1.)*.56*detailWeight*(1.-steel);
+        vec2 xy=(micro.rg*2.-1.)*.56*detailWeight*(1.-steel)*(1.-finish.z*.94)*(1.-finish.y*.18);
         normal=normalize(normal*sqrt(max(1.-dot(xy,xy),.05))+(tx*xy.x+ty*xy.y)*invT);`);
     urbanLighting(s);
     addStreetPhotography(s);
   };
+  mat.customProgramCacheKey=()=> 'territory-pavement-weather-v1';
   return registerUrbanMaterial(mat,'street',{diffuse,detail});
 }
 

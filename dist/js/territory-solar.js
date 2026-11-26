@@ -25,6 +25,7 @@ export function solarPreset(name,date){
   if(name==='noon')return 12;
   if(name==='night')return 23;
   const halfDay=12/Math.PI*Math.acos(-Math.tan(latitude)*Math.tan(declination(date)));
+  if(name==='blue')return Math.round((12+halfDay+.40)*4)/4;
   // These presets show the sun just above the horizon at quarter-hour precision.
   return Math.round((12+(name==='sunrise'?-1:1)*(halfDay-.35))*4)/4;
 }

@@ -22,3 +22,27 @@ export function contactPlan({enabled,pixels,maxSamples=4,tier=2}){
 export function estimateTargetBytes(width,height,samples){
  const pixels=width*height;return pixels*(8+4)*(1+(samples>0?samples:0));
 }
+
+// One photometric/weather response for both renderers. Values are visual
+// presentation controls, not a live weather measurement or a forecast.
+export function weatherLightPlan({elevation=0,cloudiness=0,haze=0}={}){
+ const unit=value=>Math.max(0,Math.min(1,Number.isFinite(value)?value:0));
+ const smooth=(a,b,value)=>{const t=unit((value-a)/(b-a));return t*t*(3-2*t);};
+ const y=Math.max(-1,Math.min(1,Number.isFinite(elevation)?elevation:0));
+ const clouds=unit(cloudiness),mist=unit(haze);
+ const daylight=smooth(-.17,.21,y),warmth=1-smooth(-.01,.44,y);
+ const sunVisibility=1-.86*clouds;
+ return {
+  cloudiness:clouds,haze:mist,daylight,warmth,
+  dusk:warmth*smooth(-.18,.015,y)*(1-.58*clouds),
+  sunIntensity:3.10*Math.pow(Math.max(0,y),.56)*sunVisibility,
+  // Keep the sky contribution distinct from the sun so shaded elevations
+  // retain relief. Diffuse cloud light opens the shadows without bleaching.
+  ambientIntensity:.22+daylight*(.30+.18*clouds),
+  environmentIntensity:.38+daylight*(.36+.12*clouds),
+  exposure:1.08+.12*(1-daylight)+.06*clouds*daylight,
+  fogDensity:.000033+.000115*mist+.000013*clouds+.000012*(1-daylight),
+  sunVisibility,shadowOpacity:1-.74*clouds,
+  night:1-smooth(-.16,.10,y)
+ };
+}

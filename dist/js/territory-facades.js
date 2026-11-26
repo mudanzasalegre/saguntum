@@ -4,23 +4,25 @@ import {localScore,viewBucket} from './territory-local-detail.js';
 import {baysOn,balconyBay,edgeSeed,joineryTone,openingBounds} from './territory-building-style.js';
 import {architectureScans} from './territory-building-material.js';
 import {registerUrbanMaterial} from './territory-urban-material-record.js';
+import {realismUniforms} from './territory-realism.js';
 
 function detailMaterial(){
   const mat=new T.MeshStandardMaterial({roughness:.78});
+  mat.customProgramCacheKey=()=>'territorial-facade-detail-realism-45';
   mat.onBeforeCompile=shader=>{
     const scans=architectureScans();
-    Object.assign(shader.uniforms,{uSamples:scans.uArchSurface,uPores:scans.uArchRelief,uLoaded:scans.uArchReady});
-    const vars='varying vec2 vPartMetres; varying float vFinish;\n';
+    Object.assign(shader.uniforms,{uSamples:scans.uArchSurface,uPores:scans.uArchRelief,uLoaded:scans.uArchReady,uDetailWetness:realismUniforms.wetness});
+    const vars='varying vec2 vPartMetres; varying float vFinish,vPartUp;\n';
     shader.vertexShader=vars+'attribute float facadeFinish;\n'+shader.vertexShader
       .replace('#include <begin_vertex>',`#include <begin_vertex>
         vec3 at=(instanceMatrix*vec4(position,1.)).xyz;
         vec3 dir=normalize(mat3(instanceMatrix)*normal);
         // Horizontal surfaces use the cadastral grid. Vertical trim follows its wall.
         vPartMetres=abs(dir.y)>.5?at.xz:vec2(dot(at.xz,vec2(dir.z,-dir.x)),at.y);
-        vFinish=facadeFinish;`);
-    shader.fragmentShader=vars+'uniform sampler2D uSamples,uPores; uniform float uLoaded;\n'+shader.fragmentShader
+        vFinish=facadeFinish;vPartUp=clamp(dir.y,0.,1.);`);
+    shader.fragmentShader=vars+'uniform sampler2D uSamples,uPores; uniform float uLoaded,uDetailWetness;\n'+shader.fragmentShader
       .replace('#include <color_fragment>',`#include <color_fragment>
-        float scanRough=.78, metal=0.;
+        float scanRough=.78, metal=0.,partRelief=0.;vec2 partNormal=vec2(0.);
         if(uLoaded>.5){
           float slot=vFinish<.5?3.:vFinish<1.5?4.:2.;
           float metres=vFinish<.5?3.:vFinish<1.5?2.:2.7;
@@ -44,9 +46,25 @@ function detailMaterial(){
             diffuseColor.rgb*=1.-resolved*(.04+.08*(.5+.5*cos(6.283185*slats)));
             scanRough=.94;
           }
+          if(vFinish<3.5){
+            float wet=clamp(uDetailWetness,0.,1.)*(.32+.68*vPartUp);
+            diffuseColor.rgb*=1.-wet*(vFinish<1.5?.14:.04);
+            scanRough=mix(scanRough,vFinish<1.5?.48:.26,wet*.65);
+            partNormal=pores.rg*2.-1.;
+            partRelief=(vFinish<1.5?.21:.065)*(1.-.38*wet);
+          }
         }`)
       .replace('#include <roughnessmap_fragment>','#include <roughnessmap_fragment>\nroughnessFactor=scanRough;')
-      .replace('#include <metalnessmap_fragment>','#include <metalnessmap_fragment>\nmetalnessFactor=metal;');
+      .replace('#include <metalnessmap_fragment>','#include <metalnessmap_fragment>\nmetalnessFactor=metal;')
+      .replace('#include <normal_fragment_maps>',`#include <normal_fragment_maps>
+        if(partRelief>.001){
+          vec3 dp=dFdx(-vViewPosition),dq=dFdy(-vViewPosition);
+          vec2 du=dFdx(vPartMetres),dv=dFdy(vPartMetres);
+          vec3 tangent=cross(dq,normal)*du.x+cross(normal,dp)*dv.x;
+          vec3 bitangent=cross(dq,normal)*du.y+cross(normal,dp)*dv.y;
+          float inv=inversesqrt(max(1.e-8,max(dot(tangent,tangent),dot(bitangent,bitangent))));
+          normal=normalize(normal+(tangent*partNormal.x+bitangent*partNormal.y)*inv*partRelief);
+        }`);
   };
   return registerUrbanMaterial(mat,'facade-details');
 }

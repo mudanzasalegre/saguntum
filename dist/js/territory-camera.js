@@ -1,13 +1,14 @@
 import * as T from 'three';
 import {simulatorInput} from './territory-input.js';
 import {locomotion} from './territory-locomotion.js';
+import {createTerritoryTour} from './territory-tour.js';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 const clamp=T.MathUtils.clamp;
 const modes=['orbit','fly','walk'];
-export function createNavigation({camera,element,heightAt,walkingHeight,bounds,core,safe,nearest,route,onMode,onRoute,onCommand=()=>{}}){
+export function createNavigation({camera,element,heightAt,walkingHeight,bounds,core,safe,nearest,onMode,onRoute=()=>{},tourReady=()=>true,onCommand=()=>{}}){
   const controls=new OrbitControls(camera,element);
   Object.assign(controls,{enableDamping:true,dampingFactor:.10,minDistance:4,maxDistance:29000,maxPolarAngle:Math.PI*.493,screenSpacePanning:false,zoomSpeed:.9});
-  const v=new T.Vector3(),aim=new T.Vector3(),joystick={x:0,z:0};
+  const v=new T.Vector3(),joystick={x:0,z:0};
   const up=new T.Vector3(0,1,0),euler=new T.Euler(0,0,0,'YXZ');
   let mode='orbit',yaw=0,pitch=0,tween=null,ascend=0,targetYaw=0,targetPitch=0;
   const motion=locomotion({camera,heightAt,walkingHeight,bounds,safe,nearest,spawn:core.anchors[0]});
@@ -31,13 +32,35 @@ export function createNavigation({camera,element,heightAt,walkingHeight,bounds,c
     controls.minDistance=enabled?1:4;
     controls.maxPolarAngle=enabled?Math.max(Math.PI*.493,eye.clone().sub(target).angleTo(up)+.001):Math.PI*.493;
   }
-  let touring=false,travel=0,routeIndex=1,routeSpeed=100;
-  const distances=[0];for(let i=1;i<route.length;i++)distances.push(distances[i-1]+Math.hypot(route[i][0]-route[i-1][0],route[i][1]-route[i-1][1]));
-  function stop(){if(touring){touring=false;onRoute(false);}}
-  controls.addEventListener('start',()=>{stop();untouched=false;if(tween){targetLift=controls.target.y-heightAt(controls.target.x,controls.target.z);if(visitPose)authoredTarget=controls.target.clone();}tween=null;});
+  function readTourPose(){return {eye:camera.position.toArray(),target:controls.target.toArray(),fov:camera.fov};}
+  function applyTourPose(pose){
+    camera.position.fromArray(pose.eye);controls.target.fromArray(pose.target);camera.fov=pose.fov;camera.updateProjectionMatrix();camera.lookAt(controls.target);
+    targetLift=controls.target.y-heightAt(controls.target.x,controls.target.z);
+  }
+  function flushOrbitMotion(){
+    // Consume any previous drag's damping delta, then restore the visible pose.
+    // No private OrbitControls fields or extra synthetic input are required.
+    const pose=readTourPose(),damping=controls.enableDamping,min=controls.minDistance,max=controls.maxPolarAngle;
+    controls.enableDamping=false;controls.minDistance=0;controls.maxPolarAngle=Math.PI;
+    controls.update();applyTourPose(pose);controls.update();
+    controls.enableDamping=damping;controls.minDistance=min;controls.maxPolarAngle=max;
+  }
+  const tour=createTerritoryTour({readPose:readTourPose,applyPose:applyTourPose,heightAt,isReady:tourReady,onState(active,state){
+    if(!active){
+      // Cancellation can happen while leaving an interior or looking upwards
+      // from free flight. Keep that visible pose when OrbitControls takes over;
+      // its normal ground/polar limits would otherwise produce a camera jump.
+      setVisitPose(true,camera.position,controls.target);untouched=false;
+      targetLift=controls.target.y-heightAt(controls.target.x,controls.target.z);flushOrbitMotion();
+    }
+    onRoute(active,state);
+  }});
+  function stop(reason='manual'){return tour.stop(reason);}
+  controls.addEventListener('start',()=>{stop('camera');untouched=false;if(tween){targetLift=controls.target.y-heightAt(controls.target.x,controls.target.z);if(visitPose)authoredTarget=controls.target.clone();}tween=null;});
   function orientation(){camera.quaternion.setFromEuler(euler.set(pitch,yaw,0,'YXZ'));}
   function setMode(next,reset=true){
     if(!modes.includes(next))return;
+    stop('mode');
     if(next===mode){onMode(mode);return;}
     const initialOverview=mode==='orbit'&&camera.position.distanceTo(controls.target)>2500;
     setVisitPose(false);input.release();motion.stop();
@@ -91,20 +114,22 @@ export function createNavigation({camera,element,heightAt,walkingHeight,bounds,c
   pad.onlostpointercapture=()=>{joystick.x=joystick.z=0;nub.style.transform='';};
   document.querySelectorAll('[data-rise]').forEach(b=>{b.onpointerdown=e=>{b.setPointerCapture(e.pointerId);ascend=Number(b.dataset.rise);};b.onlostpointercapture=()=>ascend=0;});
   window.addEventListener('blur',()=>{joystick.x=joystick.z=ascend=0;motion.stop();});
-  function startTour(){
-    if(touring){stop();return;}
-    if(route.length<2)return;
-    setMode('orbit');setVisitPose(false);tween=null;targetLift=0;camera.fov=38;touring=true;travel=0;routeIndex=1;onRoute(true);
-    const [x,z]=route[0];controls.target.set(x,heightAt(x,z),z);camera.position.set(x+65,controls.target.y+150,z+155);
+  function startTour(stops,options={}){
+    if(!Array.isArray(stops)||!stops.length)return false;
+    const visiblePose=readTourPose();
+    if(mode!=='orbit'){
+      camera.getWorldDirection(v);visiblePose.target=camera.position.clone().addScaledVector(v,60).toArray();
+    }
+    setMode('orbit');setVisitPose(false);tween=null;input.release();motion.stop();
+    applyTourPose(visiblePose);flushOrbitMotion();
+    return tour.start(stops,options);
   }
   function tick(dt) {
     const p=camera.position;
-    if(touring){
-      travel+=dt*routeSpeed;while(routeIndex<route.length-1&&travel>distances[routeIndex])routeIndex++;
-      const a=route[routeIndex-1],b=route[routeIndex],d=distances[routeIndex]-distances[routeIndex-1]||1,f=clamp((travel-distances[routeIndex-1])/d,0,1);
-      const x=T.MathUtils.lerp(a[0],b[0],f),z=T.MathUtils.lerp(a[1],b[1],f);
-      controls.target.set(x,heightAt(x,z),z);
-      aim.set(x+65,controls.target.y+150,z+155);p.lerp(aim,1-Math.exp(-dt*2.5));if(travel>=distances.at(-1))stop();
+    if(tour.active){
+      // Authoritative pose while moving or paused; OrbitControls remains able
+      // to receive a gesture, whose start event ends the guided visit.
+      tour.tick(dt);return;
     }
     if(tween){
       tween.t=Math.min(1,tween.t+dt*.9);const t=tween.t*tween.t*(3-2*tween.t);
@@ -113,7 +138,7 @@ export function createNavigation({camera,element,heightAt,walkingHeight,bounds,c
     }
     if(mode==='orbit'){
       controls.target.x=clamp(controls.target.x,bounds[0],bounds[2]);controls.target.z=clamp(controls.target.z,bounds[1],bounds[3]);
-      if(!tween&&!touring){
+      if(!tween&&!tour.active){
         const offset=authoredTarget?Math.hypot(controls.target.x-authoredTarget.x,controls.target.z-authoredTarget.z):Infinity;
         if(visitPose&&offset>80){setVisitPose(false);targetLift=0;}
         controls.target.y=visitPose&&offset<.02?authoredTarget.y:heightAt(controls.target.x,controls.target.z)+targetLift;
@@ -153,6 +178,6 @@ export function createNavigation({camera,element,heightAt,walkingHeight,bounds,c
     if(Number.isFinite(s.fov)){camera.fov=clamp(s.fov,10,115);camera.updateProjectionMatrix();}
     if(mode==='orbit')controls.update();else {yaw=targetYaw=s.yaw||0;pitch=targetPitch=s.pitch||0;orientation();if(mode==='walk')motion.restore(s.walk);}return true;
   }
-  return {controls,input,north,relocate,get speed(){return motion.speed;},get landing(){return mode==='walk'&&motion.landing;},setMode,flyTo,frame,panorama,tick,startTour,snapshot,restore,get mode(){return mode;},get atVisitFrame(){return untouched;},leaveVisit(){if(visitPose){setVisitPose(false);targetLift=0;}},get touring(){return touring;},
+  return {controls,input,north,relocate,get speed(){return motion.speed;},get landing(){return mode==='walk'&&motion.landing;},setMode,flyTo,frame,panorama,tick,startTour,pauseTour:reason=>tour.pause(reason),resumeTour:()=>tour.resume(),stepTour:delta=>tour.step(delta),stopTour:stop,get tourState(){return tour.state;},snapshot,restore,get mode(){return mode;},get atVisitFrame(){return untouched;},leaveVisit(){if(visitPose){setVisitPose(false);targetLift=0;}},get touring(){return tour.active;},
     focusPoint(){return mode==='orbit'?controls.target:camera.position;},get range(){return mode==='orbit'?camera.position.distanceTo(controls.target):Math.max(0,camera.position.y-heightAt(camera.position.x,camera.position.z));}};
 }

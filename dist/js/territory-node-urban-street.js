@@ -1,10 +1,13 @@
 import {MeshStandardNodeMaterial} from 'three/webgpu';
-import {wgslFn,attribute,texture,sampler,uv,positionWorld,positionView,normalViewGeometry} from 'three/tsl';
-import {applyUrbanLightNodes} from './territory-node-urban-light.js';
+import {wgslFn,attribute,texture,sampler,uv,positionWorld,positionView,normalViewGeometry,normalWorldGeometry} from 'three/tsl';
+import {applyUrbanLightNodes,liveUniform} from './territory-node-urban-light.js';
 import {photoStreetColor} from './territory-node-photography.js';
+import {realismUniforms} from './territory-realism.js';
+import {streetWeatherWGSL} from './territory-street-weather.js';
 
 const band=wgslFn(`fn streetBand(d:f32,w:f32,aa:f32)->f32{return 1.-smoothstep(w-aa,w+aa,d);}`);
-const pavement=wgslFn(`fn streetPavement(profile:vec4f,ribbon:vec2f,metricXZ:vec2f,viewPoint:vec3f,N:vec3f,
+const weather=wgslFn(streetWeatherWGSL);
+const pavement=wgslFn(`fn streetPavement(profile:vec4f,ribbon:vec2f,metricXZ:vec2f,viewPoint:vec3f,N:vec3f,up:f32,wet:f32,
  diffuse:texture_2d<f32>,ds:sampler,relief:texture_2d<f32>,rs:sampler)->mat3x3f{
  let kind=profile.x;let mode=profile.w;let halfW=profile.z;
  let oriented=kind==1.||kind==3.||kind==4.||kind==6.||mode==2.;
@@ -20,8 +23,8 @@ const pavement=wgslFn(`fn streetPavement(profile:vec4f,ribbon:vec2f,metricXZ:vec
  let lateral=ribbon.x;let along=ribbon.y;let ax=abs(lateral);
  let acrossPixel=fwidth(lateral);let aa=max(.012,acrossPixel*.58);let alongAA=max(.015,fwidth(along)*.58);
  var paint=0.;var steel=0.;var polish=0.;
- let wear=sin(metricXZ.x*.39+sin(metricXZ.y*.17))*sin(metricXZ.y*.31);
- bed*=1.+.038*wear*detail;
+ let finish=streetWeather(metricXZ,kind,mode,up,wet,length(viewPoint),halfW,lateral);
+ bed*=mix(1.,finish.x,detail);
  if(kind==0.&&(mode==1.||mode==8.||mode==9.)){
    let lane=select(halfW*.5,0.,mode==8.||halfW<2.35);
    polish=(1.-smoothstep(.15,.52,abs(abs(ax-lane)-.76)))*(1.-smoothstep(.15,.76,aa));
@@ -49,17 +52,20 @@ const pavement=wgslFn(`fn streetPavement(profile:vec4f,ribbon:vec2f,metricXZ:vec
  let tx=cross(dpdy(viewPoint),N)*dx.x+cross(N,dpdx(viewPoint))*dy.x;
  let ty=cross(dpdy(viewPoint),N)*dx.y+cross(N,dpdx(viewPoint))*dy.y;
  let inv=inverseSqrt(max(max(dot(tx,tx),dot(ty,ty)),1.e-10));
- let xy=(micro.rg*2.-1.)*.56*detail*(1.-steel);
+ let xy=(micro.rg*2.-1.)*.56*detail*(1.-steel)*(1.-finish.z*.94)*(1.-finish.y*.18);
  let normal=normalize(N*sqrt(max(1.-dot(xy,xy),.05))+(tx*xy.x+ty*xy.y)*inv);
- let rough=mix(mix(.93,clamp(micro.b,.48,1.),detail)-polish*.09,.35,steel);
+ var rough=mix(mix(.93,clamp(micro.b,.48,1.),detail)-polish*.09,.35,steel);
+ rough=mix(rough,finish.w,finish.y*.72);
+ rough=clamp(mix(rough,.105+.025*micro.b,finish.z),.105,1.);
+ bed*=1.-finish.y*select(.19,.29,kind==0.)-finish.z*.055;
  return mat3x3f(bed,normal,vec3f(rough,select(0.,1.,kind==0.&&mode!=2.&&paint<.05),0.));
-}`,[band]);
+}`,[band,weather]);
 
 export function streetNodes(source,record){
   const node=new MeshStandardNodeMaterial({side:source.side,polygonOffset:source.polygonOffset,
     polygonOffsetFactor:source.polygonOffsetFactor,polygonOffsetUnits:source.polygonOffsetUnits});
   const albedo=texture(record.diffuse),relief=texture(record.detail);
-  const p=pavement(attribute('streetProfile','vec4'),uv(),positionWorld.xz,positionView,normalViewGeometry,
+  const p=pavement(attribute('streetProfile','vec4'),uv(),positionWorld.xz,positionView,normalViewGeometry,normalWorldGeometry.y,liveUniform(realismUniforms.wetness),
     albedo,sampler(albedo),relief,sampler(relief)).toVar('pavingResult');
   node.colorNode=photoStreetColor(p.element(0),positionWorld.xz,p.element(2).y);
   node.normalNode=p.element(1);node.roughnessNode=p.element(2).x;

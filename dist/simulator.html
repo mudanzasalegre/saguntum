@@ -1,4 +1,5 @@
 <div id="sim-world" role="application" aria-label="Territorio navegable de Sagunto"></div>
+<div id="sim-tour-transfer" aria-hidden="true"><span id="sim-tour-transfer-label"></span></div>
 <header class="sim-top">
   <div id="sim-brand"></div><span class="sim-divider"></span><h1>Simulador 3D</h1>
   <a class="sim-atlas" href="#atlas">Volver al Atlas</a>
@@ -17,11 +18,17 @@
 </section>
 <section class="sim-panel" id="sim-settings" aria-label="Ajustes del territorio" hidden>
   <div class="sim-heading"><h2>Capas y luz</h2><button data-close aria-label="Cerrar ajustes">×</button></div>
-  <label>Luz <select id="sim-light"><option value="auto">Automática según el lugar</option><option value="golden">Dorada del Atlas</option><option value="day">Día del Atlas</option><option value="solar">Hora solar</option></select></label>
+  <fieldset class="sim-atmosphere"><legend>Ambiente del territorio</legend>
+    <label for="sim-weather">Cielo <select id="sim-weather"><option value="clear">Mediterráneo despejado</option><option value="overcast">Cielo cubierto</option><option value="after-rain">Después de la lluvia</option></select></label>
+    <label for="sim-wetness">Suelo húmedo <output id="sim-wetness-value" for="sim-wetness">0 %</output></label>
+    <input id="sim-wetness" type="range" min="0" max="100" step="1" value="0">
+    <button id="sim-rain-sunset" type="button">Ver hora azul tras la lluvia</button>
+  </fieldset>
+  <label>Luz <select id="sim-light"><option value="auto">Natural del territorio</option><option value="golden">Dorada del Atlas</option><option value="day">Día del Atlas</option><option value="solar">Hora solar</option></select></label>
   <label>Fecha solar <input id="sim-date" type="date" min="1900-01-01" max="2100-12-31"></label>
-  <label>Momento del día <select id="sim-sun-preset"><option value="">Hora elegida</option><option value="sunrise">Amanecer</option><option value="noon">Mediodía</option><option value="sunset">Atardecer</option><option value="night">Noche</option></select></label>
+  <label>Momento del día <select id="sim-sun-preset"><option value="">Hora elegida</option><option value="sunrise">Amanecer</option><option value="noon">Mediodía</option><option value="sunset">Atardecer</option><option value="blue">Hora azul</option><option value="night">Noche</option></select></label>
   <label for="sim-time">Hora solar <output id="sim-hour">15:00</output></label><input id="sim-time" type="range" min="0" max="23.75" step=".25" value="15">
-  <label>Terreno <select id="sim-terrain"><option value="auto">Automático según el lugar</option><option value="natural">Natural del Atlas</option><option value="photo">Ortofotografía PNOA</option></select></label>
+  <label>Terreno <select id="sim-terrain"><option value="auto">Color del territorio</option><option value="natural">Natural del Atlas</option><option value="photo">Ortofotografía PNOA</option></select></label>
   <label>Calidad <select id="sim-quality"><option value="auto">Automática</option><option value="0">Baja</option><option value="1">Media</option><option value="2">Alta</option><option value="3" disabled>Ultra</option></select></label>
   <label>Motor gráfico <select id="sim-engine"><option value="auto">Automático · recomendado</option><option value="webgpu">WebGPU · en evaluación</option><option value="webgl2">WebGL 2</option></select></label>
   <p id="sim-engine-info" role="status"></p>
@@ -70,8 +77,28 @@
   <div class="sim-nav" role="group" aria-label="Modo de cámara">
     <button data-mode="orbit" aria-pressed="true">Vista aérea</button><button data-mode="fly" aria-pressed="false">Vuelo libre</button><button data-mode="walk" aria-pressed="false">A pie</button>
   </div>
-  <div class="sim-actions"><button id="sim-home">Panorámica</button><button id="sim-tour" aria-pressed="false">Recorrido territorial</button></div>
+  <div class="sim-actions"><button id="sim-home">Panorámica</button><button id="sim-tour" aria-pressed="false" aria-expanded="false" aria-controls="sim-tour-panel">Recorrido territorial</button></div>
 </div>
+<section class="sim-tour-panel" id="sim-tour-panel" aria-label="Recorrido territorial guiado" hidden>
+  <div class="sim-heading"><span class="sim-kicker">RECORRIDO GUIADO</span><button id="sim-tour-close" type="button" aria-label="Cerrar y detener el recorrido">×</button></div>
+  <p id="sim-tour-counter" class="sim-tour-counter"></p>
+  <h2 id="sim-tour-title">Del casco histórico al mar</h2>
+  <div id="sim-tour-setup">
+    <p>Una visita con tiempo para mirar. Elige una zona o recorre el territorio en orden.</p>
+    <label for="sim-tour-route">Ruta</label><select id="sim-tour-route"></select>
+    <p id="sim-tour-summary" class="sim-tour-summary"></p>
+  </div>
+  <p id="sim-tour-stage" role="status" aria-live="polite" aria-atomic="true"></p>
+  <progress id="sim-tour-progress" value="0" max="1" aria-label="Avance de la parada" hidden></progress>
+  <p id="sim-tour-up-next" class="sim-tour-up-next" hidden></p>
+  <div class="sim-tour-controls">
+    <button id="sim-tour-prev" type="button" disabled aria-label="Lugar anterior del recorrido">Anterior</button>
+    <button id="sim-tour-play" type="button">Iniciar recorrido</button>
+    <button id="sim-tour-next" type="button" disabled aria-label="Lugar siguiente del recorrido">Siguiente</button>
+  </div>
+  <button id="sim-tour-explore" class="sim-tour-explore" type="button" hidden>Explorar este lugar</button>
+  <p class="sim-tour-hint">Puedes pausar, saltar una parada o mover la cámara para explorar por tu cuenta.</p>
+</section>
 <div id="sim-stick" aria-label="Control táctil de desplazamiento" hidden><i></i></div>
 <div id="sim-altitude" hidden><button data-rise="1" aria-label="Ascender">＋</button><button data-rise="-1" aria-label="Descender">−</button></div>
 <div id="sim-walk-actions" hidden><button data-motion="run">Correr</button><button data-motion="up">Saltar</button></div>

@@ -3,7 +3,8 @@ import {territorySky} from './territory-sky.js';
 import {urbanSun} from './territory-urban-sky.js';
 import {atlasLights,atlasRim,applyAtlasLighting} from './atlas-appearance.js';
 import {solarDirection} from './territory-solar.js';
-import {shadowPlan} from './territory-render-policy.js';
+import {shadowPlan,weatherLightPlan} from './territory-render-policy.js';
+import {realismUniforms} from './territory-realism.js';
 
 export function createAtmosphere(scene,renderer,sea,buildings,network,registration,nativeEnvironment=null) {
   const ambient=new T.HemisphereLight('#bfd8f1','#827366',1);
@@ -32,36 +33,41 @@ export function createAtmosphere(scene,renderer,sea,buildings,network,registrati
   const right=new T.Vector3(),upPlane=new T.Vector3(),worldUp=new T.Vector3(0,1,0);
   const snapped=new T.Vector3();
   let light=1,span=0,lastPopulation='',lastRefresh=0,invalid=true,atlasMode=false,shadowEnabled=null;
+  let lastHour=12,lastDate=null,atlasPreset='golden',shadowOpacity=1;
   function atlas(mode){
-    atlasMode=true;
+    atlasMode=true;atlasPreset=mode;shadowOpacity=1;
     scene.background=horizon;applyAtlasLighting(mode,scene,renderer,sun,ambient);
     if(nativeEnvironment){
       scene.background=nativeEnvironment.atlasBackdrop(horizon,renderer.toneMappingExposure);
       sea.setReflectionSky(horizon);
     }
     atlasDirection(atlasLights[mode].direction,direction);rim.intensity=atlasRim.intensity;
-    sky.show(false);sea.setAtlasLight(mode,direction);
-    buildings.night.value=0;network.setNight(0);invalid=true;
+    sky.show(false);sea.setSunVisibility?.(1);sea.setAtlasLight(mode,direction);
+    realismUniforms.night.value=0;buildings.night.value=0;network.setNight(0);invalid=true;
   }
   function setHour(hour,date){
+    lastHour=hour;lastDate=date;
     atlasMode=false;rim.intensity=0;sky.show(true);
     if(nativeEnvironment)sea.setReflectionSky(null);
     atlasDirection(solarDirection(hour,date),direction);
-    light=T.MathUtils.smoothstep(direction.y,-.17,.21);
-    renderer.toneMappingExposure=T.MathUtils.lerp(1.24,1.05,light);
-    const warmth=1-T.MathUtils.smoothstep(direction.y,-.01,.44);
-    const dusk=warmth*T.MathUtils.smoothstep(direction.y,-.18,.015);
-    horizon.set('#152031').lerp(tint.set('#b8cfdf'),light).lerp(tint.set('#f3bea4'),dusk*.72);
-    zenith.set('#071224').lerp(tint.set('#427fae'),light);
+    const plan=weatherLightPlan({elevation:direction.y,cloudiness:realismUniforms.cloudiness.value,haze:realismUniforms.haze.value});
+    const {warmth,dusk,cloudiness,haze}=plan;
+    light=plan.daylight;shadowOpacity=plan.shadowOpacity;
+    renderer.toneMappingExposure=plan.exposure;
+    horizon.set('#132031').lerp(tint.set('#bfd3df'),light)
+      .lerp(tint.set('#bbc4ca'),cloudiness*light*.64).lerp(tint.set('#efb89a'),dusk*.65);
+    zenith.set('#071224').lerp(tint.set('#4a81a8'),light)
+      .lerp(tint.set('#8e9da9'),cloudiness*light*.78);
     scene.background=horizon;scene.fog.color.copy(horizon);
-    scene.fog.density=.000043+(1-light)*.000017;
-    sun.color.set('#fff1db').lerp(tint.set('#ffac72'),warmth);
-    sun.intensity=2.85*Math.pow(Math.max(0,direction.y),.52);
-    ambient.color.set('#799acb').lerp(tint.set('#d1e1f4'),light);
-    ambient.groundColor.set('#39384b').lerp(tint.set('#88755f'),light);
-    ambient.intensity=.28+.50*light;scene.environmentIntensity=.52+.29*light;
-    sky.setLight(light,dusk);sea.setSun(direction,light);
-    buildings.night.value=1-T.MathUtils.smoothstep(direction.y,-.16,.10);
+    scene.fog.density=plan.fogDensity;
+    sun.color.set('#fff2de').lerp(tint.set('#ffb47c'),warmth*(1-.35*cloudiness));
+    sun.intensity=plan.sunIntensity;
+    ambient.color.set('#7992b8').lerp(tint.set('#ccdae7'),light).lerp(tint.set('#d7dbdf'),cloudiness*light*.52);
+    ambient.groundColor.set('#373b46').lerp(tint.set('#867c69'),light);
+    ambient.intensity=plan.ambientIntensity;scene.environmentIntensity=plan.environmentIntensity;
+    sky.setWeather(cloudiness,haze);sky.setLight(light,dusk);sea.setSun(direction,light);
+    sea.setSunVisibility?.(plan.sunVisibility);
+    realismUniforms.night.value=plan.night;buildings.night.value=plan.night;
     network.setNight(buildings.night.value);invalid=true;
   }
   function update(camera,p,range,quality){
@@ -71,9 +77,9 @@ export function createAtmosphere(scene,renderer,sea,buildings,network,registrati
     const {enabled,extent,size:desiredSize}=plan;
     if(shadowEnabled!==enabled){
       shadowEnabled=enabled;invalid=true;
-      sun.shadow.intensity=enabled?1:0;
       sun.shadow.needsUpdate=enabled;
     }
+    sun.shadow.intensity=enabled?shadowOpacity:0;
     if(enabled&&sun.shadow.mapSize.x!==desiredSize){
       sun.shadow.mapSize.setScalar(desiredSize);
       if(!nativeEnvironment){sun.shadow.map?.dispose();sun.shadow.map=null;}
@@ -102,6 +108,7 @@ export function createAtmosphere(scene,renderer,sea,buildings,network,registrati
       renderer.shadowMap.needsUpdate=enabled;sun.shadow.needsUpdate=enabled;lastPopulation=population;lastRefresh=now;invalid=false;
     }
   }
-  return {atlas,setHour,update,dispose(){sky.dispose();sun.shadow.dispose();},get daylight(){return atlasMode?1:light;},
+  return {atlas,setHour,update,refreshWeather(){if(atlasMode)atlas(atlasPreset);else if(lastDate)setHour(lastHour,lastDate);},
+    dispose(){sky.dispose();sun.shadow.dispose();},get daylight(){return atlasMode?1:light;},
     get shadowSize(){return shadowEnabled?sun.shadow.mapSize.x:0;}};
 }

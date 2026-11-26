@@ -46,7 +46,7 @@ export function createTerritorySea({polygons,bounds,shorelines=[],project,height
  env.water.material.defines={...env.water.material.defines,TERRITORIAL_COAST:1};
  const u=env.water.material.uniforms;
  Object.assign(u,{inspectPort:{value:false},inspectionOrigin:{value:new THREE.Vector2()},inspectionU:{value:new THREE.Vector2()},inspectionV:{value:new THREE.Vector2()}});
- let last=-1,lastY=Infinity,interval=0,previous=-Infinity;
+ let last=-1,lastY=Infinity,interval=0,previous=-Infinity,sunVisibility=1,solarStrength=u.sunStrength.value;
  const reflect=env.water.onBeforeRender;
  env.water.onBeforeRender=function(renderer,scene,camera,...rest){
    const now=performance.now();
@@ -65,13 +65,20 @@ export function createTerritorySea({polygons,bounds,shorelines=[],project,height
    u.inspectPort.value=!!cut;
    if(cut){u.inspectionOrigin.value.set(cut[0],cut[1]);u.inspectionU.value.set(cut[2],cut[3]);u.inspectionV.value.set(cut[4],cut[5]);}
   },
-  setAtlasLight(mode,direction){last=-1;lastY=Infinity;previous=-Infinity;env.setLight(mode);if(direction)u.sunDirection.value.copy(direction);},
+  setAtlasLight(mode,direction){last=-1;lastY=Infinity;previous=-Infinity;sunVisibility=1;env.setLight(mode);solarStrength=u.sunStrength.value;if(direction)u.sunDirection.value.copy(direction);},
   setSun(direction,daylight){
    const light=THREE.MathUtils.clamp(daylight,0,1);
    u.sunDirection.value.copy(direction).normalize();
    if(Math.abs(last-light)<.002&&Math.abs(lastY-u.sunDirection.value.y)<.002)return;
    last=light;lastY=u.sunDirection.value.y;
    solarWater(u,lastY,light);
+   solarStrength=u.sunStrength.value;u.sunStrength.value=solarStrength*sunVisibility;
+   previous=-Infinity;env.invalidate();
+  },
+  setSunVisibility(value){
+   const next=Number.isFinite(value)?THREE.MathUtils.clamp(value,0,1):1;
+   if(next===sunVisibility)return;
+   sunVisibility=next;u.sunStrength.value=solarStrength*sunVisibility;
    previous=-Infinity;env.invalidate();
   },
   dispose(){

@@ -4,6 +4,7 @@ import {addRegionalRoofPhotography} from './territory-ortho.js';
 import {openingBounds} from './territory-building-style.js';
 import {urbanLighting} from './territory-urban-sky.js';
 import {registerUrbanMaterial} from './territory-urban-material-record.js';
+import {realismUniforms} from './territory-realism.js';
 
 const dir=new URL('../assets/materials/architecture/',import.meta.url);
 const apertures=Array.from({length:24},(_,i)=>
@@ -61,9 +62,9 @@ export function architectureScans(){
 export function architecturalMaterial(night,photography){
   const mat=new T.MeshStandardMaterial({vertexColors:true,roughness:.88,side:T.DoubleSide});
   mat.defines={USE_UV:''};
-  mat.customProgramCacheKey=()=>'territorial-architecture-38';
+  mat.customProgramCacheKey=()=>'territorial-architecture-realism-45';
   mat.onBeforeCompile=s=>{
-    Object.assign(s.uniforms,architectureScans(),{uNight:night});
+    Object.assign(s.uniforms,architectureScans(),{uNight:night,uFacadeWetness:realismUniforms.wetness});
     const varyings=`
       varying vec2 vArchBay, vArchMetric, vArchXZ, vArchGrade;
       varying vec4 vArchData;
@@ -73,7 +74,7 @@ export function architecturalMaterial(night,photography){
     s.vertexShader=s.vertexShader.replace('#include <project_vertex>',`#include <project_vertex>
       vArchBay=uv; vArchMetric=archMetric.xy; vArchGrade=archMetric.zw; vArchData=archData; vArchXZ=position.xz; vArchRange=-mvPosition.z;`);
     const fragment=`
-      uniform float uNight,uArchReady;
+      uniform float uNight,uArchReady,uFacadeWetness;
       uniform sampler2D uArchSurface,uArchRelief,uArchBay,uArchGlass;
       vec2 surfaceUV(vec2 metres,float index,out vec2 dx,out vec2 dy){
         float size=index<.5?1.:index<1.5?1.9:index<2.5?2.7:index<3.5?3.:index<4.5?2.:index<5.5?2.6:index<6.5?1.12:2.5;
@@ -152,7 +153,7 @@ export function architecturalMaterial(night,photography){
     s.fragmentShader=s.fragmentShader.replace('#include <color_fragment>',`#include <color_fragment>
       float archDetail=(1.-smoothstep(220.,780.,vArchRange))*uArchReady;
       float archSides=step(-1.5,vArchData.y);
-      float glassAmt=0.,litWindow=0.,archRough=.88,archMetal=0.,reliefWeight=0.;
+      float glassAmt=0.,litWindow=0.,archRough=.88,archMetal=0.,reliefWeight=0.,joineryCover=0.;
       vec2 microNormal=vec2(0.);
       float reveal=0.;
       vec3 revealNormal=vec3(0.);
@@ -167,7 +168,9 @@ export function architecturalMaterial(night,photography){
         // fine grain. World coordinates keep it stable between facade LODs.
         float weather=sin(vArchXZ.x*.21+sin(vArchXZ.y*.12))*sin(vArchXZ.y*.19+vArchMetric.y*.16);
         float broadDetail=archDetail*(1.-smoothstep(95.,260.,vArchRange));
-        diffuseColor.rgb*=1.+weather*broadDetail*(index==0.?.035:.022);
+        // Mineral-scale variation breaks the repetition of the scanned atlas.
+        // Its wavelength stays in metres and survives a facade LOD change.
+        diffuseColor.rgb*=1.+weather*broadDetail*(index==0.?.065:.035);
         archRough=mix(.88,nr.b,archDetail*.74);
         if(index==2.||index==6.)archMetal=archDetail*clamp(.72*(1.-nr.b)+.10,.1,.58);
         microNormal=nr.rg*2.-1.;
@@ -254,6 +257,7 @@ export function architecturalMaterial(night,photography){
             vec2 bayUV=(vec2(style.x,variant)+.006+.988*sampleAt)/grid;
             float inBay=step(0.,min(f.x,f.y))*step(max(f.x,f.y),1.);
             vec4 trim=textureGrad(uArchBay,bayUV,bx,by)*inBay;
+            joineryCover=clamp(trim.a*archDetail*(1.-reveal),0.,1.);
             glassAmt=textureGrad(uArchGlass,bayUV,bx,by).r*archDetail*inBay*(1.-reveal);
             if(glassAmt>.025&&vArchRange<145.){
               vec3 refl=inverseTransformDirection(reflect(-V,N),viewMatrix);
@@ -272,6 +276,20 @@ export function architecturalMaterial(night,photography){
             diffuseColor.rgb=mix(diffuseColor.rgb,trim.rgb*frameContact,trim.a*archDetail*(1.-reveal));
             litWindow=glassAmt*step(.64,tone)*mix(.3,1.,tone);
             reliefWeight*=1.-trim.a;
+          }
+          // A rain-wetted porous wall stays rough; it must never become a
+          // mirror or darken the glazing and doors composited above. The base
+          // follows the measured street grade and eaves shelter the wall.
+          bool porous=index<1.5||index==3.||index==4.||index==7.;
+          if(porous&&uFacadeWetness>.001){
+            float run=.5+.5*sin(vArchXZ.x*.67+vArchXZ.y*.49+sin(above*.19));
+            float splash=1.-smoothstep(.16,1.05,localHeight);
+            float shelter=smoothstep(.14,.70,eave);
+            float dampWall=clamp(uFacadeWetness,0.,1.)*archDetail*(1.-joineryCover)*
+              (.28+.28*run+.36*splash)*shelter;
+            diffuseColor.rgb*=1.-.22*dampWall;
+            archRough=mix(archRough,max(.46,archRough*.71),dampWall);
+            reliefWeight*=1.-.18*dampWall;
           }
         }
       }

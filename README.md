@@ -2,6 +2,14 @@
 
 Atlas patrimonial y paisajístico de Sagunto, Puerto de Sagunto y su costa en Three.js, con **32 lugares explorables** sobre cartografía real. Reúne monumentos, arqueología, memoria industrial, costa y paisajes en seis ámbitos territoriales, con visitas documentadas y vistas históricas.
 
+## Visitas en orden y recorrido guiado
+
+La numeración es común al Atlas y al Simulador: **1–16 Sagunto**, **17–25 Puerto de Sagunto** y **26–32 costa y paisajes**. El catálogo muestra esos tres grupos y mantiene los números al buscar o filtrar. Los enlaces a monumentos y sus paradas conservan sus identificadores.
+
+En **Simulador → Recorrido territorial**, se puede elegir todo el territorio o una de las tres zonas. Cada lugar tiene un encuadre y 14 segundos de observación. Los desplazamientos próximos aceleran y frenan suavemente; los traslados largos usan un fundido identificado y preparan el destino antes de descubrirlo. Se puede pausar, volver, avanzar o terminar para explorar. El recorrido se pausa al consultar el mapa, abrir ajustes o cambiar de pestaña, y termina al llegar al último lugar. [Comportamiento y validación](docs/RECORRIDO_GUIADO.md)
+
+La revisión conserva las mejoras visuales de Sites 45: ambientes despejado, cubierto y posterior a la lluvia, humedad de superficies, luces locales y respuesta del agua en los dos motores. [Alcance y comprobaciones](research/realism-2026-11-26.md)
+
 ## La Glorieta · Plaza del Cronista Chabret
 
 La visita recorre el paseo de Sagunto en **24 paradas**. Desde el jardín de José Romeu se llega a la fuente, la pérgola y los juegos, al frente del Mercado Municipal, la biblioteca y el auditorio, y a los arcos y el reloj del Ayuntamiento. Tiene plano seleccionable, comparación con la configuración anterior a 2009, 16 hitos históricos y una sección arqueológica del sondeo III. [Entrar en la Glorieta](https://saguntum-atlas-3d.monmode.chatgpt.site/#glorieta) · [Explorar en el simulador](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador/glorieta/glorieta-romeu) · [Fuentes, modelo y validación](docs/GLORIETA.md)
