@@ -1,8 +1,8 @@
-# Castillo de Sagunto — documentación de la visita V7
+# Castillo de Sagunto — documentación de la visita V50
 
-Fecha de revisión: 19 de noviembre de 2026. Alcance: exclusivamente el castillo, sus siete recintos y los elementos internos necesarios para comprenderlo. Datos de publicación: `dist/assets/data/castle-visit.json`.
+Fecha de revisión: 26 de noviembre de 2026. Alcance: exclusivamente el castillo, sus siete recintos y los elementos internos necesarios para comprenderlo. Datos de publicación: `dist/assets/data/castle-visit.json`.
 
-La visita contiene **18 paradas, 72 hechos con referencias, 14 hitos y 24 fuentes**. Se ha construido como una lectura de restos y documentos, no como la restitución íntegra de una única fase. El nombre editorial es «Castillo de Sagunto», sin atribuir carácter romano a toda la fortificación.
+La visita contiene **18 paradas, 72 hechos con referencias, 15 hitos y 29 fuentes**. Se ha construido como una lectura de restos y documentos, no como la restitución íntegra de una única fase. El nombre editorial es «Castillo de Sagunto», sin atribuir carácter romano a toda la fortificación.
 
 ## Criterio histórico y espacial
 
@@ -21,20 +21,42 @@ Una fuente oficial sirve para su ámbito de competencia, pero no elimina la nece
 
 - **Fecha del asedio de Aníbal:** se emplea 219 a. C.; 218 corresponde al inicio de la segunda guerra púnica. La discusión cronológica aparece en Pérez Vilatela, 2013 [cronologia-2013].
 - **Orientación del foro:** curia al noreste y basílica al oeste. La planta del Plan Director, hoja 80, coincide en esto con la síntesis de Aranegui de 2004. Se descarta una orientación meridional de la curia aparecida en una guía divulgativa [aranegui-2004; plan-director-2000].
+- **Terraza central del foro:** la fotografía y la planta publicadas permiten reconocer una explanada aterrazada, pero no aportan su cota actual exacta. La corrección final del modelo nivela sólo el polígono central existente mediante una altura estimada del borde sur/oriental del MDT y una transición de 4 m. No convierte esa estimación en dato arqueológico ni extiende la nivelación a las excavaciones del templo y de la basílica [plan-director-2000; foto-ricsol-2022].
 - **Templo republicano:** se distinguen los restos excavados y el alzado propuesto. La dedicación a una divinidad concreta no se da por demostrada [templo-aranegui-1991].
 - **Dos cisternas diferentes:** la gran estructura meridional del foro y el depósito excavado en 1983 en su límite septentrional tienen fichas separadas. Las medidas interiores publicadas no convierten la cubierta en una columnata exterior [civera-cisternas-2007; cisterna-norte-1984].
 - **Inscripción del foro:** el foco indica contexto, no la posición original exacta de cada bloque. La revisión de los manuscritos de Conyngham corresponde a una investigación de 2017 [cebrian-conyngham-2017].
 - **Nombres y fases:** los topónimos actuales son referencias para orientarse. Ni San Fernando ni Ciudadela, por ejemplo, equivalen a una fase arqueológica completa. El repertorio de nombres históricos puede variar entre autores.
-- **Estado reciente:** se distinguen la consolidación de 2023–2025 y el nuevo Plan Director anunciado en febrero de 2026. No se presenta este último como trabajo terminado [ayto-2026].
+- **Estado reciente:** se distinguen la consolidación de 2023–2025, la descripción municipal de los caminos ejecutados en noviembre de 2025 y las mejoras anunciadas en febrero de 2026. Los anuncios no se convierten en obra terminada [ayto-caminos-2025; ayto-2026].
+- **Torre de Ciudadela:** el edificio cuadrado se identifica mediante el inventario de telegrafía del IPCE, no como una torre romana completa. La fecha asignada al edificio conservado, 1849–1850, se distingue de la noticia de una instalación anterior en 1838 [ipce-telegrafia; arse-obras-2019].
+- **Nueve Pilares:** se incorporan la fotografía, las mediciones y el croquis de Civera. Documentan una estructura cubierta con nueve apoyos; no justifican dibujar nueve columnas al aire libre ni resolver por sí solos su origen [civera-cisternas-2007].
 
 - **Puerta de Almenara:** la fotografía de obra de SERANCO, p. 43, confirma el arco apuntado y los dos óculos trilobulados. Este contraste fundamenta la forma visible del modelo, no una medición exacta ni la atribución cronológica de todos sus paramentos [seranco-2019].
 
 ### Documentación cartográfica prioritaria
 
-1. **Plan Director de 2000:** planta del foro en hoja 80; anatomía de recintos en hojas 110–112; serie de planos del estado existente tras el índice de la página 143. Los documentos posteriores del mismo PDF contienen propuestas, que no deben confundirse con obra ejecutada [plan-director-2000].
+1. **Plan Director de 2000:** planta del foro en hoja 80 y anatomía de recintos en hojas 110–112. El índice enumera planos generales, plantas acotadas y alzados, pero su enumeración no acredita que esas láminas estén reproducidas en el PDF consultado. Se corrige la afirmación de V7 de que aparecían después de la página 143: allí continúan índice y bibliografía. Los documentos posteriores contienen también propuestas, que no se confunden con obra ejecutada [plan-director-2000].
 2. **FORTMED 2020:** figura 3, ortofoto general y siete recintos; figuras 7–9, documentación de lienzos; figura 10, Puerta de Almenara. El trabajo de campo es de 2019. Esta consulta no supone haber obtenido ni incorporado su nube de puntos [fortmed-2020].
 3. **Archivo Municipal:** planos militares originales de 1810–1813. El plano del sitio catalogado por Defensa se publicó después del episodio que representa [archivo-obras-xix; defensa-plano-1811].
 4. **OSM del proyecto:** se conserva como base de plantas y focos. Las alturas aproximadas o procedentes de otras capas deben conservar su procedencia independiente.
+
+## Comparación visual de estados históricos y recientes
+
+La revisión de 2026 utiliza imágenes de varias fechas para reconocer pérdidas, reconstrucciones y permanencias. No combina todos sus detalles en un supuesto estado único del castillo. Las imágenes ajenas se enlazan desde Fuentes; no se incorporan como texturas ni se redistribuyen con la aplicación.
+
+| Documento visual | Fecha del estado representado | Qué aporta | Límite de uso |
+|---|---|---|---|
+| Planos militares españoles y franceses, SHD GR 1 VM 248 y GR 1 VN 105 | 1810–1813, según cada documento | Organización defensiva, frentes occidentales y proyectos militares | Distinguir proyecto de ejecución y original de edición posterior; crédito del archivo |
+| Jean Laurent, *El castillo visto desde uno de sus patios* | 1870, según la ficha de la fotografía | Sucesión de muros, recintos escalonados y edificios vistos desde Armas | Perspectiva histórica; no proporciona alzados métricos ni el estado actual |
+| Gómez Durán, *Castell de Sagunt: porta* | Publicada el 12 de abril de 1908 | Estado de un portal y su fábrica a comienzos del siglo XX | La ficha no nombra la puerta; no se usa para sustituir el arco apuntado documentado de Almenara |
+| Civera, fotografía y notas de campo de Nueve Pilares | Publicadas en 2007 | Nueve apoyos interiores, arcos, bóvedas y planta medida | Fechas de origen propuestas por el autor requieren contraste arqueológico |
+| Inventario IPCE de telegrafía, registro L2_32 | Proyecto de 2012 | Identificación, planta y pérdidas de la torre cuadrada de Ciudadela | No se dispone aquí de un levantamiento completo de su alzado |
+| FORTMED, fotografías, ortofoto y fotogrametría | Trabajo de campo de 2019, publicación de 2020 | Recintos, lienzos de Armas y del Palacio del Gobernador, elementos de Almenara | Consulta documental; no importación de una nube de puntos |
+| Reportaje de Castillos Ricsol | Publicación de 2022; mezcla tomas anteriores, con algunas fechadas en 2000 y 2016 | Muros escalonados, coronaciones selectivas, cubiertas y torre telegráfica | No se atribuye 2022 a todas las tomas; anterior a las obras de 2025 |
+| Información municipal sobre itinerarios | Noviembre de 2025 | Materiales descritos de caminos ejecutados y cambios respecto al proyecto | Es una descripción fechada; no acredita la ejecución de mejoras anunciadas después |
+
+La fotografía de Laurent y la de Gómez Durán se descargaron e inspeccionaron durante esta revisión. Las dos fichas de Commons las identifican como obras en dominio público. La publicación de Gómez Durán se localiza además en la Hemeroteca Digital de la BNE. La comparación de imágenes no basta para identificar una puerta cuyo nombre no figura en el registro.
+
+Para las formas que cambian la silueta se han priorizado la documentación de campo y las fotografías próximas: la torre telegráfica se conserva sin cubierta, y las coronaciones almenadas se concentran en tramos concretos. La existencia de merlones en una fotografía no permite extenderlos automáticamente a toda la muralla ni fechar todos sus paños en una misma época. Los volúmenes de modelo efectivamente implementados se detallan en `research/castle-model.md`.
 
 ## Coordenadas y contrato de navegación
 
@@ -65,7 +87,7 @@ Las coordenadas se expresan como longitud/latitud WGS84. Los puntos OSM son refe
 
 La Puerta de Almenara se sitúa en la intersección entre el paso cartografiado `way/733215257` y el lienzo `way/733215258`. La curia se contrasta con `way/733215272` y `way/733215273`. Las tabernae orientales tienen trazas nominales `way/1419350908` a `way/1419350914`; no se han inventado fachadas comerciales a partir de esos nombres.
 
-La cisterna norte mantiene deliberadamente un **foco de sector**. Carecemos en esta iteración de una huella inequívoca georreferenciada. El Antiquarium se encuadra por su edificio actual, sin reconstruir una exposición interior. Los usos antiguos del inventario militar no se transforman en objetos contemporáneos dentro de la escena.
+La cisterna norte mantiene deliberadamente un **foco de sector**. Carecemos en esta iteración de una huella inequívoca georreferenciada. La parada de Conejera tampoco añade una envolvente inventada para Nueve Pilares: sus medidas interiores enriquecen la documentación, pero no fijan por sí solas la posición y cota de una cubierta en la malla. El Antiquarium se encuadra por su edificio actual, sin reconstruir una exposición interior. Los usos antiguos del inventario militar no se transforman en objetos contemporáneos dentro de la escena.
 
 ## Límites y siguientes pasos de precisión
 
@@ -77,21 +99,23 @@ No se convierten en certezas la fecha propuesta de un aljibe, la identificación
 
 ## Fuentes y localizadores
 
-Los IDs siguientes corresponden a `sourceIds` en cada hecho y cada hito. La bibliografía conserva la fecha del estudio; una fecha de carga o actualización informática no la sustituye.
+Los IDs siguientes corresponden a las referencias de las fichas, hechos, hitos y geometría. Se conserva la fecha del documento o se explica expresamente cuándo el año corresponde a una publicación digital.
 
 ### plan-director-2000
 
 [Plan Director del Castillo de Sagunto: conocimiento del bien y estado de conservación](https://aytosagunto.es/media/b1qd4rn2/plan-director-del-castillo_-web.pdf). INTEINCO / Ministerio de Educación, Cultura y Deporte. 2000. plan técnico.
 
-Documento 1, hojas 110–112; planos generales y recintos 2.1–2.7
+Documento 1, hojas 75–80: foro; hojas 110–112: recintos. El índice cita láminas generales que no se dan por examinadas.
 
 Documento histórico fechado en 2000. La fecha informática del PDF no es su fecha de redacción; no representa por sí solo el estado de 2026.
 
 ### archivo-obras-xix
 
-[Intervenciones en el Castillo, siglo XIX](https://aytosagunto.es/es/ayuntamiento/areas-y-servicios/archivo-municipal/documentos-digitalizados/intervenciones-en-el-castillo-s-xix/). Archivo Municipal de Sagunto. sin fecha de edición indicada. archivo institucional.
+[Intervenciones en el Castillo, siglo XIX](https://aytosagunto.es/es/ayuntamiento/areas-y-servicios/archivo-municipal/documentos-digitalizados/intervenciones-en-el-castillo-s-xix/). Archivo Municipal de Sagunto. 2026. archivo institucional.
 
 Planos de 1810–1813, originales del Service Historique de la Défense, Vincennes; GR 1 VM 248 y GR 1 VN 105
+
+Difusión municipal de facsímiles anunciada el 13 de febrero de 2026. Las fechas 1810–1813 corresponden a los documentos, no a su publicación digital. Crédito del fondo: © Service Historique de la Défense, Vincennes, con la signatura de cada plano.
 
 ### arse-obras-2019
 
@@ -205,17 +229,17 @@ Distingue obras ejecutadas en 2023–2025 de nuevos trabajos y planes anunciados
 
 ### fortmed-2020
 
-[Técnicas digitales para el estudio del Patrimonio Defensivo: Puerta de Almenara y lienzos sur del Palacio del Gobernador y Plaza de Armas](https://doi.org/10.4995/FORTMED2020.2020.11387). Álvaro Sánchez Corrochano, Enrique Martínez Sierra, Alessandro Greco y Daniela Besana. 2020. levantamiento arquitectónico.
+[Técnicas digitales para el estudio del Patrimonio Defensivo: Puerta de Almenara y lienzos sur del Palacio del Gobernador y Plaza de Armas](https://riunet.upv.es/server/api/core/bitstreams/be75bcef-e0c5-40b7-a0ee-07a2003e9627/content). Álvaro Sánchez Corrochano, Enrique Martínez Sierra, Alessandro Greco y Daniela Besana. 2020. levantamiento arquitectónico.
 
 Defensive Architecture of the Mediterranean X, pp. 455–462; figs. 3, 7–10
 
-Levantamiento fotogramétrico de 2019. Copia: https://www.academia.edu/67929397/T%C3%A9cnicas_digitales_para_el_estudio_del_Patrimonio_Defensivo_Puerta_de_Almenara_y_lienzos_sur_del_Palacio_del_Gobernador_y_Plaza_de_Armas_del_Castillo_de_Sagunto_Valencia_
+DOI 10.4995/FORTMED2020.2020.11387. Trabajo de campo de 2019; fig. 3, ortofoto y recintos; figs. 7–9, lienzos; fig. 10, hoja de madera de la puerta. La publicación no aporta aquí una nube de puntos reutilizada por el modelo.
 
 ### civera-cisternas-2007
 
-[Les cisternes del Castell de Sagunt](https://www.centroarqueologicosaguntino.es/uploads/descargas/339_010_les_cisternes_del_castell.pdf). Manuel Civera i Gómez. 2007. inventario y medición de campo.
+[Les cisternes del Castell de Sagunt](https://centroarqueologicosaguntino.es/wp-content/uploads/2018/09/339_010_les_cisternes_del_castell.pdf). Manuel Civera i Gómez. 2007. inventario y medición de campo.
 
-ARSE 41, pp. 149–186; cisterna del foro, pp. 175 y 179; Estudiantes, p. 178
+ARSE 41, pp. 149–186; Nueve Pilares: foto p. 173, medidas p. 174 y croquis p. 177; cisterna del foro, pp. 175 y 179; Estudiantes, p. 178
 
 Se utilizan las mediciones y observaciones directas. Las dataciones tipológicas generales del autor no se convierten en certezas arqueológicas.
 
@@ -239,16 +263,60 @@ Plantas y puntos para navegación; los atributos cartográficos no verifican por
 
 [Nuevas mejoras en el Conjunto Monumental de Sagunto: proyecto del antiguo Museo Militar](https://ivc.gva.es/es/escena/cultura-impulsa-la-ampliacion-del-aforo-del-teatro-romano-y-nuevas-mejoras-en-el-conjunto-monumental-de-sagunto). Generalitat Valenciana / Institut Valencià de Cultura. 2026. información institucional.
 
-4 de mayo de 2026; apartado Museo Militar. Informa de un proyecto en redacción; no acredita la apertura de los servicios propuestos.
+4 de mayo de 2026; apartado Museo Militar
+
+Informa de un proyecto en redacción; no acredita la apertura de los servicios propuestos.
 
 ### seranco-2019
 
 [Dossier SERANCO 2019: Puerta de Almenara del Castillo de Sagunto](https://seranco.es/wp-content/uploads/2019/07/Dossier-SERANCO-2019.pdf). SERANCO, empresa constructora. 2019. documentación fotográfica de obra.
 
-Página 43 (página 43 del PDF), fotografía inferior titulada Puerta de Almenara Castillo de Sagunto. La fotografía documenta el arco apuntado y los dos óculos trilobulados visibles. No es un alzado métrico ni determina la fecha de cada fábrica. El año corresponde al dossier, no a una fecha de toma fotográfica verificada.
+Página 43 (página 43 del PDF), fotografía inferior titulada Puerta de Almenara Castillo de Sagunto
 
-## Verificación del paquete
+La fotografía documenta el arco apuntado y los dos óculos trilobulados visibles. No es un alzado métrico ni determina la fecha de cada fábrica. El año corresponde al dossier, no a una fecha de toma fotográfica verificada.
 
-Comprobación estructural: 18 IDs únicos de parada, siete IDs de recinto, cuatro hechos por parada, 14 hitos y referencias de hechos/hitos resueltas dentro de las 24 fuentes. Se revisaron las orientaciones principales y la separación de los depósitos de agua. No se trasladaron horarios ni supuestas condiciones actuales de acceso desde documentación antigua.
+### ipce-telegrafia
 
-Las síntesis están redactadas para la visita y no reproducen párrafos de las fuentes. No se han copiado las imágenes, ortofotos ni planos de terceros como recursos de la aplicación; su consulta fundamenta la interpretación y la documentación. Las licencias de los datos cartográficos existentes mantienen su atribución propia.
+[Estudio de la Red de Telegrafía Óptica en España: Castillo de Muviedro](https://www.cultura.gob.es/planes-nacionales/dam/jcr%3Aacb2cbc4-d388-4f43-86c7-353b0aa89a45/telegrafia-optica-esp.pdf). Enrique Capdevila Montes, con la colaboración de Paula Slepoy Benites / IPCE. 2012. inventario arquitectónico de campo.
+
+Registro L2_32, línea Madrid–Barcelona. Proyecto de noviembre de 2012, según la ficha oficial del IPCE.
+
+Cronología 1849/1850; coordenadas 39,676237, −0,281978; planta 5,7 × 5,7 m. Describe fábrica mixta de mampostería y ladrillo, vanos norte/sur, testeros este/oeste macizos y pérdida de cubierta y coronación. Ficha del proyecto: https://www.cultura.gob.es/planes-nacionales/gl/planes-nacionales/patrimonio-industrial/actuaciones/red-telegrafia-optica.html
+
+### ayto-caminos-2025
+
+[Descripción municipal de los itinerarios peatonales ejecutados en el castillo](https://aytosagunto.es/es/actualidad/2025-11-10-el-ayuntamiento-de-sagunto-pide-que-se-finalicen-las-obras-en-el-castillo-conforme-a-lo-establecido-en-la-autorizacion-patrimonial-y-arqueologica/). Ayuntamiento de Sagunto. 2025. información técnica institucional.
+
+10 de noviembre de 2025; extracto del informe municipal sobre las obras y la reapertura de abril de 2025.
+
+Describe bastidores de madera con revestimiento metálico, grava de canto rodado sobre geotextil y elementos transversales. Es una descripción fechada de la obra ejecutada; el proyecto de mejora anunciado en febrero de 2026 no se da por terminado.
+
+### foto-laurent-1870
+
+[El castillo visto desde uno de sus patios](https://commons.wikimedia.org/wiki/File:1870._El_castillo_visto_desde_uno_de_sus_patios.jpg). Jean Laurent. 1870. fotografía histórica.
+
+Fotografía de Laurent, fechada en 1870 por la ficha de Wikimedia Commons; vista desde el sector de Armas.
+
+Imagen inspeccionada para comparar la sucesión de recintos, muros y edificios del siglo XIX. No se emplea como levantamiento métrico ni como estado actual. La ficha identifica la obra como dominio público.
+
+### foto-gomez-duran-1908
+
+[Castell de Sagunt: porta](https://commons.wikimedia.org/wiki/File:Castell_de_Sagunt_-_1908_-_Porta.jpg). Gómez Durán / Ilustració Catalana. 1908. fotografía histórica.
+
+Ilustració Catalana, n.º 254, segunda época, 12 de abril de 1908. Original: https://hemerotecadigital.bne.es/issue.vm?id=0001410947&search=&lang=en
+
+Imagen inspeccionada: portal y fábrica conservados a comienzos del siglo XX. La ficha no identifica la puerta por su nombre; no se atribuye automáticamente a Almenara ni se usa para sustituir su arco documentado. La ficha de Commons la identifica como dominio público.
+
+### foto-ricsol-2022
+
+[Castillo de Sagunto: recorrido fotográfico por sus recintos](https://castillosricsol.es/castillo-de-sagunto/). Ricardo / Castillos Ricsol. 2022. reportaje fotográfico.
+
+Publicado el 6 de marzo de 2022; incluye imágenes con fechas de toma anteriores, entre ellas 2000 y 2016.
+
+Se contrastan siluetas, cambios de cota y volúmenes visibles. La fecha de publicación no fecha cada fotografía ni acredita el estado posterior a las obras de 2025. Se enlaza el reportaje; sus fotografías no se redistribuyen en la aplicación.
+
+## Verificación del paquete V50
+
+`research/validation-v50/validate-castle-guide.mjs` contrasta el JSON, los focos de la geometría distribuida y el catálogo territorial real contra identificadores y huellas de la versión previa. El informe `castle-guide-qa.json` registra **53 comprobaciones superadas**: 18 paradas, siete recintos, 72 hechos, 15 hitos y 29 fuentes, con 169 referencias resueltas. Se conservan los 32 destinos globales, el castillo como visita 15 y el contenido semántico de las otras 31 visitas.
+
+La validación comprueba integridad de referencias y consistencia del marco de navegación, no precisión topográfica ni la vigencia de todos los enlaces remotos. Las comprobaciones de arquitectura, cámaras e integración con el Simulador se documentan por separado en `research/castle-model.md` y en los informes V50.

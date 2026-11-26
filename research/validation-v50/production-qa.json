@@ -1,0 +1,93 @@
+{
+  "pass": true,
+  "checkedAt": "2026-11-26T18:34:46.237Z",
+  "scope": "Published interface and 2D fallback; model geometry, terrain and cameras verified separately by CPU",
+  "url": "https://saguntum-atlas-3d.monmode.chatgpt.site/#castle/ciudadela",
+  "siteVersion": 50,
+  "versionId": "appgprj_6afeb5aaef8c8191b0062318fb3a24f1~appgver_2b90370f5b4c819181dfb5d51013d410",
+  "deploymentId": "appgdep_6b087aaeba988191a5bde54516fbec63",
+  "deploymentStatus": "succeeded",
+  "deploymentUpdatedAt": "2026-11-26T18:30:35.604907+00:00",
+  "sourceCommit": "f765f4a96948d6c045813b5f94adab39e2782f07",
+  "distTree": "b0218207c2bdafcc2837a87738e56615d8441f21",
+  "archive": {
+    "files": 1633,
+    "bytes": 267868160,
+    "sha256": "28081bcf04e315f2696ff836dec8723b07ce0b36967f83f3c3f3714105ddaf49"
+  },
+  "browser": {
+    "title": "SAGUNTUM · Sagunto y Puerto de Sagunto",
+    "mode": "2D fallback",
+    "webglVisualVerification": false,
+    "observedMessage": "Mapa 2D · El navegador no pudo abrir un contexto WebGL 2.",
+    "consoleEvidence": "THREE.WebGLRenderer could not create a context: GL_VENDOR = Disabled, GL_RENDERER = Disabled. Browser extension metadata errors were also recorded."
+  },
+  "checks": [
+    {
+      "name": "Territorial homepage and castle visit number",
+      "pass": true,
+      "observed": "32 lugares · 6 ámbitos; Castillo de Sagunto · Visita 15 · 18 paradas · 7 recintos"
+    },
+    {
+      "name": "New castle introduction",
+      "pass": true,
+      "observed": "Recorre la cresta, atraviesa sus puertas y reconoce las ruinas del foro, las defensas escalonadas y la torre telegráfica."
+    },
+    {
+      "name": "Published source links",
+      "pass": true,
+      "observed": 29,
+      "including": [
+        "Plan Director 2000",
+        "Military drawings of 1810–1813",
+        "IPCE telegraph inventory 2012",
+        "Municipal paths report 2025",
+        "Jean Laurent 1870",
+        "Gómez Durán 1908",
+        "Ricardo photographic report published in 2022"
+      ]
+    },
+    {
+      "name": "Hide and reopen visit information",
+      "pass": true,
+      "observed": "Ocultar información de la visita → Mostrar información de la visita → restored castle overview"
+    },
+    {
+      "name": "Start visit",
+      "pass": true,
+      "observed": "Parada 1 de 18 · Una fortaleza, muchas épocas",
+      "url": "https://saguntum-atlas-3d.monmode.chatgpt.site/#castle/conjunto"
+    },
+    {
+      "name": "Map selection and new Ciudadela content",
+      "pass": true,
+      "observed": "All 18 numbered stop buttons present; selected 17 Ciudadela: la altura defensiva. New telegraph tower dates, footprint, opposing openings and lost roof appear."
+    },
+    {
+      "name": "Atlas to Simulator retains stop",
+      "pass": true,
+      "url": "https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador/castle/ciudadela",
+      "selectedLabel": "17. Ciudadela: la altura defensiva",
+      "selectorOptions": 19,
+      "selectorOptionsIncludeOverview": true
+    },
+    {
+      "name": "Simulator to Atlas retains stop",
+      "pass": true,
+      "url": "https://saguntum-atlas-3d.monmode.chatgpt.site/#castle/ciudadela",
+      "observed": "Parada 17 de 18 · Ciudadela: la altura defensiva"
+    }
+  ],
+  "separateEvidence": {
+    "geometry": "castle-geometry.json",
+    "guide": "castle-guide-qa.json",
+    "cameras": "castle-cameras-qa.json",
+    "simulatorAndTerrain": "castle-simulator-qa.json",
+    "cpuRenders": "render-inspection.json"
+  },
+  "limitations": [
+    "WebGL is disabled in the verification browser. No GPU frame-rate, browser 3D rendering or hardware performance claim is made.",
+    "The six inspection renders use shipped Three.js mesh buffers and textures with Blender CPU lighting; they are not browser captures.",
+    "The forum terrace is a local visualization adjustment derived from the existing terrain, not a new archaeological elevation measurement."
+  ]
+}

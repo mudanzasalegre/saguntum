@@ -3,8 +3,8 @@
   "id": "castle",
   "title": "Castillo de Sagunto",
   "subtitle": "Siete recintos. Más de dos mil años de historia.",
-  "introduction": "Una visita al castillo completo: del foro romano a las defensas de la Edad Media y la artillería del siglo XIX. Dieciocho paradas conectan los restos visibles con excavaciones, inscripciones y documentos históricos, distinguiendo lo conocido de lo interpretado.",
-  "researchDate": "2026-11-19",
+  "introduction": "Recorre la cresta, atraviesa sus puertas y reconoce las ruinas del foro, las defensas escalonadas y la torre telegráfica. Dieciocho paradas enlazan los siete recintos con planos, excavaciones y fotografías de distintas fechas.",
+  "researchDate": "2026-11-26",
   "regions": [
     {
       "id": "armas",
@@ -70,7 +70,8 @@
       "osmId": "node/11166834500",
       "sourceIds": [
         "spain-castillo",
-        "arse-guardia-2019"
+        "arse-guardia-2019",
+        "civera-cisternas-2007"
       ],
       "stopIds": [
         "conejera"
@@ -126,14 +127,15 @@
       "aliases": [
         "Ciutadella"
       ],
-      "summary": "La altura occidental entre San Fernando y Dos de Mayo.",
+      "summary": "La altura occidental, las defensas escalonadas y la torre telegráfica del siglo XIX.",
       "coordinate": [
         -0.2818811,
         39.6763446
       ],
       "osmId": "node/11125234506",
       "sourceIds": [
-        "plan-director-2000"
+        "plan-director-2000",
+        "ipce-telegrafia"
       ],
       "stopIds": [
         "ciudadela"
@@ -175,8 +177,8 @@
         -0.2786,
         39.67615
       ],
-      "intro": "Antes de acercarte a una ruina, recorre la cresta completa. Su forma reúne una ciudad antigua, sucesivas fortificaciones y espacios transformados por la investigación y la conservación.",
-      "narrative": "Antes de acercarte a una ruina, recorre la cresta completa. Su forma reúne una ciudad antigua, sucesivas fortificaciones y espacios transformados por la investigación y la conservación.",
+      "intro": "Sigue la cresta de levante a poniente. Las plazas del foro, los muros escalonados de Estudiantes y los baluartes occidentales tienen formas diferentes porque la fortaleza fue cambiando durante siglos.",
+      "narrative": "Sigue la cresta de levante a poniente. Las plazas del foro, los muros escalonados de Estudiantes y los baluartes occidentales tienen formas diferentes porque la fortaleza fue cambiando durante siglos.",
       "facts": [
         {
           "text": "El cerro del Castell se sitúa en la margen derecha del Palancia y permite relacionar visualmente la costa con el corredor hacia el interior.",
@@ -207,13 +209,15 @@
           "confidence": "documented"
         }
       ],
-      "lookFor": "Compara la plataforma regular del foro con la cresta, las torres y los baluartes. Cada forma responde a necesidades diferentes.",
+      "lookFor": "Compara las terrazas del foro con los muros que suben hacia Ciudadela. La fotografía de Laurent de 1870 permite reconocer una etapa anterior del mismo conjunto.",
       "modelNote": "La maqueta combina trazas cartográficas y volúmenes interpretados. Una muralla conservada no recibe automáticamente una fecha romana.",
       "sourceIds": [
         "fortmed-2020",
         "mapa-castell",
         "cronologia-2013",
-        "archivo-obras-xix"
+        "archivo-obras-xix",
+        "foto-laurent-1870",
+        "foto-ricsol-2022"
       ],
       "confidence": "documented",
       "coordinateConfidence": "approximate",
@@ -236,8 +240,8 @@
         -0.277215,
         39.675965
       ],
-      "intro": "Cruzar este umbral sirve para aprender a separar la arquitectura antigua de la forma en que fue presentada después. La visita comienza por esa lectura de las capas visibles.",
-      "narrative": "Cruzar este umbral sirve para aprender a separar la arquitectura antigua de la forma en que fue presentada después. La visita comienza por esa lectura de las capas visibles.",
+      "intro": "La entrada reúne una puerta de la fortaleza, el antiguo Museo Militar y restos del extremo de la basílica romana. Acércate a sus encuentros para distinguir ruinas bajas, edificios todavía en pie y caminos acondicionados.",
+      "narrative": "La entrada reúne una puerta de la fortaleza, el antiguo Museo Militar y restos del extremo de la basílica romana. Acércate a sus encuentros para distinguir ruinas bajas, edificios todavía en pie y caminos acondicionados.",
       "facts": [
         {
           "text": "La entrada principal se abre al oeste del foro, en la Plaza de Armas.",
@@ -268,13 +272,15 @@
           "confidence": "documented"
         }
       ],
-      "lookFor": "Observa el encuentro entre el acceso, el volumen del antiguo museo y los restos bajos de la basílica.",
+      "lookFor": "Relaciona el portal de entrada, el frente del antiguo museo y los restos de la basílica. Después sigue el itinerario que cruza Armas hacia el interior.",
       "modelNote": "El edificio del siglo XX se diferencia de las ruinas. Los recorridos virtuales no certifican la apertura física de cada estancia.",
       "sourceIds": [
         "plan-director-2000",
         "arse-obras-2019",
         "ivc-2026",
-        "ayto-2026"
+        "ayto-2026",
+        "ayto-caminos-2025",
+        "foto-gomez-duran-1908"
       ],
       "confidence": "documented",
       "coordinateConfidence": "approximate",
@@ -297,8 +303,8 @@
         -0.27658,
         39.676
       ],
-      "intro": "Imagina este espacio como una plaza cívica que debía ordenar edificios, personas y mensajes públicos. Acércate después a sus bordes para entender el trabajo necesario para sostenerla.",
-      "narrative": "Imagina este espacio como una plaza cívica que debía ordenar edificios, personas y mensajes públicos. Acércate después a sus bordes para entender el trabajo necesario para sostenerla.",
+      "intro": "El foro ocupa una plataforma ganada a la ladera. Recorre el espacio central y sus bordes: al norte se sitúa el templo republicano, al noreste la curia, al oeste la basílica y al sur la gran cisterna.",
+      "narrative": "El foro ocupa una plataforma ganada a la ladera. Recorre el espacio central y sus bordes: al norte se sitúa el templo republicano, al noreste la curia, al oeste la basílica y al sur la gran cisterna.",
       "facts": [
         {
           "text": "La gran transformación del sector pertenece a época de Augusto y se relaciona con la organización municipal de Saguntum.",
@@ -329,12 +335,15 @@
           "confidence": "documented"
         }
       ],
-      "lookFor": "Busca la relación entre el pavimento, los pórticos y los contrafuertes del lado norte.",
+      "lookFor": "Observa cómo los muros de contención sostienen la plaza y cómo las habitaciones bajas definen sus bordes. Las ruinas permiten reconocer la planta de edificios que perdieron su alzado.",
       "modelNote": "La lectura antigua destaca componentes identificados, sin convertir todos los muros de la Plaza de Armas en una única fase augustea.",
       "sourceIds": [
         "foro-terrazas-1998",
         "mapa-castell",
-        "cebrian-epigrafia-2003"
+        "cebrian-epigrafia-2003",
+        "plan-director-2000",
+        "foto-laurent-1870",
+        "foto-ricsol-2022"
       ],
       "confidence": "documented",
       "coordinateConfidence": "approximate",
@@ -357,8 +366,8 @@
         -0.2767,
         39.67637
       ],
-      "intro": "La plaza imperial conservó un foco religioso anterior. Esta parada permite leer lo que la planta demuestra y separar esa evidencia de las propuestas sobre su fachada y su dedicación.",
-      "narrative": "La plaza imperial conservó un foco religioso anterior. Esta parada permite leer lo que la planta demuestra y separar esa evidencia de las propuestas sobre su fachada y su dedicación.",
+      "intro": "El templo republicano ocupaba el borde norte antes de la gran plaza imperial. Su podio y su división interior son las claves para reconocerlo entre restos de otras fases.",
+      "narrative": "El templo republicano ocupaba el borde norte antes de la gran plaza imperial. Su podio y su división interior son las claves para reconocerlo entre restos de otras fases.",
       "facts": [
         {
           "text": "El estudio arqueológico identifica un templo del siglo II a. C. en el lado norte del centro cívico, anterior al foro de época imperial.",
@@ -389,7 +398,7 @@
           "confidence": "disputed"
         }
       ],
-      "lookFor": "Observa la división interior del podio y su posición respecto a la plaza y a la curia.",
+      "lookFor": "Localiza el podio, la división de sus espacios y su relación con la curia. La fachada con columnas pertenece a propuestas de restitución, no a lo que hoy permanece en pie.",
       "modelNote": "Se conserva la lectura de los restos y su planta. Las partes desaparecidas no se presentan como una reproducción exacta.",
       "sourceIds": [
         "templo-aranegui-1991"
@@ -477,8 +486,8 @@
         -0.27695,
         39.67594
       ],
-      "intro": "Mira primero la planta y después su apoyo sobre la ladera. La palabra basílica designa aquí un edificio civil romano, relacionado con la administración de justicia y la actividad pública.",
-      "narrative": "Mira primero la planta y después su apoyo sobre la ladera. La palabra basílica designa aquí un edificio civil romano, relacionado con la administración de justicia y la actividad pública.",
+      "intro": "En el lado occidental del foro, la basílica civil se apoyaba en una estructura que absorbía el desnivel. Sus restos se entrecruzan con construcciones posteriores del acceso.",
+      "narrative": "En el lado occidental del foro, la basílica civil se apoyaba en una estructura que absorbía el desnivel. Sus restos se entrecruzan con construcciones posteriores del acceso.",
       "facts": [
         {
           "text": "La basílica ocupa el lado occidental del foro; la propuesta de planta mide unos cuarenta por veinte metros.",
@@ -509,7 +518,7 @@
           "confidence": "documented"
         }
       ],
-      "lookFor": "Relaciona el rectángulo del edificio con los muros que absorben el desnivel hacia el norte.",
+      "lookFor": "Sigue los muros bajos y su continuación hacia el borde de la terraza. Compara esa huella arqueológica con el volumen cerrado del antiguo Museo Militar.",
       "modelNote": "Se muestran las trazas arqueológicas y su relación con el acceso moderno; no se ha supuesto una fachada completa ni decoración interior conservada.",
       "sourceIds": [
         "aranegui-2004",
@@ -839,8 +848,8 @@
         -0.2765862,
         39.676737
       ],
-      "intro": "Este espacio abre una lectura del castillo menos monumental: reserva, agua y abastecimiento. Sigue el borde norte para relacionar la plaza con el relieve exterior.",
-      "narrative": "Este espacio abre una lectura del castillo menos monumental: reserva, agua y abastecimiento. Sigue el borde norte para relacionar la plaza con el relieve exterior.",
+      "intro": "El recinto norte conserva la memoria del abastecimiento del castillo. Su gran cisterna recibe el nombre de Nueve Pilares por los apoyos interiores que sostienen arcos y bóvedas.",
+      "narrative": "El recinto norte conserva la memoria del abastecimiento del castillo. Su gran cisterna recibe el nombre de Nueve Pilares por los apoyos interiores que sostienen arcos y bóvedas.",
       "facts": [
         {
           "text": "Conejera o Conillera ocupa el sector al norte de Armas y Almenara.",
@@ -850,9 +859,9 @@
           "confidence": "documented"
         },
         {
-          "text": "La ficha de Turespaña destaca en su ángulo norte el aljibe conocido por sus nueve pilares.",
+          "text": "Civera midió una planta ligeramente trapezoidal de 18,72 y 18,56 metros de longitud, por 14,52 de anchura; su croquis distribuye nueve pilares en tres filas.",
           "sourceIds": [
-            "spain-castillo"
+            "civera-cisternas-2007"
           ],
           "confidence": "documented"
         },
@@ -871,13 +880,14 @@
           "confidence": "interpretive"
         }
       ],
-      "lookFor": "Relaciona el espacio abierto, el depósito y el enlace con Armas: el abastecimiento también condicionaba la defensa.",
-      "modelNote": "No se etiqueta el aljibe automáticamente como romano. La cronología de las estructuras hidráulicas exige evidencia individual.",
+      "lookFor": "Recorre visualmente la explanada y el borde de la ladera. En Fuentes, el croquis y la fotografía de Civera permiten reconocer el depósito cubierto y sus nueve apoyos.",
+      "modelNote": "Foco de recinto: no se añade una envolvente del aljibe sin una huella georreferenciada inequívoca. Las medidas y la organización interior publicadas por Civera se ofrecen como documentación.",
       "sourceIds": [
         "plan-director-2000",
         "spain-castillo",
         "arse-guardia-2019",
-        "arse-obras-2019"
+        "arse-obras-2019",
+        "civera-cisternas-2007"
       ],
       "confidence": "documented",
       "coordinateConfidence": "cartographic",
@@ -963,8 +973,8 @@
         -0.2798156,
         39.6756028
       ],
-      "intro": "Para sostener una fortaleza hacían falta dependencias y servicios además de murallas. Esta parada se centra en el uso cotidiano del sector y en sus cambios de nombre.",
-      "narrative": "Para sostener una fortaleza hacían falta dependencias y servicios además de murallas. Esta parada se centra en el uso cotidiano del sector y en sus cambios de nombre.",
+      "intro": "Sigue la franja meridional desde la puerta hasta el Antiquarium. Los edificios adosados, las explanadas y los pasos entre muros muestran cómo se organizaba la vida cotidiana de la guarnición.",
+      "narrative": "Sigue la franja meridional desde la puerta hasta el Antiquarium. Los edificios adosados, las explanadas y los pasos entre muros muestran cómo se organizaba la vida cotidiana de la guarnición.",
       "facts": [
         {
           "text": "Su franja meridional ocupa unos 12.233 metros cuadrados, según el Plan Director.",
@@ -995,7 +1005,7 @@
           "confidence": "documented"
         }
       ],
-      "lookFor": "Sigue los volúmenes adosados al borde sur y compara su función de servicio con los baluartes del extremo occidental.",
+      "lookFor": "Compara el volumen actual del Antiquarium y los edificios adosados a la muralla con las defensas altas que conducen hacia Ciudadela.",
       "modelNote": "Los inventarios documentan usos de una fecha concreta. La maqueta no coloca armamento ni equipamiento histórico como si se conservaran hoy.",
       "sourceIds": [
         "plan-director-2000",
@@ -1084,8 +1094,8 @@
         -0.2803067,
         39.6760944
       ],
-      "intro": "El lado norte permite seguir la historia de puertas clausuradas y estructuras enterradas. Aquí la lectura vertical de los restos es tan importante como recorrer su superficie.",
-      "narrative": "El lado norte permite seguir la historia de puertas clausuradas y estructuras enterradas. Aquí la lectura vertical de los restos es tan importante como recorrer su superficie.",
+      "intro": "Los paños de muralla suben por la vertiente norte y enlazan las cotas bajas con Ciudadela. Las puertas antiguas y los depósitos de agua añaden otra historia bajo esa silueta escalonada.",
+      "narrative": "Los paños de muralla suben por la vertiente norte y enlazan las cotas bajas con Ciudadela. Las puertas antiguas y los depósitos de agua añaden otra historia bajo esa silueta escalonada.",
       "facts": [
         {
           "text": "El antiguo acceso medieval se encuentra en el borde norte, hacia el teatro.",
@@ -1116,12 +1126,13 @@
           "confidence": "documented"
         }
       ],
-      "lookFor": "Observa el desnivel hacia el norte y la superposición de accesos, torre y estructuras de agua.",
+      "lookFor": "Sigue los cambios de altura de la muralla y sus remates. Desde aquí se distingue la torre cuadrada de telegrafía sobre Ciudadela.",
       "modelNote": "El punto encuadra la plaza; no identifica cada tumba ni presenta una excavación completa del subsuelo.",
       "sourceIds": [
         "plan-director-2000",
         "arse-obras-2019",
-        "civera-cisternas-2007"
+        "civera-cisternas-2007",
+        "foto-ricsol-2022"
       ],
       "confidence": "documented",
       "coordinateConfidence": "cartographic",
@@ -1146,8 +1157,8 @@
         -0.2818811,
         39.6763446
       ],
-      "intro": "Subir a esta parte del recorrido ayuda a comprender el dominio visual de la fortaleza. Desde aquí, observa cómo los recintos centrales se subordinan a las posiciones más elevadas.",
-      "narrative": "Subir a esta parte del recorrido ayuda a comprender el dominio visual de la fortaleza. Desde aquí, observa cómo los recintos centrales se subordinan a las posiciones más elevadas.",
+      "intro": "La altura de Ciudadela permite dominar las plazas centrales y el extremo de Dos de Mayo. La torre cuadrada conservada añade una función posterior: transmitir mensajes por telegrafía óptica en el siglo XIX.",
+      "narrative": "La altura de Ciudadela permite dominar las plazas centrales y el extremo de Dos de Mayo. La torre cuadrada conservada añade una función posterior: transmitir mensajes por telegrafía óptica en el siglo XIX.",
       "facts": [
         {
           "text": "Entre San Fernando y Dos de Mayo, Ciudadela conserva los emplazamientos de Hércules y del Penó.",
@@ -1164,27 +1175,30 @@
           "confidence": "documented"
         },
         {
-          "text": "El inventario de 1882 distribuye aquí ciento dieciséis fusiles entre dependencias de tropa y la estancia del horno de pan.",
+          "text": "El inventario del IPCE fecha la torre telegráfica conservada en 1849–1850 y registra una planta de 5,7 × 5,7 metros, con puertas y ventanas al norte y al sur.",
           "sourceIds": [
-            "arse-guardia-2019"
+            "ipce-telegrafia"
           ],
           "confidence": "documented"
         },
         {
-          "text": "En 1838 se documenta una instalación telegráfica en Ciudadela.",
+          "text": "La torre ha perdido la cubierta y parte del piso superior. La noticia de una instalación telegráfica en 1838 es anterior a la cronología que el IPCE asigna al edificio conservado.",
           "sourceIds": [
+            "ipce-telegrafia",
             "arse-obras-2019"
           ],
           "confidence": "documented"
         }
       ],
-      "lookFor": "Relaciona el punto alto con el foso de Dos de Mayo y con las plazas de San Fernando y Estudiantes.",
-      "modelNote": "Se representan las masas conservadas y trazadas. Las torres citadas en documentos no se convierten automáticamente en torres completas de una misma época.",
+      "lookFor": "Busca la torre de mampostería y ladrillo, sus vanos en caras opuestas y la coronación incompleta. Compara su planta cuadrada con los quiebros y terrazas de las defensas.",
+      "modelNote": "La torre telegráfica se identifica con el registro L2_32 del IPCE, de planta 5,7 × 5,7 m. Su altura residual y el detalle de la fábrica se aproximan mediante fotografías; no se restituyen la cubierta ni el mecanismo perdido.",
       "sourceIds": [
         "plan-director-2000",
         "archivo-obras-xix",
         "arse-guardia-2019",
-        "arse-obras-2019"
+        "arse-obras-2019",
+        "ipce-telegrafia",
+        "foto-ricsol-2022"
       ],
       "confidence": "documented",
       "coordinateConfidence": "cartographic",
@@ -1209,8 +1223,8 @@
         -0.2831876,
         39.6768604
       ],
-      "intro": "El recorrido termina en el extremo donde el castillo afrontaba uno de sus accesos más comprometidos. Lee el baluarte, las bóvedas y el foso como piezas de un sistema.",
-      "narrative": "El recorrido termina en el extremo donde el castillo afrontaba uno de sus accesos más comprometidos. Lee el baluarte, las bóvedas y el foso como piezas de un sistema.",
+      "intro": "El recorrido termina en el frente occidental, donde las superficies para artillería, las dependencias abovedadas y el foso forman un sistema defensivo. Los planos militares ayudan a comprender cómo se transformó durante la guerra de 1811.",
+      "narrative": "El recorrido termina en el frente occidental, donde las superficies para artillería, las dependencias abovedadas y el foso forman un sistema defensivo. Los planos militares ayudan a comprender cómo se transformó durante la guerra de 1811.",
       "facts": [
         {
           "text": "El parte de Andriani describe un ataque rechazado durante la noche del 27 al 28 de septiembre de 1811 y menciona la batería del Dos de Mayo.",
@@ -1241,13 +1255,14 @@
           "confidence": "documented"
         }
       ],
-      "lookFor": "Compara las superficies aptas para artillería con los pasos, almacenes y desniveles que las protegían.",
+      "lookFor": "Sigue la forma angular del baluarte, la diferencia de cota de sus plataformas y su separación respecto a Ciudadela. Compárala con los planos españoles y franceses del archivo.",
       "modelNote": "La lectura moderna se limita a defensas identificables. La cartografía histórica se usa como documento de una fase, sin borrar reparaciones y pérdidas posteriores.",
       "sourceIds": [
         "gazeta-1811",
         "arse-guardia-2019",
         "archivo-obras-xix",
-        "defensa-plano-1811"
+        "defensa-plano-1811",
+        "foto-ricsol-2022"
       ],
       "confidence": "documented",
       "coordinateConfidence": "cartographic",
@@ -1371,6 +1386,17 @@
       "confidence": "documented"
     },
     {
+      "id": "telegrafia-optica",
+      "date": "1849–1850",
+      "title": "La torre de telegrafía óptica",
+      "text": "El inventario del IPCE fecha en estos años la torre cuadrada conservada en Ciudadela, perteneciente a la línea Madrid–Barcelona.",
+      "sourceIds": [
+        "ipce-telegrafia"
+      ],
+      "period": "modern",
+      "confidence": "documented"
+    },
+    {
       "id": "guarnicion",
       "date": "1882–1886",
       "title": "La fortaleza cotidiana",
@@ -1424,8 +1450,8 @@
       "url": "https://aytosagunto.es/media/b1qd4rn2/plan-director-del-castillo_-web.pdf",
       "type": "plan técnico",
       "year": 2000,
-      "accessed": "2026-11-19",
-      "locator": "Documento 1, hojas 110–112; planos generales y recintos 2.1–2.7",
+      "accessed": "2026-11-26",
+      "locator": "Documento 1, hojas 75–80: foro; hojas 110–112: recintos. El índice cita láminas generales que no se dan por examinadas.",
       "note": "Documento histórico fechado en 2000. La fecha informática del PDF no es su fecha de redacción; no representa por sí solo el estado de 2026."
     },
     {
@@ -1434,9 +1460,10 @@
       "author": "Archivo Municipal de Sagunto",
       "url": "https://aytosagunto.es/es/ayuntamiento/areas-y-servicios/archivo-municipal/documentos-digitalizados/intervenciones-en-el-castillo-s-xix/",
       "type": "archivo institucional",
-      "year": null,
-      "accessed": "2026-11-19",
-      "locator": "Planos de 1810–1813, originales del Service Historique de la Défense, Vincennes; GR 1 VM 248 y GR 1 VN 105"
+      "year": 2026,
+      "accessed": "2026-11-26",
+      "locator": "Planos de 1810–1813, originales del Service Historique de la Défense, Vincennes; GR 1 VM 248 y GR 1 VN 105",
+      "note": "Difusión municipal de facsímiles anunciada el 13 de febrero de 2026. Las fechas 1810–1813 corresponden a los documentos, no a su publicación digital. Crédito del fondo: © Service Historique de la Défense, Vincennes, con la signatura de cada plano."
     },
     {
       "id": "arse-obras-2019",
@@ -1609,22 +1636,22 @@
       "id": "fortmed-2020",
       "title": "Técnicas digitales para el estudio del Patrimonio Defensivo: Puerta de Almenara y lienzos sur del Palacio del Gobernador y Plaza de Armas",
       "author": "Álvaro Sánchez Corrochano, Enrique Martínez Sierra, Alessandro Greco y Daniela Besana",
-      "url": "https://doi.org/10.4995/FORTMED2020.2020.11387",
+      "url": "https://riunet.upv.es/server/api/core/bitstreams/be75bcef-e0c5-40b7-a0ee-07a2003e9627/content",
       "type": "levantamiento arquitectónico",
       "year": 2020,
-      "accessed": "2026-11-19",
+      "accessed": "2026-11-26",
       "locator": "Defensive Architecture of the Mediterranean X, pp. 455–462; figs. 3, 7–10",
-      "note": "Levantamiento fotogramétrico de 2019. Copia: https://www.academia.edu/67929397/T%C3%A9cnicas_digitales_para_el_estudio_del_Patrimonio_Defensivo_Puerta_de_Almenara_y_lienzos_sur_del_Palacio_del_Gobernador_y_Plaza_de_Armas_del_Castillo_de_Sagunto_Valencia_"
+      "note": "DOI 10.4995/FORTMED2020.2020.11387. Trabajo de campo de 2019; fig. 3, ortofoto y recintos; figs. 7–9, lienzos; fig. 10, hoja de madera de la puerta. La publicación no aporta aquí una nube de puntos reutilizada por el modelo."
     },
     {
       "id": "civera-cisternas-2007",
       "title": "Les cisternes del Castell de Sagunt",
       "author": "Manuel Civera i Gómez",
-      "url": "https://www.centroarqueologicosaguntino.es/uploads/descargas/339_010_les_cisternes_del_castell.pdf",
+      "url": "https://centroarqueologicosaguntino.es/wp-content/uploads/2018/09/339_010_les_cisternes_del_castell.pdf",
       "type": "inventario y medición de campo",
       "year": 2007,
-      "accessed": "2026-11-19",
-      "locator": "ARSE 41, pp. 149–186; cisterna del foro, pp. 175 y 179; Estudiantes, p. 178",
+      "accessed": "2026-11-26",
+      "locator": "ARSE 41, pp. 149–186; Nueve Pilares: foto p. 173, medidas p. 174 y croquis p. 177; cisterna del foro, pp. 175 y 179; Estudiantes, p. 178",
       "note": "Se utilizan las mediciones y observaciones directas. Las dataciones tipológicas generales del autor no se convierten en certezas arqueológicas."
     },
     {
@@ -1670,6 +1697,61 @@
       "accessed": "2026-11-19",
       "locator": "Página 43 (página 43 del PDF), fotografía inferior titulada Puerta de Almenara Castillo de Sagunto",
       "note": "La fotografía documenta el arco apuntado y los dos óculos trilobulados visibles. No es un alzado métrico ni determina la fecha de cada fábrica. El año corresponde al dossier, no a una fecha de toma fotográfica verificada."
+    },
+    {
+      "id": "ipce-telegrafia",
+      "title": "Estudio de la Red de Telegrafía Óptica en España: Castillo de Muviedro",
+      "author": "Enrique Capdevila Montes, con la colaboración de Paula Slepoy Benites / IPCE",
+      "url": "https://www.cultura.gob.es/planes-nacionales/dam/jcr%3Aacb2cbc4-d388-4f43-86c7-353b0aa89a45/telegrafia-optica-esp.pdf",
+      "type": "inventario arquitectónico de campo",
+      "year": 2012,
+      "accessed": "2026-11-26",
+      "locator": "Registro L2_32, línea Madrid–Barcelona. Proyecto de noviembre de 2012, según la ficha oficial del IPCE.",
+      "note": "Cronología 1849/1850; coordenadas 39,676237, −0,281978; planta 5,7 × 5,7 m. Describe fábrica mixta de mampostería y ladrillo, vanos norte/sur, testeros este/oeste macizos y pérdida de cubierta y coronación. Ficha del proyecto: https://www.cultura.gob.es/planes-nacionales/gl/planes-nacionales/patrimonio-industrial/actuaciones/red-telegrafia-optica.html"
+    },
+    {
+      "id": "ayto-caminos-2025",
+      "title": "Descripción municipal de los itinerarios peatonales ejecutados en el castillo",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/es/actualidad/2025-11-10-el-ayuntamiento-de-sagunto-pide-que-se-finalicen-las-obras-en-el-castillo-conforme-a-lo-establecido-en-la-autorizacion-patrimonial-y-arqueologica/",
+      "type": "información técnica institucional",
+      "year": 2025,
+      "accessed": "2026-11-26",
+      "locator": "10 de noviembre de 2025; extracto del informe municipal sobre las obras y la reapertura de abril de 2025.",
+      "note": "Describe bastidores de madera con revestimiento metálico, grava de canto rodado sobre geotextil y elementos transversales. Es una descripción fechada de la obra ejecutada; el proyecto de mejora anunciado en febrero de 2026 no se da por terminado."
+    },
+    {
+      "id": "foto-laurent-1870",
+      "title": "El castillo visto desde uno de sus patios",
+      "author": "Jean Laurent",
+      "url": "https://commons.wikimedia.org/wiki/File:1870._El_castillo_visto_desde_uno_de_sus_patios.jpg",
+      "type": "fotografía histórica",
+      "year": 1870,
+      "accessed": "2026-11-26",
+      "locator": "Fotografía de Laurent, fechada en 1870 por la ficha de Wikimedia Commons; vista desde el sector de Armas.",
+      "note": "Imagen inspeccionada para comparar la sucesión de recintos, muros y edificios del siglo XIX. No se emplea como levantamiento métrico ni como estado actual. La ficha identifica la obra como dominio público."
+    },
+    {
+      "id": "foto-gomez-duran-1908",
+      "title": "Castell de Sagunt: porta",
+      "author": "Gómez Durán / Ilustració Catalana",
+      "url": "https://commons.wikimedia.org/wiki/File:Castell_de_Sagunt_-_1908_-_Porta.jpg",
+      "type": "fotografía histórica",
+      "year": 1908,
+      "accessed": "2026-11-26",
+      "locator": "Ilustració Catalana, n.º 254, segunda época, 12 de abril de 1908. Original: https://hemerotecadigital.bne.es/issue.vm?id=0001410947&search=&lang=en",
+      "note": "Imagen inspeccionada: portal y fábrica conservados a comienzos del siglo XX. La ficha no identifica la puerta por su nombre; no se atribuye automáticamente a Almenara ni se usa para sustituir su arco documentado. La ficha de Commons la identifica como dominio público."
+    },
+    {
+      "id": "foto-ricsol-2022",
+      "title": "Castillo de Sagunto: recorrido fotográfico por sus recintos",
+      "author": "Ricardo / Castillos Ricsol",
+      "url": "https://castillosricsol.es/castillo-de-sagunto/",
+      "type": "reportaje fotográfico",
+      "year": 2022,
+      "accessed": "2026-11-26",
+      "locator": "Publicado el 6 de marzo de 2022; incluye imágenes con fechas de toma anteriores, entre ellas 2000 y 2016.",
+      "note": "Se contrastan siluetas, cambios de cota y volúmenes visibles. La fecha de publicación no fecha cada fotografía ni acredita el estado posterior a las obras de 2025. Se enlaza el reportaje; sus fotografías no se redistribuyen en la aplicación."
     }
   ],
   "methodology": [
@@ -1679,7 +1761,7 @@
     "Los colores históricos sólo distinguen componentes identificados. Una plaza o un lienzo de cronología mixta conserva esa condición aunque se seleccione una época.",
     "Las coordenadas de recintos proceden del extracto OSM del proyecto. Los focos de edificios se contrastan con las plantas publicadas; su posición sirve a la navegación, no a mediciones arqueológicas.",
     "La cisterna del flanco norte tiene un foco de sector aproximado. La inscripción del foro se trata como contexto epigráfico, sin fijar artificialmente la posición original de cada fragmento.",
-    "Los inventarios militares describen fechas concretas del pasado. La documentación del año 2000, la fotogrametría de 2019 y las noticias de 2026 no se mezclan como si fueran un único levantamiento actual.",
+    "Los planos militares de 1810–1813, las fotografías históricas de 1870 y 1908, el Plan Director de 2000, el inventario del IPCE de 2012 y la fotogrametría de 2019 documentan estados diferentes. Las fotografías reunidas en una página de 2022 no se fechan todas en ese año.",
     "La conservación reciente se diferencia de los planes anunciados. La visita virtual no garantiza accesibilidad física, apertura de interiores ni exposición actual de todas las piezas mencionadas."
   ],
   "readingLegend": [

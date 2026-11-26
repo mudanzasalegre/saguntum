@@ -38,6 +38,11 @@ export function heritageRelief(id,sites,frame,place,heightAt,sample){
  }
  const theatre=sites.theatre?.group?.userData.surfaceHeight;
  if(theatre)expand(place,58);
+ const castle=sites.castle?.group?.userData.ground;
+ if(castle){
+  const b=castle.bounds;
+  for(const x of [b.minX,b.maxX])for(const z of [b.minZ,b.maxZ])expand(frame.world(x,z),3);
+ }
  if(!Number.isFinite(left))return {cuts};
  const bounds=[Math.floor(left/10)*10,Math.floor(top/10)*10,Math.ceil(right/10)*10,Math.ceil(bottom/10)*10];
  const width=Math.min(193,Math.ceil((bounds[2]-bounds[0])/1.25)+1),height=Math.min(193,Math.ceil((bounds[3]-bounds[1])/1.25)+1);
@@ -46,7 +51,8 @@ export function heritageRelief(id,sites,frame,place,heightAt,sample){
  for(let j=0;j<height;j++)for(let i=0;i<width;i++){
   const x=bounds[0]+(bounds[2]-bounds[0])*i/(width-1),z=bounds[1]+(bounds[3]-bounds[1])*j/(height-1);
   const raw=heightAt(x,z),lx=((x-frame.tx)*frame.d-(z-frame.tz)*frame.b)/det,lz=((z-frame.tz)*frame.a-(x-frame.tx)*frame.c)/det;
-  delta[j*width+i]=(theatre?theatre(lx,lz,raw):adjust(lx,lz))-raw;
+  const ground=theatre?theatre(lx,lz,raw):adjust(lx,lz);
+  delta[j*width+i]=(castle?castle.surfaceHeight(lx,lz,ground):ground)-raw;
  }
  return {cuts,bounds,width,height,delta};
 }

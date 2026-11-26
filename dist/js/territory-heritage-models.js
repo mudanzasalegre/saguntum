@@ -5,6 +5,7 @@ import {heritageRelief,reliefDelta} from './territory-heritage-relief.js';
 import {heightOnPavement,sampleAtlasPavement,samplePublicDeck} from './territory-heritage-paving.js';
 import {prepareWalkingBarriers,sampleHeritageBarriers} from './territory-collision-heritage.js';
 import {instantiateAtlasVisit,preloadAtlasVisit} from './territory-heritage-registry.js';
+import {createCastleGround} from './castle-ground.js';
 
 // Each table entry addresses the original geometry constructor, including
 // sectional interiors and original texture generation. Only one site is built
@@ -274,6 +275,8 @@ export async function buildHeritageModel(id,{places,records,area,heightAt,projec
  const sample=(x,z)=>{const p=frame.world(x,z);return heightAt(p.x,p.z);};
  const record=records[primary];
  const options={heightAt:sample,project:atlasProject,records,data:area,record,site:record};
+ const castleGround=id==='castle'?createCastleGround({heightAt:sample,project:atlasProject}):null;
+ if(castleGround)options.heightAt=castleGround.sample;
  const get=async(name,key)=>{options[key]=await documentData(name,false);};
  const requests=[loadFactory(),loadAtlasContext(id)];
  if(!archiveOnly.has(id)){
@@ -301,6 +304,7 @@ export async function buildHeritageModel(id,{places,records,area,heightAt,projec
  const made=module[func](options);
  const sites=made.sites||{[id]:made.isObject3D?{group:made}:made};
  const local=made.isObject3D?made:made.group;
+ if(castleGround)local.userData.ground=castleGround;
  if(id==='berenguer'&&made.dianaSite){
   sites.diana=made.dianaSite;
   local.attach(made.dianaSite.group);
@@ -377,6 +381,18 @@ export async function buildHeritageModel(id,{places,records,area,heightAt,projec
  if(id==='castle'||id==='theatre'){
   for(const ref of module[id+'BuildingIds']||[])claims[0].ids.add(String(ref).replace(/^cat-/,''));
   if(id==='theatre')claims[0].rings.push(maskRing(area.theatrePolygon.map(c=>project(...c))));
+ }
+ if(id==='castle'){
+  // Use the castle's actual path and step faces to suppress only overlapping
+  // generic road fragments and to keep the visitor on the same walking level.
+  // The archaeological and natural ground outside these paths remains intact.
+  const routeSurface=mesh=>mesh.isMesh&&
+   (mesh.userData.component==='caminos'&&mesh.userData.materialKind==='path'||
+    mesh.userData.component==='escalones'&&mesh.userData.materialKind==='ashlar');
+  pavement=sampleAtlasPavement({group:outer},null,routeSurface);
+  const visit=sites.castle.group.userData.visit;
+  contextStats={id,paths:module.castleRoadIds?.size||0,mappedBuildings:visit.stats.mappedBuildings,
+   pavingAreaM2:Math.round((pavement?.coverage||0)*(pavement?.metres||0)**2)};
  }
  if(id==='theatre'&&sites.theatre.group.userData.environs){
   const environs=sites.theatre.group.userData.environs;

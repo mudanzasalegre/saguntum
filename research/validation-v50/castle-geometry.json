@@ -1,0 +1,494 @@
+{
+  "pass": true,
+  "buildMs": 1091.7396709999994,
+  "groundBinding": {
+    "assembly": "Sacred/civic/archaeological patches + urban ground + final terrain mesh + deferred castle construction",
+    "scope": "Same local castle inputs as buildRegion(sagunto); distant Glorieta omitted from CPU context"
+  },
+  "stats": {
+    "perimeterSource": "OpenStreetMap, polygon in cartography.json",
+    "elevationSource": "Supplied rendered terrain sampler; architectural heights are visual estimates",
+    "perimeterVertices": 272,
+    "perimeterLengthM": 2225.205128985826,
+    "wallWayCount": 61,
+    "wallLengthM": 4185.138000324025,
+    "duplicateSegmentsSkipped": 273,
+    "outsideSegmentsSkipped": 122,
+    "gates": [
+      {
+        "id": "acceso",
+        "coordinates": [
+          -0.277222,
+          39.6759601
+        ],
+        "width": 3.3,
+        "height": 4.65,
+        "depth": 3.7,
+        "opening": true,
+        "planConfidence": "OSM path / wall intersection",
+        "elevationConfidence": "interpretive"
+      },
+      {
+        "id": "puerta-almenara",
+        "coordinates": [
+          -0.2762665022,
+          39.676214945
+        ],
+        "width": 3.15,
+        "height": 5.2,
+        "depth": 6.4,
+        "opening": true,
+        "form": "pointed arch, two trefoil oculi, folded timber leaves",
+        "planConfidence": "OSM path / wall intersection",
+        "elevationConfidence": "photographic form; interpreted dimensions"
+      },
+      {
+        "id": "puerta-san-fernando",
+        "coordinates": [
+          -0.2780262,
+          39.6759438
+        ],
+        "width": 3.05,
+        "height": 4.35,
+        "depth": 3.5,
+        "opening": true,
+        "planConfidence": "OSM path / wall intersection",
+        "elevationConfidence": "interpretive"
+      }
+    ],
+    "routeSegments": 1919,
+    "routeLengthM": 2025.3509805935398,
+    "mappedBuildings": 10,
+    "romanWallWays": 24,
+    "periods": [
+      "ancient",
+      "medieval",
+      "modern",
+      "unknown"
+    ],
+    "interpretiveDimensions": true,
+    "undergroundReconstruction": false,
+    "sourceKeys": [
+      "plan-director-2000",
+      "cisterna-norte-1984",
+      "fortmed-2020",
+      "civera-cisternas-2007",
+      "osm-castillo",
+      "templo-aranegui-1991",
+      "seranco-2019",
+      "foto-ricsol-2022",
+      "ipce-telegrafia"
+    ],
+    "detail": "full",
+    "triangles": 83047,
+    "meshes": 107
+  },
+  "checks": [
+    {
+      "pass": true,
+      "label": "Deferred castle construction is idempotent"
+    },
+    {
+      "pass": true,
+      "label": "All 18 stable stop IDs resolve"
+    },
+    {
+      "pass": true,
+      "label": "Seven visitor precincts have geometry"
+    },
+    {
+      "pass": true,
+      "label": "Every model source resolves in the published guide"
+    },
+    {
+      "pass": true,
+      "label": "Duplicate OSM perimeter edges are not extruded again"
+    },
+    {
+      "pass": true,
+      "label": "Identified forum foundations retain their 24 mapped ways"
+    },
+    {
+      "pass": true,
+      "label": "The shared context can exclude all 20 roads and ten buildings"
+    },
+    {
+      "pass": true,
+      "label": "Every geometry attribute is finite"
+    },
+    {
+      "pass": true,
+      "label": "Mapped route triangles consistently face upward"
+    },
+    {
+      "pass": true,
+      "label": "Surface material kinds are available to the Simulator ground mask"
+    },
+    {
+      "pass": true,
+      "label": "Floor vertices use the final terrain mesh rather than the raw elevation grid"
+    },
+    {
+      "pass": true,
+      "label": "Route and floor triangle centers remain above the final terrain"
+    },
+    {
+      "pass": true,
+      "label": "Mapped buildings are supported above the highest footprint ground"
+    },
+    {
+      "pass": true,
+      "label": "Defensive walls remain anchored into local ground"
+    },
+    {
+      "pass": true,
+      "label": "acceso: open portals pass all nine rays across the curtain"
+    },
+    {
+      "pass": true,
+      "label": "puerta-almenara: open portals pass all nine rays across the curtain"
+    },
+    {
+      "pass": true,
+      "label": "Almenara retains two real trefoil oculi"
+    },
+    {
+      "pass": true,
+      "label": "puerta-san-fernando: open portals pass all nine rays across the curtain"
+    },
+    {
+      "pass": true,
+      "label": "Optical telegraph north-south faces at 1.2 m match the documented openings"
+    },
+    {
+      "pass": true,
+      "label": "Optical telegraph north-south faces at 4.03 m match the documented openings"
+    },
+    {
+      "pass": true,
+      "label": "Optical telegraph east-west faces at 1.2 m match the documented openings"
+    },
+    {
+      "pass": true,
+      "label": "Optical telegraph east-west faces at 4.03 m match the documented openings"
+    },
+    {
+      "pass": true,
+      "label": "The optical telegraph tower has no invented covering roof"
+    },
+    {
+      "pass": true,
+      "label": "Surviving merlon arrow slits are actual holes through their geometry"
+    },
+    {
+      "pass": true,
+      "label": "Pitched roof triangles face upward and stay inside their irregular mapped footprints"
+    },
+    {
+      "pass": true,
+      "label": "Covered cisterns remain covered; no invented exposed colonnade"
+    },
+    {
+      "pass": true,
+      "label": "South cistern dimensions remain separate from the northern cisterns"
+    },
+    {
+      "pass": true,
+      "label": "Visit selection conjunto"
+    },
+    {
+      "pass": true,
+      "label": "Visit selection acceso"
+    },
+    {
+      "pass": true,
+      "label": "Visit selection foro"
+    },
+    {
+      "pass": true,
+      "label": "Visit selection templo"
+    },
+    {
+      "pass": true,
+      "label": "Visit selection curia"
+    },
+    {
+      "pass": true,
+      "label": "Visit selection basilica"
+    },
+    {
+      "pass": true,
+      "label": "Visit selection cisterna-foro"
+    },
+    {
+      "pass": true,
+      "label": "Visit selection cisterna-norte"
+    },
+    {
+      "pass": true,
+      "label": "Visit selection inscripcion"
+    },
+    {
+      "pass": true,
+      "label": "Visit selection puerta-almenara"
+    },
+    {
+      "pass": true,
+      "label": "Visit selection almenara"
+    },
+    {
+      "pass": true,
+      "label": "Visit selection conejera"
+    },
+    {
+      "pass": true,
+      "label": "Visit selection puerta-san-fernando"
+    },
+    {
+      "pass": true,
+      "label": "Visit selection san-fernando"
+    },
+    {
+      "pass": true,
+      "label": "Visit selection antiquarium"
+    },
+    {
+      "pass": true,
+      "label": "Visit selection estudiantes"
+    },
+    {
+      "pass": true,
+      "label": "Visit selection ciudadela"
+    },
+    {
+      "pass": true,
+      "label": "Visit selection dos-mayo"
+    },
+    {
+      "pass": true,
+      "label": "All selections and period readings restore their complete material and texture"
+    },
+    {
+      "pass": true,
+      "label": "Compact regional context uses the same castle plans"
+    },
+    {
+      "pass": true,
+      "label": "Atlas and regional instances never share disposable materials"
+    },
+    {
+      "pass": true,
+      "label": "Atlas and regional instances never share disposable textures"
+    },
+    {
+      "pass": true,
+      "label": "Distinct original fabric textures are self contained and have no external image dependency"
+    }
+  ],
+  "errors": [],
+  "terrainComparisons": {
+    "maximumVertexError": 1.3072876114961218e-14,
+    "minimumCentroidClearance": 0.03316334897345996,
+    "buriedCentroids": 0,
+    "triangles": 25315
+  },
+  "gateResults": [
+    {
+      "id": "acceso",
+      "total": 9,
+      "clear": 9,
+      "hits": [],
+      "openOculi": 0
+    },
+    {
+      "id": "puerta-almenara",
+      "total": 9,
+      "clear": 9,
+      "hits": [],
+      "openOculi": 2
+    },
+    {
+      "id": "puerta-san-fernando",
+      "total": 9,
+      "clear": 9,
+      "hits": [],
+      "openOculi": 0
+    }
+  ],
+  "towerRays": [
+    {
+      "axis": "north-south",
+      "level": 1.2,
+      "hit": false,
+      "expectedHit": false
+    },
+    {
+      "axis": "north-south",
+      "level": 4.03,
+      "hit": false,
+      "expectedHit": false
+    },
+    {
+      "axis": "east-west",
+      "level": 1.2,
+      "hit": true,
+      "expectedHit": true
+    },
+    {
+      "axis": "east-west",
+      "level": 4.03,
+      "hit": true,
+      "expectedHit": true
+    }
+  ],
+  "roofs": {
+    "triangles": 23,
+    "outsideSamples": 0,
+    "downwardTriangles": 0
+  },
+  "crowns": {
+    "count": 252,
+    "slitCount": 167,
+    "clearSlits": 167
+  },
+  "buildings": [
+    {
+      "id": "cat-3555856YJ3935N_part1-0",
+      "component": "edificio-cat-3555856YJ3935N_part1-0",
+      "base": 132.08,
+      "top": 137.33,
+      "eaveHeight": 135.78,
+      "terrainMaximum": 132,
+      "period": "modern",
+      "roof": {
+        "type": "pitched",
+        "ridgeHeight": 137.33,
+        "axis": {
+          "x": -0.9826132344165129,
+          "z": 0.1856642979937679
+        },
+        "source": "foto-ricsol-2022",
+        "elevation": "visual-estimate"
+      }
+    },
+    {
+      "id": "82897960",
+      "component": "edificio-82897960",
+      "base": 132.08,
+      "top": 137.63000000000002,
+      "eaveHeight": 136.08,
+      "terrainMaximum": 132,
+      "period": "modern",
+      "roof": {
+        "type": "pitched",
+        "ridgeHeight": 137.63000000000002,
+        "axis": {
+          "x": -0.23869736219854573,
+          "z": -0.9710940064069269
+        },
+        "source": "foto-ricsol-2022",
+        "elevation": "visual-estimate"
+      }
+    },
+    {
+      "id": "180732338",
+      "component": "antiquarium",
+      "base": 139.9289701120952,
+      "top": 144.39897011209518,
+      "eaveHeight": 143.27897011209518,
+      "terrainMaximum": 139.84897011209517,
+      "period": "modern",
+      "roof": {
+        "type": "pitched",
+        "ridgeHeight": 144.39897011209518,
+        "axis": {
+          "x": 0.9700333710119297,
+          "z": -0.2429717249459949
+        },
+        "source": "foto-ricsol-2022",
+        "elevation": "visual-estimate"
+      }
+    },
+    {
+      "id": "733215254",
+      "component": "edificio-733215254",
+      "base": 143.27307176560726,
+      "top": 148.27307176560726,
+      "eaveHeight": 148.27307176560726,
+      "terrainMaximum": 143.19307176560724,
+      "period": "unknown",
+      "roof": {
+        "type": "flat",
+        "ridgeHeight": 148.27307176560726,
+        "source": "mapped-current-footprint"
+      }
+    },
+    {
+      "id": "733219600",
+      "component": "edificio-733219600",
+      "base": 147.98187422611986,
+      "top": 152.98187422611986,
+      "eaveHeight": 152.98187422611986,
+      "terrainMaximum": 147.90187422611984,
+      "period": "unknown",
+      "roof": {
+        "type": "flat",
+        "ridgeHeight": 152.98187422611986,
+        "source": "mapped-current-footprint"
+      }
+    },
+    {
+      "id": "1199456167",
+      "component": "edificio-1199456167",
+      "base": 122.55685647688284,
+      "top": 126.65685647688284,
+      "eaveHeight": 126.65685647688284,
+      "terrainMaximum": 122.47685647688284,
+      "period": "modern",
+      "roof": {
+        "type": "flat",
+        "ridgeHeight": 126.65685647688284,
+        "source": "mapped-current-footprint"
+      }
+    }
+  ],
+  "features": [
+    {
+      "id": "templo-cellae",
+      "count": 3,
+      "source": "plan-director-2000",
+      "condition": "surviving-low-foundations",
+      "footprint": "approximate-plan-alignment"
+    },
+    {
+      "id": "telegrafo",
+      "coordinate": [
+        -0.281978,
+        39.676237
+      ],
+      "width": 5.7,
+      "depth": 5.7,
+      "base": 168.0031560538029,
+      "bodyHeight": 5.8,
+      "roof": false,
+      "openings": [
+        "north-door",
+        "south-door",
+        "north-window",
+        "south-window"
+      ],
+      "blindFaces": [
+        "east",
+        "west"
+      ],
+      "orientation": "approximately-cardinal",
+      "source": "ipce-telegrafia",
+      "heightConfidence": "photographic-estimate"
+    }
+  ],
+  "limitations": [
+    "Footprints are mapped; curtain elevations, merlon dimensions and roof slopes remain photographic estimates.",
+    "Historical drawings document lost configurations and are not shown as the current fabric.",
+    "The model is not a photogrammetric survey and does not establish a physically accessible walking route."
+  ]
+}

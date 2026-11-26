@@ -1,5 +1,24 @@
 # Sincronización de Sites a GitHub
 
+## Versión 50 · Castillo, recintos y entorno
+
+El 26 de noviembre de 2026 se publicó la revisión documentada del Castillo de Sagunto, su relieve local y las 18 paradas de la visita. El despliegue `appgdep_6b087aaeba988191a5bde54516fbec63` terminó con estado `succeeded` en el Site original, conservando su acceso público.
+
+| Evidencia | Valor |
+| --- | --- |
+| Fuente publicada en Sites | `f765f4a96948d6c045813b5f94adab39e2782f07` |
+| Árbol Git de la aplicación `dist/` | `b0218207c2bdafcc2837a87738e56615d8441f21` |
+| Archivo registrado por Sites | 1633 archivos, 267868160 bytes |
+| Huella del contenido registrado | `sha256:28081bcf04e315f2696ff836dec8723b07ce0b36967f83f3c3f3714105ddaf49` |
+
+[Castillo publicado](https://saguntum-atlas-3d.monmode.chatgpt.site/#castle) · [Ciudadela en el Atlas](https://saguntum-atlas-3d.monmode.chatgpt.site/#castle/ciudadela) · [La misma parada en el Simulador](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador/castle/ciudadela) · [Investigación](../research/castle-history.md) · [Memoria del modelo](../research/castle-model.md)
+
+Las murallas distinguen fábricas, remates deteriorados y tramos con parapetos, adarves y merlones apoyados en las fotografías. Se incorporan aspilleras físicas, la torre telegráfica de Ciudadela y cubiertas inclinadas en tres grupos de edificios. El foro recibe una terraza de tierra y grava sobre una corrección local del relieve, preservando las excavaciones del templo y la basílica. Atlas y Simulador comparten la arquitectura, la acomodación del terreno y las superficies de caminos y escalones. Se mantienen las 32 visitas, el número 15 del Castillo, sus 18 identificadores y los siete grupos de recintos.
+
+La geometría aprobó 50 comprobaciones: 25.315 triángulos de suelo examinados, 27 rayos de pasos, dos óculos y 167 aspilleras abiertos. La guía aprobó 53 comprobaciones y enlaza 29 fuentes, 72 hechos y 15 hitos. Se verificaron 40 poses mediante el cálculo real de cámaras, los 107 lotes del adaptador del Simulador, el ajuste local de la terraza y las máscaras de caminos y colisiones. Se revisaron seis renders CPU del modelo efectivo y se registraron las huellas de fuentes e imágenes. [Evidencias y reproducción](../research/validation-v50/README.md)
+
+En la URL pública se comprobaron la portada territorial, las fuentes, la ocultación y reapertura del panel, el inicio de la visita, el plano con las 18 paradas y el enlace Atlas → Simulador → Atlas conservando Ciudadela. El navegador disponible tiene WebGL desactivado: la comprobación pública fue de interfaz y plano, sin mediciones de FPS ni validación visual GPU. El nivel de la terraza y los detalles menores siguen siendo interpretativos; no se presentan como un nuevo levantamiento arqueológico. [Registro público](../research/validation-v50/production-qa.json)
+
 ## Versión 49 · Teatro Romano y ladera
 
 El 26 de noviembre de 2026 se publicó la revisión documentada del Teatro Romano, su entorno y las 16 paradas de la visita. El despliegue `appgdep_6b086f39ea5081919b268b9c05e89004` terminó con estado `succeeded` en el Site original.

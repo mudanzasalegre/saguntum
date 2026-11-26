@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import {createCastleTexture,CASTLE_TEXTURE_METRES} from './castle-materials.js';
 
 // Present-day castle fabric. Plans: OSM / PNOA; structure identification: municipal
 // Plan Director (2000), Aranegui and FORTMED (2020). Heights are visual estimates.
@@ -11,7 +12,7 @@ export const castleBuildingIds=new Set(MAPPED_BUILDINGS.map(b=>b.id));
 
 const TAU=Math.PI*2,clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 const noise=n=>{const v=Math.sin(n*127.13+43.7)*43758.5453;return v-Math.floor(v);};
-const COLORS={stone:'#c5b597',ashlar:'#ded1b7',rubble:'#a7977d',mortar:'#80745f',paving:'#d2c6ab',path:'#c3ad87',roof:'#a99d87',tile:'#af826a',metal:'#575e55',glass:'#535f5b',wood:'#73654f'};
+const COLORS={stone:'#c7b99e',ashlar:'#dfd4bd',rubble:'#b6aa90',tapial:'#c3b08a',brick:'#bd9276',mortar:'#8e8470',paving:'#bdb39d',path:'#c7b998',roof:'#a99d87',tile:'#b88769',metal:'#575e55',glass:'#424b45',wood:'#76654a'};
 const PERIOD_COLORS={ancient:'#e1c18b',medieval:'#8ad3ca',modern:'#f0b192',unknown:'#c0cbc9'};
 const ROMAN_WALL_IDS=new Set(['733215272','733215273','733215274','733215275','733215276','733215277','733215278','733215279','733215280','733215281','733215282','733215283','733215284','733215285','733215286','1199456162','1199456163','1419350908','1419350909','1419350910','1419350911','1419350912','1419350913','1419350914']);
 // Precinct limits are a visitor-oriented segmentation of the mapped footprint,
@@ -58,17 +59,6 @@ function regionAt(x,z){
  return'armas';
 }
 function quad(out,a,b,c,d){out.push(...a,...b,...c,...a,...c,...d);}
-function stoneTexture(){
- // Original procedural limestone: no external textures, no image provenance gap.
- const w=256,h=256,bytes=new Uint8Array(w*h*4);
- for(let y=0;y<h;y++)for(let x=0;x<w;x++){
-  const row=Math.floor(y/32),xx=(x+(row%2)*31)%64,joint=y%32<2||xx<2;
-  const grain=noise(x+y*w)*.11,block=noise(Math.floor(xx/64)+Math.floor((x+(row%2)*31)/64)*17+row*43)*.17;
-  const value=joint?.52:.75+block+grain,i=(y*w+x)*4;
-  bytes[i]=Math.round(255*value);bytes[i+1]=Math.round(255*value*.975);bytes[i+2]=Math.round(255*value*.91);bytes[i+3]=255;
- }
- const texture=new THREE.DataTexture(bytes,w,h,THREE.RGBAFormat);texture.colorSpace=THREE.SRGBColorSpace;texture.wrapS=texture.wrapT=THREE.RepeatWrapping;texture.magFilter=THREE.LinearFilter;texture.minFilter=THREE.LinearMipmapLinearFilter;texture.generateMipmaps=true;texture.needsUpdate=true;texture.name='Piedra procedural propia del castillo';return texture;
-}
 class CastleBatch{
  constructor(){this.parts=new Map();this.boxGeo=new THREE.BoxGeometry(1,1,1).toNonIndexed();}
  geometry(key,geometry,matrix=new THREE.Matrix4(),tint=1){
@@ -78,8 +68,8 @@ class CastleBatch{
   for(let i=0;i<p.count;i++){
    v.fromBufferAttribute(p,i).applyMatrix4(matrix);normal.fromBufferAttribute(n,i).applyMatrix3(nm).normalize();
    out.p.push(v.x,v.y,v.z);out.n.push(normal.x,normal.y,normal.z);out.c.push(tint,tint,tint);
-   const ax=Math.abs(normal.x),ay=Math.abs(normal.y),az=Math.abs(normal.z);
-   out.uv.push((ay>ax&&ay>az?v.x:ax>az?v.z:v.x)/6,(ay>ax&&ay>az?v.z:v.y)/4);
+   const ax=Math.abs(normal.x),ay=Math.abs(normal.y),az=Math.abs(normal.z),scale=CASTLE_TEXTURE_METRES[key.split('|')[3]]||[5,4];
+   out.uv.push((ay>ax&&ay>az?v.x:ax>az?v.z:v.x)/scale[0],(ay>ax&&ay>az?v.z:v.y)/scale[1]);
   }
   if(g!==geometry)g.dispose();
  }
@@ -87,16 +77,17 @@ class CastleBatch{
  box(key,x,y,z,w,h,d,yaw=0,tint=1){if(w<=0||h<=0||d<=0)return;const m=new THREE.Matrix4().compose(new THREE.Vector3(x,y,z),new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0,1,0),yaw),new THREE.Vector3(w,h,d));this.geometry(key,this.boxGeo,m,tint);}
  cylinder(key,x,y,z,rt,rb,h,tint=1,segments=14){const g=new THREE.CylinderGeometry(rt,rb,h,segments);this.geometry(key,g,new THREE.Matrix4().makeTranslation(x,y,z),tint);g.dispose();}
  finish(group){
-  const texture=stoneTexture(),materials=[];
+  const textures=new Map(),materials=[];
+  for(const key of this.parts.keys()){const kind=key.split('|')[3];if(CASTLE_TEXTURE_METRES[kind]&&!textures.has(kind))textures.set(kind,createCastleTexture(kind));}
   for(const[key,part]of this.parts){
    const[regionId,component,period,kind]=key.split('|'),g=new THREE.BufferGeometry();
    g.setAttribute('position',new THREE.Float32BufferAttribute(part.p,3));g.setAttribute('normal',new THREE.Float32BufferAttribute(part.n,3));g.setAttribute('color',new THREE.Float32BufferAttribute(part.c,3));g.setAttribute('uv',new THREE.Float32BufferAttribute(part.uv,2));g.computeBoundingSphere();g.computeBoundingBox();
-   const material=new THREE.MeshStandardMaterial({color:COLORS[kind]||COLORS.stone,roughness:kind==='metal'?.63:kind==='glass'?.4:.96,metalness:kind==='metal'?.18:0,vertexColors:true,map:['stone','rubble','paving'].includes(kind)?texture:null});
+   const material=new THREE.MeshStandardMaterial({color:COLORS[kind]||COLORS.stone,roughness:kind==='metal'?.63:kind==='glass'?.4:.96,metalness:kind==='metal'?.18:0,vertexColors:true,map:textures.get(kind)||null});
    material.name='Castillo · '+component+' · '+kind;materials.push(material);
    const mesh=new THREE.Mesh(g,material);mesh.name='Castillo · '+component+' · '+kind;mesh.castShadow=true;mesh.receiveShadow=true;
-   mesh.userData={castleFabric:true,regionId,component,period,sourceConfidence:period==='unknown'?'cartographic-plan-undated-fabric':'identified-structure-approximate-elevation',baseColor:material.color.clone(),baseMap:material.map};group.add(mesh);
+   mesh.userData={castleFabric:true,regionId,component,period,materialKind:kind,sourceConfidence:period==='unknown'?'cartographic-plan-undated-fabric':'identified-structure-approximate-elevation',baseColor:material.color.clone(),baseMap:material.map};group.add(mesh);
   }
-  this.boxGeo.dispose();return{materials,texture};
+  this.boxGeo.dispose();return{materials,textures:[...textures.values()]};
  }
 }
 const keyFor=(region,component,period='unknown',kind='stone')=>[region,component,period,kind].join('|');
@@ -107,8 +98,8 @@ export function createCastle({project,heightAt,data={},visitData=data.castleVisi
  const outline=data.castlePolygon;
  if(!Array.isArray(outline)||outline.length<3)throw new Error('Falta la planta cartográfica del Castillo de Sagunto.');
  const world=outline.map(c=>project(...c)),group=new THREE.Group(),batch=new CastleBatch();group.name='castillo-sagunto';
- const stats={perimeterSource:'OpenStreetMap, polygon in cartography.json',elevationSource:'Supplied rendered terrain sampler; architectural heights are visual estimates',perimeterVertices:outline.length,perimeterLengthM:0,wallWayCount:0,wallLengthM:0,duplicateSegmentsSkipped:0,outsideSegmentsSkipped:0,gates:[],routeSegments:0,routeLengthM:0,mappedBuildings:0,romanWallWays:0,periods:['ancient','medieval','modern','unknown'],interpretiveDimensions:true,undergroundReconstruction:false,sourceKeys:['plan-director-2000','cisterna-norte-1984','fortmed-2020','civera-cisternas-2007','osm-castillo','templo-aranegui-1991','seranco-2019'],detail};
- const qa={surfaces:[],wallBases:[],portals:[],routes:[],floorSamples:[],buildings:[]};
+ const stats={perimeterSource:'OpenStreetMap, polygon in cartography.json',elevationSource:'Supplied rendered terrain sampler; architectural heights are visual estimates',perimeterVertices:outline.length,perimeterLengthM:0,wallWayCount:0,wallLengthM:0,duplicateSegmentsSkipped:0,outsideSegmentsSkipped:0,gates:[],routeSegments:0,routeLengthM:0,mappedBuildings:0,romanWallWays:0,periods:['ancient','medieval','modern','unknown'],interpretiveDimensions:true,undergroundReconstruction:false,sourceKeys:['plan-director-2000','cisterna-norte-1984','fortmed-2020','civera-cisternas-2007','osm-castillo','templo-aranegui-1991','seranco-2019','foto-ricsol-2022','ipce-telegrafia'],detail};
+ const qa={surfaces:[],wallBases:[],portals:[],routes:[],floorSamples:[],buildings:[],crowns:[],features:[]};
  const gateSpecs=[
   {id:'acceso',regionId:'armas',coordinate:[-.277222,39.6759601],yaw:-1.61694156,width:3.3,height:4.65,depth:3.7,top:6.8,period:'unknown',type:'segmental'},
   {id:'puerta-almenara',regionId:'almenara',coordinate:[-.2762665022,39.676214945],yaw:-1.30500565,width:3.15,height:5.2,depth:6.4,top:8.9,frontWidth:9.6,period:'unknown',type:'pointed-trefoil'},
@@ -116,17 +107,17 @@ export function createCastle({project,heightAt,data={},visitData=data.castleVisi
  ];
  const gates=gateSpecs.map(g=>{const p=project(...g.coordinate);return{...g,...p,base:heightAt(p.x,p.z)+.14,cutWidth:g.frontWidth||g.width+1.9};});
  const clippedByGate=(x,z,padding=0)=>gates.some(g=>{const dx=x-g.x,dz=z-g.z,c=Math.cos(g.yaw),s=Math.sin(g.yaw),u=dx*c-dz*s,v=dx*s+dz*c;return Math.abs(u)<g.cutWidth*.5+padding&&Math.abs(v)<g.depth*.5+1.7+padding;});
- function wall(line,{height=4.2,thickness=1.8,period='unknown',component='lienzos',seed=1,perimeter=false,regionId=null,gateCuts=true,coursed=false}={}){
+ function wall(line,{height=4.2,thickness=1.8,period='unknown',component='lienzos',seed=1,perimeter=false,regionId=null,gateCuts=true,coursed=false,fabric=null,crown=null,arcStart=0,broken=false}={}){
   for(let k=0;k<line.length-1;k++){
    const a=line[k],b=line[k+1],dx=b.x-a.x,dz=b.z-a.z,length=Math.hypot(dx,dz);if(length<.07)continue;
    const nx=-dz/length,nz=dx/length,n=Math.max(1,Math.ceil(length/1.8)),yaw=-Math.atan2(dz,dx);
    for(let j=0;j<n;j++){
     const ta=j/n,tb=(j+1)/n,pa={x:a.x+dx*ta,z:a.z+dz*ta},pb={x:a.x+dx*tb,z:a.z+dz*tb},cx=(pa.x+pb.x)/2,cz=(pa.z+pb.z)/2;
     if(gateCuts&&clippedByGate(cx,cz,.4))continue;
-    const region=regionId||regionAt(cx,cz),key=keyFor(region,component,period,height<1.5?'rubble':'stone');
+    const region=regionId||regionAt(cx,cz),kind=fabric||(height<1.5?'rubble':'stone'),key=keyFor(region,component,period,kind);
     const at=p=>{const l=heightAt(p.x+nx*thickness*.6,p.z+nz*thickness*.6),r=heightAt(p.x-nx*thickness*.6,p.z-nz*thickness*.6),center=heightAt(p.x,p.z);return{base:Math.min(l,r,center)-.35,top:Math.max(l,r,center)+height};};
     const ha=at(pa),hb=at(pb),v=[];
-    const weather=height<.3?.02:Math.min(.37,height*.10);
+    const weather=height<.3?.02:broken?Math.min(1.12,height*.32):Math.min(.32,height*.08);
     ha.top+=(noise(seed+k*71+j)-.5)*weather;hb.top+=(noise(seed+k*71+j+1)-.5)*weather;
     const p=(a,h,side,top)=>[a.x+nx*side*thickness*(top?.5:.57),top?h.top:h.base,a.z+nz*side*thickness*(top?.5:.57)];
     quad(v,p(pa,ha,1,false),p(pb,hb,1,false),p(pb,hb,1,true),p(pa,ha,1,true));
@@ -140,16 +131,55 @@ export function createCastle({project,heightAt,data={},visitData=data.castleVisi
      for(let y=base+.8;y<Math.min(ha.top,hb.top)-.4;y+=.95)for(const side of[-1,1])batch.box(keyFor(region,component,period,'mortar'),cx+nx*side*thickness*.507,y,cz+nz*side*thickness*.507,length/n*.94,.025,.025,yaw,.83);
     }
     if(height>1.5&&j%4===0&&noise(seed+j+k)>.52)batch.box(keyFor(region,component,period,'ashlar'),cx,(ha.top+hb.top)/2+.08,cz,Math.min(1.3,length/n*.9),.16,thickness*.77,yaw,.90+noise(seed+j)*.09);
-    qa.wallBases.push({x:cx,z:cz,bottom:Math.min(ha.base,hb.base),top:Math.max(ha.top,hb.top),component});
+    // The documented crenellated runs have a narrow outer parapet and a
+    // walk behind it. Other curtains deliberately retain a broken plain crown.
+    if(crown){
+     const inward=inside(cx+nx*3,cz+nz*3,world)?1:-1,outward=-inward,shift=outward*(thickness/2-.35);
+     const y=(ha.top+hb.top)/2;
+     batch.box(keyFor(region,'adarves',period,'ashlar'),cx+nx*inward*.25,y+.045,cz+nz*inward*.25,length/n+.025,.09,Math.max(.5,thickness-.75),yaw,.91);
+     const pp=[],pr=(point,h,side,upper)=>[point.x+nx*(shift+side*.34),h.top+(upper?.49:.01),point.z+nz*(shift+side*.34)];
+     quad(pp,pr(pa,ha,1,false),pr(pb,hb,1,false),pr(pb,hb,1,true),pr(pa,ha,1,true));
+     quad(pp,pr(pb,hb,-1,false),pr(pa,ha,-1,false),pr(pa,ha,-1,true),pr(pb,hb,-1,true));
+     quad(pp,pr(pa,ha,-1,true),pr(pa,ha,1,true),pr(pb,hb,1,true),pr(pb,hb,-1,true));
+     batch.raw(keyFor(region,'parapetos',period,kind),pp,.96);
+     const step=crown.spacing||1.85,start=arcStart+length*j/n,end=arcStart+length*(j+1)/n;
+     for(let along=Math.ceil(start/step)*step;along<end;along+=step){
+      const local=(along-arcStart)/length,t=clamp((along-start)/(end-start),0,1),mx=a.x+dx*local+nx*shift,mz=a.z+dz*local+nz*shift,mb=ha.top+(hb.top-ha.top)*t+.47,mh=crown.height||.87,mw=crown.width||.82;
+      if(clippedByGate(mx,mz,1)||noise(Math.round(along)*19)<(crown.loss||.10))continue;
+      const kk=keyFor(region,'merlones',period,kind),slit=crown.slits&&noise(Math.round(along)*11)>.16;
+      if(slit){
+       const opening=.12,side=(mw-opening)/2;
+       for(const sign of[-1,1])batch.box(kk,mx+Math.cos(yaw)*sign*(opening+side)/2,mb+mh/2,mz-Math.sin(yaw)*sign*(opening+side)/2,side,mh,.68,yaw,.98);
+       batch.box(kk,mx,mb+.115,mz,opening,.23,.68,yaw,.97);
+       batch.box(kk,mx,mb+mh-.13,mz,opening,.26,.68,yaw,.97);
+      }else batch.box(kk,mx,mb+mh/2,mz,mw,mh,.68,yaw,.94+noise(along)*.08);
+      batch.box(keyFor(region,'merlones',period,'ashlar'),mx,mb+mh+.025,mz,mw+.05,.05,.73,yaw,.91);
+      qa.crowns.push({x:mx,z:mz,bottom:mb,top:mb+mh,regionId:region,slit,yaw,slitCenter:mb+(.23+mh-.26)/2,source:'foto-ricsol-2022',elevation:'visual-estimate'});
+     }
+    }
+    qa.wallBases.push({x:cx,z:cz,bottom:Math.min(ha.base,hb.base),top:Math.max(ha.top,hb.top),component,kind,thickness});
     stats.wallLengthM+=length/n;if(perimeter)stats.perimeterLengthM+=length/n;
    }
   }
  }
- // The mapped outline is constructed once. Many source ways repeat its edges.
+ // Present silhouettes follow different surviving defensive runs. Heights and
+ // crenel dimensions are estimated from dated photographs, not a restitution of
+ // the nineteenth-century military drawings. The OSM footprint stays unchanged.
+ let perimeterArc=0;
  for(let i=0;i<world.length-1;i++){
-  const a=world[i],b=world[i+1],cx=(a.x+b.x)/2,cz=(a.z+b.z)/2,r=regionAt(cx,cz);
-  const height=r==='dos-mayo'?4.9:r==='conejera'?5.5:r==='ciudadela'?5.0:cz>370?5.8:4.5;
-  wall([a,b],{height,thickness:r==='dos-mayo'?3.1:2.45,seed:400+i*13,perimeter:true,component:'muralla-exterior',coursed:detail==='full'});
+  const a=world[i],b=world[i+1],cx=(a.x+b.x)/2,cz=(a.z+b.z)/2,r=regionAt(cx,cz),length=Math.hypot(b.x-a.x,b.z-a.z);
+  if(length<.07)continue;
+  const nx=-(b.z-a.z)/length,nz=(b.x-a.x)/length,inward=inside(cx+nx*3,cz+nz*3,world)?1:-1,northFace=-inward*nz<-.34,southFace=-inward*nz>.34;
+  let height=4.3,thickness=2.25,fabric='stone',crown=null,broken=true;
+  if(r==='dos-mayo'){height=northFace?4.25:4.85;thickness=2.9;if(northFace)crown={height:.91,spacing:1.92,width:.84,slits:true,loss:.04};}
+  else if(r==='ciudadela'){height=northFace?4.55:5.35;thickness=2.75;fabric=southFace?'tapial':'stone';}
+  else if(r==='estudiantes'){height=northFace?3.75:4.1;thickness=2.2;if(northFace&&cx< -75)crown={height:.84,spacing:1.80,width:.78,slits:true,loss:.12};}
+  else if(r==='san-fernando'){height=southFace?4.8:3.55;thickness=2.3;if(southFace&&cx< -125&&cx> -275)crown={height:.75,spacing:1.85,width:.80,slits:false,loss:.19};else if(cx< -200)fabric='tapial';}
+  else if(r==='conejera'){height=4.45;thickness=2.45;}
+  else if(r==='almenara'){height=cx>220?3.1:4.7;thickness=2.05;}
+  else{height=cz>370?5.75:4.35;thickness=2.45;}
+  wall([a,b],{height,thickness,fabric,crown,arcStart:perimeterArc,broken:!crown,seed:400+i*13,perimeter:true,component:'muralla-exterior',coursed:false});
+  perimeterArc+=length;
  }
  const allWays=data.castleWalls||[];
  for(const source of allWays){
@@ -167,7 +197,7 @@ export function createCastle({project,heightAt,data={},visitData=data.castleVisi
    const a=points[i],b=points[i+1],mid={x:(a.x+b.x)/2,z:(a.z+b.z)/2};
    if(distanceToOutline(mid,world)<.5&&distanceToOutline(a,world)<.7&&distanceToOutline(b,world)<.7){stats.duplicateSegmentsSkipped++;continue;}
    if(!inside(mid.x,mid.z,world)){stats.outsideSegmentsSkipped++;continue;}
-   wall([a,b],{height:h,thickness:roman?.68:h<.5?.8:source.id==='733215258'?2.7:1.55,period:roman?'ancient':'unknown',regionId:roman?'armas':null,component,seed:(idNum%1737)+i*11,coursed:detail==='full'&&h>3.5});accepted=true;
+   wall([a,b],{height:h,thickness:roman?.68:h<.5?.8:source.id==='733215258'?2.7:1.55,period:roman?'ancient':'unknown',regionId:roman?'armas':null,component,seed:(idNum%1737)+i*11,broken:!roman&&h>1.5,coursed:false,fabric:roman?'rubble':null});accepted=true;
   }
   if(accepted){stats.wallWayCount++;if(roman)stats.romanWallWays++;}
  }
@@ -286,16 +316,19 @@ export function createCastle({project,heightAt,data={},visitData=data.castleVisi
  const from=(coordinates)=>coordinates.map(c=>project(...c));
  const forumFloor=from([[-.276737,39.676246],[-.276350,39.676304],[-.276270,39.675924],[-.276657,39.675867]]);
  conformingPolygon(forumFloor,{regionId:'armas',component:'foro',period:'ancient',kind:'paving',offset:.115,cell:1.1});
- // Discontinuous, weathered slab joints conform to the hill. They are not an
- // invented facsimile of the bronze-letter inscription or an ancient flat datum.
- const fa=forumFloor[0],fb=forumFloor[1],fc=forumFloor[3],fx={x:fb.x-fa.x,z:fb.z-fa.z},fz={x:fc.x-fa.x,z:fc.z-fa.z};
- for(let i=1;i<13;i++)for(let j=0;j<9;j++){
-  if(noise(i*79+j)>.67)continue;const a={x:fa.x+fx.x*j/9+fz.x*i/13,z:fa.z+fx.z*j/9+fz.z*i/13},b={x:a.x+fx.x*.083,z:a.z+fx.z*.083},cx=(a.x+b.x)/2,cz=(a.z+b.z)/2;
-  batch.box(keyFor('armas','foro','ancient','mortar'),cx,heightAt(cx,cz)+.134,cz,Math.hypot(b.x-a.x,b.z-a.z),.026,.045,-Math.atan2(b.z-a.z,b.x-a.x),.96);
- }
+ // The current excavation is mostly earth and gravel with worn stone
+ // fragments. Do not draw a regular replacement pavement or an invented copy
+ // of the bronze-letter inscription over the whole terrace.
  const temple=from([[-.276789,39.676425],[-.276641,39.676444],[-.276609,39.676317],[-.276755,39.676299]]);
  wall([...temple,temple[0]],{height:.66,thickness:.8,period:'ancient',component:'templo',seed:607,regionId:'armas',gateCuts:false});
  conformingPolygon(temple,{regionId:'armas',component:'templo',period:'ancient',kind:'rubble',offset:.13});
+ // Three parallel cellae are documented in Plan Director p58 / Aranegui. Their
+ // low surviving foundations retain the lower excavated level of this sector.
+ for(let division=1;division<=2;division++){
+  const t=division/3,a={x:temple[0].x+(temple[1].x-temple[0].x)*t,z:temple[0].z+(temple[1].z-temple[0].z)*t},b={x:temple[3].x+(temple[2].x-temple[3].x)*t,z:temple[3].z+(temple[2].z-temple[3].z)*t};
+  wall([a,b],{height:.48,thickness:.67,period:'ancient',component:'templo',seed:120+division,regionId:'armas',gateCuts:false});
+ }
+ qa.features.push({id:'templo-cellae',count:3,source:'plan-director-2000',condition:'surviving-low-foundations',footprint:'approximate-plan-alignment'});
  const templeSouth={x:(temple[2].x+temple[3].x)/2,z:(temple[2].z+temple[3].z)/2},templeYaw=-Math.atan2(temple[2].z-temple[3].z,temple[2].x-temple[3].x);
  for(let i=0;i<4;i++){
   const x=templeSouth.x+Math.sin(templeYaw)*(.7+i*.54),z=templeSouth.z+Math.cos(templeYaw)*(.7+i*.54);
@@ -303,8 +336,8 @@ export function createCastle({project,heightAt,data={},visitData=data.castleVisi
  }
  // Only low column bases and stumps, at the curia portico, survive this reading.
  const ca=project(-.276526,39.676278),cb=project(-.276294,39.676311);
- for(let i=0;i<5;i++){
-  const t=(i+.5)/5,x=ca.x+(cb.x-ca.x)*t,z=ca.z+(cb.z-ca.z)*t,y=heightAt(x,z);
+ for(let i=0;i<4;i++){
+  const t=(i+.5)/4,x=ca.x+(cb.x-ca.x)*t,z=ca.z+(cb.z-ca.z)*t,y=heightAt(x,z);
   batch.box(keyFor('armas','curia','ancient','ashlar'),x,y+.13,z,.88,.26,.88,0,.94);
   batch.cylinder(keyFor('armas','curia','ancient','ashlar'),x,y+.4,z,.30,.35,.36+noise(i)*.22,.94,16);
  }
@@ -325,12 +358,85 @@ export function createCastle({project,heightAt,data={},visitData=data.castleVisi
   for(const t of triangles){const a=poly[t[0]],b=poly[t[1]],c=poly[t[2]],signed=(b.x-a.x)*(c.z-a.z)-(b.z-a.z)*(c.x-a.x);for(const q of signed>0?[a,c,b]:[a,b,c])p.push(q.x,height,q.z);}
   batch.raw(key,p,tint);
  }
+
+ // IPCE, Inventario de la telegrafía óptica (2012), L2_32: 5.7 x 5.7 m.
+ // Current roofless survivor, not the original complete telegraph installation.
+ // N/S openings and blind E/W faces follow the inventory. Heights are estimated
+ // from present photographs; the southern plinth follows the actual mesh.
+ function telegraphTower(){
+  const coordinate=[-.281978,39.676237],p=project(...coordinate),half=2.85,thick=.56,bodyHeight=5.8;
+  const corners=[[-half,-half],[half,-half],[half,half],[-half,half]].map(([x,z])=>({x:p.x+x,z:p.z+z}));
+  const base=Math.max(...corners.map(q=>heightAt(q.x,q.z)))+.08,key=keyFor('ciudadela','telegrafo','modern','stone'),brick=keyFor('ciudadela','telegrafo','modern','brick');
+  const box=(kind,x,y,z,w,h,d)=>batch.box(kind,p.x+x,base+y,p.z+z,w,h,d,0,.97);
+  for(let i=0;i<4;i++){
+   const a=corners[i],b=corners[(i+1)%4],positions=[],bottomA=heightAt(a.x,a.z)-.23,bottomB=heightAt(b.x,b.z)-.23;
+   quad(positions,[b.x,bottomB,b.z],[a.x,bottomA,a.z],[a.x,base+.05,a.z],[b.x,base+.05,b.z]);batch.raw(key,positions,.93);
+  }
+  for(const side of[-1,1]){
+   // East and west faces are solid. The narrow cap is irregular, not crenellated.
+   box(key,side*(half-thick/2),bodyHeight/2,0,thick,bodyHeight,5.7);
+   const z=side*(half-thick/2),opening=1.02,leg=(5.7-opening)/2;
+   for(const sign of[-1,1])box(key,sign*(opening+leg)/2,bodyHeight/2,z,leg,bodyHeight,thick);
+   box(key,0,.075,z,opening,.15,thick);
+   box(key,0,(2.24+3.68)/2,z,opening,3.68-2.24,thick);
+   // The upper opening is a small square, rather than an invented balcony.
+   const upper=.62;
+   for(const sign of[-1,1])box(key,sign*(upper+(opening-upper)/2)/2,(3.68+4.40)/2,z,(opening-upper)/2,4.40-3.68,thick);
+   box(key,0,(4.40+bodyHeight)/2,z,opening,bodyHeight-4.40,thick);
+   for(const [y,w,h]of[[.15,1.02,2.09],[3.68,.62,.72]]){
+    for(const sign of[-1,1])box(brick,sign*(w/2+.11),y+h/2,side*(half+.015),.22,h+.22,.07);
+    box(brick,0,y+h+.105,side*(half+.018),w+.44,.21,.08);
+    box(brick,0,y-.045,side*(half+.025),w+.40,.10,.11);
+   }
+  }
+  // Brick quoins and the band between floors are the tower's identifying fabric.
+  for(const x of[-1,1])for(const z of[-1,1])for(let row=0;row<22;row++){
+   const y=.13+row*.255,w=row%2?.42:.62;
+   box(brick,x*(half-.20),y,z*(half+.008),w,.225,.055);
+   box(brick,x*(half+.008),y,z*(half-.20),.055,.225,w);
+  }
+  for(const side of[-1,1]){
+   box(brick,0,2.70,side*(half+.045),5.78,.17,.13);
+   box(brick,side*(half+.045),2.70,0,.13,.17,5.78);
+   // Surviving rough cap: the missing roof and upper loss remain visible.
+   for(let i=0;i<9;i++){
+    const d=-2.52+i*.63,h=.06+noise(i+side*37)*.18;
+    box(key,d,bodyHeight+h/2,side*(half-thick/2),.64,h,thick);
+    box(key,side*(half-thick/2),bodyHeight+h/2,d,thick,h,.64);
+   }
+  }
+  // A dark interior floor makes the real apertures read as depth at close range.
+  batch.box(keyFor('ciudadela','telegrafo','modern','rubble'),p.x,base+.045,p.z,4.55,.08,4.55,0,.72);
+  if(detail==='full')for(const dx of[-1.8,1.8])batch.cylinder(keyFor('ciudadela','telegrafo','modern','metal'),p.x+dx,base+bodyHeight+.75,p.z-1.75,.021,.021,1.5,.76,6);
+  qa.features.push({id:'telegrafo',coordinate,width:5.7,depth:5.7,base,bodyHeight,roof:false,openings:['north-door','south-door','north-window','south-window'],blindFaces:['east','west'],orientation:'approximately-cardinal',source:'ipce-telegrafia',heightConfidence:'photographic-estimate'});
+ }
+ telegraphTower();
+ function pitchedRoof(poly,top,{regionId,component,period,rise=1.15,kind='tile'}={}){
+  let longest=0,axis={x:1,z:0};
+  for(let i=0;i<poly.length;i++){const a=poly[i],b=poly[(i+1)%poly.length],l=Math.hypot(b.x-a.x,b.z-a.z);if(l>longest){longest=l;axis={x:(b.x-a.x)/l,z:(b.z-a.z)/l};}}
+  const clockwise=poly.reduce((sum,p,i)=>sum+p.x*poly[(i+1)%poly.length].z-poly[(i+1)%poly.length].x*p.z,0)>0;
+  const normal={x:-axis.z,z:axis.x},values=poly.map(p=>p.x*normal.x+p.z*normal.z),v0=Math.min(...values),v1=Math.max(...values),ridge=(v0+v1)/2,span=(v1-v0)/2;
+  const v=p=>p.x*normal.x+p.z*normal.z-ridge,roofY=p=>top+rise*Math.max(0,1-Math.abs(v(p))/span);
+  function clip(sign){const out=[];for(let i=0;i<poly.length;i++){const a=poly[i],b=poly[(i+1)%poly.length],va=v(a)*sign,vb=v(b)*sign;if(va>=-.00001)out.push(a);if(va*vb<0){const t=va/(va-vb);out.push({x:a.x+(b.x-a.x)*t,z:a.z+(b.z-a.z)*t});}}return out;}
+  for(const sign of[-1,1]){
+   const piece=clip(sign);if(piece.length<3)continue;
+   const tris=THREE.ShapeUtils.triangulateShape(piece.map(p=>new THREE.Vector2(p.x,p.z)),[]),positions=[];
+   for(const tri of tris){const a=piece[tri[0]],b=piece[tri[1]],c=piece[tri[2]],signed=(b.x-a.x)*(c.z-a.z)-(b.z-a.z)*(c.x-a.x);for(const q of signed>0?[a,c,b]:[a,b,c])positions.push(q.x,roofY(q),q.z);}
+   batch.raw(keyFor(regionId,component,period,kind),positions,.98);
+  }
+  // Close gables and short irregular returns along the surveyed perimeter.
+  for(let i=0;i<poly.length;i++){
+   const a=poly[i],b=poly[(i+1)%poly.length],line=[a];if(v(a)*v(b)<0){const t=v(a)/(v(a)-v(b));line.push({x:a.x+(b.x-a.x)*t,z:a.z+(b.z-a.z)*t});}line.push(b);
+   for(let j=0;j<line.length-1;j++){const a=line[j],b=line[j+1],positions=[];if(clockwise)quad(positions,[b.x,top,b.z],[a.x,top,a.z],[a.x,roofY(a),a.z],[b.x,roofY(b),b.z]);else quad(positions,[a.x,top,a.z],[b.x,top,b.z],[b.x,roofY(b),b.z],[a.x,roofY(a),a.z]);batch.raw(keyFor(regionId,component,period,'stone'),positions,.93);}
+  }
+  return {type:'pitched',ridgeHeight:top+rise,axis,source:'foto-ricsol-2022',elevation:'visual-estimate'};
+ }
  const buildings=MAPPED_BUILDINGS.map(b=>(data.buildings||[]).find(s=>s.id===b.id)||b);
  for(const building of buildings){
   let poly=from(building.coordinates);if(poly.length>2&&Math.hypot(poly[0].x-poly.at(-1).x,poly[0].z-poly.at(-1).z)<.02)poly=poly.slice(0,-1);
   const center={x:poly.reduce((s,p)=>s+p.x,0)/poly.length,z:poly.reduce((s,p)=>s+p.z,0)/poly.length},regionId=regionAt(center.x,center.z),ruin=building.kind==='ruins',component=building.id==='180732338'?'antiquarium':'edificio-'+building.id;
   if(ruin){wall([...poly,poly[0]],{height:building.id==='733215260'?2.2:1.1,thickness:.8,component,regionId,gateCuts:false,seed:Number(building.id)%217});stats.mappedBuildings++;continue;}
-  const period=['180732338','1199456167','82897960','cat-3555856YJ3935N_part1-0'].includes(building.id)?'modern':'unknown',h=clamp(building.surfaceHeightEstimate||building.height||5,3,8),base=Math.max(...poly.map(p=>heightAt(p.x,p.z)))+.08,top=base+h;
+  const period=['180732338','1199456167','82897960','cat-3555856YJ3935N_part1-0'].includes(building.id)?'modern':'unknown',h=({'180732338':3.35,'82897960':4.0,'cat-3555856YJ3935N_part1-0':3.7,'1199456167':4.1})[building.id]||clamp(building.surfaceHeightEstimate||building.height||5,3,8),base=Math.max(...poly.map(p=>heightAt(p.x,p.z)))+.08,top=base+h;
   const key=keyFor(regionId,component,period,'stone'),clockwise=poly.reduce((s,p,i)=>s+p.x*poly[(i+1)%poly.length].z-poly[(i+1)%poly.length].x*p.z,0)>0;
   for(let i=0;i<poly.length;i++){
    const a=poly[i],b=poly[(i+1)%poly.length],l=Math.hypot(b.x-a.x,b.z-a.z);if(l<.05)continue;
@@ -348,10 +454,13 @@ export function createCastle({project,heightAt,data={},visitData=data.castleVisi
     }
    }
   }
-  roofPolygon(poly,top,keyFor(regionId,component,period,building.id==='1199456167'?'tile':'roof'),.95);
-  // Low parapet is sufficient for a current silhouette; no invented battlements.
-  for(let i=0;i<poly.length;i++){const a=poly[i],b=poly[(i+1)%poly.length],l=Math.hypot(b.x-a.x,b.z-a.z);batch.box(keyFor(regionId,component,period,'ashlar'),(a.x+b.x)/2,top+.13,(a.z+b.z)/2,l,.26,.25,-Math.atan2(b.z-a.z,b.x-a.x),.94);}
-  qa.buildings.push({id:building.id,component,base,top,terrainMaximum:Math.max(...poly.map(p=>heightAt(p.x,p.z))),period,roof:'schematic',polygon:poly});stats.mappedBuildings++;
+  const pitched=['180732338','82897960','cat-3555856YJ3935N_part1-0'].includes(building.id);
+  const roof=pitched?pitchedRoof(poly,top,{regionId,component,period,rise:building.id==='180732338'?1.12:1.55}):{type:'flat',ridgeHeight:top,source:'mapped-current-footprint'};
+  if(!pitched){
+   roofPolygon(poly,top,keyFor(regionId,component,period,'roof'),.95);
+   for(let i=0;i<poly.length;i++){const a=poly[i],b=poly[(i+1)%poly.length],l=Math.hypot(b.x-a.x,b.z-a.z);batch.box(keyFor(regionId,component,period,'ashlar'),(a.x+b.x)/2,top+.10,(a.z+b.z)/2,l,.20,.21,-Math.atan2(b.z-a.z,b.x-a.x),.94);}
+  }
+  qa.buildings.push({id:building.id,component,base,top:roof.ridgeHeight,eaveHeight:top,terrainMaximum:Math.max(...poly.map(p=>heightAt(p.x,p.z))),period,roof,polygon:poly});stats.mappedBuildings++;
  }
  const resources=batch.finish(group);group.updateMatrixWorld(true);
  const bounds=new THREE.Box3().setFromObject(group),regions=REGION_DEFS.map(region=>{
@@ -400,6 +509,6 @@ export function createCastle({project,heightAt,data={},visitData=data.castleVisi
  }
  function setReadingMode(mode){readingMode=mode==='periods'?'periods':'materials';applyMaterials();return readingMode;}
  stats.triangles=0;stats.meshes=0;group.traverse(o=>{if(o.isMesh){stats.meshes++;stats.triangles+=(o.geometry.index?.count||o.geometry.attributes.position.count)/3;}});
- group.userData={id:'castle',label:'Castillo de Sagunto',interpretation:true,cartographicOutline:true,visit:{focuses,regions,bounds,stats,selectFocus,setReadingMode,getState:()=>({selected,readingMode}),qa},ownedResources:{materials:resources.materials,textures:[resources.texture]},metadata:{plan:'Mapped present-day footprint and walls',fabric:'Roman identified remains; mixed defensive enclosures; mapped present buildings',elevations:'Approximate, not photogrammetry',cisternaNorte:'Sector focus only; no invented footprint',selection:'Camera itinerary; not a walking accessibility route'}};
+ group.userData={id:'castle',label:'Castillo de Sagunto',interpretation:true,cartographicOutline:true,visit:{focuses,regions,bounds,stats,selectFocus,setReadingMode,getState:()=>({selected,readingMode}),qa},ownedResources:{materials:resources.materials,textures:resources.textures},metadata:{plan:'Mapped present-day footprint and walls',fabric:'Identified Roman foundations; mixed masonry and tapial curtains; selective surviving parapets; current buildings and roofless optical telegraph tower',elevations:'Approximate from photographs; footprints mapped; telegraph width 5.7 m from IPCE inventory; no complete historical reconstruction',cisternaNorte:'Sector focus only; no invented footprint',selection:'Camera itinerary; not a walking accessibility route'}};
  return group;
 }
