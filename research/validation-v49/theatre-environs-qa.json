@@ -1,0 +1,668 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "pass": true,
+      "label": "All environment positions are finite"
+    },
+    {
+      "pass": true,
+      "label": "All geometry comprises complete triangles"
+    },
+    {
+      "pass": true,
+      "label": "Original OSM way exists with matching node count: 180732340"
+    },
+    {
+      "pass": true,
+      "label": "Original OSM way exists with matching node count: 180732347"
+    },
+    {
+      "pass": true,
+      "label": "Original OSM way exists with matching node count: 180732352"
+    },
+    {
+      "pass": true,
+      "label": "Original OSM way exists with matching node count: 733053998"
+    },
+    {
+      "pass": true,
+      "label": "Original OSM way exists with matching node count: 733058698"
+    },
+    {
+      "pass": true,
+      "label": "Original OSM way exists with matching node count: 1419279909"
+    },
+    {
+      "pass": true,
+      "label": "Original OSM way exists with matching node count: 1419279910"
+    },
+    {
+      "pass": true,
+      "label": "Original OSM way exists with matching node count: 1419279911"
+    },
+    {
+      "pass": true,
+      "label": "Projected OSM coordinates preserved within centimetre rounding"
+    },
+    {
+      "pass": true,
+      "label": "Every rendered tree owns a generic-vegetation exclusion"
+    },
+    {
+      "pass": true,
+      "label": "The inspected PNOA setting replaces generic scattering across one continuous area"
+    },
+    {
+      "pass": true,
+      "label": "Paths and retaining walls expose world-coordinate Simulator claims"
+    },
+    {
+      "pass": true,
+      "label": "Ground scenery does not intrude into the conservative theatre envelope"
+    },
+    {
+      "pass": true,
+      "label": "Binding twice to the same terrain does not accumulate displacement"
+    },
+    {
+      "pass": true,
+      "label": "Rebinding to the source ground restores original geometry"
+    },
+    {
+      "pass": true,
+      "label": "The helper leaves the terrain height unchanged"
+    }
+  ],
+  "stats": {
+    "meshes": 6,
+    "triangles": 21804,
+    "trees": 21,
+    "rejectedTrees": 4,
+    "pathSegments": 224,
+    "wallSegments": 173,
+    "rockCells": 611,
+    "maximumOsmNodeDifferenceM": 0.006304423591738227,
+    "componentIds": [
+      "entorno-accesos",
+      "entorno-contencion",
+      "entorno-roca",
+      "entorno-arbolado",
+      "entorno-matorral"
+    ]
+  },
+  "qa": {
+    "sourceWayIds": [
+      "180732340",
+      "180732347",
+      "180732352",
+      "733053998",
+      "733058698"
+    ],
+    "sourceRetainingWallIds": [
+      "1419279909",
+      "1419279910",
+      "1419279911"
+    ],
+    "paths": [
+      {
+        "id": "180732340",
+        "kind": "steps",
+        "interpretedWidthM": 1.45,
+        "segments": 26,
+        "treads": 26,
+        "clippedSegments": 69
+      },
+      {
+        "id": "180732347",
+        "kind": "path",
+        "interpretedWidthM": 1.4,
+        "segments": 18,
+        "treads": 0,
+        "clippedSegments": 5
+      },
+      {
+        "id": "180732352",
+        "kind": "path",
+        "interpretedWidthM": 1.6,
+        "segments": 86,
+        "treads": 0,
+        "clippedSegments": 1
+      },
+      {
+        "id": "733053998",
+        "kind": "steps",
+        "interpretedWidthM": 1.45,
+        "segments": 13,
+        "treads": 13,
+        "clippedSegments": 0
+      },
+      {
+        "id": "733058698",
+        "kind": "path",
+        "interpretedWidthM": 1.4,
+        "segments": 81,
+        "treads": 0,
+        "clippedSegments": 0
+      }
+    ],
+    "walls": [
+      {
+        "id": "1419279909",
+        "interpretedHeightM": 0.8,
+        "interpretedWidthM": 0.48,
+        "segments": 39,
+        "clippedSegments": 6
+      },
+      {
+        "id": "1419279910",
+        "interpretedHeightM": 0.68,
+        "interpretedWidthM": 0.42,
+        "segments": 107,
+        "clippedSegments": 0
+      },
+      {
+        "id": "1419279911",
+        "interpretedHeightM": 0.58,
+        "interpretedWidthM": 0.45,
+        "segments": 27,
+        "clippedSegments": 51
+      }
+    ],
+    "trees": [
+      {
+        "index": 0,
+        "local": [
+          17.8,
+          -65.7
+        ],
+        "world": {
+          "x": 50.960222009574636,
+          "z": 188.1306682473645
+        },
+        "baseM": 78.51259695104045,
+        "heightM": 8.8,
+        "maximumCrownRadiusM": 4.4,
+        "form": "pine",
+        "positionSource": "PNOA canopy registration",
+        "dimensions": "interpreted"
+      },
+      {
+        "index": 1,
+        "local": [
+          17.28,
+          -47.44
+        ],
+        "world": {
+          "x": 41.70700890503058,
+          "z": 203.8810983126641
+        },
+        "baseM": 78.44806462248667,
+        "heightM": 7.3,
+        "maximumCrownRadiusM": 3.5,
+        "form": "pine",
+        "positionSource": "PNOA canopy registration",
+        "dimensions": "interpreted"
+      },
+      {
+        "index": 2,
+        "local": [
+          6.43,
+          -47.47
+        ],
+        "world": {
+          "x": 32.213771367276635,
+          "z": 198.62735288185195
+        },
+        "baseM": 76.12555140293573,
+        "heightM": 6.9,
+        "maximumCrownRadiusM": 3.2,
+        "form": "pine",
+        "positionSource": "PNOA canopy registration",
+        "dimensions": "interpreted"
+      },
+      {
+        "index": 3,
+        "local": [
+          23.64,
+          -47.81
+        ],
+        "world": {
+          "x": 47.45844447564588,
+          "z": 206.62107803468052
+        },
+        "baseM": 79.92502716989723,
+        "heightM": 7.1,
+        "maximumCrownRadiusM": 3.5,
+        "form": "pine",
+        "positionSource": "PNOA canopy registration",
+        "dimensions": "interpreted"
+      },
+      {
+        "index": 4,
+        "local": [
+          52.87,
+          -1.39
+        ],
+        "world": {
+          "x": 50.70740938021486,
+          "z": 261.38104084555977
+        },
+        "baseM": 91.41498131191966,
+        "heightM": 7.6,
+        "maximumCrownRadiusM": 3.7,
+        "form": "pine",
+        "positionSource": "PNOA canopy registration",
+        "dimensions": "interpreted"
+      },
+      {
+        "index": 6,
+        "local": [
+          78.68,
+          9.23
+        ],
+        "world": {
+          "x": 68.20767862173116,
+          "z": 283.1222707204873
+        },
+        "baseM": 101.35257821825351,
+        "heightM": 8.4,
+        "maximumCrownRadiusM": 3.8,
+        "form": "pine",
+        "positionSource": "PNOA canopy registration",
+        "dimensions": "interpreted"
+      },
+      {
+        "index": 9,
+        "local": [
+          2.84,
+          55.5
+        ],
+        "world": {
+          "x": -20.542343579481965,
+          "z": 287.12877284630446
+        },
+        "baseM": 111.32835266554333,
+        "heightM": 7.5,
+        "maximumCrownRadiusM": 3.5,
+        "form": "pine",
+        "positionSource": "PNOA canopy registration",
+        "dimensions": "interpreted"
+      },
+      {
+        "index": 11,
+        "local": [
+          30.57,
+          55.09
+        ],
+        "world": {
+          "x": 3.954572370566545,
+          "z": 300.1296231621976
+        },
+        "baseM": 113.40431793560222,
+        "heightM": 7.2,
+        "maximumCrownRadiusM": 3.3,
+        "form": "pine",
+        "positionSource": "PNOA canopy registration",
+        "dimensions": "interpreted"
+      },
+      {
+        "index": 12,
+        "local": [
+          58.76,
+          60.7
+        ],
+        "world": {
+          "x": 25.954183949800385,
+          "z": 318.6273335708628
+        },
+        "baseM": 119.49497946169947,
+        "heightM": 8.3,
+        "maximumCrownRadiusM": 4.1,
+        "form": "pine",
+        "positionSource": "PNOA canopy registration",
+        "dimensions": "interpreted"
+      },
+      {
+        "index": 13,
+        "local": [
+          80.06,
+          55.84
+        ],
+        "world": {
+          "x": 46.96056790381516,
+          "z": 324.63078534267794
+        },
+        "baseM": 120.24978805106862,
+        "heightM": 7.5,
+        "maximumCrownRadiusM": 3.4,
+        "form": "pine",
+        "positionSource": "PNOA canopy registration",
+        "dimensions": "interpreted"
+      },
+      {
+        "index": 14,
+        "local": [
+          81.81,
+          14.93
+        ],
+        "world": {
+          "x": 68.20422881945925,
+          "z": 289.6251076474649
+        },
+        "baseM": 105.00998742413924,
+        "heightM": 6.4,
+        "maximumCrownRadiusM": 2.8,
+        "form": "pine",
+        "positionSource": "PNOA canopy registration",
+        "dimensions": "interpreted"
+      },
+      {
+        "index": 15,
+        "local": [
+          -66.6,
+          42.32
+        ],
+        "world": {
+          "x": -75.04153294545495,
+          "z": 242.1236136037041
+        },
+        "baseM": 102.44065953110946,
+        "heightM": 8.8,
+        "maximumCrownRadiusM": 4.2,
+        "form": "pine",
+        "positionSource": "PNOA canopy registration",
+        "dimensions": "interpreted"
+      },
+      {
+        "index": 16,
+        "local": [
+          -49.53,
+          43.78
+        ],
+        "world": {
+          "x": -60.786767595334126,
+          "z": 251.62720054827375
+        },
+        "baseM": 106.79320990377454,
+        "heightM": 8.4,
+        "maximumCrownRadiusM": 3.9,
+        "form": "pine",
+        "positionSource": "PNOA canopy registration",
+        "dimensions": "interpreted"
+      },
+      {
+        "index": 17,
+        "local": [
+          -38.24,
+          49.27
+        ],
+        "world": {
+          "x": -53.53855590047239,
+          "z": 261.87745065383064
+        },
+        "baseM": 109.22291996795306,
+        "heightM": 7.9,
+        "maximumCrownRadiusM": 3.8,
+        "form": "pine",
+        "positionSource": "PNOA canopy registration",
+        "dimensions": "interpreted"
+      },
+      {
+        "index": 18,
+        "local": [
+          -72.05,
+          23.07
+        ],
+        "world": {
+          "x": -70.54276545924763,
+          "z": 222.6293557028492
+        },
+        "baseM": 92.25356374452808,
+        "heightM": 7.2,
+        "maximumCrownRadiusM": 3.7,
+        "form": "pine",
+        "positionSource": "PNOA canopy registration",
+        "dimensions": "interpreted"
+      },
+      {
+        "index": 19,
+        "local": [
+          -42.96,
+          28.76
+        ],
+        "world": {
+          "x": -47.79304091675463,
+          "z": 241.6307828397958
+        },
+        "baseM": 99.47249991976092,
+        "heightM": 6.9,
+        "maximumCrownRadiusM": 3.1,
+        "form": "pine",
+        "positionSource": "PNOA canopy registration",
+        "dimensions": "interpreted"
+      },
+      {
+        "index": 20,
+        "local": [
+          -64.17,
+          64.38
+        ],
+        "world": {
+          "x": -83.54051994093994,
+          "z": 262.6252164691041
+        },
+        "baseM": 111.38383489094736,
+        "heightM": 8.5,
+        "maximumCrownRadiusM": 4,
+        "form": "pine",
+        "positionSource": "PNOA canopy registration",
+        "dimensions": "interpreted"
+      },
+      {
+        "index": 21,
+        "local": [
+          -20.65,
+          58.43
+        ],
+        "world": {
+          "x": -42.537930504933676,
+          "z": 278.3789639452542
+        },
+        "baseM": 112.49360707365648,
+        "heightM": 8.2,
+        "maximumCrownRadiusM": 0.85,
+        "form": "cypress",
+        "positionSource": "PNOA canopy registration",
+        "dimensions": "interpreted"
+      },
+      {
+        "index": 22,
+        "local": [
+          -14.75,
+          63.46
+        ],
+        "world": {
+          "x": -39.79126960569249,
+          "z": 285.6292573120484
+        },
+        "baseM": 114.73232168282789,
+        "heightM": 8.8,
+        "maximumCrownRadiusM": 0.95,
+        "form": "cypress",
+        "positionSource": "PNOA canopy registration",
+        "dimensions": "interpreted"
+      },
+      {
+        "index": 23,
+        "local": [
+          -6.42,
+          67.72
+        ],
+        "world": {
+          "x": -34.544255550170085,
+          "z": 293.37556891830013
+        },
+        "baseM": 116.14016024828629,
+        "heightM": 8.4,
+        "maximumCrownRadiusM": 0.9,
+        "form": "cypress",
+        "positionSource": "PNOA canopy registration",
+        "dimensions": "interpreted"
+      },
+      {
+        "index": 24,
+        "local": [
+          1.78,
+          71.2
+        ],
+        "world": {
+          "x": -29.035359790004456,
+          "z": 300.37574516634055
+        },
+        "baseM": 118.31026107277745,
+        "heightM": 9.3,
+        "maximumCrownRadiusM": 1,
+        "form": "cypress",
+        "positionSource": "PNOA canopy registration",
+        "dimensions": "interpreted"
+      }
+    ],
+    "rockPatches": [
+      {
+        "id": "oeste",
+        "cells": 390,
+        "maximumSurfaceReliefM": 0.18,
+        "source": "Exposed rock in supplied PNOA and contemporary photographs"
+      },
+      {
+        "id": "este",
+        "cells": 221,
+        "maximumSurfaceReliefM": 0.18,
+        "source": "Exposed rock in supplied PNOA and contemporary photographs"
+      }
+    ],
+    "rejectedCanopies": [
+      {
+        "index": 5,
+        "local": [
+          61.5,
+          1.85
+        ],
+        "reason": "architectural or mapped-path clearance"
+      },
+      {
+        "index": 7,
+        "local": [
+          -20.09,
+          47
+        ],
+        "reason": "architectural or mapped-path clearance"
+      },
+      {
+        "index": 8,
+        "local": [
+          -8.66,
+          47.56
+        ],
+        "reason": "architectural or mapped-path clearance"
+      },
+      {
+        "index": 10,
+        "local": [
+          25.24,
+          64.58
+        ],
+        "reason": "architectural or mapped-path clearance"
+      }
+    ],
+    "sourceFrame": {
+      "center": [
+        -0.27795671425,
+        39.67686986465
+      ],
+      "yaw": -0.5027
+    },
+    "sourceKeys": [
+      "teatro-osm",
+      "teatro-entorno-pnoa",
+      "teatro-foto-2014",
+      "teatro-fotos-turisme"
+    ],
+    "attribution": "© OpenStreetMap contributors · Obra derivada de IGN/PNOA",
+    "limits": [
+      "Trazados OSM; anchuras, huellas y alturas de muros interpretadas.",
+      "Copas localizadas visualmente en PNOA; especies y alzados estimados, sin inventario botánico.",
+      "Fecha de consulta del mosaico: 19/11/2026; fecha de toma no determinada.",
+      "Roca superficial interpretada sobre el relieve IGN; no se modifica el terreno ni se crea una explanada.",
+      "No se reproduce ni se sustituye arquitectura del castillo."
+    ],
+    "terrainPolicy": "No terrain modification; scenery is rebound to the final rendered ground.",
+    "vegetationCoverage": {
+      "localOutline": [
+        [
+          -82,
+          -10
+        ],
+        [
+          -52,
+          -17
+        ],
+        [
+          -47,
+          -48
+        ],
+        [
+          1,
+          -80
+        ],
+        [
+          40,
+          -81
+        ],
+        [
+          89,
+          -57
+        ],
+        [
+          92,
+          25
+        ],
+        [
+          88,
+          76
+        ],
+        [
+          10,
+          83
+        ],
+        [
+          -43,
+          75
+        ],
+        [
+          -81,
+          72
+        ]
+      ],
+      "basis": "Immediate area inspected in supplied PNOA",
+      "policy": "Replace generic scattering with registered canopies; this is not a physical boundary."
+    },
+    "rebinding": {
+      "calls": 3,
+      "maximumShiftM": 0
+    }
+  },
+  "bounds": {
+    "min": [
+      -96.98135763725672,
+      72.68511464869373,
+      139.9423221446552
+    ],
+    "max": [
+      111.10706907591495,
+      127.76254537379138,
+      340.89392073332465
+    ]
+  }
+}

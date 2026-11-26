@@ -1,0 +1,111 @@
+{
+  "generatedAt": "2026-11-26T17:08:08.266141+00:00",
+  "pass": true,
+  "checksCount": 13,
+  "scope": "Two overlapping procedural Necropolis pines superseded by PNOA-positioned theatre canopies; no other model change.",
+  "method": "Deep JSON comparison, generator AST comparison and execution of the isolated authoring filter. Full generator not executed to avoid rewriting unrelated source products.",
+  "before": {
+    "trees": 22,
+    "cypresses": 7
+  },
+  "after": {
+    "trees": 20,
+    "cypresses": 7,
+    "pines": 13,
+    "smallLandscapeDetails": 180
+  },
+  "removedIds": [
+    "necro-pine-hipogeos-2",
+    "necro-pine-hipogeos-3"
+  ],
+  "retainedTreeIds": [
+    "necro-cypress-0",
+    "necro-cypress-1",
+    "necro-cypress-2",
+    "necro-cypress-3",
+    "necro-cypress-4",
+    "necro-cypress-5",
+    "necro-cypress-6",
+    "necro-pine-cementerio-0",
+    "necro-pine-cementerio-1",
+    "necro-pine-cementerio-2",
+    "necro-pine-cementerio-3",
+    "necro-pine-cementerio-4",
+    "necro-pine-cementerio-5",
+    "necro-pine-cementerio-6",
+    "necro-pine-cementerio-7",
+    "necro-pine-cementerio-8",
+    "necro-pine-cementerio-9",
+    "necro-pine-hipogeos-0",
+    "necro-pine-hipogeos-1",
+    "necro-pine-hipogeos-4"
+  ],
+  "generator": {
+    "path": "research/validation-v21/prepare_necropolis_context.py",
+    "lastRandomCallLine": 176,
+    "filterLine": 206
+  },
+  "consumers": [
+    "Atlas: createArchaeology -> createNecropolisContext",
+    "Simulator: loadAtlasContext/originalSurroundings -> createNecropolisContext"
+  ],
+  "hashes": {
+    "baselineContext": "50dd8417da1ee8695cdcadceb2a6f0920d5c78d39dba6d86a9ff80c8738aef68",
+    "currentContext": "557235c94c620b3193f361c4fa14797d7cace1f65870ddd3f9d8e2ab65b5deba",
+    "currentGenerator": "e06abf0133432d9ecd590a40a7bda484767d9820fb4ff44153f390c368bfbbce"
+  },
+  "checks": [
+    {
+      "pass": true,
+      "label": "Exactly two of 22 tree records removed"
+    },
+    {
+      "pass": true,
+      "label": "Only the two identified overlapping procedural pine IDs removed"
+    },
+    {
+      "pass": true,
+      "label": "Both removed records are interpreted pines seeded within OSM landcover"
+    },
+    {
+      "pass": true,
+      "label": "Every remaining tree record and its order are identical"
+    },
+    {
+      "pass": true,
+      "label": "All seven photo-guided cypresses remain identical"
+    },
+    {
+      "pass": true,
+      "label": "All 180 small landscape detail records remain identical"
+    },
+    {
+      "pass": true,
+      "label": "Tree and cypress statistics match the preserved records"
+    },
+    {
+      "pass": true,
+      "label": "No JSON data other than the two tree records and stats.trees changed"
+    },
+    {
+      "pass": true,
+      "label": "Generator contains the explicit two-pine ownership filter"
+    },
+    {
+      "pass": true,
+      "label": "Ownership filtering occurs after every random sequence"
+    },
+    {
+      "pass": true,
+      "label": "Generator AST is unchanged except for the two added filter assignments"
+    },
+    {
+      "pass": true,
+      "label": "Executing the authored filter reproduces the published tree list exactly"
+    },
+    {
+      "pass": true,
+      "label": "Filter preserves matching IDs if species, interpretation status or source differs"
+    }
+  ]
+}

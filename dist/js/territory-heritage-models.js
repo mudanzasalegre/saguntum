@@ -378,6 +378,22 @@ export async function buildHeritageModel(id,{places,records,area,heightAt,projec
   for(const ref of module[id+'BuildingIds']||[])claims[0].ids.add(String(ref).replace(/^cat-/,''));
   if(id==='theatre')claims[0].rings.push(maskRing(area.theatrePolygon.map(c=>project(...c))));
  }
+ if(id==='theatre'&&sites.theatre.group.userData.environs){
+  const environs=sites.theatre.group.userData.environs;
+  // Register the same planted area used by the Atlas. It suppresses generic
+  // trees only; approach paths must not erase neighbouring cadastral buildings.
+  const green=environs.vegetationExclusions.map(polygon=>maskRing(polygon.map(p=>frame.world(p.x,p.z)))).filter(Boolean);
+  claims.push({ids:[],rings:[],green});
+  // The actual top faces mask only the new paved footprints, preserving the
+  // rest of each OSM street and supporting the visitor on the rebuilt steps.
+  pavement=sampleAtlasPavement({group:outer},null,mesh=>mesh.isMesh&&mesh.userData.component==='entorno-accesos');
+  let meshes=0,triangles=0;
+  outer.traverseVisible(mesh=>{if(mesh.isMesh&&mesh.userData.component?.startsWith('entorno-')){
+   meshes++;triangles+=(mesh.geometry.index?.count??mesh.geometry.attributes.position.count)/3;
+  }});
+  contextStats={id,meshes,triangles,trees:environs.qa.trees.length,paths:environs.qa.sourceWayIds.length,
+   pavingAreaM2:Math.round((pavement?.coverage||0)*(pavement?.metres||0)**2)};
+ }
  const model={group:outer,claims,relief,pavement,contextStats,contextGroup:surroundings?.context.group,animate:made.animate,setDensity:landscapeDetail(outer),setHistorical(on){
   for(const site of Object.values(sites))if(site.currentGroup&&site.historicalGroup){
    site.currentGroup.visible=!on;site.historicalGroup.visible=on;

@@ -1,0 +1,2693 @@
+{
+  "pass": true,
+  "buildMs": 1509.9260889999998,
+  "groundBinding": {
+    "assembly": "Theatre + sacred/civic/archaeological patches + urban ground + final terrain mesh + bindGround",
+    "scope": "Same local theatre inputs as buildRegion(sagunto); distant Glorieta omitted from CPU context",
+    "changes": [
+      {
+        "id": "teatro-conjunto",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "teatro-aditus-oriental",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "teatro-orchestra",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "teatro-ima-cavea",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "teatro-media-cavea",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "teatro-summa-cavea",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "teatro-vomitoria",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "teatro-portico",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "teatro-tribunalia",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "teatro-proscaenium",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "teatro-frons-scaenae",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "teatro-basilicas",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "teatro-hyposcaenium",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "teatro-cloaca",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "teatro-restauracion",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "teatro-vivo",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      }
+    ]
+  },
+  "stats": {
+    "stops": 16,
+    "components": 25,
+    "meshes": 66,
+    "triangles": 101727,
+    "seatingRows": 23,
+    "senatorialRows": 2,
+    "upperRestitutedRows": 4,
+    "trueOpenPassages": 13,
+    "checkedOpenings": 19,
+    "cartographicOutline": true,
+    "undergroundReconstruction": "schematic",
+    "sourceKeys": [
+      "teatro-arqueologia-1993",
+      "teatro-estructura-1986",
+      "teatro-portaceli-1993",
+      "teatro-proyecto-1993",
+      "teatro-casa-arquitectura",
+      "teatro-foto-2015",
+      "teatro-almagro-1979",
+      "teatro-osm",
+      "teatro-entorno-pnoa",
+      "teatro-foto-2014",
+      "teatro-fotos-turisme"
+    ],
+    "periods": [
+      "ancient",
+      "contemporary",
+      "mixed",
+      "interpretation"
+    ]
+  },
+  "rehabilitation": {
+    "source": "teatro-casa-arquitectura",
+    "datum": "project-relative orchestra datum, not elevation above sea level",
+    "stageDeck": 1.2,
+    "scenicCrown": 20.2,
+    "upperCaveaCrown": 20.2,
+    "galleryLevels": [
+      5.6,
+      8.3
+    ],
+    "exedraCount": 3,
+    "mainPiers": 2,
+    "paleSeatingSectors": [
+      {
+        "order": "ima-cavea",
+        "angles": [
+          0.5235987755982988,
+          2.6179938779914944
+        ]
+      },
+      {
+        "order": "media-cavea",
+        "angles": [
+          0.7853981633974483,
+          2.356194490192345
+        ]
+      },
+      {
+        "order": "summa-cavea",
+        "angles": [
+          0.9424777960769379,
+          2.199114857512855
+        ]
+      }
+    ],
+    "upperCentralInterruption": true,
+    "roughFabric": "visual approximation of conserved and consolidated fabric, not individually surveyed fragments",
+    "roof": {
+      "front": -3.5,
+      "back": -23,
+      "width": 52.1,
+      "frontTop": 20.2,
+      "rearTop": 18.7375,
+      "slopeInterpretive": true
+    },
+    "sectionDrawings": [
+      "Seccion Transversal",
+      "Secciones Longitudinales",
+      "Planta +16,4",
+      "Planta +2,9"
+    ],
+    "fabricSamples": [
+      {
+        "component": "ima-cavea",
+        "period": "contemporary",
+        "localOrigin": [
+          2.2780768971483627,
+          4.48,
+          14.383211459916694
+        ],
+        "localDirection": [
+          0,
+          -1,
+          0
+        ],
+        "distance": 2
+      },
+      {
+        "component": "ima-cavea",
+        "period": "mixed",
+        "localOrigin": [
+          13.984276797670484,
+          4.48,
+          4.0628079816962765
+        ],
+        "localDirection": [
+          0,
+          -1,
+          0
+        ],
+        "distance": 2
+      },
+      {
+        "component": "media-cavea",
+        "period": "contemporary",
+        "localOrigin": [
+          3.387783883527501,
+          8.649999999999999,
+          21.38962562601345
+        ],
+        "localDirection": [
+          0,
+          -1,
+          0
+        ],
+        "distance": 2
+      },
+      {
+        "component": "media-cavea",
+        "period": "mixed",
+        "localOrigin": [
+          20.796360130441297,
+          8.649999999999999,
+          6.041901140162059
+        ],
+        "localDirection": [
+          0,
+          -1,
+          0
+        ],
+        "distance": 2
+      },
+      {
+        "component": "summa-cavea",
+        "period": "contemporary",
+        "localOrigin": [
+          4.626549303564829,
+          13.530000000000001,
+          29.2108826731012
+        ],
+        "localDirection": [
+          0,
+          -1,
+          0
+        ],
+        "distance": 2
+      },
+      {
+        "component": "summa-cavea",
+        "period": "mixed",
+        "localOrigin": [
+          28.40068575389559,
+          13.530000000000001,
+          8.251161961110206
+        ],
+        "localDirection": [
+          0,
+          -1,
+          0
+        ],
+        "distance": 2
+      }
+    ],
+    "openSpaceChecks": [
+      {
+        "id": "space-above-low-exedras",
+        "localOrigin": [
+          4,
+          7.2,
+          -5
+        ],
+        "localDirection": [
+          0,
+          0,
+          -1
+        ],
+        "distance": 10.1
+      },
+      {
+        "id": "interrupted-crown",
+        "localOrigin": [
+          0,
+          19,
+          37.5
+        ],
+        "localDirection": [
+          0,
+          0,
+          1
+        ],
+        "distance": 2.5
+      }
+    ],
+    "exedras": [
+      {
+        "center": [
+          -14.05,
+          -9.4
+        ],
+        "radius": 4.7,
+        "doorWidth": 2.5,
+        "wallTop": 5.75,
+        "geometry": "plan and photograph informed approximation"
+      },
+      {
+        "center": [
+          0,
+          -9.4
+        ],
+        "radius": 7.1,
+        "doorWidth": 3.35,
+        "wallTop": 5.75,
+        "geometry": "plan and photograph informed approximation"
+      },
+      {
+        "center": [
+          14.05,
+          -9.4
+        ],
+        "radius": 4.7,
+        "doorWidth": 2.5,
+        "wallTop": 5.75,
+        "geometry": "plan and photograph informed approximation"
+      }
+    ],
+    "scenicFloors": {
+      "timberConcavities": 1.2,
+      "rearServiceFloor": 2.15,
+      "rearLevelInterpretive": true,
+      "sectionComponent": "proscaenium",
+      "samples": [
+        [
+          0,
+          1.2,
+          -12
+        ],
+        [
+          -14.05,
+          1.2,
+          -12
+        ],
+        [
+          14.05,
+          1.2,
+          -12
+        ],
+        [
+          -5,
+          2.15,
+          -16.8
+        ],
+        [
+          5,
+          2.15,
+          -16.8
+        ]
+      ]
+    },
+    "rearPodium": {
+      "sources": [
+        "teatro-casa-arquitectura",
+        "teatro-foto-2015"
+      ],
+      "geometry": "Physical openings and narrow metal walkway; small dimensions and placement approximated from the north elevation and photograph, not a measured survey.",
+      "openings": [
+        {
+          "id": "rear-podium-window--14.05",
+          "x": -14.05,
+          "width": 1.65,
+          "bottom": -3.85,
+          "height": 2.25
+        },
+        {
+          "id": "rear-podium-window-0",
+          "x": 0,
+          "width": 1.65,
+          "bottom": -3.85,
+          "height": 2.25
+        },
+        {
+          "id": "rear-podium-window-14.05",
+          "x": 14.05,
+          "width": 1.65,
+          "bottom": -3.85,
+          "height": 2.25
+        },
+        {
+          "x": 17.25,
+          "width": 0.48,
+          "bottom": -0.95,
+          "height": 0.76
+        },
+        {
+          "x": 19.65,
+          "width": 0.48,
+          "bottom": -0.95,
+          "height": 0.76
+        },
+        {
+          "x": 21.85,
+          "width": 0.48,
+          "bottom": -0.95,
+          "height": 0.76
+        },
+        {
+          "x": 17.25,
+          "width": 0.48,
+          "bottom": -3.85,
+          "height": 0.76
+        },
+        {
+          "x": 19.65,
+          "width": 0.48,
+          "bottom": -3.85,
+          "height": 0.76
+        },
+        {
+          "x": 21.85,
+          "width": 0.48,
+          "bottom": -3.85,
+          "height": 0.76
+        },
+        {
+          "x": -21.85,
+          "width": 0.48,
+          "bottom": -3.85,
+          "height": 0.76
+        },
+        {
+          "x": -4.3,
+          "width": 1.75,
+          "bottom": -3.85,
+          "height": 3.8
+        },
+        {
+          "x": 0,
+          "width": 1.55,
+          "bottom": -7.2,
+          "height": 3
+        },
+        {
+          "x": 21.35,
+          "width": 1.15,
+          "bottom": -6.7,
+          "height": 2.6
+        },
+        {
+          "x": -21.45,
+          "width": 1.25,
+          "bottom": -6.9,
+          "height": 2.25
+        }
+      ],
+      "walkway": {
+        "level": 1.2,
+        "span": 44.3,
+        "width": 1.04,
+        "outerZ": -24.15,
+        "railHeight": 1.04,
+        "projectingLandings": 3
+      },
+      "approximateMinorDimensions": true
+    },
+    "antiquarium": {
+      "source": "teatro-casa-arquitectura",
+      "wallGroups": [
+        {
+          "center": [
+            -19.3,
+            10.95,
+            -17.97
+          ],
+          "pieces": 5
+        },
+        {
+          "center": [
+            -7.2,
+            10.95,
+            -17.97
+          ],
+          "pieces": 3
+        },
+        {
+          "center": [
+            5.5,
+            10.9,
+            -17.97
+          ],
+          "pieces": 3
+        },
+        {
+          "center": [
+            17.5,
+            11.1,
+            -17.97
+          ],
+          "pieces": 6
+        }
+      ],
+      "wallPieces": 17,
+      "columns": 2,
+      "representation": "Generic plain fragment silhouettes and display groupings observed in the author photograph; minor positions and dimensions approximate, no reconstructed inscriptions or ornament."
+    }
+  },
+  "checks": [
+    {
+      "pass": true,
+      "label": "all 16 documented stop IDs resolve to model focuses"
+    },
+    {
+      "pass": true,
+      "label": "model references resolve to the displayed bibliography"
+    },
+    {
+      "pass": true,
+      "label": "orchestra and principal cavea dimensions match archaeological measurements"
+    },
+    {
+      "pass": true,
+      "label": "the documented 6 / 8 / 9 seating orders are represented"
+    },
+    {
+      "pass": true,
+      "label": "the didactic curtain trench preserves documented structural counts and width"
+    },
+    {
+      "pass": true,
+      "label": "ancient stage elevation is not passed off as measured"
+    },
+    {
+      "pass": true,
+      "label": "both cadastral theatre duplicates are excluded from context"
+    },
+    {
+      "pass": true,
+      "label": "internal mapped paths remain replaced by architectural circulation"
+    },
+    {
+      "pass": true,
+      "label": "all geometry attributes are finite"
+    },
+    {
+      "pass": true,
+      "label": "top surfaces remain above the final interpolated terrain"
+    },
+    {
+      "pass": true,
+      "label": "vomitorium-0 has an open 3D passage and terrain clearance"
+    },
+    {
+      "pass": true,
+      "label": "vomitorium-1 has an open 3D passage and terrain clearance"
+    },
+    {
+      "pass": true,
+      "label": "vomitorium-2 has an open 3D passage and terrain clearance"
+    },
+    {
+      "pass": true,
+      "label": "vomitorium-3 has an open 3D passage and terrain clearance"
+    },
+    {
+      "pass": true,
+      "label": "portico-door-0.88 has an open 3D passage and terrain clearance"
+    },
+    {
+      "pass": true,
+      "label": "portico-door-1.32 has an open 3D passage and terrain clearance"
+    },
+    {
+      "pass": true,
+      "label": "portico-door-1.82 has an open 3D passage and terrain clearance"
+    },
+    {
+      "pass": true,
+      "label": "portico-door-2.26 has an open 3D passage and terrain clearance"
+    },
+    {
+      "pass": true,
+      "label": "aditus-occidental has an open 3D passage and terrain clearance"
+    },
+    {
+      "pass": true,
+      "label": "aditus-oriental has an open 3D passage and terrain clearance"
+    },
+    {
+      "pass": true,
+      "label": "scene-door--14.05 has an open 3D passage and terrain clearance"
+    },
+    {
+      "pass": true,
+      "label": "scene-door-0 has an open 3D passage and terrain clearance"
+    },
+    {
+      "pass": true,
+      "label": "scene-door-14.05 has an open 3D passage and terrain clearance"
+    },
+    {
+      "pass": true,
+      "label": "rear-podium-window--14.05 has an open 3D passage and terrain clearance"
+    },
+    {
+      "pass": true,
+      "label": "rear-podium-window-0 has an open 3D passage and terrain clearance"
+    },
+    {
+      "pass": true,
+      "label": "rear-podium-window-14.05 has an open 3D passage and terrain clearance"
+    },
+    {
+      "pass": true,
+      "label": "rear-podium-raised-access has an open 3D passage and terrain clearance"
+    },
+    {
+      "pass": true,
+      "label": "scenic-upper-window--19.4 has an open 3D passage and terrain clearance"
+    },
+    {
+      "pass": true,
+      "label": "scenic-upper-window-19.4 has an open 3D passage and terrain clearance"
+    },
+    {
+      "pass": true,
+      "label": "cloaca-esquema has an open 3D passage and terrain clearance"
+    },
+    {
+      "pass": true,
+      "label": "central-exedra-floor has a contemporary floor at the expected level, rather than a void to the substructures"
+    },
+    {
+      "pass": true,
+      "label": "western-exedra-floor has a contemporary floor at the expected level, rather than a void to the substructures"
+    },
+    {
+      "pass": true,
+      "label": "eastern-exedra-floor has a contemporary floor at the expected level, rather than a void to the substructures"
+    },
+    {
+      "pass": true,
+      "label": "western-rear-circulation-floor has a contemporary floor at the expected level, rather than a void to the substructures"
+    },
+    {
+      "pass": true,
+      "label": "eastern-rear-circulation-floor has a contemporary floor at the expected level, rather than a void to the substructures"
+    },
+    {
+      "pass": true,
+      "label": "air-above-low-exedras remains geometrically open instead of being closed by a full-height wall"
+    },
+    {
+      "pass": true,
+      "label": "central-upper-crown-interruption remains geometrically open instead of being closed by a full-height wall"
+    },
+    {
+      "pass": true,
+      "label": "rear-walkway-landing--14.05 has exactly one effective upper surface at +1.20 inside the former overlap"
+    },
+    {
+      "pass": true,
+      "label": "rear-walkway-landing-0 has exactly one effective upper surface at +1.20 inside the former overlap"
+    },
+    {
+      "pass": true,
+      "label": "rear-walkway-landing-14.05 has exactly one effective upper surface at +1.20 inside the former overlap"
+    },
+    {
+      "pass": true,
+      "label": "rear metal walkway remains continuous and single-faced across its six landing joints and connecting spans"
+    },
+    {
+      "pass": true,
+      "label": "west-front-wall-junction has exactly one effective crown face at +20.20, without a roof gap or coplanar overlap"
+    },
+    {
+      "pass": true,
+      "label": "east-front-wall-junction has exactly one effective crown face at +20.20, without a roof gap or coplanar overlap"
+    },
+    {
+      "pass": true,
+      "label": "west-rear-wall-junction has exactly one effective crown face at +20.20, without a roof gap or coplanar overlap"
+    },
+    {
+      "pass": true,
+      "label": "east-rear-wall-junction has exactly one effective crown face at +20.20, without a roof gap or coplanar overlap"
+    },
+    {
+      "pass": true,
+      "label": "west-end-wall-junction has exactly one effective crown face at +20.20, without a roof gap or coplanar overlap"
+    },
+    {
+      "pass": true,
+      "label": "east-end-wall-junction has exactly one effective crown face at +20.20, without a roof gap or coplanar overlap"
+    },
+    {
+      "pass": true,
+      "label": "west-triple-junction has exactly one effective crown face at +20.20, without a roof gap or coplanar overlap"
+    },
+    {
+      "pass": true,
+      "label": "east-triple-junction has exactly one effective crown face at +20.20, without a roof gap or coplanar overlap"
+    },
+    {
+      "pass": true,
+      "label": "rear-coping-centre has exactly one effective crown face at +20.20, without a roof gap or coplanar overlap"
+    },
+    {
+      "pass": true,
+      "label": "west-front-corner has exactly one effective crown face at +20.20, without a roof gap or coplanar overlap"
+    },
+    {
+      "pass": true,
+      "label": "west-front-edge-gap has exactly one effective crown face at +20.20, without a roof gap or coplanar overlap"
+    },
+    {
+      "pass": true,
+      "label": "west-rear-edge-gap has exactly one effective crown face at +20.20, without a roof gap or coplanar overlap"
+    },
+    {
+      "pass": true,
+      "label": "east-front-edge-gap has exactly one effective crown face at +20.20, without a roof gap or coplanar overlap"
+    },
+    {
+      "pass": true,
+      "label": "east-rear-edge-gap has exactly one effective crown face at +20.20, without a roof gap or coplanar overlap"
+    },
+    {
+      "pass": true,
+      "label": "west-roof-control has exactly one effective crown face at +20.20, without a roof gap or coplanar overlap"
+    },
+    {
+      "pass": true,
+      "label": "east-roof-control has exactly one effective crown face at +20.20, without a roof gap or coplanar overlap"
+    },
+    {
+      "pass": true,
+      "label": "focus selection teatro-conjunto"
+    },
+    {
+      "pass": true,
+      "label": "focus selection teatro-aditus-oriental"
+    },
+    {
+      "pass": true,
+      "label": "focus selection teatro-orchestra"
+    },
+    {
+      "pass": true,
+      "label": "focus selection teatro-ima-cavea"
+    },
+    {
+      "pass": true,
+      "label": "focus selection teatro-media-cavea"
+    },
+    {
+      "pass": true,
+      "label": "focus selection teatro-summa-cavea"
+    },
+    {
+      "pass": true,
+      "label": "focus selection teatro-vomitoria"
+    },
+    {
+      "pass": true,
+      "label": "focus selection teatro-portico"
+    },
+    {
+      "pass": true,
+      "label": "focus selection teatro-tribunalia"
+    },
+    {
+      "pass": true,
+      "label": "focus selection teatro-proscaenium"
+    },
+    {
+      "pass": true,
+      "label": "focus selection teatro-frons-scaenae"
+    },
+    {
+      "pass": true,
+      "label": "focus selection teatro-basilicas"
+    },
+    {
+      "pass": true,
+      "label": "focus selection teatro-hyposcaenium"
+    },
+    {
+      "pass": true,
+      "label": "focus selection teatro-cloaca"
+    },
+    {
+      "pass": true,
+      "label": "focus selection teatro-restauracion"
+    },
+    {
+      "pass": true,
+      "label": "focus selection teatro-vivo"
+    },
+    {
+      "pass": true,
+      "label": "section removes the contemporary roof and stage deck"
+    },
+    {
+      "pass": true,
+      "label": "documented schematic substructures remain present in section"
+    },
+    {
+      "pass": true,
+      "label": "selection, period reading and cutaway restore original resources and visibility"
+    },
+    {
+      "pass": true,
+      "label": "theatre instances never share disposable material caches"
+    },
+    {
+      "pass": true,
+      "label": "theatre instances never share disposable textures"
+    },
+    {
+      "pass": true,
+      "label": "teatro-conjunto full camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-conjunto full camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-conjunto near camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-conjunto near camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-aditus-oriental full camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-aditus-oriental full camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-aditus-oriental full camera sees its access through actual architecture and final terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-aditus-oriental near camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-aditus-oriental near camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-aditus-oriental near camera sees its access through actual architecture and final terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-orchestra full camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-orchestra full camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-orchestra near camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-orchestra near camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-ima-cavea full camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-ima-cavea full camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-ima-cavea near camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-ima-cavea near camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-media-cavea full camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-media-cavea full camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-media-cavea near camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-media-cavea near camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-summa-cavea full camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-summa-cavea full camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-summa-cavea near camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-summa-cavea near camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-vomitoria full camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-vomitoria full camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-vomitoria full camera sees its access through actual architecture and final terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-vomitoria near camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-vomitoria near camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-vomitoria near camera sees its access through actual architecture and final terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-portico full camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-portico full camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-portico near camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-portico near camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-tribunalia full camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-tribunalia full camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-tribunalia near camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-tribunalia near camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-proscaenium full camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-proscaenium full camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-proscaenium near camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-proscaenium near camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-frons-scaenae full camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-frons-scaenae full camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-frons-scaenae near camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-frons-scaenae near camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-basilicas full camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-basilicas full camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-basilicas near camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-basilicas near camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-hyposcaenium full camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-hyposcaenium full camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-hyposcaenium near camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-hyposcaenium near camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-cloaca full camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-cloaca full camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-cloaca near camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-cloaca near camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-restauracion full camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-restauracion full camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-restauracion near camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-restauracion near camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-vivo full camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-vivo full camera target is not hidden by terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-vivo near camera stays above rendered terrain"
+    },
+    {
+      "pass": true,
+      "label": "teatro-vivo near camera target is not hidden by terrain"
+    }
+  ],
+  "errors": [],
+  "openings": [
+    {
+      "id": "vomitorium-0",
+      "total": 9,
+      "clear": 9,
+      "hits": []
+    },
+    {
+      "id": "vomitorium-1",
+      "total": 9,
+      "clear": 9,
+      "hits": []
+    },
+    {
+      "id": "vomitorium-2",
+      "total": 9,
+      "clear": 9,
+      "hits": []
+    },
+    {
+      "id": "vomitorium-3",
+      "total": 9,
+      "clear": 9,
+      "hits": []
+    },
+    {
+      "id": "portico-door-0.88",
+      "total": 9,
+      "clear": 9,
+      "hits": []
+    },
+    {
+      "id": "portico-door-1.32",
+      "total": 9,
+      "clear": 9,
+      "hits": []
+    },
+    {
+      "id": "portico-door-1.82",
+      "total": 9,
+      "clear": 9,
+      "hits": []
+    },
+    {
+      "id": "portico-door-2.26",
+      "total": 9,
+      "clear": 9,
+      "hits": []
+    },
+    {
+      "id": "aditus-occidental",
+      "total": 9,
+      "clear": 9,
+      "hits": []
+    },
+    {
+      "id": "aditus-oriental",
+      "total": 9,
+      "clear": 9,
+      "hits": []
+    },
+    {
+      "id": "scene-door--14.05",
+      "total": 9,
+      "clear": 9,
+      "hits": []
+    },
+    {
+      "id": "scene-door-0",
+      "total": 9,
+      "clear": 9,
+      "hits": []
+    },
+    {
+      "id": "scene-door-14.05",
+      "total": 9,
+      "clear": 9,
+      "hits": []
+    },
+    {
+      "id": "rear-podium-window--14.05",
+      "total": 9,
+      "clear": 9,
+      "hits": []
+    },
+    {
+      "id": "rear-podium-window-0",
+      "total": 9,
+      "clear": 9,
+      "hits": []
+    },
+    {
+      "id": "rear-podium-window-14.05",
+      "total": 9,
+      "clear": 9,
+      "hits": []
+    },
+    {
+      "id": "rear-podium-raised-access",
+      "total": 9,
+      "clear": 9,
+      "hits": []
+    },
+    {
+      "id": "scenic-upper-window--19.4",
+      "total": 9,
+      "clear": 9,
+      "hits": []
+    },
+    {
+      "id": "scenic-upper-window-19.4",
+      "total": 9,
+      "clear": 9,
+      "hits": []
+    },
+    {
+      "id": "cloaca-esquema",
+      "total": 9,
+      "clear": 9,
+      "hits": []
+    }
+  ],
+  "regressions": {
+    "scenicFloors": [
+      {
+        "id": "central-exedra-floor",
+        "expectedLocal": [
+          0,
+          1.2,
+          -12
+        ],
+        "rayOrigin": [
+          9.490052386639016,
+          88.19918325220935,
+          226.61124817341224
+        ],
+        "rayDistance": 2,
+        "hitMesh": "Teatro · proscaenium · timber",
+        "hitLocal": [
+          -2.842170943040401e-14,
+          1.2000000476837016,
+          -11.999999999999972
+        ],
+        "pass": true
+      },
+      {
+        "id": "western-exedra-floor",
+        "expectedLocal": [
+          -14.05,
+          1.2,
+          -12
+        ],
+        "rayOrigin": [
+          -2.8217506792607234,
+          88.19918325220935,
+          219.84205285443215
+        ],
+        "rayDistance": 2,
+        "hitMesh": "Teatro · proscaenium · timber",
+        "hitLocal": [
+          -14.050000000000011,
+          1.2000000476837016,
+          -12
+        ],
+        "pass": true
+      },
+      {
+        "id": "eastern-exedra-floor",
+        "expectedLocal": [
+          14.05,
+          1.2,
+          -12
+        ],
+        "rayOrigin": [
+          21.80185545253876,
+          88.19918325220935,
+          233.38044349239232
+        ],
+        "rayDistance": 2,
+        "hitMesh": "Teatro · proscaenium · timber",
+        "hitLocal": [
+          14.050000000000011,
+          1.2000000476837016,
+          -11.999999999999943
+        ],
+        "pass": true
+      },
+      {
+        "id": "western-rear-circulation-floor",
+        "expectedLocal": [
+          -5,
+          2.15,
+          -16.8
+        ],
+        "rayOrigin": [
+          7.421235461486395,
+          89.14918325220935,
+          219.99611427225784
+        ],
+        "rayDistance": 2,
+        "hitMesh": "Teatro · proscaenium · paving",
+        "hitLocal": [
+          -5.000000000000014,
+          2.1500000953674174,
+          -16.80000000000001
+        ],
+        "pass": true
+      },
+      {
+        "id": "eastern-rear-circulation-floor",
+        "expectedLocal": [
+          5,
+          2.15,
+          -16.8
+        ],
+        "rayOrigin": [
+          16.18408461871041,
+          89.14918325220935,
+          224.81404688363156
+        ],
+        "rayDistance": 2,
+        "hitMesh": "Teatro · proscaenium · paving",
+        "hitLocal": [
+          4.999999999999972,
+          2.1500000953674174,
+          -16.799999999999955
+        ],
+        "pass": true
+      }
+    ],
+    "openVolumes": [
+      {
+        "id": "air-above-low-exedras",
+        "samples": [
+          {
+            "localOrigin": [
+              4,
+              7.2,
+              -5
+            ],
+            "origin": [
+              9.622639221567018,
+              93.39918325220935,
+              234.67241562801854
+            ],
+            "direction": [
+              0.481793261137372,
+              0,
+              -0.8762849157224016
+            ],
+            "distance": 10.1,
+            "clear": true,
+            "hitMesh": null,
+            "hitLocal": null
+          }
+        ],
+        "pass": true
+      },
+      {
+        "id": "central-upper-crown-interruption",
+        "samples": [
+          {
+            "localOrigin": [
+              0,
+              15.6,
+              36.5
+            ],
+            "origin": [
+              -13.876920778523518,
+              101.79918325220935,
+              269.1110665859487
+            ],
+            "direction": [
+              -0.481793261137372,
+              0,
+              0.8762849157224016
+            ],
+            "distance": 2.5,
+            "clear": true,
+            "hitMesh": null,
+            "hitLocal": null
+          },
+          {
+            "localOrigin": [
+              0,
+              17.5,
+              36.5
+            ],
+            "origin": [
+              -13.876920778523518,
+              103.69918325220935,
+              269.1110665859487
+            ],
+            "direction": [
+              -0.481793261137372,
+              0,
+              0.8762849157224016
+            ],
+            "distance": 2.5,
+            "clear": true,
+            "hitMesh": null,
+            "hitLocal": null
+          },
+          {
+            "localOrigin": [
+              0,
+              19,
+              36.5
+            ],
+            "origin": [
+              -13.876920778523518,
+              105.19918325220935,
+              269.1110665859487
+            ],
+            "direction": [
+              -0.481793261137372,
+              0,
+              0.8762849157224016
+            ],
+            "distance": 2.5,
+            "clear": true,
+            "hitMesh": null,
+            "hitLocal": null
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "accessSightlines": [
+      {
+        "id": "teatro-aditus-oriental",
+        "near": false,
+        "eye": [
+          11.980532103402064,
+          88.79918325220936,
+          240.76177857973948
+        ],
+        "target": [
+          25.124805839238086,
+          88.39918325220935,
+          247.98867749680005
+        ],
+        "eyeLocal": [
+          8.999999999999986,
+          2.5999999999999943,
+          -0.799999999999983
+        ],
+        "targetLocal": [
+          24,
+          2.1999999999999886,
+          -0.799999999999983
+        ],
+        "rayDistance": 14.955332385522148,
+        "architectureHit": null,
+        "terrainHit": null,
+        "pass": true
+      },
+      {
+        "id": "teatro-aditus-oriental",
+        "near": true,
+        "eye": [
+          14.609386850569269,
+          88.69918325220935,
+          242.2071583631516
+        ],
+        "target": [
+          25.124805839238086,
+          88.39918325220935,
+          247.98867749680005
+        ],
+        "eyeLocal": [
+          12,
+          2.499999999999986,
+          -0.799999999999983
+        ],
+        "targetLocal": [
+          24,
+          2.1999999999999886,
+          -0.799999999999983
+        ],
+        "rayDistance": 11.95374941424553,
+        "architectureHit": null,
+        "terrainHit": null,
+        "pass": true
+      },
+      {
+        "id": "teatro-vomitoria",
+        "near": false,
+        "eye": [
+          1.0129051212239653,
+          97.04918325220936,
+          258.45701148595987
+        ],
+        "target": [
+          0.4487033835184153,
+          97.14918325220935,
+          262.9215023017454
+        ],
+        "eyeLocal": [
+          7.914677882720568,
+          10.849999999999994,
+          19.990194446597457
+        ],
+        "targetLocal": [
+          9.571238000000008,
+          10.949999999999989,
+          24.17418900000004
+        ],
+        "rayDistance": 4.451111178927212,
+        "architectureHit": null,
+        "terrainHit": null,
+        "pass": true
+      },
+      {
+        "id": "teatro-vomitoria",
+        "near": true,
+        "eye": [
+          0.7621490159433532,
+          97.04918325220936,
+          260.44122956259974
+        ],
+        "target": [
+          0.4487033835184153,
+          97.14918325220935,
+          262.9215023017454
+        ],
+        "eyeLocal": [
+          8.650926988089921,
+          10.849999999999994,
+          21.849747418373937
+        ],
+        "targetLocal": [
+          9.571238000000008,
+          10.949999999999989,
+          24.17418900000004
+        ],
+        "rayDistance": 2.4519994054826357,
+        "architectureHit": null,
+        "terrainHit": null,
+        "pass": true
+      }
+    ],
+    "rearWalkway": [
+      {
+        "id": "rear-walkway-landing--14.05",
+        "samples": [
+          {
+            "local": [
+              -13.82,
+              1.2,
+              -23.72
+            ],
+            "rayOrigin": [
+              3.026411871885428,
+              88.19918325220935,
+              209.6828060922272
+            ],
+            "upperSurfaceCount": 1,
+            "hits": [
+              {
+                "mesh": "Teatro · escena-posterior · metal",
+                "faceIndex": 1877,
+                "local": [
+                  -13.820000000000036,
+                  1.2000000476837016,
+                  -23.72
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "pass": true
+      },
+      {
+        "id": "rear-walkway-landing-0",
+        "samples": [
+          {
+            "local": [
+              0.23,
+              1.2,
+              -23.72
+            ],
+            "rayOrigin": [
+              15.338214937785168,
+              88.19918325220935,
+              216.45200141120728
+            ],
+            "upperSurfaceCount": 1,
+            "hits": [
+              {
+                "mesh": "Teatro · escena-posterior · metal",
+                "faceIndex": 2261,
+                "local": [
+                  0.22999999999997556,
+                  1.2000000476837016,
+                  -23.71999999999997
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "pass": true
+      },
+      {
+        "id": "rear-walkway-landing-14.05",
+        "samples": [
+          {
+            "local": [
+              14.280000000000001,
+              1.2,
+              -23.72
+            ],
+            "rayOrigin": [
+              27.65001800368491,
+              88.19918325220935,
+              223.22119673018736
+            ],
+            "upperSurfaceCount": 1,
+            "hits": [
+              {
+                "mesh": "Teatro · escena-posterior · metal",
+                "faceIndex": 2693,
+                "local": [
+                  14.280000000000001,
+                  1.2000000476837016,
+                  -23.719999999999942
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "pass": true
+      },
+      {
+        "id": "rear-walkway-continuity",
+        "samples": [
+          {
+            "local": [
+              -21.7,
+              1.2,
+              -23.72
+            ],
+            "rayOrigin": [
+              -3.8787132640070943,
+              88.19918325220935,
+              205.8862751944647
+            ],
+            "upperSurfaceCount": 1,
+            "hits": [
+              {
+                "mesh": "Teatro · escena-posterior · metal",
+                "faceIndex": 4,
+                "local": [
+                  -21.70000000000003,
+                  1.2000000476837016,
+                  -23.72
+                ]
+              }
+            ],
+            "pass": true
+          },
+          {
+            "local": [
+              -15.635,
+              1.2,
+              -23.72
+            ],
+            "rayOrigin": [
+              1.4359547498492682,
+              88.19918325220935,
+              208.80835132326288
+            ],
+            "upperSurfaceCount": 1,
+            "hits": [
+              {
+                "mesh": "Teatro · escena-posterior · metal",
+                "faceIndex": 5,
+                "local": [
+                  -15.635000000000005,
+                  1.2000000476837016,
+                  -23.72
+                ]
+              }
+            ],
+            "pass": true
+          },
+          {
+            "local": [
+              -15.565,
+              1.2,
+              -23.72
+            ],
+            "rayOrigin": [
+              1.4972946939498368,
+              88.19918325220935,
+              208.8420768515425
+            ],
+            "upperSurfaceCount": 1,
+            "hits": [
+              {
+                "mesh": "Teatro · escena-posterior · metal",
+                "faceIndex": 1876,
+                "local": [
+                  -15.56500000000004,
+                  1.2000000476837016,
+                  -23.71999999999997
+                ]
+              }
+            ],
+            "pass": true
+          },
+          {
+            "local": [
+              -12.535,
+              1.2,
+              -23.72
+            ],
+            "rayOrigin": [
+              4.152437988588712,
+              88.19918325220935,
+              210.30191043278873
+            ],
+            "upperSurfaceCount": 1,
+            "hits": [
+              {
+                "mesh": "Teatro · escena-posterior · metal",
+                "faceIndex": 1877,
+                "local": [
+                  -12.535000000000025,
+                  1.2000000476837016,
+                  -23.72
+                ]
+              }
+            ],
+            "pass": true
+          },
+          {
+            "local": [
+              -12.465,
+              1.2,
+              -23.72
+            ],
+            "rayOrigin": [
+              4.213777932689281,
+              88.19918325220935,
+              210.33563596106836
+            ],
+            "upperSurfaceCount": 1,
+            "hits": [
+              {
+                "mesh": "Teatro · escena-posterior · metal",
+                "faceIndex": 376,
+                "local": [
+                  -12.465000000000018,
+                  1.2000000476837016,
+                  -23.719999999999942
+                ]
+              }
+            ],
+            "pass": true
+          },
+          {
+            "local": [
+              -8,
+              1.2,
+              -23.72
+            ],
+            "rayOrigin": [
+              8.126390081389804,
+              88.19918325220935,
+              212.4868428720467
+            ],
+            "upperSurfaceCount": 1,
+            "hits": [
+              {
+                "mesh": "Teatro · escena-posterior · metal",
+                "faceIndex": 376,
+                "local": [
+                  -8.000000000000014,
+                  1.2000000476837016,
+                  -23.72
+                ]
+              }
+            ],
+            "pass": true
+          },
+          {
+            "local": [
+              -1.985,
+              1.2,
+              -23.72
+            ],
+            "rayOrigin": [
+              13.397243849460049,
+              88.19918325220935,
+              215.384829337788
+            ],
+            "upperSurfaceCount": 1,
+            "hits": [
+              {
+                "mesh": "Teatro · escena-posterior · metal",
+                "faceIndex": 377,
+                "local": [
+                  -1.9850000000000279,
+                  1.2000000476837016,
+                  -23.72
+                ]
+              }
+            ],
+            "pass": true
+          },
+          {
+            "local": [
+              -1.915,
+              1.2,
+              -23.72
+            ],
+            "rayOrigin": [
+              13.458583793560615,
+              88.19918325220935,
+              215.4185548660676
+            ],
+            "upperSurfaceCount": 1,
+            "hits": [
+              {
+                "mesh": "Teatro · escena-posterior · metal",
+                "faceIndex": 2260,
+                "local": [
+                  -1.9150000000000347,
+                  1.2000000476837016,
+                  -23.71999999999997
+                ]
+              }
+            ],
+            "pass": true
+          },
+          {
+            "local": [
+              1.915,
+              1.2,
+              -23.72
+            ],
+            "rayOrigin": [
+              16.814755020777415,
+              88.19918325220935,
+              217.26382305622374
+            ],
+            "upperSurfaceCount": 1,
+            "hits": [
+              {
+                "mesh": "Teatro · escena-posterior · metal",
+                "faceIndex": 2261,
+                "local": [
+                  1.9149999999999778,
+                  1.2000000476837016,
+                  -23.72
+                ]
+              }
+            ],
+            "pass": true
+          },
+          {
+            "local": [
+              1.985,
+              1.2,
+              -23.72
+            ],
+            "rayOrigin": [
+              16.876094964877982,
+              88.19918325220935,
+              217.29754858450337
+            ],
+            "upperSurfaceCount": 1,
+            "hits": [
+              {
+                "mesh": "Teatro · escena-posterior · metal",
+                "faceIndex": 940,
+                "local": [
+                  1.9849999999999994,
+                  1.2000000476837016,
+                  -23.72
+                ]
+              }
+            ],
+            "pass": true
+          },
+          {
+            "local": [
+              8,
+              1.2,
+              -23.72
+            ],
+            "rayOrigin": [
+              22.14694873294823,
+              88.19918325220935,
+              220.19553505024467
+            ],
+            "upperSurfaceCount": 1,
+            "hits": [
+              {
+                "mesh": "Teatro · escena-posterior · metal",
+                "faceIndex": 940,
+                "local": [
+                  8,
+                  1.2000000476837016,
+                  -23.719999999999942
+                ]
+              }
+            ],
+            "pass": true
+          },
+          {
+            "local": [
+              12.465,
+              1.2,
+              -23.72
+            ],
+            "rayOrigin": [
+              26.05956088164875,
+              88.19918325220935,
+              222.34674196122302
+            ],
+            "upperSurfaceCount": 1,
+            "hits": [
+              {
+                "mesh": "Teatro · escena-posterior · metal",
+                "faceIndex": 941,
+                "local": [
+                  12.464999999999975,
+                  1.2000000476837016,
+                  -23.72
+                ]
+              }
+            ],
+            "pass": true
+          },
+          {
+            "local": [
+              12.535,
+              1.2,
+              -23.72
+            ],
+            "rayOrigin": [
+              26.120900825749317,
+              88.19918325220935,
+              222.38046748950265
+            ],
+            "upperSurfaceCount": 1,
+            "hits": [
+              {
+                "mesh": "Teatro · escena-posterior · metal",
+                "faceIndex": 2692,
+                "local": [
+                  12.534999999999997,
+                  1.2000000476837016,
+                  -23.72
+                ]
+              }
+            ],
+            "pass": true
+          },
+          {
+            "local": [
+              15.565,
+              1.2,
+              -23.72
+            ],
+            "rayOrigin": [
+              28.776044120388192,
+              88.19918325220935,
+              223.84030107074886
+            ],
+            "upperSurfaceCount": 1,
+            "hits": [
+              {
+                "mesh": "Teatro · escena-posterior · metal",
+                "faceIndex": 2693,
+                "local": [
+                  15.564999999999998,
+                  1.2000000476837016,
+                  -23.72
+                ]
+              }
+            ],
+            "pass": true
+          },
+          {
+            "local": [
+              15.635,
+              1.2,
+              -23.72
+            ],
+            "rayOrigin": [
+              28.837384064488763,
+              88.19918325220935,
+              223.8740265990285
+            ],
+            "upperSurfaceCount": 1,
+            "hits": [
+              {
+                "mesh": "Teatro · escena-posterior · metal",
+                "faceIndex": 1504,
+                "local": [
+                  15.634999999999991,
+                  1.2000000476837016,
+                  -23.72
+                ]
+              }
+            ],
+            "pass": true
+          },
+          {
+            "local": [
+              21.7,
+              1.2,
+              -23.72
+            ],
+            "rayOrigin": [
+              34.15205207834512,
+              88.19918325220935,
+              226.79610272782665
+            ],
+            "upperSurfaceCount": 1,
+            "hits": [
+              {
+                "mesh": "Teatro · escena-posterior · metal",
+                "faceIndex": 1505,
+                "local": [
+                  21.69999999999999,
+                  1.2000000476837016,
+                  -23.72
+                ]
+              }
+            ],
+            "pass": true
+          }
+        ],
+        "pass": true
+      }
+    ],
+    "roofCrownJoins": [
+      {
+        "id": "west-front-wall-junction",
+        "local": [
+          -24.2,
+          20.2,
+          -18.3
+        ],
+        "rayOrigin": [
+          -8.680745028677652,
+          107.39918325220935,
+          209.4312562848367
+        ],
+        "rayDistance": 2,
+        "upperSurfaceCount": 1,
+        "hits": [
+          {
+            "mesh": "Teatro · escena-posterior · brick",
+            "faceIndex": 1780,
+            "local": [
+              -24.20000000000003,
+              20.20000076293944,
+              -18.299999999999983
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "id": "east-front-wall-junction",
+        "local": [
+          24.3,
+          20.2,
+          -18.3
+        ],
+        "rayOrigin": [
+          33.819073383858814,
+          107.39918325220935,
+          232.79822944999924
+        ],
+        "rayDistance": 2,
+        "upperSurfaceCount": 1,
+        "hits": [
+          {
+            "mesh": "Teatro · escena-posterior · brick",
+            "faceIndex": 1781,
+            "local": [
+              24.30000000000001,
+              20.20000076293944,
+              -18.299999999999955
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "id": "west-rear-wall-junction",
+        "local": [
+          -24.2,
+          20.2,
+          -22.7
+        ],
+        "rayOrigin": [
+          -6.560854679673216,
+          107.39918325220935,
+          205.57560265565814
+        ],
+        "rayDistance": 2,
+        "upperSurfaceCount": 1,
+        "hits": [
+          {
+            "mesh": "Teatro · escena-posterior · limestone",
+            "faceIndex": 4,
+            "local": [
+              -24.20000000000003,
+              20.20000076293944,
+              -22.69999999999999
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "id": "east-rear-wall-junction",
+        "local": [
+          24.3,
+          20.2,
+          -22.85
+        ],
+        "rayOrigin": [
+          36.01123272203386,
+          107.39918325220935,
+          228.81113308346232
+        ],
+        "rayDistance": 2,
+        "upperSurfaceCount": 1,
+        "hits": [
+          {
+            "mesh": "Teatro · escena-posterior · limestone",
+            "faceIndex": 5,
+            "local": [
+              24.30000000000001,
+              20.20000076293944,
+              -22.849999999999994
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "id": "west-end-wall-junction",
+        "local": [
+          -26.23,
+          20.2,
+          -20.35
+        ],
+        "rayOrigin": [
+          -9.471927222262519,
+          107.39918325220935,
+          206.6568318874969
+        ],
+        "rayDistance": 2,
+        "upperSurfaceCount": 1,
+        "hits": [
+          {
+            "mesh": "Teatro · escena-posterior · brick",
+            "faceIndex": 3292,
+            "local": [
+              -26.230000000000032,
+              20.20000076293944,
+              -20.349999999999966
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "id": "east-end-wall-junction",
+        "local": [
+          26.23,
+          20.2,
+          -20.35
+        ],
+        "rayOrigin": [
+          36.497979456534665,
+          107.39918325220935,
+          231.93170636676345
+        ],
+        "rayDistance": 2,
+        "upperSurfaceCount": 1,
+        "hits": [
+          {
+            "mesh": "Teatro · escena-posterior · brick",
+            "faceIndex": 3329,
+            "local": [
+              26.230000000000018,
+              20.20000076293944,
+              -20.349999999999994
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "id": "west-triple-junction",
+        "local": [
+          -26.23,
+          20.2,
+          -22.75
+        ],
+        "rayOrigin": [
+          -8.315623395532826,
+          107.39918325220935,
+          204.55374808976313
+        ],
+        "rayDistance": 2,
+        "upperSurfaceCount": 1,
+        "hits": [
+          {
+            "mesh": "Teatro · escena-posterior · limestone",
+            "faceIndex": 4,
+            "local": [
+              -26.230000000000032,
+              20.20000076293944,
+              -22.75
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "id": "east-triple-junction",
+        "local": [
+          26.23,
+          20.2,
+          -22.75
+        ],
+        "rayOrigin": [
+          37.654283283264355,
+          107.39918325220935,
+          229.82862256902968
+        ],
+        "rayDistance": 2,
+        "upperSurfaceCount": 1,
+        "hits": [
+          {
+            "mesh": "Teatro · escena-posterior · limestone",
+            "faceIndex": 5,
+            "local": [
+              26.22999999999999,
+              20.20000076293944,
+              -22.74999999999997
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "id": "rear-coping-centre",
+        "local": [
+          0.23,
+          20.2,
+          -22.75
+        ],
+        "rayOrigin": [
+          14.870875474481917,
+          107.39918325220935,
+          217.30199777945802
+        ],
+        "rayDistance": 2,
+        "upperSurfaceCount": 1,
+        "hits": [
+          {
+            "mesh": "Teatro · escena-posterior · limestone",
+            "faceIndex": 5,
+            "local": [
+              0.22999999999996135,
+              20.20000076293944,
+              -22.74999999999997
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "id": "west-front-corner",
+        "local": [
+          -35.6,
+          20.2,
+          -7.3
+        ],
+        "rayOrigin": [
+          -23.970118940424122,
+          107.39918325220935,
+          213.5779471808171
+        ],
+        "rayDistance": 2,
+        "upperSurfaceCount": 1,
+        "hits": [
+          {
+            "mesh": "Teatro · basilicas · brick",
+            "faceIndex": 136,
+            "local": [
+              -35.60000000000002,
+              20.20000076293944,
+              -7.299999999999983
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "id": "west-front-edge-gap",
+        "local": [
+          -30,
+          20.2,
+          -7.65
+        ],
+        "rayOrigin": [
+          -18.89429577098059,
+          107.39918325220935,
+          215.96928972268353
+        ],
+        "rayDistance": 2,
+        "upperSurfaceCount": 1,
+        "hits": [
+          {
+            "mesh": "Teatro · basilicas · limestone",
+            "faceIndex": 41,
+            "local": [
+              -30.00000000000003,
+              20.20000076293944,
+              -7.649999999999977
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "id": "west-rear-edge-gap",
+        "local": [
+          -30,
+          20.2,
+          -23.62
+        ],
+        "rayOrigin": [
+          -11.200057390616765,
+          107.39918325220935,
+          201.97501961859678
+        ],
+        "rayDistance": 2,
+        "upperSurfaceCount": 1,
+        "hits": [
+          {
+            "mesh": "Teatro · basilicas · limestone",
+            "faceIndex": 40,
+            "local": [
+              -30.00000000000003,
+              20.20000076293944,
+              -23.619999999999976
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "id": "east-front-edge-gap",
+        "local": [
+          30,
+          20.2,
+          -7.85
+        ],
+        "rayOrigin": [
+          33.77915782459097,
+          107.39918325220935,
+          244.70162840778136
+        ],
+        "rayDistance": 2,
+        "upperSurfaceCount": 1,
+        "hits": [
+          {
+            "mesh": "Teatro · basilicas · limestone",
+            "faceIndex": 365,
+            "local": [
+              30,
+              20.20000076293944,
+              -7.849999999999966
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "id": "east-rear-edge-gap",
+        "local": [
+          30,
+          20.2,
+          -22.42
+        ],
+        "rayOrigin": [
+          40.798885639362474,
+          107.39918325220935,
+          231.93415718570597
+        ],
+        "rayDistance": 2,
+        "upperSurfaceCount": 1,
+        "hits": [
+          {
+            "mesh": "Teatro · basilicas · limestone",
+            "faceIndex": 364,
+            "local": [
+              30,
+              20.20000076293944,
+              -22.419999999999987
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "id": "west-roof-control",
+        "local": [
+          -30,
+          20.2,
+          -15
+        ],
+        "rayOrigin": [
+          -15.353115301620912,
+          107.39918325220935,
+          209.52859559212388
+        ],
+        "rayDistance": 2,
+        "upperSurfaceCount": 1,
+        "hits": [
+          {
+            "mesh": "Teatro · basilicas · limestone",
+            "faceIndex": 41,
+            "local": [
+              -30.000000000000043,
+              20.20000076293944,
+              -15
+            ]
+          }
+        ],
+        "pass": true
+      },
+      {
+        "id": "east-roof-control",
+        "local": [
+          30,
+          20.2,
+          -15
+        ],
+        "rayOrigin": [
+          37.223979641723176,
+          107.39918325220935,
+          238.43619126036617
+        ],
+        "rayDistance": 2,
+        "upperSurfaceCount": 1,
+        "hits": [
+          {
+            "mesh": "Teatro · basilicas · limestone",
+            "faceIndex": 364,
+            "local": [
+              30,
+              20.20000076293944,
+              -15
+            ]
+          }
+        ],
+        "pass": true
+      }
+    ]
+  },
+  "terrain": {
+    "topTriangles": 9082,
+    "buried": 0,
+    "minClearance": 0.47999654387824364,
+    "buriedSamples": []
+  },
+  "cameras": [
+    {
+      "id": "teatro-conjunto",
+      "near": false,
+      "clearance": 28.139003760998293,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-conjunto",
+      "near": true,
+      "clearance": 24.66050792270616,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-aditus-oriental",
+      "near": false,
+      "clearance": 2.9999965456663915,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-aditus-oriental",
+      "near": true,
+      "clearance": 2.899996545666383,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-orchestra",
+      "near": false,
+      "clearance": 10.85884909978222,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-orchestra",
+      "near": true,
+      "clearance": 10.78004215401188,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-ima-cavea",
+      "near": false,
+      "clearance": 8.19999654566638,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-ima-cavea",
+      "near": true,
+      "clearance": 8.08121956494736,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-media-cavea",
+      "near": false,
+      "clearance": 6.805889718253923,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-media-cavea",
+      "near": true,
+      "clearance": 8.379996545666387,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-summa-cavea",
+      "near": false,
+      "clearance": 32.64999654566638,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-summa-cavea",
+      "near": true,
+      "clearance": 28.211677811799746,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-vomitoria",
+      "near": false,
+      "clearance": 6.326402159370431,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-vomitoria",
+      "near": true,
+      "clearance": 4.927323248883837,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-portico",
+      "near": false,
+      "clearance": 35.84560669032385,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-portico",
+      "near": true,
+      "clearance": 29.814754226252504,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-tribunalia",
+      "near": false,
+      "clearance": 11.650769981036674,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-tribunalia",
+      "near": true,
+      "clearance": 11.662384121225003,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-proscaenium",
+      "near": false,
+      "clearance": 16.858627237233136,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-proscaenium",
+      "near": true,
+      "clearance": 17.028405807462406,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-frons-scaenae",
+      "near": false,
+      "clearance": 15.1058121573097,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-frons-scaenae",
+      "near": true,
+      "clearance": 19.155414217183477,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-basilicas",
+      "near": false,
+      "clearance": 24.497178656863824,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-basilicas",
+      "near": true,
+      "clearance": 21.657918371607707,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-hyposcaenium",
+      "near": false,
+      "clearance": 29.48877154175237,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-hyposcaenium",
+      "near": true,
+      "clearance": 22.44999654566638,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-cloaca",
+      "near": false,
+      "clearance": 26.844937074001834,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-cloaca",
+      "near": true,
+      "clearance": 21.44999654566638,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-restauracion",
+      "near": false,
+      "clearance": 23.305256162798585,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-restauracion",
+      "near": true,
+      "clearance": 23.697478299078995,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-vivo",
+      "near": false,
+      "clearance": 11.537086955537092,
+      "terrainHit": null
+    },
+    {
+      "id": "teatro-vivo",
+      "near": true,
+      "clearance": 11.268988222415857,
+      "terrainHit": null
+    }
+  ],
+  "limitations": [
+    "Metric schematic architecture registered to supplied OSM / PNOA, not photogrammetry.",
+    "Conserved and rehabilitated state; no fictitious fully restored Roman scaenae frons.",
+    "Cutaway removes contemporary roof and deck, exposing interpretive archaeological substructures.",
+    "Physical access and pedestrian collision are not certified by camera tours."
+  ]
+}

@@ -2,14 +2,14 @@
   "schemaVersion": 1,
   "id": "teatro-romano",
   "title": "Teatro Romano de Sagunto",
-  "subtitle": "Dieciséis miradas al espacio, la materia y el tiempo",
-  "introduction": "Una visita completa desde la ciudad hasta el subsuelo de la escena. Explora dieciséis paradas, consulta las evidencias y distingue la arquitectura romana de la rehabilitación contemporánea.",
-  "researchDate": "2026-11-19",
+  "subtitle": "Dieciséis miradas al teatro conservado y rehabilitado",
+  "introduction": "Recorre la ladera, los graderíos y el edificio escénico. Las dieciséis paradas enlazan la forma actual con planos de la rehabilitación y fotografías de distintas épocas, para reconocer los restos, las transformaciones y lo que todavía exige interpretación.",
+  "researchDate": "2026-11-26",
   "regionsLabel": "ámbitos",
   "mapButtonLabel": "Volver al mapa",
   "overviewButtonLabel": "Ver el teatro completo",
   "readingModeLabel": "Leer las capas",
-  "readingModeNote": "Los colores distinguen componentes romanos, restituciones contemporáneas, encuentros entre ambos y subestructuras esquemáticas. La clasificación es interpretativa: no representa un estudio estratigráfico piedra a piedra.",
+  "readingModeNote": "Los colores distinguen restos, rehabilitación contemporánea, fábricas de varias épocas y esquemas del subsuelo. Los sectores claros del graderío y sus flancos rugosos se leen por separado; la clasificación no fecha cada piedra.",
   "regions": [
     {
       "id": "conjunto",
@@ -17,14 +17,17 @@
       "aliases": [],
       "summary": "Comienza por la ladera y la relación entre edificio y paisaje.",
       "coordinate": [
-        -0.27801295,
-        39.67679115
+        -0.2780017,
+        39.67680689
       ],
       "sourceIds": [
         "teatro-man-urbanismo-2026",
         "teatro-estructura-1986",
         "teatro-osm",
-        "teatro-arqueologia-1993"
+        "teatro-arqueologia-1993",
+        "teatro-foto-2014",
+        "teatro-casa-arquitectura",
+        "teatro-entorno-pnoa"
       ],
       "stopIds": [
         "teatro-conjunto"
@@ -36,8 +39,8 @@
       "aliases": [],
       "summary": "Orchestra, gradas, accesos y galerías: ocho maneras de leer la cávea.",
       "coordinate": [
-        -0.27765448,
-        39.67675222
+        -0.27770674,
+        39.67677229
       ],
       "sourceIds": [
         "teatro-arqueologia-1993",
@@ -48,7 +51,12 @@
         "teatro-ivc-balance-2026",
         "teatro-archivo-coam",
         "teatro-grassi-1993",
-        "teatro-osm"
+        "teatro-osm",
+        "teatro-roisin-1920",
+        "teatro-fotos-turisme",
+        "teatro-foto-1969",
+        "teatro-foto-2014",
+        "teatro-casa-arquitectura"
       ],
       "stopIds": [
         "teatro-aditus-oriental",
@@ -67,15 +75,19 @@
       "aliases": [],
       "summary": "Escenario, frente y laterales vistos desde dentro y desde fuera.",
       "coordinate": [
-        -0.2779286,
-        39.67690922
+        -0.27792185,
+        39.67691867
       ],
       "sourceIds": [
         "teatro-arqueologia-1993",
         "teatro-proyecto-1993",
         "teatro-decoracion-2022",
         "teatro-estructura-1986",
-        "teatro-osm"
+        "teatro-osm",
+        "teatro-casa-arquitectura",
+        "teatro-fotos-turisme",
+        "teatro-foto-2014",
+        "teatro-foto-2015"
       ],
       "stopIds": [
         "teatro-proscaenium",
@@ -108,8 +120,8 @@
       "aliases": [],
       "summary": "La intervención contemporánea, su debate y el uso cultural documentado.",
       "coordinate": [
-        -0.27804929,
-        39.6770013
+        -0.27788923,
+        39.67696433
       ],
       "sourceIds": [
         "teatro-proyecto-1993",
@@ -119,7 +131,13 @@
         "teatro-ivc-balance-2026",
         "teatro-plan-2026",
         "teatro-man-monumento-2026",
-        "teatro-osm"
+        "teatro-osm",
+        "teatro-casa-arquitectura",
+        "teatro-foto-1969",
+        "teatro-roisin-1920",
+        "teatro-foto-2014",
+        "teatro-fotos-turisme",
+        "teatro-foto-2015"
       ],
       "stopIds": [
         "teatro-restauracion",
@@ -135,15 +153,15 @@
       "regionId": "conjunto",
       "period": "mixed",
       "coordinate": [
-        -0.27801295,
-        39.67679115
+        -0.2780017,
+        39.67680689
       ],
       "coordinates": [
-        -0.27801295,
-        39.67679115
+        -0.2780017,
+        39.67680689
       ],
-      "intro": "Empieza con una vista amplia y sigue el recorrido desde la ladera hasta el escenario. La visita reúne arquitectura, restos excavados y conservación para que puedas reconocer qué estás mirando en cada parada.",
-      "narrative": "Empieza con una vista amplia y sigue el recorrido desde la ladera hasta el escenario. La visita reúne arquitectura, restos excavados y conservación para que puedas reconocer qué estás mirando en cada parada.",
+      "intro": "Empieza por la silueta: la cávea se apoya en la ladera y el gran volumen escénico cierra el recinto hacia la ciudad. Recorre ambos lados antes de acercarte a los accesos. Puedes ocultar el panel para observar la relación completa con el cerro.",
+      "narrative": "Empieza por la silueta: la cávea se apoya en la ladera y el gran volumen escénico cierra el recinto hacia la ciudad. Recorre ambos lados antes de acercarte a los accesos. Puedes ocultar el panel para observar la relación completa con el cerro.",
       "facts": [
         {
           "text": "El teatro enlaza visualmente el foro elevado con la ciudad dispuesta en terrazas.",
@@ -174,12 +192,15 @@
           "confidence": "interpretive"
         }
       ],
-      "lookFor": "Relaciona el arco del graderío, el bloque escénico y el cerro del castillo. Aleja la cámara antes de entrar.",
-      "modelNote": "El relieve y los volúmenes son una interpretación geolocalizada. Las cotas de detalle no proceden de una nube de puntos.",
+      "lookFor": "Compara el arco abierto del graderío con la cubierta rectangular de la escena. Sigue el desnivel hacia el castillo y hacia la ciudad.",
+      "modelNote": "La implantación conserva la cartografía del atlas. Las copas se localizan visualmente en la ortofoto; especies, alturas, rocas y acabados son aproximados. La fecha de consulta de la imagen no es la fecha de captura.",
       "sourceIds": [
         "teatro-man-urbanismo-2026",
         "teatro-estructura-1986",
-        "teatro-arqueologia-1993"
+        "teatro-arqueologia-1993",
+        "teatro-foto-2014",
+        "teatro-casa-arquitectura",
+        "teatro-entorno-pnoa"
       ],
       "confidence": "documented",
       "coordinateConfidence": "approximate",
@@ -189,12 +210,14 @@
       "readingMinutes": 2,
       "modelLocal": {
         "x": 0,
-        "z": 10
+        "z": 8
       },
       "coordinateSourceIds": [
         "teatro-osm",
-        "teatro-almagro-1979"
-      ]
+        "teatro-almagro-1979",
+        "teatro-casa-arquitectura"
+      ],
+      "fitBounds": true
     },
     {
       "id": "teatro-aditus-oriental",
@@ -203,15 +226,15 @@
       "regionId": "cavea",
       "period": "mixed",
       "coordinate": [
-        -0.27765448,
-        39.67675222
+        -0.27770674,
+        39.67677229
       ],
       "coordinates": [
-        -0.27765448,
-        39.67675222
+        -0.27770674,
+        39.67677229
       ],
-      "intro": "Sitúate junto al extremo oriental y mira el cambio de escala al entrar. Esta parada permite comprender cómo se llega al espacio bajo del teatro y cómo se relacionan los accesos con el graderío.",
-      "narrative": "Sitúate junto al extremo oriental y mira el cambio de escala al entrar. Esta parada permite comprender cómo se llega al espacio bajo del teatro y cómo se relacionan los accesos con el graderío.",
+      "intro": "Acércate al extremo oriental y localiza el paso abovedado bajo la plataforma lateral. Después mira hacia la orchestra: el acceso atraviesa el espesor del edificio. La postal de Roisin permite comparar este tipo de encuentro antes de las grandes intervenciones del siglo XX.",
+      "narrative": "Acércate al extremo oriental y localiza el paso abovedado bajo la plataforma lateral. Después mira hacia la orchestra: el acceso atraviesa el espesor del edificio. La postal de Roisin permite comparar este tipo de encuentro antes de las grandes intervenciones del siglo XX.",
       "facts": [
         {
           "text": "Dos aditus maximi abovedados daban acceso a la orchestra.",
@@ -233,14 +256,22 @@
             "teatro-almagro-1979"
           ],
           "confidence": "documented"
+        },
+        {
+          "text": "BIVALDI conserva una postal de Roisin de acceso y cávea, datada aproximadamente hacia 1920.",
+          "sourceIds": [
+            "teatro-roisin-1920"
+          ],
+          "confidence": "documented"
         }
       ],
-      "lookFor": "Busca el paso bajo la grada y su conexión con el espacio semicircular. Compara ambos extremos del teatro.",
-      "modelNote": "La forma visible combina apoyo romano y tratamiento posterior. El foco no certifica una entrada actualmente abierta al público.",
+      "lookFor": "Busca la luz al fondo del paso y la superposición de bóveda, plataforma y gradas. En Fuentes puedes abrir la postal fechada hacia 1920.",
+      "modelNote": "Los pasos son huecos de la geometría. La postal muestra un estado histórico concreto; no fija por sí sola la forma romana original ni los accesos autorizados hoy.",
       "sourceIds": [
         "teatro-arqueologia-1993",
         "teatro-portaceli-1993",
-        "teatro-almagro-1979"
+        "teatro-almagro-1979",
+        "teatro-roisin-1920"
       ],
       "confidence": "documented",
       "coordinateConfidence": "approximate",
@@ -249,13 +280,19 @@
       "order": 2,
       "readingMinutes": 2,
       "modelLocal": {
-        "x": 29,
-        "z": -1
+        "x": 24,
+        "z": -0.8
       },
       "coordinateSourceIds": [
         "teatro-osm",
-        "teatro-almagro-1979"
-      ]
+        "teatro-almagro-1979",
+        "teatro-casa-arquitectura"
+      ],
+      "fitBounds": false,
+      "interiorView": true,
+      "closeScale": false,
+      "minDistance": 0.45,
+      "fov": 58
     },
     {
       "id": "teatro-orchestra",
@@ -296,12 +333,13 @@
           "confidence": "documented"
         }
       ],
-      "lookFor": "Mira la diferencia entre el área central libre y el anillo de asientos más próximo. Después gira hacia la escena.",
-      "modelNote": "Los radios se apoyan en medidas publicadas. El pavimento y las superficies visibles se simplifican, sin atribuirles una decoración romana no comprobada.",
+      "lookFor": "Observa la media luna libre, los dos niveles senatoriales y el borde de la tarima. Gira hacia arriba para comparar su escala con la cávea y la cubierta escénica.",
+      "modelNote": "Los diámetros publicados guían la planta. La textura terrosa del espacio central y la piedra clara de sus bordes representan el estado rehabilitado, con acabados simplificados.",
       "sourceIds": [
         "teatro-arqueologia-1993",
         "teatro-portaceli-1993",
-        "teatro-man-monumento-2026"
+        "teatro-man-monumento-2026",
+        "teatro-fotos-turisme"
       ],
       "confidence": "documented",
       "coordinateConfidence": "approximate",
@@ -315,8 +353,10 @@
       },
       "coordinateSourceIds": [
         "teatro-osm",
-        "teatro-almagro-1979"
-      ]
+        "teatro-almagro-1979",
+        "teatro-casa-arquitectura"
+      ],
+      "fitBounds": false
     },
     {
       "id": "teatro-ima-cavea",
@@ -332,8 +372,8 @@
         -0.27809579,
         39.6768057
       ],
-      "intro": "Acércate a los asientos bajos y observa la relación entre una fila y la siguiente. La distancia corta ayuda a entender la experiencia de ver una representación desde esta parte del recinto.",
-      "narrative": "Acércate a los asientos bajos y observa la relación entre una fila y la siguiente. La distancia corta ayuda a entender la experiencia de ver una representación desde esta parte del recinto.",
+      "intro": "Acércate a las primeras filas y compara el sector central de piedra clara con los flancos de fábrica más irregular. La fotografía de 1969 ayuda a reconocer cuánto cambió la superficie del graderío sin confundir aquel estado con el teatro romano recién construido.",
+      "narrative": "Acércate a las primeras filas y compara el sector central de piedra clara con los flancos de fábrica más irregular. La fotografía de 1969 ayuda a reconocer cuánto cambió la superficie del graderío sin confundir aquel estado con el teatro romano recién construido.",
       "facts": [
         {
           "text": "La ima cavea se describe con seis filas y cuatro cunei.",
@@ -355,13 +395,23 @@
             "teatro-portaceli-1993"
           ],
           "confidence": "interpretive"
+        },
+        {
+          "text": "La fotografía de septiembre de 1969 muestra una cávea de superficie irregular, anterior a la rehabilitación de Grassi y Portaceli.",
+          "sourceIds": [
+            "teatro-foto-1969"
+          ],
+          "confidence": "documented"
         }
       ],
-      "lookFor": "Compara las superficies regulares de asiento con las zonas de fábrica y los encuentros laterales.",
-      "modelNote": "La malla distingue soporte antiguo y revestimiento contemporáneo como categorías de lectura, no como una cartografía piedra a piedra.",
+      "lookFor": "Sigue una fila hasta su encuentro con el flanco rugoso. Compara también el canto de los asientos con los peldaños de la escalera radial.",
+      "modelNote": "La separación entre revestimiento claro y fábrica rugosa se aproxima a las fotografías. Los límites de cada reparación y el desgaste de cada piedra no se han levantado individualmente.",
       "sourceIds": [
         "teatro-arqueologia-1993",
-        "teatro-portaceli-1993"
+        "teatro-portaceli-1993",
+        "teatro-foto-1969",
+        "teatro-foto-2014",
+        "teatro-fotos-turisme"
       ],
       "confidence": "documented",
       "coordinateConfidence": "approximate",
@@ -375,8 +425,10 @@
       },
       "coordinateSourceIds": [
         "teatro-osm",
-        "teatro-almagro-1979"
-      ]
+        "teatro-almagro-1979",
+        "teatro-casa-arquitectura"
+      ],
+      "fitBounds": false
     },
     {
       "id": "teatro-media-cavea",
@@ -417,11 +469,12 @@
           "confidence": "documented"
         }
       ],
-      "lookFor": "Sigue una escalera radial y cruza visualmente el corredor horizontal. Son dos direcciones complementarias.",
-      "modelNote": "La repetición de peldaños reproduce la organización general. Desgastes, reparaciones y huellas individuales quedan fuera del alcance del modelo.",
+      "lookFor": "Sigue la escalera radial hasta el corredor horizontal. Compara la continuidad de los asientos claros con las interrupciones y los flancos de fábrica conservada.",
+      "modelNote": "Se conserva la organización de ocho filas como referencia arqueológica. El acabado visible interpreta el edificio rehabilitado; la comparación con Almagro y las fotos permite distinguir geometría general de detalle conservado.",
       "sourceIds": [
         "teatro-arqueologia-1993",
-        "teatro-almagro-1979"
+        "teatro-almagro-1979",
+        "teatro-foto-2014"
       ],
       "confidence": "documented",
       "coordinateConfidence": "approximate",
@@ -435,8 +488,10 @@
       },
       "coordinateSourceIds": [
         "teatro-osm",
-        "teatro-almagro-1979"
-      ]
+        "teatro-almagro-1979",
+        "teatro-casa-arquitectura"
+      ],
+      "fitBounds": false
     },
     {
       "id": "teatro-summa-cavea",
@@ -477,12 +532,14 @@
           "confidence": "interpretive"
         }
       ],
-      "lookFor": "Busca el encuentro entre las gradas altas, los corredores y el cierre posterior.",
-      "modelNote": "Las categorías de lectura no prometen que cada sector visible se conserve íntegramente desde época romana.",
+      "lookFor": "Mira hacia la escena para entender el desnivel; después sigue los vomitorios y el encuentro del graderío con los paños superiores de fábrica.",
+      "modelNote": "Los niveles altos y sus cambios de acabado se contrastan con secciones y fotografías. Las mejoras de accesos de 2024–2026 no convierten este modelo en un plano actualizado de evacuación.",
       "sourceIds": [
         "teatro-arqueologia-1993",
         "teatro-ivc-obras-2026",
-        "teatro-ivc-balance-2026"
+        "teatro-ivc-balance-2026",
+        "teatro-casa-arquitectura",
+        "teatro-foto-2014"
       ],
       "confidence": "documented",
       "coordinateConfidence": "approximate",
@@ -496,8 +553,10 @@
       },
       "coordinateSourceIds": [
         "teatro-osm",
-        "teatro-almagro-1979"
-      ]
+        "teatro-almagro-1979",
+        "teatro-casa-arquitectura"
+      ],
+      "fitBounds": false
     },
     {
       "id": "teatro-vomitoria",
@@ -506,12 +565,12 @@
       "regionId": "cavea",
       "period": "mixed",
       "coordinate": [
-        -0.27786666,
-        39.67658573
+        -0.27799476,
+        39.67663815
       ],
       "coordinates": [
-        -0.27786666,
-        39.67658573
+        -0.27799476,
+        39.67663815
       ],
       "intro": "Mira el graderío como una estructura atravesada por recorridos. Un hueco en las gradas cuenta una historia diferente de la de un asiento: habla de la llegada del público y de la organización del edificio.",
       "narrative": "Mira el graderío como una estructura atravesada por recorridos. Un hueco en las gradas cuenta una historia diferente de la de un asiento: habla de la llegada del público y de la organización del edificio.",
@@ -538,11 +597,12 @@
           "confidence": "documented"
         }
       ],
-      "lookFor": "Relaciona las aberturas del graderío con los pasos del anillo exterior. La ruta virtual permite observarlos desde distintos lados.",
-      "modelNote": "Los túneles se representan como lectura espacial simplificada. No constituyen un plano de evacuación ni una guía de accesibilidad física.",
+      "lookFor": "Observa la abertura, el espacio bajo el graderío y el corredor al que llega. La fábrica rugosa del entorno y las barandillas claras ayudan a distinguir las capas visibles.",
+      "modelNote": "La geometría permite leer los huecos y el soporte. El detalle de las escaleras y protecciones es aproximado: el IVC documenta actuaciones posteriores a algunas fotografías de referencia.",
       "sourceIds": [
         "teatro-arqueologia-1993",
-        "teatro-ivc-obras-2026"
+        "teatro-ivc-obras-2026",
+        "teatro-fotos-turisme"
       ],
       "confidence": "documented",
       "coordinateConfidence": "approximate",
@@ -551,13 +611,19 @@
       "order": 7,
       "readingMinutes": 2,
       "modelLocal": {
-        "x": 22,
-        "z": 24
+        "x": 9.571238,
+        "z": 24.174189
       },
       "coordinateSourceIds": [
         "teatro-osm",
-        "teatro-almagro-1979"
-      ]
+        "teatro-almagro-1979",
+        "teatro-casa-arquitectura"
+      ],
+      "fitBounds": false,
+      "interiorView": true,
+      "closeScale": false,
+      "minDistance": 0.45,
+      "fov": 58
     },
     {
       "id": "teatro-portico",
@@ -566,18 +632,18 @@
       "regionId": "cavea",
       "period": "mixed",
       "coordinate": [
-        -0.27816478,
-        39.67657861
+        -0.27816141,
+        39.67658333
       ],
       "coordinates": [
-        -0.27816478,
-        39.67657861
+        -0.27816141,
+        39.67658333
       ],
-      "intro": "Llega al borde alto y vuelve la mirada hacia el centro. Aquí conviene detenerse en las preguntas de la investigación: las partes restituidas ayudan a leer una forma, pero no convierten en segura cada solución del edificio perdido.",
-      "narrative": "Llega al borde alto y vuelve la mirada hacia el centro. Aquí conviene detenerse en las preguntas de la investigación: las partes restituidas ayudan a leer una forma, pero no convierten en segura cada solución del edificio perdido.",
+      "intro": "En la parte más alta, sigue los tramos del remate y sus interrupciones. El conjunto conserva una forma menos regular de lo que sugiere un semicírculo perfecto. La apertura del eje y los flancos son tan importantes como los paños que permanecen en pie.",
+      "narrative": "En la parte más alta, sigue los tramos del remate y sus interrupciones. El conjunto conserva una forma menos regular de lo que sugiere un semicírculo perfecto. La apertura del eje y los flancos son tan importantes como los paños que permanecen en pie.",
       "facts": [
         {
-          "text": "El pórtico superior, de 79 m de diámetro, dejaba interrupciones laterales y central.",
+          "text": "El pórtico superior se estudia con un diámetro de 79 m y con interrupciones laterales y axial; existe además un segundo anillo exterior.",
           "sourceIds": [
             "teatro-arqueologia-1993"
           ],
@@ -598,11 +664,13 @@
           "confidence": "documented"
         }
       ],
-      "lookFor": "Observa la interrupción del eje central y la continuidad del borde alto. Compárala con las plantas de la bibliografía.",
-      "modelNote": "No se añade un templo central ni una cubierta completa como si fueran elementos demostrados. Las hipótesis deben conservar su etiqueta.",
+      "lookFor": "Busca la interrupción axial, los extremos laterales y los huecos del cierre alto. Compara esa silueta con la fotografía elevada de 2014.",
+      "modelNote": "El remate actual se aproxima con paños separados. El diámetro arqueológico de 79 m corresponde al pórtico estudiado, no a toda la anchura exterior; no se añade una columnata ni un templo hipotético.",
       "sourceIds": [
         "teatro-arqueologia-1993",
-        "teatro-archivo-coam"
+        "teatro-archivo-coam",
+        "teatro-casa-arquitectura",
+        "teatro-foto-2014"
       ],
       "confidence": "documented",
       "coordinateConfidence": "approximate",
@@ -612,12 +680,14 @@
       "readingMinutes": 2,
       "modelLocal": {
         "x": 0,
-        "z": 37
+        "z": 36.4
       },
       "coordinateSourceIds": [
         "teatro-osm",
-        "teatro-almagro-1979"
-      ]
+        "teatro-almagro-1979",
+        "teatro-casa-arquitectura"
+      ],
+      "fitBounds": false
     },
     {
       "id": "teatro-tribunalia",
@@ -658,11 +728,12 @@
           "confidence": "interpretive"
         }
       ],
-      "lookFor": "Busca la superposición de acceso, plataforma lateral y primeras gradas.",
-      "modelNote": "El volumen señala la posición tipológica de los palcos. Su acabado y mobiliario no se presentan como restitución arqueológica comprobada.",
+      "lookFor": "Busca el paso abovedado bajo la plataforma y su encuentro con las primeras filas. Observa la diferencia entre el soporte de fábrica y los planos rehechos.",
+      "modelNote": "Se representa la relación entre el aditus y la plataforma lateral. Los acabados siguen la lectura del conjunto rehabilitado; no se añaden asientos ceremoniales ni mobiliario romano supuesto.",
       "sourceIds": [
         "teatro-arqueologia-1993",
-        "teatro-grassi-1993"
+        "teatro-grassi-1993",
+        "teatro-casa-arquitectura"
       ],
       "confidence": "documented",
       "coordinateConfidence": "approximate",
@@ -676,8 +747,10 @@
       },
       "coordinateSourceIds": [
         "teatro-osm",
-        "teatro-almagro-1979"
-      ]
+        "teatro-almagro-1979",
+        "teatro-casa-arquitectura"
+      ],
+      "fitBounds": false
     },
     {
       "id": "teatro-proscaenium",
@@ -686,15 +759,15 @@
       "regionId": "escena",
       "period": "mixed",
       "coordinate": [
-        -0.2779286,
-        39.67690922
+        -0.27792185,
+        39.67691867
       ],
       "coordinates": [
-        -0.2779286,
-        39.67690922
+        -0.27792185,
+        39.67691867
       ],
-      "intro": "Cambia al lado de los intérpretes y mira hacia el público. El escenario conecta la acción con la arquitectura que la enmarca; debajo se abre otro capítulo de la visita.",
-      "narrative": "Cambia al lado de los intérpretes y mira hacia el público. El escenario conecta la acción con la arquitectura que la enmarca; debajo se abre otro capítulo de la visita.",
+      "intro": "Acércate al plano de actuación y mira hacia las gradas. Después levanta la vista: el tablado, la estructura de cubierta y el cierre alto forman el espacio escénico rehabilitado. La parada siguiente acerca la cámara a las exedras y a sus puertas.",
+      "narrative": "Acércate al plano de actuación y mira hacia las gradas. Después levanta la vista: el tablado, la estructura de cubierta y el cierre alto forman el espacio escénico rehabilitado. La parada siguiente acerca la cámara a las exedras y a sus puertas.",
       "facts": [
         {
           "text": "La profundidad publicada del proscaenium es de 6,40 m.",
@@ -718,11 +791,13 @@
           "confidence": "documented"
         }
       ],
-      "lookFor": "Compara el plano del escenario, el borde hacia la orchestra y el gran cierre posterior.",
-      "modelNote": "La plataforma y cubierta actuales se leen como intervención contemporánea. La altura exacta del tablado romano no se da por conocida.",
+      "lookFor": "Distingue la tarima, las tres curvas bajas del frente y la madera visible bajo la cubierta. Desde arriba se aprecia la pendiente de su superficie clara.",
+      "modelNote": "El modelo representa la tarima y cubierta contemporáneas. El proyecto usa +1,20 para el escenario respecto a su datum; esta cota no demuestra la altura del tablado romano.",
       "sourceIds": [
         "teatro-arqueologia-1993",
-        "teatro-proyecto-1993"
+        "teatro-proyecto-1993",
+        "teatro-casa-arquitectura",
+        "teatro-fotos-turisme"
       ],
       "confidence": "documented",
       "coordinateConfidence": "approximate",
@@ -732,12 +807,14 @@
       "readingMinutes": 2,
       "modelLocal": {
         "x": 0,
-        "z": -5
+        "z": -6.2
       },
       "coordinateSourceIds": [
         "teatro-osm",
-        "teatro-almagro-1979"
-      ]
+        "teatro-almagro-1979",
+        "teatro-casa-arquitectura"
+      ],
+      "fitBounds": false
     },
     {
       "id": "teatro-frons-scaenae",
@@ -746,15 +823,15 @@
       "regionId": "escena",
       "period": "mixed",
       "coordinate": [
-        -0.27789486,
-        39.67695645
+        -0.27789036,
+        39.67696275
       ],
       "coordinates": [
-        -0.27789486,
-        39.67695645
+        -0.27789036,
+        39.67696275
       ],
-      "intro": "Observa primero el gran fondo del escenario y después los elementos pequeños. Para reconstruir un alzado desaparecido, la investigación compara piezas, medidas y posiciones; una columna aislada no resuelve por sí sola toda la fachada.",
-      "narrative": "Observa primero el gran fondo del escenario y después los elementos pequeños. Para reconstruir un alzado desaparecido, la investigación compara piezas, medidas y posiciones; una columna aislada no resuelve por sí sola toda la fachada.",
+      "intro": "Lee el frente de abajo arriba: tres exedras curvas y sus pasos, pilares altos, galerías y un muro de fondo. Los fragmentos expuestos explican la decoración desaparecida. Su presencia no convierte el alzado contemporáneo en una fachada romana conservada.",
+      "narrative": "Lee el frente de abajo arriba: tres exedras curvas y sus pasos, pilares altos, galerías y un muro de fondo. Los fragmentos expuestos explican la decoración desaparecida. Su presencia no convierte el alzado contemporáneo en una fachada romana conservada.",
       "facts": [
         {
           "text": "Los tres órdenes y 17,85 m de alzado son una hipótesis arqueológica de restitución.",
@@ -783,13 +860,22 @@
             "teatro-decoracion-2022"
           ],
           "confidence": "interpretive"
+        },
+        {
+          "text": "Los arranques conservados de las valvas permiten restituir en planta tres exedras semicirculares.",
+          "sourceIds": [
+            "teatro-arqueologia-1993"
+          ],
+          "confidence": "documented"
         }
       ],
-      "lookFor": "Compara los fragmentos y la escala de la escena. Distingue la evidencia material del dibujo de un edificio completo.",
-      "modelNote": "El modelo actual no convierte la hipótesis de tres órdenes en una fachada romana íntegra conservada. Tampoco inventa una policromía específica.",
+      "lookFor": "Distingue las tres exedras bajas, los dos pilares principales y las galerías del fondo. Sobre la galería, localiza los grupos de fragmentos expuestos; compara su escala con las columnas exentas y con la altura del cuerpo escénico.",
+      "modelNote": "El alzado contemporáneo se apoya en las plantas, secciones y fotografías del proyecto. Los cuatro grupos de piezas en la pared y las dos columnas son representaciones genéricas del antiquarium: no reproducen piezas inventariadas, inscripciones ni una decoración romana completa.",
       "sourceIds": [
         "teatro-arqueologia-1993",
-        "teatro-decoracion-2022"
+        "teatro-decoracion-2022",
+        "teatro-casa-arquitectura",
+        "teatro-fotos-turisme"
       ],
       "confidence": "documented",
       "coordinateConfidence": "approximate",
@@ -799,12 +885,14 @@
       "readingMinutes": 2,
       "modelLocal": {
         "x": 0,
-        "z": -11
+        "z": -11.8
       },
       "coordinateSourceIds": [
         "teatro-osm",
-        "teatro-almagro-1979"
-      ]
+        "teatro-almagro-1979",
+        "teatro-casa-arquitectura"
+      ],
+      "fitBounds": false
     },
     {
       "id": "teatro-basilicas",
@@ -813,15 +901,15 @@
       "regionId": "escena",
       "period": "mixed",
       "coordinate": [
-        -0.27757217,
-        39.67683016
+        -0.27758649,
+        39.67685672
       ],
       "coordinates": [
-        -0.27757217,
-        39.67683016
+        -0.27758649,
+        39.67685672
       ],
-      "intro": "Rodea el extremo del escenario para descubrir su espesor. Desde fuera deja de ser una simple pared: aparecen apoyos, encuentros y espacios laterales que permiten comprender el funcionamiento del conjunto.",
-      "narrative": "Rodea el extremo del escenario para descubrir su espesor. Desde fuera deja de ser una simple pared: aparecen apoyos, encuentros y espacios laterales que permiten comprender el funcionamiento del conjunto.",
+      "intro": "Rodea el escenario para entender el edificio que lo envuelve. El exterior alto de ladrillo claro y los cuerpos laterales contrastan con la fábrica de sus apoyos. La pendiente hace que la escena tenga una altura exterior distinta de la que percibes desde la orchestra.",
+      "narrative": "Rodea el escenario para entender el edificio que lo envuelve. El exterior alto de ladrillo claro y los cuerpos laterales contrastan con la fábrica de sus apoyos. La pendiente hace que la escena tenga una altura exterior distinta de la que percibes desde la orchestra.",
       "facts": [
         {
           "text": "Las basílicas laterales y el segundo anillo pertenecen a la reforma de mediados del siglo III.",
@@ -843,13 +931,23 @@
             "teatro-estructura-1986"
           ],
           "confidence": "documented"
+        },
+        {
+          "text": "La fotografía de Rjdeadly del 18 de julio de 2015 muestra aberturas en el zócalo de piedra y una pasarela metálica en su encuentro con el volumen rehabilitado.",
+          "sourceIds": [
+            "teatro-foto-2015"
+          ],
+          "confidence": "documented"
         }
       ],
-      "lookFor": "Sigue el frente por fuera hasta el cuerpo lateral y observa su relación con la pendiente.",
-      "modelNote": "Las basílicas teatrales son dependencias civiles. Su representación se mantiene diferenciada de las torres y adiciones de la restitución contemporánea.",
+      "lookFor": "Sigue la pared posterior hasta los volúmenes laterales. Busca las aberturas del zócalo de piedra y la pasarela metálica en su encuentro con el ladrillo superior; compara sus alturas con el desnivel del terreno.",
+      "modelNote": "Se distinguen la fábrica del zócalo, sus huecos y la pasarela de la rehabilitación. Sus dimensiones menores y apoyos son aproximados, contrastados con el alzado norte del proyecto y la fotografía de 2015. Las longitudes de distintos muros publicadas en 1986 y 1993 no se usan como si fueran una sola medida del edificio.",
       "sourceIds": [
         "teatro-arqueologia-1993",
-        "teatro-estructura-1986"
+        "teatro-estructura-1986",
+        "teatro-casa-arquitectura",
+        "teatro-foto-2014",
+        "teatro-foto-2015"
       ],
       "confidence": "documented",
       "coordinateConfidence": "approximate",
@@ -858,13 +956,15 @@
       "order": 12,
       "readingMinutes": 2,
       "modelLocal": {
-        "x": 31,
-        "z": -12
+        "x": 28.5,
+        "z": -14
       },
       "coordinateSourceIds": [
         "teatro-osm",
-        "teatro-almagro-1979"
-      ]
+        "teatro-almagro-1979",
+        "teatro-casa-arquitectura"
+      ],
+      "fitBounds": false
     },
     {
       "id": "teatro-hyposcaenium",
@@ -905,8 +1005,8 @@
           "confidence": "documented"
         }
       ],
-      "lookFor": "Busca los compartimentos estrechos y la separación entre el foso, la escena y los apoyos del frente.",
-      "modelNote": "El corte es didáctico. No se inventa un mecanismo completo de cuerdas, contrapesos o madera como si se hubiera conservado.",
+      "lookFor": "Activa Corte y localiza la serie de compartimentos junto al borde del escenario. Compara su escala con la pasarela y con el tablado que se ha retirado.",
+      "modelNote": "Corte retira cubierta y tarima para explicar el subsuelo. La distribución de fosos y restos es esquemática; el estado mostrado no es una fase histórica completa ni una reconstrucción de la maquinaria.",
       "sourceIds": [
         "teatro-arqueologia-1993",
         "teatro-estructura-1986"
@@ -923,8 +1023,11 @@
       },
       "coordinateSourceIds": [
         "teatro-osm",
-        "teatro-almagro-1979"
-      ]
+        "teatro-almagro-1979",
+        "teatro-casa-arquitectura"
+      ],
+      "requiresSection": true,
+      "fitBounds": false
     },
     {
       "id": "teatro-cloaca",
@@ -965,8 +1068,8 @@
           "confidence": "documented"
         }
       ],
-      "lookFor": "Relaciona el conducto con el foso y la fachada exterior. El relieve explica por qué hay tanta estructura bajo la escena.",
-      "modelNote": "El trazado mostrado es una lectura simplificada del drenaje documentado. No reproduce una red hidráulica completa ni asegura su funcionamiento actual.",
+      "lookFor": "Con Corte activo, sigue la conducción bajo la escena y relaciónala con el descenso de la ladera hacia la fachada posterior.",
+      "modelNote": "El trazado es un esquema del drenaje documentado. No permite recorrer una red real ni atribuir a cada tramo la forma o el funcionamiento actuales.",
       "sourceIds": [
         "teatro-arqueologia-1993",
         "teatro-estructura-1986"
@@ -983,8 +1086,11 @@
       },
       "coordinateSourceIds": [
         "teatro-osm",
-        "teatro-almagro-1979"
-      ]
+        "teatro-almagro-1979",
+        "teatro-casa-arquitectura"
+      ],
+      "requiresSection": true,
+      "fitBounds": false
     },
     {
       "id": "teatro-restauracion",
@@ -993,15 +1099,15 @@
       "regionId": "presente",
       "period": "contemporary",
       "coordinate": [
-        -0.27804929,
-        39.6770013
+        -0.27788923,
+        39.67696433
       ],
       "coordinates": [
-        -0.27804929,
-        39.6770013
+        -0.27788923,
+        39.67696433
       ],
-      "intro": "Detén el recorrido para comparar dos ideas: conservar materia y recuperar un espacio. La intervención reciente también pertenece a la historia del monumento y merece una explicación propia, con sus argumentos y su debate.",
-      "narrative": "Detén el recorrido para comparar dos ideas: conservar materia y recuperar un espacio. La intervención reciente también pertenece a la historia del monumento y merece una explicación propia, con sus argumentos y su debate.",
+      "intro": "Compara tres documentos: la postal hacia 1920, la fotografía de 1969 y las plantas y fotos de la rehabilitación. Cada uno registra un momento distinto. El teatro anterior a 1990 ya acumulaba reparaciones; su imagen tampoco equivale al edificio romano original.",
+      "narrative": "Compara tres documentos: la postal hacia 1920, la fotografía de 1969 y las plantas y fotos de la rehabilitación. Cada uno registra un momento distinto. El teatro anterior a 1990 ya acumulaba reparaciones; su imagen tampoco equivale al edificio romano original.",
       "facts": [
         {
           "text": "Giorgio Grassi y Manuel Portaceli firmaron la rehabilitación realizada entre 1990 y 1993.",
@@ -1030,15 +1136,27 @@
             "teatro-debate-1993"
           ],
           "confidence": "documented"
+        },
+        {
+          "text": "Portaceli recuerda reconstrucciones realizadas entre 1950 y 1974 que ya habían transformado el teatro antes de su proyecto.",
+          "sourceIds": [
+            "teatro-casa-arquitectura"
+          ],
+          "confidence": "documented"
         }
       ],
-      "lookFor": "Activa la lectura de capas y compara la regularidad del graderío y el cuerpo escénico con las estructuras arqueológicas.",
-      "modelNote": "La leyenda es una ayuda interpretativa por componentes. No equivale a una atribución estratigráfica de cada piedra ni resuelve el debate de conservación.",
+      "lookFor": "Activa Leer las capas y compara el revestimiento central, los flancos rugosos y el gran cuerpo escénico. En Fuentes puedes abrir las imágenes anteriores y posteriores a la intervención.",
+      "modelNote": "La escena principal muestra el edificio conservado y rehabilitado. Las imágenes históricas sirven para explicar cambios; no se mezclan en una reconstrucción única ni se ofrece un estado romano completo.",
       "sourceIds": [
         "teatro-proyecto-1993",
         "teatro-portaceli-1993",
         "teatro-grassi-1993",
-        "teatro-debate-1993"
+        "teatro-debate-1993",
+        "teatro-casa-arquitectura",
+        "teatro-foto-1969",
+        "teatro-roisin-1920",
+        "teatro-foto-2014",
+        "teatro-foto-2015"
       ],
       "confidence": "documented",
       "coordinateConfidence": "approximate",
@@ -1047,13 +1165,15 @@
       "order": 15,
       "readingMinutes": 2,
       "modelLocal": {
-        "x": -14,
-        "z": -9
+        "x": 0,
+        "z": -12
       },
       "coordinateSourceIds": [
         "teatro-osm",
-        "teatro-almagro-1979"
-      ]
+        "teatro-almagro-1979",
+        "teatro-casa-arquitectura"
+      ],
+      "fitBounds": false
     },
     {
       "id": "teatro-vivo",
@@ -1101,12 +1221,13 @@
           "confidence": "documented"
         }
       ],
-      "lookFor": "Contempla el recinto completo y vuelve a tu parada favorita para comparar lo antiguo con la forma actual.",
-      "modelNote": "804 es el aforo comunicado para el festival de 2026. No se usa como capacidad romana, aforo permanente ni garantía de apertura de cada sector.",
+      "lookFor": "Vuelve a la vista completa y compara cómo la cubierta de la escena y la cávea abierta delimitan el recinto. Puedes regresar libremente a cualquier parada.",
+      "modelNote": "El modelo recoge la arquitectura estable documentada. No fija una escenografía ni reproduce cada silla de un festival; 804 es el aforo comunicado para la edición de 2026.",
       "sourceIds": [
         "teatro-ivc-balance-2026",
         "teatro-plan-2026",
-        "teatro-man-monumento-2026"
+        "teatro-man-monumento-2026",
+        "teatro-fotos-turisme"
       ],
       "confidence": "documented",
       "coordinateConfidence": "approximate",
@@ -1120,8 +1241,10 @@
       },
       "coordinateSourceIds": [
         "teatro-osm",
-        "teatro-almagro-1979"
-      ]
+        "teatro-almagro-1979",
+        "teatro-casa-arquitectura"
+      ],
+      "fitBounds": false
     }
   ],
   "timeline": [
@@ -1181,12 +1304,36 @@
       "confidence": "documented"
     },
     {
-      "id": "restauraciones",
-      "date": "Desde los años treinta",
-      "title": "Consolidaciones del siglo XX",
-      "text": "Portaceli recuerda numerosas intervenciones anteriores a su proyecto. El estado previo a 1990 ya incluía reconstrucciones.",
+      "id": "postal-roisin",
+      "date": "Hacia 1920",
+      "title": "Una vista anterior a las grandes obras",
+      "text": "La postal de L. Roisin conserva el aspecto del acceso y la cávea. BIVALDI mantiene su datación aproximada y su procedencia.",
       "sourceIds": [
-        "teatro-portaceli-1993"
+        "teatro-roisin-1920"
+      ],
+      "period": "modern",
+      "confidence": "documented"
+    },
+    {
+      "id": "restauraciones",
+      "date": "Décadas de 1930–1970",
+      "title": "Consolidaciones del siglo XX",
+      "text": "Las consolidaciones preceden a la intervención de Grassi y Portaceli. La memoria de Portaceli destaca las reconstrucciones de 1950–1974; una imagen anterior a 1990 ya puede mostrar restauraciones.",
+      "sourceIds": [
+        "teatro-portaceli-1993",
+        "teatro-casa-arquitectura"
+      ],
+      "period": "contemporary",
+      "confidence": "documented"
+    },
+    {
+      "id": "foto-1969",
+      "date": "Septiembre de 1969",
+      "title": "El graderío antes de Grassi y Portaceli",
+      "text": "Daniel Villafruela fotografía la cávea de superficie irregular. La fecha identifica ese estado concreto, que ya incluía intervenciones del siglo XX.",
+      "sourceIds": [
+        "teatro-foto-1969",
+        "teatro-casa-arquitectura"
       ],
       "period": "contemporary",
       "confidence": "documented"
@@ -1195,7 +1342,7 @@
       "id": "levantamiento",
       "date": "1979",
       "title": "Medir el edificio",
-      "text": "Antonio Almagro publicó el estudio fotogramétrico. Sus plantas y secciones permiten consultar un estado anterior a la gran rehabilitación.",
+      "text": "La Academia vincula la serie de plantas y secciones de Almagro a su publicación de 1979. Es documentación del estado previo a la gran rehabilitación, conservada en un archivo posterior.",
       "sourceIds": [
         "teatro-almagro-1979"
       ],
@@ -1220,7 +1367,8 @@
       "text": "La obra de Grassi y Portaceli configura el gran volumen escénico y la imagen de la cávea que caracteriza la intervención contemporánea.",
       "sourceIds": [
         "teatro-proyecto-1993",
-        "teatro-portaceli-1993"
+        "teatro-portaceli-1993",
+        "teatro-casa-arquitectura"
       ],
       "period": "contemporary",
       "confidence": "documented"
@@ -1234,6 +1382,17 @@
         "teatro-portaceli-1993",
         "teatro-grassi-1993",
         "teatro-debate-1993"
+      ],
+      "period": "contemporary",
+      "confidence": "documented"
+    },
+    {
+      "id": "foto-2014",
+      "date": "Julio de 2014",
+      "title": "La silueta rehabilitada",
+      "text": "Una fotografía desde el castillo muestra la cubierta clara, el volumen escénico, los sectores de grada y la ladera. Es una referencia visual fechada, no una inspección de 2026.",
+      "sourceIds": [
+        "teatro-foto-2014"
       ],
       "period": "contemporary",
       "confidence": "documented"
@@ -1288,12 +1447,12 @@
       "id": "teatro-arqueologia-1993",
       "title": "El teatro romano de Sagunto",
       "author": "Emilia Hernández, Montserrat López, Ignacio Pascual y Carmen Aranegui",
-      "url": "https://digitum.um.es/xmlui/bitstream/10201/52625/1/El%20teatro%20romano%20de%20Sagunto.pdf",
+      "url": "https://revistas.um.es/car/article/download/68181/65651/283861",
       "type": "estudio arqueológico",
       "year": 1993,
-      "locator": "Cuadernos de Arquitectura Romana 2, pp. 25–42; plantas, secciones, excavación y conclusiones",
+      "locator": "Cuadernos de Arquitectura Romana 2, pp. 25–42; radios y filas pp. 28–30, subsuelo y escena pp. 31–33, restitución decorativa pp. 36–38",
       "note": "La fase inicial se fecha entre Claudio y Nerón; las restituciones del alzado son hipótesis explícitas.",
-      "accessed": "2026-11-19"
+      "accessed": "2026-11-26"
     },
     {
       "id": "teatro-estructura-1986",
@@ -1363,14 +1522,14 @@
     },
     {
       "id": "teatro-almagro-1979",
-      "title": "Planta 2 del Teatro romano de Sagunto",
+      "title": "Plantas y secciones del Teatro romano de Sagunto",
       "author": "Antonio Almagro Gorbea / Real Academia de Bellas Artes de San Fernando",
       "url": "https://www.academiacolecciones.com/arquitectura/inventario.php?id=AA-013_03",
       "type": "levantamiento archivado",
       "year": 1979,
-      "locator": "Inventario AA-013_03, escala 1:200; Estudio fotogramétrico, SAGVNTVM 14, pp. 165–179",
-      "note": "La serie AA-013 incluye plantas y secciones. Documenta un estado anterior a la rehabilitación; esta aplicación no es una nueva fotogrametría.",
-      "accessed": "2026-11-19"
+      "locator": "Serie AA-013_02 a AA-013_10; ficha de Planta 2 AA-013_03, escala 1:200; bibliografía del archivo: SAGVNTVM 14 (1979), pp. 165–179",
+      "note": "La serie registra el edificio anterior a Grassi y Portaceli. Se conserva 1979 según la bibliografía de la ficha del archivo, sin atribuir esa fecha a cada archivo digital. Uso documental; planos no redistribuidos.",
+      "accessed": "2026-11-26"
     },
     {
       "id": "teatro-archivo-coam",
@@ -1392,7 +1551,7 @@
       "year": 2026,
       "locator": "Conferencia del 15 de septiembre de 2026; presentación del argumento urbano",
       "note": "Relaciona el teatro con el foro, la ciudad en terrazas y la imagen monumental de Saguntum.",
-      "accessed": "2026-11-19"
+      "accessed": "2026-11-26"
     },
     {
       "id": "teatro-man-monumento-2026",
@@ -1403,7 +1562,7 @@
       "year": 2026,
       "locator": "Vitrina CERO, 14 julio–18 octubre de 2026; referencia a Gaceta de Madrid, 28 agosto de 1896, núm. 241",
       "note": "Acredita la declaración de Monumento Nacional en 1896. No se reproduce la afirmación turística de ser el primero de España.",
-      "accessed": "2026-11-19"
+      "accessed": "2026-11-26"
     },
     {
       "id": "teatro-ivc-obras-2026",
@@ -1414,7 +1573,7 @@
       "year": 2026,
       "locator": "4 de mayo de 2026; actuaciones ejecutadas en 2024 y actuaciones previstas en 2026",
       "note": "Distinguir obras ya realizadas de actuaciones anunciadas. La previsión de unas 250 plazas no es el resultado final.",
-      "accessed": "2026-11-19"
+      "accessed": "2026-11-26"
     },
     {
       "id": "teatro-ivc-balance-2026",
@@ -1425,7 +1584,7 @@
       "year": 2026,
       "locator": "2 de septiembre de 2026; aforo efectivo, representaciones y balance del festival",
       "note": "Confirma 804 localidades en la edición de 2026, frente a 608 en 2024–2025. Aforo operativo del festival, no capacidad romana.",
-      "accessed": "2026-11-19"
+      "accessed": "2026-11-26"
     },
     {
       "id": "teatro-plan-2026",
@@ -1436,7 +1595,7 @@
       "year": 2026,
       "locator": "24 de febrero de 2026; anuncio de planificación patrimonial",
       "note": "Se cita exclusivamente el anuncio. La mención de siglo I a. C. de la noticia contradice la datación arqueológica y no se adopta.",
-      "accessed": "2026-11-19"
+      "accessed": "2026-11-26"
     },
     {
       "id": "teatro-osm",
@@ -1448,17 +1607,97 @@
       "locator": "Trazas incluidas en cartography.json; ajuste del arco de la cávea y orientación del cuerpo escénico",
       "note": "Base geográfica, no fuente de atribuciones arqueológicas. Coordenadas de los focos aproximadas, ligadas a la maqueta.",
       "accessed": "2026-11-19"
+    },
+    {
+      "id": "teatro-casa-arquitectura",
+      "title": "Restauración y rehabilitación del Teatro Romano de Sagunto",
+      "author": "Manuel Portaceli y Giorgio Grassi / La Casa de la Arquitectura, Ministerio de Vivienda y Agenda Urbana",
+      "url": "https://lacasadelaarquitectura.es/recurso/restauracion-y-rehabilitacion-del-teatro-romano/3a26830f-f701-4c15-9cc6-c75f14d29933",
+      "type": "archivo del proyecto y fotografías de obra",
+      "year": 1993,
+      "locator": "Plantas +2,90, +11,00, +13,70 y +16,40; secciones longitudinales y transversales; alzados este y norte; fotografías de Pepa Balaguer, Manuel Portaceli y Duccio Malagamba",
+      "note": "Base del volumen escénico y la cávea rehabilitados. Las cotas son relativas al proyecto. La ficha no fecha cada fotografía; no acredita por sí sola el estado exacto de noviembre de 2026.",
+      "accessed": "2026-11-26"
+    },
+    {
+      "id": "teatro-foto-1969",
+      "title": "Teatro de Sagunto, fotografía de septiembre de 1969",
+      "author": "Daniel VILLAFRUELA / Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Sagunto-1969-Amphit%C3%A9atre-RI-51-0000972.jpg",
+      "type": "fotografía original fechada",
+      "year": 1969,
+      "locator": "Fecha de toma: septiembre de 1969; archivo original 6240 × 4128; licencia CC BY-SA 4.0",
+      "note": "Documenta el graderío anterior a Grassi y Portaceli, ya afectado por restauraciones previas. El nombre de archivo dice «Amphitéatre»; el edificio es un teatro. Se consulta y enlaza, sin redistribuir la fotografía.",
+      "accessed": "2026-11-26"
+    },
+    {
+      "id": "teatro-foto-2014",
+      "title": "Teatre Romà de Sagunt 02 — vista desde el castillo",
+      "author": "Mike1979 Russia / Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Teatre_Rom%C3%A0_de_Sagunt_02.jpg",
+      "type": "fotografía original fechada",
+      "year": 2014,
+      "locator": "Fecha de toma: 29 de julio de 2014; archivo original 5215 × 3477; licencia CC BY-SA 3.0",
+      "note": "Referencia de silueta, cubierta, sectores del graderío y entorno en 2014. No certifica los detalles modificados después. Se consulta y enlaza, sin redistribuir la fotografía.",
+      "accessed": "2026-11-26"
+    },
+    {
+      "id": "teatro-roisin-1920",
+      "title": "Teatro Romano de Sagunto — postal de L. Roisin",
+      "author": "L. Roisin / Biblioteca Valenciana Nicolau Primitiu, BIVALDI",
+      "url": "https://bivaldi.gva.es/es/consulta/registro.cmd?id=11149",
+      "type": "fotografía histórica en archivo público",
+      "year": 1920,
+      "locator": "Datación del catálogo: ca. 1920; BV Fondo gráfico, JH38/432; registro 11149",
+      "note": "Vista de acceso y cávea conservada en postal. La fecha es aproximada. BIVALDI marca la imagen como dominio público (PDM); se enlaza el registro original.",
+      "accessed": "2026-11-26"
+    },
+    {
+      "id": "teatro-fotos-turisme",
+      "title": "Teatro Romano — galería oficial",
+      "author": "Turisme Comunitat Valenciana",
+      "url": "https://www.comunitatvalenciana.com/es/valencia/sagunt-sagunto/monumentos/teatro-romano",
+      "type": "fotografías institucionales",
+      "year": null,
+      "locator": "Galería multimedia: panorámica interior, edificio escénico y exterior",
+      "note": "Contraste visual de materiales, graderíos y cubierta. Fecha de toma no indicada; imágenes consultadas, no redistribuidas. Las cifras divulgativas de aforo y diámetro no sustituyen las medidas arquitectónicas.",
+      "accessed": "2026-11-26"
+    },
+    {
+      "id": "teatro-entorno-pnoa",
+      "title": "PNOA Máxima Actualidad — ortofoto incorporada al atlas",
+      "author": "Instituto Geográfico Nacional y Centro Nacional de Información Geográfica / PNOA",
+      "url": "https://pnoa.ign.es/web/portal/pnoa-imagen/visualizadores-y-servicios-web",
+      "type": "ortofotografía oficial",
+      "year": null,
+      "locator": "Mosaico servido por https://www.ign.es/wms-inspire/pnoa-ma; ortofoto de referencia incorporada al atlas, consultada el 19 de noviembre de 2026",
+      "note": "Fecha de adquisición de esta imagen no identificada. Las copas se sitúan por lectura visual de la ortofoto; especies, alturas y contornos son interpretados. La fecha de consulta no es la fecha del vuelo. Atribución: obra derivada de IGN/PNOA, CC BY 4.0.",
+      "accessed": "2026-11-19"
+    },
+    {
+      "id": "teatro-foto-2015",
+      "title": "Saguntum rear wall of theatre — muro posterior del teatro",
+      "author": "Rjdeadly / Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/wiki/File:Saguntum_rear_wall_of_theatre.jpg",
+      "type": "fotografía original fechada",
+      "year": 2015,
+      "locator": "Fecha: 18 de julio de 2015; obra propia; archivo original 2560 × 1703; licencia CC BY-SA 4.0",
+      "note": "Referencia de las aberturas del zócalo de piedra y de la pasarela en el encuentro con el volumen rehabilitado. La fotografía documenta ese estado de 2015; las dimensiones de detalle del modelo son interpretadas. Se consulta y enlaza, sin redistribuir la fotografía.",
+      "accessed": "2026-11-26"
     }
   ],
   "methodology": [
     "Maqueta interpretativa geolocalizada, construida con cartografía, plantas y medidas publicadas. No es fotogrametría ni un levantamiento arqueológico nuevo.",
-    "La escena se centra en el edificio conservado y rehabilitado. La restitución antigua de lo desaparecido se presenta como hipótesis cuando la investigación así lo indica.",
+    "La escena representa el teatro conservado y rehabilitado, contrastado con plantas y secciones de la intervención, fotografías de 2014 y galerías institucionales. Las fotografías institucionales sin fecha no acreditan un levantamiento del estado exacto de 2026.",
     "La posición de cada parada es un foco de lectura del modelo, no una coordenada centimétrica del resto ni un itinerario físico de acceso autorizado.",
     "Se diferencian hechos documentados, propuestas interpretativas y cuestiones debatidas. Una fuente firmada por el autor de una rehabilitación documenta su criterio, no el consenso de toda la disciplina.",
     "Los cortes y las superficies enterradas son explicaciones espaciales simplificadas. No se reconstruyen mecanismos de madera, policromías ni mobiliario sin evidencia suficiente.",
     "Las noticias de 2026 se ordenan por fecha: el anuncio de mayo se contrasta con el balance de septiembre. Se incorpora el resultado documentado de 804 plazas del festival, sin trasladarlo a la Antigüedad.",
     "No se reproduce la afirmación de que el teatro fuera el primer Monumento Nacional de España, ni la errata de siglo I a. C. de una noticia municipal.",
-    "No se añaden fotografías históricas a la experiencia. Las fuentes enlazadas permiten consultar los documentos y sus imágenes en las instituciones y publicaciones de origen."
+    "Las fuentes enlazan fotografías anteriores y posteriores a la intervención: Roisin (hacia 1920), Villafruela (septiembre de 1969) y una vista de julio de 2014. La fecha de cada toma se mantiene separada de su digitalización; se consultan en los archivos de origen.",
+    "Las cotas de los planos del proyecto son alturas relativas: ±0,00 para la orchestra, +1,20 para el escenario y +20,20 para la coronación. Se usan para proporciones, sin convertirlas en altitudes geográficas ni en alturas romanas conservadas.",
+    "Los diámetros de los órdenes de asientos y del pórtico no son el diámetro exterior completo. El frente de escena, el muro posterior y sus dependencias tienen límites distintos y se contrastan por separado.",
+    "El entorno utiliza trazados OSM y la ortofoto PNOA incorporada al atlas, consultada el 19 de noviembre de 2026. No se conoce la fecha de adquisición de esa imagen. Las posiciones de copas son aproximaciones visuales y sus especies y alturas son interpretadas."
   ],
   "readingLegend": [
     {

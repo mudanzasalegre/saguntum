@@ -1,10 +1,10 @@
 # Teatro Romano de Sagunto — investigación y criterios de la visita
 
-Actualización documental: **19 de noviembre de 2026**. Iteración centrada exclusivamente en el Teatro Romano, integrada en SAGUNTUM Atlas.
+Actualización documental: **26 de noviembre de 2026**. Iteración centrada exclusivamente en el Teatro Romano, integrada en SAGUNTUM Atlas.
 
 ## Entrega
 
-La visita está descrita en `dist/assets/data/theatre-visit.json`: **16 paradas, 52 hechos con referencias, 14 hitos cronológicos y 15 fuentes**. Cada parada incorpora explicación, indicaciones de observación, alcance del modelo y grado de confianza. Los hechos se mantienen en ese archivo como registro principal para evitar versiones divergentes entre el contenido de la aplicación y esta memoria.
+La visita está descrita en `dist/assets/data/theatre-visit.json`: **16 paradas, 57 hechos con referencias, 17 hitos cronológicos y 22 fuentes**. Cada parada incorpora explicación, indicaciones de observación, alcance del modelo y grado de confianza. Los hechos se mantienen en ese archivo como registro principal para evitar versiones divergentes entre el contenido de la aplicación y esta memoria.
 
 Los cinco ámbitos organizan la lectura del edificio; no representan cinco fases constructivas. El recorrido comienza por la relación con la ciudad, pasa por el público y la escena, descubre el subsuelo y termina con la rehabilitación y el uso actual. Se puede seguir en secuencia o abrir una parada directamente.
 
@@ -19,6 +19,32 @@ Medidas publicadas, en metros: diámetros de orchestra 16/22, ima 34, media 49, 
 Las cifras describen conceptos diferentes: un diámetro de grada, una longitud de muro exterior y la longitud de una fachada no son magnitudes intercambiables. El estudio constructivo de 1986 resulta útil para entender la infraestructura y los apoyos sobre roca; documenta subestructuras y relaciones entre muros, no únicamente una fachada visible. [teatro-estructura-1986]
 
 El modelo utiliza esos datos como restricciones de proporción. Las irregularidades, espesores y alturas que no se han medido de nuevo se tratan como aproximaciones. El detalle visual no se utiliza para simular una precisión topográfica inexistente.
+
+### Comparar estados fechados
+
+La revisión del 26 de noviembre de 2026 amplía la base visual y arquitectónica. La fecha de una fotografía, la de un proyecto y la de una página consultada describen cosas diferentes:
+
+| Documento | Estado que permite estudiar | Aplicación y límite |
+|---|---|---|
+| Postal de L. Roisin, hacia 1920, Biblioteca Valenciana | Acceso y cávea antes de las grandes intervenciones posteriores | Comparar fábrica, ruina y pasos; la datación del catálogo es aproximada. [teatro-roisin-1920] |
+| Fotografía de Daniel Villafruela, septiembre de 1969 | Graderío de superficie irregular y accesos, ya con restauraciones anteriores | Distinguir ese momento del estado rehabilitado; no presentarlo como el teatro romano original. [teatro-foto-1969] |
+| Serie de Antonio Almagro, asociada por la Academia a la publicación de 1979 | Plantas y secciones previas a Grassi y Portaceli | Control de organización arquitectónica a escala 1:200, sin atribuir la fecha de publicación a cada fichero digital. [teatro-almagro-1979] |
+| Plantas, secciones y fotografías de la rehabilitación | Relación entre cávea y cuerpo escénico contemporáneo | Base de proporciones y huecos; las fotos del archivo no tienen fecha individual declarada. [teatro-casa-arquitectura] |
+| Fotografía de Mike1979 Russia, 29 de julio de 2014 | Silueta, cubierta y flancos del graderío con su ladera | Contraste visual de un estado fechado; no acredita actuaciones posteriores. [teatro-foto-2014] |
+| Fotografía de Rjdeadly, 18 de julio de 2015 | Muro posterior, huecos del zócalo de piedra y pasarela metálica | Contrastar el encuentro entre fábrica y rehabilitación; las dimensiones de detalle son interpretativas. [teatro-foto-2015] |
+| Galería de Turisme Comunitat Valenciana | Apariencia de conjunto, interior y exterior rehabilitados | Corroboración visual sin fecha de toma; no se adoptan las cifras divulgativas de capacidad o diámetro como medidas de modelado. [teatro-fotos-turisme] |
+
+Las fotografías de 1969 y 2014 no forman una reconstrucción histórica completa. Se usan para reconocer cambios concretos en las superficies y en la silueta. La memoria de Portaceli recuerda las intervenciones de 1950–1974, por lo que «antes de la rehabilitación» no significa «sin restaurar». [teatro-foto-1969; teatro-foto-2014; teatro-casa-arquitectura]
+
+Las secciones del proyecto permiten relacionar orchestra, escenario y coronación mediante las cotas **±0,00 / +1,20 / +20,20**. Son referencias verticales de ese proyecto; no son altitudes geográficas ni alturas antiguas conservadas. Los tamaños de huecos, juntas, desgaste, fragmentos y vegetación siguen siendo aproximaciones del modelo. [teatro-casa-arquitectura]
+
+La ortofoto PNOA ya incorporada al atlas aporta la localización visual de las copas y los afloramientos. Su consulta está fechada el 19 de noviembre de 2026; no se ha identificado la fecha de adquisición. Las especies, alturas y contornos del arbolado son interpretados, no un inventario botánico. [teatro-entorno-pnoa]
+
+### Qué debe poder reconocer el visitante
+
+La visita pone el énfasis en el sector central claro y los flancos rugosos de la cávea, sus corredores, los huecos y las interrupciones del remate. Al llegar a la escena, las indicaciones llevan de la tarima a las tres exedras bajas, los pilares, las galerías, el muro posterior y la cubierta. La vista exterior vuelve a conectar esos elementos con el desnivel de la ladera.
+
+Las paradas de subsuelo conservan su carácter didáctico: activar **Corte** retira partes contemporáneas para observar un esquema. La parada de la rehabilitación propone consultar los documentos fechados y volver a **Leer las capas**; no convierte el corte en un «antes» histórico ni añade una fachada romana hipotética completa.
 
 ### Leer las capas y el esquema
 
@@ -39,7 +65,7 @@ Las paradas del foso y la cloaca usan una lectura esquemática: se puede compren
 
 El inventario de 2022 amplía la atención a las piezas del museo. Sus observaciones sobre trabajo de la piedra, acabados y asignación de elementos ayudan a explicar cómo se argumenta una restitución. Se conservan las incertidumbres de atribución y se evita fijar colores antiguos que la investigación consultada no acredita. Tampoco se generaliza a toda la fachada la asignación hipotética de una pieza o el número de tambores de una columna. [teatro-decoracion-2022]
 
-Las fotografías y los dibujos de las publicaciones se consultan como documentación. No se incorporan a una galería en la aplicación, respetando la petición de mantener esta iteración centrada en localización, modelado y explicación.
+Las fotografías y los dibujos se consultan como documentación de modelado. La bibliografía de la aplicación enlaza los registros originales, con autoría y fecha de toma cuando constan; no se redistribuyen imágenes de terceros en una galería.
 
 ### El presente se verifica por resultados fechados
 
@@ -86,19 +112,19 @@ No se trata de una nueva fotogrametría, de una guía de accesos físicos ni de 
 - Los dos campos de coordenadas coinciden; los focos se convierten desde el sistema local acordado con el modelo.
 - Las hipótesis se etiquetan en el propio hecho, especialmente las asignaciones de piezas, el alzado perdido y las limitaciones del escenario.
 - La declaración patrimonial, las fases antiguas, la intervención reciente y el festival no se mezclan en una misma fecha.
-- La investigación no añade una reconstrucción decorativa total, fotos históricas ni cambios a otros monumentos.
+- La investigación no añade una reconstrucción decorativa romana total ni mezcla fotografías de épocas distintas en un único supuesto estado histórico. Los documentos enlazados se consultan en sus archivos originales.
 
 La validación de interacción, rendimiento, corte y publicación corresponde a la revisión integrada de la aplicación. Esta memoria acredita la revisión documental y estructural del archivo de visita.
 
 ## Bibliografía y localizadores
 
-Los identificadores entre corchetes remiten a las mismas fuentes usadas por la interfaz. El documento de origen debe conservar su fecha: un plano antiguo, una memoria de autor y una noticia reciente responden a preguntas diferentes.
+Los identificadores remiten a las mismas fuentes usadas por la interfaz. Cada documento conserva su fecha y su alcance: medición, imagen, memoria de autor o comunicación institucional.
 
 ### teatro-arqueologia-1993
 
-**Emilia Hernández, Montserrat López, Ignacio Pascual y Carmen Aranegui (1993).** [El teatro romano de Sagunto](https://digitum.um.es/xmlui/bitstream/10201/52625/1/El%20teatro%20romano%20de%20Sagunto.pdf).
+**Emilia Hernández, Montserrat López, Ignacio Pascual y Carmen Aranegui (1993).** [El teatro romano de Sagunto](https://revistas.um.es/car/article/download/68181/65651/283861).
 
-Localizador: Cuadernos de Arquitectura Romana 2, pp. 25–42; plantas, secciones, excavación y conclusiones.
+Localizador: Cuadernos de Arquitectura Romana 2, pp. 25–42; radios y filas pp. 28–30, subsuelo y escena pp. 31–33, restitución decorativa pp. 36–38.
 
 Criterio de uso: La fase inicial se fecha entre Claudio y Nerón; las restituciones del alzado son hipótesis explícitas.
 
@@ -152,11 +178,11 @@ Criterio de uso: Distingue la cubierta y el nuevo cuerpo escénico de los restos
 
 ### teatro-almagro-1979
 
-**Antonio Almagro Gorbea / Real Academia de Bellas Artes de San Fernando (1979).** [Planta 2 del Teatro romano de Sagunto](https://www.academiacolecciones.com/arquitectura/inventario.php?id=AA-013_03).
+**Antonio Almagro Gorbea / Real Academia de Bellas Artes de San Fernando (1979).** [Plantas y secciones del Teatro romano de Sagunto](https://www.academiacolecciones.com/arquitectura/inventario.php?id=AA-013_03).
 
-Localizador: Inventario AA-013_03, escala 1:200; Estudio fotogramétrico, SAGVNTVM 14, pp. 165–179.
+Localizador: Serie AA-013_02 a AA-013_10; ficha de Planta 2 AA-013_03, escala 1:200; bibliografía del archivo: SAGVNTVM 14 (1979), pp. 165–179.
 
-Criterio de uso: La serie AA-013 incluye plantas y secciones. Documenta un estado anterior a la rehabilitación; esta aplicación no es una nueva fotogrametría.
+Criterio de uso: La serie registra el edificio anterior a Grassi y Portaceli. Se conserva 1979 según la bibliografía de la ficha del archivo, sin atribuir esa fecha a cada archivo digital. Uso documental; planos no redistribuidos.
 
 ### teatro-archivo-coam
 
@@ -213,4 +239,60 @@ Criterio de uso: Se cita exclusivamente el anuncio. La mención de siglo I a. C.
 Localizador: Trazas incluidas en cartography.json; ajuste del arco de la cávea y orientación del cuerpo escénico.
 
 Criterio de uso: Base geográfica, no fuente de atribuciones arqueológicas. Coordenadas de los focos aproximadas, ligadas a la maqueta.
+
+### teatro-casa-arquitectura
+
+**Manuel Portaceli y Giorgio Grassi / La Casa de la Arquitectura, Ministerio de Vivienda y Agenda Urbana (1993).** [Restauración y rehabilitación del Teatro Romano de Sagunto](https://lacasadelaarquitectura.es/recurso/restauracion-y-rehabilitacion-del-teatro-romano/3a26830f-f701-4c15-9cc6-c75f14d29933).
+
+Localizador: Plantas +2,90, +11,00, +13,70 y +16,40; secciones longitudinales y transversales; alzados este y norte; fotografías de Pepa Balaguer, Manuel Portaceli y Duccio Malagamba.
+
+Criterio de uso: Base del volumen escénico y la cávea rehabilitados. Las cotas son relativas al proyecto. La ficha no fecha cada fotografía; no acredita por sí sola el estado exacto de noviembre de 2026.
+
+### teatro-foto-1969
+
+**Daniel VILLAFRUELA / Wikimedia Commons (1969).** [Teatro de Sagunto, fotografía de septiembre de 1969](https://commons.wikimedia.org/wiki/File:Sagunto-1969-Amphit%C3%A9atre-RI-51-0000972.jpg).
+
+Localizador: Fecha de toma: septiembre de 1969; archivo original 6240 × 4128; licencia CC BY-SA 4.0.
+
+Criterio de uso: Documenta el graderío anterior a Grassi y Portaceli, ya afectado por restauraciones previas. El nombre de archivo dice «Amphitéatre»; el edificio es un teatro. Se consulta y enlaza, sin redistribuir la fotografía.
+
+### teatro-foto-2014
+
+**Mike1979 Russia / Wikimedia Commons (2014).** [Teatre Romà de Sagunt 02 — vista desde el castillo](https://commons.wikimedia.org/wiki/File:Teatre_Rom%C3%A0_de_Sagunt_02.jpg).
+
+Localizador: Fecha de toma: 29 de julio de 2014; archivo original 5215 × 3477; licencia CC BY-SA 3.0.
+
+Criterio de uso: Referencia de silueta, cubierta, sectores del graderío y entorno en 2014. No certifica los detalles modificados después. Se consulta y enlaza, sin redistribuir la fotografía.
+
+### teatro-roisin-1920
+
+**L. Roisin / Biblioteca Valenciana Nicolau Primitiu, BIVALDI (1920).** [Teatro Romano de Sagunto — postal de L. Roisin](https://bivaldi.gva.es/es/consulta/registro.cmd?id=11149).
+
+Localizador: Datación del catálogo: ca. 1920; BV Fondo gráfico, JH38/432; registro 11149.
+
+Criterio de uso: Vista de acceso y cávea conservada en postal. La fecha es aproximada. BIVALDI marca la imagen como dominio público (PDM); se enlaza el registro original.
+
+### teatro-fotos-turisme
+
+**Turisme Comunitat Valenciana.** [Teatro Romano — galería oficial](https://www.comunitatvalenciana.com/es/valencia/sagunt-sagunto/monumentos/teatro-romano).
+
+Localizador: Galería multimedia: panorámica interior, edificio escénico y exterior.
+
+Criterio de uso: Contraste visual de materiales, graderíos y cubierta. Fecha de toma no indicada; imágenes consultadas, no redistribuidas. Las cifras divulgativas de aforo y diámetro no sustituyen las medidas arquitectónicas.
+
+### teatro-entorno-pnoa
+
+**Instituto Geográfico Nacional y Centro Nacional de Información Geográfica / PNOA.** [PNOA Máxima Actualidad — ortofoto incorporada al atlas](https://pnoa.ign.es/web/portal/pnoa-imagen/visualizadores-y-servicios-web).
+
+Localizador: Mosaico servido por https://www.ign.es/wms-inspire/pnoa-ma; ortofoto de referencia incorporada al atlas, consultada el 19 de noviembre de 2026.
+
+Criterio de uso: Fecha de adquisición de esta imagen no identificada. Las copas se sitúan por lectura visual de la ortofoto; especies, alturas y contornos son interpretados. La fecha de consulta no es la fecha del vuelo. Atribución: obra derivada de IGN/PNOA, CC BY 4.0.
+
+### teatro-foto-2015
+
+**Rjdeadly / Wikimedia Commons (2015).** [Saguntum rear wall of theatre — muro posterior del teatro](https://commons.wikimedia.org/wiki/File:Saguntum_rear_wall_of_theatre.jpg).
+
+Localizador: Fecha: 18 de julio de 2015; obra propia; archivo original 2560 × 1703; licencia CC BY-SA 4.0.
+
+Criterio de uso: Referencia de las aberturas del zócalo de piedra y de la pasarela en el encuentro con el volumen rehabilitado. La fotografía documenta ese estado de 2015; las dimensiones de detalle del modelo son interpretadas. Se consulta y enlaza, sin redistribuir la fotografía.
 

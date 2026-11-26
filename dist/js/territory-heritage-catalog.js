@@ -79,12 +79,12 @@ function metadata(record,project){
 }
 export async function loadHeritageCatalog(project){
  const {inventories,entries,issues}=await loadAtlasVisitRegistry();
- const [lists,castle,theatrePlan,area]=await Promise.all([
-  Promise.all(Object.values(inventories).flat().map(name=>documentData(name))),documentData('castle-visit'),documentData('theatre-plan'),documentData('historic-context')
+ const [lists,castle,theatrePlan,area,theatreGuide]=await Promise.all([
+  Promise.all(Object.values(inventories).flat().map(name=>documentData(name))),documentData('castle-visit'),documentData('theatre-plan'),documentData('historic-context'),documentData('theatre-visit')
  ]);
  const records=Object.fromEntries(lists.flatMap(list=>list.sites).map(record=>[record.id,record]));
  records.castle={id:'castle',name:'Castillo de Sagunto',coordinate:castle.stops.find(s=>s.id==='conjunto').coordinate,sources:castle.sources};
- records.theatre={id:'theatre',name:'Teatro Romano',coordinate:theatrePlan.center,sources:[{url:'https://manuelportaceli.com/rehabilitacion-del-teatro-romano-de-sagunto/'}]};
+ records.theatre={id:'theatre',name:'Teatro Romano',coordinate:theatrePlan.center,sources:theatreGuide.sources};
  for(const entry of entries){
   if(records[entry.id]){issues.push('Identificador de visita duplicado · '+entry.id);continue;}
   records[entry.id]=entry;

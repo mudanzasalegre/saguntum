@@ -1,0 +1,1921 @@
+{
+  "pass": true,
+  "method": "Frozen pre-V49 identifier fixtures + shipped buildTheatreScene and loadHeritageCatalog; CPU and local JSON only",
+  "baseline": {
+    "commit": "1c7be8a5fafba5118e7b4b22e3c5ba0d372574cf",
+    "guideSha256": "992f8775a34e36f3bfa4c445c12ad65c84e05f2780a5ffbb913dd77bb4f27837",
+    "orderSha256": "c2efaee8424cc6cc62a238a32002f372b75b175a19ff211dfb9d035d05a4ff06",
+    "otherVisitIndexSha256": "00bed45f79f2e8940603b7635d357b6b362352844682ae54cdae3751bb931b33",
+    "stopIds": [
+      "teatro-conjunto",
+      "teatro-aditus-oriental",
+      "teatro-orchestra",
+      "teatro-ima-cavea",
+      "teatro-media-cavea",
+      "teatro-summa-cavea",
+      "teatro-vomitoria",
+      "teatro-portico",
+      "teatro-tribunalia",
+      "teatro-proscaenium",
+      "teatro-frons-scaenae",
+      "teatro-basilicas",
+      "teatro-hyposcaenium",
+      "teatro-cloaca",
+      "teatro-restauracion",
+      "teatro-vivo"
+    ],
+    "atlasIds": [
+      "santa-maria",
+      "plaza-mayor",
+      "juderia",
+      "calvario",
+      "berenguer",
+      "sangre",
+      "salvador",
+      "museo",
+      "portic",
+      "domus",
+      "circo",
+      "diana",
+      "necropolis",
+      "theatre",
+      "castle",
+      "glorieta",
+      "horno",
+      "talleres",
+      "museo-industrial",
+      "gerencia",
+      "casino",
+      "begona",
+      "economato",
+      "barrio-obrero",
+      "sanatorio",
+      "pantalan-paseo",
+      "pantalan-maritimo",
+      "grau-vell",
+      "puerto-antiguo",
+      "marjal-moros",
+      "dunas-almarda",
+      "rio-palancia"
+    ],
+    "gitObject": {
+      "available": true,
+      "method": "git show of the fixed pre-V49 commit",
+      "guideSha256": "992f8775a34e36f3bfa4c445c12ad65c84e05f2780a5ffbb913dd77bb4f27837",
+      "orderSha256": "c2efaee8424cc6cc62a238a32002f372b75b175a19ff211dfb9d035d05a4ff06",
+      "otherVisitIndexSha256": "00bed45f79f2e8940603b7635d357b6b362352844682ae54cdae3751bb931b33"
+    }
+  },
+  "checks": [
+    {
+      "pass": true,
+      "label": "frozen baseline hashes match the original Git objects"
+    },
+    {
+      "pass": true,
+      "label": "frozen stop order matches the original guide"
+    },
+    {
+      "pass": true,
+      "label": "frozen semantic hash matches the other 31 visits in the original index"
+    },
+    {
+      "pass": true,
+      "label": "exactly 16 unique theatre stop IDs"
+    },
+    {
+      "pass": true,
+      "label": "all 16 stop IDs and their order are unchanged from the pre-V49 guide"
+    },
+    {
+      "pass": true,
+      "label": "the shipped model exposes the same 16 ordered focuses"
+    },
+    {
+      "pass": true,
+      "label": "editorial stop numbers remain 1 through 16"
+    },
+    {
+      "pass": true,
+      "label": "intro and narrative aliases remain synchronized"
+    },
+    {
+      "pass": true,
+      "label": "the bibliography has no duplicate source identifiers"
+    },
+    {
+      "pass": true,
+      "label": "$.regions[0].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.regions[1].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.regions[2].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.regions[3].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.regions[4].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[0].facts[0].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[0].facts[1].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[0].facts[2].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[0].facts[3].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[0].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[0].coordinateSourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[1].facts[0].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[1].facts[1].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[1].facts[2].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[1].facts[3].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[1].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[1].coordinateSourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[2].facts[0].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[2].facts[1].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[2].facts[2].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[2].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[2].coordinateSourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[3].facts[0].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[3].facts[1].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[3].facts[2].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[3].facts[3].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[3].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[3].coordinateSourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[4].facts[0].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[4].facts[1].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[4].facts[2].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[4].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[4].coordinateSourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[5].facts[0].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[5].facts[1].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[5].facts[2].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[5].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[5].coordinateSourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[6].facts[0].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[6].facts[1].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[6].facts[2].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[6].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[6].coordinateSourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[7].facts[0].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[7].facts[1].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[7].facts[2].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[7].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[7].coordinateSourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[8].facts[0].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[8].facts[1].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[8].facts[2].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[8].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[8].coordinateSourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[9].facts[0].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[9].facts[1].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[9].facts[2].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[9].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[9].coordinateSourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[10].facts[0].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[10].facts[1].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[10].facts[2].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[10].facts[3].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[10].facts[4].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[10].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[10].coordinateSourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[11].facts[0].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[11].facts[1].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[11].facts[2].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[11].facts[3].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[11].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[11].coordinateSourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[12].facts[0].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[12].facts[1].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[12].facts[2].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[12].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[12].coordinateSourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[13].facts[0].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[13].facts[1].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[13].facts[2].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[13].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[13].coordinateSourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[14].facts[0].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[14].facts[1].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[14].facts[2].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[14].facts[3].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[14].facts[4].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[14].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[14].coordinateSourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[15].facts[0].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[15].facts[1].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[15].facts[2].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[15].facts[3].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[15].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.stops[15].coordinateSourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.timeline[0].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.timeline[1].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.timeline[2].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.timeline[3].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.timeline[4].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.timeline[5].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.timeline[6].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.timeline[7].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.timeline[8].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.timeline[9].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.timeline[10].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.timeline[11].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.timeline[12].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.timeline[13].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.timeline[14].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.timeline[15].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "$.timeline[16].sourceIds is a reference array"
+    },
+    {
+      "pass": true,
+      "label": "every stop and factual claim retains explicit source references"
+    },
+    {
+      "pass": true,
+      "label": "every editorial and coordinate reference resolves to the displayed bibliography"
+    },
+    {
+      "pass": true,
+      "label": "all model source keys resolve to the same bibliography"
+    },
+    {
+      "pass": true,
+      "label": "the five regions contain each stop exactly once"
+    },
+    {
+      "pass": true,
+      "label": "region memberships and stop region IDs agree"
+    },
+    {
+      "pass": true,
+      "label": "each region anchor follows its first documented stop"
+    },
+    {
+      "pass": true,
+      "label": "teatro-conjunto has a finite WGS84 coordinate in the theatre frame"
+    },
+    {
+      "pass": true,
+      "label": "teatro-conjunto coordinate aliases are identical"
+    },
+    {
+      "pass": true,
+      "label": "teatro-conjunto geographic anchor matches its registered modelLocal position"
+    },
+    {
+      "pass": true,
+      "label": "teatro-conjunto geographic anchor matches the actual model focus coordinate"
+    },
+    {
+      "pass": true,
+      "label": "teatro-conjunto region agrees with the model focus"
+    },
+    {
+      "pass": true,
+      "label": "teatro-conjunto uses the intended target (overview composition may differ from the map pin)"
+    },
+    {
+      "pass": true,
+      "label": "teatro-conjunto overview/detail fitBounds flags agree"
+    },
+    {
+      "pass": true,
+      "label": "teatro-conjunto cutaway requirement agrees with the model"
+    },
+    {
+      "pass": true,
+      "label": "teatro-conjunto interior camera flag agrees with the model"
+    },
+    {
+      "pass": true,
+      "label": "teatro-aditus-oriental has a finite WGS84 coordinate in the theatre frame"
+    },
+    {
+      "pass": true,
+      "label": "teatro-aditus-oriental coordinate aliases are identical"
+    },
+    {
+      "pass": true,
+      "label": "teatro-aditus-oriental geographic anchor matches its registered modelLocal position"
+    },
+    {
+      "pass": true,
+      "label": "teatro-aditus-oriental geographic anchor matches the actual model focus coordinate"
+    },
+    {
+      "pass": true,
+      "label": "teatro-aditus-oriental region agrees with the model focus"
+    },
+    {
+      "pass": true,
+      "label": "teatro-aditus-oriental uses the intended target (overview composition may differ from the map pin)"
+    },
+    {
+      "pass": true,
+      "label": "teatro-aditus-oriental overview/detail fitBounds flags agree"
+    },
+    {
+      "pass": true,
+      "label": "teatro-aditus-oriental cutaway requirement agrees with the model"
+    },
+    {
+      "pass": true,
+      "label": "teatro-aditus-oriental interior camera flag agrees with the model"
+    },
+    {
+      "pass": true,
+      "label": "teatro-aditus-oriental interior FOV, close behaviour and minimum distance are synchronized"
+    },
+    {
+      "pass": true,
+      "label": "teatro-orchestra has a finite WGS84 coordinate in the theatre frame"
+    },
+    {
+      "pass": true,
+      "label": "teatro-orchestra coordinate aliases are identical"
+    },
+    {
+      "pass": true,
+      "label": "teatro-orchestra geographic anchor matches its registered modelLocal position"
+    },
+    {
+      "pass": true,
+      "label": "teatro-orchestra geographic anchor matches the actual model focus coordinate"
+    },
+    {
+      "pass": true,
+      "label": "teatro-orchestra region agrees with the model focus"
+    },
+    {
+      "pass": true,
+      "label": "teatro-orchestra uses the intended target (overview composition may differ from the map pin)"
+    },
+    {
+      "pass": true,
+      "label": "teatro-orchestra overview/detail fitBounds flags agree"
+    },
+    {
+      "pass": true,
+      "label": "teatro-orchestra cutaway requirement agrees with the model"
+    },
+    {
+      "pass": true,
+      "label": "teatro-orchestra interior camera flag agrees with the model"
+    },
+    {
+      "pass": true,
+      "label": "teatro-ima-cavea has a finite WGS84 coordinate in the theatre frame"
+    },
+    {
+      "pass": true,
+      "label": "teatro-ima-cavea coordinate aliases are identical"
+    },
+    {
+      "pass": true,
+      "label": "teatro-ima-cavea geographic anchor matches its registered modelLocal position"
+    },
+    {
+      "pass": true,
+      "label": "teatro-ima-cavea geographic anchor matches the actual model focus coordinate"
+    },
+    {
+      "pass": true,
+      "label": "teatro-ima-cavea region agrees with the model focus"
+    },
+    {
+      "pass": true,
+      "label": "teatro-ima-cavea uses the intended target (overview composition may differ from the map pin)"
+    },
+    {
+      "pass": true,
+      "label": "teatro-ima-cavea overview/detail fitBounds flags agree"
+    },
+    {
+      "pass": true,
+      "label": "teatro-ima-cavea cutaway requirement agrees with the model"
+    },
+    {
+      "pass": true,
+      "label": "teatro-ima-cavea interior camera flag agrees with the model"
+    },
+    {
+      "pass": true,
+      "label": "teatro-media-cavea has a finite WGS84 coordinate in the theatre frame"
+    },
+    {
+      "pass": true,
+      "label": "teatro-media-cavea coordinate aliases are identical"
+    },
+    {
+      "pass": true,
+      "label": "teatro-media-cavea geographic anchor matches its registered modelLocal position"
+    },
+    {
+      "pass": true,
+      "label": "teatro-media-cavea geographic anchor matches the actual model focus coordinate"
+    },
+    {
+      "pass": true,
+      "label": "teatro-media-cavea region agrees with the model focus"
+    },
+    {
+      "pass": true,
+      "label": "teatro-media-cavea uses the intended target (overview composition may differ from the map pin)"
+    },
+    {
+      "pass": true,
+      "label": "teatro-media-cavea overview/detail fitBounds flags agree"
+    },
+    {
+      "pass": true,
+      "label": "teatro-media-cavea cutaway requirement agrees with the model"
+    },
+    {
+      "pass": true,
+      "label": "teatro-media-cavea interior camera flag agrees with the model"
+    },
+    {
+      "pass": true,
+      "label": "teatro-summa-cavea has a finite WGS84 coordinate in the theatre frame"
+    },
+    {
+      "pass": true,
+      "label": "teatro-summa-cavea coordinate aliases are identical"
+    },
+    {
+      "pass": true,
+      "label": "teatro-summa-cavea geographic anchor matches its registered modelLocal position"
+    },
+    {
+      "pass": true,
+      "label": "teatro-summa-cavea geographic anchor matches the actual model focus coordinate"
+    },
+    {
+      "pass": true,
+      "label": "teatro-summa-cavea region agrees with the model focus"
+    },
+    {
+      "pass": true,
+      "label": "teatro-summa-cavea uses the intended target (overview composition may differ from the map pin)"
+    },
+    {
+      "pass": true,
+      "label": "teatro-summa-cavea overview/detail fitBounds flags agree"
+    },
+    {
+      "pass": true,
+      "label": "teatro-summa-cavea cutaway requirement agrees with the model"
+    },
+    {
+      "pass": true,
+      "label": "teatro-summa-cavea interior camera flag agrees with the model"
+    },
+    {
+      "pass": true,
+      "label": "teatro-vomitoria has a finite WGS84 coordinate in the theatre frame"
+    },
+    {
+      "pass": true,
+      "label": "teatro-vomitoria coordinate aliases are identical"
+    },
+    {
+      "pass": true,
+      "label": "teatro-vomitoria geographic anchor matches its registered modelLocal position"
+    },
+    {
+      "pass": true,
+      "label": "teatro-vomitoria geographic anchor matches the actual model focus coordinate"
+    },
+    {
+      "pass": true,
+      "label": "teatro-vomitoria region agrees with the model focus"
+    },
+    {
+      "pass": true,
+      "label": "teatro-vomitoria uses the intended target (overview composition may differ from the map pin)"
+    },
+    {
+      "pass": true,
+      "label": "teatro-vomitoria overview/detail fitBounds flags agree"
+    },
+    {
+      "pass": true,
+      "label": "teatro-vomitoria cutaway requirement agrees with the model"
+    },
+    {
+      "pass": true,
+      "label": "teatro-vomitoria interior camera flag agrees with the model"
+    },
+    {
+      "pass": true,
+      "label": "teatro-vomitoria interior FOV, close behaviour and minimum distance are synchronized"
+    },
+    {
+      "pass": true,
+      "label": "teatro-portico has a finite WGS84 coordinate in the theatre frame"
+    },
+    {
+      "pass": true,
+      "label": "teatro-portico coordinate aliases are identical"
+    },
+    {
+      "pass": true,
+      "label": "teatro-portico geographic anchor matches its registered modelLocal position"
+    },
+    {
+      "pass": true,
+      "label": "teatro-portico geographic anchor matches the actual model focus coordinate"
+    },
+    {
+      "pass": true,
+      "label": "teatro-portico region agrees with the model focus"
+    },
+    {
+      "pass": true,
+      "label": "teatro-portico uses the intended target (overview composition may differ from the map pin)"
+    },
+    {
+      "pass": true,
+      "label": "teatro-portico overview/detail fitBounds flags agree"
+    },
+    {
+      "pass": true,
+      "label": "teatro-portico cutaway requirement agrees with the model"
+    },
+    {
+      "pass": true,
+      "label": "teatro-portico interior camera flag agrees with the model"
+    },
+    {
+      "pass": true,
+      "label": "teatro-tribunalia has a finite WGS84 coordinate in the theatre frame"
+    },
+    {
+      "pass": true,
+      "label": "teatro-tribunalia coordinate aliases are identical"
+    },
+    {
+      "pass": true,
+      "label": "teatro-tribunalia geographic anchor matches its registered modelLocal position"
+    },
+    {
+      "pass": true,
+      "label": "teatro-tribunalia geographic anchor matches the actual model focus coordinate"
+    },
+    {
+      "pass": true,
+      "label": "teatro-tribunalia region agrees with the model focus"
+    },
+    {
+      "pass": true,
+      "label": "teatro-tribunalia uses the intended target (overview composition may differ from the map pin)"
+    },
+    {
+      "pass": true,
+      "label": "teatro-tribunalia overview/detail fitBounds flags agree"
+    },
+    {
+      "pass": true,
+      "label": "teatro-tribunalia cutaway requirement agrees with the model"
+    },
+    {
+      "pass": true,
+      "label": "teatro-tribunalia interior camera flag agrees with the model"
+    },
+    {
+      "pass": true,
+      "label": "teatro-proscaenium has a finite WGS84 coordinate in the theatre frame"
+    },
+    {
+      "pass": true,
+      "label": "teatro-proscaenium coordinate aliases are identical"
+    },
+    {
+      "pass": true,
+      "label": "teatro-proscaenium geographic anchor matches its registered modelLocal position"
+    },
+    {
+      "pass": true,
+      "label": "teatro-proscaenium geographic anchor matches the actual model focus coordinate"
+    },
+    {
+      "pass": true,
+      "label": "teatro-proscaenium region agrees with the model focus"
+    },
+    {
+      "pass": true,
+      "label": "teatro-proscaenium uses the intended target (overview composition may differ from the map pin)"
+    },
+    {
+      "pass": true,
+      "label": "teatro-proscaenium overview/detail fitBounds flags agree"
+    },
+    {
+      "pass": true,
+      "label": "teatro-proscaenium cutaway requirement agrees with the model"
+    },
+    {
+      "pass": true,
+      "label": "teatro-proscaenium interior camera flag agrees with the model"
+    },
+    {
+      "pass": true,
+      "label": "teatro-frons-scaenae has a finite WGS84 coordinate in the theatre frame"
+    },
+    {
+      "pass": true,
+      "label": "teatro-frons-scaenae coordinate aliases are identical"
+    },
+    {
+      "pass": true,
+      "label": "teatro-frons-scaenae geographic anchor matches its registered modelLocal position"
+    },
+    {
+      "pass": true,
+      "label": "teatro-frons-scaenae geographic anchor matches the actual model focus coordinate"
+    },
+    {
+      "pass": true,
+      "label": "teatro-frons-scaenae region agrees with the model focus"
+    },
+    {
+      "pass": true,
+      "label": "teatro-frons-scaenae uses the intended target (overview composition may differ from the map pin)"
+    },
+    {
+      "pass": true,
+      "label": "teatro-frons-scaenae overview/detail fitBounds flags agree"
+    },
+    {
+      "pass": true,
+      "label": "teatro-frons-scaenae cutaway requirement agrees with the model"
+    },
+    {
+      "pass": true,
+      "label": "teatro-frons-scaenae interior camera flag agrees with the model"
+    },
+    {
+      "pass": true,
+      "label": "teatro-basilicas has a finite WGS84 coordinate in the theatre frame"
+    },
+    {
+      "pass": true,
+      "label": "teatro-basilicas coordinate aliases are identical"
+    },
+    {
+      "pass": true,
+      "label": "teatro-basilicas geographic anchor matches its registered modelLocal position"
+    },
+    {
+      "pass": true,
+      "label": "teatro-basilicas geographic anchor matches the actual model focus coordinate"
+    },
+    {
+      "pass": true,
+      "label": "teatro-basilicas region agrees with the model focus"
+    },
+    {
+      "pass": true,
+      "label": "teatro-basilicas uses the intended target (overview composition may differ from the map pin)"
+    },
+    {
+      "pass": true,
+      "label": "teatro-basilicas overview/detail fitBounds flags agree"
+    },
+    {
+      "pass": true,
+      "label": "teatro-basilicas cutaway requirement agrees with the model"
+    },
+    {
+      "pass": true,
+      "label": "teatro-basilicas interior camera flag agrees with the model"
+    },
+    {
+      "pass": true,
+      "label": "teatro-hyposcaenium has a finite WGS84 coordinate in the theatre frame"
+    },
+    {
+      "pass": true,
+      "label": "teatro-hyposcaenium coordinate aliases are identical"
+    },
+    {
+      "pass": true,
+      "label": "teatro-hyposcaenium geographic anchor matches its registered modelLocal position"
+    },
+    {
+      "pass": true,
+      "label": "teatro-hyposcaenium geographic anchor matches the actual model focus coordinate"
+    },
+    {
+      "pass": true,
+      "label": "teatro-hyposcaenium region agrees with the model focus"
+    },
+    {
+      "pass": true,
+      "label": "teatro-hyposcaenium uses the intended target (overview composition may differ from the map pin)"
+    },
+    {
+      "pass": true,
+      "label": "teatro-hyposcaenium overview/detail fitBounds flags agree"
+    },
+    {
+      "pass": true,
+      "label": "teatro-hyposcaenium cutaway requirement agrees with the model"
+    },
+    {
+      "pass": true,
+      "label": "teatro-hyposcaenium interior camera flag agrees with the model"
+    },
+    {
+      "pass": true,
+      "label": "teatro-cloaca has a finite WGS84 coordinate in the theatre frame"
+    },
+    {
+      "pass": true,
+      "label": "teatro-cloaca coordinate aliases are identical"
+    },
+    {
+      "pass": true,
+      "label": "teatro-cloaca geographic anchor matches its registered modelLocal position"
+    },
+    {
+      "pass": true,
+      "label": "teatro-cloaca geographic anchor matches the actual model focus coordinate"
+    },
+    {
+      "pass": true,
+      "label": "teatro-cloaca region agrees with the model focus"
+    },
+    {
+      "pass": true,
+      "label": "teatro-cloaca uses the intended target (overview composition may differ from the map pin)"
+    },
+    {
+      "pass": true,
+      "label": "teatro-cloaca overview/detail fitBounds flags agree"
+    },
+    {
+      "pass": true,
+      "label": "teatro-cloaca cutaway requirement agrees with the model"
+    },
+    {
+      "pass": true,
+      "label": "teatro-cloaca interior camera flag agrees with the model"
+    },
+    {
+      "pass": true,
+      "label": "teatro-restauracion has a finite WGS84 coordinate in the theatre frame"
+    },
+    {
+      "pass": true,
+      "label": "teatro-restauracion coordinate aliases are identical"
+    },
+    {
+      "pass": true,
+      "label": "teatro-restauracion geographic anchor matches its registered modelLocal position"
+    },
+    {
+      "pass": true,
+      "label": "teatro-restauracion geographic anchor matches the actual model focus coordinate"
+    },
+    {
+      "pass": true,
+      "label": "teatro-restauracion region agrees with the model focus"
+    },
+    {
+      "pass": true,
+      "label": "teatro-restauracion uses the intended target (overview composition may differ from the map pin)"
+    },
+    {
+      "pass": true,
+      "label": "teatro-restauracion overview/detail fitBounds flags agree"
+    },
+    {
+      "pass": true,
+      "label": "teatro-restauracion cutaway requirement agrees with the model"
+    },
+    {
+      "pass": true,
+      "label": "teatro-restauracion interior camera flag agrees with the model"
+    },
+    {
+      "pass": true,
+      "label": "teatro-vivo has a finite WGS84 coordinate in the theatre frame"
+    },
+    {
+      "pass": true,
+      "label": "teatro-vivo coordinate aliases are identical"
+    },
+    {
+      "pass": true,
+      "label": "teatro-vivo geographic anchor matches its registered modelLocal position"
+    },
+    {
+      "pass": true,
+      "label": "teatro-vivo geographic anchor matches the actual model focus coordinate"
+    },
+    {
+      "pass": true,
+      "label": "teatro-vivo region agrees with the model focus"
+    },
+    {
+      "pass": true,
+      "label": "teatro-vivo uses the intended target (overview composition may differ from the map pin)"
+    },
+    {
+      "pass": true,
+      "label": "teatro-vivo overview/detail fitBounds flags agree"
+    },
+    {
+      "pass": true,
+      "label": "teatro-vivo cutaway requirement agrees with the model"
+    },
+    {
+      "pass": true,
+      "label": "teatro-vivo interior camera flag agrees with the model"
+    },
+    {
+      "pass": true,
+      "label": "the global Atlas ordering remains unchanged from the 32-place baseline"
+    },
+    {
+      "pass": true,
+      "label": "the shared numbering implementation is byte-identical to the pre-V49 baseline"
+    },
+    {
+      "pass": true,
+      "label": "the actual shared catalogue loads without registry issues"
+    },
+    {
+      "pass": true,
+      "label": "the actual shared catalogue contains 32 unique visits"
+    },
+    {
+      "pass": true,
+      "label": "the loaded catalogue keeps all 32 baseline IDs in the same order"
+    },
+    {
+      "pass": true,
+      "label": "global visit numbers remain 1 through 32 without renumbering"
+    },
+    {
+      "pass": true,
+      "label": "Teatro Romano retains global visit number 14"
+    },
+    {
+      "pass": true,
+      "label": "Sagunto, Puerto and coast/landscapes retain their 16 / 9 / 7 grouping"
+    },
+    {
+      "pass": true,
+      "label": "all existing monument deep-link anchors remain stable"
+    },
+    {
+      "pass": true,
+      "label": "all other 31 visits retain exactly the baseline semantic content in the generated territory index"
+    },
+    {
+      "pass": true,
+      "label": "the generated visit index retains the same 32 places"
+    },
+    {
+      "pass": true,
+      "label": "the generated theatre regions match the current guide"
+    },
+    {
+      "pass": true,
+      "label": "the generated theatre index contains the current 16 stops in order"
+    },
+    {
+      "pass": true,
+      "label": "every indexed theatre title, coordinate, region, introduction, period and mode reflects the current guide"
+    }
+  ],
+  "errors": [],
+  "editorial": {
+    "stopCount": 16,
+    "facts": 57,
+    "timelineEntries": 17,
+    "sourceCount": 22,
+    "referenceOccurrences": 242,
+    "unresolvedReferences": [],
+    "regions": 5
+  },
+  "spatial": {
+    "coordinateToleranceM": 0.002,
+    "maxCoordinateErrorM": 0.0006983827568631931,
+    "overviewFitCount": 1,
+    "interiorCount": 2,
+    "sectionCount": 2,
+    "stops": [
+      {
+        "id": "teatro-conjunto",
+        "order": 1,
+        "coordinate": [
+          -0.2780017,
+          39.67680689
+        ],
+        "modelLocal": {
+          "x": 0,
+          "z": 8
+        },
+        "targetLocal": [
+          0,
+          7.999999999999986,
+          5.000000000000028
+        ],
+        "localFrameErrorM": 0.00017446636046962674,
+        "focusCoordinateErrorM": 0.0001744662277487058,
+        "fitBounds": true,
+        "requiresSection": false,
+        "interiorView": false,
+        "href": "#theatre/teatro-conjunto"
+      },
+      {
+        "id": "teatro-aditus-oriental",
+        "order": 2,
+        "coordinate": [
+          -0.27770674,
+          39.67677229
+        ],
+        "modelLocal": {
+          "x": 24,
+          "z": -0.8
+        },
+        "targetLocal": [
+          24,
+          2.1999999999999886,
+          -0.799999999999983
+        ],
+        "localFrameErrorM": 0.00042502256507400527,
+        "focusCoordinateErrorM": 0.0004250225665037044,
+        "fitBounds": false,
+        "requiresSection": false,
+        "interiorView": true,
+        "fov": 58,
+        "closeScale": false,
+        "minDistance": 0.45,
+        "href": "#theatre/teatro-aditus-oriental"
+      },
+      {
+        "id": "teatro-orchestra",
+        "order": 3,
+        "coordinate": [
+          -0.27797358,
+          39.67684625
+        ],
+        "modelLocal": {
+          "x": 0,
+          "z": 3
+        },
+        "targetLocal": [
+          -1.4210854715202004e-14,
+          0.6999999999999886,
+          3
+        ],
+        "localFrameErrorM": 0.0004027507558510785,
+        "focusCoordinateErrorM": 0.00040275070924273887,
+        "fitBounds": false,
+        "requiresSection": false,
+        "interiorView": false,
+        "href": "#theatre/teatro-orchestra"
+      },
+      {
+        "id": "teatro-ima-cavea",
+        "order": 4,
+        "coordinate": [
+          -0.27809579,
+          39.6768057
+        ],
+        "modelLocal": {
+          "x": -7,
+          "z": 12
+        },
+        "targetLocal": [
+          -7.000000000000028,
+          3.299999999999983,
+          12
+        ],
+        "localFrameErrorM": 0.00012682182370489197,
+        "focusCoordinateErrorM": 0.00012682181207957307,
+        "fitBounds": false,
+        "requiresSection": false,
+        "interiorView": false,
+        "href": "#theatre/teatro-ima-cavea"
+      },
+      {
+        "id": "teatro-media-cavea",
+        "order": 5,
+        "coordinate": [
+          -0.27807481,
+          39.67670456
+        ],
+        "modelLocal": {
+          "x": 0,
+          "z": 21
+        },
+        "targetLocal": [
+          0,
+          7.799999999999983,
+          21.00000000000003
+        ],
+        "localFrameErrorM": 0.00037980451043704167,
+        "focusCoordinateErrorM": 0.0003798043914634456,
+        "fitBounds": false,
+        "requiresSection": false,
+        "interiorView": false,
+        "href": "#theatre/teatro-media-cavea"
+      },
+      {
+        "id": "teatro-summa-cavea",
+        "order": 6,
+        "coordinate": [
+          -0.27822105,
+          39.67670494
+        ],
+        "modelLocal": {
+          "x": -11,
+          "z": 27
+        },
+        "targetLocal": [
+          -11,
+          12.499999999999986,
+          27.00000000000003
+        ],
+        "localFrameErrorM": 0.0006983827568631931,
+        "focusCoordinateErrorM": 0.0006983825402822646,
+        "fitBounds": false,
+        "requiresSection": false,
+        "interiorView": false,
+        "href": "#theatre/teatro-summa-cavea"
+      },
+      {
+        "id": "teatro-vomitoria",
+        "order": 7,
+        "coordinate": [
+          -0.27799476,
+          39.67663815
+        ],
+        "modelLocal": {
+          "x": 9.571238,
+          "z": 24.174189
+        },
+        "targetLocal": [
+          9.571238000000008,
+          10.949999999999989,
+          24.17418900000004
+        ],
+        "localFrameErrorM": 0.0004311730214655915,
+        "focusCoordinateErrorM": 0.0004311728058829104,
+        "fitBounds": false,
+        "requiresSection": false,
+        "interiorView": true,
+        "fov": 58,
+        "closeScale": false,
+        "minDistance": 0.45,
+        "href": "#theatre/teatro-vomitoria"
+      },
+      {
+        "id": "teatro-portico",
+        "order": 8,
+        "coordinate": [
+          -0.27816141,
+          39.67658333
+        ],
+        "modelLocal": {
+          "x": 0,
+          "z": 36.4
+        },
+        "targetLocal": [
+          0,
+          17.19999999999999,
+          36.400000000000006
+        ],
+        "localFrameErrorM": 0.00031045277193002973,
+        "focusCoordinateErrorM": 0.0003104527486232962,
+        "fitBounds": false,
+        "requiresSection": false,
+        "interiorView": false,
+        "href": "#theatre/teatro-portico"
+      },
+      {
+        "id": "teatro-tribunalia",
+        "order": 9,
+        "coordinate": [
+          -0.27773732,
+          39.67676678
+        ],
+        "modelLocal": {
+          "x": 22,
+          "z": 1
+        },
+        "targetLocal": [
+          22,
+          6.199999999999989,
+          1.0000000000000284
+        ],
+        "localFrameErrorM": 0.00044019322178388663,
+        "focusCoordinateErrorM": 0.00044019294604598233,
+        "fitBounds": false,
+        "requiresSection": false,
+        "interiorView": false,
+        "href": "#theatre/teatro-tribunalia"
+      },
+      {
+        "id": "teatro-proscaenium",
+        "order": 10,
+        "coordinate": [
+          -0.27792185,
+          39.67691867
+        ],
+        "modelLocal": {
+          "x": 0,
+          "z": -6.2
+        },
+        "targetLocal": [
+          -1.4210854715202004e-14,
+          1.6999999999999886,
+          -6.19999999999996
+        ],
+        "localFrameErrorM": 0.00011166398473738028,
+        "focusCoordinateErrorM": 0.00011166389689860328,
+        "fitBounds": false,
+        "requiresSection": false,
+        "interiorView": false,
+        "href": "#theatre/teatro-proscaenium"
+      },
+      {
+        "id": "teatro-frons-scaenae",
+        "order": 11,
+        "coordinate": [
+          -0.27789036,
+          39.67696275
+        ],
+        "modelLocal": {
+          "x": 0,
+          "z": -11.8
+        },
+        "targetLocal": [
+          -1.4210854715202004e-14,
+          7.499999999999986,
+          -11.799999999999983
+        ],
+        "localFrameErrorM": 0.0002743488880555203,
+        "focusCoordinateErrorM": 0.00027434880457981005,
+        "fitBounds": false,
+        "requiresSection": false,
+        "interiorView": false,
+        "href": "#theatre/teatro-frons-scaenae"
+      },
+      {
+        "id": "teatro-basilicas",
+        "order": 12,
+        "coordinate": [
+          -0.27758649,
+          39.67685672
+        ],
+        "modelLocal": {
+          "x": 28.5,
+          "z": -14
+        },
+        "targetLocal": [
+          28.5,
+          7.999999999999986,
+          -14
+        ],
+        "localFrameErrorM": 0.0001476320606948283,
+        "focusCoordinateErrorM": 0.00014763200024433875,
+        "fitBounds": false,
+        "requiresSection": false,
+        "interiorView": false,
+        "href": "#theatre/teatro-basilicas"
+      },
+      {
+        "id": "teatro-hyposcaenium",
+        "order": 13,
+        "coordinate": [
+          -0.27803088,
+          39.6769525
+        ],
+        "modelLocal": {
+          "x": -10,
+          "z": -5
+        },
+        "targetLocal": [
+          -10.000000000000014,
+          -2.500000000000014,
+          -5
+        ],
+        "localFrameErrorM": 0.0005003373415861866,
+        "focusCoordinateErrorM": 0.0005003371103549925,
+        "fitBounds": false,
+        "requiresSection": true,
+        "interiorView": false,
+        "href": "#theatre/teatro-hyposcaenium"
+      },
+      {
+        "id": "teatro-cloaca",
+        "order": 14,
+        "coordinate": [
+          -0.27793422,
+          39.67690135
+        ],
+        "modelLocal": {
+          "x": 0,
+          "z": -4
+        },
+        "targetLocal": [
+          -1.4210854715202004e-14,
+          -3.500000000000014,
+          -3.9999999999999716
+        ],
+        "localFrameErrorM": 0.0001938095130450374,
+        "focusCoordinateErrorM": 0.0001938097040272194,
+        "fitBounds": false,
+        "requiresSection": true,
+        "interiorView": false,
+        "href": "#theatre/teatro-cloaca"
+      },
+      {
+        "id": "teatro-restauracion",
+        "order": 15,
+        "coordinate": [
+          -0.27788923,
+          39.67696433
+        ],
+        "modelLocal": {
+          "x": 0,
+          "z": -12
+        },
+        "targetLocal": [
+          -1.4210854715202004e-14,
+          12.999999999999986,
+          -12
+        ],
+        "localFrameErrorM": 0.0005201351300491802,
+        "focusCoordinateErrorM": 0.0005201353154874151,
+        "fitBounds": false,
+        "requiresSection": false,
+        "interiorView": false,
+        "href": "#theatre/teatro-restauracion"
+      },
+      {
+        "id": "teatro-vivo",
+        "order": 16,
+        "coordinate": [
+          -0.27799608,
+          39.67681476
+        ],
+        "modelLocal": {
+          "x": 0,
+          "z": 7
+        },
+        "targetLocal": [
+          -1.4210854715202004e-14,
+          3.999999999999986,
+          7.000000000000028
+        ],
+        "localFrameErrorM": 0.0002873484921836598,
+        "focusCoordinateErrorM": 0.0002873485410168495,
+        "fitBounds": false,
+        "requiresSection": false,
+        "interiorView": false,
+        "href": "#theatre/teatro-vivo"
+      }
+    ],
+    "groundBinding": {
+      "assembly": "Theatre + sacred/civic/archaeological patches + urban ground + final terrain mesh + bindGround",
+      "scope": "Same local theatre inputs as buildRegion(sagunto); distant Glorieta omitted from CPU context",
+      "changes": [
+        {
+          "id": "teatro-conjunto",
+          "targetShiftM": 0,
+          "eyeOffsetShiftM": 0,
+          "closeOffsetShiftM": 0
+        },
+        {
+          "id": "teatro-aditus-oriental",
+          "targetShiftM": 0,
+          "eyeOffsetShiftM": 0,
+          "closeOffsetShiftM": 0
+        },
+        {
+          "id": "teatro-orchestra",
+          "targetShiftM": 0,
+          "eyeOffsetShiftM": 0,
+          "closeOffsetShiftM": 0
+        },
+        {
+          "id": "teatro-ima-cavea",
+          "targetShiftM": 0,
+          "eyeOffsetShiftM": 0,
+          "closeOffsetShiftM": 0
+        },
+        {
+          "id": "teatro-media-cavea",
+          "targetShiftM": 0,
+          "eyeOffsetShiftM": 0,
+          "closeOffsetShiftM": 0
+        },
+        {
+          "id": "teatro-summa-cavea",
+          "targetShiftM": 0,
+          "eyeOffsetShiftM": 0,
+          "closeOffsetShiftM": 0
+        },
+        {
+          "id": "teatro-vomitoria",
+          "targetShiftM": 0,
+          "eyeOffsetShiftM": 0,
+          "closeOffsetShiftM": 0
+        },
+        {
+          "id": "teatro-portico",
+          "targetShiftM": 0,
+          "eyeOffsetShiftM": 0,
+          "closeOffsetShiftM": 0
+        },
+        {
+          "id": "teatro-tribunalia",
+          "targetShiftM": 0,
+          "eyeOffsetShiftM": 0,
+          "closeOffsetShiftM": 0
+        },
+        {
+          "id": "teatro-proscaenium",
+          "targetShiftM": 0,
+          "eyeOffsetShiftM": 0,
+          "closeOffsetShiftM": 0
+        },
+        {
+          "id": "teatro-frons-scaenae",
+          "targetShiftM": 0,
+          "eyeOffsetShiftM": 0,
+          "closeOffsetShiftM": 0
+        },
+        {
+          "id": "teatro-basilicas",
+          "targetShiftM": 0,
+          "eyeOffsetShiftM": 0,
+          "closeOffsetShiftM": 0
+        },
+        {
+          "id": "teatro-hyposcaenium",
+          "targetShiftM": 0,
+          "eyeOffsetShiftM": 0,
+          "closeOffsetShiftM": 0
+        },
+        {
+          "id": "teatro-cloaca",
+          "targetShiftM": 0,
+          "eyeOffsetShiftM": 0,
+          "closeOffsetShiftM": 0
+        },
+        {
+          "id": "teatro-restauracion",
+          "targetShiftM": 0,
+          "eyeOffsetShiftM": 0,
+          "closeOffsetShiftM": 0
+        },
+        {
+          "id": "teatro-vivo",
+          "targetShiftM": 0,
+          "eyeOffsetShiftM": 0,
+          "closeOffsetShiftM": 0
+        }
+      ]
+    }
+  },
+  "globalCatalog": {
+    "count": 32,
+    "issues": [],
+    "visits": [
+      {
+        "id": "santa-maria",
+        "number": 1,
+        "area": "sagunto",
+        "href": "#santa-maria"
+      },
+      {
+        "id": "plaza-mayor",
+        "number": 2,
+        "area": "sagunto",
+        "href": "#plaza-mayor"
+      },
+      {
+        "id": "juderia",
+        "number": 3,
+        "area": "sagunto",
+        "href": "#juderia"
+      },
+      {
+        "id": "calvario",
+        "number": 4,
+        "area": "sagunto",
+        "href": "#calvario"
+      },
+      {
+        "id": "berenguer",
+        "number": 5,
+        "area": "sagunto",
+        "href": "#berenguer"
+      },
+      {
+        "id": "sangre",
+        "number": 6,
+        "area": "sagunto",
+        "href": "#sangre"
+      },
+      {
+        "id": "salvador",
+        "number": 7,
+        "area": "sagunto",
+        "href": "#salvador"
+      },
+      {
+        "id": "museo",
+        "number": 8,
+        "area": "sagunto",
+        "href": "#museo"
+      },
+      {
+        "id": "portic",
+        "number": 9,
+        "area": "sagunto",
+        "href": "#portic"
+      },
+      {
+        "id": "domus",
+        "number": 10,
+        "area": "sagunto",
+        "href": "#domus"
+      },
+      {
+        "id": "circo",
+        "number": 11,
+        "area": "sagunto",
+        "href": "#circo"
+      },
+      {
+        "id": "diana",
+        "number": 12,
+        "area": "sagunto",
+        "href": "#diana"
+      },
+      {
+        "id": "necropolis",
+        "number": 13,
+        "area": "sagunto",
+        "href": "#necropolis"
+      },
+      {
+        "id": "theatre",
+        "number": 14,
+        "area": "sagunto",
+        "href": "#theatre"
+      },
+      {
+        "id": "castle",
+        "number": 15,
+        "area": "sagunto",
+        "href": "#castle"
+      },
+      {
+        "id": "glorieta",
+        "number": 16,
+        "area": "sagunto",
+        "href": "#glorieta"
+      },
+      {
+        "id": "horno",
+        "number": 17,
+        "area": "puerto",
+        "href": "#horno"
+      },
+      {
+        "id": "talleres",
+        "number": 18,
+        "area": "puerto",
+        "href": "#talleres"
+      },
+      {
+        "id": "museo-industrial",
+        "number": 19,
+        "area": "puerto",
+        "href": "#museo-industrial"
+      },
+      {
+        "id": "gerencia",
+        "number": 20,
+        "area": "puerto",
+        "href": "#gerencia"
+      },
+      {
+        "id": "casino",
+        "number": 21,
+        "area": "puerto",
+        "href": "#casino"
+      },
+      {
+        "id": "begona",
+        "number": 22,
+        "area": "puerto",
+        "href": "#begona"
+      },
+      {
+        "id": "economato",
+        "number": 23,
+        "area": "puerto",
+        "href": "#economato"
+      },
+      {
+        "id": "barrio-obrero",
+        "number": 24,
+        "area": "puerto",
+        "href": "#barrio-obrero"
+      },
+      {
+        "id": "sanatorio",
+        "number": 25,
+        "area": "puerto",
+        "href": "#sanatorio"
+      },
+      {
+        "id": "pantalan-paseo",
+        "number": 26,
+        "area": "resto",
+        "href": "#pantalan-paseo"
+      },
+      {
+        "id": "pantalan-maritimo",
+        "number": 27,
+        "area": "resto",
+        "href": "#pantalan-maritimo"
+      },
+      {
+        "id": "grau-vell",
+        "number": 28,
+        "area": "resto",
+        "href": "#grau-vell"
+      },
+      {
+        "id": "puerto-antiguo",
+        "number": 29,
+        "area": "resto",
+        "href": "#puerto-antiguo"
+      },
+      {
+        "id": "marjal-moros",
+        "number": 30,
+        "area": "resto",
+        "href": "#marjal-moros"
+      },
+      {
+        "id": "dunas-almarda",
+        "number": 31,
+        "area": "resto",
+        "href": "#dunas-almarda"
+      },
+      {
+        "id": "rio-palancia",
+        "number": 32,
+        "area": "resto",
+        "href": "#rio-palancia"
+      }
+    ]
+  },
+  "territoryIndex": {
+    "placeCount": 32,
+    "stopCount": 529,
+    "otherPlacesUnchanged": true,
+    "otherVisitIndexSha256": "00bed45f79f2e8940603b7635d357b6b362352844682ae54cdae3751bb931b33",
+    "theatreStopCount": 16,
+    "staleTheatreFields": []
+  },
+  "limitations": [
+    "This verifies references resolve within the bibliography; it does not revalidate every remote URL or historical assertion.",
+    "Coordinate consistency verifies the authored cartographic frame, not survey accuracy.",
+    "GPU rendering and screen framing are covered separately, not claimed by this guide check."
+  ]
+}

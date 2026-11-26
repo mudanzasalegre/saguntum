@@ -1,5 +1,24 @@
 # Sincronización de Sites a GitHub
 
+## Versión 49 · Teatro Romano y ladera
+
+El 26 de noviembre de 2026 se publicó la revisión documentada del Teatro Romano, su entorno y las 16 paradas de la visita. El despliegue `appgdep_6b086f39ea5081919b268b9c05e89004` terminó con estado `succeeded` en el Site original.
+
+| Evidencia | Valor |
+| --- | --- |
+| Fuente publicada en Sites | `7e677cfe861991e2740bc16e536e0c7867f6787c` |
+| Árbol Git de la aplicación `dist/` | `3084095f9548b2101105512428cb4bcd00db0fb4` |
+| Archivo registrado por Sites | 1631 archivos, 267827200 bytes |
+| Huella del contenido registrado | `sha256:5524a7ee5f6f8bd08bdd2b1a461746b8c26c5a755308230eade561db2ab8bcf5` |
+
+[Teatro Romano publicado](https://saguntum-atlas-3d.monmode.chatgpt.site/#theatre) · [Vomitorios en el Atlas](https://saguntum-atlas-3d.monmode.chatgpt.site/#theatre/teatro-vomitoria) · [La misma parada en el Simulador](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador/theatre/teatro-vomitoria) · [Investigación](../research/theatre-history.md) · [Memoria del modelo](../research/theatre-model.md)
+
+El modelo diferencia las gradas claras de los flancos de fábrica rugosa, corrige el remate superior y rehace el cuerpo escénico con tres exedras, galerías, suelos y cubierta. La fachada posterior incorpora 14 aberturas físicas y su pasarela metálica. El entorno añade accesos, contenciones, afloramientos y 21 copas interpretadas con apoyo cartográfico. Se retiran sólo dos pinos procedurales vecinos que duplicaban esas copas. Atlas y Simulador comparten la arquitectura y conservan las 32 visitas y sus enlaces.
+
+La geometría aprobó 146 comprobaciones, incluidos 180 rayos de aberturas y 16 muestras de cubiertas sin huecos ni caras superpuestas. La guía aprobó 286 comprobaciones y enlaza 22 fuentes, 57 hechos y 17 hitos; mantiene los 16 identificadores anteriores. Se verificaron 36 poses mediante el cálculo real de cámaras y la igualdad de los buffers arquitectónicos en el adaptador del Simulador. Los seis renders CPU de inspección conservan las huellas de las fuentes y de las imágenes. [Evidencias y reproducción](../research/validation-v49/README.md)
+
+En la URL pública se comprobaron las 22 fuentes, la ocultación y reapertura del panel, el inicio y avance de la visita, el plano con las 16 paradas y el enlace Atlas → Simulador → Atlas conservando la parada de los vomitorios. El navegador disponible no pudo crear WebGL 2; la comprobación pública fue de interfaz y plano, y no se presentan mediciones de FPS ni validación visual GPU. [Registro público](../research/validation-v49/production-qa.json)
+
 ## Versión 48 · Santa María, interior y panel plegable
 
 El 26 de noviembre de 2026 se publicó la revisión del entorno occidental y del Mediodía de Santa María, sus interiores y el control para ocultar y mostrar la información de las visitas. El despliegue `appgdep_6b082d51772c819199b70b81ff34c30a` terminó con estado `succeeded` en el Site original.

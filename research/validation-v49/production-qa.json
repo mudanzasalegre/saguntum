@@ -1,0 +1,89 @@
+{
+  "pass": true,
+  "checkedAt": "2026-11-26T17:45:21.850Z",
+  "scope": "Published interface and 2D fallback; model geometry and cameras verified separately by CPU",
+  "url": "https://saguntum-atlas-3d.monmode.chatgpt.site/#theatre",
+  "siteVersion": 49,
+  "versionId": "appgprj_6afeb5aaef8c8191b0062318fb3a24f1~appgver_6ff493c7c6548191ac3557db8d5141f7",
+  "deploymentId": "appgdep_6b086f39ea5081919b268b9c05e89004",
+  "deploymentStatus": "succeeded",
+  "sourceCommit": "7e677cfe861991e2740bc16e536e0c7867f6787c",
+  "distTree": "3084095f9548b2101105512428cb4bcd00db0fb4",
+  "browser": {
+    "title": "SAGUNTUM · Sagunto y Puerto de Sagunto",
+    "httpStatus": 200,
+    "mode": "2D fallback",
+    "webglVisualVerification": false,
+    "browsingIssueId": "4df91f66-6c35-4f62-9c21-293aa52d13dc",
+    "observedMessage": "Mapa 2D · El navegador no pudo abrir un contexto WebGL 2."
+  },
+  "checks": [
+    {
+      "name": "Theatre overview and global visit number",
+      "pass": true,
+      "observed": "Teatro Romano. · Visita 14 · 16 paradas · 5 ámbitos"
+    },
+    {
+      "name": "Published source links",
+      "pass": true,
+      "observed": 22,
+      "including": [
+        "Roisin ca. 1920",
+        "Villafruela September 1969",
+        "Mike1979 Russia July 2014",
+        "Rjdeadly July 2015",
+        "La Casa de la Arquitectura plans and sections"
+      ]
+    },
+    {
+      "name": "Hide and reopen visit information",
+      "pass": true,
+      "observed": "Ocultar información de la visita → Mostrar información de la visita → restored Fuentes tab"
+    },
+    {
+      "name": "Start and advance visit",
+      "pass": true,
+      "observed": "Parada 1 de 16 → Parada 2 de 16",
+      "url": "https://saguntum-atlas-3d.monmode.chatgpt.site/#theatre/teatro-aditus-oriental"
+    },
+    {
+      "name": "Map selection",
+      "pass": true,
+      "observed": "All 16 numbered stop buttons present; selected 7 Vomitoria y galerías: circular bajo las gradas"
+    },
+    {
+      "name": "Atlas to Simulator retains stop",
+      "pass": true,
+      "url": "https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador/theatre/teatro-vomitoria",
+      "selectedValue": "teatro-vomitoria",
+      "selectedLabel": "7. Vomitoria y galerías: circular bajo las gradas",
+      "selectorOptions": 17,
+      "selectorOptionsIncludeOverview": true
+    },
+    {
+      "name": "Simulator to Atlas retains stop",
+      "pass": true,
+      "url": "https://saguntum-atlas-3d.monmode.chatgpt.site/#theatre/teatro-vomitoria",
+      "observed": "Vomitoria y galerías: circular bajo las gradas"
+    },
+    {
+      "name": "Return to theatre overview",
+      "pass": true,
+      "observed": "Iniciar visita visible",
+      "url": "https://saguntum-atlas-3d.monmode.chatgpt.site/#theatre"
+    }
+  ],
+  "separateEvidence": {
+    "geometry": "theatre-geometry.json",
+    "guide": "theatre-guide-qa.json",
+    "cameras": "theatre-cameras-qa.json",
+    "simulator": "theatre-simulator-qa.json",
+    "environs": "theatre-environs-qa.json",
+    "vegetation": "theatre-vegetation-qa.json",
+    "cpuRenders": "render-inspection.json"
+  },
+  "limitations": [
+    "The verification browser could not create WebGL 2. No GPU frame-rate, browser 3D rendering or hardware performance claim is made.",
+    "The six inspection renders use the shipped Three.js mesh buffers and textures with Blender CPU lighting; they are not browser captures."
+  ]
+}

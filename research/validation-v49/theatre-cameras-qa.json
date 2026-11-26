@@ -1,0 +1,667 @@
+{
+  "pass": true,
+  "method": "CPU final terrain binding + exact app.js preset() + shipped Three.js + actual stopCamera()",
+  "viewports": {
+    "wide": {
+      "width": 1440,
+      "height": 900
+    },
+    "portrait": {
+      "width": 390,
+      "height": 844
+    }
+  },
+  "panel": "open",
+  "counts": {
+    "stops": 16,
+    "atlasFrames": 2,
+    "aspects": 2,
+    "poses": 36,
+    "interiors": 2
+  },
+  "inputs": {
+    "presetSha256": "bf1baecc8a4a1ad7f5bddf0931505bd53065d0a4c1d7c4e3c66bdfb2dfbcec78",
+    "editorialSceneFrameSha256": "96886873c8c082d93b8df16a4ae77f8e14185c91c9ace2022f9023597ff2e05f",
+    "theatreSha256": "6d0c5ba653a3e8f27c701d8fe7186aba06433181d0b85a08e32607fbd51d9c11",
+    "environsSha256": "1d97a8ed5ff2a05e090e4ceb5def4180acc26c1a09061cd0788c68bf8be43efc",
+    "terrainSha256": "199e257e1398562b01cccd1ee0fe285a6f6655b73b1c552cb3747787d240a278",
+    "urbanSurfaceSha256": "fa2c95b186e19787cc37eb566e9ebc6b44ecbb85cb27ee7119cdfb344247fe98"
+  },
+  "groundBinding": {
+    "assembly": "Theatre + sacred/civic/archaeological patches + urban ground + final terrain mesh + bindGround",
+    "scope": "Same local theatre inputs as buildRegion(sagunto); distant Glorieta omitted from CPU context",
+    "changes": [
+      {
+        "id": "teatro-conjunto",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "teatro-aditus-oriental",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "teatro-orchestra",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "teatro-ima-cavea",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "teatro-media-cavea",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "teatro-summa-cavea",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "teatro-vomitoria",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "teatro-portico",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "teatro-tribunalia",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "teatro-proscaenium",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "teatro-frons-scaenae",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "teatro-basilicas",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "teatro-hyposcaenium",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "teatro-cloaca",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "teatro-restauracion",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "teatro-vivo",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      }
+    ]
+  },
+  "overviewNote": "Unselected entrance and conjunto stop share the authored theatre overview.",
+  "interiorIds": [
+    "teatro-aditus-oriental",
+    "teatro-vomitoria"
+  ],
+  "maxPoseErrorM": 0.0004878338403386806,
+  "maxAdapterErrorM": 0,
+  "maxFovErrorDeg": 7.105427357601002e-15,
+  "simulatorRegistration": {
+    "projection": "ETRS89 / UTM 30N",
+    "verticalOffsetM": 7.25
+  },
+  "unchanged": [
+    {
+      "file": "dist/assets/territory/visit-cameras.json",
+      "otherMonuments": 31,
+      "unchangedOutsideTheatre": true,
+      "outsideValueSha256": "71d1266094efc93dded63238b270b1fd5cf6c5b7b6a418ff5eaa32af8cdc45e1",
+      "otherMonumentsSha256": "3c8a3b8823f168080a12dc8d546dca9021f75531e566a61c79d3c2a623855df8"
+    },
+    {
+      "file": "dist/assets/territory/atlas-frames.json",
+      "otherMonuments": 31,
+      "unchangedOutsideTheatre": true,
+      "outsideValueSha256": "b4bb727d086698c6b3fccbb170422e3eb23dbe9acff1c9152430a2cb7ec00062",
+      "otherMonumentsSha256": "8be72c12333ddaf3909d0f7734547322362f882da75398c9d4a0d7c0f49f89de"
+    }
+  ],
+  "samples": [
+    {
+      "kind": "stop",
+      "id": "teatro-conjunto",
+      "view": "wide",
+      "eyeErrorM": 0.000045351788799052883,
+      "targetErrorM": 0.000033052696305491125,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "teatro-conjunto",
+      "view": "portrait",
+      "eyeErrorM": 0.000049615017758242175,
+      "targetErrorM": 0.000033052696305491125,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "teatro-aditus-oriental",
+      "view": "wide",
+      "eyeErrorM": 0.0000321034020647204,
+      "targetErrorM": 0.00002250319994345773,
+      "authoredEye": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 7.105427357601002e-15
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "teatro-aditus-oriental",
+      "view": "portrait",
+      "eyeErrorM": 0.0000321034020647204,
+      "targetErrorM": 0.00002250319994345773,
+      "authoredEye": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 7.105427357601002e-15
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "teatro-orchestra",
+      "view": "wide",
+      "eyeErrorM": 0.00003396179771275598,
+      "targetErrorM": 0.000046530421561552515,
+      "authoredEye": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "teatro-orchestra",
+      "view": "portrait",
+      "eyeErrorM": 0.00003396179771275598,
+      "targetErrorM": 0.000046530421561552515,
+      "authoredEye": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "teatro-ima-cavea",
+      "view": "wide",
+      "eyeErrorM": 0.00003227790912951889,
+      "targetErrorM": 0.0000333227882549636,
+      "authoredEye": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "teatro-ima-cavea",
+      "view": "portrait",
+      "eyeErrorM": 0.00003227790912951889,
+      "targetErrorM": 0.0000333227882549636,
+      "authoredEye": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "teatro-media-cavea",
+      "view": "wide",
+      "eyeErrorM": 0.000026405721428091056,
+      "targetErrorM": 0.00004960774850815142,
+      "authoredEye": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "teatro-media-cavea",
+      "view": "portrait",
+      "eyeErrorM": 0.000026405721428091056,
+      "targetErrorM": 0.00004960774850815142,
+      "authoredEye": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "teatro-summa-cavea",
+      "view": "wide",
+      "eyeErrorM": 0.000020130479839508553,
+      "targetErrorM": 0.00003401407479941554,
+      "authoredEye": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "teatro-summa-cavea",
+      "view": "portrait",
+      "eyeErrorM": 0.000020130479839508553,
+      "targetErrorM": 0.00003401407479941554,
+      "authoredEye": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "teatro-vomitoria",
+      "view": "wide",
+      "eyeErrorM": 0.000016747790638760307,
+      "targetErrorM": 0.000016747790638760307,
+      "authoredEye": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 7.105427357601002e-15
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "teatro-vomitoria",
+      "view": "portrait",
+      "eyeErrorM": 0.000016747790638760307,
+      "targetErrorM": 0.000016747790638760307,
+      "authoredEye": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 7.105427357601002e-15
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "teatro-portico",
+      "view": "wide",
+      "eyeErrorM": 0.00003902223787122239,
+      "targetErrorM": 0.00004145240978203901,
+      "authoredEye": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "teatro-portico",
+      "view": "portrait",
+      "eyeErrorM": 0.00003902223787122239,
+      "targetErrorM": 0.00004145240978203901,
+      "authoredEye": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "teatro-tribunalia",
+      "view": "wide",
+      "eyeErrorM": 0.000048033751625098375,
+      "targetErrorM": 0.000016747790638760307,
+      "authoredEye": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "teatro-tribunalia",
+      "view": "portrait",
+      "eyeErrorM": 0.000048033751625098375,
+      "targetErrorM": 0.000016747790638760307,
+      "authoredEye": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "teatro-proscaenium",
+      "view": "wide",
+      "eyeErrorM": 0.00003177022443878741,
+      "targetErrorM": 0.00004852795774024088,
+      "authoredEye": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "teatro-proscaenium",
+      "view": "portrait",
+      "eyeErrorM": 0.00003177022443878741,
+      "targetErrorM": 0.00004852795774024088,
+      "authoredEye": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "teatro-frons-scaenae",
+      "view": "wide",
+      "eyeErrorM": 0.000022398107996313144,
+      "targetErrorM": 0.000016747790652971162,
+      "authoredEye": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "teatro-frons-scaenae",
+      "view": "portrait",
+      "eyeErrorM": 0.000022398107996313144,
+      "targetErrorM": 0.000016747790652971162,
+      "authoredEye": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "teatro-basilicas",
+      "view": "wide",
+      "eyeErrorM": 0.00004960134177878217,
+      "targetErrorM": 0.000040992997796251984,
+      "authoredEye": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "teatro-basilicas",
+      "view": "portrait",
+      "eyeErrorM": 0.00004960134177878217,
+      "targetErrorM": 0.000040992997796251984,
+      "authoredEye": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "teatro-hyposcaenium",
+      "view": "wide",
+      "eyeErrorM": 0.000022464757060802754,
+      "targetErrorM": 0.00004959854660047114,
+      "authoredEye": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "teatro-hyposcaenium",
+      "view": "portrait",
+      "eyeErrorM": 0.000022464757060802754,
+      "targetErrorM": 0.00004959854660047114,
+      "authoredEye": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "teatro-cloaca",
+      "view": "wide",
+      "eyeErrorM": 0.000025500986225779343,
+      "targetErrorM": 0.000027499191446622717,
+      "authoredEye": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "teatro-cloaca",
+      "view": "portrait",
+      "eyeErrorM": 0.000025500986225779343,
+      "targetErrorM": 0.000027499191446622717,
+      "authoredEye": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "teatro-restauracion",
+      "view": "wide",
+      "eyeErrorM": 0.000016747790652971162,
+      "targetErrorM": 0.000048173412238838864,
+      "authoredEye": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "teatro-restauracion",
+      "view": "portrait",
+      "eyeErrorM": 0.000016747790652971162,
+      "targetErrorM": 0.000048173412238838864,
+      "authoredEye": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "teatro-vivo",
+      "view": "wide",
+      "eyeErrorM": 0.00004256642631617069,
+      "targetErrorM": 0.00003842786216523564,
+      "authoredEye": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "teatro-vivo",
+      "view": "portrait",
+      "eyeErrorM": 0.00004256642631617069,
+      "targetErrorM": 0.00003842786216523564,
+      "authoredEye": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "overview",
+      "id": "theatre",
+      "view": "wide",
+      "eyeErrorM": 0.0004878338403386806,
+      "targetErrorM": 0.00043305269630544707,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "overview",
+      "id": "theatre",
+      "view": "portrait",
+      "eyeErrorM": 0.0004503849822299344,
+      "targetErrorM": 0.00043305269630544707,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "exterior",
+      "id": "teatro-orchestra",
+      "view": "wide",
+      "eyeErrorM": 0.000333961797712945,
+      "targetErrorM": 0.0004780907517556443,
+      "authoredEye": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "exterior",
+      "id": "teatro-orchestra",
+      "view": "portrait",
+      "eyeErrorM": 0.000333961797712945,
+      "targetErrorM": 0.0004780907517556443,
+      "authoredEye": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    }
+  ],
+  "interiorAspectChecks": [
+    {
+      "id": "teatro-aditus-oriental",
+      "aspect": 0.3,
+      "stationary": true
+    },
+    {
+      "id": "teatro-vomitoria",
+      "aspect": 0.3,
+      "stationary": true
+    },
+    {
+      "id": "teatro-aditus-oriental",
+      "aspect": 0.85,
+      "stationary": true
+    },
+    {
+      "id": "teatro-vomitoria",
+      "aspect": 0.85,
+      "stationary": true
+    },
+    {
+      "id": "teatro-aditus-oriental",
+      "aspect": 2.4,
+      "stationary": true
+    },
+    {
+      "id": "teatro-vomitoria",
+      "aspect": 2.4,
+      "stationary": true
+    }
+  ],
+  "errors": []
+}

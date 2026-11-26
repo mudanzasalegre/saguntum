@@ -1,88 +1,121 @@
-# Teatro romano de Sagunto — modelo V8
+# Teatro Romano de Sagunto — revisión del modelo de noviembre de 2026
 
 ## Estado representado
 
-La escena principal muestra el teatro conservado y rehabilitado, con la cávea revestida de caliza, el cuerpo escénico contemporáneo, su cubierta inclinada y el encuentro con fábricas arqueológicas. No se presenta un alzado romano completo como si se conservara. La interpretación arqueológica del frente con varios órdenes pertenece a las explicaciones históricas, no a una fachada inventada en la escena actual.
+La escena representa el teatro conservado y rehabilitado. La revisión del **26 de noviembre de 2026** contrasta su arquitectura con plantas y secciones del proyecto de Grassi y Portaceli, documentos anteriores a esa intervención y fotografías de distintas fechas. El objetivo es que el edificio se reconozca por sus proporciones, sus vacíos, la diferencia de acabados de la cávea y su cuerpo escénico, además de por su posición en la ladera.
 
-El módulo está en `dist/js/theatre.js`; `dist/js/monuments.js` integra el teatro y mantiene la construcción diferida del Castillo. La estructura, materiales y recursos del Castillo no se han modificado en esta tarea.
+La geometría principal está en `dist/js/theatre.js`; su entorno inmediato se incorpora mediante `dist/js/theatre-environs.js`. `dist/js/monuments.js` mantiene la integración del teatro con el atlas. La entrada global, la marca **SAGUNTUM · Atlas vivo**, el Castillo y las demás visitas conservan su identidad.
 
-## Fuentes y decisiones
+La escena principal no muestra un supuesto teatro romano intacto ni reconstruye un estado completo de 1969. Las imágenes históricas sirven para reconocer cambios. El alzado romano desaparecido y las subestructuras se explican con su grado de certeza en `dist/assets/data/theatre-visit.json` y `research/theatre-history.md`.
 
-Las entradas completas, enlaces, fechas y notas de cada fuente están en `dist/assets/data/theatre-visit.json` y `research/theatre-history.md`. Para la geometría se utilizan:
+## Base documental y decisiones de modelado
 
-| Fuente | Aplicación al modelo | Límite |
+| Documento | Uso en esta revisión | Límite |
 |---|---|---|
-| Hernández, López, Pascual y Aranegui, *El teatro romano de Sagunto*, CAR 2, 1993, pp. 25–42 — [PDF](https://revistas.um.es/car/article/download/68181/65651/283861) | Proporciones de orchestra/cávea, órdenes de gradas, accesos, escenario, foso del telón y cloaca. | Las restituciones publicadas no equivalen a un levantamiento del estado actual. |
-| Hernández, *Sistema constructivo del cuerpo escénico*, 1986 — [PDF](https://roderic.uv.es/rest/api/core/bitstreams/9cf42415-05d5-45ff-8e2c-966cf613200f/content) | Distinción entre el muro exterior del cuerpo escénico y el frente de escenario. | Las cotas de fábrica antigua no permiten fijar toda la superficie y altura de la escena original. |
-| Portaceli, *La rehabilitación del teatro romano de Sagunto*, CAR 2, 1993, pp. 43–45 — [PDF](https://revistas.um.es/car/article/download/68281/65731/284251) | Lectura de la concha contemporánea superpuesta y de las partes nuevas frente a los restos. | El modelo no reconstruye cada fragmento arqueológico. |
-| Grassi / Portaceli, proyecto 1990–1993 — [Arquitectura Viva](https://arquitecturaviva.com/obras/teatro-romano-sagunto) | Cubierta inclinada, nueva escena, masas laterales, pasarela del foso y carácter del edificio rehabilitado. | Perfiles, juntas, alturas y detalles de acabado son una aproximación visual. |
-| Cartografía OSM incluida en `cartography.json`, contrastada con la ortofoto IGN PNOA incluida en la aplicación | Huella actual, posición del centro, dirección del cuerpo escénico y registro con el terreno. | Exactitud cartográfica de las fuentes; no se declara un nuevo levantamiento topográfico. |
+| Hernández, López, Pascual y Aranegui, 1993, [estudio arqueológico](https://revistas.um.es/car/article/download/68181/65651/283861) | Restricciones de radios, órdenes de asientos, accesos, planta de las exedras y esquema del subsuelo | El estudio incluye restituciones; no todas sus alturas son fábrica conservada. |
+| Grassi y Portaceli, [archivo de La Casa de la Arquitectura](https://lacasadelaarquitectura.es/recurso/restauracion-y-rehabilitacion-del-teatro-romano/3a26830f-f701-4c15-9cc6-c75f14d29933) | Plantas, secciones y alzado para relacionar cávea, escenario, pilares, pared posterior y cubierta | Cotas relativas de proyecto; la ficha no fecha individualmente las fotografías. |
+| Antonio Almagro, [serie AA-013 de la RABASF](https://www.academiacolecciones.com/arquitectura/inventario.php?id=AA-013_03) | Comparación de plantas y secciones anteriores a la gran rehabilitación | La ficha remite a una publicación de 1979. No equivale al estado actual ni a una nueva medición. |
+| Daniel Villafruela, [fotografía de septiembre de 1969](https://commons.wikimedia.org/wiki/File:Sagunto-1969-Amphit%C3%A9atre-RI-51-0000972.jpg) | Lectura del graderío y sus huecos antes de Grassi y Portaceli | Ya muestra un monumento transformado por intervenciones anteriores. |
+| Mike1979 Russia, [fotografía del 29 de julio de 2014](https://commons.wikimedia.org/wiki/File:Teatre_Rom%C3%A0_de_Sagunt_02.jpg) | Contraste de silueta, superficies, cubierta y relación con la ladera | Referencia fechada de 2014; no acredita reformas posteriores. |
+| Rjdeadly, [fotografía del 18 de julio de 2015](https://commons.wikimedia.org/wiki/File:Saguntum_rear_wall_of_theatre.jpg) | Aberturas del zócalo posterior y pasarela en el encuentro con el cuerpo rehabilitado | Referencia fechada de 2015; dimensiones y perfiles de detalle interpretados. |
+| L. Roisin, [postal hacia 1920 en BIVALDI](https://bivaldi.gva.es/es/consulta/registro.cmd?id=11149) | Comparación histórica de acceso y cávea | Fecha aproximada del catálogo; no documenta por sí sola la configuración romana original. |
+| [Galería de Turisme Comunitat Valenciana](https://www.comunitatvalenciana.com/es/valencia/sagunt-sagunto/monumentos/teatro-romano) | Contraste visual del interior y exterior rehabilitados | Fotografías sin fecha de toma indicada; las cifras divulgativas no sustituyen las medidas arquitectónicas. |
+| Cartografía OSM, MDT y [ortofoto PNOA](https://pnoa.ign.es/web/portal/pnoa-imagen/visualizadores-y-servicios-web) incluidos en el proyecto | Posición, orientación, relieve y encuentro con los trazados del entorno | Exactitud de las fuentes cartográficas; detalles del paisaje aproximados. |
 
-### Proporciones
+Las referencias completas, autorías, localizadores y fechas de consulta están en el archivo de visita. Las imágenes se consultan en sus repositorios de origen; esta revisión no redistribuye fotografías o láminas de terceros dentro del sitio.
 
-La orchestra libre ocupa un diámetro de **16 m**; las dos gradas senatoriales amplían el conjunto a **22 m**. Los límites modulares de los tres órdenes de la cávea son **34, 49 y 67 m**, con un módulo total de **79 m** para el pórtico superior en el estudio arqueológico. Se construyen los **6, 8 y 9** niveles de asiento descritos para ima, media y summa cavea, con sus escaleras y pasillos. La terminación superficial y los escalones adicionales del remate actual se identifican como rehabilitación y no como asientos romanos intactos. Fuente: Hernández et al., 1993, pp. 28–30.
+## Proporciones: cada medida conserva su significado
 
-El escenario tiene **44 m de frente** y **6,4 m de profundidad** en el esquema arqueológico. Se distingue de los **52,75 m** del muro exterior estudiado en 1986. La altura del escenario contemporáneo es una decisión visual del modelo; no se atribuye a una cota antigua conservada. Fuentes: Hernández et al., 1993, pp. 31–32; Hernández, 1986.
+Los radios arqueológicos de referencia son **8 m** para la orchestra libre y **11 m** con los niveles senatoriales; los límites de ima, media y summa cavea son **17 / 24,5 / 33,5 m**. El pórtico estudiado llega a **39,5 m**. Su diámetro de 79 m no es la anchura exterior total: el edificio incluye un segundo anillo y cuerpos laterales. El mismo estudio describe 6, 8 y 9 filas en los órdenes principales, con una organización diferente en los extremos de la parte alta. [Hernández et al., 1993, pp. 28–30](https://revistas.um.es/car/article/download/68181/65651/283861).
 
-El anillo exterior actual no se confunde con el diámetro modular de 79 m. Sus flancos se representan alrededor del trazado cartográfico, con un radio aproximado de 42,7 m y la interrupción central visible en la huella. La pared de remate de la cávea actual se aproxima a la línea de la ortofoto y del contorno OSM. No se fabrica una columnata antigua completa en el pórtico superior.
+Se mantienen separados tres datos del cuerpo escénico: la profundidad del proscaenium de **6,40 m**, el frente escénico de **44 m** al que se refiere el estudio de la decoración y el lienzo de cierre septentrional de **57,25 m** descrito al estudiar el postscaenium. El lienzo de **52,75 m** de la publicación de 1986 no se usa como equivalente automático de los anteriores. [Hernández et al., 1993, pp. 31–33 y 38](https://revistas.um.es/car/article/download/68181/65651/283861); [Hernández, 1986](https://roderic.uv.es/rest/api/core/bitstreams/9cf42415-05d5-45ff-8e2c-966cf613200f/content).
 
-## Registro cartográfico y terreno
+Las secciones del proyecto contemporáneo permiten comparar **orchestra ±0,00**, **escenario +1,20** y **coronación +20,20**. Estas referencias son alturas relativas del proyecto. No se confunden con altitudes sobre el nivel del mar, ni con la propuesta arqueológica para el alzado romano perdido. [La Casa de la Arquitectura](https://lacasadelaarquitectura.es/recurso/restauracion-y-rehabilitacion-del-teatro-romano/3a26830f-f701-4c15-9cc6-c75f14d29933).
 
-- Centro de referencia del modelo: longitud **−0,27795671425**, latitud **39,67686986465**.
-- Rotación en Three.js alrededor de Y: **−0,5027 rad**. El eje del cuerpo escénico sigue aproximadamente la dirección noroeste–sureste y la cávea abre hacia el noreste.
-- El centro deriva de un ajuste circular a 20 vértices de la parte central de la huella OSM. Ese arco tiene radio ajustado aproximado de 38,48 m y residuo radial de unos 0,09 m; este residuo describe sólo el ajuste al dibujo, no la precisión real del monumento.
-- La orientación sigue el tramo recto de la escena en OSM y se comprobó contra la ortofoto PNOA ya utilizada por el proyecto.
-- La base vertical parte del muestreador de elevación de la aplicación y se ajusta 0,65 m para acomodar el suelo de la orchestra. Las alturas arquitectónicas son relativas a esa base; no se anuncian como nuevas cotas absolutas medidas.
+## Arquitectura que organiza la lectura
 
-`surfaceHeight(x,z,raw)` baja la superficie de visualización exclusivamente bajo el teatro: orchestra, gradas y cuerpo escénico. El corte bajo la escena permite mostrar el esquema del foso sin que la interpolación del terreno lo tape. La función también se aplica antes de construir el terreno de contexto del Palancia. `bindGround(meshHeightAt)` actualiza la seguridad de las cámaras con el muestreador del terreno finalmente dibujado.
+### Cávea y remate
 
-Se excluyen de los edificios genéricos el antiguo identificador OSM del teatro y las dos piezas catastrales que duplican el conjunto y la escena: `203140142`, `cat-3556901YJ3935N_part1-0`, `cat-3556901YJ3935N_part2-0`. Se excluyen además 27 vías interiores OSM que, de lo contrario, se superpondrían a gradas y pasillos. Las calles de aproximación exteriores se mantienen.
+El acabado claro del graderío central y la fábrica rugosa de los flancos se modelan como sectores distintos. Las escaleras radiales, pasillos y huecos deben conservar su relación con esos sectores. La repetición regular se limita a los componentes donde sirve para expresar una estructura realmente regular; los límites de la fábrica expuesta reciben un tratamiento más irregular.
 
-## Huecos, sección y capas
+El remate se expresa mediante paños separados, sus pasos y sus interrupciones. La apertura axial y los extremos evitan convertir la parte alta en una corona maciza continua. El modelo no añade una columnata, un templo central o una cubierta romana superior como hechos conservados.
 
-Los aditus, cuatro pasos de vomitorios y tres puertas del frente escénico están construidos con sólidos separados y bóvedas abiertas. No son rectángulos oscuros pegados a un muro. Los rayos de comprobación atraviesan todo su espesor y comprueban también la ausencia de terreno dentro de esos pasos.
+### Cuerpo escénico
 
-La sección didáctica **retira la cubierta y el tablado contemporáneos**. No pretende ser un desmonte real ni un estado histórico del edificio. Permite reconocer un esquema del foso del escenario, la pasarela moderna y la cloaca. El aulaeum mantiene el dato documental de un canal de **1,42 m**, **17 tabiques** y **16 huecos**; la distribución individual, el contorno de los restos y su alzado son aproximados. El artículo describe anchuras variables y una disposición que no es perfectamente simétrica; por ello no se genera una maquinaria de telón completa ni se afirma que cada pozo esté levantado con precisión. Fuente: Hernández et al., 1993, pp. 31–32.
+La lectura desde la orchestra distingue la tarima, las tres exedras bajas con sus pasos, los pilares elevados, las galerías y la pared posterior. La cubierta completa la silueta contemporánea con una superficie clara inclinada y una cara inferior de madera. La escena deja de depender de una pared frontal plana que oculte la profundidad del edificio.
 
-Los cruces de los tabiques con la cloaca dejan pasar la bóveda. No hay un bloque macizo ocultando la conducción. La extensión bajo la orchestra permanece cubierta y no se ofrece como recorrido peatonal.
+Desde fuera se reconoce un volumen alto y cerrado, con cuerpos laterales y aperturas contenidas. El zócalo posterior incorpora catorce aberturas físicas y una pasarela metálica que marca el encuentro entre la fábrica de piedra y el cuerpo rehabilitado. Tres rellanos se apoyan en ménsulas; el tramo principal se sitúa a la cota relativa +1,20. La disposición se contrasta con el alzado norte del proyecto y la fotografía de 2015. El tamaño de los huecos, la anchura de la pasarela y sus apoyos son interpretativos, no nuevas mediciones. [La Casa de la Arquitectura](https://lacasadelaarquitectura.es/recurso/restauracion-y-rehabilitacion-del-teatro-romano/3a26830f-f701-4c15-9cc6-c75f14d29933); [Rjdeadly, 2015](https://commons.wikimedia.org/wiki/File:Saguntum_rear_wall_of_theatre.jpg).
 
-| Capa de lectura | Color | Tratamiento |
+El contacto con los apoyos de piedra y con el desnivel es parte del modelo. El ladrillo regular, la fábrica rugosa, la piedra clara, la tarima, los metales y la cubierta tienen tratamientos materiales diferenciados.
+
+Los fragmentos del antiquarium se representan mediante diecisiete piezas lisas en cuatro grupos sobre la galería posterior, además de dos columnas exentas. La fotografía frontal del archivo del proyecto orienta la distribución y la escala. Las piezas son genéricas: sus contornos y posiciones menores son aproximados, sin réplicas de piezas inventariadas, inscripciones ni relieves reconstruidos. No se extrapolan a una fachada romana decorada completa. [La Casa de la Arquitectura](https://lacasadelaarquitectura.es/recurso/restauracion-y-rehabilitacion-del-teatro-romano/3a26830f-f701-4c15-9cc6-c75f14d29933).
+
+### Entorno inmediato
+
+El teatro se mantiene registrado en la ladera. Las trazas cartográficas, los muros de aproximación, los afloramientos y la vegetación deben relacionarse con ese relieve; no se nivela el recinto exterior como una plaza plana ni se sustituye el Castillo por un decorado añadido. La geometría del entorno distingue las bases cartográficas de los detalles interpretados a partir de fotografías. El helper construye cuatro clases de componentes: accesos, contención, roca y arbolado. El material de matorral queda reservado, sin emitir geometría. Sus mallas se vuelven a apoyar sobre el terreno definitivo sin alterarlo; los encuadres arquitectónicos no incluyen ese entorno en su caja de ajuste.
+
+Las copas se localizan visualmente en la ortofoto PNOA consultada el 19 de noviembre de 2026. La fecha de adquisición de la imagen no está identificada. Las especies, alturas y contornos son interpretados; las vías y muros conservan sus trazados OSM, con dimensiones de detalle aproximadas. [IGN/PNOA](https://pnoa.ign.es/web/portal/pnoa-imagen/visualizadores-y-servicios-web).
+
+## Huecos, subsuelo y capas
+
+Los accesos y puertas se resuelven con geometría separada alrededor del hueco. Los focos de visita miran a los pasos y a las partes relacionadas; su posición no acredita que esos lugares sean accesibles al visitante real.
+
+**Corte** retira la cubierta y la tarima contemporáneas para leer el subsuelo escénico. El esquema conserva los datos del canal del aulaeum y la cloaca, sin inventar una maquinaria completa de telón. Los restos no se presentan como una medición de cada pozo y el corte no equivale a una fase histórica completa. [Hernández et al., 1993, pp. 31–33](https://revistas.um.es/car/article/download/68181/65651/283861).
+
+| Capa | Color | Alcance |
 |---|---|---|
-| `ancient` | `#d6bd8b` | Restos romanos identificables, de extensión conservadora. |
-| `contemporary` | `#77b8c7` | Revestimiento de gradas, escena, cubierta y elementos de la rehabilitación. |
-| `mixed` | `#be98d6` | Fábricas conservadas que han recibido consolidaciones y restituciones. |
-| `interpretation` | `#929ba0` | Esquema del subsuelo y fragmentos genéricos que no se presentan como piezas exactas. |
+| `ancient` | `#d6bd8b` | Restos o trazas romanos identificables, con representación conservadora. |
+| `contemporary` | `#77b8c7` | Componentes de la rehabilitación y acabados actuales representados. |
+| `mixed` | `#be98d6` | Fábrica que acumula restos, consolidaciones y restituciones. |
+| `interpretation` | `#929ba0` | Subsuelo esquemático y fragmentos genéricos, sin precisión de inventario. |
 
-En lectura de materiales, los muros usan textura procedural de fábrica, las gradas caliza clara, la cubierta metal mate y el tablado madera. La lectura por épocas cambia los colores sin reemplazar definitivamente los materiales. La selección sólo ilumina los componentes relacionados con la parada.
+El cambio entre materiales y capas conserva los materiales propios de cada componente. La selección de una parada resalta sólo los elementos asociados a ella. La leyenda no es una cartografía estratigráfica piedra a piedra.
 
-## Contrato para la aplicación
+## Registro y terreno
+
+La referencia se conserva en **−0,27795671425 / 39,67686986465** y el giro Three.js en **−0,5027 rad**. Son parámetros de registro de la maqueta; la cantidad de decimales no expresa precisión arqueológica. El centro parte del ajuste al arco cartografiado y la orientación se contrastó con el tramo recto de la escena y la ortofoto del proyecto.
+
+`surfaceHeight(x, z, raw)` recorta la superficie de visualización bajo la arquitectura. Su finalidad es evitar que el MDT interpolado atraviese orchestra, graderíos, escena o el corte didáctico. El relieve exterior se conserva fuera de la zona tratada. `bindGround(meshHeightAt)` ajusta la seguridad de los encuadres después de construir la superficie final, incluidas las piezas del entorno.
+
+Las huellas del teatro y las vías interiores reconstruidas por el modelo se excluyen de la extrusión urbana genérica. Así se evita superponer otro edificio o una calle sobre la misma cávea. Los identificadores de exclusión se exportan desde el módulo para que las distintas escenas usen el mismo criterio.
+
+## Contrato de la visita e integración
 
 ```js
 const theatre = createTheatre({ heightAt, project, data, visitData });
 const visit = theatre.userData.visit;
-visit.focuses[stopId]; // target Vector3, bounds Box3, offset, closeOffset…
-visit.selectFocus(stopId); // null para limpiar selección
+visit.focuses[stopId];
+visit.selectFocus(stopId);        // null limpia la selección
 visit.setReadingMode('materials'); // o 'periods'
-visit.setSection(true); // devuelve boolean; false repone cubierta y tablado
+visit.setSection(true);           // false restituye cubierta y tarima
 visit.bindGround(finalMeshHeightAt);
-visit.getState(); // { selected, readingMode, sectionOpen }
+visit.getState();
 ```
 
-`visit.plan` se deriva de la misma transformación geográfica del modelo e incluye el contorno y 21 componentes. Se exporta a `dist/assets/data/theatre-plan.json` para que el plano siga disponible cuando WebGL no pueda arrancar. Las 16 paradas comparten IDs con la documentación; los focos del foso y cloaca incluyen `requiresSection: true`.
+Las **16 paradas** mantienen sus identificadores y enlaces. Los focos se vinculan a los componentes remodelados y conservan la diferencia entre vista general, detalle y subsuelo. La vista general `teatro-conjunto` usa `fitBounds: true` para adaptar el encuadre completo al espacio disponible en escritorio y móvil. Las otras quince paradas usan `fitBounds: false` para respetar su posición prevista; la guía y la geometría comparten estas marcas. El aditus y el vomitorio usan cámaras interiores a la altura de sus pasos, un campo de visión de 58° y posiciones de acercamiento propias: así el foco sigue la abertura en vez de mirar desde arriba contra la bóveda o contra las gradas. Las dos paradas del subsuelo llevan `requiresSection: true` en ambos registros. La entrada al teatro usa el foco `teatro-conjunto` del propio modelo para encuadrar la arquitectura desde el lado adecuado.
 
-Todos los materiales y texturas pertenecen a cada instancia mediante `userData.ownedResources`. El teatro de Sagunto y su presencia en el contexto del Palancia no comparten una caché de recursos que pueda eliminarse al cambiar de región.
+El plano se deriva de la misma transformación geográfica y se exporta a `dist/assets/data/theatre-plan.json`. Permanece disponible en la alternativa 2D cuando el navegador no puede iniciar WebGL. `theatre-visit.json` mantiene coordenadas, contenido y fuentes de las paradas; el índice territorial se regenera a partir de ese contenido.
 
-## Verificación reproducible
+El Simulador utiliza el mismo módulo arquitectónico a través del catálogo de patrimonio y su trabajador empaquetado. Las cámaras horneadas en `dist/assets/territory/visit-cameras.json` y `atlas-frames.json` se reexportan después del registro sobre el terreno final. Esta actualización es necesaria para que los nuevos focos se vean también en el Simulador.
 
-```sh
-node --experimental-loader ./research/validate_loader.mjs research/validate_theatre_v8.mjs --export
-blender -b -t 8 --python research/render_theatre_v8.py
-```
+Las geometrías, materiales y texturas pertenecen a su instancia mediante `userData.ownedResources`, de modo que desmontar una escena no invalida otra copia del teatro.
 
-La comprobación CPU usa la geometría real y el terreno final, incluidas las superficies urbanas y cimentaciones vecinas. Revisa atributos finitos, identificación de las 16 paradas, dimensiones y órdenes documentados, huecos físicos, conducción bajo el foso, superficies sobre el terreno, cámaras, materiales, visibilidad y propiedad de recursos. Los resultados legibles están en `research/validation-v8/theatre-geometry.json`.
+## Verificación de esta revisión
 
-Los renders `teatro-conjunto.png`, `teatro-orchestra.png` y `teatro-corte.png` se obtienen con Cycles a partir de las mallas exportadas por Three.js. Son inspecciones de geometría, **no capturas de WebGL**. Conservan posiciones, matrices, terreno y ortofoto; aproximan los materiales, por lo que no sustituyen las comprobaciones del navegador. El encuadre responsive y la integración de las dos regiones se comprueban por separado en la validación V8 de la aplicación.
+La revisión integrada conserva sus comprobaciones en `research/validation-v49/`:
 
-## Límites explícitos
+- `validate-theatre.mjs` construye la geometría real y el ensamblaje local del teatro con el terreno final. Verifica dimensiones, huecos, superficies, focos, sección y estados de materiales.
+- `validate-theatre-guide.mjs` contrasta los 16 identificadores y las 32 visitas globales con una base fija anterior a la revisión; comprueba referencias, coordenadas y marcas de cámara contra el modelo real. Guarda el resultado reproducible en `theatre-guide-qa.json`.
+- `export-theatre-cameras.mjs` aplica el encuadre de la aplicación a los focos y exporta las cámaras tras enlazar el suelo definitivo.
+- Los renders CPU se generan desde las mallas y matrices reales de Three.js. Permiten inspeccionar silueta y colisiones; sus materiales aproximados no equivalen a una captura del renderizador WebGL.
+- La visita, las fuentes, el plano y los controles de la interfaz se revisan en la vista previa gestionada y en la publicación.
 
-Este modelo es una interpretación arquitectónica documentada, no una fotogrametría ni un gemelo de conservación. No valida accesibilidad física, rutas autorizadas, dimensiones de seguridad ni navegación real en primera persona. Las tres puertas, los pasillos y las galerías visibles permiten comprender la estructura; las posiciones precisas de irregularidades, piezas decorativas y marcas de cantería requerirían levantamientos e imágenes adicionales. Se conserva la diferencia entre lo documentado, lo rehabilitado y lo esquemático durante toda la visita.
+Los resultados y la procedencia de la versión publicada se registran en `docs/SITES_SYNC.md`. La validación local se centra en el ensamblaje que influye en el teatro; no necesita cargar la Glorieta distante para comprobar sus encuentros.
+
+Durante esta iteración, el navegador disponible comunica `GL_RENDERER Disabled` y no inicia WebGL. Por ello se distingue la comprobación de la interfaz en su alternativa 2D de la inspección geométrica y los renders CPU. No se presenta esta última como validación GPU en navegador.
+
+## Límites que permanecen
+
+La revisión mejora una interpretación arquitectónica documentada. No es un levantamiento fotogramétrico, una nube de puntos ni un gemelo de conservación. Las irregularidades del aparejo, cada fragmento, cada reparación, el detalle de las protecciones y la vegetación exigirían documentación o mediciones adicionales para su reproducción individual.
+
+Las imágenes institucionales sin fecha y las fotografías de 1969 o 2014 no certifican por sí solas el estado exacto de noviembre de 2026. El [IVC documenta obras posteriores en accesos y barandillas](https://ivc.gva.es/es/escena/cultura-impulsa-la-ampliacion-del-aforo-del-teatro-romano-y-nuevas-mejoras-en-el-conjunto-monumental-de-sagunto); sus anuncios y balances se mantienen fechados en la visita. El modelo no valida accesibilidad, evacuación, aforo permanente ni itinerarios físicos autorizados.

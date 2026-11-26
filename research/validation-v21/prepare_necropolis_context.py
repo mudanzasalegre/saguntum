@@ -200,6 +200,13 @@ def build_context():
         'owner':'castle' if str(b['id']) in {str(r['id']) for r in castle_buildings} else 'theatre',
         'scope':min(centers,key=lambda name:p.distance(centers[name])),
         'renderedElsewhere':True} for b,p in nearby_buildings]
+    # These two seeded OSM-landcover pines overlap the PNOA-positioned crowns
+    # owned by theatre-environs.js. Filter after all random sequences so every
+    # other tree, the photo-guided cypresses and the small details stay identical.
+    theatre_pnoa_owned_pines = {'necro-pine-hipogeos-2', 'necro-pine-hipogeos-3'}
+    trees = [t for t in trees if not (
+        t['id'] in theatre_pnoa_owned_pines and t.get('kind') == 'pine'
+        and t.get('interpretive') is True and t.get('sourceId') == 'necro-osm-landcover')]
     context = {'schemaVersion':1,'id':'necropolis-context','coordinate':anchors['cementerio'],'researchDate':'2026-11-20',
         'districtOutline':[geo(p) for p in selections['cementerio'].exterior.coords],
         'districtOutlines':[{ 'id':scope,'coordinates':[geo(p) for p in area.exterior.coords]} for scope,area in selections.items()],
