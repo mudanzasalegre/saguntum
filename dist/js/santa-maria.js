@@ -115,8 +115,12 @@ const rect=(w,h)=>[[-w/2,0],[w/2,0],[w/2,h],[-w/2,h]];
 function wall(b,k,{x,y=0,z,w,h,d=.85,yaw=0,holes=[]}){
  const s=path(rect(w,h));for(const a of holes){const points=(a.rect?rect(a.w,a.h):arch(a.w,a.h,a.pointed!==false)).map(([u,v])=>[u+(a.u||0),v+(a.y||0)]);s.holes.push(path(points.reverse(),THREE.Path));}shapeMesh(b,k,s,x,y,z,d,yaw);
 }
-function ring(b,k,{x,y,z,w,h,t=.22,d=.18,yaw=0,pointed=true}){
- const s=path(arch(w+t*2,h+t,pointed).map(([u,v])=>[u,v-t*.3]));s.holes.push(path(arch(w,h,pointed).reverse(),THREE.Path));shapeMesh(b,k,s,x,y,z,d,yaw);
+function ring(b,k,{x,y,z,w,h,t=.22,d=.18,yaw=0,pointed=true,openBase=false}){
+ const outer=arch(w+t*2,h+t,pointed).map(([u,v])=>[u,v-t*.3]),inner=arch(w,h,pointed).reverse();
+ // A doorway archivolt is a U-shaped surround, not a closed frame across the
+ // walking surface. The old bottom strip coincided with the stair landing and
+ // produced a black self-occluding line even though downward rays hit stone.
+ const s=openBase?path([...outer,...inner]):path(outer);if(!openBase)s.holes.push(path(inner,THREE.Path));shapeMesh(b,k,s,x,y,z,d,yaw);
 }
 function onFace(x,z,yaw,u,v=0){return[x+u*Math.cos(yaw)+v*Math.sin(yaw),z-u*Math.sin(yaw)+v*Math.cos(yaw)];}
 function star(b,k,x,y,z,r,points=5,yaw=0){
@@ -135,7 +139,7 @@ function portal(b,K,{id,x,z,y=.12,yaw,w=3.5,h=4.8,archH=7.4,rings=4,period='medi
  const k=K(id,period,'trim'),outerW=w+1.0;
  // Stone tympanum over the actual rectangular, recessed timber opening.
  const tympanum=path(arch(outerW,archH));tympanum.holes.push(path(rect(w,h).reverse(),THREE.Path));shapeMesh(b,K(id,period,'stone'),tympanum,x,y,z,.48,yaw);
- for(let n=0;n<rings;n++){const[xx,zz]=onFace(x,z,yaw,0,.16+n*.13);ring(b,k,{x:xx,y,z:zz,w:outerW+n*.43,h:archH+n*.29,t:.105,d:.16,yaw});}
+ for(let n=0;n<rings;n++){const[xx,zz]=onFace(x,z,yaw,0,.16+n*.13);ring(b,k,{x:xx,y,z:zz,w:outerW+n*.43,h:archH+n*.29,t:.105,d:.16,yaw,openBase:true});}
  for(const side of[-1,1])for(let n=0;n<rings;n++){
   const[xx,zz]=onFace(x,z,yaw,side*(outerW/2+.19+n*.21),.13+n*.12);b.cylinder(k,xx,y+1.9,zz,.12,.12,3.8,8);b.box(k,xx,y+.15,zz,.30,.30,.30);b.box(k,xx,y+3.8,zz,.33,.23,.33);
  }
@@ -375,7 +379,10 @@ export function createSantaMaria({record,project,heightAt=()=>0,visitData}={}){
  const planData={outline:record.footprint,components:planComponents,center:record.coordinate,yaw:YAW,registration:'OSM perimeter with schematic published-plan alignment; not a measured new survey',floorHeight:base};
  const visit={focuses,bounds,stats,periods:santaMariaPeriods,plan:planData,selectFocus,setReadingMode,setSection,bindGround,getState:()=>({selected,readingMode,sectionOpen}),qa,metadata:{state:'Conserved church with medieval, early-modern and contemporary fabric',section:'Didactic removal of roofs, vault webs and north/west enclosure; octagonal supports, arcade and vault ribs remain. Not a reconstruction of the blocked crypt.',decoration:'Lost portal sculpture and the lost historical altarpiece are not reinstated. Small altar and surface finishes are abstract aids, not an inventory of current furnishings.',metricStatus:'Main vault 24 m and tower 58 m documented; most remaining elevations and mouldings are visual estimates registered to cartography.'}};
  group.userData={id:'santa-maria',label:'Iglesia de Santa María',interpretation:true,cartographicOutline:true,ownedResources:resources,layout:frame,groundY:base,visit,towerHeightM:58,bounds:{min:bounds.min.toArray(),max:bounds.max.toArray()}};
- const patch={polygon:worldOutline,height:base-.13,margin:1.25},thresholdPatches=[{polygon:[[-4.3,-32.5],[2.1,-32.5],[2.1,-27.4],[-4.3,-27.4]].map(p=>toWorld(...p)),height:base+westLow-.14,margin:.15}];
+ // The masonry foundation already carries the raised church floor. Cap only
+ // terrain that intrudes into it: raising surrounding street ground to this
+ // datum would invent an earth bank along Cavallers and its two corners.
+ const patch={id:'santa-maria-foundation',polygon:worldOutline,height:base-.13,margin:1.25,mode:'lower-only',priority:10},thresholdPatches=[{id:'santa-maria-west-threshold',polygon:[[-4.3,-32.5],[2.1,-32.5],[2.1,-27.4],[-4.3,-27.4]].map(p=>toWorld(...p)),height:base+westLow-.14,margin:.15,priority:20}];
  return{group,point:localWorld(-1.2,18,-3),patch,patches:[patch,...thresholdPatches],exclusion:worldOutline,ctx:frame,frame,views:{offset:rotate([80,62,75]),closeOffset:rotate([49,39,49])},stats,thresholdPatches};
 }
 

@@ -10,7 +10,7 @@ import {createSantaMaria} from './santa-maria.js';
 import {createSantaMariaContext} from './santa-maria-context.js';
 
 // Detailed monuments and their independently owned contextual geometry.
-export function createSacredHeritage({heightAt,project,landmarks,data={},santaMariaVisit,santaMariaContext,calvarioVisit,calvarioContext,berenguerContext,sangreVisit,sangreContext,salvadorVisit,salvadorContext}) {
+export function createSacredHeritage({heightAt,project,landmarks,data={},santaMariaVisit,santaMariaContext,plazaContext,calvarioVisit,calvarioContext,berenguerContext,sangreVisit,sangreContext,salvadorVisit,salvadorContext}) {
   const records=Array.isArray(landmarks)?Object.fromEntries(landmarks.map(s=>[s.id,s])):landmarks;
   const group=new THREE.Group();group.name='Patrimonio religioso del casco histórico';
   const points={},sites={},exclusions=[],patches=[],views={},excludedRoadIds=new Set(),excludedBuildingIds=new Set(),stats={sites:4,drawCalls:0,vertices:0,stations:14};
@@ -18,7 +18,7 @@ export function createSacredHeritage({heightAt,project,landmarks,data={},santaMa
     if(!records[id])throw new Error(`Missing cartography for ${id}`);
     const site=id==='santa-maria'?createSantaMaria({record:records[id],project,heightAt,visitData:santaMariaVisit||data.santaMariaVisit}):id==='calvario'?createCalvario({record:records[id],project,heightAt,visitData:calvarioVisit||data.calvarioVisit,contextData:calvarioContext||data.calvarioContext||{}}):id==='sangre'?createSangre({record:records[id],project,heightAt,visitData:sangreVisit||data.sangreVisit,contextData:sangreContext||data.sangreContext||{}}):createSalvador({record:records[id],project,heightAt,visitData:salvadorVisit||data.salvadorVisit,contextData:salvadorContext||data.salvadorContext||{}});
     if(id==='santa-maria'){
-      const context=createSantaMariaContext({data,landmarks:records,project,heightAt,churchFrame:site.frame,contextData:withoutBerenguerClaims(santaMariaContext||data.santaMariaContext||{},berenguerContext||data.berenguerContext||{})}),visit=site.group.userData.visit;
+      const context=createSantaMariaContext({data,landmarks:records,project,heightAt,churchFrame:site.frame,contextData:withoutBerenguerClaims(santaMariaContext||data.santaMariaContext||{},berenguerContext||data.berenguerContext||{}),replacedContextBuildingIds:(plazaContext||data.plazaContext)?.replacedSantaMariaBuildingIds||[]}),visit=site.group.userData.visit;
       // The context's vertices and targets are in projected world coordinates.
       // attach preserves that registration under the church's local frame.
       site.group.updateMatrixWorld(true);site.group.attach(context.group);site.group.updateMatrixWorld(true);

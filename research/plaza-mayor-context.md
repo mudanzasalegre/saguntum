@@ -1,5 +1,7 @@
 # Plaça Major · contexto cartográfico y plano de visita (V10)
 
+> Actualización de 26 de noviembre de 2026: los ocho cuerpos de las parcelas 3558301 y 3558302 conservan sus coordenadas, pero pasan a la arquitectura compartida de Plaza Mayor para abrir los soportales 7–8 y 9. Véase [cierre sur y contrato de sustitución](plaza-mayor-south-front.md). Los recuentos de 13 fachadas y 44 cuerpos protegidos, y los comandos y resultados que siguen, documentan la versión histórica V10. El estado actual y su pavimentación compartida se verifican en la [revisión del conjunto](../docs/PLAZA_SANTA_MARIA.md).
+
 Revisión: 19 de noviembre de 2026. Esta nota documenta los nuevos pavimentos, calles, volúmenes de contexto y plano interactivo de la plaza. La arquitectura principal y los contenidos históricos se describen en los informes y módulos correspondientes de la misma iteración.
 
 ## Qué se conserva y qué se añade

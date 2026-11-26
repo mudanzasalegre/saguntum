@@ -1,5 +1,25 @@
 # Sincronización de Sites a GitHub
 
+## Versión 47 · Plaza Mayor y Santa María
+
+El 26 de noviembre de 2026 se publicó la revisión documentada de los soportales del cierre sur y del entorno de Santa María. El despliegue `appgdep_6b0819a6bb6c8191914b77b67101d94e` terminó con estado `succeeded` en el Site original. La aplicación utiliza los mismos modelos y pavimentos en Atlas y Simulador, con dos visitas independientes dentro de un conjunto territorial compartido.
+
+| Evidencia | Valor |
+| --- | --- |
+| Fuente publicada en Sites | `6fb4184318d00c5aa6c02ed7cdc69266bcbac962` |
+| Árbol Git de la aplicación `dist/` | `be4c95e7349ed28d2856a3f98dc151a1b16d85a8` |
+| Archivo registrado por Sites | 1626 archivos, 267560960 bytes |
+| Huella del contenido registrado | `sha256:9547a2556ab98201572824ad0a7dc8367279c2b53a359693276ba1916b02d045` |
+
+[Plaza Mayor publicada](https://saguntum-atlas-3d.monmode.chatgpt.site/#plaza-mayor) · [Escalinata de Santa María](https://saguntum-atlas-3d.monmode.chatgpt.site/#santa-maria/santa-maria-escalinata) · [Fuentes, decisiones y límites](PLAZA_SANTA_MARIA.md)
+
+La revisión incorpora cuatro vanos y cinco apoyos en los números 7–8 y 9, el ajuste de las fachadas y cubiertas documentadas, una calle continua entre Plaza Mayor, Cavallers y Sagrari, el pretil de la escalinata y el cierre físico del umbral. Se retiran las ocho representaciones genéricas sustituidas por los frentes detallados. Se mantienen las 16 paradas de cada monumento, las 32 visitas globales y el recorrido territorial anterior.
+
+Las pruebas aprobaron 34 comprobaciones de los soportales, 19 de Santa María, 15 de suelo y 30 de integración. El pavimento conjunto se revisó en 59.088 triángulos y 599 uniones en T, sin alturas incompatibles; la plaza se muestreó en 2.698 posiciones, sin huecos ni solapes interiores. Los renders de inspección se generaron con las mallas y normales efectivas de Three.js en Blender; su iluminación no representa el render del navegador.
+
+En la URL pública se comprobaron las fuentes nuevas de Plaza Mayor, la parada y el plano de la escalinata, y el enlace de ida y vuelta al mismo destino del Simulador. El navegador de comprobación no dispone de WebGL: la inspección de interfaz fue en modo 2D y no se presentan mediciones de rendimiento GPU. [Continuidad del pavimento](../research/validation-v47/pavement-continuity-qa.json) · [Integración](../research/validation-v47/ensemble-qa.json) · [Vista final del conjunto](../research/validation-v47/plaza-cierre-sur.jpg)
+
+
 ## Versión 46 · Numeración territorial y recorrido guiado
 
 El 26 de noviembre de 2026 se publicó la numeración común de las 32 visitas y el recorrido territorial con pausa, desplazamientos suaves y fundidos entre ámbitos o encuadres opuestos. El despliegue `appgdep_6b0807ee1f7881918b533db44885b1dd` terminó con estado `succeeded` en el Site original. La sincronización con GitHub incorpora también las mejoras visuales ya publicadas en Sites 45.

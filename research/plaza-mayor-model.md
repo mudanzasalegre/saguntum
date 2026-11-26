@@ -1,5 +1,7 @@
 # Plaça Major y Puerta del Almudín — modelo V10
 
+> Actualización de 26 de noviembre de 2026: se completan los frentes porticados 7–8 y 9 junto a Santa María. Véase [documentación del cierre sur](plaza-mayor-south-front.md). La descripción V10 de 13 fachadas queda ampliada a 15 frentes y 22 cuerpos; se preservan las 16 paradas. El texto, los comandos y los resultados que siguen documentan la versión histórica V10; la verificación vigente está en la [revisión del conjunto](../docs/PLAZA_SANTA_MARIA.md).
+
 ## Alcance y registro
 
 La ampliación conserva la iglesia de Santa María V9 y añade una lectura individual del frente urbano de la Plaça Major. El núcleo tiene trece fachadas documentadas y catorce cuerpos edificados: el número 17 conserva separados sus dos componentes catastrales, con el intervalo real entre ellos. No se dibuja un volumen convexo que los una. El módulo del entorno, documentado por separado, completa calles, pavimento y caserío adyacente.

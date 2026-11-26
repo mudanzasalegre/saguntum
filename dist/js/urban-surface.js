@@ -69,12 +69,22 @@ export function createUrbanSurface({data,project,heightAt,patches=[],exclusions=
       const grade=Math.max(y-1.2,Math.min(y+1.2,center));
       y+=(grade-y)*falloff*falloff*(3-2*falloff);
     }
-    let weight=0,level=0;
+    let weight=0,level=0,chosen=null;
     for(const patch of patchIndex.at(x,z)){
       const d=polygonDistance(x,z,patch.polygon),margin=patch.margin??1.5;
       if(d>margin)continue;
-      const w=d===0?1:1-d/Math.max(.01,margin);if(w>weight){weight=w;level=patch.height;}
+      const w=d===0?1:1-d/Math.max(.01,margin);
+      // Named access surfaces can share a boundary with a raised monument.
+      // Resolve those ties explicitly so the two scene assemblers agree even
+      // when they load the church and its street context in opposite orders.
+      const tied=Math.abs(w-weight)<1e-9,priority=patch.priority??0,previous=chosen?.priority??0;
+      const namedTie=tied&&priority===previous&&patch.id&&chosen?.id&&(patch.priority!==undefined||chosen.priority!==undefined)&&patch.id<chosen.id;
+      if(w>weight+1e-9||(tied&&priority>previous)||namedTie){weight=w;chosen=patch;level=patch.height;}
     }
+    // Santa María already has a solid masonry foundation down to the street.
+    // Cutting excess ground is useful; raising the adjoining MDT to the high
+    // church floor would invent a four-metre earth bank beside Cavallers.
+    if(chosen?.mode==='lower-only')level=Math.min(y,level);
     return y+(level-y)*weight*weight*(3-2*weight);
   }
   return {groundHeight,segments,canStand(x,z,radius=.3){return !obstacles.at(x,z).some(item=>{const p=item.outline||item;if(polygonDistance(x,z,p)>=radius)return false;return !(item.holes||[]).some(h=>pointInPolygon(x,z,h)&&h.every((a,i)=>segmentDistance(x,z,a,h[(i+1)%h.length]).distance>=radius));});},slopeAt(x,z){return Math.hypot(groundHeight(x+.5,z)-groundHeight(x-.5,z),groundHeight(x,z+.5)-groundHeight(x,z-.5));},stats:{segments:segments.length,taggedWidths,foundationPatches:patches.length,description:'OSM street centerlines; widths, street camber and foundation transitions interpreted where unmeasured.'}};

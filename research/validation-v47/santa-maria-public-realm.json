@@ -1,0 +1,549 @@
+{
+  "pass": true,
+  "date": "2026-11-26",
+  "checks": [
+    {
+      "pass": true,
+      "label": "An isolated church retains every source context building"
+    },
+    {
+      "pass": true,
+      "label": "Eight detailed Plaza Mayor bodies replace eight generic context bodies"
+    },
+    {
+      "pass": true,
+      "label": "Replaced bodies stay excluded from generic world geometry"
+    },
+    {
+      "pass": true,
+      "label": "Every retained cadastral footprint and courtyard is preserved"
+    },
+    {
+      "pass": true,
+      "label": "All sixteen Santa María visit IDs resolve"
+    },
+    {
+      "pass": true,
+      "label": "Every church/context patch has a unique stable identifier"
+    },
+    {
+      "pass": true,
+      "label": "Raised church foundation and street subgrades declare their distinct policies"
+    },
+    {
+      "pass": true,
+      "label": "Patch order cannot change Cavallers in Atlas versus Simulator",
+      "details": {
+        "maximumOrderDifference": 0
+      }
+    },
+    {
+      "pass": true,
+      "label": "No patch builds an artificial earth bank above the exterior MDT",
+      "details": {
+        "maximumExteriorLift": 0
+      }
+    },
+    {
+      "pass": true,
+      "label": "Triangulated street edges stay within 0.4 m above the source MDT",
+      "details": [
+        {
+          "local": [
+            19.7,
+            -28
+          ],
+          "raw": 55.11393526820814,
+          "surface": 55.03699057372288,
+          "mesh": 55.00617767163992
+        },
+        {
+          "local": [
+            19.7,
+            -27.5
+          ],
+          "raw": 55.12410667808815,
+          "surface": 55.03699057372288,
+          "mesh": 55.00671942092217
+        },
+        {
+          "local": [
+            19.7,
+            -24
+          ],
+          "raw": 55.1137966067735,
+          "surface": 55.04594918438873,
+          "mesh": 55.00407587029227
+        },
+        {
+          "local": [
+            19.7,
+            -9
+          ],
+          "raw": 55.27361957881791,
+          "surface": 55.27361957881791,
+          "mesh": 54.99569814977252
+        },
+        {
+          "local": [
+            19.7,
+            11
+          ],
+          "raw": 54.433652998026616,
+          "surface": 54.433488487649605,
+          "mesh": 54.10729302733718
+        },
+        {
+          "local": [
+            19.7,
+            13.5
+          ],
+          "raw": 54.14974457928205,
+          "surface": 54.14552752301652,
+          "mesh": 54.02075958251953
+        },
+        {
+          "local": [
+            20,
+            15
+          ],
+          "raw": 54.090853614925855,
+          "surface": 54.05076085225248,
+          "mesh": 54.01454368388907
+        }
+      ]
+    },
+    {
+      "pass": true,
+      "label": "Triangulated access edges do not excavate a trench more than 0.5 m below the MDT",
+      "details": [
+        {
+          "local": [
+            19.7,
+            -28
+          ],
+          "raw": 55.11393526820814,
+          "surface": 55.03699057372288,
+          "mesh": 55.00617767163992
+        },
+        {
+          "local": [
+            19.7,
+            -27.5
+          ],
+          "raw": 55.12410667808815,
+          "surface": 55.03699057372288,
+          "mesh": 55.00671942092217
+        },
+        {
+          "local": [
+            19.7,
+            -24
+          ],
+          "raw": 55.1137966067735,
+          "surface": 55.04594918438873,
+          "mesh": 55.00407587029227
+        },
+        {
+          "local": [
+            19.7,
+            -9
+          ],
+          "raw": 55.27361957881791,
+          "surface": 55.27361957881791,
+          "mesh": 54.99569814977252
+        },
+        {
+          "local": [
+            19.7,
+            11
+          ],
+          "raw": 54.433652998026616,
+          "surface": 54.433488487649605,
+          "mesh": 54.10729302733718
+        },
+        {
+          "local": [
+            19.7,
+            13.5
+          ],
+          "raw": 54.14974457928205,
+          "surface": 54.14552752301652,
+          "mesh": 54.02075958251953
+        },
+        {
+          "local": [
+            20,
+            15
+          ],
+          "raw": 54.090853614925855,
+          "surface": 54.05076085225248,
+          "mesh": 54.01454368388907
+        }
+      ]
+    },
+    {
+      "pass": true,
+      "label": "All geometry attributes remain finite"
+    },
+    {
+      "pass": true,
+      "label": "Both stair flights rise monotonically to their central landing"
+    },
+    {
+      "pass": true,
+      "label": "Both flights meet the unchanged church threshold"
+    },
+    {
+      "pass": true,
+      "label": "Every tread surface stays above triangulated ground across its full usable width",
+      "details": {
+        "minimumClearanceM": 0.4459557702279824,
+        "samples": 432
+      }
+    },
+    {
+      "pass": true,
+      "label": "Continuous stone connects the landing to the recessed north doorway",
+      "details": [
+        {
+          "local": [
+            19.3,
+            -1
+          ],
+          "hit": "Escalinata norte · doble tramo y pretil macizo · stone",
+          "y": 59.46802520751953,
+          "coplanarPortal": false
+        },
+        {
+          "local": [
+            19.3,
+            0.35
+          ],
+          "hit": "Escalinata norte · doble tramo y pretil macizo · stone",
+          "y": 59.46802520751953,
+          "coplanarPortal": false
+        },
+        {
+          "local": [
+            19.3,
+            1.7
+          ],
+          "hit": "Escalinata norte · doble tramo y pretil macizo · stone",
+          "y": 59.46802520751953,
+          "coplanarPortal": false
+        },
+        {
+          "local": [
+            19.6,
+            -1
+          ],
+          "hit": "Escalinata norte · doble tramo y pretil macizo · stone",
+          "y": 59.46802520751953,
+          "coplanarPortal": false
+        },
+        {
+          "local": [
+            19.6,
+            0.35
+          ],
+          "hit": "Escalinata norte · doble tramo y pretil macizo · stone",
+          "y": 59.46802520751953,
+          "coplanarPortal": false
+        },
+        {
+          "local": [
+            19.6,
+            1.7
+          ],
+          "hit": "Escalinata norte · doble tramo y pretil macizo · stone",
+          "y": 59.46802520751953,
+          "coplanarPortal": false
+        },
+        {
+          "local": [
+            19.9,
+            -1
+          ],
+          "hit": "Escalinata norte · doble tramo y pretil macizo · stone",
+          "y": 59.46802520751953,
+          "coplanarPortal": false
+        },
+        {
+          "local": [
+            19.9,
+            0.35
+          ],
+          "hit": "Escalinata norte · doble tramo y pretil macizo · stone",
+          "y": 59.46802520751953,
+          "coplanarPortal": false
+        },
+        {
+          "local": [
+            19.9,
+            1.7
+          ],
+          "hit": "Escalinata norte · doble tramo y pretil macizo · stone",
+          "y": 59.46802520751953,
+          "coplanarPortal": false
+        },
+        {
+          "local": [
+            20.2,
+            -1
+          ],
+          "hit": "Escalinata norte · doble tramo y pretil macizo · stone",
+          "y": 59.46802520751953,
+          "coplanarPortal": false
+        },
+        {
+          "local": [
+            20.2,
+            0.35
+          ],
+          "hit": "Escalinata norte · doble tramo y pretil macizo · stone",
+          "y": 59.46802520751953,
+          "coplanarPortal": false
+        },
+        {
+          "local": [
+            20.2,
+            1.7
+          ],
+          "hit": "Escalinata norte · doble tramo y pretil macizo · stone",
+          "y": 59.46802520751953,
+          "coplanarPortal": false
+        },
+        {
+          "local": [
+            20.5,
+            -1
+          ],
+          "hit": "Escalinata norte · doble tramo y pretil macizo · stone",
+          "y": 59.44302749633789,
+          "coplanarPortal": false
+        },
+        {
+          "local": [
+            20.5,
+            0.35
+          ],
+          "hit": "Escalinata norte · doble tramo y pretil macizo · stone",
+          "y": 59.44302749633789,
+          "coplanarPortal": false
+        },
+        {
+          "local": [
+            20.5,
+            1.7
+          ],
+          "hit": "Escalinata norte · doble tramo y pretil macizo · stone",
+          "y": 59.44302749633789,
+          "coplanarPortal": false
+        },
+        {
+          "local": [
+            20.58,
+            -1
+          ],
+          "hit": "Escalinata norte · doble tramo y pretil macizo · stone",
+          "y": 59.44302749633789,
+          "coplanarPortal": false
+        },
+        {
+          "local": [
+            20.58,
+            0.35
+          ],
+          "hit": "Escalinata norte · doble tramo y pretil macizo · stone",
+          "y": 59.44302749633789,
+          "coplanarPortal": false
+        },
+        {
+          "local": [
+            20.58,
+            1.7
+          ],
+          "hit": "Escalinata norte · doble tramo y pretil macizo · stone",
+          "y": 59.44302749633789,
+          "coplanarPortal": false
+        }
+      ]
+    },
+    {
+      "pass": true,
+      "label": "Doorway archivolts have no bottom bar coplanar with the walking surface"
+    },
+    {
+      "pass": true,
+      "label": "Pavement covers both complete ends of the mapped north wall"
+    },
+    {
+      "pass": true,
+      "label": "Published inscription block dimensions are retained"
+    }
+  ],
+  "triangleCount": 216369,
+  "context": {
+    "buildingParts": 36,
+    "parentParcels": 14,
+    "sourceBuildingParts": 44,
+    "replacedBuildingParts": 8,
+    "footprintsPreserved": true,
+    "courtyards": 0,
+    "sourceHeight": 0,
+    "ignHeight": 22,
+    "storeyHeight": 14,
+    "fallbackHeight": 0,
+    "northStairTreads": 48,
+    "northApronSegments": 21,
+    "corridorSurfaces": 3,
+    "corridorAreaM2": 861.1800000000001,
+    "streetSamples": 10,
+    "roofCorrections": 0,
+    "maximumRoofCorrectionM": 0,
+    "inscriptionPanels": 2
+  },
+  "northStair": {
+    "sourceWay": "733321159",
+    "top": 59.443026938028446,
+    "startWest": 55.357476131524656,
+    "startEast": 54.52147940773875,
+    "westRise": 4.0855508065037895,
+    "eastRise": 4.921547530289693,
+    "landing": [
+      -1.75,
+      2.45
+    ],
+    "landingInnerX": 19.24,
+    "thresholdConnected": true,
+    "pretil": "solid masonry with shoulder piers, moulded crest and street plinth",
+    "crestProfile": [
+      [
+        -2.05,
+        0
+      ],
+      [
+        -1.8,
+        0
+      ],
+      [
+        -1.43,
+        0.09
+      ],
+      [
+        -1.16,
+        0.26
+      ],
+      [
+        -0.86,
+        0.26
+      ],
+      [
+        -0.7,
+        0.44
+      ],
+      [
+        -0.48,
+        0.61
+      ],
+      [
+        -0.22,
+        0.72
+      ],
+      [
+        0,
+        0.74
+      ],
+      [
+        0.22,
+        0.72
+      ],
+      [
+        0.48,
+        0.61
+      ],
+      [
+        0.7,
+        0.44
+      ],
+      [
+        0.86,
+        0.26
+      ],
+      [
+        1.16,
+        0.26
+      ],
+      [
+        1.43,
+        0.09
+      ],
+      [
+        1.8,
+        0
+      ],
+      [
+        2.05,
+        0
+      ]
+    ],
+    "plaqueDimensionsM": [
+      [
+        1.67,
+        0.59
+      ],
+      [
+        1.23,
+        0.63
+      ]
+    ],
+    "footprint": [
+      {
+        "x": -95.05770671241793,
+        "z": -25.02198726615265
+      },
+      {
+        "x": -93.44230008274327,
+        "z": -28.866380771089833
+      },
+      {
+        "x": -76.10104304968131,
+        "z": -21.579618491909923
+      },
+      {
+        "x": -77.71644967935596,
+        "z": -17.73522498697274
+      }
+    ]
+  },
+  "northApron": {
+    "sourceWay": "1365045257",
+    "cells": 21,
+    "localExtent": [
+      19.24,
+      -28.15,
+      30.570854032430436,
+      15
+    ],
+    "spans": [
+      {
+        "id": "west",
+        "from": -28.15,
+        "to": -8.23
+      },
+      {
+        "id": "east",
+        "from": 10.58,
+        "to": 15
+      }
+    ],
+    "maximumCellLengthM": 1.2,
+    "heightPolicy": "Street subgrade caps derive from the MDT; one continuous paving envelope follows the final presentation terrain along Cavallers and its Sagrari return. The church foundation remains vertical. Width, finish and exact elevation remain interpretive."
+  },
+  "limitations": [
+    "MDT and the registered church floor are not a new measured street survey.",
+    "Piers, crest moulding and stone finishes are simplified from photographic evidence.",
+    "This checks exact Three.js geometry and terrain, not a browser screenshot."
+  ]
+}

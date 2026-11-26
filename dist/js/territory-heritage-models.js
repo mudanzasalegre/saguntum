@@ -12,7 +12,7 @@ import {instantiateAtlasVisit,preloadAtlasVisit} from './territory-heritage-regi
 const definitions={
  glorieta:['glorieta','createGlorieta',()=>import('./glorieta.js')],
  castle:['castle','createCastle',()=>import('./castle.js')],theatre:['theatre','createTheatre',()=>import('./theatre.js')],
- 'santa-maria':['santa-maria','createSantaMaria',()=>import('./santa-maria.js')],'plaza-mayor':['plaza-mayor','createPlazaMayor',()=>import('./plaza-mayor.js')],
+ 'santa-maria':['santa-maria','createSantaMaria',()=>import('./santa-maria.js')],'plaza-mayor':['plaza-mayor','createPlazaSantaMaria',()=>import('./plaza-santa-maria-ensemble.js')],
  juderia:['juderia','createJuderia',()=>import('./juderia.js')],calvario:['calvario','createCalvario',()=>import('./calvario.js')],berenguer:['berenguer','createBerenguer',()=>import('./berenguer.js')],
  sangre:['sangre','createSangre',()=>import('./sangre.js')],salvador:['salvador','createSalvador',()=>import('./salvador.js')],museo:['museo','createMuseo',()=>import('./museo.js')],
  portic:['portic','createPortic',()=>import('./portic.js')],domus:['domus','createDomus',()=>import('./domus.js')],circo:['circo','createCirco',()=>import('./circo.js')],necropolis:['necropolis','createNecropolis',()=>import('./necropolis.js')],
@@ -23,7 +23,7 @@ const definitions={
  'marjal-moros':['landscape-marjal','createMarshLandscape',()=>import('./landscape-marjal.js')],'dunas-almarda':['landscape-dunes','createDunesLandscape',()=>import('./landscape-dunes.js')],'rio-palancia':['landscape-palancia','createPalanciaLandscape',()=>import('./landscape-palancia.js')]
 };
 const archiveOnly=new Set(['glorieta','pantalan','grau-vell','puerto-antiguo','marjal-moros','dunas-almarda','rio-palancia']);
-const sharedModels={'diana':'berenguer','pantalan-maritimo':'pantalan','pantalan-paseo':'pantalan'};
+const sharedModels={'diana':'berenguer','santa-maria':'plaza-mayor','pantalan-maritimo':'pantalan','pantalan-paseo':'pantalan'};
 export const modelId=id=>sharedModels[id]||id;
 // Prepare the original module and its authored data, without creating meshes,
 // textures, pavement rasters or collision structures on the rendering thread.
@@ -40,6 +40,7 @@ export async function warmHeritageModel(id,records){
   if(id!=='castle')names.push(file+'-plan');
  }
  if(id==='grau-vell')names.push('grau-visit','grau-context');
+ if(id==='plaza-mayor')names.push('santa-maria-visit','santa-maria-context','santa-maria-plan');
  if(id==='pantalan')names.push('pantalan-paseo-visit','pantalan-maritimo-visit','pantalan-context');
  if(id==='glorieta')names.push('glorieta-layout','glorieta-buildings','glorieta-visit');
  if(record?.landscape)names.push(record.region+'-cartography');
@@ -280,6 +281,7 @@ export async function buildHeritageModel(id,{places,records,area,heightAt,projec
   if(id!=='castle'&&id!=='theatre')requests.push(get(file+'-context','contextData'));
  }
  if(id==='grau-vell')requests.push(get('grau-visit','grauVisit'),get('grau-context','grauContextData'));
+ if(id==='plaza-mayor')requests.push(get('santa-maria-visit','santaMariaVisit'),get('santa-maria-context','santaMariaContext'),get('santa-maria-plan','santaMariaPlan'));
  if(id==='pantalan')requests.push(get('pantalan-paseo-visit','pantalanPaseoVisit'),get('pantalan-maritimo-visit','pantalanMaritimoVisit'),get('pantalan-context','contextData'));
  if(record.landscape){
   requests.push(get(record.region+'-cartography','data'));
@@ -293,6 +295,7 @@ export async function buildHeritageModel(id,{places,records,area,heightAt,projec
  if(!needed())return null;
  await settleSourceClaims(id,options);
  if(options.visitData&&id!=='castle')options.visitData.plan=await documentData(file+'-plan',false);
+ if(options.santaMariaVisit)options.santaMariaVisit.plan=options.santaMariaPlan;
  if(!needed())return null;
  if(sector)options.buildings=sector.resolve(options.buildings,sector.data.frontageCorrections);
  const made=module[func](options);
@@ -315,7 +318,7 @@ export async function buildHeritageModel(id,{places,records,area,heightAt,projec
  if(!await continueBuilding())return null;
  // Every context factory draws in the Atlas metre grid, including those whose
  // monument constructor has a rotated or translated local frame of its own.
- const surroundings=contextFactory?originalSurroundings(contextFactory,id,options,sites):null;
+ const surroundings=made.surroundings||(contextFactory?originalSurroundings(contextFactory,id,options,sites):null);
  if(surroundings)outer.add(surroundings.context.group);
  const streets=sector?.build(sector.data,options);
  if(streets)outer.add(streets.group);

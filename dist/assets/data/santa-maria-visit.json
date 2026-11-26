@@ -4,7 +4,7 @@
   "title": "Iglesia de Santa María de Sagunto",
   "subtitle": "Dieciséis paradas entre la iglesia y la ciudad",
   "introduction": "Recorre el templo de la Natividad de Nuestra Señora desde la Plaça Major hasta su cabecera. Las portadas, las naves, el campanario y el entorno permiten reconocer una construcción transformada durante siglos. Cada parada enlaza sus hechos con la documentación consultada.",
-  "researchDate": "2026-11-19",
+  "researchDate": "2026-11-26",
   "regionsLabel": "ámbitos",
   "mapButtonLabel": "Plano de Santa María",
   "overviewButtonLabel": "Ver conjunto",
@@ -295,8 +295,8 @@
           "confidence": "documented"
         }
       ],
-      "lookFor": "Compara la cota de la calle con el rellano del acceso; después mira el trazado hacia la Plaça Major.",
-      "modelNote": "Se destaca el tramo inmediato a Santa María. El punto de cámara es una ayuda de lectura, no una ubicación topográfica de una portada civil concreta.",
+      "lookFor": "Compara el pavimento de la calle, la base vertical del templo y el rellano del acceso. Sigue después la continuidad hacia la Plaça Major y la plaza de Cervantes.",
+      "modelNote": "El paso pavimentado conserva el trazado cartográfico. La cota y la anchura de sus encuentros con la fábrica son aproximaciones; el foco de cámara ayuda a leer el conjunto.",
       "sourceIds": [
         "sm-plaza",
         "sm-entorno",
@@ -414,12 +414,13 @@
           "confidence": "documented"
         }
       ],
-      "lookFor": "Busca el frente macizo del pretil y la posición de los dos bloques inscritos, uno sobre otro.",
-      "modelNote": "Los bloques se señalan como volúmenes sin inventar letras legibles. Peldaños, alturas y curvatura del remate son una aproximación gráfica.",
+      "lookFor": "Sigue los dos tramos hasta el rellano. Busca el frente macizo, sus pilastras y el remate curvo; debajo, los dos bloques inscritos se colocan uno sobre otro.",
+      "modelNote": "El alzado del pretil se contrasta con fotografías actuales; los bloques conservan las dimensiones aproximadas publicadas, sin inventar letras legibles. Peldaños, rasantes y molduras son una interpretación gráfica.",
       "sourceIds": [
         "sm-lapidas-2024",
         "sm-osm",
-        "sm-context-mds"
+        "sm-context-mds",
+        "sm-turismo"
       ],
       "confidence": "documented",
       "coordinateConfidence": "approximate",
@@ -1047,7 +1048,7 @@
         }
       ],
       "lookFor": "Relaciona la cabecera con la calle y con el recinto de los restos, sin confundir las fábricas de cada edificio.",
-      "modelNote": "El recorrido señala el entorno arqueológico inmediato. Mantiene los restos como vestigio y no levanta un santuario hipotético sobre ellos.",
+      "modelNote": "El retorno de Sagrari hacia Cavallers y la Plaça Major comparte un pavimento continuo entre las huellas cartográficas de los edificios. Su rasante y acabado son interpretativos; los restos antiguos conservan su lectura y ámbito propios.",
       "sourceIds": [
         "sm-diana-2022",
         "sm-diana-debate",
@@ -1403,9 +1404,9 @@
       "url": "https://www.comunitatvalenciana.com/es/valencia/sagunt-sagunto/monumentos/iglesia-parroquial-de-la-natividad-de-nuestra-senora-2",
       "type": "ficha turística institucional",
       "year": null,
-      "locator": "Denominación, inicio de las obras y descripción general",
-      "note": "Referencia para identificación y contexto básico. Las fechas detalladas de la torre se contrastan con el inventario y los estudios.",
-      "accessed": "2026-11-19"
+      "locator": "Denominación, descripción general y galería multimedia: frente norte y vista desde los soportales de la plaza",
+      "note": "Referencia institucional y contraste fotográfico del pretil y su relación con la plaza. La galería no aporta rasantes ni un levantamiento métrico de molduras; las fechas de la torre se contrastan con inventario y estudios.",
+      "accessed": "2026-11-26"
     },
     {
       "id": "sm-ruta-iglesia",
@@ -1628,7 +1629,7 @@
   "methodology": [
     "La maqueta parte del edificio conservado y de su entorno inmediato. Combina huellas cartográficas con plantas, secciones y descripciones publicadas; sus superficies y detalles son una síntesis.",
     "Cada hecho tiene referencias y grado de confianza. La geometría interpretativa puede representar un elemento bien documentado sin reproducir exactamente su talla, espesor o estado material.",
-    "El entorno combina plantas y patios del Catastro, alturas estimadas del IGN y colores de cubiertas del PNOA. Las fachadas domésticas y las formas de cubierta son interpretativas; la cota del suelo del templo se adapta al terreno MDT y los peldaños no reproducen un recuento documentado.",
+    "El entorno combina plantas y patios del Catastro, alturas estimadas del IGN y colores de cubiertas del PNOA. Las fachadas domésticas y las cubiertas son interpretativas. La calle conserva su desnivel junto al zócalo del templo; el pavimento de la iglesia, las rasantes de los accesos y los peldaños no proceden de un levantamiento métrico.",
     "Las coordenadas son focos aproximados vinculados a la maqueta. No equivalen a una topografía, a una ruta accesible certificada ni a autorización para entrar en dependencias.",
     "Se separan las fechas de la portada gótica, el pretil de la escalera, la fachada barroca y la torre actual. Un acabado uniforme no demuestra que todo el componente pertenezca a una misma campaña.",
     "La sección retira superficies para explicar el espacio interior, conservando apoyos y nervaduras. No reproduce la cripta cegada, el antiguo órgano ni retablos o esculturas desaparecidos.",

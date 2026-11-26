@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import {pointInPolygon,segmentDistance,roadWidth} from './urban-surface.js';
+import {createPavingTessellator} from './conforming-paving.js';
 
 // Compact, source-registered surroundings of Santa María. The ordinary houses
 // are deliberately schematic: source footprints, patios, storeys and roof-height
@@ -51,6 +52,13 @@ class Batch{
   const group=new THREE.Group();group.name=name;group.userData={component,period};
   for(const[k,d]of this.parts){
    const geo=new THREE.BufferGeometry();geo.setAttribute('position',new THREE.Float32BufferAttribute(d.p,3));geo.setAttribute('uv',new THREE.Float32BufferAttribute(d.u,2));geo.setAttribute('color',new THREE.Float32BufferAttribute(d.c,3));geo.computeVertexNormals();geo.computeBoundingBox();geo.computeBoundingSphere();
+   if(k==='paving'){
+    // This is one continuous street surface. Share normals at coincident
+    // vertices instead of exposing each tessellation triangle as a stone slab.
+    const normals=geo.attributes.normal,positions=geo.attributes.position,sums=new Map(),keys=[];
+    for(let i=0;i<positions.count;i++){const key=[positions.getX(i),positions.getY(i),positions.getZ(i)].map(v=>v.toFixed(4)).join(',');keys.push(key);if(!sums.has(key))sums.set(key,new THREE.Vector3());sums.get(key).add(new THREE.Vector3(normals.getX(i),normals.getY(i),normals.getZ(i)));}
+    for(const v of sums.values())v.normalize();for(let i=0;i<positions.count;i++){const v=sums.get(keys[i]);normals.setXYZ(i,v.x,v.y,v.z);}
+   }
    const map=k==='tile'?textures.tile:['paving','stone'].includes(k)?textures[k]:null;
    const material=new THREE.MeshStandardMaterial({color:'#ffffff',vertexColors:true,map,roughness:k==='iron'?.62:k==='glass'?.73:.95,metalness:k==='iron'?.38:0,side:THREE.DoubleSide});
    const mesh=new THREE.Mesh(geo,material);mesh.name=name+' · '+k;mesh.castShadow=!['paving','joints'].includes(k);mesh.receiveShadow=true;
@@ -67,48 +75,50 @@ function subdivide(a,b,c,callback,maxEdge=2.5,depth=0){
  if(long<=maxEdge||depth>8){callback(a,b,c);return;}
  const i=lengths.indexOf(long),v=[a,b,c],u=v[i],w=v[(i+1)%3],opposite=v[(i+2)%3],m={x:(u.x+w.x)/2,z:(u.z+w.z)/2};subdivide(u,m,opposite,callback,maxEdge,depth+1);subdivide(m,w,opposite,callback,maxEdge,depth+1);
 }
-function terrainFace(batch,a,b,c,ground,tint,depth=0){
- // Foundation caps introduce real edges into the final triangulated DEM. Split
- // a paving face when its chord would cut through one of those edges instead
- // of allowing the terrain to appear through a broad interpolated triangle.
- const points=[a,b,c],ys=points.map(p=>ground(p.x,p.z)+.105),probes=[];
- for(let i=0;i<3;i++){const j=(i+1)%3;probes.push({x:(points[i].x+points[j].x)/2,z:(points[i].z+points[j].z)/2,y:(ys[i]+ys[j])/2});}
- probes.push({x:(a.x+b.x+c.x)/3,z:(a.z+b.z+c.z)/3,y:(ys[0]+ys[1]+ys[2])/3});
- const deficit=Math.max(0,...probes.map(p=>ground(p.x,p.z)+.055-p.y));
- if(deficit>.015&&depth<5){const ab=probes[0],bc=probes[1],ca=probes[2];for(const triangle of[[a,ab,ca],[ab,b,bc],[ca,bc,c],[ab,bc,ca]])terrainFace(batch,...triangle,ground,tint,depth+1);return;}
- batch.triangle('paving',...points.map((p,i)=>[p.x,ys[i]+deficit,p.z]),tint);
-}
-
-export function createSantaMariaContext({data={},landmarks={},project=projectDefault,heightAt=()=>0,churchFrame=null,contextData={}}={}){
+export function createSantaMariaContext({data={},landmarks={},project=projectDefault,heightAt=()=>0,churchFrame=null,contextData={},replacedContextBuildingIds=[]}={}){
  const record=landmarks['santa-maria']||{},coordinate=record.coordinate||contextData.coordinate||DEFAULT_COORDINATE,center=churchFrame?.center||project(...coordinate),yaw=churchFrame?.yaw??YAW,co=Math.cos(yaw),si=Math.sin(yaw);
  const outline=record.footprint||churchFrame?.outline||[],worldOutline=clean(outline,project),base=churchFrame?.base??median(worldOutline.map(p=>heightAt(p.x,p.z)))+.12;
  const world=(x,z)=>({x:center.x+x*co+z*si,z:center.z-x*si+z*co}),local=(x,z)=>({x:(x-center.x)*co-(z-center.z)*si,z:(x-center.x)*si+(z-center.z)*co});
  const point=(x,y,z)=>{const p=world(x,z);return[p.x,base+y,p.z];};
  const localPolygon=p=>p.map(v=>world(v.x,v.z));
- const sourceBuildings=contextData.buildings||[],sourceRoads=contextData.roads||(data.roads||[]).filter(r=>['87554148','1365045257','1204891837','733321159','22922651','1419209850','1419209851','1419209852','1419209853'].includes(String(r.id)));
+ // A detailed adjoining monument may own a source building that also occurs
+ // in this immediate-context dataset. Retain the source records and generic
+ // exclusions, but build each parcel only once when its replacement is present.
+ const sourceBuildings=contextData.buildings||[],replacementIds=new Set([...replacedContextBuildingIds].map(String)),renderBuildings=sourceBuildings.filter(b=>!replacementIds.has(String(b.id))),sourceRoads=contextData.roads||(data.roads||[]).filter(r=>['87554148','1365045257','1204891837','733321159','22922651','1419209850','1419209851','1419209852','1419209853'].includes(String(r.id)));
  const sourceSurfaces=contextData.surfaces||sourceRoads.filter(r=>r.area==='yes').map(r=>({id:'santa-maria-cervantes',coordinates:r.coordinates,sourceId:r.id}));
+ const corridorSurfaces=contextData.corridorSurfaces||[],corridorRoadIds=new Set((contextData.corridorRoadIds||[]).map(String));
  const resources={geometries:[],materials:[],textures:[]},textures={stone:makeTexture('stone'),paving:makeTexture('paving'),tile:makeTexture('tile')};resources.textures.push(...Object.values(textures));
  const group=new THREE.Group(),fixed=new THREE.Group(),grounded=new THREE.Group();group.name='Santa María · calles, plaza y caserío inmediato';fixed.name='Acceso norte y pretil documentado';grounded.name='Contexto adaptado al terreno final';group.add(fixed,grounded);
  const exclusions=[],patches=[],excludedBuildingIds=new Set((contextData.excludedBuildingIds||sourceBuildings.map(b=>b.id)).map(String)),excludedRoadIds=new Set((contextData.excludedRoadIds||sourceRoads.map(r=>r.id)).map(String)),components=[];
- const stats={buildingParts:sourceBuildings.length,parentParcels:new Set(sourceBuildings.map(b=>b.parentId||b.id)).size,footprintsPreserved:true,courtyards:sourceBuildings.reduce((s,b)=>s+(b.holes?.length||0),0),sourceHeight:0,ignHeight:0,storeyHeight:0,fallbackHeight:0,northStairTreads:0,northApronSegments:0,streetSamples:0,roofCorrections:0,maximumRoofCorrectionM:0,inscriptionPanels:2};
- const qa={buildings:[],stairSurfaces:[],groundSamples:[],sourcePreservation:[],sourceKeys:(contextData.sources||[]).map(s=>s.id),limitations:[contextData.facadeNote,contextData.roofNote,contextData.stairNote].filter(Boolean)};
+ const stats={buildingParts:renderBuildings.length,parentParcels:new Set(renderBuildings.map(b=>b.parentId||b.id)).size,sourceBuildingParts:sourceBuildings.length,replacedBuildingParts:sourceBuildings.length-renderBuildings.length,footprintsPreserved:true,courtyards:renderBuildings.reduce((s,b)=>s+(b.holes?.length||0),0),sourceHeight:0,ignHeight:0,storeyHeight:0,fallbackHeight:0,northStairTreads:0,northApronSegments:0,corridorSurfaces:corridorSurfaces.length,corridorAreaM2:corridorSurfaces.reduce((sum,s)=>sum+(s.areaM2||0),0),streetSamples:0,roofCorrections:0,maximumRoofCorrectionM:0,inscriptionPanels:2};
+ const qa={buildings:[],stairSurfaces:[],groundSamples:[],sourcePreservation:[],sourceKeys:(contextData.sources||[]).map(s=>s.id),limitations:[contextData.facadeNote,contextData.roofNote,contextData.stairNote,contextData.streetNote].filter(Boolean)};
  let selected=null,readingMode='materials',currentGround=heightAt,disposed=false;
- const sourcePolygons=sourceBuildings.map(b=>({record:b,p:clean(b.coordinates,project),holes:(b.holes||[]).map(r=>clean(r,project))})).filter(b=>b.p.length>=3);
+ const sourcePolygons=renderBuildings.map(b=>({record:b,p:clean(b.coordinates,project),holes:(b.holes||[]).map(r=>clean(r,project))})).filter(b=>b.p.length>=3);
+ qa.replacedBuildingIds=sourceBuildings.filter(b=>replacementIds.has(String(b.id))).map(b=>String(b.id));
  for(const b of sourcePolygons){exclusions.push(b.p);components.push({id:'context-'+b.record.id,coordinates:b.record.coordinates,kind:'context-building',period:'mixed',sourceId:b.record.id,interpretive:false});qa.sourcePreservation.push({id:b.record.id,vertices:b.record.coordinates.length,holes:b.record.holes?.length||0});}
  const nearby=(data.buildings||sourceBuildings).filter(b=>{const p=b.coordinates?.[0]&&project(...b.coordinates[0]);return p&&Math.hypot(p.x-center.x,p.z-center.z)<125;}).map(b=>({id:String(b.id),p:clean(b.coordinates,project),holes:(b.holes||[]).map(r=>clean(r,project))})).filter(b=>b.p.length>=3);
  const occupied=(x,z,ignore=null)=>nearby.some(b=>b.id!==ignore&&pointInPolygon(x,z,b.p)&&!b.holes.some(h=>pointInPolygon(x,z,h)));
  const buildFixed=()=>{
   const b=new Batch(),x0=19.7,x1=23.2,z0=-8.05,z1=10.4,landing0=-1.75,landing1=2.45,top=base+.12;
   const start0=world((x0+x1)/2,z0),start1=world((x0+x1)/2,z1),y0=Math.min(top-.18,heightAt(start0.x,start0.z)+.12),y1=Math.min(top-.18,heightAt(start1.x,start1.z)+.12),bottom=Math.min(y0,y1)-.38;
-  const stairOutline=localPolygon(rect(x0-.12,z0-.18,x1+.55,z1+.18));patches.push({polygon:stairOutline,height:bottom-.04,margin:.18});exclusions.push(stairOutline);
+  const stairOutline=localPolygon(rect(x0-.12,z0-.18,x1+.55,z1+.18));exclusions.push(stairOutline);
   const lp=(x,y,z)=>{const a=world(x,z);return[a.x,y,a.z];};
   const lbox=(kind,x,y,z,w,h,d,tint)=>{const a=world(x,z);b.box(kind,a.x,y,a.z,w,h,d,yaw,tint);};
   const addFlight=(from,to,ground)=>{
    const count=Math.max(1,Math.ceil((top-ground)/.19)),rise=(top-ground)/count,run=Math.abs(to-from)/count,dir=Math.sign(to-from);stats.northStairTreads+=count;
-   for(let n=0;n<count;n++){const z=from+dir*(n+.5)*run,y=ground+(n+1)*rise;lbox('stone',(x0+x1)/2,(bottom+y)/2,z,x1-x0,y-bottom,run+.015,n%2?'#c0b29a':'#cbbca2');lbox('stone',(x0+x1)/2,y+.025,z-dir*run*.43,x1-x0+.05,.055,.13,'#d9ceb8');qa.stairSurfaces.push({x:world((x0+x1)/2,z).x,z:world((x0+x1)/2,z).z,y,flight:from<0?'west':'east'});}
+   for(let n=0;n<count;n++){const z=from+dir*(n+.5)*run,y=ground+(n+1)*rise,flight=from<0?'west':'east';lbox('stone',(x0+x1)/2,(bottom+y)/2,z,x1-x0,y-bottom,run+.015,n%2?'#c0b29a':'#cbbca2');lbox('stone',(x0+x1)/2,y+.025,z-dir*run*.43,x1-x0+.05,.055,.13,'#d9ceb8');qa.stairSurfaces.push({x:world((x0+x1)/2,z).x,z:world((x0+x1)/2,z).z,y,flight,run});
+    // Each solid tread caps its own ground intrusion. A single cap at the
+    // deepest foundation bottom excavated a false trench beside the high end.
+    patches.push({id:`santa-maria-north-stair-${flight}-${n}`,polygon:localPolygon(rect(x0-.12,z-run/2,x1+.55,z+run/2)),height:y-.08,margin:.06,mode:'lower-only',priority:20});
+   }
   };
   addFlight(z0,landing0,y0);addFlight(z1,landing1,y1);
-  lbox('stone',(20.35+x1)/2,(bottom+top)/2,(landing0+landing1)/2,x1-20.35,top-bottom,landing1-landing0,'#cfbea3');
+  // The landing reaches the recessed portal threshold. Stopping at x=20.35
+  // left an open black slot between the door and the otherwise solid stair.
+  const landingInner=19.24;
+  lbox('stone',(landingInner+x1)/2,(bottom+top)/2,(landing0+landing1)/2,x1-landingInner,top-bottom,landing1-landing0,'#cfbea3');
+  lbox('stone',(landingInner+20.35)/2,top+.012,(landing0+landing1)/2,20.35-landingInner,.026,landing1-landing0,'#d3c5ad');
+  patches.push({id:'santa-maria-north-stair-landing',polygon:localPolygon(rect(x0-.12,landing0,x1+.55,landing1)),height:top-.08,margin:.06,mode:'lower-only',priority:20});
   // The outer barrier is solid masonry. Published current photographs do not
   // show an open row of balusters, and disappeared statues are not reinstated.
   const profile=z=>z<landing0?y0+(top-y0)*(z-z0)/(landing0-z0):z>landing1?top+(y1-top)*(z-landing1)/(z1-landing1):top;
@@ -117,34 +127,52 @@ export function createSantaMariaContext({data={},landmarks={},project=projectDef
    b.quad('stone',lp(x-.25,a-.12,z),lp(x+.25,a-.12,z),lp(x+.25,a+.035,z),lp(x-.25,a+.035,z),'#d0c0a5');
   }
   for(const z of[z0,z1]){const y=profile(z)+.86;b.quad('stone',lp(x1+.06,bottom-.1,z),lp(x1+.46,bottom-.1,z),lp(x1+.46,y,z),lp(x1+.06,y,z),'#c4b49a');}
-  // A restrained curved centre crest follows the photographed baroque profile.
-  const crestZ=.35,crestHalf=2.05,crestBase=top+.85;
-  for(let n=0;n<16;n++){const za=crestZ-crestHalf+n*crestHalf*2/16,zb=crestZ-crestHalf+(n+1)*crestHalf*2/16,ya=crestBase+.45*Math.sin(Math.PI*n/16)**1.35,yb=crestBase+.45*Math.sin(Math.PI*(n+1)/16)**1.35;
+  // The current photographic elevation has a raised rounded centre, short
+  // shoulders and curved returns. It is not a single sinusoidal hump. Keep the
+  // moulding continuous through those changes of profile (ARSE 58, p. 75).
+  const crestZ=.35,crestHalf=2.05,crestBase=top+.85,halfProfile=[[0,.74],[.22,.72],[.48,.61],[.7,.44],[.86,.26],[1.16,.26],[1.43,.09],[1.8,0],[crestHalf,0]],crestProfile=[...halfProfile.slice(1).reverse().map(([z,y])=>[-z,y]),...halfProfile];
+  for(let n=1;n<crestProfile.length;n++){const[za0,ya0]=crestProfile[n-1],[zb0,yb0]=crestProfile[n],za=crestZ+za0,zb=crestZ+zb0,ya=crestBase+ya0,yb=crestBase+yb0;
    for(const x of[x1+.06,x1+.46])b.quad('stone',lp(x,crestBase-.04,za),lp(x,crestBase-.04,zb),lp(x,yb,zb),lp(x,ya,za),'#c7b79d');b.quad('stone',lp(x1+.02,ya,za),lp(x1+.50,ya,za),lp(x1+.50,yb,zb),lp(x1+.02,yb,zb),'#ddd0b6');
+   b.quad('stone',lp(x1+.51,ya-.075,za),lp(x1+.51,yb-.075,zb),lp(x1+.51,yb,zb),lp(x1+.51,ya,za),'#d7c9b0');
   }
+  // Shoulder piers and a low street plinth make the parapet read as masonry
+  // against the lane. Their detail is simplified; exact mouldings are unsurveyed.
+  for(const z of[crestZ-crestHalf-.36,crestZ+crestHalf+.36]){
+   const cap=profile(z)+1.03;lbox('stone',x1+.48,cap-.69,z,.31,1.38,.49,'#bcae97');lbox('stone',x1+.48,cap+.01,z,.43,.15,.62,'#d8cbb4');
+   lbox('stone',x1+.645,cap-.64,z,.018,.84,.29,'#a49b88');lbox('stone',x1+.66,cap-.66,z,.022,.69,.20,'#c3b59d');
+  }
+  for(let z=z0;z<z1;z+=.9){const end=Math.min(z1,z+.9),a=world(x1+.49,z),c=world(x1+.49,end),ya=heightAt(a.x,a.z),yc=heightAt(c.x,c.z);b.quad('stone',lp(x1+.56,ya-.08,z),lp(x1+.56,yc-.08,end),lp(x1+.56,yc+.27,end),lp(x1+.56,ya+.27,z),'#b9ab91');b.quad('stone',lp(x1+.43,ya+.27,z),lp(x1+.56,ya+.27,z),lp(x1+.56,yc+.27,end),lp(x1+.43,yc+.27,end),'#cfc0a4');}
   const external=world(x1+.48,crestZ),inscriptionGround=heightAt(external.x,external.z);
   for(const[width,height,y]of[[1.67,.59,inscriptionGround+1.73],[1.23,.63,inscriptionGround+1.02]]){
    lbox('stone',x1+.49,y,crestZ,.085,height,width,'#aeaa97');lbox('plaster',x1+.54,y,crestZ,.018,height-.11,width-.13,'#bcb7a4');
    for(const s of[-1,1]){lbox('stone',x1+.55,y+s*(height-.06)/2,crestZ,.045,.055,width,'#d0c8b4');lbox('stone',x1+.55,y,crestZ+s*(width-.06)/2,.045,height,.055,'#ccc2ac');}
   }
-  lbox('stone',x1+.26,top+1.34,crestZ,.44,.25,.36,'#d4c5a9');
+  // Only the weathered date tablet is retained at the centre; missing portal
+  // statuary and lost ornaments in the 1923 photograph remain absent.
+  lbox('stone',x1+.26,crestBase+.80,crestZ,.31,.18,.27,'#c8baa3');
   fixed.add(b.finish('Escalinata norte · doble tramo y pretil macizo','santa-maria-escalinata','mixed',resources,textures));
   components.push({id:'escalinata-norte',coordinates:stairOutline.map(p=>geographical(p.x,p.z)),kind:'stairs',period:'mixed',interpretive:true,sourceId:'733321159'});
   components.push({id:'pretil-1799',coordinates:localPolygon(rect(x1+.03,z0,x1+.5,z1)).map(p=>geographical(p.x,p.z)),kind:'wall',period:'modern',interpretive:true});
-  qa.northStair={sourceWay:'733321159',top,startWest:y0,startEast:y1,westRise:top-y0,eastRise:top-y1,landing:[landing0,landing1],pretil:'solid masonry',plaqueDimensionsM:[[1.67,.59],[1.23,.63]],footprint:stairOutline};
+  qa.northStair={sourceWay:'733321159',top,startWest:y0,startEast:y1,westRise:top-y0,eastRise:top-y1,landing:[landing0,landing1],landingInnerX:landingInner,thresholdConnected:true,pretil:'solid masonry with shoulder piers, moulded crest and street plinth',crestProfile,plaqueDimensionsM:[[1.67,.59],[1.23,.63]],footprint:stairOutline};
  };
  buildFixed();
- // Keep Cavallers at street level along the north-west wall. The high church
- // foundation patch otherwise produces a false earth bank outside the masonry.
- // These narrow subgrade cells lower only that display transition; the paved
- // top retains raw MDT heights, and no source building footprint is moved.
+ // A continuous paved street meets the vertical church base, rather than an
+ // earth bank. Cover both exposed ends of the north wall: the former apron
+ // stopped short of the west corner and omitted the return beyond the stair.
+ // These cells cap only local crests beneath paving following raw MDT. Using
+ // the minimum across the sloping street would instead excavate a trough.
+ // They have an explicit
+ // priority so Atlas and territorial assembly cannot change their effect.
  const northApron=[],cavallers=sourceRoads.find(r=>String(r.id)==='1365045257'),cavallersLocal=(cavallers?.coordinates||[]).map(c=>{const p=project(...c);return local(p.x,p.z);});
  const streetX=z=>{for(let i=1;i<cavallersLocal.length;i++){const a=cavallersLocal[i-1],b=cavallersLocal[i];if(z>=Math.min(a.z,b.z)&&z<=Math.max(a.z,b.z)&&Math.abs(a.z-b.z)>.01)return a.x+(b.x-a.x)*(z-a.z)/(b.z-a.z);}return 25.2;};
  if(cavallersLocal.length){
-  const minZ=-27.1,maxZ=-8.23,count=Math.ceil((maxZ-minZ)/2.4);
-  for(let i=0;i<count;i++){const a=minZ+(maxZ-minZ)*i/count,b=minZ+(maxZ-minZ)*(i+1)/count,p=localPolygon([{x:19.24,z:a},{x:streetX(a)-.35,z:a},{x:streetX(b)-.35,z:b},{x:19.24,z:b}]),samples=[...p,mid(p)],level=Math.min(...samples.map(q=>heightAt(q.x,q.z)))-.18;northApron.push(p);patches.push({polygon:p,height:level,margin:.12});exclusions.push(p);}
-  const p=localPolygon([{x:19.24,z:minZ},{x:streetX(minZ)-.35,z:minZ},{x:streetX(maxZ)-.35,z:maxZ},{x:19.24,z:maxZ}]);components.push({id:'cavallers-foundation-transition',coordinates:p.map(q=>geographical(q.x,q.z)),kind:'street',period:'interpretation',interpretive:true,sourceId:'1365045257'});
-  stats.northApronSegments=northApron.length;qa.northApron={sourceWay:'1365045257',cells:northApron.length,localExtent:[19.24,minZ,streetX(maxZ)-.35,maxZ],heightPolicy:'Pavement follows raw MDT; narrow subgrade patches suppress an artificial earth bank caused by the higher church floor. Width and finish are interpretive.'};
+  const spans=[{id:'west',from:-28.15,to:-8.23},{id:'east',from:10.58,to:15.0}];
+  for(const span of spans){
+   const {from:minZ,to:maxZ}=span,count=Math.ceil((maxZ-minZ)/1.2);
+   for(let i=0;i<count;i++){const a=minZ+(maxZ-minZ)*i/count,b=minZ+(maxZ-minZ)*(i+1)/count,p=localPolygon([{x:19.24,z:a},{x:streetX(a)-.35,z:a},{x:streetX(b)-.35,z:b},{x:19.24,z:b}]),samples=[...p,mid(p)],level=Math.max(...samples.map(q=>heightAt(q.x,q.z)))-.12;northApron.push(p);patches.push({id:`santa-maria-cavallers-${span.id}-${i}`,polygon:p,height:level,margin:.12,mode:'lower-only',priority:20});exclusions.push(p);}
+   const p=localPolygon([{x:19.24,z:minZ},{x:streetX(minZ)-.35,z:minZ},{x:streetX(maxZ)-.35,z:maxZ},{x:19.24,z:maxZ}]);components.push({id:span.id==='west'?'cavallers-foundation-transition':'cavallers-east-return',coordinates:p.map(q=>geographical(q.x,q.z)),kind:'street',period:'interpretation',interpretive:true,sourceId:'1365045257'});
+  }
+  stats.northApronSegments=northApron.length;qa.northApron={sourceWay:'1365045257',cells:northApron.length,localExtent:[19.24,-28.15,streetX(15)-.35,15],spans,maximumCellLengthM:1.2,heightPolicy:'Street subgrade caps derive from the MDT; one continuous paving envelope follows the final presentation terrain along Cavallers and its Sagrari return. The church foundation remains vertical. Width, finish and exact elevation remain interpretive.'};
  }
  const disposeLayer=layer=>{layer.traverse(o=>{if(!o.isMesh)return;const g=resources.geometries.indexOf(o.geometry);if(g>=0)resources.geometries.splice(g,1);o.geometry.dispose();const m=resources.materials.indexOf(o.material);if(m>=0)resources.materials.splice(m,1);o.material.dispose();});layer.clear();};
  const streetBatches=new Map(),batchFor=id=>{if(!streetBatches.has(id))streetBatches.set(id,new Batch());return streetBatches.get(id);};
@@ -188,11 +216,16 @@ export function createSantaMariaContext({data={},landmarks={},project=projectDef
  }
  function buildSurfaces(ground){
   streetBatches.clear();qa.groundSamples.length=0;stats.streetSamples=0;
-  for(const s of sourceSurfaces){const p=clean(s.coordinates,project),b=batchFor(s.id||'santa-maria-cervantes');for(const triangle of triangles(p))subdivide(...triangle,(a,c,d)=>{terrainFace(b,a,c,d,ground,'#d2c6ae');qa.groundSamples.push({x:(a.x+c.x+d.x)/3,z:(a.z+c.z+d.z)/3,y:ground((a.x+c.x+d.x)/3,(a.z+c.z+d.z)/3)+.105});},1.55);}
-  for(const p of northApron){const b=batchFor('santa-maria-cavallers');for(const triangle of triangles(p))subdivide(...triangle,(a,c,d)=>b.triangle('paving',...[a,c,d].map(q=>[q.x,heightAt(q.x,q.z)+.13,q.z]),'#c3baa7'),.85);for(let i=0;i<p.length;i++){const a=p[i],c=p[(i+1)%p.length];b.quad('stone',[a.x,heightAt(a.x,a.z)+.13,a.z],[c.x,heightAt(c.x,c.z)+.13,c.z],[c.x,ground(c.x,c.z)-.25,c.z],[a.x,ground(a.x,a.z)-.25,a.z],'#afa28b');}}
+  const paving=createPavingTessellator(ground),pave=(s,id,tint)=>{const p=clean(s.coordinates,project),holes=(s.holes||[]).map(r=>clean(r,project)),b=batchFor(id);paving.triangulate(p,holes,(a,c,d)=>{b.triangle('paving',a,c,d,tint);qa.groundSamples.push({x:(a[0]+c[0]+d[0])/3,z:(a[2]+c[2]+d[2])/3,y:(a[1]+c[1]+d[1])/3});});};
+  for(const s of sourceSurfaces)pave(s,s.id||'santa-maria-cervantes','#d2c6ae');
+  for(const s of corridorSurfaces)pave(s,s.component||'santa-maria-cavallers','#c3baa7');
+  // Legacy data can still build the narrow apron. With the documented public
+  // envelope, its paving and the three centre-line ribbons have a single owner.
+  if(!corridorSurfaces.length)for(const p of northApron){const b=batchFor('santa-maria-cavallers');paving.triangulate(p,[],(a,c,d)=>b.triangle('paving',a,c,d,'#c3baa7'));}
+  qa.pavingTessellation={...paving.stats,gridStepM:.5,offsetM:.105,heightPolicy:'Shared grid vertex heights and shared cell planes; no independent per-face lift.'};
   const hard=(x,z)=>pointInPolygon(x,z,worldOutline)||occupied(x,z)||pointInPolygon(x,z,qa.northStair.footprint);
   for(const road of sourceRoads){
-   if(road.area==='yes'||String(road.id)==='733321159')continue;
+   if(road.area==='yes'||String(road.id)==='733321159'||(corridorSurfaces.length&&corridorRoadIds.has(String(road.id))))continue;
    const component=String(road.id)==='87554148'?'santa-maria-sagrario':String(road.id).startsWith('141920985')?'santa-maria-cervantes':'santa-maria-cavallers',b=batchFor(component),p=clean(road.coordinates,project),width=roadWidth(road);
    for(let i=1;i<p.length;i++){const a=p[i-1],c=p[i],length=Math.hypot(c.x-a.x,c.z-a.z);if(length<.04)continue;const nx=-(c.z-a.z)/length,nz=(c.x-a.x)/length,count=Math.ceil(length/1.2);
     const cross=t=>{const x=a.x+(c.x-a.x)*t,z=a.z+(c.z-a.z)*t,halves=[];for(const side of[-1,1]){let distance=width/2;for(let d=.18;d<width/2;d+=.18)if(hard(x+nx*d*side,z+nz*d*side)){distance=Math.max(.08,d-.12);break;}halves.push(distance);}return[{x:x-nx*halves[0],z:z-nz*halves[0]},{x:x+nx*halves[1],z:z+nz*halves[1]}];};
@@ -223,6 +256,7 @@ export function createSantaMariaContext({data={},landmarks={},project=projectDef
  function selectFocus(id){selected=id&&focuses[id]?id:null;applyMaterials();return selected?focuses[selected]:null;}
  function dispose(){if(disposed)return;disposed=true;for(const g of resources.geometries)g.dispose();for(const m of resources.materials)m.dispose();for(const t of resources.textures)t.dispose();resources.geometries.length=resources.materials.length=resources.textures.length=0;group.clear();}
  for(const s of sourceSurfaces)components.push({id:s.id||'santa-maria-cervantes',coordinates:s.coordinates,kind:'plaza',period:'mixed',interpretive:false,sourceId:s.sourceId});
+ for(const s of corridorSurfaces)components.push({id:s.id,coordinates:s.coordinates,holes:s.holes||[],kind:'street',closed:true,period:'mixed',interpretive:true,sourceIds:s.sourceIds});
  for(const r of sourceRoads)if(r.area!=='yes'&&String(r.id)!=='733321159')components.push({id:'street-'+r.id,coordinates:r.coordinates,kind:r.kind==='steps'?'stairs':'street',closed:false,period:'mixed',interpretive:false,sourceId:r.id});
  const plan={outline,components,center:coordinate,yaw},bounds=new THREE.Box3();
  const api={group,patches,exclusions,excludedBuildingIds,excludedRoadIds,focuses,bounds,plan,stats,qa,bindGround,setReadingMode,selectFocus,dispose,frame:{center,coordinate,base,yaw,toWorld:world,toLocal:local},ownedResources:resources,getState:()=>({selected,readingMode})};

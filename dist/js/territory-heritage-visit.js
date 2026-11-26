@@ -51,7 +51,7 @@ export function bindHeritageVisit({model,sites,options,frame,heightAt,renderer})
   const visit=site.visit||site.group.userData.visit;
   const focus=visit?.focuses?.[stop]||site.focuses?.[stop];
   const guide=place==='pantalan-paseo'?options.pantalanPaseoVisit:place==='pantalan-maritimo'?options.pantalanMaritimoVisit:
-              options.visitData||options.grauVisit||options.guide;
+              options.visitDataByPlace?.[place]||options.visitData||options.grauVisit||options.guide;
   const entry=guide?.stops?.find(row=>row.id===stop);
   const selectedPhase=place.startsWith('pantalan-')?(entry?.mode||'current'):
    presentation.mode||focus?.recommendedMode||entry?.recommendedMode||entry?.mode||

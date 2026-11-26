@@ -174,9 +174,18 @@
             "pm-osm"
           ],
           "confidence": "interpretive"
+        },
+        {
+          "text": "El lado corto junto a Santa María se cierra con las fachadas 7–8 y 9, ambas con planta baja porticada y dos plantas superiores.",
+          "sourceIds": [
+            "pm-front-sur-2010",
+            "pm-front-sur-2011",
+            "pm-photo-2019"
+          ],
+          "confidence": "documented"
         }
       ],
-      "lookFor": "Compara el espacio central, las galerías y los cuatro arranques de calle.",
+      "lookFor": "Compara las galerías de los lados largos y el paso abierto bajo los números 7–8 y 9, al pie de Santa María.",
       "modelNote": "La maqueta representa un conjunto transformado. Huellas, alturas y fachadas proceden de evidencias de distinta precisión; no es un levantamiento fotogramétrico.",
       "sourceIds": [
         "pm-pep",
@@ -185,7 +194,10 @@
         "pm-rutas",
         "pm-turismo",
         "pm-catastro",
-        "pm-osm"
+        "pm-osm",
+        "pm-front-sur-2010",
+        "pm-front-sur-2011",
+        "pm-photo-2019"
       ],
       "confidence": "documented",
       "coordinateConfidence": "approximate",
@@ -352,6 +364,14 @@
             "pm-turismo"
           ],
           "confidence": "interpretive"
+        },
+        {
+          "text": "En el cierre sur, los apoyos de sección cuadrada dejan pasar la galería bajo 7–8 y 9; su forma no permite atribuirles origen romano.",
+          "sourceIds": [
+            "pm-front-sur-2011",
+            "pm-photo-2019"
+          ],
+          "confidence": "interpretive"
         }
       ],
       "lookFor": "Busca el contraste entre la piedra maciza y los elementos de hierro más esbeltos.",
@@ -359,7 +379,10 @@
       "sourceIds": [
         "pm-romano",
         "pm-pep",
-        "pm-turismo"
+        "pm-turismo",
+        "pm-front-sur-2010",
+        "pm-front-sur-2011",
+        "pm-photo-2019"
       ],
       "confidence": "documented",
       "coordinateConfidence": "approximate",
@@ -864,13 +887,23 @@
             "pm-lapidas"
           ],
           "confidence": "documented"
+        },
+        {
+          "text": "El alzado municipal distingue el nº 6 retranqueado de los soportales de 7–8 y 9, que forman el cierre corto de la plaza.",
+          "sourceIds": [
+            "pm-front-sur-2011"
+          ],
+          "confidence": "documented"
         }
       ],
-      "lookFor": "Observa la portada norte, la escalinata y la torre en relación con los tejados de la plaza.",
-      "modelNote": "Se conserva el modelo de Santa María de la iteración anterior. La visita de la plaza añade relaciones urbanas, sin sustituir sus paradas interiores.",
+      "lookFor": "Observa los soportales del cierre sur, la escalinata y la torre en relación con los tejados de la plaza.",
+      "modelNote": "La plaza y Santa María comparten el cierre porticado y su entorno. Los frentes 7–8 y 9 se contrastan con documentación municipal de 2010/2011 y una fotografía de enero de 2019; las medidas y acabados permanecen interpretativos.",
       "sourceIds": [
         "pm-santa-maria",
-        "pm-lapidas"
+        "pm-lapidas",
+        "pm-front-sur-2010",
+        "pm-front-sur-2011",
+        "pm-photo-2019"
       ],
       "confidence": "documented",
       "coordinateConfidence": "approximate",
@@ -1458,6 +1491,39 @@
       "accessed": "2026-11-19",
       "serviceUrl": "https://www.ign.es/wms-inspire/pnoa-ma",
       "licenseUrl": "https://www.ign.es/resources/licencia/Condiciones_licenciaUso_IGN.pdf"
+    },
+    {
+      "id": "pm-front-sur-2010",
+      "title": "Modificación de la ficha de Plaça Major 7–8 y documentación de Plaça Major 9",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/media/lkunpbcv/pl100930.pdf",
+      "type": "expediente municipal con fichas y fotografías históricas",
+      "year": 2010,
+      "locator": "Pleno de 30 de septiembre de 2010, pp. 30–39; ficha del nº 9, p. 35; fotografía conjunta, p. 38",
+      "note": "Identifica 7–8 como parcela 2 y 9 como parcela 1 de la manzana 35583. Documenta planta baja porticada y dos plantas superiores. El proyecto inicial no se utiliza como prueba del aspecto actual.",
+      "accessed": "2026-11-26"
+    },
+    {
+      "id": "pm-front-sur-2011",
+      "title": "Alzados de integración del frente de la Plaza Mayor",
+      "author": "Ayuntamiento de Sagunto",
+      "url": "https://aytosagunto.es/media/rb2mpsep/pl111227.pdf",
+      "type": "expediente municipal con alzado y planta de soportales",
+      "year": 2011,
+      "locator": "Pleno de 27 de diciembre de 2011, pp. 63–66; alzado del nº 6, 7–8 y 9 y planta de soportales, p. 66",
+      "note": "El alzado distingue el nº 6 retranqueado, dos ejes de balcones en 7–8 y 9 y la galería común. Se contrasta con fotografías; no se considera por sí solo una certificación de obra ejecutada.",
+      "accessed": "2026-11-26"
+    },
+    {
+      "id": "pm-photo-2019",
+      "title": "Sagunto · fotografías de la Plaza Mayor",
+      "author": "Gary y Josie · Got Away",
+      "url": "https://www.gotaway.ca/spain/valencia/sagunto/",
+      "type": "fotografía directa fechada de visita",
+      "year": 2019,
+      "locator": "Entrada de 20 de enero de 2019, fotografía Plaza Mayor; archivo sagunto-plaza-mayor-iglesia-santa-maria-1024x1024.jpg",
+      "note": "Corrobora el nº 7–8 ocre con cubierta de teja y dos ejes, junto al nº 9 blanco con balcón corrido inferior, dos ejes y remate de azotea. La foto no constituye una inspección de noviembre de 2026. Se consulta como referencia, sin incorporar la imagen ajena a la aplicación.",
+      "accessed": "2026-11-26"
     }
   ],
   "methodology": [

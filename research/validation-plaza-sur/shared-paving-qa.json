@@ -1,0 +1,36 @@
+{
+  "pass": true,
+  "samples": 2698,
+  "covered": 1739,
+  "areaSamples": 1739,
+  "areaGaps": 0,
+  "overlaps": 0,
+  "examples": [],
+  "checks": [
+    {
+      "pass": true,
+      "label": "No overlapping Plaza paving at the shared Cavallers mouth"
+    },
+    {
+      "pass": true,
+      "label": "Every sampled point inside the mapped Plaza surface remains paved"
+    },
+    {
+      "pass": true,
+      "label": "All three source road centre lines retained"
+    },
+    {
+      "pass": true,
+      "label": "Road plan components retained"
+    },
+    {
+      "pass": true,
+      "label": "Generic road duplicate exclusions retained"
+    }
+  ],
+  "observedBefore": {
+    "samples": 2698,
+    "overlaps": 28
+  },
+  "scope": "Actual Plaza meshes on a flat datum to isolate footprint overlap. Santa María supplies the complementary corridor; final terrain/combined coverage is verified separately."
+}

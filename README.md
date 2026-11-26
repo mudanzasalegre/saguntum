@@ -2,6 +2,14 @@
 
 Atlas patrimonial y paisajístico de Sagunto, Puerto de Sagunto y su costa en Three.js, con **32 lugares explorables** sobre cartografía real. Reúne monumentos, arqueología, memoria industrial, costa y paisajes en seis ámbitos territoriales, con visitas documentadas y vistas históricas.
 
+## Plaza Mayor y Santa María · revisión del conjunto urbano
+
+La revisión de 26 de noviembre de 2026 completa los **soportales de los números 7–8 y 9**, junto a Santa María, a partir de los expedientes municipales, la cartografía y fotografías contrastadas. Las galerías tienen cuatro vanos abiertos, cinco apoyos y continuidad bajo las dos fachadas; se conservan los cuerpos posteriores de ambas parcelas. La plaza reúne ahora 15 frentes especializados.
+
+En Santa María se corrigen el encuentro del terreno con la fábrica del templo, la continuidad del pavimento de Cavallers y el retorno del Sagrari, y la unión entre puerta y escalinata. El pretil se aproxima a sus fotografías documentadas, manteniendo los dos bloques epigráficos. **Plaza e iglesia se cargan juntas en el Simulador**, incluidas las vistas de móvil, con visitas independientes y sección propia del interior de la iglesia, sin repetir los ocho cuerpos catastrales sustituidos.
+
+[Plaza Mayor](https://saguntum-atlas-3d.monmode.chatgpt.site/#plaza-mayor) · [Santa María](https://saguntum-atlas-3d.monmode.chatgpt.site/#santa-maria) · [Fuentes, alcance y comprobaciones](docs/PLAZA_SANTA_MARIA.md)
+
 ## Visitas en orden y recorrido guiado
 
 La numeración es común al Atlas y al Simulador: **1–16 Sagunto**, **17–25 Puerto de Sagunto** y **26–32 costa y paisajes**. El catálogo muestra esos tres grupos y mantiene los números al buscar o filtrar. Los enlaces a monumentos y sus paradas conservan sus identificadores.

@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import {pointInPolygon,segmentDistance,roadWidth} from './urban-surface.js';
+import {createPavingTessellator} from './conforming-paving.js';
 
 // Source-registered surroundings of Plaça Major. The ordinary houses
 // are deliberately schematic: source footprints, patios, storeys and roof-height
@@ -67,21 +68,38 @@ function subdivide(a,b,c,callback,maxEdge=2.5,depth=0){
  if(long<=maxEdge||depth>8){callback(a,b,c);return;}
  const i=lengths.indexOf(long),v=[a,b,c],u=v[i],w=v[(i+1)%3],opposite=v[(i+2)%3],m={x:(u.x+w.x)/2,z:(u.z+w.z)/2};subdivide(u,m,opposite,callback,maxEdge,depth+1);subdivide(m,w,opposite,callback,maxEdge,depth+1);
 }
-function terrainFace(batch,a,b,c,ground,tint,depth=0){
- // Foundation caps introduce real edges into the final triangulated DEM. Split
- // a paving face when its chord would cut through one of those edges instead
- // of allowing the terrain to appear through a broad interpolated triangle.
- const points=[a,b,c],ys=points.map(p=>ground(p.x,p.z)+.105),probes=[];
- for(let i=0;i<3;i++){const j=(i+1)%3;probes.push({x:(points[i].x+points[j].x)/2,z:(points[i].z+points[j].z)/2,y:(ys[i]+ys[j])/2});}
- probes.push({x:(a.x+b.x+c.x)/3,z:(a.z+b.z+c.z)/3,y:(ys[0]+ys[1]+ys[2])/3});
- const deficit=Math.max(0,...probes.map(p=>ground(p.x,p.z)+.055-p.y));
- if(deficit>.015&&depth<5){const ab=probes[0],bc=probes[1],ca=probes[2];for(const triangle of[[a,ab,ca],[ab,b,bc],[ca,bc,c],[ab,bc,ca]])terrainFace(batch,...triangle,ground,tint,depth+1);return;}
- batch.triangle('paving',...points.map((p,i)=>[p.x,ys[i]+deficit,p.z]),tint);
+// Subtract a convex area triangle from a road cell. Testing only the cell's
+// centre left overlapping strips (and skipped wedges) at the Cavallers mouth.
+const polygonBounds=p=>({x0:Math.min(...p.map(v=>v.x)),x1:Math.max(...p.map(v=>v.x)),z0:Math.min(...p.map(v=>v.z)),z1:Math.max(...p.map(v=>v.z))});
+function halfPlane(poly,a,b,sign,inside){
+ const out=[],distance=p=>((b.x-a.x)*(p.z-a.z)-(b.z-a.z)*(p.x-a.x))*sign;
+ for(let i=0;i<poly.length;i++){
+  const u=poly[i],v=poly[(i+1)%poly.length],du=distance(u),dv=distance(v),iu=inside?du>=-1e-8:du<=1e-8,iv=inside?dv>=-1e-8:dv<=1e-8;
+  if(iu)out.push(u);if(iu!==iv){const t=du/(du-dv);out.push({x:u.x+(v.x-u.x)*t,z:u.z+(v.z-u.z)*t});}
+ }
+ return out;
+}
+function uncoveredRoadCell(cell,masks){
+ let pieces=[cell];
+ for(const mask of masks){
+  const next=[];
+  for(const piece of pieces){
+   const b=polygonBounds(piece);if(b.x1<mask.bounds.x0||b.x0>mask.bounds.x1||b.z1<mask.bounds.z0||b.z0>mask.bounds.z1){next.push(piece);continue;}
+   let remainder=piece;const sign=signedArea(mask.p)>0?1:-1;
+   for(let i=0;i<mask.p.length&&remainder.length>=3;i++){
+    const a=mask.p[i],c=mask.p[(i+1)%mask.p.length],outside=halfPlane(remainder,a,c,sign,false);
+    if(outside.length>=3&&Math.abs(signedArea(outside))>1e-7)next.push(outside);
+    remainder=halfPlane(remainder,a,c,sign,true);
+   }
+  }
+  pieces=next;if(!pieces.length)break;
+ }
+ return pieces;
 }
 
 export function createPlazaMayorContext({data={},landmarks={},project=projectDefault,heightAt=()=>0,contextData={}}={}){
  const coordinate=contextData.coordinate||DEFAULT_COORDINATE,center=project(...coordinate),outline=contextData.plazaOutline||[];
- const sourceBuildings=contextData.buildings||[],sourceRoads=contextData.roads||[],sourceSurfaces=contextData.surfaces||[];
+ const sourceBuildings=contextData.buildings||[],sourceRoads=contextData.roads||[],sourceSurfaces=contextData.surfaces||[],areaPavedRoadIds=new Set((contextData.areaPavedRoadIds||[]).map(String));
  const resources={geometries:[],materials:[],textures:[]},textures={stone:makeTexture('stone'),paving:makeTexture('paving'),tile:makeTexture('tile')};resources.textures.push(...Object.values(textures));
  const group=new THREE.Group(),grounded=new THREE.Group();group.name='Plaça Major · trama urbana y accesos';grounded.name='Contexto adaptado al terreno final';group.add(grounded);
  const exclusions=[],patches=[],excludedBuildingIds=new Set((contextData.excludedBuildingIds||sourceBuildings.map(b=>b.id)).map(String)),excludedRoadIds=new Set((contextData.excludedRoadIds||[]).map(String)),components=[];
@@ -135,24 +153,31 @@ export function createPlazaMayorContext({data={},landmarks={},project=projectDef
  }
  function buildSurfaces(ground){
   streetBatches.clear();qa.groundSamples.length=0;stats.streetSamples=0;
+  const paving=createPavingTessellator(ground);
   for(const s of sourceSurfaces){
    const p=clean(s.coordinates,project),holes=(s.holes||[]).map(r=>clean(r,project)),b=batchFor(s.component||'plaza-pavimento');
-   for(const triangle of triangles(p,holes))subdivide(...triangle,(a,c,d)=>{terrainFace(b,a,c,d,ground,s.component==='plaza-peixateria'?'#c2b9a6':'#cfc2ac');const x=(a.x+c.x+d.x)/3,z=(a.z+c.z+d.z)/3;qa.groundSamples.push({x,z,y:ground(x,z)+.105,kind:'area'});},1.55);
+   paving.triangulate(p,holes,(a,c,d)=>{b.triangle('paving',a,c,d,s.component==='plaza-peixateria'?'#c2b9a6':'#cfc2ac');qa.groundSamples.push({x:(a[0]+c[0]+d[0])/3,z:(a[2]+c[2]+d[2])/3,y:(a[1]+c[1]+d[1])/3,kind:'area'});});
    for(const ring of[p,...holes])for(let i=0;i<ring.length;i++){const a=ring[i],c=ring[(i+1)%ring.length];b.quad('stone',[a.x,ground(a.x,a.z)+.105,a.z],[c.x,ground(c.x,c.z)+.105,c.z],[c.x,ground(c.x,c.z)-.30,c.z],[a.x,ground(a.x,a.z)-.30,a.z],'#b2a58e');}
   }
-  const areaPolygons=sourceSurfaces.map(s=>({p:clean(s.coordinates,project),holes:(s.holes||[]).map(r=>clean(r,project))}));
-  const paved=(x,z)=>areaPolygons.some(s=>pointInPolygon(x,z,s.p)&&!s.holes.some(h=>pointInPolygon(x,z,h)));
+  const areaMasks=sourceSurfaces.flatMap(s=>triangles(clean(s.coordinates,project),(s.holes||[]).map(r=>clean(r,project)))).map(p=>({p,bounds:polygonBounds(p)}));
   for(const road of sourceRoads){
-   if(road.area==='yes')continue;
+   // These mapped centre lines retain their navigation/plan semantics. Their
+   // visible paving belongs to the square area and the adjoining church
+   // corridor, so a second residual ribbon must not cross the shared border.
+   if(road.area==='yes'||areaPavedRoadIds.has(String(road.id)))continue;
    const id=road.contextComponent||'plaza-pavimento',b=batchFor(id),p=clean(road.coordinates,project),width=roadWidth(road);
    for(let i=1;i<p.length;i++){
     const a=p[i-1],c=p[i],length=Math.hypot(c.x-a.x,c.z-a.z);if(length<.04)continue;const nx=-(c.z-a.z)/length,nz=(c.x-a.x)/length,count=Math.ceil(length/1.05);
     const cross=t=>{const x=a.x+(c.x-a.x)*t,z=a.z+(c.z-a.z)*t,halves=[];for(const side of[-1,1]){let distance=width/2;for(let d=.16;d<width/2;d+=.16)if(occupied(x+nx*d*side,z+nz*d*side)){distance=Math.max(.08,d-.12);break;}halves.push(distance);}return[{x:x-nx*halves[0],z:z-nz*halves[0]},{x:x+nx*halves[1],z:z+nz*halves[1]}];};
     for(let n=0;n<count;n++){
-     const q0=cross(n/count),q1=cross((n+1)/count),q=[q0[0],q0[1],q1[1],q1[0]],qmid=mid(q);if(paved(qmid.x,qmid.z))continue;
-     terrainFace(b,q[0],q[1],q[2],ground,'#bdb7a8');terrainFace(b,q[0],q[2],q[3],ground,'#bdb7a8');stats.streetSamples++;
-     for(const[j,k]of[[0,3],[1,2]]){const v=q[j],u=q[k];b.quad('stone',[v.x,ground(v.x,v.z)+.105,v.z],[u.x,ground(u.x,u.z)+.105,u.z],[u.x,ground(u.x,u.z)-.3,u.z],[v.x,ground(v.x,v.z)-.3,v.z],'#afa58f');}
-     qa.groundSamples.push({x:qmid.x,z:qmid.z,y:ground(qmid.x,qmid.z)+.105,kind:'street'});
+     const q0=cross(n/count),q1=cross((n+1)/count),q=[q0[0],q0[1],q1[1],q1[0]],pieces=uncoveredRoadCell(q,areaMasks);if(!pieces.length)continue;
+     stats.streetSamples++;
+     for(const piece of pieces){
+      paving.triangulate(piece,[],(a,c,d)=>{b.triangle('paving',a,c,d,'#bdb7a8');qa.groundSamples.push({x:(a[0]+c[0]+d[0])/3,z:(a[2]+c[2]+d[2])/3,y:(a[1]+c[1]+d[1])/3,kind:'street',sourceId:String(road.id)});});
+      // Keep only the exposed original road edges. The clipping boundary
+      // against an adjoining paved area is a flush joint, not a kerb.
+      for(let e=0;e<piece.length;e++){const v=piece[e],u=piece[(e+1)%piece.length];if(![[0,3],[1,2]].some(([j,k])=>segmentDistance(v.x,v.z,q[j],q[k]).distance<1e-6&&segmentDistance(u.x,u.z,q[j],q[k]).distance<1e-6))continue;b.quad('stone',[v.x,ground(v.x,v.z)+.105,v.z],[u.x,ground(u.x,u.z)+.105,u.z],[u.x,ground(u.x,u.z)-.3,u.z],[v.x,ground(v.x,v.z)-.3,v.z],'#afa58f');}
+     }
     }
    }
   }

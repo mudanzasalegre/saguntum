@@ -31,6 +31,7 @@ export async function settleSourceClaims(id,options){
  if(transferred.has(id)){
   const [module,claims]=await Promise.all([import('./berenguer-context.js'),documentData('berenguer-context')]);
   options.contextData=module.withoutBerenguerClaims(options.contextData,claims);
+  if(options.santaMariaContext)options.santaMariaContext=module.withoutBerenguerClaims(options.santaMariaContext,claims);
  }
 }
 export function originalSurroundings(factory,id,options,sites){

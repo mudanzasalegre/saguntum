@@ -1,0 +1,134 @@
+{
+  "pass": true,
+  "geometryFile": "/workspace/scratch/3a1b60c196d6/plaza-v47-conforming-final.json.gz",
+  "tolerances": {
+    "xyM": 0.000025,
+    "heightM": 0.001
+  },
+  "results": [
+    {
+      "component": "santa-maria-cervantes",
+      "triangles": 8696,
+      "uniqueXYVertices": 4616,
+      "edges": 13311,
+      "unequalHeightVertices": 0,
+      "maximumSharedVertexGapM": 0,
+      "checkedTJunctions": 1,
+      "unequalTJunctions": 0,
+      "maximumTJunctionGapM": 0.000001110837544615606,
+      "worstSharedVertices": [],
+      "worstTJunctions": []
+    },
+    {
+      "component": "all-public-pavement",
+      "triangles": 59088,
+      "uniqueXYVertices": 32000,
+      "edges": 91134,
+      "unequalHeightVertices": 0,
+      "maximumSharedVertexGapM": 0,
+      "checkedTJunctions": 599,
+      "unequalTJunctions": 0,
+      "maximumTJunctionGapM": 0.0000036972288697256772,
+      "worstSharedVertices": [],
+      "worstTJunctions": []
+    },
+    {
+      "component": "santa-maria-cavallers",
+      "triangles": 7622,
+      "uniqueXYVertices": 4232,
+      "edges": 11846,
+      "unequalHeightVertices": 0,
+      "maximumSharedVertexGapM": 0,
+      "checkedTJunctions": 7,
+      "unequalTJunctions": 0,
+      "maximumTJunctionGapM": 0.000001656639895486478,
+      "worstSharedVertices": [],
+      "worstTJunctions": []
+    },
+    {
+      "component": "santa-maria-sagrario",
+      "triangles": 8479,
+      "uniqueXYVertices": 4749,
+      "edges": 13226,
+      "unequalHeightVertices": 0,
+      "maximumSharedVertexGapM": 0,
+      "checkedTJunctions": 0,
+      "unequalTJunctions": 0,
+      "maximumTJunctionGapM": 0,
+      "worstSharedVertices": [],
+      "worstTJunctions": []
+    },
+    {
+      "component": "plaza-pavimento",
+      "triangles": 17856,
+      "uniqueXYVertices": 9440,
+      "edges": 27294,
+      "unequalHeightVertices": 0,
+      "maximumSharedVertexGapM": 0,
+      "checkedTJunctions": 0,
+      "unequalTJunctions": 0,
+      "maximumTJunctionGapM": 0,
+      "worstSharedVertices": [],
+      "worstTJunctions": []
+    },
+    {
+      "component": "plaza-peixateria",
+      "triangles": 4417,
+      "uniqueXYVertices": 2440,
+      "edges": 6856,
+      "unequalHeightVertices": 0,
+      "maximumSharedVertexGapM": 0,
+      "checkedTJunctions": 0,
+      "unequalTJunctions": 0,
+      "maximumTJunctionGapM": 0,
+      "worstSharedVertices": [],
+      "worstTJunctions": []
+    },
+    {
+      "component": "plaza-carrer-castell",
+      "triangles": 4858,
+      "uniqueXYVertices": 2789,
+      "edges": 7647,
+      "unequalHeightVertices": 0,
+      "maximumSharedVertexGapM": 0,
+      "checkedTJunctions": 68,
+      "unequalTJunctions": 0,
+      "maximumTJunctionGapM": 0.0000036972288697256772,
+      "worstSharedVertices": [],
+      "worstTJunctions": []
+    },
+    {
+      "component": "plaza-carrer-major",
+      "triangles": 4839,
+      "uniqueXYVertices": 2799,
+      "edges": 7651,
+      "unequalHeightVertices": 0,
+      "maximumSharedVertexGapM": 0,
+      "checkedTJunctions": 259,
+      "unequalTJunctions": 0,
+      "maximumTJunctionGapM": 0.0000033844407880678773,
+      "worstSharedVertices": [],
+      "worstTJunctions": []
+    },
+    {
+      "component": "plaza-vila",
+      "triangles": 2321,
+      "uniqueXYVertices": 1317,
+      "edges": 3640,
+      "unequalHeightVertices": 0,
+      "maximumSharedVertexGapM": 0,
+      "checkedTJunctions": 20,
+      "unequalTJunctions": 0,
+      "maximumTJunctionGapM": 0.0000017853722837912755,
+      "worstSharedVertices": [],
+      "worstTJunctions": []
+    }
+  ],
+  "notes": [
+    "One millimetre is a mesh-continuity tolerance, not a survey-accuracy claim.",
+    "Coincident X/Z vertices must have the same height. A vertex inside a longer neighboring edge must match that edge interpolation.",
+    "T-junctions on a continuous plane are accepted. Displaced T-junctions and per-triangle height offsets fail.",
+    "Santa María and Plaza Mayor public pavement components are checked independently and together, so cross-ownership seams are included.",
+    "Intentional stone stair risers and private portico floors are excluded."
+  ]
+}

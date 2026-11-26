@@ -41,7 +41,13 @@ const FACADES={
  '844866522':{number:3,page:180,colour:'plaster',h:9.85,storeys:2,cols:3,support:'doric',bays:2,roof:'tiles',balcony:'separate',attic:3,period:'mixed'},
  '844866521':{number:2,page:181,colour:'rose',h:10.55,storeys:2,cols:2,support:'iron',bays:2,roof:'flat',balcony:'separate',archedWindows:true,cornice:'classical',period:'mixed'},
  '844866520':{number:1,page:182,colour:'plaster',h:12.85,storeys:3,cols:3,support:'iron',bays:2,roof:'flat',balcony:'separate',cornice:'classical',period:'mixed'},
- '844866523':{number:4,page:183,colour:'ochre',h:10.4,storeys:2,cols:2,support:'pilaster',bays:2,roof:'tiles',balcony:'separate',attic:3,period:'mixed'}
+ '844866523':{number:4,page:183,colour:'ochre',h:10.4,storeys:2,cols:2,support:'pilaster',bays:2,roof:'tiles',balcony:'separate',attic:3,period:'mixed'},
+ // The short southern side was previously generated as opaque Santa María
+ // context. Municipal 2011 p66 and the January 2019 photograph show two
+ // upper storeys, two window axes and a continuous, open ground-floor walk.
+ // These are square moulded piers; no Roman provenance is assigned to them.
+ 'core-3558302YJ3935N':{number:'7-8',page:66,sourceId:'pm-front-sur-2011',colour:'ochre',h:9.85,storeys:2,cols:2,support:'moulded-pier',bays:2,galleryDepth:3.30,roof:'tiles',balcony:'separate',period:'contemporary'},
+ 'core-3558301YJ3935G':{number:9,page:35,sourceId:'pm-front-sur-2010',colour:'plaster',h:9.85,storeys:2,cols:2,support:'moulded-pier',bays:2,galleryDepth:3.30,roof:'flat',frontParapet:'lowered-centre',balcony:'continuous',continuousLevels:[0],omitSupportEnds:['start'],cornice:'banded',period:'mixed'}
 };
 
 function texture(type){
@@ -89,9 +95,9 @@ const signedArea=p=>p.reduce((s,a,i)=>{const b=p[(i+1)%p.length];return s+a.x*b.
 const centroid=p=>({x:p.reduce((s,v)=>s+v.x,0)/p.length,z:p.reduce((s,v)=>s+v.z,0)/p.length});
 const clean=(p,project)=>{const a=p.map(c=>Array.isArray(c)?project(...c):c);if(a.length>2&&Math.hypot(a[0].x-a.at(-1).x,a[0].z-a.at(-1).z)<.03)a.pop();return a;};
 function frame(x,z,yaw){const c=Math.cos(yaw),s=Math.sin(yaw);return{x,z,yaw,p:(u,y,v)=>[x+u*c+v*s,y,z-u*s+v*c],world:(u,v)=>({x:x+u*c+v*s,z:z-u*s+v*c}),local:p=>({x:(p.x-x)*c-(p.z-z)*s,z:(p.x-x)*s+(p.z-z)*c}),box:(b,k,u,y,v,w,h,d,rotation=0,tint=1)=>{const p=[x+u*c+v*s,z-u*s+v*c];b.box(k,p[0],y,p[1],w,h,d,yaw+rotation,tint);}};}
-function face(poly,side,plaza){
+function face(poly,side,plaza,edgeIndex=null){
  const sign=signedArea(poly)>0?1:-1;let chosen=null;
- for(let i=0;i<poly.length;i++){const a=poly[i],b=poly[(i+1)%poly.length],len=Math.hypot(b.x-a.x,b.z-a.z);if(len<.7)continue;const nx=(b.z-a.z)/len*sign,nz=-(b.x-a.x)/len*sign,mx=(a.x+b.x)/2,mz=(a.z+b.z)/2,desired=side==='west'?nx:-nx,dist=Math.hypot(plaza.x-mx,plaza.z-mz);const score=desired*2+(side==='west'?mx:-mx)*.35+len*.012-dist*.001;if(!chosen||score>chosen.score)chosen={i,len,nx,nz,mx,mz,score};}
+ for(let i=0;i<poly.length;i++){const a=poly[i],b=poly[(i+1)%poly.length],len=Math.hypot(b.x-a.x,b.z-a.z);if(len<.7)continue;const nx=(b.z-a.z)/len*sign,nz=-(b.x-a.x)/len*sign,mx=(a.x+b.x)/2,mz=(a.z+b.z)/2,desired=side==='south'?-nz:side==='north'?nz:side==='west'?nx:-nx,dist=Math.hypot(plaza.x-mx,plaza.z-mz);const score=i===edgeIndex?1e6:desired*2+(side==='south'?-mz:side==='north'?mz:side==='west'?mx:-mx)*.35+len*.012-dist*.001;if(!chosen||score>chosen.score)chosen={i,len,nx,nz,mx,mz,score};}
  return{...chosen,f:frame(chosen.mx,chosen.mz,Math.atan2(chosen.nx,chosen.nz))};
 }
 function path(points,Class=THREE.Shape){const s=new Class();s.moveTo(...points[0]);for(const p of points.slice(1))s.lineTo(...p);s.closePath();return s;}
@@ -127,10 +133,14 @@ function crossArch(b,component,f,x,y,depth,galleryH,type,qa){
  const outer=arch(w+.42,h+.24,type);shape(b,k,outer,cross,y-.02,0,.39,[arch(w,h,type)]);
  const origin=cross.p(0,y+1.5,.65),direction=[-Math.sin(cross.yaw),0,-Math.cos(cross.yaw)];qa.openings.push({id:component,kind:'gallery-cross-arch',origin,direction,distance:1.3,width:w});
 }
-function roof(b,component,poly,faceInfo,top,style){
+function roof(b,component,poly,faceInfo,top,style,frontParapet=null){
  const K=kind=>b.key(component,'contemporary',kind),f=faceInfo.f,axis=p=>-f.local(p).z,ds=poly.map(axis),min=Math.min(...ds),max=Math.max(...ds),mid=(min+max)/2;
  if(style==='flat'){
-  planePolygon(b,K('terrace'),poly,top+.07);for(let i=0;i<poly.length;i++)wallSegment(b,K('plaster'),poly[i],poly[(i+1)%poly.length],top,top+.56,.18);
+  planePolygon(b,K('terrace'),poly,top+.07);for(let i=0;i<poly.length;i++){
+   if(i===faceInfo.i&&frontParapet==='lowered-centre'){
+    const w=faceInfo.len/2;shape(b,K('plaster'),[[-w,0],[w,0],[w,.56],[w-.36,.56],[w-.67,.29],[-w+.67,.29],[-w+.36,.56],[-w,.56]],f,top,0,.18);
+   }else wallSegment(b,K('plaster'),poly[i],poly[(i+1)%poly.length],top,top+.56,.18);
+  }
   return;
  }
  const rise=Math.min(1.45,(max-min)*.12),y=p=>top+rise*Math.max(0,1-Math.abs(axis(p)-mid)/Math.max(.01,(max-min)/2));
@@ -156,9 +166,9 @@ export function createPlazaMayor({record,project,heightAt=()=>0,visitData,contex
  const exclusions=[],patches=[],buildings=[],bindings=[],planComponents=[],qa={openings:[],floorSamples:[],facades:[],portal:null,documented:{cataloguePages:[133,134,135,136,137,138,139,140,179,180,181,182,183],almudinAddress:17,almudinParcel:'3459611YJ3935H',almudinArch:'carpanel / rebajado',historicInteriorModelled:false},section:{available:false,reason:'Domestic interiors and former warehouse plans are not established for this portal.'}};
  const rows=contextData?.coreBuildings||[];
  function addBuilding(row,secondary=false,partIndex=0){
-  const spec=FACADES[row.id]||{number:'',colour:'plaster',h:row.surfaceHeightEstimate||10,storeys:2,cols:2,support:'pilaster',bays:1,roof:'tiles',period:'mixed'},poly=clean(secondary?row.secondaryFootprints[partIndex].coordinates:row.coordinates,project);if(poly.length<3)return;
-  const info=face(poly,row.coreSide||'west',centre),f=info.f,base=heightAt(info.mx,info.mz)+.12,building=new THREE.Group();building.name=`Plaça Major ${spec.number}${secondary?' · cuerpo posterior':''}`;building.position.y=base;
-  const b=new Batch(),id=`fachada-${spec.number}${secondary?'-posterior':''}`,gallery=`soportal-${spec.number}`,upper=spec.upperColour||spec.colour,top=secondary?Math.min(spec.h,8.7):spec.h,gh=secondary?0:spec.almudin?3.70:3.45,depth=secondary?0:Math.min(spec.almudin?2.70:2.85,Math.max(2.2,Math.max(...poly.map(v=>-f.local(v).z))-.55)),len=info.len,K=kind=>b.key(id,spec.period,kind),G=kind=>b.key(gallery,'mixed',kind);
+  const body=secondary?row.secondaryFootprints[partIndex]:row,spec={...(FACADES[row.id]||{number:'',colour:'plaster',h:row.surfaceHeightEstimate||10,storeys:2,cols:2,support:'pilaster',bays:1,roof:'tiles',period:'mixed'}),...(body.modelSpec||{})},poly=clean(body.coordinates,project);if(poly.length<3)return;
+  const info=face(poly,row.coreSide||'west',centre,secondary?null:row.frontEdgeIndex),f=info.f,datum=row.groundCoordinate?project(...row.groundCoordinate):{x:info.mx,z:info.mz},base=heightAt(datum.x,datum.z)+.12,building=new THREE.Group(),suffix=secondary?(body.modelSpec?`-cuerpo-${partIndex+1}`:'-posterior'):'';building.name=`Plaça Major ${spec.number}${secondary?' · cuerpo posterior '+(partIndex+1):''}`;building.position.y=base;
+  const b=new Batch(),id=`fachada-${spec.number}${suffix}`,gallery=`soportal-${spec.number}`,upper=spec.upperColour||spec.colour,top=secondary&&!body.modelSpec?Math.min(spec.h,8.7):spec.h,gh=secondary?0:spec.almudin?3.70:3.45,depth=secondary?0:Math.min(spec.galleryDepth||(spec.almudin?2.70:2.85),Math.max(2.2,Math.max(...poly.map(v=>-f.local(v).z))-.55)),len=info.len,K=kind=>b.key(id,spec.period,kind),G=kind=>b.key(gallery,'mixed',kind);
   const floor=.12;
   const columns=spec.cols,upperH=top-gh,storey=upperH/(spec.storeys+(spec.attic?.4:0));
   for(let i=0;i<poly.length;i++){
@@ -168,11 +178,11 @@ export function createPlazaMayor({record,project,heightAt=()=>0,visitData,contex
     for(let level=0;level<spec.storeys;level++)for(let n=0;n<columns;n++){
      const wide=spec.balcony==='modern',w=wide?Math.min(1.8,len/columns-.42):Math.min(1.03,len/columns-.56),h=wide?Math.min(1.65,storey-.45):Math.min(level===0?1.85:1.6,storey-.56),x=-len/2+(n+.5)*len/columns,y=gh+level*storey+.55;
      if(y+h>top-.25)continue;const arched=spec.archedWindows&&level===1;
-     holes.push((arched?arch(w,h,'lowered'):rect(w,h)).map(([u,v])=>[u+x,v+y-gh]));windows.push({x,y,w,h,arched,balcony:level<2,continuous:spec.balcony==='modern'||spec.balcony==='continuous',shutters:spec.number===2||spec.number===5});
+     holes.push((arched?arch(w,h,'lowered'):rect(w,h)).map(([u,v])=>[u+x,v+y-gh]));windows.push({x,y,w,h,arched,balcony:level<2,continuous:spec.balcony==='modern'||(spec.balcony==='continuous'&&(!spec.continuousLevels||spec.continuousLevels.includes(level))),shutters:spec.number===2||spec.number===5});
     }
     if(spec.attic){const y=top-.68;for(let n=0;n<spec.attic;n++){const x=-len/2+(n+.5)*len/spec.attic;holes.push(rect(.32,.29,x,y-gh));f.box(b,K('shadow'),x,y+.145,-.22,.32,.29,.035);}}
     shape(b,K(upper),rect(len,top-gh),f,gh,0,.42,holes);for(const win of windows)windowDetail(b,K,f,win);
-    if(['continuous','modern'].includes(spec.balcony))for(let level=0;level<Math.min(spec.storeys,spec.balcony==='modern'?4:2);level++){const y=gh+level*storey+.48,w=len-.45;f.box(b,K('trim'),0,y-.12,.42,w,.18,.94);railing(b,K,f,0,y,.91,w-.08,.72);}
+    if(['continuous','modern'].includes(spec.balcony))for(let level=0;level<Math.min(spec.storeys,spec.balcony==='modern'?4:2);level++){if(spec.continuousLevels&&!spec.continuousLevels.includes(level))continue;const y=gh+level*storey+.48,w=len-.45;f.box(b,K('trim'),0,y-.12,.42,w,.18,.94);railing(b,K,f,0,y,.91,w-.08,.72);}
     f.box(b,K('trim'),0,gh+.06,.12,len+.10,.24,.58);
    }else{
     wallSegment(b,K(upper),a,c,secondary?-.95:gh,top,.40);
@@ -193,14 +203,18 @@ export function createPlazaMayor({record,project,heightAt=()=>0,visitData,contex
    // Taller pilasters, reused stone shafts, Doric supports and cast iron are
    // kept distinct as recorded in the individual municipal catalogue entries.
    for(let n=0;n<=spec.bays;n++){
+    if(n===0&&spec.omitSupportEnds?.includes('start')||n===spec.bays&&spec.omitSupportEnds?.includes('end'))continue;
     const x=-len/2+n*len/spec.bays,p=f.world(x,0),edge=n===0||n===spec.bays,support=edge&&spec.support==='doric'?'pilaster':spec.support;
-    if(support==='iron'&&!edge){b.cylinder(G('metal'),p.x,gh/2,p.z,.085,.115,gh,16);b.cylinder(G('metal'),p.x,.20,p.z,.17,.20,.4,16);b.cylinder(G('metal'),p.x,gh-.15,p.z,.22,.11,.24,16);f.box(b,G('metal'),x,gh-.025,0,.45,.12,.45);}
+    if(support==='moulded-pier'){f.box(b,G('plaster'),x,gh/2,0,.40,gh,.44);f.box(b,G('stone'),x,.24,0,.56,.48,.58);f.box(b,G('trim'),x,gh-.29,0,.53,.17,.55);f.box(b,G('trim'),x,gh-.15,0,.66,.13,.66);f.box(b,G('trim'),x,gh-.045,0,.73,.10,.72);}
+    else if(support==='iron'&&!edge){b.cylinder(G('metal'),p.x,gh/2,p.z,.085,.115,gh,16);b.cylinder(G('metal'),p.x,.20,p.z,.17,.20,.4,16);b.cylinder(G('metal'),p.x,gh-.15,p.z,.22,.11,.24,16);f.box(b,G('metal'),x,gh-.025,0,.45,.12,.45);}
     else if((support==='doric'||support==='stone')&&!edge){b.cylinder(G('stone'),p.x,gh/2,p.z,.20,.25,gh-.25,20,.98);b.cylinder(G('trim'),p.x,.12,p.z,.32,.32,.24,20);b.cylinder(G('trim'),p.x,gh-.20,p.z,.34,.22,.22,20);f.box(b,G('trim'),x,gh-.045,0,.62,.14,.62);}
     else{f.box(b,G(support==='iron'?'metal':'stone'),x,gh/2,0,support==='iron'?.13:.40,gh,support==='iron'?.18:.46);if(support!=='iron')for(let y=.48;y<gh;y+=.48)f.box(b,G('trim'),x,y,.236,.41,.018,.018,0,.72);}
    }
    f.box(b,G('plaster'),0,gh-.10,-depth/2,len,.22,depth+.15);
    if(spec.number>=16||spec.support==='iron')for(let x=-len/2+.15;x<len/2;x+=.48)f.box(b,G('darkWood'),x,gh-.26,-depth/2,.10,.15,depth+.05,0,.9);
-   f.box(b,G('paving'),0,floor-.05,-depth/2,len,.10,depth+.10);
+   // Keep the walk level while closing the slab down into the foundation.
+   // A 10 cm plate left a visible air gap above the base-.12 terrain cap.
+   const slabBottom=-.30;f.box(b,G('paving'),0,(floor+slabBottom)/2,-depth/2,len,floor-slabBottom,depth+.10);
    for(let x=-len/2+.15;x<len/2;x+=.41)f.box(b,G('stone'),x,floor+.009,-depth/2,.014,.014,depth,0,.72);
    if(!spec.almudin)lantern(b,G,f,0,gh-.73,-depth*.52);
    if(spec.number>=13&&spec.number<=17){crossArch(b,`arco-transversal-${spec.number}`,f,-len/2,0,depth,gh,spec.crossArch||'lowered',qa);qa.openings.at(-1).origin[1]+=base;}
@@ -219,17 +233,26 @@ export function createPlazaMayor({record,project,heightAt=()=>0,visitData,contex
     const target=bf.p(0,base+1.7,.34),shieldTarget=bf.p(0,base+sy,.38);qa.portal={address:17,parcel:'3459611YJ3935H',coordinate:[target[0]/LON-.278,39.679-target[2]/111320],target,shieldTarget,widthM:doorW,heightM:doorH,shieldWidthM:sw,shieldHeightM:sw*1.02,galleryHeightM:gh,stoneTopM:base+floor+outerH,shieldTopM:base+sy+sw*.55,beamBottomM:base+gh-.335,soffitM:base+gh-.21,arch:'lowered elliptical approximation of documented carpanel',normal:outward};
     qa.openings.push({id:'almudin-doorway',kind:'door',origin:bf.p(0,base+1.6,.8),direction:outward.map(v=>-v),distance:1.15,width:doorW});
    }
-   planComponents.push({id:gallery,label:`Soportal de Plaça Major ${spec.number}`,kind:'gallery',period:'mixed',coordinates:[f.world(-len/2,0),f.world(len/2,0),f.world(len/2,-depth),f.world(-len/2,-depth)].map(p=>[p.x/LON-.278,39.679-p.z/111320]),interpretive:true,sourceId:'pm-pep',cataloguePage:spec.page});
+   planComponents.push({id:gallery,label:`Soportal de Plaça Major ${spec.number}`,kind:'gallery',period:'mixed',coordinates:[f.world(-len/2,0),f.world(len/2,0),f.world(len/2,-depth),f.world(-len/2,-depth)].map(p=>[p.x/LON-.278,39.679-p.z/111320]),interpretive:true,sourceId:spec.sourceId||'pm-pep',cataloguePage:spec.page});
   }
   planePolygon(b,K('shadow'),poly,.02);
-  roof(b,`cubierta-${spec.number}${secondary?'-posterior':''}`,poly,info,top,spec.roof);
-  if(spec.cornice==='classical'&&!secondary){for(const [y,d]of[[top-.45,.42],[top-.23,.54],[top+.04,.64]])f.box(b,K('trim'),0,y,.12,len+.12,.13,d);for(let x=-len/2+.3;x<len/2;x+=.35)f.box(b,K('trim'),x,top-.32,.34,.11,.14,.16);}
-  b.finish(building,resources,textures);group.add(building);exclusions.push(poly);patches.push({polygon:poly,height:base-.12,margin:.30});bindings.push({group:building,base,front:info,depth,floor,number:spec.number});
+  roof(b,`cubierta-${spec.number}${suffix}`,poly,info,top,spec.roof,secondary?null:spec.frontParapet);
+  if(['classical','banded'].includes(spec.cornice)&&!secondary){for(const [y,d]of[[top-.45,.42],[top-.23,.54],[top+.04,.64]])f.box(b,K('trim'),0,y,.12,len+.12,.13,d);if(spec.cornice==='classical')for(let x=-len/2+.3;x<len/2;x+=.35)f.box(b,K('trim'),x,top-.32,.34,.11,.14,.16);}
+  b.finish(building,resources,textures);if(row.sourceKeys)building.traverse(m=>{if(m.isMesh)m.userData.sourceKeys=[...row.sourceKeys];});group.add(building);exclusions.push(poly);patches.push({polygon:poly,height:base-.12,margin:.30});bindings.push({group:building,base,front:info,depth,floor,number:spec.number});
   const entry={row,spec,group:building,polygon:poly,face:info,base,top:base+top,depth};buildings.push(entry);
-  planComponents.push({id,label:`Plaça Major ${spec.number}${secondary?' · cuerpo posterior':''}`,kind:'building',period:spec.period,coordinates:poly.map(p=>[p.x/LON-.278,39.679-p.z/111320]),sourceId:'pm-pep',cataloguePage:spec.page,interpretive:true});
-  if(!secondary)qa.facades.push({id:row.id,address:spec.number,cataloguePage:spec.page,frontWidthM:len,front:{midpoint:[info.mx,info.mz],normal:[info.nx,info.nz],yaw:f.yaw,galleryDepth:depth,baseM:base},heightM:top,upperStoreys:spec.storeys,support:spec.support,roof:spec.roof,cadastralParentIds:row.cadastralParentIds||[],cadastralParts:(row.cadastralParts||[]).map(p=>({id:p.id,levels:p.levels,height:p.surfaceHeightEstimate||null})),footprintSource:row.source||'OpenStreetMap',elevationStatus:'Visual estimate from municipal PEP photograph, institutional exterior photographs and IGN surface heights'});
+  planComponents.push({id,label:`Plaça Major ${spec.number}${secondary?' · cuerpo posterior '+(partIndex+1):''}`,kind:'building',period:spec.period,coordinates:poly.map(p=>[p.x/LON-.278,39.679-p.z/111320]),sourceId:spec.sourceId||'pm-pep',cataloguePage:spec.page,interpretive:true});
+  if(!secondary)qa.facades.push({id:row.id,address:spec.number,cataloguePage:spec.page,sourceId:spec.sourceId||'pm-pep',frontWidthM:len,front:{midpoint:[info.mx,info.mz],normal:[info.nx,info.nz],yaw:f.yaw,galleryDepth:depth,baseM:base,sourceEdgeIndex:info.i},heightM:top,upperStoreys:spec.storeys,support:spec.support,roof:spec.roof,cadastralParentIds:row.cadastralParentIds||[],cadastralParts:(row.cadastralParts||[]).map(p=>({id:p.id,levels:p.levels,height:p.surfaceHeightEstimate||null})),footprintSource:row.source||'OpenStreetMap',elevationStatus:row.elevationNote||'Visual estimate from municipal PEP photograph, institutional exterior photographs and IGN surface heights'});
  }
  for(const row of rows){addBuilding(row);for(let i=0;i<(row.secondaryFootprints||[]).length;i++)addBuilding(row,true,i);}
+ // Verify the walk through the common boundary, not only separate openings
+ // seen from the square. Both documented fronts use one level street datum.
+ const south9=buildings.find(v=>v.spec.number===9&&!v.group.name.includes('posterior')),south78=buildings.find(v=>v.spec.number==='7-8'&&!v.group.name.includes('posterior'));
+ if(south9&&south78){
+  const joint=project(...south9.row.groundCoordinate),nx=(south9.face.nx+south78.face.nx)/2,nz=(south9.face.nz+south78.face.nz)/2,dx=south78.face.mx-south9.face.mx,dz=south78.face.mz-south9.face.mz,len=Math.hypot(dx,dz),direction=[dx/len,0,dz/len],depth=Math.min(south9.depth,south78.depth),x=joint.x-nx*depth*.5,z=joint.z-nz*depth*.5;
+  qa.openings.push({id:'soportales-cierre-sur-paso',kind:'gallery-connection',origin:[x-direction[0]*.7,south9.base+1.65,z-direction[2]*.7],direction,distance:1.4,width:depth-.5});
+  for(const u of[-.5,.5])qa.floorSamples.push({point:[x+direction[0]*u,south9.base+.12,z+direction[2]*u],building:'7-8/9'});
+  qa.documented.southernFrontages={addresses:['7-8',9],sourceIds:['pm-front-sur-2010','pm-front-sur-2011','pm-photo-2019','pm-rutas'],photoYear:2019,groundCoordinate:[...south9.row.groundCoordinate],levelDifferenceM:Math.abs(south9.base-south78.base),replacementBuildingIds:[...(contextData.replacedSantaMariaBuildingIds||[])]};
+ }
  group.updateMatrixWorld(true);
  const bounds=new THREE.Box3().setFromObject(group),focuses={},stops=new Map((visitData?.stops||[]).map(s=>[s.id,s])),geographical=p=>[p.x/LON-.278,39.679-p.z/111320];
  const byNumber=n=>buildings.find(b=>b.spec.number===n&&!b.group.name.includes('posterior'));
@@ -242,7 +265,7 @@ export function createPlazaMayor({record,project,heightAt=()=>0,visitData,contex
  addFocus('plaza-conjunto','La Plaça Major y su entorno',centre,squareHeight+6,27,[55,53,-65],[25,27,-36],[], 'conjunto');
  addFocus('plaza-mercado','La plaza del mercado',[-.278628,39.679427],heightAt(...Object.values(project(-.278628,39.679427)))+1.0,14,[21,28,-30],[10,12,-17],[], 'memoria');
  if(p16){const p=p16.face.f.world(0,-1.25),n=[p16.face.nx,p16.face.nz];addFocus('plaza-soportales','Recorrer los soportales',p,p16.base+1.5,3.0,[n[0]*12,9,n[1]*12],[n[0]*5,1.3,n[1]*5],['soportal-16','arco-transversal-16','soportal-17','arco-transversal-17'],'soportales');}
- if(p5){const p=p5.face.f.world(0,.20),n=[p5.face.nx,p5.face.nz];addFocus('plaza-columnas','Columnas, pilastras y fundición',p,p5.base+1.8,3.0,[n[0]*12,5,n[1]*12],[n[0]*6,1.9,n[1]*6],['soportal-5'],'soportales');}
+ if(p5){const p=p5.face.f.world(0,.20),n=[p5.face.nx,p5.face.nz];addFocus('plaza-columnas','Columnas, pilastras y fundición',p,p5.base+1.8,3.0,[n[0]*12,5,n[1]*12],[n[0]*6,1.9,n[1]*6],['soportal-5','soportal-7-8','soportal-9'],'soportales');}
  // These coordinates register the preserved V9 stair and church. This module
  // does not duplicate their fabric or fabricate new epigraphic inscriptions.
  const churchAnchor=project(-.27910948,39.67903398),syaw=1.173,churchPoint=(x,z)=>({x:churchAnchor.x+x*Math.cos(syaw)+z*Math.sin(syaw),z:churchAnchor.z-x*Math.sin(syaw)+z*Math.cos(syaw)}),stairs=churchPoint(23.2,.35);
@@ -254,7 +277,7 @@ export function createPlazaMayor({record,project,heightAt=()=>0,visitData,contex
  addFocus('plaza-mustassaf','El control del mercado',[-.278609,39.679474],squareHeight+1.5,7,[21,22,-16],[10,10,-9],[],'memoria');
  addFocus('plaza-vila','La Puerta de la Vila y el gobierno municipal',[-.278609,39.67956],squareHeight+2,7,[20,24,-13],[11,11,-7],[],'memoria');
  const churchEnd=churchPoint(23,.35);
- addFocus('plaza-santa-maria','La plaza y Santa María',churchEnd,heightAt(churchEnd.x,churchEnd.z)+15,22,[32,30,-42],[22,24,-25],['santa-maria-escalinata'],'entorno');
+ addFocus('plaza-santa-maria','La plaza y Santa María',churchEnd,heightAt(churchEnd.x,churchEnd.z)+15,22,[32,30,-42],[22,24,-25],['santa-maria-escalinata','soportal-7-8','soportal-9'],'entorno');
  if(focuses['plaza-escudo'])focuses['plaza-escudo'].minDistance=6;
  if(focuses['plaza-almudin'])focuses['plaza-almudin'].minDistance=8;
  let selected=null,readingMode='materials',sectionOpen=false,ground=heightAt;
@@ -265,7 +288,7 @@ export function createPlazaMayor({record,project,heightAt=()=>0,visitData,contex
  function setReadingMode(mode){readingMode=mode==='periods'?'periods':'materials';apply();return readingMode;}
  function setSection(){sectionOpen=false;return false;}
  function bindGround(finalHeightAt){ground=finalHeightAt||heightAt;for(const focus of Object.values(focuses))for(const offset of[focus.offset,focus.closeOffset])offset[1]=Math.max(offset[1],ground(focus.target.x+offset[0],focus.target.z+offset[2])+2.1-focus.target.y);return group;}
- const stats={stops:Object.keys(focuses).length,coreBuildings:rows.length,buildingBodies:buildings.length,documentedFacades:qa.facades.length,meshes:meshes.length,triangles:meshes.reduce((s,m)=>s+(m.geometry.index?.count||m.geometry.attributes.position.count)/3,0),trueApertures:qa.openings.length,sourceKeys:['pm-pep','pm-rutas'],portalAddress:17,sourceBasedPortalPlacement:true,historicalInteriorInvented:false,periods:plazaMayorPeriods.map(p=>p.id)};
+ const stats={stops:Object.keys(focuses).length,coreBuildings:rows.length,buildingBodies:buildings.length,documentedFacades:qa.facades.length,meshes:meshes.length,triangles:meshes.reduce((s,m)=>s+(m.geometry.index?.count||m.geometry.attributes.position.count)/3,0),trueApertures:qa.openings.length,sourceKeys:[...new Set(['pm-pep','pm-rutas',...rows.flatMap(r=>r.sourceKeys||[])])],portalAddress:17,sourceBasedPortalPlacement:true,historicalInteriorInvented:false,periods:plazaMayorPeriods.map(p=>p.id)};
  const plan={id:'plaza-mayor',label:'Plaça Major y Puerta del Almudín',coordinate:record?.coordinate||[-.27863,39.67946],outline:contextData?.plazaOutline||[],components:planComponents,stops:Object.values(focuses).map(f=>({id:f.id,label:f.label,coordinates:f.coordinates,regionId:f.regionId})),note:'Cartografía OSM/Catastro; alzados interpretados a partir del PEP y fotografías institucionales. Las funciones desaparecidas se localizan como sectores, sin edificios ficticios.'};
  const visit={focuses,bounds,stats,periods:plazaMayorPeriods,plan,selectFocus,setReadingMode,setSection,bindGround,getState:()=>({selected,readingMode,sectionOpen}),qa,metadata:{state:'Conserved square with individually documented frontages and open porticoes',metricStatus:'Footprints cartographic; heights, roof slopes, apertures and decoration visually estimated, not photogrammetry',almudin:'Portal at present-day Plaça Major 17, cadastral 3459611. Carpanel opening and carved four-bar shield documented in municipal PEP p133 and institutional photographs.',interiors:'No reconstruction of the different eighteenth-century Almudín in Carrer Abril, no invented former council hall, oven or private interiors.'}};
  group.userData={id:'plaza-mayor',label:'Plaça Major y Puerta del Almudín',interpretation:true,cartographicOutline:true,visit,ownedResources:resources,groundY:squareHeight,bounds:{min:bounds.min.toArray(),max:bounds.max.toArray()}};
