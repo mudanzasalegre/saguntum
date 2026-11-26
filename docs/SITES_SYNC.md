@@ -1,5 +1,24 @@
 # Sincronización de Sites a GitHub
 
+## Versión 48 · Santa María, interior y panel plegable
+
+El 26 de noviembre de 2026 se publicó la revisión del entorno occidental y del Mediodía de Santa María, sus interiores y el control para ocultar y mostrar la información de las visitas. El despliegue `appgdep_6b082d51772c819199b70b81ff34c30a` terminó con estado `succeeded` en el Site original.
+
+| Evidencia | Valor |
+| --- | --- |
+| Fuente publicada en Sites | `1c7be8a5fafba5118e7b4b22e3c5ba0d372574cf` |
+| Árbol Git de la aplicación `dist/` | `3f3d120480d199ff9614d4171f5ff4f7df3a2090` |
+| Archivo registrado por Sites | 1630 archivos, 267632640 bytes |
+| Huella del contenido registrado | `sha256:dc85ddfc3cd8aedb9979b1dc378666d82fb805d9823e72e5776e582c7df53ed6` |
+
+[Portada occidental y plaza](https://saguntum-atlas-3d.monmode.chatgpt.site/#santa-maria/santa-maria-portada-principal) · [Naves](https://saguntum-atlas-3d.monmode.chatgpt.site/#santa-maria/santa-maria-naves) · [La misma parada en el Simulador](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador/santa-maria/santa-maria-naves) · [Fuentes, decisiones y alcance](SANTA_MARIA_ENTORNO_INTERIOR.md)
+
+La revisión incorpora las terrazas y escaleras de la Plaça dels Tarongers, el recinto de piedra y cruz del Mediodía, la fachada occidental corregida y tres vistas interiores con cubierta presente. Los paños y nervios laterales dejan de atravesar el tejado. Se retiran tapas, muros y relieves superpuestos, y Atlas y Simulador comparten un ajuste continuo de profundidad de cámara. El panel plegable conserva la parada y el punto de lectura.
+
+La arquitectura aprobó 81 comprobaciones; la integración de Plaza Mayor y Santa María, 31. Se verificaron 36 poses de cámara después de registrar el modelo en el terreno final. El espacio público pasó 2.156 muestras de cierre de contrahuellas, 631 tramos de perímetro, 480 puntos del conector y 1.318 muestras de encuentro con las calles. El resto de pavimentos mantiene continuidad en 51.128 triángulos y 598 uniones en T. [Evidencias y renders](../research/validation-v48/README.md)
+
+En la URL pública se comprobaron el texto y la ruta de la portada occidental, la parada de Naves, la ocultación y reapertura por teclado conservando `scrollTop=1089`, y el enlace Atlas → Simulador → Atlas manteniendo esa parada. El Simulador sirvió el mismo texto nuevo del interior. El navegador disponible no tiene WebGL 2: la comprobación pública fue de interfaz y plano; las vistas 3D se revisaron mediante las mallas reales por CPU y el diagnóstico de profundidad con Mesa/EGL. [Registro público](../research/validation-v48/production-qa.json)
+
 ## Versión 47 · Plaza Mayor y Santa María
 
 El 26 de noviembre de 2026 se publicó la revisión documentada de los soportales del cierre sur y del entorno de Santa María. El despliegue `appgdep_6b0819a6bb6c8191914b77b67101d94e` terminó con estado `succeeded` en el Site original. La aplicación utiliza los mismos modelos y pavimentos en Atlas y Simulador, con dos visitas independientes dentro de un conjunto territorial compartido.

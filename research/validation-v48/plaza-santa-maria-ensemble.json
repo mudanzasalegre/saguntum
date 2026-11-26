@@ -1,0 +1,1050 @@
+{
+  "pass": true,
+  "checks": [
+    {
+      "pass": true,
+      "label": "Both destination IDs resolve to the same territorial slot"
+    },
+    {
+      "pass": true,
+      "label": "The catalog retains two independently addressable visits"
+    },
+    {
+      "pass": true,
+      "label": "Detailed southern porticoes declare their replaced Santa María context parts",
+      "detail": [
+        "cat-3558302YJ3935N_part1-0",
+        "cat-3558302YJ3935N_part2-0",
+        "cat-3558302YJ3935N_part3-0",
+        "cat-3558302YJ3935N_part4-0",
+        "cat-3558301YJ3935G_part1-0",
+        "cat-3558301YJ3935G_part2-0",
+        "cat-3558301YJ3935G_part3-0",
+        "cat-3558301YJ3935G_part4-0"
+      ]
+    },
+    {
+      "pass": true,
+      "label": "Selecting Santa María builds the shared native ensemble"
+    },
+    {
+      "pass": true,
+      "label": "The shared slot contains two separate authored monument groups"
+    },
+    {
+      "pass": true,
+      "label": "Each monument has exactly one territorial identity in the scene",
+      "detail": [
+        "plaza-mayor",
+        "santa-maria"
+      ]
+    },
+    {
+      "pass": true,
+      "label": "All editorial stops keep their own selection and sectional behavior",
+      "detail": [
+        {
+          "place": "plaza-mayor",
+          "stop": "plaza-conjunto",
+          "resolves": true,
+          "selected": "plaza-conjunto",
+          "section": false,
+          "expectedSection": false
+        },
+        {
+          "place": "plaza-mayor",
+          "stop": "plaza-mercado",
+          "resolves": true,
+          "selected": "plaza-mercado",
+          "section": false,
+          "expectedSection": false
+        },
+        {
+          "place": "plaza-mayor",
+          "stop": "plaza-soportales",
+          "resolves": true,
+          "selected": "plaza-soportales",
+          "section": false,
+          "expectedSection": false
+        },
+        {
+          "place": "plaza-mayor",
+          "stop": "plaza-columnas",
+          "resolves": true,
+          "selected": "plaza-columnas",
+          "section": false,
+          "expectedSection": false
+        },
+        {
+          "place": "plaza-mayor",
+          "stop": "plaza-epigrafia",
+          "resolves": true,
+          "selected": "plaza-epigrafia",
+          "section": false,
+          "expectedSection": false
+        },
+        {
+          "place": "plaza-mayor",
+          "stop": "plaza-almudin",
+          "resolves": true,
+          "selected": "plaza-almudin",
+          "section": false,
+          "expectedSection": false
+        },
+        {
+          "place": "plaza-mayor",
+          "stop": "plaza-escudo",
+          "resolves": true,
+          "selected": "plaza-escudo",
+          "section": false,
+          "expectedSection": false
+        },
+        {
+          "place": "plaza-mayor",
+          "stop": "plaza-abasto",
+          "resolves": true,
+          "selected": "plaza-abasto",
+          "section": false,
+          "expectedSection": false
+        },
+        {
+          "place": "plaza-mayor",
+          "stop": "plaza-forn",
+          "resolves": true,
+          "selected": "plaza-forn",
+          "section": false,
+          "expectedSection": false
+        },
+        {
+          "place": "plaza-mayor",
+          "stop": "plaza-mustassaf",
+          "resolves": true,
+          "selected": "plaza-mustassaf",
+          "section": false,
+          "expectedSection": false
+        },
+        {
+          "place": "plaza-mayor",
+          "stop": "plaza-peixateria",
+          "resolves": true,
+          "selected": "plaza-peixateria",
+          "section": false,
+          "expectedSection": false
+        },
+        {
+          "place": "plaza-mayor",
+          "stop": "plaza-vila",
+          "resolves": true,
+          "selected": "plaza-vila",
+          "section": false,
+          "expectedSection": false
+        },
+        {
+          "place": "plaza-mayor",
+          "stop": "plaza-santa-maria",
+          "resolves": true,
+          "selected": "plaza-santa-maria",
+          "section": false,
+          "expectedSection": false
+        },
+        {
+          "place": "plaza-mayor",
+          "stop": "plaza-cavallers",
+          "resolves": true,
+          "selected": "plaza-cavallers",
+          "section": false,
+          "expectedSection": false
+        },
+        {
+          "place": "plaza-mayor",
+          "stop": "plaza-carrer-major",
+          "resolves": true,
+          "selected": "plaza-carrer-major",
+          "section": false,
+          "expectedSection": false
+        },
+        {
+          "place": "plaza-mayor",
+          "stop": "plaza-carrer-castell",
+          "resolves": true,
+          "selected": "plaza-carrer-castell",
+          "section": false,
+          "expectedSection": false
+        },
+        {
+          "place": "santa-maria",
+          "stop": "santa-maria-conjunto",
+          "resolves": true,
+          "selected": "santa-maria-conjunto",
+          "section": false,
+          "expectedSection": false
+        },
+        {
+          "place": "santa-maria",
+          "stop": "santa-maria-plaza-mayor",
+          "resolves": true,
+          "selected": "santa-maria-plaza-mayor",
+          "section": false,
+          "expectedSection": false
+        },
+        {
+          "place": "santa-maria",
+          "stop": "santa-maria-cavallers",
+          "resolves": true,
+          "selected": "santa-maria-cavallers",
+          "section": false,
+          "expectedSection": false
+        },
+        {
+          "place": "santa-maria",
+          "stop": "santa-maria-portada-norte",
+          "resolves": true,
+          "selected": "santa-maria-portada-norte",
+          "section": false,
+          "expectedSection": false
+        },
+        {
+          "place": "santa-maria",
+          "stop": "santa-maria-escalinata",
+          "resolves": true,
+          "selected": "santa-maria-escalinata",
+          "section": false,
+          "expectedSection": false
+        },
+        {
+          "place": "santa-maria",
+          "stop": "santa-maria-portada-sur",
+          "resolves": true,
+          "selected": "santa-maria-portada-sur",
+          "section": false,
+          "expectedSection": false
+        },
+        {
+          "place": "santa-maria",
+          "stop": "santa-maria-portada-principal",
+          "resolves": true,
+          "selected": "santa-maria-portada-principal",
+          "section": false,
+          "expectedSection": false
+        },
+        {
+          "place": "santa-maria",
+          "stop": "santa-maria-naves",
+          "resolves": true,
+          "selected": "santa-maria-naves",
+          "section": false,
+          "expectedSection": false
+        },
+        {
+          "place": "santa-maria",
+          "stop": "santa-maria-bovedas",
+          "resolves": true,
+          "selected": "santa-maria-bovedas",
+          "section": false,
+          "expectedSection": false
+        },
+        {
+          "place": "santa-maria",
+          "stop": "santa-maria-capillas",
+          "resolves": true,
+          "selected": "santa-maria-capillas",
+          "section": false,
+          "expectedSection": false
+        },
+        {
+          "place": "santa-maria",
+          "stop": "santa-maria-abside",
+          "resolves": true,
+          "selected": "santa-maria-abside",
+          "section": false,
+          "expectedSection": false
+        },
+        {
+          "place": "santa-maria",
+          "stop": "santa-maria-contrafuertes",
+          "resolves": true,
+          "selected": "santa-maria-contrafuertes",
+          "section": false,
+          "expectedSection": false
+        },
+        {
+          "place": "santa-maria",
+          "stop": "santa-maria-campanario",
+          "resolves": true,
+          "selected": "santa-maria-campanario",
+          "section": false,
+          "expectedSection": false
+        },
+        {
+          "place": "santa-maria",
+          "stop": "santa-maria-reloj",
+          "resolves": true,
+          "selected": "santa-maria-reloj",
+          "section": false,
+          "expectedSection": false
+        },
+        {
+          "place": "santa-maria",
+          "stop": "santa-maria-sagrario",
+          "resolves": true,
+          "selected": "santa-maria-sagrario",
+          "section": false,
+          "expectedSection": false
+        },
+        {
+          "place": "santa-maria",
+          "stop": "santa-maria-berenguer",
+          "resolves": true,
+          "selected": "santa-maria-berenguer",
+          "section": false,
+          "expectedSection": false
+        }
+      ]
+    },
+    {
+      "pass": true,
+      "label": "The nave stop enters the church with its vaulted roof visible"
+    },
+    {
+      "pass": true,
+      "label": "The optional section still reveals the authored nave construction"
+    },
+    {
+      "pass": true,
+      "label": "Opening Santa María leaves every Plaza Mayor mesh visible"
+    },
+    {
+      "pass": true,
+      "label": "Switching to Plaza Mayor closes the church section completely"
+    },
+    {
+      "pass": true,
+      "label": "Switching monuments clears the previous selection without losing the new stop"
+    },
+    {
+      "pass": true,
+      "label": "Closing a visit restores both independent selection states"
+    },
+    {
+      "pass": true,
+      "label": "Church material readings leave Plaza Mayor materials unchanged"
+    },
+    {
+      "pass": true,
+      "label": "Context buildings are rendered once across the combined scene",
+      "detail": {
+        "parts": 128
+      }
+    },
+    {
+      "pass": true,
+      "label": "Replaced generic parts are omitted from actual contextual geometry",
+      "detail": {
+        "replacements": [
+          "cat-3558302YJ3935N_part1-0",
+          "cat-3558302YJ3935N_part2-0",
+          "cat-3558302YJ3935N_part3-0",
+          "cat-3558302YJ3935N_part4-0",
+          "cat-3558301YJ3935G_part1-0",
+          "cat-3558301YJ3935G_part2-0",
+          "cat-3558301YJ3935G_part3-0",
+          "cat-3558301YJ3935G_part4-0"
+        ],
+        "omitted": [
+          "cat-3558301YJ3935G_part1-0",
+          "cat-3558301YJ3935G_part2-0",
+          "cat-3558301YJ3935G_part3-0",
+          "cat-3558301YJ3935G_part4-0",
+          "cat-3558302YJ3935N_part1-0",
+          "cat-3558302YJ3935N_part2-0",
+          "cat-3558302YJ3935N_part3-0",
+          "cat-3558302YJ3935N_part4-0"
+        ]
+      }
+    },
+    {
+      "pass": true,
+      "label": "Replacement claims still hide the corresponding territorial generic buildings"
+    },
+    {
+      "pass": true,
+      "label": "Every removed generic footprint is occupied by the detailed Plaza Mayor model",
+      "detail": [
+        {
+          "id": "cat-3558302YJ3935N_part1-0",
+          "sourceExists": true,
+          "covered": true
+        },
+        {
+          "id": "cat-3558302YJ3935N_part2-0",
+          "sourceExists": true,
+          "covered": true
+        },
+        {
+          "id": "cat-3558302YJ3935N_part3-0",
+          "sourceExists": true,
+          "covered": true
+        },
+        {
+          "id": "cat-3558302YJ3935N_part4-0",
+          "sourceExists": true,
+          "covered": true
+        },
+        {
+          "id": "cat-3558301YJ3935G_part1-0",
+          "sourceExists": true,
+          "covered": true
+        },
+        {
+          "id": "cat-3558301YJ3935G_part2-0",
+          "sourceExists": true,
+          "covered": true
+        },
+        {
+          "id": "cat-3558301YJ3935G_part3-0",
+          "sourceExists": true,
+          "covered": true
+        },
+        {
+          "id": "cat-3558301YJ3935G_part4-0",
+          "sourceExists": true,
+          "covered": true
+        }
+      ]
+    },
+    {
+      "pass": true,
+      "label": "plaza-mayor: authored footprints and source IDs are represented in the combined replacement claims",
+      "detail": {
+        "footprints": 22,
+        "idsCovered": true
+      }
+    },
+    {
+      "pass": true,
+      "label": "santa-maria: authored footprints and source IDs are represented in the combined replacement claims",
+      "detail": {
+        "footprints": 1,
+        "idsCovered": true
+      }
+    },
+    {
+      "pass": true,
+      "label": "The new 7–8 and 9 porticoes and their connecting passage remain open in the assembled scene",
+      "detail": [
+        {
+          "id": "soportal-7-8-0",
+          "clear": true,
+          "obstruction": null
+        },
+        {
+          "id": "soportal-7-8-1",
+          "clear": true,
+          "obstruction": null
+        },
+        {
+          "id": "soportal-9-0",
+          "clear": true,
+          "obstruction": null
+        },
+        {
+          "id": "soportal-9-1",
+          "clear": true,
+          "obstruction": null
+        },
+        {
+          "id": "soportales-cierre-sur-paso",
+          "clear": true,
+          "obstruction": null
+        }
+      ]
+    },
+    {
+      "pass": true,
+      "label": "The paired monument has one finite in-memory relief raster",
+      "detail": {
+        "bounds": [
+          3300,
+          -770,
+          3430,
+          -640
+        ],
+        "width": 105,
+        "height": 105
+      }
+    },
+    {
+      "pass": true,
+      "label": "The shared scene retains paving and pedestrian wall geometry",
+      "detail": {
+        "pavingCells": 39907,
+        "wallValues": 91950
+      }
+    },
+    {
+      "pass": true,
+      "label": "Portico floors from both old and new frontages remain in the walking surface",
+      "detail": [
+        {
+          "building": 10,
+          "expected": 53.363702812752,
+          "actual": 53.36,
+          "error": 0.003702812752003126
+        },
+        {
+          "building": 10,
+          "expected": 53.363702812752,
+          "actual": 53.36,
+          "error": 0.003702812752003126
+        },
+        {
+          "building": 10,
+          "expected": 53.363702812752,
+          "actual": 53.36,
+          "error": 0.003702812752003126
+        },
+        {
+          "building": 11,
+          "expected": 52.83497504211979,
+          "actual": 52.83,
+          "error": 0.0049750421197884975
+        },
+        {
+          "building": 11,
+          "expected": 52.83497504211979,
+          "actual": 52.83,
+          "error": 0.0049750421197884975
+        },
+        {
+          "building": 11,
+          "expected": 52.83497504211979,
+          "actual": 52.83,
+          "error": 0.0049750421197884975
+        },
+        {
+          "building": 12,
+          "expected": 52.29078696489081,
+          "actual": 52.29,
+          "error": 0.0007869648908140903
+        },
+        {
+          "building": 12,
+          "expected": 52.29078696489081,
+          "actual": 52.29,
+          "error": 0.0007869648908140903
+        },
+        {
+          "building": 12,
+          "expected": 52.29078696489081,
+          "actual": 52.29,
+          "error": 0.0007869648908140903
+        },
+        {
+          "building": 13,
+          "expected": 52.239999999999995,
+          "actual": 52.24,
+          "error": 7.105427357601002e-15
+        },
+        {
+          "building": 13,
+          "expected": 52.239999999999995,
+          "actual": 52.24,
+          "error": 7.105427357601002e-15
+        },
+        {
+          "building": 13,
+          "expected": 52.239999999999995,
+          "actual": 52.24,
+          "error": 7.105427357601002e-15
+        },
+        {
+          "building": 14,
+          "expected": 52.16801511617759,
+          "actual": 52.17,
+          "error": 0.0019848838224092447
+        },
+        {
+          "building": 14,
+          "expected": 52.16801511617759,
+          "actual": 52.17,
+          "error": 0.0019848838224092447
+        },
+        {
+          "building": 14,
+          "expected": 52.16801511617759,
+          "actual": 52.17,
+          "error": 0.0019848838224092447
+        },
+        {
+          "building": 15,
+          "expected": 51.57393842098789,
+          "actual": 51.57,
+          "error": 0.00393842098789321
+        },
+        {
+          "building": 15,
+          "expected": 51.57393842098789,
+          "actual": 51.57,
+          "error": 0.00393842098789321
+        },
+        {
+          "building": 15,
+          "expected": 51.57393842098789,
+          "actual": 51.57,
+          "error": 0.00393842098789321
+        },
+        {
+          "building": 1,
+          "expected": 51.239999999999995,
+          "actual": 51.24,
+          "error": 7.105427357601002e-15
+        },
+        {
+          "building": 1,
+          "expected": 51.239999999999995,
+          "actual": 51.24,
+          "error": 7.105427357601002e-15
+        },
+        {
+          "building": 1,
+          "expected": 51.239999999999995,
+          "actual": 51.24,
+          "error": 7.105427357601002e-15
+        },
+        {
+          "building": 2,
+          "expected": 51.722174821542374,
+          "actual": 51.72,
+          "error": 0.0021748215423755823
+        },
+        {
+          "building": 2,
+          "expected": 51.722174821542374,
+          "actual": 51.72,
+          "error": 0.0021748215423755823
+        },
+        {
+          "building": 2,
+          "expected": 51.722174821542374,
+          "actual": 51.72,
+          "error": 0.0021748215423755823
+        },
+        {
+          "building": 3,
+          "expected": 52.14029267280381,
+          "actual": 52.14,
+          "error": 0.0002926728038090687
+        },
+        {
+          "building": 3,
+          "expected": 52.14029267280381,
+          "actual": 52.14,
+          "error": 0.0002926728038090687
+        },
+        {
+          "building": 3,
+          "expected": 52.14029267280381,
+          "actual": 52.14,
+          "error": 0.0002926728038090687
+        },
+        {
+          "building": 4,
+          "expected": 52.32767048690406,
+          "actual": 52.33,
+          "error": 0.002329513095936875
+        },
+        {
+          "building": 4,
+          "expected": 52.32767048690406,
+          "actual": 52.33,
+          "error": 0.002329513095936875
+        },
+        {
+          "building": 4,
+          "expected": 52.32767048690406,
+          "actual": 52.33,
+          "error": 0.002329513095936875
+        },
+        {
+          "building": 5,
+          "expected": 52.85801914348182,
+          "actual": 52.86,
+          "error": 0.001980856518180474
+        },
+        {
+          "building": 5,
+          "expected": 52.85801914348182,
+          "actual": 52.86,
+          "error": 0.001980856518180474
+        },
+        {
+          "building": 5,
+          "expected": 52.85801914348182,
+          "actual": 52.86,
+          "error": 0.001980856518180474
+        },
+        {
+          "building": 17,
+          "expected": 51.239999999999995,
+          "actual": 51.24,
+          "error": 7.105427357601002e-15
+        },
+        {
+          "building": 17,
+          "expected": 51.239999999999995,
+          "actual": 51.24,
+          "error": 7.105427357601002e-15
+        },
+        {
+          "building": 17,
+          "expected": 51.239999999999995,
+          "actual": 51.24,
+          "error": 7.105427357601002e-15
+        },
+        {
+          "building": 16,
+          "expected": 51.239999999999995,
+          "actual": 51.24,
+          "error": 7.105427357601002e-15
+        },
+        {
+          "building": 16,
+          "expected": 51.239999999999995,
+          "actual": 51.24,
+          "error": 7.105427357601002e-15
+        },
+        {
+          "building": 16,
+          "expected": 51.239999999999995,
+          "actual": 51.24,
+          "error": 7.105427357601002e-15
+        },
+        {
+          "building": "7-8",
+          "expected": 53.81663676603229,
+          "actual": 53.82,
+          "error": 0.00336323396771121
+        },
+        {
+          "building": "7-8",
+          "expected": 53.81663676603229,
+          "actual": 53.82,
+          "error": 0.00336323396771121
+        },
+        {
+          "building": "7-8",
+          "expected": 53.81663676603229,
+          "actual": 53.82,
+          "error": 0.00336323396771121
+        },
+        {
+          "building": 9,
+          "expected": 53.81663676603229,
+          "actual": 53.82,
+          "error": 0.00336323396771121
+        },
+        {
+          "building": 9,
+          "expected": 53.81663676603229,
+          "actual": 53.82,
+          "error": 0.00336323396771121
+        },
+        {
+          "building": 9,
+          "expected": 53.81663676603229,
+          "actual": 53.82,
+          "error": 0.00336323396771121
+        },
+        {
+          "building": "7-8/9",
+          "expected": 53.81663676603229,
+          "actual": 53.82,
+          "error": 0.00336323396771121
+        },
+        {
+          "building": "7-8/9",
+          "expected": 53.81663676603229,
+          "actual": 53.82,
+          "error": 0.00336323396771121
+        }
+      ]
+    },
+    {
+      "pass": true,
+      "label": "The full Cavallers–Sagrari return has exposed paving above the final ground",
+      "detail": [
+        {
+          "local": [
+            8.103,
+            17.656
+          ],
+          "ground": 55.34993317996813,
+          "paved": true,
+          "highest": 55.45493194225794,
+          "clearance": 0.10499876228981009,
+          "layeredSpread": 0,
+          "components": [
+            "santa-maria-sagrario"
+          ]
+        },
+        {
+          "local": [
+            7.264,
+            16.467
+          ],
+          "ground": 55.526788607175696,
+          "paved": true,
+          "highest": 55.631787321697345,
+          "clearance": 0.1049987145216491,
+          "layeredSpread": 0,
+          "components": [
+            "santa-maria-sagrario"
+          ]
+        },
+        {
+          "local": [
+            15.339,
+            19.134
+          ],
+          "ground": 54.42767089921475,
+          "paved": true,
+          "highest": 54.53267242283683,
+          "clearance": 0.10500152362207871,
+          "layeredSpread": 0,
+          "components": [
+            "santa-maria-sagrario"
+          ]
+        },
+        {
+          "local": [
+            22.514,
+            18.074
+          ],
+          "ground": 53.90937879139867,
+          "paved": true,
+          "highest": 54.01437812574316,
+          "clearance": 0.10499933434448394,
+          "layeredSpread": 0,
+          "components": [
+            "santa-maria-sagrario"
+          ]
+        },
+        {
+          "local": [
+            25.921,
+            17.031
+          ],
+          "ground": 53.74279462978527,
+          "paved": true,
+          "highest": 53.84969213941038,
+          "clearance": 0.10689750962510658,
+          "layeredSpread": 0,
+          "components": [
+            "santa-maria-sagrario"
+          ]
+        },
+        {
+          "local": [
+            28.191,
+            18.035
+          ],
+          "ground": 53.53316309345894,
+          "paved": true,
+          "highest": 53.638371363515475,
+          "clearance": 0.10520827005653643,
+          "layeredSpread": 0,
+          "components": [
+            "santa-maria-sagrario"
+          ]
+        },
+        {
+          "local": [
+            20.852,
+            14.989
+          ],
+          "ground": 54.01754766709588,
+          "paved": true,
+          "highest": 54.12806679782072,
+          "clearance": 0.11051913072483899,
+          "layeredSpread": 0,
+          "components": [
+            "santa-maria-cavallers"
+          ]
+        },
+        {
+          "local": [
+            30.311,
+            14.907
+          ],
+          "ground": 53.22062861778416,
+          "paved": true,
+          "highest": 53.327944177638756,
+          "clearance": 0.10731555985459806,
+          "layeredSpread": 0,
+          "components": [
+            "santa-maria-cavallers"
+          ]
+        }
+      ]
+    },
+    {
+      "pass": true,
+      "label": "The street return has one shared surface without overlapping pavement levels",
+      "detail": [
+        {
+          "local": [
+            8.103,
+            17.656
+          ],
+          "ground": 55.34993317996813,
+          "paved": true,
+          "highest": 55.45493194225794,
+          "clearance": 0.10499876228981009,
+          "layeredSpread": 0,
+          "components": [
+            "santa-maria-sagrario"
+          ]
+        },
+        {
+          "local": [
+            7.264,
+            16.467
+          ],
+          "ground": 55.526788607175696,
+          "paved": true,
+          "highest": 55.631787321697345,
+          "clearance": 0.1049987145216491,
+          "layeredSpread": 0,
+          "components": [
+            "santa-maria-sagrario"
+          ]
+        },
+        {
+          "local": [
+            15.339,
+            19.134
+          ],
+          "ground": 54.42767089921475,
+          "paved": true,
+          "highest": 54.53267242283683,
+          "clearance": 0.10500152362207871,
+          "layeredSpread": 0,
+          "components": [
+            "santa-maria-sagrario"
+          ]
+        },
+        {
+          "local": [
+            22.514,
+            18.074
+          ],
+          "ground": 53.90937879139867,
+          "paved": true,
+          "highest": 54.01437812574316,
+          "clearance": 0.10499933434448394,
+          "layeredSpread": 0,
+          "components": [
+            "santa-maria-sagrario"
+          ]
+        },
+        {
+          "local": [
+            25.921,
+            17.031
+          ],
+          "ground": 53.74279462978527,
+          "paved": true,
+          "highest": 53.84969213941038,
+          "clearance": 0.10689750962510658,
+          "layeredSpread": 0,
+          "components": [
+            "santa-maria-sagrario"
+          ]
+        },
+        {
+          "local": [
+            28.191,
+            18.035
+          ],
+          "ground": 53.53316309345894,
+          "paved": true,
+          "highest": 53.638371363515475,
+          "clearance": 0.10520827005653643,
+          "layeredSpread": 0,
+          "components": [
+            "santa-maria-sagrario"
+          ]
+        },
+        {
+          "local": [
+            20.852,
+            14.989
+          ],
+          "ground": 54.01754766709588,
+          "paved": true,
+          "highest": 54.12806679782072,
+          "clearance": 0.11051913072483899,
+          "layeredSpread": 0,
+          "components": [
+            "santa-maria-cavallers"
+          ]
+        },
+        {
+          "local": [
+            30.311,
+            14.907
+          ],
+          "ground": 53.22062861778416,
+          "paved": true,
+          "highest": 53.327944177638756,
+          "clearance": 0.10731555985459806,
+          "layeredSpread": 0,
+          "components": [
+            "santa-maria-cavallers"
+          ]
+        }
+      ]
+    },
+    {
+      "pass": true,
+      "label": "The worker construction also contains both monuments",
+      "detail": [
+        "plaza-mayor",
+        "santa-maria"
+      ]
+    },
+    {
+      "pass": true,
+      "label": "Worker and interactive construction contain the same mesh count",
+      "detail": {
+        "worker": 443,
+        "native": 443
+      }
+    },
+    {
+      "pass": true,
+      "label": "Worker and interactive construction grade the same ground"
+    },
+    {
+      "pass": true,
+      "label": "Worker and interactive construction retain identical pedestrian paving"
+    },
+    {
+      "pass": true,
+      "label": "All assembled geometry is finite"
+    }
+  ],
+  "failures": [],
+  "buildAndCheckMs": 4126.396721,
+  "counts": {
+    "visits": 2,
+    "stops": 32,
+    "meshes": 443,
+    "contextParts": 128,
+    "replacedParts": 8
+  },
+  "limitations": [
+    "CPU checks exercise real Three.js geometry and runtime construction. Browser GPU rendering and visual composition are checked separately.",
+    "Worker QA uses the worker construction path before serialization; the bundled worker must also be rebuilt."
+  ]
+}

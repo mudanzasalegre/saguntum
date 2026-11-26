@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import {pointInPolygon,segmentDistance,roadWidth} from './urban-surface.js';
 import {createPavingTessellator} from './conforming-paving.js';
+import {createSantaMariaPublicRealm} from './santa-maria-public-realm.js';
 
 // Compact, source-registered surroundings of Santa María. The ordinary houses
 // are deliberately schematic: source footprints, patios, storeys and roof-height
@@ -92,6 +93,9 @@ export function createSantaMariaContext({data={},landmarks={},project=projectDef
  const exclusions=[],patches=[],excludedBuildingIds=new Set((contextData.excludedBuildingIds||sourceBuildings.map(b=>b.id)).map(String)),excludedRoadIds=new Set((contextData.excludedRoadIds||sourceRoads.map(r=>r.id)).map(String)),components=[];
  const stats={buildingParts:renderBuildings.length,parentParcels:new Set(renderBuildings.map(b=>b.parentId||b.id)).size,sourceBuildingParts:sourceBuildings.length,replacedBuildingParts:sourceBuildings.length-renderBuildings.length,footprintsPreserved:true,courtyards:renderBuildings.reduce((s,b)=>s+(b.holes?.length||0),0),sourceHeight:0,ignHeight:0,storeyHeight:0,fallbackHeight:0,northStairTreads:0,northApronSegments:0,corridorSurfaces:corridorSurfaces.length,corridorAreaM2:corridorSurfaces.reduce((sum,s)=>sum+(s.areaM2||0),0),streetSamples:0,roofCorrections:0,maximumRoofCorrectionM:0,inscriptionPanels:2};
  const qa={buildings:[],stairSurfaces:[],groundSamples:[],sourcePreservation:[],sourceKeys:(contextData.sources||[]).map(s=>s.id),limitations:[contextData.facadeNote,contextData.roofNote,contextData.stairNote,contextData.streetNote].filter(Boolean)};
+ const publicRealm=createSantaMariaPublicRealm({frame:{base,yaw,toWorld:world,toLocal:local,footprintLocal:worldOutline.map(p=>local(p.x,p.z))},sourceSurfaces,project,heightAt});
+ patches.push(...publicRealm.patches);exclusions.push(...publicRealm.exclusions);components.push(...publicRealm.components);qa.publicRealm=publicRealm.qa;qa.limitations.push(...publicRealm.qa.limitations);
+ stats.westernTerraces=sourceSurfaces.length?publicRealm.qa.westernSquare.terraces:0;stats.southStoneEnclosure=true;
  let selected=null,readingMode='materials',currentGround=heightAt,disposed=false;
  const sourcePolygons=renderBuildings.map(b=>({record:b,p:clean(b.coordinates,project),holes:(b.holes||[]).map(r=>clean(r,project))})).filter(b=>b.p.length>=3);
  qa.replacedBuildingIds=sourceBuildings.filter(b=>replacementIds.has(String(b.id))).map(b=>String(b.id));
@@ -216,8 +220,8 @@ export function createSantaMariaContext({data={},landmarks={},project=projectDef
  }
  function buildSurfaces(ground){
   streetBatches.clear();qa.groundSamples.length=0;stats.streetSamples=0;
-  const paving=createPavingTessellator(ground),pave=(s,id,tint)=>{const p=clean(s.coordinates,project),holes=(s.holes||[]).map(r=>clean(r,project)),b=batchFor(id);paving.triangulate(p,holes,(a,c,d)=>{b.triangle('paving',a,c,d,tint);qa.groundSamples.push({x:(a[0]+c[0]+d[0])/3,z:(a[2]+c[2]+d[2])/3,y:(a[1]+c[1]+d[1])/3});});};
-  for(const s of sourceSurfaces)pave(s,s.id||'santa-maria-cervantes','#d2c6ae');
+  const paving=createPavingTessellator(ground),pave=(s,id,tint)=>{const p=clean(s.coordinates,project),holes=(s.holes||[]).map(r=>clean(r,project)),b=batchFor(id);paving.triangulate(p,holes,(a,c,d)=>{for(const [u,v,w]of publicRealm.clipPaving(a,c,d)){b.triangle('paving',u,v,w,tint);qa.groundSamples.push({x:(u[0]+v[0]+w[0])/3,z:(u[2]+v[2]+w[2])/3,y:(u[1]+v[1]+w[1])/3});}});};
+  for(const s of sourceSurfaces)if(!publicRealm.replacedSurfaceIds.has(s.id))pave(s,s.id||'santa-maria-cervantes','#d2c6ae');
   for(const s of corridorSurfaces)pave(s,s.component||'santa-maria-cavallers','#c3baa7');
   // Legacy data can still build the narrow apron. With the documented public
   // envelope, its paving and the three centre-line ribbons have a single owner.
@@ -225,7 +229,7 @@ export function createSantaMariaContext({data={},landmarks={},project=projectDef
   qa.pavingTessellation={...paving.stats,gridStepM:.5,offsetM:.105,heightPolicy:'Shared grid vertex heights and shared cell planes; no independent per-face lift.'};
   const hard=(x,z)=>pointInPolygon(x,z,worldOutline)||occupied(x,z)||pointInPolygon(x,z,qa.northStair.footprint);
   for(const road of sourceRoads){
-   if(road.area==='yes'||String(road.id)==='733321159'||(corridorSurfaces.length&&corridorRoadIds.has(String(road.id))))continue;
+   if(road.area==='yes'||String(road.id)==='733321159'||publicRealm.replacedRoadIds.has(String(road.id))||(corridorSurfaces.length&&corridorRoadIds.has(String(road.id))))continue;
    const component=String(road.id)==='87554148'?'santa-maria-sagrario':String(road.id).startsWith('141920985')?'santa-maria-cervantes':'santa-maria-cavallers',b=batchFor(component),p=clean(road.coordinates,project),width=roadWidth(road);
    for(let i=1;i<p.length;i++){const a=p[i-1],c=p[i],length=Math.hypot(c.x-a.x,c.z-a.z);if(length<.04)continue;const nx=-(c.z-a.z)/length,nz=(c.x-a.x)/length,count=Math.ceil(length/1.2);
     const cross=t=>{const x=a.x+(c.x-a.x)*t,z=a.z+(c.z-a.z)*t,halves=[];for(const side of[-1,1]){let distance=width/2;for(let d=.18;d<width/2;d+=.18)if(hard(x+nx*d*side,z+nz*d*side)){distance=Math.max(.08,d-.12);break;}halves.push(distance);}return[{x:x-nx*halves[0],z:z-nz*halves[0]},{x:x+nx*halves[1],z:z+nz*halves[1]}];};
@@ -251,11 +255,11 @@ export function createSantaMariaContext({data={},landmarks={},project=projectDef
  const offset=a=>[a[0]*co+a[2]*si,a[1],-a[0]*si+a[2]*co];
  function updateFocuses(){for(const[id,coords]of Object.entries(focusLocals)){const spec=focusSpecs[id];if(!spec)continue;const p=world(...coords),target=new THREE.Vector3(p.x,spec.height(p.x,p.z),p.z),far=offset(spec.far),near=offset(spec.near);for(const v of[far,near])v[1]=Math.max(v[1],currentGround(target.x+v[0],target.z+v[2])+2.5-target.y);const bounds=new THREE.Box3(new THREE.Vector3(p.x-7,target.y-3,p.z-7),new THREE.Vector3(p.x+7,target.y+9,p.z+7));focuses[id]={id,label:spec.label,regionId:'sagunto',coordinate:geographical(p.x,p.z),coordinates:geographical(p.x,p.z),modelLocal:coords,target,offset:far,closeOffset:near,bounds,components:[id],kind:'context',sourceConfidence:'Source position; architectural detail and camera framing are interpretive.'};}}
  function applyMaterials(){group.traverse(mesh=>{if(!mesh.isMesh)return;const d=mesh.userData,m=mesh.material,periods=readingMode==='periods',vertexColors=!periods;if(m.vertexColors!==vertexColors){m.vertexColors=vertexColors;m.needsUpdate=true;}const map=periods?null:d.baseMap;if(m.map!==map){m.map=map;m.needsUpdate=true;}m.color.copy(d.baseColor);if(periods)m.color.set(PERIOD_COLORS[d.period]||PERIOD_COLORS.mixed);m.emissive.set(selected===d.component?'#4a3517':'#000000');m.emissiveIntensity=selected===d.component?.16:0;});}
- function bindGround(ground){if(disposed||typeof ground!=='function')return;currentGround=ground;disposeLayer(grounded);buildBuildings(ground);buildSurfaces(ground);updateFocuses();applyMaterials();group.updateMatrixWorld(true);return api;}
+ function bindGround(ground){if(disposed||typeof ground!=='function')return;currentGround=ground;disposeLayer(grounded);buildBuildings(ground);buildSurfaces(ground);publicRealm.build({Batch,resources,textures,ground,add:part=>grounded.add(part)});updateFocuses();applyMaterials();group.updateMatrixWorld(true);return api;}
  function setReadingMode(mode){readingMode=mode==='periods'?'periods':'materials';applyMaterials();return readingMode;}
- function selectFocus(id){selected=id&&focuses[id]?id:null;applyMaterials();return selected?focuses[selected]:null;}
+ function selectFocus(id){selected=publicRealm.selectionAliases[id]||(id&&focuses[id]?id:null);applyMaterials();return focuses[selected]||null;}
  function dispose(){if(disposed)return;disposed=true;for(const g of resources.geometries)g.dispose();for(const m of resources.materials)m.dispose();for(const t of resources.textures)t.dispose();resources.geometries.length=resources.materials.length=resources.textures.length=0;group.clear();}
- for(const s of sourceSurfaces)components.push({id:s.id||'santa-maria-cervantes',coordinates:s.coordinates,kind:'plaza',period:'mixed',interpretive:false,sourceId:s.sourceId});
+ for(const s of sourceSurfaces)components.push({id:s.id||'santa-maria-cervantes',coordinates:s.coordinates,kind:'plaza',period:'mixed',interpretive:publicRealm.replacedSurfaceIds.has(s.id),sourceId:s.sourceId});
  for(const s of corridorSurfaces)components.push({id:s.id,coordinates:s.coordinates,holes:s.holes||[],kind:'street',closed:true,period:'mixed',interpretive:true,sourceIds:s.sourceIds});
  for(const r of sourceRoads)if(r.area!=='yes'&&String(r.id)!=='733321159')components.push({id:'street-'+r.id,coordinates:r.coordinates,kind:r.kind==='steps'?'stairs':'street',closed:false,period:'mixed',interpretive:false,sourceId:r.id});
  const plan={outline,components,center:coordinate,yaw},bounds=new THREE.Box3();

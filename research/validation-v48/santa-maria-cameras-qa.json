@@ -1,0 +1,710 @@
+{
+  "pass": true,
+  "method": "CPU final terrain binding + exact app.js preset() + shipped Three.js + actual stopCamera()",
+  "viewports": {
+    "wide": {
+      "width": 1440,
+      "height": 900
+    },
+    "portrait": {
+      "width": 390,
+      "height": 844
+    }
+  },
+  "panel": "open",
+  "counts": {
+    "stops": 16,
+    "atlasFrames": 2,
+    "aspects": 2,
+    "poses": 36,
+    "interiors": 3
+  },
+  "inputs": {
+    "presetSha256": "bf1baecc8a4a1ad7f5bddf0931505bd53065d0a4c1d7c4e3c66bdfb2dfbcec78",
+    "editorialSceneFrameSha256": "96886873c8c082d93b8df16a4ae77f8e14185c91c9ace2022f9023597ff2e05f",
+    "santaMariaSha256": "9d0340b720a8db135d88339b180f7718396470f30802838326ae9dd78cb46a49",
+    "santaMariaContextSha256": "797e61667ca62020f0b21ce2d153bbc45d91fd0fe152ea1b22f5dd042cbcd597",
+    "terrainSha256": "199e257e1398562b01cccd1ee0fe285a6f6655b73b1c552cb3747787d240a278",
+    "urbanSurfaceSha256": "fa2c95b186e19787cc37eb566e9ebc6b44ecbb85cb27ee7119cdfb344247fe98"
+  },
+  "groundBinding": {
+    "assembly": "createCivicHeritage + createSacredHeritage + createUrbanSurface + buildTerrainGeometry + bindGround",
+    "focusSurface": "terrain.meshHeightAt",
+    "exportedGroundDatum": "raw createHeightSampler(elevation)",
+    "changes": [
+      {
+        "id": "santa-maria-conjunto",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "santa-maria-portada-norte",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "santa-maria-escalinata",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "santa-maria-portada-sur",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "santa-maria-portada-principal",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "santa-maria-naves",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "santa-maria-bovedas",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "santa-maria-capillas",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "santa-maria-abside",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "santa-maria-contrafuertes",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "santa-maria-campanario",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "santa-maria-reloj",
+        "targetShiftM": 0,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "santa-maria-plaza-mayor",
+        "targetShiftM": 0.013194515386786065,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "santa-maria-cavallers",
+        "targetShiftM": 0.01953716362652358,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "santa-maria-sagrario",
+        "targetShiftM": 0.004957295988603505,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      },
+      {
+        "id": "santa-maria-berenguer",
+        "targetShiftM": 1.2630651424246508,
+        "eyeOffsetShiftM": 0,
+        "closeOffsetShiftM": 0
+      }
+    ]
+  },
+  "overviewNote": "No selected stop: visit.bounds with church default offset; distinct from the conjunto stop.",
+  "interiorIds": [
+    "santa-maria-naves",
+    "santa-maria-bovedas",
+    "santa-maria-capillas"
+  ],
+  "maxPoseErrorM": 0.0004992826682155282,
+  "maxAdapterErrorM": 0,
+  "maxFovErrorDeg": 7.105427357601002e-15,
+  "simulatorRegistration": {
+    "projection": "ETRS89 / UTM 30N",
+    "verticalOffsetM": 7.25
+  },
+  "unchanged": [
+    {
+      "file": "dist/assets/territory/visit-cameras.json",
+      "otherMonuments": 31,
+      "unchangedOutsideSantaMaria": true,
+      "outsideValueSha256": "75e2827a1751cb18e7d8ad7fd7a066e1eef85072cb07368675e9562b605e99e1",
+      "otherMonumentsSha256": "fa95b38d9525ce3d4dd9d6c8f6489f1a6767f135a4183b10dd0bf068654b450e"
+    },
+    {
+      "file": "dist/assets/territory/atlas-frames.json",
+      "otherMonuments": 31,
+      "unchangedOutsideSantaMaria": true,
+      "outsideValueSha256": "e40a23c27192d4847f07a8102a0b418530b50f1981edea436b12971cb28f527e",
+      "otherMonumentsSha256": "39650820a24dd042989d1800acf9689e264f94d4d1292243a484b2d54b65a5aa"
+    }
+  ],
+  "samples": [
+    {
+      "kind": "stop",
+      "id": "santa-maria-conjunto",
+      "view": "wide",
+      "eyeErrorM": 0.000034955304215600336,
+      "targetErrorM": 0.0000305511474607556,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "santa-maria-conjunto",
+      "view": "portrait",
+      "eyeErrorM": 0.000013282788927426736,
+      "targetErrorM": 0.0000305511474607556,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "santa-maria-plaza-mayor",
+      "view": "wide",
+      "eyeErrorM": 0.00004828093539543943,
+      "targetErrorM": 0.00003746460083675629,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "santa-maria-plaza-mayor",
+      "view": "portrait",
+      "eyeErrorM": 0.00002518565459297406,
+      "targetErrorM": 0.00003746460083675629,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "santa-maria-cavallers",
+      "view": "wide",
+      "eyeErrorM": 0.00003224135586776811,
+      "targetErrorM": 0.000045949919183385646,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "santa-maria-cavallers",
+      "view": "portrait",
+      "eyeErrorM": 0.000023341158311041,
+      "targetErrorM": 0.000045949919183385646,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "santa-maria-portada-norte",
+      "view": "wide",
+      "eyeErrorM": 0.00003475065837221791,
+      "targetErrorM": 0.00004167366178364773,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "santa-maria-portada-norte",
+      "view": "portrait",
+      "eyeErrorM": 0.000042123092967472076,
+      "targetErrorM": 0.00004167366178364773,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "santa-maria-escalinata",
+      "view": "wide",
+      "eyeErrorM": 0.000019220556193744187,
+      "targetErrorM": 0.00004016909367621224,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "santa-maria-escalinata",
+      "view": "portrait",
+      "eyeErrorM": 0.000040942897969742376,
+      "targetErrorM": 0.00004016909367621224,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "santa-maria-portada-sur",
+      "view": "wide",
+      "eyeErrorM": 0.000040554856070684764,
+      "targetErrorM": 0.00004144863746091687,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "santa-maria-portada-sur",
+      "view": "portrait",
+      "eyeErrorM": 0.00004722534765733144,
+      "targetErrorM": 0.00004144863746091687,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "santa-maria-portada-principal",
+      "view": "wide",
+      "eyeErrorM": 0.000034891169050865756,
+      "targetErrorM": 0.000044485294992568924,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 7.105427357601002e-15
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "santa-maria-portada-principal",
+      "view": "portrait",
+      "eyeErrorM": 0.000041877437979565,
+      "targetErrorM": 0.000044485294992568924,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 7.105427357601002e-15
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "santa-maria-naves",
+      "view": "wide",
+      "eyeErrorM": 0.00004457583455064196,
+      "targetErrorM": 0.000036883350819749694,
+      "authoredEye": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "santa-maria-naves",
+      "view": "portrait",
+      "eyeErrorM": 0.00004457583455064196,
+      "targetErrorM": 0.000036883350819749694,
+      "authoredEye": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "santa-maria-bovedas",
+      "view": "wide",
+      "eyeErrorM": 0.000047391344566882765,
+      "targetErrorM": 0.00003703078637040669,
+      "authoredEye": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "santa-maria-bovedas",
+      "view": "portrait",
+      "eyeErrorM": 0.000047391344566882765,
+      "targetErrorM": 0.00003703078637040669,
+      "authoredEye": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "santa-maria-capillas",
+      "view": "wide",
+      "eyeErrorM": 0.00003752559166514402,
+      "targetErrorM": 0.000026938028447887064,
+      "authoredEye": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "santa-maria-capillas",
+      "view": "portrait",
+      "eyeErrorM": 0.00003752559166514402,
+      "targetErrorM": 0.000026938028447887064,
+      "authoredEye": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "santa-maria-abside",
+      "view": "wide",
+      "eyeErrorM": 0.00003932687570085136,
+      "targetErrorM": 0.000045575284372212366,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "santa-maria-abside",
+      "view": "portrait",
+      "eyeErrorM": 0.00003598021545769825,
+      "targetErrorM": 0.000045575284372212366,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "santa-maria-contrafuertes",
+      "view": "wide",
+      "eyeErrorM": 0.000038500157018006576,
+      "targetErrorM": 0.00004898631614480564,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "santa-maria-contrafuertes",
+      "view": "portrait",
+      "eyeErrorM": 0.00004639211161361345,
+      "targetErrorM": 0.00004898631614480564,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "santa-maria-campanario",
+      "view": "wide",
+      "eyeErrorM": 0.000021244510321594134,
+      "targetErrorM": 0.00003612712852785194,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "santa-maria-campanario",
+      "view": "portrait",
+      "eyeErrorM": 0.00004806196474760327,
+      "targetErrorM": 0.00003612712852785194,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "santa-maria-reloj",
+      "view": "wide",
+      "eyeErrorM": 0.00004660863999106368,
+      "targetErrorM": 0.00004778891431556076,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "santa-maria-reloj",
+      "view": "portrait",
+      "eyeErrorM": 0.00004213626648663649,
+      "targetErrorM": 0.00004778891431556076,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "santa-maria-sagrario",
+      "view": "wide",
+      "eyeErrorM": 0.00003709273835283966,
+      "targetErrorM": 0.000025708012216796305,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "santa-maria-sagrario",
+      "view": "portrait",
+      "eyeErrorM": 0.000040842356838766136,
+      "targetErrorM": 0.000025708012216796305,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "santa-maria-berenguer",
+      "view": "wide",
+      "eyeErrorM": 0.000045702347705400825,
+      "targetErrorM": 0.000038002182648710914,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "santa-maria-berenguer",
+      "view": "portrait",
+      "eyeErrorM": 0.00004171073861414243,
+      "targetErrorM": 0.000038002182648710914,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "overview",
+      "id": "santa-maria",
+      "view": "wide",
+      "eyeErrorM": 0.0004992826682155282,
+      "targetErrorM": 0.0003305511474565037,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "overview",
+      "id": "santa-maria",
+      "view": "portrait",
+      "eyeErrorM": 0.0004149033347857767,
+      "targetErrorM": 0.0003305511474565037,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "exterior",
+      "id": "santa-maria-cavallers",
+      "view": "wide",
+      "eyeErrorM": 0.00039133002024627217,
+      "targetErrorM": 0.0004540500808190018,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "exterior",
+      "id": "santa-maria-cavallers",
+      "view": "portrait",
+      "eyeErrorM": 0.0003919950484370105,
+      "targetErrorM": 0.0004540500808190018,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    }
+  ],
+  "interiorAspectChecks": [
+    {
+      "id": "santa-maria-naves",
+      "aspect": 0.3,
+      "stationary": true
+    },
+    {
+      "id": "santa-maria-bovedas",
+      "aspect": 0.3,
+      "stationary": true
+    },
+    {
+      "id": "santa-maria-capillas",
+      "aspect": 0.3,
+      "stationary": true
+    },
+    {
+      "id": "santa-maria-naves",
+      "aspect": 0.85,
+      "stationary": true
+    },
+    {
+      "id": "santa-maria-bovedas",
+      "aspect": 0.85,
+      "stationary": true
+    },
+    {
+      "id": "santa-maria-capillas",
+      "aspect": 0.85,
+      "stationary": true
+    },
+    {
+      "id": "santa-maria-naves",
+      "aspect": 2.4,
+      "stationary": true
+    },
+    {
+      "id": "santa-maria-bovedas",
+      "aspect": 2.4,
+      "stationary": true
+    },
+    {
+      "id": "santa-maria-capillas",
+      "aspect": 2.4,
+      "stationary": true
+    }
+  ],
+  "errors": []
+}

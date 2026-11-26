@@ -12,8 +12,8 @@
   "readingModeNote": "Los colores distinguen fábrica medieval, transformaciones de la Edad Moderna, reconstrucción contemporánea, encuentros de etapas y esquemas interpretativos. Clasifican componentes de la maqueta, no cada piedra del edificio.",
   "timelineIntroduction": "Una construcción prolongada, pérdidas y conservación: las fechas distinguen campañas arquitectónicas, acontecimientos y anuncios documentados.",
   "visitAriaLabel": "Visita documentada a Santa María y su entorno",
-  "sectionInstructions": "Retira las cubiertas y parte de los cerramientos para observar naves, pilares, arcos y capillas.",
-  "sectionNote": "Corte didáctico: conserva las nervaduras y la cabecera como referencias espaciales. No representa una ruina histórica ni reconstruye la cripta.",
+  "sectionInstructions": "Las paradas interiores conservan la cubierta. Abre Corte cuando quieras retirar tejados, bóvedas y parte de los cerramientos para estudiar las naves, los pilares y las capillas.",
+  "sectionNote": "Corte didáctico opcional: conserva las nervaduras y la cabecera como referencias espaciales. No representa una ruina histórica ni reconstruye la cripta.",
   "regions": [
     {
       "id": "ciudad",
@@ -295,7 +295,7 @@
           "confidence": "documented"
         }
       ],
-      "lookFor": "Compara el pavimento de la calle, la base vertical del templo y el rellano del acceso. Sigue después la continuidad hacia la Plaça Major y la plaza de Cervantes.",
+      "lookFor": "Compara el pavimento de la calle, la base vertical del templo y el rellano del acceso. Sigue después la continuidad hacia la Plaça Major y la Plaça dels Tarongers, antigua plaza de Cervantes.",
       "modelNote": "El paso pavimentado conserva el trazado cartográfico. La cota y la anchura de sus encuentros con la fábrica son aproximaciones; el foco de cámara ayuda a leer el conjunto.",
       "sourceIds": [
         "sm-plaza",
@@ -303,7 +303,8 @@
         "sm-lapidas-2024",
         "sm-context-catastro",
         "sm-context-mds",
-        "sm-context-pnoa"
+        "sm-context-pnoa",
+        "sm-tarongers-name"
       ],
       "confidence": "documented",
       "coordinateConfidence": "approximate",
@@ -451,8 +452,8 @@
         -0.27920315,
         39.67885429
       ],
-      "intro": "Rodea la iglesia hacia su costado meridional. La comparación con el portal de la plaza permite reconocer una solución emparentada, más contenida, en un entorno de calles y espacios más estrechos.",
-      "narrative": "Rodea la iglesia hacia su costado meridional. La comparación con el portal de la plaza permite reconocer una solución emparentada, más contenida, en un entorno de calles y espacios más estrechos.",
+      "intro": "Rodea la iglesia hasta el acceso del Mediodía. El pequeño recinto de piedra, con pasos laterales y una cruz sobre pedestal, acompaña una portada gótica más contenida que la del norte. Mira primero este ámbito cercano y luego levanta la vista hacia el arco.",
+      "narrative": "Rodea la iglesia hasta el acceso del Mediodía. El pequeño recinto de piedra, con pasos laterales y una cruz sobre pedestal, acompaña una portada gótica más contenida que la del norte. Mira primero este ámbito cercano y luego levanta la vista hacia el arco.",
       "facts": [
         {
           "text": "La portada meridional se atribuye a la campaña del siglo XV.",
@@ -476,11 +477,12 @@
           "confidence": "documented"
         }
       ],
-      "lookFor": "Compara el número de molduras con la portada norte y sigue el muro hacia el ábside.",
-      "modelNote": "Se muestra el marco conservado con talla simplificada; la ornamentación figurativa perdida no se restituye.",
+      "lookFor": "Distingue las tres molduras del arco, el tímpano sin imágenes y las dos hojas metálicas. Compara el portal con el acceso norte y con el pequeño ámbito exterior del Mediodía.",
+      "modelNote": "Se contrasta el marco conservado con la fotografía de detalle y se resume el aspecto metálico de las hojas. La talla figurativa perdida no se restituye; la cruz y el murete exterior se modelan como piezas del contexto urbano.",
       "sourceIds": [
         "sm-ruta-iglesia",
-        "sm-serrano-2018"
+        "sm-serrano-2018",
+        "sm-south-cross-photo"
       ],
       "confidence": "documented",
       "coordinateConfidence": "approximate",
@@ -513,8 +515,8 @@
         -0.27941274,
         39.67912133
       ],
-      "intro": "Sitúate a los pies de la iglesia. La composición cambia: las líneas horizontales y las pilastras organizan una fachada distinta de los accesos apuntados que acabas de recorrer.",
-      "narrative": "Sitúate a los pies de la iglesia. La composición cambia: las líneas horizontales y las pilastras organizan una fachada distinta de los accesos apuntados que acabas de recorrer.",
+      "intro": "Recorre las terrazas y las escaleras de la Plaça dels Tarongers, antigua plaza de Cervantes, hasta la escalerilla de la puerta. El gran paño de remate horizontal encuadra una portada de dos cuerpos: las pilastras sostienen las cornisas y el nicho vacío se hunde en el muro. La ventana superior está cegada.",
+      "narrative": "Recorre las terrazas y las escaleras de la Plaça dels Tarongers, antigua plaza de Cervantes, hasta la escalerilla de la puerta. El gran paño de remate horizontal encuadra una portada de dos cuerpos: las pilastras sostienen las cornisas y el nicho vacío se hunde en el muro. La ventana superior está cegada.",
       "facts": [
         {
           "text": "La portada de los pies comenzó a construirse en 1703.",
@@ -536,13 +538,23 @@
             "sm-zaragoza-2000"
           ],
           "confidence": "documented"
+        },
+        {
+          "text": "Cabrera describe un nicho con bóveda en forma de concha y, sobre la portada, un ventanal rectangular cegado.",
+          "sourceIds": [
+            "sm-cabrera-1987",
+            "sm-west-photo"
+          ],
+          "confidence": "documented"
         }
       ],
-      "lookFor": "Reconoce la superposición de cuerpos, el nicho y el remate; compáralos con las portadas laterales.",
-      "modelNote": "Se conserva la lectura barroca. Los perfiles de las molduras se simplifican y no se añaden imágenes escultóricas sin documentación suficiente.",
+      "lookFor": "Recorre el marco acodado de la puerta, el medallón, los pares de pilastras y la concha del nicho. Levanta después la mirada hacia la ventana cegada y los remates del parapeto.",
+      "modelNote": "La silueta escalonada y la concavidad del nicho se contrastan con las fotografías. Las molduras y los paneles de las hojas se simplifican; sus dimensiones secundarias son aproximadas. La escalerilla y las terrazas pertenecen al espacio público modelado.",
       "sourceIds": [
         "sm-cabrera-1987",
-        "sm-zaragoza-2000"
+        "sm-zaragoza-2000",
+        "sm-west-photo",
+        "sm-tarongers-name"
       ],
       "confidence": "documented",
       "coordinateConfidence": "approximate",
@@ -575,8 +587,8 @@
         -0.27915104,
         39.6790367
       ],
-      "intro": "Activa el corte didáctico y sitúa la mirada entre los pilares. Recorre el eje hacia el ábside y después mira transversalmente para comprender la continuidad entre el espacio central y los laterales.",
-      "narrative": "Activa el corte didáctico y sitúa la mirada entre los pilares. Recorre el eje hacia el ábside y después mira transversalmente para comprender la continuidad entre el espacio central y los laterales.",
+      "intro": "La mirada se sitúa ahora dentro de la nave central, entre los bancos. Sigue el eje hacia la cabecera y compara la altura de los pilares con las bóvedas claras. Gira hacia los lados para reconocer los pasos abiertos entre las tres naves.",
+      "narrative": "La mirada se sitúa ahora dentro de la nave central, entre los bancos. Sigue el eje hacia la cabecera y compara la altura de los pilares con las bóvedas claras. Gira hacia los lados para reconocer los pasos abiertos entre las tres naves.",
       "facts": [
         {
           "text": "La planta reúne tres naves y cuatro tramos; el tramo junto a la cabecera es más corto.",
@@ -600,11 +612,13 @@
           "confidence": "documented"
         }
       ],
-      "lookFor": "Cuenta las alineaciones de pilares y compara la anchura de la nave central con las laterales.",
-      "modelNote": "La sección permite leer el orden espacial. Las dimensiones locales se ajustan a la cartografía y a la documentación gráfica, sin precisión de escáner.",
+      "lookFor": "Busca el pasillo central, las dos filas de pilares octogonales y los arcos que dejan pasar la vista a las naves laterales. Puedes abrir Corte para estudiar después la planta.",
+      "modelNote": "La vista conserva las cubiertas. El mobiliario sólo proporciona escala y deja libres los pasillos; su cantidad y disposición son esquemáticas. Las alturas secundarias y las posiciones de observación no son un levantamiento métrico.",
       "sourceIds": [
         "sm-zaragoza-2000",
-        "sm-cabrera-1987"
+        "sm-cabrera-1987",
+        "sm-interior-photo-east",
+        "sm-interior-photo-west"
       ],
       "confidence": "documented",
       "coordinateConfidence": "approximate",
@@ -622,8 +636,10 @@
         "sm-osm",
         "sm-cabrera-1987"
       ],
-      "requiresSection": true,
-      "sectionRecommended": true
+      "requiresSection": false,
+      "sectionRecommended": false,
+      "interiorView": true,
+      "fitBounds": false
     },
     {
       "id": "santa-maria-bovedas",
@@ -639,8 +655,8 @@
         -0.27908648,
         39.67901582
       ],
-      "intro": "Con el corte abierto, eleva la mirada hacia las nervaduras que permanecen visibles. Sigue un arco hasta su apoyo y compara la altura de la nave central, las laterales y las capillas.",
-      "narrative": "Con el corte abierto, eleva la mirada hacia las nervaduras que permanecen visibles. Sigue un arco hasta su apoyo y compara la altura de la nave central, las laterales y las capillas.",
+      "intro": "Desde el interior, mira hacia arriba sin retirar la cubierta. La estructura gótica conserva acabados posteriores: los paños claros, las bandas de moldura y las claves contrastan con la sillería de los muros. Corte permite comparar después ese acabado con las nervaduras.",
+      "narrative": "Desde el interior, mira hacia arriba sin retirar la cubierta. La estructura gótica conserva acabados posteriores: los paños claros, las bandas de moldura y las claves contrastan con la sillería de los muros. Corte permite comparar después ese acabado con las nervaduras.",
       "facts": [
         {
           "text": "Navarro Fajardo analiza las crucerías de Santa María como bóvedas de rampante llano.",
@@ -662,13 +678,23 @@
             "sm-zaragoza-2000"
           ],
           "confidence": "documented"
+        },
+        {
+          "text": "Las fotografías interiores de 2011 permiten reconocer paños claros, bandas de moldura y claves doradas sobre la fábrica de piedra.",
+          "sourceIds": [
+            "sm-interior-photo-east",
+            "sm-interior-photo-west",
+            "sm-interior-photo-vaults"
+          ],
+          "confidence": "documented"
         }
       ],
-      "lookFor": "Sigue las diagonales hasta la clave y observa el escalonamiento de alturas.",
-      "modelNote": "La retirada de cubiertas y paños de bóveda es una apertura didáctica. Los nervios quedan como referencia; el corte no representa un estado histórico en ruina.",
+      "lookFor": "Sigue las diagonales y las bandas del revestimiento hasta las claves. Compara las bóvedas de la nave central con las laterales y con los paños que se abren sobre las ventanas del ábside.",
+      "modelNote": "Se distinguen nervios y acabado: las bandas claras y doradas resumen la decoración fotografiada, sin reproducir su talla ni sus imágenes. Corte retira también el revestimiento y mantiene los apoyos y nervios.",
       "sourceIds": [
         "sm-navarro-2004",
-        "sm-zaragoza-2000"
+        "sm-zaragoza-2000",
+        "sm-interior-photo-vaults"
       ],
       "confidence": "documented",
       "coordinateConfidence": "approximate",
@@ -686,8 +712,10 @@
         "sm-osm",
         "sm-cabrera-1987"
       ],
-      "requiresSection": true,
-      "sectionRecommended": true
+      "requiresSection": false,
+      "sectionRecommended": false,
+      "interiorView": true,
+      "fitBounds": false
     },
     {
       "id": "santa-maria-capillas",
@@ -703,8 +731,8 @@
         -0.2791034,
         39.67918889
       ],
-      "intro": "Desplaza la mirada hacia el borde de las naves. Las capillas forman espacios más recogidos y permiten comparar el ritmo repetido de los tramos con las soluciones que cambian al acercarse a los pies.",
-      "narrative": "Desplaza la mirada hacia el borde de las naves. Las capillas forman espacios más recogidos y permiten comparar el ritmo repetido de los tramos con las soluciones que cambian al acercarse a los pies.",
+      "intro": "Acércate desde la nave lateral a una capilla, manteniendo la cubierta sobre la cabeza. La abertura del arco permite reconocer un espacio más recogido dentro de un conjunto continuo. Compara su escala con el pasillo y con la nave central.",
+      "narrative": "Acércate desde la nave lateral a una capilla, manteniendo la cubierta sobre la cabeza. La abertura del arco permite reconocer un espacio más recogido dentro de un conjunto continuo. Compara su escala con el pasillo y con la nave central.",
       "facts": [
         {
           "text": "Las capillas se sitúan entre los contrafuertes de los muros laterales.",
@@ -735,12 +763,13 @@
           "confidence": "documented"
         }
       ],
-      "lookFor": "Compara los espacios del borde con los tramos centrales y localiza el cambio hacia las cúpulas de los pies.",
-      "modelNote": "El foco señala una secuencia de capillas, no la localización de todas las advocaciones. Altares, imágenes y mobiliario se omiten cuando falta una documentación espacial suficiente.",
+      "lookFor": "Observa el espesor del arco, los muros entre capillas y la altura de la bóveda. Vuelve después hacia los pies para localizar las soluciones de época moderna.",
+      "modelNote": "La cámara observa un ámbito de la secuencia de capillas. No asigna todas las advocaciones a lugares sin comprobación; los altares e imágenes se omiten cuando falta documentación espacial suficiente.",
       "sourceIds": [
         "sm-turismo",
         "sm-zaragoza-2000",
-        "sm-serrano-2018"
+        "sm-serrano-2018",
+        "sm-interior-photo-east"
       ],
       "confidence": "documented",
       "coordinateConfidence": "approximate",
@@ -758,8 +787,10 @@
         "sm-osm",
         "sm-cabrera-1987"
       ],
-      "requiresSection": true,
-      "sectionRecommended": true
+      "requiresSection": false,
+      "sectionRecommended": false,
+      "interiorView": true,
+      "fitBounds": false
     },
     {
       "id": "santa-maria-abside",
@@ -804,7 +835,8 @@
       "modelNote": "La tracería es una síntesis de los motivos documentados. No se modela la cripta ni se reconstruye un retablo desaparecido.",
       "sourceIds": [
         "sm-cabrera-1987",
-        "sm-perales-2023"
+        "sm-perales-2023",
+        "sm-interior-photo-east"
       ],
       "confidence": "documented",
       "coordinateConfidence": "approximate",
@@ -1624,6 +1656,73 @@
       "accessed": "2026-11-19",
       "serviceUrl": "https://www.ign.es/wms-inspire/pnoa-ma",
       "licenseUrl": "https://www.ign.es/resources/licencia/Condiciones_licenciaUso_IGN.pdf"
+    },
+    {
+      "id": "sm-west-photo",
+      "title": "Santa María · fotografías de la fachada occidental y la portada del Mediodía",
+      "author": "Rutas Jaume I",
+      "url": "https://www.rutasjaumei.com/images/C53/PAT/P222/02SAGUNTO-SANTA-MARIA.jpg",
+      "type": "fotografía de referencia arquitectónica",
+      "year": null,
+      "locator": "Galería de Iglesia de Santa María: fotografías 01, 02 y 20; la 02 muestra el remate occidental, la 20 el acceso meridional",
+      "note": "Contraste visual con las fotografías aportadas por el usuario. Permite reconocer siluetas y relaciones; no proporciona cotas, materiales ensayados ni fecha comprobada de toma. Las fotografías no se redistribuyen como texturas.",
+      "detailUrl": "https://www.rutasjaumei.com/images/C53/PAT/P222/20SAGUNTO-SANTA-MARIA.jpg",
+      "accessed": "2026-11-26"
+    },
+    {
+      "id": "sm-interior-photo-east",
+      "title": "Santa María · vista interior hacia la cabecera",
+      "author": "Joanbanjo",
+      "url": "https://commons.wikimedia.org/wiki/File:Esgl%C3%A9sia_de_santa_Maria_de_Sagunt,_vista_cap_a_l%27altar.JPG",
+      "type": "fotografía original del autor",
+      "year": 2011,
+      "locator": "31 de agosto de 2011; pilares, arcos laterales, revestimiento del ábside y tres ventanales",
+      "note": "Evidencia visual fechada. Se usa para la organización arquitectónica, sin afirmar que documente el inventario o estado exacto de 2026. Referencia bajo CC BY-SA 3.0; no se incorpora la fotografía a la app.",
+      "accessed": "2026-11-26"
+    },
+    {
+      "id": "sm-interior-photo-west",
+      "title": "Santa María · vista interior hacia los pies",
+      "author": "Joanbanjo",
+      "url": "https://commons.wikimedia.org/wiki/File:Esgl%C3%A9sia_de_santa_Maria_de_sagunt,_vista_cap_als_peus.JPG",
+      "type": "fotografía original del autor",
+      "year": 2011,
+      "locator": "31 de agosto de 2011; tres tramos centrales, arcos redondeados, ventanas reducidas y revestimiento de las bóvedas",
+      "note": "Contraste de la lectura interior con Cabrera y Zaragozá. No acredita por sí sola el estado material actual. Referencia bajo CC BY-SA 3.0; imagen no redistribuida.",
+      "accessed": "2026-11-26"
+    },
+    {
+      "id": "sm-interior-photo-vaults",
+      "title": "Santa María · detalle de las bóvedas revestidas",
+      "author": "Joanbanjo",
+      "url": "https://commons.wikimedia.org/wiki/File:Voltes_de_l%27esgl%C3%A9sia_de_santa_Maria_de_Sagunt.JPG",
+      "type": "fotografía original del autor",
+      "year": 2011,
+      "locator": "Fotografía de Joanbanjo, 8 de enero de 2011; bóvedas y acabado interior.",
+      "note": "La geometría reproduce el orden de bandas y su contraste cromático de forma simplificada. No calca relieves ni infiere nervios estructurales nuevos a partir del acabado. Referencia bajo CC BY-SA 3.0; imagen no redistribuida.",
+      "accessed": "2026-11-26"
+    },
+    {
+      "id": "sm-south-cross-photo",
+      "title": "Santa María · cruz y portada del Mediodía",
+      "author": "Joanbanjo",
+      "url": "https://commons.wikimedia.org/wiki/File:Creu_i_portada_sud_de_l%27esgl%C3%A9sia_de_santa_Maria_de_Sagunt.JPG",
+      "type": "fotografía original del autor",
+      "year": 2011,
+      "locator": "8 de enero de 2011; pedestal, cruz, recinto cercano y portada meridional",
+      "note": "Fotografía original del pedestal, cruz y portada; contraste con las fotos del recinto de piedra aportadas por el usuario. Referencia visual, no imagen redistribuida. Licencia CC BY-SA 3.0.",
+      "accessed": "2026-11-26"
+    },
+    {
+      "id": "sm-tarongers-name",
+      "title": "Ajuntament de Sagunt · índice de calles (2021)",
+      "author": "Ajuntament de Sagunt",
+      "url": "https://aytosagunto.es/media/cg1g0qqh/2021_ordfiscal-iae.pdf",
+      "type": "documento municipal",
+      "year": 2021,
+      "locator": "Índice de calles: plaza dels Tarongers / antigua plaza Cervantes",
+      "note": "Equivalencia de nombre: plaza dels Tarongers, antigua plaza Cervantes. No se usa este documento para inferir alturas o dimensiones.",
+      "accessed": "2026-11-26"
     }
   ],
   "methodology": [
@@ -1635,7 +1734,8 @@
     "La sección retira superficies para explicar el espacio interior, conservando apoyos y nervaduras. No reproduce la cripta cegada, el antiguo órgano ni retablos o esculturas desaparecidos.",
     "Los arcos altos del exterior se interpretan con el estudio arquitectónico de Zaragozá, que destaca su función de evacuación de aguas. No se atribuye a la maqueta capacidad de cálculo estructural.",
     "Se distingue obra ejecutada, estudio, propuesta y anuncio. El comunicado del reloj de 2026 y el balance del anexo de 2025 se presentan con sus fechas y alcance.",
-    "Las fotografías y dibujos de las publicaciones sirven para contrastar formas. No se incorporan fotografías históricas a la experiencia; pueden consultarse en los enlaces de las fuentes."
+    "Las fotografías y dibujos de las publicaciones sirven para contrastar formas. No se incorporan fotografías históricas a la experiencia; pueden consultarse en los enlaces de las fuentes.",
+    "Las tres paradas interiores usan posiciones de observación dentro del modelo y conservan la cubierta. La silueta occidental, la hornacina cóncava y los acabados de bóveda se contrastan con fotografías identificadas; los bancos y los detalles menores siguen siendo esquemáticos."
   ],
   "readingLegend": [
     {

@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-26",
+  "siteVersion": 48,
+  "sourceCommit": "1c7be8a5fafba5118e7b4b22e3c5ba0d372574cf",
+  "distTree": "3f3d120480d199ff9614d4171f5ff4f7df3a2090",
+  "deployment": "appgdep_6b082d51772c819199b70b81ff34c30a",
+  "deploymentStatus": "succeeded",
+  "browser": "Authorized CUA cloud Chrome; local Browser connection unavailable",
+  "routes": [
+    "https://saguntum-atlas-3d.monmode.chatgpt.site/#santa-maria/santa-maria-portada-principal",
+    "https://saguntum-atlas-3d.monmode.chatgpt.site/#santa-maria/santa-maria-naves",
+    "https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador/santa-maria/santa-maria-naves"
+  ],
+  "checks": {
+    "westernSquareUpdatedText": true,
+    "interiorUpdatedText": true,
+    "hideControlVisible": true,
+    "hiddenPanelRemovedFromAccessibleTree": true,
+    "focusTransferredToShowControl": true,
+    "reopenedWithKeyboard": true,
+    "focusReturnedToHideControl": true,
+    "scrollBeforeHide": 1089,
+    "scrollWhileHidden": 1089,
+    "scrollAfterShow": 1089,
+    "stopPreservedByPanelToggle": "santa-maria-naves",
+    "selectedTabPreserved": "Recorrido",
+    "simulatorSameStopSelected": true,
+    "simulatorUpdatedIntroMatchesAtlas": true,
+    "returnToAtlasSameStop": true
+  },
+  "limitation": "The browser reported 'El atlas necesita WebGL' and 'Mapa 2D · El navegador no pudo abrir un contexto WebGL 2.'. Production interaction was checked in the 2D fallback. This is not a production WebGL/WebGPU visual run or a frame-rate measurement."
+}

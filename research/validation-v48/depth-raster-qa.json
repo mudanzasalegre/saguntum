@@ -1,0 +1,37 @@
+{
+  "renderer": "llvmpipe (LLVM 19.1.7, 256 bits)",
+  "depthBits": 24,
+  "geometry": "/workspace/scratch/3a1b60c196d6/plaza-v47-conforming-final.json.gz",
+  "geometrySha256": "27657564de13d3ef79c98498cd71440c2560786a3ffaf7e5d6fdf38faae4a6e7",
+  "method": "Actual unchanged roof buffers; textures and shadows disabled to isolate depth precision. Difference counts are relative to near=10 m, not measured browser performance.",
+  "results": [
+    {
+      "distance": 140,
+      "near": 0.984,
+      "pixels": 59858,
+      "baselineDifferentPixels": 55,
+      "adaptedDifferentPixels": 1
+    },
+    {
+      "distance": 200,
+      "near": 1.464,
+      "pixels": 29274,
+      "baselineDifferentPixels": 104,
+      "adaptedDifferentPixels": 3
+    },
+    {
+      "distance": 350,
+      "near": 2.664,
+      "pixels": 9604,
+      "baselineDifferentPixels": 243,
+      "adaptedDifferentPixels": 0
+    },
+    {
+      "distance": 500,
+      "near": 3.8640000000000003,
+      "pixels": 4713,
+      "baselineDifferentPixels": 238,
+      "adaptedDifferentPixels": 2
+    }
+  ]
+}

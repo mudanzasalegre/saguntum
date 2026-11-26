@@ -1,5 +1,6 @@
 import {wantsPlan,markRendered,goToPlan} from './render-session.js';
 import {atlasLights,atlasRim,applyAtlasLighting} from './atlas-appearance.js';
+import {cameraNearPlane} from './camera-depth.js';
 import * as THREE from 'three';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 import {createMonuments,theatreRoadIds,theatreBuildingIds} from './monuments.js';
@@ -53,6 +54,8 @@ import {drawPantalanMap} from './pantalan-map.js';
 import {drawGrauMap} from './grau-map.js';
 import {createDianaVisit} from './berenguer-visit.js';
 import {initTheme,getTheme,getMapPalette} from './theme.js';
+import {createEditorialVisibility,editorialSceneFrame} from './editorial-visibility.js';
+let editorialVisibility;
 
 const $=id=>document.getElementById(id),mobile=()=>innerWidth<=700,reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
 const project=(lon,lat)=>({x:(lon+.278)*111320*Math.cos(39.679*Math.PI/180),z:(39.679-lat)*111320});
@@ -325,13 +328,7 @@ function buildPlaceUI(){
 }
 
 function castleFrame(w=innerWidth,h=innerHeight){
- if((selected==='glorieta')&&w>700&&w<=1000&&h>w){
-  const left=20,right=w-64,top=102,bottom=h*.54;
-  return{left,right,top,bottom,width:right-left,height:bottom-top,offsetX:w/2-(left+right)/2,offsetY:h/2-(top+bottom)/2};
- }
- const phone=w<=700,short=!phone&&h<=540;
- const left=phone?16:short?372:424,right=w-(phone?16:short?64:80),top=phone?124:short?78:108,bottom=phone?h*.5-12:h-(short?62:80);
- return{left,right,top,bottom,width:Math.max(80,right-left),height:Math.max(80,bottom-top),offsetX:w/2-(left+right)/2,offsetY:h/2-(top+bottom)/2};
+ return editorialSceneFrame(w,h,{collapsed:editorialVisibility?.collapsed,place:selected});
 }
 function preset(name,near=false){
  if(name==='overview'&&isLandscape(activeRegion)){const sh=landscapeConfig[activeRegion].shape,t=new THREE.Vector3(sh.cx,5,sh.cz),r=Math.max(sh.rx,sh.rz),factor=mobile()?1.85:1.0,off=new THREE.Vector3(r*.75,r*1.45,r*1.2).multiplyScalar(factor);return{target:t,position:t.clone().add(off)};}
@@ -455,7 +452,7 @@ async function focus(name,{instant=false,keepTour=false,castleFocus=null,theatre
  if(glorietaNight&&name!=='glorieta')setLight(lightMode);
  const c=byId[name],nextRegion=c?regionOf(c):atlasHome||name==='forum'?'sagunto':activeRegion,changed=nextRegion!==activeRegion;selected=name;castleStopId=name==='castle'&&castleData?.stops.some(s=>s.id===castleFocus)?castleFocus:null;theatreStopId=name==='theatre'&&theatreData?.stops.some(s=>s.id===theatreFocus)?theatreFocus:null;churchStopId=name==='santa-maria'&&churchData?.stops.some(s=>s.id===santaMariaFocus)?santaMariaFocus:null;plazaStopId=name==='plaza-mayor'&&plazaData?.stops.some(s=>s.id===plazaMayorFocus)?plazaMayorFocus:null;juderiaStopId=name==='juderia'&&juderiaData?.stops.some(s=>s.id===juderiaFocus)?juderiaFocus:null;calvarioStopId=name==='calvario'&&calvarioData?.stops.some(s=>s.id===calvarioFocus)?calvarioFocus:null;theatreSectionOpen=churchSectionOpen=plazaSectionOpen=false;for(const id of Object.keys(visitStates)){const state=visitStates[id],data=visitDataFor(id);state.stopId=name===id&&data?.stops.some(stop=>stop.id===visitFocus)?visitFocus:null;state.sectionOpen=false;}setRegion(nextRegion);closeView=false;mapFocus=guidedVisit()?.stopId||null;
  $('editorial').scrollTop=0;
- document.body.classList.toggle('detail-mode',!!c);$('intro-content').hidden=!!c;$('detail-content').hidden=!c;
+ document.body.classList.toggle('detail-mode',!!c);$('intro-content').hidden=!!c;$('detail-content').hidden=!c;editorialVisibility?.sync();
  if(c){$('detail-era').textContent='Visita '+c.number+(c.era?' · '+c.era:'');$('detail-title').innerHTML=c.title;$('detail-copy').textContent=c.description;$('detail-facts').innerHTML=c.facts.map(([a,b])=>`<div><strong>${a}</strong><small>${b}</small></div>`).join('');$('detail-look').textContent=c.features.join(' · ');$('scene-caption-title').textContent=c.name.toUpperCase();$('scene-caption-subtitle').textContent=c.subCategory||c.category;}
  else{$('scene-caption-title').textContent=name==='forum'?'LA PLAZA DE ARMAS':regionInfo[activeRegion].caption;$('scene-caption-subtitle').textContent=regionInfo[activeRegion].subtitle;}
  $('close-view').textContent='Vista cercana';$('close-view').setAttribute('aria-pressed','false');$('close-view').disabled=!ready||!regionsBuilt.has(nextRegion);$('roof-toggle').disabled=!ready;archaeologyPanel();portPanel();coastPanel();landscapePanel();castlePanel();renderCatalog();refreshMap();window.history.replaceState(null,'',atlasHome?'#atlas':name==='overview'?'#'+activeRegion:'#'+name+(guidedVisit()?.stopId?'/'+encodeURIComponent(guidedVisit().stopId):''));
@@ -510,8 +507,9 @@ function dismissMapNotice(){
 }
 function toggleNearView(name=selected){if(!ready)return;closeView=!closeView;$('close-view').textContent=closeView?'Vista del conjunto':'Vista cercana';$('close-view').setAttribute('aria-pressed',String(closeView));castlePanel();fly(name);updateStatus();}
 function zoom(factor){if(!controls)return;animation=null;const d=camera.position.clone().sub(controls.target),len=Math.max(controls.minDistance,Math.min(controls.maxDistance,d.length()*factor));camera.position.copy(controls.target).add(d.setLength(len));controls.update();}
-function resize(){trimRegionCache();if(renderer){const w=innerWidth,h=innerHeight;renderer.setSize(w,h);camera.aspect=w/h;const frame=guidedVisit()?castleFrame(w,h):null,offset=frame?frame.offsetX:mobile()?0:tourStep>=0?0:-Math.min(180,w*.12),vertical=frame?frame.offsetY:mobile()?-h*(selected==='overview'?.06:(byId[selected]?.archaeological||byId[selected]?.industrial||byId[selected]?.coastal||byId[selected]?.landscape)?.21:.12):0;camera.setViewOffset(w,h,offset,vertical,w,h);camera.updateProjectionMatrix();}if(fallbackCanvas)refreshMap();redrawDialogMap?.();}
+function resize(){trimRegionCache();if(renderer){const w=innerWidth,h=innerHeight;renderer.setSize(w,h);camera.aspect=w/h;const frame=(guidedVisit()||editorialVisibility?.collapsed)?castleFrame(w,h):null,offset=frame?frame.offsetX:mobile()?0:tourStep>=0?0:-Math.min(180,w*.12),vertical=frame?frame.offsetY:mobile()?-h*(selected==='overview'?.06:(byId[selected]?.archaeological||byId[selected]?.industrial||byId[selected]?.coastal||byId[selected]?.landscape)?.21:.12):0;camera.setViewOffset(w,h,offset,vertical,w,h);camera.updateProjectionMatrix();}if(fallbackCanvas)refreshMap();redrawDialogMap?.();}
 function setupUI(){
+ editorialVisibility=createEditorialVisibility({onChange:resize});
  $('brand-home').onclick=e=>{e.preventDefault();focus('atlas');};$('nav-explore').onclick=()=>{closeDialog();focus('atlas');};$('nav-about').onclick=aboutDialog;$('nav-territory').onclick=territoryDialog;$('nav-catalog').onclick=openCatalog;$('open-catalog').onclick=openCatalog;$('catalog-close').onclick=closeCatalog;$('catalog-search').oninput=renderCatalog;
  document.querySelectorAll('[data-filter]').forEach(b=>b.onclick=()=>{filter=b.dataset.filter;document.querySelectorAll('[data-filter]').forEach(el=>{el.classList.toggle('active',el===b);el.setAttribute('aria-pressed',String(el===b));});renderCatalog();});
  $('help-button').onclick=helpDialog;$('source-button').onclick=sourcesDialog;$('detail-more').onclick=monumentDialog;$('detail-back').onclick=()=>focus('overview');$('reset-view').onclick=()=>focus(atlasHome?'atlas':'overview');
@@ -773,8 +771,10 @@ async function init(){
  function frame(now){requestAnimationFrame(frame);if(document.hidden)return;const delta=Math.min(.05,(now-previous)/1000);previous=now;
   if(animation){const a=animation,t=Math.min(1,(now-a.start)/a.duration),e=t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;camera.position.lerpVectors(a.fromPos,a.toPos,e);controls.target.lerpVectors(a.fromTarget,a.toTarget,e);camera.fov=THREE.MathUtils.lerp(a.fromFov,a.toFov,e);camera.updateProjectionMatrix();if(t>=1){animation=null;setShadowFraming();}}
   if(activeRegion==='sagunto'&&glorietaSite?.group.visible)glorietaSite.animate(now/1000,glorietaWater,glorietaNight,camera);
-  controls.update(delta);const inside=regionInside(activeRegion),ground=regionGround(activeRegion);
-  if(ground&&inside(camera.position.x,camera.position.z)){const surface=regionTerrain(activeRegion);let y=(isLandscape(activeRegion)||!!guidedVisit())&&surface?surface.meshHeightAt(camera.position.x,camera.position.z):ground.groundHeight(camera.position.x,camera.position.z);if(activeRegion==='sagunto')y=excavation?.groundAt(camera.position.x,camera.position.z,y)??y;camera.position.y=Math.max(camera.position.y,Math.max(activeRegion==='coast'||isLandscape(activeRegion)?0:-Infinity,y)+1.55);}
+  controls.update(delta);const inside=regionInside(activeRegion),ground=regionGround(activeRegion);let clearance=Infinity;
+  if(ground&&inside(camera.position.x,camera.position.z)){const surface=regionTerrain(activeRegion);let y=(isLandscape(activeRegion)||!!guidedVisit())&&surface?surface.meshHeightAt(camera.position.x,camera.position.z):ground.groundHeight(camera.position.x,camera.position.z);if(activeRegion==='sagunto')y=excavation?.groundAt(camera.position.x,camera.position.z,y)??y;const floor=Math.max(activeRegion==='coast'||isLandscape(activeRegion)?0:-Infinity,y);camera.position.y=Math.max(camera.position.y,floor+1.55);clearance=camera.position.y-floor;}
+  const visit=guidedVisit(),part=visit?.model?.focuses?.[visit.stopId||visit.overviewId],nearPlane=cameraNearPlane({range:camera.position.distanceTo(controls.target),clearance,interior:!!part?.interiorView});
+  if(Math.abs(camera.near-nearPlane)>1e-5){camera.near=nearPlane;camera.updateProjectionMatrix();}
   const lb=landscapeConfig[activeRegion]?.bounds,limits=lb?[lb.minX,lb.maxX,lb.minZ,lb.maxZ]:activeRegion==='coast'?[2750,7900,2350,6100]:activeRegion==='puerto'?[3550,7150,500,4000]:[-1050,1100,-800,1100];controls.target.x=THREE.MathUtils.clamp(controls.target.x,limits[0],limits[1]);controls.target.z=THREE.MathUtils.clamp(controls.target.z,limits[2],limits[3]);if(activeRegion==='coast')coastEnvironment?.update(delta);if(isLandscape(activeRegion))landscapes[activeRegion]?.environment?.update(delta);updateMarkers();renderer.render(scene,camera);markRendered();
   if(first){first=false;renderer.shadowMap.autoUpdate=false;$('loading').classList.add('loaded');}
  }

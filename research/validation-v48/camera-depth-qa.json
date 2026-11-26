@@ -1,0 +1,431 @@
+{
+  "pass": true,
+  "checks": 9,
+  "results": [
+    {
+      "name": "Close, interior and pedestrian views retain 12 cm, including a distant pivot",
+      "pass": true
+    },
+    {
+      "name": "Orbit depth changes continuously across the former 450/2600 m bands",
+      "pass": true
+    },
+    {
+      "name": "Low views constrain the near plane and malformed readings fail close",
+      "pass": true
+    },
+    {
+      "name": "Atlas WebGL: projected framing, close surfaces and far horizon remain valid",
+      "pass": true
+    },
+    {
+      "name": "Atlas WebGL: 4.5 cm facade separation and 1 cm roof relief remain resolvable at city scale",
+      "pass": true
+    },
+    {
+      "name": "Simulator WebGL: projected framing, close surfaces and far horizon remain valid",
+      "pass": true
+    },
+    {
+      "name": "Simulator WebGL: 4.5 cm facade separation and 1 cm roof relief remain resolvable at city scale",
+      "pass": true
+    },
+    {
+      "name": "Simulator WebGPU: projected framing, close surfaces and far horizon remain valid",
+      "pass": true
+    },
+    {
+      "name": "Simulator WebGPU: 4.5 cm facade separation and 1 cm roof relief remain resolvable at city scale",
+      "pass": true
+    }
+  ],
+  "precision": {
+    "method": "Quantization of the shipped Three perspective matrix to normalized 24-bit depth; analytical bound, not browser performance or a claim about the user GPU.",
+    "samples": [
+      {
+        "backend": "Atlas WebGL",
+        "range": 140,
+        "gap": 0.045,
+        "near": 0.984,
+        "oldUnresolved": {
+          "count": 0,
+          "samples": 330,
+          "fraction": 0
+        },
+        "newUnresolved": {
+          "count": 0,
+          "samples": 330,
+          "fraction": 0
+        }
+      },
+      {
+        "backend": "Atlas WebGL",
+        "range": 140,
+        "gap": 0.01,
+        "near": 0.984,
+        "oldUnresolved": {
+          "count": 1,
+          "samples": 330,
+          "fraction": 0.0030303030303030303
+        },
+        "newUnresolved": {
+          "count": 0,
+          "samples": 330,
+          "fraction": 0
+        }
+      },
+      {
+        "backend": "Atlas WebGL",
+        "range": 200,
+        "gap": 0.045,
+        "near": 1.464,
+        "oldUnresolved": {
+          "count": 0,
+          "samples": 471,
+          "fraction": 0
+        },
+        "newUnresolved": {
+          "count": 0,
+          "samples": 471,
+          "fraction": 0
+        }
+      },
+      {
+        "backend": "Atlas WebGL",
+        "range": 200,
+        "gap": 0.01,
+        "near": 1.464,
+        "oldUnresolved": {
+          "count": 235,
+          "samples": 471,
+          "fraction": 0.4989384288747346
+        },
+        "newUnresolved": {
+          "count": 0,
+          "samples": 471,
+          "fraction": 0
+        }
+      },
+      {
+        "backend": "Atlas WebGL",
+        "range": 350,
+        "gap": 0.045,
+        "near": 2.664,
+        "oldUnresolved": {
+          "count": 202,
+          "samples": 824,
+          "fraction": 0.24514563106796117
+        },
+        "newUnresolved": {
+          "count": 0,
+          "samples": 824,
+          "fraction": 0
+        }
+      },
+      {
+        "backend": "Atlas WebGL",
+        "range": 350,
+        "gap": 0.01,
+        "near": 2.664,
+        "oldUnresolved": {
+          "count": 684,
+          "samples": 824,
+          "fraction": 0.8300970873786407
+        },
+        "newUnresolved": {
+          "count": 0,
+          "samples": 824,
+          "fraction": 0
+        }
+      },
+      {
+        "backend": "Atlas WebGL",
+        "range": 500,
+        "gap": 0.045,
+        "near": 3.8640000000000003,
+        "oldUnresolved": {
+          "count": 749,
+          "samples": 1177,
+          "fraction": 0.6363636363636364
+        },
+        "newUnresolved": {
+          "count": 0,
+          "samples": 1177,
+          "fraction": 0
+        }
+      },
+      {
+        "backend": "Atlas WebGL",
+        "range": 500,
+        "gap": 0.01,
+        "near": 3.8640000000000003,
+        "oldUnresolved": {
+          "count": 1079,
+          "samples": 1177,
+          "fraction": 0.9167374681393373
+        },
+        "newUnresolved": {
+          "count": 0,
+          "samples": 1177,
+          "fraction": 0
+        }
+      },
+      {
+        "backend": "Simulator WebGL",
+        "range": 140,
+        "gap": 0.045,
+        "near": 0.984,
+        "oldUnresolved": {
+          "count": 0,
+          "samples": 330,
+          "fraction": 0
+        },
+        "newUnresolved": {
+          "count": 0,
+          "samples": 330,
+          "fraction": 0
+        }
+      },
+      {
+        "backend": "Simulator WebGL",
+        "range": 140,
+        "gap": 0.01,
+        "near": 0.984,
+        "oldUnresolved": {
+          "count": 0,
+          "samples": 330,
+          "fraction": 0
+        },
+        "newUnresolved": {
+          "count": 0,
+          "samples": 330,
+          "fraction": 0
+        }
+      },
+      {
+        "backend": "Simulator WebGL",
+        "range": 200,
+        "gap": 0.045,
+        "near": 1.464,
+        "oldUnresolved": {
+          "count": 0,
+          "samples": 471,
+          "fraction": 0
+        },
+        "newUnresolved": {
+          "count": 0,
+          "samples": 471,
+          "fraction": 0
+        }
+      },
+      {
+        "backend": "Simulator WebGL",
+        "range": 200,
+        "gap": 0.01,
+        "near": 1.464,
+        "oldUnresolved": {
+          "count": 227,
+          "samples": 471,
+          "fraction": 0.4819532908704883
+        },
+        "newUnresolved": {
+          "count": 0,
+          "samples": 471,
+          "fraction": 0
+        }
+      },
+      {
+        "backend": "Simulator WebGL",
+        "range": 350,
+        "gap": 0.045,
+        "near": 2.664,
+        "oldUnresolved": {
+          "count": 216,
+          "samples": 824,
+          "fraction": 0.2621359223300971
+        },
+        "newUnresolved": {
+          "count": 0,
+          "samples": 824,
+          "fraction": 0
+        }
+      },
+      {
+        "backend": "Simulator WebGL",
+        "range": 350,
+        "gap": 0.01,
+        "near": 2.664,
+        "oldUnresolved": {
+          "count": 692,
+          "samples": 824,
+          "fraction": 0.8398058252427184
+        },
+        "newUnresolved": {
+          "count": 0,
+          "samples": 824,
+          "fraction": 0
+        }
+      },
+      {
+        "backend": "Simulator WebGL",
+        "range": 500,
+        "gap": 0.045,
+        "near": 3.8640000000000003,
+        "oldUnresolved": {
+          "count": 752,
+          "samples": 1177,
+          "fraction": 0.6389124893797791
+        },
+        "newUnresolved": {
+          "count": 0,
+          "samples": 1177,
+          "fraction": 0
+        }
+      },
+      {
+        "backend": "Simulator WebGL",
+        "range": 500,
+        "gap": 0.01,
+        "near": 3.8640000000000003,
+        "oldUnresolved": {
+          "count": 1082,
+          "samples": 1177,
+          "fraction": 0.91928632115548
+        },
+        "newUnresolved": {
+          "count": 0,
+          "samples": 1177,
+          "fraction": 0
+        }
+      },
+      {
+        "backend": "Simulator WebGPU",
+        "range": 140,
+        "gap": 0.045,
+        "near": 0.984,
+        "oldUnresolved": {
+          "count": 0,
+          "samples": 330,
+          "fraction": 0
+        },
+        "newUnresolved": {
+          "count": 0,
+          "samples": 330,
+          "fraction": 0
+        }
+      },
+      {
+        "backend": "Simulator WebGPU",
+        "range": 140,
+        "gap": 0.01,
+        "near": 0.984,
+        "oldUnresolved": {
+          "count": 0,
+          "samples": 330,
+          "fraction": 0
+        },
+        "newUnresolved": {
+          "count": 0,
+          "samples": 330,
+          "fraction": 0
+        }
+      },
+      {
+        "backend": "Simulator WebGPU",
+        "range": 200,
+        "gap": 0.045,
+        "near": 1.464,
+        "oldUnresolved": {
+          "count": 0,
+          "samples": 471,
+          "fraction": 0
+        },
+        "newUnresolved": {
+          "count": 0,
+          "samples": 471,
+          "fraction": 0
+        }
+      },
+      {
+        "backend": "Simulator WebGPU",
+        "range": 200,
+        "gap": 0.01,
+        "near": 1.464,
+        "oldUnresolved": {
+          "count": 227,
+          "samples": 471,
+          "fraction": 0.4819532908704883
+        },
+        "newUnresolved": {
+          "count": 0,
+          "samples": 471,
+          "fraction": 0
+        }
+      },
+      {
+        "backend": "Simulator WebGPU",
+        "range": 350,
+        "gap": 0.045,
+        "near": 2.664,
+        "oldUnresolved": {
+          "count": 216,
+          "samples": 824,
+          "fraction": 0.2621359223300971
+        },
+        "newUnresolved": {
+          "count": 0,
+          "samples": 824,
+          "fraction": 0
+        }
+      },
+      {
+        "backend": "Simulator WebGPU",
+        "range": 350,
+        "gap": 0.01,
+        "near": 2.664,
+        "oldUnresolved": {
+          "count": 692,
+          "samples": 824,
+          "fraction": 0.8398058252427184
+        },
+        "newUnresolved": {
+          "count": 0,
+          "samples": 824,
+          "fraction": 0
+        }
+      },
+      {
+        "backend": "Simulator WebGPU",
+        "range": 500,
+        "gap": 0.045,
+        "near": 3.8640000000000003,
+        "oldUnresolved": {
+          "count": 752,
+          "samples": 1177,
+          "fraction": 0.6389124893797791
+        },
+        "newUnresolved": {
+          "count": 0,
+          "samples": 1177,
+          "fraction": 0
+        }
+      },
+      {
+        "backend": "Simulator WebGPU",
+        "range": 500,
+        "gap": 0.01,
+        "near": 3.8640000000000003,
+        "oldUnresolved": {
+          "count": 1082,
+          "samples": 1177,
+          "fraction": 0.91928632115548
+        },
+        "newUnresolved": {
+          "count": 0,
+          "samples": 1177,
+          "fraction": 0
+        }
+      }
+    ]
+  }
+}

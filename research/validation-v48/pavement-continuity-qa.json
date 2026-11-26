@@ -1,0 +1,124 @@
+{
+  "pass": true,
+  "geometryFile": "/workspace/scratch/3a1b60c196d6/santa-v48-final.json.gz",
+  "separatelyCheckedComponents": [
+    "santa-maria-cervantes"
+  ],
+  "tolerances": {
+    "xyM": 0.000025,
+    "heightM": 0.001
+  },
+  "results": [
+    {
+      "component": "santa-maria-cavallers",
+      "triangles": 8128,
+      "uniqueXYVertices": 4491,
+      "edges": 12611,
+      "unequalHeightVertices": 0,
+      "maximumSharedVertexGapM": 0,
+      "checkedTJunctions": 7,
+      "unequalTJunctions": 0,
+      "maximumTJunctionGapM": 0.000001656639895486478,
+      "worstSharedVertices": [],
+      "worstTJunctions": []
+    },
+    {
+      "component": "all-public-pavement",
+      "triangles": 51128,
+      "uniqueXYVertices": 27761,
+      "edges": 78936,
+      "unequalHeightVertices": 0,
+      "maximumSharedVertexGapM": 0,
+      "checkedTJunctions": 598,
+      "unequalTJunctions": 0,
+      "maximumTJunctionGapM": 0.0000036972288697256772,
+      "worstSharedVertices": [],
+      "worstTJunctions": []
+    },
+    {
+      "component": "santa-maria-sagrario",
+      "triangles": 8709,
+      "uniqueXYVertices": 4867,
+      "edges": 13574,
+      "unequalHeightVertices": 0,
+      "maximumSharedVertexGapM": 0,
+      "checkedTJunctions": 0,
+      "unequalTJunctions": 0,
+      "maximumTJunctionGapM": 0,
+      "worstSharedVertices": [],
+      "worstTJunctions": []
+    },
+    {
+      "component": "plaza-pavimento",
+      "triangles": 17856,
+      "uniqueXYVertices": 9440,
+      "edges": 27294,
+      "unequalHeightVertices": 0,
+      "maximumSharedVertexGapM": 0,
+      "checkedTJunctions": 0,
+      "unequalTJunctions": 0,
+      "maximumTJunctionGapM": 0,
+      "worstSharedVertices": [],
+      "worstTJunctions": []
+    },
+    {
+      "component": "plaza-peixateria",
+      "triangles": 4417,
+      "uniqueXYVertices": 2440,
+      "edges": 6856,
+      "unequalHeightVertices": 0,
+      "maximumSharedVertexGapM": 0,
+      "checkedTJunctions": 0,
+      "unequalTJunctions": 0,
+      "maximumTJunctionGapM": 0,
+      "worstSharedVertices": [],
+      "worstTJunctions": []
+    },
+    {
+      "component": "plaza-carrer-castell",
+      "triangles": 4858,
+      "uniqueXYVertices": 2789,
+      "edges": 7647,
+      "unequalHeightVertices": 0,
+      "maximumSharedVertexGapM": 0,
+      "checkedTJunctions": 68,
+      "unequalTJunctions": 0,
+      "maximumTJunctionGapM": 0.0000036972288697256772,
+      "worstSharedVertices": [],
+      "worstTJunctions": []
+    },
+    {
+      "component": "plaza-carrer-major",
+      "triangles": 4839,
+      "uniqueXYVertices": 2799,
+      "edges": 7651,
+      "unequalHeightVertices": 0,
+      "maximumSharedVertexGapM": 0,
+      "checkedTJunctions": 259,
+      "unequalTJunctions": 0,
+      "maximumTJunctionGapM": 0.0000033844407880678773,
+      "worstSharedVertices": [],
+      "worstTJunctions": []
+    },
+    {
+      "component": "plaza-vila",
+      "triangles": 2321,
+      "uniqueXYVertices": 1317,
+      "edges": 3640,
+      "unequalHeightVertices": 0,
+      "maximumSharedVertexGapM": 0,
+      "checkedTJunctions": 20,
+      "unequalTJunctions": 0,
+      "maximumTJunctionGapM": 0.0000017853722837912755,
+      "worstSharedVertices": [],
+      "worstTJunctions": []
+    }
+  ],
+  "notes": [
+    "One millimetre is a mesh-continuity tolerance, not a survey-accuracy claim.",
+    "Coincident X/Z vertices must have the same height. A vertex inside a longer neighboring edge must match that edge interpolation.",
+    "T-junctions on a continuous plane are accepted. Displaced T-junctions and per-triangle height offsets fail.",
+    "Santa María and Plaza Mayor public pavement components are checked independently and together, so cross-ownership seams are included.",
+    "Intentional stone stair risers and private portico floors are excluded."
+  ]
+}

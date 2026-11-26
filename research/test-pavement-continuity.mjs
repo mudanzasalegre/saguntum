@@ -10,6 +10,10 @@ const argument = name => {const i = process.argv.indexOf(name); return i < 0 ? n
 const geometryFile = argument('--geometry');
 if (!geometryFile) throw Error('--geometry requires an exported Three.js .json.gz path');
 const data = JSON.parse(gunzipSync(fs.readFileSync(geometryFile)));
+// A terraced plaza has deliberate discontinuities closed by stone risers.
+// Its actual top/side junctions are checked by test-public-realm-geometry.py.
+// Keep the default strict, and record any explicitly separate scope in output.
+const separatelyChecked = new Set((argument('--exclude-components') || '').split(',').filter(Boolean));
 const xyTolerance = .000025, heightTolerance = .001, cellSize = 1;
 const components = new Map();
 function decode(value) {
@@ -24,6 +28,7 @@ function transformed(values, i, m) {
     z: m[2] * x + m[6] * y + m[10] * z + m[14]};
 }
 for (const mesh of data.meshes) {
+  if (separatelyChecked.has(mesh.component)) continue;
   if (mesh.material.kind !== 'paving' || !/^(santa-maria-(cavallers|sagrario|cervantes)|plaza-.+)$/.test(mesh.component || '')) continue;
   const positions = decode(mesh.positions), index = decode(mesh.indices);
   const count = index?.length ?? positions.length / 3;
@@ -95,7 +100,7 @@ for (const [component, part] of components) {
 }
 const pass = components.has('santa-maria-cavallers') && components.has('plaza-pavimento') &&
   results.every(r => !r.unequalHeightVertices && !r.unequalTJunctions);
-const report = {pass, geometryFile, tolerances: {xyM: xyTolerance, heightM: heightTolerance}, results,
+const report = {pass, geometryFile, separatelyCheckedComponents:[...separatelyChecked], tolerances: {xyM: xyTolerance, heightM: heightTolerance}, results,
   notes: [
     'One millimetre is a mesh-continuity tolerance, not a survey-accuracy claim.',
     'Coincident X/Z vertices must have the same height. A vertex inside a longer neighboring edge must match that edge interpolation.',

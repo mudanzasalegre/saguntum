@@ -23,6 +23,7 @@ import {createCanopy} from './territory-canopy.js';
 import {setTerritoryWeather,weatherState} from './territory-realism.js';
 import {guidedTourPanel} from './territory-tour-panel.js';
 import {modelId} from './territory-heritage-models.js';
+import {cameraNearPlane} from './camera-depth.js';
 
 const $=id=>document.getElementById('sim-'+id);
 const mobile=matchMedia('(max-width:760px), (pointer:coarse)').matches;
@@ -538,8 +539,8 @@ export async function openSimulator(){
     canopy.animate(now/1000,peripheral);
     heritage.animateGlorieta(now/1000,$('jets').checked,lighting==='solar'&&atmosphere.daylight<.45);
     atmosphere.update(camera,near,detail.range,tier);sea.update(dt,tier,speed);network.animate(dt,flags,nav.mode==='walk'?camera.position:null);
-    const nearPlane=range>2600?3:range>450?.7:.12;
-    if(camera.near!==nearPlane||lastFov!==camera.fov){camera.near=nearPlane;lastFov=camera.fov;camera.updateProjectionMatrix();}
+    const nearPlane=cameraNearPlane({range,clearance:camera.position.y-ground.grade(camera.position.x,camera.position.z),interior:!!heritage.stats.visit?.interior,pedestrian:nav.mode==='walk'});
+    if(Math.abs(camera.near-nearPlane)>1e-5||lastFov!==camera.fov){camera.near=nearPlane;lastFov=camera.fov;camera.updateProjectionMatrix();}
     const contact=lighting==='solar'&&tier>=2&&peripheralPenalty<2&&(!mobile||tier===3)&&detail.range<520&&speed<65;
     renderer.info.reset();gpuTimer.begin();
     try{
