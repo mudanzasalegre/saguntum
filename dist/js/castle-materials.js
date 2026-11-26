@@ -5,9 +5,76 @@ import * as THREE from 'three';
 const fract=n=>n-Math.floor(n);
 const rand=n=>fract(Math.sin(n*127.13+43.7)*43758.5453);
 const mod=(n,m)=>(n%m+m)%m;
-export const CASTLE_TEXTURE_METRES={stone:[4.8,3.2],rubble:[3.8,2.9],tapial:[5.5,3.1],ashlar:[4.8,3.2],brick:[2.6,2.0],paving:[9.2,9.2],path:[2.1,2.1],tile:[2.3,2.7]};
+export const CASTLE_TEXTURE_METRES={stone:[4.8,3.2],rubble:[3.8,2.9],tapial:[5.5,3.1],ashlar:[4.8,3.2],brick:[2.6,2.0],paving:[9.2,9.2],path:[2.1,2.1],tile:[2.3,2.7],
+ 'gate-stone':[4.2,3.0],'gate-brick':[1.8,1.5],plaster:[3.6,3.6],wood:[1.8,3.2],
+ 'forum-earth':[5.4,5.4],'forum-gravel':[3.6,3.6],'forum-stone':[3.2,2.4],'worn-ashlar':[2.8,2.8]};
+
+const detailedKinds=new Set(['gate-stone','gate-brick','plaster','wood','forum-earth','forum-gravel','forum-stone','worn-ashlar']);
+function detailedTexture(kind){
+ const size=512,pixels=new Uint8Array(size*size*4),masonry=kind==='gate-stone'||kind==='forum-stone';
+ const cols=14,rows=12,cells=[];
+ if(masonry)for(let row=0;row<rows;row++)for(let col=0;col<cols;col++){
+  const seed=row*83+col*17;
+  cells.push({x:(col+.24+rand(seed)*.51)/cols,y:(row+.22+rand(seed+7)*.55)/rows,tone:.76+rand(seed+19)*.15});
+ }
+ const smooth=(u,v,frequency)=>{
+  const x=u*frequency,y=v*frequency,i=Math.floor(x),j=Math.floor(y),fx=x-i,fy=y-j;
+  const a=rand(mod(i,frequency)+mod(j,frequency)*71),b=rand(mod(i+1,frequency)+mod(j,frequency)*71);
+  const c=rand(mod(i,frequency)+mod(j+1,frequency)*71),d=rand(mod(i+1,frequency)+mod(j+1,frequency)*71);
+  const sx=fx*fx*(3-2*fx),sy=fy*fy*(3-2*fy);return (a+(b-a)*sx)*(1-sy)+(c+(d-c)*sx)*sy;
+ };
+ for(let y=0;y<size;y++)for(let x=0;x<size;x++){
+  const u=x/size,v=y/size,grain=rand(x+y*size),weather=smooth(u,v,8),fine=smooth(u,v,48);
+  let value=.87,red=1,green=.995,blue=.98;
+  if(masonry){
+   const gx=Math.floor(u*cols),gy=Math.floor(v*rows);let d1=Infinity,d2=Infinity,tone=.82;
+   for(let oy=-1;oy<=1;oy++)for(let ox=-1;ox<=1;ox++){
+    const cell=cells[mod(gy+oy,rows)*cols+mod(gx+ox,cols)];
+    const dx=Math.min(Math.abs(u-cell.x),1-Math.abs(u-cell.x)),dy=Math.min(Math.abs(v-cell.y),1-Math.abs(v-cell.y)),d=dx*dx+dy*dy*1.2;
+    if(d<d1){d2=d1;d1=d;tone=cell.tone;}else if(d<d2)d2=d;
+   }
+   const joint=Math.max(0,1-(d2-d1)/.00019),pit=grain>.987?.09:0;
+   value=tone+(fine-.5)*.095+(weather-.5)*.075+(grain-.5)*.055-pit;
+   // Recessed joints with pale lime edges, rather than large coloured facets.
+   value=value*(1-joint*.70)+(.72+(grain-.5)*.10)*joint*.70;
+   if(joint>.2&&joint<.5)value+=.045;
+   green=.99;blue=.965;
+  }else if(kind==='gate-brick'){
+   const row=Math.floor(v*18),xx=mod(u*7+(row%2)*.5,1),yy=mod(v*18,1),joint=xx<.038||yy<.11;
+   value=(joint?.83:.77+rand(Math.floor(u*7+(row%2)*.5)+row*37)*.10)+(fine-.5)*.07+(grain-.5)*.06;
+   green=joint?1:.94;blue=joint?.98:.87;
+  }else if(kind==='plaster'){
+   const flake=weather<.24;
+   value=.86+(weather-.5)*.12+(fine-.5)*.065+(grain-.5)*.05-(flake?.10:0);
+   green=.985;blue=.94;
+  }else if(kind==='wood'){
+   const board=Math.floor(u*8),joint=mod(u*8,1)<.018,flow=u*190+Math.sin(v*18+board)*1.8;
+   value=.78+rand(board*11)*.08+Math.sin(flow)*.045+Math.sin(flow*2.9+v*6)*.022+(grain-.5)*.065-(joint?.26:0);
+   green=.97;blue=.91;
+  }else if(kind==='worn-ashlar'){
+   // Individual blocks are geometry: no false masonry courses painted on them.
+   value=.86+(weather-.5)*.10+(fine-.5)*.08+(grain-.5)*.055-(grain>.992?.08:0);
+   green=.999;blue=.985;
+  }else{
+   const gravel=kind==='forum-gravel',pebble=smooth(u,v,128),scar=weather<.18;
+   value=.84+(weather-.5)*.095+(fine-.5)*.09+(grain-.5)*(gravel?.14:.10)+(pebble-.5)*(gravel?.15:.05)-(scar?.025:0);
+   green=.995;blue=.97;
+  }
+  const offset=(y*size+x)*4;
+  pixels[offset]=Math.max(0,Math.min(255,Math.round(value*red*255)));
+  pixels[offset+1]=Math.max(0,Math.min(255,Math.round(value*green*255)));
+  pixels[offset+2]=Math.max(0,Math.min(255,Math.round(value*blue*255)));pixels[offset+3]=255;
+ }
+ const texture=new THREE.DataTexture(pixels,size,size,THREE.RGBAFormat);
+ texture.colorSpace=THREE.SRGBColorSpace;texture.wrapS=texture.wrapT=THREE.RepeatWrapping;
+ texture.magFilter=THREE.LinearFilter;texture.minFilter=THREE.LinearMipmapLinearFilter;
+ texture.generateMipmaps=true;texture.needsUpdate=true;texture.name='Castillo · textura propia · '+kind;
+ texture.userData={originalProcedural:true,materialFamily:kind,repeatMetres:CASTLE_TEXTURE_METRES[kind],reference:'Material families observed in the forum and Almenara photographs; not a photographic survey'};
+ return texture;
+}
 
 export function createCastleTexture(kind){
+ if(detailedKinds.has(kind))return detailedTexture(kind);
  const width=256,height=256,data=new Uint8Array(width*height*4);
  const rubble=kind==='stone'||kind==='rubble';
  // A wrapped, jittered field gives small irregular stones and uneven courses.

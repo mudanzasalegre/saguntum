@@ -1,0 +1,638 @@
+{
+  "pass": true,
+  "method": "CPU final terrain binding + exact app.js preset() + shipped Three.js + actual stopCamera()",
+  "viewports": {
+    "wide": {
+      "width": 1440,
+      "height": 900
+    },
+    "portrait": {
+      "width": 390,
+      "height": 844
+    }
+  },
+  "panel": "open",
+  "counts": {
+    "stops": 18,
+    "atlasFrames": 2,
+    "aspects": 2,
+    "poses": 40,
+    "interiors": 0
+  },
+  "inputs": {
+    "presetSha256": "bf1baecc8a4a1ad7f5bddf0931505bd53065d0a4c1d7c4e3c66bdfb2dfbcec78",
+    "editorialSceneFrameSha256": "96886873c8c082d93b8df16a4ae77f8e14185c91c9ace2022f9023597ff2e05f",
+    "castleSha256": "fe2982fbcc56ba98dadacf7a05f9d4eacd786937597e36531ccf89c7feeab464",
+    "materialsSha256": "5fc6affe794d7ba83dd9b0a8f66a23ecd8270f2c5c2721cf2e6d0395324b0bfb",
+    "castleGroundSha256": "8bea3c1ea20506860cc970517b94201143c55f848d61e2b5ed04c9e6f16d1889",
+    "castleSourceHashes": {
+      "dist/js/castle-almenara.js": "172f30f459d71afab07e13820a326391e24b21973b58ed81025a2a6b399503f9",
+      "dist/js/castle-forum.js": "aace8d3649720b189d084efe924220543c5716a87b31546740b4ba99f77824d1",
+      "dist/js/castle-ground.js": "8bea3c1ea20506860cc970517b94201143c55f848d61e2b5ed04c9e6f16d1889",
+      "dist/js/castle-map.js": "6d1cb292d6b413eb998997806bf59ca88bfbf1b62a1269573d0e8d18c67b40b9",
+      "dist/js/castle-materials.js": "5fc6affe794d7ba83dd9b0a8f66a23ecd8270f2c5c2721cf2e6d0395324b0bfb",
+      "dist/js/castle-panel.js": "9246867bd35d57d300e8e1dea785652d876f7b9bca40c86b14ea9e08953ca801",
+      "dist/js/castle.js": "fe2982fbcc56ba98dadacf7a05f9d4eacd786937597e36531ccf89c7feeab464"
+    },
+    "terrainSha256": "199e257e1398562b01cccd1ee0fe285a6f6655b73b1c552cb3747787d240a278",
+    "urbanSurfaceSha256": "fa2c95b186e19787cc37eb566e9ebc6b44ecbb85cb27ee7119cdfb344247fe98"
+  },
+  "groundBinding": {
+    "assembly": "Castle forum terrace + sacred/civic/archaeological patches + urban ground + final terrain mesh + deferred castle construction",
+    "forum": {
+      "level": 132,
+      "margin": 4,
+      "method": "Forum and archaeological floors: local relative levels from photographed remains, anchored to the existing IGN south/east edge; curia platform built separately; Almenara passage graded continuously; elevations are interpretive, not a new archaeological survey"
+    },
+    "scope": "Same local castle inputs as buildRegion(sagunto); distant Glorieta omitted from CPU context"
+  },
+  "overviewNote": "Unselected entrance and conjunto stop share the authored castle overview.",
+  "interiorIds": [],
+  "maxPoseErrorM": 0.000498306777842572,
+  "maxAdapterErrorM": 0,
+  "maxFovErrorDeg": 0,
+  "simulatorRegistration": {
+    "projection": "ETRS89 / UTM 30N",
+    "verticalOffsetM": 7.25
+  },
+  "unchanged": [
+    {
+      "file": "dist/assets/territory/visit-cameras.json",
+      "otherMonuments": 31,
+      "unchangedOutsideCastle": true,
+      "outsideValueSha256": "93b2ac4ac3224fc2e9a036080fd8df039e54fc8698ce8e4b1ec9c40488789985",
+      "otherMonumentsSha256": "70e7be7a97a1666718128e72716a3aa9113b8400780814c27711022fad6e4b7c"
+    },
+    {
+      "file": "dist/assets/territory/atlas-frames.json",
+      "otherMonuments": 31,
+      "unchangedOutsideCastle": true,
+      "outsideValueSha256": "e8e9909ffad049993fd434519666659efc62ac477cc8a4aa6fe20066762e78c7",
+      "otherMonumentsSha256": "067f84856c43c91b813d1aca8acb4058321aa6b72d1664c309601ef7ecd1aa21"
+    }
+  ],
+  "samples": [
+    {
+      "kind": "stop",
+      "id": "conjunto",
+      "view": "wide",
+      "eyeErrorM": 0.000024917224664022797,
+      "targetErrorM": 0.00003950195309698756,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "conjunto",
+      "view": "portrait",
+      "eyeErrorM": 0.00003454490433796309,
+      "targetErrorM": 0.00003950195309698756,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "acceso",
+      "view": "wide",
+      "eyeErrorM": 0.000037406821661534195,
+      "targetErrorM": 0.0000422067999892306,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "acceso",
+      "view": "portrait",
+      "eyeErrorM": 0.000019824516524380442,
+      "targetErrorM": 0.0000422067999892306,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "foro",
+      "view": "wide",
+      "eyeErrorM": 0.00004373213882402638,
+      "targetErrorM": 0.00002666708044785082,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "foro",
+      "view": "portrait",
+      "eyeErrorM": 0.000048968840019369964,
+      "targetErrorM": 0.00002666708044785082,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "templo",
+      "view": "wide",
+      "eyeErrorM": 0.0000409074396543474,
+      "targetErrorM": 4.6986291124540003e-7,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "templo",
+      "view": "portrait",
+      "eyeErrorM": 0.000035325881327707975,
+      "targetErrorM": 4.6986291124540003e-7,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "curia",
+      "view": "wide",
+      "eyeErrorM": 0.00002314234964728712,
+      "targetErrorM": 0.000015586395250011265,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "curia",
+      "view": "portrait",
+      "eyeErrorM": 0.000048774144801200237,
+      "targetErrorM": 0.000015586395250011265,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "basilica",
+      "view": "wide",
+      "eyeErrorM": 0.00004203095670618495,
+      "targetErrorM": 0.0000061035156022626325,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "basilica",
+      "view": "portrait",
+      "eyeErrorM": 0.000024075111582533282,
+      "targetErrorM": 0.0000061035156022626325,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "cisterna-foro",
+      "view": "wide",
+      "eyeErrorM": 0.000018977066190473124,
+      "targetErrorM": 0.00003896754576260264,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "cisterna-foro",
+      "view": "portrait",
+      "eyeErrorM": 0.000037921532140217096,
+      "targetErrorM": 0.00003896754576260264,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "cisterna-norte",
+      "view": "wide",
+      "eyeErrorM": 0.000017234525699905134,
+      "targetErrorM": 4.6986291124540003e-7,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "cisterna-norte",
+      "view": "portrait",
+      "eyeErrorM": 0.000040273669696944125,
+      "targetErrorM": 4.6986291124540003e-7,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "inscripcion",
+      "view": "wide",
+      "eyeErrorM": 0.000023562847985658664,
+      "targetErrorM": 0.000014366615104677294,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "inscripcion",
+      "view": "portrait",
+      "eyeErrorM": 0.00003051981644830448,
+      "targetErrorM": 0.000014366615104677294,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "puerta-almenara",
+      "view": "wide",
+      "eyeErrorM": 0.00004673807175947786,
+      "targetErrorM": 0.000032000455576053355,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "puerta-almenara",
+      "view": "portrait",
+      "eyeErrorM": 0.000042485453093377146,
+      "targetErrorM": 0.000032000455576053355,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "almenara",
+      "view": "wide",
+      "eyeErrorM": 0.000045019763319942285,
+      "targetErrorM": 0.00004755519958621335,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "almenara",
+      "view": "portrait",
+      "eyeErrorM": 0.00003999485716121853,
+      "targetErrorM": 0.00004755519958621335,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "conejera",
+      "view": "wide",
+      "eyeErrorM": 0.00003783602164730837,
+      "targetErrorM": 0.000040000084851499196,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "conejera",
+      "view": "portrait",
+      "eyeErrorM": 0.000046918614316382445,
+      "targetErrorM": 0.000040000084851499196,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "puerta-san-fernando",
+      "view": "wide",
+      "eyeErrorM": 0.00004453016948957611,
+      "targetErrorM": 0.00003294004201848111,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "puerta-san-fernando",
+      "view": "portrait",
+      "eyeErrorM": 0.000036093661684333256,
+      "targetErrorM": 0.00003294004201848111,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "san-fernando",
+      "view": "wide",
+      "eyeErrorM": 0.0000448486035793394,
+      "targetErrorM": 0.000046636084761075836,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "san-fernando",
+      "view": "portrait",
+      "eyeErrorM": 0.00003425787184596629,
+      "targetErrorM": 0.000046636084761075836,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "antiquarium",
+      "view": "wide",
+      "eyeErrorM": 0.00004497043403262069,
+      "targetErrorM": 0.000047612580459599485,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "antiquarium",
+      "view": "portrait",
+      "eyeErrorM": 0.000042386206416722416,
+      "targetErrorM": 0.000047612580459599485,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "estudiantes",
+      "view": "wide",
+      "eyeErrorM": 0.000031207120059661975,
+      "targetErrorM": 0.00004117397077152418,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "estudiantes",
+      "view": "portrait",
+      "eyeErrorM": 0.000047659346421369264,
+      "targetErrorM": 0.00004117397077152418,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "ciudadela",
+      "view": "wide",
+      "eyeErrorM": 0.00004720907844557587,
+      "targetErrorM": 0.0000342113740714467,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "ciudadela",
+      "view": "portrait",
+      "eyeErrorM": 0.00003864859453983627,
+      "targetErrorM": 0.0000342113740714467,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "dos-mayo",
+      "view": "wide",
+      "eyeErrorM": 0.000033218775911336706,
+      "targetErrorM": 0.00003588281964539419,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "stop",
+      "id": "dos-mayo",
+      "view": "portrait",
+      "eyeErrorM": 0.00004697418944488163,
+      "targetErrorM": 0.00003588281964539419,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "overview",
+      "id": "castle",
+      "view": "wide",
+      "eyeErrorM": 0.0003910292211912747,
+      "targetErrorM": 0.0004097290039055679,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "overview",
+      "id": "castle",
+      "view": "portrait",
+      "eyeErrorM": 0.0003792433285525476,
+      "targetErrorM": 0.0004097290039055679,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "exterior",
+      "id": "acceso",
+      "view": "wide",
+      "eyeErrorM": 0.00036925437967738617,
+      "targetErrorM": 0.00035779320000983716,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    },
+    {
+      "kind": "exterior",
+      "id": "acceso",
+      "view": "portrait",
+      "eyeErrorM": 0.000498306777842572,
+      "targetErrorM": 0.00035779320000983716,
+      "fittedPoints": 8,
+      "allWithinOpenPanelFrame": true,
+      "adapter": {
+        "eyeErrorM": 0,
+        "targetErrorM": 0,
+        "fovErrorDeg": 0
+      }
+    }
+  ],
+  "interiorAspectChecks": [],
+  "errors": []
+}

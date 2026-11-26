@@ -2,6 +2,16 @@
 
 Atlas patrimonial y paisajístico de Sagunto, Puerto de Sagunto y su costa en Three.js, con **32 lugares explorables** sobre cartografía real. Reúne monumentos, arqueología, memoria industrial, costa y paisajes en seis ámbitos territoriales, con visitas documentadas y vistas históricas.
 
+## Castillo · Foro y Puerta de Almenara
+
+La revisión de V51 recupera y termina el trabajo dedicado al **Foro y la Puerta de Almenara**, con los mismos modelos en Atlas y Simulador. Se contrasta el estado conservado con plantas arqueológicas, fotografías de excavación, una postal histórica sin fecha y documentación de restauración.
+
+El Foro distingue la explanada, el templo incompleto, la curia elevada con tres peldaños, los fondos excavados de la basílica y las tabernae. Las basas, fustes y piezas lapidarias se representan como fragmentos conservados. Almenara separa el frontis apuntado con dos óculos trilobulados del cuerpo posterior abovedado, su arco rebajado, las tres aberturas estrechas y la escalera lateral. Los suelos, materiales y encuentros con las murallas se ajustan de forma local.
+
+La visita conserva **18 paradas**, los siete recintos y sus enlaces; su bibliografía reúne **35 fuentes**. Las alturas de modelado y varias posiciones de detalle son aproximaciones explícitas. Las comprobaciones geométricas y los renders de inspección no equivalen a un levantamiento fotogramétrico ni a una medición de rendimiento en GPU.
+
+[Foro](https://saguntum-atlas-3d.monmode.chatgpt.site/#castle/foro) · [Puerta de Almenara](https://saguntum-atlas-3d.monmode.chatgpt.site/#castle/puerta-almenara) · [Investigación](research/castle-history.md) · [Modelo y límites](research/castle-model.md) · [Verificación](research/validation-v51/README.md) · [Estado de publicación](docs/SITES_SYNC.md)
+
 ## Plaza Mayor y Santa María · revisión del conjunto urbano
 
 La revisión de 26 de noviembre de 2026 completa los **soportales de los números 7–8 y 9**, junto a Santa María, a partir de los expedientes municipales, la cartografía y fotografías contrastadas. Las galerías tienen cuatro vanos abiertos, cinco apoyos y continuidad bajo las dos fachadas; se conservan los cuerpos posteriores de ambas parcelas. La plaza reúne ahora 15 frentes especializados.

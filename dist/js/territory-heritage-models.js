@@ -387,7 +387,7 @@ export async function buildHeritageModel(id,{places,records,area,heightAt,projec
   // generic road fragments and to keep the visitor on the same walking level.
   // The archaeological and natural ground outside these paths remains intact.
   const routeSurface=mesh=>mesh.isMesh&&
-   (mesh.userData.component==='caminos'&&mesh.userData.materialKind==='path'||
+   (mesh.userData.publicWalkingSurface===true||mesh.userData.component==='caminos'&&mesh.userData.materialKind==='path'||
     mesh.userData.component==='escalones'&&mesh.userData.materialKind==='ashlar');
   pavement=sampleAtlasPavement({group:outer},null,routeSurface);
   const visit=sites.castle.group.userData.visit;

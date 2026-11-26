@@ -1,0 +1,6065 @@
+{
+  "pass": true,
+  "method": "Actual Three.js architecture and final Atlas terrain; independently ray-tested foot corridor, facade depth, visible archaeology and surface continuity",
+  "baselineCommit": "f765f4a96948d6c045813b5f94adab39e2782f07",
+  "unchanged": [
+    {
+      "file": "dist/assets/territory/visit-stops.json",
+      "pass": true,
+      "count": 31
+    },
+    {
+      "file": "dist/assets/territory/visit-cameras.json",
+      "pass": true,
+      "count": 31
+    },
+    {
+      "file": "dist/assets/territory/atlas-frames.json",
+      "pass": true,
+      "count": 31
+    }
+  ],
+  "groundBinding": {
+    "assembly": "Castle forum terrace + sacred/civic/archaeological patches + urban ground + final terrain mesh + deferred castle construction",
+    "forum": {
+      "level": 132,
+      "margin": 4,
+      "method": "Forum and archaeological floors: local relative levels from photographed remains, anchored to the existing IGN south/east edge; curia platform built separately; Almenara passage graded continuously; elevations are interpretive, not a new archaeological survey"
+    },
+    "scope": "Same local castle inputs as buildRegion(sagunto); distant Glorieta omitted from CPU context"
+  },
+  "sourceHashes": {
+    "dist/js/castle-almenara.js": "172f30f459d71afab07e13820a326391e24b21973b58ed81025a2a6b399503f9",
+    "dist/js/castle-forum.js": "aace8d3649720b189d084efe924220543c5716a87b31546740b4ba99f77824d1",
+    "dist/js/castle-ground.js": "8bea3c1ea20506860cc970517b94201143c55f848d61e2b5ed04c9e6f16d1889",
+    "dist/js/castle-map.js": "6d1cb292d6b413eb998997806bf59ca88bfbf1b62a1269573d0e8d18c67b40b9",
+    "dist/js/castle-materials.js": "5fc6affe794d7ba83dd9b0a8f66a23ecd8270f2c5c2721cf2e6d0395324b0bfb",
+    "dist/js/castle-panel.js": "9246867bd35d57d300e8e1dea785652d876f7b9bca40c86b14ea9e08953ca801",
+    "dist/js/castle.js": "fe2982fbcc56ba98dadacf7a05f9d4eacd786937597e36531ccf89c7feeab464",
+    "dist/js/monuments.js": "ce10354ba856f3ca369d12624d11f40782e9e4b4777ebaae906cacf73154f688",
+    "dist/js/territory-heritage-models.js": "2c3a191d8abf0f54352625d7d2fad9e567a0694aaf372f6687ea13c368503438",
+    "dist/js/territory-heritage-relief.js": "8a1432f618634bc1d39a9c8ef52a3b492f7632e17da229ca0e4b9be59ee31ff4"
+  },
+  "checks": [
+    {
+      "pass": true,
+      "label": "The 18 existing castle stop identifiers and order are preserved"
+    },
+    {
+      "pass": true,
+      "label": "All other 31 destinations are unchanged in dist/assets/territory/visit-stops.json"
+    },
+    {
+      "pass": true,
+      "label": "All other 31 destinations are unchanged in dist/assets/territory/visit-cameras.json"
+    },
+    {
+      "pass": true,
+      "label": "All other 31 destinations are unchanged in dist/assets/territory/atlas-frames.json"
+    },
+    {
+      "pass": true,
+      "label": "Almenara publishes the local threshold and facade contract"
+    },
+    {
+      "pass": true,
+      "label": "Gate walking centreline has finite floor coordinates"
+    },
+    {
+      "pass": true,
+      "label": "Gate has a usable authored walking width"
+    },
+    {
+      "pass": true,
+      "label": "Gate facade has an explicit origin and physical thickness"
+    },
+    {
+      "pass": true,
+      "label": "Actual gate floor supports the complete authored walking corridor",
+      "detail": {
+        "samples": 204,
+        "missing": 0,
+        "maxGroundError": 0.11080447110558111
+      }
+    },
+    {
+      "pass": true,
+      "label": "Terrain and architecture together leave 1.8 m headroom throughout the gate",
+      "detail": {
+        "clear": 204,
+        "total": 204
+      }
+    },
+    {
+      "pass": true,
+      "label": "Body rays travel through the gate above its actual sloping floor",
+      "detail": {
+        "clear": 522,
+        "total": 522
+      }
+    },
+    {
+      "pass": true,
+      "label": "Gate floor has no accidental vertical jump above one stair riser",
+      "detail": {
+        "maxFootJump": 0.055716854996290976,
+        "sampleStep": 0.25
+      }
+    },
+    {
+      "pass": true,
+      "label": "Both facade oculi have documented geometric probes"
+    },
+    {
+      "pass": true,
+      "label": "Oculus 1 has a finite aperture and wall thickness"
+    },
+    {
+      "pass": true,
+      "label": "Oculus 1 is physically open through the facade"
+    },
+    {
+      "pass": true,
+      "label": "Oculus 1 belongs to the thin facade rather than a solid passage-depth slab",
+      "detail": {
+        "thickness": 0.7799979043725418,
+        "expected": 0.78,
+        "frontDepth": 0.3899991382268355,
+        "backDepth": -0.3899987661457063
+      }
+    },
+    {
+      "pass": true,
+      "label": "Oculus 2 has a finite aperture and wall thickness"
+    },
+    {
+      "pass": true,
+      "label": "Oculus 2 is physically open through the facade"
+    },
+    {
+      "pass": true,
+      "label": "Oculus 2 belongs to the thin facade rather than a solid passage-depth slab",
+      "detail": {
+        "thickness": 0.7800106061472347,
+        "expected": 0.78,
+        "frontDepth": 0.39000426138485883,
+        "backDepth": -0.3900063447623759
+      }
+    },
+    {
+      "pass": true,
+      "label": "The eastern facade has the three documented narrow openings"
+    },
+    {
+      "pass": true,
+      "label": "Rear slit 1 has a finite geometric probe"
+    },
+    {
+      "pass": true,
+      "label": "Rear slit 1 remains physically open",
+      "detail": {
+        "clear": 9,
+        "total": 9
+      }
+    },
+    {
+      "pass": true,
+      "label": "Rear slit 2 has a finite geometric probe"
+    },
+    {
+      "pass": true,
+      "label": "Rear slit 2 remains physically open",
+      "detail": {
+        "clear": 9,
+        "total": 9
+      }
+    },
+    {
+      "pass": true,
+      "label": "Rear slit 3 has a finite geometric probe"
+    },
+    {
+      "pass": true,
+      "label": "Rear slit 3 remains physically open",
+      "detail": {
+        "clear": 9,
+        "total": 9
+      }
+    },
+    {
+      "pass": true,
+      "label": "Forum publishes separate surface and foundation components"
+    },
+    {
+      "pass": true,
+      "label": "Forum surfaces have independent footprints and component names"
+    },
+    {
+      "pass": true,
+      "label": "Forum foro has visible supported surface faces",
+      "detail": {
+        "id": "foro",
+        "component": "foro",
+        "triangles": 8192,
+        "buried": 0,
+        "minClearance": 0.05614913565418078,
+        "nonFinite": 0,
+        "continuityPairs": 5522,
+        "unexpectedJumps": 0,
+        "maximumJump": 0.1330448517642253,
+        "discontinuities": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Forum foro has no accidental steps inside its walking surface",
+      "detail": {
+        "pairs": 5522,
+        "unexpectedJumps": 0,
+        "maximumJump": 0.1330448517642253
+      }
+    },
+    {
+      "pass": true,
+      "label": "Forum basilica has visible supported surface faces",
+      "detail": {
+        "id": "basilica",
+        "component": "basilica",
+        "triangles": 8849,
+        "buried": 0,
+        "minClearance": 0.0203731656075945,
+        "nonFinite": 0
+      }
+    },
+    {
+      "pass": true,
+      "label": "Forum templo has visible supported surface faces",
+      "detail": {
+        "id": "templo",
+        "component": "templo",
+        "triangles": 19289,
+        "buried": 0,
+        "minClearance": 0.035054524739564386,
+        "nonFinite": 0
+      }
+    },
+    {
+      "pass": true,
+      "label": "Forum curia has visible supported surface faces",
+      "detail": {
+        "id": "curia",
+        "component": "curia",
+        "triangles": 8196,
+        "buried": 0,
+        "minClearance": 0.05902905215816645,
+        "nonFinite": 0
+      }
+    },
+    {
+      "pass": true,
+      "label": "Forum tabernae has visible supported surface faces",
+      "detail": {
+        "id": "tabernae",
+        "component": "tabernae",
+        "triangles": 8450,
+        "buried": 0,
+        "minClearance": 0.03505270974710584,
+        "nonFinite": 0
+      }
+    },
+    {
+      "pass": true,
+      "label": "Forum margen-occidental has visible supported surface faces",
+      "detail": {
+        "id": "margen-occidental",
+        "component": "foro",
+        "triangles": 9954,
+        "buried": 0,
+        "minClearance": 0.05689053547877165,
+        "nonFinite": 0
+      }
+    },
+    {
+      "pass": true,
+      "label": "Forum pie-muro-noroeste-basilica has visible supported surface faces",
+      "detail": {
+        "id": "pie-muro-noroeste-basilica",
+        "component": "foro",
+        "triangles": 8201,
+        "buried": 0,
+        "minClearance": 0.03586195694907701,
+        "nonFinite": 0
+      }
+    },
+    {
+      "pass": true,
+      "label": "Forum curia-rellano has visible supported surface faces",
+      "detail": {
+        "id": "curia-rellano",
+        "component": "curia",
+        "triangles": 5542,
+        "buried": 0,
+        "minClearance": 0.10442111128941178,
+        "nonFinite": 0
+      }
+    },
+    {
+      "pass": true,
+      "label": "Forum curia-peldano-1 has visible supported surface faces",
+      "detail": {
+        "id": "curia-peldano-1",
+        "component": "curia",
+        "triangles": 18,
+        "buried": 0,
+        "minClearance": 0.3182373046875,
+        "nonFinite": 0,
+        "continuityPairs": 64,
+        "unexpectedJumps": 0,
+        "maximumJump": 0.023611497606452758,
+        "discontinuities": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Forum curia-peldano-1 has no accidental steps inside its walking surface",
+      "detail": {
+        "pairs": 64,
+        "unexpectedJumps": 0,
+        "maximumJump": 0.023611497606452758
+      }
+    },
+    {
+      "pass": true,
+      "label": "Forum curia-peldano-2 has visible supported surface faces",
+      "detail": {
+        "id": "curia-peldano-2",
+        "component": "curia",
+        "triangles": 18,
+        "buried": 0,
+        "minClearance": 0.5103505452473769,
+        "nonFinite": 0,
+        "continuityPairs": 64,
+        "unexpectedJumps": 0,
+        "maximumJump": 0.024476468880948232,
+        "discontinuities": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Forum curia-peldano-2 has no accidental steps inside its walking surface",
+      "detail": {
+        "pairs": 64,
+        "unexpectedJumps": 0,
+        "maximumJump": 0.024476468880948232
+      }
+    },
+    {
+      "pass": true,
+      "label": "Forum curia-peldano-3 has visible supported surface faces",
+      "detail": {
+        "id": "curia-peldano-3",
+        "component": "curia",
+        "triangles": 18,
+        "buried": 0,
+        "minClearance": 0.7125244140625,
+        "nonFinite": 0,
+        "continuityPairs": 64,
+        "unexpectedJumps": 0,
+        "maximumJump": 0.024296058602089943,
+        "discontinuities": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Forum curia-peldano-3 has no accidental steps inside its walking surface",
+      "detail": {
+        "pairs": 64,
+        "unexpectedJumps": 0,
+        "maximumJump": 0.024296058602089943
+      }
+    },
+    {
+      "pass": true,
+      "label": "Forum curia-desembarco has visible supported surface faces",
+      "detail": {
+        "id": "curia-desembarco",
+        "component": "curia",
+        "triangles": 0,
+        "buried": 0,
+        "minClearance": null,
+        "nonFinite": 0,
+        "sharedSupport": {
+          "surface": "curia-rellano",
+          "samples": 38,
+          "missing": 0,
+          "buried": 0,
+          "maxHeightError": 0.000006103515630684342
+        },
+        "continuityPairs": 61,
+        "unexpectedJumps": 0,
+        "maximumJump": 0,
+        "discontinuities": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Forum curia-desembarco has no accidental steps inside its walking surface",
+      "detail": {
+        "pairs": 61,
+        "unexpectedJumps": 0,
+        "maximumJump": 0
+      }
+    },
+    {
+      "pass": true,
+      "label": "Surviving forum foundations are explicitly identified for terrain checks"
+    },
+    {
+      "pass": true,
+      "label": "Forum templo foundations meet the final terrain",
+      "detail": {
+        "component": "templo",
+        "probes": 56,
+        "buried": 0,
+        "floating": 0,
+        "missing": 0,
+        "failures": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Forum curia foundations meet the final terrain",
+      "detail": {
+        "component": "curia",
+        "probes": 69,
+        "buried": 0,
+        "floating": 0,
+        "missing": 0,
+        "failures": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Forum basilica foundations meet the final terrain",
+      "detail": {
+        "component": "basilica",
+        "probes": 135,
+        "buried": 0,
+        "floating": 0,
+        "missing": 0,
+        "failures": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "Forum tabernae foundations meet the final terrain",
+      "detail": {
+        "component": "tabernae",
+        "probes": 44,
+        "buried": 0,
+        "floating": 0,
+        "missing": 0,
+        "failures": []
+      }
+    }
+  ],
+  "errors": [],
+  "warnings": [],
+  "gate": {
+    "samples": [
+      {
+        "segment": 0,
+        "u": -0.825,
+        "t": 0,
+        "x": 145.40713019886925,
+        "z": 310.0243091690158,
+        "expected": 133.75499999999997,
+        "actual": 133.7749962330002,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 0,
+        "u": -0.825,
+        "t": 0.125,
+        "x": 145.64835147728147,
+        "z": 309.95864110340415,
+        "expected": 133.8008333333333,
+        "actual": 133.82083453255441,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 0,
+        "u": -0.825,
+        "t": 0.25,
+        "x": 145.8895727556937,
+        "z": 309.89297303779256,
+        "expected": 133.84666666666664,
+        "actual": 133.86666543070712,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 0,
+        "u": -0.825,
+        "t": 0.375,
+        "x": 146.13079403410592,
+        "z": 309.8273049721809,
+        "expected": 133.89249999999998,
+        "actual": 133.91249587287382,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 0,
+        "u": -0.825,
+        "t": 0.5,
+        "x": 146.37201531251816,
+        "z": 309.7616369065693,
+        "expected": 133.9383333333333,
+        "actual": 133.95833355127797,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 0,
+        "u": -0.825,
+        "t": 0.625,
+        "x": 146.61323659093037,
+        "z": 309.6959688409577,
+        "expected": 133.98416666666662,
+        "actual": 134.00416506715712,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 0,
+        "u": -0.825,
+        "t": 0.75,
+        "x": 146.85445786934258,
+        "z": 309.63030077534603,
+        "expected": 134.02999999999997,
+        "actual": 134.04999404328592,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 0,
+        "u": -0.825,
+        "t": 0.875,
+        "x": 147.09567914775482,
+        "z": 309.56463270973444,
+        "expected": 134.07583333333332,
+        "actual": 134.09583234284014,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 0,
+        "u": -0.825,
+        "t": 1,
+        "x": 147.33690042616703,
+        "z": 309.4989646441228,
+        "expected": 134.12166666666664,
+        "actual": 134.1416706423944,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 0,
+        "u": 0,
+        "t": 0,
+        "x": 145.62383481538762,
+        "z": 310.82033938777613,
+        "expected": 133.75499999999997,
+        "actual": 133.77499090741966,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 0,
+        "u": 0,
+        "t": 0.125,
+        "x": 145.86505609379984,
+        "z": 310.7546713221645,
+        "expected": 133.8008333333333,
+        "actual": 133.82083110836447,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 0,
+        "u": 0,
+        "t": 0.25,
+        "x": 146.10627737221208,
+        "z": 310.6890032565529,
+        "expected": 133.84666666666664,
+        "actual": 133.86666929099076,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 0,
+        "u": 0,
+        "t": 0.375,
+        "x": 146.3474986506243,
+        "z": 310.62333519094125,
+        "expected": 133.89249999999998,
+        "actual": 133.91249614283112,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 0,
+        "u": 0,
+        "t": 0.5,
+        "x": 146.58871992903653,
+        "z": 310.55766712532966,
+        "expected": 133.9383333333333,
+        "actual": 133.9583295396158,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 0,
+        "u": 0,
+        "t": 0.625,
+        "x": 146.82994120744874,
+        "z": 310.491999059718,
+        "expected": 133.98416666666662,
+        "actual": 134.0041675783308,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 0,
+        "u": 0,
+        "t": 0.75,
+        "x": 147.07116248586095,
+        "z": 310.42633099410637,
+        "expected": 134.02999999999997,
+        "actual": 134.0500033277535,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 0,
+        "u": 0,
+        "t": 0.875,
+        "x": 147.3123837642732,
+        "z": 310.3606629284948,
+        "expected": 134.07583333333332,
+        "actual": 134.09582921108301,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 0,
+        "u": 0,
+        "t": 1,
+        "x": 147.5536050426854,
+        "z": 310.29499486288313,
+        "expected": 134.12166666666664,
+        "actual": 134.13977095828128,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 0,
+        "u": 0.825,
+        "t": 0,
+        "x": 145.840539431906,
+        "z": 311.61636960653647,
+        "expected": 133.75499999999997,
+        "actual": 133.77499808175466,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 0,
+        "u": 0.825,
+        "t": 0.125,
+        "x": 146.0817607103182,
+        "z": 311.5507015409248,
+        "expected": 133.8008333333333,
+        "actual": 133.82082545108753,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 0,
+        "u": 0.825,
+        "t": 0.25,
+        "x": 146.32298198873045,
+        "z": 311.48503347531323,
+        "expected": 133.84666666666664,
+        "actual": 133.86666335351632,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 0,
+        "u": 0.825,
+        "t": 0.375,
+        "x": 146.56420326714266,
+        "z": 311.4193654097016,
+        "expected": 133.89249999999998,
+        "actual": 133.912501398743,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 0,
+        "u": 0.825,
+        "t": 0.5,
+        "x": 146.8054245455549,
+        "z": 311.35369734409,
+        "expected": 133.9383333333333,
+        "actual": 133.95833165642037,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 0,
+        "u": 0.825,
+        "t": 0.625,
+        "x": 147.0466458239671,
+        "z": 311.28802927847835,
+        "expected": 133.98416666666662,
+        "actual": 134.00416426652234,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 0,
+        "u": 0.825,
+        "t": 0.75,
+        "x": 147.28786710237932,
+        "z": 311.2223612128667,
+        "expected": 134.02999999999997,
+        "actual": 134.05000245369507,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 0,
+        "u": 0.825,
+        "t": 0.875,
+        "x": 147.52908838079156,
+        "z": 311.1566931472551,
+        "expected": 134.07583333333332,
+        "actual": 134.0945929169279,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 0,
+        "u": 0.825,
+        "t": 1,
+        "x": 147.77030965920378,
+        "z": 311.09102508164347,
+        "expected": 134.12166666666664,
+        "actual": 134.1334387542137,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 1,
+        "u": -0.825,
+        "t": 0,
+        "x": 147.336900426167,
+        "z": 309.4989646441228,
+        "expected": 134.12166666666664,
+        "actual": 134.14167064239436,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 1,
+        "u": -0.825,
+        "t": 0.25,
+        "x": 147.57812170457922,
+        "z": 309.43329657851115,
+        "expected": 134.16749999999996,
+        "actual": 134.1831298294795,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 1,
+        "u": -0.825,
+        "t": 0.5,
+        "x": 147.81934298299146,
+        "z": 309.36762851289956,
+        "expected": 134.2133333333333,
+        "actual": 134.21545138957498,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 1,
+        "u": -0.825,
+        "t": 0.75,
+        "x": 148.06056426140367,
+        "z": 309.3019604472879,
+        "expected": 134.25916666666666,
+        "actual": 134.24776242257693,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 1,
+        "u": -0.825,
+        "t": 1,
+        "x": 148.30178553981588,
+        "z": 309.23629238167626,
+        "expected": 134.30499999999998,
+        "actual": 134.29598062862664,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 1,
+        "u": 0,
+        "t": 0,
+        "x": 147.5536050426854,
+        "z": 310.29499486288313,
+        "expected": 134.12166666666664,
+        "actual": 134.13977095828128,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 1,
+        "u": 0,
+        "t": 0.25,
+        "x": 147.79482632109762,
+        "z": 310.2293267972715,
+        "expected": 134.16749999999996,
+        "actual": 134.1761652016573,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 1,
+        "u": 0,
+        "t": 0.5,
+        "x": 148.03604759950986,
+        "z": 310.1636587316599,
+        "expected": 134.2133333333333,
+        "actual": 134.20996729288237,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 1,
+        "u": 0,
+        "t": 0.75,
+        "x": 148.27726887792207,
+        "z": 310.09799066604825,
+        "expected": 134.25916666666666,
+        "actual": 134.2591707836277,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 1,
+        "u": 0,
+        "t": 1,
+        "x": 148.51849015633428,
+        "z": 310.0323226004366,
+        "expected": 134.30499999999998,
+        "actual": 134.29598055136861,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 1,
+        "u": 0.825,
+        "t": 0,
+        "x": 147.7703096592038,
+        "z": 311.09102508164347,
+        "expected": 134.12166666666664,
+        "actual": 134.13343875421373,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 1,
+        "u": 0.825,
+        "t": 0.25,
+        "x": 148.01153093761602,
+        "z": 311.0253570160318,
+        "expected": 134.16749999999996,
+        "actual": 134.17193183903763,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 1,
+        "u": 0.825,
+        "t": 0.5,
+        "x": 148.25275221602826,
+        "z": 310.95968895042023,
+        "expected": 134.2133333333333,
+        "actual": 134.2093205579809,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 1,
+        "u": 0.825,
+        "t": 0.75,
+        "x": 148.49397349444047,
+        "z": 310.8940208848086,
+        "expected": 134.25916666666666,
+        "actual": 134.2447393096208,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 1,
+        "u": 0.825,
+        "t": 1,
+        "x": 148.73519477285268,
+        "z": 310.82835281919694,
+        "expected": 134.30499999999998,
+        "actual": 134.29598029217593,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 2,
+        "u": -0.825,
+        "t": 0,
+        "x": 148.28690067872472,
+        "z": 309.2404947694907,
+        "expected": 134.30499999999998,
+        "actual": 134.2937033401143,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 2,
+        "u": -0.825,
+        "t": 0.25,
+        "x": 148.4740928804267,
+        "z": 309.1857458171168,
+        "expected": 134.32175781249998,
+        "actual": 134.32043452185272,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 2,
+        "u": -0.825,
+        "t": 0.5,
+        "x": 148.66128508212864,
+        "z": 309.130996864743,
+        "expected": 134.33851562499999,
+        "actual": 134.337191331612,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 2,
+        "u": -0.825,
+        "t": 0.75,
+        "x": 148.8484772838306,
+        "z": 309.0762479123692,
+        "expected": 134.3552734375,
+        "actual": 134.35394815118107,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 2,
+        "u": -0.825,
+        "t": 1,
+        "x": 149.03566948553257,
+        "z": 309.0214989599953,
+        "expected": 134.37203125,
+        "actual": 134.3760446118475,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 2,
+        "u": 0,
+        "t": 0,
+        "x": 148.51849015633428,
+        "z": 310.0323226004366,
+        "expected": 134.30499999999998,
+        "actual": 134.29598055136861,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 2,
+        "u": 0,
+        "t": 0.25,
+        "x": 148.70568235803626,
+        "z": 309.97757364806273,
+        "expected": 134.32175781249998,
+        "actual": 134.32176301439304,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 2,
+        "u": 0,
+        "t": 0.5,
+        "x": 148.8928745597382,
+        "z": 309.9228246956889,
+        "expected": 134.33851562499999,
+        "actual": 134.33851949581828,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 2,
+        "u": 0,
+        "t": 0.75,
+        "x": 149.08006676144015,
+        "z": 309.8680757433151,
+        "expected": 134.3552734375,
+        "actual": 134.35527604757223,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 2,
+        "u": 0,
+        "t": 1,
+        "x": 149.26725896314213,
+        "z": 309.81332679094123,
+        "expected": 134.37203125,
+        "actual": 134.37203286714131,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 2,
+        "u": 0.825,
+        "t": 0,
+        "x": 148.75007963394384,
+        "z": 310.8241504313825,
+        "expected": 134.30499999999998,
+        "actual": 134.2982575347312,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 2,
+        "u": 0.825,
+        "t": 0.25,
+        "x": 148.93727183564582,
+        "z": 310.76940147900865,
+        "expected": 134.32175781249998,
+        "actual": 134.32309225880516,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 2,
+        "u": 0.825,
+        "t": 0.5,
+        "x": 149.12446403734776,
+        "z": 310.71465252663484,
+        "expected": 134.33851562499999,
+        "actual": 134.33984907837424,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 2,
+        "u": 0.825,
+        "t": 0.75,
+        "x": 149.3116562390497,
+        "z": 310.659903574261,
+        "expected": 134.3552734375,
+        "actual": 134.35660573493965,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 2,
+        "u": 0.825,
+        "t": 1,
+        "x": 149.4988484407517,
+        "z": 310.60515462188715,
+        "expected": 134.37203125,
+        "actual": 134.37433915970715,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 3,
+        "u": -0.825,
+        "t": 0,
+        "x": 149.03566948553254,
+        "z": 309.0214989599953,
+        "expected": 134.37203125,
+        "actual": 134.3760446118475,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 3,
+        "u": -0.825,
+        "t": 0.2,
+        "x": 149.26989972766216,
+        "z": 308.9529925785634,
+        "expected": 134.393,
+        "actual": 134.40187171181284,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 3,
+        "u": -0.825,
+        "t": 0.4,
+        "x": 149.50412996979182,
+        "z": 308.88448619713154,
+        "expected": 134.41396874999998,
+        "actual": 134.42650832611662,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 3,
+        "u": -0.825,
+        "t": 0.6,
+        "x": 149.73836021192145,
+        "z": 308.8159798156996,
+        "expected": 134.4349375,
+        "actual": 134.4503739664722,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 3,
+        "u": -0.825,
+        "t": 0.8,
+        "x": 149.9725904540511,
+        "z": 308.74747343426776,
+        "expected": 134.45590624999997,
+        "actual": 134.4545736815856,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 3,
+        "u": -0.825,
+        "t": 1,
+        "x": 150.20682069618073,
+        "z": 308.67896705283584,
+        "expected": 134.47687499999998,
+        "actual": 134.47554113098465,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 3,
+        "u": 0,
+        "t": 0,
+        "x": 149.26725896314213,
+        "z": 309.81332679094123,
+        "expected": 134.37203125,
+        "actual": 134.37203286714131,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 3,
+        "u": 0,
+        "t": 0.2,
+        "x": 149.50148920527175,
+        "z": 309.7448204095093,
+        "expected": 134.393,
+        "actual": 134.40224790174068,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 3,
+        "u": 0,
+        "t": 0.4,
+        "x": 149.7357194474014,
+        "z": 309.67631402807746,
+        "expected": 134.41396874999998,
+        "actual": 134.4288408481164,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 3,
+        "u": 0,
+        "t": 0.6,
+        "x": 149.96994968953103,
+        "z": 309.60780764664554,
+        "expected": 134.4349375,
+        "actual": 134.43493470104025,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 3,
+        "u": 0,
+        "t": 0.8,
+        "x": 150.2041799316607,
+        "z": 309.5393012652137,
+        "expected": 134.45590624999997,
+        "actual": 134.45590217412592,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 3,
+        "u": 0,
+        "t": 1,
+        "x": 150.43841017379032,
+        "z": 309.47079488378176,
+        "expected": 134.47687499999998,
+        "actual": 134.476869258576,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 3,
+        "u": 0.825,
+        "t": 0,
+        "x": 149.49884844075171,
+        "z": 310.60515462188715,
+        "expected": 134.37203125,
+        "actual": 134.37433915970715,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 3,
+        "u": 0.825,
+        "t": 0.2,
+        "x": 149.73307868288134,
+        "z": 310.53664824045524,
+        "expected": 134.393,
+        "actual": 134.40420114051966,
+        "floorMesh": "Castillo · tabernae · forum-earth",
+        "headClear": true
+      },
+      {
+        "segment": 3,
+        "u": 0.825,
+        "t": 0.4,
+        "x": 149.967308925011,
+        "z": 310.4681418590234,
+        "expected": 134.41396874999998,
+        "actual": 134.415297043848,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 3,
+        "u": 0.825,
+        "t": 0.6,
+        "x": 150.20153916714062,
+        "z": 310.39963547759146,
+        "expected": 134.4349375,
+        "actual": 134.4362641585435,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 3,
+        "u": 0.825,
+        "t": 0.8,
+        "x": 150.43576940927028,
+        "z": 310.3311290961596,
+        "expected": 134.45590624999997,
+        "actual": 134.45723124918607,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 3,
+        "u": 0.825,
+        "t": 1,
+        "x": 150.6699996513999,
+        "z": 310.2626227147277,
+        "expected": 134.47687499999998,
+        "actual": 134.47819875677655,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 4,
+        "u": -0.825,
+        "t": 0,
+        "x": 150.2068206961807,
+        "z": 308.67896705283584,
+        "expected": 134.47687499999998,
+        "actual": 134.47554113098465,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 4,
+        "u": -0.825,
+        "t": 0.14285714285714285,
+        "x": 150.4125264123367,
+        "z": 308.6188033689085,
+        "expected": 134.4952901785714,
+        "actual": 134.49395759898763,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 4,
+        "u": -0.825,
+        "t": 0.2857142857142857,
+        "x": 150.6182321284927,
+        "z": 308.55863968498124,
+        "expected": 134.51370535714284,
+        "actual": 134.51237886347846,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 4,
+        "u": -0.825,
+        "t": 0.42857142857142855,
+        "x": 150.8239378446487,
+        "z": 308.4984760010539,
+        "expected": 134.53212053571426,
+        "actual": 134.5307968190619,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 4,
+        "u": -0.825,
+        "t": 0.5714285714285714,
+        "x": 151.02964356080471,
+        "z": 308.4383123171266,
+        "expected": 134.5505357142857,
+        "actual": 134.54921090652428,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 4,
+        "u": -0.825,
+        "t": 0.7142857142857143,
+        "x": 151.2353492769607,
+        "z": 308.37814863319926,
+        "expected": 134.56895089285712,
+        "actual": 134.56762483756108,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 4,
+        "u": -0.825,
+        "t": 0.8571428571428571,
+        "x": 151.44105499311672,
+        "z": 308.317984949272,
+        "expected": 134.58736607142856,
+        "actual": 134.58603855338606,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 4,
+        "u": -0.825,
+        "t": 1,
+        "x": 151.6467607092727,
+        "z": 308.25782126534466,
+        "expected": 134.60578124999998,
+        "actual": 134.60445248002614,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 4,
+        "u": 0,
+        "t": 0,
+        "x": 150.43841017379032,
+        "z": 309.47079488378176,
+        "expected": 134.47687499999998,
+        "actual": 134.476869258576,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 4,
+        "u": 0,
+        "t": 0.14285714285714285,
+        "x": 150.6441158899463,
+        "z": 309.41063119985444,
+        "expected": 134.4952901785714,
+        "actual": 134.49528622437558,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 4,
+        "u": 0,
+        "t": 0.2857142857142857,
+        "x": 150.84982160610232,
+        "z": 309.35046751592716,
+        "expected": 134.51370535714284,
+        "actual": 134.51370854341496,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 4,
+        "u": 0,
+        "t": 0.42857142857142855,
+        "x": 151.0555273222583,
+        "z": 309.29030383199984,
+        "expected": 134.53212053571426,
+        "actual": 134.53212635374928,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 4,
+        "u": 0,
+        "t": 0.5714285714285714,
+        "x": 151.26123303841433,
+        "z": 309.2301401480725,
+        "expected": 134.5505357142857,
+        "actual": 134.55054006960117,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 4,
+        "u": 0,
+        "t": 0.7142857142857143,
+        "x": 151.46693875457032,
+        "z": 309.1699764641452,
+        "expected": 134.56895089285712,
+        "actual": 134.56895403456647,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 4,
+        "u": 0,
+        "t": 0.8571428571428571,
+        "x": 151.67264447072634,
+        "z": 309.1098127802179,
+        "expected": 134.58736607142856,
+        "actual": 134.5873681220073,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 4,
+        "u": 0,
+        "t": 1,
+        "x": 151.87835018688233,
+        "z": 309.0496490962906,
+        "expected": 134.60578124999998,
+        "actual": 134.60578190598542,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 4,
+        "u": 0.825,
+        "t": 0,
+        "x": 150.66999965139993,
+        "z": 310.2626227147277,
+        "expected": 134.47687499999998,
+        "actual": 134.47819875677655,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 4,
+        "u": 0.825,
+        "t": 0.14285714285714285,
+        "x": 150.87570536755592,
+        "z": 310.20245903080036,
+        "expected": 134.4952901785714,
+        "actual": 134.4966164823367,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 4,
+        "u": 0.825,
+        "t": 0.2857142857142857,
+        "x": 151.08141108371194,
+        "z": 310.1422953468731,
+        "expected": 134.51370535714284,
+        "actual": 134.5150388014113,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 4,
+        "u": 0.825,
+        "t": 0.42857142857142855,
+        "x": 151.28711679986793,
+        "z": 310.08213166294576,
+        "expected": 134.53212053571426,
+        "actual": 134.5334559905104,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 4,
+        "u": 0.825,
+        "t": 0.5714285714285714,
+        "x": 151.49282251602395,
+        "z": 310.0219679790184,
+        "expected": 134.5505357142857,
+        "actual": 134.55186970633537,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 4,
+        "u": 0.825,
+        "t": 0.7142857142857143,
+        "x": 151.69852823217994,
+        "z": 309.9618042950911,
+        "expected": 134.56895089285712,
+        "actual": 134.57028369813358,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 4,
+        "u": 0.825,
+        "t": 0.8571428571428571,
+        "x": 151.90423394833596,
+        "z": 309.9016406111638,
+        "expected": 134.58736607142856,
+        "actual": 134.58869778560893,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 4,
+        "u": 0.825,
+        "t": 1,
+        "x": 152.10993966449195,
+        "z": 309.8414769272365,
+        "expected": 134.60578124999998,
+        "actual": 134.6071115427329,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 5,
+        "u": -0.825,
+        "t": 0,
+        "x": 151.64676070927274,
+        "z": 308.25782126534466,
+        "expected": 134.60578124999998,
+        "actual": 134.60445248002614,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 5,
+        "u": -0.825,
+        "t": 0.14285714285714285,
+        "x": 151.85246642542873,
+        "z": 308.19765758141733,
+        "expected": 134.6241964285714,
+        "actual": 134.62286656748853,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 5,
+        "u": -0.825,
+        "t": 0.2857142857142857,
+        "x": 152.05817214158475,
+        "z": 308.13749389749006,
+        "expected": 134.64261160714284,
+        "actual": 134.64128038978356,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 5,
+        "u": -0.825,
+        "t": 0.42857142857142855,
+        "x": 152.26387785774074,
+        "z": 308.07733021356273,
+        "expected": 134.66102678571426,
+        "actual": 134.65969410560854,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 5,
+        "u": -0.825,
+        "t": 0.5714285714285714,
+        "x": 152.46958357389676,
+        "z": 308.01716652963546,
+        "expected": 134.6794419642857,
+        "actual": 134.6781081409904,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 5,
+        "u": -0.825,
+        "t": 0.7142857142857143,
+        "x": 152.67528929005275,
+        "z": 307.95700284570813,
+        "expected": 134.69785714285712,
+        "actual": 134.6974267930301,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 5,
+        "u": -0.825,
+        "t": 0.8571428571428571,
+        "x": 152.88099500620876,
+        "z": 307.89683916178086,
+        "expected": 134.71627232142856,
+        "actual": 134.71750312476252,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 5,
+        "u": -0.825,
+        "t": 1,
+        "x": 153.08670072236475,
+        "z": 307.83667547785353,
+        "expected": 134.73468749999998,
+        "actual": 134.73880341658503,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 5,
+        "u": 0,
+        "t": 0,
+        "x": 151.87835018688233,
+        "z": 309.0496490962906,
+        "expected": 134.60578124999998,
+        "actual": 134.60578190598542,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 5,
+        "u": 0,
+        "t": 0.14285714285714285,
+        "x": 152.08405590303832,
+        "z": 308.98948541236325,
+        "expected": 134.6241964285714,
+        "actual": 134.62419562183732,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 5,
+        "u": 0,
+        "t": 0.2857142857142857,
+        "x": 152.28976161919434,
+        "z": 308.929321728436,
+        "expected": 134.64261160714284,
+        "actual": 134.64260969552953,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 5,
+        "u": 0,
+        "t": 0.42857142857142855,
+        "x": 152.49546733535033,
+        "z": 308.86915804450865,
+        "expected": 134.66102678571426,
+        "actual": 134.66102374236965,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 5,
+        "u": 0,
+        "t": 0.5714285714285714,
+        "x": 152.70117305150634,
+        "z": 308.8089943605814,
+        "expected": 134.6794419642857,
+        "actual": 134.67943745822157,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 5,
+        "u": 0,
+        "t": 0.7142857142857143,
+        "x": 152.90687876766233,
+        "z": 308.74883067665405,
+        "expected": 134.69785714285712,
+        "actual": 134.69785337254848,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 5,
+        "u": 0,
+        "t": 0.8571428571428571,
+        "x": 153.11258448381835,
+        "z": 308.6886669927268,
+        "expected": 134.71627232142856,
+        "actual": 134.71627569158625,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 5,
+        "u": 0,
+        "t": 1,
+        "x": 153.31829019997434,
+        "z": 308.62850330879945,
+        "expected": 134.73468749999998,
+        "actual": 134.73506522044246,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 5,
+        "u": 0.825,
+        "t": 0,
+        "x": 152.10993966449192,
+        "z": 309.8414769272365,
+        "expected": 134.60578124999998,
+        "actual": 134.6071115427329,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 5,
+        "u": 0.825,
+        "t": 0.14285714285714285,
+        "x": 152.3156453806479,
+        "z": 309.78131324330917,
+        "expected": 134.6241964285714,
+        "actual": 134.6255252716231,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 5,
+        "u": 0.825,
+        "t": 0.2857142857142857,
+        "x": 152.52135109680393,
+        "z": 309.7211495593819,
+        "expected": 134.64261160714284,
+        "actual": 134.64393935909845,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 5,
+        "u": 0.825,
+        "t": 0.42857142857142855,
+        "x": 152.72705681295992,
+        "z": 309.66098587545457,
+        "expected": 134.66102678571426,
+        "actual": 134.6623533791304,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 5,
+        "u": 0.825,
+        "t": 0.5714285714285714,
+        "x": 152.93276252911593,
+        "z": 309.6008221915273,
+        "expected": 134.6794419642857,
+        "actual": 134.68076709495537,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 5,
+        "u": 0.825,
+        "t": 0.7142857142857143,
+        "x": 153.13846824527192,
+        "z": 309.54065850759997,
+        "expected": 134.69785714285712,
+        "actual": 134.69918363047833,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 5,
+        "u": 0.825,
+        "t": 0.8571428571428571,
+        "x": 153.34417396142794,
+        "z": 309.4804948236727,
+        "expected": 134.71627232142856,
+        "actual": 134.7176059495529,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 5,
+        "u": 0.825,
+        "t": 1,
+        "x": 153.54987967758393,
+        "z": 309.4203311397454,
+        "expected": 134.73468749999998,
+        "actual": 134.73602419014196,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 6,
+        "u": -0.825,
+        "t": 0,
+        "x": 153.08670072236475,
+        "z": 307.83667547785353,
+        "expected": 134.73468749999998,
+        "actual": 134.73880341658503,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 6,
+        "u": -0.825,
+        "t": 0.16666666666666666,
+        "x": 153.31069139106796,
+        "z": 307.77116391091045,
+        "expected": 134.76012364330623,
+        "actual": 134.76541552782516,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 6,
+        "u": -0.825,
+        "t": 0.3333333333333333,
+        "x": 153.53468205977117,
+        "z": 307.7056523439674,
+        "expected": 134.7855597866125,
+        "actual": 134.79178112182043,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 6,
+        "u": -0.825,
+        "t": 0.5,
+        "x": 153.75867272847438,
+        "z": 307.6401407770243,
+        "expected": 134.81099592991876,
+        "actual": 134.81838361516975,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 6,
+        "u": -0.825,
+        "t": 0.6666666666666666,
+        "x": 153.9826633971776,
+        "z": 307.57462921008124,
+        "expected": 134.836432073225,
+        "actual": 134.84475109140894,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 6,
+        "u": -0.825,
+        "t": 0.8333333333333334,
+        "x": 154.2066540658808,
+        "z": 307.5091176431382,
+        "expected": 134.8618682165313,
+        "actual": 134.87109758581747,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 6,
+        "u": -0.825,
+        "t": 1,
+        "x": 154.430644734584,
+        "z": 307.4436060761951,
+        "expected": 134.88730435983754,
+        "actual": 134.89699448894882,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 6,
+        "u": 0,
+        "t": 0,
+        "x": 153.31829019997434,
+        "z": 308.62850330879945,
+        "expected": 134.73468749999998,
+        "actual": 134.73506522044246,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 6,
+        "u": 0,
+        "t": 0.16666666666666666,
+        "x": 153.54228086867755,
+        "z": 308.56299174185637,
+        "expected": 134.76012364330623,
+        "actual": 134.7561201332277,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 6,
+        "u": 0,
+        "t": 0.3333333333333333,
+        "x": 153.76627153738076,
+        "z": 308.49748017491333,
+        "expected": 134.7855597866125,
+        "actual": 134.78087944508317,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 6,
+        "u": 0,
+        "t": 0.5,
+        "x": 153.99026220608397,
+        "z": 308.43196860797025,
+        "expected": 134.81099592991876,
+        "actual": 134.80749081931415,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 6,
+        "u": 0,
+        "t": 0.6666666666666666,
+        "x": 154.21425287478718,
+        "z": 308.36645704102716,
+        "expected": 134.836432073225,
+        "actual": 134.83409427626304,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 6,
+        "u": 0,
+        "t": 0.8333333333333334,
+        "x": 154.4382435434904,
+        "z": 308.30094547408413,
+        "expected": 134.8618682165313,
+        "actual": 134.86069734317584,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 6,
+        "u": 0,
+        "t": 1,
+        "x": 154.6622342121936,
+        "z": 308.23543390714104,
+        "expected": 134.88730435983754,
+        "actual": 134.88730005138078,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 6,
+        "u": 0.825,
+        "t": 0,
+        "x": 153.54987967758393,
+        "z": 309.4203311397454,
+        "expected": 134.73468749999998,
+        "actual": 134.73602419014196,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 6,
+        "u": 0.825,
+        "t": 0.16666666666666666,
+        "x": 153.77387034628714,
+        "z": 309.3548195728023,
+        "expected": 134.76012364330623,
+        "actual": 134.75607468070692,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 6,
+        "u": 0.825,
+        "t": 0.3333333333333333,
+        "x": 153.99786101499035,
+        "z": 309.28930800585925,
+        "expected": 134.7855597866125,
+        "actual": 134.77627608944417,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 6,
+        "u": 0.825,
+        "t": 0.5,
+        "x": 154.22185168369356,
+        "z": 309.22379643891617,
+        "expected": 134.81099592991876,
+        "actual": 134.79669275136692,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 6,
+        "u": 0.825,
+        "t": 0.6666666666666666,
+        "x": 154.44584235239677,
+        "z": 309.1582848719731,
+        "expected": 134.836432073225,
+        "actual": 134.823295271651,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 6,
+        "u": 0.825,
+        "t": 0.8333333333333334,
+        "x": 154.66983302109998,
+        "z": 309.09277330503005,
+        "expected": 134.8618682165313,
+        "actual": 134.84933650167946,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 6,
+        "u": 0.825,
+        "t": 1,
+        "x": 154.89382368980318,
+        "z": 309.02726173808696,
+        "expected": 134.88730435983754,
+        "actual": 134.87594893600303,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 7,
+        "u": -0.825,
+        "t": 0,
+        "x": 154.44552959567523,
+        "z": 307.4394036883807,
+        "expected": 134.88730435983754,
+        "actual": 134.8987118786077,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 7,
+        "u": -0.825,
+        "t": 0.25,
+        "x": 154.66262874624624,
+        "z": 307.38030242933024,
+        "expected": 134.92342693561577,
+        "actual": 134.92488174190126,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 7,
+        "u": -0.825,
+        "t": 0.5,
+        "x": 154.87972789681723,
+        "z": 307.3212011702798,
+        "expected": 134.95954951139396,
+        "actual": 134.95064700009382,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 7,
+        "u": -0.825,
+        "t": 0.75,
+        "x": 155.09682704738822,
+        "z": 307.2620999112293,
+        "expected": 134.99567208717218,
+        "actual": 134.98051952570106,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 7,
+        "u": -0.825,
+        "t": 1,
+        "x": 155.31392619795923,
+        "z": 307.20299865217885,
+        "expected": 135.0317946629504,
+        "actual": 135.0224985800885,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 7,
+        "u": 0,
+        "t": 0,
+        "x": 154.6622342121936,
+        "z": 308.23543390714104,
+        "expected": 134.88730435983754,
+        "actual": 134.88730005138078,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 7,
+        "u": 0,
+        "t": 0.25,
+        "x": 154.8793333627646,
+        "z": 308.1763326480906,
+        "expected": 134.92342693561577,
+        "actual": 134.91629735418945,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 7,
+        "u": 0,
+        "t": 0.5,
+        "x": 155.0964325133356,
+        "z": 308.1172313890401,
+        "expected": 134.95954951139396,
+        "actual": 134.9481635390588,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 7,
+        "u": 0,
+        "t": 0.75,
+        "x": 155.3135316639066,
+        "z": 308.05813012998965,
+        "expected": 134.99567208717218,
+        "actual": 134.97901974660783,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 7,
+        "u": 0,
+        "t": 1,
+        "x": 155.5306308144776,
+        "z": 307.9990288709392,
+        "expected": 135.0317946629504,
+        "actual": 135.02166330631707,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 7,
+        "u": 0.825,
+        "t": 0,
+        "x": 154.87893882871197,
+        "z": 309.0314641259014,
+        "expected": 134.88730435983754,
+        "actual": 134.87418728769887,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 7,
+        "u": 0.825,
+        "t": 0.25,
+        "x": 155.09603797928298,
+        "z": 308.9723628668509,
+        "expected": 134.92342693561577,
+        "actual": 134.92990414269516,
+        "floorMesh": "Castillo · puerta-almenara · ashlar",
+        "headClear": true
+      },
+      {
+        "segment": 7,
+        "u": 0.825,
+        "t": 0.5,
+        "x": 155.31313712985397,
+        "z": 308.91326160780045,
+        "expected": 134.95954951139396,
+        "actual": 134.9494232044926,
+        "floorMesh": "Castillo · almenara-suelo · path",
+        "headClear": true
+      },
+      {
+        "segment": 7,
+        "u": 0.825,
+        "t": 0.75,
+        "x": 155.53023628042496,
+        "z": 308.85416034875,
+        "expected": 134.99567208717218,
+        "actual": 134.98156343424864,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 7,
+        "u": 0.825,
+        "t": 1,
+        "x": 155.74733543099597,
+        "z": 308.7950590896995,
+        "expected": 135.0317946629504,
+        "actual": 135.0238309238203,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 8,
+        "u": -0.825,
+        "t": 0,
+        "x": 155.31392619795923,
+        "z": 307.20299865217885,
+        "expected": 135.0317946629504,
+        "actual": 135.0224985800885,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 8,
+        "u": -0.825,
+        "t": 0.16666666666666666,
+        "x": 155.55514747637145,
+        "z": 307.1373305865672,
+        "expected": 135.08090429154774,
+        "actual": 135.06927492976152,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 8,
+        "u": -0.825,
+        "t": 0.3333333333333333,
+        "x": 155.79636875478369,
+        "z": 307.0716625209556,
+        "expected": 135.13001392014507,
+        "actual": 135.11798257986968,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 8,
+        "u": -0.825,
+        "t": 0.5,
+        "x": 156.0375900331959,
+        "z": 307.00599445534397,
+        "expected": 135.17912354874244,
+        "actual": 135.1667298500591,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 8,
+        "u": -0.825,
+        "t": 0.6666666666666666,
+        "x": 156.2788113116081,
+        "z": 306.9403263897323,
+        "expected": 135.22823317733977,
+        "actual": 135.21547689769378,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 8,
+        "u": -0.825,
+        "t": 0.8333333333333334,
+        "x": 156.52003259002035,
+        "z": 306.87465832412073,
+        "expected": 135.2773428059371,
+        "actual": 135.26421779586724,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 8,
+        "u": -0.825,
+        "t": 1,
+        "x": 156.76125386843256,
+        "z": 306.8089902585091,
+        "expected": 135.32645243453445,
+        "actual": 135.31296687525057,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 8,
+        "u": 0,
+        "t": 0,
+        "x": 155.5306308144776,
+        "z": 307.9990288709392,
+        "expected": 135.0317946629504,
+        "actual": 135.02166330631707,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 8,
+        "u": 0,
+        "t": 0.16666666666666666,
+        "x": 155.77185209288982,
+        "z": 307.93336080532754,
+        "expected": 135.08090429154774,
+        "actual": 135.06928309687953,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 8,
+        "u": 0,
+        "t": 0.3333333333333333,
+        "x": 156.01307337130206,
+        "z": 307.86769273971595,
+        "expected": 135.13001392014507,
+        "actual": 135.11806791345373,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 8,
+        "u": 0,
+        "t": 0.5,
+        "x": 156.25429464971427,
+        "z": 307.8020246741043,
+        "expected": 135.17912354874244,
+        "actual": 135.16672126405882,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 8,
+        "u": 0,
+        "t": 0.6666666666666666,
+        "x": 156.49551592812648,
+        "z": 307.73635660849266,
+        "expected": 135.22823317733977,
+        "actual": 135.2154706568686,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 8,
+        "u": 0,
+        "t": 0.8333333333333334,
+        "x": 156.73673720653872,
+        "z": 307.67068854288107,
+        "expected": 135.2773428059371,
+        "actual": 135.26422004967839,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 8,
+        "u": 0,
+        "t": 1,
+        "x": 156.97795848495093,
+        "z": 307.6050204772694,
+        "expected": 135.32645243453445,
+        "actual": 135.312969190787,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 8,
+        "u": 0.825,
+        "t": 0,
+        "x": 155.74733543099597,
+        "z": 308.7950590896995,
+        "expected": 135.0317946629504,
+        "actual": 135.0238309238203,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 8,
+        "u": 0.825,
+        "t": 0.16666666666666666,
+        "x": 155.9885567094082,
+        "z": 308.7293910240879,
+        "expected": 135.08090429154774,
+        "actual": 135.0712818857351,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 8,
+        "u": 0.825,
+        "t": 0.3333333333333333,
+        "x": 156.22977798782043,
+        "z": 308.6637229584763,
+        "expected": 135.13001392014507,
+        "actual": 135.11902896036682,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 8,
+        "u": 0.825,
+        "t": 0.5,
+        "x": 156.47099926623264,
+        "z": 308.59805489286464,
+        "expected": 135.17912354874244,
+        "actual": 135.1667238312964,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 8,
+        "u": 0.825,
+        "t": 0.6666666666666666,
+        "x": 156.71222054464485,
+        "z": 308.532386827253,
+        "expected": 135.22823317733977,
+        "actual": 135.2154732241062,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 8,
+        "u": 0.825,
+        "t": 0.8333333333333334,
+        "x": 156.9534418230571,
+        "z": 308.4667187616414,
+        "expected": 135.2773428059371,
+        "actual": 135.264222380125,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 8,
+        "u": 0.825,
+        "t": 1,
+        "x": 157.1946631014693,
+        "z": 308.40105069602976,
+        "expected": 135.32645243453445,
+        "actual": 135.31297017471653,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 9,
+        "u": -0.825,
+        "t": 0,
+        "x": 156.76125386843256,
+        "z": 306.8089902585091,
+        "expected": 135.32645243453445,
+        "actual": 135.31296687525057,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 9,
+        "u": -0.825,
+        "t": 0.14285714285714285,
+        "x": 156.9817990372666,
+        "z": 306.74895088423557,
+        "expected": 135.37135266639487,
+        "actual": 135.35753761905542,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 9,
+        "u": -0.825,
+        "t": 0.2857142857142857,
+        "x": 157.20234420610063,
+        "z": 306.6889115099621,
+        "expected": 135.4162528982553,
+        "actual": 135.4021070312534,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 9,
+        "u": -0.825,
+        "t": 0.42857142857142855,
+        "x": 157.42288937493467,
+        "z": 306.6288721356886,
+        "expected": 135.46115313011572,
+        "actual": 135.44667662457132,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 9,
+        "u": -0.825,
+        "t": 0.5714285714285714,
+        "x": 157.64343454376868,
+        "z": 306.56883276141514,
+        "expected": 135.50605336197614,
+        "actual": 135.49124749799742,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 9,
+        "u": -0.825,
+        "t": 0.7142857142857143,
+        "x": 157.8639797126027,
+        "z": 306.5087933871416,
+        "expected": 135.55095359383657,
+        "actual": 135.53581690182202,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 9,
+        "u": -0.825,
+        "t": 0.8571428571428571,
+        "x": 158.08452488143675,
+        "z": 306.44875401286816,
+        "expected": 135.595853825697,
+        "actual": 135.58037861060336,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 9,
+        "u": -0.825,
+        "t": 1,
+        "x": 158.30507005027079,
+        "z": 306.38871463859465,
+        "expected": 135.64075405755742,
+        "actual": 135.6249478275583,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 9,
+        "u": 0,
+        "t": 0,
+        "x": 156.97795848495093,
+        "z": 307.6050204772694,
+        "expected": 135.32645243453445,
+        "actual": 135.312969190787,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 9,
+        "u": 0,
+        "t": 0.14285714285714285,
+        "x": 157.19850365378497,
+        "z": 307.5449811029959,
+        "expected": 135.37135266639487,
+        "actual": 135.35753860298496,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 9,
+        "u": 0,
+        "t": 0.2857142857142857,
+        "x": 157.419048822619,
+        "z": 307.48494172872245,
+        "expected": 135.4162528982553,
+        "actual": 135.40210831838283,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 9,
+        "u": 0,
+        "t": 0.42857142857142855,
+        "x": 157.63959399145304,
+        "z": 307.42490235444893,
+        "expected": 135.46115313011572,
+        "actual": 135.44667919180893,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 9,
+        "u": 0,
+        "t": 0.5714285714285714,
+        "x": 157.86013916028705,
+        "z": 307.3648629801755,
+        "expected": 135.50605336197614,
+        "actual": 135.49124817944715,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 9,
+        "u": 0,
+        "t": 0.7142857142857143,
+        "x": 158.08068432912108,
+        "z": 307.30482360590196,
+        "expected": 135.55095359383657,
+        "actual": 135.53581047912093,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 9,
+        "u": 0,
+        "t": 0.8571428571428571,
+        "x": 158.30122949795512,
+        "z": 307.2447842316285,
+        "expected": 135.595853825697,
+        "actual": 135.5803743748972,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 9,
+        "u": 0,
+        "t": 1,
+        "x": 158.52177466678916,
+        "z": 307.184744857355,
+        "expected": 135.64075405755742,
+        "actual": 135.62494455576672,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 9,
+        "u": 0.825,
+        "t": 0,
+        "x": 157.1946631014693,
+        "z": 308.40105069602976,
+        "expected": 135.32645243453445,
+        "actual": 135.31297017471653,
+        "floorMesh": "Castillo · caminos · path",
+        "headClear": true
+      },
+      {
+        "segment": 9,
+        "u": 0.825,
+        "t": 0.14285714285714285,
+        "x": 157.41520827030334,
+        "z": 308.34101132175624,
+        "expected": 135.37135266639487,
+        "actual": 135.26253887287135,
+        "floorMesh": "Terreno IGN / PNOA",
+        "headClear": true
+      },
+      {
+        "segment": 9,
+        "u": 0.825,
+        "t": 0.2857142857142857,
+        "x": 157.63575343913737,
+        "z": 308.2809719474828,
+        "expected": 135.4162528982553,
+        "actual": 135.30710732513478,
+        "floorMesh": "Terreno IGN / PNOA",
+        "headClear": true
+      },
+      {
+        "segment": 9,
+        "u": 0.825,
+        "t": 0.42857142857142855,
+        "x": 157.8562986079714,
+        "z": 308.22093257320927,
+        "expected": 135.46115313011572,
+        "actual": 135.35167577739819,
+        "floorMesh": "Terreno IGN / PNOA",
+        "headClear": true
+      },
+      {
+        "segment": 9,
+        "u": 0.825,
+        "t": 0.5714285714285714,
+        "x": 158.07684377680542,
+        "z": 308.1608931989358,
+        "expected": 135.50605336197614,
+        "actual": 135.3962442296616,
+        "floorMesh": "Terreno IGN / PNOA",
+        "headClear": true
+      },
+      {
+        "segment": 9,
+        "u": 0.825,
+        "t": 0.7142857142857143,
+        "x": 158.29738894563945,
+        "z": 308.1008538246623,
+        "expected": 135.55095359383657,
+        "actual": 135.44081268192502,
+        "floorMesh": "Terreno IGN / PNOA",
+        "headClear": true
+      },
+      {
+        "segment": 9,
+        "u": 0.825,
+        "t": 0.8571428571428571,
+        "x": 158.5179341144735,
+        "z": 308.04081445038884,
+        "expected": 135.595853825697,
+        "actual": 135.48538113418843,
+        "floorMesh": "Terreno IGN / PNOA",
+        "headClear": true
+      },
+      {
+        "segment": 9,
+        "u": 0.825,
+        "t": 1,
+        "x": 158.73847928330753,
+        "z": 307.9807750761153,
+        "expected": 135.64075405755742,
+        "actual": 135.52994958645183,
+        "floorMesh": "Terreno IGN / PNOA",
+        "headClear": true
+      }
+    ],
+    "segments": [
+      {
+        "segment": 0,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 0,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 1,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 1,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 1,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 1,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 1,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 1,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 1,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 1,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 1,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 1,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 1,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 1,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 1,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 1,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 1,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 1,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 1,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 1,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 1,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 1,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 1,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 1,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 1,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 1,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 1,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 1,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 1,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 1,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 1,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 1,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 1,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 1,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 1,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 1,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 1,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 1,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 2,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 2,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 2,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 2,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 2,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 2,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 2,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 2,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 2,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 2,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 2,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 2,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 2,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 2,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 2,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 2,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 2,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 2,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 2,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 2,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 2,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 2,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 2,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 2,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 2,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 2,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 2,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 2,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 2,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 2,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 2,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 2,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 2,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 2,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 2,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 2,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 3,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 4,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 5,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 6,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 7,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 7,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 7,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 7,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 7,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 7,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 7,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 7,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 7,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 7,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 7,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 7,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 7,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 7,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 7,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 7,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 7,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 7,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 7,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 7,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 7,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 7,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 7,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 7,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 7,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 7,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 7,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 7,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 7,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 7,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 7,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 7,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 7,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 7,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 7,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 7,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 8,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": -0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": -0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": -0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": 0,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": 0,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": 0,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": 0.825,
+        "height": 0.35,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": 0.825,
+        "height": 1,
+        "clear": true
+      },
+      {
+        "segment": 9,
+        "u": 0.825,
+        "height": 1.7,
+        "clear": true
+      }
+    ],
+    "oculi": [
+      {
+        "index": 0,
+        "open": true,
+        "measuredThickness": 0.7799979043725418,
+        "expectedThickness": 0.78,
+        "probeReach": 0.5900000000000001,
+        "frontDepth": 0.3899991382268355,
+        "backDepth": -0.3899987661457063,
+        "frontHit": "Castillo · puerta-almenara · gate-stone",
+        "backHit": "Castillo · puerta-almenara · gate-stone"
+      },
+      {
+        "index": 1,
+        "open": true,
+        "measuredThickness": 0.7800106061472347,
+        "expectedThickness": 0.78,
+        "probeReach": 0.5900000000000001,
+        "frontDepth": 0.39000426138485883,
+        "backDepth": -0.3900063447623759,
+        "frontHit": "Castillo · puerta-almenara · gate-stone",
+        "backHit": "Castillo · puerta-almenara · gate-stone"
+      }
+    ],
+    "rearSlits": [
+      {
+        "index": 0,
+        "clear": 9,
+        "total": 9
+      },
+      {
+        "index": 1,
+        "clear": 9,
+        "total": 9
+      },
+      {
+        "index": 2,
+        "clear": 9,
+        "total": 9
+      }
+    ],
+    "terrainTriangles": 120,
+    "sampleCount": 204,
+    "supports": 204,
+    "missing": 0,
+    "headClear": 204,
+    "bodyClear": 522,
+    "maxGroundError": 0.11080447110558111,
+    "maxFootJump": 0.055716854996290976
+  },
+  "forum": {
+    "surfaces": [
+      {
+        "id": "foro",
+        "component": "foro",
+        "triangles": 8192,
+        "buried": 0,
+        "minClearance": 0.05614913565418078,
+        "nonFinite": 0,
+        "continuityPairs": 5522,
+        "unexpectedJumps": 0,
+        "maximumJump": 0.1330448517642253,
+        "discontinuities": []
+      },
+      {
+        "id": "basilica",
+        "component": "basilica",
+        "triangles": 8849,
+        "buried": 0,
+        "minClearance": 0.0203731656075945,
+        "nonFinite": 0
+      },
+      {
+        "id": "templo",
+        "component": "templo",
+        "triangles": 19289,
+        "buried": 0,
+        "minClearance": 0.035054524739564386,
+        "nonFinite": 0
+      },
+      {
+        "id": "curia",
+        "component": "curia",
+        "triangles": 8196,
+        "buried": 0,
+        "minClearance": 0.05902905215816645,
+        "nonFinite": 0
+      },
+      {
+        "id": "tabernae",
+        "component": "tabernae",
+        "triangles": 8450,
+        "buried": 0,
+        "minClearance": 0.03505270974710584,
+        "nonFinite": 0
+      },
+      {
+        "id": "margen-occidental",
+        "component": "foro",
+        "triangles": 9954,
+        "buried": 0,
+        "minClearance": 0.05689053547877165,
+        "nonFinite": 0
+      },
+      {
+        "id": "pie-muro-noroeste-basilica",
+        "component": "foro",
+        "triangles": 8201,
+        "buried": 0,
+        "minClearance": 0.03586195694907701,
+        "nonFinite": 0
+      },
+      {
+        "id": "curia-rellano",
+        "component": "curia",
+        "triangles": 5542,
+        "buried": 0,
+        "minClearance": 0.10442111128941178,
+        "nonFinite": 0
+      },
+      {
+        "id": "curia-peldano-1",
+        "component": "curia",
+        "triangles": 18,
+        "buried": 0,
+        "minClearance": 0.3182373046875,
+        "nonFinite": 0,
+        "continuityPairs": 64,
+        "unexpectedJumps": 0,
+        "maximumJump": 0.023611497606452758,
+        "discontinuities": []
+      },
+      {
+        "id": "curia-peldano-2",
+        "component": "curia",
+        "triangles": 18,
+        "buried": 0,
+        "minClearance": 0.5103505452473769,
+        "nonFinite": 0,
+        "continuityPairs": 64,
+        "unexpectedJumps": 0,
+        "maximumJump": 0.024476468880948232,
+        "discontinuities": []
+      },
+      {
+        "id": "curia-peldano-3",
+        "component": "curia",
+        "triangles": 18,
+        "buried": 0,
+        "minClearance": 0.7125244140625,
+        "nonFinite": 0,
+        "continuityPairs": 64,
+        "unexpectedJumps": 0,
+        "maximumJump": 0.024296058602089943,
+        "discontinuities": []
+      },
+      {
+        "id": "curia-desembarco",
+        "component": "curia",
+        "triangles": 0,
+        "buried": 0,
+        "minClearance": null,
+        "nonFinite": 0,
+        "sharedSupport": {
+          "surface": "curia-rellano",
+          "samples": 38,
+          "missing": 0,
+          "buried": 0,
+          "maxHeightError": 0.000006103515630684342
+        },
+        "continuityPairs": 61,
+        "unexpectedJumps": 0,
+        "maximumJump": 0,
+        "discontinuities": []
+      }
+    ],
+    "foundations": [
+      {
+        "component": "templo",
+        "probes": 56,
+        "buried": 0,
+        "floating": 0,
+        "missing": 0,
+        "failures": []
+      },
+      {
+        "component": "curia",
+        "probes": 69,
+        "buried": 0,
+        "floating": 0,
+        "missing": 0,
+        "failures": []
+      },
+      {
+        "component": "basilica",
+        "probes": 135,
+        "buried": 0,
+        "floating": 0,
+        "missing": 0,
+        "failures": []
+      },
+      {
+        "component": "tabernae",
+        "probes": 44,
+        "buried": 0,
+        "floating": 0,
+        "missing": 0,
+        "failures": []
+      }
+    ]
+  },
+  "limitations": [
+    "These checks validate the model geometry, not public access to the monument.",
+    "Authored dimensions and floor levels retain their documented or interpretive status.",
+    "No browser rendering or GPU timing is measured."
+  ]
+}

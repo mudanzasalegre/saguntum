@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-26",
+  "method": "Observed browser UI through CUA on managed Sites preview",
+  "url": "http://127.0.0.1:4173/",
+  "checks": [
+    {
+      "name": "Global title and territorial cover",
+      "pass": true,
+      "observed": "SAGUNTUM · Sagunto y Puerto de Sagunto; 32 lugares · 6 ámbitos"
+    },
+    {
+      "name": "Castle visit identity and catalogue",
+      "pass": true,
+      "observed": "Visita 15; 18 paradas; 7 recintos"
+    },
+    {
+      "name": "Almenara updated interpretation shown",
+      "pass": true,
+      "observed": "Separate pointed frontis and lower vaulted body; two trilobed oculi; three eastern slots"
+    },
+    {
+      "name": "Hide and reopen reading panel",
+      "pass": true,
+      "observed": "Same puerta-almenara stop retained"
+    },
+    {
+      "name": "Atlas to Simulator",
+      "pass": true,
+      "observed": "#simulador/castle/puerta-almenara; Parada 10 de 18"
+    },
+    {
+      "name": "Simulator shares updated stop text",
+      "pass": true
+    },
+    {
+      "name": "Simulator return to Atlas",
+      "pass": true,
+      "observed": "#castle/puerta-almenara; La Puerta de Almenara; Parada 10 de 18"
+    }
+  ],
+  "graphics": {
+    "webglVerified": false,
+    "gpuPerformanceMeasured": false,
+    "observed": "GL_RENDERER = Disabled; fallback map and documentation working"
+  },
+  "scope": "Interface and navigation only. Separate CPU geometry tests and inspection renders cover the model."
+}

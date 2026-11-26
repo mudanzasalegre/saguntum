@@ -1,4 +1,56 @@
-# Castillo de Sagunto · modelo de la visita V50
+# Castillo de Sagunto · modelo de la visita V51
+
+V51 corrige el Foro y la Puerta de Almenara mediante un nuevo contraste de planos, excavaciones y fotografías de sus dos caras. Atlas y Simulador comparten la geometría, el terreno acomodado y los dieciocho identificadores anteriores. La documentación detallada de las referencias está en `research/validation-v51/foro-evidence.md` y `research/validation-v51/almenara-evidence.md`.
+
+## Cambios correctivos de V51
+
+| Elemento | Corrección implementada | Evidencia y límite |
+|---|---|---|
+| Templo | Dos compartimentos conservados, cierre transversal de la pronaos, fábrica gruesa y lado oriental discontinuo; se retiran la tercera cella completa y la escalera genérica | Aranegui 1991, fig. 6. La fig. 7 reconstruye simetría y no controla el estado conservado. Alineación y alturas residuales aproximadas |
+| Curia | Rellano elevado, tres peldaños físicos de 0,20 m, dos basas áticas sin plinto cuadrado con arranque estriado y fragmentos bajos del antepatio | Organización y formas documentadas; las alturas de modelado y la colocación de piezas no son mediciones de campo |
+| Foro y excavaciones | Acabados granulares por sectores y transición entre niveles locales | Sustituyen la ortofoto estirada y los fondos deformados por el MDT; no restituyen el pavimento romano completo |
+| Piezas lapidarias | Grupos limitados junto a curia y borde occidental | Se representan volúmenes fotografiados con posición aproximada, sin inscripciones completas ni dispersión decorativa aleatoria |
+| Almenara | Frontis delgado independiente con dos óculos, cámara abovedada, segundo arco rebajado, tres aberturas altas, bases ataludadas y escalera posterior | Fotografías frontal/posterior, postal BIVALDI sin fecha y conservación documentada. No se presenta como una malla medida ni como una puerta medieval íntegra |
+
+### Módulos y contrato de terreno
+
+`dist/js/castle-forum.js` exporta `FORUM_SURFACE_DEFS`, los tres identificadores OSM de curia sustituidos y `buildForum`. `dist/js/castle-almenara.js` construye la puerta; `dist/js/castle.js` integra ambos después de recibir el terreno final. Las fábricas del resto del castillo conservan su cartografía y su lectura de épocas.
+
+`dist/js/castle-ground.js` utiliza el mismo datum local que ya empleaba la plataforma central y acomoda los cinco sectores. Los desfases nominales son: plaza 0; basílica −1,40 m; templo −2,00 m; tabernae −0,20 m; base del suelo de curia 0. Su rellano se construye geométricamente 0,60 m por encima. Los márgenes interpolan los cambios de nivel y recuperan la ladera exterior. Estas cifras son **estimaciones relativas de la maqueta**, motivadas por la forma visible de las excavaciones; no proceden de un levantamiento arqueológico ni alteran los datos fuente del MDT.
+
+El paso de Almenara recibe un perfil continuo entre la aproximación, la cámara y la salida. El frontis y el cuerpo posterior consultan ese perfil para evitar que una pendiente áspera del MDT cierre la puerta o deje sus hojas suspendidas. La pendiente y las cotas verticales del acceso conservan condición interpretativa.
+
+El módulo del foro registra doce superficies de control, las tres alzadas de la curia, catorce piezas de los grupos lapidarios y los tramos de cimentación. Las superficies son distintas de la fábrica; una basa o un muro elevado puede apoyarse en el rellano en lugar de hacerlo directamente en la malla del terreno. Los controles de soporte deben comprobar esa relación.
+
+### Documentación que modifica la geometría
+
+Se inspeccionaron las figuras 6 y 7 de [Aranegui, pp. 71–72](https://revistas.um.es/car/article/download/68051/125201/526121), la [planta municipal, hoja 80](https://aytosagunto.es/media/b1qd4rn2/plan-director-del-castillo_-web.pdf), y las fotografías actuales reunidas en [Ricsol](https://castillosricsol.es/castillo-de-sagunto/). La figura 6 sirve para la conservación del templo; la envolvente de 11,90 × 14,28 m de la restitución permanece como metadato, sin construir su simetría perdida. La fábrica exterior de 1,70 m y divisiones de 1,20–1,40 m se diferencian de las alturas aproximadas de los muros.
+
+La vista histórica de las excavaciones de la década de 1930, reproducida por [Benedito 2015, fig. 1, p. 13](https://dialnet.unirioja.es/descarga/articulo/5239230.pdf), permite comparar fondos, compartimentos y caminos. Las fotografías de [2013](https://rutasparatodaslasedades.blogspot.com/2013/12/el-castillo-de-sagunto.html) y [2017](https://juliaeats.com/2017/08/13/day-trip-to-sagunto/) documentan grupos de fragmentos y peldaños. Ninguna se trata como nube de puntos ni acredita por sí sola el estado exacto de 2026.
+
+En Almenara, la [postal BIVALDI JH4/388](https://bivaldi.gva.es/es/consulta/registro.cmd?id=9135), las imágenes de ambas caras y las [obras de 2017](https://aytosagunto.es/es/actualidad/el-ministerio-organiza-visitas-gratuitas-al-castillo-de-sagunto-para-explicar-su-proceso-de-restauracion/) justifican separar los dos cuerpos. El espesor del frontis y la dimensión de la segunda abertura se modelan como estimaciones. Los óculos y las tres aberturas posteriores son huecos reales de sus respectivos muros; no túneles a toda la profundidad del conjunto. Las hojas de madera permanecen abiertas para la navegación virtual; el ángulo de apertura no se atribuye a un estado actual medido.
+
+### Materiales y verificación
+
+Las familias nuevas `forum-earth`, `forum-gravel`, `forum-stone` y `worn-ashlar` distinguen tierra, grava, fábrica baja y piezas de sillar. Los bloques ya modelados no reciben una retícula de grandes juntas superpuesta. Almenara diferencia piedra, ladrillo, revoco localizado y madera. Las texturas son propias y no reproducen fotografías ajenas.
+
+La comprobación geométrica inicial del foro ejecutó rayos verticales contra la escena integrada. Los tres peldaños y el desembarco se encontraron en sus alturas esperadas, con menos de un centímetro de variación por desgaste sobre las alzadas nominales. No se considera esa prueba una validación topográfica ni sustituye los informes finales de cámaras, paso, terreno y Simulador en `research/validation-v51/`.
+
+### Cierre de la revisión recuperada
+
+La continuación del trabajo local conservado incorporó cuatro correcciones después de comparar los renders de inspección con las fotografías de ambas caras de Almenara y del frente de la curia:
+
+- El desembarco de la curia utiliza la superficie continua del rellano. Se retiró una cara exactamente coplanar que producía una franja negra, sin abrir un hueco en el suelo.
+- La terraza del cuerpo posterior de Almenara cubre el extradós de la bóveda; su remate deja de asomar como una cubierta triangular ajena a la referencia. La escalera conserva su lado y queda apoyada en ese cuerpo.
+- Sólo los dos muros cartográficos inmediatamente contiguos a la puerta reciben un perfil de altura local con transición gradual. El frontis vuelve a sobresalir sobre ellos, como en las fotografías. El trazado de planta se conserva y las alturas siguen siendo estimaciones visuales.
+- Se añaden hiladas discretas de ladrillo al aparejo mixto del frente, con exclusión geométrica de arco y óculos. La escala y la distribución de reparaciones son interpretativas.
+
+La bibliografía, los renders de inspección y los informes de comprobación se conservan junto al código. La revisión en navegador comprueba interfaz y navegación; el navegador de esta ejecución tiene la aceleración WebGL desactivada y no proporciona una validación de rendimiento ni una captura del render GPU.
+
+## Registro de implementación V50, superado parcialmente por V51
+
+El contenido siguiente se conserva como historial técnico. Las descripciones V50 de tres cellae, cuatro basas genéricas, frontis extruido en profundidad y nivelación exclusivamente central han quedado sustituidas por lo expuesto arriba. Las decisiones sobre otros recintos siguen siendo aplicables donde no se indique una corrección.
+
 
 La versión V50 mejora la silueta conservada, las fábricas, las cubiertas y los elementos reconocibles del castillo. Añade la torre telegráfica de Ciudadela, revisa los restos bajos del foro y corrige la superficie de su plataforma central. Atlas y Simulador utilizan la misma geometría, con los dieciocho identificadores de visita existentes.
 

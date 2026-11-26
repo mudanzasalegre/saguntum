@@ -1,5 +1,24 @@
 # Sincronización de Sites a GitHub
 
+## Versión 51 · Foro y Puerta de Almenara
+
+El 26 de noviembre de 2026 se recuperó y completó la revisión interrumpida del Foro y la Puerta de Almenara. La versión 51 quedó publicada en el Site original, conservando su acceso público. El despliegue `appgdep_6b08a7d8a1848191aaca82f2f08cbb4d` terminó con estado `succeeded`.
+
+| Evidencia | Valor |
+| --- | --- |
+| Fuente publicada en Sites | `6a32c4395e716f92c30ebb0628c6e7c3204c5cae` |
+| Árbol Git de la aplicación `dist/` | `dc11afa6ecb4696e32b3823903837d9545a05be9` |
+| Archivo registrado por Sites | 1635 archivos, 267939840 bytes |
+| Huella del contenido registrado | `sha256:21e1553e7d99ecf3361ff244064d3d7001ee5969ca764f778b2081fb227bbb77` |
+
+[Foro publicado](https://saguntum-atlas-3d.monmode.chatgpt.site/#castle/foro) · [Puerta de Almenara](https://saguntum-atlas-3d.monmode.chatgpt.site/#castle/puerta-almenara) · [Almenara en el Simulador](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador/castle/puerta-almenara) · [Evidencia del Foro](../research/validation-v51/foro-evidence.md) · [Evidencia de Almenara](../research/validation-v51/almenara-evidence.md)
+
+El Foro distingue los restos conservados del templo de su restitución arqueológica, los niveles excavados de la basílica, el rellano elevado de la curia y sus piezas dispersas. Almenara separa el frontis alto con arco apuntado y dos óculos trilobulados del cuerpo posterior bajo, con bóveda, arco rebajado y tres aberturas. Se ajustaron los dos tramos de muralla contiguos para recuperar la silueta documentada, los aparejos de ladrillo y piedra, las bases ataludadas, la escalera lateral y el paso. Se eliminaron las caras coincidentes de la curia y se cerró la terraza posterior de la puerta.
+
+Las validaciones aprobaron 50 comprobaciones de geometría y terreno, 16 del constructor real del Simulador y 56 de la guía. La guía enlaza 35 fuentes y 72 hechos. Se contrastaron 40 poses en dos relaciones de aspecto, los 116 lotes de Atlas y Simulador, y 207 muestras de apoyo y colisión del paso con el MDT original. Se mantienen los 32 lugares, las 18 paradas del Castillo, los siete recintos y los datos de las otras 31 visitas. Las tres vistas CPU finales corresponden a la curia y a las dos caras de Almenara; sus huellas coinciden con el código publicado. [Validación reproducible](../research/validation-v51/README.md)
+
+En la URL pública se verificaron los textos nuevos de Almenara y el Foro, sus enlaces directos y el cambio Atlas → Simulador → Atlas conservando la parada elegida. El navegador de comprobación no dispone de WebGL 2: se verificaron la interfaz, el plano y la documentación; no se atribuyen capturas GPU ni mediciones de FPS a esta revisión. Las cotas y detalles sin levantamiento métrico siguen marcados como interpretativos. [Registro público](../research/validation-v51/production-qa.json)
+
 ## Versión 50 · Castillo, recintos y entorno
 
 El 26 de noviembre de 2026 se publicó la revisión documentada del Castillo de Sagunto, su relieve local y las 18 paradas de la visita. El despliegue `appgdep_6b087aaeba988191a5bde54516fbec63` terminó con estado `succeeded` en el Site original, conservando su acceso público.

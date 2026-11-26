@@ -1,0 +1,849 @@
+{
+  "pass": true,
+  "method": "Frozen V50 fixtures; shipped buildCastleScene and shared catalogue; CPU/local JSON validation",
+  "baseline": {
+    "commit": "f765f4a96948d6c045813b5f94adab39e2782f07",
+    "guideSha256": "a3e6c50d77152d4bedf550f84c4bb4e7b68f7bf2c8af5a77c1a182629ce23888",
+    "orderSha256": "c2efaee8424cc6cc62a238a32002f372b75b175a19ff211dfb9d035d05a4ff06",
+    "otherVisitIndexSha256": "9a31f5558ddfbdda3270690c24d8716b3dee10e0ed9d50a79d75c89b98086d58",
+    "stopIds": [
+      "conjunto",
+      "acceso",
+      "foro",
+      "templo",
+      "curia",
+      "basilica",
+      "cisterna-foro",
+      "cisterna-norte",
+      "inscripcion",
+      "puerta-almenara",
+      "almenara",
+      "conejera",
+      "puerta-san-fernando",
+      "san-fernando",
+      "antiquarium",
+      "estudiantes",
+      "ciudadela",
+      "dos-mayo"
+    ],
+    "regionIds": [
+      "armas",
+      "almenara",
+      "conejera",
+      "san-fernando",
+      "estudiantes",
+      "ciudadela",
+      "dos-mayo"
+    ],
+    "atlasIds": [
+      "santa-maria",
+      "plaza-mayor",
+      "juderia",
+      "calvario",
+      "berenguer",
+      "sangre",
+      "salvador",
+      "museo",
+      "portic",
+      "domus",
+      "circo",
+      "diana",
+      "necropolis",
+      "theatre",
+      "castle",
+      "glorieta",
+      "horno",
+      "talleres",
+      "museo-industrial",
+      "gerencia",
+      "casino",
+      "begona",
+      "economato",
+      "barrio-obrero",
+      "sanatorio",
+      "pantalan-paseo",
+      "pantalan-maritimo",
+      "grau-vell",
+      "puerto-antiguo",
+      "marjal-moros",
+      "dunas-almarda",
+      "rio-palancia"
+    ],
+    "gitObject": {
+      "available": true,
+      "method": "git show of the fixed V50 source",
+      "guideSha256": "a3e6c50d77152d4bedf550f84c4bb4e7b68f7bf2c8af5a77c1a182629ce23888",
+      "orderSha256": "c2efaee8424cc6cc62a238a32002f372b75b175a19ff211dfb9d035d05a4ff06",
+      "otherVisitIndexSha256": "9a31f5558ddfbdda3270690c24d8716b3dee10e0ed9d50a79d75c89b98086d58"
+    }
+  },
+  "checks": [
+    {
+      "pass": true,
+      "label": "frozen fixtures match the original source objects"
+    },
+    {
+      "pass": true,
+      "label": "frozen stop order matches the original guide"
+    },
+    {
+      "pass": true,
+      "label": "18 unique stop IDs retain their original order"
+    },
+    {
+      "pass": true,
+      "label": "the shipped scene exposes the same 18 ordered focuses"
+    },
+    {
+      "pass": true,
+      "label": "stop numbers and introduction aliases remain synchronized"
+    },
+    {
+      "pass": true,
+      "label": "the guide and shipped scene retain all seven precincts in order"
+    },
+    {
+      "pass": true,
+      "label": "bibliographic source identifiers are unique"
+    },
+    {
+      "pass": true,
+      "label": "the V51 forum and Almenara primary references are present in the displayed bibliography"
+    },
+    {
+      "pass": true,
+      "label": "all displayed bibliographic records have a title and public web URL"
+    },
+    {
+      "pass": true,
+      "label": "all guide references resolve to the displayed bibliography"
+    },
+    {
+      "pass": true,
+      "label": "every stop and factual claim retains named sources"
+    },
+    {
+      "pass": true,
+      "label": "all geometric source keys resolve to the guide bibliography"
+    },
+    {
+      "pass": true,
+      "label": "Almenara geometric evidence resolves to the public guide bibliography"
+    },
+    {
+      "pass": true,
+      "label": "17 regional stops occur exactly once, with the overview kept outside the seven precinct lists"
+    },
+    {
+      "pass": true,
+      "label": "conjunto geographic aliases and the scene focus agree"
+    },
+    {
+      "pass": true,
+      "label": "conjunto has the intended region and a usable finite target/bounds"
+    },
+    {
+      "pass": true,
+      "label": "acceso geographic aliases and the scene focus agree"
+    },
+    {
+      "pass": true,
+      "label": "acceso has the intended region and a usable finite target/bounds"
+    },
+    {
+      "pass": true,
+      "label": "foro geographic aliases and the scene focus agree"
+    },
+    {
+      "pass": true,
+      "label": "foro has the intended region and a usable finite target/bounds"
+    },
+    {
+      "pass": true,
+      "label": "templo geographic aliases and the scene focus agree"
+    },
+    {
+      "pass": true,
+      "label": "templo has the intended region and a usable finite target/bounds"
+    },
+    {
+      "pass": true,
+      "label": "curia geographic aliases and the scene focus agree"
+    },
+    {
+      "pass": true,
+      "label": "curia has the intended region and a usable finite target/bounds"
+    },
+    {
+      "pass": true,
+      "label": "basilica geographic aliases and the scene focus agree"
+    },
+    {
+      "pass": true,
+      "label": "basilica has the intended region and a usable finite target/bounds"
+    },
+    {
+      "pass": true,
+      "label": "cisterna-foro geographic aliases and the scene focus agree"
+    },
+    {
+      "pass": true,
+      "label": "cisterna-foro has the intended region and a usable finite target/bounds"
+    },
+    {
+      "pass": true,
+      "label": "cisterna-norte geographic aliases and the scene focus agree"
+    },
+    {
+      "pass": true,
+      "label": "cisterna-norte has the intended region and a usable finite target/bounds"
+    },
+    {
+      "pass": true,
+      "label": "inscripcion geographic aliases and the scene focus agree"
+    },
+    {
+      "pass": true,
+      "label": "inscripcion has the intended region and a usable finite target/bounds"
+    },
+    {
+      "pass": true,
+      "label": "puerta-almenara geographic aliases and the scene focus agree"
+    },
+    {
+      "pass": true,
+      "label": "puerta-almenara has the intended region and a usable finite target/bounds"
+    },
+    {
+      "pass": true,
+      "label": "almenara geographic aliases and the scene focus agree"
+    },
+    {
+      "pass": true,
+      "label": "almenara has the intended region and a usable finite target/bounds"
+    },
+    {
+      "pass": true,
+      "label": "conejera geographic aliases and the scene focus agree"
+    },
+    {
+      "pass": true,
+      "label": "conejera has the intended region and a usable finite target/bounds"
+    },
+    {
+      "pass": true,
+      "label": "puerta-san-fernando geographic aliases and the scene focus agree"
+    },
+    {
+      "pass": true,
+      "label": "puerta-san-fernando has the intended region and a usable finite target/bounds"
+    },
+    {
+      "pass": true,
+      "label": "san-fernando geographic aliases and the scene focus agree"
+    },
+    {
+      "pass": true,
+      "label": "san-fernando has the intended region and a usable finite target/bounds"
+    },
+    {
+      "pass": true,
+      "label": "antiquarium geographic aliases and the scene focus agree"
+    },
+    {
+      "pass": true,
+      "label": "antiquarium has the intended region and a usable finite target/bounds"
+    },
+    {
+      "pass": true,
+      "label": "estudiantes geographic aliases and the scene focus agree"
+    },
+    {
+      "pass": true,
+      "label": "estudiantes has the intended region and a usable finite target/bounds"
+    },
+    {
+      "pass": true,
+      "label": "ciudadela geographic aliases and the scene focus agree"
+    },
+    {
+      "pass": true,
+      "label": "ciudadela has the intended region and a usable finite target/bounds"
+    },
+    {
+      "pass": true,
+      "label": "dos-mayo geographic aliases and the scene focus agree"
+    },
+    {
+      "pass": true,
+      "label": "dos-mayo has the intended region and a usable finite target/bounds"
+    },
+    {
+      "pass": true,
+      "label": "the shared Atlas order and numbering implementation are unchanged"
+    },
+    {
+      "pass": true,
+      "label": "the real shared catalogue loads all 32 original visits without registry issues"
+    },
+    {
+      "pass": true,
+      "label": "all 32 numbers, 16/9/7 territorial groups and monument anchors remain stable; Castillo is visit 15"
+    },
+    {
+      "pass": true,
+      "label": "all other 31 visits retain their original semantic index content"
+    },
+    {
+      "pass": true,
+      "label": "the territorial index contains the current seven precincts, 18 stops and 32 destinations"
+    },
+    {
+      "pass": true,
+      "label": "the generated territorial guide reflects every edited title, coordinate, region, introduction, period and mode"
+    }
+  ],
+  "errors": [],
+  "editorial": {
+    "stops": 18,
+    "facts": 72,
+    "timeline": 15,
+    "sources": 35,
+    "regions": 7,
+    "referenceOccurrences": 185,
+    "malformedReferences": [],
+    "unresolvedReferences": [],
+    "invalidSourceUrls": []
+  },
+  "spatial": {
+    "coordinateToleranceM": 0.002,
+    "maxCoordinateErrorM": 0,
+    "stops": [
+      {
+        "id": "conjunto",
+        "order": 1,
+        "coordinate": [
+          -0.2786,
+          39.67615
+        ],
+        "modelCoordinate": [
+          -0.2786,
+          39.67615
+        ],
+        "coordinateErrorM": 0,
+        "targetErrorM": 0,
+        "regionId": "all",
+        "kind": "overview",
+        "href": "#castle/conjunto"
+      },
+      {
+        "id": "acceso",
+        "order": 2,
+        "coordinate": [
+          -0.277215,
+          39.675965
+        ],
+        "modelCoordinate": [
+          -0.277215,
+          39.675965
+        ],
+        "coordinateErrorM": 0,
+        "targetErrorM": 0,
+        "regionId": "armas",
+        "kind": "feature",
+        "href": "#castle/acceso"
+      },
+      {
+        "id": "foro",
+        "order": 3,
+        "coordinate": [
+          -0.27658,
+          39.676
+        ],
+        "modelCoordinate": [
+          -0.27658,
+          39.676
+        ],
+        "coordinateErrorM": 0,
+        "targetErrorM": 0,
+        "regionId": "armas",
+        "kind": "feature",
+        "href": "#castle/foro"
+      },
+      {
+        "id": "templo",
+        "order": 4,
+        "coordinate": [
+          -0.2767,
+          39.67637
+        ],
+        "modelCoordinate": [
+          -0.2767,
+          39.67637
+        ],
+        "coordinateErrorM": 0,
+        "targetErrorM": 0,
+        "regionId": "armas",
+        "kind": "feature",
+        "href": "#castle/templo"
+      },
+      {
+        "id": "curia",
+        "order": 5,
+        "coordinate": [
+          -0.27643,
+          39.67636
+        ],
+        "modelCoordinate": [
+          -0.27643,
+          39.67636
+        ],
+        "coordinateErrorM": 0,
+        "targetErrorM": 0,
+        "regionId": "armas",
+        "kind": "feature",
+        "href": "#castle/curia"
+      },
+      {
+        "id": "basilica",
+        "order": 6,
+        "coordinate": [
+          -0.27695,
+          39.67594
+        ],
+        "modelCoordinate": [
+          -0.27695,
+          39.67594
+        ],
+        "coordinateErrorM": 0,
+        "targetErrorM": 0,
+        "regionId": "armas",
+        "kind": "feature",
+        "href": "#castle/basilica"
+      },
+      {
+        "id": "cisterna-foro",
+        "order": 7,
+        "coordinate": [
+          -0.2766,
+          39.67561
+        ],
+        "modelCoordinate": [
+          -0.2766,
+          39.67561
+        ],
+        "coordinateErrorM": 0,
+        "targetErrorM": 0,
+        "regionId": "armas",
+        "kind": "feature",
+        "href": "#castle/cisterna-foro"
+      },
+      {
+        "id": "cisterna-norte",
+        "order": 8,
+        "coordinate": [
+          -0.2767,
+          39.67643
+        ],
+        "modelCoordinate": [
+          -0.2767,
+          39.67643
+        ],
+        "coordinateErrorM": 0,
+        "targetErrorM": 0,
+        "regionId": "armas",
+        "kind": "feature",
+        "href": "#castle/cisterna-norte"
+      },
+      {
+        "id": "inscripcion",
+        "order": 9,
+        "coordinate": [
+          -0.27656,
+          39.67601
+        ],
+        "modelCoordinate": [
+          -0.27656,
+          39.67601
+        ],
+        "coordinateErrorM": 0,
+        "targetErrorM": 0,
+        "regionId": "armas",
+        "kind": "feature",
+        "href": "#castle/inscripcion"
+      },
+      {
+        "id": "puerta-almenara",
+        "order": 10,
+        "coordinate": [
+          -0.2762665,
+          39.6762149
+        ],
+        "modelCoordinate": [
+          -0.2762665,
+          39.6762149
+        ],
+        "coordinateErrorM": 0,
+        "targetErrorM": 0,
+        "regionId": "almenara",
+        "kind": "feature",
+        "href": "#castle/puerta-almenara"
+      },
+      {
+        "id": "almenara",
+        "order": 11,
+        "coordinate": [
+          -0.2758659,
+          39.6764949
+        ],
+        "modelCoordinate": [
+          -0.2758659,
+          39.6764949
+        ],
+        "coordinateErrorM": 0,
+        "targetErrorM": 0,
+        "regionId": "almenara",
+        "kind": "precinct",
+        "href": "#castle/almenara"
+      },
+      {
+        "id": "conejera",
+        "order": 12,
+        "coordinate": [
+          -0.2765862,
+          39.676737
+        ],
+        "modelCoordinate": [
+          -0.2765862,
+          39.676737
+        ],
+        "coordinateErrorM": 0,
+        "targetErrorM": 0,
+        "regionId": "conejera",
+        "kind": "precinct",
+        "href": "#castle/conejera"
+      },
+      {
+        "id": "puerta-san-fernando",
+        "order": 13,
+        "coordinate": [
+          -0.2780262,
+          39.6759438
+        ],
+        "modelCoordinate": [
+          -0.2780262,
+          39.6759438
+        ],
+        "coordinateErrorM": 0,
+        "targetErrorM": 0,
+        "regionId": "san-fernando",
+        "kind": "feature",
+        "href": "#castle/puerta-san-fernando"
+      },
+      {
+        "id": "san-fernando",
+        "order": 14,
+        "coordinate": [
+          -0.2798156,
+          39.6756028
+        ],
+        "modelCoordinate": [
+          -0.2798156,
+          39.6756028
+        ],
+        "coordinateErrorM": 0,
+        "targetErrorM": 0,
+        "regionId": "san-fernando",
+        "kind": "precinct",
+        "href": "#castle/san-fernando"
+      },
+      {
+        "id": "antiquarium",
+        "order": 15,
+        "coordinate": [
+          -0.278987,
+          39.675568
+        ],
+        "modelCoordinate": [
+          -0.278987,
+          39.675568
+        ],
+        "coordinateErrorM": 0,
+        "targetErrorM": 0,
+        "regionId": "san-fernando",
+        "kind": "feature",
+        "href": "#castle/antiquarium"
+      },
+      {
+        "id": "estudiantes",
+        "order": 16,
+        "coordinate": [
+          -0.2803067,
+          39.6760944
+        ],
+        "modelCoordinate": [
+          -0.2803067,
+          39.6760944
+        ],
+        "coordinateErrorM": 0,
+        "targetErrorM": 0,
+        "regionId": "estudiantes",
+        "kind": "precinct",
+        "href": "#castle/estudiantes"
+      },
+      {
+        "id": "ciudadela",
+        "order": 17,
+        "coordinate": [
+          -0.2818811,
+          39.6763446
+        ],
+        "modelCoordinate": [
+          -0.2818811,
+          39.6763446
+        ],
+        "coordinateErrorM": 0,
+        "targetErrorM": 0,
+        "regionId": "ciudadela",
+        "kind": "precinct",
+        "href": "#castle/ciudadela"
+      },
+      {
+        "id": "dos-mayo",
+        "order": 18,
+        "coordinate": [
+          -0.2831876,
+          39.6768604
+        ],
+        "modelCoordinate": [
+          -0.2831876,
+          39.6768604
+        ],
+        "coordinateErrorM": 0,
+        "targetErrorM": 0,
+        "regionId": "dos-mayo",
+        "kind": "precinct",
+        "href": "#castle/dos-mayo"
+      }
+    ],
+    "groundBinding": {
+      "assembly": "Castle forum terrace + sacred/civic/archaeological patches + urban ground + final terrain mesh + deferred castle construction",
+      "forum": {
+        "level": 132,
+        "margin": 4,
+        "method": "Forum and archaeological floors: local relative levels from photographed remains, anchored to the existing IGN south/east edge; curia platform built separately; Almenara passage graded continuously; elevations are interpretive, not a new archaeological survey"
+      },
+      "scope": "Same local castle inputs as buildRegion(sagunto); distant Glorieta omitted from CPU context"
+    }
+  },
+  "globalCatalog": {
+    "count": 32,
+    "issues": [],
+    "visits": [
+      {
+        "id": "santa-maria",
+        "number": 1,
+        "area": "sagunto",
+        "href": "#santa-maria"
+      },
+      {
+        "id": "plaza-mayor",
+        "number": 2,
+        "area": "sagunto",
+        "href": "#plaza-mayor"
+      },
+      {
+        "id": "juderia",
+        "number": 3,
+        "area": "sagunto",
+        "href": "#juderia"
+      },
+      {
+        "id": "calvario",
+        "number": 4,
+        "area": "sagunto",
+        "href": "#calvario"
+      },
+      {
+        "id": "berenguer",
+        "number": 5,
+        "area": "sagunto",
+        "href": "#berenguer"
+      },
+      {
+        "id": "sangre",
+        "number": 6,
+        "area": "sagunto",
+        "href": "#sangre"
+      },
+      {
+        "id": "salvador",
+        "number": 7,
+        "area": "sagunto",
+        "href": "#salvador"
+      },
+      {
+        "id": "museo",
+        "number": 8,
+        "area": "sagunto",
+        "href": "#museo"
+      },
+      {
+        "id": "portic",
+        "number": 9,
+        "area": "sagunto",
+        "href": "#portic"
+      },
+      {
+        "id": "domus",
+        "number": 10,
+        "area": "sagunto",
+        "href": "#domus"
+      },
+      {
+        "id": "circo",
+        "number": 11,
+        "area": "sagunto",
+        "href": "#circo"
+      },
+      {
+        "id": "diana",
+        "number": 12,
+        "area": "sagunto",
+        "href": "#diana"
+      },
+      {
+        "id": "necropolis",
+        "number": 13,
+        "area": "sagunto",
+        "href": "#necropolis"
+      },
+      {
+        "id": "theatre",
+        "number": 14,
+        "area": "sagunto",
+        "href": "#theatre"
+      },
+      {
+        "id": "castle",
+        "number": 15,
+        "area": "sagunto",
+        "href": "#castle"
+      },
+      {
+        "id": "glorieta",
+        "number": 16,
+        "area": "sagunto",
+        "href": "#glorieta"
+      },
+      {
+        "id": "horno",
+        "number": 17,
+        "area": "puerto",
+        "href": "#horno"
+      },
+      {
+        "id": "talleres",
+        "number": 18,
+        "area": "puerto",
+        "href": "#talleres"
+      },
+      {
+        "id": "museo-industrial",
+        "number": 19,
+        "area": "puerto",
+        "href": "#museo-industrial"
+      },
+      {
+        "id": "gerencia",
+        "number": 20,
+        "area": "puerto",
+        "href": "#gerencia"
+      },
+      {
+        "id": "casino",
+        "number": 21,
+        "area": "puerto",
+        "href": "#casino"
+      },
+      {
+        "id": "begona",
+        "number": 22,
+        "area": "puerto",
+        "href": "#begona"
+      },
+      {
+        "id": "economato",
+        "number": 23,
+        "area": "puerto",
+        "href": "#economato"
+      },
+      {
+        "id": "barrio-obrero",
+        "number": 24,
+        "area": "puerto",
+        "href": "#barrio-obrero"
+      },
+      {
+        "id": "sanatorio",
+        "number": 25,
+        "area": "puerto",
+        "href": "#sanatorio"
+      },
+      {
+        "id": "pantalan-paseo",
+        "number": 26,
+        "area": "resto",
+        "href": "#pantalan-paseo"
+      },
+      {
+        "id": "pantalan-maritimo",
+        "number": 27,
+        "area": "resto",
+        "href": "#pantalan-maritimo"
+      },
+      {
+        "id": "grau-vell",
+        "number": 28,
+        "area": "resto",
+        "href": "#grau-vell"
+      },
+      {
+        "id": "puerto-antiguo",
+        "number": 29,
+        "area": "resto",
+        "href": "#puerto-antiguo"
+      },
+      {
+        "id": "marjal-moros",
+        "number": 30,
+        "area": "resto",
+        "href": "#marjal-moros"
+      },
+      {
+        "id": "dunas-almarda",
+        "number": 31,
+        "area": "resto",
+        "href": "#dunas-almarda"
+      },
+      {
+        "id": "rio-palancia",
+        "number": 32,
+        "area": "resto",
+        "href": "#rio-palancia"
+      }
+    ]
+  },
+  "territoryIndex": {
+    "places": 32,
+    "castleStops": 18,
+    "otherPlacesUnchanged": true,
+    "otherVisitIndexSha256": "9a31f5558ddfbdda3270690c24d8716b3dee10e0ed9d50a79d75c89b98086d58",
+    "staleCastleFields": []
+  },
+  "limitations": [
+    "Reference integrity does not independently revalidate each historical claim or remote URL.",
+    "Coordinate consistency verifies the authored navigation frame, not archaeological survey accuracy.",
+    "Screen framing, GPU rendering, materials and geometric fidelity are checked separately."
+  ]
+}

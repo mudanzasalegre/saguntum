@@ -1,5 +1,8 @@
 import * as THREE from 'three';
 import {createCastleTexture,CASTLE_TEXTURE_METRES} from './castle-materials.js';
+import {ALMENARA_SPEC,buildAlmenara} from './castle-almenara.js';
+import {buildForum,FORUM_REPLACED_WALL_IDS} from './castle-forum.js';
+import {createCastleGround} from './castle-ground.js';
 
 // Present-day castle fabric. Plans: OSM / PNOA; structure identification: municipal
 // Plan Director (2000), Aranegui and FORTMED (2020). Heights are visual estimates.
@@ -12,7 +15,8 @@ export const castleBuildingIds=new Set(MAPPED_BUILDINGS.map(b=>b.id));
 
 const TAU=Math.PI*2,clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 const noise=n=>{const v=Math.sin(n*127.13+43.7)*43758.5453;return v-Math.floor(v);};
-const COLORS={stone:'#c7b99e',ashlar:'#dfd4bd',rubble:'#b6aa90',tapial:'#c3b08a',brick:'#bd9276',mortar:'#8e8470',paving:'#bdb39d',path:'#c7b998',roof:'#a99d87',tile:'#b88769',metal:'#575e55',glass:'#424b45',wood:'#76654a'};
+const COLORS={stone:'#c7b99e',ashlar:'#dfd4bd',rubble:'#b6aa90',tapial:'#c3b08a',brick:'#bd9276',mortar:'#8e8470',paving:'#bdb39d',path:'#c7b998',roof:'#a99d87',tile:'#b88769',metal:'#575e55',glass:'#424b45',wood:'#807157',
+ 'gate-stone':'#c5b9a3','gate-brick':'#be9576',plaster:'#c9b58b','forum-earth':'#b7a78f','forum-gravel':'#c0b39c','forum-stone':'#d2cbbb','worn-ashlar':'#ded9cd'};
 const PERIOD_COLORS={ancient:'#e1c18b',medieval:'#8ad3ca',modern:'#f0b192',unknown:'#c0cbc9'};
 const ROMAN_WALL_IDS=new Set(['733215272','733215273','733215274','733215275','733215276','733215277','733215278','733215279','733215280','733215281','733215282','733215283','733215284','733215285','733215286','1199456162','1199456163','1419350908','1419350909','1419350910','1419350911','1419350912','1419350913','1419350914']);
 // Precinct limits are a visitor-oriented segmentation of the mapped footprint,
@@ -98,27 +102,67 @@ export function createCastle({project,heightAt,data={},visitData=data.castleVisi
  const outline=data.castlePolygon;
  if(!Array.isArray(outline)||outline.length<3)throw new Error('Falta la planta cartográfica del Castillo de Sagunto.');
  const world=outline.map(c=>project(...c)),group=new THREE.Group(),batch=new CastleBatch();group.name='castillo-sagunto';
- const stats={perimeterSource:'OpenStreetMap, polygon in cartography.json',elevationSource:'Supplied rendered terrain sampler; architectural heights are visual estimates',perimeterVertices:outline.length,perimeterLengthM:0,wallWayCount:0,wallLengthM:0,duplicateSegmentsSkipped:0,outsideSegmentsSkipped:0,gates:[],routeSegments:0,routeLengthM:0,mappedBuildings:0,romanWallWays:0,periods:['ancient','medieval','modern','unknown'],interpretiveDimensions:true,undergroundReconstruction:false,sourceKeys:['plan-director-2000','cisterna-norte-1984','fortmed-2020','civera-cisternas-2007','osm-castillo','templo-aranegui-1991','seranco-2019','foto-ricsol-2022','ipce-telegrafia'],detail};
+ const stats={perimeterSource:'OpenStreetMap, polygon in cartography.json',elevationSource:'Supplied rendered terrain sampler; architectural heights are visual estimates',perimeterVertices:outline.length,perimeterLengthM:0,wallWayCount:0,wallLengthM:0,duplicateSegmentsSkipped:0,outsideSegmentsSkipped:0,gates:[],routeSegments:0,routeLengthM:0,mappedBuildings:0,romanWallWays:0,periods:['ancient','medieval','modern','unknown'],interpretiveDimensions:true,undergroundReconstruction:false,sourceKeys:['plan-director-2000','cisterna-norte-1984','fortmed-2020','civera-cisternas-2007','osm-castillo','templo-aranegui-1991','seranco-2019','foto-ricsol-2022','ipce-telegrafia','foro-terrazas-1998','aranegui-2004','bivaldi-jh4-388','almenara-restoration-2017'],detail};
  const qa={surfaces:[],wallBases:[],portals:[],routes:[],floorSamples:[],buildings:[],crowns:[],features:[]};
  const gateSpecs=[
   {id:'acceso',regionId:'armas',coordinate:[-.277222,39.6759601],yaw:-1.61694156,width:3.3,height:4.65,depth:3.7,top:6.8,period:'unknown',type:'segmental'},
-  {id:'puerta-almenara',regionId:'almenara',coordinate:[-.2762665022,39.676214945],yaw:-1.30500565,width:3.15,height:5.2,depth:6.4,top:8.9,frontWidth:9.6,period:'unknown',type:'pointed-trefoil'},
+  ALMENARA_SPEC,
   {id:'puerta-san-fernando',regionId:'san-fernando',coordinate:[-.2780262,39.6759438],yaw:-1.58285553,width:3.05,height:4.35,depth:3.5,top:7.3,period:'unknown',type:'round'}
  ];
- const gates=gateSpecs.map(g=>{const p=project(...g.coordinate);return{...g,...p,base:heightAt(p.x,p.z)+.14,cutWidth:g.frontWidth||g.width+1.9};});
- const clippedByGate=(x,z,padding=0)=>gates.some(g=>{const dx=x-g.x,dz=z-g.z,c=Math.cos(g.yaw),s=Math.sin(g.yaw),u=dx*c-dz*s,v=dx*s+dz*c;return Math.abs(u)<g.cutWidth*.5+padding&&Math.abs(v)<g.depth*.5+1.7+padding;});
- function wall(line,{height=4.2,thickness=1.8,period='unknown',component='lienzos',seed=1,perimeter=false,regionId=null,gateCuts=true,coursed=false,fabric=null,crown=null,arcStart=0,broken=false}={}){
+ const localGround=createCastleGround({project,heightAt});
+ const gates=gateSpecs.map(g=>{const p=project(...g.coordinate),gate={...g,...p,base:heightAt(p.x,p.z)+.14,cutWidth:g.frontWidth||g.width+1.9};
+  if(g.id==='puerta-almenara'){
+   gate.base=localGround.almenara.frontLevel+.105;
+   gate.floorAt=(u,v)=>{const p=localGround.almenara.world(u,v);return Math.max(localGround.almenara.profile(v),heightAt(p.x,p.z))+.105;};
+  }
+  return gate;
+ });
+ const clippedByGate=(x,z,padding=0,skipAlmenara=false)=>gates.some(g=>{if(skipAlmenara&&g.id==='puerta-almenara')return false;const dx=x-g.x,dz=z-g.z,c=Math.cos(g.yaw),s=Math.sin(g.yaw),u=dx*c-dz*s,v=dx*s+dz*c;return Math.abs(u)<g.cutWidth*.5+padding&&(g.id==='puerta-almenara'?v>=-g.cutBack-padding&&v<=g.cutFront+padding:Math.abs(v)<g.depth*.5+1.7+padding);});
+ const almenaraGate=gates.find(g=>g.id==='puerta-almenara');
+ function wallOutsideAlmenara(a,b,ta,tb){
+  const g=almenaraGate,c=Math.cos(g.yaw),s=Math.sin(g.yaw),ax=a.x-g.x,az=a.z-g.z,dx=b.x-a.x,dz=b.z-a.z;
+  let enter=ta,exit=tb;
+  for(const [origin,delta,min,max]of[[ax*c-az*s,dx*c-dz*s,-g.cutWidth/2+.18,g.cutWidth/2-.18],[ax*s+az*c,dx*s+dz*c,-g.cutBack,g.cutFront]]){
+   if(Math.abs(delta)<1e-9){if(origin<min||origin>max)return[[ta,tb]];continue;}
+   const t0=(min-origin)/delta,t1=(max-origin)/delta;enter=Math.max(enter,Math.min(t0,t1));exit=Math.min(exit,Math.max(t0,t1));
+   if(enter>=exit)return[[ta,tb]];
+  }
+  return [[ta,enter],[exit,tb]].filter(([a,b])=>b-a>1e-8);
+ }
+ // Clip only the mapped path faces hidden by the authored gate floor. Keeping
+ // the outside pieces avoids both coincident surfaces and gaps at the jambs.
+ const gateFloor=(()=>{const a=localGround.almenara,w=ALMENARA_SPEC.width/2-.012;
+  return [a.world(-w,.25),a.world(w,.25),a.world(w-.12,-ALMENARA_SPEC.depth-.5),a.world(-w-.12,-ALMENARA_SPEC.depth-.5)];})();
+ const gateFloorBounds={x0:Math.min(...gateFloor.map(p=>p.x)),x1:Math.max(...gateFloor.map(p=>p.x)),z0:Math.min(...gateFloor.map(p=>p.z)),z1:Math.max(...gateFloor.map(p=>p.z))};
+ function outsideGateFloor(polygon){
+  if(polygon.every(p=>p.x<gateFloorBounds.x0)||polygon.every(p=>p.x>gateFloorBounds.x1)||polygon.every(p=>p.z<gateFloorBounds.z0)||polygon.every(p=>p.z>gateFloorBounds.z1))return[polygon];
+  const area=gateFloor.reduce((a,p,i)=>{const q=gateFloor[(i+1)%gateFloor.length];return a+p.x*q.z-q.x*p.z;},0),sign=Math.sign(area);
+  const outside=[];let remaining=polygon;
+  for(let i=0;i<gateFloor.length&&remaining.length>=3;i++){
+   const a=gateFloor[i],b=gateFloor[(i+1)%gateFloor.length],value=p=>sign*((b.x-a.x)*(p.z-a.z)-(b.z-a.z)*(p.x-a.x)),inner=[],outer=[];
+   for(let j=0;j<remaining.length;j++){
+    const p=remaining[j],q=remaining[(j+1)%remaining.length],vp=value(p),vq=value(q);
+    (vp>=0?inner:outer).push(p);
+    if((vp>=0)!==(vq>=0)){const t=vp/(vp-vq),cross={x:p.x+(q.x-p.x)*t,z:p.z+(q.z-p.z)*t};inner.push(cross);outer.push(cross);}
+   }
+   if(outer.length>=3)outside.push(outer);remaining=inner;
+  }
+  return outside;
+ }
+ function wall(line,{height=4.2,thickness=1.8,period='unknown',component='lienzos',seed=1,perimeter=false,regionId=null,gateCuts=true,coursed=false,fabric=null,crown=null,arcStart=0,broken=false,topCap=null}={}){
   for(let k=0;k<line.length-1;k++){
    const a=line[k],b=line[k+1],dx=b.x-a.x,dz=b.z-a.z,length=Math.hypot(dx,dz);if(length<.07)continue;
    const nx=-dz/length,nz=dx/length,n=Math.max(1,Math.ceil(length/1.8)),yaw=-Math.atan2(dz,dx);
-   for(let j=0;j<n;j++){
-    const ta=j/n,tb=(j+1)/n,pa={x:a.x+dx*ta,z:a.z+dz*ta},pb={x:a.x+dx*tb,z:a.z+dz*tb},cx=(pa.x+pb.x)/2,cz=(pa.z+pb.z)/2;
-    if(gateCuts&&clippedByGate(cx,cz,.4))continue;
-    const region=regionId||regionAt(cx,cz),kind=fabric||(height<1.5?'rubble':'stone'),key=keyFor(region,component,period,kind);
+   for(let j=0;j<n;j++)for(const [ta,tb]of(gateCuts?wallOutsideAlmenara(a,b,j/n,(j+1)/n):[[j/n,(j+1)/n]])){
+    const pa={x:a.x+dx*ta,z:a.z+dz*ta},pb={x:a.x+dx*tb,z:a.z+dz*tb},cx=(pa.x+pb.x)/2,cz=(pa.z+pb.z)/2,segmentLength=length*(tb-ta);
+    if(gateCuts&&clippedByGate(cx,cz,.4,true))continue;
+    const region=regionId||regionAt(cx,cz),baseKind=fabric||(height<1.5?'rubble':'stone'),nearAlmenara=Math.hypot(cx-almenaraGate.x,cz-almenaraGate.z)<22;
+    const kind=baseKind==='stone'&&nearAlmenara?'gate-stone':baseKind,key=keyFor(region,component,period,kind);
     const at=p=>{const l=heightAt(p.x+nx*thickness*.6,p.z+nz*thickness*.6),r=heightAt(p.x-nx*thickness*.6,p.z-nz*thickness*.6),center=heightAt(p.x,p.z);return{base:Math.min(l,r,center)-.35,top:Math.max(l,r,center)+height};};
     const ha=at(pa),hb=at(pb),v=[];
     const weather=height<.3?.02:broken?Math.min(1.12,height*.32):Math.min(.32,height*.08);
     ha.top+=(noise(seed+k*71+j)-.5)*weather;hb.top+=(noise(seed+k*71+j+1)-.5)*weather;
+    if(topCap){ha.top=Math.max(ha.base+.45,topCap(pa,ha.top));hb.top=Math.max(hb.base+.45,topCap(pb,hb.top));}
     const p=(a,h,side,top)=>[a.x+nx*side*thickness*(top?.5:.57),top?h.top:h.base,a.z+nz*side*thickness*(top?.5:.57)];
     quad(v,p(pa,ha,1,false),p(pb,hb,1,false),p(pb,hb,1,true),p(pa,ha,1,true));
     quad(v,p(pb,hb,-1,false),p(pa,ha,-1,false),p(pa,ha,-1,true),p(pb,hb,-1,true));
@@ -128,21 +172,21 @@ export function createCastle({project,heightAt,data={},visitData=data.castleVisi
     batch.raw(key,v,.91+noise(seed+j+k*17)*.16);
     if(coursed&&j%2===0&&height>2.5){
      const base=Math.max(heightAt(cx+nx*thickness*.51,cz+nz*thickness*.51),heightAt(cx-nx*thickness*.51,cz-nz*thickness*.51));
-     for(let y=base+.8;y<Math.min(ha.top,hb.top)-.4;y+=.95)for(const side of[-1,1])batch.box(keyFor(region,component,period,'mortar'),cx+nx*side*thickness*.507,y,cz+nz*side*thickness*.507,length/n*.94,.025,.025,yaw,.83);
+     for(let y=base+.8;y<Math.min(ha.top,hb.top)-.4;y+=.95)for(const side of[-1,1])batch.box(keyFor(region,component,period,'mortar'),cx+nx*side*thickness*.507,y,cz+nz*side*thickness*.507,segmentLength*.94,.025,.025,yaw,.83);
     }
-    if(height>1.5&&j%4===0&&noise(seed+j+k)>.52)batch.box(keyFor(region,component,period,'ashlar'),cx,(ha.top+hb.top)/2+.08,cz,Math.min(1.3,length/n*.9),.16,thickness*.77,yaw,.90+noise(seed+j)*.09);
+    if(height>1.5&&j%4===0&&noise(seed+j+k)>.52)batch.box(keyFor(region,component,period,'ashlar'),cx,(ha.top+hb.top)/2+.08,cz,Math.min(1.3,segmentLength*.9),.16,thickness*.77,yaw,.90+noise(seed+j)*.09);
     // The documented crenellated runs have a narrow outer parapet and a
     // walk behind it. Other curtains deliberately retain a broken plain crown.
     if(crown){
      const inward=inside(cx+nx*3,cz+nz*3,world)?1:-1,outward=-inward,shift=outward*(thickness/2-.35);
      const y=(ha.top+hb.top)/2;
-     batch.box(keyFor(region,'adarves',period,'ashlar'),cx+nx*inward*.25,y+.045,cz+nz*inward*.25,length/n+.025,.09,Math.max(.5,thickness-.75),yaw,.91);
+     batch.box(keyFor(region,'adarves',period,'ashlar'),cx+nx*inward*.25,y+.045,cz+nz*inward*.25,segmentLength+.025,.09,Math.max(.5,thickness-.75),yaw,.91);
      const pp=[],pr=(point,h,side,upper)=>[point.x+nx*(shift+side*.34),h.top+(upper?.49:.01),point.z+nz*(shift+side*.34)];
      quad(pp,pr(pa,ha,1,false),pr(pb,hb,1,false),pr(pb,hb,1,true),pr(pa,ha,1,true));
      quad(pp,pr(pb,hb,-1,false),pr(pa,ha,-1,false),pr(pa,ha,-1,true),pr(pb,hb,-1,true));
      quad(pp,pr(pa,ha,-1,true),pr(pa,ha,1,true),pr(pb,hb,1,true),pr(pb,hb,-1,true));
      batch.raw(keyFor(region,'parapetos',period,kind),pp,.96);
-     const step=crown.spacing||1.85,start=arcStart+length*j/n,end=arcStart+length*(j+1)/n;
+     const step=crown.spacing||1.85,start=arcStart+length*ta,end=arcStart+length*tb;
      for(let along=Math.ceil(start/step)*step;along<end;along+=step){
       const local=(along-arcStart)/length,t=clamp((along-start)/(end-start),0,1),mx=a.x+dx*local+nx*shift,mz=a.z+dz*local+nz*shift,mb=ha.top+(hb.top-ha.top)*t+.47,mh=crown.height||.87,mw=crown.width||.82;
       if(clippedByGate(mx,mz,1)||noise(Math.round(along)*19)<(crown.loss||.10))continue;
@@ -158,7 +202,7 @@ export function createCastle({project,heightAt,data={},visitData=data.castleVisi
      }
     }
     qa.wallBases.push({x:cx,z:cz,bottom:Math.min(ha.base,hb.base),top:Math.max(ha.top,hb.top),component,kind,thickness});
-    stats.wallLengthM+=length/n;if(perimeter)stats.perimeterLengthM+=length/n;
+    stats.wallLengthM+=segmentLength;if(perimeter)stats.perimeterLengthM+=segmentLength;
    }
   }
  }
@@ -181,8 +225,20 @@ export function createCastle({project,heightAt,data={},visitData=data.castleVisi
   wall([a,b],{height,thickness,fabric,crown,arcStart:perimeterArc,broken:!crown,seed:400+i*13,perimeter:true,component:'muralla-exterior',coursed:false});
   perimeterArc+=length;
  }
+ // Both photographed faces show the gateway rising above its immediate
+ // curtain walls. The generic 7.2 m rampart previously overtopped the frontis.
+ // Only the two mapped walls adjoining this gate receive a local height cap;
+ // their original profile returns smoothly 12–28 m along either flank. These
+ // relative 2.9/4.1 m heights are visual estimates, not surveyed elevations.
+ const almenaraWallTop=(p,original)=>{
+  const g=almenaraGate,dx=p.x-g.x,dz=p.z-g.z,u=dx*Math.cos(g.yaw)-dz*Math.sin(g.yaw);
+  const t=clamp((Math.abs(u)-12)/16,0,1),weight=1-t*t*(3-2*t);
+  const cap=g.base+(u<0?2.9:4.1)+Math.sin(u*.63)*.10;
+  return original+(Math.min(original,cap)-original)*weight;
+ };
  const allWays=data.castleWalls||[];
  for(const source of allWays){
+  if(FORUM_REPLACED_WALL_IDS.has(String(source.id)))continue;
   const coords=source.coordinates||source.geometry?.coordinates;if(!coords?.length)continue;
   let accepted=false;const points=coords.map(c=>project(...c));
   const roman=ROMAN_WALL_IDS.has(source.id),tabernae=source.name==='Tavernae';
@@ -197,7 +253,7 @@ export function createCastle({project,heightAt,data={},visitData=data.castleVisi
    const a=points[i],b=points[i+1],mid={x:(a.x+b.x)/2,z:(a.z+b.z)/2};
    if(distanceToOutline(mid,world)<.5&&distanceToOutline(a,world)<.7&&distanceToOutline(b,world)<.7){stats.duplicateSegmentsSkipped++;continue;}
    if(!inside(mid.x,mid.z,world)){stats.outsideSegmentsSkipped++;continue;}
-   wall([a,b],{height:h,thickness:roman?.68:h<.5?.8:source.id==='733215258'?2.7:1.55,period:roman?'ancient':'unknown',regionId:roman?'armas':null,component,seed:(idNum%1737)+i*11,broken:!roman&&h>1.5,coursed:false,fabric:roman?'rubble':null});accepted=true;
+   wall([a,b],{height:h,thickness:roman?.68:h<.5?.8:source.id==='733215258'?2.7:1.55,period:roman?'ancient':'unknown',regionId:roman?'armas':null,component,seed:(idNum%1737)+i*11,broken:!roman&&h>1.5,coursed:false,fabric:roman?'forum-stone':null,topCap:['733215258','733215259'].includes(String(source.id))?almenaraWallTop:null});accepted=true;
   }
   if(accepted){stats.wallWayCount++;if(roman)stats.romanWallWays++;}
  }
@@ -231,7 +287,7 @@ export function createCastle({project,heightAt,data={},visitData=data.castleVisi
    for(let i=0;i<n;i++){
     const t=i/n,u=(i+1)/n,ax=a.x+dx*t,az=a.z+dz*t,bx=a.x+dx*u,bz=a.z+dz*u,cx=(ax+bx)/2,cz=(az+bz)/2;
     const polygon=[{x:ax+nx*width/2,z:az+nz*width/2},{x:bx+nx*width/2,z:bz+nz*width/2},{x:bx-nx*width/2,z:bz-nz*width/2},{x:ax-nx*width/2,z:az-nz*width/2}],p=[];
-    drapedTriangle(polygon[0],polygon[1],polygon[2],p,.095,1.4,'caminos');drapedTriangle(polygon[0],polygon[2],polygon[3],p,.095,1.4,'caminos');
+    for(const piece of outsideGateFloor(polygon))for(let j=1;j<piece.length-1;j++)drapedTriangle(piece[0],piece[j],piece[j+1],p,.095,1.4,'caminos');
     batch.raw(keyFor(regionAt(cx,cz),'caminos','modern','path'),p,.92+noise(i+k*13)*.09);
     qa.routes.push({roadId:road.id,x:cx,z:cz,height:heightAt(cx,cz)+.095,width});stats.routeSegments++;stats.routeLengthM+=l/n;
     if(road.kind==='steps'&&detail==='full'){
@@ -242,46 +298,7 @@ export function createCastle({project,heightAt,data={},visitData=data.castleVisi
  }
  // A portal has a genuine opening through the curtain; no black blocking cube.
  function portal(g){
-  if(g.type==='pointed-trefoil'){
-   // The photographed west facade has an acute arch and TWO trefoil oculi.
-   // SERANCO's 2019 restoration dossier p43 is the visual source. The passage
-   // extends east of the OSM wall/path intersection, rather than symmetrically
-   // across the curtain. Its dimensions remain a visual interpretation.
-   const r=g.width/2,rise=2.15,spring=g.height-rise,R=(rise*rise+r*r)/(2*r),q=R-r,peakAngle=Math.acos(q/R),half=g.frontWidth/2;
-   const outline=new THREE.Shape();outline.moveTo(-half,-3);outline.lineTo(-r,-3);outline.lineTo(-r,spring);
-   const archPoints=[];
-   for(let i=0;i<=28;i++){const a=peakAngle*i/28,p={x:q-R*Math.cos(a),y:spring+R*Math.sin(a),side:-1,angle:a};archPoints.push(p);outline.lineTo(p.x,p.y);}
-   for(let i=28;i>=0;i--){const a=peakAngle*i/28,p={x:-q+R*Math.cos(a),y:spring+R*Math.sin(a),side:1,angle:a};archPoints.push(p);outline.lineTo(p.x,p.y);}
-   outline.lineTo(r,-3);outline.lineTo(half,-3);outline.lineTo(half,g.top-.15);outline.lineTo(3.5,g.top-.38);outline.lineTo(1.45,g.top-.26);outline.lineTo(.25,g.top+.16);outline.lineTo(-.65,g.top+.05);outline.lineTo(-2.2,g.top-.48);outline.lineTo(-half,g.top-.76);outline.closePath();
-   function trefoil(cx,cy,reverse=false){const hole=new THREE.Path(),n=96;for(let i=0;i<=n;i++){const a=(reverse?-1:1)*i*TAU/n,rr=.40+.12*Math.cos(3*(a-Math.PI/2)),x=cx+Math.cos(a)*rr,y=cy+Math.sin(a)*rr;i?hole.lineTo(x,y):hole.moveTo(x,y);}hole.closePath();return hole;}
-   const oculi=[{x:-2.15,y:6.95},{x:2.15,y:7.12}];
-   for(const o of oculi)outline.holes.push(trefoil(o.x,o.y,true));
-   const facade=new THREE.ExtrudeGeometry(outline,{depth:g.depth,bevelEnabled:false,steps:1,curveSegments:24});facade.translate(0,0,-g.depth);
-   const transform=new THREE.Matrix4().compose(new THREE.Vector3(g.x,g.base,g.z),new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0,1,0),g.yaw),new THREE.Vector3(1,1,1));
-   batch.geometry(keyFor(g.regionId,g.id,g.period,'stone'),facade,transform,.96);facade.dispose();
-   for(const o of oculi){
-    const frame=new THREE.Shape();frame.absarc(o.x,o.y,.70,0,TAU,false);frame.holes.push(trefoil(o.x,o.y,true));
-    const geo=new THREE.ExtrudeGeometry(frame,{depth:.16,bevelEnabled:false,steps:1,curveSegments:28});geo.translate(0,0,.015);batch.geometry(keyFor(g.regionId,g.id,g.period,'ashlar'),geo,transform,.95);geo.dispose();
-   }
-   const c=Math.cos(g.yaw),s=Math.sin(g.yaw),tr=(x,y,z)=>[g.x+x*c+z*s,g.base+y,g.z-x*s+z*c];
-   // Thin brick voussoirs follow each of the two centered curves of the arch.
-   for(const side of[-1,1])for(let i=0;i<18;i++){
-    const a=peakAngle*(i+.025)/18,b=peakAngle*(i+.975)/18,t=.43,p=[];
-    const at=(rr,angle,z)=>tr(side<0?q-rr*Math.cos(angle):-q+rr*Math.cos(angle),spring+rr*Math.sin(angle),z);
-    const a0=at(R,a,.025),b0=at(R,b,.025),a1=at(R+t,a,.025),b1=at(R+t,b,.025),a2=at(R,a,.24),b2=at(R,b,.24),a3=at(R+t,a,.24),b3=at(R+t,b,.24);
-    quad(p,a0,b0,b1,a1);quad(p,b2,a2,a3,b3);quad(p,a0,a2,b2,b0);quad(p,a1,b1,b3,a3);quad(p,a0,a1,a3,a2);quad(p,b1,b0,b2,b3);batch.raw(keyFor(g.regionId,g.id,g.period,'tile'),p,.88+noise(i*23+side)*.13);
-   }
-   // The documented wooden leaves are shown folded against the passage sides,
-   // keeping the virtual opening usable instead of placing a dark blocking box.
-   for(const side of[-1,1]){
-    const p=tr(side*(r-.08),1.55,-4.25);batch.box(keyFor(g.regionId,g.id,g.period,'wood'),p[0],p[1],p[2],2.25,3.1,.12,g.yaw+Math.PI/2,.91);
-    for(const y of[.55,2.55]){const a=tr(side*(r-.14),y,-4.25);batch.box(keyFor(g.regionId,g.id,g.period,'metal'),a[0],a[1],a[2],2.15,.12,.06,g.yaw+Math.PI/2,.88);}
-   }
-   const center=tr(0,0,-g.depth/2);
-   qa.portals.push({...g,x:center[0],z:center[2],openingBottom:g.base,openingCrown:g.base+g.height,oculi:oculi.map(o=>({center:tr(o.x,o.y,-g.depth/2),radius:.5})),facadeSource:'seranco-2019'});
-   stats.gates.push({id:g.id,coordinates:g.coordinate,width:g.width,height:g.height,depth:g.depth,opening:true,form:'pointed arch, two trefoil oculi, folded timber leaves',planConfidence:'OSM path / wall intersection',elevationConfidence:'photographic form; interpreted dimensions'});
-   return;
-  }
+  if(g.id==='puerta-almenara')return buildAlmenara({THREE,batch,keyFor,g,heightAt,qa,stats,detail});
   const key=keyFor(g.regionId,g.id,g.period,'stone'),ashlar=keyFor(g.regionId,g.id,g.period,'ashlar'),c=Math.cos(g.yaw),s=Math.sin(g.yaw),r=g.width/2,thick=.73,spring=g.height-r,outer=r+thick;
   const tr=(x,y,z)=>[g.x+x*c+z*s,g.base+y,g.z-x*s+z*c];
   const box=(key,x,y,z,w,h,d,tint=1)=>{const p=tr(x,y,z);batch.box(key,p[0],p[1],p[2],w,h,d,g.yaw,tint);};
@@ -314,33 +331,7 @@ export function createCastle({project,heightAt,data={},visitData=data.castleVisi
  gates.forEach(portal);
  // Identified surviving forum: north temple, NE curia, W basilica, E tabernae.
  const from=(coordinates)=>coordinates.map(c=>project(...c));
- const forumFloor=from([[-.276737,39.676246],[-.276350,39.676304],[-.276270,39.675924],[-.276657,39.675867]]);
- conformingPolygon(forumFloor,{regionId:'armas',component:'foro',period:'ancient',kind:'paving',offset:.115,cell:1.1});
- // The current excavation is mostly earth and gravel with worn stone
- // fragments. Do not draw a regular replacement pavement or an invented copy
- // of the bronze-letter inscription over the whole terrace.
- const temple=from([[-.276789,39.676425],[-.276641,39.676444],[-.276609,39.676317],[-.276755,39.676299]]);
- wall([...temple,temple[0]],{height:.66,thickness:.8,period:'ancient',component:'templo',seed:607,regionId:'armas',gateCuts:false});
- conformingPolygon(temple,{regionId:'armas',component:'templo',period:'ancient',kind:'rubble',offset:.13});
- // Three parallel cellae are documented in Plan Director p58 / Aranegui. Their
- // low surviving foundations retain the lower excavated level of this sector.
- for(let division=1;division<=2;division++){
-  const t=division/3,a={x:temple[0].x+(temple[1].x-temple[0].x)*t,z:temple[0].z+(temple[1].z-temple[0].z)*t},b={x:temple[3].x+(temple[2].x-temple[3].x)*t,z:temple[3].z+(temple[2].z-temple[3].z)*t};
-  wall([a,b],{height:.48,thickness:.67,period:'ancient',component:'templo',seed:120+division,regionId:'armas',gateCuts:false});
- }
- qa.features.push({id:'templo-cellae',count:3,source:'plan-director-2000',condition:'surviving-low-foundations',footprint:'approximate-plan-alignment'});
- const templeSouth={x:(temple[2].x+temple[3].x)/2,z:(temple[2].z+temple[3].z)/2},templeYaw=-Math.atan2(temple[2].z-temple[3].z,temple[2].x-temple[3].x);
- for(let i=0;i<4;i++){
-  const x=templeSouth.x+Math.sin(templeYaw)*(.7+i*.54),z=templeSouth.z+Math.cos(templeYaw)*(.7+i*.54);
-  batch.box(keyFor('armas','templo','ancient','ashlar'),x,heightAt(x,z)+.10+(3-i)*.11,z,7.2,.22,.58,templeYaw,.92+noise(i)*.06);
- }
- // Only low column bases and stumps, at the curia portico, survive this reading.
- const ca=project(-.276526,39.676278),cb=project(-.276294,39.676311);
- for(let i=0;i<4;i++){
-  const t=(i+.5)/4,x=ca.x+(cb.x-ca.x)*t,z=ca.z+(cb.z-ca.z)*t,y=heightAt(x,z);
-  batch.box(keyFor('armas','curia','ancient','ashlar'),x,y+.13,z,.88,.26,.88,0,.94);
-  batch.cylinder(keyFor('armas','curia','ancient','ashlar'),x,y+.4,z,.30,.35,.36+noise(i)*.22,.94,16);
- }
+ buildForum({THREE,batch,keyFor,project,heightAt,qa,stats,detail,conformingPolygon,wall,forumLevel:localGround.level});
  // South forum cistern: its long covered footprint remains under the terrace.
  // Dimensions come from Civera 2007; position is aligned to the municipal forum
  // plan and PNOA, with metres of uncertainty. No below-ground spaces are exposed.
@@ -462,13 +453,17 @@ export function createCastle({project,heightAt,data={},visitData=data.castleVisi
   }
   qa.buildings.push({id:building.id,component,base,top:roof.ridgeHeight,eaveHeight:top,terrainMaximum:Math.max(...poly.map(p=>heightAt(p.x,p.z))),period,roof,polygon:poly});stats.mappedBuildings++;
  }
- const resources=batch.finish(group);group.updateMatrixWorld(true);
+ const resources=batch.finish(group);
+ for(const mesh of group.children)if(mesh.isMesh){const d=mesh.userData;
+  d.publicWalkingSurface=d.component==='almenara-suelo'&&d.materialKind==='path'||d.component==='foro'&&d.materialKind==='forum-earth';
+ }
+ group.updateMatrixWorld(true);
  const bounds=new THREE.Box3().setFromObject(group),regions=REGION_DEFS.map(region=>{
   const box=new THREE.Box3();for(const child of group.children)if(child.userData.regionId===region.id)box.union(child.geometry.boundingBox);
   const p=project(...region.coordinates);return{id:region.id,label:region.label,coordinate:region.coordinates,period:'unknown',planConfidence:'visitor segmentation of current mapped structures; no newly surveyed polygon',bounds:box,center:new THREE.Vector3(p.x,heightAt(p.x,p.z),p.z)};
  });
  const focuses={},sourceStops=new Map((visitData?.stops||[]).map(stop=>[stop.id,stop]));
- const componentFor={acceso:['acceso'],'puerta-almenara':['puerta-almenara'],'puerta-san-fernando':['puerta-san-fernando'],foro:['foro','templo','curia','basilica','tabernae'],templo:['templo'],curia:['curia'],basilica:['basilica'],'cisterna-foro':['cisterna-foro'],'cisterna-norte':['templo'],inscripcion:['foro'],antiquarium:['antiquarium']};
+ const componentFor={acceso:['acceso'],'puerta-almenara':['puerta-almenara','almenara-suelo'],'puerta-san-fernando':['puerta-san-fernando'],foro:['foro','templo','curia','basilica','tabernae'],templo:['templo'],curia:['curia'],basilica:['basilica'],'cisterna-foro':['cisterna-foro'],'cisterna-norte':['templo'],inscripcion:['foro'],antiquarium:['antiquarium']};
  for(const[id,label,regionId,coordinates,radius]of DEFAULT_STOPS){
   const source=sourceStops.get(id),coord=source?.coordinate||source?.coordinates||coordinates,p=project(...coord),target=new THREE.Vector3(p.x,heightAt(p.x,p.z)+2.2,p.z);
   let focusBounds=new THREE.Box3();
@@ -478,11 +473,13 @@ export function createCastle({project,heightAt,data={},visitData=data.castleVisi
   if(focusBounds.isEmpty()||['cisterna-norte','inscripcion'].includes(id))focusBounds.setFromCenterAndSize(target,new THREE.Vector3(radius*2,10,radius*2));
   // A documented point stays the target; the overview instead centers all fabric.
   if(id==='conjunto')focusBounds.getCenter(target);
+  if(id==='puerta-almenara')target.y=almenaraGate.base+4.2;
   const size=focusBounds.getSize(new THREE.Vector3()),distance=id==='conjunto'?1250:Math.max(radius*2.05,Math.max(size.x,size.z)*1.85,42);
   const direction=id==='puerta-almenara'||id==='puerta-san-fernando'?new THREE.Vector3(-.78,.62,.25):id==='basilica'?new THREE.Vector3(-.49,.88,.58):new THREE.Vector3(.23,.82,.70);
   direction.normalize();const offset=direction.clone().multiplyScalar(distance).toArray(),closeOffset=direction.clone().multiplyScalar(Math.max(20,distance*.57)).toArray();
   if(id==='acceso'){offset.splice(0,3,-36,30,-30);closeOffset.splice(0,3,-18,15,-20);}
-  if(id==='puerta-almenara'){offset.splice(0,3,-34,23,9);closeOffset.splice(0,3,-18,10,5);}
+  if(id==='foro'){offset.splice(0,3,-50,62,-60);closeOffset.splice(0,3,-26,26,-34);}
+  if(id==='puerta-almenara'){offset.splice(0,3,-24,7.5,8);closeOffset.splice(0,3,-15,1.4,4.5);}
   if(id==='puerta-san-fernando'){offset.splice(0,3,34,24,11);closeOffset.splice(0,3,19,11,7);}
   // Clamp both camera heights to the supplied mesh for every preset.
   for(const v of[offset,closeOffset])v[1]=Math.max(v[1],heightAt(target.x+v[0],target.z+v[2])+4-target.y);
@@ -509,6 +506,6 @@ export function createCastle({project,heightAt,data={},visitData=data.castleVisi
  }
  function setReadingMode(mode){readingMode=mode==='periods'?'periods':'materials';applyMaterials();return readingMode;}
  stats.triangles=0;stats.meshes=0;group.traverse(o=>{if(o.isMesh){stats.meshes++;stats.triangles+=(o.geometry.index?.count||o.geometry.attributes.position.count)/3;}});
- group.userData={id:'castle',label:'Castillo de Sagunto',interpretation:true,cartographicOutline:true,visit:{focuses,regions,bounds,stats,selectFocus,setReadingMode,getState:()=>({selected,readingMode}),qa},ownedResources:{materials:resources.materials,textures:resources.textures},metadata:{plan:'Mapped present-day footprint and walls',fabric:'Identified Roman foundations; mixed masonry and tapial curtains; selective surviving parapets; current buildings and roofless optical telegraph tower',elevations:'Approximate from photographs; footprints mapped; telegraph width 5.7 m from IPCE inventory; no complete historical reconstruction',cisternaNorte:'Sector focus only; no invented footprint',selection:'Camera itinerary; not a walking accessibility route'}};
+ group.userData={id:'castle',label:'Castillo de Sagunto',interpretation:true,cartographicOutline:true,visit:{focuses,regions,bounds,stats,selectFocus,setReadingMode,getState:()=>({selected,readingMode}),qa},ownedResources:{materials:resources.materials,textures:resources.textures},metadata:{plan:'Mapped present-day footprint and walls',fabric:'Surviving temple foundations distinguished from restitutions; three curia steps and fragment groups; thin Almenara facade with chamber, rear arch and physical openings; mixed masonry curtains and current precincts',elevations:'Approximate from photographs; footprints mapped; telegraph width 5.7 m from IPCE inventory; no complete historical reconstruction',cisternaNorte:'Sector focus only; no invented footprint',selection:'Camera itinerary; not a walking accessibility route'}};
  return group;
 }

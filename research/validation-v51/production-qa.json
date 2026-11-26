@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "site": {
+    "projectId": "appgprj_6afeb5aaef8c8191b0062318fb3a24f1",
+    "version": 51,
+    "versionId": "appgprj_6afeb5aaef8c8191b0062318fb3a24f1~appgver_a849717437748191947bfe03fb7e65d0",
+    "sourceCommit": "6a32c4395e716f92c30ebb0628c6e7c3204c5cae",
+    "distTree": "dc11afa6ecb4696e32b3823903837d9545a05be9",
+    "deploymentId": "appgdep_6b08a7d8a1848191aaca82f2f08cbb4d",
+    "status": "succeeded",
+    "url": "https://saguntum-atlas-3d.monmode.chatgpt.site",
+    "publishedAt": "2026-11-26T21:43:11.694762+00:00",
+    "archive": {
+      "archive_format": "tar",
+      "sediment_file_id": "file_00000000e0688243bd780e8873a3b480",
+      "content_hash": "sha256:21e1553e7d99ecf3361ff244064d3d7001ee5969ca764f778b2081fb227bbb77",
+      "size_bytes": 267939840,
+      "file_count": 1635
+    }
+  },
+  "method": "Manual UI interaction with the public Site using the available cloud browser; geometry separately inspected from actual exported Three.js buffers with Blender Cycles CPU.",
+  "checks": [
+    {
+      "id": "brand-and-title",
+      "pass": true,
+      "observed": "SAGUNTUM · Sagunto y Puerto de Sagunto; territorial entry with 32 places and 6 areas."
+    },
+    {
+      "id": "almenara-live",
+      "pass": true,
+      "url": "https://saguntum-atlas-3d.monmode.chatgpt.site/#castle/puerta-almenara",
+      "observed": "Stop 10 of 18; revised two-face description, pointed arch, two trilobed oculi, lower rear body with three vertical openings; 7 stop sources; 18 stops / 7 precincts."
+    },
+    {
+      "id": "atlas-to-simulator",
+      "pass": true,
+      "url": "https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador/castle/puerta-almenara",
+      "observed": "Clicked Simulator from Almenara; destination retained castle/puerta-almenara, stop 10 of 18."
+    },
+    {
+      "id": "simulator-select-forum",
+      "pass": true,
+      "url": "https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador/castle/foro",
+      "observed": "Selected visible option '3. El foro y sus terrazas'; selected stop and route changed to Foro."
+    },
+    {
+      "id": "simulator-to-atlas-forum",
+      "pass": true,
+      "url": "https://saguntum-atlas-3d.monmode.chatgpt.site/#castle/foro",
+      "observed": "Clicked Visita patrimonial; retained stop 3 of 18; revised terraces / excavations text and 6 stop sources visible."
+    },
+    {
+      "id": "fallback-content",
+      "pass": true,
+      "observed": "Map and historical content remain accessible after accepting the 2D fallback."
+    }
+  ],
+  "limitations": [
+    "The browser environment cannot create a WebGL 2 context; no GPU-rendered visual inspection or frame-rate measurements are claimed.",
+    "CPU renders inspect three final views and real geometry/textures, not browser screenshots.",
+    "Source dimensions and some architectural details remain explicitly interpretive; no metric photogrammetry or laser-scan import was performed."
+  ],
+  "relatedReports": [
+    "forum-almenara-qa.json",
+    "castle-simulator-qa.json",
+    "castle-guide-qa.json",
+    "castle-cameras-qa.json",
+    "render-inspection.json",
+    "preview-qa.json"
+  ]
+}

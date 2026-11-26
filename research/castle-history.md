@@ -1,8 +1,38 @@
-# Castillo de Sagunto — documentación de la visita V50
+# Castillo de Sagunto — documentación de la visita V51
 
 Fecha de revisión: 26 de noviembre de 2026. Alcance: exclusivamente el castillo, sus siete recintos y los elementos internos necesarios para comprenderlo. Datos de publicación: `dist/assets/data/castle-visit.json`.
 
-La visita contiene **18 paradas, 72 hechos con referencias, 15 hitos y 29 fuentes**. Se ha construido como una lectura de restos y documentos, no como la restitución íntegra de una única fase. El nombre editorial es «Castillo de Sagunto», sin atribuir carácter romano a toda la fortificación.
+La visita V51 contiene **18 paradas, 72 hechos con referencias, 15 hitos y 35 fuentes**. Se ha construido como una lectura de restos y documentos, no como la restitución íntegra de una única fase. El nombre editorial es «Castillo de Sagunto», sin atribuir carácter romano a toda la fortificación.
+
+## Revisión V51: Foro y Puerta de Almenara
+
+Esta revisión conserva los dieciocho identificadores, sus coordenadas, el orden de visita y los siete recintos. Corrige la lectura visual del foro y de la puerta, y actualiza las fichas para distinguir formas conservadas, reconstrucciones propuestas y decisiones de la maqueta. El inventario de contraste está en `research/validation-v51/foro-evidence.md` y `research/validation-v51/almenara-evidence.md`.
+
+### Corrección arqueológica del templo
+
+Se inspeccionaron por separado las figuras 6 y 7 de [Aranegui, pp. 71–72](https://revistas.um.es/car/article/download/68051/125201/526121). La primera dibuja los restos incompletos, con dos compartimentos legibles y pérdida del lado oriental. La segunda completa la planta por simetría para estudiar una organización tripartita. V50 había representado tres habitaciones completas y una escalera genérica; V51 retira esa restitución del estado conservado y muestra el espacio transversal de la pronaos, muros de espesor diferenciado y el borde roto. La envolvente de 11,90 × 14,28 m se conserva como dato de la restitución, sin atribuir conservación íntegra a cada lado [templo-aranegui-1991].
+
+### Terrazas y piezas del foro
+
+La [planta del Plan Director, hoja 80](https://aytosagunto.es/media/b1qd4rn2/plan-director-del-castillo_-web.pdf), el [estudio de las terrazas](https://publicacions.iec.cat/repository/pdf/00000451/00000022.pdf) y las fotografías se emplean para reconocer edificios y desniveles. La cuadrícula general del MDT no describe con precisión el suelo de cada excavación: sus diferencias de varios metros deformaban tanto las cimentaciones como la ortofoto. V51 acomoda niveles locales relacionados entre sí y los presenta expresamente como estimaciones visuales, sin asignarles categoría de cotas arqueológicas.
+
+La curia recibe un rellano y tres peldaños; las basas se diferencian por sus molduras y arranques estriados, sin plintos cuadrados genéricos. Se mantienen fragmentos cortos y grupos lapidarios limitados, observados en las fotografías; no se levanta el pórtico de cinco columnas propuesto para la antigüedad. Los bloques de la inscripción se tratan como piezas expuestas posteriormente, con ubicación aproximada, sin recomponer el texto ni atribuirles su posición romana original [aranegui-2004; foto-ricsol-2022; foto-foro-2013; foto-foro-2017].
+
+El contraste histórico incorpora la fotografía de las excavaciones de González Simancas de la década de 1930, procedente del Archivo Municipal y reproducida en [Benedito 2015, fig. 1, p. 13](https://dialnet.unirioja.es/descarga/articulo/5239230.pdf). El año del artículo no se confunde con la fecha de la imagen [benedito-foro-2015].
+
+### La puerta como dos cuerpos distintos
+
+Las fotografías de ambas caras muestran un frontis occidental alto, con arco apuntado y dos óculos trilobulados, y un cuerpo posterior más bajo con bóveda, arco rebajado y tres aberturas estrechas. Se reconocen bases ataludadas, diferencias entre jambas, hojas de madera y una escalera lateral en el reverso. En V50 el frontis y sus óculos se extruían a toda la profundidad; V51 separa estos volúmenes [foto-ricsol-2022; seranco-2019].
+
+La [postal BIVALDI JH4/388](https://bivaldi.gva.es/es/consulta/registro.cmd?id=9135), editada por L. Crumière en la serie *Alrededores de Valencia*, n.º 27, documenta un estado antiguo del paso. El registro es sin fecha: no se rotula como 1900, 1908 ni otro año supuesto. La [información institucional de octubre de 2017](https://aytosagunto.es/es/actualidad/el-ministerio-organiza-visitas-gratuitas-al-castillo-de-sagunto-para-explicar-su-proceso-de-restauracion/) documenta la consolidación del arco, bóveda y óculos. La forma visible y su asimetría se contrastan fotográficamente; la maqueta no adopta una medición de alturas o espesores que estas fuentes no aportan [bivaldi-jh4-388; almenara-restoration-2017].
+
+### Estado exterior y obras recientes
+
+El Ayuntamiento [confirmó el 30 de marzo de 2026](https://aytosagunto.es/es/actualidad/2026-03-30-el-ayuntamiento-de-sagunto-finaliza-las-obras-para-mejorar-el-entorno-monumental-del-castillo-y-del-teatro-romano/) la finalización de mejoras exteriores junto a los contrafuertes del foro y el teatro, con escalera, protección arqueológica y barandillas. Esa noticia se incorpora como obra terminada en su ámbito, separada de anuncios sobre caminos interiores u otros proyectos [ayto-entorno-2026].
+
+### Registro anterior
+
+Las decisiones y verificaciones V50 que siguen se conservan como historial. En caso de diferencia, esta sección V51 y los módulos actuales prevalecen: quedan superadas la nivelación exclusiva del polígono central, las tres cellae completas y la extrusión uniforme de Almenara. El resto de paradas y del marco histórico mantiene su procedencia.
 
 ## Criterio histórico y espacial
 
@@ -17,7 +47,7 @@ La evidencia se separa en cuatro niveles:
 
 Una fuente oficial sirve para su ámbito de competencia, pero no elimina la necesidad de crítica. Los planos técnicos fijan relaciones espaciales; los excavadores fundamentan la interpretación arqueológica; los archivos describen actuaciones históricas; las noticias institucionales permiten distinguir obras terminadas de planes anunciados.
 
-### Decisiones que afectan al contenido
+### Decisiones V50 conservadas como historial
 
 - **Fecha del asedio de Aníbal:** se emplea 219 a. C.; 218 corresponde al inicio de la segunda guerra púnica. La discusión cronológica aparece en Pérez Vilatela, 2013 [cronologia-2013].
 - **Orientación del foro:** curia al noreste y basílica al oeste. La planta del Plan Director, hoja 80, coincide en esto con la síntesis de Aranegui de 2004. Se descarta una orientación meridional de la curia aparecida en una guía divulgativa [aranegui-2004; plan-director-2000].
@@ -315,8 +345,35 @@ Publicado el 6 de marzo de 2022; incluye imágenes con fechas de toma anteriores
 
 Se contrastan siluetas, cambios de cota y volúmenes visibles. La fecha de publicación no fecha cada fotografía ni acredita el estado posterior a las obras de 2025. Se enlaza el reportaje; sus fotografías no se redistribuyen en la aplicación.
 
-## Verificación del paquete V50
+## Verificación histórica del paquete V50
 
 `research/validation-v50/validate-castle-guide.mjs` contrasta el JSON, los focos de la geometría distribuida y el catálogo territorial real contra identificadores y huellas de la versión previa. El informe `castle-guide-qa.json` registra **53 comprobaciones superadas**: 18 paradas, siete recintos, 72 hechos, 15 hitos y 29 fuentes, con 169 referencias resueltas. Se conservan los 32 destinos globales, el castillo como visita 15 y el contenido semántico de las otras 31 visitas.
 
 La validación comprueba integridad de referencias y consistencia del marco de navegación, no precisión topográfica ni la vigencia de todos los enlaces remotos. Las comprobaciones de arquitectura, cámaras e integración con el Simulador se documentan por separado en `research/castle-model.md` y en los informes V50.
+
+
+## Fuentes añadidas en V51
+
+### benedito-foro-2015
+
+[Las infraestructuras viarias de Saguntum en época imperial: propaganda, prestigio social y poder municipal](https://dialnet.unirioja.es/descarga/articulo/5239230.pdf). Josep Benedito Nuez. Potestas 8 (2015), pp. 9–35. DOI 10.6035/Potestas.2015.8.1. Figura 1, p. 13: fotografía de excavaciones de la década de 1930 del Archivo Municipal de Sagunto, inspeccionada durante esta revisión.
+
+### foto-foro-2013
+
+[El Castillo de Sagunto](https://rutasparatodaslasedades.blogspot.com/2013/12/el-castillo-de-sagunto.html). Rutas para todas las edades, diciembre de 2013. Fotografía IMG_0096: restos, fragmentos de fuste, escaleras y antepatio. Fuente visual de la toma, no fuente de datación arqueológica.
+
+### foto-foro-2017
+
+[Day trip to Sagunto](https://juliaeats.com/2017/08/13/day-trip-to-sagunto/). Julia Eats, 13 de agosto de 2017. Fotografía de los bloques de la inscripción junto a la curia. Su disposición fotografiada no acredita su posición romana original.
+
+### bivaldi-jh4-388
+
+[Puerta de Almenara: Sagunto](https://bivaldi.gva.es/es/consulta/registro.cmd?id=9135). Biblioteca Valenciana Nicolau Primitiu, JH4/388. Postal anónima editada por L. Crumière, *Alrededores de Valencia*, n.º 27, 14 × 9 cm, sin año determinado. Reproducción marcada como dominio público. Se compara un estado antiguo, sin trasladar todos sus deterioros o las hojas de la puerta a la representación contemporánea.
+
+### almenara-restoration-2017
+
+[El proceso de restauración del Castillo](https://aytosagunto.es/es/actualidad/el-ministerio-organiza-visitas-gratuitas-al-castillo-de-sagunto-para-explicar-su-proceso-de-restauracion/). Ayuntamiento de Sagunto, 24 de octubre de 2017; información del IPCE sobre estabilización de fábricas, arco, bóveda, óculos y evacuación de aguas en Almenara. Contraste con [fotografías de septiembre de 2017](https://aytosagunto.es/es/actualidad/las-obras-de-la-puerta-de-almenara-estan-finalizando/).
+
+### ayto-entorno-2026
+
+[Finalización de las mejoras del entorno monumental del Castillo y del Teatro Romano](https://aytosagunto.es/es/actualidad/2026-03-30-el-ayuntamiento-de-sagunto-finaliza-las-obras-para-mejorar-el-entorno-monumental-del-castillo-y-del-teatro-romano/). Ayuntamiento de Sagunto, 30 de marzo de 2026. Se limita la afirmación de obra terminada al entorno exterior descrito por esta comunicación.
