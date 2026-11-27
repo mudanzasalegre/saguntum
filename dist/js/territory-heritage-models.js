@@ -16,7 +16,7 @@ const definitions={
  'santa-maria':['santa-maria','createSantaMaria',()=>import('./santa-maria.js')],'plaza-mayor':['plaza-mayor','createPlazaSantaMaria',()=>import('./plaza-santa-maria-ensemble.js')],
  juderia:['juderia','createJuderia',()=>import('./juderia.js')],calvario:['calvario','createCalvario',()=>import('./calvario.js')],berenguer:['berenguer','createBerenguer',()=>import('./berenguer.js')],
  sangre:['sangre','createSangre',()=>import('./sangre.js')],salvador:['salvador','createSalvador',()=>import('./salvador.js')],museo:['museo','createMuseo',()=>import('./museo.js')],
- portic:['portic','createPortic',()=>import('./portic.js')],domus:['domus','createDomus',()=>import('./domus.js')],circo:['circo','createCirco',()=>import('./circo.js')],necropolis:['necropolis','createNecropolis',()=>import('./necropolis.js')],
+ portic:['portic','createPortic',()=>import('./portic.js')],domus:['domus','createDomus',()=>import('./domus.js')],circo:['circo','createCirco',()=>import('./circo.js')],'forum-plaza':['forum-plaza','createForumPlaza',()=>import('./forum-plaza.js')],necropolis:['necropolis','createNecropolis',()=>import('./necropolis.js')],
  horno:['horno','createHorno',()=>import('./horno.js')],talleres:['talleres','createTalleres',()=>import('./talleres.js')],'museo-industrial':['museo-industrial','createMuseoIndustrial',()=>import('./museo-industrial.js')],
  gerencia:['gerencia','createGerencia',()=>import('./gerencia.js')],casino:['casino','createCasino',()=>import('./casino.js')],begona:['begona','createBegona',()=>import('./begona.js')],
  economato:['economato','createEconomato',()=>import('./economato.js')],'barrio-obrero':['barrio','createBarrio',()=>import('./barrio.js')],sanatorio:['sanatorio','createSanatorio',()=>import('./sanatorio.js')],
@@ -351,6 +351,21 @@ export async function buildHeritageModel(id,{places,records,area,heightAt,projec
   }
   outer.updateMatrixWorld(true);
  }
+ if(id==='forum-plaza'&&surroundings){
+  // Match the Atlas guide's shared park/street focuses after the context has
+  // rebound to the final ground; the author's getFocus uses this same object.
+  const visit=sites[id].visit||sites[id].group.userData.visit,context=surroundings.context;
+  Object.assign(visit.focuses,context.focuses||{});
+  for(const focus of Object.values(visit.focuses)){
+   const stop=options.visitData.stops.find(s=>s.id===focus.id);
+   if(stop)Object.assign(focus,{label:stop.title,regionId:stop.regionId,readingLayer:stop.readingLayer||focus.readingLayer});
+  }
+  if(context.bounds)visit.bounds.union(context.bounds);
+  if(context.plan?.components)visit.plan.components.push(...context.plan.components);
+  const select=visit.selectFocus,reading=visit.setReadingMode;
+  visit.selectFocus=focusId=>{const result=select?.(focusId);context.selectFocus?.(focusId);return result;};
+  visit.setReadingMode=mode=>{const result=reading?.(mode);context.setReadingMode?.(mode);return result;};
+ }
  if(!await continueBuilding())return null;
  const claims=Object.entries(sites).map(([key,site])=>claimsFor(site,records[key],frame,project));
  let pavement=null,contextStats=null;
@@ -392,6 +407,17 @@ export async function buildHeritageModel(id,{places,records,area,heightAt,projec
   pavement=sampleAtlasPavement({group:outer},null,routeSurface);
   const visit=sites.castle.group.userData.visit;
   contextStats={id,paths:module.castleRoadIds?.size||0,mappedBuildings:visit.stats.mappedBuildings,
+   pavingAreaM2:Math.round((pavement?.coverage||0)*(pavement?.metres||0)**2)};
+ }
+ if(id==='forum-plaza'){
+  // Public paths share one mask and walking sampler, including the lower park
+  // deck. Context streets keep their own footprints outside the irregular pit.
+  const context=surroundings?.context;
+  pavement=sampleAtlasPavement({group:outer},null,mesh=>mesh.isMesh&&
+   (mesh.userData.publicWalkingSurface===true||!!context?.surfaces?.getObjectById(mesh.id)));
+  const green=(sites[id].vegetationExclusions||[]).map(ring=>maskRing(ring.map(p=>frame.world(p.x,p.z)))).filter(Boolean);
+  claims.push({ids:[],rings:[],green});
+  contextStats={...contextStats,id,park:sites[id].visit?.stats||sites[id].group.userData.visit?.stats,
    pavingAreaM2:Math.round((pavement?.coverage||0)*(pavement?.metres||0)**2)};
  }
  if(id==='theatre'&&sites.theatre.group.userData.environs){

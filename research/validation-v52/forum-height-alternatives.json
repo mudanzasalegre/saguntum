@@ -1,0 +1,1260 @@
+{
+  "researchDate": "2026-11-27",
+  "streetY": 44.70400106994653,
+  "archaeologicalBaseY": 42.20400106994653,
+  "recommendation": "Use streetLid only for preparing terrain/urban interpolation. Permanently subtract the exact park before rendering. Keep display surface levels and public walking decks for geometry, vegetation, camera clearance and walking.",
+  "method": {
+    "scene": "buildForumScene({withCity:false}) supplies the shipped raw DEM, actual selected street records, source frame and archaeological patches.",
+    "alternatives": {
+      "displayLevels": "Before-fix behaviour: public park display levels feed the terrain sampler.",
+      "rawOnly": "Original DEM at every point.",
+      "streetLid": "streetY inside the exact concave park; raw DEM outside. This temporary filling is removed by the exact permanent excavation."
+    },
+    "mesh": "Existing buildTerrainGeometry defaults: 10m north of world z=-180; 2.5m south within the central region. Heights sampled before permanent clipping remain available numerically, even where no terrain triangle will remain.",
+    "boundary": "North, west and east polygon edges sampled at intervals no longer than1m; signed residual relative to constant display street datum. This is a rendering diagnosis, not a survey accuracy statistic.",
+    "scope": "Local comparison rebuilds urban grading with the actual road selection and archaeology patches. Distant sacred/civic foundation caps do not meet the sampled park edge; the final shipped scene is also reported point by point.",
+    "sourcesUnchanged": true,
+    "applicationFilesChangedByThisScript": false
+  },
+  "findings": [
+    "The source DEM already contains the archaeological depression. Reverting to rawOnly partly fixes the west edge but worsens the north-middle join.",
+    "The streetLid avoids interpolation from the archaeological floor into neighbouring street cells while preserving the original DEM data.",
+    "After clipping, meshHeightAt still mathematically returns the removed lid inside the park. Camera and pedestrian queries must prioritize actual display/walking surfaces there.",
+    "The earlier model drew stair treads/risers without full lateral closure; those black openings are a separate geometry problem, subsequently addressed by the model owner.",
+    "Ray checks before the correction found only the park model and its earth base at north/east interior and west stair samples: no previous context paving covering the interior."
+  ],
+  "sourceHashes": {
+    "dist/js/forum-plaza-ground.js": "4811e102edf5ac3bc57066f74ba589cedca1e3bd32bec34052461ba74d67613a",
+    "dist/js/forum-plaza-surfaces.js": "d68fa3d568dacc435d29595d4595240bf45a40280bb4a0eba6960dc04c380d10",
+    "dist/js/terrain.js": "199e257e1398562b01cccd1ee0fe285a6f6655b73b1c552cb3747787d240a278",
+    "dist/js/urban-surface.js": "fa2c95b186e19787cc37eb566e9ebc6b44ecbb85cb27ee7119cdfb344247fe98",
+    "dist/assets/data/elevation.json": "3c70059cb1f8de706bc7e6912311076cb716ec2ff7f1c8aa2b6e51a520809d8c",
+    "dist/assets/data/forum-plaza-context.json": "09490804ed9646f6878243d51ab9e523c544cd3046b5ba63581128cc3b794568",
+    "dist/assets/data/circo-context.json": "6de0892ebce264997199b7c79022e6b94d198dd624b55f9a13ab5df65106a387"
+  },
+  "points": [
+    {
+      "name": "Nwest",
+      "local": [
+        0,
+        -0.3
+      ],
+      "inside": false,
+      "rawDEM": 44.74038662343493,
+      "publicWalkingHeight": null,
+      "displayLevels": 44.73724091639931,
+      "rawOnly": 44.6104740220855,
+      "streetLid": 44.73724091639931,
+      "shippedFinalTerrain": 44.73724091639931
+    },
+    {
+      "name": "N10",
+      "local": [
+        10,
+        -0.3
+      ],
+      "inside": false,
+      "rawDEM": 43.667401299184654,
+      "publicWalkingHeight": null,
+      "displayLevels": 44.59937567187307,
+      "rawOnly": 44.27754744755355,
+      "streetLid": 44.61488775905001,
+      "shippedFinalTerrain": 44.61488775905001
+    },
+    {
+      "name": "Nmiddle",
+      "local": [
+        22,
+        -0.3
+      ],
+      "inside": false,
+      "rawDEM": 43.7464801685686,
+      "publicWalkingHeight": null,
+      "displayLevels": 44.59939752231313,
+      "rawOnly": 43.56366264229259,
+      "streetLid": 44.66897519830669,
+      "shippedFinalTerrain": 44.66897519830669
+    },
+    {
+      "name": "NE",
+      "local": [
+        44.2,
+        -0.3
+      ],
+      "inside": false,
+      "rawDEM": 45,
+      "publicWalkingHeight": null,
+      "displayLevels": 44.976205358647896,
+      "rawOnly": 44.976205358647896,
+      "streetLid": 44.976205358647896,
+      "shippedFinalTerrain": 44.976205358647896
+    },
+    {
+      "name": "Wnearstairs",
+      "local": [
+        -1.8,
+        7.8
+      ],
+      "inside": false,
+      "rawDEM": 44.569347357434694,
+      "publicWalkingHeight": null,
+      "displayLevels": 43.756452853018175,
+      "rawOnly": 44.50030401095031,
+      "streetLid": 44.75451402834104,
+      "shippedFinalTerrain": 44.75451402834104
+    },
+    {
+      "name": "Wstreet",
+      "local": [
+        -3,
+        7
+      ],
+      "inside": false,
+      "rawDEM": 44.73543294205088,
+      "publicWalkingHeight": null,
+      "displayLevels": 43.85484168777744,
+      "rawOnly": 44.68180415041612,
+      "streetLid": 44.7739988135067,
+      "shippedFinalTerrain": 44.7739988135067
+    },
+    {
+      "name": "WstairTop",
+      "local": [
+        -0.7,
+        7.8
+      ],
+      "inside": true,
+      "rawDEM": 44.32606644747327,
+      "publicWalkingHeight": 44.70400106994653,
+      "displayLevels": 43.86754092826388,
+      "rawOnly": 44.321136571770616,
+      "streetLid": 44.755182120418674,
+      "shippedFinalTerrain": 44.755182120418674
+    },
+    {
+      "name": "WstairMiddle",
+      "local": [
+        0.8,
+        10.5
+      ],
+      "inside": true,
+      "rawDEM": 44.03490816692072,
+      "publicWalkingHeight": 43.57000106994653,
+      "displayLevels": 43.389996928699084,
+      "rawOnly": 44.06794059843461,
+      "streetLid": 44.716664712731486,
+      "shippedFinalTerrain": 44.716664712731486
+    },
+    {
+      "name": "WstairBottom",
+      "local": [
+        2.3,
+        13.1
+      ],
+      "inside": true,
+      "rawDEM": 43.81648967105038,
+      "publicWalkingHeight": 42.27400106994653,
+      "displayLevels": 43.12946441188377,
+      "rawOnly": 43.8353551503991,
+      "streetLid": 44.704002380371094,
+      "shippedFinalTerrain": 44.704002380371094
+    },
+    {
+      "name": "Wgalleryoutside",
+      "local": [
+        -3.5,
+        17.5
+      ],
+      "inside": false,
+      "rawDEM": 44.55367887755838,
+      "publicWalkingHeight": null,
+      "displayLevels": 44.50178624166292,
+      "rawOnly": 44.50178624166292,
+      "streetLid": 44.50178624166292,
+      "shippedFinalTerrain": 44.50178624166292
+    },
+    {
+      "name": "Eoutside10",
+      "local": [
+        44.5,
+        10
+      ],
+      "inside": false,
+      "rawDEM": 44.58555047419871,
+      "publicWalkingHeight": null,
+      "displayLevels": 44.66397765894223,
+      "rawOnly": 44.59815974844671,
+      "streetLid": 44.66397765894223,
+      "shippedFinalTerrain": 44.66397765894223
+    },
+    {
+      "name": "Eoutside20",
+      "local": [
+        44,
+        20
+      ],
+      "inside": false,
+      "rawDEM": 44.44445559541241,
+      "publicWalkingHeight": null,
+      "displayLevels": 43.5663352342321,
+      "rawOnly": 44.4823027362469,
+      "streetLid": 44.76969042555538,
+      "shippedFinalTerrain": 44.76969042555538
+    },
+    {
+      "name": "Eoutside30",
+      "local": [
+        43.5,
+        30
+      ],
+      "inside": false,
+      "rawDEM": 44.58613254133312,
+      "publicWalkingHeight": null,
+      "displayLevels": 44.478639281316624,
+      "rawOnly": 44.692434184811525,
+      "streetLid": 44.739642691632014,
+      "shippedFinalTerrain": 44.739642691632014
+    },
+    {
+      "name": "South",
+      "local": [
+        30,
+        44.5
+      ],
+      "inside": false,
+      "rawDEM": 44.280612496995495,
+      "publicWalkingHeight": null,
+      "displayLevels": 44.32224608352088,
+      "rawOnly": 44.29086956454989,
+      "streetLid": 44.32224608352088,
+      "shippedFinalTerrain": 44.32224608352088
+    }
+  ],
+  "edgeDifferenceFromStreet": {
+    "displayLevels": {
+      "minM": -2.003496576611802,
+      "maxM": 0.2724591759033288,
+      "rmsM": 0.6645000068985114
+    },
+    "rawOnly": {
+      "minM": -1.2408202292965882,
+      "maxM": 0.2724591759033288,
+      "rmsM": 0.5350383711460152
+    },
+    "streetLid": {
+      "minM": -0.48560302973961456,
+      "maxM": 0.2724591759033288,
+      "rmsM": 0.13360449469339317
+    }
+  },
+  "edgeSamples": [
+    {
+      "local": [
+        0,
+        0
+      ],
+      "displayLevels": 0.03377764766841551,
+      "rawOnly": -0.090431532721162,
+      "streetLid": 0.03377764766841551
+    },
+    {
+      "local": [
+        0.9874888888888889,
+        0
+      ],
+      "displayLevels": 0.01985066194200158,
+      "rawOnly": -0.15450671204092714,
+      "streetLid": 0.01985066194200158
+    },
+    {
+      "local": [
+        1.9749777777777777,
+        0
+      ],
+      "displayLevels": 0.013987463395693567,
+      "rawOnly": -0.2343961411616604,
+      "streetLid": 0.013987463395693567
+    },
+    {
+      "local": [
+        2.9624666666666664,
+        0
+      ],
+      "displayLevels": 0.008123977181263342,
+      "rawOnly": -0.31254830653369226,
+      "streetLid": 0.008123977181263342
+    },
+    {
+      "local": [
+        3.9499555555555554,
+        0
+      ],
+      "displayLevels": -0.18218759322179068,
+      "rawOnly": -0.3951483776964153,
+      "streetLid": -0.18218759322179068
+    },
+    {
+      "local": [
+        4.937444444444444,
+        0
+      ],
+      "displayLevels": -0.3771319983239465,
+      "rawOnly": -0.500954938286398,
+      "streetLid": -0.3751013824697722
+    },
+    {
+      "local": [
+        5.924933333333333,
+        0
+      ],
+      "displayLevels": -0.4909376814899957,
+      "rawOnly": -0.5931437958203887,
+      "streetLid": -0.48560302973961456
+    },
+    {
+      "local": [
+        6.912422222222221,
+        0
+      ],
+      "displayLevels": -0.387046263591742,
+      "rawOnly": -0.5525541052626721,
+      "streetLid": -0.37840757594515395
+    },
+    {
+      "local": [
+        7.899911111111111,
+        0
+      ],
+      "displayLevels": -0.28315484569348826,
+      "rawOnly": -0.5119644147049627,
+      "streetLid": -0.27121212215070045
+    },
+    {
+      "local": [
+        8.8874,
+        0
+      ],
+      "displayLevels": -0.21545897606131348,
+      "rawOnly": -0.531782463733002,
+      "streetLid": -0.2002122166223188
+    },
+    {
+      "local": [
+        9.874888888888888,
+        0
+      ],
+      "displayLevels": -0.12676141488295656,
+      "rawOnly": -0.5116335119992854,
+      "streetLid": -0.10821061954775502
+    },
+    {
+      "local": [
+        10.862377777777777,
+        0
+      ],
+      "displayLevels": -0.039493813050228255,
+      "rawOnly": -0.49307857025910806,
+      "streetLid": -0.017638981818819843
+    },
+    {
+      "local": [
+        11.849866666666665,
+        0
+      ],
+      "displayLevels": -0.05786453125744373,
+      "rawOnly": -0.5856297119103289,
+      "streetLid": -0.032705664129835554
+    },
+    {
+      "local": [
+        12.837355555555554,
+        0
+      ],
+      "displayLevels": -0.09194677759526115,
+      "rawOnly": -0.6890217205995057,
+      "streetLid": -0.06348387457144611
+    },
+    {
+      "local": [
+        13.824844444444443,
+        0
+      ],
+      "displayLevels": -0.09592214537774169,
+      "rawOnly": -0.7731658612935348,
+      "streetLid": -0.08142706176170833
+    },
+    {
+      "local": [
+        14.812333333333331,
+        0
+      ],
+      "displayLevels": -0.09324338970669999,
+      "rawOnly": -0.8509873754985975,
+      "streetLid": -0.09324338970669999
+    },
+    {
+      "local": [
+        15.799822222222222,
+        0
+      ],
+      "displayLevels": -0.11283254381734054,
+      "rawOnly": -0.9419635766562351,
+      "streetLid": -0.11283254381734054
+    },
+    {
+      "local": [
+        16.787311111111112,
+        0
+      ],
+      "displayLevels": -0.11427988446318693,
+      "rawOnly": -1.0085635644050726,
+      "streetLid": -0.11427988446318693
+    },
+    {
+      "local": [
+        17.7748,
+        0
+      ],
+      "displayLevels": -0.09966759893214316,
+      "rawOnly": -1.0632833581595023,
+      "streetLid": -0.09966759893214316
+    },
+    {
+      "local": [
+        18.76228888888889,
+        0
+      ],
+      "displayLevels": -0.09029527158325834,
+      "rawOnly": -1.1152222496649742,
+      "streetLid": -0.08420721757305927
+    },
+    {
+      "local": [
+        19.749777777777776,
+        0
+      ],
+      "displayLevels": -0.14331598314353755,
+      "rawOnly": -1.1505407438038375,
+      "streetLid": -0.08032761690124346
+    },
+    {
+      "local": [
+        20.737266666666663,
+        0
+      ],
+      "displayLevels": -0.11923396627911131,
+      "rawOnly": -1.1884826134896045,
+      "streetLid": -0.05061585105286781
+    },
+    {
+      "local": [
+        21.724755555555554,
+        0
+      ],
+      "displayLevels": -0.10639315394856652,
+      "rawOnly": -1.2127607413708859,
+      "streetLid": -0.033645046367105635
+    },
+    {
+      "local": [
+        22.712244444444444,
+        0
+      ],
+      "displayLevels": -0.10298859655895143,
+      "rawOnly": -1.2227808219146041,
+      "streetLid": -0.026110496622266055
+    },
+    {
+      "local": [
+        23.69973333333333,
+        0
+      ],
+      "displayLevels": -0.06087129697282734,
+      "rawOnly": -1.2408202292965882,
+      "streetLid": 0.020136795319075418
+    },
+    {
+      "local": [
+        24.68722222222222,
+        0
+      ],
+      "displayLevels": -0.05875228862920068,
+      "rawOnly": -1.2259683151520377,
+      "streetLid": 0.02638579601793367
+    },
+    {
+      "local": [
+        25.674711111111108,
+        0
+      ],
+      "displayLevels": -0.05337381804708485,
+      "rawOnly": -1.2166148194204638,
+      "streetLid": 0.03589425895526688
+    },
+    {
+      "local": [
+        26.6622,
+        0
+      ],
+      "displayLevels": -0.017198616746554762,
+      "rawOnly": -1.219888230981077,
+      "streetLid": 0.06491347838075257
+    },
+    {
+      "local": [
+        27.649688888888885,
+        0
+      ],
+      "displayLevels": 0.030835477219469,
+      "rawOnly": -1.1532286284330908,
+      "streetLid": 0.06017725246989869
+    },
+    {
+      "local": [
+        28.63717777777778,
+        0
+      ],
+      "displayLevels": 0.04543614070972524,
+      "rawOnly": -1.1498306245525782,
+      "streetLid": 0.04543614070972524
+    },
+    {
+      "local": [
+        29.624666666666663,
+        0
+      ],
+      "displayLevels": 0.0318239515810248,
+      "rawOnly": -1.109650007119427,
+      "streetLid": 0.0318239515810248
+    },
+    {
+      "local": [
+        30.612155555555557,
+        0
+      ],
+      "displayLevels": 0.028851390581138503,
+      "rawOnly": -0.9791028816253231,
+      "streetLid": 0.028851390581138503
+    },
+    {
+      "local": [
+        31.599644444444444,
+        0
+      ],
+      "displayLevels": 0.047644712876206086,
+      "rawOnly": -0.9283502736639733,
+      "streetLid": 0.047644712876206086
+    },
+    {
+      "local": [
+        32.58713333333333,
+        0
+      ],
+      "displayLevels": 0.044730804183608086,
+      "rawOnly": -0.8204053893826,
+      "streetLid": 0.044730804183608086
+    },
+    {
+      "local": [
+        33.574622222222224,
+        0
+      ],
+      "displayLevels": 0.03892589732534191,
+      "rawOnly": -0.7036532899010126,
+      "streetLid": 0.03892589732534191
+    },
+    {
+      "local": [
+        34.56211111111111,
+        0
+      ],
+      "displayLevels": 0.04649913837908315,
+      "rawOnly": -0.6316759741817322,
+      "streetLid": 0.04649913837908315
+    },
+    {
+      "local": [
+        35.5496,
+        0
+      ],
+      "displayLevels": 0.03834943524061174,
+      "rawOnly": -0.48082762383462097,
+      "streetLid": 0.03834943524061174
+    },
+    {
+      "local": [
+        36.53708888888889,
+        0
+      ],
+      "displayLevels": 0.030199732102133225,
+      "rawOnly": -0.3299792734875169,
+      "streetLid": 0.030199732102133225
+    },
+    {
+      "local": [
+        37.52457777777778,
+        0
+      ],
+      "displayLevels": 0.022050028963661816,
+      "rawOnly": -0.23039999543971845,
+      "streetLid": 0.022050028963661816
+    },
+    {
+      "local": [
+        38.51206666666666,
+        0
+      ],
+      "displayLevels": 0.013900325825190407,
+      "rawOnly": -0.08977747915037071,
+      "streetLid": 0.013900325825190407
+    },
+    {
+      "local": [
+        39.49955555555555,
+        0
+      ],
+      "displayLevels": 0.007136511159686165,
+      "rawOnly": 0.04108983660669452,
+      "streetLid": 0.007136511159686165
+    },
+    {
+      "local": [
+        40.48704444444444,
+        0
+      ],
+      "displayLevels": 0.0793536564913424,
+      "rawOnly": 0.10076105397610036,
+      "streetLid": 0.0793536564913424
+    },
+    {
+      "local": [
+        41.474533333333326,
+        0
+      ],
+      "displayLevels": 0.15180294084557033,
+      "rawOnly": 0.15998733204435922,
+      "streetLid": 0.15180294084557033
+    },
+    {
+      "local": [
+        42.462022222222224,
+        0
+      ],
+      "displayLevels": 0.21559519656733528,
+      "rawOnly": 0.21559519656733528,
+      "streetLid": 0.21559519656733528
+    },
+    {
+      "local": [
+        43.44951111111111,
+        0
+      ],
+      "displayLevels": 0.24402718623532849,
+      "rawOnly": 0.24402718623532849,
+      "streetLid": 0.24402718623532849
+    },
+    {
+      "local": [
+        44.437,
+        0
+      ],
+      "displayLevels": 0.2724591759033288,
+      "rawOnly": 0.2724591759033288,
+      "streetLid": 0.2724591759033288
+    },
+    {
+      "local": [
+        0,
+        0
+      ],
+      "displayLevels": 0.03377764766841551,
+      "rawOnly": -0.090431532721162,
+      "streetLid": 0.03377764766841551
+    },
+    {
+      "local": [
+        -0.1452,
+        0.9410999999999999
+      ],
+      "displayLevels": 0.05105883073955653,
+      "rawOnly": -0.04919128124070937,
+      "streetLid": 0.05105883073955653
+    },
+    {
+      "local": [
+        -0.2904,
+        1.8821999999999999
+      ],
+      "displayLevels": 0.07225371335045594,
+      "rawOnly": -0.058172021506585736,
+      "streetLid": 0.07225371335045594
+    },
+    {
+      "local": [
+        -0.4356,
+        2.8232999999999997
+      ],
+      "displayLevels": 0.0960429375640004,
+      "rawOnly": -0.10044361787662126,
+      "streetLid": 0.0960429375640004
+    },
+    {
+      "local": [
+        -0.5808,
+        3.7643999999999997
+      ],
+      "displayLevels": 0.06486185052034443,
+      "rawOnly": -0.13649252967859837,
+      "streetLid": 0.11476632359986638
+    },
+    {
+      "local": [
+        -0.726,
+        4.7055
+      ],
+      "displayLevels": -0.3081354777026277,
+      "rawOnly": -0.13384756108484197,
+      "streetLid": 0.10198932834416041
+    },
+    {
+      "local": [
+        -0.8712,
+        5.646599999999999
+      ],
+      "displayLevels": -0.4928373357629283,
+      "rawOnly": -0.1968760661072224,
+      "streetLid": 0.08632919281713924
+    },
+    {
+      "local": [
+        -1.0164,
+        6.5877
+      ],
+      "displayLevels": -0.6350170151020436,
+      "rawOnly": -0.2747354068365624,
+      "streetLid": 0.07001796671533356
+    },
+    {
+      "local": [
+        -1.1616,
+        7.5287999999999995
+      ],
+      "displayLevels": -0.7882893321512796,
+      "rawOnly": -0.34069431981350107,
+      "streetLid": 0.05400662741270423
+    },
+    {
+      "local": [
+        -1.3068,
+        8.469899999999999
+      ],
+      "displayLevels": -1.0523454141571733,
+      "rawOnly": -0.28780195273811415,
+      "streetLid": 0.04099030061665587
+    },
+    {
+      "local": [
+        -1.452,
+        9.411
+      ],
+      "displayLevels": -1.3164014961630741,
+      "rawOnly": -0.23490958566272724,
+      "streetLid": 0.02797397382060751
+    },
+    {
+      "local": [
+        -1.5972,
+        10.3521
+      ],
+      "displayLevels": -1.580457578168975,
+      "rawOnly": -0.18201721858734032,
+      "streetLid": 0.01495764702455915
+    },
+    {
+      "local": [
+        -1.7424,
+        11.293199999999999
+      ],
+      "displayLevels": -1.7681942839532852,
+      "rawOnly": -0.16948477103009196,
+      "streetLid": 0.008748814631537982
+    },
+    {
+      "local": [
+        -1.8875999999999997,
+        12.2343
+      ],
+      "displayLevels": -1.4668154539197928,
+      "rawOnly": -0.15493956913863371,
+      "streetLid": -0.00868389167035133
+    },
+    {
+      "local": [
+        -2.0328,
+        13.1754
+      ],
+      "displayLevels": -1.0454488964151878,
+      "rawOnly": -0.17027817393754674,
+      "streetLid": -0.07270896910554825
+    },
+    {
+      "local": [
+        -2.178,
+        14.116499999999998
+      ],
+      "displayLevels": -0.624082338910597,
+      "rawOnly": -0.18561677873645976,
+      "streetLid": -0.13673404654074517
+    },
+    {
+      "local": [
+        -2.3232,
+        15.057599999999999
+      ],
+      "displayLevels": -0.2027157814059919,
+      "rawOnly": -0.2009553835353728,
+      "streetLid": -0.20075912397593498
+    },
+    {
+      "local": [
+        -2.4684,
+        15.9987
+      ],
+      "displayLevels": -0.21415755786924962,
+      "rawOnly": -0.21415755786924962,
+      "streetLid": -0.21415755786924962
+    },
+    {
+      "local": [
+        -2.6136,
+        16.939799999999998
+      ],
+      "displayLevels": -0.23301169604462757,
+      "rawOnly": -0.23301169604462757,
+      "streetLid": -0.23301169604462757
+    },
+    {
+      "local": [
+        -2.7588,
+        17.8809
+      ],
+      "displayLevels": -0.26138328555074963,
+      "rawOnly": -0.26138328555074963,
+      "streetLid": -0.26138328555074963
+    },
+    {
+      "local": [
+        -2.904,
+        18.822
+      ],
+      "displayLevels": -0.2897548750568646,
+      "rawOnly": -0.2897548750568646,
+      "streetLid": -0.2897548750568646
+    },
+    {
+      "local": [
+        44.437,
+        0
+      ],
+      "displayLevels": 0.2724591759033288,
+      "rawOnly": 0.2724591759033288,
+      "streetLid": 0.2724591759033288
+    },
+    {
+      "local": [
+        44.38284090909091,
+        0.9978636363636363
+      ],
+      "displayLevels": 0.2490503705007967,
+      "rawOnly": 0.2490503705007967,
+      "streetLid": 0.2490503705007967
+    },
+    {
+      "local": [
+        44.32868181818181,
+        1.9957272727272726
+      ],
+      "displayLevels": 0.2256415650982646,
+      "rawOnly": 0.2256415650982646,
+      "streetLid": 0.2256415650982646
+    },
+    {
+      "local": [
+        44.274522727272725,
+        2.993590909090909
+      ],
+      "displayLevels": 0.2022327596957325,
+      "rawOnly": 0.2022327596957325,
+      "streetLid": 0.2022327596957325
+    },
+    {
+      "local": [
+        44.220363636363636,
+        3.991454545454545
+      ],
+      "displayLevels": 0.16023293361918434,
+      "rawOnly": 0.16023293361918434,
+      "streetLid": 0.16023293361918434
+    },
+    {
+      "local": [
+        44.16620454545454,
+        4.989318181818182
+      ],
+      "displayLevels": 0.10194634713909068,
+      "rawOnly": 0.10194634713909068,
+      "streetLid": 0.10194634713909068
+    },
+    {
+      "local": [
+        44.11204545454545,
+        5.987181818181818
+      ],
+      "displayLevels": 0.043659760658997016,
+      "rawOnly": 0.043659760658997016,
+      "streetLid": 0.043659760658997016
+    },
+    {
+      "local": [
+        44.057886363636364,
+        6.985045454545454
+      ],
+      "displayLevels": -0.014051477615360852,
+      "rawOnly": -0.013303819494772995,
+      "streetLid": -0.014051477615360852
+    },
+    {
+      "local": [
+        44.00372727272727,
+        7.98290909090909
+      ],
+      "displayLevels": -0.06131381988456752,
+      "rawOnly": -0.06610656071629961,
+      "streetLid": -0.06131381988456752
+    },
+    {
+      "local": [
+        43.94956818181818,
+        8.980772727272727
+      ],
+      "displayLevels": -0.05174531670051863,
+      "rawOnly": -0.13914862668138284,
+      "streetLid": -0.05174531670051863
+    },
+    {
+      "local": [
+        43.89540909090909,
+        9.978636363636364
+      ],
+      "displayLevels": -0.02779833396913034,
+      "rawOnly": -0.1741478909377534,
+      "streetLid": -0.02779833396913034
+    },
+    {
+      "local": [
+        43.84125,
+        10.9765
+      ],
+      "displayLevels": 0.0038456409883380616,
+      "rawOnly": -0.1887823351137925,
+      "streetLid": 0.0038456409883380616
+    },
+    {
+      "local": [
+        43.78709090909091,
+        11.974363636363636
+      ],
+      "displayLevels": 0.03548961594580646,
+      "rawOnly": -0.2034167792898387,
+      "streetLid": 0.03548961594580646
+    },
+    {
+      "local": [
+        43.73293181818182,
+        12.972227272727274
+      ],
+      "displayLevels": 0.05283340049245311,
+      "rawOnly": -0.17685645116561943,
+      "streetLid": 0.05283340049245311
+    },
+    {
+      "local": [
+        43.67877272727273,
+        13.970090909090908
+      ],
+      "displayLevels": 0.06403714051896969,
+      "rawOnly": -0.13260840500036153,
+      "streetLid": 0.06403714051896969
+    },
+    {
+      "local": [
+        43.624613636363634,
+        14.967954545454546
+      ],
+      "displayLevels": 0.03661091447565212,
+      "rawOnly": -0.13422973345428346,
+      "streetLid": 0.07663602306414674
+    },
+    {
+      "local": [
+        43.570454545454545,
+        15.96581818181818
+      ],
+      "displayLevels": -0.017440531702334283,
+      "rawOnly": -0.16746595368593375,
+      "streetLid": 0.09019649011114694
+    },
+    {
+      "local": [
+        43.51629545454546,
+        16.963681818181815
+      ],
+      "displayLevels": -0.20356183311335485,
+      "rawOnly": -0.20836803636900214,
+      "streetLid": 0.09454809982627665
+    },
+    {
+      "local": [
+        43.46213636363636,
+        17.961545454545455
+      ],
+      "displayLevels": -0.7244592281255677,
+      "rawOnly": -0.2687018620567372,
+      "streetLid": 0.07555671973761235
+    },
+    {
+      "local": [
+        43.40797727272727,
+        18.95940909090909
+      ],
+      "displayLevels": -1.2453566231377664,
+      "rawOnly": -0.3290356877444722,
+      "streetLid": 0.056565339648948054
+    },
+    {
+      "local": [
+        43.353818181818184,
+        19.957272727272727
+      ],
+      "displayLevels": -1.7585738080395217,
+      "rawOnly": -0.39229214557835235,
+      "streetLid": 0.03638303018450273
+    },
+    {
+      "local": [
+        43.29965909090909,
+        20.955136363636363
+      ],
+      "displayLevels": -1.5890051730860932,
+      "rawOnly": -0.4713945556617176,
+      "streetLid": -0.12074070366181644
+    },
+    {
+      "local": [
+        43.2455,
+        21.953
+      ],
+      "displayLevels": -0.9282624381216706,
+      "rawOnly": -0.5134756402864724,
+      "streetLid": -0.3799576919004082
+    },
+    {
+      "local": [
+        43.19134090909091,
+        22.950863636363636
+      ],
+      "displayLevels": -0.680268585303871,
+      "rawOnly": -0.5013655149526102,
+      "streetLid": -0.35234946129166644
+    },
+    {
+      "local": [
+        43.137181818181816,
+        23.94872727272727
+      ],
+      "displayLevels": -0.7535593165611161,
+      "rawOnly": -0.39953485037199243,
+      "streetLid": -0.10465266222762892
+    },
+    {
+      "local": [
+        43.08302272727273,
+        24.946590909090904
+      ],
+      "displayLevels": -0.9741310121195852,
+      "rawOnly": -0.3462748027076543,
+      "streetLid": -0.004236827464701776
+    },
+    {
+      "local": [
+        43.02886363636364,
+        25.944454545454548
+      ],
+      "displayLevels": -1.279087763799403,
+      "rawOnly": -0.4023375038306085,
+      "streetLid": 0.011793951176763073
+    },
+    {
+      "local": [
+        42.97470454545454,
+        26.94231818181818
+      ],
+      "displayLevels": -1.596226079677173,
+      "rawOnly": -0.39171068372150586,
+      "streetLid": 0.01564316562033241
+    },
+    {
+      "local": [
+        42.920545454545454,
+        27.940181818181816
+      ],
+      "displayLevels": -1.9217279800890381,
+      "rawOnly": -0.3384730819497932,
+      "streetLid": 0.011128795529756985
+    },
+    {
+      "local": [
+        42.866386363636366,
+        28.938045454545453
+      ],
+      "displayLevels": -1.4087177617474111,
+      "rawOnly": -0.24227615026946836,
+      "streetLid": 0.015288299916171866
+    },
+    {
+      "local": [
+        42.81222727272727,
+        29.935909090909092
+      ],
+      "displayLevels": -0.36305808148907204,
+      "rawOnly": -0.09830071858502976,
+      "streetLid": 0.02019467606748293
+    },
+    {
+      "local": [
+        42.75806818181818,
+        30.93377272727273
+      ],
+      "displayLevels": -0.4360835970940755,
+      "rawOnly": -0.09120374460187008,
+      "streetLid": 0.029735464312892645
+    },
+    {
+      "local": [
+        42.70390909090909,
+        31.93163636363636
+      ],
+      "displayLevels": -0.7400588626604261,
+      "rawOnly": -0.15752851176500116,
+      "streetLid": 0.04674772906794544
+    },
+    {
+      "local": [
+        42.64975,
+        32.9295
+      ],
+      "displayLevels": -1.0645094007889426,
+      "rawOnly": -0.19457521496343588,
+      "streetLid": 0.04328472126070437
+    },
+    {
+      "local": [
+        42.59559090909091,
+        33.92736363636363
+      ],
+      "displayLevels": -1.4067778002602864,
+      "rawOnly": -0.27175532437165373,
+      "streetLid": 0.0220038521107071
+    },
+    {
+      "local": [
+        42.54143181818182,
+        34.92522727272728
+      ],
+      "displayLevels": -1.7086892817348627,
+      "rawOnly": -0.28993024876654516,
+      "streetLid": 0.013043984784850693
+    },
+    {
+      "local": [
+        42.48727272727273,
+        35.92309090909091
+      ],
+      "displayLevels": -2.003496576611802,
+      "rawOnly": -0.29690125826803637,
+      "streetLid": 0.007189629973687772
+    },
+    {
+      "local": [
+        42.433113636363636,
+        36.92095454545454
+      ],
+      "displayLevels": -1.3281909651853425,
+      "rawOnly": -0.19108448046475246,
+      "streetLid": 0.011531639037841046
+    },
+    {
+      "local": [
+        42.37895454545455,
+        37.91881818181818
+      ],
+      "displayLevels": -0.19619525061922616,
+      "rawOnly": -0.10892954559181334,
+      "streetLid": 0.019533025174730767
+    },
+    {
+      "local": [
+        42.32479545454546,
+        38.91668181818182
+      ],
+      "displayLevels": -0.5798692953285567,
+      "rawOnly": -0.13360664845523473,
+      "streetLid": 0.02384970347318216
+    },
+    {
+      "local": [
+        42.27063636363636,
+        39.914545454545454
+      ],
+      "displayLevels": -0.8921905300942043,
+      "rawOnly": -0.2086573232768245,
+      "streetLid": 0.032515999028930764
+    },
+    {
+      "local": [
+        42.216477272727275,
+        40.91240909090909
+      ],
+      "displayLevels": -0.11566840059565209,
+      "rawOnly": -0.15815501129359433,
+      "streetLid": 0.026949896839028042
+    },
+    {
+      "local": [
+        42.162318181818186,
+        41.91027272727273
+      ],
+      "displayLevels": 0.05308757094515926,
+      "rawOnly": -0.15698465396472017,
+      "streetLid": 0.05308757094515926
+    },
+    {
+      "local": [
+        42.10815909090909,
+        42.90813636363636
+      ],
+      "displayLevels": 0.0706958003768321,
+      "rawOnly": -0.02452163371019367,
+      "streetLid": 0.0706958003768321
+    },
+    {
+      "local": [
+        42.054,
+        43.906
+      ],
+      "displayLevels": 0.08393905882172703,
+      "rawOnly": 0.09140052584999836,
+      "streetLid": 0.08393905882172703
+    }
+  ]
+}

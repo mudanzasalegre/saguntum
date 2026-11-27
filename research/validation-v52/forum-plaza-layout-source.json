@@ -1,0 +1,1479 @@
+{
+  "id": "forum-plaza-layout",
+  "registration": {
+    "origin": [
+      -0.2753495,
+      39.6808973
+    ],
+    "yawRadians": -0.2825634446,
+    "localAxes": "u along Horts toward east; v southward into plaza",
+    "coordinateSystem": "Three.js Y rotation; metres",
+    "streetLevelM": 0,
+    "archaeologicalLevelM": -2.5,
+    "verticalAccuracy": "−2.50m is published relative level; all individual slopes/retaining heights estimated"
+  },
+  "sourceBoundary": {
+    "id": "osm-way-660194745",
+    "local": [
+      [
+        -2.904,
+        18.822
+      ],
+      [
+        0,
+        0
+      ],
+      [
+        29.69,
+        -0.031
+      ],
+      [
+        44.437,
+        0
+      ],
+      [
+        42.054,
+        43.906
+      ],
+      [
+        31.293,
+        43.193
+      ],
+      [
+        23.327,
+        42.735
+      ],
+      [
+        23.805,
+        29.846
+      ],
+      [
+        11.732,
+        29.561
+      ],
+      [
+        11.578,
+        31.889
+      ],
+      [
+        5.408,
+        31.501
+      ],
+      [
+        6.101,
+        19.384
+      ]
+    ],
+    "coordinates": [
+      [
+        -0.275443304,
+        39.680742198
+      ],
+      [
+        -0.2753495,
+        39.6808973
+      ],
+      [
+        -0.275016602,
+        39.680823204
+      ],
+      [
+        -0.274851403,
+        39.680786001
+      ],
+      [
+        -0.275020999,
+        39.680413198
+      ],
+      [
+        -0.2751393,
+        39.680446301
+      ],
+      [
+        -0.275227101,
+        39.680470204
+      ],
+      [
+        -0.275179797,
+        39.680580199
+      ],
+      [
+        -0.275314197,
+        39.680612896
+      ],
+      [
+        -0.275323499,
+        39.680593199
+      ],
+      [
+        -0.275391397,
+        39.680612
+      ],
+      [
+        -0.275344196,
+        39.680714796
+      ]
+    ],
+    "method": "OpenStreetMap recorded polygon; map data not cadastral survey"
+  },
+  "ortho": {
+    "url": "https://www.ign.es/wms-inspire/pnoa-ma?service=WMS&version=1.3.0&request=GetMap&layers=OI.OrthoimageCoverage&styles=&crs=EPSG%3A4326&bbox=39.6802%2C-0.27565%2C39.68105%2C-0.27455&width=1500&height=1500&format=image%2Fjpeg",
+    "bounds": {
+      "west": -0.27565,
+      "east": -0.27455,
+      "south": 39.6802,
+      "north": 39.68105
+    },
+    "width": 1500,
+    "height": 1500,
+    "sha256": "677adc135668747d3c4f40ec94b0449a3567a29fd775a3255604e68cebf80394",
+    "license": "IGN/CNIG CC BY4.0",
+    "retrieved": "2026-11-27",
+    "flightDate": null
+  },
+  "features": [
+    {
+      "id": "archaeology-bed",
+      "kind": "polygon",
+      "local": [
+        [
+          0.8,
+          15.5
+        ],
+        [
+          31.5,
+          15.8
+        ],
+        [
+          34.7,
+          18.2
+        ],
+        [
+          34.5,
+          22
+        ],
+        [
+          29.2,
+          27.5
+        ],
+        [
+          27.5,
+          32
+        ],
+        [
+          25.3,
+          29
+        ],
+        [
+          9.3,
+          27.5
+        ],
+        [
+          8.8,
+          19.1
+        ],
+        [
+          1.1,
+          17.8
+        ]
+      ],
+      "coordinates": [
+        [
+          -0.275390975,
+          39.68076158
+        ],
+        [
+          -0.275047833,
+          39.680682099
+        ],
+        [
+          -0.275019774,
+          39.680653379
+        ],
+        [
+          -0.275034383,
+          39.680621098
+        ],
+        [
+          -0.27511169,
+          39.680586925
+        ],
+        [
+          -0.27514539,
+          39.680552362
+        ],
+        [
+          -0.275160287,
+          39.680583753
+        ],
+        [
+          -0.27533475,
+          39.680636768
+        ],
+        [
+          -0.275313018,
+          39.680710486
+        ],
+        [
+          -0.275395097,
+          39.680740986
+        ]
+      ],
+      "source": "pnoa+municipal-2018",
+      "method": "manual orthophoto interpretation; no archaeological survey",
+      "uncertaintyM": 1.5,
+      "note": "Central exposed archaeology inside light salmon/gravel surface. Approximate visible limits; not full ancient building footprint.",
+      "heightM": -2.5
+    },
+    {
+      "id": "north-wall",
+      "kind": "line",
+      "local": [
+        [
+          1.1,
+          16.1
+        ],
+        [
+          30.6,
+          16.4
+        ]
+      ],
+      "coordinates": [
+        [
+          -0.275389565,
+          39.680755652
+        ],
+        [
+          -0.275059874,
+          39.680679177
+        ]
+      ],
+      "source": "pnoa+municipal-2018",
+      "method": "manual orthophoto interpretation; no archaeological survey",
+      "uncertaintyM": 1.5,
+      "note": "Observed masonry at northern edge of excavated enclosure. Published conserved northern length 29.50m, separately from older hypothetical total36.5m.",
+      "heightM": -2.5,
+      "nominalLengthM": 29.5,
+      "wallHeightM": 0.7,
+      "widthM": 0.65
+    },
+    {
+      "id": "east-wall",
+      "kind": "line",
+      "local": [
+        [
+          34.5,
+          16.5
+        ],
+        [
+          34.5,
+          27
+        ],
+        [
+          29.8,
+          29.3
+        ]
+      ],
+      "coordinates": [
+        [
+          -0.275016484,
+          39.680668546
+        ],
+        [
+          -0.275050655,
+          39.680577964
+        ],
+        [
+          -0.275110822,
+          39.680569894
+        ]
+      ],
+      "source": "pnoa+municipal-2018",
+      "method": "manual orthophoto interpretation; no archaeological survey",
+      "uncertaintyM": 2.5,
+      "note": "Only photograph-visible segment suggested. Official eastern preserved length21.37m does not imply an exact straight modern visible21.37m wall; keep continuation as hypothesis.",
+      "heightM": -2.5,
+      "wallHeightM": 0.55,
+      "widthM": 0.6
+    },
+    {
+      "id": "northwest-wall-return",
+      "kind": "line",
+      "local": [
+        [
+          1.1,
+          16.1
+        ],
+        [
+          1.2,
+          18.1
+        ],
+        [
+          8.6,
+          18.7
+        ],
+        [
+          8.9,
+          27
+        ]
+      ],
+      "coordinates": [
+        [
+          -0.275389565,
+          39.680755652
+        ],
+        [
+          -0.275394953,
+          39.680738148
+        ],
+        [
+          -0.275313958,
+          39.680714437
+        ],
+        [
+          -0.275337607,
+          39.680642083
+        ]
+      ],
+      "source": "pnoa+municipal-2018",
+      "method": "manual orthophoto interpretation; no archaeological survey",
+      "uncertaintyM": 1.5,
+      "note": "Low visible rubble returns beside historic medianera.",
+      "heightM": -2.5,
+      "wallHeightM": 0.45
+    },
+    {
+      "id": "inner-rectangular-basin",
+      "kind": "line",
+      "local": [
+        [
+          2,
+          13.5
+        ],
+        [
+          13,
+          13.9
+        ],
+        [
+          13.1,
+          17.5
+        ],
+        [
+          8.6,
+          18.7
+        ]
+      ],
+      "coordinates": [
+        [
+          -0.275371016,
+          39.680775828
+        ],
+        [
+          -0.275249018,
+          39.680744826
+        ],
+        [
+          -0.275259612,
+          39.680713519
+        ],
+        [
+          -0.275313958,
+          39.680714437
+        ]
+      ],
+      "source": "pnoa+municipal-2018",
+      "method": "manual orthophoto interpretation; no archaeological survey",
+      "uncertaintyM": 2.0,
+      "note": "Aerial traces do not date or securely identify this small compartment; use low fragmentary masonry.",
+      "heightM": -2.5,
+      "wallHeightM": 0.3
+    },
+    {
+      "id": "noria",
+      "kind": "point",
+      "local": [
+        [
+          27.45,
+          21.03
+        ]
+      ],
+      "coordinates": [
+        [
+          -0.27511025,
+          39.680647124
+        ]
+      ],
+      "source": "pnoa+municipal-2018",
+      "method": "manual orthophoto interpretation; no archaeological survey",
+      "uncertaintyM": 0.8,
+      "note": "Circular deposit with modern protective grille, attested in official2018photograph. Exact identification as the historically described noria/aljibe and attribution to14thcentury remain uncertain; visible label: depósito circular.",
+      "radiusM": 1.25,
+      "heightM": -2.5
+    },
+    {
+      "id": "portico-bases",
+      "kind": "points",
+      "local": [
+        [
+          12.14,
+          21.47
+        ],
+        [
+          15.46,
+          22.08
+        ],
+        [
+          18.42,
+          22.14
+        ],
+        [
+          21.32,
+          22.22
+        ]
+      ],
+      "coordinates": [
+        [
+          -0.275283293,
+          39.680681674
+        ],
+        [
+          -0.275248064,
+          39.680668097
+        ],
+        [
+          -0.27521508,
+          39.680660165
+        ],
+        [
+          -0.275182834,
+          39.680652212
+        ]
+      ],
+      "source": "pnoa+municipal-2018",
+      "method": "manual orthophoto interpretation; no archaeological survey",
+      "uncertaintyM": 0.8,
+      "note": "Four square low pads visible in orthophoto. Partial column/pier bases; do not substitute a completed marble colonnade.",
+      "heightM": -2.5
+    },
+    {
+      "id": "threshold-zone",
+      "kind": "point",
+      "local": [
+        [
+          10.4,
+          17
+        ]
+      ],
+      "coordinates": [
+        [
+          -0.27528825,
+          39.680724595
+        ]
+      ],
+      "source": "pnoa+municipal-2018",
+      "method": "manual orthophoto interpretation; no archaeological survey",
+      "uncertaintyM": 5.0,
+      "note": "Focus only: exact two surviving plinths cannot be registered from accessible published plan. Official site describes threshold with2plinths.",
+      "heightM": -2.5
+    },
+    {
+      "id": "cloaca-axis",
+      "kind": "line",
+      "local": [
+        [
+          15,
+          25
+        ],
+        [
+          20,
+          20
+        ],
+        [
+          25,
+          15
+        ],
+        [
+          30,
+          10
+        ],
+        [
+          35,
+          5
+        ]
+      ],
+      "coordinates": [
+        [
+          -0.275262723,
+          39.680644058
+        ],
+        [
+          -0.275190406,
+          39.680674669
+        ],
+        [
+          -0.275118089,
+          39.68070528
+        ],
+        [
+          -0.275045771,
+          39.680735892
+        ],
+        [
+          -0.274973454,
+          39.680766503
+        ]
+      ],
+      "source": "municipal-2016",
+      "method": "manual orthophoto interpretation; no archaeological survey",
+      "uncertaintyM": 8.0,
+      "note": "Schematic SW→NE direction toward Horts/Ordóñez reported by municipal archaeology. NO exact survey; distinguish as interpretive submerged/dashed layer.",
+      "heightM": -2.7,
+      "interpretive": true
+    },
+    {
+      "id": "historic-medianera",
+      "kind": "line",
+      "local": [
+        [
+          -2.904,
+          18.822
+        ],
+        [
+          6.101,
+          19.384
+        ],
+        [
+          5.408,
+          31.501
+        ]
+      ],
+      "coordinates": [
+        [
+          -0.275443304,
+          39.680742198
+        ],
+        [
+          -0.275344196,
+          39.680714796
+        ],
+        [
+          -0.275391397,
+          39.680612
+        ]
+      ],
+      "source": "pnoa+municipal-2018",
+      "method": "manual orthophoto interpretation; no archaeological survey",
+      "uncertaintyM": 2.0,
+      "note": "Northern return and main east-facing historic wall, registered against OSM notch. Bare blocked windows/arches and stair traces preserved; only far-west section of Nreturn receives vertical planting. Actual building footprints come from Catastro.",
+      "heightM": 0,
+      "displayHeightM": 8
+    },
+    {
+      "id": "vertical-garden-west",
+      "kind": "line",
+      "local": [
+        [
+          -2.6,
+          18.9
+        ],
+        [
+          1.9,
+          19.2
+        ]
+      ],
+      "coordinates": [
+        [
+          -0.275440151,
+          39.680740764
+        ],
+        [
+          -0.275390686,
+          39.680726905
+        ]
+      ],
+      "source": "pnoa+municipal-2018",
+      "method": "manual orthophoto interpretation; no archaeological survey",
+      "uncertaintyM": 2.0,
+      "note": "Northern face of western party wall, beside Remei; revised after crosschecking official2015render,2018photos and2019galleryphoto. Preserve adjoining archaeological wall traces. Height estimated.",
+      "heightM": 0,
+      "displayHeightM": 9.5
+    },
+    {
+      "id": "vertical-garden-south",
+      "kind": "line",
+      "local": [
+        [
+          24,
+          42.8
+        ],
+        [
+          32,
+          43.2
+        ]
+      ],
+      "coordinates": [
+        [
+          -0.275219768,
+          39.680467958
+        ],
+        [
+          -0.275131398,
+          39.68044447
+        ]
+      ],
+      "source": "pnoa+municipal-2018",
+      "method": "manual orthophoto interpretation; no archaeological survey",
+      "uncertaintyM": 3.0,
+      "note": "Probable southern closing facade, at end of southern paved leg, visible behind central circular deposit in municipal2018photo. Exact facade alignment inferred; not a measured elevation.",
+      "heightM": 0,
+      "displayHeightM": 7.0
+    },
+    {
+      "id": "north-lower-promenade",
+      "kind": "line",
+      "local": [
+        [
+          -0.5,
+          13
+        ],
+        [
+          30,
+          13.5
+        ],
+        [
+          34,
+          16
+        ],
+        [
+          35.3,
+          19
+        ]
+      ],
+      "coordinates": [
+        [
+          -0.275397411,
+          39.680786403
+        ],
+        [
+          -0.275057162,
+          39.680705697
+        ],
+        [
+          -0.275020461,
+          39.680674112
+        ],
+        [
+          -0.275015653,
+          39.680644975
+        ]
+      ],
+      "source": "pnoa+municipal-2018",
+      "method": "manual orthophoto interpretation; no archaeological survey",
+      "uncertaintyM": 1.5,
+      "note": "Rose/pink concrete promenade outside excavation; low steel-wire posts beside ruin, upper areas black railings.",
+      "widthM": 2.4,
+      "heightM": -2.5
+    },
+    {
+      "id": "east-ramp",
+      "kind": "line",
+      "local": [
+        [
+          40.8,
+          4
+        ],
+        [
+          40.5,
+          12
+        ],
+        [
+          39.5,
+          21
+        ],
+        [
+          37.8,
+          25
+        ],
+        [
+          34.4,
+          27.3
+        ],
+        [
+          30,
+          30.5
+        ]
+      ],
+      "coordinates": [
+        [
+          -0.274905187,
+          39.680760603
+        ],
+        [
+          -0.274934585,
+          39.680692339
+        ],
+        [
+          -0.274975083,
+          39.680617202
+        ],
+        [
+          -0.275007156,
+          39.680586952
+        ],
+        [
+          -0.275052752,
+          39.680575626
+        ],
+        [
+          -0.275112486,
+          39.680559041
+        ]
+      ],
+      "source": "pnoa+municipal-2018",
+      "method": "manual orthophoto interpretation; no archaeological survey",
+      "uncertaintyM": 1.5,
+      "note": "Accessible descending route from upper corner east to lower archaeology; orthophoto shows curved plan, photo2018-2 confirms concrete ramps with black railing. Endlevels~0/−2.5m are historical reference, ramp profile estimated.",
+      "widthM": 2.3,
+      "startHeightM": 0,
+      "endHeightM": -2.5
+    },
+    {
+      "id": "south-promenade",
+      "kind": "line",
+      "local": [
+        [
+          30.2,
+          29
+        ],
+        [
+          29.3,
+          36
+        ],
+        [
+          29.4,
+          41
+        ]
+      ],
+      "coordinates": [
+        [
+          -0.275105362,
+          39.68057148
+        ],
+        [
+          -0.275138231,
+          39.680513346
+        ],
+        [
+          -0.275153382,
+          39.680469961
+        ]
+      ],
+      "source": "pnoa+municipal-2018",
+      "method": "manual orthophoto interpretation; no archaeological survey",
+      "uncertaintyM": 2.0,
+      "note": "Paved southern leg between medianera/garden and eastern planting; stairs/ramp connections inferred, retain open passage.",
+      "widthM": 3.4,
+      "heightM": -0.8
+    },
+    {
+      "id": "west-stairs",
+      "kind": "line",
+      "local": [
+        [
+          -0.8,
+          8.3
+        ],
+        [
+          1.5,
+          11.7
+        ],
+        [
+          2.6,
+          13.3
+        ]
+      ],
+      "coordinates": [
+        [
+          -0.275385478,
+          39.680827701
+        ],
+        [
+          -0.275370762,
+          39.680792609
+        ],
+        [
+          -0.275363639,
+          39.68077605
+        ]
+      ],
+      "source": "pnoa+municipal-2018",
+      "method": "manual orthophoto interpretation; no archaeological survey",
+      "uncertaintyM": 2.5,
+      "note": "Steps connect Remei/Horts upper sidewalk to lower promenade, position inferred from aerial.",
+      "widthM": 2.1,
+      "startHeightM": 0,
+      "endHeightM": -2.5
+    },
+    {
+      "id": "north-stairs",
+      "kind": "line",
+      "local": [
+        [
+          21.2,
+          5.8
+        ],
+        [
+          20.9,
+          9.5
+        ],
+        [
+          21.8,
+          12.3
+        ]
+      ],
+      "coordinates": [
+        [
+          -0.275130743,
+          39.680794165
+        ],
+        [
+          -0.275146147,
+          39.680762997
+        ],
+        [
+          -0.275145171,
+          39.680736588
+        ]
+      ],
+      "source": "pnoa+municipal-2018",
+      "method": "manual orthophoto interpretation; no archaeological survey",
+      "uncertaintyM": 2.5,
+      "note": "Middle north connection visible in aerial amid planted beds; steps or graded route exact design not measured.",
+      "widthM": 2.0,
+      "startHeightM": 0,
+      "endHeightM": -2.5
+    },
+    {
+      "id": "northwest-green",
+      "kind": "polygon",
+      "local": [
+        [
+          1,
+          1
+        ],
+        [
+          18,
+          1
+        ],
+        [
+          18,
+          6.5
+        ],
+        [
+          15,
+          9.5
+        ],
+        [
+          1,
+          10
+        ]
+      ],
+      "coordinates": [
+        [
+          -0.275341545,
+          39.680886168
+        ],
+        [
+          -0.275150991,
+          39.680843589
+        ],
+        [
+          -0.27516889,
+          39.680796141
+        ],
+        [
+          -0.27521228,
+          39.680777775
+        ],
+        [
+          -0.275370834,
+          39.680808527
+        ]
+      ],
+      "source": "pnoa+municipal-2018",
+      "method": "manual orthophoto interpretation; no archaeological survey",
+      "uncertaintyM": 1.5,
+      "note": "Two planted terraces/tree rows, gray paved connecting path; no uniform unbroken lawn.",
+      "heightM": -0.2
+    },
+    {
+      "id": "north-central-green",
+      "kind": "polygon",
+      "local": [
+        [
+          20,
+          3
+        ],
+        [
+          28,
+          3
+        ],
+        [
+          31.5,
+          9.8
+        ],
+        [
+          27.8,
+          12
+        ],
+        [
+          20.8,
+          9.8
+        ]
+      ],
+      "coordinates": [
+        [
+          -0.275135082,
+          39.680821326
+        ],
+        [
+          -0.275045409,
+          39.680801289
+        ],
+        [
+          -0.275028307,
+          39.68073386
+        ],
+        [
+          -0.27507694,
+          39.680724148
+        ],
+        [
+          -0.275148244,
+          39.68076066
+        ]
+      ],
+      "source": "pnoa+municipal-2018",
+      "method": "manual orthophoto interpretation; no archaeological survey",
+      "uncertaintyM": 1.5,
+      "note": "Narrow planted islands and trees, boundaries approximate.",
+      "heightM": -1
+    },
+    {
+      "id": "playground",
+      "kind": "polygon",
+      "local": [
+        [
+          31,
+          5.3
+        ],
+        [
+          36.5,
+          4.6
+        ],
+        [
+          40,
+          6.8
+        ],
+        [
+          40.6,
+          10
+        ],
+        [
+          38.7,
+          12.6
+        ],
+        [
+          32.3,
+          12
+        ],
+        [
+          30.2,
+          9
+        ]
+      ],
+      "coordinates": [
+        [
+          -0.275019267,
+          39.680773933
+        ],
+        [
+          -0.274955339,
+          39.680766196
+        ],
+        [
+          -0.274923267,
+          39.680738451
+        ],
+        [
+          -0.274926955,
+          39.680709342
+        ],
+        [
+          -0.274956714,
+          39.680691671
+        ],
+        [
+          -0.275026499,
+          39.680712877
+        ],
+        [
+          -0.275040275,
+          39.680744017
+        ]
+      ],
+      "source": "pnoa+municipal-2018",
+      "method": "manual orthophoto interpretation; no archaeological survey",
+      "uncertaintyM": 1.5,
+      "note": "Green rubber play area with reddish round safety pads; 2018photo confirms smallslide, single swing and springride, woodenbench andblackrail.",
+      "heightM": -0.15
+    },
+    {
+      "id": "southeast-green",
+      "kind": "polygon",
+      "local": [
+        [
+          35.2,
+          28.7
+        ],
+        [
+          40.5,
+          27
+        ],
+        [
+          40.3,
+          41.5
+        ],
+        [
+          32.7,
+          42
+        ],
+        [
+          31.8,
+          38.5
+        ]
+      ],
+      "coordinates": [
+        [
+          -0.275048341,
+          39.680561545
+        ],
+        [
+          -0.2749834,
+          39.680562936
+        ],
+        [
+          -0.27503283,
+          39.680438347
+        ],
+        [
+          -0.275119646,
+          39.680453069
+        ],
+        [
+          -0.275118344,
+          39.680485517
+        ]
+      ],
+      "source": "pnoa+municipal-2018",
+      "method": "manual orthophoto interpretation; no archaeological survey",
+      "uncertaintyM": 1.5,
+      "note": "Tree/shrub bed in southern east flank, not empty excavated plot.",
+      "heightM": -0.3
+    },
+    {
+      "id": "trees",
+      "kind": "points",
+      "local": [
+        [
+          2,
+          3
+        ],
+        [
+          9.7,
+          2.9
+        ],
+        [
+          2.7,
+          8.1
+        ],
+        [
+          16.6,
+          5.8
+        ],
+        [
+          20.7,
+          7.5
+        ],
+        [
+          22.4,
+          10.4
+        ],
+        [
+          27.2,
+          11.9
+        ],
+        [
+          31.3,
+          13.5
+        ],
+        [
+          36.4,
+          15.1
+        ],
+        [
+          38,
+          25
+        ],
+        [
+          36.3,
+          33
+        ],
+        [
+          35.4,
+          38.4
+        ]
+      ],
+      "coordinates": [
+        [
+          -0.275336845,
+          39.68086641
+        ],
+        [
+          -0.27525021,
+          39.680847987
+        ],
+        [
+          -0.275345596,
+          39.68082066
+        ],
+        [
+          -0.275182305,
+          39.680805687
+        ],
+        [
+          -0.27514188,
+          39.680780752
+        ],
+        [
+          -0.275132262,
+          39.680751476
+        ],
+        [
+          -0.27508334,
+          39.680726514
+        ],
+        [
+          -0.27504259,
+          39.680702441
+        ],
+        [
+          -0.274990631,
+          39.680675865
+        ],
+        [
+          -0.275004914,
+          39.680586451
+        ],
+        [
+          -0.275050004,
+          39.680521694
+        ],
+        [
+          -0.275077666,
+          39.680477363
+        ]
+      ],
+      "source": "pnoa+municipal-2018",
+      "method": "manual orthophoto interpretation; no archaeological survey",
+      "uncertaintyM": 1.5,
+      "note": "Aerial observed crowns; trunk position/radii approximate. Trees visible2018younger than ortho. Broadleaf canopy~2–3m radius, heights~5–7m as display estimates.",
+      "heightRangeM": [
+        5,
+        7
+      ]
+    },
+    {
+      "id": "benches",
+      "kind": "points",
+      "local": [
+        [
+          9.3,
+          5.7
+        ],
+        [
+          26.1,
+          5.5
+        ],
+        [
+          34.3,
+          7.8
+        ],
+        [
+          37,
+          23
+        ],
+        [
+          29,
+          38
+        ]
+      ],
+      "coordinates": [
+        [
+          -0.275263805,
+          39.680824834
+        ],
+        [
+          -0.275074842,
+          39.680784481
+        ],
+        [
+          -0.274990413,
+          39.680744101
+        ],
+        [
+          -0.275009614,
+          39.68060621
+        ],
+        [
+          -0.275148102,
+          39.680496844
+        ]
+      ],
+      "source": "pnoa+municipal-2018",
+      "method": "manual orthophoto interpretation; no archaeological survey",
+      "uncertaintyM": 2.0,
+      "note": "Rectangular pale spots in ortho and woodenbench2018photos. Coordinates approximate; avoid excessive invented count."
+    },
+    {
+      "id": "access-horts",
+      "kind": "point",
+      "local": [
+        [
+          22.33,
+          4.98
+        ]
+      ],
+      "coordinates": [
+        [
+          -0.275115408,
+          39.680798409
+        ]
+      ],
+      "source": "pnoa+municipal-2018",
+      "method": "manual orthophoto interpretation; no archaeological survey",
+      "uncertaintyM": 1.5,
+      "note": "North central public access / overlooking entry.",
+      "heightM": 0
+    },
+    {
+      "id": "access-remei",
+      "kind": "point",
+      "local": [
+        [
+          -1.36,
+          14.88
+        ]
+      ],
+      "coordinates": [
+        [
+          -0.275413169,
+          39.680772338
+        ]
+      ],
+      "source": "pnoa+municipal-2018",
+      "method": "manual orthophoto interpretation; no archaeological survey",
+      "uncertaintyM": 1.5,
+      "note": "West edge relation to Remei; stairs and path.",
+      "heightM": 0
+    },
+    {
+      "id": "access-ordonez",
+      "kind": "point",
+      "local": [
+        [
+          43.3,
+          25
+        ]
+      ],
+      "coordinates": [
+        [
+          -0.274945506,
+          39.680573176
+        ]
+      ],
+      "source": "pnoa+municipal-2018",
+      "method": "manual orthophoto interpretation; no archaeological survey",
+      "uncertaintyM": 1.5,
+      "note": "Eastern sidewalk connection near widened lower corner.",
+      "heightM": 0
+    },
+    {
+      "id": "elevated-gallery",
+      "kind": "line",
+      "local": [
+        [
+          -2.0,
+          18.6
+        ],
+        [
+          5.8,
+          19.1
+        ],
+        [
+          7.0,
+          21.0
+        ]
+      ],
+      "coordinates": [
+        [
+          -0.275432449,
+          39.680741849
+        ],
+        [
+          -0.275346645,
+          39.680718
+        ],
+        [
+          -0.275339378,
+          39.680698603
+        ]
+      ],
+      "source": "municipal-2015-render+municipal-2018+firsthand-photo2019",
+      "method": "Crosschecked photograph/orthophoto interpretation",
+      "uncertaintyM": 2.0,
+      "widthM": 1.35,
+      "heightM": 0,
+      "note": "Black steel elevated gallery with vertical posts and guardrail along north wall of western notch, short return at archaeological party-wall junction. Historic blocked arch visible below, not sealed by a solid ramp."
+    }
+  ],
+  "focuses": [
+    {
+      "id": "conjunto",
+      "local": [
+        24,
+        15
+      ],
+      "coordinate": [
+        -0.275129298,
+        39.680707785
+      ],
+      "note": "Interpretive visit target, not archaeological survey"
+    },
+    {
+      "id": "umbral",
+      "local": [
+        10.4,
+        17
+      ],
+      "coordinate": [
+        -0.27528825,
+        39.680724595
+      ],
+      "note": "Interpretive visit target, not archaeological survey"
+    },
+    {
+      "id": "portico",
+      "local": [
+        17,
+        22
+      ],
+      "coordinate": [
+        -0.275230542,
+        39.68066493
+      ],
+      "note": "Interpretive visit target, not archaeological survey"
+    },
+    {
+      "id": "cloaca",
+      "local": [
+        24,
+        15
+      ],
+      "coordinate": [
+        -0.275129298,
+        39.680707785
+      ],
+      "note": "Interpretive visit target, not archaeological survey"
+    },
+    {
+      "id": "trinidad",
+      "local": [
+        10,
+        28
+      ],
+      "coordinate": [
+        -0.275328531,
+        39.680630701
+      ],
+      "note": "Interpretive visit target, not archaeological survey"
+    },
+    {
+      "id": "medianeras",
+      "local": [
+        16,
+        29
+      ],
+      "coordinate": [
+        -0.275264531,
+        39.680607046
+      ],
+      "note": "Interpretive visit target, not archaeological survey"
+    },
+    {
+      "id": "aljibes",
+      "local": [
+        27.45,
+        21.03
+      ],
+      "coordinate": [
+        -0.27511025,
+        39.680647124
+      ],
+      "note": "Interpretive visit target, not archaeological survey"
+    },
+    {
+      "id": "jardin",
+      "local": [
+        28,
+        42
+      ],
+      "coordinate": [
+        -0.275172329,
+        39.680464841
+      ],
+      "note": "Interpretive visit target, not archaeological survey"
+    },
+    {
+      "id": "accesos",
+      "local": [
+        39,
+        18
+      ],
+      "coordinate": [
+        -0.274970925,
+        39.680644335
+      ],
+      "note": "Interpretive visit target, not archaeological survey"
+    },
+    {
+      "id": "ciudad-baja",
+      "local": [
+        21,
+        2
+      ],
+      "coordinate": [
+        -0.275120618,
+        39.680827448
+      ],
+      "note": "Interpretive visit target, not archaeological survey"
+    }
+  ],
+  "confidenceNotes": [
+    "Current park correctly separated from hilltop Roman forum.",
+    "Official published excavation northwall29.50m/eastwall21.37m; 2015total36.5m/27m refers earlier overall identification. Do not mix.",
+    "Complete monument ancient elevations, original columns, cloaca exactaxis, vegetation species, detailedstairs are unresolved. Use surviving state with labelled historical hypotheses.",
+    "PNOAlatest service returns published latest imagery; acquisitiondate was not exposed by request.",
+    "Municipal2018photos are researchreferences only; no redistribution license verified."
+  ]
+}

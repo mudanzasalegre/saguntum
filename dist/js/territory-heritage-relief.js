@@ -1,4 +1,5 @@
 import {createUrbanSurface} from './urban-surface.js';
+import {excavationTriangles,triangleCut} from './polygon-excavation.js';
 
 export function territorialCut(cut,frame){
  const {x,z}=cut.center,c=Math.cos(cut.yaw||0),s=Math.sin(cut.yaw||0),p=frame.world(x,z);
@@ -20,7 +21,7 @@ export function reliefDelta(p,x,z){
 // Sample the v32 foundation grading in the metric world, retaining the
 // height *difference* from MDT. A border supplies the unchanged terrain.
 export function heritageRelief(id,sites,frame,place,heightAt,sample){
- const patches=[],cuts=[];
+ const patches=[],cuts=[],triangleCuts=[];
  let left=Infinity,top=Infinity,right=-Infinity,bottom=-Infinity;
  function expand(point,pad){
   left=Math.min(left,point.x-pad);right=Math.max(right,point.x+pad);
@@ -33,7 +34,12 @@ export function heritageRelief(id,sites,frame,place,heightAt,sample){
   }
   for(const cut of site.currentMasks||[site.currentMask]){
    if(!cut||cut.permanent===false)continue;
-   cuts.push(territorialCut(cut,frame));
+   if(cut.outline){
+    for(const triangle of excavationTriangles(cut)){
+     const packed=triangleCut(triangle,p=>frame.world(p.x,p.z));
+     if(packed)triangleCuts.push(packed);
+    }
+   }else cuts.push(territorialCut(cut,frame));
   }
  }
  const theatre=sites.theatre?.group?.userData.surfaceHeight;
@@ -43,7 +49,12 @@ export function heritageRelief(id,sites,frame,place,heightAt,sample){
   const b=castle.bounds;
   for(const x of [b.minX,b.maxX])for(const z of [b.minZ,b.maxZ])expand(frame.world(x,z),3);
  }
- if(!Number.isFinite(left))return {cuts};
+ // The Forum's exact polygon removes the generic ground beneath the park.
+ // Its preparatory street-height cap prevents coarse edge interpolation from
+ // dragging neighbouring streets into the pit; visible levels are separate.
+ const forumSurface=sites['forum-plaza']?.surfaceHeight;
+ if(forumSurface)for(const p of sites['forum-plaza'].group.userData.ground.outline)expand(frame.world(p.x,p.z),3);
+ if(!Number.isFinite(left))return {cuts,triangleCuts};
  const bounds=[Math.floor(left/10)*10,Math.floor(top/10)*10,Math.ceil(right/10)*10,Math.ceil(bottom/10)*10];
  const width=Math.min(193,Math.ceil((bounds[2]-bounds[0])/1.25)+1),height=Math.min(193,Math.ceil((bounds[3]-bounds[1])/1.25)+1);
  const adjust=createUrbanSurface({data:{},heightAt:sample,patches}).groundHeight;
@@ -52,7 +63,7 @@ export function heritageRelief(id,sites,frame,place,heightAt,sample){
   const x=bounds[0]+(bounds[2]-bounds[0])*i/(width-1),z=bounds[1]+(bounds[3]-bounds[1])*j/(height-1);
   const raw=heightAt(x,z),lx=((x-frame.tx)*frame.d-(z-frame.tz)*frame.b)/det,lz=((z-frame.tz)*frame.a-(x-frame.tx)*frame.c)/det;
   const ground=theatre?theatre(lx,lz,raw):adjust(lx,lz);
-  delta[j*width+i]=(castle?castle.surfaceHeight(lx,lz,ground):ground)-raw;
+  delta[j*width+i]=(castle?castle.surfaceHeight(lx,lz,ground):forumSurface?forumSurface(lx,lz,ground):ground)-raw;
  }
- return {cuts,bounds,width,height,delta};
+ return {cuts,triangleCuts,bounds,width,height,delta};
 }

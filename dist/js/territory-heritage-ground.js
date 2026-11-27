@@ -2,6 +2,7 @@ import * as T from 'three';
 import {maxLocalHeritage} from './territory-heritage-roadmask.js';
 import {reliefDelta} from './territory-heritage-relief.js';
 import {describeGroundEffect,groundEffectsOf} from './territory-ground-effects.js';
+import {insideTriangleCut} from './polygon-excavation.js';
 
 function joinRectangles(rows){
  const result=[];
@@ -26,22 +27,24 @@ export function conservationGround({group,material,heightAt,bounds}){
  const maxCuts=2*maxLocalHeritage+1;
  const cuts=Array.from({length:maxCuts},()=>new T.Vector4()),cross=Array.from({length:maxCuts},()=>new T.Vector2());
  const rectangles=Array.from({length:maxLocalHeritage},()=>new T.Vector4(1,1,-1,-1)),nCuts={value:0};
+ const maxTriangles=64,triangles=Array.from({length:maxTriangles},()=>new T.Vector4()),triangleCross=Array.from({length:maxTriangles},()=>new T.Vector2()),nTriangles={value:0};
  function hook(target,coarse,appearance){
   describeGroundEffect(target,{photo:appearance?groundEffectsOf(material)?.photo:null,
-    excavation:{coarse,rectangles,cuts,cross,nCuts}});
+    excavation:{coarse,rectangles,cuts,cross,nCuts,triangles,triangleCross,nTriangles}});
   target.customProgramCacheKey=()=>coarse?'territory-ground-with-cut':'territory-ground-graded';
   target.onBeforeCompile=function(shader,renderer){
    if(appearance)original.call(this,shader,renderer);
-   Object.assign(shader.uniforms,{uSiteRects:{value:rectangles},uExc:{value:cuts},uExcCross:{value:cross},uExcCount:nCuts});
+   Object.assign(shader.uniforms,{uSiteRects:{value:rectangles},uExc:{value:cuts},uExcCross:{value:cross},uExcCount:nCuts,uExcTriangles:{value:triangles},uExcTriangleCross:{value:triangleCross},uExcTriangleCount:nTriangles});
    shader.vertexShader='varying vec2 vSiteMetric;\n'+shader.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\nvSiteMetric=position.xz;');
-   shader.fragmentShader=`varying vec2 vSiteMetric; uniform vec4 uSiteRects[${maxLocalHeritage}],uExc[${maxCuts}]; uniform vec2 uExcCross[${maxCuts}]; uniform int uExcCount;\n`+shader.fragmentShader.replace('#include <clipping_planes_fragment>',`#include <clipping_planes_fragment>
+   shader.fragmentShader=`varying vec2 vSiteMetric; uniform vec4 uSiteRects[${maxLocalHeritage}],uExc[${maxCuts}],uExcTriangles[${maxTriangles}]; uniform vec2 uExcCross[${maxCuts}],uExcTriangleCross[${maxTriangles}]; uniform int uExcCount,uExcTriangleCount;\n`+shader.fragmentShader.replace('#include <clipping_planes_fragment>',`#include <clipping_planes_fragment>
     ${coarse?`for(int j=0;j<${maxLocalHeritage};j++){vec4 r=uSiteRects[j]; if(all(greaterThanEqual(vSiteMetric,r.xy))&&all(lessThanEqual(vSiteMetric,r.zw)))discard;}`:''}
-    for(int i=0;i<${maxCuts};i++){if(i>=uExcCount)break;vec2 d=vSiteMetric-uExc[i].xy;if(abs(dot(d,uExc[i].zw))<=1.&&abs(dot(d,uExcCross[i]))<=1.)discard;}`);
+    for(int i=0;i<${maxCuts};i++){if(i>=uExcCount)break;vec2 d=vSiteMetric-uExc[i].xy;if(abs(dot(d,uExc[i].zw))<=1.&&abs(dot(d,uExcCross[i]))<=1.)discard;}
+    for(int i=0;i<${maxTriangles};i++){if(i>=uExcTriangleCount)break;vec2 d=vSiteMetric-uExcTriangles[i].xy;float u=dot(d,uExcTriangles[i].zw),v=dot(d,uExcTriangleCross[i]);if(u>=0.&&v>=0.&&u+v<=1.)discard;}`);
   };
  }
  hook(material,true,true);hook(overlay,false,true);
  hook(depth,true,false);hook(gradedDepth,false,false);
- let source=null,active=[],meshes=[],cutsNow=[];
+ let source=null,active=[],meshes=[],cutsNow=[],trianglesNow=[];
  function grade(x,z){
   let delta=0;
   for(const r of active){const d=reliefDelta(r,x,z);if(Math.abs(d)>Math.abs(delta))delta=d;}
@@ -67,7 +70,8 @@ export function conservationGround({group,material,heightAt,bounds}){
   if(next.length===active.length&&next.every((p,i)=>p===active[i]))return;
   const sameGrades=next.length===active.length&&next.every((p,i)=>p.delta===active[i].delta);
   active=next;
-  const regions=joinRectangles(next.filter(p=>p.bounds).map(p=>p.bounds)),holes=next.flatMap(p=>p.cuts);
+  const regions=joinRectangles(next.filter(p=>p.bounds).map(p=>p.bounds)),holes=next.flatMap(p=>p.cuts||[]),triangleHoles=next.flatMap(p=>p.triangleCuts||[]);
+  if(holes.length>maxCuts||triangleHoles.length>maxTriangles)throw new Error('Demasiadas ventanas arqueológicas simultáneas');
   if(!sameGrades){
    for(const mesh of meshes){mesh.removeFromParent();mesh.geometry.dispose();}
    meshes=regions.map(tile);
@@ -75,11 +79,13 @@ export function conservationGround({group,material,heightAt,bounds}){
   }
   holes.forEach((q,i)=>{cuts[i].set(q[0],q[1],q[2],q[3]);cross[i].set(q[4],q[5]);});
   nCuts.value=holes.length;cutsNow=holes;
+  triangleHoles.forEach((q,i)=>{triangles[i].set(q[0],q[1],q[2],q[3]);triangleCross[i].set(q[4],q[5]);});
+  nTriangles.value=triangleHoles.length;trianglesNow=triangleHoles;
  }
  return {depth,setSource(value){
    if(source!==value)for(const mat of [material,overlay,depth,gradedDepth])value?.maskRoadMaterial?.(mat,true);
    source=value;update();
   },update,grade,
-  canStand(x,z){return !cutsNow.some(([cx,cz,a,b,c,d])=>Math.abs((x-cx)*a+(z-cz)*b)<=1&&Math.abs((x-cx)*c+(z-cz)*d)<=1);}
+  canStand(x,z,onPublicDeck=false){return !cutsNow.some(([cx,cz,a,b,c,d])=>Math.abs((x-cx)*a+(z-cz)*b)<=1&&Math.abs((x-cx)*c+(z-cz)*d)<=1)&&(onPublicDeck||!trianglesNow.some(t=>insideTriangleCut(t,x,z)));}
  };
 }

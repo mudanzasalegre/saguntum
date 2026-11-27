@@ -1,5 +1,26 @@
 # Sincronización de Sites a GitHub
 
+## Versión 52 · Plaza del Fórum y parque arqueológico
+
+El 27 de noviembre de 2026 se publicó la nueva visita a la Plaza del Fórum en el Site original, conservando su acceso público. El despliegue `appgdep_6b093f776fac8191a0256e4585f596a3` terminó con estado `succeeded`.
+
+| Evidencia | Valor |
+| --- | --- |
+| Fuente publicada en Sites | `7c798336b46556233de8117492be11fed15b14ab` |
+| Árbol Git de la aplicación `dist/` | `c1a55e7005b9efa6933da74749010ed6c7a2b7fb` |
+| Archivo registrado por Sites | 1645 archivos, 268400640 bytes |
+| Huella del contenido registrado | `sha256:a8a9601ed4672d60c95de5d756de33ea26b99b90b843b6f15aec72ac6c443d30` |
+
+[Plaza del Fórum publicada](https://saguntum-atlas-3d.monmode.chatgpt.site/#forum-plaza) · [Accesos en el Simulador](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador/forum-plaza/forum-plaza-accesos) · [Investigación histórica](../research/forum-plaza-history.md) · [Registro cartográfico](../research/forum-plaza-layout.md) · [Validación reproducible](../research/validation-v52/README.md)
+
+La Plaza del Fórum es la visita **12**, después de la Puerta del Circo. El catálogo contiene **33 lugares: Sagunto 1–17, Puerto 18–26 y costa y paisajes 27–33**. La nueva guía reúne diez paradas, cuatro lecturas, trece fuentes y once hitos cronológicos. Se conserva el contenido de las otras 32 visitas y sus encuadres territoriales.
+
+El modelo sigue el contorno cóncavo del parque, las medianeras conservadas, el depósito circular, los restos bajos del recinto porticado, los paseos entre cotas, los jardines verticales y el entorno urbano. La excavación permanente deja libres los entrantes ocupados por edificios. Se preparó la cota de calle antes de retirar el terreno del parque para evitar que la malla gruesa hundiera las aceras; los pisos propios sustentan la cámara y el recorrido a pie. La contención exterior cierra los encuentros bajo las calles y su retorno sur. La identificación del edificio como segundo foro y las funciones discutidas de estructuras posteriores permanecen marcadas como hipótesis.
+
+Se comprobaron 22 encuadres en dos proporciones de pantalla, los mapas de las diez paradas y 18 puntos de circulación en rampas, escaleras y galería mediante el adaptador real del Simulador. Las cinco vistas CPU finales inspeccionan la geometría, el contexto y las texturas exportados de la aplicación. El navegador de comprobación no dispone de WebGL 2: la revisión pública verificó el catálogo, el plano, la selección de paradas y el cambio Atlas → Simulador → Atlas conservando la parada. No se atribuye a esta revisión una prueba gráfica GPU o de rendimiento. [Registro de publicación](../research/validation-v52/production-qa.json)
+
+El primer paquete excedió el límite de TAR expandido de Sites y no creó una versión. Se eliminaron exclusivamente espacios externos a las cadenas en los JSON de esta ampliación: se ahorraron 280399 bytes y se comprobó la igualdad de todos sus valores. El paquete local definitivo ocupa 268410880 bytes expandido, con 24576 bytes de margen respecto de 256 MiB; una ampliación posterior deberá revisar ese presupuesto. Los datos y la geometría de los renders son equivalentes a los compactados, según el [registro de hashes y equivalencia](../research/validation-v52/distribution-json-equivalence.json).
+
 ## Versión 51 · Foro y Puerta de Almenara
 
 El 26 de noviembre de 2026 se recuperó y completó la revisión interrumpida del Foro y la Puerta de Almenara. La versión 51 quedó publicada en el Site original, conservando su acceso público. El despliegue `appgdep_6b08a7d8a1848191aaca82f2f08cbb4d` terminó con estado `succeeded`.
@@ -18,6 +39,7 @@ El Foro distingue los restos conservados del templo de su restitución arqueoló
 Las validaciones aprobaron 50 comprobaciones de geometría y terreno, 16 del constructor real del Simulador y 56 de la guía. La guía enlaza 35 fuentes y 72 hechos. Se contrastaron 40 poses en dos relaciones de aspecto, los 116 lotes de Atlas y Simulador, y 207 muestras de apoyo y colisión del paso con el MDT original. Se mantienen los 32 lugares, las 18 paradas del Castillo, los siete recintos y los datos de las otras 31 visitas. Las tres vistas CPU finales corresponden a la curia y a las dos caras de Almenara; sus huellas coinciden con el código publicado. [Validación reproducible](../research/validation-v51/README.md)
 
 En la URL pública se verificaron los textos nuevos de Almenara y el Foro, sus enlaces directos y el cambio Atlas → Simulador → Atlas conservando la parada elegida. El navegador de comprobación no dispone de WebGL 2: se verificaron la interfaz, el plano y la documentación; no se atribuyen capturas GPU ni mediciones de FPS a esta revisión. Las cotas y detalles sin levantamiento métrico siguen marcados como interpretativos. [Registro público](../research/validation-v51/production-qa.json)
+
 
 ## Versión 50 · Castillo, recintos y entorno
 

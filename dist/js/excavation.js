@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import {excavationOutline,excavationTriangles,triangleCut,insideTriangleCut} from './polygon-excavation.js';
 
 // A local excavation is a window through the present-day scene. The source
 // geometry is never changed; temporary material clones carry the clipping planes.
@@ -14,6 +15,7 @@ export function excavationPlanes(cut) {
   ]);
 }
 export function insideExcavation(cut,x,z,margin=0) {
+  if(cut.outline)return excavationTriangles(cut).some(t=>{const packed=triangleCut(t);return packed&&insideTriangleCut(packed,x,z);});
   const {u,v,center}=rectangleFrame(cut),p=new THREE.Vector3(x,0,z).sub(center);
   return Math.abs(p.dot(u))<=cut.width/2+margin&&Math.abs(p.dot(v))<=cut.depth/2+margin;
 }
@@ -22,7 +24,11 @@ export function insideExcavation(cut,x,z,margin=0) {
 export function openPermanentExcavations(roots,windows){
   const statistics={windows:windows.length,meshes:0,removedTriangles:0,addedTriangles:0},seen=new Set();
   for(const root of roots)root?.updateWorldMatrix(true,true);
-  for(const window of windows){const planes=excavationPlanes(window),bounds=new THREE.Box3().setFromPoints(corners(window));bounds.min.y=-100;bounds.max.y=1000;
+  const pieces=windows.flatMap(window=>window.outline?excavationTriangles(window).map(outline=>({...window,outline})):[window]);
+  for(const window of pieces){const points=window.outline?excavationOutline(window).map(p=>new THREE.Vector3(p.x,0,p.z)):corners(window);
+    const center=new THREE.Vector3();for(const p of points)center.add(p);center.multiplyScalar(1/points.length);
+    const planes=window.outline?points.map((p,i)=>{const q=points[(i+1)%points.length],normal=new THREE.Vector3(q.z-p.z,0,p.x-q.x).normalize(),plane=new THREE.Plane().setFromNormalAndCoplanarPoint(normal,p);if(plane.distanceToPoint(center)>0)plane.negate();return plane;}):excavationPlanes(window);
+    const bounds=new THREE.Box3().setFromPoints(points);bounds.min.y=-100;bounds.max.y=1000;
     seen.clear();for(const root of roots)root?.traverse(mesh=>{
       if(!mesh.isMesh||mesh.isInstancedMesh||seen.has(mesh))return;seen.add(mesh);
       if(!new THREE.Box3().setFromObject(mesh).intersectsBox(bounds))return;

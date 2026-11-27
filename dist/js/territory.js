@@ -361,7 +361,7 @@ export async function openSimulator(){
   const heritageCollision=createHeritageCollision(heritage);
   const safe=(x,z,radius=.32,feetY=walkingHeight(x,z))=>{
     if(sea.mask.isWater(x,z)&&heritage.publicDeckAt(x,z)===null&&network.bridgeHeight(x,z,true)===null)return false;
-    return ground.canStand(x,z)&&buildings.safeToWalk(x,z,radius)&&network.safeToWalk(x,z,radius,feetY)&&heritageCollision.safeToWalk(x,z,radius,feetY);
+    return ground.canStand(x,z,heritage.publicDeckAt(x,z)!==null)&&buildings.safeToWalk(x,z,radius)&&network.safeToWalk(x,z,radius,feetY)&&heritageCollision.safeToWalk(x,z,radius,feetY);
   };
   nav=createNavigation({camera,element:renderer.domElement,heightAt:ground.grade,walkingHeight,bounds:world.bounds,core,
     safe,nearest:network.nearestPublic,onMode,onCommand:command,

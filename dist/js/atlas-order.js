@@ -2,7 +2,7 @@
 // Keep this order shared by the Atlas and the territorial simulator.
 export const atlasPlaceIds=Object.freeze([
   'santa-maria','plaza-mayor','juderia','calvario','berenguer','sangre','salvador','museo',
-  'portic','domus','circo','diana','necropolis','theatre','castle','glorieta',
+  'portic','domus','circo','forum-plaza','diana','necropolis','theatre','castle','glorieta',
   'horno','talleres','museo-industrial','gerencia','casino','begona','economato','barrio-obrero','sanatorio',
   'pantalan-paseo','pantalan-maritimo','grau-vell','puerto-antiguo',
   'marjal-moros','dunas-almarda','rio-palancia'
@@ -13,7 +13,11 @@ const areas=Object.freeze([
   Object.freeze({id:'resto',label:'Costa y paisajes'})
 ]);
 const order=new Map(atlasPlaceIds.map((id,index)=>[id,index]));
-const knownArea=new Map(atlasPlaceIds.map((id,index)=>[id,index<16?0:index<25?1:2]));
+// Area membership is explicit, so inserting a Sagunto visit cannot accidentally
+// reclassify an existing Puerto destination when public numbers are recomputed.
+const puertoIds=new Set(['horno','talleres','museo-industrial','gerencia','casino','begona','economato','barrio-obrero','sanatorio']);
+const restIds=new Set(['pantalan-paseo','pantalan-maritimo','grau-vell','puerto-antiguo','marjal-moros','dunas-almarda','rio-palancia']);
+const knownArea=new Map(atlasPlaceIds.map(id=>[id,puertoIds.has(id)?1:restIds.has(id)?2:0]));
 const regionArea=new Map([['sagunto',0],['puerto',1],['coast',2],['marjal',2],['almarda',2],['palancia',2]]);
 const collator=new Intl.Collator('es',{numeric:true,sensitivity:'base'});
 function areaIndex(place){

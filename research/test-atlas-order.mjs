@@ -16,17 +16,18 @@ const source=Object.fromEntries(await Promise.all(Object.values(manifest.invento
 const original=JSON.stringify(source),catalog=structuredClone(baseCatalog),byId=Object.fromEntries(catalog.map(c=>[c.id,c])),tour=[];
 const glorieta={...source[manifest.inventories.glorieta].sites[0]};catalog.push(glorieta);byId.glorieta=glorieta;
 for(const [key,register]of [['archaeology',registerArchaeology],['port',registerPortHeritage],['coast',registerCoastHeritage],['landscapes',registerLandscapes]])register(manifest.inventories[key].map(name=>source[name]),catalog,byId,tour);
+registerArchaeology([source[manifest.inventories.forumPlaza]],catalog,byId,tour);
 const extras=await Promise.all(manifest.visits.map(read));registerAtlasEntries(extras,catalog,byId,tour);
 const identities=new Map(catalog.map(c=>[c.id,c])),geometry=new Map(catalog.map(c=>[c.id,{coordinate:c.coordinate,angle:c.angle,observationPoints:c.observationPoints,secondaryLocations:c.secondaryLocations}]));
 orderAtlasPlaces(catalog);
-assert.equal(catalog.length,32);
+assert.equal(catalog.length,33);
 assert.deepEqual(catalog.map(c=>c.id),[...atlasPlaceIds]);
-assert.deepEqual(catalog.map(c=>c.number),Array.from({length:32},(_,i)=>i+1));
+assert.deepEqual(catalog.map(c=>c.number),Array.from({length:33},(_,i)=>i+1));
 assert.equal(new Set(catalog.map(c=>c.id)).size,catalog.length);
-assert.deepEqual(catalog.filter(c=>atlasArea(c).id==='sagunto').map(c=>c.number),Array.from({length:16},(_,i)=>i+1));
-assert.deepEqual(catalog.filter(c=>atlasArea(c).id==='puerto').map(c=>c.number),Array.from({length:9},(_,i)=>i+17));
-assert.deepEqual(catalog.filter(c=>atlasArea(c).id==='resto').map(c=>c.number),Array.from({length:7},(_,i)=>i+26));
-assert.equal(byId.theatre.number,14);assert.equal(byId.castle.number,15);assert.equal(byId.glorieta.number,16);
+assert.deepEqual(catalog.filter(c=>atlasArea(c).id==='sagunto').map(c=>c.number),Array.from({length:17},(_,i)=>i+1));
+assert.deepEqual(catalog.filter(c=>atlasArea(c).id==='puerto').map(c=>c.number),Array.from({length:9},(_,i)=>i+18));
+assert.deepEqual(catalog.filter(c=>atlasArea(c).id==='resto').map(c=>c.number),Array.from({length:7},(_,i)=>i+27));
+assert.equal(byId['forum-plaza'].number,12);assert.equal(byId.theatre.number,15);assert.equal(byId.castle.number,16);assert.equal(byId.glorieta.number,17);
 assert.equal(JSON.stringify(source),original,'original inventories and their geometry/stop numbering remain unchanged');
 for(const place of catalog){
   assert.equal(place,byId[place.id]);assert.equal(place,identities.get(place.id));
@@ -59,8 +60,8 @@ try{
 const future=structuredClone(catalog),lookup=Object.fromEntries(future.map(c=>[c.id,c]));
 registerAtlasEntries([{id:'future-port',name:'Nueva visita del Puerto',region:'puerto',coordinate:[-.22,39.66],scene:{module:'example.js'}},{id:'future-sagunto',name:'Nueva visita de Sagunto',region:'sagunto',coordinate:[-.28,39.68],scene:{module:'example.js'}}],future,lookup,[]);
 orderAtlasPlaces(future);
-assert.equal(future[16].id,'future-sagunto');assert.equal(future[26].id,'future-port');
-assert.equal(future[27].id,'pantalan-paseo');
-assert.deepEqual(future.map(c=>c.number),Array.from({length:34},(_,i)=>i+1));
+assert.equal(future[17].id,'future-sagunto');assert.equal(future[27].id,'future-port');
+assert.equal(future[28].id,'pantalan-paseo');
+assert.deepEqual(future.map(c=>c.number),Array.from({length:35},(_,i)=>i+1));
 assert.equal(atlasArea({id:'unknown',region:'__proto__'}).id,'sagunto');
-console.log('Atlas order passed: 32 real registrations, 16/9/7 area groups, unique 1–32 numbers, matching Simulator catalogue and links, stable IDs/maps/geometry/inner stops, deterministic future registration.');
+console.log('Atlas order passed: 33 real registrations, 17/9/7 area groups, unique 1–33 numbers, matching Simulator catalogue and links, stable IDs/maps/geometry/inner stops, deterministic future registration.');

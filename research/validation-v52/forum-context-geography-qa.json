@@ -1,0 +1,73 @@
+{
+  "pass": true,
+  "sourceParkAreaM2": 1532.4959884353643,
+  "publishedInterventionAreaM2": 1608.44,
+  "areaNote": "OSM park polygon and published entire project area are distinct source scopes.",
+  "pavingAreaM2": 1043.2004598021556,
+  "vertices": 1064,
+  "triangles": 1386,
+  "uncoveredAreaM2": 4.691590493211296e-05,
+  "excessAreaM2": 4.82896137653539e-05,
+  "buildingOverlapM2": 2.878014401911953e-05,
+  "privateCourtOverlapM2": 1.0186193461017106e-16,
+  "previousPavingOverlapM2": 5.774717938899514e-07,
+  "parkOverlapM2": 7.761807724028085e-06,
+  "triangleOverlapM2": 1.1368683772161603e-12,
+  "previousBuildingOverlapM2": 0.0,
+  "mappedBuildingParkBoundaryMismatchM2": 0.3047009204266899,
+  "footprintsRetained": true,
+  "stats": {
+    "contextParts": 63,
+    "contextParcels": 12,
+    "mappedCourtyards": 5,
+    "roads": 6,
+    "fullyReplacedRoads": 0,
+    "OSMDuplicates": [],
+    "retainedOwners": [
+      "santa-maria",
+      "plaza-mayor",
+      "juderia",
+      "calvario",
+      "berenguer",
+      "sangre",
+      "salvador",
+      "museo",
+      "portic",
+      "domus",
+      "circo"
+    ],
+    "reusedBuildingParts": 32,
+    "reusedRoadFragments": 6,
+    "rejectedParcels": [
+      {
+        "parentId": "3760401YJ3936B",
+        "reason": "Earlier owner retained."
+      },
+      {
+        "parentId": "3760402YJ3936B",
+        "reason": "Earlier owner retained."
+      },
+      {
+        "parentId": "3760403YJ3936B",
+        "reason": "Earlier owner retained."
+      },
+      {
+        "parentId": "3760714YJ3936B",
+        "reason": "Earlier owner retained."
+      },
+      {
+        "parentId": "3861208YJ3936B",
+        "reason": "Earlier owner retained."
+      },
+      {
+        "parentId": "3861209YJ3936B",
+        "reason": "Earlier owner retained."
+      }
+    ],
+    "heightConflicts": 3
+  },
+  "limits": [
+    "Map/cadastral edge mismatch below0.6m² perselectedparcel preserved rather than rewriting source.",
+    "Heights, facade detail and street widths partly interpretive."
+  ]
+}

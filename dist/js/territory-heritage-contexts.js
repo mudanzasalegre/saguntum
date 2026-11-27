@@ -12,6 +12,7 @@ const factories={
  'portic':()=>import('./portic-context.js').then(m=>m.createPorticContext),
  'domus':()=>import('./domus-context.js').then(m=>m.createDomusContext),
  'circo':()=>import('./circo-context.js').then(m=>m.createCircoContext),
+ 'forum-plaza':()=>import('./forum-plaza-context.js').then(m=>m.createForumPlazaContext),
  'necropolis':()=>import('./necropolis-context.js').then(m=>m.createNecropolisContext),
  'horno':()=>import('./horno-context.js').then(m=>m.createHornoContext),
  'talleres':()=>import('./talleres-context.js').then(m=>m.createTalleresContext),

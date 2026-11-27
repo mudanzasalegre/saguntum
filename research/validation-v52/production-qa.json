@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "site": {
+    "projectId": "appgprj_6afeb5aaef8c8191b0062318fb3a24f1",
+    "version": 52,
+    "versionId": "appgprj_6afeb5aaef8c8191b0062318fb3a24f1~appgver_c11aa644120481918520c79ef2a6c4af",
+    "sourceCommit": "7c798336b46556233de8117492be11fed15b14ab",
+    "distTree": "c1a55e7005b9efa6933da74749010ed6c7a2b7fb",
+    "deploymentId": "appgdep_6b093f776fac8191a0256e4585f596a3",
+    "status": "succeeded",
+    "url": "https://saguntum-atlas-3d.monmode.chatgpt.site",
+    "publishedAt": "2026-11-27T08:30:11.117491+00:00",
+    "archive": {
+      "archive_format": "tar",
+      "sediment_file_id": "file_00000000c8dc81f4a8ac0811cac87f8c",
+      "content_hash": "sha256:a8a9601ed4672d60c95de5d756de33ea26b99b90b843b6f15aec72ac6c443d30",
+      "size_bytes": 268400640,
+      "file_count": 1645
+    }
+  },
+  "method": "Manual UI interaction with the public Site using the cloud browser. Geometry and walking surfaces separately validated in CPU tests and five Blender Cycles renders of the exported real Three.js buffers.",
+  "checks": [
+    {
+      "id": "brand-and-catalogue",
+      "pass": true,
+      "observed": "SAGUNTUM · Sagunto y Puerto de Sagunto; 33 visits, 6 areas. Public catalogue: Sagunto 1–17, Puerto 18–26, coast and landscapes 27–33. Plaza del Fórum is 12, immediately after Circus Gate 11."
+    },
+    {
+      "id": "forum-live",
+      "pass": true,
+      "url": "https://saguntum-atlas-3d.monmode.chatgpt.site/#forum-plaza",
+      "observed": "Clicked Visita 12 from the public catalogue. Guide shows ten stops, four readings, related Circus Gate and Vía del Pòrtic links."
+    },
+    {
+      "id": "guided-start",
+      "pass": true,
+      "url": "https://saguntum-atlas-3d.monmode.chatgpt.site/#forum-plaza/forum-plaza-conjunto",
+      "observed": "Clicked Iniciar visita; stop 1 of 10 and source-backed introductory text displayed."
+    },
+    {
+      "id": "plan-selection",
+      "pass": true,
+      "url": "https://saguntum-atlas-3d.monmode.chatgpt.site/#forum-plaza/forum-plaza-aljibes",
+      "observed": "Opened Situar en el plano: ten labelled stop controls. Selected stop 7; route and deposit interpretation updated."
+    },
+    {
+      "id": "atlas-to-simulator",
+      "pass": true,
+      "url": "https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador/forum-plaza/forum-plaza-aljibes",
+      "observed": "Clicked Simulator from stop 7. Simulator shows Plaza del Fórum, stop 7 of 10 and the correct selected label."
+    },
+    {
+      "id": "simulator-stop-selection",
+      "pass": true,
+      "url": "https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador/forum-plaza/forum-plaza-accesos",
+      "observed": "Selected 9. De la calle al nivel antiguo from the visible stop selector; route and selected stop changed to 9."
+    },
+    {
+      "id": "simulator-to-atlas",
+      "pass": true,
+      "url": "https://saguntum-atlas-3d.monmode.chatgpt.site/#forum-plaza/forum-plaza-accesos",
+      "observed": "Clicked Visita patrimonial. Atlas retains stop 9 of 10, its access description and sources."
+    },
+    {
+      "id": "deliverable",
+      "pass": true,
+      "url": "https://saguntum-atlas-3d.monmode.chatgpt.site/#forum-plaza",
+      "observed": "Returned to Ver el conjunto and marked the public overview tab as the deliverable."
+    }
+  ],
+  "limitations": [
+    "The browser environment cannot create a WebGL 2 context. Public navigation and documentation were verified through the app's 2D fallback; no live GPU rendering or frame-rate claims are made.",
+    "Five CPU inspection renders use actual geometry, vertex colours and textures, with Blender lighting. They are not browser screenshots.",
+    "Source dimensions, access profiles, vegetation, masonry details and the didactic drain orientation remain explicitly interpretive; no metric photogrammetry or laser-scan import was performed."
+  ],
+  "relatedReports": [
+    "README.md",
+    "forum-integration-report.json",
+    "forum-simulator-report.json",
+    "forum-context-geography-qa.json",
+    "forum-height-alternatives.json",
+    "forum-surface-qa.json",
+    "render-inspection.json",
+    "distribution-json-equivalence.json"
+  ]
+}

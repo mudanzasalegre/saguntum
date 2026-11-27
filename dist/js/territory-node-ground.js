@@ -1,4 +1,4 @@
-import {Fn,If,bool,float,vec2,vec4,uniform,uniformArray,positionLocal,positionView,positionWorld,
+import {Fn,If,Loop,bool,float,vec2,vec4,uniform,uniformArray,positionLocal,positionView,positionWorld,
   normalWorld,normalWorldGeometry,materialColor,materialNormal,materialRoughness,abs,max,dot,cross,dFdx,dFdy,
   sign,normalize,smoothstep,fract,clamp} from 'three/tsl';
 import {groundEffectsOf} from './territory-ground-effects.js';
@@ -18,7 +18,7 @@ function visibleSurface(effects){
   return Fn(()=>{
     const keep=bool(true).toVar(),p=positionLocal.xz;
     if(effects.excavation){
-      const {rectangles,cuts,cross,nCuts,coarse}=effects.excavation;
+      const {rectangles,cuts,cross,nCuts,coarse,triangles,triangleCross,nTriangles}=effects.excavation;
       if(coarse){
         const boxes=uniformArray(rectangles,'vec4');
         for(let i=0;i<rectangles.length;i++){
@@ -30,6 +30,14 @@ function visibleSurface(effects){
       for(let i=0;i<cuts.length;i++){
         const cut=bound(nCuts).greaterThan(i).and(excavationInside(p,spans.element(i),axes.element(i)));
         keep.assign(keep.and(cut.not()));
+      }
+      if(triangles){
+        const starts=uniformArray(triangles,'vec4'),basis=uniformArray(triangleCross,'vec2');
+        Loop({start:0,end:bound(nTriangles),type:'int'},({i})=>{
+          const t=starts.element(i),delta=p.sub(t.xy),u=dot(delta,t.zw),v=dot(delta,basis.element(i));
+          const cut=u.greaterThanEqual(0).and(v.greaterThanEqual(0)).and(u.add(v).lessThanEqual(1));
+          keep.assign(keep.and(cut.not()));
+        });
       }
     }
     if(effects.paving){

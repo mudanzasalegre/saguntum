@@ -5,7 +5,7 @@ import {indexBounds,nearCell,segmentFraction} from './territory-collision.js';
 // box around a whole church or gate would also block its courtyards and doors.
 // The source mesh is only read when the model loads; walking uses these lines.
 const levels=[.55,1.35,2.2];
-const decoration=/foliage|leaves|grass|planting|flower|canopy-leaf|copa|hojas|matorral|guijarros|tornillería/i;
+const decoration=/foliage|leaves|grass|planting|flower|canopy-leaf|copa|hojas|matorral|guijarros|tornillería|^leaf(?:Light|Dark|Red)?$/i;
 function* segments(group,heightAt) {
   const result=[],a=group.position.clone(),b=a.clone(),c=a.clone(),p=a.clone(),q=a.clone();
   const local=group.matrix.clone(),matrix=local.clone(),terrain=new Map();
