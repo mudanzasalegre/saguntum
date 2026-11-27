@@ -2,6 +2,16 @@
 
 Atlas patrimonial y paisajístico de Sagunto, Puerto de Sagunto y su costa en Three.js, con **33 lugares explorables** sobre cartografía real. Reúne monumentos, arqueología, memoria industrial, costa y paisajes en seis ámbitos territoriales, con visitas documentadas y vistas históricas.
 
+## Castillo · el recinto oriental de Almenara
+
+La revisión V54 amplía el sector oriental con tres terrazas defensivas, el baluarte noreste, una pequeña torre semicircular adosada, ruinas sin cubierta, un depósito abierto y las bandas discontinuas de roca de la explanada y sus laderas. Las huellas se contrastan con OSM y la ortofoto PNOA; la sección, los materiales y las aberturas se interpretan a partir de fotografías. El plano militar GR 1 VM 248(1) se utiliza distinguiendo obras antiguas, construidas y proyectadas.
+
+El recorrido del Castillo tiene **22 paradas**. Las nuevas se dedican a la **batería norte**, los **depósitos de agua**, el **baluarte oriental** y las **dependencias de la guarnición**. Incluye ojos de detalle próximos al suelo y un plano que amplía el este al seleccionarlo. El pequeño depósito tiene un hueco real en el terreno, fondo y revestimiento interior; no se le adjudican sin prueba las medidas de una cisterna concreta del inventario de Civera.
+
+Los caminos y pisos comparten niveles en Atlas y Simulador. Se corrigen los picos del relieve de baja resolución dentro del recinto; las laderas exteriores mantienen el MDT. La rama que rozaba el lateral de la Puerta de Almenara se enlaza localmente con el camino central, sin modificar el vano. La visita mantiene los siete recintos y todos los identificadores anteriores. Las alturas, el detalle de fábrica y ese enlace digital son estimaciones visuales, no un levantamiento topográfico ni un certificado de accesibilidad.
+
+[Recinto oriental](https://saguntum-atlas-3d.monmode.chatgpt.site/#castle/almenara) · [Batería norte](https://saguntum-atlas-3d.monmode.chatgpt.site/#castle/almenara-bateria) · [Fuentes](research/validation-v54/east-evidence.md) · [Registro sobre PNOA](research/validation-v54/east-layout.md) · [Verificación](research/validation-v54/README.md) · [Publicación](docs/SITES_SYNC.md)
+
 ## Circo romano · de la puerta al edificio completo
 
 La revisión V53 incorpora el selector **Puerta actual / Circo completo** en el Atlas y el Simulador. La puerta conservada permanece en su posición y actúa como referencia entre ambas vistas. La capa histórica retira el terreno y el contexto contemporáneos dentro de la huella del circo, conserva la ciudad exterior y permite volver al recinto arqueológico actual.
@@ -24,7 +34,7 @@ La revisión de V51 recupera y termina el trabajo dedicado al **Foro y la Puerta
 
 El Foro distingue la explanada, el templo incompleto, la curia elevada con tres peldaños, los fondos excavados de la basílica y las tabernae. Las basas, fustes y piezas lapidarias se representan como fragmentos conservados. Almenara separa el frontis apuntado con dos óculos trilobulados del cuerpo posterior abovedado, su arco rebajado, las tres aberturas estrechas y la escalera lateral. Los suelos, materiales y encuentros con las murallas se ajustan de forma local.
 
-La visita conserva **18 paradas**, los siete recintos y sus enlaces; su bibliografía reúne **35 fuentes**. Las alturas de modelado y varias posiciones de detalle son aproximaciones explícitas. Las comprobaciones geométricas y los renders de inspección no equivalen a un levantamiento fotogramétrico ni a una medición de rendimiento en GPU.
+V51 dejó una visita de **18 paradas** y **35 fuentes**, ampliada en V54 a **22 paradas y 36 fuentes** para incorporar el recinto oriental. Conserva los siete recintos y sus enlaces. Las alturas de modelado y varias posiciones de detalle son aproximaciones explícitas. Las comprobaciones geométricas y los renders de inspección no equivalen a un levantamiento fotogramétrico ni a una medición de rendimiento en GPU.
 
 [Foro](https://saguntum-atlas-3d.monmode.chatgpt.site/#castle/foro) · [Puerta de Almenara](https://saguntum-atlas-3d.monmode.chatgpt.site/#castle/puerta-almenara) · [Investigación](research/castle-history.md) · [Modelo y límites](research/castle-model.md) · [Verificación](research/validation-v51/README.md) · [Estado de publicación](docs/SITES_SYNC.md)
 
@@ -56,7 +66,7 @@ El simulador permite elegir **WebGPU** en **Capas y luz → Motor gráfico**. Co
 
 Elige **A pie** desde la panorámica para empezar en el centro de Sagunto. Un clic en la escena activa la mirada con ratón. WASD permite caminar, Mayús correr, Espacio saltar y E entrar en la visita que tienes delante. Al acercarte a un monumento, el simulador carga su modelo original. En pantallas táctiles puedes moverte con un dedo y mirar con el otro. [Abrir el simulador](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador) · [Controles, alcance y comprobaciones](docs/EXPLORACION.md) · [Comparar el Atlas y el simulador](research/validation-atlas-parity/v41/comparacion.jpg)
 
-Los **33 lugares visitables** tienen recorrido dentro del territorio continuo. El buscador admite el nombre del lugar o de una parada. En cada lugar puedes elegir una de sus vistas desde la lista o el mapa numerado, pasar a la visita del Atlas y regresar a la posición que habías dejado. Hay **539 entradas de visita** entre arquitectura, excavaciones, patrimonio industrial y paisajes. El encuadre, las cubiertas, las secciones y la fase documentada proceden de la visita original. [Orchestra del Teatro Romano](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador/theatre/teatro-orchestra) · [Salón del Casino](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador/casino/casino-salon) · [Desembocadura del Palancia](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador/rio-palancia/delta) · [Catálogo y criterios de integración](docs/VISITAS_TERRITORIALES.md)
+Los **33 lugares visitables** tienen recorrido dentro del territorio continuo. El buscador admite el nombre del lugar o de una parada. En cada lugar puedes elegir una de sus vistas desde la lista o el mapa numerado, pasar a la visita del Atlas y regresar a la posición que habías dejado. Hay **543 entradas de visita** entre arquitectura, excavaciones, patrimonio industrial y paisajes. El encuadre, las cubiertas, las secciones y la fase documentada proceden de la visita original. [Orchestra del Teatro Romano](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador/theatre/teatro-orchestra) · [Salón del Casino](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador/casino/casino-salon) · [Desembocadura del Palancia](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador/rio-palancia/delta) · [Catálogo y criterios de integración](docs/VISITAS_TERRITORIALES.md)
 
 La panorámica se abre con luz solar y ortofotografía. En una visita seleccionada, el ajuste **Automático** recupera el terreno y la luz del Atlas. En **Capas y luz** puedes elegir esos ajustes por separado. Las cubiertas reciben color de la fotografía aérea sobre sus huellas catastrales. Para las fachadas de las calles, la fecha declarada en Catastro orienta los acabados y las proporciones de los huecos cuando se conoce. Los alzados individuales siguen siendo aproximaciones. [Abrir el simulador](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador)
 
@@ -755,7 +765,7 @@ El Teatro Romano utiliza el modelo y la visita V8; el Castillo conserva el model
 
 - Arrastrar: orbitar. Rueda o pellizco: zoom. Botón derecho o dos dedos: desplazar.
 - **Apariencia:** Atlas oscuro o Lectura clara, también en los mapas.
-- **Castillo:** recorrido de 18 paradas, cronología y bibliografía. El avance es manual; las vistas cercanas siguen siendo orbitales.
+- **Castillo:** recorrido de 22 paradas, cronología y bibliografía. El avance es manual; el sector oriental añade puntos de observación próximos al suelo y plano ampliado.
 - **Lugares:** catálogo buscable, filtros por templos, vida urbana, cerro, arqueología, industria, ciudad factoría, costa y paisajes. Los números 1–29 conservan el orden de la selección del usuario.
 - **Sagunto / Puerto / Costa / Paisajes:** cambia entre seis maquetas; Paisajes permite seleccionar Marjal, Dunas o Palancia y sus mapas locales; mantiene la ubicación geográfica y escala métrica de cada ámbito.
 - **Puntos de observación:** cada nuevo conjunto ofrece encuadres de sus elementos principales.

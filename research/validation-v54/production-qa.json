@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "site": {
+    "projectId": "appgprj_6afeb5aaef8c8191b0062318fb3a24f1",
+    "version": 54,
+    "versionId": "appgprj_6afeb5aaef8c8191b0062318fb3a24f1~appgver_4e58f5f55f5081919193ad53d13c2676",
+    "sourceCommit": "5a3c3d935f4d15d85496f25d7e4495aac0679528",
+    "distTree": "078d8c01ab2494df3b2bda3a074e018859bd371f",
+    "deploymentId": "appgdep_6b095efb3830819183604531f3de27bb",
+    "status": "succeeded",
+    "url": "https://saguntum-atlas-3d.monmode.chatgpt.site",
+    "publishedAt": "2026-11-27T10:44:37.076598+00:00",
+    "audience": "public",
+    "archive": {
+      "archive_format": "tar",
+      "sediment_file_id": "file_00000000893c81f4ac408699e2b84789",
+      "content_hash": "sha256:9696a247347e05ea80473a12c62664e644532f19db83559d94c0d998350cbfaf",
+      "size_bytes": 267530240,
+      "file_count": 1651
+    },
+    "localArchive": {
+      "archiveBytes": 161149478,
+      "expandedBytes": 267540480,
+      "limitBytes": 268435456,
+      "marginBytes": 894976,
+      "files": 1651
+    }
+  },
+  "method": "Cloud browser UI on the published public Site. Separate CPU checks execute the shared Atlas/Simulator models, terrain masks, walkability and camera projections. Four final Blender CPU inspection images use real exported application buffers, textures and authored cameras.",
+  "checks": [
+    {
+      "id": "public-eastern-entry",
+      "pass": true,
+      "url": "https://saguntum-atlas-3d.monmode.chatgpt.site/#castle/almenara",
+      "observed": "SAGUNTUM identity and visit 16 preserved. Almenara is stop 11 of 22. Updated guide distinguishes evidence and discussion. Map shows Sector oriental, 13 nearby markers, scale 50 m."
+    },
+    {
+      "id": "public-four-new-stops",
+      "pass": true,
+      "stops": [
+        "almenara-bateria",
+        "almenara-aljibes",
+        "almenara-baluarte",
+        "almenara-dependencias"
+      ],
+      "observed": "Sequential controls opened battery 12, deposits 13 and dependencies 15; the map opened bastion 14. Each heading, numbering, source links and URL matched."
+    },
+    {
+      "id": "public-eastern-map",
+      "pass": true,
+      "observed": "Situar en el plano opens Recinto a recinto with all 22 selectable stop buttons. Sector oriental renders 13 nearby markers. Button 14 navigates to the bastion."
+    },
+    {
+      "id": "atlas-to-simulator",
+      "pass": true,
+      "url": "https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador/castle/almenara-dependencias",
+      "observed": "Simulator preserves stop 15 of 22. Selector includes six Almenara stops; dependencies selected."
+    },
+    {
+      "id": "simulator-to-atlas",
+      "pass": true,
+      "url": "https://saguntum-atlas-3d.monmode.chatgpt.site/#castle/almenara-dependencias",
+      "observed": "Visita patrimonial returns to the same stop and source-backed guide."
+    },
+    {
+      "id": "deliverable",
+      "pass": true,
+      "url": "https://saguntum-atlas-3d.monmode.chatgpt.site/#castle/almenara",
+      "observed": "Almenara overview left open and marked as deliverable. Temporary local preview tab closed."
+    },
+    {
+      "id": "source-provenance",
+      "pass": true,
+      "observed": "Saved version 54 uses the pushed source commit and locally packaged dist tree. Sites deployment succeeded, latest version 54 and public audience confirmed by get_site."
+    }
+  ],
+  "localVerification": {
+    "nativeChecks": 672,
+    "castleMeshes": 160,
+    "castleTriangles": 200785,
+    "atlasSimulatorRegistrationErrorMetres": 0,
+    "walkingSamplesPerConstructor": 219,
+    "walkingBlockages": 0,
+    "walkingPitEntries": 0,
+    "gateSamples": 207,
+    "mapScenarios": 9,
+    "normalCameraPoses": 48,
+    "closeCameraPoses": 10,
+    "globalPlaces": 33,
+    "castleStops": 22,
+    "castleSources": 36,
+    "otherPlaceRecordsUnchanged": 32
+  },
+  "limitations": [
+    "The review browser cannot create a WebGL 2 context. Published navigation, source guide, plans and Atlas/Simulator transitions were verified in fallback. No live GPU rendering or performance measurement is claimed.",
+    "Four final CPU renders use actual application geometry, texture data and authored cameras with Blender lighting. Minor pale triangular contact/material fragments remain near some southern ruin feet; numerical inspection finds no continuous floating gap.",
+    "Current feature footprints follow mapped and manually traced PNOA evidence. Some relative heights, damaged crowns, texture finishes and historical functions remain interpretive. No photogrammetric survey precision is claimed."
+  ],
+  "relatedReports": [
+    "README.md",
+    "east-evidence.md",
+    "east-layout.md",
+    "east-layout.json",
+    "castle-simulator-qa.json",
+    "castle-cameras-qa.json",
+    "east-ground-qa.json",
+    "east-map-qa.json",
+    "east-catalogue-qa.json",
+    "browser-qa.json",
+    "visual-review.json",
+    "render-inspection.json",
+    "geometry-review.md"
+  ]
+}

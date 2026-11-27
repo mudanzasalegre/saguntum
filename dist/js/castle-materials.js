@@ -7,11 +7,12 @@ const rand=n=>fract(Math.sin(n*127.13+43.7)*43758.5453);
 const mod=(n,m)=>(n%m+m)%m;
 export const CASTLE_TEXTURE_METRES={stone:[4.8,3.2],rubble:[3.8,2.9],tapial:[5.5,3.1],ashlar:[4.8,3.2],brick:[2.6,2.0],paving:[9.2,9.2],path:[2.1,2.1],tile:[2.3,2.7],
  'gate-stone':[4.2,3.0],'gate-brick':[1.8,1.5],plaster:[3.6,3.6],wood:[1.8,3.2],
- 'forum-earth':[5.4,5.4],'forum-gravel':[3.6,3.6],'forum-stone':[3.2,2.4],'worn-ashlar':[2.8,2.8]};
+ 'forum-earth':[5.4,5.4],'forum-gravel':[3.6,3.6],'forum-stone':[3.2,2.4],'worn-ashlar':[2.8,2.8],
+ 'east-masonry':[3.8,2.7],'east-render':[3.8,3.4],'east-rock':[4.6,3.0],'east-earth':[4.8,4.8]};
 
-const detailedKinds=new Set(['gate-stone','gate-brick','plaster','wood','forum-earth','forum-gravel','forum-stone','worn-ashlar']);
+const detailedKinds=new Set(['gate-stone','gate-brick','plaster','wood','forum-earth','forum-gravel','forum-stone','worn-ashlar','east-masonry','east-render','east-rock','east-earth']);
 function detailedTexture(kind){
- const size=512,pixels=new Uint8Array(size*size*4),masonry=kind==='gate-stone'||kind==='forum-stone';
+ const size=512,pixels=new Uint8Array(size*size*4),masonry=kind==='gate-stone'||kind==='forum-stone'||kind==='east-masonry';
  const cols=14,rows=12,cells=[];
  if(masonry)for(let row=0;row<rows;row++)for(let col=0;col<cols;col++){
   const seed=row*83+col*17;
@@ -43,6 +44,16 @@ function detailedTexture(kind){
    const row=Math.floor(v*18),xx=mod(u*7+(row%2)*.5,1),yy=mod(v*18,1),joint=xx<.038||yy<.11;
    value=(joint?.83:.77+rand(Math.floor(u*7+(row%2)*.5)+row*37)*.10)+(fine-.5)*.07+(grain-.5)*.06;
    green=joint?1:.94;blue=joint?.98:.87;
+  }else if(kind==='east-rock'){
+   // Original limestone grain and inclined bedding; the actual ledges are
+   // geometry. This is a material study, not a geological field measurement.
+   const seam=mod(v*8.5+u*1.35+(weather-.5)*.26,1),crack=seam<.04;
+   value=.83+(weather-.5)*.16+(fine-.5)*.12+(grain-.5)*.07-(crack?.17:0);
+   green=.995;blue=.965;
+  }else if(kind==='east-render'){
+   const eroded=weather<.30,run=smooth(u*.65,v,16);
+   value=.86+(weather-.5)*.14+(fine-.5)*.08+(grain-.5)*.075-(eroded?.11:0)-(run<.2?.05:0);
+   green=.98;blue=.92;
   }else if(kind==='plaster'){
    const flake=weather<.24;
    value=.86+(weather-.5)*.12+(fine-.5)*.065+(grain-.5)*.05-(flake?.10:0);

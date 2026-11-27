@@ -1,5 +1,28 @@
 # Sincronización de Sites a GitHub
 
+## Versión 54 · Recinto oriental de Almenara
+
+El 27 de noviembre de 2026 se publicó la ampliación de la Plaza de Almenara y sus laderas en el Site original, conservando el acceso público. El despliegue `appgdep_6b095efb3830819183604531f3de27bb` terminó con estado `succeeded`.
+
+| Evidencia | Valor |
+| --- | --- |
+| Fuente publicada en Sites | `5a3c3d935f4d15d85496f25d7e4495aac0679528` |
+| Árbol Git de la aplicación `dist/` | `078d8c01ab2494df3b2bda3a074e018859bd371f` |
+| Archivo registrado por Sites | 1651 archivos, 267530240 bytes |
+| Huella del contenido registrado | `sha256:9696a247347e05ea80473a12c62664e644532f19db83559d94c0d998350cbfaf` |
+
+[Almenara publicada](https://saguntum-atlas-3d.monmode.chatgpt.site/#castle/almenara) · [Batería norte](https://saguntum-atlas-3d.monmode.chatgpt.site/#castle/almenara-bateria) · [Aljibes](https://saguntum-atlas-3d.monmode.chatgpt.site/#castle/almenara-aljibes) · [Baluarte](https://saguntum-atlas-3d.monmode.chatgpt.site/#castle/almenara-baluarte) · [Dependencias](https://saguntum-atlas-3d.monmode.chatgpt.site/#castle/almenara-dependencias) · [Investigación](../research/validation-v54/east-evidence.md) · [Validación](../research/validation-v54/README.md)
+
+El modelo incorpora cuatro plataformas, cuatro ruinas con interiores diferenciados, ocho trazas, tres áreas de roca y una proyección semicircular adosada. Las defensas norte y nordeste distinguen merlones perforados, escalera, adarve y troneras anchas; el flanco sur conserva la silueta quebrada sobre roca. Los depósitos tienen fondo, revestimiento y coronación continua. El suelo interior y las conexiones con la puerta se ajustaron para suprimir montículos y cruces con muros sin aplanar las laderas exteriores.
+
+Se añadieron las paradas **12–15**: batería norte, depósitos de agua, baluarte y dependencias. El Castillo tiene **22 paradas**, siete recintos y 36 fuentes en su guía. Se mantienen los **33 lugares** y su orden Sagunto/Puerto/resto; los 32 registros ajenos al Castillo conservan sus contenidos. El plano oriental usa una escala de 50 m y dispone de acercamientos específicos para Almenara y las cuatro nuevas paradas.
+
+La validación aprueba 672 comprobaciones del constructor real; Atlas y Simulador tienen registro idéntico, sin diferencias geométricas. Se revisaron 219 muestras de los caminos por constructor, 207 del paso de Almenara, 48 poses normales, diez cercanas y nueve escenarios del plano. Las cuatro vistas CPU finales usan las 160 mallas y 200.785 triángulos del Castillo exportados de la aplicación; muestran el fondo del aljibe y la coronación corregida. La revisión pública comprobó las cuatro nuevas paradas, su acceso desde el plano y la ida y vuelta Atlas → Simulador → Atlas. El navegador de revisión no dispone de WebGL 2; no se atribuye una prueba gráfica GPU ni de rendimiento a esta comprobación. [Registro público](../research/validation-v54/production-qa.json)
+
+Las huellas siguen la cartografía y la ortofoto PNOA, contrastadas con fotografías, el Plan Director, el inventario de cisternas y documentación militar. Las alturas relativas, los acabados y la asignación funcional de varias ruinas siguen expresamente interpretados. No se reconstruye como conocido un palacio hipotético ni se convierten en obras ejecutadas todas las propuestas de los planos históricos.
+
+El paquete local tiene 267540480 bytes expandidos, con 894976 bytes de margen frente a 256 MiB. La publicación conserva el mismo modelo en Atlas y Simulador.
+
 ## Versión 53 · Puerta y circo romano completo
 
 El 27 de noviembre de 2026 se publicó la capa histórica del Circo Romano en el Site original, conservando su acceso público. El despliegue `appgdep_6b0950a076708191bfd3d258a6e91fe2` terminó con estado `succeeded`.

@@ -6,6 +6,7 @@
 import {polygonDistance} from './urban-surface.js';
 import {FORUM_SURFACE_DEFS} from './castle-forum.js';
 import {ALMENARA_SPEC} from './castle-almenara.js';
+import {createEastGround} from './castle-east-ground.js';
 
 export const castleForumCoordinates=FORUM_SURFACE_DEFS.find(p=>p.id==='foro').coordinates;
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
@@ -30,6 +31,8 @@ export function createCastleGround({project,heightAt}){
  }
  const allPoints=sectors.flatMap(p=>p.polygon);
  for(const u of[-gateHalf-gateMargin,gateHalf+gateMargin])for(const v of[-departure-gateMargin,approach+gateMargin])allPoints.push(gateWorld(u,v));
+ const east=createEastGround({project,forumLevel:level,gate:{...gp,yaw,depth,departure,halfWidth:gateHalf,margin:gateMargin,world:gateWorld,profile:gateProfile}});
+ for(const x of[east.bounds.minX,east.bounds.maxX])for(const z of[east.bounds.minZ,east.bounds.maxZ])allPoints.push({x,z});
  const bounds={minX:Math.min(...allPoints.map(p=>p.x))-margin,maxX:Math.max(...allPoints.map(p=>p.x))+margin,
   minZ:Math.min(...allPoints.map(p=>p.z))-margin,maxZ:Math.max(...allPoints.map(p=>p.z))+margin};
  function forumTarget(x,z){
@@ -43,6 +46,7 @@ export function createCastleGround({project,heightAt}){
  }
  function grade(x,z,raw){
   if(x<bounds.minX||x>bounds.maxX||z<bounds.minZ||z>bounds.maxZ)return raw;
+  raw=east.grade(x,z,raw);
   const forum=forumTarget(x,z);
   // An interval cap is idempotent. Adjacent levels blend across their shared
   // excavation banks; the unmodified hillside is recovered outside the margin.
@@ -64,10 +68,14 @@ export function createCastleGround({project,heightAt}){
   return [center,...sector.polygon.map(p=>({x:center.x+(p.x-center.x)*.35,z:center.z+(p.z-center.z)*.35}))];
  });
  probes.push(gateWorld(0,-depth/2));
+ // Edge samples next to the excavated curia lie on interpolated banks, not a
+ // walking plane. Keep the existing forum probes and use eastern interior
+ // points to recognise a final mesh without re-grading those banks.
+ probes.push(...east.probes.filter(p=>sectors.every(sector=>polygonDistance(p.x,p.z,sector.polygon)>margin+2)));
  const pregraded=probes.every(p=>Math.abs(heightAt(p.x,p.z)-grade(p.x,p.z,heightAt(p.x,p.z)))<.16);
  const surfaceHeight=(x,z,raw=heightAt(x,z))=>pregraded?raw:grade(x,z,raw);
  const sample=(x,z)=>surfaceHeight(x,z,heightAt(x,z));
- return {polygon,bounds,level,margin,sectors,pregraded,surfaceHeight,sample,
+ return {polygon,bounds,level,margin,sectors,pregraded,surfaceHeight,sample,east,
   almenara:{...gp,yaw,frontLevel,rearRise,depth,approach,departure,halfWidth:gateHalf,profile:gateProfile,world:gateWorld},
-  method:'Forum and archaeological floors: local relative levels from photographed remains, anchored to the existing IGN south/east edge; curia platform built separately; Almenara passage graded continuously; elevations are interpretive, not a new archaeological survey'};
+  method:'Forum and archaeological floors: local relative levels from photographed remains, anchored to the existing IGN south/east edge; curia platform built separately; Almenara passage and eastern paths graded continuously; eastern courtyards retain small relief and outer slopes retain source MDT; elevations are interpretive, not a new archaeological survey'};
 }

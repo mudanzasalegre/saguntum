@@ -304,7 +304,10 @@ export async function buildHeritageModel(id,{places,records,area,heightAt,projec
  const made=module[func](options);
  const sites=made.sites||{[id]:made.isObject3D?{group:made}:made};
  const local=made.isObject3D?made:made.group;
- if(castleGround)local.userData.ground=castleGround;
+ if(castleGround){
+  local.userData.ground=castleGround;
+  sites.castle.currentMasks=local.userData.currentMasks||[];
+ }
  if(id==='berenguer'&&made.dianaSite){
   sites.diana=made.dianaSite;
   local.attach(made.dianaSite.group);

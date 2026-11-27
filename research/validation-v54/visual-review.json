@@ -1,0 +1,35 @@
+{
+  "actualBuffers": true,
+  "replacementGeometry": false,
+  "webglCapture": false,
+  "device": "CPU",
+  "threads": 8,
+  "samples": 24,
+  "resolution": [
+    1280,
+    960
+  ],
+  "castleMeshes": 160,
+  "castleTriangles": 200785,
+  "contextMeshes": 1389,
+  "colorTextures": 100,
+  "sourceHashesMatchCurrent": true,
+  "changedSourcesAfterCapture": [],
+  "finalImages": [
+    "castillo-oriente-general.jpg",
+    "castillo-oriente-bateria.jpg",
+    "castillo-oriente-aljibes.jpg",
+    "castillo-oriente-dependencias.jpg"
+  ],
+  "passed": [
+    "Interior and floor visible from authored cistern close camera",
+    "No open dark seam at cistern crown corner",
+    "Roofless southern remains readable against the new ground",
+    "North stairs and parapets visible from courtyard",
+    "Eastern enclosure and lower terrain remain legible in context"
+  ],
+  "minorObservation": "Small pale triangular fragments remain visible near the southern ruin feet. No continuous floating gap was found; do not move the ruin based on shadow alone.",
+  "initialRegressionImage": "initial-review/castillo-almenara-frente.jpg",
+  "initialBottomScreening": "initial-review/cpu-bottom-gaps.json",
+  "createdAt": "2026-11-27T10:41:39.422629+00:00"
+}

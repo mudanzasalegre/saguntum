@@ -1,0 +1,115 @@
+{
+  "method": "Blender Cycles CPU inspection of exported Three.js buffers, CanvasTextures and DataTextures; not a WebGL capture",
+  "createdAt": "2026-11-27T10:39:11Z",
+  "blender": "4.3.2",
+  "samples": 24,
+  "denoising": false,
+  "device": "CPU",
+  "threads": 8,
+  "resolution": [
+    1280,
+    960
+  ],
+  "sourceGeometryReplacement": false,
+  "sourceInput": "/workspace/scratch/53242b8b9a77/east-v54/model.json.gz",
+  "rendererSha256": "238d8977e58b6531aab5b006afe2a9de8545c678774986951333e5ae433b47ca",
+  "sourceHashes": {
+    "dist/js/castle-almenara.js": "172f30f459d71afab07e13820a326391e24b21973b58ed81025a2a6b399503f9",
+    "dist/js/castle-east-cameras.js": "4427f3675ac7bf7ea337b987f54c79061054fa36cbdb2aca57439ed9a8059da8",
+    "dist/js/castle-east-ground.js": "febc63fcc50ce798b27f39c273f9fa432961f09bc07bfa54cd583fb085cb74c6",
+    "dist/js/castle-east-layout.js": "ec939fe5a8d857711a2ab8a66be68a79081c72026fc5310264bc34ae867e5c9f",
+    "dist/js/castle-east-rock.js": "8f42274f4a03336ece21e81d0e98ec98563ca1761cc8136b3ec002dd4c064223",
+    "dist/js/castle-east.js": "cc2d2d57ae888b401b3d297694c8bb65bd0df63b6bda44289d53fb2c9f7a55b8",
+    "dist/js/castle-forum.js": "aace8d3649720b189d084efe924220543c5716a87b31546740b4ba99f77824d1",
+    "dist/js/castle-ground.js": "4c53ce178489bbe53d12ccb58edee69d5fdc04be47017013ee224e93dc1e1e5e",
+    "dist/js/castle-map.js": "ff7fa41aeab755abde05f57cd84538d2b2013047fdd37c61cff0d5424df20248",
+    "dist/js/castle-materials.js": "041e69c3e0c2d88c0980c8a8fa0996b8be7e83e4397135cf6eb6f5bbd0391cef",
+    "dist/js/castle-panel.js": "f1c34c5b085137ae8d98b994f8609d75ca99fde90b696a11ae53d78ea17670be",
+    "dist/js/castle.js": "a14aed1a25e3dd1479de1dc1ad3b5c5c4e6b2d01f8a6bbc34e958e89118d1680",
+    "dist/js/monuments.js": "ce10354ba856f3ca369d12624d11f40782e9e4b4777ebaae906cacf73154f688",
+    "dist/assets/data/castle-visit.json": "755b2f727108f0e5febc770488bc957a51363217a7a080db5a88268d42bc91fa",
+    "dist/js/terrain.js": "199e257e1398562b01cccd1ee0fe285a6f6655b73b1c552cb3747787d240a278",
+    "dist/js/urban-surface.js": "fa2c95b186e19787cc37eb566e9ebc6b44ecbb85cb27ee7119cdfb344247fe98",
+    "dist/js/excavation.js": "d663478846fecdb683c0c3f1c66049b57772fd4d412f9f32662280d25fffb657",
+    "dist/js/city.js": "d6a70683a21973dc3c9d0df85e6eda0093b19afcd331ee188acca59eafdc51fa",
+    "dist/assets/data/elevation.json": "3c70059cb1f8de706bc7e6912311076cb716ec2ff7f1c8aa2b6e51a520809d8c",
+    "dist/assets/data/cartography.json": "a2b02f3311dfc3cc4b0a162400508364ce41f9ea875e77638e983e5065b23340",
+    "dist/assets/data/orthophoto.jpg": "4af0699d220992253881bd8fcbfcb85f73e84f4a224efec4653a183f50e1cf71"
+  },
+  "images": [
+    {
+      "file": "castillo-oriente-general.jpg",
+      "camera": {
+        "name": "castillo-oriente-general",
+        "position": [
+          306.8403300209726,
+          221.06095645547913,
+          381.86773200005365
+        ],
+        "target": [
+          204.8403300209726,
+          137.06095645547913,
+          276.86773200005365
+        ],
+        "fov": 50
+      },
+      "sha256": "8b2fb83f5d3ce916f655af102c81ad4dab03883e58b9b4f61ff3b79fac59f995"
+    },
+    {
+      "file": "castillo-oriente-bateria.jpg",
+      "camera": {
+        "name": "castillo-oriente-bateria",
+        "position": [
+          212.89713596166538,
+          136.9953327561203,
+          273.5794400002805
+        ],
+        "target": [
+          227.89713596166538,
+          135.62872452097042,
+          249.5794400002805
+        ],
+        "fov": 58
+      },
+      "sha256": "96e82638a9600eebae5ec85295d74b94cedfc431db80820924112f4f15022590"
+    },
+    {
+      "file": "castillo-oriente-aljibes.jpg",
+      "camera": {
+        "name": "castillo-oriente-aljibes",
+        "position": [
+          199.42712908946177,
+          137.74689923142023,
+          280.38168400034436
+        ],
+        "target": [
+          200.88361454485494,
+          134.60760387559483,
+          278.52263999997575
+        ],
+        "fov": 58,
+        "authoredVisitCamera": true,
+        "focusId": "almenara-aljibes"
+      },
+      "sha256": "e932827b2bb62943b4155ff1f7783b93146860e71e8392b33820d36a76f6b09c"
+    },
+    {
+      "file": "castillo-oriente-dependencias.jpg",
+      "camera": {
+        "name": "castillo-oriente-dependencias",
+        "position": [
+          167.31906224351846,
+          146.57569274902343,
+          314.8392800002856
+        ],
+        "target": [
+          179.31906224351846,
+          139.57569274902343,
+          328.8392800002856
+        ],
+        "fov": 56
+      },
+      "sha256": "f47539a10639d3c70aad2b225c6646098602fc9efddac316fa84236646e995e6"
+    }
+  ]
+}

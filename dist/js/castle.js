@@ -3,6 +3,9 @@ import {createCastleTexture,CASTLE_TEXTURE_METRES} from './castle-materials.js';
 import {ALMENARA_SPEC,buildAlmenara} from './castle-almenara.js';
 import {buildForum,FORUM_REPLACED_WALL_IDS} from './castle-forum.js';
 import {createCastleGround} from './castle-ground.js';
+import {buildCastleEast,EAST_REPLACED_BUILDING_IDS,isEastPerimeterSegment} from './castle-east.js';
+import {EAST_STOPS,EAST_REPLACED_WALL_IDS,EAST_ROUTE_DEFS} from './castle-east-layout.js';
+import {applyEastCamera} from './castle-east-cameras.js';
 
 // Present-day castle fabric. Plans: OSM / PNOA; structure identification: municipal
 // Plan Director (2000), Aranegui and FORTMED (2020). Heights are visual estimates.
@@ -16,7 +19,8 @@ export const castleBuildingIds=new Set(MAPPED_BUILDINGS.map(b=>b.id));
 const TAU=Math.PI*2,clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 const noise=n=>{const v=Math.sin(n*127.13+43.7)*43758.5453;return v-Math.floor(v);};
 const COLORS={stone:'#c7b99e',ashlar:'#dfd4bd',rubble:'#b6aa90',tapial:'#c3b08a',brick:'#bd9276',mortar:'#8e8470',paving:'#bdb39d',path:'#c7b998',roof:'#a99d87',tile:'#b88769',metal:'#575e55',glass:'#424b45',wood:'#807157',
- 'gate-stone':'#c5b9a3','gate-brick':'#be9576',plaster:'#c9b58b','forum-earth':'#b7a78f','forum-gravel':'#c0b39c','forum-stone':'#d2cbbb','worn-ashlar':'#ded9cd'};
+ 'gate-stone':'#c5b9a3','gate-brick':'#be9576',plaster:'#c9b58b','forum-earth':'#b7a78f','forum-gravel':'#c0b39c','forum-stone':'#d2cbbb','worn-ashlar':'#ded9cd',
+ 'east-masonry':'#c3bba8','east-render':'#c5b391','east-rock':'#bcb7a6','east-earth':'#b9ad94','east-scrub':'#707951','dry-grass':'#a19769'};
 const PERIOD_COLORS={ancient:'#e1c18b',medieval:'#8ad3ca',modern:'#f0b192',unknown:'#c0cbc9'};
 const ROMAN_WALL_IDS=new Set(['733215272','733215273','733215274','733215275','733215276','733215277','733215278','733215279','733215280','733215281','733215282','733215283','733215284','733215285','733215286','1199456162','1199456163','1419350908','1419350909','1419350910','1419350911','1419350912','1419350913','1419350914']);
 // Precinct limits are a visitor-oriented segmentation of the mapped footprint,
@@ -42,6 +46,10 @@ const DEFAULT_STOPS=[
  ['inscripcion','El pavimento y su inscripción','armas',[-.27658,39.676],16],
  ['puerta-almenara','Puerta de Almenara','almenara',[-.2762665022,39.676214945],15],
  ['almenara','Plaza de Almenara','almenara',[-.2758659,39.6764949],80],
+ ['almenara-bateria','Las baterías del norte','almenara',[-.27534,39.676758],26],
+ ['almenara-aljibes','Depósitos y reserva de agua','almenara',[-.2756553,39.676498],10],
+ ['almenara-baluarte','El baluarte oriental','almenara',[-.27499,39.676712],25],
+ ['almenara-dependencias','Las dependencias de Almenara','almenara',[-.275907,39.676046],16],
  ['conejera','Plaza de la Conejera','conejera',[-.2765862,39.676737],65],
  ['puerta-san-fernando','Puerta de San Fernando','san-fernando',[-.2780262,39.6759438],18],
  ['san-fernando','Plaza de San Fernando','san-fernando',[-.2798156,39.6756028],115],
@@ -213,6 +221,7 @@ export function createCastle({project,heightAt,data={},visitData=data.castleVisi
  for(let i=0;i<world.length-1;i++){
   const a=world[i],b=world[i+1],cx=(a.x+b.x)/2,cz=(a.z+b.z)/2,r=regionAt(cx,cz),length=Math.hypot(b.x-a.x,b.z-a.z);
   if(length<.07)continue;
+  if(isEastPerimeterSegment(outline[i],outline[i+1])){perimeterArc+=length;stats.perimeterLengthM+=length;continue;}
   const nx=-(b.z-a.z)/length,nz=(b.x-a.x)/length,inward=inside(cx+nx*3,cz+nz*3,world)?1:-1,northFace=-inward*nz<-.34,southFace=-inward*nz>.34;
   let height=4.3,thickness=2.25,fabric='stone',crown=null,broken=true;
   if(r==='dos-mayo'){height=northFace?4.25:4.85;thickness=2.9;if(northFace)crown={height:.91,spacing:1.92,width:.84,slits:true,loss:.04};}
@@ -239,6 +248,7 @@ export function createCastle({project,heightAt,data={},visitData=data.castleVisi
  const allWays=data.castleWalls||[];
  for(const source of allWays){
   if(FORUM_REPLACED_WALL_IDS.has(String(source.id)))continue;
+  if(EAST_REPLACED_WALL_IDS.includes(String(source.id)))continue;
   const coords=source.coordinates||source.geometry?.coordinates;if(!coords?.length)continue;
   let accepted=false;const points=coords.map(c=>project(...c));
   const roman=ROMAN_WALL_IDS.has(source.id),tabernae=source.name==='Tavernae';
@@ -279,7 +289,7 @@ export function createCastle({project,heightAt,data={},visitData=data.castleVisi
   batch.raw(key,positions,.97);qa.surfaces.push({component,offset,box:{x0,x1,z0,z1},sampled:true});
  }
  // Mapped pedestrian tracks are independent of the circuit's camera jumps.
- const roads=MAPPED_ROADS.map(r=>(data.roads||[]).find(s=>s.id===r.id)||r);
+ const roads=MAPPED_ROADS.map(r=>EAST_ROUTE_DEFS.find(s=>s.id===r.id)||(data.roads||[]).find(s=>s.id===r.id)||r);
  for(const road of roads){
   const line=road.coordinates.map(c=>project(...c)),width=road.id==='733215257'?2.4:road.kind==='steps'?1.25:road.surface==='paved'?2.5:2.05;
   for(let k=0;k<line.length-1;k++){
@@ -289,6 +299,15 @@ export function createCastle({project,heightAt,data={},visitData=data.castleVisi
     const polygon=[{x:ax+nx*width/2,z:az+nz*width/2},{x:bx+nx*width/2,z:bz+nz*width/2},{x:bx-nx*width/2,z:bz-nz*width/2},{x:ax-nx*width/2,z:az-nz*width/2}],p=[];
     for(const piece of outsideGateFloor(polygon))for(let j=1;j<piece.length-1;j++)drapedTriangle(piece[0],piece[j],piece[j+1],p,.095,1.4,'caminos');
     batch.raw(keyFor(regionAt(cx,cz),'caminos','modern','path'),p,.92+noise(i+k*13)*.09);
+    if(['180732342','733215256'].includes(road.id)){
+     // The 9.5 cm visual clearance keeps tracks above the terrain. Give their
+     // edges a shallow gravel shoulder so the surface does not look suspended.
+     const sides=[];for(const sign of[-1,1]){
+      const a={x:ax+nx*width/2*sign,z:az+nz*width/2*sign},b={x:bx+nx*width/2*sign,z:bz+nz*width/2*sign};
+      const side=[[a.x,heightAt(a.x,a.z)-.035,a.z],[b.x,heightAt(b.x,b.z)-.035,b.z],[b.x,heightAt(b.x,b.z)+.095,b.z],[a.x,heightAt(a.x,a.z)+.095,a.z]];
+      quad(sides,...(sign>0?side:side.reverse()));
+     }batch.raw(keyFor('almenara','east-path-edges','modern','east-earth'),sides,.94);
+    }
     qa.routes.push({roadId:road.id,x:cx,z:cz,height:heightAt(cx,cz)+.095,width});stats.routeSegments++;stats.routeLengthM+=l/n;
     if(road.kind==='steps'&&detail==='full'){
      const rise=Math.abs(heightAt(bx,bz)-heightAt(ax,az));if(rise>.14)batch.box(keyFor(regionAt(cx,cz),'escalones','modern','ashlar'),cx,Math.max(heightAt(ax,az),heightAt(bx,bz))+.10,cz,width,.16,.22,-Math.atan2(dz,dx)+Math.PI/2,.94);
@@ -424,6 +443,7 @@ export function createCastle({project,heightAt,data={},visitData=data.castleVisi
  }
  const buildings=MAPPED_BUILDINGS.map(b=>(data.buildings||[]).find(s=>s.id===b.id)||b);
  for(const building of buildings){
+  if(EAST_REPLACED_BUILDING_IDS.has(String(building.id)))continue;
   let poly=from(building.coordinates);if(poly.length>2&&Math.hypot(poly[0].x-poly.at(-1).x,poly[0].z-poly.at(-1).z)<.02)poly=poly.slice(0,-1);
   const center={x:poly.reduce((s,p)=>s+p.x,0)/poly.length,z:poly.reduce((s,p)=>s+p.z,0)/poly.length},regionId=regionAt(center.x,center.z),ruin=building.kind==='ruins',component=building.id==='180732338'?'antiquarium':'edificio-'+building.id;
   if(ruin){wall([...poly,poly[0]],{height:building.id==='733215260'?2.2:1.1,thickness:.8,component,regionId,gateCuts:false,seed:Number(building.id)%217});stats.mappedBuildings++;continue;}
@@ -453,9 +473,10 @@ export function createCastle({project,heightAt,data={},visitData=data.castleVisi
   }
   qa.buildings.push({id:building.id,component,base,top:roof.ridgeHeight,eaveHeight:top,terrainMaximum:Math.max(...poly.map(p=>heightAt(p.x,p.z))),period,roof,polygon:poly});stats.mappedBuildings++;
  }
+ const east=buildCastleEast({THREE,batch,keyFor,project,heightAt,ground:localGround,outline,qa,stats,detail});
  const resources=batch.finish(group);
  for(const mesh of group.children)if(mesh.isMesh){const d=mesh.userData;
-  d.publicWalkingSurface=d.component==='almenara-suelo'&&d.materialKind==='path'||d.component==='foro'&&d.materialKind==='forum-earth';
+  d.publicWalkingSurface=d.component==='almenara-suelo'&&d.materialKind==='path'||d.component==='foro'&&d.materialKind==='forum-earth'||d.component.endsWith('-floor')&&d.materialKind==='east-earth'||d.component==='east-stairs'&&d.materialKind==='worn-ashlar';
  }
  group.updateMatrixWorld(true);
  const bounds=new THREE.Box3().setFromObject(group),regions=REGION_DEFS.map(region=>{
@@ -464,6 +485,7 @@ export function createCastle({project,heightAt,data={},visitData=data.castleVisi
  });
  const focuses={},sourceStops=new Map((visitData?.stops||[]).map(stop=>[stop.id,stop]));
  const componentFor={acceso:['acceso'],'puerta-almenara':['puerta-almenara','almenara-suelo'],'puerta-san-fernando':['puerta-san-fernando'],foro:['foro','templo','curia','basilica','tabernae'],templo:['templo'],curia:['curia'],basilica:['basilica'],'cisterna-foro':['cisterna-foro'],'cisterna-norte':['templo'],inscripcion:['foro'],antiquarium:['antiquarium']};
+ for(const stop of EAST_STOPS)componentFor[stop.id]=stop.featureIds.flatMap(id=>[id,id+'-floor']);
  for(const[id,label,regionId,coordinates,radius]of DEFAULT_STOPS){
   const source=sourceStops.get(id),coord=source?.coordinate||source?.coordinates||coordinates,p=project(...coord),target=new THREE.Vector3(p.x,heightAt(p.x,p.z)+2.2,p.z);
   let focusBounds=new THREE.Box3();
@@ -483,7 +505,8 @@ export function createCastle({project,heightAt,data={},visitData=data.castleVisi
   if(id==='puerta-san-fernando'){offset.splice(0,3,34,24,11);closeOffset.splice(0,3,19,11,7);}
   // Clamp both camera heights to the supplied mesh for every preset.
   for(const v of[offset,closeOffset])v[1]=Math.max(v[1],heightAt(target.x+v[0],target.z+v[2])+4-target.y);
-  focuses[id]={id,label:source?.title||source?.label||label,regionId,coordinates:coord,target,offset,closeOffset,bounds:focusBounds,sourceConfidence:source?.coordinateConfidence||'approximate documented sector',components:componentFor[id]||[],kind:REGION_DEFS.some(r=>r.id===id)?'precinct':id==='conjunto'?'overview':'feature'};
+  const eastCamera=applyEastCamera({id,target,offset,closeOffset,heightAt,project,eastQA:qa.east});
+  focuses[id]={id,label:source?.title||source?.label||label,regionId,coordinates:coord,target,offset,closeOffset,bounds:focusBounds,sourceConfidence:source?.coordinateConfidence||'approximate documented sector',components:componentFor[id]||[],kind:REGION_DEFS.some(r=>r.id===id)?'precinct':id==='conjunto'?'overview':'feature',...eastCamera};
  }
  // Subtle ground ring marks the selected *visit point*; it does not pretend to
  // outline an excavation for which no georeferenced plan exists.
@@ -506,6 +529,6 @@ export function createCastle({project,heightAt,data={},visitData=data.castleVisi
  }
  function setReadingMode(mode){readingMode=mode==='periods'?'periods':'materials';applyMaterials();return readingMode;}
  stats.triangles=0;stats.meshes=0;group.traverse(o=>{if(o.isMesh){stats.meshes++;stats.triangles+=(o.geometry.index?.count||o.geometry.attributes.position.count)/3;}});
- group.userData={id:'castle',label:'Castillo de Sagunto',interpretation:true,cartographicOutline:true,visit:{focuses,regions,bounds,stats,selectFocus,setReadingMode,getState:()=>({selected,readingMode}),qa},ownedResources:{materials:resources.materials,textures:resources.textures},metadata:{plan:'Mapped present-day footprint and walls',fabric:'Surviving temple foundations distinguished from restitutions; three curia steps and fragment groups; thin Almenara facade with chamber, rear arch and physical openings; mixed masonry curtains and current precincts',elevations:'Approximate from photographs; footprints mapped; telegraph width 5.7 m from IPCE inventory; no complete historical reconstruction',cisternaNorte:'Sector focus only; no invented footprint',selection:'Camera itinerary; not a walking accessibility route'}};
+ group.userData={id:'castle',label:'Castillo de Sagunto',interpretation:true,cartographicOutline:true,currentMasks:east.currentMasks,vegetationExclusions:east.vegetationExclusions,visit:{focuses,regions,bounds,stats,selectFocus,setReadingMode,getState:()=>({selected,readingMode}),qa,plan:{east:east.qa}},ownedResources:{materials:resources.materials,textures:resources.textures},metadata:{plan:'Mapped present-day footprint and walls; eastern batteries, open remains and rock bands registered to current PNOA',fabric:'Surviving temple foundations distinguished from restitutions; three curia steps and fragment groups; thin Almenara facade with chamber, rear arch and physical openings; eastern roofless terraces, perforated north merlons, broad NE embrasures, small outward round projection, lined open tank and discontinuous rock',elevations:'Approximate from photographs; footprints mapped; telegraph width 5.7 m from IPCE inventory; no complete historical reconstruction',cisternaNorte:'Sector focus only; no invented footprint',selection:'Camera itinerary; not a walking accessibility route'}};
  return group;
 }
