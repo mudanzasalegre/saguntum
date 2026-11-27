@@ -1,11 +1,18 @@
 import {createUrbanSurface} from './urban-surface.js';
-import {excavationTriangles,triangleCut} from './polygon-excavation.js';
+import {excavationOutline,excavationTriangles,triangleCut} from './polygon-excavation.js';
 
 export function territorialCut(cut,frame){
  const {x,z}=cut.center,c=Math.cos(cut.yaw||0),s=Math.sin(cut.yaw||0),p=frame.world(x,z);
  const u=frame.world(x+c*cut.width/2,z-s*cut.width/2),v=frame.world(x+s*cut.depth/2,z+c*cut.depth/2);
  const ux=u.x-p.x,uz=u.z-p.z,vx=v.x-p.x,vz=v.z-p.z,det=ux*vz-uz*vx;
  return [p.x,p.z,vz/det,-vx/det,-uz/det,ux/det];
+}
+
+export function territorialWindow(cut,frame){
+ const rect=territorialCut(cut,frame),outline=excavationOutline(cut);
+ if(!outline.length)return rect;
+ return {rect,outline:outline.map(p=>frame.world(p.x,p.z)),
+  triangles:excavationTriangles(cut).map(t=>triangleCut(t,p=>frame.world(p.x,p.z))).filter(Boolean)};
 }
 
 export function reliefDelta(p,x,z){

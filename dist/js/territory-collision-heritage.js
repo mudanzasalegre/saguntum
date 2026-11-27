@@ -6,7 +6,7 @@ import {indexBounds,nearCell,segmentFraction} from './territory-collision.js';
 // The source mesh is only read when the model loads; walking uses these lines.
 const levels=[.55,1.35,2.2];
 const decoration=/foliage|leaves|grass|planting|flower|canopy-leaf|copa|hojas|matorral|guijarros|tornillería|^leaf(?:Light|Dark|Red)?$/i;
-function* segments(group,heightAt) {
+function* segments(group,heightAt,includeMesh=()=>true) {
   const result=[],a=group.position.clone(),b=a.clone(),c=a.clone(),p=a.clone(),q=a.clone();
   const local=group.matrix.clone(),matrix=local.clone(),terrain=new Map();
   function ground(x,z){
@@ -62,7 +62,7 @@ function* segments(group,heightAt) {
   group.updateWorldMatrix(true,true);
   const meshes=[];
   group.traverseVisible(mesh=>{
-    if(mesh.isMesh&&!mesh.userData.territoryInstances&&!decoration.test(mesh.userData.materialKind||mesh.name))meshes.push(mesh);
+    if(mesh.isMesh&&!mesh.userData.territoryInstances&&!decoration.test(mesh.userData.materialKind||mesh.name)&&includeMesh(mesh))meshes.push(mesh);
   });
   let count=0;
   for(const mesh of meshes){
@@ -82,8 +82,8 @@ function* segments(group,heightAt) {
   return new Float32Array(result);
 }
 
-export function sampleHeritageBarriers(group,heightAt){
-  const work=segments(group,heightAt);
+export function sampleHeritageBarriers(group,heightAt,includeMesh){
+  const work=segments(group,heightAt,includeMesh);
   let step;
   do{step=work.next();}while(!step.done);
   return step.value;

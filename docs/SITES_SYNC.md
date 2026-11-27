@@ -1,5 +1,26 @@
 # Sincronización de Sites a GitHub
 
+## Versión 53 · Puerta y circo romano completo
+
+El 27 de noviembre de 2026 se publicó la capa histórica del Circo Romano en el Site original, conservando su acceso público. El despliegue `appgdep_6b0950a076708191bfd3d258a6e91fe2` terminó con estado `succeeded`.
+
+| Evidencia | Valor |
+| --- | --- |
+| Fuente publicada en Sites | `3d3d523247d827acbec8b0debc333a1a85114019` |
+| Árbol Git de la aplicación `dist/` | `04503fd37e06c5e0681d71a3d7e759ef81185a2d` |
+| Archivo registrado por Sites | 1646 archivos, 267438080 bytes |
+| Huella del contenido registrado | `sha256:5970c1300dcf81f794fff0c62a71501825576db6619bb67142a42218cf28c35a` |
+
+[Circo completo publicado](https://saguntum-atlas-3d.monmode.chatgpt.site/#circo/circo-historica) · [Puerta actual](https://saguntum-atlas-3d.monmode.chatgpt.site/#circo/circo-conjunto) · [Circo en el Simulador](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador/circo/circo-historica) · [Investigación](../research/validation-v53/circo-evidence.md) · [Registro cartográfico](../research/validation-v53/circo-registration.md) · [Validación](../research/validation-v53/README.md)
+
+El selector **Puerta actual / Circo completo** conserva la puerta meridional como ancla y permite retirar el contexto contemporáneo dentro de la huella histórica, manteniendo la ciudad exterior. El registro sobre la misma ortofoto ICV de 2012 de la publicación corrige la posición longitudinal del conjunto y aproxima su cabecera oriental achatada. La referencia es 273 × 70 m, con intervalo occidental de 270–290 m y una *spina* de 151 m. Los 237 m reconocibles en 1938 se explican como cimentación observada. El cierre de las carceres, las gradas y varios alzados siguen marcados como interpretación.
+
+Se mantienen las **33 visitas**, su orden 17/9/7 y los 20 identificadores del Circo: 14 paradas actuales y seis históricas. Los planos históricos añaden la puerta 3 como referencia seleccionable. Los 32 registros restantes de los índices territoriales conservan sus contenidos. La guía reúne ocho fuentes y once hitos.
+
+La validación cubre el encaje de la puerta y el trazado, ocho proyecciones del conjunto en cuatro tamaños de pantalla, 42 encuadres del Simulador, doce puntos transitables y tres ciclos de restauración de materiales. La máscara de 49 triángulos coexiste con los diez del Fórum; los shaders y las sombras se comprobaron con sus constructores reales en CPU. Cuatro renders CPU inspeccionan las mallas, texturas y recortes de la aplicación. El navegador de revisión no dispone de WebGL 2; la comprobación pública verificó rutas, modos, planos y fuentes, incluido el paso Atlas → Simulador → Atlas y el funcionamiento del modo sin GPU. No se atribuyen mediciones de rendimiento gráfico a esta revisión. [Registro público](../research/validation-v53/production-qa.json)
+
+El paquete local final tiene 267448320 bytes expandidos y 987136 bytes de margen frente a 256 MiB. Se compactaron siete JSON sin alterar sus valores, números, claves ni cadenas; el ahorro de 927.128 bytes está documentado en el [registro de equivalencia](../research/validation-v53/distribution-json-equivalence.json).
+
 ## Versión 52 · Plaza del Fórum y parque arqueológico
 
 El 27 de noviembre de 2026 se publicó la nueva visita a la Plaza del Fórum en el Site original, conservando su acceso público. El despliegue `appgdep_6b093f776fac8191a0256e4585f596a3` terminó con estado `succeeded`.

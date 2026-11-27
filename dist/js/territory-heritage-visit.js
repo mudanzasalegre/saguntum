@@ -1,5 +1,6 @@
 import {createExcavationController} from './excavation.js';
-import {territorialCut} from './territory-heritage-relief.js';
+import {territorialCut,territorialWindow} from './territory-heritage-relief.js';
+import {samplePublicDeck} from './territory-heritage-paving.js';
 
 // A worker snapshot contains the visible geometry of a place. A stop also
 // needs the original author's visibility, material, roof and section controls.
@@ -14,6 +15,10 @@ export function bindHeritageVisit({model,sites,options,frame,heightAt,renderer})
  function applyCut(window){
   model.relief=permanent;
   if(!window||window.clipTerrain===false)return;
+  if(window.outline){
+   const cut=territorialWindow(window,frame);
+   model.relief={...permanent,triangleCuts:[...cut.triangles,...permanent.triangleCuts||[]]};return;
+  }
   const cut=territorialCut(window,frame);
   if(permanent.cuts.some(row=>row.every((v,i)=>Math.abs(v-cut[i])<1e-6)))return;
   model.relief={...permanent,cuts:[cut,...permanent.cuts]};
@@ -74,10 +79,11 @@ export function bindHeritageVisit({model,sites,options,frame,heightAt,renderer})
   if(!archaeological.has(place))visit?.setSection?.(section);
   if(place==='puerto-antiguo')site.roof.visible=!(presentation.roofOpen||stop===site.roofFocus);
   applyCut(cut);
+  if(place==='circo'&&mode==='historical'&&!model.historicalPublicDeck)model.historicalPublicDeck=samplePublicDeck(model.group);
   previous={site,visit};
   return {place,stop,mode,section,interior,archFocus:archFocus||null,inspection,
    waterCut:inspection?marineWindow(site):null,
-   contextCut:cut?.clipContext===true?territorialCut(cut,frame):null};
+   contextCut:cut?.clipContext===true?territorialWindow(cut,frame):null};
  };
  model.disposeVisit=()=>{excavation?.dispose();};
 }

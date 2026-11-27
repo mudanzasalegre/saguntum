@@ -8,6 +8,13 @@ export function rectangleFrame(cut) {
   return {u:new THREE.Vector3(c,0,-s),v:new THREE.Vector3(s,0,c),center:new THREE.Vector3(cut.center.x,0,cut.center.z)};
 }
 export function excavationPlanes(cut) {
+  const outline=excavationOutline(cut);
+  if(outline.length){
+    // Dynamic historical windows use a convex perimeter. Permanent concave
+    // excavations are still split into triangles by openPermanentExcavations.
+    const center=new THREE.Vector3();for(const p of outline)center.add(new THREE.Vector3(p.x,0,p.z));center.multiplyScalar(1/outline.length);
+    return outline.map((p,i)=>{const q=outline[(i+1)%outline.length],normal=new THREE.Vector3(q.z-p.z,0,p.x-q.x).normalize(),plane=new THREE.Plane().setFromNormalAndCoplanarPoint(normal,new THREE.Vector3(p.x,0,p.z));if(plane.distanceToPoint(center)>0)plane.negate();return plane;});
+  }
   const {u,v,center}=rectangleFrame(cut);
   return [[u,cut.width/2],[v,cut.depth/2]].flatMap(([axis,half])=>[
     new THREE.Plane(axis.clone(),-axis.dot(center)-half),
@@ -48,6 +55,7 @@ export function openPermanentExcavations(roots,windows){
   }return statistics;
 }
 function corners(cut) {
+  const outline=excavationOutline(cut);if(outline.length)return outline.map(p=>new THREE.Vector3(p.x,0,p.z));
   const {u,v,center}=rectangleFrame(cut);
   return [[-1,-1],[1,-1],[1,1],[-1,1]].map(([a,b])=>center.clone().addScaledVector(u,a*cut.width/2).addScaledVector(v,b*cut.depth/2));
 }
@@ -56,8 +64,8 @@ function soilMesh(cut,heightAt,{slab=false}={}) {
   const shades=['#625344','#85705a','#ab8e68','#c3aa80'].map(c=>new THREE.Color(c));
   const tri=(a,b,c,color)=>{for(const p of [a,b,c]){positions.push(p.x,p.y,p.z);colors.push(color.r,color.g,color.b);}};
   // Expository soil bands, not a claimed measured stratigraphic section.
-  for(let edge=0;edge<4;edge++){
-    const a=pts[edge],b=pts[(edge+1)%4],n=Math.ceil(a.distanceTo(b)/1.5);
+  for(let edge=0;edge<pts.length;edge++){
+    const a=pts[edge],b=pts[(edge+1)%pts.length],n=Math.ceil(a.distanceTo(b)/1.5);
     for(let j=0;j<n;j++){
       const p=a.clone().lerp(b,j/n),q=a.clone().lerp(b,(j+1)/n);
       const hp=Math.max(cut.floorY+.05,heightAt(p.x,p.z)),hq=Math.max(cut.floorY+.05,heightAt(q.x,q.z));
@@ -70,7 +78,8 @@ function soilMesh(cut,heightAt,{slab=false}={}) {
     }
   }
   const base=pts.map(p=>p.clone().setY(cut.floorY-.035));
-  tri(base[0],base[2],base[1],shades[0]);tri(base[0],base[3],base[2],shades[0]);
+  if(cut.outline){for(const face of THREE.ShapeUtils.triangulateShape(pts.map(p=>new THREE.Vector2(p.x,p.z)),[]))tri(...face.map(i=>base[i]),shades[0]);}
+  else{tri(base[0],base[2],base[1],shades[0]);tri(base[0],base[3],base[2],shades[0]);}
   const geometry=new THREE.BufferGeometry();geometry.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));geometry.setAttribute('color',new THREE.Float32BufferAttribute(colors,3));geometry.computeVertexNormals();
   const material=new THREE.MeshStandardMaterial({vertexColors:true,roughness:1,side:THREE.DoubleSide,transparent:slab});
   const mesh=new THREE.Mesh(geometry,material);mesh.name=slab?'Bloque de suelo desplazado':'Sección expositiva del terreno';mesh.receiveShadow=true;mesh.castShadow=slab;mesh.userData.expositorySoil=true;return mesh;
@@ -98,7 +107,8 @@ export function createExcavationController({scene,renderer,sites,contextRoots,te
   function clipContext(window,withCover,clipTerrain=true){
     cut=window;const planes=excavationPlanes(window),reverse=planes.map(p=>p.clone().negate());baseLiftPlanes=reverse.map(p=>p.clone());liftPlanes=reverse;
     const siteContext=window.includeSiteContext?currentSite()?.group?.userData.context?.group:null;
-    const allRoots=[...(window.clipContext===false?[]:contextRoots),...(siteContext?[siteContext]:[]),...(clipTerrain?terrainMeshes:[])],meshes=new Set(),originalMaterials=new Map(),coverMaterials=new Map();
+    const roots=typeof contextRoots==='function'?contextRoots(currentSite(),window):contextRoots;
+    const allRoots=[...(window.clipContext===false?[]:roots),...(siteContext?[siteContext]:[]),...(clipTerrain?terrainMeshes:[])],meshes=new Set(),originalMaterials=new Map(),coverMaterials=new Map();
     const clipBounds=new THREE.Box3().setFromPoints(corners(window));clipBounds.min.y=-100;clipBounds.max.y=1000;
     scene.updateMatrixWorld(true);
     const convert=(material,cover)=>{

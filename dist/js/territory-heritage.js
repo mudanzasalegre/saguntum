@@ -61,6 +61,10 @@ export async function createHeritage({scene,renderer,heightAt,project,grids,mobi
  const claimIds=new Set(),claimGrid=new Map(),registeredGrid=new Map(),propGrid=new Map(),greenGrid=new Map(),cell=64;
  const roadMasks=atlasRoadMasks();
  const excavation=sectionWindow();
+ function historicalDeckAt(x,z){
+  if(!root.visible||status.visit?.place!=='circo'||status.visit.mode!=='historical')return null;
+  return heightOnPavement(loaded.get(requestedStop?.model)?.historicalPublicDeck,x,z);
+ }
  let activeBarriers=null;
  const emptyBarriers=[];
  function walkingBarriers(){
@@ -69,14 +73,19 @@ export async function createHeritage({scene,renderer,heightAt,project,grids,mobi
   activeBarriers=[];
   for(const [id,item] of loaded){
    const phase=historical===id?'historic':requestedStop?.model===id&&item.setVisitStop?requestedStop.stop:null;
-   if(!phase){if(item.walkBarriers?.length)activeBarriers.push(item.walkBarriers);continue;}
+   if(!phase){if(item.walkBarriers?.length)activeBarriers.push(excavation.clipBarriers(item.walkBarriers));continue;}
+   const circus=id==='circo'&&status.visit?.mode==='historical',barrierPhase=circus?'circo-historical':phase;
    // Only a walker entering this presentation incurs the extra section pass.
-   if(item.barrierPhase!==phase){
+   if(item.barrierPhase!==barrierPhase){
     const deck=id===historical?null:item.publicDeck;
-    item.otherBarriers=sampleHeritageBarriers(item.group,(x,z)=>heightOnPavement(deck,x,z)??heightOnPavement(item.pavement,x,z)??(heightAt(x,z)+reliefDelta(item.relief,x,z)));
-    item.barrierPhase=phase;
+    const floor=(x,z)=>historicalDeckAt(x,z)??heightOnPavement(deck,x,z)??heightOnPavement(item.pavement,x,z)??(heightAt(x,z)+reliefDelta(item.relief,x,z));
+    const context=new Set();if(circus)item.contextGroup?.traverse(o=>context.add(o));
+    item.otherBarriers=sampleHeritageBarriers(item.group,floor,circus?mesh=>!context.has(mesh):undefined);
+    if(circus&&item.contextGroup)item.contextBarriers=sampleHeritageBarriers(item.contextGroup,floor);
+    item.barrierPhase=barrierPhase;
    }
    if(item.otherBarriers.length)activeBarriers.push(item.otherBarriers);
+   if(circus&&item.contextBarriers?.length)activeBarriers.push(excavation.clipBarriers(item.contextBarriers));
   }
   return activeBarriers;
  }
@@ -259,7 +268,9 @@ export async function createHeritage({scene,renderer,heightAt,project,grids,mobi
    notify();
    if(id&&desired.includes(id)&&missing(id))void schedule();
   },
+  historicalDeckAt,contextHiddenAt:(x,z)=>root.visible&&excavation.contains(x,z),
   publicDeckAt(x,z){
+   if(status.visit?.place==='circo'&&status.visit.mode==='historical'&&excavation.contains(x,z))return historicalDeckAt(x,z);
    let height=null;
    if(root.visible)for(const [id,item] of loaded)if(id!==historical){
     const h=heightOnPavement(item.publicDeck,x,z);if(h!==null&&(height===null||h>height))height=h;
@@ -267,6 +278,7 @@ export async function createHeritage({scene,renderer,heightAt,project,grids,mobi
    return height;
   },
   walkSurface(x,z){
+   if(status.visit?.place==='circo'&&status.visit.mode==='historical'&&excavation.contains(x,z))return historicalDeckAt(x,z);
    let height=this.publicDeckAt(x,z);
    if(root.visible)for(const {pavement} of loaded.values()){
     const h=heightOnPavement(pavement,x,z);if(h!==null&&(height===null||h>height))height=h;
@@ -349,6 +361,7 @@ export async function createHeritage({scene,renderer,heightAt,project,grids,mobi
   isReplaced(sourceId,x,z,rings){
    if(!root.visible)return false;
    if(excavation.contains(x,z))return true;
+   if(excavation.ring&&rings?.length&&overlapsRegisteredFootprint(rings,excavation.ring))return true;
    if(claimIds.has(normalizeBuildingId(sourceId)))return true;
    if(nearby(claimGrid,x,z).some(ring=>(!ring.registered||!rings?.length)&&inRing(x,z,ring)))return true;
    if(!registeredGrid.size||!rings?.[0]?.length)return false;

@@ -27,7 +27,8 @@ export function drawCircoMap(canvas,cartography,visit,{selected=null,heightAt,pa
  const periodColors={ancient:p.ancient,roman:p.ancient,medieval:'#d6bd8b',modern:'#d4a578',contemporary:'#77b8c7',mixed:'#be98d6',interpretation:'#929ba0',unknown:p.unknown};
  for(const item of visit.readingLegend||[])if(validColor(item.color))periodColors[item.id]=item.color;
  const periodColor=value=>periodColors[value]||p.unknown;
- const frameOutline=scope==='gate'&&plan.archaeologyOutline?.length>=3?plan.archaeologyOutline:outline;
+ const historicalOutline=plan.historicalOutline?.length>=3?plan.historicalOutline:outline;
+ const frameOutline=scope==='gate'&&plan.archaeologyOutline?.length>=3?plan.archaeologyOutline:scope==='circus'?historicalOutline:outline;
  const points=frameOutline.map(c=>project(...c));
  const roomMargin=scope==='gate'?5:12;
  const box={minX:Math.min(...points.map(a=>a.x))-roomMargin,maxX:Math.max(...points.map(a=>a.x))+roomMargin,minZ:Math.min(...points.map(a=>a.z))-roomMargin,maxZ:Math.max(...points.map(a=>a.z))+roomMargin};
@@ -44,6 +45,7 @@ export function drawCircoMap(canvas,cartography,visit,{selected=null,heightAt,pa
  const map=a=>({x:ox+(a.x-box.minX)*scale,y:oy+(a.z-box.minZ)*scale});
  const screenBox={x:ox,y:oy,width:(box.maxX-box.minX)*scale,height:(box.maxZ-box.minZ)*scale};
  const path=(coordinates,close=false)=>{if(!coordinates?.length||!coordinates.every(finite))return false;ctx.beginPath();coordinates.forEach((c,i)=>{const a=map(project(...c));i?ctx.lineTo(a.x,a.y):ctx.moveTo(a.x,a.y);});if(close)ctx.closePath();return true;};
+ const outsideHistorical=()=>{if(scope!=='circus')return;ctx.beginPath();ctx.rect(0,0,w,h);historicalOutline.forEach((c,i)=>{const a=map(project(...c));i?ctx.lineTo(a.x,a.y):ctx.moveTo(a.x,a.y);});ctx.closePath();ctx.clip('evenodd');};
  const roomTargets=[];
  const inView=coordinates=>coordinates?.some(c=>{if(!finite(c))return false;const a=project(...c);return a.x>=box.minX&&a.x<=box.maxX&&a.z>=box.minZ&&a.z<=box.maxZ;});
  ctx.clearRect(0,0,w,h);ctx.fillStyle=p.background;ctx.fillRect(0,0,w,h);
@@ -72,25 +74,30 @@ export function drawCircoMap(canvas,cartography,visit,{selected=null,heightAt,pa
    ctx.globalAlpha=1;
   }
  }
+ ctx.save();outsideHistorical();
  for(const b of cartography.buildings||[])if(inView(b.coordinates)&&path(b.coordinates,true)){ctx.globalAlpha=.4;ctx.fillStyle=p.building;ctx.fill();for(const hole of b.holes||[])if(path(hole,true)){ctx.globalAlpha=.7;ctx.fillStyle=p.terrainLow;ctx.fill();}}
  for(const road of cartography.roads||[])if(inView(road.coordinates)&&path(road.coordinates,road.area==='yes')){ctx.globalAlpha=.6;ctx.strokeStyle=p.road;ctx.lineWidth=large?1.6:.8;ctx.stroke();if(road.area==='yes'){ctx.globalAlpha=.16;ctx.fillStyle=p.road;ctx.fill();}}
+ ctx.restore();
  ctx.globalAlpha=1;path(outline,true);ctx.fillStyle=mix(p.accent,p.background,.77);ctx.fill();
  for(const component of components){
+  const modern=scope==='circus'&&(component.kind==='context-building'||['contemporary','contemporanea'].includes(component.period));
+  if(modern){ctx.save();outsideHistorical();}
   if(component.coordinates.length===1){
    const at=map(project(...component.coordinates[0])),size=component.kind==='gate'?(large?4:2.5):(large?3:1.8);
    // Small unnumbered squares denote interpreted roadside structures; the
    // numbered circles below identify thematic visit stops.
-   ctx.beginPath();ctx.rect(at.x-size,at.y-size,size*2,size*2);ctx.fillStyle=readingMode==='periods'?periodColor(component.period):p.accent;ctx.globalAlpha=.42;ctx.fill();ctx.strokeStyle=p.accent;ctx.globalAlpha=.85;ctx.lineWidth=large?1:.6;ctx.stroke();ctx.globalAlpha=1;continue;
+   ctx.beginPath();ctx.rect(at.x-size,at.y-size,size*2,size*2);ctx.fillStyle=readingMode==='periods'?periodColor(component.period):p.accent;ctx.globalAlpha=.42;ctx.fill();ctx.strokeStyle=p.accent;ctx.globalAlpha=.85;ctx.lineWidth=large?1:.6;ctx.stroke();ctx.globalAlpha=1;if(modern)ctx.restore();continue;
   }
-  const linear=['path','wall','street'].includes(component.kind),closed=component.closed===true||(!linear&&component.closed!==false&&component.coordinates.length>=3);if(!path(component.coordinates,closed))continue;
+  const linear=['path','wall','street'].includes(component.kind),closed=component.closed===true||(!linear&&component.closed!==false&&component.coordinates.length>=3);if(!path(component.coordinates,closed)){if(modern)ctx.restore();continue;}
   const context=component.kind==='context-building',route=component.kind==='path',wall=component.kind==='wall',surface=['plaza','street','stairs','forecourt'].includes(component.kind);
-  if(closed&&component.stopId&&component.kind!=='context-building'){const polygon=component.coordinates.map(c=>map(project(...c)));const area=Math.abs(polygon.reduce((sum,a,i)=>{const b=polygon[(i+1)%polygon.length];return sum+a.x*b.y-b.x*a.y;},0))/2;roomTargets.push({id:component.stopId,polygon,area});}
+  if(closed&&component.stopId&&component.kind!=='context-building'&&!modern){const polygon=component.coordinates.map(c=>map(project(...c)));const area=Math.abs(polygon.reduce((sum,a,i)=>{const b=polygon[(i+1)%polygon.length];return sum+a.x*b.y-b.x*a.y;},0))/2;roomTargets.push({id:component.stopId,polygon,area});}
   const activeRoom=closed&&component.stopId===selected;
   // Surrounding parcels and approach streets provide geographic context;
   // they have no specific historical dating and retain neutral map colours.
   const color=context?p.building:component.kind==='street'?p.road:readingMode==='periods'?periodColor(component.period):route?p.accent:wall?p.muted:surface?p.road:p.accent;
   if(closed){ctx.globalAlpha=activeRoom?.45:context?.16:readingMode==='periods'?.32:.24;ctx.fillStyle=color;ctx.fill();for(const hole of component.holes||[])if(path(hole,true)){ctx.fillStyle=p.terrainLow;ctx.fill();}path(component.coordinates,true);}
   ctx.globalAlpha=context?.48:wall?.58:.9;ctx.strokeStyle=activeRoom?p.text:color;ctx.lineWidth=activeRoom?2.5:context?(large?.9:.5):route?(large?2.6:1.4):wall?(large?1:.6):(large?1.5:.8);ctx.setLineDash(component.interpretive?[large?5:3,large?3:2]:[]);ctx.stroke();ctx.setLineDash([]);
+  if(modern)ctx.restore();
  }
  ctx.globalAlpha=1;path(outline,true);ctx.strokeStyle=p.accent;ctx.lineWidth=large?2.4:1.3;if(scope==='circus')ctx.setLineDash([large?7:4,large?4:3]);ctx.stroke();ctx.setLineDash([]);if(scope==='circus'&&gateOutline.length>=3&&path(gateOutline,true)){ctx.strokeStyle=p.text;ctx.lineWidth=large?2:1;ctx.stroke();}ctx.restore();
 
@@ -124,5 +131,5 @@ export function drawCircoMap(canvas,cartography,visit,{selected=null,heightAt,pa
  // Nested areas select the most specific feature, so the encompassing pit
  // or arena never intercepts a click on the gateway, tribune or spina.
  roomTargets.sort((a,b)=>a.area-b.area);
- return{targets,rooms:roomTargets,totalStops:allStops.length,visibleStops:stops.length,floor,mapScope:scope,floorLabel:scope==='circus'?'Antiguo circo':'Puerta y recinto',bounds:box,shadeCells,contourSegments,components:components.length,scaleMetres:metres,outlineSource:'circo-plan',hitTarget(x,y){let result=null,closest=Infinity;for(const target of targets){const d=Math.hypot(target.x-x,target.y-y);if(d<target.r&&d<closest){result=target.id;closest=d;}}if(result)return result;for(const room of roomTargets){let inside=false;const poly=room.polygon;for(let i=0,j=poly.length-1;i<poly.length;j=i++){const a=poly[i],b=poly[j];if((a.y>y)!==(b.y>y)&&x<(b.x-a.x)*(y-a.y)/(b.y-a.y)+a.x)inside=!inside;}if(inside)return room.id;}return null;}};
+ return{targets,rooms:roomTargets,totalStops:allStops.length,visibleStops:stops.length,historicalStops:stops.filter(s=>stopScope(s)==='circus').length,floor,mapScope:scope,floorLabel:scope==='circus'?'Circo completo':'Puerta actual',bounds:box,shadeCells,contourSegments,components:components.length,scaleMetres:metres,outlineSource:'circo-plan',hitTarget(x,y){let result=null,closest=Infinity;for(const target of targets){const d=Math.hypot(target.x-x,target.y-y);if(d<target.r&&d<closest){result=target.id;closest=d;}}if(result)return result;for(const room of roomTargets){let inside=false;const poly=room.polygon;for(let i=0,j=poly.length-1;i<poly.length;j=i++){const a=poly[i],b=poly[j];if((a.y>y)!==(b.y>y)&&x<(b.x-a.x)*(y-a.y)/(b.y-a.y)+a.x)inside=!inside;}if(inside)return room.id;}return null;}};
 }

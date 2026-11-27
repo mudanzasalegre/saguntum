@@ -169,6 +169,7 @@ export function createNetwork({scene,index,heightAt,heritage,mobile=false}){
       const actor=list[i];
       if(!advance(actor,car,dt)){release(actor);list.splice(i,1);continue;}
       const p=actor.pose;
+      if(heritage?.contextHiddenAt?.(p.x,p.z))continue;
       if(!car)stride.setX(count,actor.s*4.15+i);
       dummy.position.set(p.x,p.y,p.z);dummy.rotation.set(p.pitch,Math.atan2(p.dx,p.dz),0);
       dummy.updateMatrix();object.setMatrixAt(count++,dummy.matrix);
@@ -181,7 +182,8 @@ export function createNetwork({scene,index,heightAt,heritage,mobile=false}){
       observer=[x,z];
       stream.update(x,z,alt>1800?0:[620,1050,1500][budget],alt>1800?0:[6,12,20][budget],hint);graph(x,z);
       streets.visible=flags.streets;green.visible=flags.land;
-      const key=(heritage?.group.visible?'on/':'off/')+(heritage?.stats.loaded||[]).join(',');
+      const visit=heritage?.stats.visit;
+      const key=(heritage?.group.visible?'on/':'off/')+(heritage?.stats.loaded||[]).join(',')+'/'+(visit?.place||'')+'/'+(visit?.stop||'')+'/'+(visit?.mode||'');
       for(const tile of stream.live.values())tile.refresh?.(x,z,budget,key);
       const sources=night>.025&&flags.land&&alt<=125?Array.from(stream.live.values()).flatMap(tile=>tile.lamps||[]):[];
       localLights.update(sources,{x,z,range:alt,budget,night,enabled:flags.land,
@@ -200,7 +202,7 @@ export function createNetwork({scene,index,heightAt,heritage,mobile=false}){
     bridgeHeight,
     walkingHeight(x,z){return Math.max(heightAt(x,z),bridgeHeight(x,z)??-Infinity)+.2;},
     safeToWalk(x,z,radius=.32,feetY){
-      if(vehicles.some(a=>touchesCar(a.pose,x,z,radius,feetY)))return false;
+      if(vehicles.some(a=>!heritage?.contextHiddenAt?.(a.pose.x,a.pose.z)&&touchesCar(a.pose,x,z,radius,feetY)))return false;
       return !green.visible||!nearbyTiles(x,z,radius,tile=>nearCell(tile.solids,x,z,radius,o=>{
         if(feetY>=o.y+o.height||feetY+1.7<o.y)return false;
         const dx=x-o.x,dz=z-o.z;

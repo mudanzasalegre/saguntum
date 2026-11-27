@@ -53,9 +53,22 @@ function visibleSurface(effects){
       }
     }
     if(effects.section){
-      const {rect,across,enabled,participates}=effects.section;
+      const {rect,across,enabled,participates,triangles,triangleCross,nTriangles}=effects.section;
       const open=bound(enabled).mul(bound(participates)).greaterThan(.5);
-      keep.assign(keep.and(open.and(excavationInside(positionWorld.xz,bound(rect),bound(across))).not()));
+      If(open,()=>{
+        const inside=excavationInside(positionWorld.xz,bound(rect),bound(across)).toVar();
+        if(triangles){
+          const starts=uniformArray(triangles,'vec4'),basis=uniformArray(triangleCross,'vec2');
+          If(bound(nTriangles).greaterThan(0),()=>{
+            inside.assign(false);
+            Loop({start:0,end:bound(nTriangles),type:'int'},({i})=>{
+              const t=starts.element(i),delta=positionWorld.xz.sub(t.xy),u=dot(delta,t.zw),v=dot(delta,basis.element(i));
+              inside.assign(inside.or(u.greaterThanEqual(0).and(v.greaterThanEqual(0)).and(u.add(v).lessThanEqual(1))));
+            });
+          });
+        }
+        keep.assign(keep.and(inside.not()));
+      });
     }
     return keep;
   })();

@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-27T09:41:26.234189+00:00",
+  "method": "Cloud browser UI on managed preview; no WebGL 2 context is available.",
+  "previewUrl": "http://127.0.0.1:4173/",
+  "checks": [
+    {
+      "id": "catalogue",
+      "pass": true,
+      "observed": "Global brand and all 33 places remain present."
+    },
+    {
+      "id": "atlas-entry",
+      "pass": true,
+      "url": "http://127.0.0.1:4173/#circo",
+      "observed": "Current gate presentation and Ver el circo completo CTA are visible."
+    },
+    {
+      "id": "atlas-historical",
+      "pass": true,
+      "url": "http://127.0.0.1:4173/#circo/circo-historica",
+      "observed": "CTA selects the historical stop and mode; six historical stops appear in the mini plan."
+    },
+    {
+      "id": "atlas-plan",
+      "pass": true,
+      "observed": "Large historical plan exposes the six historical stops plus surviving gate marker 3; full footprint and current urban context are legible."
+    },
+    {
+      "id": "atlas-return",
+      "pass": true,
+      "url": "http://127.0.0.1:4173/#circo/circo-conjunto",
+      "observed": "Puerta actual restores the current overview and fourteen current stops."
+    },
+    {
+      "id": "sources",
+      "pass": true,
+      "observed": "Eight source links and the revised 151 m, 237 m and 270–290 m distinctions are visible in the guide."
+    },
+    {
+      "id": "simulator-route",
+      "pass": true,
+      "url": "http://127.0.0.1:4173/#simulador/circo/circo-historica",
+      "observed": "Simulator remains in its own viewer with stop 17 of 20 selected."
+    },
+    {
+      "id": "simulator-fallback-historical",
+      "pass": true,
+      "url": "http://127.0.0.1:4173/#simulador/circo/circo-historica",
+      "observed": "After reload, stop 17 is selected, Circo completo has aria-pressed=true and opening CTA is hidden."
+    },
+    {
+      "id": "simulator-fallback-return",
+      "pass": true,
+      "url": "http://127.0.0.1:4173/#simulador/circo/circo-conjunto",
+      "observed": "Click Puerta actual selects stop 1, updates the route, and displays the CTA. Click Circo completo returns to stop 17 with correct mode."
+    },
+    {
+      "id": "simulator-fallback-map",
+      "pass": true,
+      "observed": "Map button switches Ver territorio / Ver plano de paradas. Returning shows the entire registered circus, six historical stop markers and gate marker 3. Screenshot inspected."
+    }
+  ],
+  "issueFound": "Initial Simulator fallback selected the historical stop while showing the current indicator. Resolved by deriving presentation from the requested stop independently of renderer and camera loading.",
+  "limitations": [
+    "Live GPU output and frame rate cannot be measured in this browser. Model geometry, masks, camera projections and CPU render inspections are recorded separately."
+  ],
+  "issueResolved": true
+}

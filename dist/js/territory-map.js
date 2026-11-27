@@ -77,9 +77,12 @@ export function terrainMap({world,network,zones,places,image,onPoint}){
     onPoint(xx,zz,candidates[0]?.[1]<Math.min(150,6/s)?candidates[0][0]:null);
   };
   function redraw(){dirty=true;if(last)requestAnimationFrame(()=>draw(...last));}
-  document.getElementById('sim-expand').onclick=e=>{const b=box.classList.toggle('expanded');e.currentTarget.setAttribute('aria-expanded',b);labels();redraw();};
+  document.getElementById('sim-expand').onclick=e=>{
+    if(document.body.classList.contains('map-only')){if(visitPlace){useLocal=!useLocal;municipal=false;wide=!useLocal;}else{municipal=!municipal;wide=!municipal;}labels();redraw();return;}
+    const b=box.classList.toggle('expanded');e.currentTarget.setAttribute('aria-expanded',b);labels();redraw();
+  };
   function labels(){
-    document.getElementById('sim-expand').textContent=box.classList.contains('expanded')?'Cerrar mapa':useLocal?'Mapa de paradas':'Mapa general';
+    document.getElementById('sim-expand').textContent=document.body.classList.contains('map-only')?(visitPlace?(useLocal?'Ver territorio':'Ver plano de paradas'):(municipal?'Ver territorio':'Ver municipio')):box.classList.contains('expanded')?'Cerrar mapa':useLocal?'Mapa de paradas':'Mapa general';
     document.getElementById('sim-extent').textContent=useLocal?'Ver territorio':municipal?(visitPlace?'Ver paradas':'Ver corredor'):'Ver municipio';
   }
   document.getElementById('sim-extent').onclick=()=>{

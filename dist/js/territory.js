@@ -24,6 +24,7 @@ import {setTerritoryWeather,weatherState} from './territory-realism.js';
 import {guidedTourPanel} from './territory-tour-panel.js';
 import {modelId} from './territory-heritage-models.js';
 import {cameraNearPlane} from './camera-depth.js';
+import {requestedVisitMode} from './visit-presentation.js';
 
 const $=id=>document.getElementById('sim-'+id);
 const mobile=matchMedia('(max-width:760px), (pointer:coarse)').matches;
@@ -95,7 +96,7 @@ export async function openSimulator(){
   }
   function clear(refresh=true){
     if(historical)heritage?.setHistorical(selected.id,false);selected=null;activeStop=null;historical=false;
-    status.stop=null;status.stopIndex=0;status.stopCount=0;
+    status.stop=null;status.stopIndex=0;status.stopCount=0;status.presentationMode=null;
     if(refresh){heritage?.setVisitStop(null,null);map.setVisit(null);nav?.leaveVisit();}
     $('location').hidden=true;status.selected=null;if(refresh&&presentationReady)applyPresentation();
   }
@@ -156,8 +157,11 @@ export async function openSimulator(){
       $('prev').disabled=!activeStop;$('next').disabled=activeStop?.number===stops.length;
       $('stop-reading').hidden=!activeStop?.intro;$('stop-reading').open=false;$('stop-note').textContent=activeStop?.intro||'';
       framePlace(p,move);
-      $('history').hidden=!p.historical||!!activeStop;$('history').textContent='Reconstrucción histórica';
-      const phase=presentation?.mode||activeStop?.mode||activeStop?.recommendedMode;
+      const phase=requestedVisitMode(p,activeStop,presentation);status.presentationMode=phase;
+      const circus=p.id==='circo',wholeCircus=circus&&phase==='historical';
+      $('circo-presentation').hidden=!circus;
+      $('circo-current').setAttribute('aria-pressed',String(!wholeCircus));$('circo-historical').setAttribute('aria-pressed',String(wholeCircus));
+      $('history').hidden=circus?wholeCircus:!p.historical||!!activeStop;$('history').textContent=circus?'Ver el circo completo':'Reconstrucción histórica';
       $('era').hidden=!['historical','cut'].includes(phase);
       $('era').textContent=phase==='historical'?'Reconstrucción histórica · '+(p.historical?.period||'Interpretación del Atlas'):'Sección de la visita';
       $('location').hidden=false;
@@ -182,8 +186,11 @@ export async function openSimulator(){
   window.addEventListener('hashchange',()=>{if(!openLinkedPlace()&&location.hash==='#simulador'){clear();nav?.panorama();focus2D=core;update2D();}});
   $('visit').onclick=save;$('clear').onclick=()=>{tourPanel?.close('selection',false);clear();writeLink();};
   $('frame').onclick=()=>chooseStop(activeStop?null:frames[selected.id]?.exterior?.stop);
+  $('circo-current').onclick=()=>chooseStop('circo-conjunto');
+  $('circo-historical').onclick=()=>chooseStop('circo-historica');
   $('history').onclick=()=>{
     const h=selected?.historical;if(!h)return;
+    if(selected.id==='circo'){chooseStop('circo-historica');return;}
     if(!heritage||!h.inWorld){save();location.hash=h.href;return;}
     historical=!historical;heritage.setHistorical(selected.id,historical);
     $('era').hidden=!historical;$('era').textContent=[h.period,h.confidence].filter(Boolean).join(' · ');
@@ -216,7 +223,7 @@ export async function openSimulator(){
   function update2D(){if(!renderer)map.draw(focus2D,focus2D,{x:0,z:-1});}
   function fallback(message){
     document.body.classList.add('map-only');$('status').textContent=message;status.ready=true;status.mode='mapa 2D';
-    $('expand').disabled=true;
+    $('expand').disabled=false;
     $('retry').hidden=false;$('retry').onclick=()=>{save();chooseBackend(requestedBackend());retry3D();};
     $('markers').hidden=true;$('stick').hidden=true;$('altitude').hidden=true;
     const previous=readVisit();if(previous?.selected&&byId.has(previous.selected))select(byId.get(previous.selected),false,savedStop(previous));
@@ -361,7 +368,7 @@ export async function openSimulator(){
   const heritageCollision=createHeritageCollision(heritage);
   const safe=(x,z,radius=.32,feetY=walkingHeight(x,z))=>{
     if(sea.mask.isWater(x,z)&&heritage.publicDeckAt(x,z)===null&&network.bridgeHeight(x,z,true)===null)return false;
-    return ground.canStand(x,z,heritage.publicDeckAt(x,z)!==null)&&buildings.safeToWalk(x,z,radius)&&network.safeToWalk(x,z,radius,feetY)&&heritageCollision.safeToWalk(x,z,radius,feetY);
+    return (heritage.historicalDeckAt(x,z)!==null||ground.canStand(x,z,heritage.publicDeckAt(x,z)!==null))&&buildings.safeToWalk(x,z,radius)&&network.safeToWalk(x,z,radius,feetY)&&heritageCollision.safeToWalk(x,z,radius,feetY);
   };
   nav=createNavigation({camera,element:renderer.domElement,heightAt:ground.grade,walkingHeight,bounds:world.bounds,core,
     safe,nearest:network.nearestPublic,onMode,onCommand:command,

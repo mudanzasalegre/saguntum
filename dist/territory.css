@@ -103,6 +103,7 @@
 .sim-stop-controls select{flex:1;min-width:0;width:230px;font-size:14px;padding:4px}
 .sim-stop-controls button{font:24px/1 var(--serif);width:36px;flex-shrink:0}
 .sim-stop-controls button:disabled{opacity:.35}
+.sim-circo-modes{display:flex;gap:4px;margin:7px 0}.sim-circo-modes[hidden]{display:none}.sim-circo-modes button{flex:1;min-height:36px;border:1px solid #74877b;border-radius:3px;padding:5px 9px;font-size:13px}.sim-circo-modes button[aria-pressed=true]{background:var(--accent);color:#23362f}
 #sim-stop-reading summary{cursor:pointer;font-size:12px;color:#e9dfc4}
 #sim-stop-note{font-size:13px;line-height:1.45;max-height:15dvh;overflow:auto}
 #sim-results small{display:block;color:#c7d5ce;font-size:12px}

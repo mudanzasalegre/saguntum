@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 
-// V20 · Puerta meridional del circo de Saguntum.
+// V53 · Puerta conservada y restitución documentada del circo de Saguntum.
 // The surviving gate and excavated remains follow the published measurements
 // and photographs. Registration within the present enclosure is approximate.
 // The whole circus is a separate, explicitly interpretive archaeological view:
@@ -105,7 +105,7 @@ class Batch {
       if(def.texture){mat.bumpMap=textures[def.texture];mat.bumpScale=kind==='limestone'?.025:kind==='rubble'?.032:.012;}
       const g=new THREE.BufferGeometry();for(const[name,values,size]of[['position',a.p,3],['normal',a.n,3],['uv',a.u,2],['color',a.c,3]])g.setAttribute(name,new THREE.Float32BufferAttribute(values,size));g.computeBoundingBox();g.computeBoundingSphere();
       const mesh=new THREE.Mesh(g,mat);mesh.name='Circo · '+component+' · '+kind;mesh.castShadow=!['glass','hypothesis','water'].includes(kind);mesh.receiveShadow=true;
-      mesh.userData={circoFabric:true,component,period,materialKind:kind,baseColor:mat.color.clone(),baseMap:mat.map,baseBumpMap:mat.bumpMap,baseOpacity:mat.opacity};
+      mesh.userData={circoFabric:true,component,period,materialKind:kind,publicWalkingSurface:component==='arena'&&kind==='sand'||component==='trazado'&&kind==='earth',baseColor:mat.color.clone(),baseMap:mat.map,baseBumpMap:mat.bumpMap,baseOpacity:mat.opacity};
       group.add(mesh);resources.materials.push(mat);resources.geometries.push(g);
     }
     this.cube.dispose();
@@ -160,8 +160,8 @@ function meshFence(b,K,a,c,y,height=1.72) {
   for(let i=1;i<Math.ceil(length/.16);i++)f.box(b,K('blueMetal'),-length/2+i*.16,y+height/2,0,.008,height-.07,.008);
   for(let h=.22;h<height-.05;h+=.23)f.box(b,K('blueMetal'),0,y+h,0,length,.008,.008);
 }
-function stadium(f,left,arc,radius,segments=48) {const p=[f.world(left,-radius),f.world(arc,-radius)];for(let i=1;i<=segments;i++){const a=-PI/2+i*PI/segments;p.push(f.world(arc+Math.cos(a)*radius,Math.sin(a)*radius));}p.push(f.world(left,radius));return p;}
-function arcWall(b,K,f,arc,radius,y,h,width,start=-PI/2,end=PI/2,n=40) {for(let i=0;i<n;i++){const a=start+(end-start)*i/n,c=start+(end-start)*(i+1)/n;wall(b,K,f.world(arc+Math.cos(a)*radius,Math.sin(a)*radius),f.world(arc+Math.cos(c)*radius,Math.sin(c)*radius),y,y+h,width,.95+noise(i)*.09);}}
+function stadium(f,left,arc,radius,segments=48,depth=radius) {const p=[f.world(left,-radius),f.world(arc,-radius)];for(let i=1;i<=segments;i++){const a=-PI/2+i*PI/segments;p.push(f.world(arc+Math.cos(a)*depth,Math.sin(a)*radius));}p.push(f.world(left,radius));return p;}
+function arcWall(b,K,f,arc,radius,y,h,width,start=-PI/2,end=PI/2,n=40,depth=radius) {for(let i=0;i<n;i++){const a=start+(end-start)*i/n,c=start+(end-start)*(i+1)/n;wall(b,K,f.world(arc+Math.cos(a)*depth,Math.sin(a)*radius),f.world(arc+Math.cos(c)*depth,Math.sin(c)*radius),y,y+h,width,.95+noise(i)*.09);}}
 function boundsFrom(poly,bottom,top) {return new THREE.Box3().setFromPoints(poly.flatMap(p=>[new THREE.Vector3(p.x,bottom,p.z),new THREE.Vector3(p.x,top,p.z)]));}
 
 export function createCirco({record,project=projectDefault,heightAt=()=>30,visitData={},contextData={}}={}) {
@@ -267,43 +267,71 @@ export function createCirco({record,project=projectDefault,heightAt=()=>30,visit
   for(let i=0;i<profileBands.length;i++){const[lo,hi,material]=profileBands[i];f.box(sec,key('estratos','excavacion')(material),profileX,base+(lo+hi)/2,profileZ,.12,hi-lo,profileLength,0,.94+noise(i)*.10);}
   for(let i=0;i<32;i++)pebble(sec,key('estratos','excavacion')('cobble'),f.p(profileX-.075,base+.02+noise(i+5)*.17,profileZ-profileLength/2+noise(i+6)*profileLength),[.06,.06,.10],2600+i);
 
-  // Whole-circus interpretation. The gate fixes the southern alignment; the
-  // 273 × 70 m outline follows the 2017 working hypothesis (270–290 × 68–70 m).
-  const dimensions={length:273,width:70,uncertainLength:[270,290],uncertainWidth:[68,70]},R=35,left=-136.5,curve=101.5,innerR=24,gateU=80,centre=f.world(gx-gateU,gz-R),cf=frame(centre.x,centre.z,yaw),groundY=base+.02;
-  const circusOutline=stadium(cf,left,curve,R),arenaOutline=stadium(cf,left+9,curve,innerR);
-  slab(r,key('trazado','interpretacion')('earth'),stadium(cf,left-2.4,curve,R+2.4),groundY-.055,.28);
+  // The south gate is the fixed surviving anchor. The east head and spina
+  // are registered against Melchor et al. (2017), figs.16–17; the western
+  // closure is an interval, not a recovered line. Local gate yaw is retained
+  // for the surviving masonry even when the whole-circus axis is refined.
+  const historic=contextData.historicalRegistration||{},dimensions={length:273,width:70,uncertainLength:[270,290],uncertainWidth:[68,70]},
+    R=dimensions.width/2,left=-dimensions.length/2,headDepth=historic.headDepthM??22,curve=dimensions.length/2-headDepth,innerR=R-11,innerDepth=headDepth-11,
+    historicYaw=historic.yawRadians??-.305,gateU=historic.gateU??55.5,hc=Math.cos(historicYaw),hs=Math.sin(historicYaw),gateWorld=f.world(gx,gz),
+    centre={x:gateWorld.x-gateU*hc-R*hs,z:gateWorld.z+gateU*hs-R*hc},cf=frame(centre.x,centre.z,historicYaw),
+    rotateHistoric=o=>[o[0]*hc+o[2]*hs,o[1],-o[0]*hs+o[2]*hc],groundY=base+.02,
+    documentedWest=curve+headDepth-237,uncertainWest=curve+headDepth-dimensions.uncertainLength[1],uncertainEast=curve+headDepth-dimensions.uncertainLength[0];
+  const circusOutline=stadium(cf,left,curve,R,48,headDepth),arenaOutline=stadium(cf,left+9,curve,innerR,48,innerDepth),historicalWindow=stadium(cf,uncertainWest-2.4,curve,R+2.4,48,headDepth+2.4);
+  slab(r,key('trazado','interpretacion')('earth'),historicalWindow,groundY-.055,.28);
   flat(r,key('arena','espectaculo')('sand'),arenaOutline,groundY+.007);
+  // A translucent band marks the 270–290 m working interval at the lost
+  // western closure. It does not add a second surviving semicircular end.
+  flat(r,key('incertidumbre','interpretacion')('hypothesis'),rect(cf,(uncertainWest+uncertainEast)/2,0,uncertainEast-uncertainWest,dimensions.width),groundY+.012);
+  for(const u of[uncertainWest,uncertainEast])for(let v=-R;v<R;v+=3.8)
+    cf.box(r,key('incertidumbre','interpretacion')('hypothesis'),u,groundY+.06,v,.24,.12,2.2);
   const outerK=key('graderio','espectaculo');
   for(const side of[-1,1]){
-    const z=side*R,segments=side>0?[[left,gateU-gateWidth/2],[gateU+gateWidth/2,curve]]:[[left,curve]];
+    const z=side*R,segments=side>0?[[documentedWest,gateU-gateWidth/2],[gateU+gateWidth/2,curve]]:[[documentedWest,curve]];
     for(const[x0,x1]of segments)wall(r,outerK('rubble'),cf.world(x0,z),cf.world(x1,z),groundY,groundY+1.55,.62);
     // Low foundations are defensible; a complete masonry amphitheatre is not.
-    wall(r,outerK('mortar'),cf.world(left+4,side*(R-3.5)),cf.world(curve,side*(R-3.5)),groundY,groundY+.62,.60);
-    const innerSegments=side>0?[[left+9,gateU-5.0],[gateU+7.3,curve]]:[[left+9,curve]];
+    wall(r,outerK('mortar'),cf.world(documentedWest,side*(R-3.5)),cf.world(curve,side*(R-3.5)),groundY,groundY+.62,.60);
+    const innerSegments=side>0?[[documentedWest,gateU-5.0],[gateU+7.3,curve]]:[[documentedWest,curve]];
     for(const[x0,x1]of innerSegments)wall(r,outerK('rubble'),cf.world(x0,side*innerR),cf.world(x1,side*innerR),groundY,groundY+1.25,.60);
-    for(let x=left+7;x<curve;x+=5.4){if(side>0&&x>gateU-6&&x<gateU+8)continue;wall(r,outerK('mortar'),cf.world(x,side*(innerR+.5)),cf.world(x,side*(R-.5)),groundY,groundY+.58,.52);}
+    for(let x=documentedWest+3;x<curve;x+=5.4){if(side>0&&x>gateU-6&&x<gateU+8)continue;wall(r,outerK('mortar'),cf.world(x,side*(innerR+.5)),cf.world(x,side*(R-.5)),groundY,groundY+.58,.52);}
+    // Completing the missing west sector is visually different from the
+    // foundation alignment recoverable in the aerial photographs.
+    for(let x=left;x<documentedWest;x+=3.8)
+      cf.box(r,key('trazado','interpretacion')('hypothesis'),x,groundY+.12,z,2.2,.24,.35);
   }
-  arcWall(r,outerK('rubble'),cf,curve,R,groundY,1.55,.62);arcWall(r,outerK('rubble'),cf,curve,innerR,groundY,1.25,.60);
-  for(let i=0;i<=18;i++){const angle=-PI/2+i*PI/18;wall(r,outerK('mortar'),cf.world(curve+Math.cos(angle)*(innerR+.5),Math.sin(angle)*(innerR+.5)),cf.world(curve+Math.cos(angle)*(R-.4),Math.sin(angle)*(R-.4)),groundY,groundY+.58,.50);}
+  // The lost eastern entrance is distinct from today's south gate. Its
+  // 2.84 m opening is recorded by Chabret/Bru; no missing arch is invented.
+  const triumphalWidth=2.84;
+  for(const[rad,depth,height,width]of[[R,headDepth,1.55,.62],[innerR,innerDepth,1.25,.60]]){
+    const gap=Math.asin(triumphalWidth/2/rad);
+    arcWall(r,outerK('rubble'),cf,curve,rad,groundY,height,width,-PI/2,-gap,24,depth);
+    arcWall(r,outerK('rubble'),cf,curve,rad,groundY,height,width,gap,PI/2,24,depth);
+  }
+  for(let i=0;i<=18;i++){const angle=-PI/2+i*PI/18;if(Math.abs(Math.sin(angle)*innerR)<triumphalWidth/2+.5)continue;wall(r,outerK('mortar'),cf.world(curve+Math.cos(angle)*(innerDepth+.5),Math.sin(angle)*(innerR+.5)),cf.world(curve+Math.cos(angle)*(headDepth-.4),Math.sin(angle)*(R-.4)),groundY,groundY+.58,.50);}
+  const triumphalOutline=rect(cf,curve+(headDepth+innerDepth)/2,0,headDepth-innerDepth+2.4,triumphalWidth);
+  slab(r,key('triunfal','espectaculo')('limestone'),triumphalOutline,groundY+.015,.10);
   // The local passage is kept open across the putative seating footprint.
   slab(r,key('interior','excavacion')('sand'),rect(cf,gateU,28.8,2.05,12.4),groundY+.025,.10);
-  // Central euripus: published 190 m long and 4.35 m wide. The water is optional.
-  const spina={x:2,z:.8,length:190,width:4.35};
-  slab(r,key('spina','espectaculo')('limestoneWarm'),rect(cf,spina.x,spina.z,spina.length,spina.width),groundY+.45,.46);
-  flat(r,key('spina','espectaculo')('mortar'),rect(cf,spina.x,spina.z,spina.length-.75,spina.width-.75),groundY+.46,.92);
+  // 151 m is the aerial re-reading published in Tarraco Biennal (2017).
+  // Width 4.50 m and wall/clear width follow Bru's description, not the
+  // contradictory 190 × 4.35 m attributed to Chabret in earlier literature.
+  const spina={x:historic.spinaCenterU??38,z:historic.spinaCenterV??3.4,length:151,width:4.50,height:1.25,wallWidth:.55};
+  slab(r,key('spina','espectaculo')('limestoneWarm'),rect(cf,spina.x,spina.z,spina.length,spina.width),groundY+.10,.11);
+  flat(r,key('spina','espectaculo')('mortar'),rect(cf,spina.x,spina.z,spina.length-1.1,spina.width-1.1),groundY+.11,.92);
   for(const side of[-1,1]){
-    cf.box(r,key('spina','espectaculo')('limestone'),spina.x,groundY+.74,spina.z+side*(spina.width/2-.17),spina.length,.58,.34);
-    for(let x=spina.x-spina.length/2+.95;x<spina.x+spina.length/2;x+=1.9)cf.box(r,key('spina','espectaculo')('mortar'),x,groundY+.74,spina.z+side*(spina.width/2+.004),.016,.55,.012);
+    cf.box(r,key('spina','espectaculo')('limestone'),spina.x,groundY+spina.height/2,spina.z+side*(spina.width/2-spina.wallWidth/2),spina.length,spina.height,spina.wallWidth);
+    for(let x=spina.x-spina.length/2+.95;x<spina.x+spina.length/2;x+=1.9)cf.box(r,key('spina','espectaculo')('mortar'),x,groundY+spina.height/2,spina.z+side*(spina.width/2+.004),.016,spina.height,.012);
   }
-  for(const x of[spina.x-spina.length/2+.17,spina.x+spina.length/2-.17])cf.box(r,key('spina','espectaculo')('limestone'),x,groundY+.74,spina.z,.34,.58,spina.width);
-  cf.box(h,key('spina','interpretacion')('water'),spina.x,groundY+.82,spina.z,spina.length-.72,.012,spina.width-.72);
+  for(const x of[spina.x-spina.length/2+spina.wallWidth/2,spina.x+spina.length/2-spina.wallWidth/2])cf.box(r,key('spina','espectaculo')('limestone'),x,groundY+spina.height/2,spina.z,spina.wallWidth,spina.height,spina.width);
+  for(const side of[-1,1])cf.box(r,key('spina','espectaculo')('limestoneWarm'),spina.x,groundY+spina.height+.055,spina.z+side*(spina.width/2-spina.wallWidth/2),spina.length,.11,.65);
+  cf.box(h,key('spina','interpretacion')('water'),spina.x,groundY+.70,spina.z,spina.length-1.1,.012,spina.width-1.1);
   // Timber seating: a legible optional hypothesis, with sparse supports and
   // narrow boards. Rows stop at the conserved gate rather than burying it.
   const rows=9;
   for(const side of[-1,1])for(let row=0;row<rows;row++){
-    const rad=innerR+.85+row*.92,y=groundY+1.35+row*.30;
+    const rad=innerR+.85+row*.92,rowDepth=headDepth-(R-rad),y=groundY+1.35+row*.30;
     for(const[x0,x1]of(side>0?[[left+6,gateU-4.4],[gateU+6.6,curve]]:[[left+6,curve]]))cf.box(h,key('graderio','interpretacion')('wood'),(x0+x1)/2,y,side*rad,x1-x0,.10,.62,0,.88+noise(row)*.15);
-    for(let i=0;i<38;i++){const a0=-PI/2+i*PI/38,a1=-PI/2+(i+1)*PI/38;wall(h,key('graderio','interpretacion')('wood'),cf.world(curve+Math.cos(a0)*rad,Math.sin(a0)*rad),cf.world(curve+Math.cos(a1)*rad,Math.sin(a1)*rad),y-.05,y+.05,.62,.9+noise(row+i)*.14);}
+    for(let i=0;i<38;i++){const a0=-PI/2+i*PI/38,a1=-PI/2+(i+1)*PI/38;if(Math.abs(Math.sin((a0+a1)/2)*rad)<triumphalWidth/2+.6)continue;wall(h,key('graderio','interpretacion')('wood'),cf.world(curve+Math.cos(a0)*rowDepth,Math.sin(a0)*rad),cf.world(curve+Math.cos(a1)*rowDepth,Math.sin(a1)*rad),y-.05,y+.05,.62,.9+noise(row+i)*.14);}
   }
   for(const side of[-1,1])for(let x=left+9;x<curve;x+=7.4){if(side>0&&x>gateU-6&&x<gateU+8)continue;for(const radial of[innerR+1.2,R-2.0]){const y=groundY+1.4+(radial-innerR)*.30;cf.box(h,key('graderio','interpretacion')('woodDark'),x,groundY+(y-groundY)/2,side*radial,.14,y-groundY,.16);}h.beam(key('graderio','interpretacion')('woodDark'),cf.p(x,groundY+1.2,side*(innerR+.8)),cf.p(x,groundY+4.0,side*(R-1.3)),.065,6);}
   // Three turning posts at each end are comparative, not finds from this plot.
@@ -311,11 +339,10 @@ export function createCirco({record,project=projectDefault,heightAt=()=>30,visit
     cf.box(h,key('metae','interpretacion')('hypothesis'),x,groundY+.30,spina.z,2.0,.60,4.5);
     for(let j=0;j<3;j++)h.cylinder(key('metae','interpretacion')('hypothesis'),cf.p(x,groundY+1.63,spina.z+(j-1)*1.30),.07,.44,2.05,16);
   }
-  // Lost western starting line: a translucent schematic line with openings,
-  // without towers, roof or unsupported imperial decorative architecture.
+  // Lost western starting zone: only an unpartitioned translucent screen.
+  // The archive does not establish the number or design of starting boxes.
   const carceresX=left+1.2;
-  for(let i=0;i<=8;i++)cf.box(h,key('carceres','interpretacion')('hypothesis'),carceresX,groundY+1.35,-24+i*6,.80,2.70,.45);
-  cf.box(h,key('carceres','interpretacion')('hypothesis'),carceresX,groundY+2.80,0,.80,.20,48.8);
+  cf.box(h,key('carceres','interpretacion')('hypothesis'),carceresX,groundY+1.35,0,.22,2.70,48.8);
   for(let z=-33;z<34;z+=2.2)cf.box(h,key('carceres','interpretacion')('hypothesis'),left,groundY+.04,z,.22,.08,1.15);
   // Tribunal is only a schematic platform above the excavated support; its
   // elevation and timber balustrade can be toggled with the other hypotheses.
@@ -323,7 +350,7 @@ export function createCirco({record,project=projectDefault,heightAt=()=>30,visit
 
   a.finish(remains,resources,textures);r.finish(reconstruction,resources,textures);h.finish(hypotheses,resources,textures);m.finish(protection,resources,textures);ret.finish(retention,resources,textures);sec.finish(sectionEvidence,resources,textures);
   const meshes=[];group.traverse(q=>{if(q.isMesh&&q.userData.circoFabric){q.userData.archaeologicalSite='circo';meshes.push(q);}});group.updateMatrixWorld(true);
-  const currentBounds=boundsFrom(outline,base-.18,surface+1.85),historicalBounds=boundsFrom(circusOutline,groundY-.2,groundY+5.2),state={selected:'circo-conjunto',readingMode:'materials',mode:'current',active:false,sectionOpen:false,hypotheses:true,roofOpen:true,coverShown:true,opening:1};
+  const currentBounds=boundsFrom(outline,base-.18,surface+1.85),historicalBounds=boundsFrom(historicalWindow,groundY-.2,groundY+5.2),state={selected:'circo-conjunto',readingMode:'materials',mode:'current',active:false,sectionOpen:false,hypotheses:true,roofOpen:true,coverShown:true,opening:1};
   currentBounds.expandByPoint(new THREE.Vector3(...f.p(gx,base+gateHeight,gz)));
   const definitions=[
     ['conjunto','La puerta dentro de la ciudad',-.48,-.33,base+1.15,[8,28,-13],[11,12,-14],['puerta','recinto'],'contemporanea','current','gate',false,0,52],
@@ -340,16 +367,17 @@ export function createCirco({record,project=projectDefault,heightAt=()=>30,visit
     ['estratos','El suelo anterior al circo',5.9,-1.25,base+.65,[-4.5,3.8,-3.4],[-2.9,2.45,-2.2],['estratos','fases'],'excavacion','cut','gate',true,-1,60],
     ['arena','La pista de las carreras',25,-10,groundY+.25,[42,30,-43],[27,20,-29],['arena','interior'],'espectaculo','historical','circus',false,-1,54],
     ['spina','El euripus de la spina',spina.x,spina.z,groundY+.8,[31,36,-43],[20,23,-28],['spina'],'espectaculo','historical','circus',false,-1,56],
-    ['metae','Girar en torno a las metas',99.5,spina.z,groundY+1.15,[-13,12,-17],[-8,7.8,-11],['metae','spina'],'interpretacion','historical','circus',false,-1,57],
+    ['metae','Girar en torno a las metas',spina.x+spina.length/2+2,spina.z,groundY+1.15,[-13,12,-17],[-8,7.8,-11],['metae','spina'],'interpretacion','historical','circus',false,-1,57],
     ['graderio','Graderío y estructuras de apoyo',-16,-29.5,groundY+1.8,[14,15,18],[9,10,12],['graderio'],'espectaculo','historical','circus',false,-1,57],
-    ['historica','El trazado que la ciudad oculta',0,0,groundY+.75,[30,280,-45],[21,196,-31.5],['trazado','arena','spina'],'interpretacion','historical','circus',false,-1,48],
+    ['historica','El trazado que la ciudad oculta',-8.5,0,groundY+.75,[190,220,-22],[133,154,-15.4],['trazado','arena','spina'],'interpretacion','historical','circus',false,-1,48],
     ['carceres','El cierre occidental perdido',carceresX,0,groundY+1.0,[35,26,-37],[23,17,-24],['carceres'],'interpretacion','historical','circus',false,-1,56],
     ['fases','Abandono, reutilización y excavación',4.55,.3,base+.45,[-4.0,5.0,-4.5],[-2.6,3.3,-3.0],['fases','estratos'],'excavacion','cut','gate',false,-1,58],
     ['entorno','Huertos, Remei y la ciudad',-.5,-.4,surface+2.0,[31,28,-36],[21,19,-25],['cerramiento','contencion'],'contemporanea','current','gate',false,0,51]
   ];
-  const focuses={};for(const[short,label,x,z,y,offset,closeOffset,components,period,mode,mapScope,interiorView,floor,fov]of definitions){const ff=mapScope==='circus'?cf:f,p=ff.world(x,z),target=new THREE.Vector3(p.x,y,p.z),id='circo-'+short;focuses[id]={id,label,target,coordinates:geo(p),offset:rotate(offset),closeOffset:rotate(closeOffset),components,regionId:period,readingLayer:period,period,kind:short==='conjunto'?'overview':'feature',bounds:new THREE.Box3(target.clone().addScalar(-2),target.clone().addScalar(2)),fitBounds:false,interiorView,floor,recommendedMode:mode,requiresSection:mode==='cut',minDistance:interiorView?.25:.8,fov,closeScale:false,mapScope,sourceConfidence:mapScope==='circus'?'published-working-hypothesis':'published-measurements-and-photographic-registration'};}
+  const focuses={};for(const[short,label,x,z,y,offset,closeOffset,components,period,mode,mapScope,interiorView,floor,fov]of definitions){const ff=mapScope==='circus'?cf:f,p=ff.world(x,z),target=new THREE.Vector3(p.x,y,p.z),id='circo-'+short;focuses[id]={id,label,target,coordinates:geo(p),offset:(mapScope==='circus'?rotateHistoric:rotate)(offset),closeOffset:(mapScope==='circus'?rotateHistoric:rotate)(closeOffset),components,regionId:period,readingLayer:period,period,kind:short==='conjunto'?'overview':'feature',bounds:new THREE.Box3(target.clone().addScalar(-2),target.clone().addScalar(2)),fitBounds:false,interiorView,floor,recommendedMode:mode,requiresSection:mode==='cut',minDistance:interiorView?.25:.8,fov,closeScale:false,mapScope,sourceConfidence:mapScope==='circus'?'published-working-hypothesis':'published-measurements-and-photographic-registration'};}
   focuses['circo-conjunto'].bounds=currentBounds.clone();focuses['circo-conjunto'].fitBounds=true;
   focuses['circo-historica'].bounds=historicalBounds.clone();focuses['circo-historica'].fitBounds=true;
+  focuses['circo-historica'].framePoints=historicalWindow.flatMap(p=>[new THREE.Vector3(p.x,groundY,p.z),new THREE.Vector3(p.x,groundY+5.2,p.z)]);
   focuses['circo-puerta'].bounds=boundsFrom(gateBounds,base,base+gateHeight);
   const getFocus=(id,mode=state.mode)=>{const q=focuses[id];if(!q)return null;if(id==='circo-conjunto'&&mode==='historical')return{...focuses['circo-historica'],id,label:q.label,kind:'overview'};if(id==='circo-conjunto'&&mode==='cut')return{...q,offset:rotate([2.5,21,-7]),closeOffset:rotate([1.7,15,-5]),target:new THREE.Vector3(...f.p(-.48,base+.65,-.33)),floor:-1};return q;};
   const components=[
@@ -362,13 +390,15 @@ export function createCirco({record,project=projectDefault,heightAt=()=>30,visit
     {id:'estratos',label:'Enlosado anterior · UC 211',period:'excavacion',coordinates:rect(f,oldPaving.x,oldPaving.z,oldPaving.w,oldPaving.d).map(geo),kind:'room',stopId:'circo-estratos',scope:'gate',floors:[-1],closed:true,interpretive:true},
     {id:'trazado',label:'Perímetro interpretativo · ca. 273 × 70 m',period:'interpretacion',coordinates:circusOutline.map(geo),kind:'room',stopId:'circo-historica',scope:'circus',floors:[-1],closed:true,interpretive:true},
     {id:'arena',label:'Arena del circo',period:'espectaculo',coordinates:arenaOutline.map(geo),kind:'room',stopId:'circo-arena',scope:'circus',floors:[-1],closed:true,interpretive:true},
-    {id:'spina',label:'Euripus y spina · 190 × 4,35 m',period:'espectaculo',coordinates:rect(cf,spina.x,spina.z,spina.length,spina.width).map(geo),kind:'room',stopId:'circo-spina',scope:'circus',floors:[-1],closed:true,interpretive:true},
+    {id:'spina',label:'Spina · ca. 151 m; sección interpretada según Bru',period:'espectaculo',coordinates:rect(cf,spina.x,spina.z,spina.length,spina.width).map(geo),kind:'room',stopId:'circo-spina',scope:'circus',floors:[-1],closed:true,interpretive:true},
+    {id:'triunfal',label:'Acceso oriental perdido · 2,84 m según Chabret/Bru',period:'espectaculo',coordinates:triumphalOutline.map(geo),kind:'path',stopId:'circo-historica',scope:'circus',floors:[-1],closed:true,interpretive:true},
+    {id:'incertidumbre',label:'Cierre oeste sin localizar · intervalo de longitud 270–290 m',period:'interpretacion',coordinates:rect(cf,(uncertainWest+uncertainEast)/2,0,uncertainEast-uncertainWest,dimensions.width).map(geo),kind:'room',stopId:'circo-carceres',scope:'circus',floors:[-1],closed:true,interpretive:true},
     {id:'carceres',label:'Cierre occidental · posición incierta',period:'interpretacion',coordinates:rect(cf,carceresX,0,2.8,56).map(geo),kind:'room',stopId:'circo-carceres',scope:'circus',floors:[-1],closed:true,interpretive:true},
     {id:'graderio',label:'Graderío · restitución volumétrica',period:'interpretacion',coordinates:rect(cf,-16,-29.5,44,10.0).map(geo),kind:'room',stopId:'circo-graderio',scope:'circus',floors:[-1],closed:true,interpretive:true}
   ];
   for(let i=0;i<wallSegments.length;i++){const q=wallSegments[i];components.push({id:'muro-'+i,label:q.id==='fases'?'Reutilización y compartimentación':'Estructura conservada',period:'excavacion',coordinates:[f.world(...q.a),f.world(...q.b)].map(geo),kind:'wall',stopId:'circo-'+q.id,scope:'gate',floors:[-1],interpretive:true});}
   for(const[side,x]of[['occidental',spina.x-spina.length/2-2],['oriental',spina.x+spina.length/2+2]])components.push({id:'meta-'+side,label:'Meta '+side+' · hipótesis',period:'interpretacion',coordinates:rect(cf,x,spina.z,2.5,5.0).map(geo),kind:'room',stopId:'circo-metae',scope:'circus',floors:[-1],closed:true,interpretive:true});
-  const plan={id:'circo',label:'Puerta del Circo Romano · restos y trazado',coordinate:geo(origin),outline:outline.map(geo),archaeologyOutline:outline.map(geo),circusOutline:circusOutline.map(geo),components,stops:Object.values(focuses).map(q=>({id:q.id,label:q.label,coordinates:q.coordinates,regionId:q.regionId,readingLayer:q.readingLayer,floor:q.floor,mapScope:q.mapScope,sourceConfidence:q.sourceConfidence})),floors:[{id:-1,label:'Puerta y nivel arqueológico',elevation:base},{id:0,label:'Ciudad actual',elevation:surface}],note:'Puerta y restos según Bru i Vidal y la intervención de López, Sañudo y Verdasco (2017). Registro proporcional dentro del recinto OSM, no levantamiento del subsuelo. Trazado global: hipótesis de Melchor et al. (2017), 270–290 × 68–70 m, cierre occidental desconocido. La anchura de la cavea y el acceso local proceden de lecturas arqueológicas distintas.'};
+  const plan={id:'circo',label:'Puerta del Circo Romano · restos y trazado',coordinate:geo(origin),outline:outline.map(geo),archaeologyOutline:outline.map(geo),circusOutline:circusOutline.map(geo),historicalOutline:historicalWindow.map(geo),historicalEvidence:{referenceDimensions:[273,70],lengthInterval:[270,290],totalWidthInterval:[68,70],conservedFoundationLength:237,spinaLength:151,westClosureLocated:false,registration:historic},components,stops:Object.values(focuses).map(q=>({id:q.id,label:q.label,coordinates:q.coordinates,regionId:q.regionId,readingLayer:q.readingLayer,floor:q.floor,mapScope:q.mapScope,sourceConfidence:q.sourceConfidence})),floors:[{id:-1,label:'Puerta y nivel arqueológico',elevation:base},{id:0,label:'Ciudad actual',elevation:surface}],note:'Puerta y restos según Bru i Vidal y la intervención de López, Sañudo y Verdasco (2017). Registro proporcional dentro del recinto OSM, no levantamiento del subsuelo. Trazado global: revisión aérea de Melchor et al. (2017), 237 m de cimentación conservada y propuesta de 270–290 × 68–70 m; cierre occidental desconocido. Spina de ca.151 m según Tarraco Biennal; sección de Bru, interpretación volumétrica. La anchura de la cavea y el acceso local proceden de lecturas arqueológicas distintas.'};
   const periods=visitData.readingLegend?.length?visitData.readingLegend:circoPeriods,colors=Object.fromEntries(periods.map(q=>[q.id,q.color]));
   function repaint(){for(const mesh of meshes){const d=mesh.userData,mat=mesh.material;mat.color.copy(d.baseColor);mat.map=d.baseMap;mat.bumpMap=d.baseBumpMap;if(state.readingMode==='periods'){mat.color.set(colors[d.period]||'#acae9c');mat.map=null;mat.bumpMap=null;}mat.emissive.set(focuses[state.selected]?.components.includes(d.component)?'#ac925f':'#000000');mat.emissiveIntensity=.042;mat.needsUpdate=true;}}
   function setPresentation(settings={}) {
@@ -387,10 +417,11 @@ export function createCirco({record,project=projectDefault,heightAt=()=>30,visit
   const setSection=open=>{setPresentation({mode:open?'cut':'current'});return state.sectionOpen;};
   const bindGround=finalHeightAt=>{if(typeof finalHeightAt!=='function')return;for(const focus of Object.values(focuses)){if(focus.floor===-1)continue;for(const k of['offset','closeOffset']){const o=focus[k],y=finalHeightAt(focus.target.x+o[0],focus.target.z+o[2]);if(Number.isFinite(y)&&focus.target.y+o[1]<y+1.15)o[1]=y+1.15-focus.target.y;}}};
   const cutSpec=contextData.surfaceApron?.cut||contextData.cut||registration.currentMask||{},maskCentre=f.world(...(cutSpec.centerLocalXZ||[-.48,-.33])),currentMask={center:cutSpec.center||maskCentre,width:cutSpec.width??cutSpec.widthM??16.4,depth:cutSpec.depth??cutSpec.depthM??8.9,yaw:cutSpec.yaw??yaw,floorY:base-.38,clipContext:false,clipTerrain:false,permanent:true};
-  const cut={...currentMask,permanent:false},historicalMask={center:{x:centre.x,z:centre.z},width:dimensions.length+5.4,depth:dimensions.width+5.4,yaw,floorY:base-.38,clipContext:true,clipTerrain:true,permanent:false,includeSiteContext:true};
-  const stats={modelVersion:'v20',gate:[gateWidth,gateDepth,gateHeight],opening:[openingWidth,2.20],tribuneAreaPublished:9,podiumWidth:.60,podiumHeightMaximumPublished:1.50,stairBoxOnly:true,circusWorkingHypothesis:[273,70],circusLengthRange:[270,290],circusWidthRange:[68,70],euripus:[190,4.35],stops:definitions.length,gateStops:14,circusStops:6,meshes:meshes.length,triangles:meshes.reduce((sum,q)=>sum+(q.geometry.index?.count||q.geometry.attributes.position.count)/3,0),hypotheses:['timber seating','turning posts','west closure','water','tribunal elevation'],verticalPlacement:'interpretative',survey:false};
-  const qa={baseY:base,surfaceY:surface,deckY,frame:{x:origin.x,z:origin.z,yaw},modelRegistration:{coordinate:geo(origin),yaw,baseDepth:surface-base,gateLocal:[gx,gz],method:'Approximate photographic registration inside the OSM enclosure, with published gate dimensions; no archaeological survey coordinates'},coreOutline:outline,gate:{x:gx,z:gz,width:gateWidth,depth:gateDepth,height:gateHeight,openingX,openingWidth,openingHeight:2.20,thresholdY,courseAsymmetry:true,completeArch:false},podiumThreshold:{x:openingX,z:podiumZ,y:base+.25,pivotSockets:1},wallSegments,tribune:{polygon:tribunePoly,areaPublished:9,registration:'proportional, not a measured plan'},stairBox,deck,stair,oldPaving,analyticalSection:{onlyMode:'cut',reportedUnits:['206','207','208','210','211'],schematic:true},circus:{frame:{x:centre.x,z:centre.z,yaw},dimensions,gateU,outerRadius:R,innerRadius:innerR,westClosureKnown:false,outline:circusOutline},sourcePlan:'López, Sañudo y Verdasco (2017), pp.103–123; Civera (2017), pp.74–75 after Bru; Melchor et al. (2017), fig.17 and pp.43–44',archaeologyElevationSurvey:false};
+  const maskCentreHistoric=cf.world((uncertainWest-2.4+curve+headDepth+2.4)/2,0);
+  const cut={...currentMask,permanent:false},historicalMask={center:maskCentreHistoric,width:dimensions.uncertainLength[1]+4.8,depth:dimensions.width+4.8,yaw:historicYaw,outline:historicalWindow,floorY:base-.38,clipContext:true,clipTerrain:true,permanent:false,includeSiteContext:true};
+  const stats={modelVersion:'v53',gate:[gateWidth,gateDepth,gateHeight],opening:[openingWidth,2.20],tribuneAreaPublished:9,podiumWidth:.60,podiumHeightMaximumPublished:1.50,stairBoxOnly:true,circusWorkingHypothesis:[273,70],circusLengthRange:[270,290],circusWidthRange:[68,70],conservedFoundationLength:237,spina:[151,4.5],spinaClearWidth:3.4,spinaSectionHeight:1.25,eastHeadDepth:headDepth,eastHeadDepthUncertainty:3,stops:definitions.length,gateStops:14,circusStops:6,meshes:meshes.length,triangles:meshes.reduce((sum,q)=>sum+(q.geometry.index?.count||q.geometry.attributes.position.count)/3,0),hypotheses:['timber seating','turning posts','west closure','water','tribunal elevation'],verticalPlacement:'interpretative',survey:false};
+  const qa={baseY:base,surfaceY:surface,deckY,frame:{x:origin.x,z:origin.z,yaw},modelRegistration:{coordinate:geo(origin),yaw,baseDepth:surface-base,gateLocal:[gx,gz],method:'Approximate photographic registration inside the OSM enclosure, with published gate dimensions; no archaeological survey coordinates'},coreOutline:outline,gate:{x:gx,z:gz,width:gateWidth,depth:gateDepth,height:gateHeight,openingX,openingWidth,openingHeight:2.20,thresholdY,courseAsymmetry:true,completeArch:false},podiumThreshold:{x:openingX,z:podiumZ,y:base+.25,pivotSockets:1},wallSegments,tribune:{polygon:tribunePoly,areaPublished:9,registration:'proportional, not a measured plan'},stairBox,deck,stair,oldPaving,analyticalSection:{onlyMode:'cut',reportedUnits:['206','207','208','210','211'],schematic:true},circus:{frame:{x:centre.x,z:centre.z,yaw:historicYaw},dimensions,gateU,outerHalfWidth:R,innerHalfWidth:innerR,headDepth,innerHeadDepth:innerDepth,headGeometry:'approximate flattened elliptical head from published raster plan; not a measured radius',documentedWest,conservedFoundationLength:237,conservedSpanPlacement:'illustrative 237 m span referenced to the eastern head; not a surveyed surviving-foundation polygon',westClosureKnown:false,westernInterval:[uncertainWest,uncertainEast],spina,registration:historic,outline:circusOutline,window:historicalWindow},sourcePlan:'López, Sañudo y Verdasco (2017), pp.103–123; Bru i Vidal (1963), reviewed by Civera (2017); Melchor et al., Tarraco Biennal (2017), pp.159–160; Melchor et al., ARSE 51 (2017), figs.16–17, pp.42–44',archaeologyElevationSurvey:false};
   const visit={focuses,bounds:currentBounds,plan,stats,qa,periods,getFocus,selectFocus,setReadingMode,setSection,bindGround,getState:()=>({...state}),sectionAvailable:true,metadata:{model:'documented-interpretation',interiorSurvey:false,sourcePlan:qa.sourcePlan,modern:'Open enclosure, blue mesh fence, retaining concrete, wood deck and glass rails interpreted from site photography',historical:'Working hypothesis of the full circus, separate from the preserved gate. Seating, west closure, turning posts, water and tribunal elevation are optional interpretations.',evidence:'Published gate dimensions and passage; preserved stair box, filled compartment and opus caementicium walls. The analytical profile represents a reported alluvial sequence, not the current exposed retaining wall.'},renderStops:['circo-conjunto','circo-puerta','circo-vano','circo-tribuna','circo-estratos','circo-historica']};
   group.userData.visit=visit;group.userData.resources=resources;group.userData.ownedResources=resources;group.userData.landmarkId='circo';repaint();setPresentation();
-  return {id:'circo',group,remains,reconstruction,hypotheses,modern,retention,protection,sectionEvidence,point:focuses['circo-conjunto'].target.clone(),views:{offset:focuses['circo-conjunto'].offset,closeOffset:focuses['circo-conjunto'].closeOffset},view:{target:focuses['circo-conjunto'].target.clone(),offset:focuses['circo-conjunto'].offset,closeOffset:focuses['circo-conjunto'].closeOffset},cut,currentMask,historicalMask,containsSubsurface:(x,z)=>state.mode==='historical'?inside({x,z},stadium(cf,left-2.4,curve,R+2.4)):inside({x,z},outline),stats,visit,setPresentation,setSection,exclusions:[],patches:[],excludedBuildingIds:[],excludedRoadIds:[]};
+  return {id:'circo',group,remains,reconstruction,hypotheses,modern,retention,protection,sectionEvidence,point:focuses['circo-conjunto'].target.clone(),views:{offset:focuses['circo-conjunto'].offset,closeOffset:focuses['circo-conjunto'].closeOffset},view:{target:focuses['circo-conjunto'].target.clone(),offset:focuses['circo-conjunto'].offset,closeOffset:focuses['circo-conjunto'].closeOffset},cut,currentMask,historicalMask,containsSubsurface:(x,z)=>state.mode==='historical'?inside({x,z},historicalWindow):inside({x,z},outline),stats,visit,setPresentation,setSection,sampleWalkingHeight:(x,z)=>state.mode==='historical'&&inside({x,z},historicalWindow)?(inside({x,z},arenaOutline)?groundY+.007:groundY-.055):null,exclusions:[],patches:[],excludedBuildingIds:[],excludedRoadIds:[]};
 }

@@ -1,0 +1,138 @@
+{
+  "initialMatrix": [
+    [
+      0.3378866446164536,
+      0.013720397183528557
+    ],
+    [
+      -0.037582280287947495,
+      0.3158103153866415
+    ],
+    [
+      -74.18863090546027,
+      -437.94943179159395
+    ]
+  ],
+  "fittedMatrix": [
+    [
+      0.34154024039426645,
+      0.010393073131295033
+    ],
+    [
+      -0.010195711621863206,
+      0.3323159061150848
+    ],
+    [
+      -85.83575815488108,
+      -445.50329491210493
+    ]
+  ],
+  "correlationBefore": 0.011257245458163445,
+  "correlationAfter": 0.8652475839939618,
+  "nativeFigSize": [
+    443,
+    378
+  ],
+  "caution": "Image intensity matching is exploratory; roof parallax and differing shadows mean it does not replace ground control.",
+  "localPatchChecks": [
+    {
+      "id": "school",
+      "figurePixel": [
+        108,
+        118
+      ],
+      "windowPixels": 25,
+      "localCorrelation": 0.9507467141940831,
+      "residualSourcePixelsXY": [
+        -4.440892098500626e-16,
+        -4.440892098500626e-16
+      ],
+      "residualDistanceM": 6.350860417708932e-16
+    },
+    {
+      "id": "west_block",
+      "figurePixel": [
+        172,
+        131
+      ],
+      "windowPixels": 25,
+      "localCorrelation": 0.8908988080560972,
+      "residualSourcePixelsXY": [
+        -4.440892098500626e-16,
+        -4.440892098500626e-16
+      ],
+      "residualDistanceM": 6.350860417708932e-16
+    },
+    {
+      "id": "central_block",
+      "figurePixel": [
+        221,
+        145
+      ],
+      "windowPixels": 25,
+      "localCorrelation": 0.7950413569973622,
+      "residualSourcePixelsXY": [
+        -4.440892098500626e-16,
+        -4.440892098500626e-16
+      ],
+      "residualDistanceM": 6.350860417708932e-16
+    },
+    {
+      "id": "door_block",
+      "figurePixel": [
+        295,
+        184
+      ],
+      "windowPixels": 25,
+      "localCorrelation": 0.834982847894097,
+      "residualSourcePixelsXY": [
+        -4.440892098500626e-16,
+        -4.440892098500626e-16
+      ],
+      "residualDistanceM": 6.350860417708932e-16
+    },
+    {
+      "id": "east_head",
+      "figurePixel": [
+        366,
+        187
+      ],
+      "windowPixels": 25,
+      "localCorrelation": 0.862076331299567,
+      "residualSourcePixelsXY": [
+        -4.440892098500626e-16,
+        -4.440892098500626e-16
+      ],
+      "residualDistanceM": 6.350860417708932e-16
+    },
+    {
+      "id": "southwest",
+      "figurePixel": [
+        176,
+        228
+      ],
+      "windowPixels": 25,
+      "localCorrelation": 0.9036163094401689,
+      "residualSourcePixelsXY": [
+        -4.440892098500626e-16,
+        -4.440892098500626e-16
+      ],
+      "residualDistanceM": 6.350860417708932e-16
+    },
+    {
+      "id": "southcentral",
+      "figurePixel": [
+        256,
+        241
+      ],
+      "windowPixels": 25,
+      "localCorrelation": 0.8775250311327171,
+      "residualSourcePixelsXY": [
+        -0.2000000000000004,
+        -4.440892098500626e-16
+      ],
+      "residualDistanceM": 0.20501900068034437
+    }
+  ],
+  "patchResidualRmsM": 0.07748989854902476
+}

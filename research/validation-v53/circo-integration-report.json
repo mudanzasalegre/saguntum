@@ -1,0 +1,423 @@
+{
+  "place": "circo",
+  "stops": 20,
+  "ground": "Same sacred, civic and archaeological patches, Forum preparatory street-height cap, urban grading and interpolated terrain as Atlas. Permanent polygon removes the cap; visible park floors/public decks retain their own levels. Distant Glorieta model omitted.",
+  "geometry": {
+    "modelVersion": "v53",
+    "gate": [
+      6.21,
+      2.07,
+      4.1
+    ],
+    "opening": [
+      1.2,
+      2.2
+    ],
+    "tribuneAreaPublished": 9,
+    "podiumWidth": 0.6,
+    "podiumHeightMaximumPublished": 1.5,
+    "stairBoxOnly": true,
+    "circusWorkingHypothesis": [
+      273,
+      70
+    ],
+    "circusLengthRange": [
+      270,
+      290
+    ],
+    "circusWidthRange": [
+      68,
+      70
+    ],
+    "conservedFoundationLength": 237,
+    "spina": [
+      151,
+      4.5
+    ],
+    "spinaClearWidth": 3.4,
+    "spinaSectionHeight": 1.25,
+    "eastHeadDepth": 22,
+    "eastHeadDepthUncertainty": 3,
+    "stops": 20,
+    "gateStops": 14,
+    "circusStops": 6,
+    "meshes": 54,
+    "triangles": 34830,
+    "hypotheses": [
+      "timber seating",
+      "turning posts",
+      "west closure",
+      "water",
+      "tribunal elevation"
+    ],
+    "verticalPlacement": "interpretative",
+    "survey": false,
+    "context": {
+      "buildingParts": 91,
+      "parentParcels": 21,
+      "footprintsPreserved": true,
+      "courtyards": 6,
+      "sourceHeight": 0,
+      "ignHeight": 40,
+      "storeyHeight": 51,
+      "fallbackHeight": 0,
+      "streetSamples": 2681,
+      "roofCorrections": 0,
+      "maximumRoofCorrectionM": 0,
+      "preservedSantaMaria": true,
+      "preservedPlazaMayor": true,
+      "heightConflictsReviewed": 3,
+      "interpretiveTrees": 5,
+      "sourcePlazaAreaM2": 256.8157321307386,
+      "surfaceApronAreaM2": 26.3784,
+      "reusedBuildingParts": 0,
+      "reusedStreetFragments": 0,
+      "preservedPreviousContexts": true
+    }
+  },
+  "updated": [
+    {
+      "file": "dist/assets/territory/visit-cameras.json",
+      "otherVisits": 32,
+      "otherVisitsSha256": "cd55d79f0e56ff4c7292336c93c643e36d463efd8700e2ab2a090b84104769a7"
+    },
+    {
+      "file": "dist/assets/territory/atlas-frames.json",
+      "otherVisits": 32,
+      "otherVisitsSha256": "18ce9bfc1b7f4ad0183408986a328b486b18201de650a2d0f4767985626d58b0"
+    },
+    {
+      "file": "dist/assets/territory/visit-stops.json",
+      "otherVisits": 32,
+      "otherVisitsSha256": "8c6d0eeb6954cd54cf8ae39489f6704352c01bf3cbd493613416c4d2aae4d733"
+    }
+  ],
+  "cameras": [
+    {
+      "stop": "overview",
+      "size": "wide",
+      "fittedPoints": 8,
+      "clearanceM": 28.7296,
+      "adapterErrorM": 0
+    },
+    {
+      "stop": "overview",
+      "size": "portrait",
+      "fittedPoints": 8,
+      "clearanceM": 64.7586,
+      "adapterErrorM": 0
+    },
+    {
+      "stop": "circo-conjunto",
+      "size": "wide",
+      "fittedPoints": 8,
+      "clearanceM": 28.7296,
+      "adapterErrorM": 0
+    },
+    {
+      "stop": "circo-conjunto",
+      "size": "portrait",
+      "fittedPoints": 8,
+      "clearanceM": 64.7586,
+      "adapterErrorM": 0
+    },
+    {
+      "stop": "circo-acceso",
+      "size": "wide",
+      "fittedPoints": 0,
+      "clearanceM": 2.15,
+      "adapterErrorM": 0
+    },
+    {
+      "stop": "circo-acceso",
+      "size": "portrait",
+      "fittedPoints": 0,
+      "clearanceM": 2.15,
+      "adapterErrorM": 0
+    },
+    {
+      "stop": "circo-puerta",
+      "size": "wide",
+      "fittedPoints": 0,
+      "clearanceM": 4.2798,
+      "adapterErrorM": 0
+    },
+    {
+      "stop": "circo-puerta",
+      "size": "portrait",
+      "fittedPoints": 0,
+      "clearanceM": 4.2798,
+      "adapterErrorM": 0
+    },
+    {
+      "stop": "circo-vano",
+      "size": "wide",
+      "fittedPoints": 0,
+      "clearanceM": 2.2,
+      "adapterErrorM": 0
+    },
+    {
+      "stop": "circo-vano",
+      "size": "portrait",
+      "fittedPoints": 0,
+      "clearanceM": 2.2,
+      "adapterErrorM": 0
+    },
+    {
+      "stop": "circo-sillares",
+      "size": "wide",
+      "fittedPoints": 0,
+      "clearanceM": 3.3,
+      "adapterErrorM": 0
+    },
+    {
+      "stop": "circo-sillares",
+      "size": "portrait",
+      "fittedPoints": 0,
+      "clearanceM": 3.3,
+      "adapterErrorM": 0
+    },
+    {
+      "stop": "circo-umbral",
+      "size": "wide",
+      "fittedPoints": 0,
+      "clearanceM": 3.42,
+      "adapterErrorM": 0
+    },
+    {
+      "stop": "circo-umbral",
+      "size": "portrait",
+      "fittedPoints": 0,
+      "clearanceM": 3.42,
+      "adapterErrorM": 0
+    },
+    {
+      "stop": "circo-coronacion",
+      "size": "wide",
+      "fittedPoints": 0,
+      "clearanceM": 6.75,
+      "adapterErrorM": 0
+    },
+    {
+      "stop": "circo-coronacion",
+      "size": "portrait",
+      "fittedPoints": 0,
+      "clearanceM": 6.75,
+      "adapterErrorM": 0
+    },
+    {
+      "stop": "circo-interior",
+      "size": "wide",
+      "fittedPoints": 0,
+      "clearanceM": 4.1,
+      "adapterErrorM": 0
+    },
+    {
+      "stop": "circo-interior",
+      "size": "portrait",
+      "fittedPoints": 0,
+      "clearanceM": 4.1,
+      "adapterErrorM": 0
+    },
+    {
+      "stop": "circo-muros",
+      "size": "wide",
+      "fittedPoints": 0,
+      "clearanceM": 4.43,
+      "adapterErrorM": 0
+    },
+    {
+      "stop": "circo-muros",
+      "size": "portrait",
+      "fittedPoints": 0,
+      "clearanceM": 4.43,
+      "adapterErrorM": 0
+    },
+    {
+      "stop": "circo-tribuna",
+      "size": "wide",
+      "fittedPoints": 0,
+      "clearanceM": 4.9819,
+      "adapterErrorM": 0
+    },
+    {
+      "stop": "circo-tribuna",
+      "size": "portrait",
+      "fittedPoints": 0,
+      "clearanceM": 4.9819,
+      "adapterErrorM": 0
+    },
+    {
+      "stop": "circo-escaleras",
+      "size": "wide",
+      "fittedPoints": 0,
+      "clearanceM": 4.68,
+      "adapterErrorM": 0
+    },
+    {
+      "stop": "circo-escaleras",
+      "size": "portrait",
+      "fittedPoints": 0,
+      "clearanceM": 4.68,
+      "adapterErrorM": 0
+    },
+    {
+      "stop": "circo-estratos",
+      "size": "wide",
+      "fittedPoints": 0,
+      "clearanceM": 1.9785,
+      "adapterErrorM": 0
+    },
+    {
+      "stop": "circo-estratos",
+      "size": "portrait",
+      "fittedPoints": 0,
+      "clearanceM": 1.9785,
+      "adapterErrorM": 0
+    },
+    {
+      "stop": "circo-arena",
+      "size": "wide",
+      "fittedPoints": 0,
+      "clearanceM": 27.3494,
+      "adapterErrorM": 0
+    },
+    {
+      "stop": "circo-arena",
+      "size": "portrait",
+      "fittedPoints": 0,
+      "clearanceM": 27.3494,
+      "adapterErrorM": 0
+    },
+    {
+      "stop": "circo-spina",
+      "size": "wide",
+      "fittedPoints": 0,
+      "clearanceM": 33.9024,
+      "adapterErrorM": 0
+    },
+    {
+      "stop": "circo-spina",
+      "size": "portrait",
+      "fittedPoints": 0,
+      "clearanceM": 33.9024,
+      "adapterErrorM": 0
+    },
+    {
+      "stop": "circo-metae",
+      "size": "wide",
+      "fittedPoints": 0,
+      "clearanceM": 13.143,
+      "adapterErrorM": 0
+    },
+    {
+      "stop": "circo-metae",
+      "size": "portrait",
+      "fittedPoints": 0,
+      "clearanceM": 13.143,
+      "adapterErrorM": 0
+    },
+    {
+      "stop": "circo-graderio",
+      "size": "wide",
+      "fittedPoints": 0,
+      "clearanceM": 16.793,
+      "adapterErrorM": 0
+    },
+    {
+      "stop": "circo-graderio",
+      "size": "portrait",
+      "fittedPoints": 0,
+      "clearanceM": 16.793,
+      "adapterErrorM": 0
+    },
+    {
+      "stop": "circo-historica",
+      "size": "wide",
+      "fittedPoints": 102,
+      "clearanceM": 363.8803,
+      "adapterErrorM": 0
+    },
+    {
+      "stop": "circo-historica",
+      "size": "portrait",
+      "fittedPoints": 102,
+      "clearanceM": 754.6309,
+      "adapterErrorM": 0
+    },
+    {
+      "stop": "circo-carceres",
+      "size": "wide",
+      "fittedPoints": 0,
+      "clearanceM": 27.055,
+      "adapterErrorM": 0
+    },
+    {
+      "stop": "circo-carceres",
+      "size": "portrait",
+      "fittedPoints": 0,
+      "clearanceM": 27.055,
+      "adapterErrorM": 0
+    },
+    {
+      "stop": "circo-fases",
+      "size": "wide",
+      "fittedPoints": 0,
+      "clearanceM": 5.83,
+      "adapterErrorM": 0
+    },
+    {
+      "stop": "circo-fases",
+      "size": "portrait",
+      "fittedPoints": 0,
+      "clearanceM": 5.83,
+      "adapterErrorM": 0
+    },
+    {
+      "stop": "circo-entorno",
+      "size": "wide",
+      "fittedPoints": 0,
+      "clearanceM": 2.15,
+      "adapterErrorM": 0
+    },
+    {
+      "stop": "circo-entorno",
+      "size": "portrait",
+      "fittedPoints": 0,
+      "clearanceM": 2.15,
+      "adapterErrorM": 0
+    }
+  ],
+  "maps": [
+    {
+      "name": "current",
+      "visibleStops": 14,
+      "components": 135,
+      "scaleMetres": 10
+    },
+    {
+      "name": "current-phone",
+      "visibleStops": 14,
+      "components": 135,
+      "scaleMetres": 5
+    },
+    {
+      "name": "historical",
+      "visibleStops": 7,
+      "components": 144,
+      "scaleMetres": 50
+    },
+    {
+      "name": "historical-phone",
+      "visibleStops": 7,
+      "components": 144,
+      "scaleMetres": 50
+    },
+    {
+      "name": "historical-layers",
+      "visibleStops": 7,
+      "components": 144,
+      "scaleMetres": 50
+    }
+  ]
+}

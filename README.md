@@ -1,6 +1,22 @@
 # SAGUNTUM · Atlas vivo
 
-Atlas patrimonial y paisajístico de Sagunto, Puerto de Sagunto y su costa en Three.js, con **32 lugares explorables** sobre cartografía real. Reúne monumentos, arqueología, memoria industrial, costa y paisajes en seis ámbitos territoriales, con visitas documentadas y vistas históricas.
+Atlas patrimonial y paisajístico de Sagunto, Puerto de Sagunto y su costa en Three.js, con **33 lugares explorables** sobre cartografía real. Reúne monumentos, arqueología, memoria industrial, costa y paisajes en seis ámbitos territoriales, con visitas documentadas y vistas históricas.
+
+## Circo romano · de la puerta al edificio completo
+
+La revisión V53 incorpora el selector **Puerta actual / Circo completo** en el Atlas y el Simulador. La puerta conservada permanece en su posición y actúa como referencia entre ambas vistas. La capa histórica retira el terreno y el contexto contemporáneos dentro de la huella del circo, conserva la ciudad exterior y permite volver al recinto arqueológico actual.
+
+El trazado se apoya en los estudios fotogramétricos de 2017 y en el registro de su figura publicada sobre la misma ortofoto ICV de 2012 utilizada por los autores. Se emplea una longitud de trabajo de **273 m aproximadamente**, una anchura exterior de **70 m** y una *spina* de **151 m**. La banda occidental muestra el intervalo propuesto de **270–290 m**; los **237 m** reconocibles en la imagen de 1938 se explican como tramo de cimentación, no como longitud total del edificio. Gradas, metae, agua y tribuna se distinguen como interpretación. La geometría de cierre de los cajones de salida no se presenta como conocida.
+
+Se conservan las 20 paradas del Circo: 14 del estado actual y seis históricas. El plano histórico mantiene también la puerta como referencia seleccionable. La visita reúne ocho fuentes y once hitos. Los encuadres abarcan el edificio completo en móvil, tableta y escritorio, y la numeración de los 33 lugares permanece intacta.
+
+[Circo completo](https://saguntum-atlas-3d.monmode.chatgpt.site/#circo/circo-historica) · [Puerta actual](https://saguntum-atlas-3d.monmode.chatgpt.site/#circo/circo-conjunto) · [Investigación y límites](research/validation-v53/circo-evidence.md) · [Registro cartográfico](research/validation-v53/circo-registration.md) · [Verificación](research/validation-v53/README.md) · [Estado de publicación](docs/SITES_SYNC.md)
+
+## Plaza del Fórum · parque arqueológico
+
+La visita incorporada en V52 ocupa el número **12**, después de la Puerta del Circo. Representa el parque entre Huertos, Ordóñez y Remedio, con sus restos bajos, depósito circular, galerías, recorridos, medianeras y jardines. Sus diez paradas distinguen el estado actual de las interpretaciones históricas y conservan la relación espacial con la puerta vecina.
+
+[Plaza del Fórum](https://saguntum-atlas-3d.monmode.chatgpt.site/#forum-plaza) · [Historia](research/forum-plaza-history.md) · [Cartografía y modelo](research/forum-plaza-layout.md) · [Verificación](research/validation-v52/README.md)
 
 ## Castillo · Foro y Puerta de Almenara
 
@@ -22,7 +38,7 @@ En Santa María se corrigen el encuentro del terreno con la fábrica del templo,
 
 ## Visitas en orden y recorrido guiado
 
-La numeración es común al Atlas y al Simulador: **1–16 Sagunto**, **17–25 Puerto de Sagunto** y **26–32 costa y paisajes**. El catálogo muestra esos tres grupos y mantiene los números al buscar o filtrar. Los enlaces a monumentos y sus paradas conservan sus identificadores.
+La numeración es común al Atlas y al Simulador: **1–17 Sagunto**, **18–26 Puerto de Sagunto** y **27–33 costa y paisajes**. El catálogo muestra esos tres grupos y mantiene los números al buscar o filtrar. Los enlaces a monumentos y sus paradas conservan sus identificadores.
 
 En **Simulador → Recorrido territorial**, se puede elegir todo el territorio o una de las tres zonas. Cada lugar tiene un encuadre y 14 segundos de observación. Los desplazamientos próximos aceleran y frenan suavemente; los traslados largos usan un fundido identificado y preparan el destino antes de descubrirlo. Se puede pausar, volver, avanzar o terminar para explorar. El recorrido se pausa al consultar el mapa, abrir ajustes o cambiar de pestaña, y termina al llegar al último lugar. [Comportamiento y validación](docs/RECORRIDO_GUIADO.md)
 
@@ -40,7 +56,7 @@ El simulador permite elegir **WebGPU** en **Capas y luz → Motor gráfico**. Co
 
 Elige **A pie** desde la panorámica para empezar en el centro de Sagunto. Un clic en la escena activa la mirada con ratón. WASD permite caminar, Mayús correr, Espacio saltar y E entrar en la visita que tienes delante. Al acercarte a un monumento, el simulador carga su modelo original. En pantallas táctiles puedes moverte con un dedo y mirar con el otro. [Abrir el simulador](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador) · [Controles, alcance y comprobaciones](docs/EXPLORACION.md) · [Comparar el Atlas y el simulador](research/validation-atlas-parity/v41/comparacion.jpg)
 
-Los **32 lugares visitables** tienen recorrido dentro del territorio continuo. El buscador admite el nombre del lugar o de una parada. En cada lugar puedes elegir una de sus vistas desde la lista o el mapa numerado, pasar a la visita del Atlas y regresar a la posición que habías dejado. Hay **529 entradas de visita** entre arquitectura, excavaciones, patrimonio industrial y paisajes. El encuadre, las cubiertas, las secciones y la fase documentada proceden de la visita original. [Orchestra del Teatro Romano](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador/theatre/teatro-orchestra) · [Salón del Casino](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador/casino/casino-salon) · [Desembocadura del Palancia](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador/rio-palancia/delta) · [Catálogo y criterios de integración](docs/VISITAS_TERRITORIALES.md)
+Los **33 lugares visitables** tienen recorrido dentro del territorio continuo. El buscador admite el nombre del lugar o de una parada. En cada lugar puedes elegir una de sus vistas desde la lista o el mapa numerado, pasar a la visita del Atlas y regresar a la posición que habías dejado. Hay **539 entradas de visita** entre arquitectura, excavaciones, patrimonio industrial y paisajes. El encuadre, las cubiertas, las secciones y la fase documentada proceden de la visita original. [Orchestra del Teatro Romano](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador/theatre/teatro-orchestra) · [Salón del Casino](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador/casino/casino-salon) · [Desembocadura del Palancia](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador/rio-palancia/delta) · [Catálogo y criterios de integración](docs/VISITAS_TERRITORIALES.md)
 
 La panorámica se abre con luz solar y ortofotografía. En una visita seleccionada, el ajuste **Automático** recupera el terreno y la luz del Atlas. En **Capas y luz** puedes elegir esos ajustes por separado. Las cubiertas reciben color de la fotografía aérea sobre sus huellas catastrales. Para las fachadas de las calles, la fecha declarada en Catastro orienta los acabados y las proporciones de los huecos cuando se conoce. Los alzados individuales siguen siendo aproximaciones. [Abrir el simulador](https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador)
 

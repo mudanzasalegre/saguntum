@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "site": {
+    "projectId": "appgprj_6afeb5aaef8c8191b0062318fb3a24f1",
+    "version": 53,
+    "versionId": "appgprj_6afeb5aaef8c8191b0062318fb3a24f1~appgver_98d92d624f1c8191910344a5703ab87d",
+    "sourceCommit": "3d3d523247d827acbec8b0debc333a1a85114019",
+    "distTree": "04503fd37e06c5e0681d71a3d7e759ef81185a2d",
+    "deploymentId": "appgdep_6b0950a076708191bfd3d258a6e91fe2",
+    "status": "succeeded",
+    "url": "https://saguntum-atlas-3d.monmode.chatgpt.site",
+    "publishedAt": "2026-11-27T09:43:20.426795+00:00",
+    "archive": {
+      "archive_format": "tar",
+      "sediment_file_id": "file_0000000023b481f4b90646ab3fc02410",
+      "content_hash": "sha256:5970c1300dcf81f794fff0c62a71501825576db6619bb67142a42218cf28c35a",
+      "size_bytes": 267438080,
+      "file_count": 1646
+    },
+    "localArchive": {
+      "archiveBytes": 161117433,
+      "expandedBytes": 267448320,
+      "limitBytes": 268435456,
+      "marginBytes": 987136,
+      "files": 1646
+    }
+  },
+  "method": "Cloud browser UI on the published public Site. Separate CPU tests execute the real model, masks, camera projections, collision and shader builders; four Blender inspection images use exported application meshes.",
+  "checks": [
+    {
+      "id": "public-historical-entry",
+      "pass": true,
+      "url": "https://saguntum-atlas-3d.monmode.chatgpt.site/#circo/circo-historica",
+      "observed": "Global brand preserved; Visita 11 and stop 17 of 20. Circo completo is selected. Six historical stops and an explicit uncertainty note are present."
+    },
+    {
+      "id": "public-current-return",
+      "pass": true,
+      "url": "https://saguntum-atlas-3d.monmode.chatgpt.site/#circo/circo-conjunto",
+      "observed": "Puerta actual selects the current overview and restores the visible Ver el circo completo CTA."
+    },
+    {
+      "id": "public-historical-cta",
+      "pass": true,
+      "url": "https://saguntum-atlas-3d.monmode.chatgpt.site/#circo/circo-historica",
+      "observed": "Ver el circo completo returns to the full historical presentation and correct selected control."
+    },
+    {
+      "id": "public-source-guide",
+      "pass": true,
+      "observed": "Eight source entries and linked bibliography are visible. The guide distinguishes the 237 m visible foundation, 270–290 m proposed total, 68–70 m total width and 151 m spina."
+    },
+    {
+      "id": "atlas-to-simulator",
+      "pass": true,
+      "url": "https://saguntum-atlas-3d.monmode.chatgpt.site/#simulador/circo/circo-historica",
+      "observed": "Simulator stays in its own viewer at stop 17 with Circo completo pressed, current unpressed and opening CTA hidden. Local map control remains enabled."
+    },
+    {
+      "id": "simulator-to-atlas",
+      "pass": true,
+      "url": "https://saguntum-atlas-3d.monmode.chatgpt.site/#circo/circo-historica",
+      "observed": "Visita patrimonial returns to the same historical stop."
+    },
+    {
+      "id": "public-historical-plan",
+      "pass": true,
+      "observed": "Situar en el plano opens Plano del circo romano: Circo completo · 7 paradas en el plano. All twenty guide stop buttons remain available; seven markers belong to the historical plan."
+    },
+    {
+      "id": "deliverable",
+      "pass": true,
+      "url": "https://saguntum-atlas-3d.monmode.chatgpt.site/#circo/circo-historica",
+      "observed": "Closed the plan dialog and left the historical visit open, marked as deliverable. Temporary local preview tab closed."
+    }
+  ],
+  "limitations": [
+    "WebGL 2 is unavailable in the review browser. Published navigation, controls, sources and plans were verified in fallback. No live GPU frame or performance measurement is claimed.",
+    "Four CPU renders use the real application meshes, textures and clipping geometry with Blender lighting.",
+    "The historical plan is a documented interpretation. Western closure, seating elevations and several decorative or functional details remain uncertain; the registration adopts a 3–5 m interpretive tolerance."
+  ],
+  "relatedReports": [
+    "README.md",
+    "circo-evidence.md",
+    "circo-registration.md",
+    "circo-layer-qa.json",
+    "circo-integration-report.json",
+    "circo-simulator-report.json",
+    "browser-qa.json",
+    "render-inspection.json",
+    "distribution-json-equivalence.json"
+  ]
+}
