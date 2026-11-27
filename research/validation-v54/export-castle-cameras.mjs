@@ -20,7 +20,9 @@ const hash=value=>createHash('sha256').update(value).digest('hex');
 const round=(n,places=4)=>Number(n.toFixed(places));
 const vec=(v,places=4)=>v.toArray().map(n=>round(n,places));
 const sizes={wide:{width:1440,height:900},portrait:{width:390,height:844}};
-fs.writeFileSync(path.join(root,'research/validation-v54/castle-cameras-qa.json'),JSON.stringify({pass:false,status:'validating-current-source',started:new Date().toISOString()},null,2)+'\n');
+const outputDirectory=path.resolve(process.env.SAGUNTUM_CASTLE_QA_DIRECTORY||path.join(root,'research/validation-v54'));
+fs.mkdirSync(outputDirectory,{recursive:true});
+fs.writeFileSync(path.join(outputDirectory,'castle-cameras-qa.json'),JSON.stringify({pass:false,status:'validating-current-source',started:new Date().toISOString()},null,2)+'\n');
 
 const {visit, guide, heightAt, terrain, terrainMesh, castle, monuments, groundBinding}=await buildCastleScene();
 const [{editorialSceneFrame},{stopCamera},{registerFrame},{project:territoryProject},{insideExcavation},{sampleHeritageBarriers,createHeritageCollision}]=await Promise.all([
@@ -229,6 +231,6 @@ const report={pass:true,method:'CPU final terrain binding + exact app.js preset(
  overviewNote:'Unselected entrance and conjunto stop share the authored castle overview.',
  interiorIds,maxPoseErrorM,maxAdapterErrorM,maxFovErrorDeg,simulatorRegistration:{projection:'ETRS89 / UTM 30N',verticalOffsetM:elevationShift},
  unchanged,samples,easternDetails,interiorAspectChecks:blendSamples,errors};
-fs.writeFileSync(path.join(root,'research/validation-v54/castle-cameras-qa.json'),JSON.stringify(report,null,2)+'\n');
+fs.writeFileSync(path.join(outputDirectory,'castle-cameras-qa.json'),JSON.stringify(report,null,2)+'\n');
 console.log(JSON.stringify({pass:report.pass,checkOnly,dryRun,counts:report.counts,interiorIds,maxPoseErrorM,maxAdapterErrorM,
  otherMonumentsUnchanged:unchanged.every(item=>item.unchangedOutsideCastle)},null,2));

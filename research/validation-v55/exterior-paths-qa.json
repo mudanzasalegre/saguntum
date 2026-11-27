@@ -1,0 +1,65 @@
+{
+  "pass": true,
+  "method": "Indexed triangles from createCity and streetGeometry; centre and edge rays/probes against final Atlas terrain and loaded production Simulator grids",
+  "observations": [
+    {
+      "name": "Atlas actual city mesh",
+      "triangles": 9290,
+      "samples": 37160,
+      "maxAboveM": 0.04291700657147146,
+      "maxBelowM": 0.007155105688880781,
+      "maxContactErrorM": 0.01791700657147146,
+      "worst": {
+        "x": 282.26285807291663,
+        "z": 219.72728983561197,
+        "y": 113.53488159179688,
+        "ground": 113.4919645852254,
+        "above": 0.04291700657147146
+      },
+      "pass": true
+    },
+    {
+      "name": "Simulator actual streetGeometry / production terrain grids",
+      "triangles": 7755,
+      "samples": 31020,
+      "maxAboveM": 0.041960906982410506,
+      "maxBelowM": 0.007765960693348006,
+      "maxContactErrorM": 0.017234039306651995,
+      "worst": {
+        "x": 3751.0194091796875,
+        "z": -439.01258850097656,
+        "y": 107.84596252441406,
+        "ground": 107.83819656372071,
+        "above": 0.007765960693348006
+      },
+      "pass": true
+    }
+  ],
+  "scope": {
+    "sourceIds": [
+      "1419384280",
+      "1419384293",
+      "1419384294"
+    ],
+    "radiusM": 60,
+    "fullyConformingRadiusM": 50,
+    "onlyTheseAtlasIds": true,
+    "interiorRoutesUnchanged": true,
+    "outsideRadiusUnchanged": true,
+    "nativeMappedSegments": 12,
+    "nativeAccessTagsPreserved": true,
+    "terrainFilesModified": false
+  },
+  "sourceHashes": {
+    "dist/js/city.js": "7e9c35a0ef9c83cc1566786d5947cf1a8c460aaa06f86acc02fcb22fb1e61c02",
+    "dist/js/territory-street-surfaces.js": "4bd0d0b676da12fbd3fa7f42bd22c3be86b5ed51354b7f819842cb4fcaa86add",
+    "dist/js/castle-east-paths.js": "a1e08f786846c7937dbd1c6d18d4f05923642a9ec03acd6873b64e6212490ef9",
+    "dist/assets/network/3_-1.json": "c57c36af52a165fe6b3d51204ab89009e110c46e89d93bd88f8a05807995e7ef",
+    "dist/assets/data/cartography.json": "a2b02f3311dfc3cc4b0a162400508364ce41f9ea875e77638e983e5065b23340",
+    "dist/assets/data/elevation.json": "3c70059cb1f8de706bc7e6912311076cb716ec2ff7f1c8aa2b6e51a520809d8c"
+  },
+  "limitations": [
+    "CPU mesh contact check, not WebGL.",
+    "The existing access tags are preserved; this change does not designate a new public walking itinerary."
+  ]
+}

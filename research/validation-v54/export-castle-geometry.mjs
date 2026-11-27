@@ -4,14 +4,19 @@ import fs from 'node:fs';
 import zlib from 'node:zlib';
 import {createHash} from 'node:crypto';
 import {createRequire} from 'node:module';
+import {pathToFileURL} from 'node:url';
+import path from 'node:path';
 import {THREE,root,buildCastleScene} from './castle-scene.mjs';
 const output=process.argv[process.argv.indexOf('--out')+1];
 if(!process.argv.includes('--out'))throw new Error('--out <file.json.gz> is required');
+const inspectionModule=process.argv.includes('--cameras')?path.resolve(process.argv[process.argv.indexOf('--cameras')+1]):null;
 const {createCanvas,ImageData}=createRequire((process.env.CODEX_PRIMARY_RUNTIME_NODE_MODULES||root+'node_modules')+'/package.json')('@napi-rs/canvas');
 const sourceFiles=[...fs.readdirSync(root+'dist/js').filter(file=>/^castle.*\.js$/.test(file)).map(file=>'dist/js/'+file),'dist/js/monuments.js','dist/assets/data/castle-visit.json',
  'dist/js/terrain.js','dist/js/urban-surface.js','dist/js/excavation.js','dist/js/city.js','dist/assets/data/elevation.json','dist/assets/data/cartography.json','dist/assets/data/orthophoto.jpg'];
+if(inspectionModule)sourceFiles.push(path.relative(root,inspectionModule));
 const sourceHashes=Object.fromEntries(sourceFiles.map(file=>[file,createHash('sha256').update(fs.readFileSync(root+file)).digest('hex')]));
-const {scene,castle,visit,terrain,groundBinding,easternExcavation}=await buildCastleScene({context:true,rasterTextures:true});
+const assembled=await buildCastleScene({context:true,rasterTextures:true});
+const {scene,castle,visit,terrain,groundBinding,easternExcavation}=assembled;
 const typed=a=>a?{type:a.constructor.name,data:Buffer.from(a.buffer,a.byteOffset,a.byteLength).toString('base64')}:null;
 const textures=[],textureIds=new Map(),meshes=[];
 function textureId(t){
@@ -58,7 +63,7 @@ const focus=(id,offset,targetOffset=[0,0,0])=>{
 };
 // V54 inspection eyes are derived from the shipped visitor focuses.
 // These camera choices do not add, move or replace any source geometry.
-const cameras=[
+let cameras=[
  camera('castillo-oriente-general',...focus('almenara',[102,84,105],[22,-1,-2]),50),
  {...camera('castillo-oriente-aljibes',...focus('almenara-aljibes',visit.focuses['almenara-aljibes'].closeOffset),visit.focuses['almenara-aljibes'].fov||58),authoredVisitCamera:true,focusId:'almenara-aljibes'},
  camera('castillo-oriente-dependencias',...focus('almenara-dependencias',[-12,7,-14],[0,-1.6,0]),56)
@@ -79,6 +84,11 @@ for(const id of ['almenara','almenara-bateria','almenara-aljibes','almenara-balu
  const f=visit.focuses[id];
  cameras.push({name:'visita-'+id,position:f.target.clone().add(new THREE.Vector3(...f.offset)).toArray(),target:f.target.toArray(),fov:f.fov||38,authoredVisitCamera:true});
  cameras.push({name:'visita-'+id+'-detalle',position:f.target.clone().add(new THREE.Vector3(...f.closeOffset)).toArray(),target:f.target.toArray(),fov:f.fov||38,authoredVisitCamera:true});
+}
+if(inspectionModule){
+ const {createInspectionCameras}=await import(pathToFileURL(inspectionModule));
+ cameras=createInspectionCameras({...assembled,THREE,root});
+ if(!Array.isArray(cameras)||!cameras.length||cameras.some(c=>!c.name||!c.position?.every(Number.isFinite)||!c.target?.every(Number.isFinite)||!Number.isFinite(c.fov)))throw new Error('Invalid inspection camera module');
 }
 const changedSources=sourceFiles.filter(file=>createHash('sha256').update(fs.readFileSync(root+file)).digest('hex')!==sourceHashes[file]);
 if(changedSources.length)throw new Error('Source changed during export; retry after edits finish: '+changedSources.join(', '));

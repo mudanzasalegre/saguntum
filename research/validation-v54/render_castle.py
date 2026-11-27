@@ -1,4 +1,4 @@
-"""CPU geometry inspection of V54's exported Three.js castle and actual terrain.
+"""CPU geometry inspection of exported Three.js castle and actual terrain.
 
 This is a Cycles render of the same mesh, not a WebGL/browser screenshot.
 Procedural color maps, vertices, UVs, colors and matrices are preserved; lighting/shading use Cycles.
@@ -101,6 +101,8 @@ specs=[(c['name']+'.jpg',c)for c in data['cameras']]
 if '--only' in sys.argv:
     wanted=sys.argv[sys.argv.index('--only')+1].split(',');specs=[s for s in specs if s[0] in wanted]
 for filename,spec in specs:
+    resolution=spec.get('resolution',[1280,960])
+    scene.render.resolution_x=resolution[0];scene.render.resolution_y=resolution[1]
     for obj in bpy.data.objects:
         if obj.get('component') in data.get('sectionRemoved',['cubierta','proscaenium']):obj.hide_render=bool(spec.get('section'))
     camera.data.lens=32/(2*math.tan(math.radians(spec.get('fov',38)/2)))
@@ -110,9 +112,9 @@ for filename,spec in specs:
 report={'method':'Blender Cycles CPU inspection of exported Three.js buffers, CanvasTextures and DataTextures; not a WebGL capture',
         'createdAt':time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime()),'blender':bpy.app.version_string,
         'samples':scene.cycles.samples,'denoising':scene.cycles.use_denoising,'device':'CPU','threads':scene.render.threads,
-        'resolution':[scene.render.resolution_x,scene.render.resolution_y],'sourceGeometryReplacement':False,
+        'defaultResolution':[1280,960],'sourceGeometryReplacement':False,
         'sourceInput':str(source),'rendererSha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
         'sourceHashes':data.get('sourceHashes',{}),
-        'images':[{'file':name,'camera':spec,'sha256':hashlib.sha256((out/name).read_bytes()).hexdigest()} for name,spec in specs]}
+        'images':[{'file':name,'camera':spec,'resolution':spec.get('resolution',[1280,960]),'sha256':hashlib.sha256((out/name).read_bytes()).hexdigest()} for name,spec in specs]}
 (out/'render-inspection.json').write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n')
 print('CASTLE_RENDER_COMPLETE',flush=True)

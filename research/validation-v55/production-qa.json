@@ -1,0 +1,27 @@
+{
+  "pass": true,
+  "checkedAtUTC": "2026-11-27 12:11:13 UTC",
+  "version": 55,
+  "sourceCommit": "7c6bcb69c8e5b897fc593756f602288e81403dc5",
+  "distTree": "f53572e9858bf44a31aec22bb10022bad923f685",
+  "deployment": "appgdep_6b0972a6ac4081918c902a04c2e5ead6",
+  "deploymentStatus": "succeeded",
+  "url": "https://saguntum-atlas-3d.monmode.chatgpt.site",
+  "environment": "Managed cloud browser; public production site",
+  "observed": [
+    "Production page reloaded after successful v55 publication; new 2010/2014/2022 source text appeared on Almenara.",
+    "Parada 12: Escalera, adarve y crujías del norte; new open-room and stepped-wall description and linked photographs.",
+    "Parada 13: updated cistern descriptions and explicit uncertainty of matching inventory entries to model footprints.",
+    "Parada 14: El baluarte y las defensas de la ladera; municipal Daoiz machine-gun position and descending Tres Castellets wall descriptions; six linked sources.",
+    "Expanded eastern map visibly renders the descending wall and 13 local markers; all 22 itinerary buttons retain their order.",
+    "Atlas to Simulator preserves selected stop 14, new title and URL #simulador/castle/almenara-baluarte.",
+    "Visita patrimonial returns to #castle/almenara-baluarte with stop 14 and the updated content.",
+    "33 places and 7 castle precincts remain; public page marked as deliverable."
+  ],
+  "limitations": [
+    "The managed browser cannot create WebGL2; production UI, map, documentation and route navigation were checked in the application's 2D fallback.",
+    "3D geometry was verified separately using real Atlas/Simulator constructors, equal buffers, terrain/collision checks and CPU renders. No GPU or FPS claim."
+  ],
+  "validationManifest": "research/validation-v55/validation-manifest.json",
+  "validationManifestSha256": "1a95adcc9d2de282a27cab071a5fb03a682a95293063125101132d1706b977e9"
+}

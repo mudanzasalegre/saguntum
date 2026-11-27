@@ -1,0 +1,57 @@
+{
+  "pass": true,
+  "method": "v54 catalogue baseline vs v55 guide/territory indexes; exact semantic hashes outside Castle",
+  "places": 33,
+  "castleStops": 22,
+  "castleRegions": 7,
+  "checks": [
+    {
+      "pass": true,
+      "label": "All 22 Castle stop IDs and their order are preserved"
+    },
+    {
+      "pass": true,
+      "label": "All seven Castle regions retain their IDs and order"
+    },
+    {
+      "pass": true,
+      "label": "Exactly 22 unique Castle stops"
+    },
+    {
+      "pass": true,
+      "label": "Every other monument is unchanged: dist/assets/territory/visit-stops.json",
+      "detail": {
+        "otherMonuments": 32,
+        "sha256": "5018e258a556befa53231e0072ac9f63e27961e7af6031d8ed1c3205bc9de19f"
+      }
+    },
+    {
+      "pass": true,
+      "label": "Simulator Castle stop IDs/order match the guide"
+    },
+    {
+      "pass": true,
+      "label": "Simulator Castle titles match the updated guide"
+    },
+    {
+      "pass": true,
+      "label": "Every other monument is unchanged: dist/assets/territory/visit-cameras.json",
+      "detail": {
+        "otherMonuments": 32,
+        "sha256": "8c094b3d2fcb94a5df68338d12b3987b459cecf35fe4a1889eb84871cb51a774"
+      }
+    },
+    {
+      "pass": true,
+      "label": "The camera index retains all 22 Castle stops in itinerary order"
+    },
+    {
+      "pass": true,
+      "label": "Every other monument is unchanged: dist/assets/territory/atlas-frames.json",
+      "detail": {
+        "otherMonuments": 32,
+        "sha256": "ff17f2a961b5d63f29af3783a229f77709b007a9acf7e4ee5c89595bf1f80ac9"
+      }
+    }
+  ]
+}

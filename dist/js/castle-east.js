@@ -1,9 +1,13 @@
 // Eastern enclosure: surviving fabric, hand-registered to current OSM/PNOA.
 // Vertical sections, material weathering and minor fragments are interpretive.
-// No roofs, palace or lost historical buildings are restituted here.
+// No lost roofs, palace or complete historical buildings are restituted here.
 import {EAST_PLAN_FEATURES,EAST_ROUTE_DEFS} from './castle-east-layout.js';
-import {polygonDistance} from './urban-surface.js';
+import {polygonDistance,pointInPolygon} from './urban-surface.js';
 import {buildEastRock} from './castle-east-rock.js';
+import {buildEastBarracks,batteryCrown} from './castle-east-buildings.js';
+import {buildEastStandingRemains} from './castle-east-remains.js';
+import {buildEastExterior} from './castle-east-exterior.js';
+import {isEastExteriorPerimeterSegment} from './castle-east-exterior-layout.js';
 
 const rand=n=>{const v=Math.sin(n*127.13+43.7)*43758.5453;return v-Math.floor(v);};
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
@@ -12,10 +16,10 @@ export const EAST_REPLACED_BUILDING_IDS=new Set(['733215260','733215261','733215
 export function isEastPerimeterSegment(a,b){const x=(a[0]+b[0])/2,z=(a[1]+b[1])/2;return x>-.27606&&z>39.67587&&z<39.67689;}
 
 export function buildCastleEast({THREE,batch,keyFor,project,heightAt,ground,outline,qa,stats,detail='full'}){
- const features=Object.values(EAST_PLAN_FEATURES).flat().map(f=>({...f,period:'unknown',component:f.id,
+ const features=Object.values(EAST_PLAN_FEATURES).flat().filter(f=>f.id!=='north-round-projection').map(f=>({...f,period:'unknown',component:f.id,
   closed:['platform','standing-ruin','open-deposit','rock-patch','rock-slope'].includes(f.kind),interpretive:true}));
  const record={features,walkingRoutes:[],walkSamples:[],platforms:[],ruins:[],openDeposits:[],stairs:[],perimeterSegments:0,
-  method:'Current OSM footprints and PNOA hand-tracing, checked against Ricsol photographs, Civera and Plan Director. Relative heights are estimated; roofless remains and ambiguous traces retain their current condition.'};
+  method:'Current OSM footprints and PNOA, checked against dated Commons photographs, Ricsol, Civera and the municipal defence inventory. Roofless crujias, physical openings and exterior masonry replace generic blocks. Relative heights and minor details are estimated; uncertain historical identities remain explicit.'};
  const masks=[],key=(id,kind='east-masonry',period='unknown')=>keyFor('almenara',id,period,kind);
  const from=coords=>coords.map(c=>project(...c));
  const clean=poly=>poly.length>2&&Math.hypot(poly[0].x-poly.at(-1).x,poly[0].z-poly.at(-1).z)<.01?poly.slice(0,-1):poly;
@@ -32,7 +36,19 @@ export function buildCastleEast({THREE,batch,keyFor,project,heightAt,ground,outl
   const base=p=>typeof bottom==='function'?bottom(p):Number.isFinite(bottom)?bottom:Math.min(heightAt(p.x+nx*thickness*.6,p.z+nz*thickness*.6),heightAt(p.x-nx*thickness*.6,p.z-nz*thickness*.6))-.35;
   const crown=(p,t)=>{const h=typeof top==='function'?top(p):top;return h+(broken?(Math.sin(t*9+seed)*.06+rand(Math.round(t*31)+seed)*.11):0);};
   for(let i=0;i<n;i++){
-   const p=point(a,b,i/n),q=point(a,b,(i+1)/n),lo=[base(p),base(q)],hi=[Math.max(lo[0]+.08,crown(p,i/n)),Math.max(lo[1]+.08,crown(q,(i+1)/n))],v=[];
+   const p=point(a,b,i/n),q=point(a,b,(i+1)/n),lo=[base(p),base(q)];
+   // The steep outer bank can dip between two section stations. Check both
+   // actual flared feet along the span, so a straight footing cannot bridge
+   // above a terrain triangle even when its endpoints are buried.
+   if(bottom===undefined){
+    let drop=0;
+    for(const t of[0,.25,.5,.75,1])for(const side of[-1,1]){
+     const r=point(p,q,t),x=r.x+nx*side*thickness*.55,z=r.z+nz*side*thickness*.55;
+     drop=Math.max(drop,lo[0]+(lo[1]-lo[0])*t-heightAt(x,z)+.38);
+    }
+    lo[0]-=drop;lo[1]-=drop;
+   }
+   const hi=[Math.max(lo[0]+.08,crown(p,i/n)),Math.max(lo[1]+.08,crown(q,(i+1)/n))],v=[];
    const c=(r,y,side,atTop)=>[r.x+nx*side*thickness*(atTop?.5:.55),y,r.z+nz*side*thickness*(atTop?.5:.55)];
    quad(v,c(p,lo[0],1,false),c(q,lo[1],1,false),c(q,hi[1],1,true),c(p,hi[0],1,true));
    quad(v,c(q,lo[1],-1,false),c(p,lo[0],-1,false),c(p,hi[0],-1,true),c(q,hi[1],-1,true));
@@ -52,7 +68,7 @@ export function buildCastleEast({THREE,batch,keyFor,project,heightAt,ground,outl
   return{...f,polygon,center:p,deck};});
  // Raised present military terraces; their interior retaining faces, unroofed
  // decks and stairs are separate from the natural slope below the curtains.
- for(const f of platforms){
+ for(const f of platforms.filter(f=>f.id!=='battery-n'&&f.id!=='battery-e')){
   for(let i=0;i<f.polygon.length;i++)section(f.polygon[i],f.polygon[(i+1)%f.polygon.length],{id:f.id,top:f.deck,thickness:.65,seed:440+i,kind:'east-masonry'});
   flatFloor(f.polygon,f.deck+.035,f.id+'-floor','east-earth',.97);
   record.platforms.push({id:f.id,polygon:f.polygon,deck:f.deck,roof:false,heightConfidence:'photographic-relative-estimate'});
@@ -85,20 +101,21 @@ export function buildCastleEast({THREE,batch,keyFor,project,heightAt,ground,outl
    }
   }
  }
+ buildEastBarracks({THREE,batch,key,platforms,ground,heightAt,section,flatFloor,inset,masks,record,detail});
  function nearestPlatform(p){let found=null,d=Infinity;for(const f of platforms){const v=polygonDistance(p.x,p.z,f.polygon);if(v<d){d=v;found=f;}}return{feature:found,distance:d};}
- const tower=EAST_PLAN_FEATURES.points[0],tp=project(...tower.coordinates);
+
  // Preserve the exact mapped perimeter. Its section changes with the current
  // batteries: a plain broken southern crown, perforated merlons on the north,
  // and broad gun embrasures at the northeastern bastion.
  for(let i=0;i<outline.length-1;i++){
-  if(!isEastPerimeterSegment(outline[i],outline[i+1]))continue;
+  if(!isEastPerimeterSegment(outline[i],outline[i+1])||isEastExteriorPerimeterSegment(outline[i],outline[i+1]))continue;
   const a=project(...outline[i]),b=project(...outline[i+1]),mid=point(a,b,.5),l=Math.hypot(b.x-a.x,b.z-a.z);
-  if(Math.hypot(mid.x-tp.x,mid.z-tp.z)<2.4)continue;
   const near=nearestPlatform(mid),f=near.feature,defensive=near.distance<3.4,
    bastion=defensive&&f.id==='bastion-ne',northern=outline[i][1]>39.67671&&!bastion,
    deck=defensive?f.deck:ground.east.plane(mid.x,mid.z)+(northern?2.10:.85),
-   top=deck+(bastion?.48:northern?.47:.30),id=bastion?'bastion-ne':northern?'battery-n':defensive?f.id:'east-south-curtain';
-  section(a,b,{id,top,thickness:bastion?1.35:northern?1.25:1.55,broken:!bastion&&!northern,seed:900+i});
+   top=defensive&&(f.id==='battery-n'||f.id==='battery-e')?batteryCrown(f,mid,ground):deck+(bastion?.48:northern?.47:.30),id=bastion?'bastion-ne':northern?'battery-n':defensive?f.id:'east-south-curtain';
+  const crown=p=>defensive&&(f.id==='battery-n'||f.id==='battery-e')?batteryCrown(f,p,ground):top;
+  section(a,b,{id,top:crown,thickness:bastion?1.35:northern?1.25:1.55,broken:!bastion&&!northern,seed:900+i});
   record.perimeterSegments++;
   // Splayed corners are reinforced by irregular pale ashlar blocks.
   if(detail==='full'&&i%3===0){const base=heightAt(a.x,a.z),rows=Math.max(1,Math.min(8,Math.floor((top-base)/.5)));for(let r=0;r<rows;r++)batch.box(key(id,'worn-ashlar'),a.x,base+.24+r*.5,a.z,.72+(r%2)*.14,.43,.72,-Math.atan2(b.z-a.z,b.x-a.x),.89+rand(r+i)*.08);}
@@ -106,7 +123,7 @@ export function buildCastleEast({THREE,batch,keyFor,project,heightAt,ground,outl
    const spacing=bastion?4.0:1.85,width=bastion?2.5:1.06,height=bastion?.88:1.10,thickness=bastion?1.05:.68,yaw=-Math.atan2(b.z-a.z,b.x-a.x),dx=(b.x-a.x)/l,dz=(b.z-a.z)/l;
    const count=Math.max(0,Math.floor(l/spacing));
    for(let j=0;j<count;j++){
-    const p=point(a,b,(j+.5)/count),base=top-.025;
+    const p=point(a,b,(j+.5)/count),base=crown(p)-.025;
     if(bastion)batch.box(key(id),p.x,base+height/2,p.z,width,height,thickness,yaw,.96);
     else{
      const slit=.145,w=(width-slit)/2;
@@ -118,19 +135,10 @@ export function buildCastleEast({THREE,batch,keyFor,project,heightAt,ground,outl
    }
   }
  }
- // Small outward semicircular projection, attached to the northern curtain.
- // Unlike a generic complete tower, only its visible outward half is built.
- {
-  const r=tower.radiusM,axis=-1.85,top=ground.east.plane(tp.x,tp.z)+3.35,out=[],segments=22;
-  const arc=[];for(let j=0;j<=segments;j++){const angle=axis-Math.PI/2+j*Math.PI/segments;arc.push({x:tp.x+Math.cos(angle)*r,z:tp.z+Math.sin(angle)*r});}
-  for(let j=1;j<arc.length;j++){
-   const a=arc[j-1],b=arc[j],ya=heightAt(a.x,a.z)-.45,yb=heightAt(b.x,b.z)-.45;
-   quad(out,[b.x,yb,b.z],[a.x,ya,a.z],[a.x,top,a.z],[b.x,top,b.z]);
-  }
-  batch.raw(key(tower.id),out,.97);flatFloor(arc,top,tower.id,'east-masonry',.95);
- }
- // Roofless mapped ruins: differing crowns, surviving returns and real floors.
- for(const f of EAST_PLAN_FEATURES.ruins){
+ // Current mapped ruins have individual sections; a historical identification
+ // remains approximate. The open tank is handled separately below.
+ buildEastStandingRemains({THREE,batch,key,features:EAST_PLAN_FEATURES.ruins,project,heightAt,ground,section,flatFloor,inset,record,detail});
+ for(const f of EAST_PLAN_FEATURES.ruins.filter(f=>f.kind==='open-deposit')){
   const poly=clean(from(f.coordinates)),p=center(poly),inner=inset(poly,f.kind==='open-deposit'?.34:.44),small=f.kind==='open-deposit';
   if(small){
    const rim=Math.max(...poly.map(q=>heightAt(q.x,q.z)))+.18,bottom=rim-1.55;
@@ -148,19 +156,6 @@ export function buildCastleEast({THREE,batch,keyFor,project,heightAt,ground,outl
    flatFloor(inner,bottom+.025,f.id,'east-earth',.82);
    masks.push({id:f.id,outline:inner,polygon:inner,center:p,width:6,depth:5,floorY:bottom,permanent:true,clipContext:false});
    record.openDeposits.push({id:f.id,polygon:poly,interior:inner,rimY:rim,floorY:bottom,roof:false,depthConfidence:'visual-estimate; not identified as a measured Civera tank'});
-  }else{
-   const floor=ground.east.plane(p.x,p.z)+.11;
-   flatFloor(inner,floor,f.id+'-floor','east-earth',.96);
-   const large=f.osmId==='733215260';
-   for(let i=0;i<poly.length;i++){
-    const a=poly[i],b=poly[(i+1)%poly.length],mid=point(a,b,.5),high=large?(mid.z<p.z?2.35:.72):.48+rand(i+Number(f.osmId))*1.03;
-    section(a,b,{id:f.id,top:q=>floor+high+.15*Math.sin(q.x*.8+q.z*.7),bottom:q=>Math.min(floor-.25,heightAt(q.x,q.z)-.22),thickness:large?.72:.57,broken:true,seed:i+443});
-    if(large&&mid.z<p.z){
-     const ia=inner[i],ib=inner[(i+1)%poly.length];
-     section(ia,ib,{id:f.id,top:floor+high-.2,bottom:floor+.06,thickness:.025,kind:'east-render',broken:true,tint:.95});
-    }
-   }
-   record.ruins.push({id:f.id,polygon:poly,floorY:floor,roof:false,functionAssigned:false});
   }
  }
  for(const f of EAST_PLAN_FEATURES.traces.filter(f=>f.kind!=='exposed-rock-and-low-remains')){
@@ -170,7 +165,7 @@ export function buildCastleEast({THREE,batch,keyFor,project,heightAt,ground,outl
  // dense drape replaces blurred aerial shadows on the open visitor courtyard.
  // Keep the deposit as a real hole; surrounding rock remains separate geometry.
  {
-  const outer=clean(ground.east.courtyard),holes=masks.map(m=>m.outline),contours=[outer,...holes],vertices=contours.flat(),positions=[];
+  const outer=clean(ground.east.courtyard),holes=masks.map(m=>m.outline).filter(h=>h.every(p=>pointInPolygon(p.x,p.z,outer))),contours=[outer,...holes],vertices=contours.flat(),positions=[];
   const triangles=THREE.ShapeUtils.triangulateShape(outer.map(p=>new THREE.Vector2(p.x,p.z)),holes.map(h=>h.map(p=>new THREE.Vector2(p.x,p.z))));
   function face(a,b,c,depth=0){
    const ab=Math.hypot(a.x-b.x,a.z-b.z),ac=Math.hypot(a.x-c.x,a.z-c.z),bc=Math.hypot(b.x-c.x,b.z-c.z),longest=Math.max(ab,ac,bc);
@@ -192,6 +187,9 @@ export function buildCastleEast({THREE,batch,keyFor,project,heightAt,ground,outl
   record.walkingRoutes.push({id:route.id,points,width:route.widthM});
  }
  record.walkSamples=record.walkingRoutes.flatMap(r=>r.points.map((p,i)=>({id:r.id+'-'+i,x:p[0],z:p[2]})));
+ const exterior=buildEastExterior({THREE,batch,keyFor,project,heightAt,ground,qa:record,stats,detail});
+ record.exterior=exterior.qa;
+ masks.push(...(exterior.currentMasks||[]));
  qa.east=record;stats.easternFeatures=features.length;stats.easternPlatforms=platforms.length;stats.mappedBuildings+=EAST_PLAN_FEATURES.ruins.length;
- return {qa:record,currentMasks:masks,vegetationExclusions:[ground.east.courtyard]};
+ return {qa:record,currentMasks:masks,vegetationExclusions:[ground.east.courtyard,...(exterior.vegetationExclusions||[])]};
 }

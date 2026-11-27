@@ -5,6 +5,8 @@ import {addStreetPhotography} from './territory-surface-photo.js';
 import {registerUrbanMaterial} from './territory-urban-material-record.js';
 import {realismUniforms} from './territory-realism.js';
 import {streetWeatherGLSL} from './territory-street-weather.js';
+import {project} from './territory-coordinates.js';
+import {EAST_CONTEXT_PATH_ANCHOR,eastContextPathWeight,drapeEastContextTriangle} from './castle-east-paths.js';
 
 const folder=new URL('../assets/materials/streets/',import.meta.url);
 const metres=[4.04,2.24,2,1.8,2.5,2.25,2,2.48];
@@ -148,6 +150,7 @@ function geometry(pos,uv,profiles,idx){
 
 export function streetGeometry(data,heightAt,fronts){
   const pos=[],uv=[],profiles=[],idx=[];
+  const easternPathAnchor=project(...EAST_CONTEXT_PATH_ANCHOR);
   function ribbon(f){
     const points=f.points;if(!points||points.length<2)return;
     const line=[],width=f.width||4,[slot,style]=profile(f),sidewalk=Boolean(f.offset);
@@ -193,7 +196,25 @@ export function streetGeometry(data,heightAt,fronts){
     }
   }
   for(const road of data.roads)if(!road.tunnel){
+    const start=idx.length;
     ribbon(road);
+    if(!road.deck&&!road.offset&&road.points?.some(([x,z])=>eastContextPathWeight(road,x,z,easternPathAnchor)>0)){
+      const source=idx.splice(start),weight=(x,z)=>eastContextPathWeight(road,x,z,easternPathAnchor);
+      for(let k=0;k<source.length;k+=3){
+        const ids=source.slice(k,k+3),points=ids.map(i=>pos.slice(i*3,i*3+3));
+        if(!points.some(p=>weight(p[0],p[2])>0)){idx.push(...ids);continue;}
+        const [a,b,c]=points,den=(b[2]-c[2])*(a[0]-c[0])+(c[0]-b[0])*(a[2]-c[2]);
+        drapeEastContextTriangle(points,heightAt,weight,(...triangle)=>{
+          for(const p of triangle){
+            const u=((b[2]-c[2])*(p[0]-c[0])+(c[0]-b[0])*(p[2]-c[2]))/(den||1),
+              v=((c[2]-a[2])*(p[0]-c[0])+(a[0]-c[0])*(p[2]-c[2]))/(den||1),w=1-u-v;
+            idx.push(pos.length/3);pos.push(...p);
+            for(let j=0;j<2;j++)uv.push(uv[ids[0]*2+j]*u+uv[ids[1]*2+j]*v+uv[ids[2]*2+j]*w);
+            profiles.push(...profiles.slice(ids[0]*4,ids[0]*4+4));
+          }
+        });
+      }
+    }
     for(const [tag,sign] of [['left',-1],['right',1]])if(road.sidewalk===tag||road.sidewalk==='both')
       ribbon({...road,kind:'footway',width:1.2,offset:sign*(road.width/2+.6)});
   }

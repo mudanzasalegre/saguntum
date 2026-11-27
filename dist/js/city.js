@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
 import { roadWidth } from './urban-surface.js';
+import {EAST_CONTEXT_PATH_ANCHOR,eastContextPathWeight,drapeEastContextTriangle} from './castle-east-paths.js';
 
 // Context uses OSM / transformed Catastro plan geometry. Unobserved heights,
 // roofs, windows and planting are deterministic visual interpretations.
@@ -231,7 +232,8 @@ export function createCity({data,project,heightAt,urban,terrainHeightAt=null,exc
   for(const [b,m,n] of [[wallBuffer,wallMat,'Fachadas'],[contextWallBuffer,contextWallMat,'Fachadas de contexto · vanos interpretativos'],[roofBuffer,tileMat,'Tejados de terracota'],[flatRoofBuffer,wallMat,'Azoteas'],[windowBuffer,windowMat,'Ventanas'],[trimBuffer,wallMat,'Cornisas']])if(b.p.length)buildings.add(meshFrom(b,m,n));
   buildings.userData={footprintCount:buildingCount,empiricalHeightCount:measuredHeights,ignSurfaceHeightCount:surfaceHeights,osmLevelCount:levelHeights,cadastralLevelCount:cadastralLevelHeights,estimatedHeightCount:buildingCount-measuredHeights-surfaceHeights-levelHeights-cadastralLevelHeights,sampledRoofColorCount:sampledRoofs,contextFacadeCount:contextFacades,terrainRoofCorrections,maximumRoofCorrectionM,terrainRoofNote:"Display roof raised only where source terrain would intersect it; original height estimates are retained in data.",otherHeights:'OSM height > IGN normalized surface estimate > attributed OSM / DGC storeys × 3 m > deterministic visual estimate.',facades:'Generic repeated facade bays outside detailed areas; not surveyed window positions. Roof colours sampled from PNOA where available.'};
 
-  const paved=buffers(),paths=buffers(),curbs=buffers(),stepsBuffer=buffers(),supports=buffers();
+  const paved=buffers(),paths=buffers(),easternPaths=buffers(),curbs=buffers(),stepsBuffer=buffers(),supports=buffers();
+  const easternPathAnchor=project(...EAST_CONTEXT_PATH_ANCHOR),easternPathIds=new Set();let easternPathTriangles=0;
   const visibleWays=new Set();let stairTreads=0,supportCount=0;
   const supportColor=color('#96968a');
   // Foundation accommodation can lower the rendered mesh outside a model's floor.
@@ -266,8 +268,17 @@ export function createCity({data,project,heightAt,urban,terrainHeightAt=null,exc
         const L=h1>h0?[A,B]:[C,D];quad(stepsBuffer,L[0],L[1],[L[1][0],yLow,L[1][2]],[L[0][0],yLow,L[0][2]],color('#a89a80'));stairTreads++;
       }
     }else{
-      const pavement=q.map(([x,z])=>[x,top(x,z),z]);quad(natural?paths:paved,...pavement,col);
-      if(terrainHeightAt)for(let i=0;i<4;i++)supportEdge(pavement[i],pavement[(i+1)%4]);
+      const pavement=q.map(([x,z])=>[x,top(x,z),z]);
+      const repair=terrainHeightAt&&natural&&q.some(([x,z])=>eastContextPathWeight(road,x,z,easternPathAnchor)>0);
+      if(repair){
+        const weight=(x,z)=>eastContextPathWeight(road,x,z,easternPathAnchor),emit=(a,b,c)=>{tri(easternPaths,a,b,c,col);easternPathTriangles++;};
+        drapeEastContextTriangle([pavement[0],pavement[1],pavement[2]],terrainHeightAt,weight,emit);
+        drapeEastContextTriangle([pavement[0],pavement[2],pavement[3]],terrainHeightAt,weight,emit);
+        easternPathIds.add(String(road.osmId||road.id));
+      }else{
+        quad(natural?paths:paved,...pavement,col);
+        if(terrainHeightAt)for(let i=0;i<4;i++)supportEdge(pavement[i],pavement[(i+1)%4]);
+      }
     }
     if((oldTown||data.title)&&!natural&&road.kind!=='steps'&&w>2){
       for(const side of [-1,1]){
@@ -282,8 +293,8 @@ export function createCity({data,project,heightAt,urban,terrainHeightAt=null,exc
   const stoneTexture=new THREE.CanvasTexture(stoneCanvas);stoneTexture.colorSpace=THREE.SRGBColorSpace;stoneTexture.wrapS=stoneTexture.wrapT=THREE.RepeatWrapping;stoneTexture.anisotropy=4;
   const roadMat=new THREE.MeshStandardMaterial({vertexColors:true,map:data.title?null:stoneTexture,roughness:1,side:THREE.DoubleSide,polygonOffset:true,polygonOffsetFactor:-1,polygonOffsetUnits:-1});
   const simpleMat=new THREE.MeshStandardMaterial({vertexColors:true,roughness:1,side:THREE.DoubleSide});
-  for(const [buffer,mat,name] of [[paved,roadMat,'Pavimentos sobre trazado OSM'],[paths,simpleMat,'Sendas sobre el relieve'],[stepsBuffer,roadMat,'Escalinatas con huellas y contrahuellas'],[curbs,simpleMat,'Bordes de piedra'],[supports,simpleMat,'Faldones bajo los pavimentos']])if(buffer.p.length){const mesh=meshFrom(buffer,mat,name);mesh.castShadow=false;roads.add(mesh);}
-  roads.userData={wayCount:visibleWays.size,stairTreads,supportCount,taggedWidths:urban?.stats.taggedWidths||0,profile:'Longitudinal DEM samples; pavement widths, treads and transverse grading are interpreted.'};
+  for(const [buffer,mat,name] of [[paved,roadMat,'Pavimentos sobre trazado OSM'],[paths,simpleMat,'Sendas sobre el relieve'],[easternPaths,simpleMat,'Sendas orientales ajustadas al terreno'],[stepsBuffer,roadMat,'Escalinatas con huellas y contrahuellas'],[curbs,simpleMat,'Bordes de piedra'],[supports,simpleMat,'Faldones bajo los pavimentos']])if(buffer.p.length){const mesh=meshFrom(buffer,mat,name);mesh.castShadow=false;if(buffer===easternPaths)mesh.userData={component:'east-context-paths',sourceIds:[...easternPathIds]};roads.add(mesh);}
+  roads.userData={wayCount:visibleWays.size,stairTreads,supportCount,taggedWidths:urban?.stats.taggedWidths||0,easternGroundContact:{sourceIds:[...easternPathIds],triangles:easternPathTriangles,radiusM:60,liftM:.025},profile:'Longitudinal DEM samples; pavement widths, treads and transverse grading are interpreted.'};
 
   const naturalPolys=(data.landcover||[]).filter(l=>['wood','forest','scrub','park','garden','orchard','grass'].includes(l.kind)).map(l=>({kind:l.kind,p:cleanPolygon(l.coordinates,project)})).filter(l=>l.p.length>2);
   const natureGrid=new SpatialGrid(80);

@@ -1,0 +1,587 @@
+{
+  "method": "Blender Cycles CPU inspection of exported Three.js buffers, CanvasTextures and DataTextures; not a WebGL capture",
+  "createdAt": "2026-11-27T11:53:30Z",
+  "blender": "4.3.2",
+  "samples": 24,
+  "denoising": false,
+  "device": "CPU",
+  "threads": 8,
+  "defaultResolution": [
+    1280,
+    960
+  ],
+  "sourceGeometryReplacement": false,
+  "sourceInput": "/workspace/scratch/53242b8b9a77/east-v55/final/model-before-contact-fix.json.gz",
+  "rendererSha256": "45047990b213aec796e0f9a8e76a816989bded127c6330ce0dd8b0d7e8614932",
+  "sourceHashes": {
+    "dist/js/castle-almenara.js": "172f30f459d71afab07e13820a326391e24b21973b58ed81025a2a6b399503f9",
+    "dist/js/castle-east-buildings.js": "d844241c860d8bb3e8c5431e57e4ed2169e9d6fac47d0a893a7e4464c0df2615",
+    "dist/js/castle-east-cameras.js": "4427f3675ac7bf7ea337b987f54c79061054fa36cbdb2aca57439ed9a8059da8",
+    "dist/js/castle-east-exterior-layout.js": "b7945101315d61c9a831d62b86f782dd068f8147d2fb76cbb47bf9df39749ec6",
+    "dist/js/castle-east-exterior.js": "e52c38b7efc23543fc59f4536927dd38d96b60de84c97dc3712768a2203e042a",
+    "dist/js/castle-east-ground.js": "febc63fcc50ce798b27f39c273f9fa432961f09bc07bfa54cd583fb085cb74c6",
+    "dist/js/castle-east-layout.js": "842809c25e0c6763b9e88b5a58bfd5e73553f1f0c9dbb60bc1a551beb6a645ba",
+    "dist/js/castle-east-remains.js": "3c09eada43638a79f72233e813313835d1d9272515730f8c0482415e8642be44",
+    "dist/js/castle-east-rock.js": "8f42274f4a03336ece21e81d0e98ec98563ca1761cc8136b3ec002dd4c064223",
+    "dist/js/castle-east.js": "9f2f170b5fdf2084c0fa278beec2808b1c7a7a33e22b3412f98ec8932bd72273",
+    "dist/js/castle-forum.js": "aace8d3649720b189d084efe924220543c5716a87b31546740b4ba99f77824d1",
+    "dist/js/castle-ground.js": "4c53ce178489bbe53d12ccb58edee69d5fdc04be47017013ee224e93dc1e1e5e",
+    "dist/js/castle-map.js": "1826db8f96eb1ae3a0567a4c2ed7bb896e391e98c297f34bee908b4bb0bb8f05",
+    "dist/js/castle-materials.js": "c6b48904b6c9750a4e593f1a0ea5716483cf5c962efcea46f8f1438dc17ff7d0",
+    "dist/js/castle-panel.js": "f1c34c5b085137ae8d98b994f8609d75ca99fde90b696a11ae53d78ea17670be",
+    "dist/js/castle.js": "ae8ad04bfff700a5ffe9cbe6f34bbc378955061f42d9ae16709ddfa1882c9999",
+    "dist/js/monuments.js": "ce10354ba856f3ca369d12624d11f40782e9e4b4777ebaae906cacf73154f688",
+    "dist/assets/data/castle-visit.json": "a4c3fa554e5fe1a3aecc3d1f464a484572c606dcd4fc0241d06c0889b50fe17c",
+    "dist/js/terrain.js": "199e257e1398562b01cccd1ee0fe285a6f6655b73b1c552cb3747787d240a278",
+    "dist/js/urban-surface.js": "fa2c95b186e19787cc37eb566e9ebc6b44ecbb85cb27ee7119cdfb344247fe98",
+    "dist/js/excavation.js": "d663478846fecdb683c0c3f1c66049b57772fd4d412f9f32662280d25fffb657",
+    "dist/js/city.js": "d6a70683a21973dc3c9d0df85e6eda0093b19afcd331ee188acca59eafdc51fa",
+    "dist/assets/data/elevation.json": "3c70059cb1f8de706bc7e6912311076cb716ec2ff7f1c8aa2b6e51a520809d8c",
+    "dist/assets/data/cartography.json": "a2b02f3311dfc3cc4b0a162400508364ce41f9ea875e77638e983e5065b23340",
+    "dist/assets/data/orthophoto.jpg": "4af0699d220992253881bd8fcbfcb85f73e84f4a224efec4653a183f50e1cf71",
+    "research/validation-v55/inspection-cameras.mjs": "34b824a121bf0fcaf9454678f2276f8846b13037be8ebfb1378d1d783d9f1bed"
+  },
+  "images": [
+    {
+      "file": "castillo-captura-usuario-v55.jpg",
+      "camera": {
+        "name": "castillo-captura-usuario-v55",
+        "position": [
+          492.8108784246571,
+          361.00719685405926,
+          72.03947736445764
+        ],
+        "target": [
+          336.2581125472708,
+          205.43279845761236,
+          189.46110254365482
+        ],
+        "fov": 25.44160800810877,
+        "resolution": [
+          1279,
+          817
+        ],
+        "inspection": "Approximate registered screenshot angle; RMS 4.00445178752421 px; not a browser capture"
+      },
+      "resolution": [
+        1279,
+        817
+      ],
+      "sha256": "f02f20e1e854bbae9c74a0d2a8d9187ec7f4c9d145d64dee524149b90cd5879d"
+    },
+    {
+      "file": "rojo-norte-estancias-y-escalera.jpg",
+      "camera": {
+        "name": "rojo-norte-estancias-y-escalera",
+        "position": [
+          222.89578247070312,
+          144.8636260986328,
+          282.21508026123047
+        ],
+        "target": [
+          230.89578247070312,
+          133.8636260986328,
+          250.21508026123047
+        ],
+        "fov": 52,
+        "components": [
+          "battery-n"
+        ],
+        "inspection": "CPU source geometry detail; camera can be elevated for inspection"
+      },
+      "resolution": [
+        1280,
+        960
+      ],
+      "sha256": "dafea025d1695ef221fe38702f1ffdc77ed572e8af781222b8dbe590cd3cf4f9"
+    },
+    {
+      "file": "rojo-oriente-crujia-abierta.jpg",
+      "camera": {
+        "name": "rojo-oriente-crujia-abierta",
+        "position": [
+          215.47667694091797,
+          145.62365112304687,
+          290.4506378173828
+        ],
+        "target": [
+          249.47667694091797,
+          135.62365112304687,
+          285.4506378173828
+        ],
+        "fov": 52,
+        "components": [
+          "battery-e"
+        ],
+        "inspection": "CPU source geometry detail; camera can be elevated for inspection"
+      },
+      "resolution": [
+        1280,
+        960
+      ],
+      "sha256": "978bb837672ffe8770c5bdce4367751684bd84ccd7765c8281310c07a20fd6b4"
+    },
+    {
+      "file": "azul-ruinas-261-262.jpg",
+      "camera": {
+        "name": "azul-ruinas-261-262",
+        "position": [
+          239.67274475097656,
+          150.2680892944336,
+          317.1232147216797
+        ],
+        "target": [
+          227.67274475097656,
+          137.2680892944336,
+          295.1232147216797
+        ],
+        "fov": 55,
+        "components": [
+          "ruin-733215261",
+          "ruin-733215262"
+        ],
+        "inspection": "CPU source geometry detail; camera can be elevated for inspection"
+      },
+      "resolution": [
+        1280,
+        960
+      ],
+      "sha256": "eec482c1e01bae5e8836de9c440ff1fb83689adab5413d6bf28897d58092084c"
+    },
+    {
+      "file": "azul-ruina-260.jpg",
+      "camera": {
+        "name": "azul-ruina-260",
+        "position": [
+          198.18790435791016,
+          151.07240295410156,
+          310.6881408691406
+        ],
+        "target": [
+          181.18790435791016,
+          140.07240295410156,
+          327.6881408691406
+        ],
+        "fov": 54,
+        "components": [
+          "ruin-733215260"
+        ],
+        "inspection": "CPU source geometry detail; camera can be elevated for inspection"
+      },
+      "resolution": [
+        1280,
+        960
+      ],
+      "sha256": "1b0bbb77f7a53e3cca68ea27a0d95b19aef42976525c74b6b860cec4fffb78ea"
+    },
+    {
+      "file": "lima-torre-y-cortina.jpg",
+      "camera": {
+        "name": "lima-torre-y-cortina",
+        "position": [
+          234.8743438720703,
+          143.64496231079102,
+          219.78956604003906
+        ],
+        "target": [
+          215.8743438720703,
+          132.64496231079102,
+          239.78956604003906
+        ],
+        "fov": 52,
+        "components": [
+          "north-round-tower",
+          "north-tower-joining-curtain",
+          "north-arched-recess"
+        ],
+        "inspection": "CPU source geometry detail; camera can be elevated for inspection"
+      },
+      "resolution": [
+        1280,
+        960
+      ],
+      "sha256": "434ba1bde564234cc80d175a270620ee2deea85ee77051594f19a48a61b097fe"
+    },
+    {
+      "file": "naranja-puesto-defensivo.jpg",
+      "camera": {
+        "name": "naranja-puesto-defensivo",
+        "position": [
+          275.6108217788288,
+          129.80337780923904,
+          241.70809885744228
+        ],
+        "target": [
+          268.1108217788288,
+          123.30337780923904,
+          232.70809885744228
+        ],
+        "fov": 54,
+        "components": [
+          "daoiz-machine-gun-remains"
+        ],
+        "inspection": "CPU source geometry detail; camera can be elevated for inspection"
+      },
+      "resolution": [
+        1280,
+        960
+      ],
+      "sha256": "d718053778793be9f7412911b432f93c6fddfc17d7f2880d08ffb3c886f5f9df"
+    },
+    {
+      "file": "amarillo-muralla-en-ladera.jpg",
+      "camera": {
+        "name": "amarillo-muralla-en-ladera",
+        "position": [
+          361.7690734863281,
+          158.51748657226562,
+          257.32774353027344
+        ],
+        "target": [
+          299.7690734863281,
+          110.51748657226562,
+          222.32774353027344
+        ],
+        "fov": 50,
+        "components": [
+          "tres-castellets-upper-link",
+          "tres-castellets-descending-wall"
+        ],
+        "inspection": "CPU source geometry detail; camera can be elevated for inspection"
+      },
+      "resolution": [
+        1280,
+        960
+      ],
+      "sha256": "f5f5626b75ce0f8bfd0cb5384288f36c0a99cecbe9d9cc0a5a93ab1e3a48957a"
+    },
+    {
+      "file": "amarillo-paso-superior.jpg",
+      "camera": {
+        "name": "amarillo-paso-superior",
+        "position": [
+          302.01331032765745,
+          121.270297152667,
+          244.88203200019387
+        ],
+        "target": [
+          287.01331032765745,
+          112.270297152667,
+          256.8820320001939
+        ],
+        "fov": 52,
+        "components": [
+          "tres-castellets-upper-link"
+        ],
+        "inspection": "CPU source geometry detail; camera can be elevated for inspection"
+      },
+      "resolution": [
+        1280,
+        960
+      ],
+      "sha256": "47c697be88787acdc0d4cc4834b7af7b07e6c2d84a1be62050e3ab261063d0b1"
+    },
+    {
+      "file": "visita-almenara.jpg",
+      "camera": {
+        "name": "visita-almenara",
+        "position": [
+          -93.9326789468119,
+          470.62009301210446,
+          630.7345935675876
+        ],
+        "target": [
+          182.8403300209726,
+          138.06095645547913,
+          278.86773200005365
+        ],
+        "fov": 52,
+        "authoredVisitCamera": false,
+        "presetVisitCamera": true,
+        "focusId": "almenara",
+        "presetViewport": [
+          1280,
+          960
+        ],
+        "projection": "Unshifted full canvas for geometry inspection; app UI panel/view offset is not rendered"
+      },
+      "resolution": [
+        1280,
+        960
+      ],
+      "sha256": "b6fe958d71a7a1e4bb2fa7ef5425b6ba3f4601d172d34dd683c3c2cd6eface2a"
+    },
+    {
+      "file": "visita-almenara-detalle.jpg",
+      "camera": {
+        "name": "visita-almenara-detalle",
+        "position": [
+          162.16680411587905,
+          138.21992928675223,
+          305.1503840002965
+        ],
+        "target": [
+          182.8403300209726,
+          138.06095645547913,
+          278.86773200005365
+        ],
+        "fov": 52,
+        "authoredVisitCamera": true,
+        "presetVisitCamera": true,
+        "focusId": "almenara",
+        "presetViewport": [
+          1280,
+          960
+        ],
+        "projection": "Unshifted full canvas for geometry inspection; app UI panel/view offset is not rendered"
+      },
+      "resolution": [
+        1280,
+        960
+      ],
+      "sha256": "d5b196f004cef7d3e9dd14e61b5c86f54fdf8ec71775a2beca21fb3a9db4ac50"
+    },
+    {
+      "file": "visita-almenara-bateria.jpg",
+      "camera": {
+        "name": "visita-almenara-bateria",
+        "position": [
+          178.40298806788488,
+          262.03321230047266,
+          399.63310382972844
+        ],
+        "target": [
+          227.89713596166538,
+          135.62872452097042,
+          249.5794400002805
+        ],
+        "fov": 52,
+        "authoredVisitCamera": false,
+        "presetVisitCamera": true,
+        "focusId": "almenara-bateria",
+        "presetViewport": [
+          1280,
+          960
+        ],
+        "projection": "Unshifted full canvas for geometry inspection; app UI panel/view offset is not rendered"
+      },
+      "resolution": [
+        1280,
+        960
+      ],
+      "sha256": "8114a908c046b695cf082b9704b032f8055303b942a36f67533315f9c2939cef"
+    },
+    {
+      "file": "visita-almenara-bateria-detalle.jpg",
+      "camera": {
+        "name": "visita-almenara-bateria-detalle",
+        "position": [
+          225.32686751096742,
+          135.81644785555244,
+          257.371840000381
+        ],
+        "target": [
+          227.89713596166538,
+          135.62872452097042,
+          249.5794400002805
+        ],
+        "fov": 52,
+        "authoredVisitCamera": true,
+        "presetVisitCamera": true,
+        "focusId": "almenara-bateria",
+        "presetViewport": [
+          1280,
+          960
+        ],
+        "projection": "Unshifted full canvas for geometry inspection; app UI panel/view offset is not rendered"
+      },
+      "resolution": [
+        1280,
+        960
+      ],
+      "sha256": "61b431f9ad2336812f0a126c34fbd8bcf7904b1fe595b7b18446961d79d73e77"
+    },
+    {
+      "file": "visita-almenara-aljibes.jpg",
+      "camera": {
+        "name": "visita-almenara-aljibes",
+        "position": [
+          172.9768721654887,
+          240.1909587833312,
+          314.14253705977086
+        ],
+        "target": [
+          200.88361454485494,
+          134.60760387559483,
+          278.52263999997575
+        ],
+        "fov": 58,
+        "authoredVisitCamera": false,
+        "presetVisitCamera": true,
+        "focusId": "almenara-aljibes",
+        "presetViewport": [
+          1280,
+          960
+        ],
+        "projection": "Unshifted full canvas for geometry inspection; app UI panel/view offset is not rendered"
+      },
+      "resolution": [
+        1280,
+        960
+      ],
+      "sha256": "8036b7ac1bda40573f4353573ba13eeb01000c02a35c1a97571ce60e20de1b40"
+    },
+    {
+      "file": "visita-almenara-aljibes-detalle.jpg",
+      "camera": {
+        "name": "visita-almenara-aljibes-detalle",
+        "position": [
+          199.42712908946177,
+          137.74689923142023,
+          280.38168400034436
+        ],
+        "target": [
+          200.88361454485494,
+          134.60760387559483,
+          278.52263999997575
+        ],
+        "fov": 58,
+        "authoredVisitCamera": true,
+        "presetVisitCamera": true,
+        "focusId": "almenara-aljibes",
+        "presetViewport": [
+          1280,
+          960
+        ],
+        "projection": "Unshifted full canvas for geometry inspection; app UI panel/view offset is not rendered"
+      },
+      "resolution": [
+        1280,
+        960
+      ],
+      "sha256": "470ff8672767cac9032eb73d10cec7bb782eb65a5e8de6ff0ef23732671c4cd8"
+    },
+    {
+      "file": "visita-almenara-baluarte.jpg",
+      "camera": {
+        "name": "visita-almenara-baluarte",
+        "position": [
+          148.14869942920177,
+          239.20691181334251,
+          323.72732487820883
+        ],
+        "target": [
+          257.8836012197754,
+          135.49500881397648,
+          254.70016000000754
+        ],
+        "fov": 52,
+        "authoredVisitCamera": false,
+        "presetVisitCamera": true,
+        "focusId": "almenara-baluarte",
+        "presetViewport": [
+          1280,
+          960
+        ],
+        "projection": "Unshifted full canvas for geometry inspection; app UI panel/view offset is not rendered"
+      },
+      "resolution": [
+        1280,
+        960
+      ],
+      "sha256": "34fd6a51912f300dd04e29a838aceeb81632b3589ac9f441542d09cd28261fca"
+    },
+    {
+      "file": "visita-almenara-baluarte-detalle.jpg",
+      "camera": {
+        "name": "visita-almenara-baluarte-detalle",
+        "position": [
+          247.08847372685335,
+          135.76715007759574,
+          261.4906800002646
+        ],
+        "target": [
+          257.8836012197754,
+          135.49500881397648,
+          254.70016000000754
+        ],
+        "fov": 52,
+        "authoredVisitCamera": true,
+        "presetVisitCamera": true,
+        "focusId": "almenara-baluarte",
+        "presetViewport": [
+          1280,
+          960
+        ],
+        "projection": "Unshifted full canvas for geometry inspection; app UI panel/view offset is not rendered"
+      },
+      "resolution": [
+        1280,
+        960
+      ],
+      "sha256": "b10c38f05e632703fe546ce9cd7cb761a7272b7d4c95c921cc7e7508c81f4b58"
+    },
+    {
+      "file": "visita-almenara-dependencias.jpg",
+      "camera": {
+        "name": "visita-almenara-dependencias",
+        "position": [
+          159.45158158743558,
+          161.41478071226345,
+          344.50183175135123
+        ],
+        "target": [
+          179.31906224351846,
+          141.17569274902343,
+          328.8392800002856
+        ],
+        "fov": 52,
+        "authoredVisitCamera": false,
+        "presetVisitCamera": true,
+        "focusId": "almenara-dependencias",
+        "presetViewport": [
+          1280,
+          960
+        ],
+        "projection": "Unshifted full canvas for geometry inspection; app UI panel/view offset is not rendered"
+      },
+      "resolution": [
+        1280,
+        960
+      ],
+      "sha256": "31e6b8532991a42eb35ee270f8a4c16b49b8a040aa1fd5f48807fde7d1328ef4"
+    },
+    {
+      "file": "visita-almenara-dependencias-detalle.jpg",
+      "camera": {
+        "name": "visita-almenara-dependencias-detalle",
+        "position": [
+          171.69393250645487,
+          141.35993722534104,
+          334.85056000013714
+        ],
+        "target": [
+          179.31906224351846,
+          141.17569274902343,
+          328.8392800002856
+        ],
+        "fov": 52,
+        "authoredVisitCamera": true,
+        "presetVisitCamera": true,
+        "focusId": "almenara-dependencias",
+        "presetViewport": [
+          1280,
+          960
+        ],
+        "projection": "Unshifted full canvas for geometry inspection; app UI panel/view offset is not rendered"
+      },
+      "resolution": [
+        1280,
+        960
+      ],
+      "sha256": "87b4b492a5b829632e0310bfbfa07716ca456b438f8558aba31f548f25087608"
+    }
+  ],
+  "sourceInputSha256": "95dadc94450c8179a72e3dcd56244880bf3104f0f53cc81a67a261942805775f",
+  "retentionNote": "Interior views approved before the later buried-footing/bunker-entry/local-exterior-path fixes; their source hashes remain recorded."
+}

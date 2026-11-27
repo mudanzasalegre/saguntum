@@ -1,0 +1,455 @@
+// v55: extant exterior fabric, registered to OSM/PNOA and source photographs.
+// Horizontal source coordinates are retained. Vertical profiles are estimates,
+// not an archaeological survey, and no vanished continuous enclosure is filled.
+// Sources and uncertainty: research/validation-v55/exterior-evidence.md.
+export const EAST_EXTERIOR_FEATURES=[
+  {
+    "id": "north-round-tower",
+    "kind": "round-masonry-projection",
+    "coordinates": [
+      [
+        -0.2754961,
+        39.6768399
+      ],
+      [
+        -0.275488,
+        39.6768601
+      ],
+      [
+        -0.2754914,
+        39.6768687
+      ],
+      [
+        -0.2755021,
+        39.6768738
+      ],
+      [
+        -0.2755188,
+        39.676874
+      ],
+      [
+        -0.2755285,
+        39.6768658
+      ],
+      [
+        -0.2755341,
+        39.6768554
+      ],
+      [
+        -0.2755342,
+        39.6768454
+      ],
+      [
+        -0.2754961,
+        39.6768399
+      ]
+    ],
+    "closed": true,
+    "sourceIds": [
+      "osm-castillo",
+      "foto-ricsol-2022"
+    ],
+    "heightAboveEasternPlaneM": 5.45,
+    "heightConfidence": "relative photographic estimate; tower crown about 0.8 m above adjacent merlons",
+    "interpretive": true,
+    "period": "unknown",
+    "component": "north-round-tower",
+    "evidenceRefs": [
+      "osm-1199456161",
+      "ricsol-26",
+      "pnoa-current"
+    ]
+  },
+  {
+    "id": "north-tower-joining-curtain",
+    "kind": "joined-curtain",
+    "coordinates": [
+      [
+        -0.2754286,
+        39.676823
+      ],
+      [
+        -0.275476,
+        39.6768349
+      ],
+      [
+        -0.2754961,
+        39.6768399
+      ]
+    ],
+    "closed": false,
+    "sourceIds": [
+      "osm-castillo",
+      "foto-ricsol-2022"
+    ],
+    "parapetAboveEasternPlaneM": 3.5,
+    "merlonHeightM": 1.1,
+    "interpretive": true,
+    "period": "unknown",
+    "component": "north-tower-joining-curtain",
+    "evidenceRefs": [
+      "osm-1199456161",
+      "ricsol-26"
+    ]
+  },
+  {
+    "id": "north-arched-recess",
+    "kind": "closed-arched-recess",
+    "coordinates": [
+      [
+        -0.2754825,
+        39.67683652
+      ]
+    ],
+    "closed": false,
+    "sourceIds": [
+      "foto-ricsol-2022"
+    ],
+    "widthM": 0.88,
+    "springHeightM": 1.1,
+    "riseM": 0.2,
+    "depthM": 0.28,
+    "registration": "Approximate placement relative to mapped tower; opening visible in photo, closed/back material not conclusively identified",
+    "interpretive": true,
+    "period": "unknown",
+    "component": "north-arched-recess",
+    "evidenceRefs": [
+      "ricsol-26"
+    ]
+  },
+  {
+    "id": "daoiz-machine-gun-remains",
+    "kind": "open-concrete-remains",
+    "osmId": "1419384279",
+    "coordinates": [
+      [
+        -0.2748766,
+        39.6769282
+      ],
+      [
+        -0.27486,
+        39.6769199
+      ],
+      [
+        -0.2748534,
+        39.6769099
+      ],
+      [
+        -0.2748601,
+        39.6768993
+      ],
+      [
+        -0.2748726,
+        39.6768976
+      ],
+      [
+        -0.2748887,
+        39.6768992
+      ],
+      [
+        -0.274883,
+        39.6769128
+      ],
+      [
+        -0.2748766,
+        39.6769282
+      ]
+    ],
+    "closed": true,
+    "sourceIds": [
+      "osm-castillo",
+      "municipal-02b-2020",
+      "aparici-casva7-2025"
+    ],
+    "wallThicknessM": 0.36,
+    "estimatedWallHeightM": 1.38,
+    "entryEdge": 5,
+    "entryWidthM": 0.72,
+    "registration": "OSM chamber footprint and municipal locality; profile/entry details interpretive from the field sketch, no unregistered long corridor or roof",
+    "interpretive": true,
+    "period": "modern",
+    "component": "daoiz-machine-gun-remains",
+    "evidenceRefs": [
+      "osm-1419384279",
+      "municipal-02b-2020",
+      "balanza-2022-casva7-p10",
+      "pnoa-current"
+    ]
+  },
+  {
+    "id": "tres-castellets-upper-link",
+    "kind": "current-outer-wall-remnant",
+    "osmId": "1419384286",
+    "coordinates": [
+      [
+        -0.2748601,
+        39.6767044
+      ],
+      [
+        -0.27466,
+        39.6766928
+      ]
+    ],
+    "closed": false,
+    "sourceIds": [
+      "osm-castillo",
+      "foto-ricsol-2022"
+    ],
+    "widthM": 0.7,
+    "heightRangeM": [
+      0.55,
+      1.2
+    ],
+    "interpretive": true,
+    "period": "unknown",
+    "component": "tres-castellets-upper-link",
+    "evidenceRefs": [
+      "osm-1419384286",
+      "pnoa-current",
+      "ricsol-5"
+    ]
+  },
+  {
+    "id": "tres-castellets-descending-wall",
+    "kind": "current-stepped-curtain",
+    "osmId": "523549298",
+    "coordinates": [
+      [
+        -0.2746388,
+        39.6766919
+      ],
+      [
+        -0.2745296,
+        39.676643
+      ],
+      [
+        -0.2745371,
+        39.6766865
+      ],
+      [
+        -0.274433,
+        39.6768376
+      ],
+      [
+        -0.2743782,
+        39.6769031
+      ],
+      [
+        -0.2743532,
+        39.6769023
+      ],
+      [
+        -0.2743373,
+        39.6769393
+      ],
+      [
+        -0.2743696,
+        39.6769428
+      ],
+      [
+        -0.2743359,
+        39.6770566
+      ],
+      [
+        -0.2742629,
+        39.6771726
+      ],
+      [
+        -0.2741973,
+        39.6772914
+      ],
+      [
+        -0.2742036,
+        39.6772938
+      ],
+      [
+        -0.2741773,
+        39.6773621
+      ],
+      [
+        -0.2741422,
+        39.6773599
+      ]
+    ],
+    "closed": false,
+    "sourceIds": [
+      "osm-castillo",
+      "foto-ricsol-2022"
+    ],
+    "widthM": 0.78,
+    "innerParapetHeightM": 2.25,
+    "merlonHeightM": 0.95,
+    "bayLengthM": 6.0,
+    "registration": "Current standing wall, not hypothetical ancient perimeter; heights are photographic estimates anchored to source terrain",
+    "interpretive": true,
+    "period": "unknown",
+    "component": "tres-castellets-descending-wall",
+    "evidenceRefs": [
+      "osm-523549298",
+      "pnoa-current",
+      "ricsol-5",
+      "ricsol-6",
+      "ricsol-7"
+    ]
+  },
+  {
+    "id": "tres-castellets-lower-wall",
+    "kind": "current-outer-wall",
+    "osmId": "1419384303",
+    "coordinates": [
+      [
+        -0.2741259,
+        39.6773594
+      ],
+      [
+        -0.2740099,
+        39.6773507
+      ],
+      [
+        -0.2739847,
+        39.6773809
+      ],
+      [
+        -0.2739907,
+        39.6773872
+      ],
+      [
+        -0.2739904,
+        39.6773927
+      ],
+      [
+        -0.2739781,
+        39.6774039
+      ],
+      [
+        -0.2739655,
+        39.677408
+      ],
+      [
+        -0.2739506,
+        39.6774219
+      ],
+      [
+        -0.2739397,
+        39.6774226
+      ],
+      [
+        -0.2739187,
+        39.6774462
+      ],
+      [
+        -0.2739196,
+        39.6774662
+      ],
+      [
+        -0.2738935,
+        39.6775556
+      ],
+      [
+        -0.2739756,
+        39.677692
+      ],
+      [
+        -0.2738476,
+        39.6777451
+      ],
+      [
+        -0.2738531,
+        39.6777576
+      ],
+      [
+        -0.2738026,
+        39.6777844
+      ],
+      [
+        -0.2738272,
+        39.6778212
+      ],
+      [
+        -0.2738776,
+        39.6777949
+      ]
+    ],
+    "closed": false,
+    "sourceIds": [
+      "osm-castillo",
+      "foto-ricsol-2022"
+    ],
+    "widthM": 0.66,
+    "innerParapetHeightM": 1.5,
+    "bayLengthM": 6.8,
+    "registration": "Current surviving stepped continuation; no blanket reconstruction of crenellation",
+    "interpretive": true,
+    "period": "unknown",
+    "component": "tres-castellets-lower-wall",
+    "evidenceRefs": [
+      "osm-1419384303",
+      "pnoa-current",
+      "ricsol-12"
+    ]
+  },
+  {
+    "id": "tres-castellets-upper-gap",
+    "kind": "current-path-opening",
+    "osmId": "1419384287",
+    "coordinates": [
+      [
+        -0.2746388,
+        39.6766919
+      ],
+      [
+        -0.27466,
+        39.6766928
+      ]
+    ],
+    "closed": false,
+    "sourceIds": [
+      "osm-castillo"
+    ],
+    "passable": true,
+    "interpretive": true,
+    "period": "unknown",
+    "component": "tres-castellets-upper-gap",
+    "evidenceRefs": [
+      "osm-1419384287",
+      "pnoa-current"
+    ]
+  },
+  {
+    "id": "tres-castellets-lower-gap",
+    "kind": "current-path-opening",
+    "osmId": "1419384304",
+    "coordinates": [
+      [
+        -0.2741422,
+        39.6773599
+      ],
+      [
+        -0.2741259,
+        39.6773594
+      ]
+    ],
+    "closed": false,
+    "sourceIds": [
+      "osm-castillo"
+    ],
+    "passable": true,
+    "interpretive": true,
+    "period": "unknown",
+    "component": "tres-castellets-lower-gap",
+    "evidenceRefs": [
+      "osm-1419384304",
+      "pnoa-current"
+    ]
+  }
+];
+
+export const EAST_EXTERIOR_REPLACED_WALL_IDS=new Set(['1419384286','523549298','1419384303']);
+export const EAST_EXTERIOR_REPLACED_BUILDING_IDS=new Set(['1419384279']);
+
+// Own precisely the short E joining curtain and mapped curved projection.
+// The long western curtain begins at [-.2755342,39.6768454] and is retained.
+export function isEastExteriorPerimeterSegment(a,b){
+ const lon=(a[0]+b[0])/2,lat=(a[1]+b[1])/2;
+ return lon>-.27554&&lon<-.275425&&lat>39.676820&&lat<39.676880;
+}

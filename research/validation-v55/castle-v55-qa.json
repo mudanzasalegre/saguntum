@@ -1,0 +1,369 @@
+{
+  "pass": true,
+  "method": "Shared real-constructor regressions plus v55 source geometry/roofless room rays, actual generic-city buffers, native claims and extant gap collisions",
+  "sourceHashes": {
+    "dist/js/castle-almenara.js": "172f30f459d71afab07e13820a326391e24b21973b58ed81025a2a6b399503f9",
+    "dist/js/castle-east-buildings.js": "d844241c860d8bb3e8c5431e57e4ed2169e9d6fac47d0a893a7e4464c0df2615",
+    "dist/js/castle-east-cameras.js": "4427f3675ac7bf7ea337b987f54c79061054fa36cbdb2aca57439ed9a8059da8",
+    "dist/js/castle-east-exterior-layout.js": "b7945101315d61c9a831d62b86f782dd068f8147d2fb76cbb47bf9df39749ec6",
+    "dist/js/castle-east-exterior.js": "f540bbb40e0da44793fcc168f863c4d6e315a87a8e42d8458c9d275e27631a83",
+    "dist/js/castle-east-ground.js": "febc63fcc50ce798b27f39c273f9fa432961f09bc07bfa54cd583fb085cb74c6",
+    "dist/js/castle-east-layout.js": "842809c25e0c6763b9e88b5a58bfd5e73553f1f0c9dbb60bc1a551beb6a645ba",
+    "dist/js/castle-east-paths.js": "a1e08f786846c7937dbd1c6d18d4f05923642a9ec03acd6873b64e6212490ef9",
+    "dist/js/castle-east-remains.js": "3c09eada43638a79f72233e813313835d1d9272515730f8c0482415e8642be44",
+    "dist/js/castle-east-rock.js": "8f42274f4a03336ece21e81d0e98ec98563ca1761cc8136b3ec002dd4c064223",
+    "dist/js/castle-east.js": "9eb807e1391827f84e5f8191cb7bf242ca6eb586a7c67fa44462a0ee2ab47a2f",
+    "dist/js/castle-forum.js": "aace8d3649720b189d084efe924220543c5716a87b31546740b4ba99f77824d1",
+    "dist/js/castle-ground.js": "4c53ce178489bbe53d12ccb58edee69d5fdc04be47017013ee224e93dc1e1e5e",
+    "dist/js/castle-map.js": "1826db8f96eb1ae3a0567a4c2ed7bb896e391e98c297f34bee908b4bb0bb8f05",
+    "dist/js/castle-materials.js": "c6b48904b6c9750a4e593f1a0ea5716483cf5c962efcea46f8f1438dc17ff7d0",
+    "dist/js/castle-panel.js": "f1c34c5b085137ae8d98b994f8609d75ca99fde90b696a11ae53d78ea17670be",
+    "dist/js/castle.js": "ae8ad04bfff700a5ffe9cbe6f34bbc378955061f42d9ae16709ddfa1882c9999",
+    "dist/js/monuments.js": "ce10354ba856f3ca369d12624d11f40782e9e4b4777ebaae906cacf73154f688",
+    "dist/js/territory-heritage-models.js": "e0a3d30dfe0e79c6cc0b513159dcead6e144d2aa77ad0cf2b84e77995d7618fa",
+    "dist/js/territory-heritage-relief.js": "fef1c1eef996f3b619fe80826739864e050a957ce65565c4eb0cdec6165864bc",
+    "dist/js/territory-heritage-paving.js": "f5e8dc53b85545e8d005886f03d44a206525605713bbe0095059fff713da23e6",
+    "dist/js/territory-collision-heritage.js": "9eb8699d805aa0acda17ab4687f08bcfca42ed539999348b93157518211f6126"
+  },
+  "regressionFile": "castle-simulator-qa.json",
+  "preservedStops": 22,
+  "addedStops": 0,
+  "rooms": [
+    {
+      "id": "battery-n",
+      "samples": 59,
+      "visibleFloor": 56,
+      "floorVisibleFraction": 0.9491525423728814,
+      "floorY": 132.76362096968248,
+      "occludingComponents": {
+        "battery-n": 3
+      }
+    },
+    {
+      "id": "battery-e",
+      "samples": 37,
+      "visibleFloor": 37,
+      "floorVisibleFraction": 1,
+      "floorY": 134.52364824591407,
+      "occludingComponents": {}
+    }
+  ],
+  "gaps": [
+    {
+      "id": "tres-castellets-upper-gap",
+      "constructor": "final-terrain",
+      "samples": [
+        {
+          "x": 287.3371641524442,
+          "z": 256.90262620019723,
+          "feet": 111.07821186178964,
+          "clear": true
+        },
+        {
+          "x": 287.06471569667053,
+          "z": 256.8875980002589,
+          "feet": 111.23953517153423,
+          "clear": true
+        },
+        {
+          "x": 286.7922672408968,
+          "z": 256.8725698003206,
+          "feet": 111.39162912736505,
+          "clear": true
+        }
+      ]
+    },
+    {
+      "id": "tres-castellets-upper-gap",
+      "constructor": "raw-MDT",
+      "samples": [
+        {
+          "x": 287.3371641524442,
+          "z": 256.90262620019723,
+          "feet": 110.74837226698415,
+          "clear": true
+        },
+        {
+          "x": 287.06471569667053,
+          "z": 256.8875980002589,
+          "feet": 110.97240823966553,
+          "clear": true
+        },
+        {
+          "x": 286.7922672408968,
+          "z": 256.8725698003206,
+          "feet": 111.1702282243982,
+          "clear": true
+        }
+      ]
+    },
+    {
+      "id": "tres-castellets-lower-gap",
+      "constructor": "final-terrain",
+      "samples": [
+        {
+          "x": 331.0081670201369,
+          "z": 182.5954130002882,
+          "feet": 95.70144877614398,
+          "clear": true
+        },
+        {
+          "x": 331.2176438988689,
+          "z": 182.60376200026712,
+          "feet": 95.64668799640584,
+          "clear": true
+        },
+        {
+          "x": 331.4271207776009,
+          "z": 182.61211100024605,
+          "feet": 95.5919272166677,
+          "clear": true
+        }
+      ]
+    },
+    {
+      "id": "tres-castellets-lower-gap",
+      "constructor": "raw-MDT",
+      "samples": [
+        {
+          "x": 331.0081670201369,
+          "z": 182.5954130002882,
+          "feet": 95.68919001623809,
+          "clear": true
+        },
+        {
+          "x": 331.2176438988689,
+          "z": 182.60376200026712,
+          "feet": 95.59026898900657,
+          "clear": true
+        },
+        {
+          "x": 331.4271207776009,
+          "z": 182.61211100024605,
+          "feet": 95.47580639113384,
+          "clear": true
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "pass": true,
+      "label": "Mapped barrack has an open interior and a real terrain cut: battery-n"
+    },
+    {
+      "pass": true,
+      "label": "Roofless rooms expose their excavated floor from above: battery-n",
+      "detail": {
+        "id": "battery-n",
+        "samples": 59,
+        "visibleFloor": 56,
+        "floorVisibleFraction": 0.9491525423728814,
+        "floorY": 132.76362096968248,
+        "occludingComponents": {
+          "battery-n": 3
+        }
+      }
+    },
+    {
+      "pass": true,
+      "label": "Mapped barrack has an open interior and a real terrain cut: battery-e"
+    },
+    {
+      "pass": true,
+      "label": "Roofless rooms expose their excavated floor from above: battery-e",
+      "detail": {
+        "id": "battery-e",
+        "samples": 37,
+        "visibleFloor": 37,
+        "floorVisibleFraction": 1,
+        "floorY": 134.52364824591407,
+        "occludingComponents": {}
+      }
+    },
+    {
+      "pass": true,
+      "label": "The detached v54 tower geometry is removed"
+    },
+    {
+      "pass": true,
+      "label": "The mapped exterior has actual geometry: north-round-tower"
+    },
+    {
+      "pass": true,
+      "label": "The mapped exterior has actual geometry: north-tower-joining-curtain"
+    },
+    {
+      "pass": true,
+      "label": "The mapped exterior has actual geometry: north-arched-recess"
+    },
+    {
+      "pass": true,
+      "label": "The mapped exterior has actual geometry: daoiz-machine-gun-remains"
+    },
+    {
+      "pass": true,
+      "label": "The mapped exterior has actual geometry: tres-castellets-upper-link"
+    },
+    {
+      "pass": true,
+      "label": "The mapped exterior has actual geometry: tres-castellets-descending-wall"
+    },
+    {
+      "pass": true,
+      "label": "The mapped exterior has actual geometry: tres-castellets-lower-wall"
+    },
+    {
+      "pass": true,
+      "label": "Tower and joining curtain share a contact envelope"
+    },
+    {
+      "pass": true,
+      "label": "Atlas excludes the generic bunker by its shared building ID"
+    },
+    {
+      "pass": true,
+      "label": "Simulator claims the bunker source ID: final-terrain"
+    },
+    {
+      "pass": true,
+      "label": "Structured worker transfer retains the bunker claim: final-terrain"
+    },
+    {
+      "pass": true,
+      "label": "Simulator claims the bunker source ID: raw-MDT"
+    },
+    {
+      "pass": true,
+      "label": "Structured worker transfer retains the bunker claim: raw-MDT"
+    },
+    {
+      "pass": true,
+      "label": "Actual Atlas city buffers contain no facade, roof or cornice in the bunker footprint",
+      "detail": {
+        "testedContextBatches": 3,
+        "probes": 8,
+        "hits": []
+      }
+    },
+    {
+      "pass": true,
+      "label": "The new bunker remains a low surviving structure",
+      "detail": {
+        "maxHeightAboveTerrainM": 1.295076435571545,
+        "formerGenericFacadeSpanM": 11.32612
+      }
+    },
+    {
+      "pass": true,
+      "label": "Replacement exterior wall retains the existing gap: tres-castellets-upper-gap/final-terrain",
+      "detail": {
+        "samples": [
+          {
+            "x": 287.3371641524442,
+            "z": 256.90262620019723,
+            "feet": 111.07821186178964,
+            "clear": true
+          },
+          {
+            "x": 287.06471569667053,
+            "z": 256.8875980002589,
+            "feet": 111.23953517153423,
+            "clear": true
+          },
+          {
+            "x": 286.7922672408968,
+            "z": 256.8725698003206,
+            "feet": 111.39162912736505,
+            "clear": true
+          }
+        ]
+      }
+    },
+    {
+      "pass": true,
+      "label": "Replacement exterior wall retains the existing gap: tres-castellets-upper-gap/raw-MDT",
+      "detail": {
+        "samples": [
+          {
+            "x": 287.3371641524442,
+            "z": 256.90262620019723,
+            "feet": 110.74837226698415,
+            "clear": true
+          },
+          {
+            "x": 287.06471569667053,
+            "z": 256.8875980002589,
+            "feet": 110.97240823966553,
+            "clear": true
+          },
+          {
+            "x": 286.7922672408968,
+            "z": 256.8725698003206,
+            "feet": 111.1702282243982,
+            "clear": true
+          }
+        ]
+      }
+    },
+    {
+      "pass": true,
+      "label": "Replacement exterior wall retains the existing gap: tres-castellets-lower-gap/final-terrain",
+      "detail": {
+        "samples": [
+          {
+            "x": 331.0081670201369,
+            "z": 182.5954130002882,
+            "feet": 95.70144877614398,
+            "clear": true
+          },
+          {
+            "x": 331.2176438988689,
+            "z": 182.60376200026712,
+            "feet": 95.64668799640584,
+            "clear": true
+          },
+          {
+            "x": 331.4271207776009,
+            "z": 182.61211100024605,
+            "feet": 95.5919272166677,
+            "clear": true
+          }
+        ]
+      }
+    },
+    {
+      "pass": true,
+      "label": "Replacement exterior wall retains the existing gap: tres-castellets-lower-gap/raw-MDT",
+      "detail": {
+        "samples": [
+          {
+            "x": 331.0081670201369,
+            "z": 182.5954130002882,
+            "feet": 95.68919001623809,
+            "clear": true
+          },
+          {
+            "x": 331.2176438988689,
+            "z": 182.60376200026712,
+            "feet": 95.59026898900657,
+            "clear": true
+          },
+          {
+            "x": 331.4271207776009,
+            "z": 182.61211100024605,
+            "feet": 95.47580639113384,
+            "clear": true
+          }
+        ]
+      }
+    }
+  ],
+  "errors": [],
+  "maxBunkerHeightAboveTerrainM": 1.295076435571545,
+  "limitations": [
+    "CPU geometry and collision checks; no browser or WebGL session.",
+    "The contact envelope check is supplemented by the exterior builder contact probes and visual inspection.",
+    "Existing hill gaps are not asserted to form an accessible visitor route."
+  ]
+}

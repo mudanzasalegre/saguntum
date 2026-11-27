@@ -8,9 +8,9 @@ const mod=(n,m)=>(n%m+m)%m;
 export const CASTLE_TEXTURE_METRES={stone:[4.8,3.2],rubble:[3.8,2.9],tapial:[5.5,3.1],ashlar:[4.8,3.2],brick:[2.6,2.0],paving:[9.2,9.2],path:[2.1,2.1],tile:[2.3,2.7],
  'gate-stone':[4.2,3.0],'gate-brick':[1.8,1.5],plaster:[3.6,3.6],wood:[1.8,3.2],
  'forum-earth':[5.4,5.4],'forum-gravel':[3.6,3.6],'forum-stone':[3.2,2.4],'worn-ashlar':[2.8,2.8],
- 'east-masonry':[3.8,2.7],'east-render':[3.8,3.4],'east-rock':[4.6,3.0],'east-earth':[4.8,4.8]};
+ 'east-masonry':[3.8,2.7],'east-render':[3.8,3.4],'east-rock':[4.6,3.0],'east-earth':[4.8,4.8],'east-concrete':[2.8,2.4]};
 
-const detailedKinds=new Set(['gate-stone','gate-brick','plaster','wood','forum-earth','forum-gravel','forum-stone','worn-ashlar','east-masonry','east-render','east-rock','east-earth']);
+const detailedKinds=new Set(['gate-stone','gate-brick','plaster','wood','forum-earth','forum-gravel','forum-stone','worn-ashlar','east-masonry','east-render','east-rock','east-earth','east-concrete']);
 function detailedTexture(kind){
  const size=512,pixels=new Uint8Array(size*size*4),masonry=kind==='gate-stone'||kind==='forum-stone'||kind==='east-masonry';
  const cols=14,rows=12,cells=[];
@@ -51,9 +51,13 @@ function detailedTexture(kind){
    value=.83+(weather-.5)*.16+(fine-.5)*.12+(grain-.5)*.07-(crack?.17:0);
    green=.995;blue=.965;
   }else if(kind==='east-render'){
-   const eroded=weather<.30,run=smooth(u*.65,v,16);
-   value=.86+(weather-.5)*.14+(fine-.5)*.08+(grain-.5)*.075-(eroded?.11:0)-(run<.2?.05:0);
-   green=.98;blue=.92;
+   const wear=smooth(u,v,19),eroded=wear<.23,run=smooth(u*1.6,v*.24,28);
+   value=.86+(wear-.5)*.10+(fine-.5)*.10+(grain-.5)*.08-(eroded?.075:0)-(run<.23?.065:0);
+   green=.985;blue=.96;
+  }else if(kind==='east-concrete'){
+   const pit=grain>.985,aggregate=smooth(u,v,110),joint=mod(v*6+(weather-.5)*.04,1)<.012;
+   value=.85+(weather-.5)*.11+(fine-.5)*.085+(aggregate-.5)*.07+(grain-.5)*.08-(pit?.14:0)-(joint?.045:0);
+   green=.998;blue=.985;
   }else if(kind==='plaster'){
    const flake=weather<.24;
    value=.86+(weather-.5)*.12+(fine-.5)*.065+(grain-.5)*.05-(flake?.10:0);

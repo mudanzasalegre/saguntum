@@ -1,6 +1,7 @@
 // Local plan: documented positions, contemporary OSM walls and IGN terrain.
 // Labels are displaced only for readability; leader lines retain the real point.
 import {EAST_PLAN_FEATURES,EAST_ROUTE_DEFS} from './castle-east-layout.js';
+import {EAST_EXTERIOR_FEATURES,EAST_EXTERIOR_REPLACED_WALL_IDS,EAST_EXTERIOR_REPLACED_BUILDING_IDS} from './castle-east-exterior-layout.js';
 const project = (lon, lat) => ({x:(lon+.278)*111320*Math.cos(39.679*Math.PI/180),z:(39.679-lat)*111320});
 const fallback = {background:'#102b31',surface:'#193a40',text:'#f4f4ec',muted:'#abc3c1',accent:'#dec18a',accentInk:'#173038',border:'#42666b',water:'#2c6b7c',vegetation:'#35564d',building:'#60736a',road:'#a4ae94',ancient:'#e2ad78',medieval:'#74bcb4',modern:'#aaa5d4',unknown:'#8c9c98'};
 const finite = p => Array.isArray(p) && p.length >= 2 && p.every(Number.isFinite);
@@ -8,8 +9,8 @@ const eastStops=new Set(['puerta-almenara','almenara','almenara-bateria','almena
 function planFeatures(source){
   return (Array.isArray(source)?source:Object.values(source||{}).flat()).map(feature=>{
     let coordinates=feature.coordinates;
-    if(finite(coordinates)){
-      const [lon,lat]=coordinates,radius=feature.radiusM||1.3;
+    if(finite(coordinates)||coordinates?.length===1&&finite(coordinates[0])){
+      const [lon,lat]=finite(coordinates)?coordinates:coordinates[0],radius=feature.radiusM||(/recess/.test(feature.kind||'')?.55:1.3);
       coordinates=Array.from({length:20},(_,i)=>{const a=i*Math.PI/10;return [lon+Math.cos(a)*radius/(111320*Math.cos(lat*Math.PI/180)),lat+Math.sin(a)*radius/111320];});
     }
     return {...feature,coordinates,closed:feature.closed??!/(trace|low-remains)/.test(feature.kind||'')};
@@ -26,8 +27,9 @@ export function drawCastleMap(canvas, cartography, visit, {selected=null,heightA
   const p={...fallback,...palette}, w=canvas.width,h=canvas.height, pad=large?42:18;
   const outline=(cartography.castlePolygon||[]).filter(finite),allStops=(visit.stops||[]).filter(s=>finite(s.coordinate||s.coordinates));
   if(!outline.length)return null;
-  const features=planFeatures(modelGeometry?.east?.features||EAST_PLAN_FEATURES);
-  const eastern=eastStops.has(selected),world=outline.map(c=>project(...c));
+  const exterior=planFeatures(modelGeometry?.east?.exterior?.features||EAST_EXTERIOR_FEATURES);
+  const features=[...planFeatures(modelGeometry?.east?.features||EAST_PLAN_FEATURES).filter(feature=>feature.id!=='north-round-projection'),...exterior];
+  const eastern=eastStops.has(selected),world=[...outline,...exterior.flatMap(f=>f.coordinates)].map(c=>project(...c));
   let box={minX:Math.min(...world.map(p=>p.x))-65,maxX:Math.max(...world.map(p=>p.x))+65,minZ:Math.min(...world.map(p=>p.z))-75,maxZ:Math.max(...world.map(p=>p.z))+65};
   if(eastern){
     const points=[...features.flatMap(f=>f.coordinates),...allStops.filter(s=>eastStops.has(s.id)).map(s=>s.coordinate||s.coordinates)].map(c=>project(...c));
@@ -54,7 +56,7 @@ export function drawCastleMap(canvas, cartography, visit, {selected=null,heightA
   }
   function path(coords,close=false){if(!coords?.length)return false;ctx.beginPath();coords.forEach((c,i)=>{const a=map(Array.isArray(c)?project(...c):c);i?ctx.lineTo(a.x,a.y):ctx.moveTo(a.x,a.y);});if(close)ctx.closePath();return true;}
   const inView=coords=>coords?.some(c=>{const a=project(...c);return a.x>=box.minX&&a.x<=box.maxX&&a.z>=box.minZ&&a.z<=box.maxZ;});
-  for(const building of cartography.buildings||[])if(inView(building.coordinates)&&path(building.coordinates,true)){ctx.fillStyle=p.building;ctx.globalAlpha=.55;ctx.fill();}
+  for(const building of cartography.buildings||[])if(!EAST_EXTERIOR_REPLACED_BUILDING_IDS.has(String(building.osmId||building.id))&&inView(building.coordinates)&&path(building.coordinates,true)){ctx.fillStyle=p.building;ctx.globalAlpha=.55;ctx.fill();}
   ctx.globalAlpha=1;
   for(const road of cartography.roads||[]){
     const coordinates=EAST_ROUTE_DEFS.find(route=>route.id===String(road.osmId||road.id))?.coordinates||road.coordinates;
@@ -65,15 +67,22 @@ export function drawCastleMap(canvas, cartography, visit, {selected=null,heightA
     const coords=region.polygon||region.coordinates;if(!Array.isArray(coords)||coords.length<3||!coords.every(finite)||!path(coords,true))continue;
     ctx.globalAlpha=.15;ctx.fillStyle=p[region.period]||p.unknown;ctx.fill();ctx.globalAlpha=1;
   }
-  for(const wall of cartography.castleWalls||[])if(path(wall.coordinates||wall.geometry?.coordinates)){ctx.strokeStyle=p.accent;ctx.globalAlpha=.75;ctx.lineWidth=large?1.7:.8;ctx.stroke();}
-  let featuresDrawn=0;
+  for(const wall of cartography.castleWalls||[])if(!EAST_EXTERIOR_REPLACED_WALL_IDS.has(String(wall.osmId||wall.id))&&path(wall.coordinates||wall.geometry?.coordinates)){ctx.strokeStyle=p.accent;ctx.globalAlpha=.75;ctx.lineWidth=large?1.7:.8;ctx.stroke();}
+  let featuresDrawn=0,openingsDrawn=0;const featureIds=[];
   for(const feature of features){
     if(!inView(feature.coordinates)||!path(feature.coordinates,feature.closed!==false))continue;
     const kind=feature.kind||'ruin',period=({iberian:'ancient',roman:'ancient',andalusi:'medieval'}[feature.period]||feature.period);
+    // Source gaps remain gaps. A road-coloured dashed trace distinguishes the
+    // crossing from the solid surviving wall without inventing another gate.
+    if(kind==='current-path-opening'){
+      ctx.strokeStyle=p.background;ctx.globalAlpha=1;ctx.lineWidth=large?4.2:2.5;ctx.stroke();
+      ctx.strokeStyle=p.road;ctx.lineWidth=large?1.1:.6;ctx.setLineDash([large?2:1.2,large?2:1.2]);ctx.stroke();ctx.setLineDash([]);
+      featuresDrawn++;openingsDrawn++;featureIds.push(feature.id);continue;
+    }
     const colour=readingMode==='periods'?(p[period]||p.unknown):['path','steps'].includes(kind)?p.road:/rock/.test(kind)?(p.terrainHigh||p.muted):/(cistern|deposit)/.test(kind)?'#a39a80':p.accent;
     ctx.strokeStyle=colour;ctx.lineWidth=large?1.8:.9;ctx.setLineDash(feature.interpretive?[large?5:3,large?3:2]:[]);
     if(feature.closed!==false){ctx.fillStyle=colour;ctx.globalAlpha=['ground','terrace','earth','platform'].includes(kind)?.10:.30;ctx.fill();}
-    ctx.globalAlpha=.90;ctx.stroke();ctx.setLineDash([]);featuresDrawn++;
+    ctx.globalAlpha=.90;ctx.stroke();ctx.setLineDash([]);featuresDrawn++;featureIds.push(feature.id);
   }
   ctx.globalAlpha=1;ctx.restore();
   const targets=[],placed=[];
@@ -102,9 +111,9 @@ export function drawCastleMap(canvas, cartography, visit, {selected=null,heightA
   // drawing area for the 22 numbered stops rather than a duplicate heading.
   if(large&&showLabels&&w>=600){
     ctx.textAlign='left';ctx.font='600 14px Manrope,sans-serif';ctx.fillStyle=p.text;ctx.fillText(eastern?'CASTILLO · SECTOR ORIENTAL':'CASTILLO DE SAGUNTO',frame.left+pad,top);
-    ctx.font='12px Manrope,sans-serif';ctx.fillStyle=p.muted;ctx.fillText(eastern?'Almenara, sus estructuras y el recorrido':'Planta cartografiada · posiciones de la visita',frame.left+pad,top+24);
+    ctx.font='12px Manrope,sans-serif';ctx.fillStyle=p.muted;ctx.fillText(eastern?'Almenara, sus estructuras y la ladera oriental':'Planta cartografiada · posiciones de la visita',frame.left+pad,top+24);
   }
   const floorLabel=eastern?'Sector oriental':'Castillo completo';
   canvas.setAttribute?.('aria-label','Plano del Castillo: '+floorLabel+' · '+targets.length+' paradas en el plano');
-  return {targets,bounds:box,shadeCells,featuresDrawn,floorLabel,mapScope:eastern?'east':'castle',scaleMetres:metres,hitTarget(x,y){let result=null,closest=Infinity;for(const t of targets){const d=Math.hypot(t.x-x,t.y-y);if(d<t.r&&d<closest){result=t.id;closest=d;}}return result;}};
+  return {targets,bounds:box,shadeCells,featuresDrawn,featureIds,openingsDrawn,floorLabel,mapScope:eastern?'east':'castle',scaleMetres:metres,hitTarget(x,y){let result=null,closest=Infinity;for(const t of targets){const d=Math.hypot(t.x-x,t.y-y);if(d<t.r&&d<closest){result=t.id;closest=d;}}return result;}};
 }

@@ -1,5 +1,27 @@
 # Sincronización de Sites a GitHub
 
+## Versión 55 · Corrección documentada de Almenara y su ladera
+
+El 27 de noviembre de 2026 se publicó la revisión de las cinco zonas señaladas por el usuario, en el Site original y conservando su acceso público. El despliegue `appgdep_6b0972a6ac4081918c902a04c2e5ead6` terminó con estado `succeeded`.
+
+| Evidencia | Valor |
+| --- | --- |
+| Fuente publicada en Sites | `7c6bcb69c8e5b897fc593756f602288e81403dc5` |
+| Árbol Git de la aplicación `dist/` | `f53572e9858bf44a31aec22bb10022bad923f685` |
+| Archivo registrado por Sites | 1656 archivos, 267622400 bytes |
+| Huella del contenido registrado | `sha256:47661469317422e210303d21a2449c94b9215c1cbf8f758a84bc1fb9d453d08e` |
+
+[Almenara publicada](https://saguntum-atlas-3d.monmode.chatgpt.site/#castle/almenara) · [Crujías y adarve](https://saguntum-atlas-3d.monmode.chatgpt.site/#castle/almenara-bateria) · [Restos de depósitos](https://saguntum-atlas-3d.monmode.chatgpt.site/#castle/almenara-aljibes) · [Defensas de la ladera](https://saguntum-atlas-3d.monmode.chatgpt.site/#castle/almenara-baluarte) · [Investigación](../research/validation-v55/east-evidence.md) · [Validación](../research/validation-v55/README.md)
+
+Se sustituyen los dos bloques largos por crujías abiertas, con fachadas perforadas, niveles distintos, adarve y escalera longitudinal. Las tres ruinas interiores tienen formas diferenciadas y fragmentarias. La torre circular queda unida a la cortina y muestra el pequeño arco exterior tapiado. El edificio genérico de unos once metros desaparece: su huella alberga ahora la cámara baja y abierta del nido de ametralladora próximo a Daoiz. La muralla oriental de Tres Castellets incorpora unos 205,7 m de trazados conservados y mantiene sus dos huecos actuales.
+
+Las cimentaciones y el pequeño acceso del nido se ajustan a la malla final. Tres senderos próximos se adaptan localmente al suelo en Atlas y Simulador, conservando trazados y etiquetas de acceso. La guía añade seis fuentes y alcanza 42; se mantienen 22 paradas, siete recintos, los 33 lugares y la numeración global. Las asociaciones inciertas de las ruinas con el inventario de cisternas y las cotas aproximadas permanecen explícitas.
+
+El manifiesto reúne ocho informes aprobados y ningún hash obsoleto: 763 comprobaciones comunes y 24 específicas, 182 mallas coincidentes entre Atlas y Simulador, 48 encuadres normales y diez cercanos, nueve escenarios de plano y contacto de los senderos comprobado mediante 37.160 muestras del Atlas y 31.020 del Simulador. Las vistas CPU general, naranja y amarilla se regeneraron tras las últimas correcciones; los otros 16 renders conservan su procedencia anterior aprobada.
+
+La revisión pública comprobó los textos nuevos, las fuentes, el plano ampliado, el orden de las 22 paradas y el recorrido Atlas → Simulador → Atlas manteniendo la parada 14. El navegador de comprobación carece de WebGL2; se verificó la alternativa 2D y no se atribuyen pruebas de GPU ni mediciones de rendimiento. [Registro público](../research/validation-v55/production-qa.json) · [Manifiesto](../research/validation-v55/validation-manifest.json)
+
+
 ## Versión 54 · Recinto oriental de Almenara
 
 El 27 de noviembre de 2026 se publicó la ampliación de la Plaza de Almenara y sus laderas en el Site original, conservando el acceso público. El despliegue `appgdep_6b095efb3830819183604531f3de27bb` terminó con estado `succeeded`.

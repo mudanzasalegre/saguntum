@@ -10,9 +10,13 @@ import {createCastleGround} from '../../dist/js/castle-ground.js';
 const {heritageRelief,reliefDelta}=await import('../../dist/js/territory-heritage-relief.js');
 const {excavationTriangles,insideTriangleCut}=await import('../../dist/js/polygon-excavation.js');
 const {insideExcavation}=await import('../../dist/js/excavation.js');
+const outputDirectory=path.resolve(process.env.SAGUNTUM_CASTLE_QA_DIRECTORY||path.join(root,'research/validation-v54'));
+fs.mkdirSync(outputDirectory,{recursive:true});
+const output=name=>path.join(outputDirectory,name);
+const preservedStopIds=Number(process.env.SAGUNTUM_CASTLE_PRESERVED_STOPS||18),addedEasternStops=22-preservedStopIds;
 const checks=[],errors=[];
-function check(pass,label,detail){checks.push({pass:!!pass,label,...(detail?{detail}:{})});if(!pass){errors.push(label);fs.writeFileSync(path.join(root,'research/validation-v54/simulator-failure-checkpoint.json'),JSON.stringify({pass:false,checks,errors},null,2)+'\n');}}
-const atlas=await buildCastleScene();
+function check(pass,label,detail){checks.push({pass:!!pass,label,...(detail?{detail}:{})});if(!pass){errors.push(label);fs.writeFileSync(output('simulator-failure-checkpoint.json'),JSON.stringify({pass:false,checks,errors},null,2)+'\n');}}
+const atlas=await buildCastleScene({context:process.env.SAGUNTUM_CASTLE_QA_CONTEXT==='1'});
 const [{buildHeritageModel,releaseModel},{registerFrame},{project},{heightOnPavement},{createHeritageCollision}]=await Promise.all([
  import('../../dist/js/territory-heritage-models.js'),import('../../dist/js/territory-heritage-catalog.js'),
  import('../../dist/js/territory-coordinates.js'),import('../../dist/js/territory-heritage-paving.js'),import('../../dist/js/territory-collision-heritage.js')]);
@@ -116,7 +120,7 @@ for(let k=0;k<line.length-1;k++){
 }
 const passage={samples:passageSamples.length,missingDeck,missingMask,blocked,checks:passageSamples};
 if(missingDeck||missingMask||blocked||maxDeckError>=.13){
- fs.writeFileSync(path.join(root,'research/validation-v54/castle-simulator-qa.json'),JSON.stringify({pass:false,
+ fs.writeFileSync(output('castle-simulator-qa.json'),JSON.stringify({pass:false,
   method:'Actual buildHeritageModel(castle), final Atlas terrain and publicDeck, actual pedestrian collision query',
   passage,maxDeckError},null,2)+'\n');
 }
@@ -240,14 +244,26 @@ check(rawPassage.maxFootJump<=.245,'Raw-MDT passage and both approaches have no 
 // polygon cuts in the Simulator. Their floors do not become public decks.
 const deposits=[],depositRay=new THREE.Raycaster(),masks=atlas.castle.userData.currentMasks||[];
 check(masks.length>0&&atlas.easternExcavation.removedTriangles>0,'The eastern open deposit subtracts real Atlas terrain triangles');
+function expectedCutFloor(cut,p){
+ const entry=atlas.visit.qa.east.exterior?.bunkers?.find(b=>b.id===cut.id)?.entrySurface;
+ if(!entry)return cut.floorY;
+ const area=entry.reduce((s,v,i)=>s+v[0]*entry[(i+1)%entry.length][2]-entry[(i+1)%entry.length][0]*v[2],0),vertices=area>0?[...entry].reverse():entry;
+ for(const ids of [[0,1,2],[0,2,3]]){
+  const [a,b,c]=ids.map(i=>vertices[i]),den=(b[2]-c[2])*(a[0]-c[0])+(c[0]-b[0])*(a[2]-c[2]);
+  if(Math.abs(den)<1e-10)continue;
+  const u=((b[2]-c[2])*(p.x-c[0])+(c[0]-b[0])*(p.z-c[2]))/den,v=((c[2]-a[2])*(p.x-c[0])+(a[0]-c[0])*(p.z-c[2]))/den,w=1-u-v;
+  if(u>=-1e-7&&v>=-1e-7&&w>=-1e-7)return a[1]*u+b[1]*v+c[1]*w;
+ }
+ return cut.floorY;
+}
 for(const cut of masks){
  const probes=excavationTriangles(cut).map(t=>t.reduce((p,v)=>({x:p.x+v.x/3,z:p.z+v.z/3}),{x:0,z:0}));
  const result={id:cut.id,probes:probes.length,atlasTerrainHits:0,missingFloor:0,maxFloorError:0,missingFinalNativeCuts:0,missingRawNativeCuts:0};
  for(const p of probes){
   depositRay.set(new THREE.Vector3(p.x,cut.floorY+12,p.z),new THREE.Vector3(0,-1,0));depositRay.near=0;depositRay.far=20;
   if(depositRay.intersectObject(atlas.terrainMesh,false).length)result.atlasTerrainHits++;
-  const floor=depositRay.intersectObject(atlas.castle,true).find(hit=>hit.object.isMesh&&Math.abs(hit.point.y-cut.floorY)<.10);
-  if(!floor)result.missingFloor++;else result.maxFloorError=Math.max(result.maxFloorError,Math.abs(floor.point.y-cut.floorY));
+  const expectedFloor=expectedCutFloor(cut,p),floor=depositRay.intersectObject(atlas.castle,true).find(hit=>hit.object.isMesh&&Math.abs(hit.point.y-expectedFloor)<.10);
+  if(!floor)result.missingFloor++;else result.maxFloorError=Math.max(result.maxFloorError,Math.abs(floor.point.y-expectedFloor));
   const w=frame.world(p.x,p.z);
   if(!model.relief.triangleCuts.some(t=>insideTriangleCut(t,w.x,w.z)))result.missingFinalNativeCuts++;
   if(!rawModel.relief.triangleCuts.some(t=>insideTriangleCut(t,w.x,w.z)))result.missingRawNativeCuts++;
@@ -309,7 +325,7 @@ sourceFiles.push('dist/js/monuments.js','dist/js/territory-heritage-models.js','
 const sourceHashes=Object.fromEntries(sourceFiles.map(file=>[file,createHash('sha256').update(fs.readFileSync(path.join(root,file))).digest('hex')]));
 const report={pass:errors.length===0,method:'Actual buildHeritageModel(castle), local source assets, final Atlas terrain, CPU geometry comparison',checks,errors,
  sourceHashes,architecturalMeshes:matched,maxBufferError,maxRegistrationErrorM:maxRegistrationError,
- preservedStopIds:18,addedEasternStops:4,mappedPaths:model.contextStats.paths,mappedBuildings:model.contextStats.mappedBuildings,
+ preservedStopIds,addedEasternStops,mappedPaths:model.contextStats.paths,mappedBuildings:model.contextStats.mappedBuildings,
  pavement:{coverageCells:paving.coverage,cellSizeM:paving.metres,emptyCells},
  publicDeck:{coverageCells:model.publicDeck.coverage,cellSizeM:model.publicDeck.metres,maxPassageErrorM:maxDeckError},
  passage,
@@ -320,12 +336,12 @@ const report={pass:errors.length===0,method:'Actual buildHeritageModel(castle), 
  collisionValues:model.walkBarriers.length,batches:details,
  limitations:['No WebGL/WebGPU rendering performed by this CPU check.','Camera vertical-offset registration is checked separately.',
   'The 2.5 m Atlas terrain and approximately 1.25 m Simulator relief interpolate archaeological banks; pointwise deviations from the analytical profile are reported and are not surveyed elevations.']};
-fs.writeFileSync(path.join(root,'research/validation-v54/castle-simulator-qa.json'),JSON.stringify(report,null,2)+'\n');
-if(!errors.length)fs.rmSync(path.join(root,'research/validation-v54/simulator-failure-checkpoint.json'),{force:true});
-releaseModel(model.group);
-releaseModel(rawModel.group);
+fs.writeFileSync(output('castle-simulator-qa.json'),JSON.stringify(report,null,2)+'\n');
+if(!errors.length)fs.rmSync(output('simulator-failure-checkpoint.json'),{force:true});
+if(process.env.SAGUNTUM_CASTLE_QA_RETAIN_MODELS!=='1'){releaseModel(model.group);releaseModel(rawModel.group);}
 console.log(JSON.stringify({pass:report.pass,checks:checks.length,errors,architecturalMeshes:matched,maxBufferError,maxRegistrationErrorM:maxRegistrationError,
- preservedStopIds:18,addedEasternStops:4,mappedPaths:model.contextStats.paths,publicDeck:report.publicDeck,
+ preservedStopIds,addedEasternStops,mappedPaths:model.contextStats.paths,publicDeck:report.publicDeck,
  rawInputPassage:{...rawPassage,samples:rawPassage.samples.length},
- output:path.join(root,'research/validation-v54/castle-simulator-qa.json')},null,2));
+ output:output('castle-simulator-qa.json')},null,2));
 if(errors.length)process.exitCode=1;
+export {atlas,model,rawModel,frame,report,releaseModel,THREE,sourceProject,heightAt,rawTerritoryHeight,createHeritageCollision,reliefDelta,heightOnPavement};
